@@ -454,7 +454,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_defining_information_technology">Defining Information Technology</a></li>
 <li><a href="#_it_services_systems_and_applications">IT services, systems, and applications</a></li>
 <li><a href="#_the_it_service_lifecycle">The IT service lifecycle</a></li>
-<li><a href="#_defining_user_customer_and_sponsor">Defining user, customer, and sponsor</a></li>
+<li><a href="#_defining_consumer_customer_and_sponsor">Defining consumer, customer, and sponsor</a></li>
 <li><a href="#_conclusion">Conclusion</a></li>
 </ul>
 </li>
@@ -462,10 +462,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#_introduction_to_chapter_2">Introduction to Chapter 2</a></li>
 <li><a href="#_infrastructure_overview">Infrastructure overview</a></li>
-<li><a href="#_from_physical_compute_to_cloud">From "physical" compute to Cloud</a></li>
 <li><a href="#_choosing_infrastructure">Choosing infrastructure</a></li>
+<li><a href="#_from_physical_compute_to_cloud">From "physical" compute to Cloud</a></li>
 <li><a href="#_infrastructure_as_code">Infrastructure as code</a></li>
-<li><a href="#_from_scripts_to_policies">From scripts to policies</a></li>
 <li><a href="#_source_control_the_agile_foundation">Source control: the Agile foundation</a></li>
 <li><a href="#_conclusion_2">Conclusion</a></li>
 </ul>
@@ -1161,9 +1160,6 @@ There are hundreds of books on Agile. In this section I will seek to credit spec
 <h2 id="_labs">Labs</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><em>note, this may be broken out into separate volume</em></p>
-</div>
-<div class="paragraph">
 <p>With three chapters in each section, the book can be covered in one intense semester at a chapter a week, although expanding it to a two-semester treatment would allow for more in depth coverage and increased lab exposure.</p>
 </div>
 <div class="paragraph">
@@ -1199,8 +1195,8 @@ There are hundreds of books on Agile. In this section I will seek to credit spec
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Course introduction</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Structure, approach</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Basic Linux command line</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SSH &amp; workstation setup</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Individual</p></td>
 </tr>
 <tr>
@@ -1209,15 +1205,15 @@ There are hundreds of books on Agile. In this section I will seek to credit spec
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Chapter 1</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">IT value</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Defining an IT product</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cloud and infrastructure as code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defining an IT product - review SaaS examples</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Linux command line</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Chapter 2</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">IT Infrastructure</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cloud and infrastructure as code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reviewing current IaaS offerings</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cloud and infrastructure as code - configuring a Vagrant machine manually &amp; w/script that is checked into Github &amp; modified</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
 </tr>
 <tr>
@@ -1233,15 +1229,14 @@ There are hundreds of books on Agile. In this section I will seek to credit spec
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Chapter 4</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Product management</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fail fast/risk mgmt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Continuous delivery pipeline</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">User stories. Fail fast/risk mgmt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Behavior-driven development</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">6-8</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Chapter 5</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Work management</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Ticketing and kanban</p></td>
+<td class="tableblock halign-center valign-top" colspan="2"><p class="tableblock">Scrum, ticketing and kanban</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">6-8</p></td>
 </tr>
 <tr>
@@ -1373,11 +1368,6 @@ There are hundreds of books on Agile. In this section I will seek to credit spec
 <div class="paragraph">
 <p>While this is not a book about any particular computing language or platform, we need to describe some technical fundamentals. We’ll do so in as neutral a manner as possible. However, the specific technologies employed in this books’ accompanying labs are based on Ubuntu Linux and git, the distributed version control system created by Linus Torvalds to facilitate Linux development.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>[break labs &amp; their discussion out into different book]</pre>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_chapter_1_it_value">Chapter 1. IT Value</h3>
 <div class="sect3">
@@ -1443,7 +1433,7 @@ There are hundreds of books on Agile. In this section I will seek to credit spec
 <h4 id="_what_is_it_value">What is IT value?</h4>
 <div class="imageblock">
 <div class="content">
-<img src="images/1.01-woman.jpg" alt="1.01 woman">
+<img src="images/1.01a-woman.jpg" alt="1.01a woman">
 </div>
 </div>
 <div class="paragraph">
@@ -1539,14 +1529,22 @@ There are hundreds of books on Agile. In this section I will seek to credit spec
 <p>picture credits:</p>
 </div>
 <div class="paragraph">
+<p><a href="https://www.flickr.com/photos/plantronicsgermany/8138975231/" class="bare">https://www.flickr.com/photos/plantronicsgermany/8138975231/</a></p>
+</div>
+<div class="paragraph">
 <p><a href="https://pixabay.com/en/woman-sitting-counter-phone-828888/" class="bare">https://pixabay.com/en/woman-sitting-counter-phone-828888/</a></p>
 </div>
 <div class="paragraph">
 <p><a href="https://pixabay.com/en/friends-celebration-dinner-table-581753/" class="bare">https://pixabay.com/en/friends-celebration-dinner-table-581753/</a></p>
 </div>
+<div class="paragraph">
+<p><a href="https://www.flickr.com/photos/iicd/5348620457/" class="bare">https://www.flickr.com/photos/iicd/5348620457/</a></p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_defining_information_technology">Defining Information Technology</h4>
+<div class="sect4">
+<h5 id="_what_is_it_anyways">What is IT, anyways?</h5>
 <div class="paragraph">
 <p>We’ve started this book in the previous section, by first defining IT value. This is deliberate. But what is IT, anyways?</p>
 </div>
@@ -1575,7 +1573,7 @@ There are hundreds of books on Agile. In this section I will seek to credit spec
 </div>
 </div>
 <div class="paragraph">
-<p>Information technology (”IT” for the rest of this book) increasingly permeates business operations and social interactions (figure XX). As it increases its pervasiveness, it becomes difficult to disentangle and analyze it. However, doing so remains essential. Without a line of sight back to its intellectual foundations, any technology risks becoming magic, and its users risk becoming a <a href="https://en.wikipedia.org/wiki/Cargo_cult">cargo cult</a>.</p>
+<p>Information technology (”IT” for the rest of this book) increasingly permeates business operations and social interactions. As it increases its pervasiveness, it becomes difficult to disentangle and analyze it. However, doing so remains essential. Without a line of sight back to its intellectual foundations, any technology risks becoming magic, and its users risk becoming a <a href="https://en.wikipedia.org/wiki/Cargo_cult">cargo cult</a>.</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -1586,7 +1584,7 @@ There are hundreds of books on Agile. In this section I will seek to credit spec
 <p>During World War II, South Pacific native peoples had been exposed abruptly to modern technological society with the Japanese and US occupations of their islands. Occupying forces would often provide food, tobacco, and luxuries to the natives to ease relations. After the war, various tribes were observed creating simulated airports and airplanes, and engaging in various rituals that superficially looked like air traffic signaling and other operations associated with a military air base.</p>
 </div>
 <div class="paragraph">
-<p>On further investigation, it became clear that the natives were seeking more “cargo” and had developed a magical understanding of how goods would be delivered. By imitating the form of what they had seen, they hoped to rec⁠1reate it.</p>
+<p>On further investigation, it became clear that the natives were seeking more “cargo” and had developed a magical understanding of how goods would be delivered. By imitating the form of what they had seen, they hoped to recreate it.</p>
 </div>
 <div class="paragraph">
 <p>In 1974, the noted physicist Richard Feynman gave a speech at Caltech in which he coined the immortal phrase “cargo cult science.” His intent was to caution against activities which appear to follow the external form of science, but lack the essential understanding at its core.</p>
@@ -1600,7 +1598,7 @@ There are hundreds of books on Agile. In this section I will seek to credit spec
 <p>Nicholas Carr, in his controversial <em>Harvard Business Review</em> article "IT Doesn&#8217;t Matter," recognized that IT was becoming commoditized in an important sense. As Cloud providers started to offer utility-style computing, the choice of vendors like HP vs IBM was no longer strategic. Looking to history, Carr argued that just as business no longer have “Vice Presidents for Electricity,” so businesses no longer need Chief Information Officers or dedicated IT departments.</p>
 </div>
 <div class="paragraph">
-<p>Carr’s hypothesis has insight&#8201;&#8212;&#8201;there is no question IT is becoming pervasive&#8201;&#8212;&#8201;but ultimately reflects a narrow view of what “IT” is. If “IT” were merely computation at the lowest level&#8201;&#8212;&#8201;just shuffling bits of information around, doing a little math&#8201;&#8212;&#8201;then perhaps it could be embedded throughout a business like electricity.</p>
+<p>Carr has insight&#8201;&#8212;&#8201;there is no question IT is becoming pervasive&#8201;&#8212;&#8201;but ultimately reflects a narrow view of what “IT” is. If “IT” were merely computation at the lowest level&#8201;&#8212;&#8201;just shuffling bits of information around, doing a little math&#8201;&#8212;&#8201;then perhaps it could be embedded throughout a business like electricity.</p>
 </div>
 <div class="paragraph">
 <p>But IT has emergent aspects that are not comparable to electrical power. As it pervades all dimensions of business operations, it brings its concerns with it: complexity, fragility, and the skills required to cope with them.</p>
@@ -1620,6 +1618,8 @@ There are hundreds of books on Agile. In this section I will seek to credit spec
 <div class="paragraph">
 <p>In the digitally transforming economy, traditional “back office” IT organizations find themselves called on to envision, develop, and support market-facing applications of IT. And what starts with one market-facing use case can quickly expand into entire portfolios.  It is such cases that this book is particularly concerned with.</p>
 </div>
+<div class="sect5">
+<h6 id="_are_you_doing_it">Are you "doing IT?"</h6>
 <div class="paragraph">
 <p>So, how do we define an IT problem, as opposed to other kinds of business problems? An IT problem is any problem where you are primarily constrained by your capability and understanding of IT.</p>
 </div>
@@ -1676,7 +1676,7 @@ There are hundreds of books on Agile. In this section I will seek to credit spec
 <p>Discussions of “information technology” become contentious because some think of the traditional organization, while others think of the general problem area.</p>
 </div>
 <div class="paragraph">
-<p>IT has a long history as a corporate function, a single hierarchy under a powerful Chief Information Officer. This model has had its dysfunctions, including a longstanding reputation for being slow and expensive. Often, when one encounters the term “IT,” the author using the termf is referring to this organizational tradition.</p>
+<p>IT has a long history as a corporate function, a single hierarchy under a powerful Chief Information Officer. This model has had its dysfunctions, including a longstanding reputation for being slow and expensive. Often, when one encounters the term “IT,” the author using the term is referring to this organizational tradition.</p>
 </div>
 <div class="paragraph">
 <p><strong>We are less interested in the future of IT as a distinct organizational structure. There are many different models, from fully centralized to fully embedded.</strong> Organizational structure will be discussed in Chapter 7.</p>
@@ -1699,8 +1699,12 @@ There are hundreds of books on Agile. In this section I will seek to credit spec
 <p>￼</p>
 </div>
 </div>
+</div>
+</div>
 <div class="sect3">
 <h4 id="_it_services_systems_and_applications">IT services, systems, and applications</h4>
+<div class="sect4">
+<h5 id="_inside_an_it_service">Inside an IT service</h5>
 <div class="paragraph">
 <p>Let&#8217;s examine our user&#8217;s value experience in more detail, without getting unnecessrily technical, and clarify some definitions along the way.</p>
 </div>
@@ -1812,16 +1816,15 @@ The "moment of truth" represents the user&#8217;s experience of value, from a pr
 </div>
 </div>
 <div class="paragraph">
-<p><em>insert cloud providers</em></p>
-</div>
-<div class="paragraph">
 <p>Consider: what does all this mean to our user? Does she care about cell phone towers, or middleware, or triply-redundant industrial-strength Power Distribution Units? Usually, not in the least.</p>
 </div>
 <div class="paragraph">
-<p>Therefore, as we study this world, we need to mantain awareness of her perspective. Our friend is seeking some value that IT uniquely can enable, but does not want to consider all the complexity that goes into it. She just wants to go out with friends.</p>
+<p>Therefore, as we study this world, we need to mantain awareness of her perspective. Our friend is seeking some value that IT uniquely can enable, but does not want to consider all the complexity that goes into it. She just wants to go out with friends. The moment of truth depends on the service; the service may contain great complexity, but part of its success lies in shielding the user from that complexity.</p>
 </div>
-<div class="paragraph">
-<p><em>insert picture of user w/arrow encapsulating components</em></p>
+<div class="imageblock">
+<div class="content">
+<img src="images/1.01-ITStack2.png" alt="1.01 ITStack2">
+</div>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -1835,6 +1838,9 @@ Always remember the user&#8217;s experience. Information technology has a well d
 </tr>
 </table>
 </div>
+</div>
+<div class="sect4">
+<h5 id="_what_vs_how">What vs. how</h5>
 <div class="paragraph">
 <p>This fundamental tension between <strong>what</strong> a system is supposed to do, versus <strong>how</strong> it does it, pervades IT management and will likely define your career. "Don&#8217;t trouble me with the details, just give me the results" is the overall theme, and we encounter this reaction to complexity in many aspects of life. You may perceive similar concerns in:</p>
 </div>
@@ -1911,7 +1917,8 @@ There are many debates around these definitions. Sometimes these debates are hel
 </ul>
 </div>
 <div class="paragraph">
-<p>Finally, the concept of the "IT stack" is important. Notice how long Figure 1.01.03 is and how it appears "stacked." Layered approaches to understanding IT are common; see Further Reading for useful references.</p>
+<p>Finally, the concept of the "IT stack" is important. Notice how the different technology layers appear "stacked." Layered approaches to understanding IT are common; see Further Reading for useful references.</p>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -1992,7 +1999,7 @@ System retirement is often more complex and expensive than expected, and there a
 </div>
 </div>
 <div class="sect3">
-<h4 id="_defining_user_customer_and_sponsor">Defining user, customer, and sponsor</h4>
+<h4 id="_defining_consumer_customer_and_sponsor">Defining consumer, customer, and sponsor</h4>
 <div class="paragraph">
 <p>In understanding IT value, it is essential to clarify the definitions of user, customer, and sponsor. Sometimes, the user <strong>is</strong> the customer. But more often, the user and the customer are different, and one may additionally need to distinguish the role of system or service sponsor.</p>
 </div>
@@ -2002,7 +2009,7 @@ System retirement is often more complex and expensive than expected, and there a
 <div class="ulist">
 <ul>
 <li>
-<p>The <strong>user</strong> is the person actually interacting with the IT-based service</p>
+<p>The <strong>consumer</strong> (sometimes called the <strong>user</strong>) is the person actually interacting with the IT-based service</p>
 </li>
 <li>
 <p>The <strong>customer</strong> is source of revenue for the service. If the service is part of a profit center, the customer is the person actually purchasing product (e.g. demand deposit banking.) If the service is part of a cost center (e.g. an HR system), the customer is best seen as an internal executive, as the actual revenue-producing customers are too far removed.</p>
@@ -2026,7 +2033,7 @@ System retirement is often more complex and expensive than expected, and there a
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">Example</th>
-<th class="tableblock halign-left valign-top">User</th>
+<th class="tableblock halign-left valign-top">Consumer</th>
 <th class="tableblock halign-left valign-top">Customer</th>
 <th class="tableblock halign-left valign-top">Sponsor</th>
 <th class="tableblock halign-left valign-top">Notes</th>
@@ -2072,7 +2079,7 @@ System retirement is often more complex and expensive than expected, and there a
 <p>So, who paid for our user&#8217;s enjoyment? The bank and restaurant both had clear motivation for supporting a better on line experience, and people now expect that service organizations provide this. The bank experiences less customer turnover and increased likelihood that customers add additional services. The restaurant sees increased traffic and smoother flow from more efficient reservations. Both see increased competitiveness.</p>
 </div>
 <div class="paragraph">
-<p>The traffic application is a somewhat different story. While it is an engineering marvel, there is still some question as to how to fund it long term. It requires a large user base to operate, and yet end users are unlikely to pay for it. At this writing, the service draws on advertising dollars from businesses wishing to advertise to passersby, and also sells its real-time data on traffic patterns to a variety of customers, such as developers considering investments along given routes.</p>
+<p>The traffic application is a somewhat different story. While it is an engineering marvel, there is still some question as to how to fund it long term. It requires a large user base to operate, and yet end consumers of the service are unlikely to pay for it. At this writing, the service draws on advertising dollars from businesses wishing to advertise to passersby, and also sells its real-time data on traffic patterns to a variety of customers, such as developers considering investments along given routes.</p>
 </div>
 <div class="paragraph">
 <p>This last example well illustrates the maxim that "if you don&#8217;t know how the product is making money, you are the product."</p>
@@ -2156,6 +2163,21 @@ System retirement is often more complex and expensive than expected, and there a
 </ul>
 </div>
 </div>
+<div class="sect4">
+<h5 id="_picture_credits">Picture credits:</h5>
+<div class="paragraph">
+<p><a href="https://www.flickr.com/photos/plantronicsgermany/8138975231/" class="bare">https://www.flickr.com/photos/plantronicsgermany/8138975231/</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://pixabay.com/en/woman-sitting-counter-phone-828888/" class="bare">https://pixabay.com/en/woman-sitting-counter-phone-828888/</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://pixabay.com/en/friends-celebration-dinner-table-581753/" class="bare">https://pixabay.com/en/friends-celebration-dinner-table-581753/</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.flickr.com/photos/iicd/5348620457/" class="bare">https://www.flickr.com/photos/iicd/5348620457/</a></p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -2182,12 +2204,6 @@ System retirement is often more complex and expensive than expected, and there a
 <li>
 <p>The ingredients (OS, language, services)</p>
 </li>
-</ul>
-</div>
-</li>
-<li>
-<p>IT infrastructure from a management point of view</p>
-</li>
 <li>
 <p>Physical vs virtual</p>
 </li>
@@ -2199,17 +2215,19 @@ System retirement is often more complex and expensive than expected, and there a
 </li>
 </ul>
 </div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>Sidebar: Introducing Allspaw.</p>
-</div>
-</div>
-</div>
+</li>
+<li>
+<p>IT infrastructure from a management point of view</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Operations (not too much as that is the topic of Ch 6)</p>
+<p>Choosing an infrastructure platform</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Operations overview (brief; covered in depth in <a href="http://dm-academy.github.io/aitm/#_chapter_6_operations_management">Chapter 6</a>)</p>
 </li>
 <li>
 <p>Automation and infrastructure as code</p>
@@ -2253,7 +2271,7 @@ System retirement is often more complex and expensive than expected, and there a
 <div class="sect3">
 <h4 id="_infrastructure_overview">Infrastructure overview</h4>
 <div class="paragraph">
-<p>In the previous chapter, you developed a product idea and a proposed Minimum Marketable Feature. Some part of that Minimum Marketable Feature requires writing software, or at least configuring some IT-centric system. (IT being defined as in Chapter 1.)</p>
+<p>In the previous chapter, you were introduced to the concept of a Moment of Truth, and in the final exercises asked to think of a product idea. Some part of that product requires writing software, or at least configuring some IT-centric system. (IT being defined as in Chapter 1.)</p>
 </div>
 <div class="paragraph">
 <p>You presumably have some resources (time and money). It’s Monday morning, you have cleared all distractions; shut down your Twitter and Facebook feeds, and are ready to start building.</p>
@@ -2262,12 +2280,16 @@ System retirement is often more complex and expensive than expected, and there a
 <p>Not so fast.</p>
 </div>
 <div class="paragraph">
-<p>Before you can start writing code, you need some kind of a platform. You need to decide what language you are going to write in, or what framework you are going to configure, and how that effort is going to result in an operational system capable of rendering IT services.
-`
-`You are probably swimming in a sea of advice and options regarding your technical choices. In previous decades, books such as this might have gone into the specifics of particular platforms: mainframe vs. minicomputers, COBOL vs Fortran, Windows vs Unix, etc.</p>
+<p>Before you can start writing code, you need some kind of a platform. It&#8217;s hard to build before you decide on your tools.</p>
 </div>
 <div class="paragraph">
-<p>At this writing, JavaScript is a leading choice, in conjunction with various frameworks and NoSQL options (e.g. the MEAN stack, for MongoDB, Express, Angular, and Node.js), but millions of developers are still writing Java and .Net, and Ruby and Python have significant followings. Linux is arguably the leading platform, but commercial Unix and Microsoft platforms are still strong. And, periodically it&#8217;s reported that the majority of the world&#8217;s transactions <strong>still</strong> run on COBOL-based systems.</p>
+<p>You need to decide what language you are going to write in, or what framework you are going to configure, and how that effort is going to result in an operational system capable of rendering IT services.</p>
+</div>
+<div class="paragraph">
+<p>You are probably swimming in a sea of advice and options regarding your technical choices. In previous decades, books such as this might have gone into the specifics of particular platforms: mainframe vs. minicomputers, COBOL vs Fortran, Windows vs Unix, etc.</p>
+</div>
+<div class="paragraph">
+<p>At this writing, JavaScript is a leading choice, in conjunction with various frameworks and NoSQL options (e.g. the MEAN stack, for MongoDB, Express, Angular, and Node.js), but millions of developers are still writing Java and .Net, and Ruby and Python have significant followings. Linux is arguably the leading platform, but commercial Unix and Microsoft platforms are still strong. And, periodically it&#8217;s reported that the majority of the world&#8217;s transactions <strong>still</strong> run on <a href="http://blog.hackerrank.com/the-inevitable-return-of-cobol/">COBOL-based systems</a>.</p>
 </div>
 <div class="paragraph">
 <p>However, in the past few years, some powerful infrastructure concepts have solidified that are independent of particular platforms:</p>
@@ -2335,6 +2357,95 @@ Infrastructure is a tricky word. Google defines it thus:</p>
 <p>Operating systems took on more and more functionality, technology became more and more reliable and easily configured, and once unique (and competitively differentiating) functionality became commoditized and more and more deeply buried in the “stack”: the IT infrastructure.</p>
 </div>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_choosing_infrastructure">Choosing infrastructure</h4>
+<div class="paragraph">
+<p>There is ferocious turbulence in the IT infrastructure market. Cloud technologies, DevOps, various platform wars… As an entrepreneur, you need to understand what technical trends matter and what are more of same?</p>
+</div>
+<div class="paragraph">
+<p>In particular, you will need to make some level of commitment to your technical architecture. And at some point you <strong>WILL</strong> be asked, “You’re still using X?”</p>
+</div>
+<div class="paragraph">
+<p>As a startup, you have two major decisions to make in product development:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>What toolset should I use to create my product?</p>
+</li>
+<li>
+<p>What is my approach for exposing that product to the world? As a startup, it would seem likely that you would use a commodity cloud provider. This text is based on this assumption (physical IT asset management will be discussed in Sections 3 and 4), but is there any reason why that would not work for you?</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The two questions are related. If you want to develop on a LAMP stack, you need a Cloud provider that will support you in this. While most are very flexible, you will need to consider the specific support levels they are offering; a provider that supports the platform (and not just the operating system) might be more valuable, but there may be higher costs and other tradeoffs.
+There is a near-infinite amount of material, debate, discussion, books, blogs, lists, and so forth concerning choice of language and platform. Exploring this is not the purpose of this book. However, this book has certain biases and assumptions.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Your system will be built at least in part with some form of programming language which is human-readable and compiled or interpreted into binary instructions</p>
+</li>
+<li>
+<p>Your system will run on general purpose digital computers using well known technologies.</p>
+</li>
+<li>
+<p>Your computing environment is networked in a standard way</p>
+</li>
+<li>
+<p>You use the concept of a software pipeline, in which new functionality is developed in a scope distinct from what is currently offered as your product/service. New functionality moves through the pipeline at significant volumes and velocity and you are concerned with optimizing this overall flow.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>continue to revisit these assumptions</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This is where this textbook differs from many previous textbooks.</p>
+</div>
+<div class="paragraph">
+<p>Experienced IT professionals may be jumping up and down at this point, saying “How can you be thinking about infrastructure before you have gone deeply into requirements?”</p>
+</div>
+<div class="paragraph">
+<p>Let’s be clear, in defining a product (Chapter 1) you already have started to think about requirements, although we have not yet started to use that. The Minimum Marketable Feature is an initial statement of requirements from which you should be able to infer at least initial toolset and platform requirements.</p>
+</div>
+<div class="paragraph">
+<p>There is a good reason, however, why you should not spend too much time “analyzing” before you make platform decisions. The reality is that you cannot know all of the factors necessary to make a perfect decision, and in fact the way you will learn them is by moving forward and testing out various approaches.</p>
+</div>
+<div class="paragraph">
+<p>So, choose Ruby on Rails, or PHP, or Node, and start. Do not fall into analysis paralysis. But be critical of everything especially in your first few weeks of development. Ask yourself</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>can I see myself doing things this way for the next year?</p>
+</li>
+<li>
+<p>Will I be able to train people in this?</p>
+</li>
+<li>
+<p>Will this scale to a bigger codebase? Higher performance? Faster throughput of new features?</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If you start to become uncomfortable with the answers, you should strongly consider investigating alternatives.</p>
+</div>
+<div class="paragraph">
+<p>In Scrum-based development, they use the concept of a “spike” to represent effort whose outcome is not shippable product, but rather research and information. Consider thinking of things in this way.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.scrumalliance.org/community/articles/2013/march/spikes-and-the-effort-to-grief-ratio" class="bare">https://www.scrumalliance.org/community/articles/2013/march/spikes-and-the-effort-to-grief-ratio</a></p>
+</div>
+<div class="paragraph">
+<p><em>Iterative was not possible with earlier technical platforms.</em></p>
 </div>
 </div>
 <div class="sect3">
@@ -2535,94 +2646,12 @@ OS instructor.</p>
 * Managed services: “your mess for less”
 * Cloud: “clean it up first”</p>
 </div>
-</div>
-<div class="sect3">
-<h4 id="_choosing_infrastructure">Choosing infrastructure</h4>
+<div class="sidebarblock">
+<div class="content">
 <div class="paragraph">
-<p>There is ferocious turbulence in the IT infrastructure market. Cloud technologies, DevOps, various platform wars… As an entrepreneur, you need to understand what technical trends matter and what are more of same?</p>
+<p>Sidebar: Introducing Allspaw.</p>
 </div>
-<div class="paragraph">
-<p>In particular, you will need to make some level of commitment to your technical architecture. And at some point you <strong>WILL</strong> be asked, “You’re still using X?”</p>
 </div>
-<div class="paragraph">
-<p>As a startup, you have two major decisions to make in product development:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>What toolset should I use to create my product?</p>
-</li>
-<li>
-<p>What is my approach for exposing that product to the world? As a startup, it would seem likely that you would use a commodity cloud provider. This text is based on this assumption (physical IT asset management will be discussed in Sections 3 and 4), but is there any reason why that would not work for you?</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The two questions are related. If you want to develop on a LAMP stack, you need a Cloud provider that will support you in this. While most are very flexible, you will need to consider the specific support levels they are offering; a provider that supports the platform (and not just the operating system) might be more valuable, but there may be higher costs and other tradeoffs.
-There is a near-infinite amount of material, debate, discussion, books, blogs, lists, and so forth concerning choice of language and platform. Exploring this is not the purpose of this book. However, this book has certain biases and assumptions.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Your system will be built at least in part with some form of programming language which is human-readable and compiled or interpreted into binary instructions</p>
-</li>
-<li>
-<p>Your system will run on general purpose digital computers using well known technologies.</p>
-</li>
-<li>
-<p>Your computing environment is networked in a standard way</p>
-</li>
-<li>
-<p>You use the concept of a software pipeline, in which new functionality is developed in a scope distinct from what is currently offered as your product/service. New functionality moves through the pipeline at significant volumes and velocity and you are concerned with optimizing this overall flow.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>continue to revisit these assumptions</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>This is where this textbook differs from many previous textbooks.</p>
-</div>
-<div class="paragraph">
-<p>Experienced IT professionals may be jumping up and down at this point, saying “How can you be thinking about infrastructure before you have gone deeply into requirements?”</p>
-</div>
-<div class="paragraph">
-<p>Let’s be clear, in defining a product (Chapter 1) you already have started to think about requirements, although we have not yet started to use that. The Minimum Marketable Feature is an initial statement of requirements from which you should be able to infer at least initial toolset and platform requirements.</p>
-</div>
-<div class="paragraph">
-<p>There is a good reason, however, why you should not spend too much time “analyzing” before you make platform decisions. The reality is that you cannot know all of the factors necessary to make a perfect decision, and in fact the way you will learn them is by moving forward and testing out various approaches.</p>
-</div>
-<div class="paragraph">
-<p>So, choose Ruby on Rails, or PHP, or Node, and start. Do not fall into analysis paralysis. But be critical of everything especially in your first few weeks of development. Ask yourself</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>can I see myself doing things this way for the next year?</p>
-</li>
-<li>
-<p>Will I be able to train people in this?</p>
-</li>
-<li>
-<p>Will this scale to a bigger codebase? Higher performance? Faster throughput of new features?</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>If you start to become uncomfortable with the answers, you should strongly consider investigating alternatives.</p>
-</div>
-<div class="paragraph">
-<p>In Scrum-based development, they use the concept of a “spike” to represent effort whose outcome is not shippable product, but rather research and information. Consider thinking of things in this way.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://www.scrumalliance.org/community/articles/2013/march/spikes-and-the-effort-to-grief-ratio" class="bare">https://www.scrumalliance.org/community/articles/2013/march/spikes-and-the-effort-to-grief-ratio</a></p>
-</div>
-<div class="paragraph">
-<p><em>Iterative was not possible with earlier technical platforms.</em></p>
 </div>
 </div>
 <div class="sect3">
@@ -2722,10 +2751,6 @@ touch a b c</pre>
 <p>Let’s return to our iac.sh file. It’s valuable. It documents our intentions for how this configuration should look. We can reliably run it on thousands of machines and it will always give us two directories and six files. In terms of the previous section, we might choose to run it on every new server we create. We want to establish it as a known resource in our technical ecosystem. This is where version control comes in.</p>
 </div>
 </div>
-</div>
-<div class="sect3">
-<h4 id="_from_scripts_to_policies">From scripts to policies</h4>
-
 </div>
 <div class="sect3">
 <h4 id="_source_control_the_agile_foundation">Source control: the Agile foundation</h4>
@@ -2861,7 +2886,13 @@ It is not always easy to apply this approach in practice. There can be edge case
 </div>
 <div class="sect4">
 <h5 id="_research_practice_2">Research &amp; practice</h5>
-
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Research Cloud providers and recommend which you would prefer to build your new product on.</p>
+</li>
+</ol>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_further_reading_2">Further reading</h5>
@@ -2877,7 +2908,10 @@ It is not always easy to apply this approach in practice. There can be edge case
 <p>Limoncelli</p>
 </li>
 <li>
-<p>Allspaw</p>
+<p>Allspaw (move?)</p>
+</li>
+<li>
+<p><a href="http://vmboomerang.com/posts/cloud-jumping-why-amazon-aws-is-kicking-paas/" class="bare">http://vmboomerang.com/posts/cloud-jumping-why-amazon-aws-is-kicking-paas/</a></p>
 </li>
 </ul>
 </div>
@@ -3866,6 +3900,9 @@ In your career, many - perhaps even the majority - of the people you meet and wo
 <li>
 <p><a href="http://blog.fastmonkeys.com/2014/06/18/minimum-viable-product-your-ultimate-guide-to-mvp-great-examples/" class="bare">http://blog.fastmonkeys.com/2014/06/18/minimum-viable-product-your-ultimate-guide-to-mvp-great-examples/</a></p>
 </li>
+<li>
+<p><a href="http://blackswanfarming.com/workshop-quantifying-the-cost-of-delay/" class="bare">http://blackswanfarming.com/workshop-quantifying-the-cost-of-delay/</a></p>
+</li>
 </ul>
 </div>
 </div>
@@ -4620,7 +4657,9 @@ OK, we have a structure.  Work needs to flow across the structure, and the proje
 </div>
 <div class="sect4">
 <h5 id="_further_reading_9">Further reading</h5>
-
+<div class="paragraph">
+<p><a href="http://devops.com/2014/11/10/enterprise-devops-doesnt-make-sense/" class="bare">http://devops.com/2014/11/10/enterprise-devops-doesnt-make-sense/</a></p>
+</div>
 </div>
 </div>
 </div>
