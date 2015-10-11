@@ -529,7 +529,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_monitoring">Monitoring</a></li>
 <li><a href="#_state_configuration_and_discovery">State, configuration, and discovery</a></li>
 <li><a href="#_capacity_and_performance_management">Capacity and performance management</a></li>
-<li><a href="#_from_incident_to_disaster_to_postmortem">From Incident to disaster to postmortem</a></li>
+<li><a href="#_change_and_incident_management">Change and Incident Management</a></li>
 <li><a href="#_advanced_topics_in_operations">Advanced topics in operations</a></li>
 <li><a href="#_conclusion_6">Conclusion</a></li>
 </ul>
@@ -7034,11 +7034,6 @@ In a digitally transformed enterprise, Operations is part of the Product.
 <div class="paragraph">
 <p>First, let’s get back to our fundamental principle that there is an IT system some human is interacting with. This system can be of any scale, but fundamentally we are able to conceive of it having a “state.”</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>(Systems that are too big, complex, and fluid to be considered as having a “state”??)</pre>
-</div>
-</div>
 <div class="paragraph">
 <p>When we want to change the behavior of this system, we are cautious. We reproduce the system at varying levels of fidelity and experiment with potential changes. This is called development.</p>
 </div>
@@ -7326,17 +7321,6 @@ Enterprise monitoring tools are notorious for requiring agents (small, continuou
 </div>
 <div class="sect3">
 <h4 id="_state_configuration_and_discovery">State, configuration, and discovery</h4>
-<div class="paragraph">
-<p>Closely related to monitoring is the concept of discovery. While monitoring focuses on the activity of a given system, discovery is focused on state. In particular, discovery tools Answering this question has resulting in a significant market for so-called “discovery” tools, which seek to profile the server and understand its installed software, processing patterns and communications with an objective of assigning it to some management construct, such as a high level IT application or service.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>What is the future of discovery tools?</strong>
-There is some evidence that the increasing automation of IT infrastructures will mitigate this (which?) problem. As the software pipeline becomes increasingly automated, tracking software from development through production becomes easier.</p>
-</div>
-</div>
-</div>
 <div class="quoteblock">
 <blockquote>
 In computer science and automata theory, the state of a digital logic circuit or computer program is a technical term for all the stored information, at a given instant in time, to which the circuit or program has access.[1] The output of a digital circuit or computer program at any time is completely determined by its current inputs and its state.
@@ -7347,12 +7331,12 @@ In computer science and automata theory, the state of a digital logic circuit or
 </div>
 </div>
 <div class="paragraph">
-<p>In all of IT (whether “infrastructure” or “applications” there is a particular concern with managing state. IT systems are remarkably fragile. One incorrect bit of information - a “0” instead of a “1” - can completely alter a system’s behavior, to the detriment of business operations depending on it.
-Therefore, any development of information technology - starting with the initial definition of the computing platform - depends on robust management of state.
-￼</p>
+<p>In all of IT (whether “infrastructure” or “applications” there is a particular concern with managing state. IT systems are remarkably fragile. One incorrect bit of information - a “0” instead of a “1” - can completely alter a system’s behavior, to the detriment of business operations depending on it.</p>
 </div>
 <div class="paragraph">
-<p>The following are examples of state:</p>
+<p>Therefore, any development of information technology - starting with the initial definition of the computing platform - depends on robust management of state.
+￼
+The following are examples of state:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -7384,10 +7368,40 @@ Therefore, any development of information technology - starting with the initial
 </ul>
 </div>
 <div class="paragraph">
+<p>Finally, we saw in the previous section some server/application/business mappings. These are also a form of state.</p>
+</div>
+<div class="paragraph">
 <p>It is therefore not possible to make blanket statements like “we need to manage state.” Computing devices go through myriads of state changes with every cycle of their internal clock. (Analog and quantum computing are out of scope for this book.)</p>
 </div>
 <div class="paragraph">
-<p>The primary question in managing state is “what matters”? What aspects of the system need to persist, in a reliable and reproducible manner? Two related concepts have emerged in the past decade: policy-based management and promise theory.</p>
+<p>The primary question in managing state is “what matters”? What aspects of the system need to persist, in a reliable and reproducible manner?</p>
+</div>
+<div class="paragraph">
+<p>In terms of OODA, determining and tracking the state of a system under investigation is one of the fundamental tools. With current practices, for example, this might mean examining the configuration management/provisioning system to determine how the basic operating system was built.</p>
+</div>
+<div class="sect4">
+<h5 id="_discovery">Discovery</h5>
+<div class="paragraph">
+<p>Closely related to monitoring is the concept of discovery. While monitoring focuses on the activity of a given system, discovery is focused on state. In particular, discovery tools Answering this question has resulting in a significant market for so-called “discovery” tools, which seek to profile the server and understand its installed software, processing patterns and communications with an objective of assigning it to some management construct, such as a high level IT application or service.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>What is the future of discovery tools?</strong>
+There is some evidence that the increasing automation of IT infrastructures will mitigate this (which?) problem. As the software pipeline becomes increasingly automated, tracking software from development through production becomes easier.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_policy_based_management">Policy-based management</h5>
+<div class="literalblock">
+<div class="content">
+<pre>[review ch 2 for overlaps]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Two important concepts have emerged in the past decade: policy-based management and promise theory.</p>
 </div>
 <div class="paragraph">
 <p>In brief, policy-based management and promise theory focus on “what,” not “how.” This may also be described as “declarative,” not “imperative” (see Sidebar).</p>
@@ -7415,36 +7429,86 @@ create example - can’t find anything decent on web
 Use directory creation example with failure of script b/c not idempotent</pre>
 </div>
 </div>
-<div class="paragraph">
-<p>In terms of OODA, determining and tracking the state of a system under investigation is one of the fundamental tools. With current practices, for example, this might mean examining the configuration management/provisioning system to determine how the basic operating system was built.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_capacity_and_performance_management">Capacity and performance management</h4>
+<div class="paragraph">
+<p>Capacity and performance management are closely related, but not identical terms encountered as IT systems scale up and encounter significant load.</p>
+</div>
+<div class="paragraph">
+<p>A capacity management system may include large quantities of data harvested from monitoring and event management systems, stored for long periods of time so that history of system utilization is understood and some degree of prediction can be ventured for upcoming utilization.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/DCUSA.Gallery10.TargetBlackFriday.Wikipedia.jpg/240px-DCUSA.Gallery10.TargetBlackFriday.Wikipedia.jpg" alt="240px DCUSA.Gallery10.TargetBlackFriday.Wikipedia">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Black Friday at Target, from <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/DCUSA.Gallery10.TargetBlackFriday.Wikipedia.jpg/240px-DCUSA.Gallery10.TargetBlackFriday.Wikipedia.jpg">Wikipedia</a></em></p>
+</div>
+<div class="paragraph">
+<p>The classic example of significant capacity utilization is the <a href="https://en.wikipedia.org/wiki/Black_Friday_(shopping)">Black Friday/Cyber Monday</a> experience of retailers. Both physical store and online ecommerce systems are placed under great strain annually around this time, with the year&#8217;s profits potentially on the line.</p>
+</div>
+<div class="sect4">
+<h5 id="_performance_management">Performance management</h5>
+<div class="paragraph">
+<p>Performance management focuses on the responsiveness (e.g. speed) of the systems being used. Responsiveness may be related to capacity utilization, but some capacity issues don&#8217;t immediately affect responsiveness. For example, a disk drive may be approaching full. When it fills, the system will immediately crash, and performance severely affected. But until then, the system performs fine. The disk needs to replaced on the basis of capacity reporting, not performance trending. On the other hand, some performance issues are not related to capacity. A mis-configured router might badly affect a web site&#8217;s performance, but the configuration simply needs to be fixed - there is no need to handle as a capacity-related issue.</p>
+</div>
+</div>
 <div class="sect4">
 <h5 id="_analytics">Analytics</h5>
 <div class="paragraph">
-<p>Measure and analyze</p>
+<p>Capacity analytics at its most advanced is a true Big Data problem domain. At a simpler level, it may consist of monitoring CPU, memory, and storage utilization across a given set of nodes, and raising alerts if certain threshholds are approached.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[examples]</pre>
+</div>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_as_a_source_of_demand">As a source of demand</h5>
 <div class="paragraph">
-<p>What do we do about it?</p>
+<p>So, what do we do when a capacity alert is raised, either through an automated system or through the manual efforts of a capacity analyst?</p>
+</div>
+<div class="paragraph">
+<p>There are a number of responses that may follow:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Acquire more capacity</p>
+</li>
+<li>
+<p>Seek to use existing capacity more efficiently</p>
+</li>
+<li>
+<p>Throttle demand somehow</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_from_incident_to_disaster_to_postmortem">From Incident to disaster to postmortem</h4>
+<h4 id="_change_and_incident_management">Change and Incident Management</h4>
+<div class="literalblock">
+<div class="content">
+<pre>[to be moved to section III]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In many discussions of Operations Management, two processes are front and center:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>include 2 dimensions of demand</p>
+<p>Change Management</p>
+</li>
+<li>
+<p>Incident Management</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>should this be Change and Incident and defer DR to ch 10?</p>
 </div>
 <div class="paragraph">
 <p>Sidebar: Introducing ITIL</p>
@@ -7452,6 +7516,10 @@ Use directory creation example with failure of script b/c not idempotent</pre>
 </div>
 <div class="sect3">
 <h4 id="_advanced_topics_in_operations">Advanced topics in operations</h4>
+<div class="sect4">
+<h5 id="_a_critique_of_the_noops_idea">A critique of the "NoOps" idea</h5>
+
+</div>
 <div class="sect4">
 <h5 id="_human_in_the_loop_problem">Human in the loop problem</h5>
 
@@ -7461,10 +7529,15 @@ Use directory creation example with failure of script b/c not idempotent</pre>
 
 </div>
 <div class="sect4">
+<h5 id="_classes_of_work">Classes of work</h5>
+
+</div>
+<div class="sect4">
 <h5 id="_theory">Theory</h5>
 <div class="literalblock">
 <div class="content">
 <pre>  * States and sense-making and risk management around state transitions
+  (Systems that are too big, complex, and fluid to be considered as having a “state”??)
   * Complexity &amp; uncertainty
   * Promise theory?
   * Burgess measuring system normality paper</pre>
@@ -7475,44 +7548,60 @@ Use directory creation example with failure of script b/c not idempotent</pre>
 <div class="sect3">
 <h4 id="_conclusion_6">Conclusion</h4>
 <div class="paragraph">
-<p>Conclusion placeholder</p>
+<p>While operations management is an integral part of "DevOps," and of a given product&#8217;s management, it is still a distinct area of concern and practice. The focus on interrupt-driven work results in different personality types being attracted to it, and different management approaches required.</p>
+</div>
+<div class="paragraph">
+<p>Operations management has a broader industry meaning, but in the narrower IT sense, includes concerns of monitoring, state and configuration management, capacity and performance concerns, and related topics.</p>
 </div>
 <div class="sect4">
 <h5 id="_discussion_questions_6">Discussion questions</h5>
-
+<div class="ulist">
+<ul>
+<li>
+<p>Have you or anyone you&#8217;ve known worked in a call center or operations center? What was it like?</p>
+</li>
+<li>
+<p>Do you prefer interrupt-driven or focused development work?</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_research_practice_6">Research &amp; practice</h5>
-
+<div class="ulist">
+<ul>
+<li>
+<p>Stand up two VMs, one with a web server, the other with Nagios or another open-source monitoring tool. Experiment with monitoring various aspects of the web server.</p>
+</li>
+<li>
+<p>In a team kanban setting, experiment with both user stories and operations requests coming into the same board or product team. What issues arise? How can you best handle the diversity of work? What if there were 10 times as much, what would you do?</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_further_reading_6">Further reading</h5>
 <div class="ulist">
 <ul>
 <li>
-<p>Allspaw</p>
+<p>Thomas A. Limoncelli, Strata R. Chalup, Christina J. Hogan, <a href="http://www.goodreads.com/book/show/23131211-the-practice-of-cloud-system-administration">The Practice of Cloud System Administration: Designing and Operating Large Distributed Systems, Volume 2</a></p>
 </li>
 <li>
-<p>Limoncelli</p>
+<p>John Allspaw, <a href="http://www.goodreads.com/book/show/8571725-web-operations">Web Operations: Keeping the Data On Time</a></p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>Kanban
-Phoenix Project</p>
 </div>
-<div class="paragraph">
-<p>Control theory basics
-Cybernetics</p>
-</div>
+<div class="sect4">
+<h5 id="_articles_posts">Articles/posts</h5>
 <div class="paragraph">
 <p><a href="https://aws.amazon.com/message/5467D2/?utm_content=buffer72a89&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer">AWS DynamoDB Fall 2015 outage</a></p>
 </div>
 <div class="paragraph">
-<p><a href="http://techironic.com/post/129767406981/the-truth-behind-building-multiple-environments-to" class="bare">http://techironic.com/post/129767406981/the-truth-behind-building-multiple-environments-to</a></p>
+<p><a href="http://techironic.com/post/129767406981/the-truth-behind-building-multiple-environments-to">The truth behind building multiple environments to run your services</a></p>
 </div>
 <div class="paragraph">
-<p>Percepetual issues &amp; HCI <a href="http://csel.eng.ohio-state.edu/woods/design/concepts/nav_problems.pdf" class="bare">http://csel.eng.ohio-state.edu/woods/design/concepts/nav_problems.pdf</a></p>
+<p><a href="http://csel.eng.ohio-state.edu/woods/design/concepts/nav_problems.pdf">Orienting in Virtual Perceptual Fields</a></p>
 </div>
 </div>
 </div>
