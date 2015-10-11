@@ -521,7 +521,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#_introduction_to_chapter_6">Introduction to Chapter 6</a></li>
 <li><a href="#_introducting_operations_management">Introducting Operations Management</a></li>
-<li><a href="#_telemetry">Telemetry</a></li>
+<li><a href="#_monitoring">Monitoring</a></li>
+<li><a href="#_from_incident_to_disaster_to_postmortem">From Incident to Disaster to Postmortem.</a></li>
+<li><a href="#_advanced_topics_in_operations">Advanced topics in operations</a></li>
 <li><a href="#_conclusion_6">Conclusion</a></li>
 </ul>
 </li>
@@ -6650,15 +6652,28 @@ I have seen various attempts and interest along these lines, but always company 
 </div>
 <div class="sect3">
 <h4 id="_introducting_operations_management">Introducting Operations Management</h4>
+<div class="imageblock">
+<div class="content">
+<img src="images/2.06-NASA-ops.jpg" alt="2.06 NASA ops">
+</div>
+</div>
+<div class="paragraph">
+<p><em>NASA Payload Operations Integraion Center</em></p>
+</div>
+<div class="paragraph">
+<p><em>Photo credit <a href="https://www.flickr.com/photos/nasamarshall/15330580364" class="bare">https://www.flickr.com/photos/nasamarshall/15330580364</a>, non-commercial</em></p>
+</div>
 <div class="paragraph">
 <p>What do we mean by operations? Operations management is a broad topic in management theory, with whole programs dedicated to it.</p>
 </div>
 <div class="paragraph">
-<p>We started to run into this in chapter 5, as we examined the topic of “work management” - in traditional operations management, the question of work is primary. However, in IT, “operations” tends to have a narrower meaning, being focused on the immediate questions of systems availability and performance trending.</p>
+<p>We started to run into this in chapter 5, as we examined the topic of “work management” - in traditional operations management, the question of work is primary. However, in IT, “operations” tends to have a more technical meaning, being focused on the immediate questions of systems integrity, availability and performance, and feedback from the user community (i.e., the service or help desk).</p>
 </div>
 <div class="paragraph">
-<p>Operations often can mean, “everything but development” in an IT context. When merged with IT into “DevOps,” one gets IT Product Management with an Agile twist. We will take a close look at the various aspects of IT operations in this chapter.
-Consider the following various definitions of “operations” in an IT context. Some are relevant to our “two pizza team” scenario, some might be more applicable to larger environments:</p>
+<p>Operations often can mean, “everything but development” in an IT context. When merged with Development into “DevOps,” one gets IT Product Management with an Agile twist. We will take a close look at the various aspects of IT operations in this chapter.</p>
+</div>
+<div class="paragraph">
+<p>Consider the following various definitions of “operations” in an IT context. Some are relevant to our “two pizza team” scenario, some might be more applicable to larger environments:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -6683,7 +6698,7 @@ Consider the following various definitions of “operations” in an IT context.
 <p>As above, the primary thing that operations does NOT do is develop new systems functionality. However, new functionality usually has operational impacts.</p>
 </div>
 <div class="paragraph">
-<p>It used to be that development was a minority of work, while operations was where the bulk of work happened. However, when an operational task becomes repetitive and risk-free, it can be automated. This continuous cycle of innovation and commoditization has driven closer and closer ties between “development” and “operations.” It also has driven confusion around exactly what is meant by “operations.”</p>
+<p>In manufacturing and other traditional industries, product development was a minority of work, while operations was where the bulk of work happened. However, when an operational task involving information becomes repetitive and risk-free, it can be automated with a computer. This continuous cycle of innovation and commoditization has driven closer and closer ties between “development” and “operations.” It also has driven confusion around exactly what is meant by “operations.”</p>
 </div>
 <div class="paragraph">
 <p>In many organizations, there is an “Infrastructure and Operations” function. Pay close attention to the naming. A matrix may help, because we have two dimensions to consider here.</p>
@@ -6756,6 +6771,9 @@ Consider the following various definitions of “operations” in an IT context.
 <p>QA</p>
 </li>
 <li>
+<p>Integration</p>
+</li>
+<li>
 <p>Performance Testing</p>
 </li>
 </ul>
@@ -6764,10 +6782,7 @@ Consider the following various definitions of “operations” in an IT context.
 <p>The final state, where value is realized, is “Production.”</p>
 </div>
 <div class="paragraph">
-<p>There is nothing sacred about the environments listed above. Others are seen. The author has heard it recommended that the term “environment” be eliminated, as it tends to result in turf wars and empire building, and potentially the waste of fixed assets (see chapter 8). Performance environments are particularly in question.</p>
-</div>
-<div class="paragraph">
-<p>Instead, in a dynamic infrastructure environment (private or public), one simply defines the kind of test one wants to perform and provisions that capacity on-demand.</p>
+<p>There is nothing sacred about the environments listed above. You will see many variations, especially at scale.</p>
 </div>
 <div class="paragraph">
 <p>The idea that one sequentially moves (”promotes”) new system functionality through a series of states to gain confidence before finally changing the state of the production system is historically well established. However, the production state is notoriously difficult to reproduce fully, especially in highly distributed environments. Therefore there is always risk in changing the state of the production system. Mitigating strategies include:</p>
@@ -6778,7 +6793,7 @@ Consider the following various definitions of “operations” in an IT context.
 <p>Extensive automated test harnesses that can quickly determine if system behavior has been unfavorably altered.</p>
 </li>
 <li>
-<p>Investing in lower environments with strategies such as service virtualization to make them appear more like production</p>
+<p>Elaborating lower environments with strategies such as service virtualization to make them appear more like production</p>
 </li>
 <li>
 <p>Hardening services against their own failure in production, or the failure of services on which they depend</p>
@@ -6797,6 +6812,15 @@ Consider the following various definitions of “operations” in an IT context.
 <div class="paragraph">
 <p>Another important development in environmental approaches is A/B testing. In this approach, the “production” environment is segregated into two or more discrete states, with different features or behaviors exposed to users in order to assess their reactions (see sidebar).</p>
 </div>
+</div>
+<div class="sect4">
+<h5 id="_do_we_need_environments_at_all">Do we need environments at all?</h5>
+<div class="paragraph">
+<p>The author has heard it recommended that the term “environment” be eliminated, as it tends to result in turf wars and empire building, and potentially the waste of fixed assets (see chapter 8). Performance environments are particularly in question.</p>
+</div>
+<div class="paragraph">
+<p>Instead, in a dynamic infrastructure environment (private or public), one simply defines the kind of test one wants to perform and provisions that capacity on-demand.</p>
+</div>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
@@ -6810,9 +6834,9 @@ Consider the following various definitions of “operations” in an IT context.
 </div>
 </div>
 </div>
-<div class="paragraph">
-<p>“Development is production”</p>
 </div>
+<div class="sect4">
+<h5 id="__development_is_production">“Development is production”</h5>
 <div class="paragraph">
 <p>On the flip side, development systems must never be treated casually.</p>
 </div>
@@ -6838,30 +6862,28 @@ Consider the following various definitions of “operations” in an IT context.
 <div class="paragraph">
 <p>But the platforms supporting the instantiation and teardown of those VMs are production platforms, supporting the business of new systems development.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>States and sense-making and risk management around state transitions</p>
-</li>
-<li>
-<p>Complexity &amp; uncertainty</p>
-</li>
-<li>
-<p>Promise theory?</p>
-</li>
-</ul>
+<div class="literalblock">
+<div class="content">
+<pre>  * States and sense-making and risk management around state transitions
+  * Complexity &amp; uncertainty
+  * Promise theory?</pre>
+</div>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_telemetry">Telemetry</h4>
-<div class="sect4">
-<h5 id="_what_is_telemetry">What is telemetry?</h5>
-
+<h4 id="_monitoring">Monitoring</h4>
+<div class="quoteblock">
+<blockquote>
+Telemetry is an automated communications process by which measurements are made and other data collected at remote or inaccessible points and transmitted to receiving equipment for monitoring. The word is derived from Greek roots: <em>tele</em> = remote, and <em>metron</em> = measure.
+</blockquote>
+<div class="attribution">
+&#8212; Wikpedia<br>
+<cite>https://en.wikipedia.org/wiki/Telemetry</cite>
 </div>
-<div class="sect4">
-<h5 id="_monitoring">Monitoring</h5>
-
+</div>
+<div class="paragraph">
+<p>Computers run in large data centers, where physical access to them is tightly controlled. Therefore, we need telemetry to manage them, more typically called monitoring.</p>
 </div>
 <div class="sect4">
 <h5 id="_aggregation_and_operations_centers">Aggregation and operations centers</h5>
@@ -6902,6 +6924,31 @@ There is some evidence that the increasing automation of IT infrastructures will
 </div>
 </div>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_from_incident_to_disaster_to_postmortem">From Incident to Disaster to Postmortem.</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>include 2 dimensions of demand</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_advanced_topics_in_operations">Advanced topics in operations</h4>
+<div class="sect4">
+<h5 id="_human_in_the_loop_problem">Human in the loop problem</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_the_feedback_loop_from_ops_to_dev">The feedback loop from ops to dev</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_theory">Theory</h5>
+
 </div>
 </div>
 <div class="sect3">
