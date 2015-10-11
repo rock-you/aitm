@@ -528,7 +528,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_introducing_operations_management">Introducing operations management</a></li>
 <li><a href="#_monitoring">Monitoring</a></li>
 <li><a href="#_capacity_and_performance_management">Capacity and performance management</a></li>
-<li><a href="#_from_incident_to_disaster_to_postmortem">From Incident to disaster to postmortem</a></li>
 <li><a href="#_advanced_topics_in_operations">Advanced topics in operations</a></li>
 <li><a href="#_conclusion_6">Conclusion</a></li>
 </ul>
@@ -6317,6 +6316,9 @@ https://t.co/2X92CFcKqU</pre>
 <div class="sect3">
 <h4 id="_the_service_desk">The service desk</h4>
 <div class="paragraph">
+<p>As a product starts to gain a user base, and as a company matures and grows, there emerges a need for human to human support. This is typically handled by a help desk or service desk.</p>
+</div>
+<div class="paragraph">
 <p>The Service Desk (aka Help Desk), is the human face of IT when the IT systems are not meeting people&#8217;s expectations. We were first briefly introduced to the concept in our Service Lifecycle:</p>
 </div>
 <div class="imageblock">
@@ -6331,6 +6333,10 @@ https://t.co/2X92CFcKqU</pre>
 <p>The service desk ideally answers each user&#8217;s request immediately, requiring no followup. If followup is required, a "ticket" is "issued."</p>
 </div>
 <div class="paragraph">
+<p>As a “help desk,” it may be focused on end user assistance and reporting Incidents;
+As a “service desk,” it may expand its purview to accepting provisioning or other requests of various types (and referring and tracking those requests). Note that in some frameworks, Service Request and Incident are considered to be distinct processes.</p>
+</div>
+<div class="paragraph">
 <p>The term "ticket" dates to paper-based industrial processes, where the "help desk" might actually be a physical desk, where a user seeking services might be issued a paper ticket. Such "tickets" were also used in field services:</p>
 </div>
 <div class="imageblock">
@@ -6341,13 +6347,42 @@ https://t.co/2X92CFcKqU</pre>
 <div class="paragraph">
 <p>In IT-centric domains, tickets are virtual; they are records in databases, not paper. The user is given a ticket "ID" or "number" for tracking (e.g., so they can inquire about the request&#8217;s status.) The ticket may be "routed" to someone to handle, but again in a virtual world what really happens is that the person it&#8217;s routed to is directed to look at the record in the database. (In paper based processes, the ticket might well be moved physically to various parties to perform the needed work.)</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>picture of service desk vs operations</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In any event, a Service Desk capability needs</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>channels for accepting contacts (e.g. telephone, email, chat),</p>
+</li>
+<li>
+<p>staffing appropriate to the volume and nature of those requests,</p>
+</li>
+<li>
+<p>robust workflow capabilities to track their progress, and</p>
+</li>
+<li>
+<p>routing and escalation mechanisms, since clarifying the true nature of contacts and getting them serviced by the most appropriate means are nontrivial challenges.</p>
 <div class="literalblock">
 <div class="content">
 <pre>[more to be written]</pre>
 </div>
 </div>
+</li>
+</ul>
+</div>
 <div class="paragraph">
-<p>See <a href="https://en.wikipedia.org/wiki/Help_desk" class="bare">https://en.wikipedia.org/wiki/Help_desk</a>.</p>
+<p>There is extensive literature on managing Service Desks; the reader is referred first to the Help Desk Institute.</p>
+</div>
+<div class="paragraph">
+<p>See also <a href="https://en.wikipedia.org/wiki/Help_desk" class="bare">https://en.wikipedia.org/wiki/Help_desk</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -6831,19 +6866,6 @@ I have seen various attempts and interest along these lines, but always company 
 <p>Defining "operations"</p>
 </li>
 <li>
-<p>Kinds of work (where is that original concept)</p>
-<div class="ulist">
-<ul>
-<li>
-<p>interrupt-driven</p>
-</li>
-<li>
-<p>etc</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
 <p>Event management and monitoring</p>
 </li>
 <li>
@@ -6853,34 +6875,20 @@ I have seen various attempts and interest along these lines, but always company 
 <p>Incidents, disasters, and everything in between</p>
 </li>
 <li>
-<p>Impact &amp; dependency</p>
-</li>
-</ul>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>Sidebar: Configuration Management and the CMDB</p>
-</div>
-</div>
-</div>
+<p>Advanced topics</p>
 <div class="ulist">
 <ul>
 <li>
-<p>State &amp; stability (Burgess?)</p>
+<p>Ops &#8594; dev feedback</p>
 </li>
 <li>
-<p>Control theory?</p>
+<p>Configuration</p>
 </li>
 <li>
-<p>Web-scale IT (first pass)</p>
+<p>Control</p>
 </li>
 <li>
-<p>Antifragility</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Chaos bestiary</p>
+<p>Web-scale IT</p>
 </li>
 </ul>
 </div>
@@ -6893,7 +6901,13 @@ I have seen various attempts and interest along these lines, but always company 
 <div class="ulist">
 <ul>
 <li>
-<p>Distinguish kinds of work, esp operational vs development</p>
+<p>Distinguish kinds of work, especially operational vs development</p>
+</li>
+<li>
+<p>Understand basics of monitoring, event management and impact</p>
+</li>
+<li>
+<p>Describe the basics of change and incident management</p>
 </li>
 <li>
 <p>Describe operational feedback into product design &amp; the kinds of concerns it raises</p>
@@ -7150,7 +7164,34 @@ Telemetry is an automated communications process by which measurements are made 
 </div>
 <div class="sect4">
 <h5 id="_monitoring_techniques">Monitoring techniques</h5>
-
+<div class="paragraph">
+<p>But how does one “observe” computing infrastructure? Clearly, sitting in the data center (assuming you could get in) and looking at the faceplates of servers will not convey much useful information. Monitoring tools are the software that watches the software (and systems more broadly).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Monitoring systems are similar to source control systems in that they are a critical point at which metadata diverges from the actual system under management.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>A variety of techniques are used to monitor computing infrastructure. Typically these involve communication over a network with the device being managed. Often, the network traffic is over the same network carrying the primary traffic of the computers. Sometimes, however, there is a distinct "out of band" network for management traffic.</p>
+</div>
+<div class="paragraph">
+<p>A classic, simple monitoring tool will simply observe a computing node, perhaps by “pinging” it periodically, and will raise an alert if the node does not respond within an expected time frame. If you are working through this course&#8217;s labs, you will see an example of this.</p>
+</div>
+<div class="paragraph">
+<p>More broadly, these tools provide a variety of mechanisms for monitoring and controlling operational IT systems, often through small software “agents” deployed to computing platforms. These agents may monitor processes and their return codes, performance metrics (e.g. memory and CPU utilization), events raised through various channels, network availability, log file contents (e.g. with standing filters for messages indicating problems), interactions with other elements in the IT infrastructure, and more.</p>
+</div>
+<div class="paragraph">
+<p>All of this data may then forwarded to a central console and integrated, with the objective of supporting the organization’s service level agreements in priority order.
+Enterprise monitoring tools are notorious for requiring agents (small, continuously-running programs) on servers; while some things can be detected without such agents, having software running on a given computer still provides the richest data. Since licensing is often agent-based, this gets expensive.</p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_aggregation_and_operations_centers">Aggregation and operations centers</h5>
@@ -7162,14 +7203,6 @@ Telemetry is an automated communications process by which measurements are made 
 </div>
 <div class="paragraph">
 <p>Enabling a monitoring console to auto-create tickets however needs to be carefully considered and designed. A notorious scenario is the “ticket storm,” where a monitoring system creates multiple (perhaps thousands) of tickets, all essentially in response to the same condition. Event de-duplication starts to become an essential capability, which leads to distinguishing the monitoring system from the event management system.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>What about Incidents?</strong>
-Some of you who may be familiar with ITIL will be asking, “why not call this an Incident?” Because we are taking an evolutionary approach, applying ITIL principles does not come into play until Section 3. This is consistent with the real world, where ITIL is more often seen in larger, more mature organizations. A simple “ticket” to track the work will suffice for now.</p>
-</div>
-</div>
 </div>
 </div>
 <div class="sect4">
@@ -7194,9 +7227,7 @@ There is some evidence that the increasing automation of IT infrastructures will
 </div>
 <div class="sect4">
 <h5 id="_understanding_business_impact">Understanding business impact</h5>
-<div class="paragraph">
-<p>org structure, matrixing, factory model, product again</p>
-</div>
+
 </div>
 </div>
 <div class="sect3">
@@ -7212,26 +7243,97 @@ There is some evidence that the increasing automation of IT infrastructures will
 <div class="paragraph">
 <p>What do we do about it?</p>
 </div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_from_incident_to_disaster_to_postmortem">From Incident to disaster to postmortem</h4>
-<div class="ulist">
-<ul>
-<li>
-<p>include 2 dimensions of demand</p>
-</li>
-</ul>
-</div>
 <div class="paragraph">
-<p>should this be Change and Incident and defer DR to ch 10?</p>
+<p>Unresolved directive in core.adoc - include::book/2-section-II/2.06-chap-6/2.06.04-incidents-disasters.adoc[]</p>
 </div>
-<div class="paragraph">
-<p>Sidebar: Introducing ITIL</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_advanced_topics_in_operations">Advanced topics in operations</h4>
+<div class="sect4">
+<h5 id="_state_and_configuration">State and configuration</h5>
+<div class="quoteblock">
+<blockquote>
+In computer science and automata theory, the state of a digital logic circuit or computer program is a technical term for all the stored information, at a given instant in time, to which the circuit or program has access.[1] The output of a digital circuit or computer program at any time is completely determined by its current inputs and its state.
+</blockquote>
+<div class="attribution">
+&#8212; Wikipedia<br>
+<cite>https://en.wikipedia.org/wiki/State_(computer_science)</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>In all of IT (whether “infrastructure” or “applications” there is a particular concern with managing state. IT systems are remarkably fragile. One incorrect bit of information - a “0” instead of a “1” - can completely alter a system’s behavior, to the detriment of business operations depending on it.
+Therefore, any development of information technology - starting with the initial definition of the computing platform - depends on robust management of state.
+￼</p>
+</div>
+<div class="paragraph">
+<p>The following are examples of state:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The name of a particular server</p>
+</li>
+<li>
+<p>The network address of that server</p>
+</li>
+<li>
+<p>The software installed on that server, in terms of the exact version and bits that comprise it.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>State also has more transient connotations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The current processes listed in the process table</p>
+</li>
+<li>
+<p>The memory allocated to each process</p>
+</li>
+<li>
+<p>The current users logged into the system</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>It is therefore not possible to make blanket statements like “we need to manage state.” Computing devices go through myriads of state changes with every cycle of their internal clock. (Analog and quantum computing are out of scope for this book.)</p>
+</div>
+<div class="paragraph">
+<p>The primary question in managing state is “what matters”? What aspects of the system need to persist, in a reliable and reproducible manner? Two related concepts have emerged in the past decade: policy-based management and promise theory.</p>
+</div>
+<div class="paragraph">
+<p>In brief, policy-based management and promise theory focus on “what,” not “how.” This may also be described as “declarative,” not “imperative” (see Sidebar).</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>A simple example of “declarative” vs “imperative”</strong></p>
+</div>
+<div class="paragraph">
+<p>Declarative: “Get me a gallon of milk.”</p>
+</div>
+<div class="paragraph">
+<p>Imperative: “Go out the door, take a right, take a left, go into the building with a big ‘SA’ on it, go in to the last aisle, take a left, go to the third case and take the first container on the fourth shelf from the bottom. Give money to the cashier and bring the container back home.”</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>In configuring infrastructure, scripting is in general considered “imperative” while advanced infrastructure automation frameworks are built using a “declarative,” policy-based approach.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>For example, the following shell script and Chef recipe do the same thing:
+create example - can’t find anything decent on web
+Use directory creation example with failure of script b/c not idempotent</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In terms of OODA, determining and tracking the state of a system under investigation is one of the fundamental tools. With current practices, for example, this might mean examining the configuration management/provisioning system to determine how the basic operating system was built.</p>
+</div>
+</div>
 <div class="sect4">
 <h5 id="_human_in_the_loop_problem">Human in the loop problem</h5>
 
@@ -7246,7 +7348,8 @@ There is some evidence that the increasing automation of IT infrastructures will
 <div class="content">
 <pre>  * States and sense-making and risk management around state transitions
   * Complexity &amp; uncertainty
-  * Promise theory?</pre>
+  * Promise theory?
+  * Burgess measuring system normality paper</pre>
 </div>
 </div>
 </div>
@@ -7910,6 +8013,9 @@ into a project for governance reasons makes sense. And when new demand (even fin
 </div>
 <div class="ulist">
 <ul>
+<li>
+<p>Disaster recovery</p>
+</li>
 <li>
 <p>Defining governance</p>
 </li>
