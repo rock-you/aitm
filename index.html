@@ -6560,7 +6560,7 @@ I have seen various attempts and interest along these lines, but always company 
 <div class="ulist">
 <ul>
 <li>
-<p>Defining "operations" (vs. product mgmt)</p>
+<p>Defining "operations"</p>
 </li>
 <li>
 <p>Kinds of work (where is that original concept)</p>
@@ -6576,24 +6576,13 @@ I have seen various attempts and interest along these lines, but always company 
 </div>
 </li>
 <li>
-<p>OODA &amp; situational awareness</p>
-<div class="ulist">
-<ul>
-<li>
 <p>Event management and monitoring</p>
 </li>
-</ul>
-</div>
+<li>
+<p>Capacity and performance management</p>
 </li>
 <li>
-<p>Classic model (24x7, oncall, etc)</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Mention ITIL (more depth in chapter 8)</p>
-</li>
-</ul>
-</div>
+<p>Incidents, disasters, and everything in between</p>
 </li>
 <li>
 <p>Impact &amp; dependency</p>
@@ -6671,7 +6660,19 @@ I have seen various attempts and interest along these lines, but always company 
 <p>We started to run into this in chapter 5, as we examined the topic of “work management” - in traditional operations management, the question of work is primary. However, in IT, “operations” tends to have a more technical meaning, being focused on the immediate questions of systems integrity, availability and performance, and feedback from the user community (i.e., the service or help desk).</p>
 </div>
 <div class="paragraph">
-<p>Operations often can mean, “everything but development” in an IT context. When merged with Development into “DevOps,” one gets IT Product Management with an Agile twist. We will take a close look at the various aspects of IT operations in this chapter.</p>
+<p>Operations often can mean, “everything but development” in an IT context. When merged with Development into “DevOps,” one gets IT Product Management with an Agile twist.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+In a digitally transformed enterprise, Operations is part of the Product.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Consider the following various definitions of “operations” in an IT context. Some are relevant to our “two pizza team” scenario, some might be more applicable to larger environments:</p>
@@ -6880,6 +6881,10 @@ Telemetry is an automated communications process by which measurements are made 
 <p>Computers run in large data centers, where physical access to them is tightly controlled. Therefore, we need telemetry to manage them, more typically called monitoring.</p>
 </div>
 <div class="sect4">
+<h5 id="_monitoring_techniques">Monitoring techniques</h5>
+
+</div>
+<div class="sect4">
 <h5 id="_aggregation_and_operations_centers">Aggregation and operations centers</h5>
 <div class="paragraph">
 <p>It is not possible for a Level 1 24 x 7 operations team to access and understand the myriads of element managers and specialized monitoring tools present in the large IT environment. Instead, these teams rely on aggregators of various kinds to provide an integrated view into the complexity. These aggregators may focus on raw status events, or specifically on performance aspects related either to the elements or to logical transactions flowing across them. They may incorporate dependencies from configuration management to provide a true “business view” into the event streams. This is directly analogous to the concept of andon board from Lean practices, or the idea of “information radiator” from Agile principles (<strong>*</strong> cite AA)</p>
@@ -6902,7 +6907,7 @@ Some of you who may be familiar with ITIL will be asking, “why not call this a
 <div class="sect4">
 <h5 id="_discovery">Discovery</h5>
 <div class="paragraph">
-<p>Closely related to monitoring is the concept of discovery. While monitoring focuses on the activity of a given system, discovery is focused on state. In particular, discovery tools are usually associated with the need to evaluate an IT infrastructure where certain aspects are unknown.</p>
+<p>Closely related to monitoring is the concept of discovery. While monitoring focuses on the activity of a given system, discovery is focused on state. In particular, discovery tools are usually associated with the need to evaluate an IT infrastructure where certain aspects are unknown, for example what a server is being used for.</p>
 </div>
 <div class="paragraph">
 <p>This may be surprising to new students, and perhaps those with experience in smaller organizations. However, in many large “traditional” IT environments, where the operations team is distant from the development organization, it is not necessarily easy to determine what a given hardware or software resource is doing or why it is there.</p>
@@ -6917,6 +6922,12 @@ Some of you who may be familiar with ITIL will be asking, “why not call this a
 There is some evidence that the increasing automation of IT infrastructures will mitigate this (which?) problem. As the software pipeline becomes increasingly automated, tracking software from development through production becomes easier.</p>
 </div>
 </div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_understanding_business_impact">Understanding business impact</h5>
+<div class="paragraph">
+<p>org structure, matrixing, factory model, product again</p>
 </div>
 </div>
 </div>
@@ -6943,6 +6954,12 @@ There is some evidence that the increasing automation of IT infrastructures will
 <p>include 2 dimensions of demand</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>should this be Change and Incident and defer DR to ch 10?</p>
+</div>
+<div class="paragraph">
+<p>Sidebar: Introducing ITIL</p>
 </div>
 </div>
 <div class="sect3">
