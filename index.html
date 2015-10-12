@@ -524,7 +524,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_monitoring">Monitoring</a></li>
 <li><a href="#_state_configuration_and_discovery">State, configuration, and discovery</a></li>
 <li><a href="#_capacity_and_performance_management">Capacity and performance management</a></li>
-<li><a href="#_change_and_incident_management">Change and Incident Management</a></li>
+<li><a href="#_other_operations_techniques_and_tools">Other operations techniques and tools</a></li>
 <li><a href="#_advanced_topics_in_operations">Advanced topics in operations</a></li>
 <li><a href="#_conclusion_6">Conclusion</a></li>
 </ul>
@@ -6127,7 +6127,7 @@ As a “service desk,” it may expand its purview to accepting provisioning or 
 <p>routing and escalation mechanisms, since clarifying the true nature of contacts and getting them serviced by the most appropriate means are nontrivial challenges.</p>
 <div class="literalblock">
 <div class="content">
-<pre>[more to be written]</pre>
+<pre>[more to be written e.g. provide an example of escalation]</pre>
 </div>
 </div>
 </li>
@@ -6664,7 +6664,7 @@ I have seen various attempts and interest along these lines, but always company 
 </div>
 </div>
 <div class="paragraph">
-<p><em>NASA Payload Operations Integraion Center</em></p>
+<p><em>NASA Payload Operations Integration Center</em></p>
 </div>
 <div class="paragraph">
 <p><em>Photo credit <a href="https://www.flickr.com/photos/nasamarshall/15330580364" class="bare">https://www.flickr.com/photos/nasamarshall/15330580364</a>, non-commercial</em></p>
@@ -6748,6 +6748,54 @@ In a digitally transformed enterprise, Operations is part of the Product.
 </tbody>
 </table>
 <div class="sect4">
+<h5 id="_a_day_in_the_life">A day in the life</h5>
+<div class="paragraph">
+<p>A duty-oriented, physical presence in the service of executing particular tasks is an unchanging aspect of operational responsibility. The tasks may support broader goals and strategies, and need to be systematically discharged.</p>
+</div>
+<div class="paragraph">
+<p>What do we mean by this?</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Systems operators sitting in 24x7 operations centers, monitoring system status and responding to alerts</p>
+</li>
+<li>
+<p>Field technicians executing work orders (install a new PC, fix a printer, service a cell tower antenna)</p>
+</li>
+<li>
+<p>Help desk representatives responding to user inquiries</p>
+</li>
+<li>
+<p>Developers and engineers wearing pagers on a rotating basis to respond to systems outages referred to them by the operations center.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Limoncelli, Strata, and Hogan, in their excellent <em>Cloud Systems Administration</em>, emphasize the role of the "oncall" and "onduty" staff in the service of operations. Oncall staff have a primary responsibility of emergency response, and the term oncall refers to their continuous availability, even if they are not otherwise working (e.g., they are expected to pick up phone calls and pages at home and dial into emergency communications channels). Onduty staff</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Emergency vs non-emergency - it&#8217;s all a matter of expectations</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A brief look at terminology (Incident, Problem, Issue, Defect, Request)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>At the end of the day, we need to remember that operational work is just one form of work. In the classic model, developers built systems and "threw them over the wall" to operations. Each side had specialized processes and technology supporting their particular concerns.</p>
+</div>
+<div class="paragraph">
+<p>Now, companies undergoing digital transformation are experimenting with many different models; as we will see in Section III, up to and including the complete merging of Development and Operations-oriented skills under common product management.</p>
+</div>
+</div>
+<div class="sect4">
 <h5 id="_environments_and_the_fierce_god_of_production">Environments and the fierce god of "Production"</h5>
 <div class="quoteblock">
 <blockquote>
@@ -6764,7 +6812,7 @@ In a digitally transformed enterprise, Operations is part of the Product.
 <p>How do things get to be “in production”? What do we mean by that?</p>
 </div>
 <div class="paragraph">
-<p>First, let’s get back to our fundamental principle that there is an IT system some human is interacting with. This system can be of any scale, but fundamentally we are able to conceive of it having a “state.”</p>
+<p>First, let’s get back to our fundamental principle that there is an IT system delivering some "moment of truth" to someone. This system can be of any scale, but fundamentally we are able to conceive of it having a “state.” (See http::/url[State, Configuration, and Discovery].)</p>
 </div>
 <div class="paragraph">
 <p>When we want to change the behavior of this system, we are cautious. We reproduce the system at varying levels of fidelity and experiment with potential changes. This is called development.</p>
@@ -7223,27 +7271,45 @@ Use directory creation example with failure of script b/c not idempotent</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_change_and_incident_management">Change and Incident Management</h4>
-<div class="literalblock">
-<div class="content">
-<pre>[to be moved to section III]</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>In many discussions of Operations Management, two processes are front and center:</p>
-</div>
+<h4 id="_other_operations_techniques_and_tools">Other operations techniques and tools</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>Change Management</p>
+<p>Communications channels</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Conference bridges</p>
 </li>
 <li>
-<p>Incident Management</p>
+<p>Instant messaging &amp; chat</p>
+</li>
+<li>
+<p>Email</p>
+</li>
+<li>
+<p>Cell phone</p>
+</li>
+<li>
+<p>Paging</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>Sidebar: Introducing ITIL</p>
+</li>
+<li>
+<p>Record keeping</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Running incident logs</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Post-mortems</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -7258,6 +7324,10 @@ Use directory creation example with failure of script b/c not idempotent</pre>
 </div>
 <div class="sect4">
 <h5 id="_the_feedback_loop_from_ops_to_dev">The feedback loop from ops to dev</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_re_visiting_dual_axis">Re-visiting dual-axis</h5>
 
 </div>
 <div class="sect4">
@@ -8526,7 +8596,7 @@ IEEE Press.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-08-21 08:27:34 CDT
+Last updated 2015-08-08 00:02:45 EDT
 </div>
 </div>
 </body>
