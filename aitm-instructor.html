@@ -557,7 +557,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_introduction_to_chapter_8">Introduction to Chapter 8</a></li>
 <li><a href="#_why_project_management">Why project management?</a></li>
 <li><a href="#_principles_and_theories_of_project_management">Principles and theories of project management</a></li>
-<li><a href="#_product_versus_project_management">Product versus project management</a></li>
 <li><a href="#_it_sourcing">IT sourcing</a></li>
 <li><a href="#_it_resource_management">IT resource management</a></li>
 <li><a href="#_it_financial_management">IT financial management</a></li>
@@ -9115,10 +9114,10 @@ A project is a temporary endeavor undertaken to create a unique product, service
 <p>Project management is traditionally defined as the execution of a given scope of work within constraints of time and budget. As we have seen in our discussions of product management, in implementing truly new IT-based products, estimating time and budget can be difficult because <strong>the necessary information is not available</strong>. In fact, creating it is the actual work of the "project". Therefore, in the new Agile world, there is some uncertainty as to the role and even need for traditional project management.</p>
 </div>
 <div class="paragraph">
-<p>However, at a practical level, project managers remain important roles and are employed at both "unicorn" and "horse" companies as overall orchestrators of complex initiatives. Financial planning and resource management have not gone away and without project management, financial planning meets difficult challenges. The very concept of having a vision becomes problematic without some ability to plan.</p>
+<p>However, at a practical level, project managers remain important roles and are employed at both "unicorn" and "horse" companies as overall orchestrators of complex initiatives. Financial planning and resource management have not gone away and without project management, financial planning meets challenges, especially regarding the most ambitious efforts, the ones most critical to the business. The very concept of having a vision becomes problematic without some ability to plan.</p>
 </div>
 <div class="paragraph">
-<p>Because of this, this chapter also covers IT financial management, sourcing, and human resource management at a very introductory level.</p>
+<p>Because of this, this chapter also covers IT financial management, sourcing, and human resource management at an introductory level.</p>
 </div>
 <div class="sect3">
 <h4 id="_introduction_to_chapter_8">Introduction to Chapter 8</h4>
@@ -9293,18 +9292,101 @@ An ongoing work effort is generally a repetitive process that follows an organiz
 <cite>version 5</cite>
 </div>
 </div>
-<div class="quoteblock">
-<blockquote>
-Agile is having a profound impact on the project management profession and will cause us to fundamentally rethink many of the well-established notions of what a project manager is&#8230;&#8203;
-</blockquote>
-<div class="attribution">
-&#8212; Charles G. Cobb<br>
-<cite>The Project Manager's Guide to Mastering Agile: Principles and Practices for an Adaptive Approach</cite>
+<div class="paragraph">
+<p>Project management, like many other areas of IT practice, is undergoing considerable transformation in response to the Agile transition. However, it will likely remain an important tool for value delivery at various scales. There is little doubt the student pursuing an IT career will encounter project managers and their techniques at some point. Rather than a dogmatic "project management bad" approach, this book will discuss the fundamental premises and techniques of project management, in the context of Agile transformation.</p>
+</div>
+<div class="sect4">
+<h5 id="_what_is_a_project">What is a project?</h5>
+<div class="paragraph">
+<p>Let&#8217;s start with the most fundamental aspects of a project. Essentially, a project can be seen as little more than a "to-do" list. However, rather than a miscellaneous list of errands, it is a to-do list that is aimed at delivering some overall end result.</p>
+</div>
+<div class="paragraph">
+<p>So, comparing to your daily life, a random list of to-dos isn&#8217;t a project, but if you are organizing your annual holiday party, that certainly would qualify as a project.</p>
+</div>
+<div class="paragraph">
+<p>We could start with the following list:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Choose menu</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Clean house before party</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Get groceries</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fix food</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Decorate house</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Send invitations</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Choose date</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Clean up after party</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>One of the important characteristics of a project is that it is temporary. This project ends when we clean up after the party - not the most fun part.</p>
+</div>
+<div class="paragraph">
+<p>Project management however takes things much further. There are a number of ways that the list above can be refined using project management techniques.</p>
+</div>
+<div class="paragraph">
+<p>First, we should probably organize the list a little better. And the task "clean house" - do we understand precisely what we mean by that? Maybe we should break this down into sub-tasks. There is also a question about "choose menu" - isn&#8217;t the menu part of the project plan? Also, you may notice that there are "dependencies." For example, we can&#8217;t send out invitations before we choose the date, nor can we fix the party food before we get groceries.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s break out the heavyweight tools. Introducing Microsoft Project:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3.08-ms-proj-1.png" alt="3.08 ms proj 1">
 </div>
 </div>
 <div class="paragraph">
-<p>Project management, like many other areas of IT practice, is undergoing considerable transformation in response to the Agile transition. However, it will likely remain an important tool for value delivery at various scales. There is little doubt the student pursuing an IT career will encounter project managers and their techniques at some point. Rather than a dogmatic "project management bad, product management good" approach, this book will discuss the fundamental premises and techniques of project management, in the context of Agile transformation.</p>
+<p>First, let&#8217;s set up some sub-tasks and document the dependencies:</p>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3.08-ms-proj-2.png" alt="3.08 ms proj 2">
+</div>
+</div>
+<div class="paragraph">
+<p>Notice the bold headings:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Clean house before party</strong></p>
+</li>
+<li>
+<p><strong>Food for party</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>and how they have indented "sub-tasks" underneath them. These are all the things that need to be completed, for the overall major task to be considered complete.</p>
+</div>
+<div class="paragraph">
+<p>For example, we can&#8217;t call the house clean if the dining room isn&#8217;t vacuumed.</p>
+</div>
+<div class="paragraph">
+<p>Also notice that, to the right, we see certain tasks are linked. We are not going to decorate the house until all the cleaning is done, and we need to get the food prepared before we have the party.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_what_is_project_management">What is project management?</h5>
 <div class="paragraph">
 <p>Review:</p>
 </div>
@@ -9348,6 +9430,7 @@ Agile is having a profound impact on the project management profession and will 
 </div>
 </li>
 </ul>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -9471,49 +9554,9 @@ The above diagram resembles the Rational Unified Process <a href="#link">[link]<
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_product_versus_project_management">Product versus project management</h4>
-<div class="quoteblock">
-<blockquote>
-What’s typically underestimated is the complexity and indivisibility of many large-scale coordination tasks.
-</blockquote>
-<div class="attribution">
-&#8212; Gary Hamel<br>
-<cite>preface to the Open Organization: Igniting Passion and Performance</cite>
-</div>
-</div>
-<div class="quoteblock">
-<blockquote>
-When risk and uncertainty are present with ongoing demand, like in the case of architectural changes and related high-stake decisions, batching demand into a project for governance reasons makes sense&#8230;&#8203;
-</blockquote>
-<div class="attribution">
-&#8212; Mark Kennaley<br>
-<cite>SDLC 3.0</cite>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_pm_still_needed_in_an_agile_product_centric_world">PM still needed in an Agile, product-centric world?</h5>
-<div class="quoteblock">
-<blockquote>
-Where leveraging yellow stickies or index cards makes sense in conjunction with practices like big visible charts and co-location, such formats become ridiculous for a large constituency of challenging projects . . . When faced with these challenges, rather than proclaim that Agile won&#8217;t work or doesn&#8217;t scale, the preferable approach is to understand and acknowledge the nature of collaboration, the nature of distributed workflow, and the complexity of modern product development.
-</blockquote>
-<div class="attribution">
-&#8212; Mark Kennaley<br>
-<cite>SDLC 3.0</cite>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_project_management_antipatterns">Project management antipatterns</h5>
 <div class="paragraph">
-<p>The estimation controversy (sidebar?)</p>
+<p>Unresolved directive in core.adoc - include::book/3-section-III/3.08-chap-8/3.08.03-project-v-product.adoc[]</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_the_future_of_project_management">The future of project management</h5>
-
 </div>
 </div>
 <div class="sect3">
