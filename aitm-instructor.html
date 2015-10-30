@@ -1449,22 +1449,22 @@ There are hundreds of books on Agile. In this section I will seek to credit spec
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Chapter 10</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Architecture &amp; governance</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise architecture &amp; risk mgmt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Archi (open source modeling tool)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Security, governance, risk, and compliance</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Chapter 11</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Portfolio and analytics</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enterprise Information Management</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Portfolio simulation</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Porfolio simulation with R?</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Chapter 12</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Complexity and chaos</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Complex Incident Simulation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Architecture and portfolio</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Archi (open source modeling tool)</p></td>
 <td class="tableblock halign-left valign-top"></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
 </tr>
@@ -5828,6 +5828,9 @@ Professional
 </div>
 <div class="sect2">
 <h3 id="_chapter_5_work_management">Chapter 5: Work Management</h3>
+<div class="paragraph">
+<p><a id="2.05.00-work-management"></a></p>
+</div>
 <div class="sect3">
 <h4 id="_introduction_to_chapter_5">Introduction to Chapter 5</h4>
 <div class="admonitionblock note">
@@ -7513,6 +7516,9 @@ Enterprise monitoring tools are notorious for requiring agents (small, continuou
 </div>
 <div class="sect3">
 <h4 id="_state_configuration_and_discovery">State, configuration, and discovery</h4>
+<div class="paragraph">
+<p><a id="2.06.03-state"></a></p>
+</div>
 <div class="quoteblock">
 <blockquote>
 In computer science and automata theory, the state of a digital logic circuit or computer program is a technical term for all the stored information, at a given instant in time, to which the circuit or program has access.[1] The output of a digital circuit or computer program at any time is completely determined by its current inputs and its state.
@@ -7788,7 +7794,7 @@ Use directory creation example with failure of script b/c not idempotent</pre>
 
 </div>
 <div class="sect4">
-<h5 id="_theory">Theory</h5>
+<h5 id="_deeper_theory">Deeper theory</h5>
 <div class="literalblock">
 <div class="content">
 <pre>  * States and sense-making and risk management around state transitions
@@ -9578,10 +9584,98 @@ RFI stands for <a href="https://en.wikipedia.org/wiki/Request_for_information">R
 <p>However, project management (NOT restricted to IT) is a defined area of study, theory, and professional practice. This section provides a (necessarily brief) overview of these topics.</p>
 </div>
 <div class="paragraph">
-<p>We will discuss the Project Management Body of Knowledge, which is the leading industry framework in project management, at least in the United States. (PRINCE2 is another framework, originating from the UK, which will not be covered in this edition.)</p>
+<p>We will first discuss the author&#8217;s own framework for understanding project demand holistically in the context of other forms of demand.</p>
 </div>
 <div class="paragraph">
-<p>We will also discuss the author&#8217;s own framework for understanding project demand holistically in the context of other forms of demand. We will compare project execution to more general problems of scheduling and execution, and finally we will take a brief look at Eli Goldratt&#8217;s Critical Chain.</p>
+<p>We will then discuss the Project Management Body of Knowledge, which is the leading industry framework in project management, at least in the United States. (PRINCE2 is another framework, originating from the UK, which will not be covered in this edition.)</p>
+</div>
+<div class="paragraph">
+<p>We will compare project execution to more general problems of scheduling and execution, and finally we will take a brief look at Eli Goldratt&#8217;s Critical Chain.</p>
+</div>
+<div class="sect4">
+<h5 id="_the_two_dimensions_of_demand_management">The two dimensions of demand management</h5>
+<div class="paragraph">
+<p>Project management is our first major specialization of <a href="#2.05.00-work-management">Chapter 5</a>'s general concept of "work management." (We will turn to process management in the next chapter.) In the interest of keeping project management firmly in context, consider the following two-dimensional analysis:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3.08-2d-demand.png" alt="3.08 2d demand">
+</div>
+</div>
+<div class="paragraph">
+<p>You should spend some time considering the graphic, which provides a unique way of understanding the work you are now experiencing as a "team of teams" or "manager of managers" in an IT-dependent environment of increasing size and complexity.</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;ve come a long ways from the last section&#8217;s insistence that "it&#8217;s all just work." But there still is an essential truth there. Regardless of the abstract label we put on a given activity, it represents some set of tasks or objectives that real people are going to take time to perform, and expect to be compensated for. Retaining a clear realization of this is essential to maintaining truly business-aligned IT management.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s consider the various forms that demand may take. While this may not be project management per se, it&#8217;s essential to putting project management in a broader context. This will also help you develop a deeper understanding of an <strong>architecture of IT management</strong>, a topic the author has explored in other works.<a href="#Betz2011">[Betz2011]</a></p>
+</div>
+<div class="paragraph">
+<p>The diagram has two dimensions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Planning</p>
+</li>
+<li>
+<p>Granularity</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The bubbles represent a "space" where one is likely to find that kind of work. As indicated by the central diagonal, it reflects an assumption that larger amounts of work are more likely to be planned further in advance. However, this is not always true. A large, unwelcome amount of required work that shows up with no planning is probably a disaster. Desired work (in the form of transactional demand) may also spike.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[The following table is work in process, currently with just a few examples filled in]</pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type of work</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Core transactional demand</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This is the demand on the fully automated IT system for a given moment of truth: a banking account lookup, a streaming movie, a Human Resources record update</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Routine service requests and incidents</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Service requests are predefined, process-driven work items, rarely requiring creative thought or analysis. Incidents span a spectrum, but some are simpler and more routine than others, especially those stemming from user misunderstanding or error.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Changes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Changes represent modifications of established IT functionality or <a href="#2.06.03-state">state</a>. They represent some definite risk to one or more IT services, which is why they are planned on a longer lead time. However, they ideally remain relatively granular, which helps reduce their risk.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Routine releases, stories, reports</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Releases and (in the Agile world) stories represent larger increments of functionality</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Services and Projects</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A Project is a large, planned amount of work with a defined end date. It might create a Service, which also represents a commitment to a large, ongoing amount of work, perhaps comparable in scope to the Project.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Severe incidents</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Severe incidents by definition are not planned. But they represent a significant amount of work to overcome.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Some forms of work may lead to other forms of work. For example, Projets may manifest as Stories, Releases, and Changes. This complicates the diagram a bit; we don&#8217;t want to "double-count" work effort. But not all Releases derive from Projects, and not all Project work (especially in complex environments) can be cleanly reduced to a set of smaller tasks.</p>
+</div>
+<div class="paragraph">
+<p>The final point of this diagram: you only have so much capacity to execute the work it implies. If you have a disaster, it may impact your ability to deliver user stories, changes, or even meet transactional demand. Trade-offs must be considered.</p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_the_project_management_body_of_knowledge">The Project Management Body of Knowledge</h5>
@@ -9715,17 +9809,7 @@ A framework is a formalized body of knowledge, usually sustained by some appropr
 </div>
 </div>
 <div class="sect4">
-<h5 id="_the_two_dimensions_of_demand_management">The two dimensions of demand management</h5>
-
-</div>
-<div class="sect4">
 <h5 id="_scheduling_and_execution">Scheduling and execution</h5>
-<div class="paragraph">
-<p>Turning to the problem of transactional friction:</p>
-</div>
-<div class="paragraph">
-<p>This problem is distinct from the problem of feedback. It is also a bit more obvious on a tactical level. The most common response is project management.</p>
-</div>
 <div class="paragraph">
 <p>To understand how project management works across a functionally organized system, consider the internals of each functional area:</p>
 </div>
@@ -9806,19 +9890,13 @@ The above diagram resembles the Rational Unified Process <a href="#link">[link]<
 <div class="paragraph">
 <p>The project manager is expected to manage the uncertain handoffs between the various functional areas, and anticipate resource requirements stemming from unexpected feedback demands.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>fractional allocations</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>[the above section should probably move to chapter 8]</pre>
-</div>
-</div>
 </div>
 <div class="sect4">
-<h5 id="_critical_chain_related_topics">Critical chain &amp; related topics</h5>
+<h5 id="_the_problem_of_fractional_allocation">The problem of fractional allocation</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_critical_chain_related_topics_to_be_written">Critical chain &amp; related topics [to be written]</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -9828,7 +9906,7 @@ The above diagram resembles the Rational Unified Process <a href="#link">[link]<
 <p>Last responsible moment</p>
 </li>
 <li>
-<p>Reinertsen&#8217;s critique</p>
+<p>Reinertsen&#8217;s critique of CC</p>
 </li>
 </ul>
 </div>
@@ -9845,8 +9923,6 @@ Agile is having a profound impact on the project management profession and will 
 <cite>The Project Manager's Guide to Mastering Agile: Principles and Practices for an Adaptive Approach</cite>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_product_versus_project_management">Product versus project management</h5>
 <div class="quoteblock">
 <blockquote>
 What’s typically underestimated is the complexity and indivisibility of many large-scale coordination tasks.
@@ -9856,6 +9932,24 @@ What’s typically underestimated is the complexity and indivisibility of many l
 <cite>preface to the Open Organization: Igniting Passion and Performance</cite>
 </div>
 </div>
+<div class="paragraph">
+<p>As the above quote indicates, project management is under pressure from the Agile movement. Project management professionals are advised to not deny or diminish this fact. It is possible for a modern, IT-centric organization to make considerable progress on the basis of product plus simple work management, without the overhead of the formalized project lifecycle suggested by PMBOK.</p>
+</div>
+<div class="paragraph">
+<p>So, a couple questions emerge:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Under what circumstances does formalized project management make economic sense?</p>
+</li>
+<li>
+<p>Assuming that formalized project management is employed, how does one retain values such as fast feedback and adaptability?</p>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="_pm_still_needed_in_an_agile_product_centric_world">PM still needed in an Agile, product-centric world?</h5>
 <div class="quoteblock">
 <blockquote>
 When risk and uncertainty are present with ongoing demand, like in the case of architectural changes and related high-stake decisions, batching demand into a project for governance reasons makes sense&#8230;&#8203;
@@ -9865,9 +9959,21 @@ When risk and uncertainty are present with ongoing demand, like in the case of a
 <cite>SDLC 3.0</cite>
 </div>
 </div>
+<div class="paragraph">
+<p>Kennaley, above, provides some reasoning for project management. Ironically, he uses the term "batch," which is often a concept unfavorably viewed in Agile and Lean circles.</p>
+</div>
+<div class="paragraph">
+<p>However, when a system presents multiple constraints that need to be solved simultaneously, the only way to do this with confidence is as a "batch" of thought and analysis. If one needs to balance several competing objectives, one may need to know how a given course of action will affect all of them before embarking. Solving for one constraint, and embarking on a plan of action, may result in not meeting the other constraints, and having to throw the whole solution away.</p>
+</div>
+<div class="paragraph">
+<p>Dogmatic approaches to solving this are unhelpful.  Multi-constraint optimization is a known problem in systems engineering and cannot be wished away through merely invoking the word "Agile."</p>
+</div>
+<div class="paragraph">
+<p>Not all problems respond to iteration. Iterative solutions may make sense in some cases; in other cases, a higher degree of certainty is required before any solutioning is attempted. Attempting to iteratively refine a given solution may result in completely missing a higher order mode in a complex space.</p>
+</div>
 </div>
 <div class="sect4">
-<h5 id="_pm_still_needed_in_an_agile_product_centric_world">PM still needed in an Agile, product-centric world?</h5>
+<h5 id="_collaboration_at_scale">Collaboration at scale</h5>
 <div class="quoteblock">
 <blockquote>
 Where leveraging yellow stickies or index cards makes sense in conjunction with practices like big visible charts and co-location, such formats become ridiculous for a large constituency of challenging projects . . . When faced with these challenges, rather than proclaim that Agile won&#8217;t work or doesn&#8217;t scale, the preferable approach is to understand and acknowledge the nature of collaboration, the nature of distributed workflow, and the complexity of modern product development.
@@ -9878,39 +9984,10 @@ Where leveraging yellow stickies or index cards makes sense in conjunction with 
 </div>
 </div>
 <div class="paragraph">
-<p>Limoncelli - IT in old days would spin up a system with a project team and then operate it unchanged</p>
-</div>
-<div class="paragraph">
-<p>but now, that kind of functionality is delivered by online service providers -</p>
-</div>
-<div class="paragraph">
-<p>meaning that more and more internal IT is differentiating and requires those skills</p>
-</div>
-<div class="paragraph">
-<p>not just "stick some vendor delivered software on a box and run it"</p>
+<p>Limoncelli - IT in old days would spin up a system with a project team and then operate it unchanged but now, that kind of functionality is delivered by online service providers - meaning that more and more internal IT is differentiating and requires those skills not just "stick some vendor delivered software on a box and run it"</p>
 </div>
 <div class="paragraph">
 <p>ultimately, the decision of EA&#8230;&#8203;</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>basic concerns and disciplines</p>
-</li>
-<li>
-<p>PMBOK etc (also covered in Appendix)</p>
-</li>
-<li>
-<p>PM relationships w/IT &amp; Agile</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Impact of Cloud on project management</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
 </div>
 </div>
 <div class="sect4">
@@ -9981,11 +10058,39 @@ Where leveraging yellow stickies or index cards makes sense in conjunction with 
 <h4 id="_conclusion_8">Conclusion</h4>
 <div class="sect4">
 <h5 id="_discussion_questions_8">Discussion questions</h5>
-
+<div class="ulist">
+<ul>
+<li>
+<p>Imagine yourself in an organization that recognized product management and work management, but had no concept of project management. Describe a scenario where project management would be a reasoanble technique to introduce.</p>
+</li>
+<li>
+<p>What experience do you or your team members have with project management? How effective did you find it?</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_research_practice_8">Research &amp; practice</h5>
-
+<div class="ulist">
+<ul>
+<li>
+<p>Compare Microsoft Project with one of the following. What are the pros and cons?</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Rally</p>
+</li>
+<li>
+<p>Jira</p>
+</li>
+<li>
+<p>????</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_further_reading_8">Further reading</h5>
@@ -10269,15 +10374,6 @@ One organization enthusiastically embraced process improvement, with good reason
 </div>
 <div class="paragraph">
 <p>But you have great resources at your command, and you&#8217;re as well positioned as any of your competitors to meet the challenges ahead. And in the end, that&#8217;s all you need.</p>
-</div>
-<div class="paragraph">
-<p><strong>Special section: The elaborated IT organization</strong>
-The laundry lists
-supporting functions (sourcing&#8230;&#8203;)</p>
-</div>
-<div class="paragraph">
-<p>IVI
-IT4IT</p>
 </div>
 <div class="paragraph">
 <p><strong>Chapter 10: Security, Governance, Risk, and Compliance</strong></p>
