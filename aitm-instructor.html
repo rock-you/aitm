@@ -975,22 +975,6 @@ Filtering Lean/Agile through a project management lens tends to reduce it to dev
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><em>positioning this book vis a vis systems engineering, computer science, etc - is there some kind of matrix?</em></p>
-</div>
-<div class="paragraph">
-<p>Omissions in this book:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Big data</p>
-</li>
-<li>
-<p>Security</p>
-</li>
-</ul>
-</div>
 <div class="sect3">
 <h4 id="_current_textbooks">Current textbooks</h4>
 <div class="sidebarblock">
@@ -3517,6 +3501,9 @@ It is not always easy to apply this approach in practice. There can be edge case
 <li>
 <p><a href="http://www.wired.com/2015/09/google-2-billion-lines-codeand-one-place/">Google Is 2 Billion Lines of Code—And It’s All in One Place</a></p>
 </li>
+<li>
+<p><a href="http://continuousdelivery.com/2011/07/on-dvcs-continuous-integration-and-feature-branches/">On DVCS, continuous integration, and feature branches</a></p>
+</li>
 </ul>
 </div>
 </div>
@@ -5282,7 +5269,8 @@ Everyone designs who devises courses of action aimed at changing existing situat
 <p>The presence of a section entitled "product design" in this book is a marked departure from other IT management textbooks. "Traditional" models of IT delivery focus on projects and deliverables, concepts we will not explore until chapter 8.</p>
 </div>
 <div class="paragraph">
-<p>However, the ideas of projects and deliverables represent approaches that are more open-loop, or at least delayed in feedback. Design processes do not perform well when feedback is delayed.</p>
+<p>However, the ideas of projects and deliverables represent approaches that are more open-loop, or at least delayed in feedback. Design processes do not perform well when feedback is delayed.
+ [point back to system intent section in chapter 3, this is elaboration]</p>
 </div>
 <div class="sect4">
 <h5 id="_lean_startup">Lean Startup</h5>
@@ -5331,7 +5319,10 @@ The goal of a startup is to figure out the right thing to build— the thing cus
 <h5 id="_impact_mapping">Impact mapping</h5>
 <div class="literalblock">
 <div class="content">
-<pre>[TBW]</pre>
+<pre>[TBW]
+* INVEST
+* MoSCoW
+* 5 Whys</pre>
 </div>
 </div>
 </div>
@@ -5971,13 +5962,13 @@ As two more assistants were added, however, coordination problems did arise. One
 </div>
 </div>
 <div class="paragraph">
-<p>Work management may start with verbal requests, emails, even postal mail. The design process may result in a wide variety of deliverables that also initiate work activity. And as your product matures, the product itself generates both routine and non-routine work. Some of the work depends on other work getting done. Sometimes you do not realize this immediately. All of this needs to be tracked.</p>
+<p>Work management may start with verbal requests, emails, even postal mail. The design process may result in a wide variety of deliverables that also initiate work activity. As your product matures, the product itself generates both routine and non-routine work. Some of the work depends on other work getting done. Sometimes you do not realize this immediately. All of this needs to be tracked.</p>
 </div>
 <div class="paragraph">
 <p>If you ask your colleague to do one thing, and she doesn’t have anything else to do, it’s likely that the two of you will remember. If you ask her to do four things over a few days, you <strong>might</strong> both still remember. But if you are asking for new things every day, it is likely that some things will get missed.</p>
 </div>
 <div class="paragraph">
-<p>You each might start keeping your own “to do” list and this can handle a dozen or two dozen tasks.</p>
+<p>You each might start keeping your own “to do” list, and this mechanism can handle a dozen or two dozen tasks.</p>
 </div>
 <div class="paragraph">
 <p>Consider an example of three people, each with their own to do list:</p>
@@ -6064,13 +6055,13 @@ Reification generally refers to making something real, bringing something into b
 <div class="ulist">
 <ul>
 <li>
-<p>Finish what you start, if you can, before starting anything else</p>
+<p>Finish what you start, if you can, before starting anything else.</p>
 </li>
 <li>
 <p>Infinitely long to-do lists (backlog) sap motivation. Consider limiting backlog as well as work in process.</p>
 </li>
 <li>
-<p>Visibility into work in progress is important for the collective mental model of the team</p>
+<p>Visibility into work in progress is important for the collective mental model of the team.</p>
 </li>
 </ul>
 </div>
@@ -7132,7 +7123,7 @@ In a digitally transformed enterprise, Operations is part of the Product.
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Infrastructure layer</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Engineering team. Infrastructure platform engineering and development (design and build typically of externally sourced products)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Engineering team. Infrastructure platform engineering and development (design and build typically of externally sourced products).</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Operations center. Operational support, including monitoring system status. May monitor both infrastructure and application layers.</p></td>
 </tr>
 </tbody>
@@ -7148,13 +7139,13 @@ In a digitally transformed enterprise, Operations is part of the Product.
 <div class="ulist">
 <ul>
 <li>
-<p>Systems operators sitting in 24x7 operations centers, monitoring system status and responding to alerts</p>
+<p>Systems operators sitting in 24x7 operations centers, monitoring system status and responding to alerts.</p>
 </li>
 <li>
-<p>Field technicians executing work orders (install a new PC, fix a printer, service a cell tower antenna)</p>
+<p>Field technicians executing work orders (install a new PC, fix a printer, service a cell tower antenna).</p>
 </li>
 <li>
-<p>Help desk representatives responding to user inquiries</p>
+<p>Help desk representatives responding to user inquiries.</p>
 </li>
 <li>
 <p>Developers and engineers wearing pagers on a rotating basis to respond to systems outages referred to them by the operations center.</p>
@@ -7249,19 +7240,19 @@ In a digitally transformed enterprise, Operations is part of the Product.
 <p>Extensive automated test harnesses that can quickly determine if system behavior has been unfavorably altered.</p>
 </li>
 <li>
-<p>Elaborating lower environments with strategies such as service virtualization to make them appear more like production</p>
+<p>Elaborating lower environments with strategies such as service virtualization to make them appear more like production.</p>
 </li>
 <li>
-<p>Hardening services against their own failure in production, or the failure of services on which they depend</p>
+<p>Hardening services against their own failure in production, or the failure of services on which they depend.</p>
 </li>
 <li>
-<p>Reducing the size (and therefore complexity and risk) of changes to production (a key DevOps strategy)</p>
+<p>Reducing the size (and therefore complexity and risk) of changes to production (a key DevOps strategy).</p>
 </li>
 <li>
-<p>Ensuring that changes to the production system can be easily and automatically reversed</p>
+<p>Ensuring that changes to the production system can be easily and automatically reversed.</p>
 </li>
 <li>
-<p>Using policy-aware infrastructure management tools</p>
+<p>Using policy-aware infrastructure management tools.</p>
 </li>
 </ul>
 </div>
@@ -8275,7 +8266,7 @@ Concern that Peter no longer had a clear career path as VP of Operations.</p></t
 <blockquote>
 Five coordinating mechanisms seem to explain the fundamental ways in which organizations coordinate their work: mutual adjustment, direct supervision, standardization of work processes, standardization of work outputs, and standardization of worker skills.<br>
 <br>
-These should be considered the most basic elements of structure, the glue that holds or ganizations together…As organizational work becomes more complicated,  the favored means of coordination seems to shift from mutual adjustment to direct supervision to standardization, preferably of work processes, otherwise of outputs, or else of skills, <strong>finally reverting back to mutual adjustment</strong>. (emphasis added)
+These should be considered the most basic elements of structure, the glue that holds organizations together…As organizational work becomes more complicated,  the favored means of coordination seems to shift from mutual adjustment to direct supervision to standardization, preferably of work processes, otherwise of outputs, or else of skills, <strong>finally reverting back to mutual adjustment</strong>. (emphasis added)
 </blockquote>
 <div class="attribution">
 &#8212; Henry Mintzberg<br>
@@ -8499,7 +8490,7 @@ Even where they are not part of a value stream, activity-oriented teams tend to 
 </div>
 </div>
 <div class="paragraph">
-<p>By this time, you probably detect that there is a fundamental tension between functional specialization and end to end value delivery. This tension is the topic of endless research, articles, books, and commentary, in the mainstream business press and more specialized channels. The tension may go by different names:</p>
+<p>By this time, you probably detect that there is a fundamental tension between functional specialization and end to end value delivery. This tension is the topic of endless research, articles, books, and commentary in the mainstream business press and more specialized channels. The tension may go by different names:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -8517,7 +8508,7 @@ Even where they are not part of a value stream, activity-oriented teams tend to 
 <div class="sect4">
 <h5 id="_efficiency_versus_flow">Efficiency versus flow</h5>
 <div class="paragraph">
-<p>Here from an interesting presentation by Ari Tikka <a href="#Tikka2013">[Tikka2013]</a> is a depiction of one dysfunctional pattern that can emerge in navigating this tension:</p>
+<p>Here is a depiction of one dysfunctional pattern, from an interesting presentation by Ari Tikka <a href="#Tikka2013">[Tikka2013]</a>, that can emerge in navigating this tension:</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -8692,7 +8683,7 @@ The original Skunk Works [was] established by Kelly Johnson at Lockheed &#8230;&
 </div>
 </div>
 <div class="paragraph">
-<p>The product team has complete autonomy, and can move at great speed. It is also free to</p>
+<p>The product team has complete autonomy, and can move at great speed. It is also free to:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -8784,7 +8775,7 @@ What is culture in this context? It is not so much about an informal dress code,
 <p>But what motivates people?</p>
 </div>
 <div class="paragraph">
-<p>One of the oldest discussions of culture is Douglas McGregor&#8217;s idea of <a href="http://www.wikipedia.org/" class="bare">http://www.wikipedia.org/</a> ["Theory X" vs "Theory Y"] organizations, which he developed in the 1960s at the Massachusetts Institute of Technology.</p>
+<p>One of the oldest discussions of culture is Douglas McGregor&#8217;s idea of <a href="http://www.wikipedia.org/">"Theory X" vs "Theory Y"</a> organizations, which he developed in the 1960s at the Massachusetts Institute of Technology.</p>
 </div>
 <div class="paragraph">
 <p>"Theory X" organizations rely on extrinsic motivators and operate on the assumption that workers must be cajoled and punished in order to produce results. We see Theory X approaches when organizations focus on pay scales, bonuses, titles, awards, writeups/demerits, performance appraisals, and the like.</p>
@@ -8998,7 +8989,7 @@ Because power is about the regulation of behavior, it has very little effect on 
 <div class="sect3">
 <h4 id="_conclusion_7">Conclusion</h4>
 <div class="paragraph">
-<p>Beware of simplistic progression models, which imply that organizational forms evolve from authoritarian to enlightened. You never get to done with organizational development and evolution. It is always an ongoing process, of balancing culture, centralization, and autonomy. Rather than seeking any "best practice," it is better to see a toolbox, or perhaps a set of levers you can position in various ways to get different results.</p>
+<p>Beware of simplistic progression models, which imply that organizational forms evolve from authoritarian to enlightened. You never get to done with organizational development and evolution. It is always an ongoing process of balancing culture, centralization, and autonomy. Rather than seeking any "best practice," it is better to see a toolbox, or perhaps a set of levers you can position in various ways to get different results.</p>
 </div>
 <div class="paragraph">
 <p>As of 2015, product-centric Agile teams are becoming more and more common. But there are ultimately limitations to this approach, which many companies have experienced.</p>
@@ -9875,35 +9866,27 @@ Production scheduling is a large topic in and of itself. It is part of the domai
 <div class="paragraph">
 <p>Because of this, the project may retain some residual claim on all the engaged resources, but their utilization may be low or zero at certain points. Pivoting the above diagram 90 degrees, we start to develop an understanding of the interrelatedness of product development:</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-The above diagram resembles the Rational Unified Process <a href="#link">[link]</a>. This is deliberate. RUP is notable as an early and widely publicized illustration of these matters.
-</td>
-</tr>
-</table>
+<div class="imageblock">
+<div class="content">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Development-iterative.png" alt="Development iterative">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Rational Unified Process, from <a href="https://en.wikipedia.org/wiki/Rational_Unified_Process">Wikpedia</a></em></p>
 </div>
 <div class="paragraph">
 <p>The project manager is expected to manage the uncertain handoffs between the various functional areas, and anticipate resource requirements stemming from unexpected feedback demands.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_the_problem_of_fractional_allocation">The problem of fractional allocation</h5>
-
-</div>
-<div class="sect4">
 <h5 id="_critical_chain_related_topics_to_be_written">Critical chain &amp; related topics [to be written]</h5>
 <div class="ulist">
 <ul>
 <li>
-<p>Execution, resource &amp; scheduling constraints</p>
+<p>The problem of fractional allocation</p>
 </li>
 <li>
-<p>Last responsible moment</p>
+<p>Execution, resource &amp; scheduling constraints</p>
 </li>
 <li>
 <p>Reinertsen&#8217;s critique of CC</p>
@@ -9959,17 +9942,33 @@ When risk and uncertainty are present with ongoing demand, like in the case of a
 <cite>SDLC 3.0</cite>
 </div>
 </div>
+<div class="quoteblock">
+<blockquote>
+the project as a vehicle of IT execution has by and large, failed to live up to its promise of predictable delivery.
+</blockquote>
+<div class="attribution">
+&#8212; Sriram Narayan<br>
+<cite>Scaling Agile: Problems and Solutions</cite>
+</div>
+</div>
 <div class="paragraph">
 <p>Kennaley, above, provides some reasoning for project management. Ironically, he uses the term "batch," which is often a concept unfavorably viewed in Agile and Lean circles.</p>
 </div>
 <div class="paragraph">
-<p>However, when a system presents multiple constraints that need to be solved simultaneously, the only way to do this with confidence is as a "batch" of thought and analysis. If one needs to balance several competing objectives, one may need to know how a given course of action will affect all of them before embarking. Solving for one constraint, and embarking on a plan of action, may result in not meeting the other constraints, and having to throw the whole solution away.</p>
+<p>However, when a system presents multiple constraints that need to be solved simultaneously, the only way to do this with confidence may be as a "batch" of thought and analysis. If one needs to balance several competing objectives, one may need to know how a given course of action will affect all of them before embarking. Solving for one constraint, and embarking on a plan of action, may result in not meeting the other constraints, and having to throw the whole solution away.</p>
 </div>
 <div class="paragraph">
 <p>Dogmatic approaches to solving this are unhelpful.  Multi-constraint optimization is a known problem in systems engineering and cannot be wished away through merely invoking the word "Agile."</p>
 </div>
 <div class="paragraph">
 <p>Not all problems respond to iteration. Iterative solutions may make sense in some cases; in other cases, a higher degree of certainty is required before any solutioning is attempted. Attempting to iteratively refine a given solution may result in completely missing a higher order mode in a complex space.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>tactical needs for PM: resources, team performance - see Cohn</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect4">
@@ -9991,9 +9990,51 @@ Where leveraging yellow stickies or index cards makes sense in conjunction with 
 </div>
 </div>
 <div class="sect4">
+<h5 id="_agile_project_management">Agile project management</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Rolling wave planning</p>
+</li>
+<li>
+<p>Last responsible moment</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
 <h5 id="_project_management_antipatterns">Project management antipatterns</h5>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
+<p>Project change control</p>
+</li>
+<li>
 <p>The estimation controversy (sidebar?)</p>
+</li>
+<li>
+<p>Impersonal requirements ()</p>
+</li>
+<li>
+<p>"nothing is real unless it&#8217;s a project"</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_the_agile_project_frameworks">The Agile project frameworks</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>SAFe</p>
+</li>
+<li>
+<p>DaD</p>
+</li>
+<li>
+<p>etc</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect4">
@@ -10084,7 +10125,10 @@ Where leveraging yellow stickies or index cards makes sense in conjunction with 
 <p>Jira</p>
 </li>
 <li>
-<p>????</p>
+<p>VersionOne</p>
+</li>
+<li>
+<p>Asana</p>
 </li>
 </ul>
 </div>
@@ -10123,6 +10167,15 @@ Where leveraging yellow stickies or index cards makes sense in conjunction with 
 <ul>
 <li>
 <p><a href="http://www.slideshare.net/garydrumm/project-management-101-primer">Project Management 101</a></p>
+</li>
+<li>
+<p><a href="https://www.mountaingoatsoftware.com/articles/the-need-for-agile-project-management">The Need for Agile Project Management</a></p>
+</li>
+<li>
+<p><a href="https://www.thoughtworks.com/insights/blog/project-vs-product">Project vs. Product</a></p>
+</li>
+<li>
+<p><a href="https://www.thoughtworks.com/insights/blog/scaling-agile-problems-and-solutions">Scaling Agile: Problems and Solutions</a></p>
 </li>
 </ul>
 </div>
@@ -10698,6 +10751,9 @@ As we look forward, and consider the scale at which we are now operating, the ch
 <p><strong>Articles</strong></p>
 </div>
 <div class="paragraph">
+<p><a href="http://tdan.com/agile-methodologies-in-edm-projects/19062" class="bare">http://tdan.com/agile-methodologies-in-edm-projects/19062</a></p>
+</div>
+<div class="paragraph">
 <p><strong>Videos</strong></p>
 </div>
 <div class="paragraph">
@@ -11148,7 +11204,7 @@ IEEE Press.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-08-08 00:02:45 EDT
+Last updated 2015-08-07 23:02:45 CDT
 </div>
 </div>
 </body>
