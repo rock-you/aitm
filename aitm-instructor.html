@@ -9463,13 +9463,13 @@ An ongoing work effort is generally a repetitive process that follows an organiz
 </tbody>
 </table>
 <div class="paragraph">
-<p>One of the important characteristics of a project is that it is temporary. This project ends when we clean up after the party - not the most fun part.</p>
+<p>One of the important characteristics of a project is that it is temporary. This project ends when we clean up after the party.</p>
 </div>
 <div class="paragraph">
 <p>Project management, however, takes things much further. There are a number of ways that the list above can be refined using project management techniques.</p>
 </div>
 <div class="paragraph">
-<p>First, we should probably organize the list a little better. And the task "clean house" - do we understand precisely what we mean by that? Maybe we should break this down into sub-tasks. There is also a question about "choose menu" - isn&#8217;t the menu part of the project plan? Also, you may notice that there are "dependencies." For example, we can&#8217;t send out invitations before we choose the date, nor can we fix the party food before we get groceries.</p>
+<p>First, we should probably organize the list a little better. And the task "clean house" - do we understand precisely what we mean by that? Maybe we should break this down into sub-tasks.  Also, you may notice that there are "dependencies." For example, we can&#8217;t send out invitations before we choose the date, nor can we fix the party food before we get groceries, which in turn depends on setting the menu.</p>
 </div>
 <div class="paragraph">
 <p>Let&#8217;s break out the heavyweight tools. Introducing Microsoft Project:</p>
@@ -9600,24 +9600,22 @@ An ongoing work effort is generally a repetitive process that follows an organiz
 </ul>
 </div>
 <div class="paragraph">
-<p>The project has an explicit concept of dependencies in the tasks, and powerful tools to manage them. While this book aligns with the Agile movement in avoiding needless assumption of dependencies (e.g. waterfall method), they <strong>do</strong> exist - especially in the most ambitious and complex product efforts! And tools are needed to manage them.</p>
+<p>The project has an explicit concept of dependencies in the tasks, and powerful tools to manage them. While this book aligns with the Agile movement in avoiding unwarranted assumption of dependencies (i.e. waterfall method), they <strong>do</strong> exist - especially in the most ambitious and complex product efforts! And techniques are needed to manage them.</p>
 </div>
 <div class="paragraph">
 <p>Project management also has more robust tools for managing people&#8217;s time and effort, especially as they translate to project funding. While this may be a contentious aspect of project management (see later in this chapter on the #NoEstimates controversy), it remains a critical part of management practice in both IT and non-IT domains.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>[more]</pre>
-</div>
+<div class="paragraph">
+<p>At the end of the day, people expect to be paid for their time, and investors expect to be compensated through the delivery of results. Investment capital only lasts as a function of an organization&#8217;s "burn rate;" the rate at which the money is consumed for salaries and expenses. Some forecasting of status (whether that of a project, organization, product, program, or what have you) is therefore an essential and unavoidable obligation of management, unless funding is unlimited (a rare situation to say the least.)</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_project_management_in_information_technology">Project management in information technology</h5>
+<h5 id="_a_traditional_information_technology_project">A traditional information technology project</h5>
 <div class="paragraph">
 <p>So, what does all this have to do with information technology? As we have discussed in previous chapters, project management is one of the main tools used to deliver value across specialized skill-based teams.</p>
 </div>
 <div class="paragraph">
-<p>A "traditional" IT project starts with the "sponsorship" of some executive with standing to request funding. For example, suppose that the VP of Logistics under the Chief Operations Officer believes that a new supply chain system is required. With the sponsorship of the COO, they put in a request (possibly called a "demand request" although this varies by corporation) to implement this system. The assumption is that a commercial software package will be acquired and implemented.</p>
+<p>A "traditional" IT project starts with the "sponsorship" of some executive with authority to request funding. For example, suppose that the VP of Logistics under the Chief Operations Officer believes that a new supply chain system is required. With the sponsorship of the COO, they put in a request (possibly called a "demand request" although this varies by organization) to implement this system. The assumption is that a commercial software package will be acquired and implemented.</p>
 </div>
 <div class="paragraph">
 <p>The IT department serves as an overall coordinator for this project. The "demand request" in many cases is registered with the enterprise Project Management Office, which may report under the CIO.</p>
@@ -9629,7 +9627,7 @@ An ongoing work effort is generally a repetitive process that follows an organiz
 <div class="title">Note</div>
 </td>
 <td class="content">
-Why does the Enterprise Project Management office report under the CIO? IT projects in many companies represent the single largest type of internally managed capital expenditure. The other major form of projects, building projects, are usually outsourced to a general contractor.
+Why might the Enterprise Project Management office report under the CIO? IT projects in many companies represent the single largest type of internally managed capital expenditure. The other major form of projects, building projects, are usually outsourced to a general contractor.
 </td>
 </tr>
 </table>
@@ -9665,16 +9663,22 @@ RFI stands for <a href="https://en.wikipedia.org/wiki/Request_for_information">R
 <p>The system requires its own hardware (servers, storage, perhaps a dedicated switch) and specifying this in some detail is required for the purchasing process to start. This in turn required advance planning and approval for the project as a whole.</p>
 </div>
 <div class="paragraph">
-<p>It would not have been much different for a fully in house developed application, except that more money would have gone to developers. The slow infrastructure supply chain still drove much of the behavior, and correctly "sizing" this infrastructure was a challenge particularly for in-house developed software. (The vendors of commercial software would usually have a better idea of the infrastructure required for a given load.) Hence much attention to much up-front planning. Without requirements, no analysis or design; without design, how to know how much server to buy?</p>
+<p>It would not have been much different for a fully in house developed application, except that more money would have gone to developers. The slow infrastructure supply chain still drove much of the behavior, and correctly "sizing" this infrastructure was a challenge particularly for in-house developed software. (The vendors of commercial software would usually have a better idea of the infrastructure required for a given load.) Hence much attention to up-front planning. Without requirements, no analysis or design; without design, how to know how much server to buy?</p>
+</div>
+<div class="sect5">
+<h6 id="_the_decline_of_the_traditional_it_project">The decline of the "traditional" IT project</h6>
+<div class="paragraph">
+<p>The above scenario is in decline, and along with it a way of life for many "IT" professionals. The primary reason is Cloud, and in particular Software as a Service. The long hardware acquisition cycle is gone. And new systems did not need to be nearly as precisely "sized," which meant that development could commence without as much up front analysis. Simpler architectures would suffice until real load was proven. It might then be a scramble to refactor software to take advantage of new capacity, but the overall economic effect was positive, as over-engineering and over-capacity are increasingly avoided.</p>
 </div>
 <div class="paragraph">
-<p>Cloud changed all this. The long hardware acquisition cycle was gone. And new systems did not need to be nearly as precisely "sized," which meant that development could commence without as much up front analysis. Simpler architectures would suffice until real load was proven. It might then be a scramble to refactor software to take advantage of new capacity, but the overall economic effect was positive, as over-engineering was increasingly avoided.</p>
+<p>There is little reason to run commodity software (e.g. payroll, expenses, etc) in-house. Cloud providers such as Workday, Concur, Salesforce, and others provide ready access to the desired functionality "as a service" and concerns over security and data privacy are rapidly fading. What is left, increasingly, are those initiatives deemed "competitive" or "strategic" for the company. Usually, this means that they are going to contribute to a revenue stream. This in turn means they are "products" or significant components of them. (See Chapter 4.)</p>
 </div>
 <div class="paragraph">
-<p>A current project (still calling for project management per se) might start with the identification of a large, interrelated set of features, perhaps termed an "epic." Hardware acquisition is a thing of the past, due to either private or public cloud. The team might simply analyze the overall structure of the epic, decomposing it into stories and features, and spending the time to organize them into a logical sequence.</p>
+<p>A significant product initiative (still calling for project management per se) might start with the identification of a large, interrelated set of features, perhaps termed an "epic." Hardware acquisition is a thing of the past, due to either private or public cloud. The team might simply analyze the overall structure of the epic, decomposing it into stories and features, and spending the time to organize them into a logical sequence.</p>
 </div>
 <div class="paragraph">
-<p>A project manager may well be in the mix, to facilitate discussions, record decisions, and keep the team on track to its stated direction and commitments. Regardless of whether the team considers itself "Agile," people are sometimes bad at taking notes or being consistent in their usage of tools such as Kanban boards and standups. It is also useful to have a third party who is knowledgeable about the product, yet has some emotional distance from its success. This can be a difficult balance to strike, but the existence of the role of Scrum coach is indicative of its importance.</p>
+<p>However, a project manager may still be required, to facilitate discussions, record decisions, and keep the team on track to its stated direction and commitments. Regardless of whether the team considers itself "Agile," people are sometimes bad at taking notes or being consistent in their usage of tools such as Kanban boards and standups. It is also useful to have a third party who is knowledgeable about the product, yet has some emotional distance from its success. This can be a difficult balance to strike, but the existence of the role of Scrum coach is indicative of its importance.</p>
+</div>
 </div>
 </div>
 </div>
@@ -9728,7 +9732,7 @@ RFI stands for <a href="https://en.wikipedia.org/wiki/Request_for_information">R
 </ul>
 </div>
 <div class="paragraph">
-<p>The bubbles represent a "space" where one is likely to find that kind of work. As indicated by the central diagonal, it reflects an assumption that larger amounts of work are more likely to be planned further in advance. However, this is not always true. A large, unwelcome amount of required work that shows up with no planning is probably a disaster. Desired work (in the form of transactional demand) may also spike.</p>
+<p>The bubbles represent a "space" where one is likely to find that kind of work. As indicated by the central diagonal, it reflects an assumption that larger amounts of work are more likely to be planned further in advance. However, this is not always true. A large, unwelcome amount of required work that shows up with no planning is probably a disaster. Desired work (in the form of aggregate transactional demand) may also spike unexpectedly.</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -9787,8 +9791,10 @@ RFI stands for <a href="https://en.wikipedia.org/wiki/Request_for_information">R
 A framework is a formalized body of knowledge, usually sustained by some appropriate professional body, that defines the necessary and appropriate skills and concepts for practitioners.</p>
 </div>
 <div class="paragraph">
-<p>The Project Management Body of Knowledge is sustained by the Project Management Institute,
-<em>the world&#8217;s leading not-for-profit professional membership association for the project, program and portfolio management profession. Founded in 1969, PMI delivers value for more than 2.9 million professionals working in nearly every country in the world through global advocacy, collaboration, education and research. PMI advances careers, improves organizational success and further matures the profession of project management through its globally recognized standards, certifications, resources, tools, academic research, publications, professional development courses, and networking opportunities</em> (from <a href="http://www.pmi.org/About-Us.aspx">www.pmi.org</a>).</p>
+<p>The Project Management Body of Knowledge is sustained by the Project Management Institute. PMI describes itself as:</p>
+</div>
+<div class="paragraph">
+<p><em>the world&#8217;s leading not-for-profit professional membership association for the project, program and portfolio management profession. Founded in 1969, PMI delivers value for more than 2.9 million professionals working in nearly every country in the world through global advocacy, collaboration, education and research. PMI advances careers, improves organizational success and further matures the profession of project management through its globally recognized standards, certifications, resources, tools, academic research, publications, professional development courses, and networking opportunities</em> (from <a href="http://www.pmi.org/About-Us.aspx">www.pmi.org</a>).</p>
 </div>
 <div class="paragraph">
 <p>The Project Management Body of Knowledge is articulated in a publication, <em>A Guide to the Project Management Body of Knowlege.</em> While this may seem to imply that the PMBOK and its guide are two different things, they are not&#8201;&#8212;&#8201;it is one publication.</p>
@@ -9891,7 +9897,7 @@ A framework is a formalized body of knowledge, usually sustained by some appropr
 </ul>
 </div>
 <div class="paragraph">
-<p>Each process is categorized by one Process Group and one Knowledge Area, resulting in a matrix. A full matrix is not presented here due to copyright issues, but one can be seen <a href="http://www.focus-on-training.co.uk/blog/pmbok-process-groups-knowledge-areas">here</a>.</p>
+<p>Each process is categorized by one Process Group and one Knowledge Area, resulting in a matrix. A full matrix is not presented here due to copyright concerns, but one can be seen <a href="http://www.focus-on-training.co.uk/blog/pmbok-process-groups-knowledge-areas">here</a>.</p>
 </div>
 <div class="paragraph">
 <p>PMBOK details are easily obtained on the web, and will not be repeated here. It&#8217;s clear that the Agile critiques of waterfall project management have been taken seriously by the PMBOK braintrust. There is now a PMI Agile certification and much explicit recognition of the need for iterative and incremental approaches to project work.</p>
@@ -9906,7 +9912,7 @@ A framework is a formalized body of knowledge, usually sustained by some appropr
 <p>For example, PMBOK calls for a "stakeholder management plan" to be produced as part of the Project Stakeholder Management knowledge area and the Planning process group. The author has never seen one of these deliverables produced, in years of enterprise experience. However, for certain projects they may make sense.</p>
 </div>
 <div class="paragraph">
-<p>Part of the problem with extensive frameworks such as PMBOK is that knowing how and when to tailor them is hard-won knowledge that is not part of the usual formalized training. And yet, without some idea of "what matters" in applying the framework, there is great risk of wasted effort. The Agile movement in some ways is a reaction to this.</p>
+<p>Part of the problem with extensive frameworks such as PMBOK is that knowing how and when to tailor them is hard-won knowledge that is not part of the usual formalized training. And yet, without some idea of "what matters" in applying the framework, there is great risk of wasted effort. The Agile movement in some ways is a reaction to the waste that can result from overly detailed frameworks.</p>
 </div>
 </div>
 <div class="sect4">
@@ -9923,10 +9929,10 @@ A framework is a formalized body of knowledge, usually sustained by some appropr
 <p>Each combination of worker and equipment can be considered a workstation in this simplified model.</p>
 </div>
 <div class="paragraph">
-<p>If there is concern for flow across the functional areas, one technique used in manufacturing is that of expediting. The expeditor tracks the process across the work stations and ensures that any friction or blockages are overcome so that the entire process completes and value is delivered. This can be seen as a preliminary form of project management.</p>
+<p>If there is concern for flow across the functional areas, one technique used in manufacturing is that of expediting. An individual in the role of  "expeditor" tracks the process across the work stations and ensures that any friction or blockages are overcome so that the entire process completes and value is delivered. This can be seen as a preliminary form of project management.</p>
 </div>
 <div class="paragraph">
-<p>As the production line evolves, scheduling may be used as well: the assignment of work to each workstation (combination of worker and equipment) may have its timing and duration specified in advance. While this is not an optimal approach according to Lean philosophy (which emphasizes "pull" techniques), production scheduling is widely used in manufacturing.</p>
+<p>As the production line evolves, scheduling may be used as well: the assignment of work to each workstation (combination of worker and equipment) may have its timing and duration specified in advance. While this is not an optimal approach according to Lean philosophy (which emphasizes "pull" techniques), <a href="https://en.wikipedia.org/wiki/Scheduling_(production_processes)">production scheduling</a> is widely used in manufacturing.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -9986,6 +9992,9 @@ Production scheduling is a large topic in and of itself. It is part of the domai
 </div>
 <div class="paragraph">
 <p>The project manager is expected to manage the uncertain handoffs between the various functional areas, and anticipate resource requirements stemming from unexpected feedback demands.</p>
+</div>
+<div class="paragraph">
+<p>Ultimately, the reason classical production scheduling is inappropriate for delivering new IT functionality is that there is simply too much variability in product development. (Again see Chapter 4 for further discussion of this.) However, this does not change the fact that some level of planning and estimation is needed. To what extent this more variable IT work can be quantitatively managed is an active area of discussion in the software, Agile, and related communities.</p>
 </div>
 </div>
 <div class="sect4">
@@ -10343,10 +10352,10 @@ Where leveraging yellow stickies or index cards makes sense in conjunction with 
 <p>Function vs process</p>
 </li>
 <li>
-<p>Practice vs process</p>
+<p>Practice, discipline, capability vs process</p>
 </li>
 <li>
-<p>process vs execution (execution includes concern for resource)</p>
+<p>Process and execution (execution includes concern for resource)</p>
 </li>
 <li>
 <p>"Process" at Toyota (Rother)</p>
@@ -11260,6 +11269,9 @@ els in the architecture. Paradoxically, structure is the key to freedom. ibid 12
 </li>
 <li>
 <p><a id="Limoncelli2014"></a>[Limoncelli2014]: Limoncelli, T. A.; Chalup, S. R. &amp; Hogan, C. J. (2014), <em>The Practice of Cloud System Administration: Designing and Operating Large Distributed Systems, Vol. 2</em>,  Pearson Education</p>
+</li>
+<li>
+<p><a id="Loeliger2009"></a>[Loeliger2009]: Loeliger, J. (2009). <em>Version control with Git</em>. Beijing ; Sebastopol, CA, O&#8217;Reilly.</p>
 </li>
 <li>
 <p><a id="Madachy2008"></a>[Madachy2008]: Madachy, R. J. (2008). <em>Software process dynamics.</em> Hoboken, NJ Piscataway, NJ, Wiley;
