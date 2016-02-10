@@ -468,7 +468,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_choosing_infrastructure">Choosing infrastructure</a></li>
 <li><a href="#_from_physical_compute_to_cloud">From "physical" compute to Cloud</a></li>
 <li><a href="#_infrastructure_as_code">Infrastructure as code</a></li>
-<li><a href="#_source_control_the_agile_foundation">Source control: the Agile foundation</a></li>
+<li><a href="#_version_control_the_agile_foundation">Version control: the Agile foundation</a></li>
 <li><a href="#_policy_based_approaches">Policy-based approaches</a></li>
 <li><a href="#_topics_in_it_infrastructure">Topics in IT infrastructure</a></li>
 <li><a href="#_conclusion_2">Conclusion</a></li>
@@ -3101,6 +3101,18 @@ The phone system has been multi-tenant ever since they got rid of <a href="https
 <img src="images/1.02-virtUtil.png" alt="1.02 virtUtil">
 </div>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+For illustration only. A utilization of 62.5% might actually be a bit too high for comfort, depending on the variability and criticality of the workloads.
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>In most virtualized architectures, the physical servers supporting workloads share a consistent configuration, which made it easy to add and remove resources from the environment. The virtual machines may still vary greatly in configuration, but the fact of virtualization makes managing that easier - the virtual machines can be easily copied and moved, and increasingly can be defined as a form of code (see next section).</p>
 </div>
@@ -3243,10 +3255,10 @@ not manage or control the underlying cloud infrastructure including network, ser
 <p><em>“Several months ago, we were three hours into a Sev 1 outage, and we bent over backward not to escalate to Brent. But eventually, we got to a point where we were just out of ideas, and we were starting to make things worse. So, we put Brent on the problem.” He shakes his head, recalling the memory, “He sat down at the keyboard, and it’s like he went into this trance. Ten minutes later, the problem is fixed. Everyone is happy and relieved that the system came back up. But then someone asked, ‘How did you do it?’ And I swear to God, Brent just looked back at him blankly and said, ‘I have no idea. I just did it.’”</em></p>
 </div>
 <div class="paragraph">
-<p>(Kim, Gene; Behr, Kevin ; Spafford, George (2013-01-10). The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win (p. 116). IT Revolution Press. Kindle Edition.)</p>
+<p><a href="#Kim2013">[Kim2013]</a>, p. 116.</p>
 </div>
 <div class="paragraph">
-<p>Obviously (and as discussed in the Phoenix Project), “close your eyes and go into a trance” is not a repeatable process. It is not a procedure or operation that can be archived and distributed across multiple servers. So, shell scripts or more advanced forms of automation are written and increasingly, all actual server configuration is based on such pre-developed specification. It is becoming more and more rare for a systems administrator to actually “log in” to a server and execute configuration-changing commands in an ad-hoc manner (as Brent).</p>
+<p>Obviously, “close your eyes and go into a trance” is not a repeatable process. It is not a procedure or operation that can be archived and distributed across multiple servers. So, shell scripts or more advanced forms of automation are written and increasingly, all actual server configuration is based on such pre-developed specification. It is becoming more and more rare for a systems administrator to actually “log in” to a server and execute configuration-changing commands in an ad-hoc manner (as Brent).</p>
 </div>
 <div class="paragraph">
 <p>In fact, because virtualization is becoming so powerful, servers increasingly are destroyed and rebuilt at the first sign of any trouble. In this way, it is certain that the server’s configuration is as intended. This again is a relatively new practice.</p>
@@ -3316,15 +3328,12 @@ touch a b c</pre>
 <p>The state of the art in infrastructure configuration is not to use shell scripts at all but rather policy-based infrastructure management approaches &#8230;&#8203;</p>
 </div>
 <div class="paragraph">
-<p><em>describe modern infra managers, policy management, auto-scaling as an example, provide an example Chef script..</em></p>
-</div>
-<div class="paragraph">
 <p>Let’s return to our iac.sh file. It’s valuable. It documents our intentions for how this configuration should look. We can reliably run it on thousands of machines and it will always give us two directories and six files. In terms of the previous section, we might choose to run it on every new server we create. We want to establish it as a known resource in our technical ecosystem. This is where version control comes in.</p>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_source_control_the_agile_foundation">Source control: the Agile foundation</h4>
+<h4 id="_version_control_the_agile_foundation">Version control: the Agile foundation</h4>
 <div class="quoteblock">
 <blockquote>
 In software development, version control is the foundation of every other Agile technical practice. Without version control, there is no build, no TDD, no continuous integration.
@@ -3335,12 +3344,12 @@ In software development, version control is the foundation of every other Agile 
 </div>
 </div>
 <div class="sect4">
-<h5 id="_what_is_source_control">What is source control?</h5>
+<h5 id="_what_is_version_control">What is version control?</h5>
 <div class="paragraph">
 <p>Now, because this is a general book on IT management, we’re going to take a bit of a different turn here. As mentioned previously, there are numerous sources available to you to learn Linux scripting, policy-based configuration management of infrastructure, and source control. Competency with source control is essential to your career and you should devote some serious time to it. This book has a different purpose: to orient you to the fundamental principles and architectures of IT management at all scales.</p>
 </div>
 <div class="paragraph">
-<p>We are going to take a very deep and targeted look at source control (aka software configuration management) because it is here that we start to see the emergence of an architecture of IT management. It is in the source control system that we first start to see metadata emerge as an independent concern.</p>
+<p>We are going to take a very deep and targeted look at version control, in particular source control,  because it is here that we start to see the emergence of an architecture of IT management. It is in the source control system that we first start to see metadata emerge as an independent concern.</p>
 </div>
 <div class="paragraph">
 <p>(For a definition of metadata, see the sidebar.)</p>
@@ -3360,22 +3369,24 @@ In software development, version control is the foundation of every other Agile 
 <td class="content">
 It’s significant that the Agile Alliance indicates “version control” as one of the <a href="http://guide.agilealliance.org/subway.html">four foundational areas of Agile</a>, along with team, iterative development, and incremental development.<br>
 <br>
-"Version control" also includes what we will cover as package management: the management of binary files, as distinct from human-understandable symbolic files.
+"Version control" also includes what we will cover as package management: the management of binary files, as distinct from human-understandable symbolic files. There is also a need to understand what versions are installed on what computers; this can be termed "deployment management." (With the advent of containers, this is a particularly fast changing area.)
 </td>
 </tr>
 </table>
 </div>
-<div class="literalblock">
+<div class="imageblock">
 <div class="content">
-<pre>Add graphic illustrating kinds of version control - source vs package</pre>
+<img src="images/1.02-versionControlTypes.png" alt="1.02 versionControlTypes">
 </div>
 </div>
 <div class="paragraph">
-<p>Source control works like a really advanced file system. It can remember all the changes you make to its contents, tell you the differences between any two versions, and also bring back the version you had at any point in time.
-Source control, as you may imagine, is critical for any kind of system with complex, changing content, especially when many people are working on that content.</p>
+<p>Source control works like an advanced file system with a memory. (Actual file systems that do this are called <a href="https://en.wikipedia.org/wiki/Versioning_file_system"><em>versioning</em></a> file systems.) It can remember all the changes you make to its contents, tell you the differences between any two versions, and also bring back the version you had at any point in time.</p>
 </div>
 <div class="paragraph">
-<p>You can find many references to source control on the Internet and in books such as <em>Pro Git</em> by Scott Chacon and Ben Straub. As it is the most important foundational technology for professional IT, whether in a garage or in the largest corporations, you need to have a deep familiarity with it.</p>
+<p>Source control, as you may imagine, is critical for any kind of system with complex, changing content, especially when many people are working on that content, and there is a need to see the exact sequence of its evolution and isolate any particular moment in its history, or provide detailed analysis on how two versions differ.</p>
+</div>
+<div class="paragraph">
+<p>You can find many references to source control on the Internet and in books such as <em>Pro Git</em> by Scott Chacon and Ben Straub <a href="#Chacon2009">[Chacon2009]</a>. As it is the most important foundational technology for professional IT, whether in a garage or in the largest corporations, you need to have a deep familiarity with it.</p>
 </div>
 <div class="paragraph">
 <p>Source control is at its most powerful when dealing with symbolic data, which we usually see as text files. It is less useful in dealing with unstructured, binary data, such as image files.</p>
@@ -3394,22 +3405,19 @@ Source control, as you may imagine, is critical for any kind of system with comp
 </div>
 <div class="paragraph">
 <p>Although implementation details may differ, all version control systems have some concept of “commit.”
-As stated in Version Control with Git:</p>
+As stated in Version Control with Git <a href="#Loeliger2009">[Loeliger2009]</a>:</p>
 </div>
 <div class="paragraph">
 <p><em>In Git, a commit is used to record changes to a repository  . . . Every Git commit represents a single, atomic changeset with respect to the previous state. Regardless of the number of directories, files, lines, or bytes that change with a commit… either all changes apply or none do. In terms of the underlying object model, atomicity just makes sense: A commit snapshot represents the total set of modified files and directories…  Git doesn’t care why files are changing. That is, the content of the changes doesn’t matter. As the developer, you might move a function from here to there and expect this to be handled as one unitary move. But you could, alternatively, commit the removal and then later commit the addition. Git doesn’t care. It has nothing to do with the semantics of what is in the files.</em></p>
 </div>
 <div class="paragraph">
-<p>(Loeliger, Jon; McCullough, Matthew (2012-08-14). Version Control with Git: Powerful tools and techniques for collaborative software development (Kindle Locations 1520-1528). O&#8217;Reilly Media. Kindle Edition.)</p>
-</div>
-<div class="paragraph">
-<p>The concept of a “commit” is a rich foundation for IT management and governance. It both represents the state of the computing system as well as providing evidence of the human activity surrounding it.</p>
+<p>The concept of a version or source control <a href="https://en.wikipedia.org/wiki/Commit_(data_management)">“commit”</a> is a rich foundation for IT management and governance. It both represents the state of the computing system as well as providing evidence of the human activity affecting it.</p>
 </div>
 <div class="paragraph">
 <p>As we will see in Chapter 3, the “commit” identifier is directly referenced by build activity, which in turn is referenced by the release activity, which is typically visible across the IT value chain.</p>
 </div>
 <div class="paragraph">
-<p>Also, the concept of an atomic “commit” is essential to the concept of a “branch” - the creation of an experimental version, completely separate from the main version, so that various alterations can be tried without compromising the overall system stability. Starting at the point of a “commit,” the branched version also becomes evidence of human activity around a potential future for the system. In some environments, the branch is automatically created with the assignment of a requirement or story - again, more on this to come in chapter 3.  In other environments, the very concept of branching is avoided.</p>
+<p>Also, the concept of an atomic “commit” is essential to the concept of a “branch” - the creation of an experimental version, completely separate from the main version, so that various alterations can be tried without compromising the overall system stability. Starting at the point of a “commit,” the branched version also becomes evidence of human activity around a potential future for the system. In some environments, the branch is automatically created with the assignment of a requirement or story - again, more on this to come in chapter 3. In other environments, the very concept of branching is avoided.</p>
 </div>
 </div>
 <div class="sect4">
@@ -3453,7 +3461,7 @@ As stated in Version Control with Git:</p>
 <p>In computer systems, metadata can be difficult to isolate. Sometimes, computing professionals will speak of a “metadata” layer that may define physical database structures, data extracts, business process behavior, even file locations. The trouble is, from a computer’s point of view, a processing instruction is an instruction, and the prefix “meta” has no real meaning.</p>
 </div>
 <div class="paragraph">
-<p>Because of this, I favor a principle that <strong>metadata is by definition non-runtime.</strong> It is documentation, usually represented as structured or semi-structured data, but not usually a primary processing input or output. It might be “digital exhaust” - log files are a form of metadata. It is not executable. If it’s executable, it’s digital logic or configuration, plain and simple.</p>
+<p>Because of this, I favor a principle that <strong>metadata is by definition non-runtime.</strong> It is documentation, usually represented as structured or semi-structured data, but not usually a primary processing input or output. It might be “digital exhaust” - log files are a form of metadata. It is not executable. If it’s  executable (directly or indirectly), it’s digital logic or configuration, plain and simple.</p>
 </div>
 <div class="paragraph">
 <p>So what about our infrastructure as code example? The artifact - the configuration file, the script - is NOT metadata, because it is executable. But the source repository commit IS metadata. It has no meaning for the script. The dependency is one way - without the artifact, the commit ID is meaningless, but the artifact is completely ignorant of the commit. However, the commit may become an essential data point for human beings trying to make sense of the state of a resource defined by that artifact.</p>
@@ -3493,6 +3501,9 @@ It is not always easy to apply this approach in practice. There can be edge case
 </div>
 <div class="paragraph">
 <p>This is a complex topic and there are advantages and disadvantages to each approach. (See <a href="http://markburgess.org/blog_order.html">"When and Where Order Matters"</a> by Mark Burgess for an advanced discussion.) But policy-based approaches seem to have the upper hand for now.</p>
+</div>
+<div class="paragraph">
+<p><em>describe modern infra managers, policy management, auto-scaling as an example, provide an example Chef script..</em></p>
 </div>
 </div>
 <div class="sect3">
@@ -11153,6 +11164,9 @@ els in the architecture. Paradoxically, structure is the key to freedom. ibid 12
 </li>
 <li>
 <p><a id="Carroll2013"></a>[Carroll2013]: Carroll, I. (2013), "Various", <a href="http://itopskanban.wordpress.com/before/" class="bare">http://itopskanban.wordpress.com/before/</a></p>
+</li>
+<li>
+<p><a id="Chacon2009"></a>[Chacon2009]: Chacon, S. &amp; Straub, B. (2009). Pro Git. Berkeley, CA. New York, Apress.</p>
 </li>
 <li>
 <p><a id="Cobb2015"></a>[Cobb2015]: Cobb, C.G., (2015), The Project MANAGER&#8217;S GUIDE TO MASTERING AGILE: Principles and Practices for an Adaptive Approach, Hoboken, New Jersey: John Wiley &amp; Sons.</p>
