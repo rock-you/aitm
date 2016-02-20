@@ -5066,6 +5066,9 @@ No system can ever be fully "open loop" indefinitely.  Sooner or later, you take
 <div class="paragraph">
 <p>Engineers of complex systems use feedback techniques extensively. Complex systems do not work without them. <strong>This section is about closing the loops.</strong></p>
 </div>
+<div class="paragraph">
+<p><a id="2.04.00-product-mgmt"></a></p>
+</div>
 </div>
 </div>
 </div>
@@ -6006,6 +6009,9 @@ Never confuse production with product development. The approaches, measures, and
 <p><strong>Professional</strong>
 Professional
 <a href="http://www.pdma.org/">Product Development and Marketing Association</a></p>
+</div>
+<div class="paragraph">
+<p>anchor:2.05.00-Work Management[]</p>
 </div>
 </div>
 </div>
@@ -10236,19 +10242,66 @@ Part of the problem with extensive frameworks such as PMBOK is that knowing how 
 <div class="paragraph">
 <p>When tasks are ordered, and their time to complete estimated, an analysis known as <strong>critical path</strong> is possible.</p>
 </div>
+<div class="paragraph">
+<p>PMBOK <a href="#PMI2013">[PMI2013]</a> defines the critical path as "The sequence of activities that represents the longest path through a project, which determines the shortest possible duration."</p>
+</div>
+<div class="paragraph">
+<p>Consider our holiday party plan again:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3.08-ms-proj-3.png" alt="3.08 ms proj 3">
+</div>
+</div>
+<div class="paragraph">
+<p>In the above example, we have two major work areas: clean the house and prepare a menu. Note however that there are no dependencies between:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>vacuum living room</p>
+</li>
+<li>
+<p>clean kitchen</p>
+</li>
+<li>
+<p>clean dining table</p>
+</li>
+<li>
+<p>vacuum dining room</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Really, they can be done in any order.</p>
+</div>
+<div class="paragraph">
+<p>On the other hand, there is a clear set of dependencies between:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Choose menu</p>
+</li>
+<li>
+<p>Get groceries</p>
+</li>
+<li>
+<p>Fix food</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This means that the sub-activity "Food for party" is the critical path. If the menu is not determined on time, the grocery run can&#8217;t happen, and the food will be fixed late or not at all.</p>
+</div>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
 <p><strong>Microservices to the rescue?</strong></p>
 </div>
 <div class="paragraph">
-<p>Finally, while this book does not go into architectural styles in depth, there is some evidence that a well-considered microservices approach can help minimize the dependency management that larger, more "monolithic" systems are prone to.</p>
+<p>While this book does not go into architectural styles in depth, there is some evidence that a well-considered microservices approach can help minimize the dependency management that larger, more "monolithic" systems tend to require. (need citations)</p>
 </div>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>need citations</pre>
 </div>
 </div>
 </div>
@@ -10265,7 +10318,7 @@ Part of the problem with extensive frameworks such as PMBOK is that knowing how 
 <h5 id="_scheduling_and_execution">Scheduling and execution</h5>
 <div class="literalblock">
 <div class="content">
-<pre>not sure about this section.</pre>
+<pre>not sure about this section. Sets up the Critical Chain discussion.</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -10387,6 +10440,9 @@ The use of the term "resources" to refer to the people working on a project is o
 <div class="paragraph">
 <p>Human beings are notably bad at multi-tasking, and the mental "context-switching" required to move from one task to another is wasteful and ultimately not scalable. A human being fractionally allocated to more and more projects will get less and less done in total, as the transactional friction of task switching increases.</p>
 </div>
+<div class="paragraph">
+<p>More on this in the following section on resource management.</p>
+</div>
 <div class="literalblock">
 <div class="content">
 <pre>there have got to be good cites on this</pre>
@@ -10413,15 +10469,8 @@ The use of the term "resources" to refer to the people working on a project is o
 <div class="paragraph">
 <p>Goldratt suggested an alternate approach, in which the idea of "critical path" is enhanced with resource awareness. Estimation is handled more probabilistically, and the "critical chain" is the combination of the critical path plus the resource assigned to complete the most critical task. The theory is that a person performing such a task must be protected from distraction, and in fact project managers must expand their tools to effectively forecast and plan the critical chain.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Execution, resource &amp; scheduling constraints</p>
-</li>
-<li>
-<p>Reinertsen&#8217;s critique of CC</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>This leads to some complex math, in particular a known problem called the Resource-Constrained Scheduling Problem. (e.g. <a href="http://www.iste.co.uk/data/doc_dtalmanhopmh.pdf" class="bare">http://www.iste.co.uk/data/doc_dtalmanhopmh.pdf</a>)</p>
 </div>
 </div>
 </div>
@@ -10455,7 +10504,7 @@ Agile is having a profound impact on the project management profession and will 
 </div>
 </div>
 <div class="paragraph">
-<p>As the above quotes indicate, there are diverse opinions on the role and importance of traditional project management in the enterprise. Clearly it is under pressure from the Agile movement. Project management professionals are advised to not deny or diminish this fact. It is possible for a modern, IT-centric organization to make considerable progress on the basis of product management plus simple work management, without the overhead of the formalized project lifecycle suggested by PMBOK.</p>
+<p>As the above quotes indicate, there are diverse opinions on the role and importance of traditional project management in the enterprise. Clearly it is under pressure from the Agile movement. Project management professionals are advised to not deny or diminish this fact. It is possible for a modern, IT-centric organization to make considerable progress on the basis of <a href="#2.04.00-product-mgmt">product management</a> plus simple <a href="#2.05.00-Work Management">work management</a>, without the overhead of the formalized project lifecycle suggested by PMBOK.</p>
 </div>
 <div class="paragraph">
 <p>Cloud is having related yet distinct impacts on traditional project management as well. As discussed elsewhere, projects were often used to install vendor-delivered commodity software, such as for payroll or employee expense. Increasingly, that kind of functionality is delivered by online service providers, leaving internal IT with considerably reduced responsibilities.</p>
@@ -11858,6 +11907,13 @@ els in the architecture. Paradoxically, structure is the key to freedom. ibid 12
 <div class="paragraph">
 <p>Limits of iterative approaches &#8230;&#8203; missing higher order modes &#8230;&#8203;</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reinertsen&#8217;s critique of CC</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_references">References</h3>
@@ -12142,7 +12198,7 @@ IEEE Press.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-08-06 11:22:43 CDT
+Last updated 2015-08-21 08:27:34 CDT
 </div>
 </div>
 </body>
