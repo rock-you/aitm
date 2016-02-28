@@ -8396,6 +8396,9 @@ Because Peter was the one receiving all the calls, and in the interest of giving
 <p>It was perceived that the engineering team would likely be receiving various requests and so a dotted line appears on the organization chart, indicating a service relationship. The new support person under Peter would also be shared across both teams, and there needed to be some means of communicating support requests to the feature teams when their support was needed. There was some question as to how the office Kanban boards might be reconfigured to support these relationships. Peter and Sonya, after some online research, started to become interested in something called ITIL (the IT Infrastructure Library), which prescribed multiple IT processes that could be used as a basis for organizing.</p>
 </div>
 <div class="paragraph">
+<p><a id="spotify-model"></a></p>
+</div>
+<div class="paragraph">
 <p><strong>Proposed structure #2</strong></p>
 </div>
 <div class="paragraph">
@@ -10877,7 +10880,7 @@ sense of flow</a> - a destructive outcome.</p>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_synch_points">Synch points</h6>
+<h6 id="_synchronization_points">Synchronization points</h6>
 <div class="paragraph">
 <p>If the team cannot work all the time in one room, then perhaps they can at least be gathered periodically. There is a broad spectrum of synchronization approaches:</p>
 </div>
@@ -10888,6 +10891,9 @@ sense of flow</a> - a destructive outcome.</p>
 </li>
 <li>
 <p>Weekly status meetings</p>
+</li>
+<li>
+<p>Coordination meetings (e.g. Scrum of Scrums, see below)</p>
 </li>
 <li>
 <p>Release kickoffs</p>
@@ -10917,54 +10923,72 @@ Unmeetings/unconferences/Open space</pre>
 </div>
 <div class="sect5">
 <h6 id="_liaison_and_coordination_structures">Liaison and coordination structures</h6>
+<div class="paragraph">
+<p>A variety of liaison and coordination approaches are suggested by Mike Cohn (<a href="#Cohn2010">[Cohn2010]</a>, Chapter 17, "Scaling Scrum") including:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Structured liasons</p>
-<div class="ulist">
-<ul>
+<p>Shared team members</p>
+</li>
+<li>
+<p>Integration teams</p>
+</li>
+<li>
+<p>Communities of practice</p>
+</li>
 <li>
 <p>Scrum of scrums</p>
 </li>
-<li>
-<p>shared team members</p>
-</li>
-<li>
-<p>integration teams</p>
-</li>
-<li>
-<p>communities of practice</p>
-</li>
 </ul>
 </div>
-</li>
-</ul>
+<div class="paragraph">
+<p><strong>Shared team members</strong> are suggested when two teams have a persistent interface requiring focus and ownership. When a product has multiple interfaces that emerge as a problem requiring focus, an <strong>integration team</strong> may be called for. <strong>Communities of practice</strong> were introduced in Chapter 7 as we discussed the <a href="#spotify-model">Spotify model</a>. Considered here, they may also play a coordination role as well as a practice development/maturity role.</p>
+</div>
+<div class="paragraph">
+<p>Finally, the idea of a "scrum of scrums" is essentially a representative or delegated model, in which each individual Scrum team sends one individual to a periodic coordination meeting where matters of cross-team concern can be discussed and decisions taken.</p>
 </div>
 </div>
 <div class="sect5">
 <h6 id="_planning_techniques">Planning techniques</h6>
+<div class="paragraph">
+<p>Techniques of co-location, synchronization, and liaison all support to varying degrees a concept of planning. Fundamentally, we plan so that the work progresses effectively and efficiently. We seek to optimize the following contradictory goals:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Estimation (should this be covered in chapter 4?)</p>
+<p>Delivering results quickly</p>
 </li>
 <li>
-<p>Rolling wave planning</p>
-</li>
-<li>
-<p>"Water-scrum-fall"</p>
-</li>
-<li>
-<p>Last responsible moment</p>
+<p>Minimizing the waste of un-utilized resources</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><a id="3.08.03-NoEstimates"></a>
- Sidebar: The estimation controversy (sidebar?)</p>
+<p>To meet these goals, we</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>estimate so that we have some understanding of our resource needs</p>
+</li>
+<li>
+<p>plan so that we understand dependencies (e.g. when one team <strong>must</strong> complete a task before another team can start theirs)</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>A wealth of additional techniques is to be found in <a href="#Larman2009">[Larman2009]</a> and <a href="#Cohn2010">[Cohn2010]</a>.</p>
+<p><a id="3.08.03-NoEstimates"></a></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Sidebar: The estimation controversy</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The above discussion is by no means exhaustive. A wealth of additional techniques is to be found in <a href="#Larman2009">[Larman2009]</a> and <a href="#Cohn2010">[Cohn2010]</a>. New techniques are continually emerging from the front lines of the digital industry; the interested student should consider attending industry conferences such as those offered by the Agile Alliance.</p>
 </div>
 </div>
 </div>
@@ -11255,18 +11279,13 @@ When risk and uncertainty are present with ongoing demand, like in the case of a
 <div class="ulist">
 <ul>
 <li>
-<p>Project change control</p>
-</li>
-<li>
 <p>Impersonal requirements (but see Alleman)</p>
 </li>
 <li>
 <p>"nothing is real unless it&#8217;s a project"</p>
-<div class="literalblock">
-<div class="content">
-<pre>idea: interview St. Thomas IT staff on moving to Office 365.</pre>
-</div>
-</div>
+</li>
+<li>
+<p>"Water-scrum-fall"</p>
 </li>
 </ul>
 </div>
@@ -11281,6 +11300,21 @@ trade unions&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
 <p>the quest for "authenticity" and the suspicion of systems thinkers</p>
+</div>
+<div class="paragraph">
+<p>The concept of "scrum of scrums" may make intuitive sense, but starts to run into issues of power, hierarchy, authority, accountability, and so forth. It is mostly presented as a bottom-up structure, and there is an implication that the representatives are also practitioners. (There is a strong narrative of authenticity in the Agile community. The lack of respect for "non-coders" is pronounced.) But what happens when overriding systems concerns need to be communicated downwards in the face of team resistance? What of the "scrum of scrums" representative who is perceived (rightly or wrongly) as not advocating reliably for the team? What of the team who rotates their delegate out of well-intentioned motives related to individual empowerment, but resulting in ineffective representation?</p>
+</div>
+<div class="paragraph">
+<p>In these questions we see the overlap of Agile with seemingly distant fields such as political science, organizational leadership, and the like.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_misc">Misc</h5>
+<div class="paragraph">
+<p>The concept of last responsible moment</p>
+</div>
+<div class="paragraph">
+<p>idea: interview St. Thomas IT staff on moving to Office 365.</p>
 </div>
 </div>
 <div class="sect4">
