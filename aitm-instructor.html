@@ -8929,6 +8929,14 @@ Even in this simplest model, feedback is important. Much of the evolution of 20t
 </div>
 <div class="sect4">
 <h5 id="_the_continuum_of_organizational_forms">The continuum of organizational forms</h5>
+<div class="quoteblock">
+<blockquote>
+The traditional approach is that we have work and we bring "the right people" to the work. To be nimble&#8201;&#8212;&#8201;to have organizational agility&#8201;&#8212;&#8201;we have to have great teams of people and bring the work to the team.
+</blockquote>
+<div class="attribution">
+&#8212; Joseph Flahiff
+</div>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -9411,6 +9419,10 @@ Micromanagement.</p>
 <div class="paragraph">
 <p>No choice but to allocate fine-grained decision rights between product lines &amp; guilds. See Reinertsen/Smith.</p>
 </div>
+</div>
+<div class="sect4">
+<h5 id="_the_problem_of_epistemic_closure">The problem of epistemic closure</h5>
+
 </div>
 <div class="sect4">
 <h5 id="_additional_material">additional material</h5>
@@ -10637,7 +10649,7 @@ Agile is having a profound impact on the project management profession and will 
 <p>Cloud is having impacts on traditional project management as well. As noted in the section on the <a href="#trad-IT-decline">decline of traditional IT</a>, projects were often used to install vendor-delivered commodity software, such as for payroll or employee expense. Increasingly, that kind of functionality is delivered by online service providers, leaving "traditional" internal IT with considerably reduced responsibilities.</p>
 </div>
 <div class="paragraph">
-<p>Some of the IT capability may remain in the guise of an internal "service broker," to assist with the sourcing and procurement of online services. The remainder moves into digital product management, as the only need for internal IT is in the area of revenue-generating, market-facing strategic product.</p>
+<p>Some of the IT capability may remain in the guise of an internal "service broker," to assist with the sourcing and procurement of online services. The remainder moves into digital product management, as the only need for internal IT is in the area of revenue-generating, market-facing strategic digital product.</p>
 </div>
 <div class="paragraph">
 <p>So, this section will examine the following questions:</p>
@@ -10695,9 +10707,42 @@ What’s typically underestimated is the complexity and indivisibility of many l
 <div class="paragraph">
 <p>As noted in the discussion of <a href="#loose-coupling-project">loose coupling and project management</a>, some needs for coordination may be mitigated through the design of the product itself. If the features and components have well defined protocols for their interaction and clear contracts for matters like performance, development on each team can move forward with some autonomy.</p>
 </div>
-<div class="literalblock">
+<div class="sidebarblock">
 <div class="content">
-<pre>discussion of internal architectures, expectations, contracts at Google - Chubby locking case study.</pre>
+<div class="paragraph">
+<p><strong>The reality of microservices and loose coupling: the case of Chubby at Google</strong></p>
+</div>
+<div class="paragraph">
+<p>The idea that architecture can "emerge" across a set of smaller grained services ("microservices"), without explicit coordination, is attractive. Coordinating designs across products is expensive and ideally products should be able to evolve independently.</p>
+</div>
+<div class="paragraph">
+<p>Mike Burrows of Google provides a detailed description of the Chubby lock service <a href="#Burrows2006">[Burrows2006]</a>, which is a prototypical example of a broadly-available internal service usable by a wide variety of other products.</p>
+</div>
+<div class="paragraph">
+<p>The purpose of a lock service is to "allow its clients to synchronize their activities and to agree on basic information about their environment." Chubby was built from the start with objectives of reliability, availability to a "moderately large set of clients," and ease of understanding.</p>
+</div>
+<div class="paragraph">
+<p>Burrows notes that even with such a cohesive and well-designed internal service, they still encounter coordination problems requiring human intervention. Such problems include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use ("abuse") in unintended ways by clients</p>
+</li>
+<li>
+<p>Invalid assumptions by clients regarding Chubby&#8217;s availability</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Because of this, the Chubby team (at least at the time writing of the case study) instituted a review process when new clients wished to start using the lock manager.</p>
+</div>
+<div class="paragraph">
+<p>In terms of this chapter&#8217;s topic, this means that someone on the product team needed to coordinate the discussions with the Chubby team and ensure that any concerns were resolved. This might conceivably have involved multiple iterations and reviews of designs describing intended use.</p>
+</div>
+<div class="paragraph">
+<p>In short, even the most sophisticated microservice environments may require some level of  human coordination across the teams. Project management provides a framework for doing this and encourages the development of appropriate skills.</p>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -10996,46 +11041,14 @@ will not have the same quick, get-in-get-out tone of a daily scrum."</p>
 </ul>
 </div>
 <div class="paragraph">
-<p><a id="3.08.03-NoEstimates"></a></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>Sidebar: The estimation controversy</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
 <p>The above discussion is by no means exhaustive. A wealth of additional techniques is to be found in <a href="#Larman2009">[Larman2009]</a> and <a href="#Cohn2010">[Cohn2010]</a>. New techniques are continually emerging from the front lines of the digital industry; the interested student should consider attending industry conferences such as those offered by the Agile Alliance.</p>
 </div>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_the_agile_project_frameworks">The Agile project frameworks</h5>
-<div class="ulist">
-<ul>
-<li>
-<p>SAFe</p>
-</li>
-<li>
-<p>DaD</p>
-</li>
-<li>
-<p>etc</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>"bring the work to the team, not the team to the work"</p>
-</div>
-<div class="paragraph">
-<p><a href="http://searchcio.techtarget.com/tip/How-organizational-agility-will-save-and-destroy-your-company" class="bare">http://searchcio.techtarget.com/tip/How-organizational-agility-will-save-and-destroy-your-company</a> - cultural issues - refer to previous chapter</p>
-</div>
-</div>
-<div class="sect4">
 <h5 id="_the_future_of_project_management">The future of project management</h5>
 <div class="paragraph">
-<p>Recall ultimately our three "Ps":</p>
+<p>Recall our three "Ps":</p>
 </div>
 <div class="ulist">
 <ul>
@@ -11051,24 +11064,13 @@ will not have the same quick, get-in-get-out tone of a daily scrum."</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Taken together, the three represent a coherent set of concerns for value delivery in various forms. But in isolation, any one of them ultimately is limited. This is a particular challenge for project management, whose practitioners may invest deeply in their chosen field of expertise. The field of project management, in turn, has its own expansionist tendencies, to the point where the PMO has become the arbiter of ALL IT investments in some organizations.</p>
+<p>Taken together, the three represent a coherent set of concerns for value delivery in various forms. But in isolation, any one of them ultimately is limited. This is a particular challenge for project management, whose practitioners may identify deeply with their chosen field of expertise.</p>
 </div>
 <div class="paragraph">
-<p>A product manager who does not understand the fundamentals of project execution will not succeed&#8230;&#8203;</p>
+<p>Clearly, formalized project management is under pressure. Its methods are perceived by the Agile community as overly heavyweight; its practitioners are criticized for focusing too much on success in terms of cost and schedule performance and not enough on business outcomes. Because projects are by definition temporary, project managers have little incentive to care about technical debt or operational consequences. Hence the rise of the product manager.</p>
 </div>
 <div class="paragraph">
-<p>fundamental theme - what can we know&#8230;&#8203; emergence vs planning &#8230;&#8203; network vs chain &#8230;&#8203; finding partial ordering, falsifying hypotheses&#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<p>If we "get rid of the PMO" there still is the need to charter new investments. What is their value proposition, business model&#8230;&#8203; there is always a portfolio and some form of success criteria and there will ALWAYS be issues of resources and dependencies</p>
-</div>
-<div class="paragraph">
-<p>however the days of equating schedule performance with success are ending
-or translating EVM directly to the balance sheet (EVM always being a fiction and less and less useful in a digitally transforming world)</p>
-</div>
-<div class="paragraph">
-<p>Project success: product mgmt happy
-Product success: market happy</p>
+<p>However, a product manager who does not understand the fundamentals of project execution will not succeed. As we have seen, modern products, especially in organizations scaling up, have dependencies and coordination needs, and to meet those needs, project management tools will continue to provide value.</p>
 </div>
 <div class="paragraph">
 <p><a id="it-sourcing"></a></p>
@@ -11171,6 +11173,30 @@ Decline &amp; fall of EVM?</p>
 <div class="sect3">
 <h4 id="_topics_in_it_project_management_and_related_fields">Topics in IT project management and related fields</h4>
 <div class="sect4">
+<h5 id="_the_agile_project_frameworks">The Agile project frameworks</h5>
+<div class="paragraph">
+<p>As of this writing, a number of frameworks have been developed at the intersection of Agile and project management. Notable examples include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The Scaled Agile Framework (<a href="http://www.scaledagileframework.com/" class="bare">http://www.scaledagileframework.com/</a>)</p>
+</li>
+<li>
+<p>Disciplined Agile Delivery (<a href="http://www.disciplinedagiledelivery.com/" class="bare">http://www.disciplinedagiledelivery.com/</a>)</p>
+<div class="literalblock">
+<div class="content">
+<pre>expand with contributed descriptions</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Other Agile authors are skeptical of the need for such material <a href="#Schwaber2013">[Schwaber2013]</a>.</p>
+</div>
+</div>
+<div class="sect4">
 <h5 id="_the_two_dimensions_of_demand_management">The two dimensions of demand management</h5>
 <div class="paragraph">
 <p>Project management is our first major specialization of <a href="#2.05.00-work-management">Chapter 5</a>'s general concept of "work management." (We will turn to process management in the next chapter.) In the interest of keeping project management firmly in context, consider the following two-dimensional analysis:</p>
@@ -11264,11 +11290,24 @@ which are intended to provide insights into project dynamics. However
 as will be discussed, the model does not take into consideration
 feedback. It is an Open-Loop system model. Kennaley p44</p>
 </div>
+<div class="paragraph">
+<p>or translating EVM directly to the balance sheet (EVM always being a fiction and less and less useful in a digitally transforming world)</p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_controversies_in_pm_history">Controversies in PM history</h5>
 <div class="paragraph">
 <p>PERT chart history, Mcnamara, etc</p>
+</div>
+<div class="paragraph">
+<p><a id="3.08.03-NoEstimates"></a></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>The estimation controversy</strong></p>
+</div>
+</div>
 </div>
 <div class="sect5">
 <h6 id="_the_systems_problem">The systems problem</h6>
@@ -11306,6 +11345,9 @@ When risk and uncertainty are present with ongoing demand, like in the case of a
 <p>"Water-scrum-fall"</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>When taken to an extreme, the PMO becomes the arbiter of ALL IT investments in some organizations. Support and operational activities are chartered as long-running "projects" and staff time is billed through them (more on this in the section on Resource Management.) Essentially, this is how a product management approach emerges from taking the project management paradigm to an ultimate conclusion.</p>
 </div>
 </div>
 <div class="sect4">
@@ -11356,6 +11398,12 @@ advice for transitioning a PMO from traditional to agile. (cited in <a href="#Co
 </div>
 <div class="sect3">
 <h4 id="_conclusion_8">Conclusion</h4>
+<div class="paragraph">
+<p>fundamental theme - what can we know&#8230;&#8203; emergence vs planning &#8230;&#8203; network vs chain &#8230;&#8203; finding partial ordering, falsifying hypotheses&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>If we "get rid of the PMO" there still is the need to charter new investments. What is their value proposition, business model&#8230;&#8203; there is always a portfolio and some form of success criteria and there will ALWAYS be issues of resources and dependencies</p>
+</div>
 <div class="sect4">
 <h5 id="_discussion_questions_8">Discussion questions</h5>
 <div class="ulist">
@@ -11849,6 +11897,11 @@ Standard + case</p>
 </div>
 <div class="paragraph">
 <p>The modern product manager: a purple squirrel? <a href="#Cohn2010">[Cohn2010]</a>pp130-132</p>
+</div>
+<div class="paragraph">
+<p>Process success: project mgr happy
+Project success: product mgmt happy
+Product success: market happy</p>
 </div>
 </div>
 </div>
@@ -12437,10 +12490,10 @@ difficult for them to stay hands on</p>
 <p>Folk models = "sr. clinician&#8217;s opinions" - Nancy Raymond</p>
 </div>
 <div class="paragraph">
-<p>the problem of frameworks - arbitrary applications of semantics</p>
+<p>the problem of frameworks - folk applications of semantics</p>
 </div>
 <div class="paragraph">
-<p>traditions of canon law</p>
+<p>traditions of canon law (see chapter 11)</p>
 </div>
 <div class="paragraph">
 <p>Optimizing across multiple constraints</p>
@@ -12503,6 +12556,9 @@ difficult for them to stay hands on</p>
 <p><a id="Brooks1975"></a>[Brooks1975]:Brooks, F. P. (1975). <em>The mythical man-month: essays on software engineering.</em> Reading, Mass., Addison-Wesley Pub. Co.</p>
 </li>
 <li>
+<p><a id="Burrows2006"></a>[Burrows2006]: Burrows, M. G. I. (2006). "The Chubby lock service for loosely-coupled distributed systems." 7th symposium on Operating systems design and implementation (OSDI '06), USENIX Association Berkeley, CA, USA</p>
+</li>
+<li>
 <p><a id="Burrows2014"></a>[Burrows2014]: Burrows, Mike. (2014) <em>Kanban from the Inside: Understand the Kanban Method, connect it to what you already know, introduce it with impact</em>. Sequim, WA, Blue Hole Press.</p>
 </li>
 <li>
@@ -12528,6 +12584,9 @@ difficult for them to stay hands on</p>
 </li>
 <li>
 <p><a id="Edwards2012"></a>[Edwards2012]: Edwards, D. (2012), "Integrating DevOps tools into a Service Delivery Platform", <a href="http://dev2ops.org/2012/07/integrating-devops-tools-into-a-service-delivery-platform-video/" class="bare">http://dev2ops.org/2012/07/integrating-devops-tools-into-a-service-delivery-platform-video/</a></p>
+</li>
+<li>
+<p><a id="Flahiff2016"></a>[Flahiff2016]: Flahiff, J. (2016). "How organizational agility will save and destroy your company." from <a href="http://searchcio.techtarget.com/tip/How-organizational-agility-will-save-and-destroy-your-company" class="bare">http://searchcio.techtarget.com/tip/How-organizational-agility-will-save-and-destroy-your-company</a>. Accessed March 19, 2016.</p>
 </li>
 <li>
 <p><a id="Fowler2003"></a>[Fowler2003]: Fowler, M. (2003), <em>Patterns of enterprise application architecture</em>, Addison-Wesley, Boston</p>
@@ -12673,6 +12732,9 @@ IEEE Press.</p>
 </li>
 <li>
 <p><a id="Rubin2012"></a>[Rubin2012]: Rubin, K.S., 2012. <em>Essential Scrum : a practical guide to the most popular agile process</em>, Upper Saddle River, NJ: Addison-Wesley. xliii, 452 p.</p>
+</li>
+<li>
+<p><a id="Schwaber2013"></a>[Schwaber2013]: Schwaber, K. (2013). unSAFE at any speed. URL: <a href="https://kenschwaber.wordpress.com/2013/08/06/unsafe-at-any-speed/" class="bare">https://kenschwaber.wordpress.com/2013/08/06/unsafe-at-any-speed/</a>. Ken Schwaber&#8217;s Blog: Telling It Like It Is. 2016.</p>
 </li>
 <li>
 <p><a id="Scotland2010"></a>[Scotland2010]: Scotland, K. (2010), "Defining the Last Responsible Moment", <a href="http://availagility.co.uk/2010/04/06/defining-the-last-responsible-moment" class="bare">http://availagility.co.uk/2010/04/06/defining-the-last-responsible-moment</a></p>
