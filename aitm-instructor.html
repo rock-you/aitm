@@ -10929,6 +10929,12 @@ What’s typically underestimated is the complexity and indivisibility of many l
 </div>
 </div>
 <div class="sect4">
+<h5 id="_governing_outsourced_work">Governing outsourced work</h5>
+<div class="paragraph">
+<p>A third major reason for the continued use of project management and its techniques is governing work that has been outsourced to third parties. This is covered in detail in the section on <a href="#sourcing">sourcing</a>.</p>
+</div>
+</div>
+<div class="sect4">
 <h5 id="_organizational_tools_and_techniques">Organizational tools and techniques</h5>
 <div class="paragraph">
 <p>Our previous discussion of <a href="#2.05.00-work-management">work management</a>was a simple, idealized flow of uniform demand (new product functionality, issues, etc). Tasks in general did not have dependencies, or dependencies were handled through ad-hoc coordination. We also in general assumed that resources (people) were available to perform the tasks; resource contention, while it certainly may have come up, was again handled through ad-hoc means.</p>
@@ -11300,7 +11306,7 @@ will not have the same quick, get-in-get-out tone of a daily scrum."</p>
 A large enterprise had a long relationship with a major software vendor, who provided a critical software product used widely for many purposes across the enterprise.</p>
 </div>
 <div class="paragraph">
-<p>The price for this product was set based on the power of the computer running it. A license would cost less for computer with 4 cores and 1 gigabyte of RAM, than it would for a computer with 16 cores and 8 gigabytes of RAM. The largest computers required the most expensive licenses, which got to be quite costly.</p>
+<p>The price for this product was set based on the power of the computer running it. A license would cost less for computer with 4 cores and 1 gigabyte of RAM, than it would for a computer with 16 cores and 8 gigabytes of RAM. The largest computers required the most expensive licenses.</p>
 </div>
 <div class="paragraph">
 <p>As described previously, the goal of <a href="#virtualization">virtualization</a> is to use one powerful physical computer to consolidate more lightly-loaded computers as "virtual machines." This can provide significant savings.</p>
@@ -11328,11 +11334,11 @@ A large enterprise had a long relationship with a major software vendor, who pro
 </div>
 </div>
 <div class="paragraph">
-<p>Software licensing is a subset of Software Asset Management, which is itself a subset of IT Asset Management, which is discussed in more depth in the material on <a href="#chap-process-mgmt">process management</a> and <a href="#IT-lifecycles">IT lifecycles</a>.</p>
+<p>Software licensing is a subset of Software Asset Management, which is itself a subset of IT Asset Management, discussed in more depth in the material on <a href="#chap-process-mgmt">process management</a> and <a href="#IT-lifecycles">IT lifecycles</a>.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_impact_of_agile">Impact of Agile</h5>
+<h5 id="_services_and_software_development">Services and software development</h5>
 <div class="quoteblock">
 <blockquote>
 Customer collaboration over contract negotiation
@@ -11375,9 +11381,79 @@ for both suppliers and buyers of information technology (IT) projects, one issue
 <div class="paragraph">
 <p>When a contract is signed based on waterfall assumptions, the project management process of <a href="#change-control">change control</a> is typically used to govern any alterations to the scope of the effort. Each change order typically implies some increase in cost to the customer. Because of this, the perceived risk mitigation of a fixed price contract may become a false premise.</p>
 </div>
+<div class="paragraph">
+<p>This problem has been understood for some time. Scott Ambler argued in 2005 that "It&#8217;s time to abandon the idea that fixed bids reduce risk. Clients have far more control over a project with a variable, gated approach to funding in which working software is delivered on a regular basis" <a href="#Ambler2005">[Ambler2005]</a>. Andreas Opelt states, "For agile IT projects it is therefore necessary to find an agreement that supports the balance between a fixed budget (maximum price range) and agile development (scope not yet defined in detail)&#8230;&#8203;"</p>
+</div>
+<div class="paragraph">
+<p>How is this done? Opelt and his co-authors further argue that the essential question revolves around the project "iron triangle":</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Scope</p>
+</li>
+<li>
+<p>Cost</p>
+</li>
+<li>
+<p>Deadline</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The approach they recommend is determining which of these elements is the "fixed point" and which is estimated. In traditional waterfall projects, scope is fixed, while costs and deadline must be estimated (a problematic approach when <a href="#2.04.04-lean-product-dev">product development</a> is required.)</p>
+</div>
+<div class="paragraph">
+<p>In Opelt&#8217;s view, in Agile contracting, costs and deadline are fixed, while scope is "estimated" - understood to have some inevitable variability. "&#8230;&#8203;you never know exactly what details will be needed at the start of a project. On the other hand, you do not always need everything that had originally been considered to be important" <a href="#Opelt2013">[Opelt2013]</a>.</p>
+</div>
+<div class="paragraph">
+<p>Their recommended approach supports the following benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Simplified adaptation to change</p>
+</li>
+<li>
+<p>Non-punitive changes in scope</p>
+</li>
+<li>
+<p>Reduced knowledge decay (large "batches" of requirements degrade in value over time)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This is achieved through:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Defining the contract at the level of product or project vision (epics or high-level stories; see discussion of <a href="#2.0.4.03-scrum">Scrum</a>)</p>
+</li>
+<li>
+<p>Developing high-level estimation</p>
+</li>
+<li>
+<p>Establishing agreement for sharing the risk of product development variability</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This last point, which Opelt et al term "riskshare," is key. If the schedule or cost expand beyond the initial estimate, both the supplier and the customer pay, according to some agreed %, which they recommend be between 30%-70%. If the supplier proportion is too low, the contract becomes essentially time &amp; materials. If the customer proportion is too low, the contract starts to resemble traditional fixed-price.</p>
+</div>
+<div class="paragraph">
+<p>Incremental checkpoints are also essential; for example, the supplier/customer interactions should be high bandwidth for the first few sprints, while culture and expectations are being established and the project is developing a rhythm.</p>
+</div>
+<div class="paragraph">
+<p>Finally, the ability for either party to exit gracefully and with minimum penalty is needed. If the initiative is testing market response (ala <a href="#lean-startup">Lean Startup</a>)
+and the product hypothesis is falsified, there is little point to continuing the work from the customer&#8217;s point of view. AND, if the product vision turns out to be far more work than either party estimated, the supplier should be able to walk away  (or at least insist on comprehensive re-negotiation.)</p>
+</div>
+<div class="paragraph">
+<p>These ideas are a departure from traditional contract management. As Opelt asks, "How can you sign a contract from which one party can exit at any time?" Recall however that (if Agile principles are applied) the customer is receiving working software continuously through the engagement (e.g. after every sprint).</p>
+</div>
 </div>
 <div class="sect4">
-<h5 id="_impact_of_cloud">Impact of Cloud</h5>
+<h5 id="_cloud_sourcing">Cloud sourcing</h5>
 
 </div>
 <div class="sect4">
@@ -11404,11 +11480,11 @@ for both suppliers and buyers of information technology (IT) projects, one issue
 
 </div>
 <div class="sect4">
-<h5 id="_impact_of_agile_2">Impact of Agile</h5>
+<h5 id="_impact_of_agile">Impact of Agile</h5>
 
 </div>
 <div class="sect4">
-<h5 id="_impact_of_cloud_2">Impact of Cloud</h5>
+<h5 id="_impact_of_cloud">Impact of Cloud</h5>
 
 </div>
 <div class="sect4">
@@ -11783,6 +11859,9 @@ advice for transitioning a PMO from traditional to agile. (cited in <a href="#Co
 <p><a href="https://www.thoughtworks.com/insights/blog/scaling-agile-problems-and-solutions">Scaling Agile: Problems and Solutions</a></p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p><strong>Resources</strong></p>
 </div>
 <div class="paragraph">
 <p><strong>Videos</strong></p>
@@ -12868,6 +12947,9 @@ difficult for them to stay hands on</p>
 <p><a id="Allspaw2009"></a>[Allspaw2009]: Allspaw, J. &amp; Hammond, P. (2009), "10 deploys per day: Dev &amp; ops cooperation at Flickr",  O&#8217;Reilly Publications, <a href="http://www.slideshare.net/jallspaw/10-deploys-per-day-dev-and-ops-cooperation-at-flickr" class="bare">http://www.slideshare.net/jallspaw/10-deploys-per-day-dev-and-ops-cooperation-at-flickr</a></p>
 </li>
 <li>
+<p><a id="Ambler2005"></a>[Ambler2005]: Ambler, S. (2005) "Agile Outsourcing." <em>Dr. Dobb&#8217;s Journal</em>.  Retrieved from <a href="http://www.drdobbs.com/architecture-and-design/agile-outsourcing/184415344" class="bare">http://www.drdobbs.com/architecture-and-design/agile-outsourcing/184415344</a>. Date Accessed:  3/21/2016.</p>
+</li>
+<li>
 <p><a id="Anderson2010"></a>[Anderson2010]: Anderson, D. J. (2010), <em>Kanban: Successful Evolutionary Change for your Technology Business</em>, Blue Hole Press, Sequim, WA</p>
 </li>
 <li>
@@ -13152,7 +13234,7 @@ IEEE Press.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-08-07 23:02:45 CDT
+Last updated 2015-08-21 08:27:34 CDT
 </div>
 </div>
 </body>
