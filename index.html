@@ -873,7 +873,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_basic_concerns_2">Basic concerns</a></li>
 <li><a href="#_hiring">Hiring</a></li>
-<li><a href="#_resource_allocation">Resource allocation</a></li>
+<li><a href="#_resource_allocation_and_tracking">Resource allocation and tracking</a></li>
 <li><a href="#_accountability_and_performance">Accountability and performance</a></li>
 <li><a href="#_skills_management">Skills management</a></li>
 </ul>
@@ -11878,48 +11878,106 @@ hiring is one of the most important things a software organization does. Every g
 </div>
 </div>
 <div class="sect4">
-<h5 id="_resource_allocation">Resource allocation</h5>
+<h5 id="_resource_allocation_and_tracking">Resource allocation and tracking</h5>
 <div class="paragraph">
-<p>Once you have hired someone, you have to manage them, at least to the extent of assigning them to a team. We have talked about <a href="#motivation">Theory X and Theory Y</a> in the chapter on culture, and it&#8217;s the assumption of this book that your company is more aligned to Theory Y.</p>
-</div>
-<div class="paragraph">
-<p>process management in chapter 9
-multi-project fractional allocation
-resources impacted by operational processes
-ad-hoc requests
-sum total of demand - overburden
-Phoenix Project examination - all just work</p>
-</div>
-<div class="paragraph">
-<p>the various time tracking approaches</p>
+<p>When a new hire enters your organization, they enter a complex system that will structure and direct their daily activities through a myriad of means. The various means that direct their action include:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>roll up FTE to product &amp; don&#8217;t</p>
+<p>Team assignment (e.g. to an ongoing product)</p>
 </li>
 <li>
-<p>project systems</p>
+<p>Project assignment</p>
 </li>
 <li>
-<p>HR systems</p>
-</li>
-<li>
-<p>ticketing systems (process centric)</p>
-</li>
-<li>
-<p>home built systems</p>
+<p>Process responsibilities</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>project IDs</p>
+<p>Notice again the appearance of the <a href="#2.04.01-process-project-product">"3 Ps."</a></p>
+</div>
+<div class="paragraph">
+<p>Product, project, and process become challenging when they are all allowed to generate demand on individuals independently of each other. In the worst case scenario, the <strong>same</strong> individual winds up with:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Collaborative team responsibilities</p>
+</li>
+<li>
+<p>"Fractional" allocation to one or more projects</p>
+</li>
+<li>
+<p>Ticketed process responsibilities</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Fractional allocation is the practice of funding individuals through assigning them at some % to a project. For example, a server engineer might be allocated 25% time to a project for 6 months to define its infrastructure architecture, while being assigned 30% to another project to refresh obsolete infrastructure.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>When demand is un-coordinated, these multiple channels can result in multi-tasking and dramatic overburden, and in the worst case the individual becomes the constraint to enterprise value. Project managers expect deliverables on time, and have no visibility to operational concerns (e.g. outages) that may affect the ability of staff to deliver. Ad-hoc requests "smaller than a project, bigger than a ticket" further complicate matters.</p>
+</div>
+<div class="paragraph">
+<p>The <em>Phoenix Project</em> presents an effective and realistic dramatization of the resulting challenges. Work is entering the system through multiple channels and the overburden on key individuals (such as Brent, the lead systems engineer) has reached crisis proportions. Through a variety of mechanisms, they take control of the demand channels and greatly improve the organization&#8217;s success. One of the most important lessons is well articulated by Erik, the mentor:</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>“Your job as VP of IT Operations is to ensure the fast, predictable, and uninterrupted flow of planned work that delivers value to the business while minimizing the impact and disruption of unplanned work, so you can provide stable, predictable, and secure IT service&#8230;&#8203;You must figure out how to control the release of work into IT Operations and, more importantly, ensure that your most constrained resources are doing only the work that serves the goal of the entire system, not just one silo.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="#Kim2013">[Kim2013]</a>, p.91</p>
+</div>
+<div class="paragraph">
+<p>In order to understand the work, measuring the consumption of people&#8217;s time is important. There are various time tracking approaches:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Simple allocation of staff payroll to product or organizational line</p>
+</li>
+<li>
+<p>Project management systems (sometimes these are used for weekly time tracking, even for staff that are not assigned to projects - in such cases, placeholder operational projects are created)</p>
+</li>
+<li>
+<p>Human Resource Management systems</p>
+</li>
+<li>
+<p>Ticketing/workflow systems - advanced systems, such as those found in the Professional Services Automation sector, track time when tickets are in an "open" status.</p>
+</li>
+<li>
+<p>Home built systems</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>There is little industry consensus on best practices here. There are reasonable concerns about the burden of time tracking on employees, and very poor data quality resulting from employees attempting to "code" activities when summarizing their time on a weekly or bi-weekly basis.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Need reviewer input</pre>
+</div>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_accountability_and_performance">Accountability and performance</h5>
 <div class="paragraph">
-<p>broken older models - linear 1-5 ranking once a year
+<p>We have talked about <a href="#motivation">Theory X and Theory Y</a> in the chapter on culture, and it&#8217;s the assumption of this book that your company is more aligned to Theory Y. We are not talking about the daily "management" of the employee&#8217;s work.
+broken older models - linear 1-5 ranking once a year
 360 degree
 etc.</p>
 </div>
@@ -11930,8 +11988,10 @@ etc.</p>
 <div class="sect4">
 <h5 id="_skills_management">Skills management</h5>
 <div class="paragraph">
-<p>10x controversy
-good blogs: Johanna Rothmann</p>
+<p>10x controversy</p>
+</div>
+<div class="paragraph">
+<p>good blogs: Johanna Rothmann</p>
 </div>
 <div class="paragraph">
 <p>We covered culture in Chapter 7.</p>
