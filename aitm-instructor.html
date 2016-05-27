@@ -524,6 +524,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_web_scale_it">Web-scale IT</a></li>
 <li><a href="#_technology_lifecycle_management">Technology lifecycle management</a></li>
+<li><a href="#_additional_material">additional material</a></li>
 </ul>
 </li>
 <li><a href="#_conclusion_2">Conclusion</a>
@@ -821,7 +822,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_bi_modal_it_a_critique">Bi-modal IT, a critique</a></li>
 <li><a href="#_solving_for_decisionmaking_governance">Solving for decisionmaking &amp; governance</a></li>
 <li><a href="#_the_problem_of_epistemic_closure">The problem of epistemic closure</a></li>
-<li><a href="#_additional_material">additional material</a></li>
+<li><a href="#_additional_material_2">additional material</a></li>
 </ul>
 </li>
 <li><a href="#_conclusion_7">Conclusion</a>
@@ -926,18 +927,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_chapter_9_learning_objectives">Chapter 9 learning objectives</a></li>
 </ul>
 </li>
-<li><a href="#_input_material">Input material</a></li>
 <li><a href="#_why_process_management">Why process management?</a>
 <ul class="sectlevel4">
 <li><a href="#_the_fundamental_point">The fundamental point</a></li>
 <li><a href="#_process_vs_work_management">Process vs work management</a></li>
 <li><a href="#_process_vs_function">Process vs function</a></li>
+<li><a href="#_self_organization_and_process">Self-organization and process</a></li>
 </ul>
 </li>
 <li><a href="#_process_theory">Process theory</a>
 <ul class="sectlevel4">
+<li><a href="#_bpm_fundamentals">BPM fundamentals</a></li>
 <li><a href="#_raci">RACI</a></li>
-<li><a href="#_decision_rules">Decision rules</a></li>
+<li><a href="#_cynefin_and_the_checklist_manifesto">Cynefin and the Checklist Manifesto</a></li>
 </ul>
 </li>
 <li><a href="#_process_frameworks">Process frameworks</a>
@@ -959,10 +961,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_continuous_improvement">Continuous improvement</a></li>
 <li><a href="#_topics_in_process_management">Topics in process management</a>
 <ul class="sectlevel4">
-<li><a href="#_the_complex_relationship_of_process_and_agile">The complex relationship of process and Agile</a></li>
+<li><a href="#_case_mgmt">Case mgmt</a></li>
 <li><a href="#_cynefin_and_best_practice">Cynefin and "best practice"</a></li>
 <li><a href="#_process_antipatterns">Process antipatterns</a></li>
 <li><a href="#_revisiting_the_problem_of_the_contending_execution_models">Revisiting the problem of the contending execution models</a></li>
+<li><a href="#_process_flow_across_a_services_model">Process flow across a services model</a></li>
+<li><a href="#_deeper_theory_state_charts_petri_nets">deeper theory: state charts, Petri nets</a></li>
+<li><a href="#_formal_process_control">formal process control</a></li>
 </ul>
 </li>
 <li><a href="#_conclusion_9">Conclusion</a>
@@ -1006,7 +1011,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_data_information_knowledge">Data, information, knowledge</a></li>
 <li><a href="#_the_ontology_problem">The ontology problem</a></li>
 <li><a href="#_records_vs_data">Records vs data</a></li>
-<li><a href="#_input_material_2">input material</a></li>
+<li><a href="#_input_material">input material</a></li>
 </ul>
 </li>
 <li><a href="#_conclusion_11">Conclusion</a>
@@ -4123,6 +4128,19 @@ It is not always easy to apply this approach in practice. There can be edge case
 <div class="literalblock">
 <div class="content">
 <pre>[to be written]</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_additional_material">additional material</h5>
+<div class="literalblock">
+<div class="content">
+<pre>http://12factor.net/build-release-run</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Releases are an append-only ledger and a release cannot be mutated once it is created. Any change must create a new release.</pre>
 </div>
 </div>
 </div>
@@ -10076,7 +10094,7 @@ Micromanagement.</p>
 
 </div>
 <div class="sect4">
-<h5 id="_additional_material">additional material</h5>
+<h5 id="_additional_material_2">additional material</h5>
 <div class="paragraph">
 <p>Toyota Way quadrant as cited in <a href="#Cohn2010">[Cohn2010]</a> p145</p>
 </div>
@@ -13594,7 +13612,32 @@ advice for transitioning a PMO from traditional to agile. (cited in <a href="#Co
 <div class="sect3">
 <h4 id="_introduction_to_chapter_9">Introduction to Chapter 9</h4>
 <div class="paragraph">
-<p>No matter what your organization structure, you need process. Toyota considers a clear process vision, or "target condition," to be the most fundamental objective in improving operations. Process, in terms of "business process," has been a topic of study and professional education for many years. Designing processes, improving them, and using them to improve overall performance is an ongoing activity in most if not all organizations.</p>
+<p>What is "process?"</p>
+</div>
+<div class="paragraph">
+<p><a href="http://www.dictionary.com/browse/process">Dictionary.com</a> defines it as "a systematic series of actions directed to some end . . . a continuous action, operation, or series of changes taking place in a definite manner."</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;ve discussed <a href="#2.05.00-work-management">work management</a>, which is an important precursor of process management. Work management is less formalized; a wide variety of activities are handled through flexible Kanban boards based on the simplest "process" of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>To do</p>
+</li>
+<li>
+<p>Doing</p>
+</li>
+<li>
+<p>Done</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Process management starts with the fundamental capability for coordinated work management, and refines it much further.</p>
+</div>
+<div class="paragraph">
+<p>Process, in terms of "business process," has been a topic of study and professional development for many years. Toyota considers a clear process vision, or "target condition," to be the most fundamental objective in improving operations (<a href="#Rother2010">[Rother2010]</a>, chapters 5-6).  Designing processes, improving them, and using them to improve overall performance is an ongoing activity in most if not all organizations.</p>
 </div>
 <div class="paragraph">
 <p>However, process can cause problems. Processes imply <a href="#queuing">queues</a>, and in digital organizations this means invisible work in process. Organzational improvement approaches that encourage the formation of processes and associated metrics at all levels may therefore not be an effective model.</p>
@@ -13722,54 +13765,6 @@ advice for transitioning a PMO from traditional to agile. (cited in <a href="#Co
 </div>
 </div>
 <div class="sect3">
-<h4 id="_input_material">Input material</h4>
-<div class="quoteblock">
-<blockquote>
-One organization enthusiastically embraced process improvement, with good reason: customers, suppliers, and employees found the company&#8217;s processes slow, inconsistent, and error prone. Unfortunately, they were so enthusiastic that each team defined the work of their small group or department as a complete process. Of course, each of these was in fact the contribution of a specialized functional group to some larger, but unidentified, processes. Each of these "processes" was "improved" independently, and you can guess what happened.<br>
-<br>
- Within the boundaries of each process, improvements were implemented that made work more efficient from the perspective of the performer. However, these mini-processes were efficient largely because they had front-end constraints that made work easier for the performer but imposed a burden on the customer or the preceding process. The attendant delay and effort meant that the true business processes behaved even more poorly than they had before. This is a common outcome when processes are defined too "small." Moral: Don&#8217;t confuse subprocesses or activities with business processes.
-</blockquote>
-<div class="attribution">
-&#8212; Alex Sharp<br>
-<cite>Workflow Modeling</cite>
-</div>
-</div>
-<div class="paragraph">
-<p>If processes are connected on a 1:1 basis, then we say that they are part of a single, end-to-end, business process.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>&lt;&lt;Sharp2009&gt;&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>[Domain modeling]</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><a href="http://12factor.net/build-release-run" class="bare">http://12factor.net/build-release-run</a></p>
-</div>
-<div class="paragraph">
-<p>Releases are an append-only ledger and a release cannot be mutated once it is created. Any change must create a new release.</p>
-</div>
-<div class="paragraph">
-<p>Adapting a services model to improve flow</p>
-</div>
-<div class="paragraph">
-<p>(Notice that the services a functional area provides can be viewed as a form of product in and of themselves.)</p>
-</div>
-<div class="paragraph">
-<p>How to structure the matrix</p>
-</div>
-<div class="paragraph">
-<p>RACI</p>
-</div>
-<div class="paragraph">
-<p>focus on specific decisions rather than abstract concepts like empowerment and strong vs. weak teams. It is much more useful for teams to know which product features they can change without outside approval than it is to find out they are "empowered."</p>
-</div>
-</div>
-<div class="sect3">
 <h4 id="_why_process_management">Why process management?</h4>
 <div class="literalblock">
 <div class="content">
@@ -13779,6 +13774,12 @@ One organization enthusiastically embraced process improvement, with good reason
 <div class="paragraph">
 <p>Scenario: repetitive yet error prone work
 team to team interactions that become "servicized"</p>
+</div>
+<div class="paragraph">
+<p>from work to process mgmt</p>
+</div>
+<div class="paragraph">
+<p>kanban board starts to elaborate</p>
 </div>
 <div class="paragraph">
 <p>A glance at the frameworks? At least examples are needed.</p>
@@ -13816,22 +13817,48 @@ team to team interactions that become "servicized"</p>
 <p>Measuring process. KPIs across a 36-process operating model?</p>
 </div>
 </div>
+<div class="sect4">
+<h5 id="_self_organization_and_process">Self-organization and process</h5>
+<div class="paragraph">
+<p>Control vs &#8230;&#8203;</p>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_process_theory">Process theory</h4>
-<div class="paragraph">
-<p>The first question is,whycontrol the process? When we know why, it al
-most automatically clarifies how we must control the process. Is a con
-trolled process inherently better than one that has more uncertainty?
-No. Since the purpose of our process is to make money, it would follow
-that the purpose of controlling the process must be to influence eco-
-197
-198 Managing the DesignFactory
-nomic outcomes. There is no other reason to be interested in process
-control. <a href="#Reinertsen2007">[Reinertsen2007]</a> pp197-198</p>
+<div class="quoteblock">
+<blockquote>
+The first question is, why control the process? When we know why, it almost automatically clarifies how we must control the process. Is a controlled process inherently better than one that has more uncertainty? No. Since the purpose of our process is to make money, it would follow that the purpose of controlling the process must be to influence economic outcomes. There is no other reason to be interested in process control.
+</blockquote>
+<div class="attribution">
+&#8212; Don Reinertsen<br>
+<cite>Managing the Design Factory pp. 197-198</cite>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_bpm_fundamentals">BPM fundamentals</h5>
+<div class="sect5">
+<h6 id="_process_granularity">Process granularity</h6>
+<div class="quoteblock">
+<blockquote>
+One organization enthusiastically embraced process improvement, with good reason: customers, suppliers, and employees found the company&#8217;s processes slow, inconsistent, and error prone. Unfortunately, they were so enthusiastic that each team defined the work of their small group or department as a complete process. Of course, each of these was in fact the contribution of a specialized functional group to some larger, but unidentified, processes. Each of these "processes" was "improved" independently, and you can guess what happened.<br>
+<br>
+ Within the boundaries of each process, improvements were implemented that made work more efficient from the perspective of the performer. However, these mini-processes were efficient largely because they had front-end constraints that made work easier for the performer but imposed a burden on the customer or the preceding process. The attendant delay and effort meant that the true business processes behaved even more poorly than they had before. This is a common outcome when processes are defined too "small." Moral: Don&#8217;t confuse subprocesses or activities with business processes.
+</blockquote>
+<div class="attribution">
+&#8212; Alex Sharp<br>
+<cite>Workflow Modeling</cite>
+</div>
 </div>
 <div class="paragraph">
-<p>Case mgmt</p>
+<p>If processes are connected on a 1:1 basis, then we say that they are part of a single, end-to-end, business process.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>&lt;&lt;Sharp2009&gt;&gt;</pre>
+</div>
+</div>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_raci">RACI</h5>
@@ -13842,13 +13869,34 @@ control. <a href="#Reinertsen2007">[Reinertsen2007]</a> pp197-198</p>
 <p>but most refined in process approaches</p>
 </div>
 <div class="paragraph">
-<p>deeper theory: state charts, Petri nets</p>
+<p>How to structure the matrix</p>
+</div>
+<div class="paragraph">
+<p>RACI
+focus on specific decisions rather than abstract concepts like empowerment and strong vs. weak teams. It is much more useful for teams to know which product features they can change without outside approval than it is to find out they are "empowered."</p>
+</div>
+<div class="paragraph">
+<p>reinertsen has stuff on this</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_decision_rules">Decision rules</h5>
-<div class="paragraph">
-<p>Reinertsen Boeing case</p>
+<h5 id="_cynefin_and_the_checklist_manifesto">Cynefin and the Checklist Manifesto</h5>
+<div class="literalblock">
+<div class="content">
+<pre>The problem of determinism</pre>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_case_management">Case Management</h6>
+
+</div>
+<div class="sect5">
+<h6 id="_decision_rules">Decision rules</h6>
+<div class="literalblock">
+<div class="content">
+<pre>Reinertsen Boeing case</pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -13922,6 +13970,12 @@ Standard + case</pre>
 <div class="paragraph">
 <p>"It will be seen that the cost of a process on a single part becomes a perfectly definite and tangible thing and can be recorded as such." Church quoted in <a href="#Huntzinger2007">[Huntzinger2007]</a> p 85</p>
 </div>
+<div class="paragraph">
+<p>Richard Knaster, IBM Rational’s worldwide agile practice manager, has helped several organizations to scale agile. He reports: “Development intelligence strategies such as automated dashboards are excellent tools to steer projects and ensure that agile teams are working effectively. In large organizations where there are many projects the physical space and governance needs make the use of whiteboards to track projects (e.g., taskboards, burndown charts) unfeasible. Management cannot be expected to attend ten or more daily meetings to understand if the projects responsible for their strategy execution are on track. A large insurance company found that by using IBM Rational Team Concert (RTC) dashboards they could easily see how well projects were progressing towards their release goals and if the agile practices that they had adopted were being followed correctly. By looking at the dashboards, they discovered that some teams were not writing stories effectively, nor concluding the iteration by either marking stories as being done or moving incomplete stories to the next iteration or to the product backlog. The dashboards also helped them get a handle on their technical debt. It was easy to view the defect trend for a single team or for the entire enterprise and understand if the teams were addressing quality throughout the projects or just towards the end of the release. The insurance company was also able to see whether the team was tracking impediments, performing retrospectives, and taking a few key actions from the retrospectives.”</p>
+</div>
+<div class="paragraph">
+<p>Ambler, Scott W.; Lines, Mark (2012-05-31). Disciplined Agile Delivery: A Practitioner&#8217;s Guide to Agile Software Delivery in the Enterprise (IBM Press) (Kindle Locations 8337-8348). Pearson Education. Kindle Edition.</p>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -13933,7 +13987,7 @@ Standard + case</pre>
 <p>what is maturity? Cooke-Davis defines this as "the extent to which an organization has explicitly and consistently deployed processes that are documented, managed, measured, controlled, and continually improved" (Cooke-Davies, 2004). <a href="#Richardson2010">[Richardson2010]</a></p>
 </div>
 <div class="paragraph">
-<p>governance. In the world of agile delivery the role of quality assurance needs to adapt from auditing the quality of the process and product that is delivered at the end of the lifecycle to supporting practices that ensure that quality is built in and validated from the beginning of the project.</p>
+<p>In the world of agile delivery the role of quality assurance needs to adapt from auditing the quality of the process and product that is delivered at the end of the lifecycle to supporting practices that ensure that quality is built in and validated from the beginning of the project.</p>
 </div>
 <div class="paragraph">
 <p>Ambler, Scott W.; Lines, Mark (2012-05-31). Disciplined Agile Delivery: A Practitioner&#8217;s Guide to Agile Software Delivery in the Enterprise (IBM Press) (Kindle Locations 8175-8177). Pearson Education. Kindle Edition.</p>
@@ -13942,7 +13996,7 @@ Standard + case</pre>
 <div class="sect3">
 <h4 id="_topics_in_process_management">Topics in process management</h4>
 <div class="sect4">
-<h5 id="_the_complex_relationship_of_process_and_agile">The complex relationship of process and Agile</h5>
+<h5 id="_case_mgmt">Case mgmt</h5>
 
 </div>
 <div class="sect4">
@@ -13976,12 +14030,26 @@ Standard + case</pre>
 <div class="paragraph">
 <p>checklist manifesto submission process for intra communication - great</p>
 </div>
+</div>
+<div class="sect4">
+<h5 id="_process_flow_across_a_services_model">Process flow across a services model</h5>
 <div class="paragraph">
-<p>Richard Knaster, IBM Rational’s worldwide agile practice manager, has helped several organizations to scale agile. He reports: “Development intelligence strategies such as automated dashboards are excellent tools to steer projects and ensure that agile teams are working effectively. In large organizations where there are many projects the physical space and governance needs make the use of whiteboards to track projects (e.g., taskboards, burndown charts) unfeasible. Management cannot be expected to attend ten or more daily meetings to understand if the projects responsible for their strategy execution are on track. A large insurance company found that by using IBM Rational Team Concert (RTC) dashboards they could easily see how well projects were progressing towards their release goals and if the agile practices that they had adopted were being followed correctly. By looking at the dashboards, they discovered that some teams were not writing stories effectively, nor concluding the iteration by either marking stories as being done or moving incomplete stories to the next iteration or to the product backlog. The dashboards also helped them get a handle on their technical debt. It was easy to view the defect trend for a single team or for the entire enterprise and understand if the teams were addressing quality throughout the projects or just towards the end of the release. The insurance company was also able to see whether the team was tracking impediments, performing retrospectives, and taking a few key actions from the retrospectives.”</p>
+<p>Adapting a services model to improve flow</p>
 </div>
 <div class="paragraph">
-<p>Ambler, Scott W.; Lines, Mark (2012-05-31). Disciplined Agile Delivery: A Practitioner&#8217;s Guide to Agile Software Delivery in the Enterprise (IBM Press) (Kindle Locations 8337-8348). Pearson Education. Kindle Edition.</p>
+<p>(Notice that the services a functional area provides can be viewed as a form of product in and of themselves.)</p>
 </div>
+<div class="paragraph">
+<p>Degree of automation</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_deeper_theory_state_charts_petri_nets">deeper theory: state charts, Petri nets</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_formal_process_control">formal process control</h5>
+
 </div>
 </div>
 <div class="sect3">
@@ -14344,7 +14412,7 @@ billion.</p>
 
 </div>
 <div class="sect4">
-<h5 id="_input_material_2">input material</h5>
+<h5 id="_input_material">input material</h5>
 <div class="paragraph">
 <p><a href="http://searchcio.techtarget.com/definition/agile-business-intelligence-BI?utm_medium=EM&amp;asrc=EM_NLN_56914325&amp;utm_campaign=20160510_Word%20of%20the%20Day:%20Agile%20business%20intelligence%20(BI)_kherbert&amp;utm_source=NLN&amp;track=NL-1823&amp;ad=907631&amp;src=907631" class="bare">http://searchcio.techtarget.com/definition/agile-business-intelligence-BI?utm_medium=EM&amp;asrc=EM_NLN_56914325&amp;utm_campaign=20160510_Word%20of%20the%20Day:%20Agile%20business%20intelligence%20(BI)_kherbert&amp;utm_source=NLN&amp;track=NL-1823&amp;ad=907631&amp;src=907631</a></p>
 </div>
