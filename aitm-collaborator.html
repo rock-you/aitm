@@ -667,7 +667,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_why_work_management">Why work management?</a>
 <ul class="sectlevel4">
-<li><a href="#_limiting_work_in_process">Limiting work in process</a></li>
+<li><a href="#_queuing_theory_and_limiting_work_in_process">Queuing theory and limiting work in process</a></li>
 </ul>
 </li>
 <li><a href="#_introducing_kanban">Introducing Kanban</a>
@@ -922,7 +922,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#_introduction_to_chapter_9">Introduction to Chapter 9</a>
 <ul class="sectlevel4">
-<li><a href="#_process_management_in_the_organization">Process management in the organization</a></li>
 <li><a href="#_chapter_9_overview">Chapter 9 overview</a></li>
 <li><a href="#_chapter_9_learning_objectives">Chapter 9 learning objectives</a></li>
 </ul>
@@ -952,7 +951,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_other_frameworks">Other frameworks</a></li>
 </ul>
 </li>
-<li><a href="#_agile_and_it_process_management">Agile and IT process management</a></li>
+<li><a href="#_agile_and_it_process_management">Agile and IT process management</a>
+<ul class="sectlevel4">
+<li><a href="#_process_management_in_the_organization">Process management in the organization</a></li>
+</ul>
+</li>
 <li><a href="#_continuous_improvement">Continuous improvement</a></li>
 <li><a href="#_topics_in_process_management">Topics in process management</a>
 <ul class="sectlevel4">
@@ -6938,8 +6941,18 @@ Reification generally refers to making something real, bringing something into b
 <div class="paragraph">
 <p>The basic board is widely used because it is a powerful artifact. Behind its deceptive simplicity is considerable industrial experience and relevant theory from operations management and human factors <a href="#Anderson2010">[Anderson2010]</a>. However, it has scalability limitations. What if the team is not all in the same room? We will cover this in Section 3.</p>
 </div>
+<div class="paragraph">
+<p><a id="queuing"></a></p>
+</div>
 <div class="sect4">
-<h5 id="_limiting_work_in_process">Limiting work in process</h5>
+<h5 id="_queuing_theory_and_limiting_work_in_process">Queuing theory and limiting work in process</h5>
+<div class="literalblock">
+<div class="content">
+<pre>Mentioned Reinertsen in last chapter
+Product development is invisible WIP
+Digital product mgmt - doubly so</pre>
+</div>
+</div>
 <div class="paragraph">
 <p>At this time, we’ll foreshadow some material to be covered more in depth in Section 3. But even at this stage of our evolution, with just one co-located collaborative team, it’s important to consider work in progress and how to limit it. We’ll touch on the queuing theory in section 3. For now, some rules of thumb are advisable:</p>
 </div>
@@ -13710,31 +13723,13 @@ advice for transitioning a PMO from traditional to agile. (cited in <a href="#Co
 <div class="sect3">
 <h4 id="_introduction_to_chapter_9">Introduction to Chapter 9</h4>
 <div class="paragraph">
-<p>No matter what your organization structure, you need process. Toyota considers a clear process vision, or "target condition," to be the most fundamental objective in improving operations. Process, in terms of "business process," has been a topic of study and professional education for many years. Designing processes, improving them, and using them to improve overall  performance is an ongoing activity in most if not all organizations.</p>
+<p>No matter what your organization structure, you need process. Toyota considers a clear process vision, or "target condition," to be the most fundamental objective in improving operations. Process, in terms of "business process," has been a topic of study and professional education for many years. Designing processes, improving them, and using them to improve overall performance is an ongoing activity in most if not all organizations.</p>
 </div>
 <div class="paragraph">
-<p>However, some less than effective things have been done in the name of "process." Both ITIL and the Capability Maturity Model-Integrated claim to be "process"-oriented, but their results have been questioned. In particular, there is risk in allowing processes to proliferate - the organization can only tolerate a certain number of processes before people start to become confused and demoralized by all the "bureaucracy." Organzational improvement approaches that encourage the formation of processes and associated metrics at all levels may therefore not be an effective model.</p>
+<p>However, process can cause problems. Processes imply <a href="#queuing">queues</a>, and in digital organizations this means invisible work in process. Organzational improvement approaches that encourage the formation of processes and associated metrics at all levels may therefore not be an effective model.</p>
 </div>
 <div class="paragraph">
 <p>Nevertheless, process remains an important tool in the toolkit for organization design.</p>
-</div>
-<div class="sect4">
-<h5 id="_process_management_in_the_organization">Process management in the organization</h5>
-<div class="quoteblock">
-<blockquote>
-Many companies have at least one dysfunctional area. This may be the “furniture police” who won’t let programmers rearrange furniture to facilitate pair programming. Or it may be a purchasing group that takes six weeks to process a standard software order. In any event these types of insanity get in the way of successful projects. One way to view the project manager is as the bulldozer responsible for quickly removing these problems.
-</blockquote>
-<div class="attribution">
-&#8212; Mike Cohn
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>example of service-ized process dysfunction
-is expediting the only option?
-alternatives...</pre>
-</div>
-</div>
 </div>
 <div class="sect4">
 <h5 id="_chapter_9_overview">Chapter 9 overview</h5>
@@ -14019,19 +14014,43 @@ control. <a href="#Reinertsen2007">[Reinertsen2007]</a> pp197-198</p>
 </div>
 <div class="sect3">
 <h4 id="_agile_and_it_process_management">Agile and IT process management</h4>
-<div class="paragraph">
-<p>Invariants
+<div class="sect4">
+<h5 id="_process_management_in_the_organization">Process management in the organization</h5>
+<div class="quoteblock">
+<blockquote>
+Many companies have at least one dysfunctional area. This may be the “furniture police” who won’t let programmers rearrange furniture to facilitate pair programming. Or it may be a purchasing group that takes six weeks to process a standard software order. In any event these types of insanity get in the way of successful projects. One way to view the project manager is as the bulldozer responsible for quickly removing these problems.
+</blockquote>
+<div class="attribution">
+&#8212; Mike Cohn
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>example of service-ized process dysfunction
+is expediting the only option?
+alternatives...</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Invariants
 Process is "adaptive" only to a degree
-Standard + case</p>
+Standard + case</pre>
 </div>
-<div class="paragraph">
-<p>Scrum of scrums as a synch point</p>
 </div>
-<div class="paragraph">
-<p>Cost of delay &amp; process cycles</p>
+<div class="literalblock">
+<div class="content">
+<pre>Scrum of scrums as a synch point</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Cost of delay &amp; process cycles</pre>
+</div>
 </div>
 <div class="paragraph">
 <p>"It will be seen that the cost of a process on a single part becomes a perfectly definite and tangible thing and can be recorded as such." Church quoted in <a href="#Huntzinger2007">[Huntzinger2007]</a> p 85</p>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -15211,7 +15230,7 @@ IEEE Press.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-05-04 14:21:38 CDT
+Last updated 2016-05-04 12:59:53 CDT
 </div>
 </div>
 </body>
