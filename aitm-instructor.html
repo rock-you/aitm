@@ -930,11 +930,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_why_process_management">Why process management?</a>
 <ul class="sectlevel4">
 <li><a href="#_the_fundamental_point">The fundamental point</a></li>
-<li><a href="#_process_vs_work_management">Process vs work management</a></li>
-<li><a href="#_process_vs_function">Process vs function</a></li>
+<li><a href="#_from_work_to_process_management">From work to process management</a></li>
+<li><a href="#_process_vs_organization">Process vs organization</a></li>
 <li><a href="#_self_organization_and_process">Self-organization and process</a></li>
 <li><a href="#__business_vs_it_process">"Business" vs "IT" process</a></li>
-<li><a href="#_process_in_the_product_centric_organization">Process in the product-centric organization</a></li>
+<li><a href="#_measuring_process">Measuring process</a></li>
 </ul>
 </li>
 <li><a href="#_process_theory">Process theory</a>
@@ -944,7 +944,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_process_granularity">Process granularity</a></li>
 <li><a href="#_process_vs_execution_execution_includes_concern_for_resource">Process vs execution (execution includes concern for resource)</a></li>
 <li><a href="#_cynefin_and_the_checklist_manifesto">Cynefin and the Checklist Manifesto</a></li>
-<li><a href="#_raw_material">raw material</a></li>
+<li><a href="#_deeper_theory_2">Deeper theory</a></li>
 </ul>
 </li>
 <li><a href="#_process_frameworks">Process frameworks</a>
@@ -961,6 +961,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_agile_and_it_process_management">Agile and IT process management</a>
 <ul class="sectlevel4">
 <li><a href="#_process_management_in_the_organization">Process management in the organization</a></li>
+<li><a href="#_bureaucratic_friction">Bureaucratic friction</a></li>
+<li><a href="#_the_design_factory_problem">The design factory problem</a></li>
+<li><a href="#_process_as_a_source_of_demand">Process as a source of demand</a></li>
+<li><a href="#_cost_of_delay_of_aggregate_process">Cost of delay of aggregate process</a></li>
+<li><a href="#_cultural_aspects">Cultural aspects</a></li>
 </ul>
 </li>
 <li><a href="#_continuous_improvement">Continuous improvement</a></li>
@@ -13661,7 +13666,7 @@ advice for transitioning a PMO from traditional to agile. (cited in <a href="#Co
 <p>And when tasks become more routine and specialized, formal process management starts to emerge.</p>
 </div>
 <div class="paragraph">
-<p>Process, in terms of "business process," has been a topic of study and professional development for many years. Authors such as Michael Hammer <a href="#Hammer1993">[Hammer1993]</a> and Geary Rummler <a href="#Rummler1995">[Rummler1995]</a> have had an immense impact on business operations. Toyota considers a clear process vision, or "target condition," to be the most fundamental objective in improving operations (<a href="#Rother2010">[Rother2010]</a>, chapters 5-6).  Designing processes, improving them, and using them to improve overall performance is an ongoing activity in most if not all organizations.</p>
+<p>Process, in terms of "business process," has been a topic of study and professional development for many years. Pioneering BPM (Business Process Management) authors such as Michael Hammer <a href="#Hammer1993">[Hammer1993]</a> and Geary Rummler <a href="#Rummler1995">[Rummler1995]</a> have had an immense impact on business operations. Toyota considers a clear process vision, or "target condition," to be the most fundamental objective in improving operations (<a href="#Rother2010">[Rother2010]</a>, chapters 5-6).  Designing processes, improving them, and using them to improve overall performance is an ongoing activity in most if not all organizations.</p>
 </div>
 <div class="paragraph">
 <p>However, process can cause problems. Processes imply <a href="#queuing">queues</a>, and in digital and other product development-based organizations, this means invisible work in process. Organzational improvement approaches that encourage the formation of processes and associated metrics at all levels may therefore not be an effective model.</p>
@@ -13712,20 +13717,50 @@ The first question is, why control the process? When we know why, it almost auto
 </div>
 </div>
 <div class="paragraph">
+<p>We have previously discussed product and project management. You may wish to review our summary description of <a href="#2.04.01-process-project-product">process, product, and project management</a>.</p>
+</div>
+<div class="paragraph">
 <p>Process management starts with the fundamental capability for coordinated <a href="#2.05.00-work-management">work management</a>, and refines it much further.</p>
 </div>
 <div class="paragraph">
-<p>Work will have already been specializing. Sales process, HR process, etc. This is about a certain degree of formalization that includes explicit process improvement.</p>
+<p>In our company, work has been specializing. A simple card-based kanban approach is no longer sufficient. We are finding that some work is repetitive, and we need to remember to do certain things in certain orders.</p>
 </div>
 <div class="paragraph">
-<p>Scenario: repetitive yet error prone work
-team to team interactions that become "servicized"</p>
+<p>For example, a new Human Resources (HR) manager was hired. The HR manager decided that a simple Kanban card of "hire someone new for us" was not sufficient. As she pointed out to the team, hiring needed to follow a defined sequence of tasks:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Establishing the need and purpose for the position</p>
+</li>
+<li>
+<p>Soliciting candidates</p>
+</li>
+<li>
+<p>Filtering the candidates</p>
+</li>
+<li>
+<p>Selecting a final choice</p>
+</li>
+<li>
+<p>Registering that new employee in the payroll system</p>
+</li>
+<li>
+<p>Getting the new employee set up with benefits providers (insurance, retirement, etc)</p>
+</li>
+<li>
+<p>Getting the new employee working space, equipment, and access to systems</p>
+</li>
+<li>
+<p>Training the new employee in organizational policies as well as any position-specific orientation</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>from work to process mgmt</p>
+<p>The sales, marketing, and finance teams have similarly been developing ordered lists of tasks that are consistently executed as end to end sequences. And even in the core digital development and operations teams, they are finding that some tasks are repetitive and need documentation so they are performed consistently.</p>
 </div>
 <div class="paragraph">
-<p>A glance at the frameworks? At least examples are needed.</p>
+<p>However, some team members are very cautious. The term "process police" comes up in an unhappy way. "We used to get these consultants in at my old company and they would leave piles of 3 ring binders on the shelf that no-one ever looked at," another person says.</p>
 </div>
 <div class="sect4">
 <h5 id="_the_fundamental_point">The fundamental point</h5>
@@ -13734,12 +13769,12 @@ team to team interactions that become "servicized"</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_process_vs_work_management">Process vs work management</h5>
+<h5 id="_from_work_to_process_management">From work to process management</h5>
 <div class="paragraph">
 <p>kanban board starts to elaborate</p>
 </div>
 <div class="paragraph">
-<p>Ordered tasks are something we&#8217;ve had since Chapter 5. Process management is when we need to start managing multiple processes and considering their interdependencies, perhaps using common engines and methods to define them.</p>
+<p>Ordered tasks are something we&#8217;ve had since Chapter 5. Process management is when we need to start managing multiple processes and considering their interdependencies, perhaps using common methods to define them and even common tooling to support multiple processes.</p>
 </div>
 <div class="paragraph">
 <p>"there are many organizational processes that are needed to optimally support a successful project." <a href="#Richardson2010">[Richardson2010]</a></p>
@@ -13759,7 +13794,7 @@ team to team interactions that become "servicized"</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_process_vs_function">Process vs function</h5>
+<h5 id="_process_vs_organization">Process vs organization</h5>
 <div class="paragraph">
 <p>Will functions stay with product centricity?</p>
 </div>
@@ -13771,9 +13806,6 @@ team to team interactions that become "servicized"</p>
 </div>
 <div class="paragraph">
 <p>perils of "take a number" service-ization</p>
-</div>
-<div class="paragraph">
-<p>Measuring process. KPIs across a 36-process operating model?</p>
 </div>
 </div>
 <div class="sect4">
@@ -13794,8 +13826,10 @@ team to team interactions that become "servicized"</p>
 
 </div>
 <div class="sect4">
-<h5 id="_process_in_the_product_centric_organization">Process in the product-centric organization</h5>
-
+<h5 id="_measuring_process">Measuring process</h5>
+<div class="paragraph">
+<p>Measuring process. KPIs across a 36-process operating model?</p>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -13805,6 +13839,11 @@ team to team interactions that become "servicized"</p>
 <div class="literalblock">
 <div class="content">
 <pre>Practice, discipline, capability vs process</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ordering, synch, conditionality</pre>
 </div>
 </div>
 </div>
@@ -13862,12 +13901,8 @@ One organization enthusiastically embraced process improvement, with good reason
 <pre>Reinertsen Boeing case</pre>
 </div>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Process as a Mintzberg liaison mechanism</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Rule engines</p>
 </div>
 </div>
 </div>
@@ -13875,17 +13910,25 @@ One organization enthusiastically embraced process improvement, with good reason
 <h5 id="_cynefin_and_the_checklist_manifesto">Cynefin and the Checklist Manifesto</h5>
 <div class="literalblock">
 <div class="content">
-<pre>The problem of determinism</pre>
+<pre>The problem of determinism
+Required interactions as well as required steps
+Process as a Mintzberg liaison mechanism</pre>
 </div>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_raw_material">raw material</h5>
+<h5 id="_deeper_theory_2">Deeper theory</h5>
 <div class="paragraph">
 <p><a href="http://blogs.forrester.com/jean_pierre_garbani/09-06-26-my_issue_itil" class="bare">http://blogs.forrester.com/jean_pierre_garbani/09-06-26-my_issue_itil</a></p>
 </div>
 <div class="paragraph">
 <p>CPRET is a mnemonic for the basic definition of process in process engineering: it stands for Constraints, Product, Resources, input Elements and Transformation which are the basic components of a process. In process engineering, a process is a suite of transformations of elements into a given output (product) given a set of constraints and resources. From this definition, we can see that technology has a strong influence on the process: the transformation part is a clear function of the technology available as input and resources in IT are strongly influenced by the technology used. As we mostly deal with information and data in IT management processes, the type of data available is either helping or impeding the transformation part.</p>
+</div>
+<div class="paragraph">
+<p>Schwaber process author - chem e guy</p>
+</div>
+<div class="paragraph">
+<p>Kennelay - PID model</p>
 </div>
 </div>
 </div>
@@ -13924,13 +13967,12 @@ One organization enthusiastically embraced process improvement, with good reason
 <h4 id="_agile_and_it_process_management">Agile and IT process management</h4>
 <div class="sect4">
 <h5 id="_process_management_in_the_organization">Process management in the organization</h5>
-<div class="quoteblock">
-<blockquote>
-Many companies have at least one dysfunctional area. This may be the “furniture police” who won’t let programmers rearrange furniture to facilitate pair programming. Or it may be a purchasing group that takes six weeks to process a standard software order. In any event these types of insanity get in the way of successful projects. One way to view the project manager is as the bulldozer responsible for quickly removing these problems.
-</blockquote>
-<div class="attribution">
-&#8212; Mike Cohn
+
 </div>
+<div class="sect4">
+<h5 id="_bureaucratic_friction">Bureaucratic friction</h5>
+<div class="paragraph">
+<p>Many companies have at least one dysfunctional area. This may be the “furniture police” who won’t let programmers rearrange furniture to facilitate pair programming. Or it may be a purchasing group that takes six weeks to process a standard software order. In any event these types of insanity get in the way of successful projects. One way to view the project manager is as the bulldozer responsible for quickly removing these problems.</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -13938,6 +13980,26 @@ Many companies have at least one dysfunctional area. This may be the “furnitur
 is expediting the only option?
 alternatives...</pre>
 </div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_the_design_factory_problem">The design factory problem</h5>
+<div class="paragraph">
+<p>Misunderstanding variation</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_process_as_a_source_of_demand">Process as a source of demand</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_cost_of_delay_of_aggregate_process">Cost of delay of aggregate process</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_cultural_aspects">Cultural aspects</h5>
+<div class="paragraph">
+<p>overcome through rational, specific understanding of concepts like cadence and synch</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -14079,6 +14141,10 @@ Standard + case</pre>
 </div>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Scenario: repetitive yet error prone work
+team to team interactions that become "servicized"</p>
 </div>
 </div>
 <div class="sect4">
