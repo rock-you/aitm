@@ -14354,7 +14354,7 @@ The first question is, why control the process? When we know why, it almost auto
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>The HR department enters the employee in the HR system.</p>
+<p>The HR department enters the employee in the HR system (including payroll).</p>
 </li>
 <li>
 <p>Either the HR department or the hiring manager requests space from Facilities Management.</p>
@@ -14447,7 +14447,7 @@ The idea that processes are active and countable, while functions are passive an
 <p>A <strong>modeling language</strong> is a set of concepts and definitions that describes a given problem space. Modeling languages can be formalized to different degrees of precision.</p>
 </div>
 <div class="paragraph">
-<p>A <strong>notation</strong> is a specific set of visual symbols mapped onto a modeling language. One modeling language might have different notations.</p>
+<p>A <strong>notation</strong> is a specific set of visual symbols mapped onto a modeling language. One modeling language might have different notations; for example, Data Flow Diagrams have two notations but both communicate essentially the same language.</p>
 </div>
 <div class="paragraph">
 <p>A <strong>model</strong> is a specific usage of a modeling language and notation to communicate some idea about a system. It may also be a verb, e.g. "I am going to <strong>model</strong> the system."</p>
@@ -14469,7 +14469,7 @@ The idea that processes are active and countable, while functions are passive an
 </ul>
 </div>
 <div class="paragraph">
-<p>Process modeling is therefore only a subset, but an important one. Process analysis is one of most important activities in the broader area of business analysis and architecture, which in turn are key to <a href="#2.04.00-product-mgmt">product Management</a> in general (as we briefly mentioned in Chapter 4).</p>
+<p>Process modeling is therefore only a subset, but an important one. Process analysis is one of most important activities in the broader area of business analysis and architecture, which in turn are key to <a href="#2.04.00-product-mgmt">product management</a> in general (as we briefly mentioned in Chapter 4).</p>
 </div>
 <div class="paragraph">
 <p>There are many process modeling languages and notations:</p>
@@ -14509,28 +14509,66 @@ The idea that processes are active and countable, while functions are passive an
 <div class="sect5">
 <h6 id="_igoe_input_guide_output_enabler">IGOE (Input/Guide/Output/Enabler)</h6>
 <div class="paragraph">
-<p>A useful framework for thinking about activities represented as icons is the IGOE approach. IGOE stands for:</p>
+<p>A useful framework for thinking about activities represented as icons is the IGOE approach <a href="#BPTrends2013">[BPTrends2013]</a>. IGOE stands for:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Input</p>
+<p>Inputs</p>
 </li>
 <li>
-<p>Output</p>
+<p>Outputs</p>
 </li>
 <li>
-<p>Guide</p>
+<p>Guides</p>
 </li>
 <li>
-<p>Enabler</p>
+<p>Enablers</p>
 </li>
 </ul>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3.09-IGOE.png" alt="3.09 IGOE">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Inputs</strong> include the information or event stimulus that initiates the activity. They also include resources that will be consumed in the course of the activity.</p>
+</div>
+<div class="paragraph">
+<p><strong>Outputs</strong> include the final, value-added outcome of the activity, and also serve as a signal for downstream activities to commence.</p>
+</div>
+<div class="paragraph">
+<p><strong>Guides</strong> govern the process, setting constraints and expectations (e.g. current HR policies). They are not consumed.</p>
+</div>
+<div class="paragraph">
+<p><strong>Enablers</strong> support the process, without being immediately consumed. Examples include infrastructure and facilities support.</p>
 </div>
 </div>
 <div class="sect5">
 <h6 id="_ordering_synchronization_and_conditionality">Ordering, synchronization, and conditionality</h6>
-
+<div class="paragraph">
+<p>Multiple activities can be sequenced and this is often represented as a series of shapes connected by arrows:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3.09-ordering1.png" alt="3.09 ordering1">
+</div>
+</div>
+<div class="paragraph">
+<p>Notice these activities align to the overall cross-functional flow we discussed above:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3.09-ordering2.png" alt="3.09 ordering2">
+</div>
+</div>
+<div class="paragraph">
+<p>However, we encounter a problem with this ordering. It is taking too long, because people are waiting for space to be assigned before doing anything else. This is a well understood problem; processes can branch and run in parallel (you may well be writing code that works this way; human processes also do this):</p>
+</div>
+<div class="paragraph">
+<p>Similarities to project management - except with project management they only solve this one.</p>
+</div>
 </div>
 <div class="sect5">
 <h6 id="_swimlanes">Swimlanes</h6>
@@ -14539,8 +14577,13 @@ The idea that processes are active and countable, while functions are passive an
 <div class="sect5">
 <h6 id="_a_final_caution_on_technique">A final caution on technique</h6>
 <div class="paragraph">
-<p>Don&#8217;t get caught up in it
-Keep it simple - more to come when we discuss Agile Modeling</p>
+<p>endless nuances and debates</p>
+</div>
+<div class="paragraph">
+<p>Don&#8217;t get caught up in it</p>
+</div>
+<div class="paragraph">
+<p>Keep it simple - more to come when we discuss Agile Modeling</p>
 </div>
 </div>
 </div>
@@ -15736,6 +15779,9 @@ difficult for them to stay hands on</p>
 <p><a id="Betz2015"></a>[Betz2015]: Betz, C.T. (2015), "Calavera project", Github, <a href="https://github.com/CharlesTBetz/Calavera" class="bare">https://github.com/CharlesTBetz/Calavera</a></p>
 </li>
 <li>
+<p><a id="BPTrends2013"></a>[BPTrends2013]: BPTrends. 2013. “Scope Diagram (or Input-Guides-Outputs-Enablers – IGOE Diagram).” BPTrends. <a href="http://www.bptrends.com/resources/glossary/scope-diagram-or-input-guides-outputs-enablers-igoe-diagram/" class="bare">http://www.bptrends.com/resources/glossary/scope-diagram-or-input-guides-outputs-enablers-igoe-diagram/</a>.</p>
+</li>
+<li>
 <p><a id="Brooks1995"></a>[Brooks1995]: Brooks, Frederick P. 1995. <em>The Mythical Man-Month : Essays on Software Engineering.</em> 25th Anniversary edition. Reading, Mass.: Addison-Wesley Pub. Co.</p>
 </li>
 <li>
@@ -16059,7 +16105,7 @@ IEEE Press.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-06-04 16:53:51 CDT
+Last updated 2016-06-04 16:55:01 CDT
 </div>
 </div>
 </body>
