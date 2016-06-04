@@ -14136,7 +14136,18 @@ The idea that processes are active and countable, while functions are passive an
 </div>
 </div>
 <div class="paragraph">
-<p>However, we encounter a problem with this ordering. It is taking too long, because people are waiting for space to be assigned before doing anything else. This is a well understood problem; processes can branch and run in parallel (you may well be writing code that works this way; human processes also do this):</p>
+<p>However, we encounter a problem with</p>
+</div>
+<div class="paragraph">
+<p>Finally, this ordering is taking too long, because people are waiting for space to be assigned before doing anything else. This is a well understood problem; processes can branch and run in parallel (you may well be writing code that works this way; human processes also do this). In UML, the term is "fork" for when processes diverge to run in parallel, and "join" when they must again synchronize for the next activity to continue:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3.09-ordering3.png" alt="3.09 ordering3">
+</div>
+</div>
+<div class="paragraph">
+<p>In the above diagram, we see that 3 activities can commence independently when the employee is hired, but network access requires that the employee have both an entry in the enterprise directory, as well as their hardware supplied.</p>
 </div>
 <div class="paragraph">
 <p>Similarities to project management - except with project management they only solve this one.</p>
