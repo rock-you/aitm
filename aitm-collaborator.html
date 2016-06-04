@@ -939,7 +939,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_bpm_fundamentals">BPM fundamentals</a></li>
 <li><a href="#_process_and_related_terms">Process and related terms</a></li>
-<li><a href="#_naming">Naming</a></li>
+<li><a href="#_a_deeper_look_at_processes_and_functions">A deeper look at processes and functions</a></li>
 <li><a href="#_process_notation">Process notation</a></li>
 <li><a href="#_raci">RACI</a></li>
 <li><a href="#_process_granularity">Process granularity</a></li>
@@ -978,6 +978,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_revisiting_the_problem_of_the_contending_execution_models">Revisiting the problem of the contending execution models</a></li>
 <li><a href="#_process_flow_across_a_services_model">Process flow across a services model</a></li>
 <li><a href="#_deeper_theory_state_charts_petri_nets">deeper theory: state charts, Petri nets</a></li>
+<li><a href="#_bpmn_bpel_and_more">BPMN, BPEL, and more</a></li>
 <li><a href="#_simulations">simulations</a></li>
 <li><a href="#_formal_process_control">formal process control</a></li>
 <li><a href="#_process_and_service_management">Process and service management</a></li>
@@ -14252,7 +14253,35 @@ The first question is, why control the process? When we know why, it almost auto
 </div>
 </div>
 <div class="paragraph">
-<p>The following two terms are also unordered, but have different connotations from function:</p>
+<p>They may also be represented as nested shapes:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3.09-hier-nested.png" alt="3.09 hier nested">
+</div>
+</div>
+<div class="paragraph">
+<p>However - and this is an important point - functions do <strong>not</strong> necessarily need to reflect the organizational chart. Often, they are used as a "logical" construct, to help with organizational design.</p>
+</div>
+<div class="paragraph">
+<p>What do we mean by this?</p>
+</div>
+<div class="paragraph">
+<p>Suppose two companies merge. They may leave their organizational charts untouched for a time, because they do not know what parts of each company should merge together. They have two sets of developers, two sets of sales staff, and so on. They do not feel that either company&#8217;s organizational structure is a good basis for the new, larger company.</p>
+</div>
+<div class="paragraph">
+<p>To solve this, they might create a logical functional hierarchy, with no-one&#8217;s name on any part. Where their actual organization structure (temporarily) has duplication, the logical hierarchy does not. They then start to populate it with individuals and teams from the previous companies and in this way develop a new organizational structure.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3.09-hier2.png" alt="3.09 hier2">
+</div>
+</div>
+<div class="paragraph">
+<p>This kind of thinking can help the organization evolve over time. If different teams are finding themselves performing similar activities, a functional analysis might indicate a new organizational structure.</p>
+</div>
+<div class="paragraph">
+<p>Finally, the following two terms are also unordered, but have different connotations from function:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -14265,32 +14294,117 @@ The first question is, why control the process? When we know why, it almost auto
 </ul>
 </div>
 <div class="paragraph">
-<p>A <strong>capability</strong> is a generic term for a capacity or potential
-A <strong>service</strong> is a transactional act of value, simultaneously produced and delivered (more on this later)</p>
+<p>A <strong>capability</strong> is a generic term for a capacity or potential.</p>
+</div>
+<div class="paragraph">
+<p>A <strong>service</strong> is a transactional act of value, simultaneously produced and delivered (more on this later)</p>
 </div>
 <div class="paragraph">
 <p>Finally, the concept of <strong>practice</strong> has the following characteristics: It is the least formalized of the concepts. It represents a loose, conceptual area that may represent a community of interest (for example, a Java community of interest). It&#8217;s not usually measured or tracked for improvement. Some topics may start as a practice and formalize into a function, for example Capacity management.</p>
 </div>
 <div class="paragraph">
-<p>To repeat: we say that an IT management capability may be implemented by a process, function, or practice</p>
+<p>We say that an IT management capability may be implemented by a process, function, or practice.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_naming">Naming</h5>
+<h5 id="_a_deeper_look_at_processes_and_functions">A deeper look at processes and functions</h5>
 <div class="paragraph">
-<p>Processes, as a best practice, are named with active verbs.</p>
+<p>Processes cross functions in a repeatable way. You may have deep organizational functions such as</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Human Resource Management</p>
+</li>
+<li>
+<p>Facilities Management</p>
+</li>
+<li>
+<p>IT Asset Management</p>
+</li>
+<li>
+<p>Security Management</p>
+</li>
+<li>
+<p>Network Management</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>However, you have a value adding activity of bringing in a new employee that involved ALL of these functions:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3.09-ProcXFunc.png" alt="3.09 ProcXFunc">
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The HR department enters the employee in the HR system.</p>
+</li>
+<li>
+<p>Either the HR department or the hiring manager requests space from Facilities Management.</p>
+</li>
+<li>
+<p>A workstation and smart phone are requested from IT Asset Management</p>
+</li>
+<li>
+<p>When those devices are received, Security authorizes them (and the employee) to enterprise systems (critically the enterprise directory)</p>
+</li>
+<li>
+<p>If a wired connection is needed, Network Management may be required to "turn  on" a port in the employee&#8217;s location.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This is a deliberately older, traditional workflow. Modern organizations may accelerate things:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>HR enters a record</p>
+</li>
+<li>
+<p>All employees use common "hoteling" space, so the major Facilities concern is whether the space can accommodate the peak # of employees seen (e.g. at 10 AM on a Monday)</p>
+</li>
+<li>
+<p>Equipment is either BYOD (Bring Your Own Device) or is ordered from an authorized vendor and drop-shipped directly to the employee</p>
+</li>
+<li>
+<p>In either case, security must establish some control over the devices, so that organizational data remains secure. There are various approaches for this, even for devices owned by the employee.</p>
+</li>
+<li>
+<p>Networking in modern organizations is almost all wireless, but the employee still requires the appropriate credentials, likely provided by security. As with facilities, Networking&#8217;s concerns now move to questions of capacity and availability of the overall infrastructure.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Notice however that even in the modern scenario we have an end to end, repeatable value flow that crosses distinct domains of concern. The employee is not productive until all these steps are taken. Since the employee starts drawing payroll on hire, there is a substantial cost of delay for this entire process. A week&#8217;s unproductive time could amount to $10,000 or more, wasted.</p>
+</div>
+<div class="paragraph">
+<p>Such delays can easily happen, when functional areas are focused just on their responsibility, and no-one is concerned for the overall process. This is why Rummler and Brache titled their book, <em>Improving Performance: How to Manage the White Space on the Organization Chart</em>. The "white space" they are talking about is the spaces between the functions, also termed "silos" or "towers:"</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3.09-PXFNamed.png" alt="3.09 PXFNamed">
+</div>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_process_notation">Process notation</h5>
 <div class="paragraph">
-<p>It&#8217;s not all about this</p>
+<p>It&#8217;s not all about this
+Processes, as a best practice, are named with active verbs.</p>
 </div>
 <div class="paragraph">
 <p>ordering, synch, conditionality</p>
 </div>
 <div class="paragraph">
 <p>Swimlanes</p>
+</div>
+<div class="paragraph">
+<p>BPMN, BPEL</p>
 </div>
 </div>
 <div class="sect4">
@@ -14568,6 +14682,10 @@ perils of "take a number" service-ization</p>
 </div>
 <div class="sect4">
 <h5 id="_deeper_theory_state_charts_petri_nets">deeper theory: state charts, Petri nets</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_bpmn_bpel_and_more">BPMN, BPEL, and more</h5>
 
 </div>
 <div class="sect4">
