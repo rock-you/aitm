@@ -688,7 +688,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_relationship_between_features_and_tasks">Relationship between features and tasks</a></li>
 <li><a href="#_decision_rules">Decision rules</a></li>
-<li><a href="#_context_switching_and_multi_tasking">Context switching and multi-tasking</a></li>
 <li><a href="#_synchronization">Synchronization</a></li>
 <li><a href="#_cadence">Cadence</a></li>
 <li><a href="#_velocity">Velocity</a></li>
@@ -7538,13 +7537,10 @@ As a “service desk,” it may expand its purview to accepting provisioning or 
 <pre>Rule engines</pre>
 </div>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_context_switching_and_multi_tasking">Context switching and multi-tasking</h5>
-<div class="literalblock">
-<div class="content">
-<pre>[Human factors discussion]</pre>
-</div>
+<div class="paragraph">
+<p><a id="multi-tasking"></a>
+===== Context switching and multi-tasking
+ [Human factors discussion]</p>
 </div>
 </div>
 <div class="sect4">
@@ -13737,7 +13733,10 @@ As with other chapters in the later part of this book, we are going to introduce
 <p>So, the kanban board has started to elaborate. We&#8217;re seeing more and more work that needs to follow a sequence, or checklist&#8230;&#8203; Wait, didn&#8217;t we see that in the chapter on Project Management?</p>
 </div>
 <div class="paragraph">
-<p>We discussed task ordering in Chapter 8. However, projects are not usually seen as repeatable. Process management is when we need to start managing multiple processes and considering their interdependencies, perhaps using common methods to define them and even common tooling to support multiple processes. The following diagram might help:</p>
+<p>We discussed task ordering in Chapter 8. However, projects are not usually seen as repeatable.</p>
+</div>
+<div class="paragraph">
+<p>It all starts with just "work." The following diagram might help:</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -13745,7 +13744,35 @@ As with other chapters in the later part of this book, we are going to introduce
 </div>
 </div>
 <div class="paragraph">
-<p>Project management adds concerns of task ordering and resource management, for projects typically executed on a one-time basis. Process management is also concerned with ordering, but less so with the resource load (more on this below), and instead is concerned with repeatability and ongoing improvement.</p>
+<p>Project management adds concerns of task ordering and resource management, for projects typically executed on a one-time basis.</p>
+</div>
+<div class="paragraph">
+<p>Process management is also concerned with ordering, but less so with the resource load (more on this below), and instead is concerned with repeatability and ongoing improvement.</p>
+</div>
+<div class="paragraph">
+<p>Process management is when we need to start managing</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>multiple,</p>
+</li>
+<li>
+<p>repeatable,</p>
+</li>
+<li>
+<p>measurable sequences of activity,</p>
+</li>
+<li>
+<p>considering their interdependencies,</p>
+</li>
+<li>
+<p>perhaps using common methods to define them,</p>
+</li>
+<li>
+<p>and even common tooling to support multiple processes.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>Project management and process management interact in 2 primary ways:</p>
@@ -13756,9 +13783,12 @@ As with other chapters in the later part of this book, we are going to introduce
 <p>Projects often are used to create and deploy processes. A large system implementation (e.g. of a Enterprise Resource Planning module such as Human Resource Management) will often be responsible for process implementation including training.</p>
 </li>
 <li>
-<p>As environments mature, product and/or project teams require process support. As Richardson notes in <em>Project Management Theory and Practice</em>, "there are many organizational processes that are needed to optimally support a successful project." <a href="#Richardson2010">[Richardson2010]</a> For example, the project may require predictable contractor hiring, or infrastructure provisioning, or security reviews. The same is true for product teams that may not be using a "project" concept to manage their work. To the extent these are managed as repeatable, optimized processes, risk is reduced.</p>
+<p>As environments mature, product and/or project teams require process support.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>As Richardson notes in <em>Project Management Theory and Practice</em>, "there are many organizational processes that are needed to optimally support a successful project." <a href="#Richardson2010">[Richardson2010]</a> For example, the project may require predictable contractor hiring, or infrastructure provisioning, or security reviews. The same is true for product teams that may not be using a "project" concept to manage their work. To the extent these are managed as repeatable, optimized processes, risk is reduced.</p>
 </div>
 </div>
 <div class="sect4">
@@ -13886,7 +13916,7 @@ The first question is, why control the process? When we know why, it almost auto
 </div>
 </div>
 <div class="paragraph">
-<p>Value Chain similar to <a href="#Porter1998">[Porter1998]</a>.</p>
+<p><em>Value Chain similar to <a href="#Porter1998">[Porter1998]</a>.</em></p>
 </div>
 <div class="paragraph">
 <p>Note the progression along the bottom: first, raw materials are acquired, then manufactured, then distributed at which point they are marketed and sold, and ultimately serviced. Porter termed this set of activities "Primary."</p>
@@ -14490,7 +14520,7 @@ Do not confuse "Case" here with Computer Assisted Software Engineering.
 <p>However, within the overall bounds of flight operations, or construction, or surgery, there are critical sequences of events that MUST be executed, often in a specific order. Gawande discusses the airline industry as a key exemplar of this. Instead of one "master checklist" there are specific, clear, brief checklists for a wide variety of scenarios, such as a cargo hold door becoming unlatched.</p>
 </div>
 <div class="paragraph">
-<p>There are similarities and differences between core BPM approaches and checklists. Often, business process management is employed to describe processes that are automated and where their progress is tracked in a database. Checklists, on the other hand, may be more manual, and may represent a briefer period of time.</p>
+<p>There are similarities and differences between core BPM approaches and checklists. Often, business process management is employed to describe processes that are automated and whose progress is tracked in a database. Checklists, on the other hand, may be more manual, and may represent a briefer period of time.</p>
 </div>
 <div class="paragraph">
 <p>Finally, in chapter 8, we discussed the concept of the <a href="#submittal-schedule">submittal schedule</a>, which Gawande encountered in his discussions with the construction industry. In this approach, the actual, trackable task is that <strong>two or more parties consult with each other.</strong> This technique is also applicable in a BPM and Case Management sense.</p>
@@ -14503,9 +14533,65 @@ Do not confuse "Case" here with Computer Assisted Software Engineering.
 <p>The final pitfall we cover here is that of process proliferation.</p>
 </div>
 <div class="paragraph">
-<p>resource
-complexity
-context switching</p>
+<p>Process is a powerful tool. Ultimately it is how value is delivered. However, too many processes can have negative results on an organization.</p>
+</div>
+<div class="paragraph">
+<p>Review the fundmentals of process modeling above. One thing that you do not see is any attention to the resource impacts of the process. This is a primary difference between project and process management; in process management, resource availability is in general assumed.</p>
+</div>
+<div class="paragraph">
+<p>More advanced forms of process modeling and simulation (see " <a href="https://www.google.com/search?q=discrete+event+simulation">discrete event simulation</a>)" can provide insight into the resource demands for processes. However, such techniques 1) require specialized tooling and 2) are not part of the typical BPM practitioner&#8217;s skillset.</p>
+</div>
+<div class="paragraph">
+<p>Many enterprise environments have multiple cross-functional processes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>service requests,</p>
+</li>
+<li>
+<p>compliance certifications,</p>
+</li>
+<li>
+<p>asset validations,</p>
+</li>
+<li>
+<p>provisioning requests,</p>
+</li>
+<li>
+<p>capacity assessments,</p>
+</li>
+<li>
+<p>change approvals,</p>
+</li>
+<li>
+<p>training obligations,</p>
+</li>
+<li>
+<p>performance assessments,</p>
+</li>
+<li>
+<p>audit responses,</p>
+</li>
+<li>
+<p>expense reporting,</p>
+</li>
+<li>
+<p>travel approvals,</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>and many more.</p>
+</div>
+<div class="paragraph">
+<p>Such processes can be implemented on the assumption that enterprises can always accommodate another process. The result can be dramatic overburden for digital staff in complex environments.</p>
+</div>
+<div class="paragraph">
+<p>It is therefore advisable to at least keep an inventory of processes that may impose demand on staff, and understand both the aggregate demand as well as the degree of <a href="#multi-tasking">multi-tasking and context-switching</a> that may result (as discussed in Chapter 5). Thorough automation of all processes to the maximum extent possible can also drive value, as both load and distraction are reduced.</p>
+</div>
+<div class="paragraph">
+<p>We now turn to one of the causes for process proliferation: the industry frameworks.</p>
 </div>
 </div>
 </div>
