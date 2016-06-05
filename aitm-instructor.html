@@ -14410,7 +14410,12 @@ The idea that processes are active and countable, while functions are passive an
 </div>
 </div>
 <div class="paragraph">
-<p>However, we encounter a problem with</p>
+<p>However, we encounter a complication. In order to describe this process accurately, we should note that some people do not have space assigned, if they are primarily telecommuting and/or working in "hoteling" space. We want to show a decision point, which in many notations is represented by a diamond.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3.09-ordering4.png" alt="3.09 ordering4">
+</div>
 </div>
 <div class="paragraph">
 <p>Finally, this ordering is taking too long, because people are waiting for space to be assigned before doing anything else. This is a well understood problem; processes can branch and run in parallel (you may well be writing code that works this way; human processes also do this). In UML, the term is "fork" for when processes diverge to run in parallel, and "join" when they must again synchronize for the next activity to continue:</p>
@@ -14421,20 +14426,33 @@ The idea that processes are active and countable, while functions are passive an
 </div>
 </div>
 <div class="paragraph">
-<p>In the above diagram, we see that 3 activities can commence independently when the employee is hired, but network access requires that the employee have both an entry in the enterprise directory, as well as their hardware supplied.</p>
-</div>
-<div class="paragraph">
-<p>Similarities to project management - except with project management they only solve this one.</p>
+<p>In the above diagram, we see that 3 activities (including the decision point) can commence independently when the employee is hired, but network access requires that the employee have both an entry in the enterprise directory, as well as their hardware supplied. The entire process is complete when their space, equipment, and access needs have been met.</p>
 </div>
 </div>
 <div class="sect5">
 <h6 id="_swimlanes">Swimlanes</h6>
-
+<div class="paragraph">
+<p>We made much of the fact that processes cross functions, and yet with our final diagram we have lost our view of this fact. We can re-introduce the functional boundaries through the use of swimlanes (pioneered by Rummler in <a href="#Rummler1995">[Rummler1995]</a>):</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3.09-swimlanes.png" alt="3.09 swimlanes">
+</div>
+</div>
+<div class="paragraph">
+<p>Adding the swimlanes helps us understand the cross-functional handoffs, and also where certain activities will remain within the scope of one function. Another interesting, finer point is the question of the synch points. Observe the synch point in the Network Management swimlane. Its presence implies that the Network Management function must confirm that the employee has equipment and a directory in the enterprise directory.</p>
+</div>
+<div class="paragraph">
+<p>You may notice that this diagram has been "rotated." The diagram was becoming too long if drawn left to right. UML Activity Diagrams frequently use this approach. The meaning of the diagram is not changed.</p>
+</div>
 </div>
 <div class="sect5">
 <h6 id="_a_final_caution_on_technique">A final caution on technique</h6>
 <div class="paragraph">
-<p>endless nuances and debates</p>
+<p>The techniques briefly discussed here can be applied and combined in many different ways, and result in models of large scope and complexity. However there are crucial limitations to visual representations of complexity.</p>
+</div>
+<div class="paragraph">
+<p>There are endless nuances and debates about notations, methodology, and philosophy.</p>
 </div>
 <div class="paragraph">
 <p>Don&#8217;t get caught up in it</p>
@@ -15962,7 +15980,7 @@ IEEE Press.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-06-04 16:55:01 CDT
+Last updated 2016-05-04 14:21:38 CDT
 </div>
 </div>
 </body>
