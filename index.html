@@ -939,10 +939,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_process_and_related_terms">Process and related terms</a></li>
 <li><a href="#_a_deeper_look_at_processes_and_functions">A deeper look at processes and functions</a></li>
 <li><a href="#_process_modeling">Process modeling</a></li>
-<li><a href="#_process_granularity">Process granularity</a></li>
-<li><a href="#_process_vs_execution">Process vs execution</a></li>
-<li><a href="#_the_checklist_manifesto">The Checklist Manifesto</a></li>
-<li><a href="#_a_final_caution_on_technique">A final caution on technique</a></li>
+<li><a href="#_the_pitfall_of_process_silos">The pitfall of process "silos"</a></li>
+<li><a href="#_the_pitfall_of_process_complexity">The pitfall of process complexity</a></li>
 </ul>
 </li>
 <li><a href="#_process_frameworks">Process frameworks</a>
@@ -1312,7 +1310,72 @@ As is best practice, the preface and introduction will be given a thorough updat
 <p>IT management at scale within an organization is a complex system. Complex systems do not respond well to dramatic perturbations. They are best changed incrementally, with careful monitoring of the consequences of each small change. (This is part of the systems theory foundation underlying the Agile movement.)</p>
 </div>
 <div class="paragraph">
-<p>So, how do we undertake Agile transformation? For longer term, more ambitious goals, while we cannot plan in advance how any given change initiative will play out, we <strong>can</strong> develop awareness.</p>
+<p>This is why the book, especially in the later chapters, starts with relatively straightforward and uncritical presentations of the following topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Project management</p>
+</li>
+<li>
+<p>Process management</p>
+</li>
+<li>
+<p>Governance, risk, security, and compliance</p>
+</li>
+<li>
+<p>Enterprise information management</p>
+</li>
+<li>
+<p>Enterprise architecture and portfolio management</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>While these practices, and their associated approaches and policies, have caused friction with digital and Agile practitioners, they all have their reasons for existing. The goal of this book is to understand their interaction with the new digital approaches, but in order to do this we must first understand them on their own terms. It does no good to develop a critique based on misconceptions or exaggerations about what (for example) "process management" is all about.</p>
+</div>
+<div class="paragraph">
+<p>Instead, we try to break these large and sometimes controversial topics down into smaller, more specific topics - "lowest common denominators," perhaps:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Work</p>
+</li>
+<li>
+<p>Ordering of tasks</p>
+</li>
+<li>
+<p>Task dependencies</p>
+</li>
+<li>
+<p>Estimation vs. commitment</p>
+</li>
+<li>
+<p>Repeatability</p>
+</li>
+<li>
+<p>Synchronization and cadence</p>
+</li>
+<li>
+<p>Resource demand</p>
+</li>
+<li>
+<p>Shared mental models</p>
+</li>
+<li>
+<p>Mission objectives vs perimeter defense</p>
+</li>
+<li>
+<p>Technical debt</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>and so forth.</p>
+</div>
+<div class="paragraph">
+<p>So, how do we undertake digital transformation? For longer term, more ambitious goals, while we cannot plan in advance how any given change initiative will play out, we <strong>can</strong> develop awareness.</p>
 </div>
 <div class="paragraph">
 <p>The idea of the OODA loop is popular in the Agile community. OODA stands for Orient, Observe, Decide, Act, a set of concepts developed by Air Force colonel John Boyd in analyzing the performance of aviators in the Korean War. The faster an actor can move through this cycle, the more effective they will be.</p>
@@ -14142,10 +14205,10 @@ The idea that processes are active and countable, while functions are passive an
 <p>Inputs</p>
 </li>
 <li>
-<p>Outputs</p>
+<p>Guides</p>
 </li>
 <li>
-<p>Guides</p>
+<p>Outputs</p>
 </li>
 <li>
 <p>Enablers</p>
@@ -14161,17 +14224,59 @@ The idea that processes are active and countable, while functions are passive an
 <p><strong>Inputs</strong> include the information or event stimulus that initiates the activity. They also include resources that will be consumed in the course of the activity.</p>
 </div>
 <div class="paragraph">
-<p><strong>Outputs</strong> include the final, value-added outcome of the activity, and also serve as a signal for downstream activities to commence.</p>
+<p><strong>Guides</strong> govern the process, setting constraints and expectations (e.g. current HR policies). They are not consumed.</p>
 </div>
 <div class="paragraph">
-<p><strong>Guides</strong> govern the process, setting constraints and expectations (e.g. current HR policies). They are not consumed.</p>
+<p><strong>Outputs</strong> include the final, value-added outcome of the activity, and also serve as a signal for downstream activities to commence.</p>
 </div>
 <div class="paragraph">
 <p><strong>Enablers</strong> support the process, without being immediately consumed. Examples include infrastructure and facilities support.</p>
 </div>
+<div class="paragraph">
+<p>The IGOE approach is seen in the classic IDEF0 standard (the terms used there were Inputs, Controls, Outputs, Mechanisms). This is a form of <strong>functional modeling</strong> which is <strong>not</strong> event driven but rather is used to scope higher level interactions between areas.</p>
+</div>
+<div class="paragraph">
+<p>The original intent of the IDEF0 standard was for a multi-level, decomposition approach, A high level scope would be elaborated thus:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3.09-IGOE2.png" alt="3.09 IGOE2">
+</div>
+</div>
+<div class="paragraph">
+<p>However, there is not a clear sense of the events, since the primary objects are still the functions. There also is the temptation to insert extraneous information, as indicated in the line between Facilities Management and IT Asset Management labeled "Provides space for ??".</p>
+</div>
+<div class="paragraph">
+<p>It is true that Facilities Management does provide space for the IT Asset Management Team (in fact, all of these functions provide services to each other), but to draw this would result in a "spaghetti" diagram with several dozen lines, and not much explanatory power.</p>
+</div>
+<div class="paragraph">
+<p>Purely functional modeling of this nature is therefore limited in usefulness, although it can be a good place to start.</p>
+</div>
 </div>
 <div class="sect5">
 <h6 id="_ordering_synchronization_and_conditionality">Ordering, synchronization, and conditionality</h6>
+<div class="paragraph">
+<p>Activities in process modeling, by contrast, emphasize active verbs:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Hire</p>
+</li>
+<li>
+<p>Assign</p>
+</li>
+<li>
+<p>Supply</p>
+</li>
+<li>
+<p>Create</p>
+</li>
+<li>
+<p>Authorize</p>
+</li>
+</ul>
+</div>
 <div class="paragraph">
 <p>Multiple activities can be sequenced and this is often represented as a series of shapes connected by arrows:</p>
 </div>
@@ -14222,15 +14327,24 @@ The idea that processes are active and countable, while functions are passive an
 <p>Adding the swimlanes helps us understand the cross-functional handoffs, and also where certain activities will remain within the scope of one function. Another interesting, finer point is the question of the synch points. Observe the synch point in the Network Management swimlane. Its presence implies that the Network Management function must confirm that the employee has equipment and a directory in the enterprise directory.</p>
 </div>
 <div class="paragraph">
-<p>You may notice that this diagram has been "rotated." The diagram was becoming too long if drawn left to right. UML Activity Diagrams frequently use this approach. The meaning of the diagram is not changed.</p>
+<p>You may notice that this diagram has been "rotated." The diagram was becoming too long if drawn left to right. UML Activity Diagrams frequently use a top-to-bottom approach. The meaning of the diagram is not changed.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_a_final_caution_on_technique">A final caution on technique</h6>
+<div class="paragraph">
+<p>The techniques briefly discussed here can be applied and combined in many different ways, and result in models of large scope and complexity. However there are crucial limitations to visual representations of complexity.</p>
 </div>
 <div class="paragraph">
-<p>With the above discussion, we have covered in a summary form the basics of business process modeling. We finish this chapter section with a discussion of some higher-level BPM practices and concerns.</p>
+<p>There are endless nuances and debates about BPM notations, methodology, and philosophy. Don&#8217;t get caught up in it. Modeling should generate simple, clear artifacts that are useful by a broad audience, and it should not become an end in itself, or (in general) consume inordinate amounts of time. We will discuss this further in the chapter section on Agile.</p>
+</div>
+<div class="paragraph">
+<p>With the above discussion, we have covered in a summary form the basics of business process modeling. We finish this chapter section with a discussion of some higher-level BPM pitfalls.</p>
 </div>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_process_granularity">Process granularity</h5>
+<h5 id="_the_pitfall_of_process_silos">The pitfall of process "silos"</h5>
 <div class="quoteblock">
 <blockquote>
 One organization enthusiastically embraced process improvement, with good reason: customers, suppliers, and employees found the company&#8217;s processes slow, inconsistent, and error prone. Unfortunately, they were so enthusiastic that each team defined the work of their small group or department as a complete process. Of course, each of these was in fact the contribution of a specialized functional group to some larger, but unidentified, processes. Each of these "processes" was "improved" independently, and you can guess what happened.<br>
@@ -14242,19 +14356,61 @@ Within the boundaries of each process, improvements were implemented that made w
 <cite>Workflow Modeling</cite>
 </div>
 </div>
+<div class="literalblock">
+<div class="content">
+<pre>obtain permission</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The above quote well illustrates the dangers of combining local optimization and  process management. Many current authors speak highly of self-organizing teams, but self-organizing teams may seek to optimize locally. Process management was originally intended to overcome this problem, but modeling techniques can be applied at various levels, including within specific departments. This is where enterprise business architecture can assist, to identify these longer, end to end flows of value and highlight the handoff areas, so that the process benefits the larger objective.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_the_pitfall_of_process_complexity">The pitfall of process complexity</h5>
+<div class="paragraph">
+<p>A related problem is when the process simply becomes too complex for humans to follow. Multi-page process models are rarely consulted, even if the team affected developed them. This is especially true when there are many optional or conditional steps in the process.</p>
+</div>
+<div class="paragraph">
+<p>There are two related lines of response to this:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Case Management</p>
+</li>
+<li>
+<p>The Checklist Manifesto</p>
+</li>
+</ul>
+</div>
 <div class="sect5">
 <h6 id="_case_management">Case Management</h6>
-
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Do not confuse "Case" here with Computer Assisted Software Engineering.
+</td>
+</tr>
+</table>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_process_vs_execution">Process vs execution</h5>
 <div class="paragraph">
-<p>(execution includes concern for resource)</p>
+<p>Case management is a concept used in medicine, law, and social services. Case management can be thought of as a high-level process supporting the skilled knowledge worker applying their professional expertise.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3.09-casemgmt.png" alt="3.09 casemgmt">
 </div>
 </div>
-<div class="sect4">
-<h5 id="_the_checklist_manifesto">The Checklist Manifesto</h5>
+<div class="paragraph">
+<p>Case</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_the_checklist_manifesto">The Checklist Manifesto</h6>
 <div class="paragraph">
 <p>RACI revisited
 Steady state expectations become tasks for PMs to track</p>
@@ -14265,26 +14421,11 @@ Required interactions as well as required steps
 Process as a Mintzberg liaison mechanism</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_a_final_caution_on_technique">A final caution on technique</h5>
+<div class="sect5">
+<h6 id="_process_proliferation">Process proliferation</h6>
 <div class="paragraph">
-<p>The techniques briefly discussed here can be applied and combined in many different ways, and result in models of large scope and complexity. However there are crucial limitations to visual representations of complexity.</p>
+<p>(execution includes concern for resource)</p>
 </div>
-<div class="paragraph">
-<p>There are endless nuances and debates about BPM notations, methodology, and philosophy.</p>
-</div>
-<div class="paragraph">
-<p>Don&#8217;t get caught up in it</p>
-</div>
-<div class="paragraph">
-<p>Keep it simple - more to come when we discuss Agile Modeling</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>"Process" at Toyota (Rother)</p>
-</li>
-</ul>
 </div>
 </div>
 </div>
@@ -15579,6 +15720,9 @@ IEEE Press.</p>
 </li>
 <li>
 <p><a id="Narayam2015"></a>[Narayam2015]: Narayam, S. (2015). Agile IT organization design: for digital transformation and continuous delivery, Pearson Education Inc. .</p>
+</li>
+<li>
+<p><a id="NIST1993"></a>[NIST1993]: NIST. 1993. “Integration Definition for Function Modeling (IDEF0).” <a href="http://www.idef.com/idefo-function_modeling_method/" class="bare">http://www.idef.com/idefo-function_modeling_method/</a>.</p>
 </li>
 <li>
 <p><a id="Nygard2007"></a>[Nygard2007]: Nygard, M.T., 2007. <em>Release it! : design and deploy production-ready software.</em> The pragmatic programmers, Raleigh, N.C.: Pragmatic Bookshelf. xvi, 350 p.</p>
