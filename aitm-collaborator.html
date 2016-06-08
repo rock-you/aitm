@@ -946,13 +946,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_process_modeling">Process modeling</a></li>
 </ul>
 </li>
-<li><a href="#_continuous_improvement">Continuous improvement</a>
+<li><a href="#_process_control_and_continuous_improvement">Process control and continuous improvement</a>
 <ul class="sectlevel4">
 <li><a href="#_history_of_continuous_improvement">History of continuous improvement</a></li>
-<li><a href="#_efficiency">Efficiency</a></li>
-<li><a href="#_effectiveness">Effectiveness</a></li>
-<li><a href="#_variation">Variation</a></li>
-<li><a href="#_process_maturity_and_quality">Process "Maturity" and "quality"</a></li>
+<li><a href="#_ken_schwaber_and_empirical_process_control">Ken Schwaber and empirical process control</a></li>
 </ul>
 </li>
 <li><a href="#_process_frameworks">Process frameworks</a>
@@ -14874,7 +14871,7 @@ The idea that processes are active and countable, while functions are passive an
 </div>
 </div>
 <div class="sect3">
-<h4 id="_continuous_improvement">Continuous improvement</h4>
+<h4 id="_process_control_and_continuous_improvement">Process control and continuous improvement</h4>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
@@ -14961,6 +14958,15 @@ There is a debate over to use the term "continuous" or "continual" improvement. 
 <div class="paragraph">
 <p>We have emphasized throughout this book that the process by which complex systems are created is not repetitive. Such creation is a process of <strong>product development</strong>, not <strong>production.</strong> And yet, the entire digital organization covers a broad spectrum of process possibilities, from the repetitive to the unique. You need to be able to identify what kind of process you are dealing with, and to choose the right techniques to manage it.</p>
 </div>
+<div class="paragraph">
+<p>For example, the employee provisioning process flow shown in the previous chapter is simple and prescriptive. Measuring its efficiency and variability would be possible, and perhaps useful.</p>
+</div>
+<div class="paragraph">
+<p>There are many aspects of continuous improvement we won&#8217;t cover in this brief section. Some of them (systems thinking, culture, and others) have already been covered in this book. This book is based in part on Lean and Agile premises, and continuous improvement is one of the major influences on Lean and Agile, so in some ways we come full circle.</p>
+</div>
+<div class="paragraph">
+<p>We are focusing on continuous improvement in the context of processes and process improvement. We&#8217;ll therefore scope this to a few concerns: efficiency, variation, effectiveness, and empirical process control.</p>
+</div>
 <div class="sect4">
 <h5 id="_history_of_continuous_improvement">History of continuous improvement</h5>
 <div class="admonitionblock note">
@@ -14985,34 +14991,15 @@ History is important. You may think your career is far removed from the early da
 <p>As steam and electric power increased the productivity of industry, requiring greater sums of capital to fund, a search for improvements began. Blacksmith shops began to consolidate into larger organizations, and technology became more complex and dangerous. It started to become clear that allowing each worker to perform the work as they preferred was not feasible.</p>
 </div>
 <div class="paragraph">
-<p>Enter the scientific method. Thinkers such as Frederick Taylor and Frank and Lillian Gilbreth (of "Cheaper by the Dozen" fame) started applying careful techniques of measurement and comparison, in search of the "one best way" to dig ditches or assemble vehicles. An entire profession of industrial engineering was established.</p>
+<p>Enter the scientific method. Thinkers such as Frederick Taylor and Frank and Lillian Gilbreth (of "Cheaper by the Dozen" fame) started applying careful techniques of measurement and comparison, in search of the "one best way" to dig ditches or assemble vehicles. An entire profession of industrial engineering was established, along with the formal study of business management itself.</p>
+</div>
+<div class="sect5">
+<h6 id="_frederick_taylor_and_efficiency">Frederick Taylor and efficiency</h6>
+<div class="paragraph">
+<p>Frederick Taylor (1856-1915)  was a mechanical engineer and one of the first industrial engineers. In 1911, he wrote <em>Principles of Scientific Management</em>.</p>
 </div>
 <div class="paragraph">
-<p>As Peter Drucker, one of the most influential management thinkers, says of Frederick Taylor:</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>The application of knowledge to work explosively increased productivity. For hundreds of years there had been no increase in the ability of workers to turn out goods or to move goods . . . But within a few years after Taylor began to apply knowledge to work, productivity began to rise at a rate of 3.5 to 4 percent compound a year—which means doubling every eighteen years or so. Since Taylor began, productivity has increased some fiftyfold in all advanced countries. On this unprecedented expansion rest all the increases in both standard of living and quality of life in the developed countries. <a href="#Drucker1993">[Drucker1993]</a>, pp.37-38.</p>
-</div>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>From Taylor to Deming to Reinertsen</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>BOHICA
-Kaizen and kamikaze kaizen</pre>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_efficiency">Efficiency</h5>
-<div class="paragraph">
-<p>Let&#8217;s go back to some fundamentals.</p>
+<p>One of Taylor&#8217;s primary contributions to management thinking was a systematic approach to efficiency. To understand this, let&#8217;s consider some fundamentals.</p>
 </div>
 <div class="paragraph">
 <p>Human beings engage in repetitive activities. These activities consume inputs and produce outputs. It is often possible to compare the outputs against the inputs, numerically, and understand how "productive" the process is.</p>
@@ -15027,32 +15014,21 @@ Kaizen and kamikaze kaizen</pre>
 <p>Assume for a moment that the workers are all earning the same across each factory. There is possibly a "process" problem. The first factory is more <em>efficient</em> than the second; it can produce more given the same set of inputs. Why?</p>
 </div>
 <div class="paragraph">
-<p>There are many possible reasons. Perhaps the second factory is poorly laid out and the work in progress must be moved too many times in order for workers to perform their tasks. Perhaps the workers are using tools that require more manual steps. Understanding the differences between the two factories, and recommending the "best way," is what industrial engineers do. (See sidebar on Frederick Taylor.)</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_effectiveness">Effectiveness</h5>
-<div class="paragraph">
-<p>Discussions of efficiency usually focus on productivity given a certain set of inputs. Time can be one of those inputs. Everything else being equal, a company that can produce the pizza cutters more quickly is also viewed as more efficient. Customers may pay a premium for early delivery, and may penalize late delivery; such charges typically would be some percentage (say plus or minus 20%) of the final price of the finished goods.</p>
+<p>There are many possible reasons. Perhaps the second factory is poorly laid out and the work in progress must be moved too many times in order for workers to perform their tasks. Perhaps the workers are using tools that require more manual steps. Understanding the differences between the two factories, and recommending the "best way," is what Taylor pioneered, and what industrial engineers do to this day.</p>
 </div>
 <div class="paragraph">
-<p>However, the question of time becomes a game-changer in the "process" of new product development. Starting with a series of influential articles starting in the early 1980s, Don Reinertsen developed the idea of "cost of delay" for product development. Where the cost of a delayed product shipment might be some percentage, the cost of delay for a delayed product could be much more substantial. For example, if a new product launch misses a key trade show where competitors will be presenting similar innovations, the cost to the company might be millions of dollars of lost revenue - many times the product development investment. (Perhaps even orders of magnitude larger.)</p>
+<p>As Peter Drucker, one of the most influential management thinkers, says of Frederick Taylor:</p>
 </div>
+<div class="sidebarblock">
+<div class="content">
 <div class="paragraph">
-<p>This is not really a question of "efficiency;" of comparing inputs to outputs and looking for a few percentage points improvement. It is more a matter of effectiveness; of the company&#8217;s ability to execute on complex knowledge work.</p>
+<p>The application of knowledge to work explosively increased productivity. For hundreds of years there had been no increase in the ability of workers to turn out goods or to move goods . . . But within a few years after Taylor began to apply knowledge to work, productivity began to rise at a rate of 3.5 to 4 percent compound a year—which means doubling every eighteen years or so. Since Taylor began, productivity has increased some fiftyfold in all advanced countries. On this unprecedented expansion rest all the increases in both standard of living and quality of life in the developed countries. <a href="#Drucker1993">[Drucker1993]</a>, pp.37-38.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_variation">Variation</h5>
-<div class="quoteblock">
-<blockquote>
-the purpose of controlling the process must be to influence economic outcomes. There is no other reason to be interested in process control.
-</blockquote>
-<div class="attribution">
-&#8212; Don Reinertsen<br>
-<cite>Managing the Design Factory</cite>
 </div>
 </div>
+<div class="sect5">
+<h6 id="_w_e_deming_and_variation">W.E. Deming and variation</h6>
 <div class="paragraph">
 <p>The quest for effiency leads to the long-standing management interest in variability and variation. What do we mean by this?</p>
 </div>
@@ -15063,22 +15039,64 @@ the purpose of controlling the process must be to influence economic outcomes. T
 <p>In highly repeatable manufacturing processes, statistical techniques can be applied. Analyzing such "variation" has been a part of management for decades, and is an important part of disciplines such as Six Sigma. This is why Six Sigma is of such interest to manufacturing firms.</p>
 </div>
 <div class="paragraph">
-<p>However, understanding variation and when to manage it requires care.</p>
+<p>\W. Edwards Deming (1900-1993) is noted for (among many other things) his understanding of variation and organizational responses to it. Understanding variation is one of the major parts of his "System of Profound Knowledge." He emphasizes the need to distinguish special causes from  common causes of variation; special causes are those requiring management attention.</p>
+</div>
+<div class="paragraph">
+<p>Deming in particular was an advocate of the control chart, a technique to understand whether a process was within statistical control:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3.09-controlChart.jpg" alt="3.09 controlChart">
+</div>
+</div>
+<div class="paragraph">
+<p><em>image from <a href="https://www.flickr.com/photos/internetarchivebookimages/14775750673/" class="bare">https://www.flickr.com/photos/internetarchivebookimages/14775750673/</a>, no known copyright restrictions</em></p>
+</div>
+<div class="paragraph">
+<p>However, using techniques of this nature makes certain critical assumptions about the nature of the process. These techniques were defined to understand <strong>physical</strong> processes that in general follow normal distributions. In general, applying statistical process control to variable, creative product development processes is inappropriate.</p>
+</div>
+<div class="paragraph">
+<p>Understanding variation and when to manage it therefore requires care.</p>
 </div>
 <div class="paragraph">
 <p>For example, let&#8217;s say you are working at a large manufacturer, in their IT organization, and you see the KPI "variance from project plan." The idea is that your actual project time, scope and resources should be the same, or close to, what you planned. In practice, this tends to become a discussion about time, as resources and scope are often fixed.</p>
 </div>
 <div class="paragraph">
-<p>The assumption is that, for your project tasks, you should be able to estimate to a meaningful degree of accuracy.</p>
+<p>The assumption is that, for your project tasks, you should be able to estimate to a meaningful degree of accuracy. Your estimates are equally likely to be too low, or too high. Furthermore, it should be somehow possible to improve the accuracy of your estimates.</p>
 </div>
 <div class="paragraph">
-<p>It was one of the major parts of Deming&#8217;s "System of Profound Knowledge."</p>
+<p>The problem is that neither of these are true. Despite heroic efforts, you cannot improve your estimation. In process control jargon, there are too many causes of variation for "best practices" to emerge. Project tasks remain unpredictable, and the variability does not follow a normal distribution - there is a long tail to the right, of tasks that take 2x, 3x or 10x longer than estimated.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_don_reinertsen_and_effectiveness">Don Reinertsen and effectiveness</h6>
+<div class="quoteblock">
+<blockquote>
+the purpose of controlling the process must be to influence economic outcomes. There is no other reason to be interested in process control.
+</blockquote>
+<div class="attribution">
+&#8212; Don Reinertsen<br>
+<cite>Managing the Design Factory</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>Discussions of efficiency usually focus on productivity given a certain set of inputs. Time can be one of those inputs. Everything else being equal, a company that can produce the pizza cutters more quickly is also viewed as more efficient. Customers may pay a premium for early delivery, and may penalize late delivery; such charges typically would be some percentage (say plus or minus 20%) of the final price of the finished goods.</p>
+</div>
+<div class="paragraph">
+<p>However, the question of time becomes a game-changer in the "process" of new product development. As we have discussed previously: Starting with a series of influential articles starting in the early 1980s, Don Reinertsen developed the idea of "cost of delay" for product development.</p>
+</div>
+<div class="paragraph">
+<p>Where the cost of a delayed product shipment might be some percentage, the cost of delay for a delayed product could be much more substantial. For example, if a new product launch misses a key trade show where competitors will be presenting similar innovations, the cost to the company might be millions of dollars of lost revenue - many times the product development investment. (Perhaps even orders of magnitude larger.)</p>
+</div>
+<div class="paragraph">
+<p>This is not really a question of "efficiency;" of comparing inputs to outputs and looking for a few percentage points improvement. It is more a matter of effectiveness; of the company&#8217;s ability to execute on complex knowledge work.</p>
+</div>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_process_maturity_and_quality">Process "Maturity" and "quality"</h5>
+<h5 id="_ken_schwaber_and_empirical_process_control">Ken Schwaber and empirical process control</h5>
 <div class="paragraph">
-<p>what is maturity? Cooke-Davis defines this as "the extent to which an organization has explicitly and consistently deployed processes that are documented, managed, measured, controlled, and continually improved" (Cooke-Davies, 2004). <a href="#Richardson2010">[Richardson2010]</a></p>
+<p>Ken Schwaber, inventor of the Scrum methodology (along with Jeff Sutherland)</p>
 </div>
 </div>
 </div>
