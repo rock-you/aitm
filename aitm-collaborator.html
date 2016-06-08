@@ -949,6 +949,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_process_control_and_continuous_improvement">Process control and continuous improvement</a>
 <ul class="sectlevel4">
 <li><a href="#_history_of_continuous_improvement">History of continuous improvement</a></li>
+<li><a href="#_frederick_taylor_and_efficiency">Frederick Taylor and efficiency</a></li>
+<li><a href="#_w_e_deming_and_variation">W.E. Deming and variation</a></li>
+<li><a href="#_don_reinertsen_and_effectiveness">Don Reinertsen and effectiveness</a></li>
 <li><a href="#_ken_schwaber_and_empirical_process_control">Ken Schwaber and empirical process control</a></li>
 </ul>
 </li>
@@ -956,6 +959,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_continuous_improvement_frameworks">Continuous improvement frameworks</a></li>
 <li><a href="#_it_management_frameworks">IT management frameworks</a></li>
+<li><a href="#_process_maturity_and_quality">Process "Maturity" and "quality"</a></li>
 </ul>
 </li>
 <li><a href="#_agile_and_it_process_management">Agile and IT process management</a>
@@ -14993,8 +14997,9 @@ History is important. You may think your career is far removed from the early da
 <div class="paragraph">
 <p>Enter the scientific method. Thinkers such as Frederick Taylor and Frank and Lillian Gilbreth (of "Cheaper by the Dozen" fame) started applying careful techniques of measurement and comparison, in search of the "one best way" to dig ditches or assemble vehicles. An entire profession of industrial engineering was established, along with the formal study of business management itself.</p>
 </div>
-<div class="sect5">
-<h6 id="_frederick_taylor_and_efficiency">Frederick Taylor and efficiency</h6>
+</div>
+<div class="sect4">
+<h5 id="_frederick_taylor_and_efficiency">Frederick Taylor and efficiency</h5>
 <div class="paragraph">
 <p>Frederick Taylor (1856-1915)  was a mechanical engineer and one of the first industrial engineers. In 1911, he wrote <em>Principles of Scientific Management</em>.</p>
 </div>
@@ -15027,8 +15032,8 @@ History is important. You may think your career is far removed from the early da
 </div>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_w_e_deming_and_variation">W.E. Deming and variation</h6>
+<div class="sect4">
+<h5 id="_w_e_deming_and_variation">W.E. Deming and variation</h5>
 <div class="paragraph">
 <p>The quest for effiency leads to the long-standing management interest in variability and variation. What do we mean by this?</p>
 </div>
@@ -15053,10 +15058,7 @@ History is important. You may think your career is far removed from the early da
 <p><em>image from <a href="https://www.flickr.com/photos/internetarchivebookimages/14775750673/" class="bare">https://www.flickr.com/photos/internetarchivebookimages/14775750673/</a>, no known copyright restrictions</em></p>
 </div>
 <div class="paragraph">
-<p>However, using techniques of this nature makes certain critical assumptions about the nature of the process. These techniques were defined to understand <strong>physical</strong> processes that in general follow normal distributions. In general, applying statistical process control to variable, creative product development processes is inappropriate.</p>
-</div>
-<div class="paragraph">
-<p>Understanding variation and when to manage it therefore requires care.</p>
+<p>However, using techniques of this nature makes certain critical assumptions about the nature of the process. Understanding variation and when to manage it requires care. These techniques were defined to understand <strong>physical</strong> processes that in general follow normal distributions.</p>
 </div>
 <div class="paragraph">
 <p>For example, let&#8217;s say you are working at a large manufacturer, in their IT organization, and you see the KPI "variance from project plan." The idea is that your actual project time, scope and resources should be the same, or close to, what you planned. In practice, this tends to become a discussion about time, as resources and scope are often fixed.</p>
@@ -15067,9 +15069,12 @@ History is important. You may think your career is far removed from the early da
 <div class="paragraph">
 <p>The problem is that neither of these are true. Despite heroic efforts, you cannot improve your estimation. In process control jargon, there are too many causes of variation for "best practices" to emerge. Project tasks remain unpredictable, and the variability does not follow a normal distribution - there is a long tail to the right, of tasks that take 2x, 3x or 10x longer than estimated.</p>
 </div>
+<div class="paragraph">
+<p>In general, applying statistical process control to variable, creative product development processes is inappropriate. For software development, Steven Kan states: "Many assumptions that underlie control charts are not being met in software data. Perhaps the most critical one is that data variation is from homogeneous sources of variation." That is, the causes of variation are knowable and can be addressed. This is in general not true of development work. <a href="#Kan2003">[Kan2003]</a></p>
 </div>
-<div class="sect5">
-<h6 id="_don_reinertsen_and_effectiveness">Don Reinertsen and effectiveness</h6>
+</div>
+<div class="sect4">
+<h5 id="_don_reinertsen_and_effectiveness">Don Reinertsen and effectiveness</h5>
 <div class="quoteblock">
 <blockquote>
 the purpose of controlling the process must be to influence economic outcomes. There is no other reason to be interested in process control.
@@ -15092,11 +15097,43 @@ the purpose of controlling the process must be to influence economic outcomes. T
 <p>This is not really a question of "efficiency;" of comparing inputs to outputs and looking for a few percentage points improvement. It is more a matter of effectiveness; of the company&#8217;s ability to execute on complex knowledge work.</p>
 </div>
 </div>
-</div>
 <div class="sect4">
 <h5 id="_ken_schwaber_and_empirical_process_control">Ken Schwaber and empirical process control</h5>
+<div class="quoteblock">
+<blockquote>
+process theory experts . . . were amazed and appalled that my industry, systems development, was trying to do its work using a completely inappropriate process control model.
+</blockquote>
+<div class="attribution">
+&#8212; Ken Schwaber<br>
+<cite>Agile Software Development with Scrum</cite>
+</div>
+</div>
 <div class="paragraph">
-<p>Ken Schwaber, inventor of the Scrum methodology (along with Jeff Sutherland)</p>
+<p>Ken Schwaber, inventor of the Scrum methodology (along with Jeff Sutherland), like many other software engineers in the 1990s, experienced discomfort with the process control approach at the time. Mainstream software development processes sought to make software development predictable and repeatable in the sense of a defined process.</p>
+</div>
+<div class="paragraph">
+<p>As Schwaber discusses (<a href="#Schwaber2002">[Schwaber2002]</a>, pp. 24-25), defined processes are completely understood, which is not the case with creative processes. Highly automated industrial processes run predictably, with consistent results. By contrast, complex processes that are not understood require the <strong>empirical model.</strong></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The defined and empirical models of process control are concepts from formal <a href="https://en.wikipedia.org/wiki/Process_control">process control theory</a>. We touched on some related topics in our discussion of systems theory and <a href="#2.00.01-feedback">feedback</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Empirical process control relies on frequent inspection and adaptation. After exposure to Dupont process theory experts who clarified the difference between defined and empirical process control, Schwaber went on to develop the influential Scrum methodology. As he notes:</p>
+</div>
+<div class="paragraph">
+<p><em>During my visit to DuPont . . . I realized why [software development] was in such trouble and had such a poor reputation. We were wasting our time trying to control our work by thinking we had an assembly line when the only proper control was frequent and first-hand inspection, followed by immediate adjustments.</em> <a href="#Schwaber2002">[Schwaber2002]</a>, p. 25.</p>
+</div>
+<div class="paragraph">
+<p>We will now turn to a critical examination of the IT management frameworks. While there is much of value in them, there are many places where they may lead you into the "defined process" trap, and they may not provide enough support for the alternative approach of empirical process control.</p>
 </div>
 </div>
 </div>
@@ -15174,7 +15211,17 @@ is distinct from and subordinate to the process architecture.</p>
 </div>
 <div class="sect5">
 <h6 id="_the_particular_case_of_cmmi">The particular case of CMMI</h6>
-
+<div class="paragraph">
+<p>Process capability is the
+inherent variation of the process in relation to the specification limits. The smaller
+the process variation, the better the process&#8217;s capability. <a href="#Kan1995">[Kan1995]</a></p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_process_maturity_and_quality">Process "Maturity" and "quality"</h5>
+<div class="paragraph">
+<p>what is maturity? Cooke-Davis defines this as "the extent to which an organization has explicitly and consistently deployed processes that are documented, managed, measured, controlled, and continually improved" (Cooke-Davies, 2004). <a href="#Richardson2010">[Richardson2010]</a></p>
 </div>
 <div class="sect5">
 <h6 id="_other_frameworks">Other frameworks</h6>
@@ -15506,7 +15553,7 @@ Standard + case</pre>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>checklist manifesto</pre>
+<pre>Kaizen and kamikaze kaizen</pre>
 </div>
 </div>
 </div>
@@ -15696,6 +15743,10 @@ team to team interactions that become "servicized"</p>
 </div>
 <div class="paragraph">
 <p><a href="http://www.computing.dcu.ie/~mcrane/CA441/BPMLectureNotes.pdf" class="bare">http://www.computing.dcu.ie/~mcrane/CA441/BPMLectureNotes.pdf</a></p>
+</div>
+<div class="paragraph">
+<p>Bob Raczynski and Bill Curtis (2008) Software Data Violate SPC&#8217;s Underlying Assumptions, IEEE Software, May/June 2008, Vol. 25, No. 3, pp. 49-51
+Robert V. Binder (1997) Can a Manufacturing Quality Model Work for Software?, IEEE Software, September/October 1997, pp. 101-105</p>
 </div>
 <div class="paragraph">
 <p><strong>Videos</strong></p>
@@ -16636,7 +16687,10 @@ difficult for them to stay hands on</p>
 <p><a id="Humble2011"></a>[Humble2011]: Humble, J. &amp; Farley, D. (2011), <em>Continuous delivery</em>, Addison-Wesley, Boston</p>
 </li>
 <li>
-<p><a id="Huntzinger2007"></a>[Huntzinger2007]: Huntzinger, James R. 2007. Lean Cost Management: Accounting for Lean by Establishing Flow. Fort Lauderdale, Fl.: J. Ross Publishing.</p>
+<p><a id="Huntzinger2007"></a>[Huntzinger2007]: Huntzinger, James R. 2007. <em>Lean Cost Management: Accounting for Lean by Establishing Flow</em>. Fort Lauderdale, Fl.: J. Ross Publishing.</p>
+</li>
+<li>
+<p><a id="Kan2003"></a>[Kan2003]: Kan, Stephen H. 1995. <em>Metrics and Models in Software Quality Engineering</em>. Second Edition. Reading, Mass.: Addison-Wesley.</p>
 </li>
 <li>
 <p><a id="Keefer2006"></a>[Keefer2006]: Keefer, G. "The CMMI Considered Harmful For Quality Improvement And Supplier Selection."" 2006. <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.130.4292&amp;rep=rep1&amp;type=pdf" class="bare">http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.130.4292&amp;rep=rep1&amp;type=pdf</a></p>
@@ -16767,6 +16821,9 @@ IEEE Press.</p>
 </li>
 <li>
 <p><a id="Rummler1995"></a>[Rummler1995]: Rummler, Geary A, and Alan P Brache. 1995. <em>Improving Performance: How to Manage the White Space on the Organization Chart.</em> The Jossey-Bass Management Series. 2nd ed. San Francisco, CA: Jossey-Bass. <a href="http://www.loc.gov/catdir/toc/wiley041/94048105.html" class="bare">http://www.loc.gov/catdir/toc/wiley041/94048105.html</a>.</p>
+</li>
+<li>
+<p><a id="Schwaber2002"></a>[Schwaber2002]: Schwaber, Ken. 2002. Agile Software Development with Scrum. Upper Saddle River, N.J.: Prentice Hall.</p>
 </li>
 <li>
 <p><a id="Schwaber2007"></a>[Schwaber2007]: Schwaber, Ken. 2007. <em>The Enterprise and Scrum.</em> Redmond, Wash: Microsoft Press.</p>
