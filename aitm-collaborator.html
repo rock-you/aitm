@@ -938,38 +938,31 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_measuring_process">Measuring process</a></li>
 </ul>
 </li>
-<li><a href="#_process_basics">Process basics</a>
+<li><a href="#_process_management_practices">Process management practices</a>
 <ul class="sectlevel4">
 <li><a href="#_bpm_fundamentals">BPM fundamentals</a></li>
 <li><a href="#_process_and_related_terms">Process and related terms</a></li>
 <li><a href="#_a_deeper_look_at_processes_and_functions">A deeper look at processes and functions</a></li>
 <li><a href="#_process_modeling">Process modeling</a></li>
-</ul>
-</li>
-<li><a href="#_process_control_and_continuous_improvement">Process control and continuous improvement</a>
-<ul class="sectlevel4">
-<li><a href="#_history_of_continuous_improvement">History of continuous improvement</a></li>
-<li><a href="#_frederick_taylor_and_efficiency">Frederick Taylor and efficiency</a></li>
-<li><a href="#_w_e_deming_and_variation">W.E. Deming and variation</a></li>
-<li><a href="#_don_reinertsen_and_effectiveness">Don Reinertsen and effectiveness</a></li>
-<li><a href="#_ken_schwaber_and_empirical_process_control">Ken Schwaber and empirical process control</a></li>
+<li><a href="#_process_granularity">Process granularity</a></li>
+<li><a href="#_process_vs_execution">Process vs execution</a></li>
+<li><a href="#_the_checklist_manifesto">The Checklist Manifesto</a></li>
+<li><a href="#_a_final_caution_on_technique">A final caution on technique</a></li>
 </ul>
 </li>
 <li><a href="#_process_frameworks">Process frameworks</a>
 <ul class="sectlevel4">
-<li><a href="#_continuous_improvement_frameworks">Continuous improvement frameworks</a></li>
-<li><a href="#_it_management_frameworks">IT management frameworks</a></li>
-<li><a href="#_process_maturity_and_quality">Process "Maturity" and "quality"</a></li>
+<li><a href="#_process_vs_function_in_the_frameworks">Process vs function in the frameworks</a></li>
+<li><a href="#_itil">ITIL</a></li>
+<li><a href="#_cobit">COBIT</a></li>
+<li><a href="#_togaf">TOGAF</a></li>
+<li><a href="#_it4it">IT4IT</a></li>
+<li><a href="#_the_particular_case_of_cmmi">The particular case of CMMI</a></li>
+<li><a href="#_other_frameworks">Other frameworks</a></li>
 </ul>
 </li>
 <li><a href="#_agile_and_it_process_management">Agile and IT process management</a>
 <ul class="sectlevel4">
-<li><a href="#__quality">"quality"</a></li>
-<li><a href="#_misunderstanding_variation">misunderstanding variation</a></li>
-<li><a href="#_misunderstanding_economics">misunderstanding economics</a></li>
-<li><a href="#_the_pitfall_of_process_silos">The pitfall of process "silos"</a></li>
-<li><a href="#_the_pitfall_of_process_complexity">The pitfall of process complexity</a></li>
-<li><a href="#_process_proliferation">Process proliferation</a></li>
 <li><a href="#_process_management_in_the_organization">Process management in the organization</a></li>
 <li><a href="#_self_organization">Self organization?</a></li>
 <li><a href="#_bureaucratic_friction">Bureaucratic friction</a></li>
@@ -982,6 +975,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_cultural_aspects">Cultural aspects</a></li>
 </ul>
 </li>
+<li><a href="#_continuous_improvement">Continuous improvement</a></li>
 <li><a href="#_topics_in_process_management">Topics in process management</a>
 <ul class="sectlevel4">
 <li><a href="#_cynefin_and_best_practice">Cynefin and "best practice"</a></li>
@@ -1336,72 +1330,7 @@ As is best practice, the preface and introduction will be given a thorough updat
 <p>IT management at scale within an organization is a complex system. Complex systems do not respond well to dramatic perturbations. They are best changed incrementally, with careful monitoring of the consequences of each small change. (This is part of the systems theory foundation underlying the Agile movement.)</p>
 </div>
 <div class="paragraph">
-<p>This is why the book, especially in the later chapters, starts with relatively straightforward and uncritical presentations of the following topics:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Project management</p>
-</li>
-<li>
-<p>Process management</p>
-</li>
-<li>
-<p>Governance, risk, security, and compliance</p>
-</li>
-<li>
-<p>Enterprise information management</p>
-</li>
-<li>
-<p>Enterprise architecture and portfolio management</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>While these practices, and their associated approaches and policies, have caused friction with digital and Agile practitioners, they all have their reasons for existing. The goal of this book is to understand their interaction with the new digital approaches, but in order to do this we must first understand them on their own terms. It does no good to develop a critique based on misconceptions or exaggerations about what (for example) "process management" is all about.</p>
-</div>
-<div class="paragraph">
-<p>Instead, we try to break these large and sometimes controversial topics down into smaller, more specific topics - "lowest common denominators," perhaps:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Work</p>
-</li>
-<li>
-<p>Ordering of tasks</p>
-</li>
-<li>
-<p>Task dependencies</p>
-</li>
-<li>
-<p>Estimation vs. commitment</p>
-</li>
-<li>
-<p>Repeatability</p>
-</li>
-<li>
-<p>Synchronization and cadence</p>
-</li>
-<li>
-<p>Resource demand</p>
-</li>
-<li>
-<p>Shared mental models</p>
-</li>
-<li>
-<p>Mission objectives vs perimeter defense</p>
-</li>
-<li>
-<p>Technical debt</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>and so forth.</p>
-</div>
-<div class="paragraph">
-<p>So, how do we undertake digital transformation? For longer term, more ambitious goals, while we cannot plan in advance how any given change initiative will play out, we <strong>can</strong> develop awareness.</p>
+<p>So, how do we undertake Agile transformation? For longer term, more ambitious goals, while we cannot plan in advance how any given change initiative will play out, we <strong>can</strong> develop awareness.</p>
 </div>
 <div class="paragraph">
 <p>The idea of the OODA loop is popular in the Agile community. OODA stands for Orient, Observe, Decide, Act, a set of concepts developed by Air Force colonel John Boyd in analyzing the performance of aviators in the Korean War. The faster an actor can move through this cycle, the more effective they will be.</p>
@@ -7869,9 +7798,6 @@ This is more advanced, speculative material and its presence in the book is in q
 <pre>Rule engines</pre>
 </div>
 </div>
-<div class="paragraph">
-<p><a id="multi-tasking"></a></p>
-</div>
 </div>
 <div class="sect4">
 <h5 id="_context_switching_and_multi_tasking">Context switching and multi-tasking</h5>
@@ -9378,11 +9304,6 @@ Managing organizational growth is a well studied problem. Military examples are 
 <div class="paragraph">
 <p>The idea would be that the guilds would meet regularly (perhaps bi-weekly) and would have their own forums on the company’s social media channels. The head of each guild would meet with Lena monthly to discuss issues and concerns, and would have a direct channel of communication to her as needed for more time sensitive matters.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>not sure there is any evidence for a Sales "guild" even in smaller firms - thinking it tends to be a contained function everywhere. Seeking input.</pre>
-</div>
-</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -10725,18 +10646,6 @@ An ongoing work effort is generally a repetitive process that follows an organiz
 <div class="paragraph">
 <p><em>As noted in the introduction, we are already doing work in our emergence model, using Scrum and Kanban for the most part. But there is interest in more formalized, traditional project management, so some of you go to training and learn the following basics.</em></p>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Important</div>
-</td>
-<td class="content">
-As with other chapters in the later part of this book, we are going to introduce Project Mangement "on its own terms." We will then add additional context and critique in subsequent sections.
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
 <p>Let&#8217;s start with the most fundamental aspects of a project. You can start your understanding of a project by first thinking of a "to-do" list. However, rather than a miscellaneous list of errands, a project is a to-do list that is aimed at delivering some overall end result, with certain resources and within a time frame.</p>
 </div>
@@ -11960,11 +11869,6 @@ The philosophy is that you push the power of decision making out to the peripher
 </li>
 <li>
 <p>Scrum of scrums</p>
-<div class="literalblock">
-<div class="content">
-<pre>Refactor this. Include submittal schedules in list. Find out Cohn's original sources. Other techniques?</pre>
-</div>
-</div>
 </li>
 </ul>
 </div>
@@ -11979,8 +11883,7 @@ The philosophy is that you push the power of decision making out to the peripher
 will not have the same quick, get-in-get-out tone of a daily scrum."</p>
 </div>
 <div class="paragraph">
-<p><a id="submittal-schedule"></a>
-Another perspective on this is found in The Checklist Manifesto <a href="#Gawande2010">[Gawande2010]</a>. Some work, while detailed, can be planned to a high degree of detail (i.e. the "checklists" of the title). However, emergent complexity requires different approach - no checklist can anticipate all eventualities. To handle all the emergent complexity, the coordination focus must shift to structuring the right communications. In examining modern construction industry techniques, Gawande noted the concept of the "submittal schedule," which "didn&#8217;t specify construction tasks; it specified <em>communication</em> tasks" (p. 65, emphasis supplied).</p>
+<p>Another perspective on this is found in The Checklist Manifesto <a href="#Gawande2010">[Gawande2010]</a>. Some work, while detailed, can be planned to a high degree of detail (i.e. the "checklists" of the title). However, emergent complexity requires different approach - no checklist can anticipate all eventualities. To handle all the emergent complexity, the coordination focus must shift to structuring the right communications. In examining modern construction industry techniques, Gawande noted the concept of the "submittal schedule," which "didn&#8217;t specify construction tasks; it specified <em>communication</em> tasks" (p. 65, emphasis supplied).</p>
 </div>
 </div>
 <div class="sect5">
@@ -13954,17 +13857,8 @@ advice for transitioning a PMO from traditional to agile. (cited in <a href="#Co
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>Status: These three chapter sections are in first draft as of 4 June 2016:</pre>
+<pre>Status: This section is in process as of May 27 2016. Expect volatility.</pre>
 </div>
-</div>
-<div class="paragraph">
-<p><a href="http://dm-academy.github.io/aitm/aitm-collaborator.html#_chapter_9_process_management">Introduction</a></p>
-</div>
-<div class="paragraph">
-<p><a href="http://dm-academy.github.io/aitm/aitm-collaborator.html#_why_process_management">Why Process Management?</a></p>
-</div>
-<div class="paragraph">
-<p><a href="http://dm-academy.github.io/aitm/aitm-collaborator.html#_process_management_practices">Process Management Practices</a></p>
 </div>
 <div class="ulist">
 <ul>
@@ -14003,19 +13897,7 @@ advice for transitioning a PMO from traditional to agile. (cited in <a href="#Co
 <p>You&#8217;ve not had these conversations before. What do they mean by these different "processes?"</p>
 </div>
 <div class="paragraph">
-<p>They seem to have some expectation from their previous employment, and if you say "we don&#8217;t have one" they tend to be confused. You&#8217;re becoming concerned that your company may be running some risk, although you also are wary that "process" might mean slowing things down, and you can&#8217;t afford that.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Important</div>
-</td>
-<td class="content">
-As with other chapters in the later part of this book, we are going to introduce Process Mangement "on its own terms." We will then add additional context and critique in subsequent sections.
-</td>
-</tr>
-</table>
+<p>They seem to have some expectation from their previous employment, and if you say "we don&#8217;t have one" they tend to be confused. You&#8217;re starting to become concerned that your company may be running some risk, although you also are wary that process might mean slowing things down, and you can&#8217;t affort that.</p>
 </div>
 <div class="paragraph">
 <p>What is "process?"</p>
@@ -14024,7 +13906,7 @@ As with other chapters in the later part of this book, we are going to introduce
 <p><a href="http://www.dictionary.com/browse/process">Dictionary.com</a> defines it as "a systematic series of actions directed to some end . . . a continuous action, operation, or series of changes taking place in a definite manner."</p>
 </div>
 <div class="paragraph">
-<p>We&#8217;ve discussed <a href="#2.05.00-work-management">work management</a>, which is an important precursor of process management. Work management is less formalized; a wide variety of activities are handled through flexible <a href="#2.05.02-kanban">Kanban</a>-style boards or "card walls" based on the simplest "process" of:</p>
+<p>We&#8217;ve discussed <a href="#2.05.00-work-management">work management</a>, which is an important precursor of process management. Work management is less formalized; a wide variety of activities are handled through flexible <a href="#2.05.02-kanban">Kanban</a>-style boards based on the simplest "process" of:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -14040,7 +13922,7 @@ As with other chapters in the later part of this book, we are going to introduce
 </ul>
 </div>
 <div class="paragraph">
-<p>However, the simple card wall/Kanban board can easily become much more complex, with the addition of swimlanes and additional columns, including holding areas for blocked work:</p>
+<p>However, the simple Kanban board can easily become much more complex, with the addition of swimlanes and additional columns, including holding areas for blocked work:</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -14056,10 +13938,10 @@ As with other chapters in the later part of this book, we are going to introduce
 <p>And when tasks become more routine and specialized, formal process management starts to emerge.</p>
 </div>
 <div class="paragraph">
-<p>Processes are how we ensure consistency, repeatability, and quality. You get expected treatment at banks, coffee shops, and dentists because they follow processes. IT systems often enable processes – a mortgage origination system is based on IT software that enforces a consistent process. IT management itself follows certain processes, for all the same reasons as above.</p>
+<p>Processes are how we ensure consistency, repeatability, and quality. You get expected treatment at banks, coffee shops, and dentists because they follow processes. IT systems often enable processes – a mortgage origination system is based on IT software that enforces a consistent process. IT management itself follows certain processes, for all the same reasons as above</p>
 </div>
 <div class="paragraph">
-<p>Process, in terms of "business process," has been a topic of study and professional development for many years. Pioneering Business Process Management (BPM) authors such as Michael Hammer <a href="#Hammer1993">[Hammer1993]</a> and Geary Rummler <a href="#Rummler1995">[Rummler1995]</a> have had an immense impact on business operations. Toyota considers a clear process vision, or "target condition," to be the most fundamental objective in improving operations (<a href="#Rother2010">[Rother2010]</a>, chapters 5-6).  Designing processes, improving them, and using them to improve overall performance is an ongoing activity in most if not all organizations.</p>
+<p>Process, in terms of "business process," has been a topic of study and professional development for many years. Pioneering BPM (Business Process Management) authors such as Michael Hammer <a href="#Hammer1993">[Hammer1993]</a> and Geary Rummler <a href="#Rummler1995">[Rummler1995]</a> have had an immense impact on business operations. Toyota considers a clear process vision, or "target condition," to be the most fundamental objective in improving operations (<a href="#Rother2010">[Rother2010]</a>, chapters 5-6).  Designing processes, improving them, and using them to improve overall performance is an ongoing activity in most if not all organizations.</p>
 </div>
 <div class="paragraph">
 <p>However, process can cause problems. Processes imply <a href="#queuing">queues</a>, and in digital and other product development-based organizations, this means invisible work in process. For every employee you hire who expects you to have processes, you seem to hire another who has had bad process experiences at previous employers.</p>
@@ -14071,10 +13953,10 @@ As with other chapters in the later part of this book, we are going to introduce
 <p>Process is a broad concept used throughout business operations. <strong>The coverage here is primarily about process as applied to the digital organization.</strong> There is a bit of a recursive paradox here; in part, we are talking about the <strong>process by which business processes are analyzed and automated</strong>. By definition, this overall "process" (you could call it a <strong>meta</strong>-process) cannot be made too prescriptive or predictable.</p>
 </div>
 <div class="paragraph">
-<p>We also introduce process in terms of our <a href="#0.01-emergence">emergence model</a>, and therefore focus on the concerns and dynamics that may cause you to notice the concept, and your need for it.</p>
+<p>We also introduce process in terms of our scaling model, and therefore focus on the concerns and dynamics that may cause you to notice the concept, and your need for it.</p>
 </div>
 <div class="paragraph">
-<p>There is a rich body of industry practice we will draw on in our discussion. Business process management for the purposes of the digital organization is just one more form of business process management.</p>
+<p>However, there is a rich body of industry practice we will draw on in our discussion. Business process management for the purposes of the digital organization is just one more form of business process management.</p>
 </div>
 <div class="sect4">
 <h5 id="_chapter_9_overview">Chapter 9 overview</h5>
@@ -14089,16 +13971,16 @@ As with other chapters in the later part of this book, we are going to introduce
 <div class="ulist">
 <ul>
 <li>
-<p>Identify differences between process and project management</p>
-</li>
-<li>
 <p>Describe a business process and how it crosses functions</p>
 </li>
 <li>
-<p>Identify the problems of process proliferation with respect to execution and demand</p>
+<p>Describe the relationship between business process and business performance</p>
 </li>
 <li>
-<p>Describe the origins, purpose, and scope of IT industry frameworks</p>
+<p>Describe the origins, purpose, and scope of ITIL and CMMI</p>
+</li>
+<li>
+<p>Identify the problems of process proliferation with respect to execution and demand</p>
 </li>
 </ul>
 </div>
@@ -14125,7 +14007,7 @@ Is a firm a collection of activities or a set of resources and capabilities? Cle
 <p>In our company, work has been specializing. A simple card-based kanban approach is no longer sufficient. We are finding that some work is repetitive, and we need to remember to do certain things in certain orders.</p>
 </div>
 <div class="paragraph">
-<p>For example, a new Human Resources (HR) manager was hired. The HR manager decided that a sticky note of "hire someone new for us" was not sufficient. As she pointed out to the team, hiring needed to follow a defined sequence of tasks:</p>
+<p>For example, a new Human Resources (HR) manager was hired. The HR manager decided that a simple Kanban card of "hire someone new for us" was not sufficient. As she pointed out to the team, hiring needed to follow a defined sequence of tasks:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -14162,19 +14044,26 @@ Is a firm a collection of activities or a set of resources and capabilities? Cle
 <p>More broadly, your entire digital product pipeline is sometimes called a "process." From initial feature idea through production, you seek a consistent means for identifying and implementing valuable functionality. Sometimes this work requires intensive, iterative collaboration and is unpredictable (e.g. developing a user interface); sometimes, the work is more repeatable (e.g. packaging and releasing tested functionality).</p>
 </div>
 <div class="paragraph">
-<p>However, some team members are cautious of the word "process". The term "process police" comes up in an unhappy way.</p>
+<p>However, some team members are cautious of the word "process". The term "process police" comes up in an unhappy way. "Are we going to have auditors tracking whether we filled out all our forms correctly?," one asks. "We used to get these consultants in at my old company and they would leave piles of 3 ring binders on the shelf that no-one ever looked at," another person says.</p>
 </div>
 <div class="paragraph">
-<p>"Are we going to have auditors tracking whether we filled out all our forms correctly?," one asks.</p>
+<p>The irony is that digital products are based on process automation. The idea that certain tasks can be done repeatably and at scale through digitization is fundamental to all use of computers:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ride sharing applications</p>
+</li>
+<li>
+<p>electronic mail transmission</p>
+</li>
+<li>
+<p>"Hire Employee" as an automated transaction in a Human Resource Management System</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>"We used to get these consultants in at my old company and they would leave piles of 3 ring binders on the shelf that no-one ever looked at," another person says.</p>
-</div>
-<div class="paragraph">
-<p>"I can&#8217;t write code according to someone&#8217;s recipe!," a third says with some passion, and to general agreement from the developers in the room.</p>
-</div>
-<div class="paragraph">
-<p>The irony is that digital products are based on process automation. The idea that certain tasks can be done repeatably and at scale through digitization is fundamental to all use of computers. The digital service <strong>is</strong> fundamentally an automated process, one that can be intricate and complicated. That&#8217;s what computers do. But process management also spans human activities, and that&#8217;s where things get more complex.</p>
+<p>To repeat, the digital service <strong>is</strong> fundamentally an automated process. That&#8217;s what computers do.</p>
 </div>
 <div class="sect4">
 <h5 id="_from_work_to_process_management">From work to process management</h5>
@@ -14182,10 +14071,7 @@ Is a firm a collection of activities or a set of resources and capabilities? Cle
 <p>So, the kanban board has started to elaborate. We&#8217;re seeing more and more work that needs to follow a sequence, or checklist&#8230;&#8203; Wait, didn&#8217;t we see that in the chapter on Project Management?</p>
 </div>
 <div class="paragraph">
-<p>We discussed task ordering in Chapter 8. However, projects are not usually seen as repeatable.</p>
-</div>
-<div class="paragraph">
-<p>It all starts with just "work." The following diagram might help:</p>
+<p>We discussed task ordering in Chapter 8. However, projects are not usually seen as repeatable. Process management is when we need to start managing multiple processes and considering their interdependencies, perhaps using common methods to define them and even common tooling to support multiple processes. The following diagram might help:</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -14193,35 +14079,7 @@ Is a firm a collection of activities or a set of resources and capabilities? Cle
 </div>
 </div>
 <div class="paragraph">
-<p>Project management adds concerns of task ordering and resource management, for projects typically executed on a one-time basis.</p>
-</div>
-<div class="paragraph">
-<p>Process management is also concerned with ordering, but less so with the resource load (more on this below), and instead is concerned with repeatability and ongoing improvement.</p>
-</div>
-<div class="paragraph">
-<p>Process management is when we need to start managing</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>multiple,</p>
-</li>
-<li>
-<p>repeatable,</p>
-</li>
-<li>
-<p>measurable sequences of activity,</p>
-</li>
-<li>
-<p>considering their interdependencies,</p>
-</li>
-<li>
-<p>perhaps using common methods to define them,</p>
-</li>
-<li>
-<p>and even common tooling to support multiple processes.</p>
-</li>
-</ul>
+<p>Project management adds concerns of task ordering and resource management, for projects typically executed on a one-time basis. Process management is also concerned with ordering, but less so with the resource load (more on this below), and instead is concerned with repeatability and ongoing improvement.</p>
 </div>
 <div class="paragraph">
 <p>Project management and process management interact in 2 primary ways:</p>
@@ -14232,12 +14090,9 @@ Is a firm a collection of activities or a set of resources and capabilities? Cle
 <p>Projects often are used to create and deploy processes. A large system implementation (e.g. of a Enterprise Resource Planning module such as Human Resource Management) will often be responsible for process implementation including training.</p>
 </li>
 <li>
-<p>As environments mature, product and/or project teams require process support.</p>
+<p>As environments mature, projects require process support. As Richardson notes in <em>Project Management Theory and Practice</em>, "there are many organizational processes that are needed to optimally support a successful project." <a href="#Richardson2010">[Richardson2010]</a> For example, the project may require predictable contractor hiring, or infrastructure provisioning, or security reviews. To the extent these are managed as repeatable, optimized processes, project risk is reduced.</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>As Richardson notes in <em>Project Management Theory and Practice</em>, "there are many organizational processes that are needed to optimally support a successful project." <a href="#Richardson2010">[Richardson2010]</a> For example, the project may require predictable contractor hiring, or infrastructure provisioning, or security reviews. The same is true for product teams that may not be using a "project" concept to manage their work. To the extent these are managed as repeatable, optimized processes, risk is reduced.</p>
 </div>
 </div>
 <div class="sect4">
@@ -14249,10 +14104,10 @@ Is a firm a collection of activities or a set of resources and capabilities? Cle
 <p>The concept of process is often contrasted with that of function or organization. We have seen in previous chapters how product development and project management must drive results across organizational boundaries. Process management has a similar challenge; its goal is to drive <strong>repeatable</strong> results across organizational boundaries.</p>
 </div>
 <div class="paragraph">
-<p>As we know from our discussion of <a href="#2.04.00-product-mgmt">Product Management</a>, developing new products is not a particularly repeatable process. The Agile movement in some ways arose in opposition to attempts to apply process concepts of "repeatability" to developing software. These concerns remain.</p>
+<p>As we know from our discussion of product management, developing new products is not a particularly repeatable process. The Agile movement in some ways arose in opposition to attempts to apply process concepts of "repeatability" to developing software. These concerns remain.</p>
 </div>
 <div class="paragraph">
-<p>However, this book is not only about digital R&amp;D processes. It is also about a spectrum of operations and effort that spans from the unique to the highly repeatable. There is an interesting middle ground, of processes that are at least semi-repeatable. Examples often found in the large digital organization include:</p>
+<p>However, this book is not only about digital R&amp;D processes. It is also about a spectrum of operations and effort that spans from the unique to the highly repeatable. There is an interesting middle ground, of processes that are semi-repeatable, more repeatable than the stereotypically non-deterministic development process. Examples often found in the large digital organization include:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -14263,10 +14118,7 @@ Is a firm a collection of activities or a set of resources and capabilities? Cle
 <p>End user equipment provisioning</p>
 </li>
 <li>
-<p>Resolving incidents and answering user inquiries</p>
-</li>
-<li>
-<p>Troubleshooting problems</p>
+<p>Resolving incidents and answering user</p>
 </li>
 </ul>
 </div>
@@ -14277,13 +14129,8 @@ Is a firm a collection of activities or a set of resources and capabilities? Cle
 <p>It is important to realize, however, that just as the traditional IT project is under pressure, there are similar challenges for the traditional IT process. Continuous deployment techniques are eroding the need for formal change management. Consumerization is challenging traditional internal IT provisioning practices. And self-service help desks are eliminating some traditional support activities.</p>
 </div>
 <div class="paragraph">
-<p>Nevertheless, any rumors of an "end to process" are probably greatly exaggerated. There will likely always be complex combinations of automated, semi-automated, and manual activity in digital organizations. Some of this activity will be repeatable enough that the "process" construct will be applied to it. Measurability remains a concern; the Lean philosophy underpinning much Agile thought emphasizes this.</p>
+<p>Nevertheless, any rumors of an "end to process" are probably greatly exaggerated. There will likely always be complex combinations of automated, semi-automated, and manual activity in digital organizations. Some of this activity will be repeatable enough that the "process" construct will be applied to it. It is therefore useful to understand more fundamentally what processes are, how they operate, and how they are managed and improved.</p>
 </div>
-<div class="paragraph">
-<p>It is therefore useful to understand more fundamentally what processes are, how they operate, and how they are managed and improved.</p>
-</div>
-<div class="sect5">
-<h6 id="_process_as_skill">Process as skill</h6>
 <div class="paragraph">
 <p>As we discussed at the beginning of this chapter, sometimes new employees come in expecting that you are following certain processes. This is in part because "process" experience can be an important part of an employee&#8217;s career background. A skilled HR manager may consider their experience with large-scale enterprise hiring processes to be a major part of their qualifications for a position in your company.</p>
 </div>
@@ -14313,8 +14160,7 @@ Is a firm a collection of activities or a set of resources and capabilities? Cle
 </ul>
 </div>
 <div class="paragraph">
-<p>It&#8217;s not clear which of these are "IT" versus "business" processes. But they are definitely processes. Some of them are more predictable, some less so, but they all represent some form of ordered work that is repeatable to some degree. And to some extent, you are seeking people with experience defined at least in part by their exposure to processes.</p>
-</div>
+<p>It&#8217;s not clear which of these are "IT" versus "business" processes. But they are definitely processes. Some of them are more predictable, some less so, but they all represent some form of ordered work that is repeatable to some degree.</p>
 </div>
 </div>
 <div class="sect4">
@@ -14334,9 +14180,6 @@ Is a firm a collection of activities or a set of resources and capabilities? Cle
 <p>Quality</p>
 </li>
 <li>
-<p>Variation</p>
-</li>
-<li>
 <p>Outcomes</p>
 </li>
 </ul>
@@ -14345,12 +14188,21 @@ Is a firm a collection of activities or a set of resources and capabilities? Cle
 <p>at the most general level, and of course all of those measurements must be defined much more specifically depending on the process.</p>
 </div>
 <div class="paragraph">
-<p>Measurement is an essential aspect of process management, but must be carefully designed. Measuring process can have unforeseen results. Process participants will behave according to how the process is measured. If a help desk operator is measured and rated on how many calls they process an hour, the quality of those interactions may suffer. It is critical that any process "key performance indicator" be understood in terms of the highest possible business objectives. Is the objective truly to process as many calls as possible? Or is it to satisfy the customer so they need not turn to other channels to get their answers? (More on measurement in the chapter section on <a href="#continuous-improvement">Continuous Improvement</a>.)</p>
+<p>Measurement is an essential aspect of process management, but must be carefully designed. Process participants will behave according to how the process is measured. If a help desk operator is measured and rated on how many calls they process an hour, the quality of those interactions may suffer. It is critical that any process "key performance indicator" be understood in terms of the highest possible business objectives. Is the objective truly to process as many calls as possible? Or is it to satisfy the customer so they need not turn to other channels to get their answers?</p>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_process_basics">Process basics</h4>
+<h4 id="_process_management_practices">Process management practices</h4>
+<div class="quoteblock">
+<blockquote>
+The first question is, why control the process? When we know why, it almost automatically clarifies how we must control the process. Is a controlled process inherently better than one that has more uncertainty? No. Since the purpose of our process is to make money, it would follow that the purpose of controlling the process must be to influence economic outcomes. There is no other reason to be interested in process control.
+</blockquote>
+<div class="attribution">
+&#8212; Don Reinertsen<br>
+<cite>Managing the Design Factory pp. 197-198</cite>
+</div>
+</div>
 <div class="sect4">
 <h5 id="_bpm_fundamentals">BPM fundamentals</h5>
 <div class="paragraph">
@@ -14368,7 +14220,7 @@ Is a firm a collection of activities or a set of resources and capabilities? Cle
 </div>
 </div>
 <div class="paragraph">
-<p><em>Value Chain similar to <a href="#Porter1998">[Porter1998]</a>.</em></p>
+<p>Value Chain similar to <a href="#Porter1998">[Porter1998]</a>.</p>
 </div>
 <div class="paragraph">
 <p>Note the progression along the bottom: first, raw materials are acquired, then manufactured, then distributed at which point they are marketed and sold, and ultimately serviced. Porter termed this set of activities "Primary."</p>
@@ -14377,7 +14229,7 @@ Is a firm a collection of activities or a set of resources and capabilities? Cle
 <p>The upper half represents what Porter termed "support." Supporting activities represent necessary, but not value adding, functions.</p>
 </div>
 <div class="paragraph">
-<p>There are many criticisms of the Porter value chain. Without research and development, there is no product, so why is it considered a support activity (and confusingly named just "Technology Development")? Surely, marketing and sales help drive demand for the product, especially with manufacturing lead times shrinking, so why do they appear so late in the game?</p>
+<p>There are many criticisms of the Porter value chain. Without research and development, there is no product, so why is it considered a support activity? Surely, marketing and sales help drive demand for the product, especially with manufacturing lead times shrinking, so why do they appear so late in the game?</p>
 </div>
 <div class="paragraph">
 <p>Overall, the model represents a manufacturing-centric world where customers were happy to buy what was on offer.</p>
@@ -14451,12 +14303,6 @@ Is a firm a collection of activities or a set of resources and capabilities? Cle
 <div class="content">
 <img src="images/3.09-chevrons.png" alt="3.09 chevrons">
 </div>
-</div>
-<div class="paragraph">
-<p>There is no industry standard that definitely lists the concepts above in terms of granularity. Is a "task" larger or smaller than a "procedure?" We will not discuss these much. However, between the high level concept of "value chain" and the concepts of "process" and "activity," is the concept of "<strong>value stream</strong>."  This is a key concept from the Lean community, and is a relatively higher-level concept (a value chain decomposes into value streams, according to some.)</p>
-</div>
-<div class="paragraph">
-<p>A value stream for example could be the complete manufacturing and sales process for one product family. Because they are more specific, value streams are more measurable and countable. Optimizing them in terms of eliminating wasted time, effort and inventory is an objective of Lean thinking. See <em>Learning to See</em> by Rother and Shook <a href="#Rother2003">[Rother2003]</a>.</p>
 </div>
 <div class="paragraph">
 <p><strong>Functions</strong> are unordered, steady state domains of activity. An organizational chart often can be based on various functions. Functions also often imply hierarchy. They are more difficult to measure or improve; usually, improving a function means improving some process it owns or performs.</p>
@@ -14586,7 +14432,7 @@ Is a firm a collection of activities or a set of resources and capabilities? Cle
 <p>HR enters a record</p>
 </li>
 <li>
-<p>All employees use common "hoteling" space, so the major Facilities concern is whether the space can accommodate the peak # of employees seen (e.g. at 10 AM on a Wednesday)</p>
+<p>All employees use common "hoteling" space, so the major Facilities concern is whether the space can accommodate the peak # of employees seen (e.g. at 10 AM on a Monday)</p>
 </li>
 <li>
 <p>Equipment is either BYOD (Bring Your Own Device) or is ordered from an authorized vendor and drop-shipped directly to the employee</p>
@@ -14716,15 +14562,7 @@ The idea that processes are active and countable, while functions are passive an
 <div class="sect5">
 <h6 id="_igoe_input_guide_output_enabler">IGOE (Input/Guide/Output/Enabler)</h6>
 <div class="paragraph">
-<p>A useful framewor for thinking about activities represented as icons is the IGOE approach <a href="#BPTrends2013">[BPTrends2013]</a>.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>insert Process Renewal Group cite</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>IGOE stands for:</p>
+<p>A useful framework for thinking about activities represented as icons is the IGOE approach <a href="#BPTrends2013">[BPTrends2013]</a>. IGOE stands for:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -14732,10 +14570,10 @@ The idea that processes are active and countable, while functions are passive an
 <p>Inputs</p>
 </li>
 <li>
-<p>Guides</p>
+<p>Outputs</p>
 </li>
 <li>
-<p>Outputs</p>
+<p>Guides</p>
 </li>
 <li>
 <p>Enablers</p>
@@ -14751,59 +14589,17 @@ The idea that processes are active and countable, while functions are passive an
 <p><strong>Inputs</strong> include the information or event stimulus that initiates the activity. They also include resources that will be consumed in the course of the activity.</p>
 </div>
 <div class="paragraph">
-<p><strong>Guides</strong> govern the process, setting constraints and expectations (e.g. current HR policies). They are not consumed.</p>
+<p><strong>Outputs</strong> include the final, value-added outcome of the activity, and also serve as a signal for downstream activities to commence.</p>
 </div>
 <div class="paragraph">
-<p><strong>Outputs</strong> include the final, value-added outcome of the activity, and also serve as a signal for downstream activities to commence.</p>
+<p><strong>Guides</strong> govern the process, setting constraints and expectations (e.g. current HR policies). They are not consumed.</p>
 </div>
 <div class="paragraph">
 <p><strong>Enablers</strong> support the process, without being immediately consumed. Examples include infrastructure and facilities support.</p>
 </div>
-<div class="paragraph">
-<p>The IGOE approach is seen in the classic IDEF0 standard (the terms used there were Inputs, Controls, Outputs, Mechanisms). This is a form of <strong>functional modeling</strong> which is <strong>not</strong> event driven but rather is used to scope higher level interactions between areas.</p>
-</div>
-<div class="paragraph">
-<p>The original intent of the IDEF0 standard was for a multi-level, decomposition approach, A high level scope would be elaborated thus:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/3.09-IGOE2.png" alt="3.09 IGOE2">
-</div>
-</div>
-<div class="paragraph">
-<p>However, there is not a clear sense of the events, since the primary objects are still the functions. There also is the temptation to insert extraneous information, as indicated in the line between Facilities Management and IT Asset Management labeled "Provides space for ??".</p>
-</div>
-<div class="paragraph">
-<p>It is true that Facilities Management does provide space for the IT Asset Management Team (in fact, all of these functions provide services to each other), but to draw this would result in a "spaghetti" diagram with several dozen lines, and not much explanatory power.</p>
-</div>
-<div class="paragraph">
-<p>Purely functional modeling of this nature is therefore limited in usefulness, although it can be a good place to start.</p>
-</div>
 </div>
 <div class="sect5">
 <h6 id="_ordering_synchronization_and_conditionality">Ordering, synchronization, and conditionality</h6>
-<div class="paragraph">
-<p>Activities in process modeling, by contrast, emphasize active verbs:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Hire</p>
-</li>
-<li>
-<p>Assign</p>
-</li>
-<li>
-<p>Supply</p>
-</li>
-<li>
-<p>Create</p>
-</li>
-<li>
-<p>Authorize</p>
-</li>
-</ul>
-</div>
 <div class="paragraph">
 <p>Multiple activities can be sequenced and this is often represented as a series of shapes connected by arrows:</p>
 </div>
@@ -14854,451 +14650,15 @@ The idea that processes are active and countable, while functions are passive an
 <p>Adding the swimlanes helps us understand the cross-functional handoffs, and also where certain activities will remain within the scope of one function. Another interesting, finer point is the question of the synch points. Observe the synch point in the Network Management swimlane. Its presence implies that the Network Management function must confirm that the employee has equipment and a directory in the enterprise directory.</p>
 </div>
 <div class="paragraph">
-<p>You may notice that this diagram has been "rotated." The diagram was becoming too long if drawn left to right. UML Activity Diagrams frequently use a top-to-bottom approach. The meaning of the diagram is not changed.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_a_final_caution_on_technique">A final caution on technique</h6>
-<div class="paragraph">
-<p>The techniques briefly discussed here can be applied and combined in many different ways, and result in models of large scope and complexity. However there are crucial limitations to visual representations of complexity.</p>
+<p>You may notice that this diagram has been "rotated." The diagram was becoming too long if drawn left to right. UML Activity Diagrams frequently use this approach. The meaning of the diagram is not changed.</p>
 </div>
 <div class="paragraph">
-<p>There are endless nuances and debates about BPM notations, methodology, and philosophy. Don&#8217;t get caught up in it. Modeling should generate simple, clear artifacts that are useful by a broad audience, and it should not become an end in itself, or (in general) consume inordinate amounts of time. We will discuss this further in the chapter section on Agile.</p>
-</div>
-<div class="paragraph">
-<p>With the above discussion, we have covered in a summary form the basics of business process modeling. In the next section on Agile and process management, we will discuss various process pitfalls and appropriate Agile and Lean responses.</p>
-</div>
-<div class="paragraph">
-<p><a id="continuous-improvement"></a></p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_process_control_and_continuous_improvement">Process control and continuous improvement</h4>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Collaborative</strong></p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Status: This section is in first draft as of 8 Jun 2016. Comments appreciated.</pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Raise an <a href="https://github.com/dm-academy/aitm/issues" target="_blank">issue</a> to comment</p>
-</li>
-<li>
-<p><a href="https://github.com/dm-academy/aitm/tree/master/book" target="_blank">Github source files</a></p>
-</li>
-<li>
-<p><a href="https://github.com/dm-academy/aitm/blob/master/collaborator-instructions.adoc" target="_blank">Collaborator instructions</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="quoteblock">
-<blockquote>
-a process can still be controlled even if it can&#8217;t be defined.
-</blockquote>
-<div class="attribution">
-&#8212; Martin Fowler<br>
-<cite>preface to Agile Software Development with Scrum</cite>
-</div>
-</div>
-<div class="paragraph">
-<p>In this chapter section, we take a deeper look at the concept of process and how processes are managed and controlled. In particular, we will explore the concept of continuous (or continual) improvement and its rich history and complex relationship to Agile.</p>
-</div>
-<div class="paragraph">
-<p>You are now at a stage in your company&#8217;s evolution, or your career, where an understanding of continuous improvement is helpful. Without this, you will increasingly find you don&#8217;t understand the language and motivations of leaders in your organization, especially those with business degrees or background.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-There is a debate over whether to use the term "continuous" or "continual" improvement. We will use "continuous" here as it is the more commonly seen. Advocates of "continual" argue it is the more grammatically correct.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The scope of the word "process" is immense. Examples include:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The end to end flow of chemicals through a refinery</p>
-</li>
-<li>
-<p>The set of activities across a manufacturing assembly line, resulting in a product for sale</p>
-</li>
-<li>
-<p>The steps expected of a customer service representative in handling an inquiry</p>
-</li>
-<li>
-<p>The steps followed in troubleshooting a software-based system</p>
-</li>
-<li>
-<p>The general steps followed in creating and executing a project</p>
-</li>
-<li>
-<p>The overall flow of work in software development, from idea to operation</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>This breadth of usage requires us to be specific in any discussion of the word "process." In particular, we need to be careful in understanding the concepts of efficiency, variation, and effectiveness. These concepts lie at the heart of understanding process control and improvement and how to correctly apply it in the digital economy.</p>
-</div>
-<div class="paragraph">
-<p>Companies institute processes because it has been long understood that repetitive activities can be optimized when they are better understood, and if they are optimized, they are more likely to be economical and even profitable.</p>
-</div>
-<div class="paragraph">
-<p>We have emphasized throughout this book that the process by which complex systems are created is not repetitive. Such creation is a process of <strong>product development</strong>, not <strong>production.</strong> And yet, the entire digital organization covers a broad spectrum of process possibilities, from the repetitive to the unique. You need to be able to identify what kind of process you are dealing with, and to choose the right techniques to manage it.</p>
-</div>
-<div class="paragraph">
-<p>(For example, the employee provisioning process flow shown in the previous chapter is simple and prescriptive. Measuring its efficiency and variability would be possible, and perhaps useful.)</p>
-</div>
-<div class="paragraph">
-<p>There are many aspects of continuous improvement we won&#8217;t cover in this brief section. Some of them (systems thinking, culture, and others) have already been covered in this book. This book is based in part on Lean and Agile premises, and continuous improvement is one of the major influences on Lean and Agile, so in some ways we come full circle.</p>
-</div>
-<div class="paragraph">
-<p>We are focusing on continuous improvement in the context of processes and process improvement. We&#8217;ll therefore scope this to a few concerns: efficiency, variation, effectiveness, and process control.</p>
-</div>
-<div class="sect4">
-<h5 id="_history_of_continuous_improvement">History of continuous improvement</h5>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-History is important. You may think your career is far removed from the early days of the industrial revolution, but the influence of early management thinkers such as Frederick Taylor remains. You need to be able to recognize when his ideas are being applied, especially if they are being applied inappropriately (as continues to happen, even a hundred years later).
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The history of continuous improvement is intertwined with the history of 20th century business itself. Before the industrial revolution, goods and services were produced primarily by local farmers, artisans, and merchants. Techniques were jealously guarded, not shared. A given blacksmith might have two or three workers, who might all forge a pan or a sword in a different way. The term "productivity" itself was unknown.</p>
-</div>
-<div class="paragraph">
-<p>Then the Industrial Revolution happened.</p>
-</div>
-<div class="paragraph">
-<p>As steam and electric power increased the productivity of industry, requiring greater sums of capital to fund, a search for improvements began. Blacksmith shops began to consolidate into larger organizations, and technology became more complex and dangerous. It started to become clear that allowing each worker to perform the work as they preferred was not feasible.</p>
-</div>
-<div class="paragraph">
-<p>Enter the scientific method. Thinkers such as Frederick Taylor and Frank and Lillian Gilbreth (of "Cheaper by the Dozen" fame) started applying careful techniques of measurement and comparison, in search of the "one best way" to dig ditches or assemble vehicles. An entire profession of industrial engineering was established, along with the formal study of business management itself.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_frederick_taylor_and_efficiency">Frederick Taylor and efficiency</h5>
-<div class="paragraph">
-<p>Frederick Taylor (1856-1915)  was a mechanical engineer and one of the first industrial engineers. In 1911, he wrote <em>Principles of Scientific Management</em>.</p>
-</div>
-<div class="paragraph">
-<p>One of Taylor&#8217;s primary contributions to management thinking was a systematic approach to efficiency. To understand this, let&#8217;s consider some fundamentals.</p>
-</div>
-<div class="paragraph">
-<p>Human beings engage in repetitive activities. These activities consume inputs and produce outputs. It is often possible to compare the outputs against the inputs, numerically, and understand how "productive" the process is.</p>
-</div>
-<div class="paragraph">
-<p>For example, suppose you have two factories producing identical kitchen utensils (pizza cutters, say).</p>
-</div>
-<div class="paragraph">
-<p>If one factory can produce 50,000 pizza cutters for $2,000, while the other requires $5,000, the first factory is more productive.</p>
-</div>
-<div class="paragraph">
-<p>Assume for a moment that the workers are all earning the same across each factory. There is possibly a "process" problem. The first factory is more <em>efficient</em> than the second; it can produce more given the same set of inputs. Why?</p>
-</div>
-<div class="paragraph">
-<p>There are many possible reasons. Perhaps the second factory is poorly laid out and the work in progress must be moved too many times in order for workers to perform their tasks. Perhaps the workers are using tools that require more manual steps. Understanding the differences between the two factories, and recommending the "best way," is what Taylor pioneered, and what industrial engineers do to this day.</p>
-</div>
-<div class="paragraph">
-<p>As Peter Drucker, one of the most influential management thinkers, says of Frederick Taylor:</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>The application of knowledge to work explosively increased productivity. For hundreds of years there had been no increase in the ability of workers to turn out goods or to move goods . . . But within a few years after Taylor began to apply knowledge to work, productivity began to rise at a rate of 3.5 to 4 percent compound a year—which means doubling every eighteen years or so. Since Taylor began, productivity has increased some fiftyfold in all advanced countries. On this unprecedented expansion rest all the increases in both standard of living and quality of life in the developed countries. <a href="#Drucker1993">[Drucker1993]</a>, pp.37-38.</p>
-</div>
+<p>With the above discussion, we have covered in a summary form the basics of business process modeling. We finish this chapter section with a discussion of some higher-level BPM practices and concerns.</p>
 </div>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_w_e_deming_and_variation">W.E. Deming and variation</h5>
-<div class="paragraph">
-<p>The quest for effiency leads to the long-standing management interest in variability and variation. What do we mean by this?</p>
-</div>
-<div class="paragraph">
-<p>If you expect a process to take 5 days, what do you make of occurrences when it takes 7 days? 4 days? If you expect a manufacturing process to yield 98% usable product, what do you do when it falls to 97%? 92%?</p>
-</div>
-<div class="paragraph">
-<p>In highly repeatable manufacturing processes, statistical techniques can be applied. Analyzing such "variation" has been a part of management for decades, and is an important part of disciplines such as Six Sigma. This is why Six Sigma is of such interest to manufacturing firms.</p>
-</div>
-<div class="paragraph">
-<p>\W. Edwards Deming (1900-1993) is noted for (among many other things) his understanding of variation and organizational responses to it. Understanding variation is one of the major parts of his "System of Profound Knowledge." He emphasizes the need to distinguish special causes from  common causes of variation; special causes are those requiring management attention.</p>
-</div>
-<div class="paragraph">
-<p>Deming in particular was an advocate of the control chart, a technique to understand whether a process was within statistical control:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/3.09-controlChart.jpg" alt="3.09 controlChart">
-</div>
-</div>
-<div class="paragraph">
-<p><em>image from <a href="https://www.flickr.com/photos/internetarchivebookimages/14775750673/" class="bare">https://www.flickr.com/photos/internetarchivebookimages/14775750673/</a>, no known copyright restrictions</em></p>
-</div>
-<div class="paragraph">
-<p>However, using techniques of this nature makes certain critical assumptions about the nature of the process. Understanding variation and when to manage it requires care. These techniques were defined to understand <strong>physical</strong> processes that in general follow <a href="https://en.wikipedia.org/wiki/Normal_distribution">normal distributions</a>.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Important</div>
-</td>
-<td class="content">
-Learning some statistics is essential, if you want to progress in your career. This section assumes you are comfortable with the concept of a "distribution" and in particular what the "normal distribution" is.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>For example, let&#8217;s say you are working at a large manufacturer, in their IT organization, and you see the a metric of "variance from project plan." The idea is that your actual project time, scope and resources should be the same, or close to, what you planned. In practice, this tends to become a discussion about time, as resources and scope are often fixed.</p>
-</div>
-<div class="paragraph">
-<p>The assumption is that, for your project tasks, you should be able to estimate to a meaningful degree of accuracy. Your estimates are equally likely to be too low, or too high. Furthermore, it should be somehow possible to improve the accuracy of your estimates. Your annual review depends on this, in fact.</p>
-</div>
-<div class="paragraph">
-<p>The problem is that neither of these are true. Despite heroic efforts, you cannot improve your estimation. In process control jargon, there are too many causes of variation for "best practices" to emerge. Project tasks remain unpredictable, and the variability does not follow a normal distribution. Very few tasks get finished earlier than you estimated, and there is a <a href="https://en.wikipedia.org/wiki/Long_tail">long tail</a> to the right, of tasks that take 2x, 3x or 10x longer than estimated.</p>
-</div>
-<div class="paragraph">
-<p>In general, applying statistical process control to variable, creative product development processes is inappropriate. For software development, Steven Kan states: "Many assumptions that underlie control charts are not being met in software data. Perhaps the most critical one is that data variation is from homogeneous sources of variation." That is, the causes of variation are knowable and can be addressed. This is in general not true of development work. <a href="#Kan2003">[Kan2003]</a></p>
-</div>
-<div class="paragraph">
-<p>Deming (along with Juran) is also known for "continuous improvement" as a cycle, e.g. "Plan/Do/Check/Act." Such cycles are akin to the scientific method, as they essentially engage in the ongoing development and testing of hypotheses, and the implementation of validated learning. We have touched on similar cycles in our discussions of <a href="#lean-startup">Lean Startup</a> and <a href="#Toyota-Kata">Toyota Kata</a>.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_don_reinertsen_and_effectiveness">Don Reinertsen and effectiveness</h5>
-<div class="quoteblock">
-<blockquote>
-the purpose of controlling the process must be to influence economic outcomes. There is no other reason to be interested in process control.
-</blockquote>
-<div class="attribution">
-&#8212; Don Reinertsen<br>
-<cite>Managing the Design Factory</cite>
-</div>
-</div>
-<div class="paragraph">
-<p>Discussions of efficiency usually focus on productivity given a certain set of inputs. Time can be one of those inputs. Everything else being equal, a company that can produce the pizza cutters more quickly is also viewed as more efficient. Customers may pay a premium for early delivery, and may penalize late delivery; such charges typically would be some percentage (say plus or minus 20%) of the final price of the finished goods.</p>
-</div>
-<div class="paragraph">
-<p>However, the question of time becomes a game-changer in the "process" of new product development. As we have discussed previously: Starting with a series of influential articles starting in the early 1980s, Don Reinertsen developed the idea of "cost of delay" for product development (<a href="#Reinertsen1997">[Reinertsen1997]</a>).</p>
-</div>
-<div class="paragraph">
-<p>Where the cost of a delayed product shipment might be some percentage, the cost of delay for a delayed product could be much more substantial. For example, if a new product launch misses a key trade show where competitors will be presenting similar innovations, the cost to the company might be millions of dollars of lost revenue - many times the product development investment. (Perhaps even orders of magnitude larger.)</p>
-</div>
-<div class="paragraph">
-<p>This is not really a question of "efficiency;" of comparing inputs to outputs and looking for a few percentage points improvement. It is more a matter of effectiveness; of the company&#8217;s ability to execute on complex knowledge work.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_ken_schwaber_and_empirical_process_control">Ken Schwaber and empirical process control</h5>
-<div class="quoteblock">
-<blockquote>
-process theory experts . . . were amazed and appalled that my industry, systems development, was trying to do its work using a completely inappropriate process control model.
-</blockquote>
-<div class="attribution">
-&#8212; Ken Schwaber<br>
-<cite>Agile Software Development with Scrum</cite>
-</div>
-</div>
-<div class="paragraph">
-<p>Ken Schwaber, inventor of the Scrum methodology (along with Jeff Sutherland), like many other software engineers in the 1990s, experienced discomfort with the process control approach at the time. Mainstream software development processes sought to make software development predictable and repeatable in the sense of a defined process.</p>
-</div>
-<div class="paragraph">
-<p>As Schwaber discusses (<a href="#Schwaber2002">[Schwaber2002]</a>, pp. 24-25), defined processes are completely understood, which is not the case with creative processes. Highly automated industrial processes run predictably, with consistent results. By contrast, complex processes that are not understood require the <strong>empirical model.</strong></p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-The defined and empirical models of process control are concepts from formal <a href="https://en.wikipedia.org/wiki/Process_control">process control theory</a>. We touched on some related topics in our discussion of systems theory and <a href="#2.00.01-feedback">feedback</a>.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Empirical process control relies on frequent inspection and adaptation. After exposure to Dupont process theory experts who clarified the difference between defined and empirical process control, Schwaber went on to develop the influential Scrum methodology. As he notes:</p>
-</div>
-<div class="paragraph">
-<p><em>During my visit to DuPont . . . I realized why [software development] was in such trouble and had such a poor reputation. We were wasting our time trying to control our work by thinking we had an assembly line when the only proper control was frequent and first-hand inspection, followed by immediate adjustments.</em> <a href="#Schwaber2002">[Schwaber2002]</a>, p. 25.</p>
-</div>
-<div class="paragraph">
-<p>We will now turn to a critical examination of the IT management frameworks. While there is much of value in them, there are many places where they may lead you into the "defined process" trap, and they may not provide enough support for the alternative approach of empirical process control.</p>
-</div>
-<div class="paragraph">
-<p><a id="frameworks"></a></p>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_process_frameworks">Process frameworks</h4>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Collaborative</strong></p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Status: This section is in development as of 8 Jun 2016. Expect volatility.</pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Raise an <a href="https://github.com/dm-academy/aitm/issues" target="_blank">issue</a> to comment</p>
-</li>
-<li>
-<p><a href="https://github.com/dm-academy/aitm/tree/master/book" target="_blank">Github source files</a></p>
-</li>
-<li>
-<p><a href="https://github.com/dm-academy/aitm/blob/master/collaborator-instructions.adoc" target="_blank">Collaborator instructions</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>So, what is a "framework?"</p>
-</div>
-<div class="paragraph">
-<p>The term "framework," in the context of business process, is used for comprehensive and systematic representations of a major business area&#8217;s activities. The first goal of any framework is, for a given conceptual space, to provide a "map" of its components and their relationships. Doing this serves a variety of goals:</p>
-</div>
-<div class="paragraph">
-<p>Many framewo rks have em erged to help und er-
-stand the overall problem . (See th e section "What is a process fram ewo rk ?"
-earlier in this chapter.) The three major fram ewo rks hav ing th e most effect
-on enterprise IT in th e United States at this writing are CO Brr"<em>, CMMI " ,
-and ITIL "</em>, altho ugh there are other public and semi pub I ic fram ewo rks such
-as the App lication Services Library, Business In formation Servi ces Library,
-and Info rm ati o n Systems Procurem ent Libra ry, as well as less formalized pub-
-lish ing ho use li braries and propri etary fram eworks owned by th e major consul-
-tancies and research firms .
-COB IT&lt;8&gt;, ITIL &lt;8&gt;, and CMM I&lt;8&gt; provide significant perspecti ves o n major o ngoing
-capabil ities and fun ctions th at the large IT o rgan iza tion must perform and in
-general are developed fro m the perspective of steady-state functi o ns, as o pposed
-to a value strea m or rigorous process perspective. (Agai n, revi ew lheir major
-concepts and ask yo urself which are "countable." ) Alo ng with the value stream
-ana lys is presented in th e previo us cha pter, they serve as useful statem ents of
-requirem ents for the data, system , and pattern analysis in the next chapters.</p>
-</div>
-<div class="paragraph">
-<p>In closing, IT capability frameworks can be harmful if they lead to fragmen-
-tation of improvement effort and lack of focus on the flow of IT value. In
-the imagery of Eli Goldratt, the problem with CMMI@, COBIT®, and mL &lt;II&gt;
-is that they do not help you find the heavy Boy Scout. They don&#8217;t point
-you towards the IT equivalent of the $2 million computerized machine
-tool that actually reduced the plant&#8217;s profitability. And it seems likely that
-large-scale IT might be vulnerable to such constraints.</p>
-</div>
-<div class="sect4">
-<h5 id="_continuous_improvement_frameworks">Continuous improvement frameworks</h5>
-
-</div>
-<div class="sect4">
-<h5 id="_it_management_frameworks">IT management frameworks</h5>
-<div class="sect5">
-<h6 id="_process_vs_function_in_the_frameworks">Process vs function in the frameworks</h6>
-
-</div>
-<div class="sect5">
-<h6 id="_itil">ITIL</h6>
-
-</div>
-<div class="sect5">
-<h6 id="_cobit">COBIT</h6>
-
-</div>
-<div class="sect5">
-<h6 id="_togaf">TOGAF</h6>
-
-</div>
-<div class="sect5">
-<h6 id="_it4it">IT4IT</h6>
-
-</div>
-<div class="sect5">
-<h6 id="_the_particular_case_of_cmmi">The particular case of CMMI</h6>
-<div class="paragraph">
-<p>Process capability is the
-inherent variation of the process in relation to the specification limits. The smaller
-the process variation, the better the process&#8217;s capability. <a href="#Kan1995">[Kan1995]</a></p>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_process_maturity_and_quality">Process "Maturity" and "quality"</h5>
-<div class="paragraph">
-<p>what is maturity? Cooke-Davis defines this as "the extent to which an organization has explicitly and consistently deployed processes that are documented, managed, measured, controlled, and continually improved" (Cooke-Davies, 2004). <a href="#Richardson2010">[Richardson2010]</a></p>
-</div>
-<div class="sect5">
-<h6 id="_other_frameworks">Other frameworks</h6>
-
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_agile_and_it_process_management">Agile and IT process management</h4>
-<div class="quoteblock">
-<blockquote>
-Individuals and interactions over processes and tools.
-</blockquote>
-<div class="attribution">
-&#8212; Manifesto for Agile Software Development
-</div>
-</div>
-<div class="paragraph">
-<p>Like project management, the practice of process management is under scrutiny in the new Lean and Agile world. The idea of</p>
-</div>
-<div class="paragraph">
-<p>problems: process conception, content, execution, and improvement</p>
-</div>
-<div class="paragraph">
-<p>continuous improvement as demand</p>
-</div>
-<div class="sect4">
-<h5 id="__quality">"quality"</h5>
-<div class="paragraph">
-<p>In the world of agile delivery the role of quality assurance needs to adapt from auditing the quality of the process and product that is delivered at the end of the lifecycle, to supporting practices that ensure that quality is built in and validated from the beginning of the project.</p>
-</div>
-<div class="paragraph">
-<p>Ambler, Scott W.; Lines, Mark (2012-05-31). Disciplined Agile Delivery: A Practitioner&#8217;s Guide to Agile Software Delivery in the Enterprise (IBM Press) (Kindle Locations 8175-8177). Pearson Education. Kindle Edition.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_misunderstanding_variation">misunderstanding variation</h5>
-
-</div>
-<div class="sect4">
-<h5 id="_misunderstanding_economics">misunderstanding economics</h5>
-
-</div>
-<div class="sect4">
-<h5 id="_the_pitfall_of_process_silos">The pitfall of process "silos"</h5>
+<h5 id="_process_granularity">Process granularity</h5>
 <div class="quoteblock">
 <blockquote>
 One organization enthusiastically embraced process improvement, with good reason: customers, suppliers, and employees found the company&#8217;s processes slow, inconsistent, and error prone. Unfortunately, they were so enthusiastic that each team defined the work of their small group or department as a complete process. Of course, each of these was in fact the contribution of a specialized functional group to some larger, but unidentified, processes. Each of these "processes" was "improved" independently, and you can guess what happened.<br>
@@ -15310,190 +14670,92 @@ Within the boundaries of each process, improvements were implemented that made w
 <cite>Workflow Modeling</cite>
 </div>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>obtain permission</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The above quote well illustrates the dangers of combining local optimization and  process management. Many current authors speak highly of self-organizing teams, but self-organizing teams may seek to optimize locally. Process management was originally intended to overcome this problem, but modeling techniques can be applied at various levels, including within specific departments. This is where enterprise business architecture can assist, to identify these longer, end to end flows of value and highlight the handoff areas, so that the process benefits the larger objective.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_the_pitfall_of_process_complexity">The pitfall of process complexity</h5>
-<div class="paragraph">
-<p>A related problem is when the process simply becomes too complex for humans to follow. Multi-page process models are rarely consulted, even if the team affected developed them. This is especially true when there are many optional or conditional steps in the process.</p>
-</div>
-<div class="paragraph">
-<p>There are two related lines of response to this:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Case Management</p>
-</li>
-<li>
-<p>The Checklist Manifesto</p>
-</li>
-</ul>
-</div>
 <div class="sect5">
 <h6 id="_case_management">Case Management</h6>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-Do not confuse "Case" here with Computer Assisted Software Engineering.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Case management is a concept used in medicine, law, and social services. Case management can be thought of as a high-level process supporting the skilled knowledge worker applying their professional expertise.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/3.09-casemgmt.png" alt="3.09 casemgmt">
-</div>
-</div>
-<div class="paragraph">
-<p>To quote the Workflow Management Coalition:</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>[Business Process Modeling] and [Case Management] are useful for different kinds of business situations.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Highly predictable and highly repeatable business situations are best supported with BPM.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>For example signing up for cell phone service: it happens thousands of times a day, and the process is essentially fixed.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Unpredictable and unrepeatable business situations are best handled with ACM.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>For example investigation of a crime will require following up on various clues, down various paths, which are not predictable before hand. The are various tests and procedures to use, but they will be called only when needed.
-<a href="#WFMC2010">[WFMC2010]</a>, via <a href="#England2013">[England2013]</a></p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Noted IT consultant and author Rob England contrasts "case management" with "standard process" in his book  <em>Plus! The Standard+Case Approach: See Service Response in a New Light</em>. Some processes are repeatable and can be precisely standardized, but it is critical for anyone working in complex environments to understand the limits of this.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_the_checklist_manifesto">The Checklist Manifesto</h6>
-<div class="paragraph">
-<p>The Checklist Manifesto is the name of a notable book by author/surgeon Atul Gawande <a href="#Gawande2010">[Gawande2010]</a>. The title can be misleading; the book in no way suggests that all work can be reduced to repeatable checklists. Instead, it is another in depth examination of the  relationship between standardization and complexity. Like case management, it addresses the problem of complex activities requiring professional judgement.</p>
-</div>
-<div class="paragraph">
-<p>Unlike case management, it explores more time-limited and often urgent activities such as flight operations, large scale construction, and surgery. These activities, as a whole, cannot be reduced to one master process; there is too much variation and complexity.</p>
-</div>
-<div class="paragraph">
-<p>However, within the overall bounds of flight operations, or construction, or surgery, there are critical sequences of events that MUST be executed, often in a specific order. Gawande discusses the airline industry as a key exemplar of this. Instead of one "master checklist" there are specific, clear, brief checklists for a wide variety of scenarios, such as a cargo hold door becoming unlatched.</p>
-</div>
-<div class="paragraph">
-<p>There are similarities and differences between core BPM approaches and checklists. Often, business process management is employed to describe processes that are automated and whose progress is tracked in a database. Checklists, on the other hand, may be more manual, and may represent a briefer period of time.</p>
-</div>
-<div class="paragraph">
-<p>Finally, in chapter 8, we discussed the concept of the <a href="#submittal-schedule">submittal schedule</a>, which Gawande encountered in his discussions with the construction industry. In this approach, the actual, trackable task is that <strong>two or more parties consult with each other.</strong> This technique is also applicable in a BPM and Case Management sense.</p>
-</div>
+
 </div>
 </div>
 <div class="sect4">
-<h5 id="_process_proliferation">Process proliferation</h5>
+<h5 id="_process_vs_execution">Process vs execution</h5>
 <div class="paragraph">
-<p>The final pitfall we cover here is that of process proliferation.</p>
+<p>(execution includes concern for resource)</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_the_checklist_manifesto">The Checklist Manifesto</h5>
+<div class="paragraph">
+<p>RACI revisited
+Steady state expectations become tasks for PMs to track</p>
 </div>
 <div class="paragraph">
-<p>Process is a powerful tool. Ultimately it is how value is delivered. However, too many processes can have negative results on an organization.</p>
+<p>The problem of determinism
+Required interactions as well as required steps
+Process as a Mintzberg liaison mechanism</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_a_final_caution_on_technique">A final caution on technique</h5>
+<div class="paragraph">
+<p>The techniques briefly discussed here can be applied and combined in many different ways, and result in models of large scope and complexity. However there are crucial limitations to visual representations of complexity.</p>
 </div>
 <div class="paragraph">
-<p>Review the fundmentals of process modeling above. One thing that you do not see is any attention to the resource impacts of the process. This is a primary difference between project and process management; in process management, resource availability is in general assumed.</p>
+<p>There are endless nuances and debates about BPM notations, methodology, and philosophy.</p>
 </div>
 <div class="paragraph">
-<p>More advanced forms of process modeling and simulation (see " <a href="https://www.google.com/search?q=discrete+event+simulation">discrete event simulation</a>)" can provide insight into the resource demands for processes. However, such techniques 1) require specialized tooling and 2) are not part of the typical BPM practitioner&#8217;s skillset.</p>
+<p>Don&#8217;t get caught up in it</p>
 </div>
 <div class="paragraph">
-<p>Many enterprise environments have multiple cross-functional processes:</p>
+<p>Keep it simple - more to come when we discuss Agile Modeling</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>service requests,</p>
-</li>
-<li>
-<p>compliance certifications,</p>
-</li>
-<li>
-<p>asset validations,</p>
-</li>
-<li>
-<p>provisioning requests,</p>
-</li>
-<li>
-<p>capacity assessments,</p>
-</li>
-<li>
-<p>change approvals,</p>
-</li>
-<li>
-<p>training obligations,</p>
-</li>
-<li>
-<p>performance assessments,</p>
-</li>
-<li>
-<p>audit responses,</p>
-</li>
-<li>
-<p>expense reporting,</p>
-</li>
-<li>
-<p>travel approvals,</p>
+<p>"Process" at Toyota (Rother)</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>and many more.</p>
 </div>
-<div class="paragraph">
-<p>Such processes can be implemented on the assumption that enterprises can always accommodate another process. The result can be dramatic overburden for digital staff in complex environments.</p>
 </div>
-<div class="paragraph">
-<p>It is therefore advisable to at least keep an inventory of processes that may impose demand on staff, and understand both the aggregate demand as well as the degree of <a href="#multi-tasking">multi-tasking and context-switching</a> that may result (as discussed in Chapter 5). Thorough automation of all processes to the maximum extent possible can also drive value, as both load and distraction are reduced.</p>
+<div class="sect3">
+<h4 id="_process_frameworks">Process frameworks</h4>
+<div class="sect4">
+<h5 id="_process_vs_function_in_the_frameworks">Process vs function in the frameworks</h5>
+
 </div>
-<div class="paragraph">
-<p>We now turn to one of the causes for process proliferation: the industry frameworks.</p>
+<div class="sect4">
+<h5 id="_itil">ITIL</h5>
+
 </div>
+<div class="sect4">
+<h5 id="_cobit">COBIT</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_togaf">TOGAF</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_it4it">IT4IT</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_the_particular_case_of_cmmi">The particular case of CMMI</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_other_frameworks">Other frameworks</h5>
+
+</div>
+</div>
+<div class="sect3">
+<h4 id="_agile_and_it_process_management">Agile and IT process management</h4>
+<div class="paragraph">
+<p>Manifesto quote</p>
 </div>
 <div class="sect4">
 <h5 id="_process_management_in_the_organization">Process management in the organization</h5>
 <div class="paragraph">
 <p>Will functions stay with product centricity?</p>
-</div>
-<div class="paragraph">
-<p>Binary thinking - Stroustrup quote.</p>
-</div>
-<div class="paragraph">
-<p>we have already discussed some of important tools - Case mgmt, checklist manifesto</p>
 </div>
 </div>
 <div class="sect4">
@@ -15588,9 +14850,24 @@ Standard + case</pre>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>Kaizen and kamikaze kaizen</pre>
+<pre>checklist manifesto</pre>
 </div>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_continuous_improvement">Continuous improvement</h4>
+<div class="paragraph">
+<p>continuous improvement as demand</p>
+</div>
+<div class="paragraph">
+<p>what is maturity? Cooke-Davis defines this as "the extent to which an organization has explicitly and consistently deployed processes that are documented, managed, measured, controlled, and continually improved" (Cooke-Davies, 2004). <a href="#Richardson2010">[Richardson2010]</a></p>
+</div>
+<div class="paragraph">
+<p>In the world of agile delivery the role of quality assurance needs to adapt from auditing the quality of the process and product that is delivered at the end of the lifecycle to supporting practices that ensure that quality is built in and validated from the beginning of the project.</p>
+</div>
+<div class="paragraph">
+<p>Ambler, Scott W.; Lines, Mark (2012-05-31). Disciplined Agile Delivery: A Practitioner&#8217;s Guide to Agile Software Delivery in the Enterprise (IBM Press) (Kindle Locations 8175-8177). Pearson Education. Kindle Edition.</p>
 </div>
 </div>
 <div class="sect3">
@@ -15658,11 +14935,6 @@ perils of "take a number" service-ization</p>
 </div>
 <div class="sect4">
 <h5 id="_deeper_theory_2">Deeper theory</h5>
-<div class="literalblock">
-<div class="content">
-<pre>Process as a Mintzberg liaison mechanism</pre>
-</div>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>http://blogs.forrester.com/jean_pierre_garbani/09-06-26-my_issue_itil</pre>
@@ -15759,9 +15031,6 @@ team to team interactions that become "servicized"</p>
 <li>
 <p>Review the section on the <a href="#spotify-model">Spotify model</a>. How does it relate to the discussion here?</p>
 </li>
-<li>
-<p>Sometimes, organizations try to treat a complex process as defined, instead of managing it empirically. Sometimes, people react by calling this "Taylorism." Why? Discuss.</p>
-</li>
 </ol>
 </div>
 </div>
@@ -15781,10 +15050,6 @@ team to team interactions that become "servicized"</p>
 </div>
 <div class="paragraph">
 <p><a href="http://www.computing.dcu.ie/~mcrane/CA441/BPMLectureNotes.pdf" class="bare">http://www.computing.dcu.ie/~mcrane/CA441/BPMLectureNotes.pdf</a></p>
-</div>
-<div class="paragraph">
-<p>Bob Raczynski and Bill Curtis (2008) Software Data Violate SPC&#8217;s Underlying Assumptions, IEEE Software, May/June 2008, Vol. 25, No. 3, pp. 49-51
-Robert V. Binder (1997) Can a Manufacturing Quality Model Work for Software?, IEEE Software, September/October 1997, pp. 101-105</p>
 </div>
 <div class="paragraph">
 <p><strong>Videos</strong></p>
@@ -15920,18 +15185,6 @@ billion.</p>
 </div>
 <div class="paragraph">
 <p>Ambler, Scott W.; Lines, Mark (2012-05-31). Disciplined Agile Delivery: A Practitioner&#8217;s Guide to Agile Software Delivery in the Enterprise (IBM Press) (Kindle Locations 8081-8084). Pearson Education. Kindle Edition.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Important</div>
-</td>
-<td class="content">
-As with other chapters in the later part of this book, we are going to introduce this topic "on its own terms." We will then add additional context and critique in subsequent sections.
-</td>
-</tr>
-</table>
 </div>
 <div class="sect4">
 <h5 id="_chapter_10_outline">Chapter 10 outline</h5>
@@ -16076,18 +15329,6 @@ As with other chapters in the later part of this book, we are going to introduce
 <pre>Analytics and metrics are a related topic for IT management. There are many ways that metrics can be used and misused. A clear understanding of organizational goals is essential to any metrics strategy. Analytics similarly requre an overall framework of continuous improvement so that their insights lead to real actions and value.</pre>
 </div>
 </div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Important</div>
-</td>
-<td class="content">
-As with other chapters in the later part of this book, we are going to introduce this topic "on its own terms." We will then add additional context and critique in subsequent sections.
-</td>
-</tr>
-</table>
-</div>
 <div class="sect4">
 <h5 id="_chapter_11_outline">Chapter 11 outline</h5>
 <div class="ulist">
@@ -16201,18 +15442,6 @@ Data Management Association</p>
 </div>
 <div class="paragraph">
 <p>Vendor relationships become a two-edged sword, providing increased value with access to higher levels of vendor resources, but at the cost of increased lock-in. Pure open-source strategies inevitably become corrupted by business realities.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Important</div>
-</td>
-<td class="content">
-As with other chapters in the later part of this book, we are going to introduce this topic "on its own terms." We will then add additional context and critique in subsequent sections.
-</td>
-</tr>
-</table>
 </div>
 <div class="sect4">
 <h5 id="_chapter_12_outline">Chapter 12 outline</h5>
@@ -16424,12 +15653,6 @@ els in the architecture. Paradoxically, structure is the key to freedom. ibid 12
 <p>keep EAs off product teams, agree
 but they set overall direction @ portfolio level
 difficult for them to stay hands on</p>
-</div>
-<div class="paragraph">
-<p>"work not done"</p>
-</div>
-<div class="paragraph">
-<p><a href="https://www.itpreneurs.com/blog/agile-togaf-and-enterprise-architecture-will-they-blend/?utm_content=buffer1b060&amp;utm_medium=social&amp;utm_source=linkedin.com&amp;utm_campaign=buffer" class="bare">https://www.itpreneurs.com/blog/agile-togaf-and-enterprise-architecture-will-they-blend/?utm_content=buffer1b060&amp;utm_medium=social&amp;utm_source=linkedin.com&amp;utm_campaign=buffer</a></p>
 </div>
 </div>
 <div class="sect4">
@@ -16653,16 +15876,10 @@ difficult for them to stay hands on</p>
 <p><a id="Csikszentmihalyi1990"></a>[Csikszentmihalyi1990]: Csikszentmihalyi, M. (1990). Flow : the psychology of optimal experience. New York, Harper &amp; Row.</p>
 </li>
 <li>
-<p><a id="Drucker1993"></a>[Drucker1993]: Drucker, Peter F. 1993. <em>Post-Capitalist Society</em>. 1st ed. New York, NY: HarperBusiness.</p>
-</li>
-<li>
 <p><a id="Duvall2007"></a>[Duvall2007]: Duvall, P. M.; Matyas, S. &amp; Glover, A. (2007), <em>Continuous integration : improving software quality and reducing risk</em>, Addison-Wesley, Upper Saddle River, NJ</p>
 </li>
 <li>
 <p><a id="Edwards2012"></a>[Edwards2012]: Edwards, D. (2012), "Integrating DevOps tools into a Service Delivery Platform", <a href="http://dev2ops.org/2012/07/integrating-devops-tools-into-a-service-delivery-platform-video/" class="bare">http://dev2ops.org/2012/07/integrating-devops-tools-into-a-service-delivery-platform-video/</a></p>
-</li>
-<li>
-<p><a id="England2013"></a>[England2013]: England, Rob. 2013. <em>Plus! The Standard+Case Approach: See Service Response in a New Light</em>. Mana, New Zealand: Two Hills Ltd.</p>
 </li>
 <li>
 <p><a id="Flahiff2016"></a>[Flahiff2016]: Flahiff, J. (2016). "How organizational agility will save and destroy your company." from <a href="http://searchcio.techtarget.com/tip/How-organizational-agility-will-save-and-destroy-your-company" class="bare">http://searchcio.techtarget.com/tip/How-organizational-agility-will-save-and-destroy-your-company</a>. Accessed March 19, 2016.</p>
@@ -16725,10 +15942,7 @@ difficult for them to stay hands on</p>
 <p><a id="Humble2011"></a>[Humble2011]: Humble, J. &amp; Farley, D. (2011), <em>Continuous delivery</em>, Addison-Wesley, Boston</p>
 </li>
 <li>
-<p><a id="Huntzinger2007"></a>[Huntzinger2007]: Huntzinger, James R. 2007. <em>Lean Cost Management: Accounting for Lean by Establishing Flow</em>. Fort Lauderdale, Fl.: J. Ross Publishing.</p>
-</li>
-<li>
-<p><a id="Kan2003"></a>[Kan2003]: Kan, Stephen H. 1995. <em>Metrics and Models in Software Quality Engineering</em>. Second Edition. Reading, Mass.: Addison-Wesley.</p>
+<p><a id="Huntzinger2007"></a>[Huntzinger2007]: Huntzinger, James R. 2007. Lean Cost Management: Accounting for Lean by Establishing Flow. Fort Lauderdale, Fl.: J. Ross Publishing.</p>
 </li>
 <li>
 <p><a id="Keefer2006"></a>[Keefer2006]: Keefer, G. "The CMMI Considered Harmful For Quality Improvement And Supplier Selection."" 2006. <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.130.4292&amp;rep=rep1&amp;type=pdf" class="bare">http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.130.4292&amp;rep=rep1&amp;type=pdf</a></p>
@@ -16795,9 +16009,6 @@ IEEE Press.</p>
 <p><a id="Narayam2015"></a>[Narayam2015]: Narayam, S. (2015). Agile IT organization design: for digital transformation and continuous delivery, Pearson Education Inc. .</p>
 </li>
 <li>
-<p><a id="NIST1993"></a>[NIST1993]: NIST. 1993. “Integration Definition for Function Modeling (IDEF0).” <a href="http://www.idef.com/idefo-function_modeling_method/" class="bare">http://www.idef.com/idefo-function_modeling_method/</a>.</p>
-</li>
-<li>
 <p><a id="Nygard2007"></a>[Nygard2007]: Nygard, M.T., 2007. <em>Release it! : design and deploy production-ready software.</em> The pragmatic programmers, Raleigh, N.C.: Pragmatic Bookshelf. xvi, 350 p.</p>
 </li>
 <li>
@@ -16846,9 +16057,6 @@ IEEE Press.</p>
 <p><a id="Ries2011"></a>[Ries2011]: Ries, E. (2011), <em>The lean startup : how today&#8217;s entrepreneurs use continuous innovation to create radically successful businesses</em>, Crown Business, New York</p>
 </li>
 <li>
-<p><a id="Rother2003"></a>[Rother2003]: Rother, Mike, and John Shook. 2003. “Learning to See: Value Stream Mapping to Add Value and Eliminate MUDA [Spiral-Bound].” Lean Enterprise Institute. doi:10.1109/6.490058.</p>
-</li>
-<li>
 <p><a id="Rother2010"></a>[Rother2010]: Rother, M. (2010). <em>Toyota kata : managing people for improvement, adaptiveness, and superior results</em>. New York, McGraw Hill.</p>
 </li>
 <li>
@@ -16859,9 +16067,6 @@ IEEE Press.</p>
 </li>
 <li>
 <p><a id="Rummler1995"></a>[Rummler1995]: Rummler, Geary A, and Alan P Brache. 1995. <em>Improving Performance: How to Manage the White Space on the Organization Chart.</em> The Jossey-Bass Management Series. 2nd ed. San Francisco, CA: Jossey-Bass. <a href="http://www.loc.gov/catdir/toc/wiley041/94048105.html" class="bare">http://www.loc.gov/catdir/toc/wiley041/94048105.html</a>.</p>
-</li>
-<li>
-<p><a id="Schwaber2002"></a>[Schwaber2002]: Schwaber, Ken. 2002. Agile Software Development with Scrum. Upper Saddle River, N.J.: Prentice Hall.</p>
 </li>
 <li>
 <p><a id="Schwaber2007"></a>[Schwaber2007]: Schwaber, Ken. 2007. <em>The Enterprise and Scrum.</em> Redmond, Wash: Microsoft Press.</p>
@@ -16918,9 +16123,6 @@ IEEE Press.</p>
 <p><a id="Tikka2013"></a>[Tikka2013]: Tikka, A., 2013. "Coordination Chaos." Slideshare deck. <a href="http://www.slideshare.net/gosei/coordination-chaos?related=1" class="bare">http://www.slideshare.net/gosei/coordination-chaos?related=1</a> Accessed: 2015.10.25.</p>
 </li>
 <li>
-<p><a id="WFMC2010"></a>[WFMC2010]: WFMC. 2010. “Adaptive Case Management.”  <a href="http://www.xpdl.org/nugen/p/adaptive-case-management/public.htm" class="bare">http://www.xpdl.org/nugen/p/adaptive-case-management/public.htm</a>. Accessed 2016-06-04.</p>
-</li>
-<li>
 <p><a id="Whittaker2012"></a>[Whittaker2012]: Whittaker, J.A., J. Arbon, and J. Carollo, 2012, <em>How Google tests software</em>, Upper Saddle River, NJ: Addison-Wesley. xxvii, 281 p.</p>
 </li>
 <li>
@@ -16952,7 +16154,7 @@ IEEE Press.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-06-04 16:55:01 CDT
+Last updated 2016-05-04 14:21:38 CDT
 </div>
 </div>
 </body>
