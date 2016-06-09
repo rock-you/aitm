@@ -14735,10 +14735,16 @@ There are other usages of the term "framework," especially in terms of software 
 </ul>
 </div>
 <div class="paragraph">
-<p>Many frameworks have emerged in the IT space, with broader and narrower domains of concern. Some are owned by non-profit standards bodies; others are commercial. We will focus on five in this book:</p>
+<p>Many frameworks have emerged in the IT space, with broader and narrower domains of concern. Some are owned by non-profit standards bodies; others are commercial. We will focus on five in this book. In roughly chronological order, they are:</p>
 </div>
 <div class="ulist">
 <ul>
+<li>
+<p>CMMI (Capability Maturity Model-Integrated)</p>
+</li>
+<li>
+<p>PMBOK (The Project Management Body of Knowledge)</p>
+</li>
 <li>
 <p>ITIL (originally the Information Technology Infrastructure Library)</p>
 </li>
@@ -14748,28 +14754,141 @@ There are other usages of the term "framework," especially in terms of software 
 <li>
 <p>TOGAF (The Open Group Architecture Framework)</p>
 </li>
+</ul>
+</div>
+<div class="sect5">
+<h6 id="_cmmi">CMMI</h6>
+<div class="paragraph">
+<p>The Capability Maturity Model was originally published by Watts Humphrey in 1989 in the book <em>Managing the Software Process</em> <a href="#Humphrey1989">[Humphrey1989]</a>. Humphrey&#8217;s original vision was to apply full statistical process control to the software process. As he stated at the time:</p>
+</div>
+<div class="paragraph">
+<p><em>Dr. W. E. Deming, in his work with the Japanese after World War II, applied the concepts of statistical process control to many of their industries. While there are important differences, these concepts are just as applicable to software as they are to producing consumer goods like cameras, television sets, or auto
+mobiles.</em></p>
+</div>
+<div class="paragraph">
+<p>The CMM was later taken on by the Software Engineering Institute at Carnegie-Mellon University, and is now managed by the CMMI Institute at Carnegie-Mellon.</p>
+</div>
+<div class="paragraph">
+<p>The CMM has had considerable influence on software development and IT management more generally. It popularized the idea that process management tends to evolve in the same way across organizations, following a "staged" model:</p>
+</div>
+<div class="paragraph">
+<p>Stage 1: Initial</p>
+</div>
+<div class="paragraph">
+<p>Stage 2: Repeatable</p>
+</div>
+<div class="paragraph">
+<p>Stage 3: Defined</p>
+</div>
+<div class="paragraph">
+<p>Stage 4: Managed</p>
+</div>
+<div class="paragraph">
+<p>Stage 5: Optimizing</p>
+</div>
+<div class="paragraph">
+<p>(These are Humphrey&#8217;s original levels. There are some differences with the current CMMI, but the concept is the same.)</p>
+</div>
+<div class="paragraph">
+<p>These ideas can be seen reflected in later guidance such as COBIT and ITIL.</p>
+</div>
+<div class="paragraph">
+<p>Within this overall framework of maturation, CMMI currently calls for 22 process areas:</p>
+</div>
+<div class="ulist">
+<ul>
 <li>
-<p>PMBOK (The Project Management Body of Knowledge)</p>
+<p>Causal Analysis and Resolution (CAR)</p>
 </li>
 <li>
-<p>CMMI (Capability Maturity Model-Integrated)
-IT capability frameworks can be harmful if they lead to fragmentation of improvement effort and lack of focus on the flow of IT value.</p>
+<p>Configuration Management (CM)</p>
+</li>
+<li>
+<p>Decision Analysis and Resolution (DAR)</p>
+</li>
+<li>
+<p>Integrated Project Management (IPM)</p>
+</li>
+<li>
+<p>Measurement and Analysis (MA)</p>
+</li>
+<li>
+<p>Organizational Process Definition (OPD)</p>
+</li>
+<li>
+<p>Organizational Process Focus (OPF)</p>
+</li>
+<li>
+<p>Organizational Performance Management (OPM)</p>
+</li>
+<li>
+<p>Organizational Process Performance (OPP)</p>
+</li>
+<li>
+<p>Organizational Training (OT)</p>
+</li>
+<li>
+<p>Product Integration (PI)</p>
+</li>
+<li>
+<p>Project Monitoring and Control (PMC)</p>
+</li>
+<li>
+<p>Project Planning (PP)</p>
+</li>
+<li>
+<p>Process and Product Quality Assurance (PPQA)</p>
+</li>
+<li>
+<p>Quantitative Project Management (QPM)</p>
+</li>
+<li>
+<p>Requirements Development (RD)</p>
+</li>
+<li>
+<p>Requirements Management (REQM)</p>
+</li>
+<li>
+<p>Risk Management (RSKM)</p>
+</li>
+<li>
+<p>Supplier Agreement Management (SAM)</p>
+</li>
+<li>
+<p>Technical Solution (TS)</p>
+</li>
+<li>
+<p>Validation (VAL)</p>
+</li>
+<li>
+<p>Verification (VER)</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>The overall idea is that a process cannot be improved and optimized until it is fully under control. As we discussed in the previous section, this may be true for defined processes, but  process theorists see creative, knowledge-intensive processes as requiring empirical control.</p>
+</div>
+<div class="paragraph">
+<p>In CMM terms, empirical processes start by measuring and immediately optimizing. They need not&#8201;&#8212;&#8201;cannot&#8201;&#8212;&#8201;be fully defined. One of the most questionable aspects of CMM, is its framing process optimization as something only done at the highest levels of maturity.</p>
+</div>
+<div class="paragraph">
+<p>This runs counter to much current thinking and practice, especially that deriving from Lean philosophy, in which processes are seen as always under improvement. (See discussion of <a href="#Toyota-Kata">Toyota Kata</a>
+.) All definition, measurement, and control serve that end.</p>
+</div>
+<div class="paragraph">
+<p>The CMMI has evolved since Humphrey&#8217;s initial vision, but retains an emphasis on statistical process control that (in the view of this author) seems increasingly out of step with the reality of the new digital economy.</p>
+</div>
 </div>
 <div class="sect5">
 <h6 id="_itil">ITIL</h6>
 <div class="paragraph">
-<p><strong>ITIL,</strong> originally the Information Technology Infrastructure Library, is a publication of the UK government, now via the Axelos commercial joint venture with Capita Group. It is in its 4th major edition (2011). While often considered an “operational” framework, ITIL spans the lifecycle of IT services and systems, from Strategy to Design to Transition to Operations to Continual Service Improvement. However, due to the particular structure of UK government publications, ITIL does not cover project management or the SDLC per se, or analysis, architecture and design.</p>
-</div>
-<div class="paragraph">
-<p>ITIL is a lengthy and expensive to obtain publication, containing about 2000 pages of narrative guidance covering 26 processes and additional IS/IT functions and activities, from IT Finance to Event Management.</p>
+<p>ITIL, originally the Information Technology Infrastructure Library, is a publication of the UK government, now via the Axelos commercial joint venture with Capita Group. It is in its 4th major edition (2011). While often considered an “operational” framework, ITIL spans the lifecycle of IT services and systems, from Strategy to Design to Transition to Operations to Continual Service Improvement. However, due to the particular structure of UK government publications, ITIL does not cover project management or the SDLC per se, or analysis, architecture and design.</p>
 </div>
 </div>
 <div class="sect5">
 <h6 id="_cobit">COBIT</h6>
 <div class="paragraph">
-<p><strong>COBIT,</strong> originally the Control Objectives for Information Technology, is a set of guidance from the IS Audit and Control Association. It has a broader scope than ITIL, as it includes architecture and project management. Where ITIL contains narrative of considerable length, COBIT is terser and more structured, providing a useful framework for the construction and testing of suitable controls for IT governance.</p>
+<p>COBIT, originally the Control Objectives for Information Technology, is a set of guidance from the IS Audit and Control Association. It has a broader scope than ITIL, as it includes architecture and project management. Where ITIL contains narrative of considerable length, COBIT is more terse and structured, providing a useful framework for the construction and testing of suitable controls for IT governance.</p>
 </div>
 <div class="paragraph">
 <p>COBIT can be freely accessed through www.isaca.org.</p>
@@ -14778,7 +14897,7 @@ IT capability frameworks can be harmful if they lead to fragmentation of improve
 <div class="sect5">
 <h6 id="_togaf">TOGAF</h6>
 <div class="paragraph">
-<p><strong>TOGAF,</strong> or The Open Group Architecture Framework, is a framework and method for IT and enterprise architecture practices.</p>
+<p>The Open Group Architecture Framework, is a framework and method for IT and enterprise architecture practices.</p>
 </div>
 <div class="paragraph">
 <p>TOGAF can be freely accessed through www.opengroup.org</p>
@@ -14787,16 +14906,7 @@ IT capability frameworks can be harmful if they lead to fragmentation of improve
 <div class="sect5">
 <h6 id="_pmbok">PMBOK</h6>
 <div class="paragraph">
-<p><strong>PMBOK,</strong> or the Project Management Body of Knowledge, is a publication of the Project Management Institute. It represents the codification of formal project management knowledge. There is a comparable Axelos publication, Prince2, not covered here. PMBOK was covered in Chapter 8.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_the_particular_case_of_cmmi">The particular case of CMMI</h6>
-<div class="paragraph">
-<p>Process capability is the inherent variation of the process in relation to the specification limits. The smaller the process variation, the better the process&#8217;s capability. <a href="#Kan1995">[Kan1995]</a></p>
-</div>
-<div class="paragraph">
-<p>what is maturity? Cooke-Davis defines this as "the extent to which an organization has explicitly and consistently deployed processes that are documented, managed, measured, controlled, and continually improved" (Cooke-Davies, 2004). <a href="#Richardson2010">[Richardson2010]</a></p>
+<p>The Project Management Body of Knowledge, is a publication of the Project Management Institute. It represents the codification of formal project management knowledge. There is a comparable Axelos publication, Prince2, not covered here. PMBOK was covered in Chapter 8.</p>
 </div>
 </div>
 <div class="sect5">
@@ -14808,6 +14918,9 @@ IT capability frameworks can be harmful if they lead to fragmentation of improve
 </div>
 <div class="sect4">
 <h5 id="_pros_and_cons_of_the_frameworks">Pros and cons of the frameworks</h5>
+<div class="paragraph">
+<p>IT capability frameworks can be harmful if they lead to fragmentation of improvement effort and lack of focus on the flow of IT value.</p>
+</div>
 <div class="paragraph">
 <p>Process vs function in the frameworks
 All of these frameworks provide notable descriptions of major ongoing capabilities and functions that the large IT organization must perform. They in general are developed from the perspective of steady-state functions, as opposed to a value stream or defined process perspective.</p>
@@ -15997,6 +16110,9 @@ difficult for them to stay hands on</p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>Process capability is the inherent variation of the process in relation to the specification limits. The smaller the process variation, the better the process&#8217;s capability. <a href="#Kan1995">[Kan1995]</a></p>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -16276,6 +16392,9 @@ difficult for them to stay hands on</p>
 </li>
 <li>
 <p><a id="Humble2011"></a>[Humble2011]: Humble, J. &amp; Farley, D. (2011), <em>Continuous delivery</em>, Addison-Wesley, Boston</p>
+</li>
+<li>
+<p><a id="Humphrey1989"></a>[Humphrey1989]: Humphrey, Watts S. 1989. <em>Managing the Software Process.</em> Reading, Mass.: Addison-Wesley.</p>
 </li>
 <li>
 <p><a id="Huntzinger2007"></a>[Huntzinger2007]: Huntzinger, James R. 2007. <em>Lean Cost Management: Accounting for Lean by Establishing Flow</em>. Fort Lauderdale, Fl.: J. Ross Publishing.</p>
