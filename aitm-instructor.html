@@ -951,7 +951,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_frederick_taylor_and_efficiency">Frederick Taylor and efficiency</a></li>
 <li><a href="#_w_e_deming_and_variation">W.E. Deming and variation</a></li>
 <li><a href="#_don_reinertsen_and_effectiveness">Don Reinertsen and effectiveness</a></li>
-<li><a href="#_ken_schwaber_and_empirical_process_control">Ken Schwaber and empirical process control</a></li>
 </ul>
 </li>
 <li><a href="#_process_frameworks">Process frameworks</a>
@@ -14939,9 +14938,10 @@ the purpose of controlling the process must be to influence economic outcomes. T
 <div class="paragraph">
 <p>This is not really a question of "efficiency;" of comparing inputs to outputs and looking for a few percentage points improvement. It is more a matter of effectiveness; of the company&#8217;s ability to execute on complex knowledge work.</p>
 </div>
+<div class="paragraph">
+<p><a id="empirical-process-control"></a>
+===== Ken Schwaber and empirical process control</p>
 </div>
-<div class="sect4">
-<h5 id="_ken_schwaber_and_empirical_process_control">Ken Schwaber and empirical process control</h5>
 <div class="quoteblock">
 <blockquote>
 process theory experts . . . were amazed and appalled that my industry, systems development, was trying to do its work using a completely inappropriate process control model.
@@ -15049,11 +15049,7 @@ There are other usages of the term "framework," especially in terms of software 
 <div class="sect5">
 <h6 id="_cmmi">CMMI</h6>
 <div class="paragraph">
-<p>The Capability Maturity Model was originally published by Watts Humphrey in 1989 in the book <em>Managing the Software Process</em> <a href="#Humphrey1989">[Humphrey1989]</a>. Humphrey&#8217;s original vision was to apply full statistical process control to the software process. As he stated at the time:</p>
-</div>
-<div class="paragraph">
-<p><em>Dr. W. E. Deming, in his work with the Japanese after World War II, applied the concepts of statistical process control to many of their industries. While there are important differences, these concepts are just as applicable to software as they are to producing consumer goods like cameras, television sets, or auto
-mobiles.</em></p>
+<p>The Capability Maturity Model was originally published by Watts Humphrey in 1989 in the book <em>Managing the Software Process</em> <a href="#Humphrey1989">[Humphrey1989]</a>.</p>
 </div>
 <div class="paragraph">
 <p>The CMM was later taken on by the Software Engineering Institute at Carnegie-Mellon University, and is now managed by the CMMI Institute at Carnegie-Mellon.</p>
@@ -15154,19 +15150,6 @@ mobiles.</em></p>
 <p>Verification (VER)</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>The overall idea is that a process cannot be improved and optimized until it is fully under control. As we discussed in the previous section, this may be true for defined processes, but  process theorists see creative, knowledge-intensive processes as requiring empirical control.</p>
-</div>
-<div class="paragraph">
-<p>In CMM terms, empirical processes start by measuring and immediately optimizing. They need not&#8201;&#8212;&#8201;cannot&#8201;&#8212;&#8201;be fully defined. One of the most questionable aspects of CMM, is its framing process optimization as something only done at the highest levels of maturity.</p>
-</div>
-<div class="paragraph">
-<p>This runs counter to much current thinking and practice, especially that deriving from Lean philosophy, in which processes are seen as always under improvement. (See discussion of <a href="#Toyota-Kata">Toyota Kata</a>
-.) All definition, measurement, and control serve that end.</p>
-</div>
-<div class="paragraph">
-<p>The CMMI has evolved since Humphrey&#8217;s initial vision, but retains an  unrealistic emphasis on statistical process control that (in the view of this author) is  out of step with the reality of the new digital economy.</p>
 </div>
 </div>
 <div class="sect5">
@@ -15428,6 +15411,9 @@ MEA03	Evaluate and Assess Compliance with External Requirements<br></p></td>
 <div class="ulist">
 <ul>
 <li>
+<p>Statistical process control in the CMM &amp; CMMI</p>
+</li>
+<li>
 <p>Local optimization temptation</p>
 </li>
 <li>
@@ -15440,6 +15426,31 @@ MEA03	Evaluate and Assess Compliance with External Requirements<br></p></td>
 <p>Artifact-centricity and batch orientation</p>
 </li>
 </ul>
+</div>
+<div class="sect5">
+<h6 id="_statistical_process_control_in_the_cmm_cmmi">Statistical process control in the CMM &amp; CMMI</h6>
+<div class="paragraph">
+<p>Humphrey&#8217;s original vision was to apply full statistical process control to the software process. As he stated at the time:</p>
+</div>
+<div class="paragraph">
+<p><em>Dr. W. E. Deming, in his work with the Japanese after World War II, applied the concepts of statistical process control to many of their industries. While there are important differences, these concepts are just as applicable to software as they are to producing consumer goods like cameras, television sets, or auto mobiles.</em> (<a href="#Humphrey1989">[Humphrey1989]</a>, p. 3)</p>
+</div>
+<div class="paragraph">
+<p>The overall CMM/CMMI idea (in the well-known staged model) is that a process cannot be improved and optimized until it is fully under control. <strong>In short, the CMMI staged model encourages the thought that process improvement (optimization) only  is possible at Level 5. Many companies implementing CMMI stages however will pragmatically say "Maybe we only need to get to level 3." This implies that they define and manage their processes, but never improve them.</strong></p>
+</div>
+<div class="paragraph">
+<p>Perhaps well-defined industrial processes should not be optimized until they are fully "managed." However, as we discussed in the previous section,  process control theorists see creative, knowledge-intensive processes as requiring <a href="#empirical-process-control">empirical control</a>.</p>
+</div>
+<div class="paragraph">
+<p>In CMM terms, empirical processes start by measuring and immediately optimizing (adjusting). They need not&#8201;&#8212;&#8201;and <strong>cannot</strong>&#8201;&#8212;&#8201;be fully defined. One of the most questionable aspects of CMMI therefore, is its implication that process optimization is something only done at the highest levels of maturity.</p>
+</div>
+<div class="paragraph">
+<p>This runs against much current thinking and practice, especially that deriving from Lean philosophy, in which processes are seen as always under improvement. (See discussion of <a href="#Toyota-Kata">Toyota Kata</a>
+.) All definition, measurement, and control must serve that end.</p>
+</div>
+<div class="paragraph">
+<p>The CMMI has evolved since Humphrey&#8217;s initial vision, but between the idea that that process optimization is only relevant at the highest maturity, and its  unrealistic emphasis on statistical process control, it is (in the view of this author) out of step with the reality of the new digital economy.</p>
+</div>
 </div>
 <div class="sect5">
 <h6 id="_local_optimization_temptation">Local optimization temptation</h6>
@@ -15474,47 +15485,13 @@ There are various definitions of "reductionism." This discussion reflects one of
 <p>A reductionist view implies that a system is nothing but the sum of its parts. Therefore, if each of the parts is attended to, the system will also function well.</p>
 </div>
 <div class="paragraph">
-<p>This can lead to a compulsive desire to do "all" of a framework. If ITIL calls for 25 processes, then a large, mature organization by definition should be good at all of them. But the 25 processes (and dozens more sub-processes and activities) called for by ITIL, or the 32 called for by COBIT, are somewhat arbitrary divisions. They overlap with each other. Furthermore, there are many digital organizations that do not use the full ITIL process portfolio and yet deliver value as well as organizations that do use ITIL. (Most Silicon Valley startups avoid process frameworks, even when they scale up.)</p>
+<p>This can lead to a compulsive desire to do "all" of a framework. If ITIL calls for 25 processes, then a large, mature organization by definition should be good at all of them. But the 25 processes (and dozens more sub-processes and activities) called for by ITIL, or the 32 called for by COBIT, are somewhat arbitrary divisions. They overlap with each other.</p>
+</div>
+<div class="paragraph">
+<p>Furthermore, there are many digital organizations that do not use the full ITIL or COBIT process portfolio and yet deliver value as well as organizations that do use ITIL.</p>
 </div>
 <div class="paragraph">
 <p>This temptation for local, process-level optimization runs counter to core principles of Lean and Systems Thinking. Many management thinkers, including W.E. Deming, Eli Goldratt, and others have emphasized the dangers of local optimization, and the need for taking a systems view.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_confusion_of_process_definition">Confusion of process definition</h6>
-<div class="paragraph">
-<p>Another issue with the "process" frameworks is that, while they use the word "process" prominently, they are not aligned with Business Process Management best practices. <a href="#Betz2011b">[Betz2011b]</a></p>
-</div>
-<div class="paragraph">
-<p>All of these frameworks provide useful descriptions of major ongoing capabilities and functions that the large IT organization must perform. But in terms of our preceding discussion on process method, they in general are developed from the perspective of steady-state functions, as opposed to a value stream or defined process perspective.</p>
-</div>
-<div class="paragraph">
-<p>This can be seen by looking above at ITIL, for example. A Business Process Management consultant would see the term "Capacity Management" and observe that it is not countable or event-driven. "How many Capacities did you do today?," might be the question.</p>
-</div>
-<div class="paragraph">
-<p>The BPM community is clear that processes and countable and event-driven (see <a href="#Sharp2009">[Sharp2009]</a>). Naming them with a strong active verb is seen as essential. "True" IT processes therefore might include:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Accept Demand</p>
-</li>
-<li>
-<p>Deliver Release</p>
-</li>
-<li>
-<p>Complete Change</p>
-</li>
-<li>
-<p>Resolve Incident</p>
-</li>
-<li>
-<p>Improve Service</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The lack of countability throughout the IT frameworks' conception of "process" has caused confusion and lack of alignment with BPM professionals for years, and remains an ongoing problem.</p>
 </div>
 </div>
 <div class="sect5">
@@ -15609,6 +15586,43 @@ There are various definitions of "reductionism." This discussion reflects one of
 </div>
 <div class="paragraph">
 <p>Good system design is a complex process, and we will discuss technical debt in Chapter 12. But the slow feedback signals that result from artifact-centric, larger batch processes such as implied by some frameworks are unacceptable in current industry, which is why new approaches are being adopted.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_confusion_of_process_definition">Confusion of process definition</h6>
+<div class="paragraph">
+<p>Another issue with the "process" frameworks is that, while they use the word "process" prominently, they are not aligned with Business Process Management best practices. <a href="#Betz2011b">[Betz2011b]</a></p>
+</div>
+<div class="paragraph">
+<p>All of these frameworks provide useful descriptions of major ongoing capabilities and functions that the large IT organization must perform. But in terms of our preceding discussion on process method, they in general are developed from the perspective of steady-state functions, as opposed to a value stream or defined process perspective.</p>
+</div>
+<div class="paragraph">
+<p>This can be seen by looking above at ITIL, for example. A Business Process Management consultant would see the term "Capacity Management" and observe that it is not countable or event-driven. "How many Capacities did you do today?," might be the question.</p>
+</div>
+<div class="paragraph">
+<p>The BPM community is clear that processes and countable and event-driven (see <a href="#Sharp2009">[Sharp2009]</a>). Naming them with a strong active verb is seen as essential. "True" IT processes therefore might include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Accept Demand</p>
+</li>
+<li>
+<p>Deliver Release</p>
+</li>
+<li>
+<p>Complete Change</p>
+</li>
+<li>
+<p>Resolve Incident</p>
+</li>
+<li>
+<p>Improve Service</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The lack of countability throughout the IT frameworks' conception of "process" has caused confusion and lack of alignment with BPM professionals for years, and remains an ongoing problem.</p>
 </div>
 <div class="paragraph">
 <p>In the next chapter on Agile process management, we&#8217;ll consider these and further issues with process management in general, and some current  responses consistent with current digital approaches.</p>
