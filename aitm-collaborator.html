@@ -856,7 +856,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_principles_and_theories_of_project_management">Principles and theories of project management</a>
 <ul class="sectlevel4">
-<li><a href="#_the_project_management_body_of_knowledge">The Project Management Body of Knowledge</a></li>
 <li><a href="#_the_challenges_of_scope_management">The challenges of scope management</a></li>
 <li><a href="#_task_ordering_dependencies_and_critical_path">Task ordering, dependencies, and critical path</a></li>
 <li><a href="#_loose_coupling_to_the_project_plan_rescue">Loose coupling to the project plan rescue?</a></li>
@@ -958,8 +957,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_process_frameworks">Process frameworks</a>
 <ul class="sectlevel4">
 <li><a href="#_defining_frameworks">Defining frameworks</a></li>
-<li><a href="#_the_process_terminology_disconnect">The process terminology disconnect</a></li>
-<li><a href="#_pros_and_cons_of_the_frameworks">Pros and cons of the frameworks</a></li>
+<li><a href="#_general_observations_on_the_frameworks">General observations on the frameworks</a></li>
+<li><a href="#_confusion_of_process_definition">Confusion of process definition</a></li>
 </ul>
 </li>
 <li><a href="#_agile_and_it_process_management">Agile and IT process management</a>
@@ -11072,10 +11071,10 @@ RFI stands for <a href="https://en.wikipedia.org/wiki/Request_for_information">R
 <div class="paragraph">
 <p>We will compare project execution to more general problems of scheduling and execution, and finally we will take a brief look at Eli Goldratt&#8217;s Critical Chain.</p>
 </div>
-<div class="sect4">
-<h5 id="_the_project_management_body_of_knowledge">The Project Management Body of Knowledge</h5>
 <div class="paragraph">
-<p>The Project Management Body of Knowledge is sustained by the Project Management Institute. PMI describes itself as:</p>
+<p><a id="PMBOK"></a>
+===== The Project Management Body of Knowledge
+The Project Management Body of Knowledge is sustained by the Project Management Institute. PMI describes itself as:</p>
 </div>
 <div class="paragraph">
 <p><em>the world&#8217;s leading not-for-profit professional membership association for the project, program and portfolio management profession. Founded in 1969, PMI delivers value for more than 2.9 million professionals working in nearly every country in the world through global advocacy, collaboration, education and research. PMI advances careers, improves organizational success and further matures the profession of project management through its globally recognized standards, certifications, resources, tools, academic research, publications, professional development courses, and networking opportunities</em> (from <a href="http://www.pmi.org/About-Us.aspx">www.pmi.org</a>).</p>
@@ -11206,7 +11205,6 @@ Part of the problem with extensive frameworks such as PMBOK is that knowing how 
 </td>
 </tr>
 </table>
-</div>
 </div>
 <div class="sect4">
 <h5 id="_the_challenges_of_scope_management">The challenges of scope management</h5>
@@ -15231,10 +15229,10 @@ There are other usages of the term "framework," especially in terms of software 
 <p>CMMI (Capability Maturity Model-Integrated)</p>
 </li>
 <li>
-<p>PMBOK (The Project Management Body of Knowledge)</p>
+<p>ITIL (originally the Information Technology Infrastructure Library)</p>
 </li>
 <li>
-<p>ITIL (originally the Information Technology Infrastructure Library)</p>
+<p>PMBOK (The Project Management Body of Knowledge)</p>
 </li>
 <li>
 <p>COBIT (aka Control Objectives for Information Technology)</p>
@@ -15243,6 +15241,9 @@ There are other usages of the term "framework," especially in terms of software 
 <p>TOGAF (The Open Group Architecture Framework)</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>A 6th framework, IT4IT, will be discussed in Chapter 12.</p>
 </div>
 <div class="sect5">
 <h6 id="_cmmi">CMMI</h6>
@@ -15398,14 +15399,152 @@ mobiles.</em></p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Within these volumes, ITIL defines a number of activities, functions, and what it calls processes (more on this below). These definitions have helped stabilize industry practice and</p>
+<p>Within these volumes, ITIL defines a number of activities, functions, and what it calls processes (more on this below). These definitions have helped stabilize industry practice and  provided a basis for industry training and certification of individuals.</p>
+</div>
+<div class="paragraph">
+<p>ITIL&#8217;s processes include:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">ITIL Stage</th>
+<th class="tableblock halign-left valign-top">Processes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Service Strategy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Strategy Management for IT Services<br>
+Service Portfolio Management<br>
+Demand Management<br>
+Financial Management for IT Services<br>
+Business Relationships Management<br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Service Design</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Design Coordination<br>
+Service Catalogue Management<br>
+Service Level Management<br>
+Risk Management<br>
+Capacity Management<br>
+Availability Management<br>
+IT Service Continuity Management<br>
+Information Security Management<br>
+Compliance Management<br>
+Architecture Management<br>
+Supplier Management<br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Service Transition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Change Management
+Change Evaluation<br>
+Project Management (Transition Planning and Support)<br>
+Application Development<br>
+Release and Deployment Management<br>
+Service Validation and Testing<br>
+Service Asset and Configuration Management<br>
+Knowledge Management<br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Service Operation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Event Management<br>
+Incident Management<br>
+Request Fulfillment<br>
+Access Management<br>
+Problem Management<br>
+IT Operations Control<br>
+Facilities Management<br>
+Application Management<br>
+Technical Management<br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Continual Service Improvement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Service Review<br>
+Process Evaluation<br>
+Definition of CSI Initiatives<br>
+Monitoring of CSI Initiatives<br></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="_pmbok">PMBOK</h6>
+<div class="paragraph">
+<p>The Project Management Body of Knowledge, is a publication of the Project Management Institute. It represents the codification of formal project management knowledge. There is a comparable Axelos publication, Prince2, not covered here. PMBOK was covered in <a href="#PMBOK">Chapter 8</a>.</p>
 </div>
 </div>
 <div class="sect5">
 <h6 id="_cobit">COBIT</h6>
 <div class="paragraph">
-<p>COBIT, originally the Control Objectives for Information Technology, is a set of guidance from the IS Audit and Control Association. It has a broader scope than ITIL, as it includes architecture and project management. Where ITIL contains narrative of considerable length, COBIT is more terse and structured, providing a useful framework for the construction and testing of suitable controls for IT governance.</p>
+<p>COBIT, originally the Control Objectives for Information Technology, is a set of guidance from the IS Audit and Control Association. It has a broader scope than ITIL, as it includes architecture and project management.</p>
 </div>
+<div class="paragraph">
+<p>Where ITIL contains narrative of considerable length, COBIT is more terse and structured, providing a useful framework for the construction and testing of suitable controls for IT governance.</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">CObIT Domain</th>
+<th class="tableblock halign-left valign-top">Processes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Plan and Organize (PO)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PO1 Define a strategic IT plan<br>
+PO2 Define the information architecture<br>
+PO3 Determine technological direction<br>
+PO4 Define the IT processes, organization and relationships<br>
+PO5 Manage the IT investment<br>
+PO6 Communicate management aims and direction<br>
+PO7 Manage IT human resources<br>
+PO8 Manage quality<br>
+PO9 Assess and manage IT risks<br>
+PO10 Manage projects<br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Acquire and Implement (AI)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">AI1 Identify automated solution<br>
+AI2 Acquire and maintain application software<br>
+AI3 Acquire and maintain technology infrastructure<br>
+AI4 Enable operation and use<br>
+AI5 Procure IT resources<br>
+AI6 Manage changes<br>
+AI7 Install and accredit solutions and changes<br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deliver and Support (DS)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DS1 Define and manage service levels<br>
+DS2 Manage third-party service<br>
+DS3 Manage performance and capacity<br>
+DS4 Ensure continuous service<br>
+DS5 Ensure systems security<br>
+DS6 Identify and allocate costs<br>
+DS7 Educate and train users<br>
+DS8 Manage service desk and incidents<br>
+DS9 Manage the configuration<br>
+DS10 Manage problems<br>
+DS11 Manage data<br>
+DS12 Manage the physical environment<br>
+DS13 Manage operations<br></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Monitor and Evaluate (ME)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ME1 Monitor and evaluate IT performance.<br>
+ME2 Monitor and evaluate internal control.<br>
+ME3 Ensure compliance with external requirements.<br>
+ME4 Provide IT governance<br></p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>COBIT can be freely accessed through www.isaca.org.</p>
 </div>
@@ -15413,16 +15552,41 @@ mobiles.</em></p>
 <div class="sect5">
 <h6 id="_togaf">TOGAF</h6>
 <div class="paragraph">
-<p>The Open Group Architecture Framework, is a framework and method for IT and enterprise architecture practices.</p>
+<p>The Open Group Architecture Framework, is a framework and method for IT and enterprise architecture practices. TOGAF advocates an "Architecture Development Method" consisting of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Architecture Vision</p>
+</li>
+<li>
+<p>Business Architecture</p>
+</li>
+<li>
+<p>Information Systems Architectures</p>
+</li>
+<li>
+<p>Technology Architecture</p>
+</li>
+<li>
+<p>Opportunities and Solutions</p>
+</li>
+<li>
+<p>Migration Planning</p>
+</li>
+<li>
+<p>Implementation, Governance</p>
+</li>
+<li>
+<p>Architecture Change Management</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>TOGAF can be freely accessed through www.opengroup.org</p>
+<p>TOGAF can be freely accessed through www.opengroup.org.</p>
 </div>
-</div>
-<div class="sect5">
-<h6 id="_pmbok">PMBOK</h6>
 <div class="paragraph">
-<p>The Project Management Body of Knowledge, is a publication of the Project Management Institute. It represents the codification of formal project management knowledge. There is a comparable Axelos publication, Prince2, not covered here. PMBOK was covered in Chapter 8.</p>
+<p>We will discuss architecture more in Chapter 12.</p>
 </div>
 </div>
 <div class="sect5">
@@ -15433,17 +15597,35 @@ mobiles.</em></p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_the_process_terminology_disconnect">The process terminology disconnect</h5>
-
+<h5 id="_general_observations_on_the_frameworks">General observations on the frameworks</h5>
+<div class="paragraph">
+<p>We have discussed the problems of process control with respect to the CMM in particular. There are a variety of other concerns with respect to the process frameworks:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Local optimization temptation</p>
+</li>
+<li>
+<p>Confusion of process definition</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect4">
-<h5 id="_pros_and_cons_of_the_frameworks">Pros and cons of the frameworks</h5>
+<h5 id="_confusion_of_process_definition">Confusion of process definition</h5>
+<div class="paragraph">
+<p>One</p>
+</div>
 <div class="paragraph">
 <p>IT capability frameworks can be harmful if they lead to fragmentation of improvement effort and lack of focus on the flow of IT value.</p>
 </div>
 <div class="paragraph">
 <p>Process vs function in the frameworks
 All of these frameworks provide notable descriptions of major ongoing capabilities and functions that the large IT organization must perform. They in general are developed from the perspective of steady-state functions, as opposed to a value stream or defined process perspective.</p>
+</div>
+<div class="paragraph">
+<p>Large batch orientation with complex spiderweb of interations surrounding each major phase</p>
 </div>
 </div>
 </div>
@@ -17096,6 +17278,9 @@ IEEE Press.</p>
 </li>
 <li>
 <p><a id="TSO2011a"></a>[TSO2011a]: 	The Stationery Office. 2011. Information Technology Infrastructure Library ITIL Service Strategy: 2011 Edition. Norwich, U.K: The Stationery Office.</p>
+</li>
+<li>
+<p><a id="TSO2011b"></a>[TSO2011b]: 	The Stationery Office. 2011. Information Technology Infrastructure Library ITIL Service Transition: 2011 Edition. Norwich, U.K: The Stationery Office.</p>
 </li>
 <li>
 <p><a id="Sutherland2014"></a>[Sutherland2014]: Sutherland, J.V., 2014. <em>Scrum: the art of doing twice the work in half the time</em>. Crown Business. First Edition. ed. viii, 248 pages.</p>
