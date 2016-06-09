@@ -15769,10 +15769,10 @@ There are various definitions of "reductionism." This discussion reflects one of
 </ul>
 </div>
 <div class="paragraph">
-<p>But processes do not run themselves. These process inputs and outputs require staff attention. They impose demand on the system and every such handoff represents transactional friction. Some handoffs may be implemented within the context of an IT management suite; others may require procedural standards, which themselves need to be created and maintained. The industry currently lacks understanding of how feasible such fully elaborated frameworks are, in terms of the time, effort, and organizational structure they imply.</p>
+<p>But processes do not run themselves. These process inputs and outputs require staff attention. They often implie <a href="#queuing">queues</a> and therefore Work in Process, often invisible. They impose demand on the system and every such handoff represents transactional friction. Some handoffs may be implemented within the context of an IT management suite; others may require procedural standards, which themselves need to be created and maintained. The industry currently lacks understanding of how feasible such fully elaborated frameworks are, in terms of the time, effort, and organizational structure they imply.</p>
 </div>
 <div class="paragraph">
-<p>We have discussed the issue of overburden previously. Too many organizations have contending execution models, where projects, processes, and miscellaneous work all compete for people&#8217;s attention. In such environments, the overburden and wasteful multi-tasking can reach crisis levels. With ITIL in particular, because it does not cover project management or architecture, we have a very large quantity of potential process interactions that is nevertheless incomplete.</p>
+<p>We have discussed the issue of overburden previously. Too many organizations have contending execution models, where projects, processes, and miscellaneous work all compete for people&#8217;s attention. In such environments, the overburden and wasteful <a href="#multi-tasking">multi-tasking</a> can reach crisis levels. With ITIL in particular, because it does not cover project management or architecture, we have a very large quantity of potential process interactions that is nevertheless incomplete.</p>
 </div>
 </div>
 <div class="sect5">
@@ -15951,8 +15951,60 @@ Individuals and interactions over processes and tools.
 </div>
 <div class="sect4">
 <h5 id="_process_conception">Process conception</h5>
+<div class="quoteblock">
+<blockquote>
+"Many companies have at least one dysfunctional area. This may be the “furniture police” who won’t let programmers rearrange furniture to facilitate pair programming. Or it may be a purchasing group that takes six weeks to process a standard software order. In any event these types of insanity get in the way of successful projects."
+</blockquote>
+<div class="attribution">
+&#8212; Mike Cohn<br>
+<cite>Succeeding with Agile: Software Development Using Scrum</cite>
+</div>
+</div>
 <div class="paragraph">
-<p>Many of the issues with process comes from a failure to correctly understand and analyze the organization needs. This is the focus of <a href="#toyota-kata">Toyota Kata</a>. A process is a technique, a tool, and no technique should be implemented without a thorough understanding of the business context. Nor should any technique be implemented without rigorous, disciplined follow-up as to its real effects, both direct and indirect.</p>
+<p>Processes can generate various emotional reactions:</p>
+</div>
+<div class="paragraph">
+<p>"Dysfunctional! Insanity!" (as above)</p>
+</div>
+<div class="paragraph">
+<p>"Follow the process!"</p>
+</div>
+<div class="paragraph">
+<p>"What bureaucracy!"</p>
+</div>
+<div class="paragraph">
+<p>"Don&#8217;t create a <em>Process Police</em>!"</p>
+</div>
+<div class="paragraph">
+<p>"I am an ITIL professional. I believe in ITIL!"</p>
+</div>
+<div class="paragraph">
+<p>"I don&#8217;t write code on an assembly line!"</p>
+</div>
+<div class="paragraph">
+<p>Such reactions are commonplace in social media, but we need a more objective and rational approach to understand the pros and cons of processes. Don Reinertsen uses a number of neutral concepts towards this end (<a href="#Reinertsen2009">[Reinertsen2009]</a>, chapters 3, 6 and 7):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Queues</p>
+</li>
+<li>
+<p>Work in Process</p>
+</li>
+<li>
+<p>Cadence</p>
+</li>
+<li>
+<p>Synchronization</p>
+</li>
+<li>
+<p>Sequencing</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Many of the issues with process comes from a failure to correctly understand and analyze the organization needs in objective terms such as these. This is the focus of <a href="#toyota-kata">Toyota Kata</a>. A process is a technique, a tool, and no technique should be implemented without a thorough understanding of the business context. Nor should any technique be implemented without rigorous, disciplined follow-up as to its real effects, both direct and indirect.</p>
 </div>
 <div class="paragraph">
 <p>A skeptical and self-critical, "go and see" approach is therefore essential. Too often, processes are instituted in reaction to the last data point, imposed top down, and rarely evaluated for effectiveness. Allowing affected parties to lead a process re-design is a core Lean principle (kaizen).</p>
@@ -16049,10 +16101,8 @@ Within the boundaries of each process, improvements were implemented that made w
 </div>
 <div class="sect4">
 <h5 id="_process_content">Process content</h5>
-<div class="sect5">
-<h6 id="_the_pitfall_of_process_complexity">The pitfall of process complexity</h6>
 <div class="paragraph">
-<p>A related problem is when the process simply becomes too complex for humans to follow. Multi-page process models are rarely consulted, even if the team affected developed them. This is especially true when there are many optional or conditional steps in the process.</p>
+<p>Sometimes, the process simply becomes too complex for humans to follow. Multi-page process models are rarely consulted, even if the team affected developed them. This is especially true when there are many optional or conditional steps in the process.</p>
 </div>
 <div class="paragraph">
 <p>There are two related lines of response to this:</p>
@@ -16066,7 +16116,6 @@ Within the boundaries of each process, improvements were implemented that made w
 <p>The Checklist Manifesto</p>
 </li>
 </ul>
-</div>
 </div>
 <div class="sect5">
 <h6 id="_case_management">Case Management</h6>
@@ -16150,13 +16199,6 @@ Do not confuse "Case" here with Computer Assisted Software Engineering.
 </div>
 <div class="sect4">
 <h5 id="_process_execution">Process execution</h5>
-<div class="paragraph">
-<p>Process as a source of demand/resource
-continuous improvement as demand
-orchestration vs choreography
-Cost of delay of aggregate process
-Visual Andon</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
@@ -16173,16 +16215,16 @@ Visual Andon</p>
 <div class="paragraph">
 <p>and the poor "resources" at their intersection, when badly managed.</p>
 </div>
+<div class="paragraph">
+<p>orchestration vs choreography
+Process as a source of demand/resource
+From workflow tools to Digital exhaust
+continuous improvement as demand
+Cost of delay of aggregate process
+Visual Andon</p>
+</div>
 <div class="sect5">
 <h6 id="_process_as_an_irritation">Process as an irritation?</h6>
-<div class="quoteblock">
-<blockquote>
-"Many companies have at least one dysfunctional area. This may be the “furniture police” who won’t let programmers rearrange furniture to facilitate pair programming. Or it may be a purchasing group that takes six weeks to process a standard software order. In any event these types of insanity get in the way of successful projects. One way to view the project manager is as the bulldozer responsible for quickly removing these problems."
-</blockquote>
-<div class="attribution">
-&#8212; Mike Cohn
-</div>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>example of service-ized process dysfunction
