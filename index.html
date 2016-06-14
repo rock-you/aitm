@@ -936,9 +936,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_governance">Governance</a>
 <ul class="sectlevel4">
 <li><a href="#_defining_governance">Defining governance</a></li>
-<li><a href="#_governance_and_it_operating_model">Governance and IT operating model</a></li>
+<li><a href="#_iso_38500">ISO 38500</a></li>
+<li><a href="#_internal_controls">Internal controls</a></li>
 <li><a href="#_it_audit">IT Audit</a></li>
-<li><a href="#_governance_process">Governance &amp; process</a></li>
+<li><a href="#_governance_and_it_operating_model">Governance and IT operating model</a></li>
 <li><a href="#_governance_and_sourcing">Governance and sourcing</a></li>
 <li><a href="#_agile_meets_it_governance">Agile meets IT governance</a></li>
 </ul>
@@ -956,6 +957,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_use_of_governance_concerns_to_further_agendas">Use of governance concerns to further agendas</a></li>
 <li><a href="#_continuous_delivery_and_security">Continuous delivery and security</a></li>
 <li><a href="#_trusted_supply_chain">Trusted supply chain</a></li>
+<li><a href="#_promise_theory">Promise Theory</a></li>
 </ul>
 </li>
 <li><a href="#_conclusion_10">Conclusion</a>
@@ -13923,6 +13925,18 @@ Is a firm a collection of activities or a set of resources and capabilities? Cle
 <div class="paragraph">
 <p>It&#8217;s not clear which of these are "IT" versus "business" processes. But they are definitely processes. Some of them are more predictable, some less so, but they all represent some form of ordered work that is repeatable to some degree. And to some extent, you are seeking people with experience defined at least in part by their exposure to processes.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+In Chapter 10, we will discuss IT governance in depth. The concept of "control" is critical to IT governance, and processes often play an important role in terms of control.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -15030,6 +15044,9 @@ Monitoring of CSI Initiatives<br></p></td>
 <div class="paragraph">
 <p>Where ITIL contains narrative of considerable length, COBIT is more terse and structured, providing a useful framework for the construction and testing of suitable controls for IT governance.</p>
 </div>
+<div class="paragraph">
+<p>We will discuss the concepts of IT governance and controls in the next section, and therefore at this point in the reading are not completely ready to evaluate COBIT in terms of its initial objectives. However, COBIT is widely used as a reference for understanding IT organizational processes and activities, and is discussed in that sense here.</p>
+</div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 25%;">
@@ -15189,7 +15206,7 @@ MEA03	Evaluate and Assess Compliance with External Requirements<br></p></td>
 <p>Lack of execution model</p>
 </li>
 <li>
-<p>Artifact-centricity and batch orientation</p>
+<p>Proliferation of secondary artifacts, compounded by batch orientation</p>
 </li>
 <li>
 <p>Confusion of process definition</p>
@@ -15313,12 +15330,15 @@ There are various definitions of "reductionism." This discussion reflects one of
 </div>
 </div>
 <div class="sect5">
-<h6 id="_artifact_centricity_and_batch_orientation">Artifact-centricity and batch orientation</h6>
+<h6 id="_secondary_artifacts_compounded_by_batch_orientation">Secondary artifacts, compounded by batch orientation</h6>
 <div class="paragraph">
 <p>The process handoffs also imply that artifacts (documents of various sorts, models, software, etc.) are being created and transferred in between teams, or at least between roles on the same team with some degree of formality.</p>
 </div>
 <div class="paragraph">
-<p>A brief examination of the ITIL and COBIT process interactions shows that many of the artifacts are "plans," "designs," or "reports:"</p>
+<p>Primary artifacts are executable software and any additional content intended directly for value delivery. Secondary artifacts are anything else.</p>
+</div>
+<div class="paragraph">
+<p>A brief examination of the ITIL and COBIT process interactions shows that many of the artifacts are secondary concepts such as "plans," "designs," or "reports:"</p>
 </div>
 <div class="ulist">
 <ul>
@@ -15337,7 +15357,10 @@ There are various definitions of "reductionism." This discussion reflects one of
 </ul>
 </div>
 <div class="paragraph">
-<p>and so on. Again, artifacts do not create themselves. Hundreds of artifacts are implied in the process frameworks. Every artifact implies:</p>
+<p>and so on. (Note that actually executable artifacts are not included here.)</p>
+</div>
+<div class="paragraph">
+<p>Again, artifacts do not create themselves. Hundreds of artifacts are implied in the process frameworks. Every artifact implies:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -16153,7 +16176,10 @@ In reality, organizations have many other things to do than practice security.
 <p>Operating at scale requires a different mindset. When you were starting out, the horizon seemed bounded only by your imagination, will, and talent.</p>
 </div>
 <div class="paragraph">
-<p>At enterprise scale, it&#8217;s a different world. You find yourself constrained by</p>
+<p>At enterprise scale, it&#8217;s a different world. You find yourself constrained by&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Whether or not you are a for-profit, publicly traded company, you are now large enough that external audits are required; you also likely have directors of some nature&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
 <p>GRC, GRSC, why the chapter is named this way, relationships between&#8230;&#8203;</p>
@@ -16237,40 +16263,103 @@ Business or IT governance constructs and processes that do not support new techn
 <cite>Disciplined Agile Delivery</cite>
 </div>
 </div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>Sidebar: Introducing ISACA</p>
-</div>
-</div>
-</div>
 <div class="sect4">
 <h5 id="_defining_governance">Defining governance</h5>
 <div class="paragraph">
 <p>IT Governance is a challenging and often misunderstood concept. First and foremost, it must be distinguished from "management." This is not always easy, but remains essential.</p>
 </div>
-<div class="paragraph">
-<p>shopkeeper example</p>
+<div class="imageblock">
+<div class="content">
+<img src="images/4.10-shopkeeper.jpg" alt="4.10 shopkeeper">
 </div>
+</div>
+<div class="paragraph">
+<p><em>image credit <a href="https://www.flickr.com/photos/garryknight/11240024613" class="bare">https://www.flickr.com/photos/garryknight/11240024613</a>, commercial use permitted.</em></p>
+</div>
+<div class="paragraph">
+<p>Here is simple explanation:</p>
+</div>
+<div class="paragraph">
+<p>Suppose you own a small retail store. For years, you were the primary operator. You might have hired an occasional cashier, but that person had limited authority; they had the keys to the store and cash register, but not the safe combination, nor was their name on the bank account. They did not talk to your suppliers. They received an hourly wage and you gave them direct and ongoing supervision.</p>
+</div>
+<div class="paragraph">
+<p>In this case, you were a manager. Governance was not part of the relationship.</p>
+</div>
+<div class="paragraph">
+<p>Now, you wish to go on an extended vacation. You need someone who can count the cash and deposit it, and place orders with and pay your suppliers. You need to hire a professional manager.</p>
+</div>
+<div class="paragraph">
+<p>They will likely draw a salary, perhaps some percentage of your proceeds, and you will not supervise them in detail as you did the cashier. Instead, you will set overall guidance and expectations for the results they produce. How do you do this? And perhaps even more importantly, how do you trust this person?</p>
+</div>
+<div class="paragraph">
+<p><strong>Now, you need governance.</strong></p>
+</div>
+<div class="paragraph">
+<p><em>Credit: I got this from hearing Brian Barnier speak at an ISACA meeting around 2011.</em></p>
+</div>
+<div class="sect5">
+<h6 id="_governance_definitions">Governance definitions</h6>
+<div class="paragraph">
+<p>Results &amp; risk</p>
+</div>
+<div class="paragraph">
+<p>Watt&#8217;s steam engine</p>
+</div>
+<div class="paragraph">
+<p>Board-level concern, aligned with corporate governance</p>
+</div>
+<div class="paragraph">
+<p>Corporate structures</p>
+</div>
+<div class="paragraph">
+<p>Treadway, Cadbury</p>
+</div>
+<div class="paragraph">
+<p>The concept of "assurance"</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_iso_38500">ISO 38500</h5>
 <div class="paragraph">
 <p>Direct, Monitor, Evaluate</p>
 </div>
 <div class="paragraph">
-<p>&#8658; need for auditors</p>
-</div>
-<div class="sect5">
-<h6 id="_iso_38500">ISO 38500</h6>
-
+<p>need for auditors</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_governance_and_it_operating_model">Governance and IT operating model</h5>
-<div class="ulist">
-<ul>
-<li>
-<p>"Rogue" IT</p>
-</li>
-</ul>
+<h5 id="_internal_controls">Internal controls</h5>
+<div class="quoteblock">
+<blockquote>
+Internal control is a process, effected by an entity&#8217;s board of directors, management, and other personnel, designed to provide reasonable assurance regarding the achievement of objectives relating to operations, reporting, and compliance.
+</blockquote>
+<div class="attribution">
+&#8212; Committee of Sponsoring Organizations of the Treadway Commission<br>
+<cite>Internal Control - Integrated Framework</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>Have existed from ancient times</p>
+</div>
+<div class="paragraph">
+<p>"Working to rule" - when they proliferate
+controls theater
+this is called the "control environment"</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Control activities are the actions established through policies and procedures that help ensure that management&#8217;s directives to mitigate risks to the achievement of objectives are carried out. Control activities are performed at all levels of the entity, at various stages within business processes, and over the technology environment. They may be preventive or detective in nature and may encompass a range of manual and automated activities such as authorizations and approvals, verifications, reconciliations, and business performance reviews.</p>
+</div>
+<div class="paragraph">
+<p>Ongoing evaluations, separate evaluations, or some combination of the two are used to ascertain whether each of the five components of internal control, including controls to effect the principles within each component, is present and functioning. Ongoing evaluations, built into business processes at different levels of the entity, provide timely information. Separate evaluations, conducted periodically, will vary in scope and frequency depending on assessment of risks, effectiveness of ongoing evaluations, and other management considerations. Findings are evaluated against criteria established by regulators, recognized standard-setting bodies or management and the board of directors, and deficiencies are communicated to management and the board of directors as appropriate.
+<a href="#COSO2013">[COSO2013]</a></p>
+</div>
+<div class="paragraph">
+<p>Concern: "recognized standard-setting bodies" - who? ISACA? Axelos?</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -16284,19 +16373,58 @@ Agile or not, a team ultimately has to meet legal and essential organizational n
 <cite>Disciplined Agile Delivery</cite>
 </div>
 </div>
+<div class="sect5">
+<h6 id="_external_audit">External audit</h6>
+<div class="paragraph">
+<p>"The Committee therefore recommends that all listed companies should establish an audit committee."  <a href="#Cadbury1992">[Cadbury1992]</a>, 4.35</p>
+</div>
 <div class="literalblock">
 <div class="content">
 <pre>ask Patrick Stachenko to write sidebar on how audit moved into IT_</pre>
 </div>
 </div>
+</div>
+<div class="sect5">
+<h6 id="_internal_audit">Internal audit</h6>
 <div class="paragraph">
 <p>Phoenix project example</p>
 </div>
+<div class="paragraph">
+<p>"The function of the internal auditors is complementary to, but different from, that of the outside auditors." <a href="#Cadbury1992">[Cadbury1992]</a>, 4.39</p>
+</div>
+</div>
 </div>
 <div class="sect4">
-<h5 id="_governance_process">Governance &amp; process</h5>
+<h5 id="_governance_and_it_operating_model">Governance and IT operating model</h5>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Sidebar: Introducing ISACA</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>pass through the other chapters?</p>
+</div>
+<div class="paragraph">
+<p>Weill
+COBIT</p>
+</div>
+<div class="paragraph">
+<p>"Rogue" IT</p>
+</div>
+<div class="sect5">
+<h6 id="_governance_process">Governance &amp; process</h6>
+
+</div>
+<div class="sect5">
+<h6 id="_governance_demand">Governance demand</h6>
+<div class="paragraph">
+<p>Watt&#8217;s governor imposed a certain burden on the engine (what % of energy did it consume?)</p>
+</div>
 <div class="paragraph">
 <p>importance of having the demand/execution framework in place to manage governance demand</p>
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -16320,8 +16448,26 @@ Agile or not, a team ultimately has to meet legal and essential organizational n
 </div>
 <div class="sect3">
 <h4 id="_risk">Risk</h4>
+<div class="quoteblock">
+<blockquote>
+Risk is defined as the possibility that an event will occur and adversely affect the achievement of objectives.
+</blockquote>
+<div class="attribution">
+&#8212; Committee of Sponsoring Organizations of the Treadway Commission<br>
+<cite>Internal Control - Integrated Framework</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>According to Treadway, control &amp; risk are distinct but overlap</p>
+</div>
 <div class="paragraph">
 <p>Define vulnerability, threat agent, threat, risk, control, exposure</p>
+</div>
+<div class="paragraph">
+<p>hubbard failure of risk management - review</p>
+</div>
+<div class="paragraph">
+<p>"risk" does not include upside.</p>
 </div>
 <div class="sect4">
 <h5 id="_continuity_and_recovery">Continuity and recovery</h5>
@@ -16363,6 +16509,10 @@ Agile or not, a team ultimately has to meet legal and essential organizational n
 </div>
 <div class="sect4">
 <h5 id="_trusted_supply_chain">Trusted supply chain</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_promise_theory">Promise Theory</h5>
 
 </div>
 </div>
@@ -16813,6 +16963,11 @@ difficult for them to stay hands on</p>
 </div>
 <div class="sect3">
 <h4 id="_special_section_the_it_lifecycles">Special section: The IT lifecycles</h4>
+<div class="literalblock">
+<div class="content">
+<pre>Weill discusses need for TLM in IT Governance</pre>
+</div>
+</div>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
@@ -17036,6 +17191,9 @@ difficult for them to stay hands on</p>
 <p><a id="Buschmann1996"></a>[Buschmann1996]: Buschmann, F. (1996), <em>Pattern-oriented software architecture : a system of patterns</em>, Wiley, Chichester ; New York</p>
 </li>
 <li>
+<p><a id="Cadbury1992"></a>[Cadbury1992]: Committee on the Financial Aspects of Corporate Governance. 1992. “Report of the Committee on the Financial Aspects of Corporate Governance (aka Cadbury Report).” London, Gee &amp; Co. Ltd.</p>
+</li>
+<li>
 <p><a id="Carroll2013"></a>[Carroll2013]: Carroll, I. (2013), "Various", <a href="http://itopskanban.wordpress.com/before/" class="bare">http://itopskanban.wordpress.com/before/</a></p>
 </li>
 <li>
@@ -17049,6 +17207,9 @@ difficult for them to stay hands on</p>
 </li>
 <li>
 <p><a id="Comella2016"></a>[Comella2016]: Comella-Dorda, Santiago, Lohiya, Swati, and Gerard Speksnijder. 2016. “An Operating Model for Company-Wide Agile Development.” McKinsey &amp; Company. <a href="http://www.mckinsey.com/Business-Functions/Business-Technology/Our-Insights/An-operating-model-for-company-wide-agile-development" class="bare">http://www.mckinsey.com/Business-Functions/Business-Technology/Our-Insights/An-operating-model-for-company-wide-agile-development</a>.</p>
+</li>
+<li>
+<p><a id="COSO2013"></a>[COSO2013]: Committee of Sponsoring Organizations of the Treadway Commission. 2013. “Internal Control — Integrated Framework (Executive Summary).” <a href="http://www.coso.org/documents/990025P_Executive_Summary_final_may20_e.pdf" class="bare">http://www.coso.org/documents/990025P_Executive_Summary_final_may20_e.pdf</a>.</p>
 </li>
 <li>
 <p><a id="Csikszentmihalyi1990"></a>[Csikszentmihalyi1990]: Csikszentmihalyi, M. (1990). Flow : the psychology of optimal experience. New York, Harper &amp; Row.</p>
