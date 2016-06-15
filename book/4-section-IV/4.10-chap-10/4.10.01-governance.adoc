@@ -2,8 +2,12 @@
 
 
 ===== What is governance?
-[quote, ISO 38500:2008, adapted from Cadbury/OECD 1999]
+[quote, Cadbury Report]
 The system by which organizations are directed and controlled.
+
+
+[quote, G20/OECD Principles of Corporate Governance 1999]
+Corporate governance involves a set of relationships between a company’s management, its board, its shareholders and other stakeholders. Corporate governance also provides the structure through which the objectives of the company are set, and the means of attaining those objectives and monitoring performance are determined.
 
 To talk about IT governance, we must talk about governance in general.
 
@@ -20,17 +24,62 @@ Suppose you own a small retail store. For years, you were the primary operator. 
 
 In this case, you were a manager. Governance was not part of the relationship.
 
-Now, you wish to go on an extended vacation. You need someone who can count the cash and deposit it, and place orders with and pay your suppliers. You need to hire a professional manager.
+Now, you wish to go on an extended vacation - perhaps a cruise around the world, or a trek in the Himalayas. You need someone who can count the cash and deposit it, and place orders with and pay your suppliers. You need to hire a professional manager.
 
 They will likely draw a salary, perhaps some percentage of your proceeds, and you will not supervise them in detail as you did the cashier. Instead, you will set overall guidance and expectations for the results they produce. How do you do this? And perhaps even more importantly, how do you trust this person?
 
 *Now, you need governance.*
 
-In political science and economics,
+In political science and economics, the need for governance is seen as an example of the https://en.wikipedia.org/wiki/Principal%E2%80%93agent_problem[principal-agent problem] <<Eisenhardt1989>>. Our shopkeeper example illustrates this. The hired manager is the "agent," acting on behalf of the shop owner, who is the "principal."
+
+In principal-agent theory, the agent may have different interests than the principal. The agent also has much more information (think of the manager running the shop day to day, versus the owner off climbing mountains).
+
+The agent is in a position to do economic harm to the principal; to shirk duty, to steal, to self-deal. Mitigating such conflicts of interest is a part of governance.
+
+In larger organizations (such as you are now), it's not just a simple matter of one clear owner vesting power in one clear agent. The corporation may be publicly owned, or in the case of a non-profit, it may be seeking to represent a diffuse set of interests (e.g. environmental issues). In such cases, a group of individuals (directors) is formed, often termed a "board," with ultimate authority to speak for the organization.
+
+The fundamental purpose of boards of directors and similar bodies is to take the side of the principal. This is easier said than done; boards can become overly close to an organization's senior management - the senior managers are real people, while the "principal" may be a diffuse body of shareholders and/or stakeholders.
+
+Because governance is the principal's concern, and because the directors represent the principal, governance, including IT governance, is a board-level concern.
+
+There are various principles of corporate governance we will not go into here, such as shareholder rights, stakeholder interests, transparency, and so forth. References on these topics are included in the chapter conclusion.
+
+However, as we turn to our focus on digital and IT-related governance, there are a few final insights from principal-agent theory that are helpful to understanding governance. Consider:
+
+_the heart of principal-agent theory is the trade-off between (a) the cost of measuring behavior and (b) the cost of measuring outcomes and transferring risk to the agent._ <<Eisenhardt1989>>
+
+What does this mean?
+
+Suppose the shopkeeper tells the manager, "I will pay you a salary of $50,000 while I am gone, assuming you can show me you have faithfully executed your daily duties."
+
+The daily duties are specified in a number of checklists, and the manager is expected to fill these out daily and weekly, and for certain tasks, provide evidence they were performed (e.g. bank deposit slips, checks written to pay bills, etc.). That is a behavior-driven approach to governance. The manager need not worry if business falls off; they will get their money. The owner has a higher level of uncertainty; the manager might falsify records, or engage in poor customer service so that business is driven away. A fundamental conflict of interest is present; the owner wants their business sustained, while the manager just wants to put in the minimum effort to collect the $50,000.
+
+When agent responsibilities can be well specified in this manner, it is said they are highly _programmable_.
+
+The shopkeeper might also tell the manager, "I will pay you 50% of the shop's gross earnings, whether they may be."
+
+In this case, the manager's behavior is more aligned with the owner's goals. If they serve customers well, they will likely earn more. There are any number of hard-to-specify behaviors (less _programmable_) that might be highly beneficial.
+
+Suppose that the store manager learns of an upcoming street festival, a new one that the owner did not know of or plan for. If the agent is managed in terms of their behavior, they may do nothing. If they are measured in terms of their outcomes, they may well make the extra effort to order merchandise desirable to the street fair participants, and perhaps hire a temporary cashier to staff an outdoor booth.
+
+In general, it may seem that an outcome-based relationship would always be preferable. There is, however, an important downside. It transfers risk to the agent. And because the agent is assuming more risk, they will (in a fair market) demand more compensation. The owner may find themselves paying $60,000 for the manager's services, for the same level of sales, because the agent also had to "price in" the possibility of poor sales and the risk that they would only make $35,000.
+
+Finally, there is a way to align interests around outcomes without going fully to performance-based pay. If the manager for cultural reasons sees their interests as aligned, this may mitigate the principal-agent problem. In our example, suppose the store is in a small, tight-knit community with a strong sense of civic pride and familial ties.
+
+Even if the manager is being managed in terms of their behavior, their cultural ties to the community or clan may lead them to see their interests as well aligned with those of the principal. As noted in <<Eisenhardt1989>>, "Clan control implies goal congruence between people and, therefore, the reduced need to monitor behavior or outcomes. Motivation issues disappear." We have discussed this kind of motivation in Chapter 7, especially in our discussion of xref:failure-control-culture[control culture] and insights drawn from the military.
+
+What does all this have to do with information technology and digital management?
+
+Consider the material we have covered to date. Activity versus outcome has been a theme throughout. Product management focuses on outcomes (what), while projects and processes define and control activity (how). Command and control culture is now suspected of being destructive to high performing teams.
+
+Furthermore, consider the "programmability" criteria above. A highly "programmable" position is one where the responsibilities can be specified in terms of their activities. *And what is the fundamental dynamic of digital transformation?* It is no accident that such positions are called "programmable." In fact, they *are* being "programmed away" or "eaten by software"- leaving only higher-skill positions that are best managed by objective, and which are more sensitive to cultural dynamics.
+
 
 ====== Governance vis-a-vis management
 
-The temptation is to lump all of "management" in with governance. The VP of sales, or HR, "governs" their function, for example. While sometimes tempting to executives who want to elevate their status, this is not the intent of the term.
+There is too often a temptation to lump all of "management" in with governance. Sometimes it may be said that the VP of sales, or HR, "governs" their function, for example. While tempting to executives who want to elevate their status, this is not the intent of the term.
+
+However, the principal-agent problem can be seen at smaller scale within the organization. Any manager encounters it to some degree, when activities or outcomes are specified for subordinates. But this does not mean that the manager is doing "governance," as governance is by definition an organization-level concern.
 
 We often hear of "bureaucratic" governance processes, as well. But is the problem "governance" per se, or is it the management response to governance requirements? Governance policies set at the board level might result in a variety of operational processes, but are those processes "governance" processes? Or management processes?
 
