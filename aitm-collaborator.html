@@ -941,20 +941,21 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_what_is_governance">What is governance?</a></li>
 <li><a href="#_policy_management">Policy management</a></li>
 <li><a href="#_internal_controls">Internal controls</a></li>
-<li><a href="#_it_audit">IT Audit</a></li>
+<li><a href="#_assurance">Assurance</a></li>
+<li><a href="#_audit_in_general">Audit in general</a></li>
 <li><a href="#_governance_and_it_operating_model">Governance and IT operating model</a></li>
 <li><a href="#_governance_and_sourcing">Governance and sourcing</a></li>
-<li><a href="#_agile_meets_it_governance">Agile meets IT governance</a></li>
 </ul>
 </li>
 <li><a href="#_risk">Risk</a>
 <ul class="sectlevel4">
-<li><a href="#_assurance">Assurance</a></li>
-<li><a href="#_benchmarking">Benchmarking</a></li>
-<li><a href="#_availability">Availability</a></li>
-<li><a href="#_continuity_and_recovery">Continuity and recovery</a></li>
-<li><a href="#_security_as_a_risk">Security as a risk</a></li>
+<li><a href="#_it_related_risks">IT-related risks</a></li>
 <li><a href="#_risk_management_antipatterns">Risk management antipatterns</a></li>
+</ul>
+</li>
+<li><a href="#_assurance_and_audit">Assurance and Audit</a>
+<ul class="sectlevel4">
+<li><a href="#_audit_in_general_2">Audit in general</a></li>
 </ul>
 </li>
 <li><a href="#_security">Security</a></li>
@@ -962,20 +963,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_digital_governance">Digital Governance</a>
 <ul class="sectlevel4">
 <li><a href="#_historic_it_governance_controlling_the_order_taker">Historic IT governance: controlling the "order taker"</a></li>
-<li><a href="#_allocation_of_capital_in_large_batches">Allocation of capital in large batches</a></li>
-<li><a href="#_governance_and_product_centricity">Governance and product centricity</a></li>
+<li><a href="#_agile_meets_it_governance">Agile meets IT governance</a></li>
 <li><a href="#_a_new_class_of_organizational_risks">A new class of organizational risks</a></li>
-<li><a href="#_siam_cloud_risks">SIAM/Cloud risks</a></li>
-<li><a href="#_antifragility">Antifragility</a></li>
 <li><a href="#_governance_as_demand">Governance as demand</a></li>
-<li><a href="#_technical_policies">Technical policies</a></li>
 <li><a href="#_automating_digital_governance">Automating digital governance</a></li>
+<li><a href="#_antifragility">Antifragility</a></li>
+<li><a href="#_continuous_delivery_and_security">Continuous delivery and security</a></li>
 </ul>
 </li>
 <li><a href="#_topics">Topics</a>
 <ul class="sectlevel4">
+<li><a href="#_benchmarking">Benchmarking</a></li>
 <li><a href="#_use_of_governance_concerns_to_further_agendas">Use of governance concerns to further agendas</a></li>
-<li><a href="#_continuous_delivery_and_security">Continuous delivery and security</a></li>
 <li><a href="#_trusted_supply_chain">Trusted supply chain</a></li>
 <li><a href="#_promise_theory">Promise Theory</a></li>
 </ul>
@@ -17098,6 +17097,21 @@ Corporate governance involves a set of relationships between a company’s manag
 <p>Furthermore, consider the "programmability" criteria above. A highly "programmable" position is one where the responsibilities can be specified in terms of their activities. <strong>And what is the fundamental dynamic of digital transformation?</strong> It is no accident that such positions are called "programmable." In fact, they <strong>are</strong> being "programmed away" or "eaten by software"- leaving only higher-skill positions that are best managed by objective, and which are more sensitive to cultural dynamics.</p>
 </div>
 <div class="sect5">
+<h6 id="_it_governance_definitions">IT Governance definitions</h6>
+<div class="paragraph">
+<p>If "corporate governance" (per ISO 38500, based on other standards) is "The system by which organizations are directed and controlled," then it is reasonable that "corporate governance of IT" is "The system by which the current and future use of IT is directed and controlled." <a href="#ISO2008">[ISO2008]</a>.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_iso_38500">ISO 38500</h6>
+<div class="paragraph">
+<p>Direct, Monitor, Evaluate</p>
+</div>
+<div class="paragraph">
+<p>need for auditors</p>
+</div>
+</div>
+<div class="sect5">
 <h6 id="_governance_vis_a_vis_management">Governance vis-a-vis management</h6>
 <div class="paragraph">
 <p>draw picture like COBIT</p>
@@ -17202,21 +17216,6 @@ We&#8217;ve encountered systems theory and associated concepts such as <a href="
 <p>So, if you find yourself coping with arbitrary and bureaucratic "governance" processes, it might be good to remember the origins of the term. Governance that only slows a system down, only adds resistance, is not truly governance.</p>
 </div>
 </div>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_it_governance_definitions">IT Governance definitions</h6>
-<div class="paragraph">
-<p>If "corporate governance" (per ISO 38500, based on other standards) is "The system by which organizations are directed and controlled," then it is reasonable that "corporate governance of IT" is "The system by which the current and future use of IT is directed and controlled." <a href="#ISO2008">[ISO2008]</a>.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_iso_38500">ISO 38500</h6>
-<div class="paragraph">
-<p>Direct, Monitor, Evaluate</p>
-</div>
-<div class="paragraph">
-<p>need for auditors</p>
 </div>
 </div>
 </div>
@@ -17387,7 +17386,66 @@ this is called the "control environment"</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_it_audit">IT Audit</h5>
+<h5 id="_assurance">Assurance</h5>
+<div class="quoteblock">
+<blockquote>
+Exercise caution in your business affairs;
+for the world is full of trickery.
+</blockquote>
+<div class="attribution">
+&#8212; Max Ehrmann<br>
+<cite>Desiderata</cite>
+</div>
+</div>
+<div class="quoteblock">
+<blockquote>
+Assurance means that, pursuant to an accountability relationship between two or more parties, an IT audit and assurance
+professional may be engaged to issue a written communication expressing a conclusion about the subject matters to the
+accountable party.
+</blockquote>
+<div class="attribution">
+&#8212; Cobit 5 for Assurance
+</div>
+</div>
+<div class="quoteblock">
+<blockquote>
+Businesses must find a level of trust between each other  . . .  3rd party reports provide that confidence. Those issuing the reports stake their name &amp; liability with each issuance.
+</blockquote>
+<div class="attribution">
+&#8212; James DeLuccia<br>
+<cite>Successfully Establishing and Representing DevOps in an Audit</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>3-party</p>
+</div>
+<div class="paragraph">
+<p>All audit is assurance, but not all assurance is audit.</p>
+</div>
+<div class="paragraph">
+<p>external</p>
+</div>
+<div class="paragraph">
+<p>Assurance and industry standards
+manufacturing tolerance examples</p>
+</div>
+<div class="paragraph">
+<p>Data center evaluations of cloud providers are a form of <strong>assurance</strong>.
+SAS 70</p>
+</div>
+<div class="paragraph">
+<p>IaaS assurance
+SaaS assurance</p>
+</div>
+<div class="paragraph">
+<p>Data safe harbor -to be discussed in next section</p>
+</div>
+<div class="paragraph">
+<p>"Dynamic certification of Cloud services: Trust, but verify!" Lins et al, computing edge,</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_audit_in_general">Audit in general</h5>
 <div class="quoteblock">
 <blockquote>
 Agile or not, a team ultimately has to meet legal and essential organizational needs, and audits help to ensure this.
@@ -17396,6 +17454,27 @@ Agile or not, a team ultimately has to meet legal and essential organizational n
 &#8212; Scott Ambler<br>
 <cite>Disciplined Agile Delivery</cite>
 </div>
+</div>
+<div class="paragraph">
+<p>Types of audit</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>External</p>
+</li>
+<li>
+<p>Internal</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Scope and bounds
+* Finance
+* IT</p>
+</div>
+<div class="paragraph">
+<p>Recipient is key</p>
 </div>
 <div class="sect5">
 <h6 id="_external_audit">External audit</h6>
@@ -17496,17 +17575,8 @@ COBIT</p>
 <div class="paragraph">
 <p>We have already covered contracting in terms of software and Cloud. But in terms of the emergence model, it is typical that companies enter into contracts before having a fully mature sourcing and contract management capability with input from the governance, risk, and compliance perspective.</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_agile_meets_it_governance">Agile meets IT governance</h5>
 <div class="paragraph">
-<p>"The wall" is embedded in ISO 38500&#8230;&#8203; product-centric management is not supported</p>
-</div>
-<div class="paragraph">
-<p>Are governance frameworks suited to define execution models?</p>
-</div>
-<div class="paragraph">
-<p>organizational scar tissue</p>
+<p>Assurance</p>
 </div>
 </div>
 </div>
@@ -17637,7 +17707,41 @@ referred to as ‘stress’ testing</p>
 <p>COBIT prefers to no longer use term "control"</p>
 </div>
 <div class="sect4">
-<h5 id="_assurance">Assurance</h5>
+<h5 id="_it_related_risks">IT-related risks</h5>
+<div class="sect5">
+<h6 id="_availability">Availability</h6>
+<div class="paragraph">
+<p>foreshadow Simian Army</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_continuity_and_recovery">Continuity and recovery</h6>
+<div class="paragraph">
+<p>A large class of risk that often results in projects or ongoing organizations</p>
+</div>
+<div class="paragraph">
+<p>The nightmare of a cold standby failure in a legacy heterogeneous environment</p>
+</div>
+<div class="paragraph">
+<p>Infrastructure as code can be a significant mitigator - investments can justify themselves</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_security_as_a_risk">Security as a risk</h6>
+<div class="paragraph">
+<p>(segue)</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_risk_management_antipatterns">Risk management antipatterns</h5>
+<div class="paragraph">
+<p>hubbard failure of risk management - review</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_assurance_and_audit">Assurance and Audit</h4>
 <div class="quoteblock">
 <blockquote>
 Exercise caution in your business affairs;
@@ -17646,6 +17750,16 @@ for the world is full of trickery.
 <div class="attribution">
 &#8212; Max Ehrmann<br>
 <cite>Desiderata</cite>
+</div>
+</div>
+<div class="quoteblock">
+<blockquote>
+Assurance means that, pursuant to an accountability relationship between two or more parties, an IT audit and assurance
+professional may be engaged to issue a written communication expressing a conclusion about the subject matters to the
+accountable party.
+</blockquote>
+<div class="attribution">
+&#8212; Cobit 5 for Assurance
 </div>
 </div>
 <div class="quoteblock">
@@ -17667,6 +17781,10 @@ Businesses must find a level of trust between each other  . . .  3rd party repor
 <p>external</p>
 </div>
 <div class="paragraph">
+<p>Assurance and industry standards
+manufacturing tolerance examples</p>
+</div>
+<div class="paragraph">
 <p>Data center evaluations of cloud providers are a form of <strong>assurance</strong>.
 SAS 70</p>
 </div>
@@ -17680,39 +17798,87 @@ SaaS assurance</p>
 <div class="paragraph">
 <p>"Dynamic certification of Cloud services: Trust, but verify!" Lins et al, computing edge,</p>
 </div>
-</div>
 <div class="sect4">
-<h5 id="_benchmarking">Benchmarking</h5>
-
+<h5 id="_audit_in_general_2">Audit in general</h5>
+<div class="quoteblock">
+<blockquote>
+Agile or not, a team ultimately has to meet legal and essential organizational needs, and audits help to ensure this.
+</blockquote>
+<div class="attribution">
+&#8212; Scott Ambler<br>
+<cite>Disciplined Agile Delivery</cite>
 </div>
-<div class="sect4">
-<h5 id="_availability">Availability</h5>
-<div class="paragraph">
-<p>foreshadow Simian Army</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_continuity_and_recovery">Continuity and recovery</h5>
-<div class="paragraph">
-<p>A large class of risk that often results in projects or ongoing organizations</p>
 </div>
 <div class="paragraph">
-<p>The nightmare of a cold standby failure in a legacy heterogeneous environment</p>
+<p>Types of audit</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>External</p>
+</li>
+<li>
+<p>Internal</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Infrastructure as code can be a significant mitigator - investments can justify themselves</p>
+<p>Scope and bounds
+* Finance
+* IT</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_security_as_a_risk">Security as a risk</h5>
 <div class="paragraph">
-<p>(segue)</p>
+<p>Recipient is key</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_risk_management_antipatterns">Risk management antipatterns</h5>
+<div class="sect5">
+<h6 id="_external_audit_2">External audit</h6>
 <div class="paragraph">
-<p>hubbard failure of risk management - review</p>
+<p>"The Committee therefore recommends that all listed companies should establish an audit committee."  <a href="#Cadbury1992">[Cadbury1992]</a>, 4.35</p>
+</div>
+<div class="paragraph">
+<p>An external auditor is chartered by a regulatory authority to visit an
+enterprise or entity and to review and independently report the results of that review. <a href="#Moeller2013">[Moeller2013]</a> p 319</p>
+</div>
+<div class="paragraph">
+<p>Phoenix project example</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_internal_audit_2">Internal audit</h6>
+<div class="quoteblock">
+<blockquote>
+Internal auditing is an independent appraisal function established within an organization to examine and evaluate its activities as a service to the organization.
+</blockquote>
+<div class="attribution">
+&#8212; Institute of Internal Auditors
+</div>
+</div>
+<div class="paragraph">
+<p>Usually reports to audit committee</p>
+</div>
+<div class="paragraph">
+<p>"The function of the internal auditors is complementary to, but different from, that of the outside auditors." <a href="#Cadbury1992">[Cadbury1992]</a>, 4.39</p>
+</div>
+<div class="paragraph">
+<p>the typical internal audit process requires scheduling a review, perform
+ing a risk assessment and necessary audit procedures, and then reporting the results
+of an audit to management and the audit committee.<a href="#Moeller2013">[Moeller2013]</a> p 324</p>
+</div>
+<div class="paragraph">
+<p>Institute of Internal Auditors</p>
+</div>
+<div class="paragraph">
+<p>Auditing of areas other than security e.g. performance reporting</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_audit_practices_2">Audit practices</h6>
+<div class="literalblock">
+<div class="content">
+<pre>DevOps Audit Defense Toolkit discussion
+Evidence p 17</pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -17810,9 +17976,29 @@ Business or IT governance constructs and processes that do not support new techn
 <div class="paragraph">
 <p>CIO-centric "order taking" organizational form is assumed through ISO 38500, Selig, Moeller</p>
 </div>
+<div class="paragraph">
+<p>"The business" defines the audit plan</p>
+</div>
+<div class="paragraph">
+<p>Now, the digital product org needs to define its own plan - proactively define the control objectives - <a href="#Moeller2013">[Moeller2013]</a></p>
+</div>
+<div class="paragraph">
+<p>Yearly batch cycle, may not change anytime soon</p>
+</div>
 </div>
 <div class="sect4">
-<h5 id="_allocation_of_capital_in_large_batches">Allocation of capital in large batches</h5>
+<h5 id="_agile_meets_it_governance">Agile meets IT governance</h5>
+<div class="paragraph">
+<p>"The wall" is embedded in ISO 38500&#8230;&#8203; product-centric management is not supported</p>
+</div>
+<div class="paragraph">
+<p>Are governance frameworks suited to define execution models?</p>
+</div>
+<div class="paragraph">
+<p>organizational scar tissue</p>
+</div>
+<div class="sect5">
+<h6 id="_allocation_of_capital_in_large_batches">Allocation of capital in large batches</h6>
 <div class="paragraph">
 <p>Pros and cons - sometimes, one needs to accept the fog of R&amp;D
 This never changes
@@ -17825,8 +18011,8 @@ The iconic entrepreneur asking for one more round</p>
 <p>VC view</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_governance_and_product_centricity">Governance and product centricity</h5>
+<div class="sect5">
+<h6 id="_governance_and_product_centricity">Governance and product centricity</h6>
 <div class="paragraph">
 <p>Whether enterprise IT governance processes have grown unin
 tentionally through evolving process improvements or grown intentionally through a
@@ -17841,6 +18027,7 @@ deliberate project, the questions a senior manager should ask include: "How good
 <p>How do the VCs do it? Can this scale down into the enterprise?
 Additional concerns within the boundary of a firm: higher leverage points because of sharing, reducing transaction costs
 Reality on tech product: successful digital firms strongly govern tech portfolio, do not allow experimentation that could expand base tech footprint. See chapter 12.</p>
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -17874,9 +18061,8 @@ Reality on tech product: successful digital firms strongly govern tech portfolio
 <p>re: principal-agent - one technique mentioned by <a href="#Eisenhardt1989">[Eisenhardt1989]</a> is to align interests through cultural intervention  - "relax the assumption
  of goal conflict between the principal and agent" p62 cites Demski/Ouchi/Perrow.</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_siam_cloud_risks">SIAM/Cloud risks</h5>
+<div class="sect5">
+<h6 id="_siam_cloud_risks">SIAM/Cloud risks</h6>
 <div class="paragraph">
 <p>Cloud (also mentioned in risk section)</p>
 </div>
@@ -17889,11 +18075,6 @@ Recovery
 investigation
 Viability (assurance)</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_antifragility">Antifragility</h5>
-<div class="paragraph">
-<p>Simian Army</p>
 </div>
 </div>
 <div class="sect4">
@@ -17917,11 +18098,8 @@ Embed, automate, iterate</p>
 <div class="paragraph">
 <p>Unacceptability of out of band governance demands</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_technical_policies">Technical policies</h5>
 <div class="paragraph">
-<p>Foreshadow Chapter 12</p>
+<p>Technical policies - foreshadow Chapter 12</p>
 </div>
 </div>
 <div class="sect4">
@@ -17988,9 +18166,25 @@ discussion in DevOps Audit Defense Toolkit</p>
 <p>This leads us beautifully to Chapter 11.</p>
 </div>
 </div>
+<div class="sect4">
+<h5 id="_antifragility">Antifragility</h5>
+<div class="paragraph">
+<p>Simian Army</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_continuous_delivery_and_security">Continuous delivery and security</h5>
+<div class="paragraph">
+<p>DevSecOps, RuggedDevOps, etc</p>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_topics">Topics</h4>
+<div class="sect4">
+<h5 id="_benchmarking">Benchmarking</h5>
+
+</div>
 <div class="sect4">
 <h5 id="_use_of_governance_concerns_to_further_agendas">Use of governance concerns to further agendas</h5>
 <div class="paragraph">
@@ -17998,12 +18192,6 @@ discussion in DevOps Audit Defense Toolkit</p>
 </div>
 <div class="paragraph">
 <p>"segregation of duties" as positional defense</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_continuous_delivery_and_security">Continuous delivery and security</h5>
-<div class="paragraph">
-<p>DevSecOps, RuggedDevOps, etc</p>
 </div>
 </div>
 <div class="sect4">
@@ -19107,7 +19295,7 @@ IEEE Press.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-05-04 14:21:38 CDT
+Last updated 2016-06-04 16:55:01 CDT
 </div>
 </div>
 </body>
