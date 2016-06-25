@@ -928,6 +928,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_section_iv_enterprise">Section IV: Enterprise</a>
 <ul class="sectlevel2">
 <li><a href="#_section_iv_introduction">Section IV introduction</a></li>
+<li><a href="#_special_section_the_it_lifecycles">Special section: The IT lifecycles</a></li>
 <li><a href="#_chapter_10_governance_risk_security_and_compliance">Chapter 10: Governance, Risk, Security, and Compliance</a>
 <ul class="sectlevel3">
 <li><a href="#_introduction_to_chapter_10">Introduction to Chapter 10</a>
@@ -978,8 +979,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_a_new_class_of_organizational_risks">A new class of organizational risks</a></li>
 <li><a href="#_governance_as_demand">Governance as demand</a></li>
 <li><a href="#_automating_digital_governance">Automating digital governance</a></li>
-<li><a href="#_antifragility">Antifragility</a></li>
-<li><a href="#_continuous_delivery_and_security">Continuous delivery and security</a></li>
+<li><a href="#_antifragility_continuous_delivery_and_security">Antifragility, continuous delivery, and security</a></li>
 </ul>
 </li>
 <li><a href="#_topics">Topics</a></li>
@@ -1024,7 +1024,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_chapter_raw_material">Chapter raw material</a></li>
 </ul>
 </li>
-<li><a href="#_special_section_the_it_lifecycles">Special section: The IT lifecycles</a></li>
 <li><a href="#_conclusion_12">Conclusion</a>
 <ul class="sectlevel4">
 <li><a href="#_discussion_questions_12">Discussion questions</a></li>
@@ -8638,6 +8637,11 @@ The following are examples of state:</p>
 </li>
 <li>
 <p>Drift from policy</p>
+<div class="literalblock">
+<div class="content">
+<pre>foreward ref to SecOps</pre>
+</div>
+</div>
 </li>
 </ul>
 </div>
@@ -16557,6 +16561,38 @@ Sidebar: Lessons from manufacturing, operations research, etc</pre>
 </div>
 </div>
 <div class="sect2">
+<h3 id="_special_section_the_it_lifecycles">Special section: The IT lifecycles</h3>
+<div class="paragraph">
+<p>Needed for remaining sections</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Weill discusses need for TLM in IT Governance</pre>
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>The folly of letting TLM dominate</strong></p>
+</div>
+<div class="paragraph">
+<p>Henrik Kniberg tells the story of one of his most successful projects — a system built for the Swedish police that allowed them to use laptops in the field — and what happened afterwards <a href="#Kniberg2011">[Kniberg2011]</a>. Because the project was extremely urgent, the group was allowed to use an agile approach and break out of the traditional organizational culture. Everything went well, the police organization viewed it as a success, and the project even won a “project of the year” award.</p>
+</div>
+<div class="paragraph">
+<p>What came next, however, was even more interesting. A high-level decision was made to rebuild from scratch that same system police had used in the field, using Siebel. This was part of a standardization effort to reduce the complexity and number of systems. Not only was the decision made to use a technology that the development team didn’t agree with, but it was decided to use a more traditional, sequential project-management approach to development. Development took a couple years and when it finally rolled out, it was a disaster because the police found it to be slow and clumsy and basically unusable. Making the change even more difficult was that the police preferred their existing system, which worked. Kniberg estimates that this cost the Swedish police more than £1 billion.</p>
+</div>
+<div class="paragraph">
+<p>in <a href="http://www.infoq.com/resource/minibooks/why-agile-works/en/pdf/InfoQ-Why-Agile-Works-Mini-book.pdf" class="bare">http://www.infoq.com/resource/minibooks/why-agile-works/en/pdf/InfoQ-Why-Agile-Works-Mini-book.pdf</a></p>
+</div>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>1 billion pounds ($1.6B) would have bought a lot of support &amp; vendor leverage for the "nonstandard" technologies.</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
 <h3 id="_chapter_10_governance_risk_security_and_compliance">Chapter 10: Governance, Risk, Security, and Compliance</h3>
 <div class="sect3">
 <h4 id="_introduction_to_chapter_10">Introduction to Chapter 10</h4>
@@ -16933,7 +16969,18 @@ draw picture like COBIT</p>
 <p>Board-level concern</p>
 </div>
 <div class="paragraph">
-<p>"Principles, policies, and frameworks" - COBIT concept</p>
+<p>Draw pic &amp; restate for compliance and security</p>
+</div>
+<div class="paragraph">
+<p>Principles
+Policies
+Processes</p>
+</div>
+<div class="paragraph">
+<p>Don&#8217;t overcomplicate</p>
+</div>
+<div class="paragraph">
+<p>Example?</p>
 </div>
 <div class="paragraph">
 <p>Variety of policies:</p>
@@ -17560,6 +17607,16 @@ Evidence p 17</pre>
 <h4 id="_security">Security</h4>
 <div class="quoteblock">
 <blockquote>
+ISACA defines information security as something that: Ensures that within the enterprise, information is protected against disclosure to unauthorised users
+(confidentiality), improper modification (integrity) and non-access when required (availability).
+</blockquote>
+<div class="attribution">
+&#8212; ISACA<br>
+<cite>Cobit 5 for Security</cite>
+</div>
+</div>
+<div class="quoteblock">
+<blockquote>
 In reality, organizations have many other things to do than practice security.
 </blockquote>
 <div class="attribution">
@@ -17571,7 +17628,7 @@ In reality, organizations have many other things to do than practice security.
 <p>Security is a significant and well-known domain in and of itself. Ultimtely, however, <strong>security is an <em>application</em> of the governance principles discussed in the previous sections</strong>. Deriving ultimately from the stakeholder&#8217;s desire to sustain and protect the enterprise, security relies on accurate risk assessment, a clear enabling strategy (i.e. controls), and effective assurance practices (e.g. security audits). In fact, much of the previous material on controls was derived from the CISSP guide, because the concepts are generally applicable to risk management, not only security risks.</p>
 </div>
 <div class="paragraph">
-<p>You have been practicing security</p>
+<p>You have been practicing security since you first selected your initial choice of development platform in Chapter 2.</p>
 </div>
 <div class="paragraph">
 <p>attack vs defense</p>
@@ -17579,11 +17636,28 @@ In reality, organizations have many other things to do than practice security.
 <div class="paragraph">
 <p>CIA</p>
 </div>
+<div class="paragraph">
+<p>Should align to principles/policy/process framework (draw picture)</p>
+</div>
 <div class="sect4">
 <h5 id="_information_classification">Information classification</h5>
+<div class="quoteblock">
+<blockquote>
+At a time when the significance of information and related technologies is increasing in every aspect of business and public life, the need to mitigate information risk, which includes protecting information and related IT assets from ever-changing threats, is constantly intensifying.
+</blockquote>
+<div class="attribution">
+&#8212; ISACA<br>
+<cite>Cobit 5 for Security</cite>
+</div>
+</div>
 <div class="paragraph">
-<p>Simple 4-tier
-Foreshadow compliance and EIM sections</p>
+<p>Simple 4-tier</p>
+</div>
+<div class="paragraph">
+<p>Foreshadow compliance and EIM sections</p>
+</div>
+<div class="paragraph">
+<p>Foreshadow IT portfolio (rats, we do need that special section)</p>
 </div>
 </div>
 <div class="sect4">
@@ -17594,9 +17668,10 @@ Foreshadow compliance and EIM sections</p>
 <div class="sect5">
 <h6 id="_security_architecture">Security architecture</h6>
 <div class="paragraph">
-<p>Authentication &amp; authorization
-Endless topic: encryption, network architectures, &#8230;&#8203; much published. Get a CISSP.
-Backref to Ch 6, state management</p>
+<p>Authentication &amp; authorization</p>
+</div>
+<div class="paragraph">
+<p>Endless topic: encryption, network architectures, &#8230;&#8203; much published. Get a CISSP.</p>
 </div>
 </div>
 <div class="sect5">
@@ -17609,6 +17684,15 @@ Zero day - segue to SecOps</p>
 </div>
 <div class="sect4">
 <h5 id="_security_operations">Security operations</h5>
+<div class="paragraph">
+<p>Altered states &#8594; events</p>
+</div>
+<div class="paragraph">
+<p>Backref to Ch 6, state/config management</p>
+</div>
+<div class="paragraph">
+<p>Event management</p>
+</div>
 <div class="sect5">
 <h6 id="_functional">Functional</h6>
 <div class="paragraph">
@@ -17931,15 +18015,12 @@ discussion in DevOps Audit Defense Toolkit</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_antifragility">Antifragility</h5>
-<div class="paragraph">
-<p>Simian Army</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_continuous_delivery_and_security">Continuous delivery and security</h5>
+<h5 id="_antifragility_continuous_delivery_and_security">Antifragility, continuous delivery, and security</h5>
 <div class="paragraph">
 <p>DevSecOps, RuggedDevOps, etc</p>
+</div>
+<div class="paragraph">
+<p>Simian Army</p>
 </div>
 </div>
 </div>
@@ -18485,35 +18566,6 @@ difficult for them to stay hands on</p>
 </div>
 <div class="paragraph">
 <p><a id="IT-lifecycles"></a></p>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_special_section_the_it_lifecycles">Special section: The IT lifecycles</h4>
-<div class="literalblock">
-<div class="content">
-<pre>Weill discusses need for TLM in IT Governance</pre>
-</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>The folly of letting TLM dominate</strong></p>
-</div>
-<div class="paragraph">
-<p>Henrik Kniberg tells the story of one of his most successful projects — a system built for the Swedish police that allowed them to use laptops in the field — and what happened afterwards <a href="#Kniberg2011">[Kniberg2011]</a>. Because the project was extremely urgent, the group was allowed to use an agile approach and break out of the traditional organizational culture. Everything went well, the police organization viewed it as a success, and the project even won a “project of the year” award.</p>
-</div>
-<div class="paragraph">
-<p>What came next, however, was even more interesting. A high-level decision was made to rebuild from scratch that same system police had used in the field, using Siebel. This was part of a standardization effort to reduce the complexity and number of systems. Not only was the decision made to use a technology that the development team didn’t agree with, but it was decided to use a more traditional, sequential project-management approach to development. Development took a couple years and when it finally rolled out, it was a disaster because the police found it to be slow and clumsy and basically unusable. Making the change even more difficult was that the police preferred their existing system, which worked. Kniberg estimates that this cost the Swedish police more than £1 billion.</p>
-</div>
-<div class="paragraph">
-<p>in <a href="http://www.infoq.com/resource/minibooks/why-agile-works/en/pdf/InfoQ-Why-Agile-Works-Mini-book.pdf" class="bare">http://www.infoq.com/resource/minibooks/why-agile-works/en/pdf/InfoQ-Why-Agile-Works-Mini-book.pdf</a></p>
-</div>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>1 billion pounds ($1.6B) would have bought a lot of support &amp; vendor leverage for the "nonstandard" technologies.</pre>
 </div>
 </div>
 </div>
