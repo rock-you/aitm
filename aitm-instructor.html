@@ -946,17 +946,25 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_risk">Risk</a>
 <ul class="sectlevel4">
-<li><a href="#_internal_controls">Internal controls</a></li>
+<li><a href="#_risk_management_fundamentals">Risk management fundamentals</a></li>
 <li><a href="#_it_related_risks">IT-related risks</a></li>
-<li><a href="#_risk_management_antipatterns">Risk management antipatterns</a></li>
+<li><a href="#_controls_and_enablers">Controls and enablers</a></li>
 </ul>
 </li>
 <li><a href="#_assurance_and_audit">Assurance and Audit</a>
 <ul class="sectlevel4">
+<li><a href="#_assurance">Assurance</a></li>
 <li><a href="#_audit_in_general">Audit in general</a></li>
 </ul>
 </li>
-<li><a href="#_security">Security</a></li>
+<li><a href="#_security">Security</a>
+<ul class="sectlevel4">
+<li><a href="#_information_classification">Information classification</a></li>
+<li><a href="#_security_engineering">Security engineering</a></li>
+<li><a href="#_security_operations">Security operations</a></li>
+<li><a href="#_security_and_grc_in_general">Security and GRC in general</a></li>
+</ul>
+</li>
 <li><a href="#_compliance">Compliance</a></li>
 <li><a href="#_digital_governance">Digital Governance</a>
 <ul class="sectlevel4">
@@ -969,15 +977,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_continuous_delivery_and_security">Continuous delivery and security</a></li>
 </ul>
 </li>
-<li><a href="#_topics">Topics</a>
-<ul class="sectlevel4">
-<li><a href="#_antipatterns">Antipatterns</a></li>
-<li><a href="#_implementation">Implementation</a></li>
-<li><a href="#_benchmarking">Benchmarking</a></li>
-<li><a href="#_trusted_supply_chain">Trusted supply chain</a></li>
-<li><a href="#_promise_theory">Promise Theory</a></li>
-</ul>
-</li>
+<li><a href="#_topics">Topics</a></li>
 <li><a href="#_conclusion_10">Conclusion</a>
 <ul class="sectlevel4">
 <li><a href="#_discussion_questions_10">Discussion questions</a></li>
@@ -994,6 +994,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_chapter_11_outline">Chapter 11 outline</a></li>
 <li><a href="#_data_information_knowledge">Data, information, knowledge</a></li>
 <li><a href="#_the_ontology_problem">The ontology problem</a></li>
+<li><a href="#_information_related_risks">Information related risks</a></li>
 <li><a href="#_records_vs_data">Records vs data</a></li>
 <li><a href="#_the_data_management_technology_landscape">The data management technology landscape</a></li>
 <li><a href="#_input_material">input material</a></li>
@@ -14284,6 +14285,20 @@ In Chapter 10, we will discuss IT governance in depth. The concept of "control" 
 <div class="paragraph">
 <p>Measurement is an essential aspect of process management, but must be carefully designed. Measuring process can have unforeseen results. Process participants will behave according to how the process is measured. If a help desk operator is measured and rated on how many calls they process an hour, the quality of those interactions may suffer. It is critical that any process "key performance indicator" be understood in terms of the highest possible business objectives. Is the objective truly to process as many calls as possible? Or is it to satisfy the customer so they need not turn to other channels to get their answers? (More on measurement in the chapter section on <a href="#continuous-improvement">Continuous Improvement</a>.)</p>
 </div>
+<div class="literalblock">
+<div class="content">
+<pre>===== The core IT service management processes
+Change
+Service Request
+Incident
+Problem</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>There are many more hypothetical... discussed subsequently</pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -15363,7 +15378,7 @@ Monitoring of CSI Initiatives<br></p></td>
 <p>Where ITIL contains narrative of considerable length, COBIT is more terse and structured, providing a useful framework for the construction and testing of suitable controls for IT governance.</p>
 </div>
 <div class="paragraph">
-<p>We will discuss the concepts of IT governance and controls in the next section, and therefore at this point in the reading are not completely ready to evaluate COBIT in terms of its initial objectives. However, COBIT is widely used as a reference for understanding IT organizational processes and activities, and is discussed in that sense here.</p>
+<p>We will discuss the concepts of IT governance and controls in the next section, and therefore at this point in the reading are not completely ready to evaluate COBIT in terms of its initial objectives. (In COBIT terms, processes are just one of various "enablers" that can serve as controls for enterprise risk.) However, COBIT is widely used as a reference for understanding IT organizational processes and activities, and is discussed in that sense here.</p>
 </div>
 <div class="paragraph">
 <p>The following processes are suggested by COBIT for IT management and goverance. (<em>Governance</em>, the "EDM" processes, is very clearly distinguished from <em>management</em> in COBIT. We will discuss this in Chapter 10.)</p>
@@ -16579,13 +16594,18 @@ As with other chapters in the later part of this book, we are going to introduce
 <p>You&#8217;ve been doing security since your company started, otherwise you would not have gotten this big. But now, you have a Chief Information Security Officer, formal risk management processes, auditors, and compliance specialists. That kind of formalization does not usually happen until an organization grows to a certain size.</p>
 </div>
 <div class="paragraph">
-<p>We needed the content in Section 3 to get this far. We had to understand our structure, how we were organizing our strategic investments, and how we were engaging in operational activities. In particular it is difficult to see how any organization can govern itself without some ability to define and execute processes, as processes often support governance controls and security protocols.</p>
+<p>We needed the content in Section 3 to get this far. We had to understand our structure, how we were organizing our strategic investments, and how we were engaging in operational activities. In particular <strong>it&#8217;s difficult for an organization to govern itself without some ability to define and execute processes, as processes often support governance controls and security protocols.</strong></p>
 </div>
 <div class="paragraph">
 <p>This chapter covers "Governance, Risk, Security, and Compliance" because there are clear relationships between these concerns. They have important dimensions of independence as well. It is interesting that the popular Guide to the CISSP starts its discussion of security with a chapter titled "Information Security Governance and Risk Management." Governance leads to a concern for risk, and security specializes in certain important classes of risk. Security requires grounding in governance and risk management.</p>
 </div>
 <div class="paragraph">
 <p>Compliance is also related but again distinct, as the concern for adherence to laws and regulations, and secondarily internal policy.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>discuss chapter order - security per se is strongly foreshadowed &amp; prepped by gov/risk/assurance material</pre>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_chapter_10_outline">Chapter 10 outline</h5>
@@ -16765,6 +16785,9 @@ Corporate governance involves a set of relationships between a company’s manag
 </div>
 <div class="paragraph">
 <p>need for auditors</p>
+</div>
+<div class="paragraph">
+<p>matrix D,E,M against effectiveness/efficiency/risk</p>
 </div>
 </div>
 <div class="sect5">
@@ -16979,8 +17002,10 @@ Risk is defined as the possibility that an event will occur and adversely affect
 </div>
 </div>
 <div class="paragraph">
-<p>According to Treadway, control &amp; risk are distinct but overlap</p>
+<p>Primary concepts: Risk and Control, M:M</p>
 </div>
+<div class="sect4">
+<h5 id="_risk_management_fundamentals">Risk management fundamentals</h5>
 <div class="paragraph">
 <p>Define vulnerability, threat agent, threat, risk, control, exposure, safeguard/control/enabler
 (CISSP)</p>
@@ -17086,16 +17111,51 @@ referred to as ‘stress’ testing</p>
 <p>OCEG</p>
 </div>
 <div class="paragraph">
-<p>Primary concepts: Risk and Control, M:M</p>
+<p>Hubbard cautions on aggregating risk</p>
 </div>
-<div class="paragraph">
-<p>Lines of defence (COBIT for Risk)</p>
-</div>
-<div class="paragraph">
-<p>COBIT prefers to no longer use term "control"</p>
 </div>
 <div class="sect4">
-<h5 id="_internal_controls">Internal controls</h5>
+<h5 id="_it_related_risks">IT-related risks</h5>
+<div class="paragraph">
+<p>Prominent issues - Barclay&#8217;s, Target, etc
+risk of learning wrong lessons w/r/t complex systems - more "rigor" is not necessarily the answer - impossibility of testing all outcomes (cite relevant SEng)&#8201;&#8212;&#8201;THE FUNDAMENTAL ISSUE</p>
+</div>
+<div class="paragraph">
+<p>defenses covered in subsequent section</p>
+</div>
+<div class="paragraph">
+<p>principles: antifragility, defense in depth, fast feedback, automation (2-edged sword), analytics &amp; pattern recognition - pointer back to chapter 6</p>
+</div>
+<div class="sect5">
+<h6 id="_availability">Availability</h6>
+<div class="paragraph">
+<p>importance of antifragility techniques</p>
+</div>
+<div class="paragraph">
+<p>foreshadow Simian Army</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_continuity_and_recovery">Continuity and recovery</h6>
+<div class="paragraph">
+<p>A large class of risk that often results in projects or ongoing organizations</p>
+</div>
+<div class="paragraph">
+<p>The nightmare of a cold standby failure in a legacy heterogeneous environment</p>
+</div>
+<div class="paragraph">
+<p>Infrastructure as code can be a significant mitigator - investments can justify themselves</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_security_as_a_risk">Security as a risk</h6>
+<div class="paragraph">
+<p>foreward ref</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_controls_and_enablers">Controls and enablers</h5>
 <div class="quoteblock">
 <blockquote>
 Internal control is a process, effected by an entity&#8217;s board of directors, management, and other personnel, designed to provide reasonable assurance regarding the achievement of objectives relating to operations, reporting, and compliance.
@@ -17105,8 +17165,106 @@ Internal control is a process, effected by an entity&#8217;s board of directors,
 <cite>Internal Control - Integrated Framework</cite>
 </div>
 </div>
+<div class="quoteblock">
+<blockquote>
+The term <em>control objective</em> is no longer a mainstream term used in COBIT 5, and the word <em>control</em> is used only rarely. Instead, COBIT 5 uses the concepts of process practices and process activities.
+</blockquote>
+<div class="attribution">
+&#8212; ISACA<br>
+<cite>COBIT 5 for Assurance</cite>
+</div>
+</div>
 <div class="paragraph">
 <p>Have existed from ancient times</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>The loaded term "control"
+Controls language can be a barrier - it&#8217;s a technical term of art</p>
+</div>
+<div class="paragraph">
+<p>A "controlling" relationship</p>
+</div>
+<div class="paragraph">
+<p>The technical term from control theory - error deliberately introduced to a function to move it in a desired direction (check Tunde)</p>
+</div>
+<div class="paragraph">
+<p>COBIT no longer uses term. "" <a href="#ISACA2013a">[ISACA2013a]</a> p. 57.</p>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_coso">COSO</h6>
+<div class="paragraph">
+<p>Because it is so essential, official statements defining control carry much influence. The leading definition of internal control and its related practices is published by the Council of Sponsoring Organizations of the Treadway Commission (COSO).</p>
+</div>
+<div class="paragraph">
+<p><strong>What is COSO?</strong></p>
+</div>
+<div class="paragraph">
+<p>The Council of Sponsoring Organizations of the Treadway Commission (COSO) has a non-intuitive name, especially given its global influence.</p>
+</div>
+<div class="paragraph">
+<p>COSO is a "private sector initiative," funded by:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Institute of Certified Public Accountants (AICPA),</p>
+</li>
+<li>
+<p>American Accounting Association (AAA),</p>
+</li>
+<li>
+<p>Financial Executives International (FEI),</p>
+</li>
+<li>
+<p>Institute of Internal Auditors (IIA)</p>
+</li>
+<li>
+<p>Institute of Management Accountants (IMA).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>It was founded in 1985 to support the National Commission on Fraudulent Financial Reporting, and has published various reports and guidance mostly concerned with the topic of internal control.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Control activities are the actions established through policies and procedures that help ensure that management&#8217;s directives to mitigate risks to the achievement of objectives are carried out. Control activities are performed at all levels of the entity, at various stages within business processes, and over the technology environment. They may be preventive or detective in nature and may encompass a range of manual and automated activities such as authorizations and approvals, verifications, reconciliations, and business performance reviews.</p>
+</div>
+<div class="paragraph">
+<p>Ongoing evaluations, separate evaluations, or some combination of the two are used to ascertain whether each of the five components of internal control, including controls to effect the principles within each component, is present and functioning. Ongoing evaluations, built into business processes at different levels of the entity, provide timely information. Separate evaluations, conducted periodically, will vary in scope and frequency depending on assessment of risks, effectiveness of ongoing evaluations, and other management considerations. Findings are evaluated against criteria established by regulators, recognized standard-setting bodies or management and the board of directors, and deficiencies are communicated to management and the board of directors as appropriate.
+<a href="#COSO2013">[COSO2013]</a></p>
+</div>
+<div class="paragraph">
+<p>Concern: "recognized standard-setting bodies" - who? ISACA? Axelos?</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_the_cobit_enabler_concept">The COBIT enabler concept</h6>
+
+</div>
+<div class="sect5">
+<h6 id="_control_categories">Control categories</h6>
+<div class="paragraph">
+<p>We&#8217;ll continue to use the generic term control as ultimately COBIT did not provide a good, terse substitute. "Testing enablers" is not how auditors talk.</p>
+</div>
+<div class="paragraph">
+<p>Ultimately, controls are Lines of defence (COBIT for Risk)</p>
+</div>
+<div class="paragraph">
+<p>Control functions (CISSP)
+Deterrent
+Preventive
+Corrective
+Recovery
+Detective
+Compensating</p>
 </div>
 <div class="paragraph">
 <p>Typical general control types</p>
@@ -17176,90 +17334,11 @@ An enterprise needs to understand the costs and implications of various controls
 </div>
 </div>
 <div class="paragraph">
-<p>"Working to rule" - when they proliferate
-controls theater
-this is called the "control environment"</p>
+<p>"Working to rule" - when they proliferate - demand implications</p>
 </div>
 <div class="paragraph">
-<p>Because it is so essential, official statements defining control carry much influence. The leading definition of internal control and its related practices is published by the Council of Sponsoring Organizations of the Treadway Commission (COSO).</p>
+<p>controls theater - cargo cult controls</p>
 </div>
-<div class="paragraph">
-<p><strong>What is COSO?</strong></p>
-</div>
-<div class="paragraph">
-<p>The Council of Sponsoring Organizations of the Treadway Commission (COSO) has a non-intuitive name, especially given its global influence.</p>
-</div>
-<div class="paragraph">
-<p>COSO is a "private sector initiative," funded by:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Institute of Certified Public Accountants (AICPA),</p>
-</li>
-<li>
-<p>American Accounting Association (AAA),</p>
-</li>
-<li>
-<p>Financial Executives International (FEI),</p>
-</li>
-<li>
-<p>Institute of Internal Auditors (IIA)</p>
-</li>
-<li>
-<p>Institute of Management Accountants (IMA).</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>It was founded in 1985 to support the National Commission on Fraudulent Financial Reporting, and has published various reports and guidance mostly concerned with the topic of internal control.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>Control activities are the actions established through policies and procedures that help ensure that management&#8217;s directives to mitigate risks to the achievement of objectives are carried out. Control activities are performed at all levels of the entity, at various stages within business processes, and over the technology environment. They may be preventive or detective in nature and may encompass a range of manual and automated activities such as authorizations and approvals, verifications, reconciliations, and business performance reviews.</p>
-</div>
-<div class="paragraph">
-<p>Ongoing evaluations, separate evaluations, or some combination of the two are used to ascertain whether each of the five components of internal control, including controls to effect the principles within each component, is present and functioning. Ongoing evaluations, built into business processes at different levels of the entity, provide timely information. Separate evaluations, conducted periodically, will vary in scope and frequency depending on assessment of risks, effectiveness of ongoing evaluations, and other management considerations. Findings are evaluated against criteria established by regulators, recognized standard-setting bodies or management and the board of directors, and deficiencies are communicated to management and the board of directors as appropriate.
-<a href="#COSO2013">[COSO2013]</a></p>
-</div>
-<div class="paragraph">
-<p>Concern: "recognized standard-setting bodies" - who? ISACA? Axelos?</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_it_related_risks">IT-related risks</h5>
-<div class="sect5">
-<h6 id="_availability">Availability</h6>
-<div class="paragraph">
-<p>foreshadow Simian Army</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_continuity_and_recovery">Continuity and recovery</h6>
-<div class="paragraph">
-<p>A large class of risk that often results in projects or ongoing organizations</p>
-</div>
-<div class="paragraph">
-<p>The nightmare of a cold standby failure in a legacy heterogeneous environment</p>
-</div>
-<div class="paragraph">
-<p>Infrastructure as code can be a significant mitigator - investments can justify themselves</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_security_as_a_risk">Security as a risk</h6>
-<div class="paragraph">
-<p>(segue)</p>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_risk_management_antipatterns">Risk management antipatterns</h5>
-<div class="paragraph">
-<p>hubbard failure of risk management - review</p>
 </div>
 </div>
 </div>
@@ -17275,16 +17354,36 @@ for the world is full of trickery.
 <cite>Desiderata</cite>
 </div>
 </div>
+<div class="paragraph">
+<p>intro</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>All audit is assurance, but not all assurance is audit. (Blurry boundary in practice, as an assurance engagement may be undertaken by auditors, and might be casually called an "audit" by the parties involved)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We can understand audit through understanding the general principles of assurance first.</p>
+</div>
+<div class="sect4">
+<h5 id="_assurance">Assurance</h5>
 <div class="quoteblock">
 <blockquote>
-Assurance means that, pursuant to an accountability relationship between two or more parties, an IT audit and assurance
-professional may be engaged to issue a written communication expressing a conclusion about the subject matters to the
+Assurance means that, pursuant to an accountability relationship between two or more parties, an IT audit and assurance professional may be engaged to issue a written communication expressing a conclusion about the subject matters to the
 accountable party.
 </blockquote>
 <div class="attribution">
 &#8212; Cobit 5 for Assurance
 </div>
 </div>
+<div class="sect5">
+<h6 id="_three_party_foundation">Three party foundation</h6>
+<div class="paragraph">
+<p>re-draw p15 cobit5 assurance</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_examples_non_audit">Examples (non-audit)</h6>
 <div class="quoteblock">
 <blockquote>
 Businesses must find a level of trust between each other  . . .  3rd party reports provide that confidence. Those issuing the reports stake their name &amp; liability with each issuance.
@@ -17293,15 +17392,6 @@ Businesses must find a level of trust between each other  . . .  3rd party repor
 &#8212; James DeLuccia<br>
 <cite>Successfully Establishing and Representing DevOps in an Audit</cite>
 </div>
-</div>
-<div class="paragraph">
-<p>3-party</p>
-</div>
-<div class="paragraph">
-<p>All audit is assurance, but not all assurance is audit.</p>
-</div>
-<div class="paragraph">
-<p>external</p>
 </div>
 <div class="paragraph">
 <p>Assurance and industry standards
@@ -17320,6 +17410,8 @@ SaaS assurance</p>
 </div>
 <div class="paragraph">
 <p>"Dynamic certification of Cloud services: Trust, but verify!" Lins et al, computing edge</p>
+</div>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_audit_in_general">Audit in general</h5>
@@ -17346,9 +17438,17 @@ Agile or not, a team ultimately has to meet legal and essential organizational n
 </ul>
 </div>
 <div class="paragraph">
-<p>Scope and bounds
-* Finance
-* IT</p>
+<p>Scope and bounds</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Finance</p>
+</li>
+<li>
+<p>IT</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>Recipient is key</p>
@@ -17395,7 +17495,49 @@ of an audit to management and the audit committee.<a href="#Moeller2013">[Moelle
 </div>
 </div>
 <div class="sect5">
-<h6 id="_audit_practices">Audit practices</h6>
+<h6 id="_assurance_practices">Assurance practices</h6>
+<div class="paragraph">
+<p>derived from <a href="#ISACA2013a">[ISACA2013a]</a></p>
+</div>
+<div class="paragraph">
+<p>Lifecycle</p>
+</div>
+<div class="paragraph">
+<p>Scoping
+* ID users of report (e.g. board audit committee)
+* ID accountable/responsible parties
+* ID Objectives
+* ID controls/enablers</p>
+</div>
+<div class="paragraph">
+<p>Performance</p>
+</div>
+<div class="paragraph">
+<p>Fundamental: expected vs actual</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enquire/confirm
+Documentation, interviews, transactional validation</p>
+</li>
+<li>
+<p>Inspect
+Process flows - trace tx thru system
+Physical inspection/walkthroughs</p>
+</li>
+<li>
+<p>Observe</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Attempt what is prevented</p>
+</div>
+<div class="paragraph">
+<p>Embedded tooling/modules
+Inspect the security protocols around them</p>
+</div>
 <div class="literalblock">
 <div class="content">
 <pre>DevOps Audit Defense Toolkit discussion
@@ -17417,26 +17559,66 @@ In reality, organizations have many other things to do than practice security.
 </div>
 </div>
 <div class="paragraph">
+<p>Security is a significant and well-known domain in and of itself. Ultimtely, however, <strong>security is an <em>application</em> of the governance principles discussed in the previous sections</strong>. Deriving ultimately from the stakeholder&#8217;s desire to sustain and protect the enterprise, security relies on accurate risk assessment, a clear enabling strategy (i.e. controls), and effective assurance practices (e.g. security audits). In fact, much of the previous material on controls was derived from the CISSP guide, because the concepts are generally applicable to risk management, not only security risks.</p>
+</div>
+<div class="paragraph">
+<p>You have been practicing security</p>
+</div>
+<div class="paragraph">
+<p>attack vs defense</p>
+</div>
+<div class="paragraph">
 <p>CIA</p>
 </div>
+<div class="sect4">
+<h5 id="_information_classification">Information classification</h5>
+<div class="paragraph">
+<p>Simple 4-tier
+Foreshadow compliance and EIM sections</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_security_engineering">Security engineering</h5>
 <div class="paragraph">
 <p>2-axis view</p>
 </div>
+<div class="sect5">
+<h6 id="_security_architecture">Security architecture</h6>
 <div class="paragraph">
-<p>SecEng</p>
+<p>Authentication &amp; authorization
+Endless topic: encryption, network architectures, &#8230;&#8203; much published. Get a CISSP.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_sourcing_and_security">Sourcing and security</h6>
+<div class="paragraph">
+<p>NIST CVE &amp; other sources
+Zero day - segue to SecOps</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_security_operations">Security operations</h5>
+<div class="sect5">
+<h6 id="_functional">Functional</h6>
+<div class="paragraph">
+<p>SOC overview</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_process">Process</h6>
+<div class="paragraph">
+<p>Detection
+Response
+Forensics</p>
 </div>
 <div class="paragraph">
-<p>Authentication &amp; authorization</p>
+<p>Relationship to other IT processes</p>
 </div>
-<div class="paragraph">
-<p>SecOps</p>
 </div>
-<div class="paragraph">
-<p>CISSP</p>
 </div>
-<div class="paragraph">
-<p>NIST CVE &amp; other sources</p>
-</div>
+<div class="sect4">
+<h5 id="_security_and_grc_in_general">Security and GRC in general</h5>
 <div class="paragraph">
 <p>Relationship to GRC</p>
 </div>
@@ -17444,11 +17626,13 @@ In reality, organizations have many other things to do than practice security.
 <p>What <strong>is</strong> that auditor doing anyways? Are they security? Or governance?</p>
 </div>
 <div class="paragraph">
-<p>Cloud certification</p>
+<p>Frameworks from a security perspective</p>
 </div>
 <div class="paragraph">
 <p>ISO 27002
+CISSP
 (good overview in Moeller)</p>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -17520,6 +17704,9 @@ Business or IT governance constructs and processes that do not support new techn
 <div class="paragraph">
 <p>organizational scar tissue</p>
 </div>
+<div class="paragraph">
+<p>Project governance is transitioning to product governance</p>
+</div>
 <div class="sect5">
 <h6 id="_allocation_of_capital_in_large_batches">Allocation of capital in large batches</h6>
 <div class="paragraph">
@@ -17556,6 +17743,12 @@ Reality on tech product: successful digital firms strongly govern tech portfolio
 <div class="sect4">
 <h5 id="_a_new_class_of_organizational_risks">A new class of organizational risks</h5>
 <div class="paragraph">
+<p>bring back d/e/m e/e/r matrix</p>
+</div>
+<div class="paragraph">
+<p>we can come back to this in digital - new classes/approaches to effectiveness risk</p>
+</div>
+<div class="paragraph">
 <p>From an IT governance perspective, what is the role of IT risk management in the new digital world? It&#8217;s not that risk management goes away. But there are significant new classes of risk that need to be better understood and managed:</p>
 </div>
 <div class="ulist">
@@ -17576,6 +17769,18 @@ Reality on tech product: successful digital firms strongly govern tech portfolio
 <p>Cultural dynamics destructive of high team performance</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>We now have better math &amp; understanding</p>
+</div>
+<div class="paragraph">
+<p>as Agile engages with traditional frameworks, this is the major transformation</p>
+</div>
+<div class="paragraph">
+<p>more on the effectiveness level, less on the efficiency</p>
+</div>
+<div class="paragraph">
+<p>but these effectiveness concerns consitute risk</p>
 </div>
 <div class="paragraph">
 <p>(not to mention more technical risks)</p>
@@ -17618,14 +17823,32 @@ Embed, automate, iterate</p>
 <p>Unacceptability of out of band governance demands</p>
 </div>
 <div class="paragraph">
+<p>working to rule (backref)</p>
+</div>
+<div class="paragraph">
 <p>Technical policies - foreshadow Chapter 12</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_automating_digital_governance">Automating digital governance</h5>
 <div class="paragraph">
-<p>Standalone systems
-Embedding</p>
+<p>Standalone systems</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Risk repository - needs to be integrated with subject inventories (portfolio &amp; processes)</p>
+</li>
+<li>
+<p>Issue tracking &amp; workflow</p>
+</li>
+<li>
+<p>Document mgmt systems</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Embedding</p>
 </div>
 <div class="paragraph">
 <p>Risk, control, compliance (and subsets like security and continuity) are always with respect TO something</p>
@@ -17700,37 +17923,41 @@ discussion in DevOps Audit Defense Toolkit</p>
 </div>
 <div class="sect3">
 <h4 id="_topics">Topics</h4>
-<div class="sect4">
-<h5 id="_antipatterns">Antipatterns</h5>
-<div class="sect5">
-<h6 id="_use_of_governance_concerns_to_further_agendas">Use of governance concerns to further agendas</h6>
-<div class="paragraph">
-<p>Phoenix project</p>
-</div>
-<div class="paragraph">
-<p>"segregation of duties" as positional defense</p>
+<div class="literalblock">
+<div class="content">
+<pre>===== Antipatterns
+====== Use of governance concerns to further agendas (Phoenix project John)</pre>
 </div>
 </div>
+<div class="literalblock">
+<div class="content">
+<pre>"segregation of duties" as positional defense</pre>
 </div>
-<div class="sect4">
-<h5 id="_implementation">Implementation</h5>
-
 </div>
-<div class="sect4">
-<h5 id="_benchmarking">Benchmarking</h5>
-
+<div class="literalblock">
+<div class="content">
+<pre>Implementation</pre>
 </div>
-<div class="sect4">
-<h5 id="_trusted_supply_chain">Trusted supply chain</h5>
-
 </div>
-<div class="sect4">
-<h5 id="_promise_theory">Promise Theory</h5>
+<div class="literalblock">
+<div class="content">
+<pre>Benchmarking</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Trusted supply chain</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Promise Theory</pre>
+</div>
+</div>
 <div class="literalblock">
 <div class="content">
 <pre>Hotline / whistleblowing
 Social media</pre>
-</div>
 </div>
 </div>
 </div>
@@ -17866,6 +18093,31 @@ As with other chapters in the later part of this book, we are going to introduce
 </div>
 <div class="paragraph">
 <p>BoundedContext and domain-driven design</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_information_related_risks">Information related risks</h5>
+<div class="paragraph">
+<p>We&#8217;ve discussed the simple 4-tier info sensitivity model (backref). A comprehensive information classification model must accommodate:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>sensitivity</p>
+</li>
+<li>
+<p>regulatory</p>
+</li>
+<li>
+<p>records</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Outside-in vs inside out - spectrum, meetin middle
+that is, data is a black box tagged with "Public" or "Top Secret" or some such
+or purely instrumental like "SOX" or "HIPAA"
+vs understanding the MEANING - e.g. "patient history" or "audit findings"</p>
 </div>
 </div>
 <div class="sect4">
@@ -18520,6 +18772,9 @@ difficult for them to stay hands on</p>
 </li>
 <li>
 <p><a id="Gruver2013"></a>[Gruver2013]:	Gruver, G., M. Young, and P. Fulghum, 2013, <em>A practical approach to large-scale Agile development : how HP transformed laserjet futuresmart firmware</em> xxiv, 183 pages.</p>
+</li>
+<li>
+<p><a id="Guldentops2011"></a>[Guldentops2011]:	Guldentops, Erik. 2011. “Where Have All the Control Objectives Gone? They Have Picked Them Every One.” ISACA Journal 4. <a href="http://www.isaca.org/Journal/archives/2011/Volume-4/Documents/jpdf11v4-Where-Have-All.pdf" class="bare">http://www.isaca.org/Journal/archives/2011/Volume-4/Documents/jpdf11v4-Where-Have-All.pdf</a>.</p>
 </li>
 <li>
 <p><a id="Hay2006"></a>[Hay2006]: Hay, D. C. (2006), <em>Data model patterns : a metadata map</em>, Morgan Kaufmann ; Oxford : Elsevier Science [distributor], San Francisco, Calif.</p>
