@@ -939,7 +939,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_governance">Governance</a>
 <ul class="sectlevel4">
 <li><a href="#_what_is_governance">What is governance?</a></li>
-<li><a href="#_it_governance">IT Governance</a></li>
+<li><a href="#_it_and_digital_governance">IT and Digital Governance</a></li>
 <li><a href="#_governance_management_and_it_operating_model">Governance,  management, and IT operating model</a></li>
 <li><a href="#_policy_management">Policy management</a></li>
 </ul>
@@ -6226,13 +6226,16 @@ The goal of a startup is to figure out the right thing to build— the thing cus
 </div>
 <div class="sect5">
 <h6 id="_business_model_canvas">Business model canvas</h6>
-
+<div class="paragraph">
+<p><a id="impact-mapping"></a></p>
+</div>
 </div>
 <div class="sect5">
 <h6 id="_impact_mapping">Impact mapping</h6>
 <div class="literalblock">
 <div class="content">
 <pre>[TBW]
+* Effectiveness/efficiency/risk
 * INVEST
 * MoSCoW
 * 5 Whys</pre>
@@ -10307,7 +10310,8 @@ originated by Wenger, McDermott, and Snyder2002.</pre>
 <p>We have previously discussed <a href="#2.04.02-features-v-components">feature vs component teams</a>. As a reminder, features are functional aspects of software (things people find directly valuable) while components are how software is organized (e.g. shared services and platforms such as data management).</p>
 </div>
 <div class="paragraph">
-<p>As an organization grows, we see both the feature and component sides scale. Feature teams start to diverge into multiple products, while component teams continue to grow in the guise of shared services and platforms. Their concerns continue to differentiate and communication friction may start to emerge between the teams. How an organization handles this is critical.</p>
+<p>As an organization grows, we see both the feature and component sides scale. Feature teams start to diverge into multiple products, while component teams continue to grow in the guise of shared services and platforms. Their concerns continue to differentiate and communication friction may start to emerge between the teams. How an organization handles this is critical.
+ (forward ref to chap 9 shared svcs, section IV lifecycles)</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -10358,6 +10362,11 @@ Toyota Way quadrant as cited in &lt;&lt;Cohn2010&gt;&gt; p145</pre>
 <div class="literalblock">
 <div class="content">
 <pre>Microservices.... important - how multiple services interact.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>The rise of coaching</pre>
 </div>
 </div>
 </div>
@@ -15417,6 +15426,9 @@ Monitoring of CSI Initiatives<br></p></td>
 <div class="paragraph">
 <p>As COBIT notes, "The proposed process model is a complete, comprehensive model, but it is not the only possible process model. Each enterprise must define its own process set, taking into account its specific situation." <a href="#ISACA2012a">[ISACA2012a]</a>, p.32.</p>
 </div>
+<div class="paragraph">
+<p>COBIT is strongly supportive of the standard CMMI/ISO/IEC 15504 process maturity progression and therefore is subject to the previous criticisms regarding the suitability of this approach for digital management, especially research and development processes and other less repeatable activities.</p>
+</div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 25%;">
@@ -16974,7 +16986,7 @@ We&#8217;ve encountered systems theory and associated concepts such as <a href="
 </div>
 </div>
 <div class="sect4">
-<h5 id="_it_governance">IT Governance</h5>
+<h5 id="_it_and_digital_governance">IT and Digital Governance</h5>
 <div class="paragraph">
 <p>If (as stated at the outset) "corporate governance" is "The system by which organizations are directed and controlled," then it is reasonable that "corporate governance of IT" is "The system by which the current and future use of IT is directed and controlled." This is in fact how ISO 38500, the IT Governance standard, defines it <a href="#ISO2008">[ISO2008]</a>.</p>
 </div>
@@ -17031,13 +17043,35 @@ The above illustration differs from ISO 38500 in two important respects: 1) "Pla
 </ol>
 </div>
 <div class="paragraph">
-<p>matrix D,E,M against effectiveness/efficiency/risk</p>
+<p>We have previously considered the value objectives of <a href="#impact-mapping">effectiveness, efficiency, and risk</a> (aka top line, bottom line, and risk). These are useful final targets for impact mapping, to demonstrate that lower level perhaps more "technical" product capabilities do ultimately contribute to organization outcomes.</p>
+</div>
+<div class="paragraph">
+<p>What is different about digital governance is that there is a greater concern for outcome and effectiveness, especially in terms of time to market (minimizing <a href="#cost-of-delay">Cost of Delay</a>). Previously, concerns for efficiency might lead a company to overburden its staff, resulting in queuing gridlock, too much work in process, destructive multitasking, and ultimately failure to deliver timely results (or deliver at all).</p>
+</div>
+<div class="paragraph">
+<p>Such failure to deliver was tolerated because it seemed to be a common problem across most IT departments, and because digital transformation had not taken hold yet. IT systems were often back office and delays in delivering them (or significant issues in their operation) were not quite as damaging.</p>
+</div>
+<div class="paragraph">
+<p>Now, effectiveness of delivery is essential. The interesting, and to some degree unexpected result, is that both efficiency and risk seem to be benefiting as well. Cross-functional, focused teams are both more effective and more efficient, and able to manage risk better as well. Systems are being built with both increased rapidity as well as improved stability, and the automation enabling this provides robust audit support.</p>
+</div>
+<div class="paragraph">
+<p>Preoccupation with "efficiency" especially has faded. The term "efficiency" signals a process that has been largely commoditized, to the point where it is repeatable and scalable. Such processes are ripe for automation and outsourcing, and this is in fact happening. And when repetitive concerns become a matter of sourcing rather than execution, the emphasis shifts to risk management and governance of the supplier.</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_governance_management_and_it_operating_model">Governance,  management, and IT operating model</h5>
+<div class="quoteblock">
+<blockquote>
+The COBIT 5 framework makes a clear distinction between governance and management. These two disciplines encompass different types of activities, require different organisational structures and serve different purposes . . .
+Governance ensures that stakeholder needs, conditions and options are evaluated to determine balanced, agreed-on enterprise objectives to be achieved; setting direction through prioritisation and decision making; and monitoring performance and compliance against agreed-on direction and objectives. In most enterprises, governance is the responsibility of the board of directors under the leadership of the chairperson . . . Management plans, builds, runs and monitors activities in alignment with the direction set by the governance body to achieve the enterprise objectives. In most enterprises, management is the responsibility of the executive management under the leadership of the CEO.
+</blockquote>
+<div class="attribution">
+&#8212; COBIT 5 Framework<br>
+<cite>ISACA</cite>
+</div>
+</div>
 <div class="paragraph">
-<p>pass through the other chapters?</p>
+<p>As we see in the above quote, one of the most firmly reinforced concepts in the COBIT guidance (more on this and ISACA in the next chapter) is the need to distinguish governance from management. Governance is by definition a board-level. Management is the CEO&#8217;s concern. In this distinction, we can still see the shop owner and his or her delegate.</p>
 </div>
 <div class="paragraph">
 <p>Weill</p>
@@ -17115,12 +17149,6 @@ draw picture like COBIT</p>
 </div>
 <div class="paragraph">
 <p>Corporate structures</p>
-</div>
-<div class="paragraph">
-<p>Treadway, Cadbury</p>
-</div>
-<div class="paragraph">
-<p>Direct, evaluate, monitor</p>
 </div>
 <div class="paragraph">
 <p>Monitor: performance &amp; conformance (nice pair)</p>
@@ -17391,6 +17419,13 @@ Internal control is a process, effected by an entity&#8217;s board of directors,
 <cite>Internal Control - Integrated Framework</cite>
 </div>
 </div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Sidebar: Introducing ISACA</p>
+</div>
+</div>
+</div>
 <div class="quoteblock">
 <blockquote>
 The term <em>control objective</em> is no longer a mainstream term used in COBIT 5, and the word <em>control</em> is used only rarely. Instead, COBIT 5 uses the concepts of process practices and process activities.
@@ -17580,6 +17615,14 @@ for the world is full of trickery.
 <div class="attribution">
 &#8212; Max Ehrmann<br>
 <cite>Desiderata</cite>
+</div>
+</div>
+<div class="quoteblock">
+<blockquote>
+Quis custodiet ipsos custodes?
+</blockquote>
+<div class="attribution">
+&#8212; Latin for "Who watches the watchers?"
 </div>
 </div>
 <div class="paragraph">
