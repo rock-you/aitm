@@ -14,6 +14,9 @@ Governance is a challenging and often misunderstood concept. First and foremost,
 image::images/4.10-shopkeeper.jpg[]
 _image credit https://www.flickr.com/photos/garryknight/11240024613, commercial use permitted._
 
+====== A governance example
+[quote, COBIT 5 Framework, ISACA]
+The COBIT 5 framework makes a clear distinction between governance and management. These two disciplines encompass different types of activities, require different organisational structures and serve different purposes . . . In most enterprises, governance is the responsibility of the board of directors under the leadership of the chairperson . . . In most enterprises, management is the responsibility of the executive management under the leadership of the CEO.
 Here is simple explanation:
 
 _Credit: I got this from hearing Brian Barnier speak at an ISACA meeting around 2011._
@@ -28,6 +31,13 @@ They will likely draw a salary, perhaps some percentage of your proceeds, and yo
 
 *Now, you need governance.*
 
+As we see above quote, one of the most firmly reinforced concepts in the COBIT guidance (more on this and ISACA in the next chapter) is the need to distinguish governance from management. Governance is by definition a board-level. Management is the CEO's concern. In this distinction, we can still see the shop owner and his or her delegate.
+
+There is too often a temptation to lump all of "management" in with governance. Sometimes it may be said that the VP of sales, or HR, "governs" their function, for example. While tempting to executives who want to elevate their status, this is not the intent of the term, as we will detail below.
+
+
+====== Some theory of goverance
+
 In political science and economics, the need for governance is seen as an example of the https://en.wikipedia.org/wiki/Principal%E2%80%93agent_problem[principal-agent problem] <<Eisenhardt1989>>. Our shopkeeper example illustrates this. The hired manager is the "agent," acting on behalf of the shop owner, who is the "principal."
 
 In principal-agent theory, the agent may have different interests than the principal. The agent also has much more information (think of the manager running the shop day to day, versus the owner off climbing mountains).
@@ -35,6 +45,8 @@ In principal-agent theory, the agent may have different interests than the princ
 The agent is in a position to do economic harm to the principal; to shirk duty, to steal, to self-deal. Mitigating such conflicts of interest is a part of governance.
 
 In larger organizations (such as you are now), it's not just a simple matter of one clear owner vesting power in one clear agent. The corporation may be publicly owned, or in the case of a non-profit, it may be seeking to represent a diffuse set of interests (e.g. environmental issues). In such cases, a group of individuals (directors) is formed, often termed a "board," with ultimate authority to speak for the organization.
+
+The principal-agent problem can be seen at smaller scale within the organization. Any manager encounters it to some degree, in specifying activities or outcomes for subordinates. But this does not mean that the manager is doing "governance," as governance is by definition an organization-level concern.
 
 The fundamental purpose of boards of directors and similar bodies is to take the side of the principal. This is easier said than done; boards can become overly close to an organization's senior management - the senior managers are real people, while the "principal" may be a diffuse body of shareholders and/or stakeholders.
 
@@ -66,14 +78,6 @@ Finally, there is a way to align interests around outcomes without going fully t
 
 Even if the manager is being managed in terms of their behavior, their cultural ties to the community or clan may lead them to see their interests as well aligned with those of the principal. As noted in <<Eisenhardt1989>>, "Clan control implies goal congruence between people and, therefore, the reduced need to monitor behavior or outcomes. Motivation issues disappear." We have discussed this kind of motivation in Chapter 7, especially in our discussion of xref:failure-control-culture[control culture] and insights drawn from the military.
 
-What does all this have to do with information technology and digital management?
-
-Consider the material we have covered to date. Activity versus outcome has been a theme throughout. Product management focuses on outcomes (what), while projects and processes define and control activity (how). Command and control culture is now suspected of being destructive to high performing teams.
-
-Furthermore, consider the "programmability" criteria above. A highly "programmable" position is one where the responsibilities can be specified in terms of their activities. *And what is the fundamental dynamic of digital transformation?* It is no accident that such positions are called "programmable." In fact, they *are* being "programmed away" or "eaten by software"- leaving only higher-skill positions that are best managed by objective, and which are more sensitive to cultural dynamics.
-
-re: principal-agent - one technique mentioned by <<Eisenhardt1989>> is to align interests through cultural intervention  - "relax the assumption
- of goal conflict between the principal and agent" p62 cites Demski/Ouchi/Perrow.
 
 ****
 *Systems theory, feedback, control, and governance*
@@ -89,140 +93,93 @@ _Centrifugal governor, public domain image via Wikipedia_
 So, if you find yourself coping with arbitrary and bureaucratic "governance" processes, it might be good to remember the origins of the term. There is more to governance than just slowing a system down.
 ****
 
-===== IT and Digital Governance
-If (as stated at the outset) "corporate governance" is "The system by which organizations are directed and controlled," then it is reasonable that "corporate governance of IT" is "The system by which the current and future use of IT is directed and controlled." This is in fact how ISO 38500, the IT Governance standard, defines it <<ISO2008>>.
+ more on Wiener & Beer
 
-Both ISO 38500 as well as COBIT (more on COBIT to come) specify that the fundamental activities of governance are:
+====== Digital governance
+
+What does all this have to do with information technology and digital management?
+
+If "corporate governance" is "The system by which organizations are directed and controlled," then it is reasonable that "corporate governance of IT" is "The system by which the *current and future use of IT is directed and controlled*." This is how ISO 38500, the IT Governance standard, defines it <<ISO2008>>.
+
+In terms of our xref:0.01-emergence[emergence model], the most important distinction between a "team of teams" and an "enterprise" is the existence of organizational governance.
+
+image::images/govEmergence.png[]
+
+Corporate governance is a broad and deep topic, essential to the functioning of society and its organized participants. These include for-profit, non-profit, and even governmental organizations. Any legally organized entity of significant scope has governance needs.
+
+One well known structure for organizational governance is seen in the regulated, publicly owned company (such as those listed on stock exchanges). In this model, shareholders elect a governing body (usually termed the Board of Directors), and this group provides the essential direction for the enteprise as a whole.
+
+However, organizational governance takes other forms. Public institutions of higher education may have a Board of Regents or Board of Governors, perhaps appointed by elected officials. Nonprofits and incorporated private companies still require some form of governance, as well. These are well known topics in law, finance, and social organization, and there are many sources you can turn to if you have further interest. If you are taking any courses on Finance or Accounting, you will likely cover governance objectives and processes.
+
+Here is a more detailed visual representation of the relationship of governance and management in a digital context:
+
+image::images/govArch.png[]
+
+Reading from the top down:
+
+Value recognition is the fundamental objective of the stakeholder. We  discussed in Chapter 4 the value objectives of xref:impact-mapping[effectiveness, efficiency, and risk] (aka top line, bottom line, and risk). These are useful final targets for impact mapping, to demonstrate that lower level perhaps more "technical" product capabilities do ultimately contribute to organization outcomes.
+
+NOTE: The term "value recognition" as the stakeholder goal is chosen over "value creation" as "creation" requires the entire system. Stakeholders do not "create" without the assistance of management, delivery teams, and the individual.
+
+Here, we see them from the stakeholder perspective of
+
+* Benefits realization
+* Cost optimization
+* Risk optimization
+
+(Adapted from <<ISACA2012a>>, p. 23)
+
+Both ISO 38500 <<ISO2008>> as well as COBIT <<ISACA2012a>> specify that the fundamental activities of governance are:
 
 * Direct
 * Evaluate
 * Monitor
 
-ISO 38500 originated a well known illustration similar to this:
+(More on COBIT to come.)
 
-image::images/38500similar.png[]
+The "governance/management interface" is an essential component. The information flows across this interface are typically some form of the following:
 
-NOTE: The above illustration differs from ISO 38500 in two important respects:
- 1) "Plans" are replaced by "Goals," as governance should be about outcomes. Plans originate from management. 2) Project versus operations management are no longer seen as distinct activities, in keeping with modern trends to product centricity.
+*From the governing side*
 
-Recap in terms of previous material
+* Goals (e.g. product and go-to-market strategies)
+* Resource authorizations (e.g. organizational budget aprovals)
+* Principles and policies (e.g. personnel and expense policies)
 
-Reading from left to right, the basic governance cycle is:
+*From the governed side*
 
-. Company direction is set in terms of goals and policies
-. Management proposes plans and investments, which are evaluated by governance (in practice, these are the most significant investments and initiatives)
-. The ongoing performance of these investments is monitored against the stated goals and policies.
+* Plans & proposals (at a high level, e.g. budget requests)
+* Performance reports (e.g. sales figures)
+* Conformance/compliance indicators (e.g. via audit and assurance)
 
-We have previously considered the value objectives of xref:impact-mapping[effectiveness, efficiency, and risk] (aka top line, bottom line, and risk). These are useful final targets for impact mapping, to demonstrate that lower level perhaps more "technical" product capabilities do ultimately contribute to organization outcomes.
+Notice also the dotted line cycle "Iterative Negotation" in the Governance/Management interface. Governance is not a one-way street. Its principles may be stable, but approaches, tools, practices, processes, and so forth (what we will discuss below as "enablers," in COBIT terminology) are variable, and require ongoing evolution.
 
-What is different about digital governance is that there is a greater concern for outcome and effectiveness, especially in terms of time to market (minimizing xref:cost-of-delay[Cost of Delay]). Previously, concerns for efficiency might lead a company to overburden its staff, resulting in queuing gridlock, too much work in process, destructive multitasking, and ultimately failure to deliver timely results (or deliver at all).
+We often hear of "bureaucratic" governance processes. But the problem is not "governance" per se. It is more often the failure to correctly manage the governance/management interface. Of course, if the board is micro-managing, demanding many different kinds of information, then governance and its management response is all much the same thing. In reality, however, burdensome organizational "governance" processes may be an overdone, bottom-up management response to *perceived* Board-level mandates.
 
-Such failure to deliver was tolerated because it seemed to be a common problem across most IT departments, and because digital transformation had not taken hold yet. IT systems were often back office and delays in delivering them (or significant issues in their operation) were not *quite* as damaging.
+Or they may be point-in-time requirements no longer needed. The policies of 1960 are unsuited to the realities of 2020. But if policies are always dictated top-down, they may never be corrected or retired when no longer applicable. Hence, the scope and approach of governance in terms of its enablers must always be a topic of ongoing, iterative negotiation between the governed and the governing.
 
-Now, effectiveness of delivery is essential. The interesting, and to some degree unexpected result, is that both efficiency and risk seem to be benefiting as well. Cross-functional, focused teams are both more effective and more efficient, and able to manage risk better as well. Systems are being built with both increased rapidity as well as improved stability, and the automation enabling this provides robust audit support.
-
- cite DevOps audit publication
-
-Preoccupation with "efficiency" especially has faded. The term "efficiency" signals a process that has been well defined to the point where it is repeatable and scalable. Such processes are ripe for automation, commoditization, and outsourcing, and this is in fact happening. And when such repetitive concerns become a matter of sourcing rather than execution, the emphasis shifts to risk management and governance of the supplier.
-
-===== Governance,  management, and IT operating model
-[quote, COBIT 5 Framework, ISACA]
-The COBIT 5 framework makes a clear distinction between governance and management. These two disciplines encompass different types of activities, require different organisational structures and serve different purposes . . . In most enterprises, governance is the responsibility of the board of directors under the leadership of the chairperson . . . In most enterprises, management is the responsibility of the executive management under the leadership of the CEO.
-
-As we see in the above quote, one of the most firmly reinforced concepts in the COBIT guidance (more on this and ISACA in the next chapter) is the need to distinguish governance from management. Governance is by definition a board-level. Management is the CEO's concern. In this distinction, we can still see the shop owner and his or her delegate.
-
-Board-level concern, aligned with corporate governance
-
-There will always be a complex relationship between governance and management.
-
-
-
-draw picture like COBIT
-
-* owners
-* governing body
-* management
-* operations & execution
-
-then add pic for internal audit as an independent check
-
-There is too often a temptation to lump all of "management" in with governance. Sometimes it may be said that the VP of sales, or HR, "governs" their function, for example. While tempting to executives who want to elevate their status, this is not the intent of the term.
-
-However, the principal-agent problem can be seen at smaller scale within the organization. Any manager encounters it to some degree, when activities or outcomes are specified for subordinates. But this does not mean that the manager is doing "governance," as governance is by definition an organization-level concern.
-
-We often hear of "bureaucratic" governance processes, as well. But is the problem "governance" per se, or is it the management response to governance requirements? Governance policies set at the board level might result in a variety of operational processes, but are those processes "governance" processes? Or management processes?
-
-Of course, if the board is micro-managing, demanding many different kinds of information, then governance and its management response is all much the same thing. In reality, however, burdensome organizational "governance" processes may be an overdone response to *perceived* Board-level mandates. Or point-in-time requirements no longer needed.
-
-Some of this may be specific to the organization, but in general it is advisable to limit the "governance" domain -- including use of the term -- to a narrow scope of board or director-level concerns, and the existence of certain capabilities, including:
+In general it is advisable to limit the "governance" domain -- including use of the term -- to a narrow scope of board or director-level concerns, and the existence of certain capabilities, including:
 
 * organizational policy management
 * external and internal audit
 * risk management
 * controls management (perhaps part of risk)
 
-Governance is about managing results and risk. It's about objectives and outcomes. It's about "what," not "how."
+Ultimately, governance is about managing results and risk. It's about objectives and outcomes. It's about "what," not "how."
 
-Corporate governance is a broad and deep topic, essential to the functioning of society and its organized participants. These include for-profit, non-profit, and even governmental organizations. Any legally organized entity of significant scope has governance needs. If you are taking any courses on Finance or Accounting, you will likely cover governance objectives and processes.
+In today's digital governance there is a greater concern for outcome and effectiveness, especially in terms of time to market (minimizing xref:cost-of-delay[Cost of Delay]). Previously, concerns for efficiency might lead a company to overburden its staff, resulting in queuing gridlock, too much work in process, destructive multitasking, and ultimately failure to deliver timely results (or deliver at all).
 
- it's a spectrum that tracks our emergence model
+Such failure to deliver was tolerated because it seemed to be a common problem across most IT departments, and because digital transformation had not taken hold yet. IT systems were often back office and delays in delivering them (or significant issues in their operation) were not *quite* as damaging.
 
+Now, effectiveness of delivery is essential. The interesting, and to some degree unexpected result, is that both efficiency and risk seem to be benefiting as well. Cross-functional, focused teams are both more effective and more efficient, and able to manage risk better as well. Systems are being built with both increased rapidity as well as improved stability, and the automation enabling this provides robust audit support.
 
-Corporate structures
-Weill
+****
 
-COBIT
+*The DevOps Audit Toolkit*
 
-"Rogue" IT
+The DevOps Audit Toolkit <<DeLuccia2015>> provides an important set of examples demonstrating how modern DevOps toolchain automation can fulfill audit objectives as well or better than "traditional" approaches.
 
-Monitor: performance & conformance (nice pair)
+****
 
-===== Policy management
-Board-level concern
+Finally, consider the "programmability" criteria above. A highly "programmable" position is one where the responsibilities can be specified in terms of their activities. *And what is the fundamental dynamic of digital transformation?* It is no accident that such positions are called "programmable." In fact, they *are* being "programmed away" or "eaten by software"- leaving only higher-skill positions that are best managed by objective, and which are more sensitive to cultural dynamics.
 
-Draw pic & restate for compliance and security
-
-Principles
-Policies
-Processes
-
-Don't overcomplicate
-
-Lifecycle/sunset!
-
-Example?
-
-
-Variety of policies:
-
-* Information security
-* Human resources
-* Fraud risk
-* Compliance
-
-In a non-IT example, a compliance policy might identify the Foreign Corrupt Practices act and make it clear that bribery of foreign officials is unacceptable. Similarly, an HR policy might spell out acceptable and unacceptable side jobs (e.g., someone in the banking industry might be forbidden from also being a mortgage broker on their own account).
-
-Policies
-Master vs issue
-Standards
-Baselines
-Guidelines
-Procedures (check CISSP as source)
-
-
-====== Governance & process
- mentioned in previous chapter
- committee structures - cross-org - mentioned in Ch 7
-
-====== Decision rights as governance
-We have covered previously. Many governance sources include discussion of organizational structure; this however is more on the management side of the spectrum
-
-====== Governance demand
-Watt's governor imposed a certain burden on the engine (what % of energy did it consume?)
-
-importance of having the demand/execution framework in place to manage governance demand
-
-====== Governance and sourcing
-We have already covered contracting in terms of software and Cloud. But in terms of the emergence model, it is typical that companies enter into contracts before having a fully mature sourcing and contract management capability with input from the governance, risk, and compliance perspective.
-
-Assurance
+Preoccupation with "efficiency" fades as a result of the decreasingly "programmable" component of work. The term "efficiency" signals a process that has been well defined (is "programmable") to the point where it is repeatable and scalable. Such processes are ripe for automation, commoditization, and outsourcing, and this is in fact happening. And when such repetitive concerns become a matter of sourcing rather than execution, the emphasis shifts to risk management and governance of the supplier.
