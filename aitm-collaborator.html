@@ -823,7 +823,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_basic_concerns">Basic concerns</a></li>
 <li><a href="#_outsourcing_and_cloudsourcing">Outsourcing and Cloudsourcing</a></li>
-<li><a href="#_software_development_and_contracts">Software development and contracts</a></li>
 <li><a href="#_software_licensing">Software licensing</a></li>
 <li><a href="#_the_role_of_industry_analysts">The role of industry analysts</a></li>
 </ul>
@@ -12336,9 +12335,10 @@ cloud computing has some fundamental characteristics that distinguish it from tr
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p><a id="contract-mgmt"></a>
+===== Software development and contracts</p>
 </div>
-<div class="sect4">
-<h5 id="_software_development_and_contracts">Software development and contracts</h5>
 <div class="quoteblock">
 <blockquote>
 Customer collaboration over contract negotiation.
@@ -17311,10 +17311,19 @@ The COBIT 5 framework makes a clear distinction between governance and managemen
 <p><strong>Now, you need governance.</strong></p>
 </div>
 <div class="paragraph">
-<p>As we see above quote, one of the most firmly reinforced concepts in the COBIT guidance (more on this and ISACA in the next chapter) is the need to distinguish governance from management. Governance is by definition a board-level. Management is the CEO&#8217;s concern. In this distinction, we can still see the shop owner and his or her delegate.</p>
+<p>As we see in the above quote, one of the most firmly reinforced concepts in the COBIT guidance (more on this and ISACA in the next chapter) is the need to distinguish governance from management. Governance is by definition a board-level. Management is the CEO&#8217;s concern. In this distinction, we can still see the shop owner and his or her delegate.</p>
 </div>
-<div class="paragraph">
-<p>There is too often a temptation to lump all of "management" in with governance. Sometimes it may be said that the VP of sales, or HR, "governs" their function, for example. While tempting to executives who want to elevate their status, this is not the intent of the term, as we will detail below.</p>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+There is too often a temptation to lump all of "management" in with governance. Sometimes it may be said that the VP of sales, or HR, "governs" their function, for example. While tempting to executives who want to elevate their status, this is not the intent of the term, as we will detail below.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect5">
@@ -17335,13 +17344,18 @@ The COBIT 5 framework makes a clear distinction between governance and managemen
 <p>The principal-agent problem can be seen at smaller scale within the organization. Any manager encounters it to some degree, in specifying activities or outcomes for subordinates. But this does not mean that the manager is doing "governance," as governance is by definition an organization-level concern.</p>
 </div>
 <div class="paragraph">
-<p>The fundamental purpose of boards of directors and similar bodies is to take the side of the principal. This is easier said than done; boards can become overly close to an organization&#8217;s senior management - the senior managers are real people, while the "principal" may be a diffuse body of shareholders and/or stakeholders.</p>
+<p>The fundamental purpose of boards of directors and similar bodies is to take the side of the principal. This is easier said than done; boards can become overly close to an organization&#8217;s senior management - the senior managers are real people, while the "principal" may be an amorphous, distant body of shareholders and/or stakeholders.</p>
 </div>
 <div class="paragraph">
 <p>Because governance is the principal&#8217;s concern, and because the directors represent the principal, governance, including IT governance, is a board-level concern.</p>
 </div>
 <div class="paragraph">
 <p>There are various principles of corporate governance we will not go into here, such as shareholder rights, stakeholder interests, transparency, and so forth. References on these topics are included in the chapter conclusion.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>todo</pre>
+</div>
 </div>
 <div class="paragraph">
 <p>However, as we turn to our focus on digital and IT-related governance, there are a few final insights from principal-agent theory that are helpful to understanding governance. Consider:</p>
@@ -17362,13 +17376,16 @@ The COBIT 5 framework makes a clear distinction between governance and managemen
 <p>When agent responsibilities can be well specified in this manner, it is said they are highly <em>programmable</em>.</p>
 </div>
 <div class="paragraph">
-<p>Or, instead of this very scripted set of expectations, shopkeeper might tell the manager, "I will pay you 50% of the shop&#8217;s gross earnings, whether they may be. I&#8217;ll leave you to follow my processes however you see fit. I expect no customer or vendor complaints when I get back."</p>
+<p>Now, consider the alternative. Instead of this very scripted set of expectations, the shopkeeper might tell the manager, "I will pay you 50% of the shop&#8217;s gross earnings, whether they may be. I&#8217;ll leave you to follow my processes however you see fit. I expect no customer or vendor complaints when I get back."</p>
 </div>
 <div class="paragraph">
 <p>In this case, the manager&#8217;s behavior is more aligned with the owner&#8217;s goals. If they serve customers well, they will likely earn more. There are any number of hard-to-specify behaviors (less <em>programmable</em>) that might be highly beneficial.</p>
 </div>
 <div class="paragraph">
-<p>Suppose that the store manager learns of an upcoming street festival, a new one that the owner did not know of or plan for. If the agent is managed in terms of their behavior, they may do nothing&#8201;&#8212;&#8201;it&#8217;s just extra work. If they are measured in terms of their outcomes, however, they may well make the extra effort to order merchandise desirable to the street fair participants, and perhaps hire a temporary cashier to staff an outdoor booth, as this will boost store revenue and therefore their pay.</p>
+<p>For example, suppose the store manager learns of an upcoming street festival, a new one that the owner did not know of or plan for. If the agent is managed in terms of their behavior, they may do nothing&#8201;&#8212;&#8201;it&#8217;s just extra work. If they are measured in terms of their outcomes, however, they may well make the extra effort to order merchandise desirable to the street fair participants, and perhaps hire a temporary cashier to staff an outdoor booth, as this will boost store revenue and therefore their pay.</p>
+</div>
+<div class="paragraph">
+<p>(Note that we have considered similar themes in our discussion of <a href="#contract-mgmt">Agile and contract management</a>, in terms of risk sharing.)</p>
 </div>
 <div class="paragraph">
 <p>In general, it may seem that an outcome-based relationship would always be preferable. There is, however, an important downside. It transfers risk to the agent. And because the agent is assuming more risk, they will (in a fair market) demand more compensation. The owner may find themselves paying $60,000 for the manager&#8217;s services, for the same level of sales, because the agent also had to "price in" the possibility of poor sales and the risk that they would only make $35,000.</p>
@@ -17402,11 +17419,11 @@ We&#8217;ve encountered systems theory and associated concepts such as <a href="
 <div class="paragraph">
 <p>So, if you find yourself coping with arbitrary and bureaucratic "governance" processes, it might be good to remember the origins of the term. There is more to governance than just slowing a system down.</p>
 </div>
-</div>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>more on Wiener &amp; Beer</pre>
+</div>
+</div>
 </div>
 </div>
 </div>
