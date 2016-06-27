@@ -939,9 +939,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_governance">Governance</a>
 <ul class="sectlevel4">
 <li><a href="#_what_is_governance">What is governance?</a></li>
-<li><a href="#_it_and_digital_governance">IT and Digital Governance</a></li>
-<li><a href="#_governance_management_and_it_operating_model">Governance,  management, and IT operating model</a></li>
+</ul>
+</li>
+<li><a href="#_policy_assurance_and_audit">Policy, assurance and audit</a>
+<ul class="sectlevel4">
 <li><a href="#_policy_management">Policy management</a></li>
+<li><a href="#_assurance">Assurance</a></li>
+<li><a href="#_audit">Audit</a></li>
 </ul>
 </li>
 <li><a href="#_risk">Risk</a>
@@ -949,12 +953,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_risk_management_fundamentals">Risk management fundamentals</a></li>
 <li><a href="#_it_related_risks">IT-related risks</a></li>
 <li><a href="#_controls_and_enablers">Controls and enablers</a></li>
-</ul>
-</li>
-<li><a href="#_assurance_and_audit">Assurance and Audit</a>
-<ul class="sectlevel4">
-<li><a href="#_assurance">Assurance</a></li>
-<li><a href="#_audit">Audit</a></li>
 </ul>
 </li>
 <li><a href="#_security">Security</a>
@@ -972,7 +970,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_compliance_practices">Compliance practices</a></li>
 </ul>
 </li>
-<li><a href="#_digital_governance">Digital Governance</a>
+<li><a href="#_digital_governance_2">Digital Governance</a>
 <ul class="sectlevel4">
 <li><a href="#_historic_it_governance_controlling_the_order_taker">Historic IT governance: controlling the "order taker"</a></li>
 <li><a href="#_agile_meets_it_governance">Agile meets IT governance</a></li>
@@ -17191,7 +17189,7 @@ As with other chapters in the later part of this book, we are going to some degr
 </table>
 </div>
 <div class="paragraph">
-<p>More than any other chapter, the location of this chapter in Section 4 draws attention. Again, any topic in any chapter may be a matter of concern at any stage in an organization&#8217;s evolution.</p>
+<p>More than any other chapter, the location of this chapter (and especially its Security subsection) in Section 4 draws attention. Again, any topic in any chapter may be a matter of concern at any stage in an organization&#8217;s evolution.</p>
 </div>
 <div class="paragraph">
 <p>You&#8217;ve been doing security since your company started, otherwise you would not have gotten this big. But now, you have a Chief Information Security Officer, formal risk management processes, a standing director-level security steering committee, auditors, and compliance specialists. That kind of formalization does not usually happen until an organization grows to a certain size.</p>
@@ -17279,8 +17277,17 @@ Corporate governance involves a set of relationships between a company’s manag
 <div class="paragraph">
 <p><em>image credit <a href="https://www.flickr.com/photos/garryknight/11240024613" class="bare">https://www.flickr.com/photos/garryknight/11240024613</a>, commercial use permitted.</em></p>
 </div>
-<div class="paragraph">
-<p>Here is simple explanation:</p>
+<div class="sect5">
+<h6 id="_a_governance_example">A governance example</h6>
+<div class="quoteblock">
+<blockquote>
+The COBIT 5 framework makes a clear distinction between governance and management. These two disciplines encompass different types of activities, require different organisational structures and serve different purposes . . . In most enterprises, governance is the responsibility of the board of directors under the leadership of the chairperson . . . In most enterprises, management is the responsibility of the executive management under the leadership of the CEO.
+Here is simple explanation:
+</blockquote>
+<div class="attribution">
+&#8212; COBIT 5 Framework<br>
+<cite>ISACA</cite>
+</div>
 </div>
 <div class="paragraph">
 <p><em>Credit: I got this from hearing Brian Barnier speak at an ISACA meeting around 2011.</em></p>
@@ -17301,6 +17308,15 @@ Corporate governance involves a set of relationships between a company’s manag
 <p><strong>Now, you need governance.</strong></p>
 </div>
 <div class="paragraph">
+<p>As we see above quote, one of the most firmly reinforced concepts in the COBIT guidance (more on this and ISACA in the next chapter) is the need to distinguish governance from management. Governance is by definition a board-level. Management is the CEO&#8217;s concern. In this distinction, we can still see the shop owner and his or her delegate.</p>
+</div>
+<div class="paragraph">
+<p>There is too often a temptation to lump all of "management" in with governance. Sometimes it may be said that the VP of sales, or HR, "governs" their function, for example. While tempting to executives who want to elevate their status, this is not the intent of the term, as we will detail below.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_some_theory_of_goverance">Some theory of goverance</h6>
+<div class="paragraph">
 <p>In political science and economics, the need for governance is seen as an example of the <a href="https://en.wikipedia.org/wiki/Principal%E2%80%93agent_problem">principal-agent problem</a> <a href="#Eisenhardt1989">[Eisenhardt1989]</a>. Our shopkeeper example illustrates this. The hired manager is the "agent," acting on behalf of the shop owner, who is the "principal."</p>
 </div>
 <div class="paragraph">
@@ -17311,6 +17327,9 @@ Corporate governance involves a set of relationships between a company’s manag
 </div>
 <div class="paragraph">
 <p>In larger organizations (such as you are now), it&#8217;s not just a simple matter of one clear owner vesting power in one clear agent. The corporation may be publicly owned, or in the case of a non-profit, it may be seeking to represent a diffuse set of interests (e.g. environmental issues). In such cases, a group of individuals (directors) is formed, often termed a "board," with ultimate authority to speak for the organization.</p>
+</div>
+<div class="paragraph">
+<p>The principal-agent problem can be seen at smaller scale within the organization. Any manager encounters it to some degree, in specifying activities or outcomes for subordinates. But this does not mean that the manager is doing "governance," as governance is by definition an organization-level concern.</p>
 </div>
 <div class="paragraph">
 <p>The fundamental purpose of boards of directors and similar bodies is to take the side of the principal. This is easier said than done; boards can become overly close to an organization&#8217;s senior management - the senior managers are real people, while the "principal" may be a diffuse body of shareholders and/or stakeholders.</p>
@@ -17357,19 +17376,6 @@ Corporate governance involves a set of relationships between a company’s manag
 <div class="paragraph">
 <p>Even if the manager is being managed in terms of their behavior, their cultural ties to the community or clan may lead them to see their interests as well aligned with those of the principal. As noted in <a href="#Eisenhardt1989">[Eisenhardt1989]</a>, "Clan control implies goal congruence between people and, therefore, the reduced need to monitor behavior or outcomes. Motivation issues disappear." We have discussed this kind of motivation in Chapter 7, especially in our discussion of <a href="#failure-control-culture">control culture</a> and insights drawn from the military.</p>
 </div>
-<div class="paragraph">
-<p>What does all this have to do with information technology and digital management?</p>
-</div>
-<div class="paragraph">
-<p>Consider the material we have covered to date. Activity versus outcome has been a theme throughout. Product management focuses on outcomes (what), while projects and processes define and control activity (how). Command and control culture is now suspected of being destructive to high performing teams.</p>
-</div>
-<div class="paragraph">
-<p>Furthermore, consider the "programmability" criteria above. A highly "programmable" position is one where the responsibilities can be specified in terms of their activities. <strong>And what is the fundamental dynamic of digital transformation?</strong> It is no accident that such positions are called "programmable." In fact, they <strong>are</strong> being "programmed away" or "eaten by software"- leaving only higher-skill positions that are best managed by objective, and which are more sensitive to cultural dynamics.</p>
-</div>
-<div class="paragraph">
-<p>re: principal-agent - one technique mentioned by <a href="#Eisenhardt1989">[Eisenhardt1989]</a> is to align interests through cultural intervention  - "relax the assumption
- of goal conflict between the principal and agent" p62 cites Demski/Ouchi/Perrow.</p>
-</div>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
@@ -17395,14 +17401,84 @@ We&#8217;ve encountered systems theory and associated concepts such as <a href="
 </div>
 </div>
 </div>
+<div class="literalblock">
+<div class="content">
+<pre>more on Wiener &amp; Beer</pre>
 </div>
-<div class="sect4">
-<h5 id="_it_and_digital_governance">IT and Digital Governance</h5>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_digital_governance">Digital governance</h6>
 <div class="paragraph">
-<p>If (as stated at the outset) "corporate governance" is "The system by which organizations are directed and controlled," then it is reasonable that "corporate governance of IT" is "The system by which the current and future use of IT is directed and controlled." This is in fact how ISO 38500, the IT Governance standard, defines it <a href="#ISO2008">[ISO2008]</a>.</p>
+<p>What does all this have to do with information technology and digital management?</p>
 </div>
 <div class="paragraph">
-<p>Both ISO 38500 as well as COBIT (more on COBIT to come) specify that the fundamental activities of governance are:</p>
+<p>If "corporate governance" is "The system by which organizations are directed and controlled," then it is reasonable that "corporate governance of IT" is "The system by which the <strong>current and future use of IT is directed and controlled</strong>." This is how ISO 38500, the IT Governance standard, defines it <a href="#ISO2008">[ISO2008]</a>.</p>
+</div>
+<div class="paragraph">
+<p>In terms of our <a href="#0.01-emergence">emergence model</a>, the most important distinction between a "team of teams" and an "enterprise" is the existence of organizational governance.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/govEmergence.png" alt="govEmergence">
+</div>
+</div>
+<div class="paragraph">
+<p>Corporate governance is a broad and deep topic, essential to the functioning of society and its organized participants. These include for-profit, non-profit, and even governmental organizations. Any legally organized entity of significant scope has governance needs.</p>
+</div>
+<div class="paragraph">
+<p>One well known structure for organizational governance is seen in the regulated, publicly owned company (such as those listed on stock exchanges). In this model, shareholders elect a governing body (usually termed the Board of Directors), and this group provides the essential direction for the enteprise as a whole.</p>
+</div>
+<div class="paragraph">
+<p>However, organizational governance takes other forms. Public institutions of higher education may have a Board of Regents or Board of Governors, perhaps appointed by elected officials. Nonprofits and incorporated private companies still require some form of governance, as well. These are well known topics in law, finance, and social organization, and there are many sources you can turn to if you have further interest. If you are taking any courses on Finance or Accounting, you will likely cover governance objectives and processes.</p>
+</div>
+<div class="paragraph">
+<p>Here is a more detailed visual representation of the relationship of governance and management in a digital context:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/govArch.png" alt="govArch">
+</div>
+</div>
+<div class="paragraph">
+<p>Reading from the top down:</p>
+</div>
+<div class="paragraph">
+<p>Value recognition is the fundamental objective of the stakeholder. We  discussed in Chapter 4 the value objectives of <a href="#impact-mapping">effectiveness, efficiency, and risk</a> (aka top line, bottom line, and risk). These are useful final targets for impact mapping, to demonstrate that lower level perhaps more "technical" product capabilities do ultimately contribute to organization outcomes.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The term "value recognition" as the stakeholder goal is chosen over "value creation" as "creation" requires the entire system. Stakeholders do not "create" without the assistance of management, delivery teams, and the individual.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Here, we see them from the stakeholder perspective of</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Benefits realization</p>
+</li>
+<li>
+<p>Cost optimization</p>
+</li>
+<li>
+<p>Risk optimization</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>(Adapted from <a href="#ISACA2012a">[ISACA2012a]</a>, p. 23)</p>
+</div>
+<div class="paragraph">
+<p>Both ISO 38500 <a href="#ISO2008">[ISO2008]</a> as well as COBIT <a href="#ISACA2012a">[ISACA2012a]</a> specify that the fundamental activities of governance are:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -17418,122 +17494,54 @@ We&#8217;ve encountered systems theory and associated concepts such as <a href="
 </ul>
 </div>
 <div class="paragraph">
-<p>ISO 38500 originated a well known illustration similar to this:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/38500similar.png" alt="38500similar">
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-The above illustration differs from ISO 38500 in two important respects:
- 1) "Plans" are replaced by "Goals," as governance should be about outcomes. Plans originate from management. 2) Project versus operations management are no longer seen as distinct activities, in keeping with modern trends to product centricity.
-</td>
-</tr>
-</table>
+<p>(More on COBIT to come.)</p>
 </div>
 <div class="paragraph">
-<p>Recap in terms of previous material</p>
+<p>The "governance/management interface" is an essential component. The information flows across this interface are typically some form of the following:</p>
 </div>
 <div class="paragraph">
-<p>Reading from left to right, the basic governance cycle is:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Company direction is set in terms of goals and policies</p>
-</li>
-<li>
-<p>Management proposes plans and investments, which are evaluated by governance (in practice, these are the most significant investments and initiatives)</p>
-</li>
-<li>
-<p>The ongoing performance of these investments is monitored against the stated goals and policies.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>We have previously considered the value objectives of <a href="#impact-mapping">effectiveness, efficiency, and risk</a> (aka top line, bottom line, and risk). These are useful final targets for impact mapping, to demonstrate that lower level perhaps more "technical" product capabilities do ultimately contribute to organization outcomes.</p>
-</div>
-<div class="paragraph">
-<p>What is different about digital governance is that there is a greater concern for outcome and effectiveness, especially in terms of time to market (minimizing <a href="#cost-of-delay">Cost of Delay</a>). Previously, concerns for efficiency might lead a company to overburden its staff, resulting in queuing gridlock, too much work in process, destructive multitasking, and ultimately failure to deliver timely results (or deliver at all).</p>
-</div>
-<div class="paragraph">
-<p>Such failure to deliver was tolerated because it seemed to be a common problem across most IT departments, and because digital transformation had not taken hold yet. IT systems were often back office and delays in delivering them (or significant issues in their operation) were not <strong>quite</strong> as damaging.</p>
-</div>
-<div class="paragraph">
-<p>Now, effectiveness of delivery is essential. The interesting, and to some degree unexpected result, is that both efficiency and risk seem to be benefiting as well. Cross-functional, focused teams are both more effective and more efficient, and able to manage risk better as well. Systems are being built with both increased rapidity as well as improved stability, and the automation enabling this provides robust audit support.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>cite DevOps audit publication</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Preoccupation with "efficiency" especially has faded. The term "efficiency" signals a process that has been well defined to the point where it is repeatable and scalable. Such processes are ripe for automation, commoditization, and outsourcing, and this is in fact happening. And when such repetitive concerns become a matter of sourcing rather than execution, the emphasis shifts to risk management and governance of the supplier.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_governance_management_and_it_operating_model">Governance,  management, and IT operating model</h5>
-<div class="quoteblock">
-<blockquote>
-The COBIT 5 framework makes a clear distinction between governance and management. These two disciplines encompass different types of activities, require different organisational structures and serve different purposes . . . In most enterprises, governance is the responsibility of the board of directors under the leadership of the chairperson . . . In most enterprises, management is the responsibility of the executive management under the leadership of the CEO.
-</blockquote>
-<div class="attribution">
-&#8212; COBIT 5 Framework<br>
-<cite>ISACA</cite>
-</div>
-</div>
-<div class="paragraph">
-<p>As we see in the above quote, one of the most firmly reinforced concepts in the COBIT guidance (more on this and ISACA in the next chapter) is the need to distinguish governance from management. Governance is by definition a board-level. Management is the CEO&#8217;s concern. In this distinction, we can still see the shop owner and his or her delegate.</p>
-</div>
-<div class="paragraph">
-<p>Board-level concern, aligned with corporate governance</p>
-</div>
-<div class="paragraph">
-<p>There will always be a complex relationship between governance and management.</p>
-</div>
-<div class="paragraph">
-<p>draw picture like COBIT</p>
+<p><strong>From the governing side</strong></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>owners</p>
+<p>Goals (e.g. product and go-to-market strategies)</p>
 </li>
 <li>
-<p>governing body</p>
+<p>Resource authorizations (e.g. organizational budget aprovals)</p>
 </li>
 <li>
-<p>management</p>
-</li>
-<li>
-<p>operations &amp; execution</p>
+<p>Principles and policies (e.g. personnel and expense policies)</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>then add pic for internal audit as an independent check</p>
+<p><strong>From the governed side</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Plans &amp; proposals (at a high level, e.g. budget requests)</p>
+</li>
+<li>
+<p>Performance reports (e.g. sales figures)</p>
+</li>
+<li>
+<p>Conformance/compliance indicators (e.g. via audit and assurance)</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>There is too often a temptation to lump all of "management" in with governance. Sometimes it may be said that the VP of sales, or HR, "governs" their function, for example. While tempting to executives who want to elevate their status, this is not the intent of the term.</p>
+<p>Notice also the dotted line cycle "Iterative Negotation" in the Governance/Management interface. Governance is not a one-way street. Its principles may be stable, but approaches, tools, practices, processes, and so forth (what we will discuss below as "enablers," in COBIT terminology) are variable, and require ongoing evolution.</p>
 </div>
 <div class="paragraph">
-<p>However, the principal-agent problem can be seen at smaller scale within the organization. Any manager encounters it to some degree, when activities or outcomes are specified for subordinates. But this does not mean that the manager is doing "governance," as governance is by definition an organization-level concern.</p>
+<p>We often hear of "bureaucratic" governance processes. But the problem is not "governance" per se. It is more often the failure to correctly manage the governance/management interface. Of course, if the board is micro-managing, demanding many different kinds of information, then governance and its management response is all much the same thing. In reality, however, burdensome organizational "governance" processes may be an overdone, bottom-up management response to <strong>perceived</strong> Board-level mandates.</p>
 </div>
 <div class="paragraph">
-<p>We often hear of "bureaucratic" governance processes, as well. But is the problem "governance" per se, or is it the management response to governance requirements? Governance policies set at the board level might result in a variety of operational processes, but are those processes "governance" processes? Or management processes?</p>
+<p>Or they may be point-in-time requirements no longer needed. The policies of 1960 are unsuited to the realities of 2020. But if policies are always dictated top-down, they may never be corrected or retired when no longer applicable. Hence, the scope and approach of governance in terms of its enablers must always be a topic of ongoing, iterative negotiation between the governed and the governing.</p>
 </div>
 <div class="paragraph">
-<p>Of course, if the board is micro-managing, demanding many different kinds of information, then governance and its management response is all much the same thing. In reality, however, burdensome organizational "governance" processes may be an overdone response to <strong>perceived</strong> Board-level mandates. Or point-in-time requirements no longer needed.</p>
-</div>
-<div class="paragraph">
-<p>Some of this may be specific to the organization, but in general it is advisable to limit the "governance" domain&#8201;&#8212;&#8201;including use of the term&#8201;&#8212;&#8201;to a narrow scope of board or director-level concerns, and the existence of certain capabilities, including:</p>
+<p>In general it is advisable to limit the "governance" domain&#8201;&#8212;&#8201;including use of the term&#8201;&#8212;&#8201;to a narrow scope of board or director-level concerns, and the existence of certain capabilities, including:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -17552,30 +17560,38 @@ The COBIT 5 framework makes a clear distinction between governance and managemen
 </ul>
 </div>
 <div class="paragraph">
-<p>Governance is about managing results and risk. It&#8217;s about objectives and outcomes. It&#8217;s about "what," not "how."</p>
+<p>Ultimately, governance is about managing results and risk. It&#8217;s about objectives and outcomes. It&#8217;s about "what," not "how."</p>
 </div>
 <div class="paragraph">
-<p>Corporate governance is a broad and deep topic, essential to the functioning of society and its organized participants. These include for-profit, non-profit, and even governmental organizations. Any legally organized entity of significant scope has governance needs. If you are taking any courses on Finance or Accounting, you will likely cover governance objectives and processes.</p>
+<p>In today&#8217;s digital governance there is a greater concern for outcome and effectiveness, especially in terms of time to market (minimizing <a href="#cost-of-delay">Cost of Delay</a>). Previously, concerns for efficiency might lead a company to overburden its staff, resulting in queuing gridlock, too much work in process, destructive multitasking, and ultimately failure to deliver timely results (or deliver at all).</p>
 </div>
-<div class="literalblock">
+<div class="paragraph">
+<p>Such failure to deliver was tolerated because it seemed to be a common problem across most IT departments, and because digital transformation had not taken hold yet. IT systems were often back office and delays in delivering them (or significant issues in their operation) were not <strong>quite</strong> as damaging.</p>
+</div>
+<div class="paragraph">
+<p>Now, effectiveness of delivery is essential. The interesting, and to some degree unexpected result, is that both efficiency and risk seem to be benefiting as well. Cross-functional, focused teams are both more effective and more efficient, and able to manage risk better as well. Systems are being built with both increased rapidity as well as improved stability, and the automation enabling this provides robust audit support.</p>
+</div>
+<div class="sidebarblock">
 <div class="content">
-<pre>it's a spectrum that tracks our emergence model</pre>
+<div class="paragraph">
+<p><strong>The DevOps Audit Toolkit</strong></p>
+</div>
+<div class="paragraph">
+<p>The DevOps Audit Toolkit <a href="#DeLuccia2015">[DeLuccia2015]</a> provides an important set of examples demonstrating how modern DevOps toolchain automation can fulfill audit objectives as well or better than "traditional" approaches.</p>
+</div>
 </div>
 </div>
 <div class="paragraph">
-<p>Corporate structures
-Weill</p>
+<p>Finally, consider the "programmability" criteria above. A highly "programmable" position is one where the responsibilities can be specified in terms of their activities. <strong>And what is the fundamental dynamic of digital transformation?</strong> It is no accident that such positions are called "programmable." In fact, they <strong>are</strong> being "programmed away" or "eaten by software"- leaving only higher-skill positions that are best managed by objective, and which are more sensitive to cultural dynamics.</p>
 </div>
 <div class="paragraph">
-<p>COBIT</p>
-</div>
-<div class="paragraph">
-<p>"Rogue" IT</p>
-</div>
-<div class="paragraph">
-<p>Monitor: performance &amp; conformance (nice pair)</p>
+<p>Preoccupation with "efficiency" fades as a result of the decreasingly "programmable" component of work. The term "efficiency" signals a process that has been well defined (is "programmable") to the point where it is repeatable and scalable. Such processes are ripe for automation, commoditization, and outsourcing, and this is in fact happening. And when such repetitive concerns become a matter of sourcing rather than execution, the emphasis shifts to risk management and governance of the supplier.</p>
 </div>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_policy_assurance_and_audit">Policy, assurance and audit</h4>
 <div class="sect4">
 <h5 id="_policy_management">Policy management</h5>
 <div class="paragraph">
@@ -17657,8 +17673,215 @@ committee structures - cross-org - mentioned in Ch 7</pre>
 <div class="paragraph">
 <p>We have already covered contracting in terms of software and Cloud. But in terms of the emergence model, it is typical that companies enter into contracts before having a fully mature sourcing and contract management capability with input from the governance, risk, and compliance perspective.</p>
 </div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_assurance">Assurance</h5>
+<div class="quoteblock">
+<blockquote>
+Exercise caution in your business affairs;
+for the world is full of trickery.
+</blockquote>
+<div class="attribution">
+&#8212; Max Ehrmann<br>
+<cite>Desiderata</cite>
+</div>
+</div>
+<div class="quoteblock">
+<blockquote>
+Quis custodiet ipsos custodes?
+</blockquote>
+<div class="attribution">
+&#8212; Latin for "Who watches the watchers?"
+</div>
+</div>
 <div class="paragraph">
-<p>Assurance</p>
+<p>intro</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>All audit is assurance, but not all assurance is audit. (Blurry boundary in practice, as an assurance engagement may be undertaken by auditors, and might be casually called an "audit" by the parties involved)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We can understand audit through understanding the general principles of assurance first.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+Assurance means that, pursuant to an accountability relationship between two or more parties, an IT audit and assurance professional may be engaged to issue a written communication expressing a conclusion about the subject matters to the
+accountable party.
+</blockquote>
+<div class="attribution">
+&#8212; Cobit 5 for Assurance
+</div>
+</div>
+<div class="sect5">
+<h6 id="_three_party_foundation">Three party foundation</h6>
+<div class="paragraph">
+<p>re-draw p15 cobit5 assurance</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_examples_non_audit">Examples (non-audit)</h6>
+<div class="quoteblock">
+<blockquote>
+Businesses must find a level of trust between each other  . . .  3rd party reports provide that confidence. Those issuing the reports stake their name &amp; liability with each issuance.
+</blockquote>
+<div class="attribution">
+&#8212; James DeLuccia<br>
+<cite>Successfully Establishing and Representing DevOps in an Audit</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>Assurance and industry standards
+manufacturing tolerance examples</p>
+</div>
+<div class="paragraph">
+<p>Data center evaluations of cloud providers are a form of <strong>assurance</strong>.
+SAS 70</p>
+</div>
+<div class="paragraph">
+<p>IaaS assurance
+SaaS assurance</p>
+</div>
+<div class="paragraph">
+<p>Data safe harbor -to be discussed in next section</p>
+</div>
+<div class="paragraph">
+<p>"Dynamic certification of Cloud services: Trust, but verify!" Lins et al, computing edge</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_audit">Audit</h5>
+<div class="quoteblock">
+<blockquote>
+Agile or not, a team ultimately has to meet legal and essential organizational needs, and audits help to ensure this.
+</blockquote>
+<div class="attribution">
+&#8212; Scott Ambler<br>
+<cite>Disciplined Agile Delivery</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>Types of audit</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>External</p>
+</li>
+<li>
+<p>Internal</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Scope and bounds</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Finance</p>
+</li>
+<li>
+<p>IT</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Recipient is key</p>
+</div>
+<div class="sect5">
+<h6 id="_external_audit">External audit</h6>
+<div class="paragraph">
+<p>"The Committee therefore recommends that all listed companies should establish an audit committee."  <a href="#Cadbury1992">[Cadbury1992]</a>, 4.35</p>
+</div>
+<div class="paragraph">
+<p>An external auditor is chartered by a regulatory authority to visit an
+enterprise or entity and to review and independently report the results of that review. <a href="#Moeller2013">[Moeller2013]</a> p 319</p>
+</div>
+<div class="paragraph">
+<p>Phoenix project example</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_internal_audit">Internal audit</h6>
+<div class="quoteblock">
+<blockquote>
+Internal auditing is an independent appraisal function established within an organization to examine and evaluate its activities as a service to the organization.
+</blockquote>
+<div class="attribution">
+&#8212; Institute of Internal Auditors
+</div>
+</div>
+<div class="paragraph">
+<p>Usually reports to audit committee</p>
+</div>
+<div class="paragraph">
+<p>"The function of the internal auditors is complementary to, but different from, that of the outside auditors." <a href="#Cadbury1992">[Cadbury1992]</a>, 4.39</p>
+</div>
+<div class="paragraph">
+<p>the typical internal audit process requires scheduling a review, perform
+ing a risk assessment and necessary audit procedures, and then reporting the results
+of an audit to management and the audit committee.<a href="#Moeller2013">[Moeller2013]</a> p 324</p>
+</div>
+<div class="paragraph">
+<p>Institute of Internal Auditors</p>
+</div>
+<div class="paragraph">
+<p>Auditing of areas other than security e.g. performance reporting</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_assurance_practices">Assurance practices</h6>
+<div class="paragraph">
+<p>derived from <a href="#ISACA2013a">[ISACA2013a]</a></p>
+</div>
+<div class="paragraph">
+<p>Lifecycle</p>
+</div>
+<div class="paragraph">
+<p>Scoping
+* ID users of report (e.g. board audit committee)
+* ID accountable/responsible parties
+* ID Objectives
+* ID controls/enablers</p>
+</div>
+<div class="paragraph">
+<p>Performance</p>
+</div>
+<div class="paragraph">
+<p>Fundamental: expected vs actual</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enquire/confirm
+Documentation, interviews, transactional validation</p>
+</li>
+<li>
+<p>Inspect
+Process flows - trace tx thru system
+Physical inspection/walkthroughs</p>
+</li>
+<li>
+<p>Observe</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Attempt what is prevented</p>
+</div>
+<div class="paragraph">
+<p>Embedded tooling/modules
+Inspect the security protocols around them</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>DevOps Audit Defense Toolkit discussion
+Evidence p 17</pre>
+</div>
 </div>
 </div>
 </div>
@@ -18028,219 +18251,6 @@ An enterprise needs to understand the costs and implications of various controls
 </div>
 </div>
 <div class="sect3">
-<h4 id="_assurance_and_audit">Assurance and Audit</h4>
-<div class="quoteblock">
-<blockquote>
-Exercise caution in your business affairs;
-for the world is full of trickery.
-</blockquote>
-<div class="attribution">
-&#8212; Max Ehrmann<br>
-<cite>Desiderata</cite>
-</div>
-</div>
-<div class="quoteblock">
-<blockquote>
-Quis custodiet ipsos custodes?
-</blockquote>
-<div class="attribution">
-&#8212; Latin for "Who watches the watchers?"
-</div>
-</div>
-<div class="paragraph">
-<p>intro</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>All audit is assurance, but not all assurance is audit. (Blurry boundary in practice, as an assurance engagement may be undertaken by auditors, and might be casually called an "audit" by the parties involved)</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>We can understand audit through understanding the general principles of assurance first.</p>
-</div>
-<div class="sect4">
-<h5 id="_assurance">Assurance</h5>
-<div class="quoteblock">
-<blockquote>
-Assurance means that, pursuant to an accountability relationship between two or more parties, an IT audit and assurance professional may be engaged to issue a written communication expressing a conclusion about the subject matters to the
-accountable party.
-</blockquote>
-<div class="attribution">
-&#8212; Cobit 5 for Assurance
-</div>
-</div>
-<div class="sect5">
-<h6 id="_three_party_foundation">Three party foundation</h6>
-<div class="paragraph">
-<p>re-draw p15 cobit5 assurance</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_examples_non_audit">Examples (non-audit)</h6>
-<div class="quoteblock">
-<blockquote>
-Businesses must find a level of trust between each other  . . .  3rd party reports provide that confidence. Those issuing the reports stake their name &amp; liability with each issuance.
-</blockquote>
-<div class="attribution">
-&#8212; James DeLuccia<br>
-<cite>Successfully Establishing and Representing DevOps in an Audit</cite>
-</div>
-</div>
-<div class="paragraph">
-<p>Assurance and industry standards
-manufacturing tolerance examples</p>
-</div>
-<div class="paragraph">
-<p>Data center evaluations of cloud providers are a form of <strong>assurance</strong>.
-SAS 70</p>
-</div>
-<div class="paragraph">
-<p>IaaS assurance
-SaaS assurance</p>
-</div>
-<div class="paragraph">
-<p>Data safe harbor -to be discussed in next section</p>
-</div>
-<div class="paragraph">
-<p>"Dynamic certification of Cloud services: Trust, but verify!" Lins et al, computing edge</p>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_audit">Audit</h5>
-<div class="quoteblock">
-<blockquote>
-Agile or not, a team ultimately has to meet legal and essential organizational needs, and audits help to ensure this.
-</blockquote>
-<div class="attribution">
-&#8212; Scott Ambler<br>
-<cite>Disciplined Agile Delivery</cite>
-</div>
-</div>
-<div class="paragraph">
-<p>Types of audit</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>External</p>
-</li>
-<li>
-<p>Internal</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Scope and bounds</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Finance</p>
-</li>
-<li>
-<p>IT</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Recipient is key</p>
-</div>
-<div class="sect5">
-<h6 id="_external_audit">External audit</h6>
-<div class="paragraph">
-<p>"The Committee therefore recommends that all listed companies should establish an audit committee."  <a href="#Cadbury1992">[Cadbury1992]</a>, 4.35</p>
-</div>
-<div class="paragraph">
-<p>An external auditor is chartered by a regulatory authority to visit an
-enterprise or entity and to review and independently report the results of that review. <a href="#Moeller2013">[Moeller2013]</a> p 319</p>
-</div>
-<div class="paragraph">
-<p>Phoenix project example</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_internal_audit">Internal audit</h6>
-<div class="quoteblock">
-<blockquote>
-Internal auditing is an independent appraisal function established within an organization to examine and evaluate its activities as a service to the organization.
-</blockquote>
-<div class="attribution">
-&#8212; Institute of Internal Auditors
-</div>
-</div>
-<div class="paragraph">
-<p>Usually reports to audit committee</p>
-</div>
-<div class="paragraph">
-<p>"The function of the internal auditors is complementary to, but different from, that of the outside auditors." <a href="#Cadbury1992">[Cadbury1992]</a>, 4.39</p>
-</div>
-<div class="paragraph">
-<p>the typical internal audit process requires scheduling a review, perform
-ing a risk assessment and necessary audit procedures, and then reporting the results
-of an audit to management and the audit committee.<a href="#Moeller2013">[Moeller2013]</a> p 324</p>
-</div>
-<div class="paragraph">
-<p>Institute of Internal Auditors</p>
-</div>
-<div class="paragraph">
-<p>Auditing of areas other than security e.g. performance reporting</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_assurance_practices">Assurance practices</h6>
-<div class="paragraph">
-<p>derived from <a href="#ISACA2013a">[ISACA2013a]</a></p>
-</div>
-<div class="paragraph">
-<p>Lifecycle</p>
-</div>
-<div class="paragraph">
-<p>Scoping
-* ID users of report (e.g. board audit committee)
-* ID accountable/responsible parties
-* ID Objectives
-* ID controls/enablers</p>
-</div>
-<div class="paragraph">
-<p>Performance</p>
-</div>
-<div class="paragraph">
-<p>Fundamental: expected vs actual</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Enquire/confirm
-Documentation, interviews, transactional validation</p>
-</li>
-<li>
-<p>Inspect
-Process flows - trace tx thru system
-Physical inspection/walkthroughs</p>
-</li>
-<li>
-<p>Observe</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Attempt what is prevented</p>
-</div>
-<div class="paragraph">
-<p>Embedded tooling/modules
-Inspect the security protocols around them</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>DevOps Audit Defense Toolkit discussion
-Evidence p 17</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
 <h4 id="_security">Security</h4>
 <div class="quoteblock">
 <blockquote>
@@ -18498,7 +18508,7 @@ The enterprise function responsible for insight into the enterprise risk related
 </div>
 </div>
 <div class="sect3">
-<h4 id="_digital_governance">Digital Governance</h4>
+<h4 id="_digital_governance_2">Digital Governance</h4>
 <div class="quoteblock">
 <blockquote>
 transforming to an agile delivery approach is difficult. Companies or government agencies that have been in existence for decades have built up layers of deep and wide waste, many of them around governance.<br>
@@ -19579,6 +19589,9 @@ A foolish consistency is the hobgoblin of little minds.
 </li>
 <li>
 <p><a id="Csikszentmihalyi1990"></a>[Csikszentmihalyi1990]: Csikszentmihalyi, M. (1990). Flow : the psychology of optimal experience. New York, Harper &amp; Row.</p>
+</li>
+<li>
+<p><a id="DeLuccia2015"></a>[DeLuccia2015]: DeLuccia, James, Jeff Gallimore, Gene Kim, and Byron Miller. 2015. “DevOps Audit Defense Toolkit.” <a href="http://itrevolution.com/devops-and-auditors-the-devops-audit-defense-toolkit/" class="bare">http://itrevolution.com/devops-and-auditors-the-devops-audit-defense-toolkit/</a>.</p>
 </li>
 <li>
 <p><a id="Drucker1993"></a>[Drucker1993]: Drucker, Peter F. 1993. <em>Post-Capitalist Society</em>. 1st ed. New York, NY: HarperBusiness.</p>
