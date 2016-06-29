@@ -975,7 +975,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_security_and_assurance">Security and assurance</a></li>
 </ul>
 </li>
-<li><a href="#_digital_governance_2">Digital Governance</a>
+<li><a href="#_digital_governance">Digital Governance</a>
 <ul class="sectlevel4">
 <li><a href="#_historic_it_governance_controlling_the_order_taker">Historic IT governance: controlling the "order taker"</a></li>
 <li><a href="#_agile_meets_it_governance">Agile meets IT governance</a></li>
@@ -17664,7 +17664,7 @@ The term "value recognition" as the stakeholder goal is chosen over "value creat
 </div>
 </div>
 <div class="sect5">
-<h6 id="_digital_governance">Digital governance</h6>
+<h6 id="_governance_and_digital_delivery">Governance and digital delivery</h6>
 <div class="paragraph">
 <p>What does all this have to do with information technology and the lowermost  <strong>digital delivery</strong> chevron?</p>
 </div>
@@ -17717,6 +17717,9 @@ The term "value recognition" as the stakeholder goal is chosen over "value creat
 </div>
 <div class="paragraph">
 <p>A critical concept for the implementation of digital governance is the concept of enablers.</p>
+</div>
+<div class="paragraph">
+<p><a id="enablers"></a></p>
 </div>
 </div>
 </div>
@@ -17892,7 +17895,7 @@ Enablers are factors that, individually and collectively, influence whether some
 <div class="sect4">
 <h5 id="_policy_management">Policy management</h5>
 <div class="paragraph">
-<p><a id="how-pollicy-begins"></a></p>
+<p><a id="how-policy-begins"></a></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -18079,13 +18082,13 @@ Carefully drafted and standardized policies and procedures save the company coun
 <p>(not a comprehensive list)</p>
 </div>
 <div class="paragraph">
-<p>Policies, even though more detailed than codes of ethics/conduct, still should be written fairly generally. In many organizations, they must be approved by the governing board.</p>
+<p>Policies, even though more detailed than codes of ethics/conduct, still should be written fairly broadly. In many organizations, they must be approved by the governing board. They should therefore be independent of  technology specifics. An information security policy may state that the hardening guidelines must be followed, but the hardening guidelines (stipulating for example what services and ports are allowable on Debian Linux) are <strong>not</strong> policy.</p>
 </div>
 <div class="paragraph">
-<p>There may be various levels of policy</p>
+<p>There may be various levels or classes of policy.</p>
 </div>
 <div class="paragraph">
-<p>Finally, policies reference <strong>Standards and processes</strong> and other enablers as appropriate. This is the management level, where documentation is specific and actionable. Guidance here may include:</p>
+<p>Finally, policies reference <strong>Standards and processes</strong> and other <a href="#enablers">enablers</a> as appropriate. This is the management level, where documentation is specific and actionable. Guidance here may include:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -18102,6 +18105,17 @@ Carefully drafted and standardized policies and procedures save the company coun
 <p>Processes and procedures</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>These concepts may vary according to organization, and can become quite detailed. In general, standard and baselines refer to some intended or documented state the organization uses as a reference point. An example might be "we run Debian Linux 16.10 unless there is a compelling business reason to do otherwise." A behavioral baseline might be "Guests are expected to sign in and be accompanied when on the data center floor."</p>
+</div>
+<div class="paragraph">
+<p>We will discuss technical baselines further in the chapter section on security, and also in our discussion of the technology product lifecycle in Chapter 12. See also Shon Harris' excellent CISSP Exam Guide <a href="#Harris2013">[Harris2013]</a> for much more detail on these topics.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>examine competing texts for the level they go on this topic in particularx</pre>
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -18121,11 +18135,6 @@ The enterprise function responsible for insight into the enterprise risk related
 </blockquote>
 <div class="attribution">
 &#8212; COBIT for Risk
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Verticals discussion best here?</pre>
 </div>
 </div>
 </div>
@@ -18178,6 +18187,12 @@ Some companies need to institute formal policies quite early. Even a startup may
 <div class="content">
 <pre>Policy is not just about risk. That's why risk comes later. Policy is also about effectiveness, e.g. understanding cost of delay, not overburdening ... we understand risk as risk of loss, not ineffectiveness... but we still control for our policies that are intended to promote effectiveness...</pre>
 </div>
+</div>
+<div class="paragraph">
+<p>Overlaps with enablers</p>
+</div>
+<div class="paragraph">
+<p>Assurance and audit next up</p>
 </div>
 </div>
 </div>
@@ -18859,6 +18874,9 @@ At a time when the significance of information and related technologies is incre
 <div class="paragraph">
 <p>2-axis view</p>
 </div>
+<div class="paragraph">
+<p>Security standards (Evaluation Assurance Levels)</p>
+</div>
 <div class="sect5">
 <h6 id="_security_architecture">Security architecture</h6>
 <div class="paragraph">
@@ -18960,7 +18978,7 @@ CISSP
 </div>
 </div>
 <div class="sect3">
-<h4 id="_digital_governance_2">Digital Governance</h4>
+<h4 id="_digital_governance">Digital Governance</h4>
 <div class="quoteblock">
 <blockquote>
 transforming to an agile delivery approach is difficult. Companies or government agencies that have been in existence for decades have built up layers of deep and wide waste, many of them around governance.<br>
@@ -20165,16 +20183,19 @@ A foolish consistency is the hobgoblin of little minds.
 <p><a id="Guldentops2011"></a>[Guldentops2011]:	Guldentops, Erik. 2011. “Where Have All the Control Objectives Gone? They Have Picked Them Every One.” ISACA Journal 4. <a href="http://www.isaca.org/Journal/archives/2011/Volume-4/Documents/jpdf11v4-Where-Have-All.pdf" class="bare">http://www.isaca.org/Journal/archives/2011/Volume-4/Documents/jpdf11v4-Where-Have-All.pdf</a>.</p>
 </li>
 <li>
-<p><a id="Hay2006"></a>[Hay2006]: Hay, D. C. (2006), <em>Data model patterns : a metadata map</em>, Morgan Kaufmann ; Oxford : Elsevier Science [distributor], San Francisco, Calif.</p>
-</li>
-<li>
 <p><a id="Hammer1993"></a>[Hammer1993]: Hammer, Michael, and James Champy. 1993. Reengineering the Corporation : A Manifesto for Business Revolution. Brealey Publishing.</p>
 </li>
 <li>
 <p><a id="Harmon2003"></a>[Harmon2003]: Harmon, Paul. 2003. Business Process Change: A Manager’s Guide to Improving, Redesigning, and Automating Processes. Amsterdam: Elsevier.</p>
 </li>
 <li>
+<p><a id="Harris2013"></a>[Harris2013]: Harris, S. (2013). CISSP Exam Guide (6th ed.). New York: McGraw-Hill Education.</p>
+</li>
+<li>
 <p><a id="Hay1996"></a>[Hay1996]: Hay, D. C. (1996), <em>Data model patterns : conventions of thought</em>, Dorset House Pub., New York</p>
+</li>
+<li>
+<p><a id="Hay2006"></a>[Hay2006]: Hay, D. C. (2006), <em>Data model patterns : a metadata map</em>, Morgan Kaufmann ; Oxford : Elsevier Science [distributor], San Francisco, Calif.</p>
 </li>
 <li>
 <p><a id="Heller2016"></a>[Heller2016]: Heller, Martha. 2016. “GE’s Jim Fowler on the CIO Role in the Digital Industrial Economy.” CIO Magazine Online. <a href="http://www.cio.com/article/3048805/leadership-management/ges-jim-fowler-on-the-cio-role-in-the-digital-industrial-economy.html" class="bare">http://www.cio.com/article/3048805/leadership-management/ges-jim-fowler-on-the-cio-role-in-the-digital-industrial-economy.html</a>.</p>
