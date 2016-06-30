@@ -37,13 +37,15 @@ The lawyer said, "I think you need some policies," and everybody groaned. One pe
 
 The lawyer said, "Um, that's an urban legend. The actual Nordstrom Code of Business Conduct and Ethics, while it starts off with that, runs about 8,000 words and covers a variety of topics such as handling customer information, using technology, social media, and so forth."
 
-And the new CFO said, "Look, I get that we want to stay agile, and keep our informal culture. I'm no fan of policy for the sake of policy. But I need those policies to keep *my* staff costs down. Two different expense approaches alone is going to kill me, and that's only one of twenty issues we've uncovered here. \'Do the right thing' doesn't cut it. We've got to have some means for establishing a baseline with new employees, someplace people can turn to when they don't know what the expectation is."
+And the new CFO said, "Look, I get that we want to stay agile, and keep our informal culture. I'm no fan of policy for the sake of policy. But I need those policies to keep *my* staff costs down. Two different expense approaches doesn't add *any* value to us, and that's only one of twenty issues we've uncovered here. \'Do the right thing' doesn't cut it. We've got to have some means for establishing a baseline with new employees, someplace people can turn to when they don't know what the expectation is."
 
 The HR director chimed in. "If we don't document our official position on things like  harassment we are going to have problems. We could fire someone who has done something really bad, and they could sue us for wrongful termination. Or their victims could sue us for failing to prevent the issue. That could cost us real money." The lawyer nodded and the company owners looked thoughtful.
 
-Another person spoke up. "I came from a company that had a 500-page policy manual. It went down into way too much detail and was always out of date. No-one could find anything in it, and there would be stuff that was just wrong because the revision process was broken."
+Another person spoke up. "I came from a company that had a 500-page policy manual. It went down into way too much detail and was always out of date. No-one could find anything in it, and there would be stuff that was wrong because the revision process was broken."
 
-The lawyer said, "You need to keep your policies light and on the general side (like Nordstrom), and cover more detailed topics elsewhere. For example, the exact approach on how to reimburse employee expenses probably doesn't belong in the policy manual. Of course, that means that somewhere you need to lay out how your principles inform your policies which are implemented by processes, procedures, guidelines, and so forth. Your actual employee handbook will probably be thirty or forty pages - sorry. You also should take advantage of your internal intranet and make sure people can find just the policy they need, with related guidance, instead of having to page through a huge document."
+The lawyer said, "You need to keep your policies light and on the general side (like Nordstrom), and cover more detailed topics elsewhere. For example, the exact approach on how to reimburse employee expenses probably doesn't belong in the policy manual. Of course, that means that somewhere you need to lay out how your principles inform your policies which are implemented by processes, procedures, guidelines, and so forth. Your actual employee handbook will probably be thirty or forty pages - sorry. You also should take advantage of your internal intranet and make sure people can find just the policy they need, with related guidance, instead of having to page through a huge document.
+
+"Finally, you need to carefully distribute the authorship and revision control, especially for lower levels of the guidance (e.g. technical standards that can change quickly). This is both because the people most affected should have a stronger voice in the policy, and also because centralized policy groups become bottlenecks if they are doing all the work."
 
 Another said, "This is all getting complicated."
 
@@ -99,7 +101,7 @@ Policies are often independently maintained documents, perhaps organized along l
 
 (not a comprehensive list)
 
-Policies, even though more detailed than codes of ethics/conduct, still should be written fairly broadly. In many organizations, they must be approved by the governing board. They should therefore be independent of  technology specifics. An information security policy may state that the hardening guidelines must be followed, but the hardening guidelines (stipulating for example what services and ports are allowable on Debian Linux) are *not* policy.
+Policies, even though more detailed than codes of ethics/conduct, still should be written fairly broadly. In many organizations, they must be approved by the governing board. *They should therefore be independent of  technology specifics*. An information security policy may state that the hardening guidelines must be followed, but the hardening guidelines (stipulating for example what services and ports are allowable on Debian Linux) are *not* policy.
 
 There may be various levels or classes of policy.
 
@@ -110,9 +112,58 @@ Finally, policies reference *Standards and processes* and other xref:enablers[en
 * Guidelines
 * Processes and procedures
 
-These concepts may vary according to organization, and can become quite detailed. In general, standard and baselines refer to some intended or documented state the organization uses as a reference point. An example might be "we run Debian Linux 16.10 unless there is a compelling business reason to do otherwise." Even more detail is seen in hardening guidelines. A behavioral baseline might be "Guests are expected to sign in and be accompanied when on the data center floor."
+These concepts may vary according to organization, and can become quite detailed.
+
+===== Standards, frameworks, and methods, and the innovate/standardize/commoditize cycle
+
+We have discussed a variety of industry influences throughout this book: PMBOK, ITIL, COBIT, Scrum, Kanban, ISO/IEC 38500 and so on. We need to clarify their roles and positioning further.
+
+All of these can be considered various forms of "guidance" and as such are governance xref:enablers[enablers]. However, their origins, stakeholders, format, content, and usage vary greatly.
+
+First, the term "*standard*" especially has multiple meanings. A "standard" in the policy sense may be a set of compulsory rules. Also, "standard" or "baseline" may refer to some intended or documented state the organization uses as a reference point. An example might be "we run Debian Linux 16.10 as a standard unless there is a compelling business reason to do otherwise."
+
+This last usage shades into a third meaning of standard, normative standards such as are produced by the IEEE, IETF and ISO/IEC.
+
+* ISO/IEC: Internatonal Standards Organization/International Eletrotechnical Commission
+* IETF: Internet Engineering Task Force
+* IEEE: Institute of Electrical and Electronics Engineers
+
+The International Standards Organization occupies a central place in this ecosystem. It possesses "general consultative status" with the United Nations, and has over 250 technical committees that develop the actual standards.
+
+The IEEE standardizes such matters as wireless networking (e.g. WiFi). The IETF (Internet Engineering Task Force) standardizes lower level Internet protocols such as TCP/IP and HTTP. The W3C (World Wide Web Consortium) standardizes higher level Internet protocols such as HTML. Sometimes standards are first developed by a group such as the IEEE/IEC and then given further authority though publication by ISO/IEC.
+
+The ISO/IEC in particular, in addition to its technical standards, also develops higher order management/"best practice" standards. One well known example of such an ISO standard is the ISO 9000 series on quality management.
+
+Frameworks were discussed in xref:frameworks[Chapter 9.] Frameworks have two major meanings. First, computing language frameworks are created to make software development easier. Examples include Struts, AngularJS, and many more. This is a highly volatile area of technology, with new frameworks appearing every year and older ones gradually losing favor.
+
+In general we are not concerned with these kinds of specific frameworks in this book, except governing them as part of the xref:tech-prod-lifecycle[technology product lifecycle]. We are concerned with "process" frameworks such as ITIL, PMBOK, COBIT, CMMI, and TOGAF. These frameworks are not "standards" in and of themselves. *However*, they often have corresponding ISO standards:
+
+[cols="2*", options="header"]
+|====
+|Framework|Standard
+|ITIL|ISO/IEC 20000
+|COBIT|ISO/IEC 38500
+|PMBOK|ISO/IEC 21500
+|CMMI |ISO/IEC 15504
+|TOGAF |ISO/IEC 42010
+|====
+
+It is critical to realize that the frameworks tend to be lengthy and verbose. The ISO/IEC standards are brief by comparison, perhaps on average 10% of the corresponding framework.
+
+Finally, methods (aka methodologies) in general are more action oriented and prescriptive. Scrum and XP are methods. It is at least arguable that PMBOK is a method as well as a framework. There is little industry consensus on some of these definitional issues and the student is advised to not be overly concerned about such abstract debates.
+
+Finally, there are terms that indicate technology cycles, movements, communities of interest, or cultural trends: Agile and DevOps being two of the most current and notable. These are neither frameworks, standards, nor methods. However, commercial interests often attempt to build frameworks and methods representing these organic trends. Examples include the Scaled Agile Framework, Disciplined Agile Delivery, and many others.
+
+Ultimately, a cycle can be seen:
+
+
+
+
+Even more detail is seen in hardening guidelines. A behavioral baseline might be "Guests are expected to sign in and be accompanied when on the data center floor."
 
 We will discuss technical baselines further in the chapter section on security, and also in our discussion of the technology product lifecycle in Chapter 12. See also Shon Harris' excellent CISSP Exam Guide <<Harris2013>> for much more detail on these topics.
+
+The ideal end state is a policy that is completely traceable to various automation characteristics, such as approved "infrastructure as code" settings applied automatically by configuration management software (as discussed in "The DevOps Audit Toolkit," <<DeLuccia2015>>-- more on this to come). However, there will always be organizational concerns that cannot be fully automated in such manners.
 
  examine competing texts for the level they go on this topic in particular
 
