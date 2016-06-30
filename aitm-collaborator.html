@@ -949,10 +949,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_policy_management">Policy management</a></li>
 <li><a href="#_the_policy_ecosystem">The policy ecosystem</a></li>
 <li><a href="#_standards_frameworks_methods_and_the_innovation_cycle">Standards, frameworks, methods, and the innovation cycle</a></li>
-<li><a href="#_policy_lifecycle">Policy lifecycle</a></li>
 <li><a href="#_compliance">Compliance</a></li>
-<li><a href="#_regulations_of_note">Regulations of note</a></li>
-<li><a href="#_compliance_practices">Compliance practices</a></li>
 </ul>
 </li>
 <li><a href="#_assurance_and_audit">Assurance and audit</a>
@@ -1384,10 +1381,18 @@ Now agile methodologies—which involve new values, principles, practices, and b
 <li>
 <p>Technical debt</p>
 </li>
+<li>
+<p>Risk</p>
+</li>
 </ul>
 </div>
 <div class="paragraph">
 <p>and so forth.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Distinguishing value: critical approach to frameworks and "best practices" where  other texts seem to blindly accept them</pre>
+</div>
 </div>
 <div class="paragraph">
 <p>So, how do we undertake digital transformation? For longer term, more ambitious goals, while we cannot plan in advance how any given change initiative will play out, we <strong>can</strong> develop awareness.</p>
@@ -15935,6 +15940,11 @@ MEA03	Evaluate and Assess Compliance with External Requirements<br></p></td>
 </li>
 <li>
 <p>Confusion of process definition</p>
+<div class="literalblock">
+<div class="content">
+<pre>Add failure of risk management quote from Hubbard p 73</pre>
+</div>
+</div>
 </li>
 </ul>
 </div>
@@ -16741,6 +16751,11 @@ Where IT management diverges from Agile</pre>
 <pre>===== ISO 9000 http://www.iso.org/iso/pub100080.pdf</pre>
 </div>
 </div>
+<div class="literalblock">
+<div class="content">
+<pre>===== Digital services playbook  https://playbook.cio.gov/#play10</pre>
+</div>
+</div>
 <div class="sect4">
 <h5 id="_deeper_theory">Deeper theory</h5>
 <div class="literalblock">
@@ -17291,7 +17306,7 @@ As with other chapters in the later part of this book, we are going to some degr
 <p>This chapter covers "Governance, Risk, Security, and Compliance" because there are clear relationships between these concerns. They have important dimensions of independence as well. It is interesting that the popular Guide to the CISSP starts its discussion of security with a chapter titled "Information Security Governance and Risk Management." Governance leads to a concern for risk, and security specializes in certain important classes of risk. Security requires grounding in governance and risk management.</p>
 </div>
 <div class="paragraph">
-<p>Compliance is also related but again distinct, as the concern for adherence to laws and regulations, and secondarily internal policy.</p>
+<p>Compliance is also related but again distinct, as the concern for adherence to laws and regulations, and secondarily internal policy. Compliance is covered <strong>prior</strong> to risk, as some forms of compliance are not only about managing risk.</p>
 </div>
 <div class="sect4">
 <h5 id="_chapter_10_outline">Chapter 10 outline</h5>
@@ -18101,7 +18116,7 @@ Carefully drafted and standardized policies and procedures save the company coun
 <p>(not a comprehensive list)</p>
 </div>
 <div class="paragraph">
-<p>Policies, even though more detailed than codes of ethics/conduct, still should be written fairly broadly. In many organizations, they must be approved by the governing board. <strong>They should therefore be independent of  technology specifics</strong>. An information security policy may state that the hardening guidelines must be followed, but the hardening guidelines (stipulating for example what services and ports are allowable on Debian Linux) are <strong>not</strong> policy.</p>
+<p>Policies, even though more detailed than codes of ethics/conduct, still should be written fairly broadly. In many organizations, they must be approved by the governing board. <strong>They should therefore be independent of  technology specifics</strong>. An information security policy may state that the hardening guidelines must be followed, but the hardening guidelines (stipulating for example what services and open ports are allowable on Debian Linux) are <strong>not</strong> policy.</p>
 </div>
 <div class="paragraph">
 <p>There may be various levels or classes of policy.</p>
@@ -18128,6 +18143,11 @@ Carefully drafted and standardized policies and procedures save the company coun
 <div class="paragraph">
 <p>These concepts may vary according to organization, and can become quite detailed.</p>
 </div>
+<div class="literalblock">
+<div class="content">
+<pre>examine competing texts for the level they go on this topic in particular</pre>
+</div>
+</div>
 <div class="paragraph">
 <p>Even more detail is seen in hardening guidelines. A behavioral baseline might be "Guests are expected to sign in and be accompanied when on the data center floor."</p>
 </div>
@@ -18137,10 +18157,20 @@ Carefully drafted and standardized policies and procedures save the company coun
 <div class="paragraph">
 <p>The ideal end state is a policy that is completely traceable to various automation characteristics, such as approved "infrastructure as code" settings applied automatically by configuration management software (as discussed in "The DevOps Audit Toolkit," <a href="#DeLuccia2015">[DeLuccia2015]</a>-- more on this to come). However, there will always be organizational concerns that cannot be fully automated in such manners.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>examine competing texts for the level they go on this topic in particular</pre>
+<div class="quoteblock">
+<blockquote>
+Company policies can breed and multiply to a point where they can hinder innovation and risk-taking. Things can get out of hand as people generate policies to respond to one-time infractions or out of the ordinary situations.
+</blockquote>
+<div class="attribution">
+&#8212; Michael Griffin<br>
+<cite>How to Write a Policy Manual</cite>
 </div>
+</div>
+<div class="paragraph">
+<p>Finally, policies and their derivative guidance are developed, just like systems, via a lifecycle. They require some initial vision, and an understanding of what the requirements are. As Steve Schlarman notes, "policy must define the why, what, who, where and how of the IT process" <a href="#Schlarman2008">[Schlarman2008]</a>.</p>
+</div>
+<div class="paragraph">
+<p>User stories have been used effectively to understand policy needs. Again, it&#8217;s advisable to institute sunset dates or some other mechanism that forces their periodic review, with the understanding that any such approach generates demand on the organization that must be funded.</p>
 </div>
 </div>
 <div class="sect4">
@@ -18272,27 +18302,35 @@ There is little industry consensus on some of these definitional issues and the 
 </div>
 </div>
 <div class="sect4">
-<h5 id="_policy_lifecycle">Policy lifecycle</h5>
-<div class="paragraph">
-<p>Don&#8217;t overcomplicate</p>
-</div>
-<div class="paragraph">
-<p>Lifecycle/sunset!</p>
-</div>
-</div>
-<div class="sect4">
 <h5 id="_compliance">Compliance</h5>
 <div class="quoteblock">
 <blockquote>
-The enterprise function responsible for insight into the enterprise risk related to regulations, legal mandates and internal policies and standards.
+Policy without a corresponding compliance measurement and monitoring strategy will be looked at as unrealistic, ignored dogma.
 </blockquote>
 <div class="attribution">
-&#8212; COBIT for Risk
+&#8212; Steve Schlarman
 </div>
 </div>
+<div class="paragraph">
+<p>discuss how they play out in terms of GRC</p>
 </div>
-<div class="sect4">
-<h5 id="_regulations_of_note">Regulations of note</h5>
+<div class="paragraph">
+<p>Policy is not just about risk. That&#8217;s why risk comes later. Policy is also about effectiveness, e.g. understanding cost of delay, not overburdening &#8230;&#8203; we understand risk as risk of loss, not ineffectiveness&#8230;&#8203; but we still control for our policies that are intended to promote effectiveness&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>governance &amp; innovation</p>
+</div>
+<div class="paragraph">
+<p>governance &amp; efficiency</p>
+</div>
+<div class="paragraph">
+<p>governance &amp; risk</p>
+</div>
+<div class="paragraph">
+<p>Overlaps with enablers</p>
+</div>
+<div class="sect5">
+<h6 id="_regulations_of_note">Regulations of note</h6>
 <div class="ulist">
 <ul>
 <li>
@@ -18331,21 +18369,11 @@ Some companies need to institute formal policies quite early. Even a startup may
 </table>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_compliance_practices">Compliance practices</h5>
-<div class="paragraph">
-<p>discuss how they play out in terms of GRC</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Policy is not just about risk. That's why risk comes later. Policy is also about effectiveness, e.g. understanding cost of delay, not overburdening ... we understand risk as risk of loss, not ineffectiveness... but we still control for our policies that are intended to promote effectiveness...</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Overlaps with enablers</p>
-</div>
+<div class="sect5">
+<h6 id="_compliance_practices">Compliance practices</h6>
 <div class="paragraph">
 <p>Assurance and audit next up</p>
+</div>
 </div>
 </div>
 </div>
@@ -20558,6 +20586,9 @@ IEEE Press.</p>
 </li>
 <li>
 <p><a id="Rummler1995"></a>[Rummler1995]: Rummler, Geary A, and Alan P Brache. 1995. <em>Improving Performance: How to Manage the White Space on the Organization Chart.</em> The Jossey-Bass Management Series. 2nd ed. San Francisco, CA: Jossey-Bass. <a href="http://www.loc.gov/catdir/toc/wiley041/94048105.html" class="bare">http://www.loc.gov/catdir/toc/wiley041/94048105.html</a>.</p>
+</li>
+<li>
+<p><a id="Schlarman2008"></a>[Schlarman2008]: Schlarman, Steve. 2016. “Developing Effective Policy, Procedure, and Standards.” Www.disaster-Resource.com. Accessed June 30 2016. <a href="http://www.disaster-resource.com/articles/07p_106.shtml" class="bare">http://www.disaster-resource.com/articles/07p_106.shtml</a>.</p>
 </li>
 <li>
 <p><a id="Schwaber2002"></a>[Schwaber2002]: Schwaber, Ken. 2002. Agile Software Development with Scrum. Upper Saddle River, N.J.: Prentice Hall.</p>
