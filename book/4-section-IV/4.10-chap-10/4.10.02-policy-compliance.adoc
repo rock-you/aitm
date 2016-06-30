@@ -103,7 +103,7 @@ Policies are often independently maintained documents, perhaps organized along l
 
 (not a comprehensive list)
 
-Policies, even though more detailed than codes of ethics/conduct, still should be written fairly broadly. In many organizations, they must be approved by the governing board. *They should therefore be independent of  technology specifics*. An information security policy may state that the hardening guidelines must be followed, but the hardening guidelines (stipulating for example what services and ports are allowable on Debian Linux) are *not* policy.
+Policies, even though more detailed than codes of ethics/conduct, still should be written fairly broadly. In many organizations, they must be approved by the governing board. *They should therefore be independent of  technology specifics*. An information security policy may state that the hardening guidelines must be followed, but the hardening guidelines (stipulating for example what services and open ports are allowable on Debian Linux) are *not* policy.
 
 There may be various levels or classes of policy.
 
@@ -116,13 +116,20 @@ Finally, policies reference *Standards and processes* and other xref:enablers[en
 
 These concepts may vary according to organization, and can become quite detailed.
 
+ examine competing texts for the level they go on this topic in particular
+
 Even more detail is seen in hardening guidelines. A behavioral baseline might be "Guests are expected to sign in and be accompanied when on the data center floor."
 
 We will discuss technical baselines further in the chapter section on security, and also in our discussion of the technology product lifecycle in Chapter 12. See also Shon Harris' excellent CISSP Exam Guide <<Harris2013>> for much more detail on these topics.
 
 The ideal end state is a policy that is completely traceable to various automation characteristics, such as approved "infrastructure as code" settings applied automatically by configuration management software (as discussed in "The DevOps Audit Toolkit," <<DeLuccia2015>>-- more on this to come). However, there will always be organizational concerns that cannot be fully automated in such manners.
 
- examine competing texts for the level they go on this topic in particular
+[quote, Michael Griffin, "How to Write a Policy Manual"]
+Company policies can breed and multiply to a point where they can hinder innovation and risk-taking. Things can get out of hand as people generate policies to respond to one-time infractions or out of the ordinary situations.
+
+Finally, policies and their derivative guidance are developed, just like systems, via a lifecycle. They require some initial vision, and an understanding of what the requirements are. As Steve Schlarman notes, "policy must define the why, what, who, where and how of the IT process" <<Schlarman2008>>.
+
+User stories have been used effectively to understand policy needs. Again, it's advisable to institute sunset dates or some other mechanism that forces their periodic review, with the understanding that any such approach generates demand on the organization that must be funded.
 
 ===== Standards, frameworks, methods, and the innovation cycle
 
@@ -180,21 +187,23 @@ Note that the innovation cycle corresponds to the elements of xref:govarch[value
 * Standardization corresponds to Cost Optimization
 * Commoditization corresponds to Risk Optimization
 
-===== Policy lifecycle
-
-
-
-Don't overcomplicate
-
-Lifecycle/sunset!
-
-
 ===== Compliance
-[quote, COBIT for Risk]
-The enterprise function responsible for insight into the enterprise risk related to regulations, legal mandates and internal policies and standards.
+[quote, Steve Schlarman]
+Policy without a corresponding compliance measurement and monitoring strategy will be looked at as unrealistic, ignored dogma.
 
+discuss how they play out in terms of GRC
 
-===== Regulations of note
+Policy is not just about risk. That's why risk comes later. Policy is also about effectiveness, e.g. understanding cost of delay, not overburdening ... we understand risk as risk of loss, not ineffectiveness... but we still control for our policies that are intended to promote effectiveness...
+
+governance & innovation
+
+governance & efficiency
+
+governance & risk
+
+Overlaps with enablers
+
+====== Regulations of note
 * HIPAA
 * SOX
 * FERPA
@@ -207,14 +216,7 @@ Note that some of these regulations call for policy management.
 
 NOTE: Some companies need to institute formal policies quite early. Even a startup may need written policies, if it is concerned with regulations such as HIPAA. However, this may be done on an ad-hoc basis, perhaps outsourced to a consultant. (A startup cannot afford a dedicated VP of Policy and Compliance.) This topic is covered in detail in this section because at enterprise scale, ongoing policy management and compliance must be formalized.
 
-
-===== Compliance practices
-discuss how they play out in terms of GRC
-
- Policy is not just about risk. That's why risk comes later. Policy is also about effectiveness, e.g. understanding cost of delay, not overburdening ... we understand risk as risk of loss, not ineffectiveness... but we still control for our policies that are intended to promote effectiveness...
-
-
-Overlaps with enablers
+====== Compliance practices
 
 
 
