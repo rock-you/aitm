@@ -939,25 +939,25 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_an_introduction_to_enablers">An introduction to enablers</a></li>
 </ul>
 </li>
-<li><a href="#_policy_and_compliance">Policy and compliance</a>
+<li><a href="#_enablers_and_assurance">Enablers and assurance</a>
 <ul class="sectlevel4">
 <li><a href="#_policy_management">Policy management</a></li>
 <li><a href="#_mission_principle_strategy_and_policy">Mission, principle, strategy, and policy</a></li>
 <li><a href="#_standards_frameworks_methods_and_the_innovation_cycle">Standards, frameworks, methods, and the innovation cycle</a></li>
-<li><a href="#_compliance">Compliance</a></li>
-<li><a href="#_controls">Controls</a></li>
+<li><a href="#_assurance">Assurance</a></li>
 </ul>
 </li>
-<li><a href="#_assurance_and_audit">Assurance and audit</a>
+<li><a href="#_audit_and_compliance">Audit and compliance</a>
 <ul class="sectlevel4">
-<li><a href="#_assurance">Assurance</a></li>
 <li><a href="#_audit">Audit</a></li>
+<li><a href="#_compliance">Compliance</a></li>
 </ul>
 </li>
 <li><a href="#_risk_management_2">Risk management</a>
 <ul class="sectlevel4">
 <li><a href="#_risk_management_fundamentals">Risk management fundamentals</a></li>
 <li><a href="#_it_related_risks">IT-related risks</a></li>
+<li><a href="#_controls">Controls</a></li>
 <li><a href="#_controls_and_enablers">Controls and enablers</a></li>
 </ul>
 </li>
@@ -14127,6 +14127,9 @@ Problem</pre>
 <div class="paragraph">
 <p>This act of <strong>conversion</strong> is a <strong>process</strong>. The overall process has been described by Michael Porter as a "value chain."</p>
 </div>
+<div class="paragraph">
+<p><a id="value-chain"></a></p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="images/3.09-valCh.png" alt="3.09 valCh">
@@ -16825,6 +16828,86 @@ We&#8217;ve encountered systems theory and associated concepts such as <a href="
 <div class="sect4">
 <h5 id="_analyzing_governance">Analyzing governance</h5>
 <div class="sect5">
+<h6 id="_governance_context">Governance context</h6>
+<div class="paragraph">
+<p>Enough theory. Governance is also practical concern for you because at your scale, you have a complex set of environmental forces to cope with:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/4.10-govEnv.png" alt="4.10 govEnv">
+</div>
+</div>
+<div class="paragraph">
+<p>You started with a focus on the customer, and the market they represented. Sooner or later, you encountered regulators and adversaries: competitors and cybercriminals.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Mark Burgess and Promise Theory</strong></p>
+</div>
+<div class="quoteblock">
+<blockquote>
+Promise Theory is . . . an engineering framework for coping with uncertainty in information systems.
+</blockquote>
+<div class="attribution">
+&#8212; Mark Burgess<br>
+<cite>Promise Theory</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>We use the term "promise" here in a manner intended to be roughly consistent with Promise Theory. Promise Theory is a way of reasoning about relationships and systems developed by Mark Burgess. <a href="#Burgess2015">[Burgess2015]</a></p>
+</div>
+<div class="paragraph">
+<p>Promise Theory is a sophisticated, mathematically-founded framework for reasoning about intent, outcome, control, and related topics of interest to digital governance. It is not possible to discuss it in depth here, but one basic heuristic we will follow is that a promise is better than a command, because "A promise expresses intent about the end point, or ultimate outcome, instead of indicating what to do at the starting point." We have explored similar themes in our chapter section on <a href="#failure-control-culture">culture</a>.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>These external parties intersect with your reality via several formal channels:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Your brand, which represents a sort of general promise to the market</p>
+</li>
+<li>
+<p>Contracts, which represent more specific promises to suppliers and customers</p>
+</li>
+<li>
+<p>Laws, regulations, and standards, which can be seen as promises you must make and keep in order to function in civil society, or in order to obtain certain contracts.</p>
+</li>
+<li>
+<p>Threats, which may be of various kinds:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>legal</p>
+</li>
+<li>
+<p>operational</p>
+</li>
+<li>
+<p>intentional</p>
+</li>
+<li>
+<p>unintentional</p>
+</li>
+<li>
+<p>illegal</p>
+</li>
+<li>
+<p>environmental</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>We will return to the role of external forces in our discussion of assurance. For now, we will turn to how digital governance, within an overall system of digital delivery, reflects our emergence model.</p>
+</div>
+</div>
+<div class="sect5">
 <h6 id="_governance_and_the_emergence_model">Governance and the emergence model</h6>
 <div class="paragraph">
 <p>In terms of our <a href="#0.01-emergence">emergence model</a>, the most important distinction between a "<a href="#Section-III-coordination">team of teams</a>" and an "<a href="#enterprise">enterprise</a>" is the existence of <a href="#formalization">formalized</a> organizational governance.</p>
@@ -16835,10 +16918,13 @@ We&#8217;ve encountered systems theory and associated concepts such as <a href="
 </div>
 </div>
 <div class="paragraph">
+<p>In the above diagram, formalized governance is represented by the establishment of a governing body, responsive to some stakeholders who seek to recognize value from the organization or "entity"&#8201;&#8212;&#8201;in this case, a digital delivery organization.</p>
+</div>
+<div class="paragraph">
 <p>Corporate governance is a broad and deep topic, essential to the functioning of society and its organized participants. These include for-profit, non-profit, and even governmental organizations. Any legally organized entity of significant scope has governance needs.</p>
 </div>
 <div class="paragraph">
-<p>One well known structure for organizational governance is seen in the regulated, publicly owned company (such as those listed on stock exchanges). In this model, shareholders elect a governing body (usually termed the Board of Directors), and this group provides the essential direction for the enteprise as a whole.</p>
+<p>One well known structure for organizational governance is seen in the regulated, publicly owned company (such as those listed on stock exchanges). In this model, shareholders elect a governing body (usually termed the Board of Directors), and this group provides the essential direction for the enterprise as a whole.</p>
 </div>
 <div class="paragraph">
 <p>However, organizational governance takes other forms. Public institutions of higher education may have a Board of Regents or Board of Governors, perhaps appointed by elected officials. Nonprofits and incorporated private companies still require some form of governance, as well. One of the less well-known but very influential forms of governance is the venture capital portfolio approach, very different from a public, mission-driven company. We will talk more about this in the digital governance section.</p>
@@ -16952,7 +17038,7 @@ The term "value recognition" as the stakeholder goal is chosen over "value creat
 </ul>
 </div>
 <div class="paragraph">
-<p>Notice also the dotted line cycle "Iterative Negotation" in the Governance/Management interface. Governance is not a one-way street. Its principles may be stable, but approaches, tools, practices, processes, and so forth (what we will discuss below as "enablers," in COBIT terminology) are variable, and require ongoing evolution.</p>
+<p>Notice also the circular arrow at the center of the Governance/Management interface. Governance is not a one-way street. Its principles may be stable, but approaches, tools, practices, processes, and so forth (what we will discuss below as "enablers," in COBIT terminology) are variable, and require ongoing evolution.</p>
 </div>
 <div class="paragraph">
 <p>We often hear of "bureaucratic" governance processes. But the problem may not be "governance" per se. It is more often the failure to correctly manage the governance/management interface. Of course, if the board is micro-managing, demanding many different kinds of information and intervening in operations, then governance and its management response is all much the same thing. In reality, however, burdensome organizational "governance" processes may be an overdone, bottom-up management response to <strong>perceived</strong> Board-level mandates.</p>
@@ -16960,39 +17046,21 @@ The term "value recognition" as the stakeholder goal is chosen over "value creat
 <div class="paragraph">
 <p>Or they may be point-in-time requirements no longer needed. The policies of 1960 are unsuited to the realities of 2020. But if policies are always dictated top-down, they may not be promptly corrected or retired when no longer applicable. Hence, the scope and approach of governance in terms of its enablers must always be a topic of ongoing, iterative negotiation between the governed and the governing.</p>
 </div>
-</div>
-<div class="sect5">
-<h6 id="_governance_and_digital_delivery">Governance and digital delivery</h6>
 <div class="paragraph">
-<p>What does all this have to do with information technology and the lowermost  <strong>digital delivery</strong> chevron?</p>
+<p>Finally the lowermost  <strong>digital delivery</strong> chevron&#8201;&#8212;&#8201;aka <a href="#value-chain">value chain</a>, represents most of what we have discussed in Sections I, II, and III:</p>
 </div>
-<div class="paragraph">
-<p>If "corporate governance" is "The system by which organizations are directed and controlled," then it is reasonable that "corporate governance of IT" is "The system by which the <strong>current and future use of IT is directed and controlled</strong>." This is how ISO 38500, the IT Governance standard, defines it <a href="#ISO2008">[ISO2008]</a>.</p>
-</div>
-<div class="paragraph">
-<p>In today&#8217;s digital governance there is a greater concern for outcome and effectiveness, especially in terms of time to market (minimizing <a href="#cost-of-delay">Cost of Delay</a>). Previously, concerns for efficiency might lead a company to overburden its staff, resulting in queuing gridlock, too much work in process, destructive multitasking, and ultimately failure to deliver timely results (or deliver at all).</p>
-</div>
-<div class="paragraph">
-<p>Such failure to deliver was tolerated because it seemed to be a common problem across most IT departments, and because digital transformation had not taken hold yet. IT systems were often back office and delays in delivering them (or significant issues in their operation) were not <strong>quite</strong> as damaging.</p>
-</div>
-<div class="paragraph">
-<p>Now, effectiveness of delivery is essential. The interesting, and to some degree unexpected result, is that both efficiency and risk seem to be benefiting as well. Cross-functional, focused teams are both more effective and more efficient, and able to manage risk better as well. Systems are being built with both increased rapidity as well as improved stability, and the automation enabling this provides robust audit support.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>The DevOps Audit Toolkit</strong></p>
-</div>
-<div class="paragraph">
-<p>The DevOps Audit Toolkit <a href="#DeLuccia2015">[DeLuccia2015]</a> provides an important set of examples demonstrating how modern DevOps toolchain automation can fulfill audit objectives as well or better than "traditional" approaches.</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Finally, consider the "programmability" criteria above. A highly "programmable" position is one where the responsibilities can be specified in terms of their activities. <strong>And what is the fundamental dynamic of digital transformation?</strong> It is no accident that such positions are called "programmable." In fact, they <strong>are</strong> being "programmed away" or "eaten by software"- leaving only higher-skill positions that are best managed by objective, and which are more sensitive to cultural dynamics.</p>
-</div>
-<div class="paragraph">
-<p>Preoccupation with "efficiency" fades as a result of the decreasingly "programmable" component of work. The term "efficiency" signals a process that has been well defined (is "programmable") to the point where it is repeatable and scalable. Such processes are ripe for automation, commoditization, and outsourcing, and this is in fact happening. And when such repetitive concerns become a matter of sourcing rather than execution, the emphasis shifts to risk management and governance of the supplier.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>the individual working to create  value using digital infrastructure and lifecycle pipelines</p>
+</li>
+<li>
+<p>the team collaborating to  discover and deliver valuable digital products</p>
+</li>
+<li>
+<p>the team of teams coordinating to deliver higher-order value while balancing effectiveness with efficiency and consistency</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>Ultimately, governance is about managing results and risk. It&#8217;s about objectives and outcomes. It&#8217;s about "what," not "how." In terms of practical usage, it is advisable to limit the "governance" domain&#8201;&#8212;&#8201;including use of the term&#8201;&#8212;&#8201;to a narrow scope of board or director-level concerns, and the existence of certain capabilities, including:</p>
@@ -17014,7 +17082,7 @@ The term "value recognition" as the stakeholder goal is chosen over "value creat
 </ul>
 </div>
 <div class="paragraph">
-<p>A critical concept for the implementation of digital governance is the concept of enablers.</p>
+<p>We turn to a useful concept for the implementation of digital governance&#8201;&#8212;&#8201;the concept of enablers.</p>
 </div>
 <div class="paragraph">
 <p><a id="enablers"></a></p>
@@ -17072,7 +17140,7 @@ Enablers are factors that, individually and collectively, influence whether some
 </div>
 </div>
 <div class="paragraph">
-<p>The varying lengths of the enablers is deliberate. The further downward the bar extends, the more they are day to day concerns for digital teams and their members.</p>
+<p>The varying lengths of the enablers is deliberate. The further upward the bar extends, the more they are direct concerns for governance.</p>
 </div>
 <div class="paragraph">
 <p>All of the enablers are discussed elsewhere in the book.</p>
@@ -17189,7 +17257,7 @@ Enablers are factors that, individually and collectively, influence whether some
 </div>
 </div>
 <div class="sect3">
-<h4 id="_policy_and_compliance">Policy and compliance</h4>
+<h4 id="_enablers_and_assurance">Enablers and assurance</h4>
 <div class="sect4">
 <h5 id="_policy_management">Policy management</h5>
 <div class="sidebarblock">
@@ -17523,7 +17591,7 @@ There is little industry consensus on some of these definitional issues and the 
 </div>
 </div>
 <div class="sect4">
-<h5 id="_compliance">Compliance</h5>
+<h5 id="_assurance">Assurance</h5>
 <div class="quoteblock">
 <blockquote>
 Policy without a corresponding compliance measurement and monitoring strategy will be looked at as unrealistic, ignored dogma.
@@ -17532,93 +17600,6 @@ Policy without a corresponding compliance measurement and monitoring strategy wi
 &#8212; Steve Schlarman
 </div>
 </div>
-<div class="paragraph">
-<p>discuss how they play out in terms of GRC</p>
-</div>
-<div class="paragraph">
-<p>Policy is not just about risk. That&#8217;s why risk comes later. Policy is also about effectiveness, e.g. understanding cost of delay, not overburdening &#8230;&#8203; we understand risk as risk of loss, not ineffectiveness&#8230;&#8203; but we still control for our policies that are intended to promote effectiveness&#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<p>governance &amp; innovation</p>
-</div>
-<div class="paragraph">
-<p>governance &amp; efficiency</p>
-</div>
-<div class="paragraph">
-<p>governance &amp; risk</p>
-</div>
-<div class="paragraph">
-<p>Overlaps with enablers</p>
-</div>
-<div class="paragraph">
-<p>Contracts - vendor &amp; customer</p>
-</div>
-<div class="sect5">
-<h6 id="_regulations_of_note">Regulations of note</h6>
-<div class="ulist">
-<ul>
-<li>
-<p>HIPAA</p>
-</li>
-<li>
-<p>SOX</p>
-</li>
-<li>
-<p>FERPA</p>
-</li>
-<li>
-<p>PCI DSS</p>
-</li>
-<li>
-<p>GLBA PII (NIST)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>(summarize each of these)</p>
-</div>
-<div class="paragraph">
-<p>Note that some of these regulations call for policy management.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-Some companies need to institute formal policies quite early. Even a startup may need written policies, if it is concerned with regulations such as HIPAA. However, this may be done on an ad-hoc basis, perhaps outsourced to a consultant. (A startup cannot afford a dedicated VP of Policy and Compliance.) This topic is covered in detail in this section because at enterprise scale, ongoing policy management and compliance must be formalized.
-</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_controls">Controls</h5>
-<div class="paragraph">
-<p>Management controls are the organization, policies, and procedures used by
-agencies to reasonably ensure that
-• programs achieve their intended results;
-• resources are used consistent with agency mission;
-• programs and resources are protected from waste, fraud, and misman
-agement;
-• laws and regulations are followed; and
-• reliable and timely information is obtained, maintained, reported and used
-for decision making.-'</p>
-</div>
-<div class="sect5">
-<h6 id="_compliance_practices">Compliance practices</h6>
-<div class="paragraph">
-<p>Assurance and audit next up</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_assurance_and_audit">Assurance and audit</h4>
-<div class="sect4">
-<h5 id="_assurance">Assurance</h5>
 <div class="quoteblock">
 <blockquote>
 Exercise caution in your business affairs;
@@ -17692,6 +17673,9 @@ SaaS assurance</p>
 </div>
 </div>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_audit_and_compliance">Audit and compliance</h4>
 <div class="sect4">
 <h5 id="_audit">Audit</h5>
 <div class="quoteblock">
@@ -17825,6 +17809,67 @@ Inspect the security protocols around them</p>
 <pre>DevOps Audit Defense Toolkit discussion
 Evidence p 17</pre>
 </div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_compliance">Compliance</h5>
+<div class="paragraph">
+<p>discuss how they play out in terms of GRC</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Policy is not just about risk. That's why risk comes later. Policy is also about effectiveness, e.g. understanding cost of delay, not overburdening ... we understand risk as risk of loss, not ineffectiveness... but we still control for our policies that are intended to promote effectiveness...</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>governance &amp; innovation</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>governance &amp; efficiency</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>governance &amp; risk</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Overlaps with enablers</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Contracts - vendor &amp; customer</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>====== Regulations of note
+* HIPAA
+* SOX
+* FERPA
+* PCI DSS
+* GLBA PII (NIST)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>(summarize each of these)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Note that some of these regulations call for policy management.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>NOTE: Some companies need to institute formal policies quite early. Even a startup may need written policies, if it is concerned with regulations such as HIPAA. However, this may be done on an ad-hoc basis, perhaps outsourced to a consultant. (A startup cannot afford a dedicated VP of Policy and Compliance.) This topic is covered in detail in this section because at enterprise scale, ongoing policy management and compliance must be formalized.</pre>
 </div>
 </div>
 </div>
@@ -18003,6 +18048,20 @@ risk of learning wrong lessons w/r/t complex systems - more "rigor" is not neces
 <div class="paragraph">
 <p>foreward ref</p>
 </div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_controls">Controls</h5>
+<div class="paragraph">
+<p>Management controls are the organization, policies, and procedures used by
+agencies to reasonably ensure that
+• programs achieve their intended results;
+• resources are used consistent with agency mission;
+• programs and resources are protected from waste, fraud, and misman
+agement;
+• laws and regulations are followed; and
+• reliable and timely information is obtained, maintained, reported and used
+for decision making.-'</p>
 </div>
 </div>
 <div class="sect4">
@@ -18432,6 +18491,37 @@ Business or IT governance constructs and processes that do not support new techn
 </div>
 <div class="paragraph">
 <p>Yearly batch cycle, may not change anytime soon</p>
+</div>
+<div class="sect5">
+<h6 id="_governance_and_digital_delivery">Governance and digital delivery</h6>
+<div class="paragraph">
+<p>If "corporate governance" is "The system by which organizations are directed and controlled," then it is reasonable that "corporate governance of IT" is "The system by which the <strong>current and future use of IT is directed and controlled</strong>." This is how ISO 38500, the IT Governance standard, defines it <a href="#ISO2008">[ISO2008]</a>.</p>
+</div>
+<div class="paragraph">
+<p>In today&#8217;s digital governance there is a greater concern for outcome and effectiveness, especially in terms of time to market (minimizing <a href="#cost-of-delay">Cost of Delay</a>). Previously, concerns for efficiency might lead a company to overburden its staff, resulting in queuing gridlock, too much work in process, destructive multitasking, and ultimately failure to deliver timely results (or deliver at all).</p>
+</div>
+<div class="paragraph">
+<p>Such failure to deliver was tolerated because it seemed to be a common problem across most IT departments, and because digital transformation had not taken hold yet. IT systems were often back office and delays in delivering them (or significant issues in their operation) were not <strong>quite</strong> as damaging.</p>
+</div>
+<div class="paragraph">
+<p>Now, effectiveness of delivery is essential. The interesting, and to some degree unexpected result, is that both efficiency and risk seem to be benefiting as well. Cross-functional, focused teams are both more effective and more efficient, and able to manage risk better as well. Systems are being built with both increased rapidity as well as improved stability, and the automation enabling this provides robust audit support.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>The DevOps Audit Toolkit</strong></p>
+</div>
+<div class="paragraph">
+<p>The DevOps Audit Toolkit <a href="#DeLuccia2015">[DeLuccia2015]</a> provides an important set of examples demonstrating how modern DevOps toolchain automation can fulfill audit objectives as well or better than "traditional" approaches.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Finally, consider the "programmability" criteria above. A highly "programmable" position is one where the responsibilities can be specified in terms of their activities. <strong>And what is the fundamental dynamic of digital transformation?</strong> It is no accident that such positions are called "programmable." In fact, they <strong>are</strong> being "programmed away" or "eaten by software"- leaving only higher-skill positions that are best managed by objective, and which are more sensitive to cultural dynamics.</p>
+</div>
+<div class="paragraph">
+<p>Preoccupation with "efficiency" fades as a result of the decreasingly "programmable" component of work. The term "efficiency" signals a process that has been well defined (is "programmable") to the point where it is repeatable and scalable. Such processes are ripe for automation, commoditization, and outsourcing, and this is in fact happening. And when such repetitive concerns become a matter of sourcing rather than execution, the emphasis shifts to risk management and governance of the supplier.</p>
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -19527,7 +19617,10 @@ A foolish consistency is the hobgoblin of little minds.
 <p><a id="Buckingham2015"></a>[Buckingham2015]: Buckingham, Marcus, and Ashley Goodall. 2015. “Reinventing Performance Management.” Harvard Business Review 93(4): 40–50. <a href="https://hbr.org/2015/04/reinventing-performance-management" class="bare">https://hbr.org/2015/04/reinventing-performance-management</a>.</p>
 </li>
 <li>
-<p><a id="Burlton2001"></a>[Burlton2001]: Burlton, Roger. 2001. Business Process Management: Profiting from Process. Indianapolis, Indiana: SAMS.</p>
+<p><a id="Burlton2001"></a>[Burlton2001]: Burlton, Roger. 2001. <em>Business Process Management: Profiting from Process</em>. Indianapolis, Indiana: SAMS.</p>
+</li>
+<li>
+<p><a id="Burgess2015"></a>[Burgess2015]: Burgess, Mark. 2015. <em>Thinking in Promises</em>. Sebastopol, CA: O’Reilly Media.</p>
 </li>
 <li>
 <p><a id="Burrows2006"></a>[Burrows2006]: Burrows, M. G. I. (2006). "The Chubby lock service for loosely-coupled distributed systems." 7th symposium on Operating systems design and implementation (OSDI '06), USENIX Association Berkeley, CA, USA</p>
