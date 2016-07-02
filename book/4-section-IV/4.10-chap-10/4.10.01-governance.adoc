@@ -114,15 +114,51 @@ So, if you find yourself coping with arbitrary and bureaucratic "governance" pro
 
 ===== Analyzing governance
 
+====== Governance context
+Enough theory. Governance is also practical concern for you because at your scale, you have a complex set of environmental forces to cope with:
+
+image::images/4.10-govEnv.png[]
+
+You started with a focus on the customer, and the market they represented. Sooner or later, you encountered regulators and adversaries: competitors and cybercriminals.
+
+****
+*Mark Burgess and Promise Theory*
+
+[quote, Mark Burgess, Promise Theory]
+Promise Theory is . . . an engineering framework for coping with uncertainty in information systems.
+
+We use the term "promise" here in a manner intended to be roughly consistent with Promise Theory. Promise Theory is a way of reasoning about relationships and systems developed by Mark Burgess. <<Burgess2015>>
+
+Promise Theory is a sophisticated, mathematically-founded framework for reasoning about intent, outcome, control, and related topics of interest to digital governance. It is not possible to discuss it in depth here, but one basic heuristic we will follow is that a promise is better than a command, because "A promise expresses intent about the end point, or ultimate outcome, instead of indicating what to do at the starting point." We have explored similar themes in our chapter section on xref:failure-control-culture[culture].
+
+****
+
+These external parties intersect with your reality via several formal channels:
+
+* Your brand, which represents a sort of general promise to the market
+* Contracts, which represent more specific promises to suppliers and customers
+* Laws, regulations, and standards, which can be seen as promises you must make and keep in order to function in civil society, or in order to obtain certain contracts.
+* Threats, which may be of various kinds:
+** legal
+** operational
+** intentional
+** unintentional
+** illegal
+** environmental
+
+We will return to the role of external forces in our discussion of assurance. For now, we will turn to how digital governance, within an overall system of digital delivery, reflects our emergence model.
+
 ====== Governance and the emergence model
 
 In terms of our xref:0.01-emergence[emergence model], the most important distinction between a "xref:Section-III-coordination[team of teams]" and an "xref:enterprise[enterprise]" is the existence of xref:formalization[formalized] organizational governance.
 
 image::images/4.10-govEmergence.png[]
 
+In the above diagram, formalized governance is represented by the establishment of a governing body, responsive to some stakeholders who seek to recognize value from the organization or "entity" -- in this case, a digital delivery organization.
+
 Corporate governance is a broad and deep topic, essential to the functioning of society and its organized participants. These include for-profit, non-profit, and even governmental organizations. Any legally organized entity of significant scope has governance needs.
 
-One well known structure for organizational governance is seen in the regulated, publicly owned company (such as those listed on stock exchanges). In this model, shareholders elect a governing body (usually termed the Board of Directors), and this group provides the essential direction for the enteprise as a whole.
+One well known structure for organizational governance is seen in the regulated, publicly owned company (such as those listed on stock exchanges). In this model, shareholders elect a governing body (usually termed the Board of Directors), and this group provides the essential direction for the enterprise as a whole.
 
 However, organizational governance takes other forms. Public institutions of higher education may have a Board of Regents or Board of Governors, perhaps appointed by elected officials. Nonprofits and incorporated private companies still require some form of governance, as well. One of the less well-known but very influential forms of governance is the venture capital portfolio approach, very different from a public, mission-driven company. We will talk more about this in the digital governance section.
 
@@ -172,35 +208,17 @@ The *governance/management interface* is an essential component. The information
 * Performance reports (e.g. sales figures)
 * Conformance/compliance indicators (e.g. via audit and assurance)
 
-Notice also the dotted line cycle "Iterative Negotation" in the Governance/Management interface. Governance is not a one-way street. Its principles may be stable, but approaches, tools, practices, processes, and so forth (what we will discuss below as "enablers," in COBIT terminology) are variable, and require ongoing evolution.
+Notice also the circular arrow at the center of the Governance/Management interface. Governance is not a one-way street. Its principles may be stable, but approaches, tools, practices, processes, and so forth (what we will discuss below as "enablers," in COBIT terminology) are variable, and require ongoing evolution.
 
 We often hear of "bureaucratic" governance processes. But the problem may not be "governance" per se. It is more often the failure to correctly manage the governance/management interface. Of course, if the board is micro-managing, demanding many different kinds of information and intervening in operations, then governance and its management response is all much the same thing. In reality, however, burdensome organizational "governance" processes may be an overdone, bottom-up management response to *perceived* Board-level mandates.
 
 Or they may be point-in-time requirements no longer needed. The policies of 1960 are unsuited to the realities of 2020. But if policies are always dictated top-down, they may not be promptly corrected or retired when no longer applicable. Hence, the scope and approach of governance in terms of its enablers must always be a topic of ongoing, iterative negotiation between the governed and the governing.
 
-====== Governance and digital delivery
+Finally the lowermost  *digital delivery* chevron -- aka xref:value-chain[value chain], represents most of what we have discussed in Sections I, II, and III:
 
-What does all this have to do with information technology and the lowermost  *digital delivery* chevron?
-
-If "corporate governance" is "The system by which organizations are directed and controlled," then it is reasonable that "corporate governance of IT" is "The system by which the *current and future use of IT is directed and controlled*." This is how ISO 38500, the IT Governance standard, defines it <<ISO2008>>.
-
-In today's digital governance there is a greater concern for outcome and effectiveness, especially in terms of time to market (minimizing xref:cost-of-delay[Cost of Delay]). Previously, concerns for efficiency might lead a company to overburden its staff, resulting in queuing gridlock, too much work in process, destructive multitasking, and ultimately failure to deliver timely results (or deliver at all).
-
-Such failure to deliver was tolerated because it seemed to be a common problem across most IT departments, and because digital transformation had not taken hold yet. IT systems were often back office and delays in delivering them (or significant issues in their operation) were not *quite* as damaging.
-
-Now, effectiveness of delivery is essential. The interesting, and to some degree unexpected result, is that both efficiency and risk seem to be benefiting as well. Cross-functional, focused teams are both more effective and more efficient, and able to manage risk better as well. Systems are being built with both increased rapidity as well as improved stability, and the automation enabling this provides robust audit support.
-
-****
-
-*The DevOps Audit Toolkit*
-
-The DevOps Audit Toolkit <<DeLuccia2015>> provides an important set of examples demonstrating how modern DevOps toolchain automation can fulfill audit objectives as well or better than "traditional" approaches.
-
-****
-
-Finally, consider the "programmability" criteria above. A highly "programmable" position is one where the responsibilities can be specified in terms of their activities. *And what is the fundamental dynamic of digital transformation?* It is no accident that such positions are called "programmable." In fact, they *are* being "programmed away" or "eaten by software"- leaving only higher-skill positions that are best managed by objective, and which are more sensitive to cultural dynamics.
-
-Preoccupation with "efficiency" fades as a result of the decreasingly "programmable" component of work. The term "efficiency" signals a process that has been well defined (is "programmable") to the point where it is repeatable and scalable. Such processes are ripe for automation, commoditization, and outsourcing, and this is in fact happening. And when such repetitive concerns become a matter of sourcing rather than execution, the emphasis shifts to risk management and governance of the supplier.
+* the individual working to create  value using digital infrastructure and lifecycle pipelines
+* the team collaborating to  discover and deliver valuable digital products
+* the team of teams coordinating to deliver higher-order value while balancing effectiveness with efficiency and consistency
 
 Ultimately, governance is about managing results and risk. It's about objectives and outcomes. It's about "what," not "how." In terms of practical usage, it is advisable to limit the "governance" domain -- including use of the term -- to a narrow scope of board or director-level concerns, and the existence of certain capabilities, including:
 
@@ -209,7 +227,7 @@ Ultimately, governance is about managing results and risk. It's about objectives
 * risk management, including security aspects
 * compliance
 
-A critical concept for the implementation of digital governance is the concept of enablers.
+We turn to a useful concept for the implementation of digital governance -- the concept of enablers.
 
 anchor:enablers[]
 
@@ -234,7 +252,7 @@ COBIT's 7 enablers are:
 
 image::images/4.10-enablers.png[]
 
-The varying lengths of the enablers is deliberate. The further downward the bar extends, the more they are day to day concerns for digital teams and their members.
+The varying lengths of the enablers is deliberate. The further upward the bar extends, the more they are direct concerns for governance. 
 
 All of the enablers are discussed elsewhere in the book.
 
