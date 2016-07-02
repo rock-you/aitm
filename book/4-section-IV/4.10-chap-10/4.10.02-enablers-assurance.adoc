@@ -1,6 +1,76 @@
 
 ==== Enablers and assurance
 
+
+anchor:enablers[]
+
+===== An introduction to enablers
+
+[quote, Cobit 5 Framework, ISACA]
+Enablers are factors that, individually and collectively, influence whether something will work — in this case, governance and management over enterprise IT.
+
+As we explore the goverance/management interface further, we encounter the COBIT concept of _enablers_ <<ISACA2012a>>.
+
+Enablers are the fundamental components of any purposeful organization. They are the core topics of interest for both management and governance. COBIT has a detailed structure that positions enablers in a broader context of stakeholder objectives, enterprise and IT goals, and various quality criteria. One easy to understand example of a governance-level enabler concern is when processes serve as risk controls; we will discuss this further in the next section.
+
+COBIT's 7 enablers are:
+
+* Principles, Policies, and Frameworks
+* Processes
+* Organizational Structures
+* Culture, Ethics and Behavior
+* Information
+* Services, Infrastructure, and Applications
+* People, Skills, and Competencies
+
+image::images/4.10-enablers.png[]
+
+The varying lengths of the enablers is deliberate. The further upward the bar extends, the more they are direct concerns for governance.
+
+All of the enablers are discussed elsewhere in the book.
+
+[cols="2*", options="header"]
+|====
+|Enabler|Covered here
+|Principles, Policies, and Frameworks|Principles & policies covered in this chapter. Frameworks covered in Chapter 8 (xref:PMBOK[PMBOK] and xref:Agile-frameworks[Agile frameworks]), Chapter 9 (xref:CMMI[CMMI], xref:ITIL[ITIL], xref:COBIT[COBIT], xref:TOGAF[TOGAF]), Chapter 11 (xref:DMBOK[DMBOK]), Chapter 12 (xref:deeper-TOGAF[further TOGAF]).
+|Processes|xref:chap-process-mgmt[Chapter 9]
+|Organizational Structures|xref:3.07.00-Chap-7[Chapter 7]
+|Culture, Ethics and Behavior|xref:culture[Chapter 7]
+|Information|xref:chap-ent-info-mgmt[Chapter 11]
+|Services, Infrastructure, and Applications|xref:Sec-I[Section I]
+|People, Skills, and Competencies|xref:resource-mgmt[Chapter 8]
+|====
+
+Here, we are concerned with their aspect as presented to the governance interface; here are some notes.
+
+====== Principles, Policies, and Frameworks
+Principles are the most general statement of organizational vision and values. Policies will be discussed in the next section, but in general are binding organization mandates or regulations, sometimes grounded in external laws. Frameworks were defined in xref:frameworks[Chapter 8].
+
+====== Processes
+Process was defined in xref:process-def[Chapter 9]. We will discuss enablers as controls in the next section on risk and control. A control is a role that an enabler may play. Processes are the primary form of enabler used in this sense.
+
+====== Organizational Structures
+We discussed basic organizational structure in xref:3.07.00-Chap-7[Chapter 7]. However, governance also may make use of some of the scaling approaches discussed in Chapter 8. Cross-organization techniques (similar to those discussed in xref:coord-struct[Chapter 8]) are frequently used in governance (e.g. cross-organizaitonal coordinating committees, such as an enterprise security council).
+
+====== Culture, Ethics and Behavior
+Culture, ethics, and behavior as an enabler can both drive revenue as well as risk and cost. Recent research by Michael Houseman and Dylan Minor suggests that while the benefit from hiring a highly qualified "superstar" worker at most is $5,303, the cost of hiring a "toxic" worker (one destructive of morale and team norms) averages $12,489 - certainly a risk to consider <<Housman2015>>. Culture is discussed in xref:culture[Chapter 7].
+
+====== Information
+Information is a general term; in the sense of an enabler, it is based on data in its various forms, with overlays of concepts (such as syntax and semantics) that transform raw "data" into a resource that is useful and valuable for given purposes. From a governance perspective, information carries governance direction to the governed system, and the fed back monitoring also is transmitted as information. Information resource management and related topics such as data governance and data quality are covered in xref:chap-ent-info-mgmt[Chapter 11]; it is helpful to understand governance at an overall level before going into these more specific domains.
+
+====== Services, Infrastructure, and Applications
+Services, infrastructure, and applications of course are the critical foundation of digital value. These fundamental topics were covered in xref:Sec-I[Section I]. In the sense of enablers, they have a recursive or self-reflexive quality. Digital technology automates business objectives; at scale, a digital pipeline becomes a nontrivial business concern in and of itself, requiring considerable automation <<Betz2011a>>, <<Open2015>>. Applications that serve as digital governance enablers might include:
+
+* Source control
+* Build management
+* Package management
+* Deployment and configuration management
+* Monitoring
+* Portfolio management
+
+====== People, Skills, and Competencies
+Finally, people and their skills and competencies (covered in xref:resource-mgmt[Chapter 8]) are an enabler upon in which all the other enablers rest. "People are our #1 asset" may seem to be a cliche, but it is ultimately true. Formal approaches to understanding and managing this base of skills are therefore needed. A basic "Human Resources" capability is a start, but the most sophisticated and ambitious institute formal organizational learning capabilities to ensure that talent remains a critical focus.
+
 ===== Policy management
 
 ifdef::collaborator-draft[]
@@ -210,7 +280,6 @@ intro
 All audit is assurance, but not all assurance is audit. (Blurry boundary in practice, as an assurance engagement may be undertaken by auditors, and might be casually called an "audit" by the parties involved)
 
 We can understand audit through understanding the general principles of assurance first.
-
 
 [quote, Cobit 5 for Assurance]
 Assurance means that, pursuant to an accountability relationship between two or more parties, an IT audit and assurance professional may be engaged to issue a written communication expressing a conclusion about the subject matters to the
