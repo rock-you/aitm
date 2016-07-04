@@ -1,0 +1,231 @@
+==== Assurance and audit
+
+===== Assurance
+
+[quote, Russian proverb]
+Trust, but verify.
+
+[quote, Max Ehrmann, "Desiderata"]
+Exercise caution in your business affairs; for the world is full of trickery.
+
+Assurance is a broad term. In this book, it is associated with governance. It represents a form of additional confirmation that management is performing its tasks adequately.
+
+Go back to the example that started the chapter, of the shop owner hiring a manager. Suppose that this relationship has continued for some time, and while things seem to be working OK, the owner has doubts about the arrangement.
+
+Over time, things have gone well enough that the owner does not worry about the shop being opened on time, having sufficient stock, or paying suppliers. But are any number of doubts the owner might retain:
+
+* Is money being accounted for honestly and accurately?
+* Is the shop clean? Is it following local regulations? For example, fire, health and safety codes?
+* If the manager selects a new supplier, are they trustworthy? Or is the shop at risk of selling counterfeit or tainted merchandise?
+* Are the shop's prices competitive? Is it well regarded in the community?
+* Is the shop protected from theft and disaster?
+
+These kinds of concerns remain with the owner, by and large, even with a reliable and trustworthy manager. If not handled correctly, the owner's entire investment is at risk. The manager may only have a salary (and perhaps a profit share) to worry about, but if the shop is closed due to violations, or lawsuit, or lost to a fire, the owner's entire life investment may be lost.
+
+These concerns give rise to the general concept of assurance, which applies to digital organizations and business just as it does to small shops.
+
+The following diagram, derived from previous illustrations, shows how this book views assurance: as a set of practices overlaid across the enablers, and in particular concerned with external forces.
+
+image:images/4.10-AudComRisk.png[]
+
+Assurance can be seen as an external, additional mechanism of control and feedback;
+
+image::images/Assurance.png[]
+
+****
+*Assurance is like out-of-band management*
+
+In terms of the governance-management interface, assurance is fundamentally distinct from the information provided by management and must travel through distinct communication channels. This is why auditors (for example) forward their reports directly to the audit committee, and do not route them through the executives who have been audited.
+
+Technologists, especially those with a background in networking, may have heard of the concept of "out of band control." With out of band management or control of IT resources, the channel over which management commands travel is distinct from the channel over which the system provides its services. This is done to increase security, confidence, and reliability, and is precisely analogous to assurance.
+****
+
+This independent, out-of-band aspect is essential to the concept of assurance. As ISACA stipulates,
+
+_The IS audit and assurance function shall be independent of the area or activity being reviewed to permit objective completion of the audit and assurance engagement._ <<ISACA2014>>, p.9.
+
+====== Three party foundation
+
+[quote, ISAE 3000 (Revised),Assurance Engagements Other than Audits or Reviews of Historical Financial Information]
+Assurance engagement―An engagement in which a practitioner aims to obtain sufficient appropriate evidence in order to express a conclusion designed to enhance the degree of confidence of the intended users other than the responsible party about the subject matter information (that is, the outcome of the measurement or evaluation of an underlying subject matter against criteria).
+
+[quote, Cobit 5 for Assurance]
+Assurance means that, pursuant to an accountability relationship between two or more parties, an IT audit and assurance professional may be engaged to issue a written communication expressing a conclusion about the subject matters to the
+accountable party.
+
+There are broader and narrower definitions of assurance. But all reflect some kind of three-party arrangement:
+
+image::images/4.10-3Party.png[]
+
+_reflects concepts from <<ISACA2013b>> and <<IAASB2013>>_
+
+The above diagram is *one* common scenario:
+
+The stakeholder (e.g. the audit committee of the board of directors) engages an assurance professional (e.g. an audit firm). The scope and approach of this is determined by the engaging party, although the accountable party in practice often has input as well.
+
+The accountable party, at the direction responds to  the assurance professional's inquiries on the audit topic.
+
+The assurance professional provides the assessment back to the engaging party, and/or other users of the report (potentially including the accountable party).
+
+This is a simplified view of what can be a more complex process and set of relationships. The ISAE3000 standard states that there must be at least three parties to any assurance engagement:
+
+* The responsible (accountable) party
+* The practitioner
+* The intended users (of the assurance report)
+
+But there may be additional parties:
+
+* The engaging party
+* The measuring/evaluating party (sometimes not the practitioner, who may be called on to render an opinion on someone *else's* measurement)
+
+ISAE3000 goes on to stipulate a complex set of business rules for the allowable relationships between these parties <<IAASB2013>>, pp 95-96. Perhaps the most important rule is that the practitioner *cannot* be the same as either the responsible party, or the intended users. There must be some level of professional objectivity.
+
+====== Types of assurance
+[quote, overheard]
+"What keeps you up at night? "  -- "Nothing, because I have an assurance strategy"
+
+The general topic of "assurance" implies a spectrum of activities.
+
+In the strictest definitions, assurance is provided by licensed professionals under highly formalized arrangements. However, while all audit is assurance, not all assurance is audit. As noted in COBIT for Assurance, "assurance also covers evaluation activities not governed by internal and/or external audit standards." <<ISACA2013a>> p15.
+
+This is a blurry boundary in practice, as an assurance engagement may be undertaken by auditors, and then might be casually called an "audit" by the parties involved. And there is a spectrum of organizational activities that seem at least to be related to formal assurance:
+
+* Brand assurance
+* Quality assurance
+* Vendor assurance
+* Capability assessments
+* Compliance
+* Risk management
+* Benchmarking
+* Other forms of "due diligence"
+
+Some of these activities may be discharged primarily internally, but even in the case of internally-managed activities, there is usually some sense of governance, some desire for objectivity.
+
+From a purist perspective, internally directed assurance is a contradiction in terms. There is a conflict of interest in that in terms of the three-party model above, the accountable party is the practitioner.
+
+However, it may well be less expensive for an organization to fund and sustain internal assurance capabilities and get much of the same benefits as from external parties. This requires sufficient organizational safeguards be instituted. For example, an internal compliance function might report to the corporate general counsel (chief lawyer), but should not report to any executive whose performance is judged based on their organization's compliance -- this would be a conflict of interest.
+
+====== Non-audit assurance examples
+[quote, James DeLuccia, "Successfully Establishing and Representing DevOps in an Audit"]
+Businesses must find a level of trust between each other  . . .  3rd party reports provide that confidence. Those issuing the reports stake their name & liability with each issuance.
+
+Before we turn to a more detailed discussion of audit, we'll discuss some specifically non-audit examples of assurance seen in IT and digital management.
+
+* Capability assessments
+* Benchmarking ** SAS70
+
+Data center evaluations of cloud providers are a form of *assurance*.
+
+IaaS assurance
+SaaS assurance
+
+Data safe harbor -to be discussed in next section
+
+"Dynamic certification of Cloud services: Trust, but verify!" Lins et al, computing edge
+
+===== Audit
+[quote, Scott Ambler, Disciplined Agile Delivery]
+Agile or not, a team ultimately has to meet legal and essential organizational needs, and audits help to ensure this.
+
+Types of audit
+
+* External
+* Internal
+
+
+Scope and bounds
+
+* Finance
+* IT
+
+Recipient is key
+
+controls vs enablers
+
+====== External audit
+
+"The Committee therefore recommends that all listed companies should establish an audit committee."  <<Cadbury1992>>, 4.35
+
+An external auditor is chartered by a regulatory authority to visit an
+enterprise or entity and to review and independently report the results of that review. <<Moeller2013>> p 319
+
+Phoenix project example
+
+====== Internal audit
+[quote, Institute of Internal Auditors]
+Internal auditing is an independent appraisal function established within an organization to examine and evaluate its activities as a service to the organization.
+
+Usually reports to audit committee
+
+"The function of the internal auditors is complementary to, but different from, that of the outside auditors." <<Cadbury1992>>, 4.39
+
+the typical internal audit process requires scheduling a review, perform
+ing a risk assessment and necessary audit procedures, and then reporting the results
+of an audit to management and the audit committee.<<Moeller2013>> p 324
+
+Institute of Internal Auditors
+
+Auditing of areas other than security e.g. performance reporting
+
+====== Audit practices
+derived from <<ISACA2013a>>
+
+Lifecycle
+
+Scoping
+* ID users of report (e.g. board audit committee)
+* ID accountable/responsible parties
+* ID Objectives
+* ID controls/enablers
+
+Performance
+
+Fundamental: expected vs actual
+
+* Enquire/confirm
+Documentation, interviews, transactional validation
+
+* Inspect
+Process flows - trace tx thru system
+Physical inspection/walkthroughs
+
+* Observe
+
+Attempt what is prevented
+
+Embedded tooling/modules
+Inspect the security protocols around them
+
+ DevOps Audit Defense Toolkit discussion
+ Evidence p 17
+
+
+===== Compliance
+
+
+discuss how they play out in terms of GRC
+
+ Policy is not just about risk. That's why risk comes later. Policy is also about effectiveness, e.g. understanding cost of delay, not overburdening ... we understand risk as risk of loss, not ineffectiveness... but we still control for our policies that are intended to promote effectiveness...
+
+ governance & innovation
+
+ governance & efficiency
+
+ governance & risk
+
+ Overlaps with enablers
+
+ Contracts - vendor & customer
+
+ ====== Regulations of note
+ * HIPAA
+ * SOX
+ * FERPA
+ * PCI DSS
+ * GLBA PII (NIST)
+
+ (summarize each of these)
+
+ Note that some of these regulations call for policy management.
+
+ NOTE: Some companies need to institute formal policies quite early. Even a startup may need written policies, if it is concerned with regulations such as HIPAA. However, this may be done on an ad-hoc basis, perhaps outsourced to a consultant. (A startup cannot afford a dedicated VP of Policy and Compliance.) This topic is covered in detail in this section because at enterprise scale, ongoing policy management and compliance must be formalized.
