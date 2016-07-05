@@ -19,9 +19,6 @@ endif::collaborator-draft[]
 [quote, Russian proverb]
 Trust, but verify.
 
-[quote, Max Ehrmann, "Desiderata"]
-Exercise caution in your business affairs; for the world is full of trickery.
-
 Assurance is a broad term. In this book, it is associated with governance. It represents a form of additional confirmation that management is performing its tasks adequately.
 
 Go back to the xref:gov-shop-example[example] that started the chapter, of the shop owner hiring a manager. Suppose that this relationship has continued for some time, and while things seem to be working OK, the owner has doubts about the arrangement.
@@ -31,12 +28,12 @@ Over time, things have gone well enough that the owner does not worry about the 
 * Is money being accounted for honestly and accurately?
 * Is the shop clean? Is it following local regulations? For example, fire, health and safety codes?
 * If the manager selects a new supplier, are they trustworthy? Or is the shop at risk of selling counterfeit or tainted merchandise?
-* Are the shop's prices competitive? Is it well regarded in the community?
+* Are the shop's prices competitive? Is it still well regarded in the community? Or has its reputation declined with the new manager?
 * Is the shop protected from theft and disaster?
 
 These kinds of concerns remain with the owner, by and large, even with a reliable and trustworthy manager. If not handled correctly, the owner's entire investment is at risk. The manager may only have a salary (and perhaps a profit share) to worry about, but if the shop is closed due to violations, or lawsuit, or lost to a fire, the owner's entire life investment may be lost.
 
-These concerns give rise to the general concept of assurance, which applies to digital organizations and business just as it does to small shops.
+These concerns give rise to the general concept of assurance, which applies to digital business just as it does to small shops.
 
 The following diagram, derived from previous illustrations, shows how this book views assurance: as a set of practices overlaid across the enablers, and in particular concerned with external forces.
 
@@ -57,6 +54,8 @@ Technologists, especially those with a background in networking, may have heard 
 This independent, out-of-band aspect is essential to the concept of assurance. As ISACA stipulates,
 
 _The IS audit and assurance function shall be independent of the area or activity being reviewed to permit objective completion of the audit and assurance engagement._ <<ISACA2014>>, p.9.
+
+anchor:3-party-model[]
 
 ====== Three party foundation
 
@@ -95,8 +94,8 @@ But there may be additional parties:
 ISAE3000 goes on to stipulate a complex set of business rules for the allowable relationships between these parties <<IAASB2013>>, pp 95-96. Perhaps the most important rule is that the practitioner *cannot* be the same as either the responsible party, or the intended users. There must be some level of professional objectivity.
 
 ====== Types of assurance
-[quote, overheard]
-"What keeps you up at night? "  -- "Nothing, because I have an assurance strategy"
+[quote, Max Ehrmann, "Desiderata"]
+Exercise caution in your business affairs; for the world is full of trickery.
 
 The general topic of "assurance" implies a spectrum of activities.
 
@@ -108,6 +107,8 @@ This is a blurry boundary in practice, as an assurance engagement may be underta
 * Quality assurance
 * Vendor assurance
 * Capability assessments
+* Attestation services
+* Certification services
 * Compliance
 * Risk management
 * Benchmarking
@@ -121,7 +122,7 @@ However, it may well be less expensive for an organization to fund and sustain i
 
 In another example, an internal compliance function might report to the corporate general counsel (chief lawyer), and not to any executive whose performance is judged based on their organization's compliance -- this would be a conflict of interest. However, because the internal compliance function is ultimately under the CEO, their concerns can be overruled.
 
-The various ways that internal assurance arrangements can work, and can go wrong, is a long history. If you are interested in the topic, review the histories of Enron, Worldcom, the 2008 mortgage crisis, and other such failures.
+The various ways that internal and external assurance arrangements can work, and can go wrong, is a long history. If you are interested in the topic, review the histories of Enron, Worldcom, the 2008 mortgage crisis, and other such failures.
 
 ====== Non-audit assurance examples
 
@@ -149,18 +150,34 @@ Your company is considering a major move to Cloud infrastructure for its systems
 
 But you are aware of some Cloud failures:
 
-* In 2013, UK Cloud provider 2e2 went bankrupt and customers were given "24 to 48 hours to get ... data and systems out and into a new environment" <<duPreez2015>>
+* In 2013, UK Cloud provider 2e2 went bankrupt and customers were given "24 to 48 hours to get ... data and systems out and into a new environment" <<duPreez2015>>. Subsequently, the provider demanded nearly £1 million pounds (roughly $1.5 million) from its customers in order for their uninterrupted access to services (i.e., their data.) <<Venkatraman2013>>
+* Also in 2013, Cloud storage provider Nirvanix went bankrupt and its customers also had a limited time to remove their data. MegaCloud went out of business with no warning two months later and all customers lost all data. <<Butler2013>>, <<Butler2014>>
+* In mid-2014, online source code repository Cloud Spaces (an early Github competitor) was taken over by hackers and destroyed. All data was lost. <<Venezia2014>>, <<Marks2014>>
 
-How do you know that the Cloud provider will prove an effec
+The question is, how do you manage the risks of trusting your data and organizational operations to a Cloud provider? This is not a new question, as computing has been outsourced to specialist firms for many years. You want to be sure that their operations meet certain standards:
 
-"Dynamic certification of Cloud services: Trust, but verify!" Lins et al, computing edge
+* Financial standards
+* Operational standards
+* Security standards
 
-Data center evaluations of cloud providers are a form of *assurance*.
+Data center evaluations of cloud providers are a form of *assurance*. Two well known approaches are:
 
-IaaS assurance
-SaaS assurance
+* The Uptime Institute's Tier Certification
+* The ISAE 3402/SSAE 16 data center audit standards
 
-Data safe harbor -to be discussed in next section
+The Uptime Institute provides the well-known "Tier" concept for certifying data centers, from Tier I to Tier IV. In their words, "Certification provides assurances that there are not shortfalls or weak links anywhere in the data center infrastructure." <<Uptime2016>>. The Tiers progress as follows <<Uptime2014>>:
+
+Tier I: Basic Capacity
+Tier II: Redundant Capacity Components
+Tier III: Concurrently Maintainable
+Tier IV: Fault Tolerance
+
+Uptime Institute certification is clearly a form of assurance in terms of the xref:3-party-model[3-party model]; the data center operator must work with the Uptime Institute who provides an independent opinion based on their criteria as to the data center's tier (and therefore effecctiveness).
+
+The ISAE 3402 standard is termed an "assurance" standard as well, with the full name _International standard on assurance engagements (ISAE) 3402: Assurance reports on controls at a service organization_. However, as mentioned above, this is the kind of "assurance" done in general by licensed auditors, and which might casually be called an "audit" by the participants.
+
+
+
 
 *Example 2: Internal process assessment*
 
