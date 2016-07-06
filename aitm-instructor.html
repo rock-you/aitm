@@ -959,7 +959,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_risk_management_2">Risk management</a>
 <ul class="sectlevel4">
 <li><a href="#_risk_management_fundamentals">Risk management fundamentals</a></li>
-<li><a href="#_it_related_risks">IT-related risks</a></li>
 <li><a href="#_controls">Controls</a></li>
 </ul>
 </li>
@@ -18451,7 +18450,7 @@ Risk is defined as the possibility that an event will occur and adversely affect
 <p><strong>Defining "Risk"</strong></p>
 </div>
 <div class="paragraph">
-<p>The definition of "risk" is surprisingly controversial. The ISO 31000 standard <a href="#ISO2009">[ISO2009]</a> and the Project Management Institute&#8217;s PMBOK <a href="#PMI2013">[PMI2013]</a>  both define risk as including positive outcomes (benefits).  This definition has been strongly criticized by (among others) Douglas Hubbard in <em>The Failure of Risk Management</em> <a href="#Hubbard2009">[Hubbard2009]</a>. Hubbard points out that historically, risk has meant the chance and consequences of loss.</p>
+<p>The definition of "risk" is surprisingly controversial. The ISO 31000 standard <a href="#ISO2009">[ISO2009]</a> and the Project Management Institute&#8217;s PMBOK <a href="#PMI2013">[PMI2013]</a>  both define risk as including positive outcomes (benefits).  This definition has been strongly criticized by (among others) Douglas Hubbard in <em>The Failure of Risk Management</em> <a href="#Hubbard2009">[Hubbard2009]</a>. Hubbard points out that traditionally, risk has meant the chance and consequences of loss.</p>
 </div>
 <div class="paragraph">
 <p>As this is an an overview text, we will use the more pragmatic, historical definition. Practically speaking, Operational Risk Management  as a function focuses on loss. The possibility ("risk") of benefits is eagerly sought by the organization as a whole and does not need "management" by a dedicated function.</p>
@@ -18549,18 +18548,57 @@ Risk is defined as the possibility that an event will occur and adversely affect
 <p>and other digital activities.</p>
 </div>
 <div class="paragraph">
-<p>More detail on the core risk management activities follows:</p>
+<p>More detail on the core risk management activities follows, largely adopted from the COBIT for Risk publication (<a href="#ISACA2013">[ISACA2013]</a>).</p>
 </div>
 <div class="sect5">
 <h6 id="_risk_identification">Risk identification</h6>
 <div class="paragraph">
-<p>Business objectives &amp; org context</p>
+<p>There are a wide variety of potential risks, and many accounts and anecdotes constantly circulating. It is critical that risk identification start with a firm understanding of the organization&#8217;s objectives and context.</p>
 </div>
 <div class="paragraph">
-<p>Frameworks input</p>
+<p>Risk identification can occur both in a "top down" and "bottom up" manner. Industry guidance can assist the operational risk management function in identifying typical risks. For example, the COBIT for Risk publication includes a useful 8 page "Generic Risk Scenarios" section (<a href="#ISACA2013">[ISACA2013]</a>, pp. 67-74) identifying risks such as</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"Wrong programmes are selected for implementation and are misaligned with corporate strategy and priorities"</p>
+</li>
+<li>
+<p>"There is an earthquake."</p>
+</li>
+<li>
+<p>"Sensitive data is lost/disclosed through
+logical attacks."</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>part of standard processes</p>
+<p>These are only three of dozens of scenarios. A wide variety of scenario areas are suggested:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Investment</p>
+</li>
+<li>
+<p>Sourcing</p>
+</li>
+<li>
+<p>Operations</p>
+</li>
+<li>
+<p>Availability</p>
+</li>
+<li>
+<p>Continuity</p>
+</li>
+<li>
+<p>Security</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>and so forth. The same guidance also strongly cautions against over-reliance on these generic scenarios.</p>
 </div>
 </div>
 <div class="sect5">
@@ -18569,31 +18607,33 @@ Risk is defined as the possibility that an event will occur and adversely affect
 <p>Risk management has a variety of concepts and techniques both qualitative and quantitative. Risk is often assumed to be the product of probability * impact. For example, if the chance of a fire in a facility is 5% over a given year, and the damage of the fire is estimated at $100,000, the annual risk is $5,000. An enterprise risk management function may attempt to quantify all such risks into an overall portfolio.</p>
 </div>
 <div class="paragraph">
-<p>Where quantitative approaches are perceived to be difficult, risk may be assessed using simple scales (e.g. 1-5, where 1 is low risk and 5 is high risk.) Such approaches are criticized by Doug Hubbard in <em>The Failure of Risk Management</em> as misleading and potentially more harmful than not managing risk at all <a href="#Hubbard2009">[Hubbard2009]</a>. Hubbard instead suggests that quantitative techniques such as Monte Carlo analysis are rarely infeasible, and recommends their application instead of subjective scales.</p>
+<p>Where quantitative approaches are perceived to be difficult, risk may be assessed using simple ordinal scales (e.g. 1-5, where 1 is low risk and 5 is high risk.) COBIT for Risk expresses concern regarding "The use of ordinal scales for expressing risk in different categories, and the mathematical difficulties or dangers of using these numbers to do any sort of calculation." <a href="#ISACA2013">[ISACA2013]</a>, p. 75. Such approaches are criticized by Doug Hubbard in <em>The Failure of Risk Management</em> as misleading and potentially more harmful than not managing risk at all <a href="#Hubbard2009">[Hubbard2009]</a>.</p>
+</div>
+<div class="paragraph">
+<p>Hubbard instead suggests that quantitative techniques such as Monte Carlo analysis are rarely infeasible, and recommends their application instead of subjective scales.</p>
+</div>
+<div class="paragraph">
+<p>The enterprise can also consider evaluating scenarios that have a chance of occurring simultaneously. This is frequently referred to as ‘stress’ testing.</p>
 </div>
 </div>
 <div class="sect5">
 <h6 id="_risk_response">Risk response</h6>
-<div class="ulist">
-<ul>
-<li>
-<p>Risk Response</p>
+<div class="paragraph">
+<p>Risk response includes several approaches:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
 <p>Analysis</p>
 </li>
 <li>
-<p>avoidance</p>
+<p>Avoidance</p>
 </li>
 <li>
-<p>acceptance</p>
+<p>Acceptance</p>
 </li>
 <li>
-<p>transference</p>
-</li>
-</ul>
-</div>
+<p>Transference</p>
 </li>
 <li>
 <p>Control Activities</p>
@@ -18622,72 +18662,17 @@ Risk is defined as the possibility that an event will occur and adversely affect
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>The enterprise can also consider evaluating scenarios that have a chance of occurring simultaneously. This is frequently referred to as ‘stress’ testing.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_risk_management_frameworks">Risk management frameworks</h6>
-<div class="paragraph">
-<p>COBIT
-OCEG
-COSO
-ISO</p>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_it_related_risks">IT-related risks</h5>
-<div class="paragraph">
-<p>Prominent issues - Barclay&#8217;s, Target, etc
-risk of learning wrong lessons w/r/t complex systems - more "rigor" is not necessarily the answer - impossibility of testing all outcomes (cite relevant SEng)&#8201;&#8212;&#8201;THE FUNDAMENTAL ISSUE</p>
-</div>
-<div class="paragraph">
-<p>defenses covered in subsequent section</p>
-</div>
-<div class="paragraph">
-<p>principles: antifragility, defense in depth, fast feedback, automation (2-edged sword), analytics &amp; pattern recognition - pointer back to chapter 6</p>
-</div>
-<div class="sect5">
-<h6 id="_availability">Availability</h6>
-<div class="paragraph">
-<p>importance of antifragility techniques</p>
-</div>
-<div class="paragraph">
-<p>foreshadow Simian Army</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_continuity_and_recovery">Continuity and recovery</h6>
-<div class="paragraph">
-<p>A large class of risk that often results in projects or ongoing organizations</p>
-</div>
-<div class="paragraph">
-<p>The nightmare of a cold standby failure in a legacy heterogeneous environment</p>
-</div>
-<div class="paragraph">
-<p>Infrastructure as code can be a significant mitigator - investments can justify themselves</p>
-</div>
-<div class="paragraph">
-<p>review <a href="#duPreez2015">[duPreez2015]</a>, consider manual? is that realistic?</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_security_as_a_risk">Security as a risk</h6>
-<div class="paragraph">
-<p>foreward ref</p>
-</div>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_controls">Controls</h5>
 <div class="paragraph">
-<p>Management controls are the organization, policies, and procedures used by
-agencies to reasonably ensure that
-• programs achieve their intended results;
+<p>Management controls are the organization, policies, and procedures used by agencies to reasonably ensure that</p>
+</div>
+<div class="paragraph">
+<p>• programs achieve their intended results;
 • resources are used consistent with agency mission;
-• programs and resources are protected from waste, fraud, and misman
-agement;
+• programs and resources are protected from waste, fraud, and mismanagement;
 • laws and regulations are followed; and
 • reliable and timely information is obtained, maintained, reported and used
 for decision making.-'</p>
@@ -18699,13 +18684,6 @@ Internal control is a process, effected by an entity&#8217;s board of directors,
 <div class="attribution">
 &#8212; Committee of Sponsoring Organizations of the Treadway Commission<br>
 <cite>Internal Control - Integrated Framework</cite>
-</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>Sidebar: Introducing ISACA</p>
-</div>
 </div>
 </div>
 <div class="quoteblock">
@@ -19630,6 +19608,19 @@ Social media</pre>
 </div>
 <div class="paragraph">
 <p><strong>Professional</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Risk management frameworks</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>COBIT
+OCEG
+COSO
+ISO</p>
 </div>
 <div class="ulist">
 <ul>
@@ -20834,7 +20825,7 @@ IEEE Press.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-06-04 16:55:01 CDT
+Last updated 2016-07-02 13:44:03 CDT
 </div>
 </div>
 </body>
