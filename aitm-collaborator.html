@@ -950,12 +950,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_standards_frameworks_methods_and_the_innovation_cycle">Standards, frameworks, methods, and the innovation cycle</a></li>
 </ul>
 </li>
-<li><a href="#_assurance_and_audit">Assurance and audit</a>
-<ul class="sectlevel4">
-<li><a href="#_assurance">Assurance</a></li>
-<li><a href="#_audit">Audit</a></li>
-</ul>
-</li>
 <li><a href="#_risk_management_2">Risk management</a>
 <ul class="sectlevel4">
 <li><a href="#_risk_management_fundamentals">Risk management fundamentals</a></li>
@@ -967,6 +961,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_compliance_fundamentals">Compliance fundamentals</a></li>
 <li><a href="#_regulations_of_note">Regulations of note</a></li>
 <li><a href="#_ethics">Ethics</a></li>
+</ul>
+</li>
+<li><a href="#_assurance_and_audit">Assurance and audit</a>
+<ul class="sectlevel4">
+<li><a href="#_assurance">Assurance</a></li>
+<li><a href="#_audit">Audit</a></li>
 </ul>
 </li>
 <li><a href="#_security">Security</a>
@@ -18491,6 +18491,500 @@ There is little industry consensus on some of these definitional issues and the 
 </div>
 </div>
 <div class="sect3">
+<h4 id="_risk_management_2">Risk management</h4>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Collaborative</strong></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Status: This section is active development as of 5 July 2016. Expect volatility.</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/dm-academy/aitm/blob/master/collaborator-instructions.adoc" target="_blank">Collaborator instructions</a></p>
+</li>
+<li>
+<p>Raise an <a href="https://github.com/dm-academy/aitm/issues" target="_blank">issue</a> to comment</p>
+</li>
+<li>
+<p><a href="https://github.com/dm-academy/aitm/tree/master/book" target="_blank">Github source files</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><em>Please remember that the intended audience of this one or two semester survey text is incoming students at a Masters' level in Information Technology, Information Systems, and Software Engineering programs. The most useful feedback comes from the perspective of, "what do you think today&#8217;s students need to learn, given the last 20 years' developments with Agile, Lean IT, DevOps, web- and cloud-scale IT, digital transformation, and related themes?"</em></p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_risk_management_fundamentals">Risk management fundamentals</h5>
+<div class="quoteblock">
+<blockquote>
+Risk is defined as the possibility that an event will occur and adversely affect the achievement of objectives.
+</blockquote>
+<div class="attribution">
+&#8212; Committee of Sponsoring Organizations of the Treadway Commission<br>
+<cite>Internal Control - Integrated Framework</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>Risk is a fundamental concern of governance. Management may focus on effectiveness and efficiency well enough, but too often disregards risk. As we noted above, the shop manager may have incentives to maximize income, but usually does not stand to lose their life savings. The owner, however, does. Fire, theft, disaster - without assurance, including risk management, the owner does not sleep well.</p>
+</div>
+<div class="paragraph">
+<p>For this reason, risk management is a large element of governance, as indicated by the popular GRC acronym: Governance, Risk, and Compliance.</p>
+</div>
+<div class="paragraph">
+<p>Risk management may be seen as part of the broader assurance ecosystem as discussed in the last chapter section (for evidence of this, consider that the Institute of Internal Auditors offers a certificate in Risk Management Assurance). Assurance in practice may seem to be biased towards risk management, but (as with governance in general) assurance as a whole relates to all aspects of IT and digital governance, including effectiveness and efficiency.</p>
+</div>
+<div class="paragraph">
+<p>Audit practices may be informed by known risks and particularly concerned with their mitigation, but risk management remains a distinct practice. Audits may have scope beyond risks, and audits are only one tool used by risk management.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/4.10-AssuranceRisk.png" alt="4.10 AssuranceRisk">
+</div>
+</div>
+<div class="paragraph">
+<p>In short, and as shown in the above diagram, assurance plays a role across value recognition, while risk management specifically targets the value recognition objective of risk optimization.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Defining "Risk"</strong></p>
+</div>
+<div class="paragraph">
+<p>The definition of "risk" is surprisingly controversial. The ISO 31000 standard <a href="#ISO2009">[ISO2009]</a> and the Project Management Institute&#8217;s PMBOK <a href="#PMI2013">[PMI2013]</a>  both define risk as including positive outcomes (benefits).  This definition has been strongly criticized by (among others) Douglas Hubbard in <em>The Failure of Risk Management</em> <a href="#Hubbard2009">[Hubbard2009]</a>. Hubbard points out that traditionally, risk has meant the chance and consequences of loss.</p>
+</div>
+<div class="paragraph">
+<p>As this is an an overview text, we will use the more pragmatic, historical definition. Practically speaking, Operational Risk Management  as a function focuses on loss. The possibility ("risk") of benefits is eagerly sought by the organization as a whole and does not need "management" by a dedicated function.</p>
+</div>
+<div class="paragraph">
+<p>"Loss," however, can also equate to "failure to achieve anticipated gains." This form of risk applies (for example) to product and project investments.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Risk management can be seen as both a <a href="#process-function">function and a process</a>. As a function, it may be managed by a dedicated organization (perhaps called Enterprise Risk Management or Operational Risk Management.) As a process, it conducts the following activities:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Identifying risks</p>
+</li>
+<li>
+<p>Assessing and prioritizing them</p>
+</li>
+<li>
+<p>Coordinating effective responses to risks</p>
+</li>
+<li>
+<p>Ongoing monitoring and reporting of risk management</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Risk impacts some asset. Examples in the digital and IT context would include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Operational IT systems</p>
+</li>
+<li>
+<p>Hardware (e.g. computers) and facilities (e.g. data centers)</p>
+</li>
+<li>
+<p>Information (customer or patient records)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>It is commonly said that organizations have an "appetite" for risk (<a href="#ISACA2013">[ISACA2013]</a>, p. 79), in terms of the amount of risk the organization is willing to accept. This is a strategic decision, usually reserved for organizational governance.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/4.10-risk-context.png" alt="4.10 risk context">
+</div>
+</div>
+<div class="paragraph">
+<p>Risk management typically has strong relationships with the following organizational capabilities:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Enterprise governance (e.g. board-level committees)</p>
+</li>
+<li>
+<p>Security</p>
+</li>
+<li>
+<p>Compliance</p>
+</li>
+<li>
+<p>Audit</p>
+</li>
+<li>
+<p>Policy management</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For example, security requires risk assessment as a input, so that security resources focus on the correct priorities.</p>
+</div>
+<div class="paragraph">
+<p>Risk additionally may interact with:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Project management</p>
+</li>
+<li>
+<p>Asset management</p>
+</li>
+<li>
+<p>Processes such as Change Management</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>and other digital activities.</p>
+</div>
+<div class="paragraph">
+<p>More detail on core risk management activities follows, largely adopted from the COBIT for Risk publication (<a href="#ISACA2013">[ISACA2013]</a>).</p>
+</div>
+<div class="sect5">
+<h6 id="_risk_identification">Risk identification</h6>
+<div class="paragraph">
+<p>There are a wide variety of potential risks, and many accounts and anecdotes constantly circulating. It is critical that risk identification start with a firm understanding of the organization&#8217;s objectives and context.</p>
+</div>
+<div class="paragraph">
+<p>Risk identification can occur both in a "top down" and "bottom up" manner. Industry guidance can assist the operational risk management function in identifying typical risks. For example, the COBIT for Risk publication includes a useful 8 page "Generic Risk Scenarios" section (<a href="#ISACA2013">[ISACA2013]</a>, pp. 67-74) identifying risks such as</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"Wrong programmes are selected for implementation and are misaligned with corporate strategy and priorities"</p>
+</li>
+<li>
+<p>"There is an earthquake."</p>
+</li>
+<li>
+<p>"Sensitive data is lost/disclosed through
+logical attacks."</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These are only three of dozens of scenarios. Risks of course extend over a wide variety of areas:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Investment</p>
+</li>
+<li>
+<p>Sourcing</p>
+</li>
+<li>
+<p>Operations</p>
+</li>
+<li>
+<p>Availability</p>
+</li>
+<li>
+<p>Continuity</p>
+</li>
+<li>
+<p>Security</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>and so forth. The same guidance also strongly cautions against over-reliance on these generic scenarios.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_risk_assessment">Risk assessment</h6>
+<div class="paragraph">
+<p>Risk management has a variety of concepts and techniques both qualitative and quantitative. Risk is often assumed to be the product of probability * impact. For example, if the chance of a fire in a facility is 5% over a given year, and the damage of the fire is estimated at $100,000, the annual risk is $5,000. An enterprise risk management function may attempt to quantify all such risks into an overall portfolio.</p>
+</div>
+<div class="paragraph">
+<p>Where quantitative approaches are perceived to be difficult, risk may be assessed using simple ordinal scales (e.g. 1-5, where 1 is low risk and 5 is high risk.) COBIT for Risk expresses concern regarding "The use of ordinal scales for expressing risk in different categories, and the mathematical difficulties or dangers of using these numbers to do any sort of calculation." <a href="#ISACA2013">[ISACA2013]</a>, p. 75. Such approaches are criticized by Doug Hubbard in <em>The Failure of Risk Management</em> as misleading and potentially more harmful than not managing risk at all <a href="#Hubbard2009">[Hubbard2009]</a>.</p>
+</div>
+<div class="paragraph">
+<p>Hubbard instead suggests that quantitative techniques such as Monte Carlo analysis are rarely infeasible, and recommends their application instead of subjective scales.</p>
+</div>
+<div class="paragraph">
+<p>The enterprise can also consider evaluating scenarios that have a chance of occurring simultaneously. This is frequently referred to as ‘stress’ testing.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_risk_response">Risk response</h6>
+<div class="quoteblock">
+<blockquote>
+He who fights and runs away, lives to fight another day.
+</blockquote>
+<div class="attribution">
+&#8212; Menander<br>
+<cite>342 BC - 291 BC</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>Risk response includes several approaches:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Avoidance</p>
+</li>
+<li>
+<p>Acceptance</p>
+</li>
+<li>
+<p>Transference</p>
+</li>
+<li>
+<p>Mitigation</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Avoidance</strong> means ending the activities or conditions causing the risk; e.g., not engaging in a given initiative or moving operations away from risk factors.</p>
+</div>
+<div class="paragraph">
+<p><strong>Acceptance</strong> means no action is taken. Typically, such "acceptance" must reside with an executive.</p>
+</div>
+<div class="paragraph">
+<p><strong>Transference</strong> means that some sharing arrangement, usually involving financial consideration, is established. Common transfer mechanisms include outsourcing and insurance. (Recall our discussion of Agile approaches to <a href="#contract-mgmt">contract management</a> and risk sharing.)</p>
+</div>
+<div class="paragraph">
+<p><strong>Mitigation</strong> means that some compensating mechanism&#8201;&#8212;&#8201;one or more "controls" is established. This topic is covered in the next section, and comprises the remainder of the material on risk management.</p>
+</div>
+<div class="paragraph">
+<p><em>The above discussion was largely derived from <a href="#ISACA2013">[ISACA2013]</a></em>.</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_controls">Controls</h5>
+<div class="quoteblock">
+<blockquote>
+The term <em>control objective</em> is no longer a mainstream term used in COBIT 5, and the word <em>control</em> is used only rarely. Instead, COBIT 5 uses the concepts of process practices and process activities.
+</blockquote>
+<div class="attribution">
+&#8212; ISACA<br>
+<cite>COBIT 5 for Assurance</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>The term "control" is problematic.</p>
+</div>
+<div class="paragraph">
+<p>It has distasteful connotations to those who casually encounter it, evoking images of "command and control" management, or "controlling" personalities.  COBIT, which once stood for Control Objectives for IT, now deprecates the term control (see the above quote). Yet it retains a prominent role in many discussions of enterprise governance and risk management, as we saw at the start of this chapter in the discussion of <a href="#COSO-control">COSO&#8217;s general concept of control</a>.</p>
+</div>
+<div class="paragraph">
+<p>And (as discussed in our coverage of <a href="#empirical-process-control">Scrum&#8217;s origins</a>) it is a technical term of art in systems engineering. As such it represents principles essential to understanding large scale digital organizations.</p>
+</div>
+<div class="paragraph">
+<p>In this section, we are concerned with controls in a narrower sense, as risk mitigators.</p>
+</div>
+<div class="paragraph">
+<p>As noted above, ISACA replaced the term "controls" with "enablers," which we have already discussed. In their guise as controls, enablers such as policies, procedures, organizational structures, and the rest are used and intended to ensure that:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>investments achieve their intended outcomes;</p>
+</li>
+<li>
+<p>resources are used responsibly, and protected from fraud, theft, abuse, waste, and mismanagement;</p>
+</li>
+<li>
+<p>laws and regulations are adhered to; and</p>
+</li>
+<li>
+<p>timely and reliable information is employed for decision making.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>But what are "controls"?</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+In this chapter section we&#8217;ll continue to use the generic term control as ultimately COBIT did not provide a good, terse substitute. "Testing enablers" is not how auditors talk.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Take a risk, such as the risk of a service (e.g. ecommerce Web site) outage resulting in loss of critical revenues.</p>
+</div>
+<div class="paragraph">
+<p>There are a number of ways we might attempt to mitigate this risk:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Configuration management (a <strong>preventative</strong> control)</p>
+</li>
+<li>
+<p>Effective monitoring of system alerts (a <strong>detective</strong> control)</p>
+</li>
+<li>
+<p>Documented operational responses to detected issues (a <strong>corrective</strong> control)</p>
+</li>
+<li>
+<p>Clear recovery protocols that are practiced and well understood (a <strong>recovery</strong> control)</p>
+</li>
+<li>
+<p>System redundancy of key components where appropriate (a <strong>compensating</strong> control)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>and so forth. Another kind of control appropriate to other risks is <strong>deterrent</strong> (e.g. an armed guard at a bank).</p>
+</div>
+<div class="paragraph">
+<p>Other types of frequently seen controls include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Separation of duties</p>
+</li>
+<li>
+<p>Audit trails</p>
+</li>
+<li>
+<p>Documentation</p>
+</li>
+<li>
+<p>Standards and guidelines</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A control type such as "Separation of duties" is very general and might be specified by activity type, e.g.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Purchasing</p>
+</li>
+<li>
+<p>System development and release</p>
+</li>
+<li>
+<p>Sales revenue recognition</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Each of these would require distinct approaches to separation of duties. Some of this may be explicitly defined; if there is no policy or control specific to a given activity, an auditor may identify this as a deficiency.</p>
+</div>
+<div class="paragraph">
+<p>Policies and processes in their aspect as controls are often what auditors test. In the case of the web site above, an auditor might test the configuration management approach, the operational processes, inspect the system redundancy, and so forth. And risk management would maintain an ongoing interest in the system in between audits.</p>
+</div>
+<div class="paragraph">
+<p>As with most topics in this book, risk management (in and of itself, as well as applied to IT and digital) is an extensive and complex domain, and this discussion was necessarily brief. The student is referred to the readings at the end of the chapter for further information.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_compliance">Compliance</h4>
+<div class="paragraph">
+<p>compliance is an information problem as well as a risk problem - ongoing stream of regs&#8230;&#8203;.</p>
+</div>
+<div class="sect4">
+<h5 id="_compliance_fundamentals">Compliance fundamentals</h5>
+<div class="paragraph">
+<p>discuss how they play out in terms of GRC</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Policy is not just about risk. That's why risk comes later. Policy is also about effectiveness, e.g. understanding cost of delay, not overburdening ... we understand risk as risk of loss, not ineffectiveness... but we still control for our policies that are intended to promote effectiveness...</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>governance &amp; innovation</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>governance &amp; efficiency</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>governance &amp; risk</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Overlaps with enablers</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Contracts - vendor &amp; customer</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_regulations_of_note">Regulations of note</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>HIPAA</p>
+</li>
+<li>
+<p>SOX</p>
+</li>
+<li>
+<p>FERPA</p>
+</li>
+<li>
+<p>PCI DSS</p>
+</li>
+<li>
+<p>GLBA PII (NIST)</p>
+<div class="literalblock">
+<div class="content">
+<pre>(summarize each of these)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Note that some of these regulations call for policy management.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>NOTE: Some companies need to institute formal policies quite early. Even a startup may need written policies, if it is concerned with regulations such as HIPAA. However, this may be done on an ad-hoc basis, perhaps outsourced to a consultant. (A startup cannot afford a dedicated VP of Policy and Compliance.) This topic is covered in detail in this section because at enterprise scale, ongoing policy management and compliance must be formalized.</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_ethics">Ethics</h5>
+
+</div>
+</div>
+<div class="sect3">
 <h4 id="_assurance_and_audit">Assurance and audit</h4>
 <div class="sidebarblock">
 <div class="content">
@@ -19057,500 +19551,6 @@ enterprise or entity and to review and independently report the results of that 
 <p>Finally, the audit results are reported to the agreed users (often with a preliminary "heads up" cycle so that people are not surprised by the results). Deficiencies are identified in various ways, and typically are taken into system and process improvement projects.</p>
 </div>
 </div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_risk_management_2">Risk management</h4>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Collaborative</strong></p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Status: This section is active development as of 5 July 2016. Expect volatility.</pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/dm-academy/aitm/blob/master/collaborator-instructions.adoc" target="_blank">Collaborator instructions</a></p>
-</li>
-<li>
-<p>Raise an <a href="https://github.com/dm-academy/aitm/issues" target="_blank">issue</a> to comment</p>
-</li>
-<li>
-<p><a href="https://github.com/dm-academy/aitm/tree/master/book" target="_blank">Github source files</a></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><em>Please remember that the intended audience of this one or two semester survey text is incoming students at a Masters' level in Information Technology, Information Systems, and Software Engineering programs. The most useful feedback comes from the perspective of, "what do you think today&#8217;s students need to learn, given the last 20 years' developments with Agile, Lean IT, DevOps, web- and cloud-scale IT, digital transformation, and related themes?"</em></p>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_risk_management_fundamentals">Risk management fundamentals</h5>
-<div class="quoteblock">
-<blockquote>
-Risk is defined as the possibility that an event will occur and adversely affect the achievement of objectives.
-</blockquote>
-<div class="attribution">
-&#8212; Committee of Sponsoring Organizations of the Treadway Commission<br>
-<cite>Internal Control - Integrated Framework</cite>
-</div>
-</div>
-<div class="paragraph">
-<p>Risk is a fundamental concern of governance. Management may focus on effectiveness and efficiency well enough, but too often disregards risk. As we noted above, the shop manager may have incentives to maximize income, but usually does not stand to lose their life savings. The owner, however, does. Fire, theft, disaster - without assurance, including risk management, the owner does not sleep well.</p>
-</div>
-<div class="paragraph">
-<p>For this reason, risk management is a large element of governance, as indicated by the popular GRC acronym: Governance, Risk, and Compliance.</p>
-</div>
-<div class="paragraph">
-<p>Risk management may be seen as part of the broader assurance ecosystem as discussed in the last chapter section (for evidence of this, consider that the Institute of Internal Auditors offers a certificate in Risk Management Assurance). Assurance in practice may seem to be biased towards risk management, but (as with governance in general) assurance as a whole relates to all aspects of IT and digital governance, including effectiveness and efficiency.</p>
-</div>
-<div class="paragraph">
-<p>Audit practices may be informed by known risks and particularly concerned with their mitigation, but risk management remains a distinct practice. Audits may have scope beyond risks, and audits are only one tool used by risk management.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/4.10-AssuranceRisk.png" alt="4.10 AssuranceRisk">
-</div>
-</div>
-<div class="paragraph">
-<p>In short, and as shown in the above diagram, assurance plays a role across value recognition, while risk management specifically targets the value recognition objective of risk optimization.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Defining "Risk"</strong></p>
-</div>
-<div class="paragraph">
-<p>The definition of "risk" is surprisingly controversial. The ISO 31000 standard <a href="#ISO2009">[ISO2009]</a> and the Project Management Institute&#8217;s PMBOK <a href="#PMI2013">[PMI2013]</a>  both define risk as including positive outcomes (benefits).  This definition has been strongly criticized by (among others) Douglas Hubbard in <em>The Failure of Risk Management</em> <a href="#Hubbard2009">[Hubbard2009]</a>. Hubbard points out that traditionally, risk has meant the chance and consequences of loss.</p>
-</div>
-<div class="paragraph">
-<p>As this is an an overview text, we will use the more pragmatic, historical definition. Practically speaking, Operational Risk Management  as a function focuses on loss. The possibility ("risk") of benefits is eagerly sought by the organization as a whole and does not need "management" by a dedicated function.</p>
-</div>
-<div class="paragraph">
-<p>"Loss," however, can also equate to "failure to achieve anticipated gains." This form of risk applies (for example) to product and project investments.</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Risk management can be seen as both a <a href="#process-function">function and a process</a>. As a function, it may be managed by a dedicated organization (perhaps called Enterprise Risk Management or Operational Risk Management.) As a process, it conducts the following activities:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Identifying risks</p>
-</li>
-<li>
-<p>Assessing and prioritizing them</p>
-</li>
-<li>
-<p>Coordinating effective responses to risks</p>
-</li>
-<li>
-<p>Ongoing monitoring and reporting of risk management</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Risk impacts some asset. Examples in the digital and IT context would include:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Operational IT systems</p>
-</li>
-<li>
-<p>Hardware (e.g. computers) and facilities (e.g. data centers)</p>
-</li>
-<li>
-<p>Information (customer or patient records)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>It is commonly said that organizations have an "appetite" for risk (<a href="#ISACA2013">[ISACA2013]</a>, p. 79), in terms of the amount of risk the organization is willing to accept. This is a strategic decision, usually reserved for organizational governance.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/4.10-risk-context.png" alt="4.10 risk context">
-</div>
-</div>
-<div class="paragraph">
-<p>Risk management typically has strong relationships with the following organizational capabilities:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Enterprise governance (e.g. board-level committees)</p>
-</li>
-<li>
-<p>Security</p>
-</li>
-<li>
-<p>Compliance</p>
-</li>
-<li>
-<p>Audit</p>
-</li>
-<li>
-<p>Policy management</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>For example, security requires risk assessment as a input, so that security resources focus on the correct priorities.</p>
-</div>
-<div class="paragraph">
-<p>Risk additionally may interact with:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Project management</p>
-</li>
-<li>
-<p>Asset management</p>
-</li>
-<li>
-<p>Processes such as Change Management</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>and other digital activities.</p>
-</div>
-<div class="paragraph">
-<p>More detail on core risk management activities follows, largely adopted from the COBIT for Risk publication (<a href="#ISACA2013">[ISACA2013]</a>).</p>
-</div>
-<div class="sect5">
-<h6 id="_risk_identification">Risk identification</h6>
-<div class="paragraph">
-<p>There are a wide variety of potential risks, and many accounts and anecdotes constantly circulating. It is critical that risk identification start with a firm understanding of the organization&#8217;s objectives and context.</p>
-</div>
-<div class="paragraph">
-<p>Risk identification can occur both in a "top down" and "bottom up" manner. Industry guidance can assist the operational risk management function in identifying typical risks. For example, the COBIT for Risk publication includes a useful 8 page "Generic Risk Scenarios" section (<a href="#ISACA2013">[ISACA2013]</a>, pp. 67-74) identifying risks such as</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>"Wrong programmes are selected for implementation and are misaligned with corporate strategy and priorities"</p>
-</li>
-<li>
-<p>"There is an earthquake."</p>
-</li>
-<li>
-<p>"Sensitive data is lost/disclosed through
-logical attacks."</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>These are only three of dozens of scenarios. Risks of course extend over a wide variety of areas:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Investment</p>
-</li>
-<li>
-<p>Sourcing</p>
-</li>
-<li>
-<p>Operations</p>
-</li>
-<li>
-<p>Availability</p>
-</li>
-<li>
-<p>Continuity</p>
-</li>
-<li>
-<p>Security</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>and so forth. The same guidance also strongly cautions against over-reliance on these generic scenarios.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_risk_assessment">Risk assessment</h6>
-<div class="paragraph">
-<p>Risk management has a variety of concepts and techniques both qualitative and quantitative. Risk is often assumed to be the product of probability * impact. For example, if the chance of a fire in a facility is 5% over a given year, and the damage of the fire is estimated at $100,000, the annual risk is $5,000. An enterprise risk management function may attempt to quantify all such risks into an overall portfolio.</p>
-</div>
-<div class="paragraph">
-<p>Where quantitative approaches are perceived to be difficult, risk may be assessed using simple ordinal scales (e.g. 1-5, where 1 is low risk and 5 is high risk.) COBIT for Risk expresses concern regarding "The use of ordinal scales for expressing risk in different categories, and the mathematical difficulties or dangers of using these numbers to do any sort of calculation." <a href="#ISACA2013">[ISACA2013]</a>, p. 75. Such approaches are criticized by Doug Hubbard in <em>The Failure of Risk Management</em> as misleading and potentially more harmful than not managing risk at all <a href="#Hubbard2009">[Hubbard2009]</a>.</p>
-</div>
-<div class="paragraph">
-<p>Hubbard instead suggests that quantitative techniques such as Monte Carlo analysis are rarely infeasible, and recommends their application instead of subjective scales.</p>
-</div>
-<div class="paragraph">
-<p>The enterprise can also consider evaluating scenarios that have a chance of occurring simultaneously. This is frequently referred to as ‘stress’ testing.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_risk_response">Risk response</h6>
-<div class="quoteblock">
-<blockquote>
-He who fights and runs away, lives to fight another day.
-</blockquote>
-<div class="attribution">
-&#8212; Menander<br>
-<cite>342 BC - 291 BC</cite>
-</div>
-</div>
-<div class="paragraph">
-<p>Risk response includes several approaches:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Avoidance</p>
-</li>
-<li>
-<p>Acceptance</p>
-</li>
-<li>
-<p>Transference</p>
-</li>
-<li>
-<p>Mitigation</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Avoidance</strong> means ending the activities or conditions causing the risk; e.g., not engaging in a given initiative or moving operations away from risk factors.</p>
-</div>
-<div class="paragraph">
-<p><strong>Acceptance</strong> means no action is taken. Typically, such "acceptance" must reside with an executive.</p>
-</div>
-<div class="paragraph">
-<p><strong>Transference</strong> means that some sharing arrangement, usually involving financial consideration, is established. Common transfer mechanisms include outsourcing and insurance. (Recall our discussion of Agile approaches to <a href="#contract-mgmt">contract management</a> and risk sharing.)</p>
-</div>
-<div class="paragraph">
-<p><strong>Mitigation</strong> means that some compensating mechanism&#8201;&#8212;&#8201;one or more "controls" is established. This topic is covered in the next section, and comprises the remainder of the material on risk management.</p>
-</div>
-<div class="paragraph">
-<p><em>The above discussion was largely derived from <a href="#ISACA2013">[ISACA2013]</a></em>.</p>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_controls">Controls</h5>
-<div class="quoteblock">
-<blockquote>
-The term <em>control objective</em> is no longer a mainstream term used in COBIT 5, and the word <em>control</em> is used only rarely. Instead, COBIT 5 uses the concepts of process practices and process activities.
-</blockquote>
-<div class="attribution">
-&#8212; ISACA<br>
-<cite>COBIT 5 for Assurance</cite>
-</div>
-</div>
-<div class="paragraph">
-<p>The term "control" is problematic.</p>
-</div>
-<div class="paragraph">
-<p>It has distasteful connotations to those who casually encounter it, evoking images of "command and control" management, or "controlling" personalities.  COBIT, which once stood for Control Objectives for IT, now deprecates the term control (see the above quote). Yet it retains a prominent role in many discussions of enterprise governance and risk management, as we saw at the start of this chapter in the discussion of <a href="#COSO-control">COSO&#8217;s general concept of control</a>.</p>
-</div>
-<div class="paragraph">
-<p>And (as discussed in our coverage of <a href="#empirical-process-control">Scrum&#8217;s origins</a>) it is a technical term of art in systems engineering. As such it represents principles essential to understanding large scale digital organizations.</p>
-</div>
-<div class="paragraph">
-<p>In this section, we are concerned with controls in a narrower sense, as risk mitigators.</p>
-</div>
-<div class="paragraph">
-<p>As noted above, ISACA replaced the term "controls" with "enablers," which we have already discussed. In their guise as controls, enablers such as policies, procedures, organizational structures, and the rest are used and intended to ensure that:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>investments achieve their intended outcomes;</p>
-</li>
-<li>
-<p>resources are used responsibly, and protected from fraud, theft, abuse, waste, and mismanagement;</p>
-</li>
-<li>
-<p>laws and regulations are adhered to; and</p>
-</li>
-<li>
-<p>timely and reliable information is employed for decision making.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>But what are "controls"?</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-In this chapter section we&#8217;ll continue to use the generic term control as ultimately COBIT did not provide a good, terse substitute. "Testing enablers" is not how auditors talk.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Take a risk, such as the risk of a service (e.g. ecommerce Web site) outage resulting in loss of critical revenues.</p>
-</div>
-<div class="paragraph">
-<p>There are a number of ways we might attempt to mitigate this risk:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Configuration management (a <strong>preventative</strong> control)</p>
-</li>
-<li>
-<p>Effective monitoring of system alerts (a <strong>detective</strong> control)</p>
-</li>
-<li>
-<p>Documented operational responses to detected issues (a <strong>corrective</strong> control)</p>
-</li>
-<li>
-<p>Clear recovery protocols that are practiced and well understood (a <strong>recovery</strong> control)</p>
-</li>
-<li>
-<p>System redundancy of key components where appropriate (a <strong>compensating</strong> control)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>and so forth. Another kind of control appropriate to other risks is <strong>deterrent</strong> (e.g. an armed guard at a bank).</p>
-</div>
-<div class="paragraph">
-<p>Other types of frequently seen controls include:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Separation of duties</p>
-</li>
-<li>
-<p>Audit trails</p>
-</li>
-<li>
-<p>Documentation</p>
-</li>
-<li>
-<p>Standards and guidelines</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>A control type such as "Separation of duties" is very general and might be specified by activity type, e.g.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Purchasing</p>
-</li>
-<li>
-<p>System development and release</p>
-</li>
-<li>
-<p>Sales revenue recognition</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Each of these would require distinct approaches to separation of duties. Some of this may be explicitly defined; if there is no policy or control specific to a given activity, an auditor may identify this as a deficiency.</p>
-</div>
-<div class="paragraph">
-<p>Policies and processes in their aspect as controls are often what auditors test. In the case of the web site above, an auditor might test the configuration management approach, the operational processes, inspect the system redundancy, and so forth. And risk management would maintain an ongoing interest in the system in between audits.</p>
-</div>
-<div class="paragraph">
-<p>As with most topics in this book, risk management (in and of itself, as well as applied to IT and digital) is an extensive and complex domain, and this discussion was necessarily brief. The student is referred to the readings at the end of the chapter for further information.</p>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_compliance">Compliance</h4>
-<div class="paragraph">
-<p>compliance is an information problem as well as a risk problem - ongoing stream of regs&#8230;&#8203;.</p>
-</div>
-<div class="sect4">
-<h5 id="_compliance_fundamentals">Compliance fundamentals</h5>
-<div class="paragraph">
-<p>discuss how they play out in terms of GRC</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Policy is not just about risk. That's why risk comes later. Policy is also about effectiveness, e.g. understanding cost of delay, not overburdening ... we understand risk as risk of loss, not ineffectiveness... but we still control for our policies that are intended to promote effectiveness...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>governance &amp; innovation</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>governance &amp; efficiency</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>governance &amp; risk</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Overlaps with enablers</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Contracts - vendor &amp; customer</pre>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_regulations_of_note">Regulations of note</h5>
-<div class="ulist">
-<ul>
-<li>
-<p>HIPAA</p>
-</li>
-<li>
-<p>SOX</p>
-</li>
-<li>
-<p>FERPA</p>
-</li>
-<li>
-<p>PCI DSS</p>
-</li>
-<li>
-<p>GLBA PII (NIST)</p>
-<div class="literalblock">
-<div class="content">
-<pre>(summarize each of these)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Note that some of these regulations call for policy management.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>NOTE: Some companies need to institute formal policies quite early. Even a startup may need written policies, if it is concerned with regulations such as HIPAA. However, this may be done on an ad-hoc basis, perhaps outsourced to a consultant. (A startup cannot afford a dedicated VP of Policy and Compliance.) This topic is covered in detail in this section because at enterprise scale, ongoing policy management and compliance must be formalized.</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_ethics">Ethics</h5>
-
 </div>
 </div>
 <div class="sect3">
