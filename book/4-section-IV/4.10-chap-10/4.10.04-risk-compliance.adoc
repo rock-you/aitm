@@ -14,6 +14,7 @@ include::../../../collab-links.adoc[]
 
 endif::collaborator-draft[]
 
+===== Risk management fundamentals
 
 [quote, Committee of Sponsoring Organizations of the Treadway Commission, Internal Control - Integrated Framework]
 Risk is defined as the possibility that an event will occur and adversely affect the achievement of objectives.
@@ -24,7 +25,7 @@ For this reason, risk management is a large element of governance, as indicated 
 
 We've discussed assurance and audit in the previous chapter, but those concepts do not equate to risk. Risk management may be seen as part of the broader assurance ecosystem as discussed in the last chapter section (for evidence of this, consider that the Institute of Internal Auditors offers a certificate in Risk Management Assurance).
 
-Assurance in practice may seem to be biased towards risk management, but (as with governance in general) assurance as a whole relates to all aspects of IT governance, including effectiveness and efficiency.
+Assurance in practice may seem to be biased towards risk management, but (as with governance in general) assurance as a whole relates to all aspects of IT and digital governance, including effectiveness and efficiency.
 
 Audit practices may be informed by known risks and particularly concerned with their mitigation, but risk management remains a distinct practice. Audits may have scope beyond risks, and audits are only one tool used by risk management.
 
@@ -39,74 +40,51 @@ The definition of "risk" is surprisingly controversial. The ISO 31000 standard <
 
 As this is an an overview text, we will use the more pragmatic, historical definition. Practically speaking, Operational Risk Management  as a function focuses on loss. The possibility ("risk") of benefits is eagerly sought by the organization as a whole and does not need "management" by a dedicated function.
 
+"Loss," however, can also equate to "failure to achieve anticipated gains." This form of risk applies (for example) to product and project investments.
 ****
 
-===== Risk management fundamentals
-
-Larger organizations often have a "Risk Management" function. In general, the scope of Risk Management includes:
+Risk management can be seen as both a xref:process-function[function and a process]. As a function, it may be managed by a dedicated function (perhaps called Enterprise Risk Management or Operational Risk Management.) As a process, it conducts the following activities:
 
 * Identifying risks
 * Assessing and prioritizing them
 * Coordinating effective responses to risks
-* Ongoing monitoring of risk responses and controls effectiveness
+* Ongoing monitoring and reporting of risk management
 
 Risk impacts some asset, such as:
 
 * Operational IT systems
-* Hardware and facilities
+* Hardware (e.g. computers) and facilities (e.g. data centers)
 * Information (customer or patient records)
 
+It is commonly said that organizations have an "appetite" for risk (<<ISACA2013>>, p. 79), in terms of the amount of risk the organization is willing to accept. This is a strategic decision, usually reserved for organizational governance.
+
+Risk management typically has strong relationships with the following organizational capabilities:
+
+* Enterprise governance (e.g. board-level committees)
+* Security
+* Compliance
+* Audit
+
+For example, security requires risk assessment as a input, so that security resources focus on the correct priorities.
+
+Risk additionally may interact with:
+
+* Project management
+* Asset management
+* Processes such as Change Management
+
+and other digital activities.
 
 
-loss, threat, vulnerability event types <<ISACA2013>> p32
-
-risk appetite, risk tolerance, risk capacity <<ISACA2013>> p79
-
-
-===== Risk management context
-
-relationship to security - security requires a risk assessment, so we know what to secure
 
 risk architecture/flows - visual
 
-
-===== IT-related risks
-Prominent issues - Barclay's, Target, etc
-risk of learning wrong lessons w/r/t complex systems - more "rigor" is not necessarily the answer - impossibility of testing all outcomes (cite relevant SEng) -- THE FUNDAMENTAL ISSUE
-
-defenses covered in subsequent section
-
-principles: antifragility, defense in depth, fast feedback, automation (2-edged sword), analytics & pattern recognition - pointer back to chapter 6
-
-====== Availability
-
-importance of antifragility techniques
-
-foreshadow Simian Army
-
-====== Continuity and recovery
-
-A large class of risk that often results in projects or ongoing organizations
-
-The nightmare of a cold standby failure in a legacy heterogeneous environment
-
-Infrastructure as code can be a significant mitigator - investments can justify themselves
-
-review <<duPreez2015>>, consider manual? is that realistic?
-
-====== Security as a risk
-foreward ref
-
-====== Risk management frameworks
-
-OCEG
-COSO
-ISO
-
-====== More detail
-Hubbard cautions on aggregating risk
+Risk management techniques
 
 single loss expectancy, annualized rate of occurrence, annualized loss expectancy
+
+Hubbard cautions on aggregating risk
+
 
 wikipedia list as input
 
@@ -138,7 +116,42 @@ Advanced IT risk evaluation and compliance dashboards
 
 The enterprise can also consider evaluating scenarios that have a chance of occurring simultaneously. This is frequently referred to as ‘stress’ testing.
 
-===== Controls and enablers
+====== Risk management frameworks
+
+COBIT
+OCEG
+COSO
+ISO
+
+
+===== IT-related risks
+Prominent issues - Barclay's, Target, etc
+risk of learning wrong lessons w/r/t complex systems - more "rigor" is not necessarily the answer - impossibility of testing all outcomes (cite relevant SEng) -- THE FUNDAMENTAL ISSUE
+
+defenses covered in subsequent section
+
+principles: antifragility, defense in depth, fast feedback, automation (2-edged sword), analytics & pattern recognition - pointer back to chapter 6
+
+====== Availability
+
+importance of antifragility techniques
+
+foreshadow Simian Army
+
+====== Continuity and recovery
+
+A large class of risk that often results in projects or ongoing organizations
+
+The nightmare of a cold standby failure in a legacy heterogeneous environment
+
+Infrastructure as code can be a significant mitigator - investments can justify themselves
+
+review <<duPreez2015>>, consider manual? is that realistic?
+
+====== Security as a risk
+foreward ref
+
+===== Controls
 Management controls are the organization, policies, and procedures used by
 agencies to reasonably ensure that
 • programs achieve their intended results;
@@ -172,8 +185,6 @@ The technical term from control theory - error deliberately introduced to a func
 
 COBIT no longer uses term. "" <<ISACA2013a>> p. 57.
 ****
-
-
 
 ====== COSO
 
