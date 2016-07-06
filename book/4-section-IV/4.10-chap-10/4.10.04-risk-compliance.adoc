@@ -34,7 +34,7 @@ In short, and as shown in the above diagram, assurance plays a role across value
 ****
 *Defining "Risk"*
 
-The definition of "risk" is surprisingly controversial. The ISO 31000 standard <<ISO2009>> and the Project Management Institute's PMBOK <<PMI2013>>  both define risk as including positive outcomes (benefits).  This definition has been strongly criticized by (among others) Douglas Hubbard in _The Failure of Risk Management_ <<Hubbard2009>>. Hubbard points out that historically, risk has meant the chance and consequences of loss.
+The definition of "risk" is surprisingly controversial. The ISO 31000 standard <<ISO2009>> and the Project Management Institute's PMBOK <<PMI2013>>  both define risk as including positive outcomes (benefits).  This definition has been strongly criticized by (among others) Douglas Hubbard in _The Failure of Risk Management_ <<Hubbard2009>>. Hubbard points out that traditionally, risk has meant the chance and consequences of loss.
 
 As this is an an overview text, we will use the more pragmatic, historical definition. Practically speaking, Operational Risk Management  as a function focuses on loss. The possibility ("risk") of benefits is eagerly sought by the organization as a whole and does not need "management" by a dedicated function.
 
@@ -76,93 +76,70 @@ Risk additionally may interact with:
 
 and other digital activities.
 
-More detail on the core risk management activities follows:
+More detail on the core risk management activities follows, largely adopted from the COBIT for Risk publication (<<ISACA2013>>).
 
 ====== Risk identification
 
-Business objectives & org context
+There are a wide variety of potential risks, and many accounts and anecdotes constantly circulating. It is critical that risk identification start with a firm understanding of the organization's objectives and context.
 
-Frameworks input
+Risk identification can occur both in a "top down" and "bottom up" manner. Industry guidance can assist the operational risk management function in identifying typical risks. For example, the COBIT for Risk publication includes a useful 8 page "Generic Risk Scenarios" section (<<ISACA2013>>, pp. 67-74) identifying risks such as
 
-part of standard processes
+* "Wrong programmes are selected for implementation and are misaligned with corporate strategy and priorities"
+* "There is an earthquake."
+* "Sensitive data is lost/disclosed through
+logical attacks."
 
+These are only three of dozens of scenarios. A wide variety of scenario areas are suggested:
+
+* Investment
+* Sourcing
+* Operations
+* Availability
+* Continuity
+* Security
+
+and so forth. The same guidance also strongly cautions against over-reliance on these generic scenarios.
 
 ====== Risk assessement
 
 Risk management has a variety of concepts and techniques both qualitative and quantitative. Risk is often assumed to be the product of probability * impact. For example, if the chance of a fire in a facility is 5% over a given year, and the damage of the fire is estimated at $100,000, the annual risk is $5,000. An enterprise risk management function may attempt to quantify all such risks into an overall portfolio.
 
-Where quantitative approaches are perceived to be difficult, risk may be assessed using simple scales (e.g. 1-5, where 1 is low risk and 5 is high risk.) Such approaches are criticized by Doug Hubbard in _The Failure of Risk Management_ as misleading and potentially more harmful than not managing risk at all <<Hubbard2009>>. Hubbard instead suggests that quantitative techniques such as Monte Carlo analysis are rarely infeasible, and recommends their application instead of subjective scales.
+Where quantitative approaches are perceived to be difficult, risk may be assessed using simple ordinal scales (e.g. 1-5, where 1 is low risk and 5 is high risk.) COBIT for Risk expresses concern regarding "The use of ordinal scales for expressing risk in different categories, and the mathematical difficulties or dangers of using these numbers to do any sort of calculation." <<ISACA2013>>, p. 75. Such approaches are criticized by Doug Hubbard in _The Failure of Risk Management_ as misleading and potentially more harmful than not managing risk at all <<Hubbard2009>>.
+
+Hubbard instead suggests that quantitative techniques such as Monte Carlo analysis are rarely infeasible, and recommends their application instead of subjective scales.
+
+The enterprise can also consider evaluating scenarios that have a chance of occurring simultaneously. This is frequently referred to as ‘stress’ testing.
 
 ====== Risk response
 
+Risk response includes several approaches:
 
-* Risk Response
-** Analysis
-** avoidance
-** acceptance
-** transference
+* Analysis
+* Avoidance
+* Acceptance
+* Transference
+
 * Control Activities
 ** Understand
 ** Develop tests
 ** Perform tests
 ** Improve
+
 * Information & Communication
 * Monitoring
 
-The enterprise can also consider evaluating scenarios that have a chance of occurring simultaneously. This is frequently referred to as ‘stress’ testing.
-
-====== Risk management frameworks
-
-COBIT
-OCEG
-COSO
-ISO
-
-
-===== IT-related risks
-Prominent issues - Barclay's, Target, etc
-risk of learning wrong lessons w/r/t complex systems - more "rigor" is not necessarily the answer - impossibility of testing all outcomes (cite relevant SEng) -- THE FUNDAMENTAL ISSUE
-
-defenses covered in subsequent section
-
-principles: antifragility, defense in depth, fast feedback, automation (2-edged sword), analytics & pattern recognition - pointer back to chapter 6
-
-====== Availability
-
-importance of antifragility techniques
-
-foreshadow Simian Army
-
-====== Continuity and recovery
-
-A large class of risk that often results in projects or ongoing organizations
-
-The nightmare of a cold standby failure in a legacy heterogeneous environment
-
-Infrastructure as code can be a significant mitigator - investments can justify themselves
-
-review <<duPreez2015>>, consider manual? is that realistic?
-
-====== Security as a risk
-foreward ref
-
 ===== Controls
-Management controls are the organization, policies, and procedures used by
-agencies to reasonably ensure that
+Management controls are the organization, policies, and procedures used by agencies to reasonably ensure that
+
 • programs achieve their intended results;
 • resources are used consistent with agency mission;
-• programs and resources are protected from waste, fraud, and misman
-agement;
+• programs and resources are protected from waste, fraud, and mismanagement;
 • laws and regulations are followed; and
 • reliable and timely information is obtained, maintained, reported and used
 for decision making.-'
 
 [quote, Committee of Sponsoring Organizations of the Treadway Commission, Internal Control - Integrated Framework]
 Internal control is a process, effected by an entity's board of directors, management, and other personnel, designed to provide reasonable assurance regarding the achievement of objectives relating to operations, reporting, and compliance.
-
-****
-Sidebar: Introducing ISACA
-****
 
 [quote, ISACA, COBIT 5 for Assurance]
 The term 'control objective' is no longer a mainstream term used in COBIT 5, and the word 'control' is used only rarely. Instead, COBIT 5 uses the concepts of process practices and process activities.
@@ -257,11 +234,9 @@ An enterprise unit or process has good Internal controls If It (1) accomplishes 
 That is. if a standard says that "management should monitor" some process or activity, the enterprise group supporting this area should be in a posi tion to demonstrate this monitoring activity through some level of documentation. [or automated event stream that is actionable]  <<Moelle2013>>
 ****
 
-
 "Working to rule" - when they proliferate - demand implications
 
 controls theater - cargo cult controls
-
 
 
 ==== Compliance
