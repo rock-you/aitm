@@ -960,6 +960,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_risk_management_2">Risk management</a>
 <ul class="sectlevel4">
 <li><a href="#_risk_management_fundamentals">Risk management fundamentals</a></li>
+<li><a href="#_risk_management_context">Risk management context</a></li>
 <li><a href="#_it_related_risks">IT-related risks</a></li>
 <li><a href="#_controls_and_enablers">Controls and enablers</a></li>
 </ul>
@@ -18433,26 +18434,155 @@ Risk is defined as the possibility that an event will occur and adversely affect
 <p>We&#8217;ve discussed assurance and audit in the previous chapter, but those concepts do not equate to risk. Risk management may be seen as part of the broader assurance ecosystem as discussed in the last chapter section (for evidence of this, consider that the Institute of Internal Auditors offers a certificate in Risk Management Assurance).</p>
 </div>
 <div class="paragraph">
+<p>Assurance in practice may seem to be biased towards risk management, but (as with governance in general) assurance as a whole relates to all aspects of IT governance, including effectiveness and efficiency.</p>
+</div>
+<div class="paragraph">
 <p>Audit practices may be informed by known risks and particularly concerned with their mitigation, but risk management remains a distinct practice. Audits may have scope beyond risks, and audits are only one tool used by risk management.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/4.10-AssuranceRisk.png" alt="4.10 AssuranceRisk">
+</div>
+</div>
+<div class="paragraph">
+<p>In short, and as shown in the above diagram, assurance plays a role across value recognition, while risk management specifically targets the value recognition objective of risk optimization.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Defining "Risk"</strong></p>
+</div>
+<div class="paragraph">
+<p>The definition of "risk" is surprisingly controversial. The ISO 31000 standard <a href="#ISO2009">[ISO2009]</a> and the Project Management Institute&#8217;s PMBOK <a href="#PMI2013">[PMI2013]</a>  both define risk as including positive outcomes (benefits).  This definition has been strongly criticized by (among others) Douglas Hubbard in <em>The Failure of Risk Management</em> <a href="#Hubbard2009">[Hubbard2009]</a>. Hubbard points out that by history and tradition, risk equates to the chance and consequences of loss.</p>
+</div>
+<div class="paragraph">
+<p>As this is an an overview text, we will use the more pragmatic, historical definition. Practically speaking, Operational Risk Management  as a function focuses on loss. The possibility ("risk") of benefits is eagerly sought by the organization as a whole and does not need "management" by a dedicated function.</p>
+</div>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_risk_management_fundamentals">Risk management fundamentals</h5>
 <div class="paragraph">
-<p>Larger organizations often have a "Risk Management" function.</p>
+<p>Larger organizations often have a "Risk Management" function. In general, the scope of Risk Management includes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Identifying risks</p>
+</li>
+<li>
+<p>Assessing and prioritizing them</p>
+</li>
+<li>
+<p>Coordinating effective responses to risks</p>
+</li>
+<li>
+<p>Ongoing monitoring of risk responses and controls effectiveness</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>In practice, governance practices often center on the management of risk and the quest for efficiency.</p>
+<p>Risk impacts some asset, such as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Operational IT systems</p>
+</li>
+<li>
+<p>Hardware and facilities</p>
+</li>
+<li>
+<p>Information (customer or patient records)</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>One explanation for this may be loss aversion.
-Define vulnerability, threat agent, threat, risk, control, exposure, safeguard/control/enabler
-(CISSP)</p>
+<p>loss, threat, vulnerability event types <a href="#ISACA2013">[ISACA2013]</a> p32</p>
 </div>
 <div class="paragraph">
-<p>"risk" does not include upside.</p>
+<p>risk appetite, risk tolerance, risk capacity <a href="#ISACA2013">[ISACA2013]</a> p79</p>
 </div>
+</div>
+<div class="sect4">
+<h5 id="_risk_management_context">Risk management context</h5>
 <div class="paragraph">
 <p>relationship to security - security requires a risk assessment, so we know what to secure</p>
+</div>
+<div class="paragraph">
+<p>risk architecture/flows - visual</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_it_related_risks">IT-related risks</h5>
+<div class="paragraph">
+<p>Prominent issues - Barclay&#8217;s, Target, etc
+risk of learning wrong lessons w/r/t complex systems - more "rigor" is not necessarily the answer - impossibility of testing all outcomes (cite relevant SEng)&#8201;&#8212;&#8201;THE FUNDAMENTAL ISSUE</p>
+</div>
+<div class="paragraph">
+<p>defenses covered in subsequent section</p>
+</div>
+<div class="paragraph">
+<p>principles: antifragility, defense in depth, fast feedback, automation (2-edged sword), analytics &amp; pattern recognition - pointer back to chapter 6</p>
+</div>
+<div class="sect5">
+<h6 id="_availability">Availability</h6>
+<div class="paragraph">
+<p>importance of antifragility techniques</p>
+</div>
+<div class="paragraph">
+<p>foreshadow Simian Army</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_continuity_and_recovery">Continuity and recovery</h6>
+<div class="paragraph">
+<p>A large class of risk that often results in projects or ongoing organizations</p>
+</div>
+<div class="paragraph">
+<p>The nightmare of a cold standby failure in a legacy heterogeneous environment</p>
+</div>
+<div class="paragraph">
+<p>Infrastructure as code can be a significant mitigator - investments can justify themselves</p>
+</div>
+<div class="paragraph">
+<p>review <a href="#duPreez2015">[duPreez2015]</a>, consider manual? is that realistic?</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_security_as_a_risk">Security as a risk</h6>
+<div class="paragraph">
+<p>foreward ref</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_risk_management_frameworks">Risk management frameworks</h6>
+<div class="paragraph">
+<p>OCEG
+COSO
+ISO</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_more_detail">More detail</h6>
+<div class="paragraph">
+<p>Hubbard cautions on aggregating risk</p>
+</div>
+<div class="paragraph">
+<p>single loss expectancy, annualized rate of occurrence, annualized loss expectancy</p>
+</div>
+<div class="paragraph">
+<p>wikipedia list as input</p>
+</div>
+<div class="paragraph">
+<p>Controls and policy library
+Policy distribution and response
+IT Controls self-assessment and measurement
+IT Asset repository
+Automated general computer control (GCC) collection
+Remediation and exception management
+Reporting
+Advanced IT risk evaluation and compliance dashboards</p>
 </div>
 <div class="ulist">
 <ul>
@@ -18515,98 +18645,7 @@ Define vulnerability, threat agent, threat, risk, control, exposure, safeguard/c
 </ul>
 </div>
 <div class="paragraph">
-<p>The enterprise can also consider evaluating scenarios that have a chance of occurring simultaneously. This is frequently referred to as ‘stress’ testing</p>
-</div>
-<div class="paragraph">
-<p>Management</p>
-</div>
-<div class="paragraph">
-<p>Use COSO outline</p>
-</div>
-<div class="paragraph">
-<p>risk architecture/flows - visual</p>
-</div>
-<div class="paragraph">
-<p>Risk impacts some asset:</p>
-</div>
-<div class="paragraph">
-<p>Assets/resources include:
-– People and skills
-– Organisational structures
-– IT processes, e.g., modelled as COBIT 5 processes, or business processes
-– Physical infrastructure, facilities, equipment, etc.
-– IT infrastructure, including computing hardware, network infrastructure, middleware
-– Other enterprise architecture components, including information, applications <a href="#ISACA2013">[ISACA2013]</a> p32</p>
-</div>
-<div class="paragraph">
-<p>loss, threat, vulnerability event types <a href="#ISACA2013">[ISACA2013]</a> p32</p>
-</div>
-<div class="paragraph">
-<p>risk appetite, risk tolerance, risk capacity <a href="#ISACA2013">[ISACA2013]</a> p79</p>
-</div>
-<div class="paragraph">
-<p>OCEG</p>
-</div>
-<div class="paragraph">
-<p>Hubbard cautions on aggregating risk</p>
-</div>
-<div class="paragraph">
-<p>single loss expectancy, annualized rate of occurrence, annualized loss expectancy</p>
-</div>
-<div class="paragraph">
-<p>wikipedia list as input</p>
-</div>
-<div class="paragraph">
-<p>Controls and policy library
-Policy distribution and response
-IT Controls self-assessment and measurement
-IT Asset repository
-Automated general computer control (GCC) collection
-Remediation and exception management
-Reporting
-Advanced IT risk evaluation and compliance dashboards</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_it_related_risks">IT-related risks</h5>
-<div class="paragraph">
-<p>Prominent issues - Barclay&#8217;s, Target, etc
-risk of learning wrong lessons w/r/t complex systems - more "rigor" is not necessarily the answer - impossibility of testing all outcomes (cite relevant SEng)&#8201;&#8212;&#8201;THE FUNDAMENTAL ISSUE</p>
-</div>
-<div class="paragraph">
-<p>defenses covered in subsequent section</p>
-</div>
-<div class="paragraph">
-<p>principles: antifragility, defense in depth, fast feedback, automation (2-edged sword), analytics &amp; pattern recognition - pointer back to chapter 6</p>
-</div>
-<div class="sect5">
-<h6 id="_availability">Availability</h6>
-<div class="paragraph">
-<p>importance of antifragility techniques</p>
-</div>
-<div class="paragraph">
-<p>foreshadow Simian Army</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_continuity_and_recovery">Continuity and recovery</h6>
-<div class="paragraph">
-<p>A large class of risk that often results in projects or ongoing organizations</p>
-</div>
-<div class="paragraph">
-<p>The nightmare of a cold standby failure in a legacy heterogeneous environment</p>
-</div>
-<div class="paragraph">
-<p>Infrastructure as code can be a significant mitigator - investments can justify themselves</p>
-</div>
-<div class="paragraph">
-<p>review <a href="#duPreez2015">[duPreez2015]</a>, consider manual? is that realistic?</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_security_as_a_risk">Security as a risk</h6>
-<div class="paragraph">
-<p>foreward ref</p>
+<p>The enterprise can also consider evaluating scenarios that have a chance of occurring simultaneously. This is frequently referred to as ‘stress’ testing.</p>
 </div>
 </div>
 </div>
@@ -18815,7 +18854,7 @@ An enterprise needs to understand the costs and implications of various controls
 <div class="sect3">
 <h4 id="_compliance">Compliance</h4>
 <div class="paragraph">
-<p>compliance is an information problem as well as a risk problem</p>
+<p>compliance is an information problem as well as a risk problem - ongoing stream of regs&#8230;&#8203;.</p>
 </div>
 <div class="sect4">
 <h5 id="_compliance_fundamentals">Compliance fundamentals</h5>
@@ -18924,6 +18963,10 @@ In reality, organizations have many other things to do than practice security.
 &#8212; Shon Harris<br>
 <cite>Guide to the CISSP</cite>
 </div>
+</div>
+<div class="paragraph">
+<p>Define vulnerability, threat agent, threat, risk, control, exposure, safeguard/control/enabler
+(CISSP)</p>
 </div>
 <div class="paragraph">
 <p>Security is a significant and well-known domain in and of itself. Ultimtely, however, <strong>security is an <em>application</em> of the governance principles discussed in the previous sections</strong>. Deriving ultimately from the stakeholder&#8217;s desire to sustain and protect the enterprise, security relies on</p>
@@ -20437,6 +20480,9 @@ A foolish consistency is the hobgoblin of little minds.
 <p><a id="Housman2015"></a>[Housman2015]: Housman, Michael, and Dylan Minor. 2015. “Toxic Workers.” <a href="http://www.hbs.edu/faculty/Publication" class="bare">http://www.hbs.edu/faculty/Publication</a> Files/16-057_d45c0b4f-fa19-49de-8f1b-4b12fe054fea.pdf.</p>
 </li>
 <li>
+<p><a id="Hubbard2009"></a>[Hubbard2009]: Hubbard, Douglas W. 2009. <em>The Failure of Risk Management</em>. Hoboken, New Jersey: John Wiley &amp; Sons, Inc.</p>
+</li>
+<li>
 <p><a id="Hubbard2010"></a>[Hubbard2010]: Hubbard, D. (2010), <em>How to Measure Anything: Finding the Value of Intangibles in Business</em>, Wiley, Boston</p>
 </li>
 <li>
@@ -20470,7 +20516,10 @@ A foolish consistency is the hobgoblin of little minds.
 <p><a id="ISACA2014"></a>[ISACA2014]: ISACA. 2014. ITAF: A Professional Practices Framework for IS Audit/ Assurance, 3rd Edition. Rolling Meadows, IL: ISACA.</p>
 </li>
 <li>
-<p><a id="ISO2008"></a>[ISO2008]: ISO/IEC. 2008. “ISO/IEC 38500  - Corporate Governance of Information Technology.”</p>
+<p><a id="ISO2008"></a>[ISO2008]: ISO/IEC. 2008. “ISO/IEC 38500 - Corporate Governance of Information Technology.”</p>
+</li>
+<li>
+<p><a id="ISO2009"></a>[ISO2009]: ISO/IEC. 2009. “ISO 31000:2009 - Risk Management.”</p>
 </li>
 <li>
 <p><a id="Kan2003"></a>[Kan2003]: Kan, Stephen H. 1995. <em>Metrics and Models in Software Quality Engineering</em>. Second Edition. Reading, Mass.: Addison-Wesley.</p>
@@ -20579,6 +20628,9 @@ IEEE Press.</p>
 <p><a id="Patton2014"></a>[Patton2014]: Patton, J., 2014. <em>User story mapping : discover the whole story, build the right product.</em> First edition. ed. xliv, 276 pages.</p>
 </li>
 <li>
+<p><a id="PMI2013"></a>[PMI2013]: Project Management Institute, 2013. A guide to the project management body of knowledge (PMBOK guide). Fifth edition.</p>
+</li>
+<li>
 <p><a id="Poppendieck2007"></a>[Poppendieck2007]: Poppendieck, M. &amp; Poppendieck, T. D. (2007), <em>Implementing lean software development : from concept to cash</em>, Addison-Wesley, London</p>
 </li>
 <li>
@@ -20589,9 +20641,6 @@ IEEE Press.</p>
 </li>
 <li>
 <p><a id="Portny2013"></a>[Portny2013]: Portny, S. (2013). Project Management for Dummies. Hoboken, New Jersey, John Wiley &amp; Sons.</p>
-</li>
-<li>
-<p><a id="PMI2013"></a>[PMI2013]: Project Management Institute, 2013. A guide to the project management body of knowledge (PMBOK guide). Fifth edition.</p>
 </li>
 <li>
 <p><a id="Puppet2015"></a>[Puppet2015]: Puppet Labs. 2015. “2015 State of DevOps Report.”</p>
