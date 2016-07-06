@@ -19,13 +19,11 @@ endif::collaborator-draft[]
 [quote, Committee of Sponsoring Organizations of the Treadway Commission, Internal Control - Integrated Framework]
 Risk is defined as the possibility that an event will occur and adversely affect the achievement of objectives.
 
-Risk is a fundamental concern of governance. Line management may focus on effectiveness and efficiency well enough, but too often disregards risk. As we noted above, the shop manager may have incentives to maximize income, but usually does not stand to lose their life savings. The owner, however, does. Fire, theft, disaster - without assurance, including risk management, the owner does not sleep well.
+Risk is a fundamental concern of governance. Management may focus on effectiveness and efficiency well enough, but too often disregards risk. As we noted above, the shop manager may have incentives to maximize income, but usually does not stand to lose their life savings. The owner, however, does. Fire, theft, disaster - without assurance, including risk management, the owner does not sleep well.
 
 For this reason, risk management is a large element of governance, as indicated by the popular GRC acronym: Governance, Risk, and Compliance.
 
-We've discussed assurance and audit in the previous chapter, but those concepts do not equate to risk. Risk management may be seen as part of the broader assurance ecosystem as discussed in the last chapter section (for evidence of this, consider that the Institute of Internal Auditors offers a certificate in Risk Management Assurance).
-
-Assurance in practice may seem to be biased towards risk management, but (as with governance in general) assurance as a whole relates to all aspects of IT and digital governance, including effectiveness and efficiency.
+Risk management may be seen as part of the broader assurance ecosystem as discussed in the last chapter section (for evidence of this, consider that the Institute of Internal Auditors offers a certificate in Risk Management Assurance). Assurance in practice may seem to be biased towards risk management, but (as with governance in general) assurance as a whole relates to all aspects of IT and digital governance, including effectiveness and efficiency.
 
 Audit practices may be informed by known risks and particularly concerned with their mitigation, but risk management remains a distinct practice. Audits may have scope beyond risks, and audits are only one tool used by risk management.
 
@@ -36,21 +34,21 @@ In short, and as shown in the above diagram, assurance plays a role across value
 ****
 *Defining "Risk"*
 
-The definition of "risk" is surprisingly controversial. The ISO 31000 standard <<ISO2009>> and the Project Management Institute's PMBOK <<PMI2013>>  both define risk as including positive outcomes (benefits).  This definition has been strongly criticized by (among others) Douglas Hubbard in _The Failure of Risk Management_ <<Hubbard2009>>. Hubbard points out that by history and tradition, risk equates to the chance and consequences of loss.
+The definition of "risk" is surprisingly controversial. The ISO 31000 standard <<ISO2009>> and the Project Management Institute's PMBOK <<PMI2013>>  both define risk as including positive outcomes (benefits).  This definition has been strongly criticized by (among others) Douglas Hubbard in _The Failure of Risk Management_ <<Hubbard2009>>. Hubbard points out that historically, risk has meant the chance and consequences of loss.
 
 As this is an an overview text, we will use the more pragmatic, historical definition. Practically speaking, Operational Risk Management  as a function focuses on loss. The possibility ("risk") of benefits is eagerly sought by the organization as a whole and does not need "management" by a dedicated function.
 
 "Loss," however, can also equate to "failure to achieve anticipated gains." This form of risk applies (for example) to product and project investments.
 ****
 
-Risk management can be seen as both a xref:process-function[function and a process]. As a function, it may be managed by a dedicated function (perhaps called Enterprise Risk Management or Operational Risk Management.) As a process, it conducts the following activities:
+Risk management can be seen as both a xref:process-function[function and a process]. As a function, it may be managed by a dedicated organization (perhaps called Enterprise Risk Management or Operational Risk Management.) As a process, it conducts the following activities:
 
 * Identifying risks
 * Assessing and prioritizing them
 * Coordinating effective responses to risks
 * Ongoing monitoring and reporting of risk management
 
-Risk impacts some asset, such as:
+Risk impacts some asset. Examples in the digital and IT context would include:
 
 * Operational IT systems
 * Hardware (e.g. computers) and facilities (e.g. data centers)
@@ -58,12 +56,15 @@ Risk impacts some asset, such as:
 
 It is commonly said that organizations have an "appetite" for risk (<<ISACA2013>>, p. 79), in terms of the amount of risk the organization is willing to accept. This is a strategic decision, usually reserved for organizational governance.
 
+image::images/4.10-risk-context.png[]
+
 Risk management typically has strong relationships with the following organizational capabilities:
 
 * Enterprise governance (e.g. board-level committees)
 * Security
 * Compliance
 * Audit
+* Policy management
 
 For example, security requires risk assessment as a input, so that security resources focus on the correct priorities.
 
@@ -75,32 +76,26 @@ Risk additionally may interact with:
 
 and other digital activities.
 
+More detail on the core risk management activities follows:
+
+====== Risk identification
+
+Business objectives & org context
+
+Frameworks input
+
+part of standard processes
 
 
-risk architecture/flows - visual
+====== Risk assessement
 
-Risk management techniques
+Risk management has a variety of concepts and techniques both qualitative and quantitative. Risk is often assumed to be the product of probability * impact. For example, if the chance of a fire in a facility is 5% over a given year, and the damage of the fire is estimated at $100,000, the annual risk is $5,000. An enterprise risk management function may attempt to quantify all such risks into an overall portfolio.
 
-single loss expectancy, annualized rate of occurrence, annualized loss expectancy
+Where quantitative approaches are perceived to be difficult, risk may be assessed using simple scales (e.g. 1-5, where 1 is low risk and 5 is high risk.) Such approaches are criticized by Doug Hubbard in _The Failure of Risk Management_ as misleading and potentially more harmful than not managing risk at all <<Hubbard2009>>. Hubbard instead suggests that quantitative techniques such as Monte Carlo analysis are rarely infeasible, and recommends their application instead of subjective scales.
 
-Hubbard cautions on aggregating risk
+====== Risk response
 
 
-wikipedia list as input
-
-Controls and policy library
-Policy distribution and response
-IT Controls self-assessment and measurement
-IT Asset repository
-Automated general computer control (GCC) collection
-Remediation and exception management
-Reporting
-Advanced IT risk evaluation and compliance dashboards
-
-* Internal environment
-* Objectives
-* Event Identification
-* Risk Assessment
 * Risk Response
 ** Analysis
 ** avoidance
