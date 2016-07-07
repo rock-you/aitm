@@ -953,7 +953,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_risk_management_2">Risk management</a>
 <ul class="sectlevel4">
 <li><a href="#_risk_management_fundamentals">Risk management fundamentals</a></li>
-<li><a href="#_controls">Controls</a></li>
 <li><a href="#_compliance">Compliance</a></li>
 </ul>
 </li>
@@ -10378,6 +10377,11 @@ ProSci/ADKAR, Lean Change Mgmt</pre>
 </div>
 <div class="literalblock">
 <div class="content">
+<pre>the limits to "you build it, you run it" - employees are not owners...</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
 <pre>The problem of epistemic closure</pre>
 </div>
 </div>
@@ -18187,9 +18191,8 @@ He who fights and runs away, lives to fight another day.
 <p><a id="controls"></a></p>
 </div>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_controls">Controls</h5>
+<div class="sect5">
+<h6 id="_controls">Controls</h6>
 <div class="quoteblock">
 <blockquote>
 The term <em>control objective</em> is no longer a mainstream term used in COBIT 5, and the word <em>control</em> is used only rarely. Instead, COBIT 5 uses the concepts of process practices and process activities.
@@ -18313,6 +18316,19 @@ You will likely encounter the term control as "testing enablers" is not how secu
 </div>
 <div class="paragraph">
 <p>As with most topics in this book, risk management (in and of itself, as well as applied to IT and digital) is an extensive and complex domain, and this discussion was necessarily brief. The student is referred to the readings at the end of the chapter for further information.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_business_continuity">Business continuity</h6>
+
+</div>
+<div class="sect5">
+<h6 id="_the_fundamental_problem_of_it_risk">The fundamental problem of IT risk</h6>
+<div class="literalblock">
+<div class="content">
+<pre>can't test all paths</pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -19038,6 +19054,22 @@ assessment,</p>
 <div class="paragraph">
 <p>(similar to <a href="#Harris2013">[Harris2013]</a>, p. 27.)</p>
 </div>
+<div class="paragraph">
+<p>In implementing controls, the primary principles are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Availability. The asset must be accessible to those entitled to it.</p>
+</li>
+<li>
+<p>Integrity. The asset must be protected from destruction or corruption.</p>
+</li>
+<li>
+<p>Confidentiality. The asset must not be accessible to those not entitled to it.</p>
+</li>
+</ul>
+</div>
 <div class="sect4">
 <h5 id="_information_classification">Information classification</h5>
 <div class="quoteblock">
@@ -19116,25 +19148,105 @@ At a time when the significance of information and related technologies is incre
 <p>There are multitudes of books written on security from an architecture and development perspective. The tools, techniques, and capabilities evolve quickly every year, which is why having a fundamental business understanding based in a stable framework of risk and control is essential.</p>
 </div>
 <div class="paragraph">
-<p>Topics:
-* Authentication &amp; authorization
-* network security
-* cryptography</p>
+<p>We are not covering technical details, any more than we are covering specific programming languages or distributed systems engineering specifics - this is practice, not management. Studying for the Certified Information Systems Security Professional exam will provide both an understanding of security management, as well as current technical topics. A glance at the CISSP guide shows how involved such topics can be:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The Harrison-Rizzo-Ullman security model</p>
+</li>
+<li>
+<p>The Diffie-Hellman Asymmetrical Encryption Algorithm</p>
+</li>
+<li>
+<p>Functions and Protocols in the OSI Model</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Use cases/exploit examples</p>
+<p>Again, the issue is mapping such technical topics to the fundamentals of risk and control. Key topics we note here include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Authentication &amp; authorization</p>
+</li>
+<li>
+<p>Network security</p>
+</li>
+<li>
+<p>Cryptography</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>we are not covering, any more than we are covering specific programming languages or distributed systems engineering specifics - this is practice, not management</p>
+<p><strong>Authentication and authorization</strong> are the cornerstones of <strong>access</strong>, i.e. the gateway to the asset. <strong>Authentication</strong> confirms that a person is who they say they are. <strong>Authorization</strong> is the management of their access rights (can they see the payroll? reset others' passwords?)</p>
 </div>
 <div class="paragraph">
-<p>do you have the <strong>skills</strong></p>
+<p><strong>Network security</strong> is a complex sub-domain in and of itself. Because attacks typically transpire over the Internet and/or internal organizational networks, the structure and capabilities of networks are of critical concern, including topics such as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Routing</p>
+</li>
+<li>
+<p>Firewalls</p>
+</li>
+<li>
+<p>the Domain Name Service</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Finally, <strong>cryptography</strong> is the "storage and transmission of data in a form that only those it is intended for can read and process" <a href="#Harris2013">[Harris2013]</a>.</p>
+</div>
+<div class="paragraph">
+<p>All of these topics, and many more, require in depth study and staff development. At this writing, there is a notable shortage of skilled security professionals. Therefore, a critical risk is that your organization might not be able to hire people with the needed skills (consider our section on <a href="#resource-mgmt">resource management</a>)</p>
 </div>
 </div>
 <div class="sect5">
 <h6 id="_security_and_sdlc">Security and SDLC</h6>
 <div class="paragraph">
-<p>digital discussion foreshadow?</p>
+<p>Security is a concern throughout the application lifecycle. You already know this, otherwise you would not have reached enterprise scale. But now you need to formalize it with some consistency, as that is what regulators and auditors expect, and it also makes it easier for your staff to work on various systems.</p>
+</div>
+<div class="paragraph">
+<p>Security should be considered throughout the SDLC, including systems design, but this is easier said than done. Organizations will always be more interested in a system&#8217;s functionality than its security. However, a security breach can ruin a company.</p>
+</div>
+<div class="paragraph">
+<p>The CISSP recommends (among other topics) consideration of the following throughout the systems lifecycle:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The role of environmental (e.g. operating system-level) safeguards versus internal application controls</p>
+</li>
+<li>
+<p>The challenges of testing</p>
+</li>
+<li>
+<p>Default implementation issues</p>
+</li>
+<li>
+<p>Ongoing monitoring</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Increasingly important controls during the construction process in particular are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Code reviews</p>
+</li>
+<li>
+<p>Automated code analysis</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>We will discuss the Netflix Simian Army in the next chapter section.</p>
 </div>
 </div>
 <div class="sect5">
@@ -19155,12 +19267,6 @@ Zero day - segue to SecOps</p>
 </div>
 <div class="paragraph">
 <p>unsched IPLs</p>
-</div>
-<div class="paragraph">
-<p>data leakage?</p>
-</div>
-<div class="paragraph">
-<p>pen testing</p>
 </div>
 <div class="paragraph">
 <p>Backref to Ch 6, state/config management</p>
@@ -19200,6 +19306,8 @@ Forensics</p>
 <div class="quoteblock">
 <blockquote>
 Quis custodiet ipsos custodes?
+pen testing
+data leakage?
 </blockquote>
 <div class="attribution">
 &#8212; Latin for "Who watches the watchers?"
