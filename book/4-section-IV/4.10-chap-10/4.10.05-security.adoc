@@ -13,41 +13,52 @@ include::../../../collab-links.adoc[]
 ****
 
 endif::collaborator-draft[]
-[quote, ISACA, Cobit 5 for Security]
-ISACA defines information security as something that: Ensures that within the enterprise, information is protected against disclosure to unauthorised users (confidentiality), improper modification (integrity) and non-access when required (availability).
 
-[quote, Enernex]
-A measure of system’s ability to resist unauthorized attempts at usage or behavior modification, while still providing service to legitimate legitimate users. (http://www.enernex.com/wp-content/uploads/2011/11/Risk-Compliance-Audit-webinar-11.2011.pdf)
+[quote, Sandy Bacik, Enernex]
+A measure of system’s ability to resist unauthorized attempts at usage or behavior modification, while still providing service to legitimate users.
 
 [quote, Shon Harris, Guide to the CISSP]
 In reality, organizations have many other things to do than practice security.
 
-Define vulnerability, threat agent, threat, risk, control, exposure, safeguard/control/enabler
-(CISSP)
+You have been practicing security since you first selected your initial choice of development platform in Chapter 2. But by now, your security capability is a well-established organization with processes spanning the enterprise, and a cross-functional steering committee composed of senior executives and with direct access to Board governance channels.
 
-Security is a significant and well-known domain in and of itself. Ultimtely, however, *security is an _application_ of the governance principles discussed in the previous sections*. Deriving ultimately from the stakeholder's desire to sustain and protect the enterprise, security relies on
+Security is a significant and well-known domain in and of itself. Ultimately, however, *security is an _application_ of the governance principles discussed in the previous sections*. Deriving ultimately from the stakeholder's desire to sustain and protect the enterprise, security relies on
 
-* accurate risk assessment,
-* a clear enabling strategy (i.e. controls), and
-* effective assurance practices (e.g. security audits).
+* accurate xref:risk-management[risk]
+ assessment,
+* a clear xref:controls[controls] strategy, and
+* effective xref:assurance[assurance] practices (e.g. security xref:audit[audits]).
 
-In fact, much of the previous material on controls was derived from the CISSP guide, because the concepts are generally applicable to risk management, not only security risks.
+In fact, some of the previous material on controls was informed by the CISSP guide, because the concepts are generally applicable to risk management, not only security risks.
 
-You have been practicing security since you first selected your initial choice of development platform in Chapter 2.
+image::images/4.10-security.png[]
 
-attack vs defense
+So what distinguishes security from more general concepts of risk? The definition at the top of this chapter section is a good start, with its mention of "unauthorized attempts" to access or modify systems. The above graphic uses the term "sanctionable," meaning violations might lead to legal or at least organizational penalties.
 
-CIA
+Many risks might involve carelessness, or incompetence, or random technical failure, or accidents of nature. They might even involve fraud or misrepresentation. But security focuses primarily on violations (primarily intentional, but also unintentional) of policies protecting organizational assets. In fact, "Assets Protection" is a common alternate name for corporate security.
 
-Should align to principles/policy/process framework (draw picture)
+"Authorization" is a key concept. Given some valuable resource, is access restricted to those who ought to have it? Are they who they say they are? Do they have the right to access what they claim is theirs? Are they conducting themselves in an expected and approved manner?
 
-Policies become requirements (true also for non-security concerns, but becomes high volume here)
+The security mentality is very different from the  mentality found in a startup. A military analogy might be helpful. Being in a startup is like engaging in missions: search, extract, destroy, etc. One travels to a destination and operates with a single-point focus on completion.
 
-* Information security
-* Asset management
-* Vendor management
-* Systems access control
-* Physical access control
+Security on the other hand is like defending a perimeter. You have to think broadly across a large area, assessing weaknesses and distributing limited resources where they will have the greatest effect.
+
+This is where a systematic approach, including an accepted set of terminology, becomes key. The CISSP (Certified Information Systems Security Professional) guide proposes the following taxonomy:
+
+* Vulnerability
+* Threat agent
+* Threat
+* Risk
+* Control
+* Exposure
+* Safeguard (e.g. control or enabler)
+
+These terms are best understood in terms of their relationships, which are graphically illustrated in the diagram below:
+
+image::images/4.10-security-taxonomy.png[]
+
+(similar to <<Harris2013>>, p. 27.)
+
 
 ===== Information classification
 [quote, ISACA, Cobit 5 for Security]
@@ -57,7 +68,7 @@ Simple 4-tier
 
 Foreshadow compliance and EIM sections
 
-Foreshadow IT portfolio (rats, we do need that special section)
+Foreshadow IT portfolio
 
 ===== Security engineering
 2-axis view
@@ -129,3 +140,9 @@ Frameworks from a security perspective
 ISO 27002
 CISSP
 (good overview in Moeller)
+
+* Information security
+* Asset management
+* Vendor management
+* Systems access control
+* Physical access control
