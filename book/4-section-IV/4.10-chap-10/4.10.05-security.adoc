@@ -57,6 +57,13 @@ image::images/4.10-security-taxonomy.png[]
 
 (similar to <<Harris2013>>, p. 27.)
 
+In implementing controls, the primary principles are:
+
+* Availability. The asset must be accessible to those entitled to it.
+* Integrity. The asset must be protected from destruction or corruption.
+* Confidentiality. The asset must not be accessible to those not entitled to it.
+
+
 ===== Information classification
 [quote, ISACA, Cobit 5 for Security]
 At a time when the significance of information and related technologies is increasing in every aspect of business and public life, the need to mitigate information risk, which includes protecting information and related IT assets from ever-changing threats, is constantly intensifying.
@@ -90,21 +97,50 @@ Security engineering is concerned with the fundamental security capabilities of 
 
 ====== Security architecture
 
-There are multitudes of books written on security from an architecture and development perspective. The tools, techniques, and capabilities evolve quickly every year, which is why having a fundamental business understanding based in a stable framework of risk and control is essential. 
+There are multitudes of books written on security from an architecture and development perspective. The tools, techniques, and capabilities evolve quickly every year, which is why having a fundamental business understanding based in a stable framework of risk and control is essential.
 
-Topics:
+We are not covering technical details, any more than we are covering specific programming languages or distributed systems engineering specifics - this is practice, not management. Studying for the Certified Information Systems Security Professional exam will provide both an understanding of security management, as well as current technical topics. A glance at the CISSP guide shows how involved such topics can be:
+
+* The Harrison-Rizzo-Ullman security model
+* The Diffie-Hellman Asymmetrical Encryption Algorithm
+* Functions and Protocols in the OSI Model
+
+Again, the issue is mapping such technical topics to the fundamentals of risk and control. Key topics we note here include:
+
 * Authentication & authorization
-* network security
-* cryptography
+* Network security
+* Cryptography
 
-Use cases/exploit examples
+*Authentication and authorization* are the cornerstones of *access*, i.e. the gateway to the asset. *Authentication* confirms that a person is who they say they are. *Authorization* is the management of their access rights (can they see the payroll? reset others' passwords?)
 
-we are not covering, any more than we are covering specific programming languages or distributed systems engineering specifics - this is practice, not management
+*Network security* is a complex sub-domain in and of itself. Because attacks typically transpire over the Internet and/or internal organizational networks, the structure and capabilities of networks are of critical concern, including topics such as:
 
-do you have the *skills*
+* Routing
+* Firewalls
+* the Domain Name Service
+
+Finally, *cryptography* is the "storage and transmission of data in a form that only those it is intended for can read and process" <<Harris2013>>.
+
+All of these topics, and many more, require in depth study and staff development. At this writing, there is a notable shortage of skilled security professionals. Therefore, a critical risk is that your organization might not be able to hire people with the needed skills (consider our section on xref:resource-mgmt[resource management])
 
 ====== Security and SDLC
-digital discussion foreshadow?
+Security is a concern throughout the application lifecycle. You already know this, otherwise you would not have reached enterprise scale. But now you need to formalize it with some consistency, as that is what regulators and auditors expect, and it also makes it easier for your staff to work on various systems.
+
+Security should be considered throughout the SDLC, including systems design, but this is easier said than done. Organizations will always be more interested in a system's functionality than its security. However, a security breach can ruin a company.
+
+The CISSP recommends (among other topics) consideration of the following throughout the systems lifecycle:
+
+* The role of environmental (e.g. operating system-level) safeguards versus internal application controls
+* The challenges of testing
+* Default implementation issues
+* Ongoing monitoring
+
+Increasingly important controls during the construction process in particular are:
+
+* Code reviews
+* Automated code analysis
+
+We will discuss the Netflix Simian Army in the next chapter section. 
 
 ====== Sourcing and security
 NIST CVE & other sources
@@ -116,10 +152,6 @@ ch 11 CISSP comprehensive
 Altered states -> events
 
 unsched IPLs
-
-data leakage?
-
-pen testing
 
 Backref to Ch 6, state/config management
 
@@ -144,6 +176,8 @@ Relationship to other IT processes
 ===== Security and assurance
 [quote, Latin for "Who watches the watchers?"]
 Quis custodiet ipsos custodes?
+pen testing
+data leakage?
 
 Relationship to GRC
 
