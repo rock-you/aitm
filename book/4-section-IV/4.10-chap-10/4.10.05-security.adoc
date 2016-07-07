@@ -63,7 +63,6 @@ In implementing controls, the primary principles are:
 * Integrity. The asset must be protected from destruction or corruption.
 * Confidentiality. The asset must not be accessible to those not entitled to it.
 
-
 ===== Information classification
 [quote, ISACA, Cobit 5 for Security]
 At a time when the significance of information and related technologies is increasing in every aspect of business and public life, the need to mitigate information risk, which includes protecting information and related IT assets from ever-changing threats, is constantly intensifying.
@@ -140,11 +139,17 @@ Increasingly important controls during the construction process in particular ar
 * Code reviews
 * Automated code analysis
 
-We will discuss the Netflix Simian Army in the next chapter section. 
+We will discuss the Netflix Simian Army -- an important automated tool that can serve as a control -- in the next chapter section.
 
 ====== Sourcing and security
-NIST CVE & other sources
-Zero day - segue to SecOps
+
+Vendors come and go in the digital marketplace, offering thousands of software-based products across every domain of interest. Inevitably, these products have security errors. A vendor may issue a "patch" for such an error, which must be applied to all instances of the running software. Such patches are not without risk, and may break existing systems; they therefore require testing under conditions of urgency.
+
+Increasingly, software is offered as a service, in which case it is the vendor responsibility to patch their own code. But what if they are slow to do this? Any customer relying on their service is running risk, and other controls may be required to mitigate the exposure.
+
+One important source of vulnerabilities is the https://nvd.nist.gov/[National Vulnerability Database] supported by the National Institute for Standards and Technology. In this database, you can look up various products and see if they have known security holes. There are many cautions and nuances to using the NVD and it is not something to casually embrace, but it does represent an important, free, taxpayer-supported resource of use to security managers.
+
+An important type of vulnerability is the "zero-day" vulnerability. With this kind of vulnerability, knowledge of a security "hole" becomes widespread before any patches are available (i.e., the software's author and users have "zero days" to create and deploy a fix). Zero-day exploits require fast and aggressive application of alternate controls, which leads us to the topic of security operations. 
 
 ===== Security operations
 ch 11 CISSP comprehensive
