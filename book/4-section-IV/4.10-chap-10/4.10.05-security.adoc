@@ -105,13 +105,13 @@ The sponsor on the other hand has derivative concerns:
 * Are compliant with laws and regulations, or are we risking penalties for non-compliance (as well as risking security issues?)
 * Are our security activities as cost-efficient as possible, given our risk appetite?
 
-====== Security architecture 
+====== Security architecture
 
 Security engineering is concerned with the fundamental security capabilities of the system, as well as ensuring that any initial principles established for the system are adhered to as development proceeds, and/or as vendors are selected and perhaps replaced over time.
 
 There are multitudes of books written on security from an engineering, architecture and development perspective. The tools, techniques, and capabilities evolve quickly every year, which is why having a fundamental business understanding based in a stable framework of risk and control is essential.
 
-We are not covering technical details, any more than we are covering specific programming languages or distributed systems engineering specifics - this is practice, not management. Studying for the Certified Information Systems Security Professional exam will provide both an understanding of security management, as well as current technical topics. A glance at the CISSP guide shows how involved such topics can be:
+This is a book on management, so we are not covering  technical security practices and principles, any more than we are covering specific programming languages or distributed systems engineering specifics. Studying for the Certified Information Systems Security Professional exam will provide both an understanding of security management, as well as current technical topics. A glance at the CISSP guide shows how involved such topics can be:
 
 * The Harrison-Rizzo-Ullman security model
 * The Diffie-Hellman Asymmetrical Encryption Algorithm
@@ -162,7 +162,7 @@ Increasingly, software is offered as a service, in which case it is the vendor r
 
 anchor:nist-nvd[]
 
-One important source of vulnerabilities is the https://nvd.nist.gov/[National Vulnerability Database] supported by the National Institute for Standards and Technology. In this database, you can look up various products and see if they have known security holes. There are many cautions and nuances to using the NVD and it is not something that can be simply and easily "implemented" in a given environment, but it does represent an important, free, taxpayer-supported resource of use to security managers.
+One important source of vulnerabilities is the https://nvd.nist.gov/[National Vulnerability Database] supported by the National Institute for Standards and Technology. In this database, you can look up various products and see if they have known security holes. Using NVD is complex and not something that can be simply and easily "implemented" in a given environment, but it does represent an important, free, taxpayer-supported resource of use to security managers.
 
 An important type of vulnerability is the "zero-day" vulnerability. With this kind of vulnerability, knowledge of a security "hole" becomes widespread before any patches are available (i.e., the software's author and users have "zero days" to create and deploy a fix). Zero-day exploits require fast and aggressive application of alternate controls, which leads us to the topic of security operations.
 
@@ -175,38 +175,52 @@ Security requires ongoing xref:ops-day-in-life[operational attention]. Security 
 anchor:security-process[]
 
 * Prevention
-** maintaining signatures for intrusion detection and  and anti-virus systems
-** software patching (e.g. driven by the xref:tech-prod-lifecycle[technology product lifeccyle] and updates to the xref:nist-nvd[National Vulnerability Database])
-** ongoing maintenance of user authorizations and authentication levels
+* Detection
+* Response
+* Forensics
+
+====== Prevention
+
+An organization's understanding for what constitutes a "secure" system is continually evolving. New threats continually emerge and the alert security administrator has an ongoing firehose of bulletins, alerts, patch notifications, and the like to keep abreast of.
+
+These inputs must be synthesized by an organization's security team into a set of security standards for what constitutes a satisfactorily-configured ("hardened") system. Ideally, such standards are automated into policy-driven systems configuration approaches; in less ideal situations, manual configuration -- and double-checking -- is required.
+
+Prevention activities include:
+
+* maintaining signatures for intrusion detection and  and anti-virus systems
+* software patching (e.g. driven by the xref:tech-prod-lifecycle[technology product lifeccyle] and updates to the xref:nist-nvd[National Vulnerability Database])
+* ongoing maintenance of user authorizations and authentication levels
 * ongoing testing of security controls (e.g., firewalls, configurations, etc.)
 * updating security controls appropriately for new or changed systems
 
-* Detection
-** monitoring events and alerts from intrusion detection and related operational systems, and responding as appropriate when security incidents are declared.
-
-* Response
-** Declaring security incidents and marshalling resources to combat
-** Developing and executing response activities
-
-* Forensics
-** Analyzing logs and other artifacts for evidence of exploits
-** Researching security incidents to establish causal factors and develop new preventative approaches (thus closing the loop)
-
-And as with operations as a whole, there is ongoing monitoring and reporting to various stakeholders.
+====== Detection
 
 There are many kinds of events that might indicate some security issue; systems exposed to the open Internet are continually scanned by a wide variety of often-hostile actors. Internal events, such as unscheduled/unexplained system restarts, may also indicate security issues. The challenge with security monitoring is identifying patterns indicating more advanced or persistent threats. When formalized, such patterns are called "signatures."
 
 One particular form of event that can be identified for systems under management are configuration state changes.
 
-For example, if a core operating system file -- one that is well known and not expected to change -- shows up has having a different size with no explanation, this might be indicative of a security exploit. Perhaps an attacker has substituted this file with one containing a "backdoor" allowing access. Tools such as Tripwire are deployed to scan and inventory such files and key information about them ("metadata") and raise alerts if unexpected changes occur. Infrastructure managers such as Chef and Puppet may also serve as inputs into security event management systems; for example, they may detect attempts to alter critical configuration files and in their re-converging the managed resource back to its desired state, can be a source of valuable information about potential exploits. Such tools also may be cited as controls for various kinds of security risks.
+For example, if a core operating system file -- one that is well known and not expected to change -- changes in size one day with no explanation, this might be indicative of a security exploit. Perhaps an attacker has substituted this file with one containing a "backdoor" allowing access. Tools such as Tripwire are deployed to scan and inventory such files and key information about them ("metadata") and raise alerts if unexpected changes occur. Infrastructure managers such as Chef and Puppet may also serve as inputs into security event management systems; for example, they may detect attempts to alter critical configuration files and in their re-converging the managed resource back to its desired state, can be a source of valuable information about potential exploits. Such tools also may be cited as controls for various kinds of security risks.
 
 We have discussed the importance of configuration management in both Chapter 2 and Chapter 6. In Chapter 2, we discussed the important concept of xref:infracode[Infrastructure as Code] and xref:policy-config[policy-driven configuration management]; we revisited the importance of configuration management from an operational perspective in xref:state-config-discovery[Chapter 6]. Configuration management also will re-appear in Chapters 11 and 12.
 
 IMPORTANT: It should be clear by now that configuration management is one of the most critical enabling capabilities for digital management, regardless of whether you look to traditional IT service management practices or modern DevOps approaches.
 
-An organization's understanding for what constitutes a "secure" system is continually evolving. New threats continually emerge and the alert security administrator has an ongoing firehose of bulletins, alerts, patch notifications, and the like to keep abreast of.
+Detection activities include:
 
-These inputs must be synthesized by an organization's security team into a set of security standards for what constitutes a satisfactorily-configured ("hardened") system. Ideally, such standards are automated into policy-driven systems configuration approaches; in less ideal situations, manual configuration -- and double-checking -- is required.
+* monitoring events and alerts from intrusion detection and related operational systems
+* Analyzing logs and other artifacts for evidence of exploits
+
+====== Response
+** Declaring security incidents and marshalling resources to combat
+** Developing and executing response activities
+
+====== Forensics
+** Analyzing logs and other artifacts for evidence of exploits
+** Researching security incidents to establish causal factors and develop new preventative approaches (thus closing the loop)
+
+====== Relationship to other processes
+
+As with operations as a whole, there is ongoing monitoring and reporting to various stakeholders, and interaction with other processes.
 
 One of the most important operational processes from a security perspective is Change Management. From an Agile and digital perspective, this is often a controversial process, and this book recommends it be implemented in as automated a fashion as possible. ITSM Event and Incident Management may be leveraged as well.
 
@@ -218,6 +232,6 @@ Quis custodiet ipsos custodes?
 
 Security management professionals are accountable to governance concerns just as any other manager in the digital organization. Security policies, processes, and standards are frequently audited, by both internal auditors as well as external xref:assurance[assurance] professionals (not only auditors, but other forms of assurance as well).
 
-The idea that an "Assets Protection" group might itself be audited might be hard to understand, but security organizations such as police organizations have Internal Affairs units for just such purposes.
+The idea that an "Assets Protection" group might itself be audited may be hard to understand, but security organizations such as police organizations have Internal Affairs units for just such purposes.
 
-Security auditors might review the xref:security-process[security processes] mentioned above, or system configuration baselines, or log files, or any number of other artifacts, depending on the goals and scope of a security audit. Actual penetration testing is a frequently used approach: the hiring of skilled "white-hat" hackers to probe an organization's defenses. Such hackers might be given license to probe as far as they possibly can and return with comprehensive evidence of what they were able to access (customer records, payrolls, negotiable identifiers, etc.)
+Security auditors might review the xref:security-process[security processes] mentioned above, or system configuration baselines, or log files, or any number of other artifacts, depending on the goals and scope of a security audit. Actual penetration testing is a frequently used approach: the hiring of skilled "white-hat" hackers to probe an organization's defenses. Such hackers might be given license to probe as far as they possibly can and return with comprehensive evidence of what they were able to access (customer records, payrolls, negotiable identifiers, etc.) Given the critical importance of security in digital organizations, it is an essential matter for governance attention at the highest levels.
