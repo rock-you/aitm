@@ -972,7 +972,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_digital_governance">Digital Governance</a>
 <ul class="sectlevel4">
-<li><a href="#_agile_and_it_governance">Agile and IT governance</a></li>
+<li><a href="#_failings_of_it_governance">Failings of IT governance</a></li>
+<li><a href="#_governance_and_digital_efficiency">Governance and digital efficiency</a></li>
 <li><a href="#_cloud_siam_and_governance">Cloud, SIAM, and governance</a></li>
 <li><a href="#_automating_digital_governance">Automating digital governance</a></li>
 </ul>
@@ -2813,6 +2814,13 @@ There are many debates around these definitions. Sometimes these debates are hel
 <div class="paragraph">
 <p>Finally, the concept of the "IT stack" is important. Notice how the different technology layers appear "stacked." Layered approaches to understanding IT are common; see Further Reading for useful references.</p>
 </div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Sidebar: The Digital Services Playbook</strong></p>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p><a id="service-lifecycle"></a></p>
 </div>
@@ -3971,6 +3979,9 @@ not manage or control the underlying cloud infrastructure including network, ser
 <div class="paragraph">
 <p>It&#8217;s recommended you at least scan the links provided.</p>
 </div>
+<div class="paragraph">
+<p><a id="infracode"></a></p>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -4210,6 +4221,9 @@ As stated in Version Control with Git <a href="#Loeliger2009">[Loeliger2009]</a>
 <div class="paragraph">
 <p><strong>In this microcosm, we see the origins of IT management.</strong>
 It is not always easy to apply this approach in practice. There can be edge cases. But <strong>the concept of metadata provides a basis for distinguishing the <em>management</em> of information technology from the actual <em>practice</em> of information technology.</strong></p>
+</div>
+<div class="paragraph">
+<p><a id="policy-config"></a></p>
 </div>
 </div>
 </div>
@@ -8233,6 +8247,9 @@ In a digitally transformed enterprise, Operations is part of the Product.
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><a id="ops-day-in-life"></a></p>
+</div>
 <div class="sect4">
 <h5 id="_a_day_in_the_life">A day in the life</h5>
 <div class="paragraph">
@@ -8607,6 +8624,9 @@ Enterprise monitoring tools are notorious for requiring agents (small, continuou
 </table>
 <div class="paragraph">
 <p>The above lists are very simple examples of what can be extensive record-keeping. But the key user story is implied: if we can&#8217;t ping SRV0001, we know that the Quadrex application supporting Logistics is at risk, and we should contact Mary Smith ASAP, if she hasn&#8217;t already contacted us. (Sometimes, the user community calls right away; in other cases, they may not, and proactively contacting them is a positive and important step.)</p>
+</div>
+<div class="paragraph">
+<p><a id="state-config-discovery"></a></p>
 </div>
 </div>
 </div>
@@ -15036,6 +15056,9 @@ History is important. You may think your career is far removed from the early da
 <div class="paragraph">
 <p>Enter the scientific method. Thinkers such as Frederick Taylor and Frank and Lillian Gilbreth (of "Cheaper by the Dozen" fame) started applying careful techniques of measurement and comparison, in search of the "one best way" to dig ditches or assemble vehicles. An entire profession of industrial engineering was established, along with the formal study of business management itself.</p>
 </div>
+<div class="paragraph">
+<p><a id="taylorism"></a></p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_frederick_taylor_and_efficiency">Frederick Taylor and efficiency</h5>
@@ -16332,9 +16355,21 @@ reached the customer or the bottom line.
 </div>
 <div class="sect3">
 <h4 id="_topics_in_process_management">Topics in process management</h4>
+<div class="literalblock">
+<div class="content">
+<pre>===== ITSM core processes</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Incident, Change, etc</p>
+</li>
+</ul>
+</div>
 <div class="paragraph">
 <p><a id="shared-services"></a>
-===== The shared services problem</p>
+ ===== The shared services problem</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -18995,7 +19030,7 @@ In reality, organizations have many other things to do than practice security.
 <p>You have been practicing security since you first selected your initial choice of development platform in Chapter 2. But by now, your security capability is a well-established organization with processes spanning the enterprise, and a cross-functional steering committee composed of senior executives and with direct access to Board governance channels.</p>
 </div>
 <div class="paragraph">
-<p>Security is a significant and well-known domain in and of itself. Ultimately, however, <strong>security is an <em>application</em> of the governance principles discussed in the previous sections</strong>. Deriving ultimately from the stakeholder&#8217;s desire to sustain and protect the enterprise, security relies on</p>
+<p>Security is a significant and well-known domain in and of itself. Ultimately, however, <strong>security is an <em>application</em> of the governance and risk management principles discussed in the previous sections</strong>. Deriving ultimately from the stakeholder&#8217;s desire to sustain and protect the enterprise, security relies on</p>
 </div>
 <div class="ulist">
 <ul>
@@ -19155,16 +19190,51 @@ At a time when the significance of information and related technologies is incre
 <img src="images/4.10-2axis-security.png" alt="4.10 2axis security">
 </div>
 </div>
+<div class="sect5">
+<h6 id="_consumer_versus_sponsor_perspective">Consumer versus sponsor perspective</h6>
 <div class="paragraph">
-<p>Security engineering is concerned with the fundamental security capabilities of the system, as well as ensuring that any initial principles established for the system are adhered to as development proceeds, and/or as vendors are selected and perhaps replaced over time.</p>
+<p>The consumer of the digital service has different concerns from the sponsor/customer (in our <a href="#consumer-customer-sponsor">3-party model</a>). The consumer (our woman <a href="#what-is-IT-value">checking her bank balance</a>) is concerned with immediate aspects of confidentiality, integrity, and availability:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Is this communication private?</p>
+</li>
+<li>
+<p>Is my money secure?</p>
+</li>
+<li>
+<p>Can I view my balance and do other operations with it (e.g. transfer it) confident of no interference?</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The sponsor on the other hand has derivative concerns:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Are we safe from the bad publicity that would result from a breach?</p>
+</li>
+<li>
+<p>Are compliant with laws and regulations, or are we risking penalties for non-compliance (as well as risking security issues?)</p>
+</li>
+<li>
+<p>Are our security activities as cost-efficient as possible, given our risk appetite?</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect5">
 <h6 id="_security_architecture">Security architecture</h6>
 <div class="paragraph">
-<p>There are multitudes of books written on security from an architecture and development perspective. The tools, techniques, and capabilities evolve quickly every year, which is why having a fundamental business understanding based in a stable framework of risk and control is essential.</p>
+<p>Security engineering is concerned with the fundamental security capabilities of the system, as well as ensuring that any initial principles established for the system are adhered to as development proceeds, and/or as vendors are selected and perhaps replaced over time.</p>
 </div>
 <div class="paragraph">
-<p>We are not covering technical details, any more than we are covering specific programming languages or distributed systems engineering specifics - this is practice, not management. Studying for the Certified Information Systems Security Professional exam will provide both an understanding of security management, as well as current technical topics. A glance at the CISSP guide shows how involved such topics can be:</p>
+<p>There are multitudes of books written on security from an engineering, architecture and development perspective. The tools, techniques, and capabilities evolve quickly every year, which is why having a fundamental business understanding based in a stable framework of risk and control is essential.</p>
+</div>
+<div class="paragraph">
+<p>This is a book on management, so we are not covering  technical security practices and principles, any more than we are covering specific programming languages or distributed systems engineering specifics. Studying for the Certified Information Systems Security Professional exam will provide both an understanding of security management, as well as current technical topics. A glance at the CISSP guide shows how involved such topics can be:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -19194,7 +19264,6 @@ At a time when the significance of information and related technologies is incre
 <p>Cryptography</p>
 </li>
 </ul>
-<<<<<<< HEAD
 </div>
 <div class="paragraph">
 <p><strong>Authentication and authorization</strong> are the cornerstones of <strong>access</strong>, i.e. the gateway to the asset. <strong>Authentication</strong> confirms that a person is who they say they are. <strong>Authorization</strong> is the management of their access rights (can they see the payroll? reset others' passwords?)</p>
@@ -19219,33 +19288,7 @@ At a time when the significance of information and related technologies is incre
 <p>Finally, <strong>cryptography</strong> is the "storage and transmission of data in a form that only those it is intended for can read and process" <a href="#Harris2013">[Harris2013]</a>.</p>
 </div>
 <div class="paragraph">
-=======
-</div>
-<div class="paragraph">
-<p><strong>Authentication and authorization</strong> are the cornerstones of <strong>access</strong>, i.e. the gateway to the asset. <strong>Authentication</strong> confirms that a person is who they say they are. <strong>Authorization</strong> is the management of their access rights (can they see the payroll? reset others' passwords?)</p>
-</div>
-<div class="paragraph">
-<p><strong>Network security</strong> is a complex sub-domain in and of itself. Because attacks typically transpire over the Internet and/or internal organizational networks, the structure and capabilities of networks are of critical concern, including topics such as:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Routing</p>
-</li>
-<li>
-<p>Firewalls</p>
-</li>
-<li>
-<p>the Domain Name Service</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Finally, <strong>cryptography</strong> is the "storage and transmission of data in a form that only those it is intended for can read and process" <a href="#Harris2013">[Harris2013]</a>.</p>
-</div>
-<div class="paragraph">
->>>>>>> 8a59fed0db1dba6c9342b123c918aac6ca97ace4
-<p>All of these topics, and many more, require in depth study and staff development. At this writing, there is a notable shortage of skilled security professionals. Therefore, a critical risk is that your organization might not be able to hire people with the needed skills (consider our section on <a href="#resource-mgmt">resource management</a>)</p>
+<p>All of these topics, and many more, require in depth study and staff development. At this writing (mid-2016), there is a notable shortage of skilled security professionals. Therefore, a critical risk is that your organization might not be able to hire people with the needed skills (consider our section on <a href="#resource-mgmt">resource management</a>)</p>
 </div>
 </div>
 <div class="sect5">
@@ -19265,7 +19308,7 @@ At a time when the significance of information and related technologies is incre
 <p>The role of environmental (e.g. operating system-level) safeguards versus internal application controls</p>
 </li>
 <li>
-<p>The challenges of testing</p>
+<p>The challenges of testing security functionality</p>
 </li>
 <li>
 <p>Default implementation issues</p>
@@ -19295,17 +19338,16 @@ At a time when the significance of information and related technologies is incre
 <div class="sect5">
 <h6 id="_sourcing_and_security">Sourcing and security</h6>
 <div class="paragraph">
-<<<<<<< HEAD
 <p>Vendors come and go in the digital marketplace, offering thousands of software-based products across every domain of interest (we call this the <a href="#tech-prod-lifecycle">technology product lifecycle</a>). Inevitably, these products have security errors. A vendor may issue a "patch" for such an error, which must be applied to all instances of the running software. Such patches are not without risk, and may break existing systems; they therefore require testing under conditions of urgency.</p>
-=======
-<p>Vendors come and go in the digital marketplace, offering thousands of software-based products across every domain of interest. Inevitably, these products have security errors. A vendor may issue a "patch" for such an error, which must be applied to all instances of the running software. Such patches are not without risk, and may break existing systems; they therefore require testing under conditions of urgency.</p>
->>>>>>> 8a59fed0db1dba6c9342b123c918aac6ca97ace4
 </div>
 <div class="paragraph">
 <p>Increasingly, software is offered as a service, in which case it is the vendor responsibility to patch their own code. But what if they are slow to do this? Any customer relying on their service is running risk, and other controls may be required to mitigate the exposure.</p>
 </div>
 <div class="paragraph">
-<p>One important source of vulnerabilities is the <a href="https://nvd.nist.gov/">National Vulnerability Database</a> supported by the National Institute for Standards and Technology. In this database, you can look up various products and see if they have known security holes. There are many cautions and nuances to using the NVD and it is not something to casually embrace, but it does represent an important, free, taxpayer-supported resource of use to security managers.</p>
+<p><a id="nist-nvd"></a></p>
+</div>
+<div class="paragraph">
+<p>One important source of vulnerabilities is the <a href="https://nvd.nist.gov/">National Vulnerability Database</a> supported by the National Institute for Standards and Technology. In this database, you can look up various products and see if they have known security holes. Using NVD is complex and not something that can be simply and easily "implemented" in a given environment, but it does represent an important, free, taxpayer-supported resource of use to security managers.</p>
 </div>
 <div class="paragraph">
 <p>An important type of vulnerability is the "zero-day" vulnerability. With this kind of vulnerability, knowledge of a security "hole" becomes widespread before any patches are available (i.e., the software&#8217;s author and users have "zero days" to create and deploy a fix). Zero-day exploits require fast and aggressive application of alternate controls, which leads us to the topic of security operations.</p>
@@ -19314,61 +19356,153 @@ At a time when the significance of information and related technologies is incre
 </div>
 <div class="sect4">
 <h5 id="_security_operations">Security operations</h5>
-<div class="paragraph">
-<<<<<<< HEAD
-<p>Security requires ongoing operational attention. Security operations is first and foremost a form of operations, as discussed in <a href="#ops-mgmt">Chapter 6</a>. It requires on-duty and on-call personnel, and some physical or virtual point of shared awareness (for example, a physical Security Operations Center, perhaps co-located with a Network Operations Center).</p>
-=======
-<p>Security requires ongoing operational attention. Security operations is first and foremost a form of operations, as discussed in <a href="#ops-mgmt">Chapter 6</a>.</p>
+<div class="quoteblock">
+<blockquote>
+Networks and computing environments are evolving entities; just because they are secure one week does not mean they are secure three weeks later.
+</blockquote>
+<div class="attribution">
+&#8212; Shon Harris<br>
+<cite>Guide to the CISSP</cite>
+</div>
 </div>
 <div class="paragraph">
-<p>ch 11 CISSP comprehensive</p>
->>>>>>> 8a59fed0db1dba6c9342b123c918aac6ca97ace4
+<p>Security requires ongoing <a href="#ops-day-in-life">operational attention</a>. Security operations is first and foremost a form of operations, as discussed in <a href="#ops-mgmt">Chapter 6</a>. It requires on-duty and on-call personnel, and some physical or virtual point of shared awareness (for example, a physical Security Operations Center, perhaps co-located with a Network Operations Center). Beyond the visible presence of a Security Operations Center, various activities must be sustained. These can be categorized into four major areas:</p>
 </div>
 <div class="paragraph">
-<p>Security operations</p>
+<p><a id="security-process"></a></p>
 </div>
-<div class="paragraph">
-<p>ch 11 CISSP comprehensive</p>
-</div>
-<div class="paragraph">
-<<<<<<< HEAD
-<p>Altered states &#8594; events</p>
-</div>
-<div class="paragraph">
-<p>unsched IPLs</p>
-</div>
-<div class="paragraph">
-=======
->>>>>>> 8a59fed0db1dba6c9342b123c918aac6ca97ace4
-<p>Backref to Ch 6, state/config management</p>
-</div>
-<div class="paragraph">
-<p>scanning &amp; hardening</p>
-</div>
-<div class="paragraph">
-<p>Ch 8 change mgmt</p>
-</div>
-<div class="paragraph">
-<p>Event  &amp; incident management</p>
-</div>
-<div class="paragraph">
-<p>Cyberlaw (more discussion of legal in next chapter)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Prevention</p>
+</li>
+<li>
+<p>Detection</p>
+</li>
+<li>
+<p>Response</p>
+</li>
+<li>
+<p>Forensics</p>
+</li>
+</ul>
 </div>
 <div class="sect5">
-<h6 id="_functional">Functional</h6>
+<h6 id="_prevention">Prevention</h6>
 <div class="paragraph">
-<p>SOC overview</p>
+<p>An organization&#8217;s understanding for what constitutes a "secure" system is continually evolving. New threats continually emerge and the alert security administrator has an ongoing firehose of bulletins, alerts, patch notifications, and the like to keep abreast of.</p>
+</div>
+<div class="paragraph">
+<p>These inputs must be synthesized by an organization&#8217;s security team into a set of security standards for what constitutes a satisfactorily-configured ("hardened") system. Ideally, such standards are automated into policy-driven systems configuration approaches; in less ideal situations, manual configuration&#8201;&#8212;&#8201;and double-checking&#8201;&#8212;&#8201;is required.</p>
+</div>
+<div class="paragraph">
+<p>Prevention activities include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>maintaining signatures for intrusion detection and  and anti-virus systems</p>
+</li>
+<li>
+<p>software patching (e.g. driven by the <a href="#tech-prod-lifecycle">technology product lifeccyle</a> and updates to the <a href="#nist-nvd">National Vulnerability Database</a>)</p>
+</li>
+<li>
+<p>ongoing maintenance of user authorizations and authentication levels</p>
+</li>
+<li>
+<p>ongoing testing of security controls (e.g., firewalls, configurations, etc.)</p>
+</li>
+<li>
+<p>updating security controls appropriately for new or changed systems</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_process">Process</h6>
+<h6 id="_detection">Detection</h6>
 <div class="paragraph">
-<p>Detection
-Response
-Forensics</p>
+<p>There are many kinds of events that might indicate some security issue; systems exposed to the open Internet are continually scanned by a wide variety of often-hostile actors. Internal events, such as unscheduled/unexplained system restarts, may also indicate security issues. The challenge with security monitoring is identifying patterns indicating more advanced or persistent threats. When formalized, such patterns are called "signatures."</p>
 </div>
 <div class="paragraph">
-<p>Relationship to other IT processes</p>
+<p>One particular form of event that can be identified for systems under management are configuration state changes.</p>
+</div>
+<div class="paragraph">
+<p>For example, if a core operating system file&#8201;&#8212;&#8201;one that is well known and not expected to change&#8201;&#8212;&#8201;changes in size one day with no explanation, this might be indicative of a security exploit. Perhaps an attacker has substituted this file with one containing a "backdoor" allowing access. Tools such as Tripwire are deployed to scan and inventory such files and key information about them ("metadata") and raise alerts if unexpected changes occur. Infrastructure managers such as Chef and Puppet may also serve as inputs into security event management systems; for example, they may detect attempts to alter critical configuration files and in their re-converging the managed resource back to its desired state, can be a source of valuable information about potential exploits. Such tools also may be cited as controls for various kinds of security risks.</p>
+</div>
+<div class="paragraph">
+<p>We have discussed the importance of configuration management in both Chapter 2 and Chapter 6. In Chapter 2, we discussed the important concept of <a href="#infracode">Infrastructure as Code</a> and <a href="#policy-config">policy-driven configuration management</a>; we revisited the importance of configuration management from an operational perspective in <a href="#state-config-discovery">Chapter 6</a>. Configuration management also will re-appear in Chapters 11 and 12.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+It should be clear by now that configuration management is one of the most critical enabling capabilities for digital management, regardless of whether you look to traditional IT service management practices or modern DevOps approaches.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Detection activities include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>monitoring events and alerts from intrusion detection and related operational systems</p>
+</li>
+<li>
+<p>Analyzing logs and other artifacts for evidence of exploits</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_response">Response</h6>
+<div class="ulist">
+<ul>
+<li>
+<p>Declaring security incidents and marshalling resources to combat</p>
+</li>
+<li>
+<p>Developing and executing response activities</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_forensics">Forensics</h6>
+<div class="ulist">
+<ul>
+<li>
+<p>Analyzing logs and other artifacts for evidence of exploits</p>
+</li>
+<li>
+<p>Researching security incidents to establish causal factors and develop new preventative approaches (thus closing the loop)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_relationship_to_other_processes">Relationship to other processes</h6>
+<div class="paragraph">
+<p>As with operations as a whole, there is ongoing monitoring and reporting to various stakeholders, and interaction with other processes.</p>
+</div>
+<div class="paragraph">
+<p>One of the most important operational processes from a security perspective is Change Management. From an Agile and digital perspective, this is often a controversial process, and this book recommends it be implemented in as automated a fashion as possible. ITSM Event and Incident Management may be leveraged as well.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The particular concerns of security may interfere with cross-process coordination. This is a topic beyond the scope of this book.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -19377,45 +19511,19 @@ Forensics</p>
 <div class="quoteblock">
 <blockquote>
 Quis custodiet ipsos custodes?
-pen testing
-data leakage?
 </blockquote>
 <div class="attribution">
 &#8212; Latin for "Who watches the watchers?"
 </div>
 </div>
 <div class="paragraph">
-<p>Relationship to GRC</p>
+<p>Security management professionals are accountable to governance concerns just as any other manager in the digital organization. Security policies, processes, and standards are frequently audited, by both internal auditors as well as external <a href="#assurance">assurance</a> professionals (not only auditors, but other forms of assurance as well).</p>
 </div>
 <div class="paragraph">
-<p>What <strong>is</strong> that auditor doing anyways? Are they security? Or governance?</p>
+<p>The idea that an "Assets Protection" group might itself be audited may be hard to understand, but security organizations such as police organizations have Internal Affairs units for just such purposes.</p>
 </div>
 <div class="paragraph">
-<p>Frameworks from a security perspective</p>
-</div>
-<div class="paragraph">
-<p>ISO 27002
-CISSP
-(good overview in Moeller)</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Information security</p>
-</li>
-<li>
-<p>Asset management</p>
-</li>
-<li>
-<p>Vendor management</p>
-</li>
-<li>
-<p>Systems access control</p>
-</li>
-<li>
-<p>Physical access control</p>
-</li>
-</ul>
+<p>Security auditors might review the <a href="#security-process">security processes</a> mentioned above, or system configuration baselines, or log files, or any number of other artifacts, depending on the goals and scope of a security audit. Actual penetration testing is a frequently used approach: the hiring of skilled "white-hat" hackers to probe an organization&#8217;s defenses. Such hackers might be given license to probe as far as they possibly can and return with comprehensive evidence of what they were able to access (customer records, payrolls, negotiable identifiers, etc.) Given the critical importance of security in digital organizations, it is an essential matter for governance attention at the highest levels.</p>
 </div>
 </div>
 </div>
@@ -19423,7 +19531,7 @@ CISSP
 <h4 id="_digital_governance">Digital Governance</h4>
 <div class="quoteblock">
 <blockquote>
-transforming to an agile delivery approach is difficult. Companies or government agencies that have been in existence for decades have built up layers of deep and wide waste, many of them around governance.<br>
+&#8230;&#8203;transforming to an agile delivery approach is difficult. Companies or government agencies that have been in existence for decades have built up layers of deep and wide waste, many of them around governance.<br>
 <br>
 Business or IT governance constructs and processes that do not support new technology-centric go-to-market models and products must be either replaced or substantially evolved; otherwise, they increase risk on the agile projects.
 </blockquote>
@@ -19432,178 +19540,119 @@ Business or IT governance constructs and processes that do not support new techn
 <cite>Disciplined Agile Delivery</cite>
 </div>
 </div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Sidebar: The Digital Services Playbook</strong></p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>governance &amp; innovation</p>
-</div>
-<div class="paragraph">
-<p>governance &amp; efficiency</p>
-</div>
-<div class="paragraph">
-<p>governance &amp; risk</p>
-</div>
 <div class="sect4">
-<h5 id="_agile_and_it_governance">Agile and IT governance</h5>
+<h5 id="_failings_of_it_governance">Failings of IT governance</h5>
 <div class="paragraph">
-<p>"The wall" is embedded in ISO 38500&#8230;&#8203; product-centric management is not supported</p>
+<p>"The wall" is embedded in ISO 38500&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
-<p>Are governance frameworks suited to define execution models?</p>
+<p>CIO-centric "order taking" organizational form is assumed through ISO 38500, Selig, Moeller</p>
 </div>
 <div class="paragraph">
-<p>organizational scar tissue</p>
+<p>As with other chapters, we have presented the material defining this chapter&#8217;s topic "on its own terms." Certainly, there is little chance that the core principles of governance will cease to have importance, even in the new digital economy.</p>
+</div>
+<div class="paragraph">
+<p>However, as Ambler and Gorans note above, the legacy of IT governance is wide, deep, and often wasteful. Approaches based on mis-applied <a href="#taylorism">Taylorism</a> and misguided, CMM-inspired <a href="#problem-statisical-process">statistical process control</a> have resulted in the creation of ineffective, large-scale <a href="#what-is-IT">IT bureaucracies</a> whose sole mission seems to be the creation and exchange of non-value-add <a href="#secondary-artifacts">secondary artifacts</a>, while lacking any clear concept of an <a href="#lack-execution-model">execution model</a>.</p>
+</div>
+<div class="paragraph">
+<p>The answer is not, however, to attempt something like #NoGovernance. We&#8217;ll leave that exercise for the anarchists, who will continue to fail as anarchists always have.</p>
+</div>
+<div class="paragraph">
+<p>Instead, this book argues the most effective answer lies in a re-examination of the true concerns of governance:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>sustaining innovation and effective value delivery</p>
+</li>
+<li>
+<p>maintaining efficiency</p>
+</li>
+<li>
+<p>optimizing risk</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These fundamental principles ("top-line," "bottom-line," "risk") define value for organizations around the world, whether for-profit, non-profit, or governmental.</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;ll re-examine through these objectives and come up with different answers:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>governance &amp; innovation</p>
+</li>
+<li>
+<p>governance &amp; efficiency</p>
+</li>
+<li>
+<p>governance &amp; risk</p>
+</li>
+</ul>
+</div>
+<div class="sect5">
+<h6 id="_governance_and_product_centricity">Governance and product centricity</h6>
+<div class="literalblock">
+<div class="content">
+<pre>product-centric management is not supported</pre>
+</div>
 </div>
 <div class="paragraph">
 <p>Project governance is transitioning to product governance</p>
 </div>
 <div class="paragraph">
-<p>If policies become requirements, how can we remove waste processing between the policy and its implementation?
-CIO-centric "order taking" organizational form is assumed through ISO 38500, Selig, Moeller</p>
+<p>Whether enterprise IT governance processes have grown unintentionally through evolving process improvements or grown intentionally through a
+deliberate project, the questions a senior manager should ask include: "How good are my IT governance processes at effectively delivering strategic business value year after year?" and "Are my processes repeatable, predictable, and scalable, and are they truly meeting the needs of my business (outside of IT) and my customers?"</p>
 </div>
-<div class="paragraph">
-<p>Policy is not just about risk. Policy is also about effectiveness, e.g. understanding cost of delay, not overburdening &#8230;&#8203; we understand risk as risk of loss, not ineffectiveness&#8230;&#8203; but we still control for our policies that are intended to promote effectiveness&#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<p>"The business" defines the audit plan</p>
-</div>
-<div class="paragraph">
-<p>Now, the digital product org needs to define its own plan - proactively define the control objectives - <a href="#Moeller2013">[Moeller2013]</a></p>
-</div>
-<div class="paragraph">
-<p>Yearly batch cycle, may not change anytime soon</p>
-</div>
-<div class="paragraph">
-<p>If "corporate governance" is "The system by which organizations are directed and controlled," then it is reasonable that "corporate governance of IT" is "The system by which the <strong>current and future use of IT is directed and controlled</strong>." This is how ISO 38500, the IT Governance standard, defines it <a href="#ISO2008">[ISO2008]</a>.</p>
-</div>
-<div class="paragraph">
-<p>In today&#8217;s digital governance there is a greater concern for outcome and effectiveness, especially in terms of time to market (minimizing <a href="#cost-of-delay">Cost of Delay</a>). Previously, concerns for efficiency might lead a company to overburden its staff, resulting in queuing gridlock, too much work in process, destructive multitasking, and ultimately failure to deliver timely results (or deliver at all).</p>
-</div>
-<div class="paragraph">
-<p>Such failure to deliver was tolerated because it seemed to be a common problem across most IT departments, and because digital transformation had not taken hold yet. IT systems were often back office and delays in delivering them (or significant issues in their operation) were not <strong>quite</strong> as damaging.</p>
-</div>
-<div class="paragraph">
-<p>Now, effectiveness of delivery is essential. The interesting, and to some degree unexpected result, is that both efficiency and risk seem to be benefiting as well. Cross-functional, focused teams are both more effective and more efficient, and able to manage risk better as well. Systems are being built with both increased rapidity as well as improved stability, and the automation enabling this provides robust audit support.</p>
-</div>
-<div class="sidebarblock">
+<div class="literalblock">
 <div class="content">
-<div class="paragraph">
-<p><strong>The DevOps Audit Toolkit</strong></p>
+<pre>an example of what is wrong - this fixation with repeatability
+(MoellerXXXX)</pre>
 </div>
-<div class="paragraph">
-<p>The DevOps Audit Toolkit <a href="#DeLuccia2015">[DeLuccia2015]</a> provides an important set of examples demonstrating how modern DevOps toolchain automation can fulfill audit objectives as well or better than "traditional" approaches.</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Finally, consider the "programmability" criteria above. A highly "programmable" position is one where the responsibilities can be specified in terms of their activities. <strong>And what is the fundamental dynamic of digital transformation?</strong> It is no accident that such positions are called "programmable." In fact, they <strong>are</strong> being "programmed away" or "eaten by software"- leaving only higher-skill positions that are best managed by objective, and which are more sensitive to cultural dynamics.</p>
-</div>
-<div class="paragraph">
-<p>Preoccupation with "efficiency" fades as a result of the decreasingly "programmable" component of work. The term "efficiency" signals a process that has been well defined (is "programmable") to the point where it is repeatable and scalable. Such processes are ripe for automation, commoditization, and outsourcing, and this is in fact happening. And when such repetitive concerns become a matter of sourcing rather than execution, the emphasis shifts to risk management and governance of the supplier.</p>
-</div>
-<div class="paragraph">
-<p>risk of learning wrong lessons w/r/t complex systems - more "rigor" is not necessarily the answer - impossibility of testing all outcomes (cite relevant SEng)&#8201;&#8212;&#8201;THE FUNDAMENTAL ISSUE</p>
-</div>
-<div class="paragraph">
-<p>defenses covered in subsequent section</p>
-</div>
-<div class="paragraph">
-<p>principles: antifragility, defense in depth, fast feedback, automation (2-edged sword), analytics &amp; pattern recognition - pointer back to chapter 6</p>
-</div>
-<div class="sect5">
-<h6 id="_a_new_class_of_organizational_risks">A new class of organizational risks</h6>
-<div class="paragraph">
-<p>bring back d/e/m e/e/r matrix</p>
-</div>
-<div class="paragraph">
-<p>the risk of failing to deliver "Poorly governed and managed information and
-technology will destroy value or fail to deliver benefits&#8230;&#8203;[such as] Unrealised or reduced business value" <a href="#ISACA2013">[ISACA2013]</a>, p18</p>
-</div>
-<div class="paragraph">
-<p>but how to "govern" this?? - the most effective way is empowerment&#8230;&#8203; !!</p>
-</div>
-<div class="paragraph">
-<p>we can come back to this in digital - new classes/approaches to effectiveness risk</p>
-</div>
-<div class="paragraph">
-<p>From an IT governance perspective, what is the role of IT risk management in the new digital world? It&#8217;s not that risk management goes away. But there are significant new classes of risk that need to be better understood and managed:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Unmanaged demand leading to multi-tasking, destructive of value &amp; results</p>
-</li>
-<li>
-<p>High queue wait states</p>
-</li>
-<li>
-<p>Slow feedback due to large batch sizes, reducing effectiveness</p>
-</li>
-<li>
-<p>Failure to incorporate cost of delay in resource allocation and work prioritization decisions</p>
-</li>
-<li>
-<p>Cultural dynamics destructive of high team performance</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>We now have better math &amp; understanding</p>
-</div>
-<div class="paragraph">
-<p>as Agile engages with traditional frameworks, this is the major transformation</p>
-</div>
-<div class="paragraph">
-<p>more on the effectiveness level, less on the efficiency</p>
-</div>
-<div class="paragraph">
-<p>but these effectiveness concerns consitute risk</p>
-</div>
-<div class="paragraph">
-<p>(not to mention more technical risks)</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_governing_the_venture_portfolio">Governing the venture portfolio</h6>
-<div class="paragraph">
-<p>Has created different attitudes &amp; expectations towards governance in West Coast "unicorn" culture. Compare/contrast.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_allocation_of_capital_in_large_batches">Allocation of capital in large batches</h6>
-<div class="paragraph">
-<p>Pros and cons - sometimes, one needs to accept the fog of R&amp;D
-This never changes
-The iconic entrepreneur asking for one more round</p>
-</div>
-<div class="paragraph">
-<p>entrepreneurs tell a story <a href="https://silvialisam.com/chris-sacca-s-639f0f5f3b9c#.j6sljdp0x" class="bare">https://silvialisam.com/chris-sacca-s-639f0f5f3b9c#.j6sljdp0x</a></p>
-</div>
-<div class="paragraph">
-<p>VC view</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_governance_and_product_centricity">Governance and product centricity</h6>
-<div class="paragraph">
-<p>Whether enterprise IT governance processes have grown unin
-tentionally through evolving process improvements or grown intentionally through a
-deliberate project, the questions a senior manager should ask include: "How good are my IT governance processes at effectively delivering strategic business value year after year?" and "Are my processes repeatable, predictable, and scalable, and are they truly meeting the needs of my business (outside of IT) and my customers?"
- an example of what is wrong - this fixation with repeatability
- (MoellerXXXX)</p>
 </div>
 <div class="paragraph">
 <p>The importance of a portfolio view</p>
 </div>
+</div>
+<div class="sect5">
+<h6 id="_the_fundamental_lesson_of_product_centric_digital_transformation">The fundamental lesson of product-centric digital transformation</h6>
 <div class="paragraph">
-<p>How do the VCs do it? Can this scale down into the enterprise?
-Additional concerns within the boundary of a firm: higher leverage points because of sharing, reducing transaction costs
-Reality on tech product: successful digital firms strongly govern tech portfolio, do not allow experimentation that could expand base tech footprint. See chapter 12.</p>
+<p>Finally, consider the "programmability" criteria above. A highly "programmable" position is one where the responsibilities can be specified in terms of their activities. <strong>And what is the fundamental dynamic of digital transformation?</strong> It is no accident that such positions are called "programmable." In fact, they <strong>are</strong> being "programmed away" or "eaten by software"- leaving only higher-skill positions that are best managed by objective, and which are more sensitive to cultural dynamics.</p>
+</div>
+<div class="paragraph">
+<p>Preoccupation with "efficiency" fades as a result of the decreasingly "programmable" component of work. The term "efficiency" signals a process that has been well defined (is "programmable") to the point where it is repeatable and scalable. Such processes are ripe for automation, commoditization, and outsourcing, and this is in fact happening.</p>
+</div>
+<div class="paragraph">
+<p>If the repetitive process is retained within an organization, the drive for efficiency leads to automation, and eventually efficiency is expressed through concerns for capacity management and ultimately attention to the algorithmic consumption of computing resources.</p>
+</div>
+<div class="paragraph">
+<p>And when such repetitive concerns are <strong>not</strong> retained by the organization, but instead become a matter of sourcing rather than execution, the emphasis shifts to risk management and governance of the supplier.</p>
+</div>
+<div class="paragraph">
+<p>The remaining uncertain and creative processes cannot be managed for "efficiency" and instead need to be managed for effectiveness, collaboration, culture, and so forth.</p>
+</div>
+<div class="paragraph">
+<p>risk of learning wrong lessons w/r/t complex systems - more "rigor" is not necessarily the answer - impossibility of testing all outcomes (cite relevant SEng)&#8201;&#8212;&#8201;THE FUNDAMENTAL ISSUE</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_governance_and_digital_efficiency">Governance and digital efficiency</h5>
+<div class="paragraph">
+<p>get stuff into a common pipeline
+stop the transaction costs
+secondary deliverables
+all this theater that is doing nothing to reduce risk</p>
+</div>
+<div class="sect5">
+<h6 id="_execution_models">Execution models</h6>
+<div class="paragraph">
+<p>Are governance frameworks suited to define execution models?</p>
+</div>
+<div class="paragraph">
+<p>organizational scar tissue</p>
 </div>
 </div>
 <div class="sect5">
@@ -19641,8 +19690,123 @@ Embed, automate, iterate</p>
 <div class="paragraph">
 <p>controls theater - cargo cult controls</p>
 </div>
+</div>
+<div class="sect5">
+<h6 id="_leveraging_the_digital_pipeline">Leveraging the digital pipeline</h6>
+<div class="paragraph">
+<p>If policies become requirements, how can we remove waste processing between the policy and its implementation?</p>
+</div>
+<div class="paragraph">
+<p>"The business" defines the audit plan</p>
+</div>
+<div class="paragraph">
+<p>Now, the digital product org needs to define its own plan - proactively define the control objectives - <a href="#Moeller2013">[Moeller2013]</a></p>
+</div>
+<div class="paragraph">
+<p>Yearly batch cycle, may not change anytime soon</p>
+</div>
+<div class="paragraph">
+<p>If "corporate governance" is "The system by which organizations are directed and controlled," then it is reasonable that "corporate governance of IT" is "The system by which the <strong>current and future use of IT is directed and controlled</strong>." This is how ISO 38500, the IT Governance standard, defines it <a href="#ISO2008">[ISO2008]</a>.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_governing_the_venture_portfolio">Governing the venture portfolio</h6>
+<div class="paragraph">
+<p>as opposed to PMO?</p>
+</div>
+<div class="paragraph">
+<p>Has created different attitudes &amp; expectations towards governance in West Coast "unicorn" culture. Compare/contrast.</p>
+</div>
+<div class="paragraph">
+<p>How do the VCs do it? Can this scale down into the enterprise?
+Additional concerns within the boundary of a firm: higher leverage points because of sharing, reducing transaction costs</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_allocation_of_capital_in_large_batches">Allocation of capital in large batches</h6>
+<div class="paragraph">
+<p>Pros and cons - sometimes, one needs to accept the fog of R&amp;D
+This never changes
+The iconic entrepreneur asking for one more round</p>
+</div>
+<div class="paragraph">
+<p>entrepreneurs tell a story <a href="https://silvialisam.com/chris-sacca-s-639f0f5f3b9c#.j6sljdp0x" class="bare">https://silvialisam.com/chris-sacca-s-639f0f5f3b9c#.j6sljdp0x</a></p>
+</div>
+<div class="paragraph">
+<p>VC view</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_next_gen_risk_mgmt">Next gen risk mgmt</h6>
+<div class="paragraph">
+<p>From an IT governance perspective, what is the role of IT risk management in the new digital world? It&#8217;s not that risk management goes away. But there are significant new classes of risk that need to be better understood and managed:</p>
+</div>
+<div class="paragraph">
+<p>bring back d/e/m e/e/r matrix</p>
+</div>
+<div class="paragraph">
+<p>the risk of failing to deliver "Poorly governed and managed information and technology will destroy value or fail to deliver benefits&#8230;&#8203;[such as] Unrealised or reduced business value" <a href="#ISACA2013">[ISACA2013]</a>, p18</p>
+</div>
+<div class="paragraph">
+<p>but how to "govern" this?? - the most effective way is empowerment&#8230;&#8203; !!</p>
+</div>
+<div class="paragraph">
+<p>we can come back to this in digital - new classes/approaches to effectiveness risk</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Unmanaged demand leading to multi-tasking, destructive of value &amp; results</p>
+</li>
+<li>
+<p>High queue wait states</p>
+</li>
+<li>
+<p>Slow feedback due to large batch sizes, reducing effectiveness</p>
+</li>
+<li>
+<p>Failure to incorporate cost of delay in resource allocation and work prioritization decisions</p>
+</li>
+<li>
+<p>Cultural dynamics destructive of high team performance</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>We now have better math &amp; understanding</p>
+</div>
+<div class="paragraph">
+<p>as Agile engages with traditional frameworks, this is the major transformation: more on the effectiveness level, less on the efficiency&#8230;&#8203;these effectiveness concerns constitute risk</p>
+</div>
+<div class="paragraph">
+<p>(not to mention more technical risks)</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_cost_of_delay_as_risk">Cost of delay as risk</h6>
+<div class="paragraph">
+<p>Policy is not just about risk. Policy is also about effectiveness, e.g. understanding cost of delay, not overburdening &#8230;&#8203; we understand risk as risk of loss, not ineffectiveness&#8230;&#8203; but we still control for our policies that are intended to promote effectiveness&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>In today&#8217;s digital governance there is a greater concern for outcome and effectiveness, especially in terms of time to market (minimizing <a href="#cost-of-delay">Cost of Delay</a>). Previously, concerns for efficiency might lead a company to overburden its staff, resulting in queuing gridlock, too much work in process, destructive multitasking, and ultimately failure to deliver timely results (or deliver at all).</p>
+</div>
+<div class="paragraph">
+<p>Such failure to deliver was tolerated because it seemed to be a common problem across most IT departments, and because digital transformation had not taken hold yet. IT systems were often back office and delays in delivering them (or significant issues in their operation) were not <strong>quite</strong> as damaging.</p>
+</div>
+<div class="paragraph">
+<p>Now, effectiveness of delivery is essential. The interesting, and to some degree unexpected result, is that both efficiency and risk seem to be benefiting as well. Cross-functional, focused teams are both more effective and more efficient, and able to manage risk better as well. Systems are being built with both increased rapidity as well as improved stability, and the automation enabling this provides robust audit support.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_architecture_and_governance">Architecture and governance</h6>
 <div class="paragraph">
 <p>Technical policies - foreshadow Chapter 12</p>
+</div>
+<div class="paragraph">
+<p>Affect E, E, R (draw here or later)</p>
+</div>
+<div class="paragraph">
+<p>Reality on tech product: successful digital firms strongly govern tech portfolio, do not allow experimentation that could expand base tech footprint. See chapter 12.</p>
 </div>
 </div>
 </div>
@@ -19675,6 +19839,16 @@ Escrow</p>
 </div>
 <div class="sect4">
 <h5 id="_automating_digital_governance">Automating digital governance</h5>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>The DevOps Audit Toolkit</strong></p>
+</div>
+<div class="paragraph">
+<p>The DevOps Audit Toolkit <a href="#DeLuccia2015">[DeLuccia2015]</a> provides an important set of examples demonstrating how modern DevOps toolchain automation can fulfill audit objectives as well or better than "traditional" approaches.</p>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>Standalone systems</p>
 </div>
@@ -19766,6 +19940,9 @@ discussion in DevOps Audit Defense Toolkit</p>
 <div class="paragraph">
 <p>Simian Army</p>
 </div>
+<div class="paragraph">
+<p>principles: antifragility, defense in depth, fast feedback, automation (2-edged sword), analytics &amp; pattern recognition - pointer back to chapter 6</p>
+</div>
 </div>
 </div>
 </div>
@@ -19805,6 +19982,11 @@ discussion in DevOps Audit Defense Toolkit</p>
 <div class="literalblock">
 <div class="content">
 <pre>Promise Theory</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Cyberlaw (more discussion of legal in next chapter)</pre>
 </div>
 </div>
 <div class="literalblock">
@@ -21106,7 +21288,7 @@ IEEE Press.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-06-04 16:55:01 CDT
+Last updated 2016-07-02 13:44:03 CDT
 </div>
 </div>
 </body>
