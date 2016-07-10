@@ -22,7 +22,7 @@ In reality, organizations have many other things to do than practice security.
 
 You have been practicing security since you first selected your initial choice of development platform in Chapter 2. But by now, your security capability is a well-established organization with processes spanning the enterprise, and a cross-functional steering committee composed of senior executives and with direct access to Board governance channels.
 
-Security is a significant and well-known domain in and of itself. Ultimately, however, *security is an _application_ of the governance principles discussed in the previous sections*. Deriving ultimately from the stakeholder's desire to sustain and protect the enterprise, security relies on
+Security is a significant and well-known domain in and of itself. Ultimately, however, *security is an _application_ of the governance and risk management principles discussed in the previous sections*. Deriving ultimately from the stakeholder's desire to sustain and protect the enterprise, security relies on
 
 * accurate xref:risk-management[risk]
  assessment,
@@ -92,11 +92,24 @@ In this model, the systems lifecycle is considered along the horizontal access, 
 
 image::images/4.10-2axis-security.png[]
 
+====== Consumer versus sponsor perspective
+The consumer of the digital service has different concerns from the sponsor/customer (in our xref:consumer-customer-sponsor[3-party model]). The consumer (our woman xref:what-is-IT-value[checking her bank balance]) is concerned with immediate aspects of confidentiality, integrity, and availability:
+
+* Is this communication private?
+* Is my money secure?
+* Can I view my balance and do other operations with it (e.g. transfer it) confident of no interference?
+
+The sponsor on the other hand has derivative concerns:
+
+* Are we safe from the bad publicity that would result from a breach?
+* Are compliant with laws and regulations, or are we risking penalties for non-compliance (as well as risking security issues?)
+* Are our security activities as cost-efficient as possible, given our risk appetite?
+
+====== Security architecture 
+
 Security engineering is concerned with the fundamental security capabilities of the system, as well as ensuring that any initial principles established for the system are adhered to as development proceeds, and/or as vendors are selected and perhaps replaced over time.
 
-====== Security architecture
-
-There are multitudes of books written on security from an architecture and development perspective. The tools, techniques, and capabilities evolve quickly every year, which is why having a fundamental business understanding based in a stable framework of risk and control is essential.
+There are multitudes of books written on security from an engineering, architecture and development perspective. The tools, techniques, and capabilities evolve quickly every year, which is why having a fundamental business understanding based in a stable framework of risk and control is essential.
 
 We are not covering technical details, any more than we are covering specific programming languages or distributed systems engineering specifics - this is practice, not management. Studying for the Certified Information Systems Security Professional exam will provide both an understanding of security management, as well as current technical topics. A glance at the CISSP guide shows how involved such topics can be:
 
@@ -120,7 +133,7 @@ Again, the issue is mapping such technical topics to the fundamentals of risk an
 
 Finally, *cryptography* is the "storage and transmission of data in a form that only those it is intended for can read and process" <<Harris2013>>.
 
-All of these topics, and many more, require in depth study and staff development. At this writing, there is a notable shortage of skilled security professionals. Therefore, a critical risk is that your organization might not be able to hire people with the needed skills (consider our section on xref:resource-mgmt[resource management])
+All of these topics, and many more, require in depth study and staff development. At this writing (mid-2016), there is a notable shortage of skilled security professionals. Therefore, a critical risk is that your organization might not be able to hire people with the needed skills (consider our section on xref:resource-mgmt[resource management])
 
 ====== Security and SDLC
 Security is a concern throughout the application lifecycle. You already know this, otherwise you would not have reached enterprise scale. But now you need to formalize it with some consistency, as that is what regulators and auditors expect, and it also makes it easier for your staff to work on various systems.
@@ -130,7 +143,7 @@ Security should be considered throughout the SDLC, including systems design, but
 The CISSP recommends (among other topics) consideration of the following throughout the systems lifecycle:
 
 * The role of environmental (e.g. operating system-level) safeguards versus internal application controls
-* The challenges of testing
+* The challenges of testing security functionality
 * Default implementation issues
 * Ongoing monitoring
 
@@ -147,59 +160,64 @@ Vendors come and go in the digital marketplace, offering thousands of software-b
 
 Increasingly, software is offered as a service, in which case it is the vendor responsibility to patch their own code. But what if they are slow to do this? Any customer relying on their service is running risk, and other controls may be required to mitigate the exposure.
 
-One important source of vulnerabilities is the https://nvd.nist.gov/[National Vulnerability Database] supported by the National Institute for Standards and Technology. In this database, you can look up various products and see if they have known security holes. There are many cautions and nuances to using the NVD and it is not something to casually embrace, but it does represent an important, free, taxpayer-supported resource of use to security managers.
+anchor:nist-nvd[]
+
+One important source of vulnerabilities is the https://nvd.nist.gov/[National Vulnerability Database] supported by the National Institute for Standards and Technology. In this database, you can look up various products and see if they have known security holes. There are many cautions and nuances to using the NVD and it is not something that can be simply and easily "implemented" in a given environment, but it does represent an important, free, taxpayer-supported resource of use to security managers.
 
 An important type of vulnerability is the "zero-day" vulnerability. With this kind of vulnerability, knowledge of a security "hole" becomes widespread before any patches are available (i.e., the software's author and users have "zero days" to create and deploy a fix). Zero-day exploits require fast and aggressive application of alternate controls, which leads us to the topic of security operations.
 
 ===== Security operations
-Security requires ongoing operational attention. Security operations is first and foremost a form of operations, as discussed in xref:ops-mgmt[Chapter 6]. It requires on-duty and on-call personnel, and some physical or virtual point of shared awareness (for example, a physical Security Operations Center, perhaps co-located with a Network Operations Center).
+[quote, Shon Harris, Guide to the CISSP]
+Networks and computing environments are evolving entities; just because they are secure one week does not mean they are secure three weeks later.
 
-Security operations 
+Security requires ongoing xref:ops-day-in-life[operational attention]. Security operations is first and foremost a form of operations, as discussed in xref:ops-mgmt[Chapter 6]. It requires on-duty and on-call personnel, and some physical or virtual point of shared awareness (for example, a physical Security Operations Center, perhaps co-located with a Network Operations Center). Beyond the visible presence of a Security Operations Center, various activities must be sustained. These can be categorized into four major areas:
 
-ch 11 CISSP comprehensive
+anchor:security-process[]
 
-Altered states -> events
+* Prevention
+** maintaining signatures for intrusion detection and  and anti-virus systems
+** software patching (e.g. driven by the xref:tech-prod-lifecycle[technology product lifeccyle] and updates to the xref:nist-nvd[National Vulnerability Database])
+** ongoing maintenance of user authorizations and authentication levels
+* ongoing testing of security controls (e.g., firewalls, configurations, etc.)
+* updating security controls appropriately for new or changed systems
 
-unsched IPLs
+* Detection
+** monitoring events and alerts from intrusion detection and related operational systems, and responding as appropriate when security incidents are declared.
 
-Backref to Ch 6, state/config management
+* Response
+** Declaring security incidents and marshalling resources to combat
+** Developing and executing response activities
 
-scanning & hardening
+* Forensics
+** Analyzing logs and other artifacts for evidence of exploits
+** Researching security incidents to establish causal factors and develop new preventative approaches (thus closing the loop)
 
-Ch 8 change mgmt
+And as with operations as a whole, there is ongoing monitoring and reporting to various stakeholders.
 
-Event  & incident management
+There are many kinds of events that might indicate some security issue; systems exposed to the open Internet are continually scanned by a wide variety of often-hostile actors. Internal events, such as unscheduled/unexplained system restarts, may also indicate security issues. The challenge with security monitoring is identifying patterns indicating more advanced or persistent threats. When formalized, such patterns are called "signatures."
 
-Cyberlaw (more discussion of legal in next chapter)
+One particular form of event that can be identified for systems under management are configuration state changes.
 
-====== Functional
-SOC overview
+For example, if a core operating system file -- one that is well known and not expected to change -- shows up has having a different size with no explanation, this might be indicative of a security exploit. Perhaps an attacker has substituted this file with one containing a "backdoor" allowing access. Tools such as Tripwire are deployed to scan and inventory such files and key information about them ("metadata") and raise alerts if unexpected changes occur. Infrastructure managers such as Chef and Puppet may also serve as inputs into security event management systems; for example, they may detect attempts to alter critical configuration files and in their re-converging the managed resource back to its desired state, can be a source of valuable information about potential exploits. Such tools also may be cited as controls for various kinds of security risks.
 
-====== Process
-Detection
-Response
-Forensics
+We have discussed the importance of configuration management in both Chapter 2 and Chapter 6. In Chapter 2, we discussed the important concept of xref:infracode[Infrastructure as Code] and xref:policy-config[policy-driven configuration management]; we revisited the importance of configuration management from an operational perspective in xref:state-config-discovery[Chapter 6]. Configuration management also will re-appear in Chapters 11 and 12.
 
-Relationship to other IT processes
+IMPORTANT: It should be clear by now that configuration management is one of the most critical enabling capabilities for digital management, regardless of whether you look to traditional IT service management practices or modern DevOps approaches.
+
+An organization's understanding for what constitutes a "secure" system is continually evolving. New threats continually emerge and the alert security administrator has an ongoing firehose of bulletins, alerts, patch notifications, and the like to keep abreast of.
+
+These inputs must be synthesized by an organization's security team into a set of security standards for what constitutes a satisfactorily-configured ("hardened") system. Ideally, such standards are automated into policy-driven systems configuration approaches; in less ideal situations, manual configuration -- and double-checking -- is required.
+
+One of the most important operational processes from a security perspective is Change Management. From an Agile and digital perspective, this is often a controversial process, and this book recommends it be implemented in as automated a fashion as possible. ITSM Event and Incident Management may be leveraged as well.
+
+NOTE: The particular concerns of security may interfere with cross-process coordination. This is a topic beyond the scope of this book.
 
 ===== Security and assurance
 [quote, Latin for "Who watches the watchers?"]
 Quis custodiet ipsos custodes?
-pen testing
-data leakage?
 
-Relationship to GRC
+Security management professionals are accountable to governance concerns just as any other manager in the digital organization. Security policies, processes, and standards are frequently audited, by both internal auditors as well as external xref:assurance[assurance] professionals (not only auditors, but other forms of assurance as well).
 
-What *is* that auditor doing anyways? Are they security? Or governance?
+The idea that an "Assets Protection" group might itself be audited might be hard to understand, but security organizations such as police organizations have Internal Affairs units for just such purposes.
 
-Frameworks from a security perspective
-
-ISO 27002
-CISSP
-(good overview in Moeller)
-
-* Information security
-* Asset management
-* Vendor management
-* Systems access control
-* Physical access control
+Security auditors might review the xref:security-process[security processes] mentioned above, or system configuration baselines, or log files, or any number of other artifacts, depending on the goals and scope of a security audit. Actual penetration testing is a frequently used approach: the hiring of skilled "white-hat" hackers to probe an organization's defenses. Such hackers might be given license to probe as far as they possibly can and return with comprehensive evidence of what they were able to access (customer records, payrolls, negotiable identifiers, etc.)
