@@ -9,7 +9,7 @@ As with other chapters, we have presented the material defining this chapter's t
 
 However, as Ambler and Gorans note above, the legacy of IT governance is wide, deep, and often wasteful. Approaches based on mis-applied xref:taylorism[Taylorism] and misguided, CMM-inspired xref:problem-statisical-process[statistical process control] have resulted in the creation of ineffective, large-scale xref:what-is-IT[IT bureaucracies] whose sole mission seems to be the creation and exchange of non-value-add xref:secondary-artifacts[secondary artifacts], while lacking any clear concept of an xref:lack-execution-model[execution model].
 
-What is to be done? Governance will not disappear any time soon. Simply arguing against governance (ala NoEstimates) is unlikely to succeed.
+What is to be done? Governance will not disappear any time soon. Simply arguing against governance (ala xref:3.08.03-NoEstimates[NoEstimates]) is unlikely to succeed.
 
 Instead, this book argues the most effective answer lies in a re-examination of the true concerns of governance:
 
@@ -17,36 +17,11 @@ Instead, this book argues the most effective answer lies in a re-examination of 
 * maintaining efficiency
 * optimizing risk
 
-These fundamental principles ("top-line," "bottom-line," "risk") define value for organizations around the world, whether for-profit, non-profit, or governmental.
+These fundamental principles ("top-line," "bottom-line," "risk") define value for organizations around the world, whether for-profit, non-profit, or governmental. After considering the failings of IT governance, we'll re-examine it in light of these objectives and come up with some new answers for the digital era.
 
-We'll re-examine through these objectives and come up with different answers:
+===== The fundamental lesson of digital transformation
 
-* governance & innovation
-* governance & efficiency
-* governance & risk
-
-===== Failings of IT governance
-"The wall" is embedded in ISO 38500...
-
-CIO-centric "order taking" organizational form is assumed through ISO 38500, Selig, Moeller
-
-====== Governance and product centricity
-
- product-centric management is not supported
-
-Project governance is transitioning to product governance
-
-Whether enterprise IT governance processes have grown unintentionally through evolving process improvements or grown intentionally through a
-deliberate project, the questions a senior manager should ask include: "How good are my IT governance processes at effectively delivering strategic business value year after year?" and "Are my processes repeatable, predictable, and scalable, and are they truly meeting the needs of my business (outside of IT) and my customers?"
-
- an example of what is wrong - this fixation with repeatability
- (MoellerXXXX)
-
-The importance of a portfolio view
-
-====== The fundamental lesson of product-centric digital transformation
-
-Finally, consider the "programmability" criteria above. A highly "programmable" position is one where the responsibilities can be specified in terms of their activities. *And what is the fundamental dynamic of digital transformation?* It is no accident that such positions are called "programmable." In fact, they *are* being "programmed away" or "eaten by software"- leaving only higher-skill positions that are best managed by objective, and which are more sensitive to cultural dynamics.
+Consider the "programmability" criteria above. A highly "programmable" position is one where the responsibilities can be specified in terms of their activities. *And what is the fundamental dynamic of digital transformation?* It is no accident that such positions are called "programmable." In fact, they *are* being "programmed away" or "eaten by software"- leaving only higher-skill positions that are best managed by objective, and which are more sensitive to cultural dynamics.
 
 Preoccupation with "efficiency" fades as a result of the decreasingly "programmable" component of work. The term "efficiency" signals a process that has been well defined (is "programmable") to the point where it is repeatable and scalable. Such processes are ripe for automation, commoditization, and outsourcing, and this is in fact happening.
 
@@ -56,17 +31,111 @@ And when such repetitive concerns are *not* retained by the organization, but in
 
 The remaining uncertain and creative processes cannot be managed for "efficiency" and instead need to be managed for effectiveness, collaboration, culture, and so forth.
 
-risk of learning wrong lessons w/r/t complex systems - more "rigor" is not necessarily the answer - impossibility of testing all outcomes (cite relevant SEng) -- THE FUNDAMENTAL ISSUE
+===== The failings of IT governance
 
+From the perspective of digital transformation, there are many issues with traditional IT governance and the assumptions and practices characterizing it.
 
+====== Project versus operations as operating model
+
+image::images/4.10-38500similar.png[]
+
+_similar to <<ISO2008>>_
+
+As we can see in the above diagram, ISO/IEC 38500 assumes a specific IT operating model, one in which projects are distinct from operations. We have discussed the growing influence of product-centric digital management throughout this book, but as of 2016 the major IT governance standard still does not recognize it.
+
+The ripple effects are seen throughout other guidance and commentary. In particular, the project-centric mindset is closely aligned to the idea of IT and the CIO as primarily order-takers.
+
+====== CIO as order-taker
+Throughout much of the IT governance guidance, certain assumptions become evident:
+
+* There is an entity that can be called "The Business."
+* There is a distinct entity called "IT" (for "Information Technology").
+* It is the job of "IT" to take direction (i.e. orders)  from "The Business" and to fulfill them.
+* There is a significant risk that "IT" activities (and by extension, dollars spent on them) may *not* be correctly allocated to the preferred priorities of "The Business." IT may spend money unwisely, on technology for its own sake. This risk needs to be controlled.
+* The needs of "The Business" can be precisely defined and it is possible for "IT" to support those needs with a high degree of predictability as to time and cost. This predictability is assumed even when those activities imply multi-million dollar investments and months or years of complex implementation activities.
+* When such activities do not proceed according to initial assumptions, this is labeled an "IT failure." It is assumed that the failure could have been prevented through more competent management, "rigorous" process, or diligent governance, especially on the IT side.
+
+There may be organizations where these are reasonable assumptions. (This book does not claim they do not exist.) But there is substantial evidence for the existence of organizations for whom these assumptions are untrue.
+
+====== The fallacies of "rigor" and repeatability
+[quote, Cem Kaner et al, Testing Computer Software]
+...it takes more time than you have to prove less than you'd like.
+
+[quote, anonymous]
+Rigor? Or rigor mortis?
+
+One of the most critical, yet poorly understood facts of software development and by extension complex digital system innovation is the impossibility of "rigor."
+
+Software engineers are taught early that "completely" testing software is impossible <<Kaner1999>>; yet it seems that this simple fact (grounded in fundamentals of computer science and information theory) is not understood by many managers.
+
+A corollary fallacy is that of repeatable processes, when complexity is involved. We may be able to understand repeatability at a higher level, through approaches like xref:case-mgmt[case management]
+ or Checklist Manifesto's xref:submittal-schedule[submittal schedules], but process control in a formal sense is simply xref:empirical-process-control[impossible], and the quest for it is essentially xref:cargo-cult[cargo cult]
+ management.
+
+And yet quotes like the following are common in IT governance discussions:
+
+_...the questions a senior manager should ask include: "How good are my IT governance processes at effectively delivering strategic business value year after year?" and "Are my processes repeatable, predictable, and scalable, and are they truly meeting the needs of my business (outside of IT) and my customers?"_ <<Moeller2008>>, p. 6.
+
+With all due respect to the author, value that can be delivered "repeatably," "year after year" is for the most part commodity production, not innovative xref:2.04.04-lean-product-dev[product development]. Strategy is notably difficult to commoditize...
+
+Another way to view this is in terms of the xref:trad-IT-decline[decline of traditional IT]. As you review those diagrams, understand that much of IT governance has emerged from the arguably futile effort to deliver product innovation in a low-risk, "efficient" manner. This desire has led, as Ambler and Gorans note at the top of this chapter section, to the creation of layers and layers of bureaucracy and xref:secondary-artifacts[secondary artifacts].
+
+The cynical term for this is "theater," as in an act that is essential unreal, but presented for the entertainment and distraction of an audience.
+
+As we noted above, a central reality of digital transformation is that commoditized, predictable, programmable, repeatable, "efficient" activities are being quickly automated, leaving governance to focus more on effectiveness of innovation (e.g. product development) and management of supplier risk. Elaborate IT operating models specifying hundreds of  interactions and deliverables, in a futile quest for "rigor" and "predictability," are increasingly relics of another time.
+
+===== Governance and effectiveness
+
+Let's return to the first value objective: effectiveness.
+
+We define effectiveness as "top-line" benefits: new revenues and preserved revenues. New revenues may come from product innovation, as well as successful marketing and sales of existing products to new markets (which itself is a form of innovation).
+
+Traditionally, "back-office" information technology was rarely seen as something contributing to effectiveness, innovation, and top-line revenue. Instead, the first computers were used to increase efficiency, through automating clerical work. The same processes and objectives could be executed for less money, but they were still the same back-office processes.
+
+With digital transformation, product innovation and effectiveness is now a much more important driver. Yet product-centric management is still poorly addressed by traditional IT governance, with its emphasis on distinguishing projects from operations.
+
+One tool that becomes increasingly important is a portfolio view. While project management offices may use a concept of "portfolio" to describe temporary initiatives, such project portfolios rarely extend to tracking ongoing operational benefits.
+
+====== Governing the portfolio
+
+In governing for effectiveness and innovation, one technique is that of options. Related to the idea of options is parallel development.
+
+In investing terms, purchasing an option gives one the right, but not the obligation, to purchase a stock (or other value) for a given price at a given time.
+
+Options are an important tool for investors to develop strategies to compensate for market uncertainty.
+
+What does this have to do with developing digital products?
+
+Product development is so uncertain that sometimes it makes sense to try several approaches at once. This in fact was how the program to develop the first atomic bomb was successfully managed.
+
+Parallel development is analogous to an options strategy. Small, sustained investments in different development "options" can optimize development payoff in certain situations.
+
+Taken to a logical conclusion, such an options strategy starts to resemble the portfolio management approaches of venture capitalists. Venture capitalists invest in a broad variety of opportunities, knowing that most in fact will not pan out, 
+
+Has created different attitudes & expectations towards governance in West Coast "unicorn" culture. Compare/contrast.
+
+How do the VCs do it? Can this scale down into the enterprise?
+
+Additional concerns within the boundary of a firm: higher leverage points because of sharing, reducing transaction costs
 
 ===== Governance and digital efficiency
 
+Efficiency is a technical term and although often inappropriately fetishized, is always an important concern - it is changing as discussed but we can still see ways to be more efficient
+
 get stuff into a common pipeline
 stop the transaction costs
-secondary deliverables
-all this theater that is doing nothing to reduce risk
+consolidate processes - stop the proliferation
+dial down the governance
 
+what if what was once a project, now a release; what was once a release, now a change; what was once a change, now a service request; what was once a service request, now inherent self-service functionality
+
+focus on digital exhaust:
+
+source repo, build mgr, package mgr, operational monitoring, service interactions
+
+stop secondary deliverables and secondary processes
+
+example: capacity spreadsheet
 
 ====== Execution models
 
@@ -102,7 +171,6 @@ controls theater - cargo cult controls
 
 If policies become requirements, how can we remove waste processing between the policy and its implementation?
 
-
 "The business" defines the audit plan
 
 Now, the digital product org needs to define its own plan - proactively define the control objectives - <<Moeller2013>>
@@ -111,14 +179,6 @@ Yearly batch cycle, may not change anytime soon
 
 If "corporate governance" is "The system by which organizations are directed and controlled," then it is reasonable that "corporate governance of IT" is "The system by which the *current and future use of IT is directed and controlled*." This is how ISO 38500, the IT Governance standard, defines it <<ISO2008>>.
 
-====== Governing the venture portfolio
-
-as opposed to PMO?
-
-Has created different attitudes & expectations towards governance in West Coast "unicorn" culture. Compare/contrast.
-
-How do the VCs do it? Can this scale down into the enterprise?
-Additional concerns within the boundary of a firm: higher leverage points because of sharing, reducing transaction costs
 
 ====== Allocation of capital in large batches
 
@@ -130,7 +190,7 @@ entrepreneurs tell a story https://silvialisam.com/chris-sacca-s-639f0f5f3b9c#.j
 
 VC view
 
-====== Next gen risk mgmt
+===== Governance and digital risk management
 
 From an IT governance perspective, what is the role of IT risk management in the new digital world? It's not that risk management goes away. But there are significant new classes of risk that need to be better understood and managed:
 
@@ -164,16 +224,9 @@ Such failure to deliver was tolerated because it seemed to be a common problem a
 
 Now, effectiveness of delivery is essential. The interesting, and to some degree unexpected result, is that both efficiency and risk seem to be benefiting as well. Cross-functional, focused teams are both more effective and more efficient, and able to manage risk better as well. Systems are being built with both increased rapidity as well as improved stability, and the automation enabling this provides robust audit support.
 
+====== Team dynamics as risk
 
-====== Architecture and governance
-
-Technical policies - foreshadow Chapter 12
-
-Affect E, E, R (draw here or later)
-
-Reality on tech product: successful digital firms strongly govern tech portfolio, do not allow experimentation that could expand base tech footprint. See chapter 12.
-
-===== Cloud, SIAM, and governance
+====== Sourcing and SIAM
 
 Deeper look at duPreez2015 - actually, due diligence did not save them -- so secondary controls such as asset (both HAM and SAM), config... IaC has great potential... open source becomes a key risk mitigator...
 
@@ -191,6 +244,7 @@ Escrow
 We have already covered contracting in terms of software and Cloud. But in terms of the emergence model, it is typical that companies enter into contracts before having a fully mature sourcing and contract management capability with input from the governance, risk, and compliance perspective.
 
  "Dynamic certification of Cloud services: Trust, but verify!" Lins et al, computing edge (advanced)
+
 
 ===== Automating digital governance
 
@@ -210,7 +264,6 @@ http://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/downloadabledoc
 
 * Issue tracking & workflow
 * Document mgmt systems
-
 
 Embedding
 
@@ -236,13 +289,13 @@ discussion in DevOps Audit Defense Toolkit
 
 Separation of duties was always an ineffective control for the risk of backdoors ... !!
 
-Package management, CVE, market data
-
-This leads us beautifully to Chapter 11.
-
-====== Antifragility, continuous delivery, and security
 DevSecOps, RuggedDevOps, etc
 
 Simian Army
 
 principles: antifragility, defense in depth, fast feedback, automation (2-edged sword), analytics & pattern recognition - pointer back to chapter 6
+
+
+Package management, CVE, market data
+
+This leads us beautifully to Chapter 11.
