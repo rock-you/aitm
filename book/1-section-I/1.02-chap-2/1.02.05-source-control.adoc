@@ -1,3 +1,5 @@
+anchor:version-control[]
+
 ==== Version control: the Agile foundation
 [quote, Andrew Clay Shafer, in Allspaw-Web Operations:Keeping the Data On Time]
 In software development, version control is the foundation of every other Agile technical practice. Without version control, there is no build, no TDD, no continuous integration.
@@ -45,7 +47,7 @@ We care very much about when a text file changes. One wrong character can comple
 Although implementation details may differ, all version control systems have some concept of “commit.”
 As stated in Version Control with Git <<Loeliger2009>>:
 
-_In Git, a commit is used to record changes to a repository  . . . Every Git commit represents a single, atomic changeset with respect to the previous state. Regardless of the number of directories, files, lines, or bytes that change with a commit… either all changes apply or none do. In terms of the underlying object model, atomicity just makes sense: A commit snapshot represents the total set of modified files and directories…  Git doesn’t care why files are changing. That is, the content of the changes doesn’t matter. As the developer, you might move a function from here to there and expect this to be handled as one unitary move. But you could, alternatively, commit the removal and then later commit the addition. Git doesn’t care. It has nothing to do with the semantics of what is in the files._
+_In Git, a commit is used to record changes to a repository  . . . Every Git commit represents a single, *atomic* changeset with respect to the previous state. Regardless of the number of directories, files, lines, or bytes that change with a commit… either all changes apply or none do. In terms of the underlying object model, atomicity just makes sense: A commit snapshot represents the total set of modified files and directories…  Git doesn’t care why files are changing. That is, the content of the changes doesn’t matter. As the developer, you might move a function from here to there and expect this to be handled as one unitary move. But you could, alternatively, commit the removal and then later commit the addition. Git doesn’t care. It has nothing to do with the semantics of what is in the files._ [emphasis added]
 
 The concept of a version or source control https://en.wikipedia.org/wiki/Commit_(data_management)[“commit”] is a rich foundation for IT management and governance. It both represents the state of the computing system as well as providing evidence of the human activity affecting it.
 
@@ -56,6 +58,8 @@ Also, the concept of an atomic “commit” is essential to the concept of a “
 ifdef::collaborator-draft[]
   Discussion of branching & merging?
 endif::collaborator-draft[]
+
+ source control versus package management
 
 ===== Sidebar: What is metadata?
 
