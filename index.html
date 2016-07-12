@@ -618,7 +618,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_product_design">Product design</a>
 <ul class="sectlevel4">
 <li><a href="#_lean_startup">Lean Startup</a></li>
-<li><a href="#_features_vs_components">Features vs. components</a></li>
+<li><a href="#_product_discovery_techniques">Product discovery techniques</a></li>
+<li><a href="#_product_architecture">Product architecture</a></li>
 </ul>
 </li>
 <li><a href="#_introducing_scrum">Introducing Scrum</a></li>
@@ -3837,6 +3838,9 @@ touch a b c</pre>
 <div class="paragraph">
 <p>Let’s return to our iac.sh file. It’s valuable. It documents our intentions for how this configuration should look. We can reliably run it on thousands of machines and it will always give us two directories and six files. In terms of the previous section, we might choose to run it on every new server we create. We want to establish it as a known resource in our technical ecosystem. This is where version control comes in.</p>
 </div>
+<div class="paragraph">
+<p><a id="version-control"></a></p>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -3920,7 +3924,7 @@ It’s significant that the Agile Alliance indicates “version control” as on
 As stated in Version Control with Git <a href="#Loeliger2009">[Loeliger2009]</a>:</p>
 </div>
 <div class="paragraph">
-<p><em>In Git, a commit is used to record changes to a repository  . . . Every Git commit represents a single, atomic changeset with respect to the previous state. Regardless of the number of directories, files, lines, or bytes that change with a commit… either all changes apply or none do. In terms of the underlying object model, atomicity just makes sense: A commit snapshot represents the total set of modified files and directories…  Git doesn’t care why files are changing. That is, the content of the changes doesn’t matter. As the developer, you might move a function from here to there and expect this to be handled as one unitary move. But you could, alternatively, commit the removal and then later commit the addition. Git doesn’t care. It has nothing to do with the semantics of what is in the files.</em></p>
+<p><em>In Git, a commit is used to record changes to a repository  . . . Every Git commit represents a single, <strong>atomic</strong> changeset with respect to the previous state. Regardless of the number of directories, files, lines, or bytes that change with a commit… either all changes apply or none do. In terms of the underlying object model, atomicity just makes sense: A commit snapshot represents the total set of modified files and directories…  Git doesn’t care why files are changing. That is, the content of the changes doesn’t matter. As the developer, you might move a function from here to there and expect this to be handled as one unitary move. But you could, alternatively, commit the removal and then later commit the addition. Git doesn’t care. It has nothing to do with the semantics of what is in the files.</em> [emphasis added]</p>
 </div>
 <div class="paragraph">
 <p>The concept of a version or source control <a href="https://en.wikipedia.org/wiki/Commit_(data_management)">“commit”</a> is a rich foundation for IT management and governance. It both represents the state of the computing system as well as providing evidence of the human activity affecting it.</p>
@@ -3930,6 +3934,11 @@ As stated in Version Control with Git <a href="#Loeliger2009">[Loeliger2009]</a>
 </div>
 <div class="paragraph">
 <p>Also, the concept of an atomic “commit” is essential to the concept of a “branch” - the creation of an experimental version, completely separate from the main version, so that various alterations can be tried without compromising the overall system stability. Starting at the point of a “commit,” the branched version also becomes evidence of human activity around a potential future for the system. In some environments, the branch is automatically created with the assignment of a requirement or story - again, more on this to come in chapter 3. In other environments, the very concept of branching is avoided.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>source control versus package management</pre>
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -4574,6 +4583,9 @@ its behavior accordingly.</p>
 <p>Pairing, swarming, mobbing <a href="http://www.jrothman.com/mpd/project-management/2014/07/how-pairing-swarming-work-why-they-will-improve-your-products/" class="bare">http://www.jrothman.com/mpd/project-management/2014/07/how-pairing-swarming-work-why-they-will-improve-your-products/</a></p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p><a id="continuous-delivery"></a></p>
 </div>
 </div>
 </div>
@@ -5906,6 +5918,9 @@ Product success: market happy</pre>
 <div class="paragraph">
 <p>In other words, it&#8217;s all relative.</p>
 </div>
+<div class="paragraph">
+<p><a id="amazon-productization"></a></p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_productization_as_a_strategy_at_amazon">Productization as a strategy at Amazon</h5>
@@ -6015,6 +6030,9 @@ The goal of a startup is to figure out the right thing to build— the thing cus
 </li>
 </ul>
 </div>
+</div>
+<div class="sect4">
+<h5 id="_product_discovery_techniques">Product discovery techniques</h5>
 <div class="sect5">
 <h6 id="_business_model_canvas">Business model canvas</h6>
 <div class="paragraph">
@@ -6046,7 +6064,9 @@ The goal of a startup is to figure out the right thing to build— the thing cus
 </div>
 </div>
 <div class="sect4">
-<h5 id="_features_vs_components">Features vs. components</h5>
+<h5 id="_product_architecture">Product architecture</h5>
+<div class="sect5">
+<h6 id="_features_vs_components">Features vs. components</h6>
 <div class="paragraph">
 <p><a id="2.04.02-features-v-components"></a>
 As your product evolves, you may see an increasing differentiation of concerns, between features and components.</p>
@@ -6079,6 +6099,7 @@ As your product evolves, you may see an increasing differentiation of concerns, 
 <div class="paragraph">
 <p>We will be revisiting this more systematically in chapter 7.</p>
 </div>
+</div>
 <div class="sect5">
 <h6 id="_three_business_strategies">Three business strategies</h6>
 <div class="ulist">
@@ -6098,11 +6119,23 @@ As your product evolves, you may see an increasing differentiation of concerns, 
 <div class="sect5">
 <h6 id="_product_owner_as_boundary_setter">Product owner as boundary setter</h6>
 <div class="paragraph">
-<p>"Boundaries are provided by the product owner and often come in the form of constraints, such as
-* I need it by June.
-* We need to reduce the per-unit cost by half.
-* It needs to run at twice the speed.
-* It can use only half the memory of the current version."" <a href="#Cohn2010">[Cohn2010]</a>, p 126</p>
+<p>"Boundaries are provided by the product owner and often come in the form of constraints, such as</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>I need it by June.</p>
+</li>
+<li>
+<p>We need to reduce the per-unit cost by half.</p>
+</li>
+<li>
+<p>It needs to run at twice the speed.</p>
+</li>
+<li>
+<p>It can use only half the memory of the current version."" <a href="#Cohn2010">[Cohn2010]</a>, p 126</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect5">
@@ -6123,23 +6156,110 @@ As your product evolves, you may see an increasing differentiation of concerns, 
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p><a id="flower-and-cog"></a></p>
 </div>
-<div class="sect5">
-<h6 id="_parable_the_flower_and_the_cog">Parable: The flower and the cog</h6>
-<div class="literalblock">
+<div class="sidebarblock">
 <div class="content">
-<pre>[TBW]</pre>
+<div class="paragraph">
+<p><strong>Parable: The flower and the cog</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>THUNK!</strong></p>
+</div>
+<div class="paragraph">
+<p><em>Hello. Where did you come from?</em></p>
+</div>
+<div class="paragraph">
+<p><strong>I fell. From that machine.</strong></p>
+</div>
+<div class="paragraph">
+<p><em>Machine?</em></p>
+</div>
+<div class="paragraph">
+<p><strong>Yes, that big loud thing that just passed by. And is now stopped over there.</strong></p>
+</div>
+<div class="paragraph">
+<p><em>Why is it stopped?</em></p>
+</div>
+<div class="paragraph">
+<p><strong>Because I am no longer with it. The machine needs me to function. I am called a "cog." Where did you come from?</strong></p>
+</div>
+<div class="paragraph">
+<p><em>I am a flower. I grew from a seed.</em></p>
+</div>
+<div class="paragraph">
+<p><strong>You &#8230;&#8203; grew?</strong></p>
+</div>
+<div class="paragraph">
+<p><em>Yes.</em></p>
+</div>
+<div class="paragraph">
+<p><strong>You mean, no-one planned or designed you?</strong></p>
+</div>
+<div class="paragraph">
+<p><em>Not that I know of. What does it mean to be "designed" or "planned"?</em></p>
+</div>
+<div class="paragraph">
+<p><strong>I am part of a greater whole. The need for me was understood when that greater whole was conceived. I was designed to fit a very particular place.<br>
+<br>
+ They had to try making me out of different metals, and different ways to build me. This took some time and effort&#8201;&#8212;&#8201;longer than was planned, in fact. But it was always understood that there would need to be a cog in a certain place in the machine.</strong></p>
+</div>
+<div class="paragraph">
+<p><em>Interesting. So you will never be more than you are?</em></p>
+</div>
+<div class="paragraph">
+<p><strong>No. I will always be a cog. They might make a different machine, with different cogs, but they will not be me. Are you part of a machine?</strong></p>
+</div>
+<div class="paragraph">
+<p><em>No. I grew here because it suited me. I have continued to grow for a couple years. Eventually I may turn into a tree, if the conditions remain good. I can adapt to other trees, and find my way around them to the sunlight and the water I need. Or I may stay smaller, if I can&#8217;t get the sunlight I need. Or I may die.</em></p>
+</div>
+<div class="paragraph">
+<p><strong>Aren&#8217;t you part of a system that defines your purpose?</strong></p>
+</div>
+<div class="paragraph">
+<p><em>Not that I know of. Sometimes I think I am a system myself, made up of my roots, stem, leaves, and flower. There are insects living on me who rely on me for food and shelter.  And I have the freedom to grow into one of the largest trees in this area.  That is worth it to me.</em></p>
+</div>
+<div class="paragraph">
+<p><strong>Interesting. Well, it is good you are growing where you are, and not twenty feet further in that direction.</strong></p>
+</div>
+<div class="paragraph">
+<p><em>Why?</em></p>
+</div>
+<div class="paragraph">
+<p><strong>Because when they find me, or replace me and fix the machine, it will continue to clear all the land over there.</strong></p>
+</div>
+<div class="paragraph">
+<p><em>Oh.</em></p>
+</div>
+<div class="paragraph">
+<p>VOICES: "Hey Joe, here&#8217;s that gear the tractor must have thrown."</p>
+</div>
+<div class="paragraph">
+<p>"Good, grab it and I&#8217;ll see if I can&#8217;t get it back in place at least temporarily until we can figure out why it happened."</p>
+</div>
+<div class="paragraph">
+<p><strong>Bye.</strong></p>
+</div>
+<div class="paragraph">
+<p><em>Goodbye. Nice talking to you. Good luck.</em></p>
+</div>
+<div class="paragraph">
+<p><strong>Thanks. You too.</strong></p>
 </div>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>Poppendieck wastes as cited by Cobb, p177</pre>
 </div>
+<div class="paragraph">
+<p>The above parable is meant to illustrate two very different product development worlds. Some product development is constrained by the overall system it takes place within. Other product development has more freedom to grow in different directions.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>https://medium.com/@cwodtke/the-myths-of-ux-design-product-design-whatever-they-call-it-this-week-ef37a39cac6b#.7uj1khbdh - product mgmt, design, engineering - good breakdown</pre>
+<div class="paragraph">
+<p>The cog represents the world of classic systems engineering&#8201;&#8212;&#8201;a larger objective frames the effort, and the component occupies a certain defined place within it. And yet, it may still be challenging to design and build the component, which can be understood as a product in and of itself.</p>
 </div>
+<div class="paragraph">
+<p>The flower represents the market-facing digital product that may "pivot," grow and adapt according to conditions. It also is constrained, by available space and energy, but within certain boundaries has greater adaptability.</p>
+</div>
+<div class="paragraph">
+<p>Neither is better than the other, but they do require different approaches. In general, we are coming from a world that saw digital systems strictly as cogs, and moving towards a world in which digital systems are more flexible, dynamic, and adaptable.</p>
 </div>
 <div class="paragraph">
 <p><a id="2.0.4.03-scrum"></a></p>
@@ -6490,6 +6610,16 @@ http://www.paulgraham.com/swan.html[Black Swan Farming]</pre>
 <div class="content">
 <pre>Lean UX &amp; Service Design
 Managed services are not 3 truck rolls: The screwdriver truck, the wire cutters truck, the conduit truck</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Poppendieck wastes as cited by Cobb, p177</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>https://medium.com/@cwodtke/the-myths-of-ux-design-product-design-whatever-they-call-it-this-week-ef37a39cac6b#.7uj1khbdh - product mgmt, design, engineering - good breakdown</pre>
 </div>
 </div>
 </div>
@@ -8158,6 +8288,9 @@ In a digitally transformed enterprise, Operations is part of the Product.
 </div>
 <div class="paragraph">
 <p>But the platforms supporting the instantiation and teardown of those VMs are production platforms, supporting the business of new systems development.</p>
+</div>
+<div class="paragraph">
+<p><a id="monitoring"></a></p>
 </div>
 </div>
 </div>
@@ -11465,6 +11598,9 @@ What’s typically underestimated is the complexity and indivisibility of many l
 <div class="paragraph">
 <p>As noted in the discussion of <a href="#loose-coupling-project">loose coupling and project management</a>, some needs for coordination may be mitigated through the design of the product itself. If the features and components have well defined protocols for their interaction and clear contracts for matters like performance, development on each team can move forward with some autonomy.</p>
 </div>
+<div class="paragraph">
+<p><a id="google-chubby"></a></p>
+</div>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
@@ -13109,9 +13245,10 @@ making</p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p><a id="internal-venture"></a>
+====== Internal "venture" funding</p>
 </div>
-<div class="sect5">
-<h6 id="_internal_venture_funding">Internal "venture" funding</h6>
 <div class="quoteblock">
 <blockquote>
 A handful of companies are even exploring a venture-capital-style budgeting model. Initial funding is provided for minimally viable products (MVPs), which can be released quickly, refined according to customer feedback, and relaunched in the marketplace . . . And subsequent funding is based on how those MVPs perform in the market. Under this model, companies can reduce the risk that a project will fail, since MVPs are continually monitored and development tasks reprioritized . . . <a href="#Comella2016">[Comella2016]</a>
@@ -13334,12 +13471,26 @@ Coordinate cross-company interactions through “market-like” forces.
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>End of IT finance section</pre>
+<pre>2nd draft material
+ spotify DIBB framework
+ ====== Allocation of capital in large batches</pre>
 </div>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>spotify DIBB framework</pre>
+<pre>Pros and cons - sometimes, one needs to accept the fog of R&amp;D
+This never changes
+The iconic entrepreneur asking for one more round</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>entrepreneurs tell a story https://silvialisam.com/chris-sacca-s-639f0f5f3b9c#.j6sljdp0x</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>VC view</pre>
 </div>
 </div>
 </div>
@@ -16839,6 +16990,9 @@ There is too often a temptation to lump all of "management" in with governance. 
 <p>Suppose the shopkeeper tells the manager, "I will pay you a salary of $50,000 while I am gone, assuming you can show me you have faithfully executed your daily duties."</p>
 </div>
 <div class="paragraph">
+<p><a id="programmability"></a></p>
+</div>
+<div class="paragraph">
 <p>The daily duties are specified in a number of checklists, and the manager is expected to fill these out daily and weekly, and for certain tasks, provide evidence they were performed (e.g. bank deposit slips, checks written to pay bills, photos of cleaning performed, etc.). That is a behavior-driven approach to governance. The manager need not worry if business falls off; they will get their money. The owner has a higher level of uncertainty; the manager might falsify records, or engage in poor customer service so that business is driven away. A fundamental conflict of interest is present; the owner wants their business sustained, while the manager just wants to put in the minimum effort to collect the $50,000.</p>
 </div>
 <div class="paragraph">
@@ -19326,19 +19480,19 @@ Business or IT governance constructs and processes that do not support new techn
 <div class="sect4">
 <h5 id="_the_fundamental_lesson_of_digital_transformation">The fundamental lesson of digital transformation</h5>
 <div class="paragraph">
-<p>Consider the "programmability" criteria above. A highly "programmable" position is one where the responsibilities can be specified in terms of their activities. <strong>And what is the fundamental dynamic of digital transformation?</strong> It is no accident that such positions are called "programmable." In fact, they <strong>are</strong> being "programmed away" or "eaten by software"- leaving only higher-skill positions that are best managed by objective, and which are more sensitive to cultural dynamics.</p>
+<p>Consider the idea of  "<a href="#programmability">programmability</a>" mentioned at the start of this chapter. A highly "programmable" position is one where the responsibilities can be specified in terms of their activities. <strong>And what is the fundamental reality of digital transformation?</strong> It is no accident that such positions are called "programmable." In fact, they <strong>are</strong> being "programmed away" or "eaten by software"- leaving only higher-skill positions that are best managed by objective, and which are more sensitive to cultural dynamics.</p>
 </div>
 <div class="paragraph">
 <p>Preoccupation with "efficiency" fades as a result of the decreasingly "programmable" component of work. The term "efficiency" signals a process that has been well defined (is "programmable") to the point where it is repeatable and scalable. Such processes are ripe for automation, commoditization, and outsourcing, and this is in fact happening.</p>
 </div>
 <div class="paragraph">
-<p>If the repetitive process is retained within an organization, the drive for efficiency leads to automation, and eventually efficiency is expressed through concerns for capacity management and ultimately attention to the algorithmic consumption of computing resources.</p>
+<p>If the repetitive process is retained within an organization, the drive for efficiency leads to automation, and eventually efficiency is expressed through concerns for capacity management and the consumption of computing resources.</p>
 </div>
 <div class="paragraph">
 <p>And when such repetitive concerns are <strong>not</strong> retained by the organization, but instead become a matter of sourcing rather than execution, the emphasis shifts to risk management and governance of the supplier.</p>
 </div>
 <div class="paragraph">
-<p>The remaining uncertain and creative processes cannot be managed for "efficiency" and instead need to be managed for effectiveness, collaboration, culture, and so forth.</p>
+<p>The remaining uncertain and creative processes <strong>should not just be managed for "efficiency"</strong> and need to be managed for effectiveness, including fast feedback, collaboration, culture, and so forth.</p>
 </div>
 </div>
 <div class="sect4">
@@ -19420,8 +19574,7 @@ Rigor? Or rigor mortis?
 <p>Software engineers are taught early that "completely" testing software is impossible <a href="#Kaner1999">[Kaner1999]</a>; yet it seems that this simple fact (grounded in fundamentals of computer science and information theory) is not understood by many managers.</p>
 </div>
 <div class="paragraph">
-<p>A corollary fallacy is that of repeatable processes, when complexity is involved. We may be able to understand repeatability at a higher level, through approaches like <a href="#case-mgmt">case management</a>
- or Checklist Manifesto&#8217;s <a href="#submittal-schedule">submittal schedules</a>, but process control in a formal sense is simply <a href="#empirical-process-control">impossible</a>, and the quest for it is essentially <a href="#cargo-cult">cargo cult</a>
+<p>A corollary fallacy is that of repeatable processes, when complexity is involved. We may be able to understand repeatability at a higher level, through approaches like <a href="#case-mgmt">case management</a> or the Checklist Manifesto&#8217;s <a href="#submittal-schedule">submittal schedules</a>, but process control in a formal sense is simply <a href="#empirical-process-control">impossible</a>, and the quest for it is essentially <a href="#cargo-cult">cargo cult</a>
  management.</p>
 </div>
 <div class="paragraph">
@@ -19453,7 +19606,7 @@ Rigor? Or rigor mortis?
 <p>We define effectiveness as "top-line" benefits: new revenues and preserved revenues. New revenues may come from product innovation, as well as successful marketing and sales of existing products to new markets (which itself is a form of innovation).</p>
 </div>
 <div class="paragraph">
-<p>Traditionally, "back-office" information technology was rarely seen as something contributing to effectiveness, innovation, and top-line revenue. Instead, the first computers were used to increase efficiency, through automating clerical work. The same processes and objectives could be executed for less money, but they were still the same back-office processes.</p>
+<p>Traditionally, "back-office" information technology was rarely seen as something contributing to effectiveness, innovation, and top-line revenue. Instead, the first computers were used to increase <a href="#taylorism"><strong>efficiency</strong></a>, through automating clerical work. The same processes and objectives could be executed for less money, but they were still the same back-office processes.</p>
 </div>
 <div class="paragraph">
 <p>With digital transformation, product innovation and effectiveness is now a much more important driver. Yet product-centric management is still poorly addressed by traditional IT governance, with its emphasis on distinguishing projects from operations.</p>
@@ -19463,14 +19616,16 @@ Rigor? Or rigor mortis?
 </div>
 <div class="sect5">
 <h6 id="_governing_the_portfolio">Governing the portfolio</h6>
+<div class="literalblock">
+<div class="content">
+<pre>move parallel dev to Chapter 8?</pre>
+</div>
+</div>
 <div class="paragraph">
 <p>In governing for effectiveness and innovation, one technique is that of options. Related to the idea of options is parallel development.</p>
 </div>
 <div class="paragraph">
-<p>In investing terms, purchasing an option gives one the right, but not the obligation, to purchase a stock (or other value) for a given price at a given time.</p>
-</div>
-<div class="paragraph">
-<p>Options are an important tool for investors to develop strategies to compensate for market uncertainty.</p>
+<p>In investing terms, purchasing an option gives one the right, but not the obligation, to purchase a stock (or other value) for a given price at a given time. Options are an important tool for investors to develop strategies to compensate for market uncertainty.</p>
 </div>
 <div class="paragraph">
 <p>What does this have to do with developing digital products?</p>
@@ -19482,92 +19637,97 @@ Rigor? Or rigor mortis?
 <p>Parallel development is analogous to an options strategy. Small, sustained investments in different development "options" can optimize development payoff in certain situations.</p>
 </div>
 <div class="paragraph">
-<p>Taken to a logical conclusion, such an options strategy starts to resemble the portfolio management approaches of venture capitalists. Venture capitalists invest in a broad variety of opportunities, knowing that most in fact will not pan out,</p>
+<p>Taken to a logical conclusion, such an options strategy starts to resemble the portfolio management approaches of venture capitalists. Venture capitalists invest in a broad variety of opportunities, knowing that most in fact will not pan out. This was mentioned in <a href="#internal-venture">chapter 8</a>.</p>
 </div>
 <div class="paragraph">
-<p>Has created different attitudes &amp; expectations towards governance in West Coast "unicorn" culture. Compare/contrast.</p>
+<p>It is arguable that the venture-funded model has created different attitudes and expectations towards governance in West Coast "unicorn" culture. However, it would be dangerous to assume that this model is universally applicable. A firm is more than a collection of independent sub-organizations; this is an important line of thought in management theory, starting with Coase&#8217;s "The Nature of the Firm" <a href="#Coase1937">[Coase1937]</a>.</p>
 </div>
 <div class="paragraph">
-<p>How do the VCs do it? Can this scale down into the enterprise?</p>
+<p>Within the boundary of a firm, ideally collaboration between internal services is easier because of reduced transaction costs. It&#8217;s not hard to see that this would be the case for digital organizations: security, accounting, customer relationship management would all be more challenging and expensive for externally-facing services.</p>
 </div>
 <div class="paragraph">
-<p>Additional concerns within the boundary of a firm: higher leverage points because of sharing, reducing transaction costs</p>
+<p>A firm is a system. This means that a service within the boundaries of a firm will have more constraints than a service constrained only by the market. The internal service may be essential to other, larger-scoped services, and may derive its identity primarily from that context.</p>
+</div>
+<div class="paragraph">
+<p>In fact, because the need for the service is well-understood, the engineering risk associated with the service may also be reduced. It may be more of a component than a product. See the parable of the <a href="#flower-and-cog">the Flower and the Cog</a>.</p>
 </div>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_governance_and_digital_efficiency">Governance and digital efficiency</h5>
 <div class="paragraph">
-<p>Efficiency is a technical term and although often inappropriately fetishized, is always an important concern - it is changing as discussed but we can still see ways to be more efficient</p>
+<p>Efficiency is a specific and technical term, and although often inappropriately sought, is always an important concern. Even in a digitally-transforming, product-centric organization we can still see ways to be more efficient.</p>
 </div>
 <div class="paragraph">
-<p>get stuff into a common pipeline
-stop the transaction costs
-consolidate processes - stop the proliferation
-dial down the governance</p>
+<p>One way in which digital organizations can become more efficient is to consolidate development as much as possible into common pipelines. Traditionally, application teams have owned their own development and deployment pipelines, at the cost of great, non-value add variability. Even centralizing source control has been difficult.</p>
 </div>
 <div class="paragraph">
-<p>what if what was once a project, now a release; what was once a release, now a change; what was once a change, now a service request; what was once a service request, now inherent self-service functionality</p>
+<p>This is challenging for organizations with large legacy environments, but full-lifecycle pipeline automation is becoming well understood across various environments (including the mainframe).</p>
 </div>
 <div class="paragraph">
-<p>focus on digital exhaust:</p>
+<p>Another way of increasing efficiency is to standardize integration protocols across internal services, ala <a href="#amazon-productization">Amazon</a>. This reduces the need for detailed analysis of system interaction approaches every time two systems need to exchange data. This is a form of reducing transaction costs and therefore consistent with Coase&#8217;s theory of the firm <a href="#Coase1937">[Coase1937]</a>.</p>
 </div>
 <div class="paragraph">
-<p>source repo, build mgr, package mgr, operational monitoring, service interactions</p>
+<p>Processes require ongoing scrutiny. The term "organizational scar tissue" is used when specific situations result in new processes and policies, that in turn increase transactional friction and reduce efficiency throughout the organization.</p>
 </div>
 <div class="paragraph">
-<p>stop secondary deliverables and secondary processes</p>
+<p>Processes can be consolidated, especially if specific procedural detail can be removed in favor of larger-grained <a href="#case-mgmt">case management</a> concepts. As part of eventual automation and digital transformation, processes can be ranked as to how "heavyweight" they are. A typical hierarchy, from "heaviest" to "lightest," might be:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Project</p>
+</li>
+<li>
+<p>Release</p>
+</li>
+<li>
+<p>Change</p>
+</li>
+<li>
+<p>Service request</p>
+</li>
+<li>
+<p>Automated self-service</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>example: capacity spreadsheet</p>
+<p>The organization might ask itself:</p>
 </div>
-<div class="sect5">
-<h6 id="_execution_models">Execution models</h6>
+<div class="ulist">
+<ul>
+<li>
+<p>Do we need to manage this as a project? Why not just a release?</p>
+</li>
+<li>
+<p>Do we need to manage this as a release? Why not just a change?</p>
+</li>
+<li>
+<p>Do we need to manage this as a change? Why not just a service request?</p>
+</li>
+<li>
+<p>Do we need to manage this as a service request? Why is it not fully automated self-service?</p>
+</li>
+</ul>
+</div>
 <div class="paragraph">
-<p>Are governance frameworks suited to define execution models?</p>
-</div>
-<div class="paragraph">
-<p>organizational scar tissue</p>
-</div>
+<p>As we saw in our examination of the <a href="#google-chubby">Chubby locking service</a>, there may be good reason to retain some formality. The point is to keep asking the question. Do we <strong>really</strong> need a separate process? Or can the objectives be achieved as part of an existing process or other enabler?</p>
 </div>
 <div class="sect5">
 <h6 id="_governance_as_demand">Governance as demand</h6>
 <div class="paragraph">
-<p>Watt&#8217;s governor imposed a certain burden on the engine (what % of energy did it consume?)</p>
+<p>A steam engine&#8217;s governor imposes some load, some resistance, on the engine. In the same way, governance activities and objectives, unless fully executed by the directing body (e.g. the board), themselves impose demand on the organization.</p>
 </div>
 <div class="paragraph">
-<p>importance of having the demand/execution framework in place to manage governance demand
-Governance programs, projects, tasks</p>
-</div>
-<div class="paragraph">
-<p>It&#8217;s all just work</p>
-</div>
-<div class="paragraph">
-<p>distributed vs centralized model</p>
-</div>
-<div class="paragraph">
-<p>See governance as a class of NFRs for operational services
-Embed, automate, iterate</p>
-</div>
-<div class="paragraph">
-<p>Challenge separate programs, processes, systems - how can objectives be met as a part of existing?</p>
-</div>
-<div class="paragraph">
-<p>Speculation: risks &amp; controls documented as BDD, risk/control repository may still be needed&#8230;&#8203; but how are these not just ongoing requirements/stories, with particular privileges for editing?</p>
-</div>
-<div class="paragraph">
-<p>Unacceptability of out of band governance demands</p>
-</div>
-<div class="paragraph">
-<p>working to rule (backref)
-"Working to rule" - when they proliferate - demand implications</p>
-</div>
-<div class="paragraph">
-<p>controls theater - cargo cult controls</p>
+<p>This points to the importance of having a clear demand/execution framework in place to manage governance demand. The organization does not have an unlimited capacity for audit response, reporting, and the like. In order to understand the organization as a system, governance demand needs to be tracked and accounted for, and challenged for efficiency just as any other sort of demand.</p>
 </div>
 </div>
 <div class="sect5">
 <h6 id="_leveraging_the_digital_pipeline">Leveraging the digital pipeline</h6>
+<div class="paragraph">
+<p>Speculation: risks &amp; controls documented as BDD, risk/control repository may still be needed&#8230;&#8203; but how are these not just ongoing requirements/stories, with particular privileges for editing?</p>
+</div>
 <div class="paragraph">
 <p>If policies become requirements, how can we remove waste processing between the policy and its implementation?</p>
 </div>
@@ -19576,26 +19736,6 @@ Embed, automate, iterate</p>
 </div>
 <div class="paragraph">
 <p>Now, the digital product org needs to define its own plan - proactively define the control objectives - <a href="#Moeller2013">[Moeller2013]</a></p>
-</div>
-<div class="paragraph">
-<p>Yearly batch cycle, may not change anytime soon</p>
-</div>
-<div class="paragraph">
-<p>If "corporate governance" is "The system by which organizations are directed and controlled," then it is reasonable that "corporate governance of IT" is "The system by which the <strong>current and future use of IT is directed and controlled</strong>." This is how ISO 38500, the IT Governance standard, defines it <a href="#ISO2008">[ISO2008]</a>.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_allocation_of_capital_in_large_batches">Allocation of capital in large batches</h6>
-<div class="paragraph">
-<p>Pros and cons - sometimes, one needs to accept the fog of R&amp;D
-This never changes
-The iconic entrepreneur asking for one more round</p>
-</div>
-<div class="paragraph">
-<p>entrepreneurs tell a story <a href="https://silvialisam.com/chris-sacca-s-639f0f5f3b9c#.j6sljdp0x" class="bare">https://silvialisam.com/chris-sacca-s-639f0f5f3b9c#.j6sljdp0x</a></p>
-</div>
-<div class="paragraph">
-<p>VC view</p>
 </div>
 </div>
 </div>
@@ -19693,6 +19833,85 @@ Escrow</p>
 </div>
 <div class="sect4">
 <h5 id="_automating_digital_governance">Automating digital governance</h5>
+<div class="sect5">
+<h6 id="_digital_exhaust">Digital exhaust</h6>
+<div class="paragraph">
+<p>One governance principle we will suggest here is to develop a governance architecture as an inherent part of the delivery system, not as an additional set of activities. We use the concept of "digital exhaust" to reinforce this.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>What is "digital exhaust"?</strong></p>
+</div>
+<div class="paragraph">
+<p>Digital exhaust consists of the extraneous data, and information that can be gleaned from it, originating from the development and delivery of IT services.</p>
+</div>
+<div class="paragraph">
+<p>Consider an automobile&#8217;s exhaust. It does not help you get to where you are going, but it&#8217;s an inevitable aspect of having an internal combustion engine. Since you have it, you can monitor it and gain certain insights as to whether your engine is running efficiently and effectively. You might even be able to identify if you are at risk of an engine failure.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>To leverage digital exhaust, focus on the critical, always-present systems that enable digital delivery:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In chapter 2, we introduced the concept of <a href="#version-control">version control</a></p>
+</li>
+<li>
+<p>In chapter 3 we introduced the idea of a <a href="#continuous-delivery">continuous delivery pipeline</a></p>
+</li>
+<li>
+<p>In chapter 6 we introduced <a href="#monitoring">monitoring</a> as part of operations</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These systems constitute a core digital pipeline, one that can be viewed as an engine producing digital exhaust.</p>
+</div>
+<div class="paragraph">
+<p>This is in contrast to fragmented, poorly-automated pipelines, or organizations with little concept of pipeline at all. Such organizations wind up relying on <a href="#secondary-artifacts">secondary artifacts</a>
+ and manual processes to deliver digital value:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/4.10-gov-2ndary.png" alt="4.10 gov 2ndary">
+</div>
+</div>
+<div class="paragraph">
+<p>The above diagram represents fragmented delivery pipelines, with many manual processes and secondary artifacts (waterfall stage approvals, designs, plans, manual ticketing, and so forth). Much IT governance assumes this model, and also assumes that governance must often rely on aggregating and monitoring the secondary artifacts.</p>
+</div>
+<div class="paragraph">
+<p>With a rationalized continuous delivery pipeline, governance increasingly can focus on monitoring the digital exhaust:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/4.10-gov-exhaust.png" alt="4.10 gov exhaust">
+</div>
+</div>
+<div class="paragraph">
+<p>What can we monitor with digital exhaust for the purposes of governance?</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Development team progress against backlog</p>
+</li>
+<li>
+<p>Conformance to architectural standards (through inspection of source and package managers, code static analysis, and other techniques)</p>
+</li>
+<li>
+<p>Complexity and technical debt</p>
+</li>
+<li>
+<p>Performance and resource consumption of services</p>
+</li>
+<li>
+<p>Performance of standards against automated hardening activities (e.g. Simian Army)</p>
+</li>
+</ul>
+</div>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
@@ -19797,6 +20016,7 @@ discussion in DevOps Audit Defense Toolkit</p>
 </div>
 </div>
 </div>
+</div>
 <div class="sect3">
 <h4 id="_topics">Topics</h4>
 <div class="literalblock">
@@ -19877,8 +20097,15 @@ Social media</pre>
 <pre>Reality on tech product: successful digital firms strongly govern tech portfolio, do not allow experimentation that could expand base tech footprint. See chapter 12.</pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Globalizaton: Whether intentional or accidental, globalization brings business operations into foreign markets with new oversight requirements. These requirements are unique to the region and may involve controls and safeguards not necessary in other regions. <a href="#DeLuccia2008">[DeLuccia2008]</a> p 14</p>
+<div class="literalblock">
+<div class="content">
+<pre>Globalizaton: Whether intentional or accidental, globalization brings business operations into foreign markets with new oversight requirements. These requirements are unique to the region and may involve controls and safeguards not necessary in other regions. &lt;&lt;DeLuccia2008&gt;&gt; p 14</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>If "corporate governance" is "The system by which organizations are directed and controlled," then it is reasonable that "corporate governance of IT" is "The system by which the *current and future use of IT is directed and controlled*." This is how ISO 38500, the IT Governance standard, defines it &lt;&lt;ISO2008&gt;&gt;.</pre>
+</div>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -20734,6 +20961,9 @@ A foolish consistency is the hobgoblin of little minds.
 </li>
 <li>
 <p><a id="Comella2016"></a>[Comella2016]: Comella-Dorda, Santiago, Lohiya, Swati, and Gerard Speksnijder. 2016. “An Operating Model for Company-Wide Agile Development.” McKinsey &amp; Company. <a href="http://www.mckinsey.com/Business-Functions/Business-Technology/Our-Insights/An-operating-model-for-company-wide-agile-development" class="bare">http://www.mckinsey.com/Business-Functions/Business-Technology/Our-Insights/An-operating-model-for-company-wide-agile-development</a>.</p>
+</li>
+<li>
+<p><a id="Coase1937"></a>[Coase1937]: Coase, R. (1937). The nature of the firm. <em>Economica</em>, 4, 386–405.</p>
 </li>
 <li>
 <p><a id="COSO2013"></a>[COSO2013]: Committee of Sponsoring Organizations of the Treadway Commission. 2013. “Internal Control — Integrated Framework (Executive Summary).” <a href="http://www.coso.org/documents/990025P_Executive_Summary_final_may20_e.pdf" class="bare">http://www.coso.org/documents/990025P_Executive_Summary_final_may20_e.pdf</a>.</p>
