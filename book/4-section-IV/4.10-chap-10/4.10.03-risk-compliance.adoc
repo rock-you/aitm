@@ -2,18 +2,6 @@ anchor:risk-management[risk management]
 
 ==== Risk management
 
-ifdef::collaborator-draft[]
-
-****
-*Collaborative*
-
- Status: This section is in first draft as of 6 July 2016. Comments appreciated.
-
-include::../../../collab-links.adoc[]
-
-****
-
-endif::collaborator-draft[]
 
 ===== Risk management fundamentals
 
@@ -181,10 +169,37 @@ Policies and processes in their aspect as controls are often what auditors test.
 
 As with most topics in this book, risk management (in and of itself, as well as applied to IT and digital) is an extensive and complex domain, and this discussion was necessarily brief. The student is referred to the readings at the end of the chapter for further information.
 
+anchor:business-continuity[]
+
 ====== Business continuity
 
-====== The fundamental problem of IT risk
- can't test all paths
+Business continuity is an applied domain of IT risk, like security. Continuity is concerned with large scale disruptions to organizational operations, such as:
+
+* Floods
+* Earthquakes
+* Tornadoes
+* Terrorism
+* Hurricanes
+* Industrial catastrophes (e.g. large scale chemical spills)
+
+A distinction is commonly made between:
+
+* Business Continuity Planning
+* Disaster Recovery
+
+*Disaster recovery* is more tactical, including the specific actions taken during the disaster to mitigate damage and restore operations.
+
+*Continuity planning* takes a longer term view of matters such as long-term availability of replacement space and computing capacity.
+
+There are a variety of standards covering business continuity planning, including:
+
+* NIST Special Publication 800-34
+* ISO/IEC 27031:2011
+* ISO 22301
+
+In general, continuity planning starts with understanding business impact of various disaster scenarios and developing plans to counter them. Traditional guidance suggests that this be done in a centralized fashion; however, large, centralized efforts of this nature tend to struggle for funding.
+
+While automation alone cannot solve problems such as "where do we put the people if our main call center is destroyed," it can help considerably in terms of recovering from disasters. If a company has been diligent in applying xref:infracode[Infrastructure as Code] techniques, and loses its data center, it can theoretically re-establish its system configurations readily, which can otherwise be a very challenging process, especially under time constraints. (Data still needs to have been backed up to multiple locations.)
 
 ===== Compliance
 
