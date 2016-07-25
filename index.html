@@ -1006,6 +1006,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_data_information_knowledge">Data, information, knowledge</a></li>
 <li><a href="#_from_concept_to_data">From concept to data</a></li>
+<li><a href="#_data_and_process">Data and process</a></li>
 <li><a href="#_data_solutions">Data solutions</a></li>
 <li><a href="#_data_infrastructure">Data infrastructure</a></li>
 </ul>
@@ -10358,6 +10359,11 @@ Toyota Way quadrant as cited in &lt;&lt;Cohn2010&gt;&gt; p145</pre>
 <div class="literalblock">
 <div class="content">
 <pre>incentives - making across the board incentives work, Knez 2002, harvard biz review</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Etsy : designated vs dedicated - Kevin M discussion - talk @ DevOpsDays MSP 2015</pre>
 </div>
 </div>
 </div>
@@ -20728,6 +20734,32 @@ No enterprise can be effective without high quality data.
 &#8212; The Data Management Body of Knowedge
 </div>
 </div>
+<div class="paragraph">
+<p>The two quotes above span the challenge of information management. Fundamentally, it is an illusion. We store data and records that are <em>representations</em>. They are merely partial reflections of reality, ambiguous and requiring interpretation.</p>
+</div>
+<div class="paragraph">
+<p>And yet, these poor shadows of the real world are the basis for all digital business. Despite their limitations, the human race has been representing and recording information in myriad ways for thousands of years.</p>
+</div>
+<div class="paragraph">
+<p>Suppose someone hands you a piece of paper with the following:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/4.11-hashes.png" alt="4.11 hashes">
+</div>
+</div>
+<div class="paragraph">
+<p>If you are of European descent, you might perceive this as the number twelve, or a count of twelve "somethings." What "somethings"? You don&#8217;t know.</p>
+</div>
+<div class="paragraph">
+<p>Someone might tell you that this is the number of trees on your family&#8217;s farm. That makes all the difference. But wait - you know for a fact that there are many more trees than 12! You inquire further and find out it is actually the number of producing apple trees, a very different concept.</p>
+</div>
+<div class="paragraph">
+<p>But the number still isn&#8217;t right; the person who counted the trees didn&#8217;t know the proper boundaries of your farm and counted a couple of the neighbors' trees, while missing three of yours.</p>
+</div>
+<div class="paragraph">
+<p>So what does this piece of paper represent? It&#8217;s a vexing question we will come back to.</p>
+</div>
 <div class="sect4">
 <h5 id="_the_origins_of_digital_information">The origins of digital information</h5>
 <div class="quoteblock">
@@ -20741,12 +20773,14 @@ Writing provides a way of extending human memory by imprinting information into 
 <div class="paragraph">
 <p>We&#8217;ve talked of <a href="#representation">representation</a> previously, in the context of task management. Understanding representation is fundamental to understanding information.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Babylonian accounting</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Humans have been representing information since at least the creation of writing. As early as 3000 BCE, the ancient Sumerians used cuneiform to record&#8201;&#8212;&#8201;among other things&#8201;&#8212;&#8201;how much beer people got. (The more things change, the more they stay the same.)</p>
+</div>
+<div class="paragraph">
+<p>Cuneiform was created by pressing wedge-shaped sticks into wet clay. A particular impression or set of impressions corresponded to a citizen, or how much grain they grew, or &#8230;&#8203; [?]</p>
+</div>
+<div class="paragraph">
+<p>Certainly, the symbols below are not the same as the beer, or the grain, or the long-dead Sumerian. This may seem obvious, but it can be tempting to confuse the <strong>representation</strong> with the <strong>reality</strong>. (This is known as the <em>reification fallacy</em>.)</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -20755,6 +20789,9 @@ Writing provides a way of extending human memory by imprinting information into 
 </div>
 <div class="paragraph">
 <p><em>Sumerian cuneiform</em> <span class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnote_3" title="View footnote.">3</a>]</span></p>
+</div>
+<div class="paragraph">
+<p>At around the same time as the Sumerians, the Inca empire in what is now Peru [?] also started to represent information. They used a radically different approach from the Sumerians: carefully knotted ropes:</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -20776,6 +20813,9 @@ The website <a href="http://www.ancientscripts.com/">ancientscripts.com</a> has 
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>We will talk more about <strong>how</strong> information is represented. But first we need to understand <strong>why</strong>.</p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_the_measurable_value_of_information">The measurable value of information</h5>
@@ -20787,6 +20827,33 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 &#8212; Doug Hubbard<br>
 <cite>How to Measure Anything</cite>
 </div>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s go back to our tree counting problem. Why do we want to count our apple trees?</p>
+</div>
+<div class="paragraph">
+<p>count neighbors' apple trees b/c we want to buy their orchard</p>
+</div>
+<div class="paragraph">
+<p>cost of not having the information</p>
+</div>
+<div class="paragraph">
+<p>if they say, "there are between 80 and 120 trees" and ask 1000 coins&#8230;&#8203; what is information worth?</p>
+</div>
+<div class="paragraph">
+<p>each tree produces 10 coins per year</p>
+</div>
+<div class="paragraph">
+<p>so the orchard produces between 100 and 1000 gold pieces a year</p>
+</div>
+<div class="paragraph">
+<p>you get 50 coins a year just leaving the money with the banker</p>
+</div>
+<div class="paragraph">
+<p>Well, if we can raise the money, we can purchase some additional land and grow our farm. Selling the trees is one way to raise money.</p>
+</div>
+<div class="paragraph">
+<p>And&#8201;&#8212;&#8201;this is the important point&#8201;&#8212;&#8201;not only do the trees have value, but knowing how many we have also has value. If we have enough trees, we can make the investment in cutting them down</p>
 </div>
 <div class="ulist">
 <ul>
@@ -20803,6 +20870,16 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 </div>
 <div class="paragraph">
 <p>Expected value of perfect information</p>
+</div>
+<div class="paragraph">
+<p>hubbard p47</p>
+</div>
+<div class="paragraph">
+<p>What is the decision this measurement is supposed to support?
+2. What is the definition of the thing being measured in terms of observable consequences?
+3. How, exactly, does this thing matter to the decision being asked?
+4. How much do you know about it now (i.e., what is your current level of uncertainty)?
+5. What is the value of additional information?</p>
 </div>
 <div class="paragraph">
 <p>information valuation <a href="http://ht.ly/X1ej300XPZj" class="bare">http://ht.ly/X1ej300XPZj</a></p>
@@ -20842,12 +20919,49 @@ At a time when companies in many industries offer similar products and use compa
 <div class="sect4">
 <h5 id="_data_information_knowledge">Data, information, knowledge</h5>
 <div class="paragraph">
-<p>laney quote: not that useful
-* Zachman framework</p>
+<p>laney quote: not that useful</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Zachman framework</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The problem of representation</p>
+</div>
+<div class="paragraph">
+<p>Put three people in three rooms</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>one has a pencil &amp; paper</p>
+</li>
+<li>
+<p>one has a box of wooden matches</p>
+</li>
+<li>
+<p>one has two cups, one with a number of marbles in it</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Each room looks out on an arena where horses are being shown. Count the horses.</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_from_concept_to_data">From concept to data</h5>
+<div class="quoteblock">
+<blockquote>
+A message to mapmakers: Highways are not painted red, rivers don&#8217;t have county lines running down the middle, and you can&#8217;t see contour lines on a mountain.
+</blockquote>
+<div class="attribution">
+&#8212; William Kent<br>
+<cite>Data and Reality</cite>
+</div>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -20876,6 +20990,12 @@ abstraction through subject area (choosing a focal concept)</p>
 </div>
 </div>
 <div class="sect4">
+<h5 id="_data_and_process">Data and process</h5>
+<div class="paragraph">
+<p>a brief look, more later in chapter 12</p>
+</div>
+</div>
+<div class="sect4">
 <h5 id="_data_solutions">Data solutions</h5>
 <div class="quoteblock">
 <blockquote>
@@ -20885,6 +21005,15 @@ distinction between entities, attributes, and relationships is arbitrary.
 <div class="attribution">
 &#8212; Graeme Simsion<br>
 <cite>Preface to Kent's Data and Reality</cite>
+</div>
+</div>
+<div class="quoteblock">
+<blockquote>
+An information system (e.g., database) is a model of a small, finite subset of the real world&#8230;&#8203;We expect certain correspondences between constructs inside the information system and in the real world. We expect to have one record in the employee file for each person employed by the company. If an employee works in a certain department, we expect to find that department&#8217;s number in that employee&#8217;s record.
+</blockquote>
+<div class="attribution">
+&#8212; William Kent<br>
+<cite>Data and Reality</cite>
 </div>
 </div>
 <div class="paragraph">
@@ -20939,6 +21068,9 @@ distinction between entities, attributes, and relationships is arbitrary.
 </div>
 <div class="paragraph">
 <p>Master data management</p>
+</div>
+<div class="paragraph">
+<p>Slowly changing dimensions</p>
 </div>
 <div class="paragraph">
 <p>Data quality</p>
@@ -21132,6 +21264,9 @@ Federal Rules of Civil Procedure</pre>
 <p>Domain driven design</p>
 </li>
 <li>
+<p>importance of patterns and ref archs - learn data through practice and pragmatism, there is no "right" way</p>
+</li>
+<li>
 <p>inferred schemas</p>
 </li>
 <li>
@@ -21154,6 +21289,12 @@ Federal Rules of Civil Procedure</pre>
 <p>Non-invasive data governance (Seiner)</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Centralized layer teams vs microservices</p>
+</div>
+<div class="paragraph">
+<p>Microservices as a more realistic implementation mechanism, better suited to human cognition</p>
 </div>
 </div>
 <div class="sect3">
@@ -22258,7 +22399,7 @@ IEEE Press.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-02 13:44:03 CDT
+Last updated 2016-07-02 14:44:03 EDT
 </div>
 </div>
 </body>
