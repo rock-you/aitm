@@ -21710,6 +21710,102 @@ An information system (e.g., database) is a model of a small, finite subset of t
 </ul>
 </div>
 <div class="paragraph">
+<p>The following descriptions of the layers are typical:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conceptual</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Independent of computing platform - no assumption of any database. Does include simple relationships. Does not include attributes.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Logical</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Assumes a database, but not what kind. Includes more detailed relationships and attributes. Human-readable names.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Physical</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Intended for a specific database platform (e.g. Oracle or MySQL). Computer-compatible names. Can be used to generate data definition scripts.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>A simple conceptual model might look like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/4.11-conceptual.png" alt="4.11 conceptual">
+</div>
+</div>
+<div class="paragraph">
+<p>The above model might be a fragment from a sales system. It shows that their are four major "entities":</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Customer</p>
+</li>
+<li>
+<p>Invoice</p>
+</li>
+<li>
+<p>Line Item</p>
+</li>
+<li>
+<p>Product</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This might be elaborated into a logical model:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/4.11-logical.png" alt="4.11 logical">
+</div>
+</div>
+<div class="paragraph">
+<p>The logical model includes attributes (Customer First Name). The line between them has particular "adornments" representing a well known data modeling notation called "crow&#8217;s foot." In this case, the notation is stipulating that one customer may have zero to many invoices, but any invoice must have one and only one customer. Notice also that the entity and attribute names are human-readable.</p>
+</div>
+<div class="paragraph">
+<p>Then, the logical model might be transformed into physical:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/4.11-physical.png" alt="4.11 physical">
+</div>
+</div>
+<div class="paragraph">
+<p>The names are no longer human-readable in full, nor do they have spaces. Common data types such as "name" and "date" have been replaced with brief codes ("N" and "DT"). In this form, the physical data model can be (in theory) translated to data definition language that can result in the creation of the necessary database tables:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>CREATE TABLE SALES.CUST
+(CUST_ID NUMBER,
+CUST_FIRST_N VARCHAR2(32),
+CUST_LAST_N VARCHAR2(32))</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the above SQL (Structured Query Language) statement, the Customer entity has been finally represented as a series of encoded statements an Oracle database can understand, including specification of the data types needed to contain Customer Identifier (a Number type) and the customer&#8217;s first and last names (a 32-character long string field, called "VARCHAR" in Oracle).</p>
+</div>
+<div class="paragraph">
+<p>The above description is brief and "classic" - the techniques shown here date back decades, and there are many other ways the same problem might be represented, analyzed, and solved. But in all cases in data management, the following questions must be answered:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>What do we mean?</p>
+</li>
+<li>
+<p>How do we represent it?</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
 <p>BoundedContext and domain-driven design</p>
 </div>
 <div class="paragraph">
