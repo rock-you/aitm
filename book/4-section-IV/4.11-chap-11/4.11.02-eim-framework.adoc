@@ -1,6 +1,7 @@
 ==== Managing the information resource
 
 ===== The road to information management
+====== What do we mean by that?
 Information management as we will discuss in the rest of this chapter derives first from the large scale absorption of data into highly efficient, miniaturized, automated digital infrastructures with capacity orders of magnitude greater than anything previously known.
 
 But cuneiform and quipu, hash marks on paper, financial ledgers, punched cards, vacuum tubes, transistors, and hard disks represent a continuum, not a disconnected list. Whether we are looking at a scratch on a clay tablet, or the magnetic state of some atoms in a solid state drive, there is one essential question:
@@ -47,13 +48,20 @@ The physical, empirical, and syntactic layers - (hardware and lowest level softw
 
 Semantic, pragmatic, and social concerns (information and knowledge) are fundamental to this book and chapter. At digital scale - terabytes, petabytes, exabytes - establishing the meaning and social consequence of data is a massive undertaking.  Data management and records management are two practices by which such meaning is developed and managed operationally. We will start by examining data management as a practice.
 
-===== The practice of data management
+====== Data and process
+We covered process management in Chapter 9. Data is often contrasted with process: processes take data inputs and produce data outputs. The fundamental difference between the two can be seen in the core computer science concepts of algorithms (process) and data structures.
+
+Data emerges, almost unavoidably, when processes are conceived and implemented. A process such as "Hire Employee" implies that there is an employee, and also a concept of "hire" with associated date and other circumstances.
+
+a brief look, more later in chapter 12
+
+===== Data management Practices
 
 Data management is a long established practice in larger IT organizations. As a profession, it is represented by the Data Management Association (DAMA). DAMA developed and supports the Data Management Body of Knowledge (DMBOK), which is a primary influence on this chapter section.
 
-anchor:DMBOK[]
+====== The Data Management Body of Knowledge
 
-===== DMBOK
+anchor:DMBOK[]
 
 The Data Management Body of Knowledge is similar to other frameworks presented in this book (e.g. ITIL, COBIT, and PMBOK.) It includes ten major functions:
 
@@ -72,16 +80,18 @@ Attentive readers will notice some commonalities with general areas covered in t
 
 We won't go through each of the DMBOK functions in order, but we will be addressing most of them throughout this chapter.
 
-===== Data and process
-We covered process management in Chapter 9. Data is often contrasted with process: processes take data inputs and produce data outputs. The fundamental difference between the two can be seen in the core computer science concepts of algorithms (process) and data structures.
+====== The ontology problem
+[quote, Graeme Simsion, Preface to Kent's Data and Reality]
+The boundaries of an entity are arbitrary, our selection of entity types is arbitrary, the
+distinction between entities, attributes, and relationships is arbitrary.
 
-Data emerges, almost unavoidably, when processes are conceived and implemented. A process such as "Hire Employee" implies that there is an employee, and also a concept of "hire" with associated date and other circumstances.
+[quote, William Kent, Data and Reality]
+An information system (e.g., database) is a model of a small, finite subset of the real world...We expect certain correspondences between constructs inside the information system and in the real world. We expect to have one record in the employee file for each person employed by the company. If an employee works in a certain department, we expect to find that department's number in that employee's record.
+
+https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/
 
 
-
-a brief look, more later in chapter 12
-
-===== The ontology problem
+Controlled vocabularies
 
 * OPAL, BORO, etc
 
@@ -98,51 +108,17 @@ fundamential semiotics problems - universality is not possible
 abstraction through supertype
 abstraction through subject area (choosing a focal concept)
 
-
-
-===== Data solutions
-[quote, Graeme Simsion, Preface to Kent's Data and Reality]
-The boundaries of an entity are arbitrary, our selection of entity types is arbitrary, the
-distinction between entities, attributes, and relationships is arbitrary.
-
-[quote, William Kent, Data and Reality]
-An information system (e.g., database) is a model of a small, finite subset of the real world...We expect certain correspondences between constructs inside the information system and in the real world. We expect to have one record in the employee file for each person employed by the company. If an employee works in a certain department, we expect to find that department's number in that employee's record.
-
-https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/
-
-
-===== EIM processes & practices
-
 Data as a lifecycle
 
-Data and the SDLC
+====== Data and the SDLC
+data modeling overview -
 
-Controlled vocabularies
+====== Master data management
 
-Master data management & its limitations (get Kevin M to write on product?)
+& its limitations (get Kevin M to write on product?)
 
-Slowly changing dimensions
 
-Data quality
-
-===== EIM functions (classic)
-data management
-
-DMBOK goals
-
-data warehousing
-
-===== EIM artifacts & deliverables
-
-backref prev section
-
-definitions/designs
-conceptual/logical/physical schema
-Metadata
-
-How do you manage data? How do you manage anything? In part, through collecting data about it. Wait - "data about data"? There's a word for that: *metadata*. We'll take some time examining it, and its broader relationships to the digital delivery pipeline.
-
-===== EIM infrastructure
+===== Data infrastructure
 engineering & operations
 
 core DBMS
@@ -157,16 +133,6 @@ control layer
 * profiling/cleansing
 * MDM
 * records mgmt
-
-===== EIM Sourcing
-
-* market data
-* infrastructure
-
-
-Package management, CVE, market data
-
-===== Data infrastructure
 
 * Pre-SQL
 * SQL
