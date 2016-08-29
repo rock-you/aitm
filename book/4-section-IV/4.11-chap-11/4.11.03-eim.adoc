@@ -17,12 +17,29 @@ We've discussed the simple 4-tier info sensitivity model (backref). A comprehens
 * regulatory
 * records
 
-that is, data is a black box tagged with "Public" or "Top Secret" or some such
-or purely instrumental like "SOX" or "HIPAA" vs understanding the MEANING - e.g. "patient history" or "audit findings"
+that is, data is a black box tagged with "Public" or "Top Secret" or some such or purely instrumental like "SOX" or "HIPAA" vs understanding the MEANING - e.g. "patient history" or "audit findings"
 
 Data quality as a control <<DeLuccia2008>>
 
 Data leakage
+
+====== Master data management
+
+There are various ways to categorize data. Frequently, it is categorized by business process or functional area (Sales, Marketing, Support, etc). However, another important way to understand data is by its non-functional characteristics. Some data is transactional (e.g. Invoice and Invoice Line Item in the above example) and some is more persistent (Customer, Product).
+
+When data is highly persistent and used for many purposes across an enterprise, we may call it "master" or "reference" data. Classic examples of master data include:
+
+* Geographic information (cities, states, zip codes)
+* Widely used "codes" in the business (medical insurance makes extensive use of these)
+*
+
+
+
+
+the tricky boundary between configuration and customization
+
+
+====== The "System of Record"
 
 ====== Data quality
 
@@ -40,6 +57,9 @@ How do you manage data? How do you manage anything? In part, through collecting 
 unstructured analytics
 
 ===== Records vs data
+
+Data as a lifecycle
+
 https://en.wikipedia.org/wiki/Records_management <-decent
 
 ARMA

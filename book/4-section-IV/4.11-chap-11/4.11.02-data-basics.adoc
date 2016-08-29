@@ -1,6 +1,6 @@
-==== Managing the information resource
+==== Data management basics
 
-===== The road to information management
+===== The importance of context
 
 Information management as we will discuss in the rest of this chapter derives first from the large scale absorption of data into highly efficient, miniaturized, automated digital infrastructures with capacity orders of magnitude greater than anything previously known.
 
@@ -115,7 +115,7 @@ There are techniques for developing controlled vocabularies in efficient and eff
 
 All of these concepts (controlled vocabularies, glossaries, ontologies, conceptual data models) are independent of computers. But the initial development of controlled vocabulary is the first step towards automating the information with computers.
 
-====== Data architecture and software
+====== Data modeling
 [quote, William Kent, Data and Reality]
 An information system (e.g., database) is a model of a small, finite subset of the real world...We expect certain correspondences between constructs inside the information system and in the real world. We expect to have one record in the employee file for each person employed by the company. If an employee works in a certain department, we expect to find that department's number in that employee's record.
 
@@ -173,47 +173,4 @@ The above description is brief and "classic" - the techniques shown here date ba
 * What do we mean?
 * How do we represent it?
 
-
-  
-
-
-BoundedContext and domain-driven design
-
-fundamental semiotics problems - universality is not possible
-
-abstraction through supertype
-abstraction through subject area (choosing a focal concept)
-
-Data as a lifecycle
-
-https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/
-data modeling overview -
-
-====== Master data management
-
-& its limitations (get Kevin M to write on product?)
-
-the tricky boundary between configuration and customization
-
-===== Data infrastructure
-engineering & operations
-
-core DBMS
-
-ETL & messaging
-
-BI & analytics
-
-control layer
-
-* modeling
-* profiling/cleansing
-* MDM
-* records mgmt
-
-* Pre-SQL
-* SQL
-* NoSQL
-* Schema inference
-* CAP
-* Advanced analytics
+The classic model shown here has solved many business problems at large scale. But there are critical limitations. Continuing to expand one "monolithic" database does not work past a certain point, but fragmenting the data into multiple independent systems and datastores also has challenges. We will discuss these further as the chapter progresses.
