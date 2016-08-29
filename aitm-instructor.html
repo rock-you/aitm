@@ -1009,7 +1009,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_managing_the_information_resource">Managing the information resource</a>
 <ul class="sectlevel4">
 <li><a href="#_the_road_to_information_management">The road to information management</a></li>
-<li><a href="#_data_management_practices">Data management Practices</a></li>
+<li><a href="#_data_management_and_the_dmbok">Data management and the DMBOK</a></li>
+<li><a href="#_data_architecture_and_development">Data architecture and development</a></li>
 <li><a href="#_data_infrastructure">Data infrastructure</a></li>
 </ul>
 </li>
@@ -21439,8 +21440,6 @@ picture of early adding machine</pre>
 <h4 id="_managing_the_information_resource">Managing the information resource</h4>
 <div class="sect4">
 <h5 id="_the_road_to_information_management">The road to information management</h5>
-<div class="sect5">
-<h6 id="_what_do_we_mean_by_that">What do we mean by that?</h6>
 <div class="paragraph">
 <p>Information management as we will discuss in the rest of this chapter derives first from the large scale absorption of data into highly efficient, miniaturized, automated digital infrastructures with capacity orders of magnitude greater than anything previously known.</p>
 </div>
@@ -21548,21 +21547,8 @@ picture of early adding machine</pre>
 <p>Semantic, pragmatic, and social concerns (information and knowledge) are fundamental to this book and chapter. At digital scale - terabytes, petabytes, exabytes - establishing the meaning and social consequence of data is a massive undertaking.  Data management and records management are two practices by which such meaning is developed and managed operationally. We will start by examining data management as a practice.</p>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_data_and_process">Data and process</h6>
-<div class="paragraph">
-<p>We covered process management in Chapter 9. Data is often contrasted with process: processes take data inputs and produce data outputs. The fundamental difference between the two can be seen in the core computer science concepts of algorithms (process) and data structures.</p>
-</div>
-<div class="paragraph">
-<p>Data emerges, almost unavoidably, when processes are conceived and implemented. A process such as "Hire Employee" implies that there is an employee, and also a concept of "hire" with associated date and other circumstances.</p>
-</div>
-<div class="paragraph">
-<p>a brief look, more later in chapter 12</p>
-</div>
-</div>
-</div>
 <div class="sect4">
-<h5 id="_data_management_practices">Data management Practices</h5>
+<h5 id="_data_management_and_the_dmbok">Data management and the DMBOK</h5>
 <div class="paragraph">
 <p>Data management is a long established practice in larger IT organizations. As a profession, it is represented by the Data Management Association (DAMA). DAMA developed and supports the Data Management Body of Knowledge (DMBOK), which is a primary influence on this chapter section.</p>
 </div>
@@ -21615,6 +21601,21 @@ picture of early adding machine</pre>
 <p>We won&#8217;t go through each of the DMBOK functions in order, but we will be addressing most of them throughout this chapter.</p>
 </div>
 </div>
+</div>
+<div class="sect4">
+<h5 id="_data_architecture_and_development">Data architecture and development</h5>
+<div class="sect5">
+<h6 id="_data_and_process">Data and process</h6>
+<div class="paragraph">
+<p>In order to understand data, we must understand how it is being used. We covered process management in Chapter 9. Data is often contrasted with process: processes take data inputs and produce data outputs. The fundamental difference between the two can be seen in the core computer science concepts of algorithms (process) and data structures.</p>
+</div>
+<div class="paragraph">
+<p>Data emerges, almost unavoidably, when processes are conceived and implemented. A process such as "Hire Employee" implies that there is an employee, and also a concept of "hire" with associated date and other circumstances.</p>
+</div>
+<div class="paragraph">
+<p>This may seem obvious, but data structures are surprisingly challenging to develop and gain consensus on.</p>
+</div>
+</div>
 <div class="sect5">
 <h6 id="_the_ontology_problem">The ontology problem</h6>
 <div class="quoteblock">
@@ -21627,6 +21628,56 @@ distinction between entities, attributes, and relationships is arbitrary.
 <cite>Preface to Kent's Data and Reality</cite>
 </div>
 </div>
+<div class="paragraph">
+<p>Suppose you are discussing the concept of "customer" with a teammate. You seem to be having some difficulty understanding each other. (You are from Support and she is from Sales.) You begin to realize that you have two different definitions for the same word:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You believe that "customer" means someone who has bought something</p>
+</li>
+<li>
+<p>She believes that "customer" includes sales leads</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This is a classic issue in data management: when one term means two things. It can lead to serious confusion and technical difficulties, if these misunderstandings affect how systems are built and operated.</p>
+</div>
+<div class="paragraph">
+<p>Because of this, it is critical to have rational and clear discussions about "what we mean." In a startup driven by one or two visionary founders, perhaps little or no time is needed for this. The mental model of the problem domain may be powerfully understood by the founder, who controls the key architectural decisions. In this way a startup can progress far with little formalized concern for data management.</p>
+</div>
+<div class="paragraph">
+<p>But as a company scales, especially into multi-product operations, unspoken (tacit) understandings do not scale correspondingly. Team members will start to misunderstand each other, unless definitions are established. This may well be needed regardless of whether data is being held in a database.</p>
+</div>
+<div class="paragraph">
+<p>The concept of a "controlled vocabulary" is therefore key to enterprise information management.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Definition: Controlled Vocabulary</strong></p>
+</div>
+<div class="paragraph">
+<p>"A controlled vocabulary is an information tool that contains standardized words and phrases used to refer to ideas, physical characteristics, people, places, events, subject matter, and many other concepts. Controlled vocabularies allow for the categorization, indexing, and retrieval of information." <a href="#Harpring2010">[Harpring2010]</a></p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>In many areas of business, the industry defines the vocabularly. Retailers are clear on terms like "supplier," "cost," and "retail" (as in amount to be charged for the item; they do not favor the term "price" as it is ambiguous.) The medical profession defines "patient," "provider," and so forth.</p>
+</div>
+<div class="paragraph">
+<p>But in more flexible spaces, where a company may be creating its own business model, defining a controlled vocabulary may be essential. We see this even in books, which adopt glossaries. Why does a book have a glossary, when dictionaries exist? Because the book is defining a controlled vocabulary. General-purpose dictionaries may list multiple meanings for the same word, or not be very precise. The author, by developing a glossary, can make the book more consistent and accurate.</p>
+</div>
+<div class="paragraph">
+<p>There are techniques for developing controlled vocabularies in efficient and effective ways. The term "ontology engineering" is sometimes used. While specialists may debate the boundaries, another important practice is "conceptual data modeling."</p>
+</div>
+<div class="paragraph">
+<p>All of these concepts (controlled vocabularies, glossaries, ontologies, conceptual data models) are independent of computers. But the initial development of controlled vocabulary is the first step towards automating the information with computers.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_data_architecture_and_software">Data architecture and software</h6>
 <div class="quoteblock">
 <blockquote>
 An information system (e.g., database) is a model of a small, finite subset of the real world&#8230;&#8203;We expect certain correspondences between constructs inside the information system and in the real world. We expect to have one record in the employee file for each person employed by the company. If an employee works in a certain department, we expect to find that department&#8217;s number in that employee&#8217;s record.
@@ -21637,32 +21688,13 @@ An information system (e.g., database) is a model of a small, finite subset of t
 </div>
 </div>
 <div class="paragraph">
-<p><a href="https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/" class="bare">https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/</a></p>
-</div>
-<div class="paragraph">
-<p>Controlled vocabularies</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>OPAL, BORO, etc</p>
-</li>
-<li>
-<p>ontology/concept/domain</p>
-</li>
-<li>
-<p>ontologies. Problems in developing them.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>CACM 3/16 article on lightweight ontology engineering.</p>
+<p>Databases are the physical representation of information within computing systems. The data contained within them <strong>corresponds</strong> to some "real world" concept we hold.</p>
 </div>
 <div class="paragraph">
 <p>BoundedContext and domain-driven design</p>
 </div>
 <div class="paragraph">
-<p>fundamential semiotics problems - universality is not possible</p>
+<p>fundamental semiotics problems - universality is not possible</p>
 </div>
 <div class="paragraph">
 <p>abstraction through supertype
@@ -21671,17 +21703,18 @@ abstraction through subject area (choosing a focal concept)</p>
 <div class="paragraph">
 <p>Data as a lifecycle</p>
 </div>
-</div>
-<div class="sect5">
-<h6 id="_data_and_the_sdlc">Data and the SDLC</h6>
 <div class="paragraph">
-<p>data modeling overview -</p>
+<p><a href="https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/" class="bare">https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/</a>
+data modeling overview -</p>
 </div>
 </div>
 <div class="sect5">
 <h6 id="_master_data_management">Master data management</h6>
 <div class="paragraph">
 <p>&amp; its limitations (get Kevin M to write on product?)</p>
+</div>
+<div class="paragraph">
+<p>the tricky boundary between configuration and customization</p>
 </div>
 </div>
 </div>
@@ -21900,6 +21933,9 @@ Federal Rules of Civil Procedure</pre>
 <p>importance of patterns and ref archs - learn data through practice and pragmatism, there is no "right" way</p>
 </li>
 <li>
+<p>ontology mining</p>
+</li>
+<li>
 <p>inferred schemas</p>
 </li>
 <li>
@@ -21910,6 +21946,9 @@ Federal Rules of Civil Procedure</pre>
 </li>
 <li>
 <p>CAP revisited</p>
+</li>
+<li>
+<p>immutability: where does the data go?</p>
 </li>
 </ul>
 </div>
@@ -21956,12 +21995,35 @@ Federal Rules of Civil Procedure</pre>
 <p>The enterprise information model: a failed vision that will never go away.</p>
 <div class="literalblock">
 <div class="content">
+<pre>===== Business rules management</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
 <pre>===== Internet of Things</pre>
 </div>
 </div>
 <div class="literalblock">
 <div class="content">
 <pre>===== Social media</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>===== ontology engineering
+* OPAL, BORO, etc</pre>
+</div>
+</div>
+</li>
+<li>
+<p>ontology/concept/domain</p>
+</li>
+<li>
+<p>ontologies. Problems in developing them.
+ontology mining</p>
+<div class="literalblock">
+<div class="content">
+<pre>CACM 3/16 article on lightweight ontology engineering.</pre>
 </div>
 </div>
 <div class="literalblock">
@@ -22045,7 +22107,8 @@ Federal Rules of Civil Procedure</pre>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>===== Metadata and metamodels</pre>
+<pre>===== Metadata and metamodels
+ - revisit BORO</pre>
 </div>
 </div>
 </li>
@@ -22746,6 +22809,9 @@ A foolish consistency is the hobgoblin of little minds.
 </li>
 <li>
 <p><a id="Harmon2003"></a>[Harmon2003]: Harmon, Paul. 2003. Business Process Change: A Manager’s Guide to Improving, Redesigning, and Automating Processes. Amsterdam: Elsevier.</p>
+</li>
+<li>
+<p><a id="Harpring2010"></a>[Harpring2010]: Harpring, Patricia. 2010. Introduction to Controlled Vocabularies: Terminology for Art, Architecture and Other Cultural Works. Los Angeles, CA: Getty Publications. <a href="http://www.getty.edu/research/publications/electronic_publications/intro_controlled_vocab/index.html" class="bare">http://www.getty.edu/research/publications/electronic_publications/intro_controlled_vocab/index.html</a>.</p>
 </li>
 <li>
 <p><a id="Harris2013"></a>[Harris2013]: Harris, S. (2013). CISSP Exam Guide (6th ed.). New York: McGraw-Hill Education.</p>
