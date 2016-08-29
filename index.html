@@ -1004,34 +1004,26 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_managing_the_information_resource">Managing the information resource</a>
 <ul class="sectlevel4">
 <li><a href="#_the_road_to_information_management">The road to information management</a></li>
-<li><a href="#_the_practice_of_data_management">The practice of data management</a></li>
-<li><a href="#_dmbok">DMBOK</a></li>
-<li><a href="#_data_and_process">Data and process</a></li>
-<li><a href="#_the_ontology_problem">The ontology problem</a></li>
-<li><a href="#_data_solutions">Data solutions</a></li>
-<li><a href="#_eim_processes_practices">EIM processes &amp; practices</a></li>
-<li><a href="#_eim_functions_classic">EIM functions (classic)</a></li>
-<li><a href="#_eim_artifacts_deliverables">EIM artifacts &amp; deliverables</a></li>
-<li><a href="#_eim_infrastructure">EIM infrastructure</a></li>
-<li><a href="#_eim_sourcing">EIM Sourcing</a></li>
+<li><a href="#_data_management_practices">Data management Practices</a></li>
 <li><a href="#_data_infrastructure">Data infrastructure</a></li>
 </ul>
 </li>
-<li><a href="#_analytics_2">Analytics</a></li>
+<li><a href="#_analytics_2">Analytics</a>
+<ul class="sectlevel4">
+<li><a href="#_data_warehousing">Data warehousing</a></li>
+<li><a href="#_business_intelligence_analytics_and_data_science">Business intelligence, analytics, and data science</a></li>
+</ul>
+</li>
 <li><a href="#_governance_and_information_management">Governance and information management</a>
 <ul class="sectlevel4">
 <li><a href="#_information_related_risks">Information related risks</a></li>
-<li><a href="#_records_vs_data">Records vs data</a></li>
 <li><a href="#_enterprise_content_mgmt">Enterprise content mgmt</a></li>
+<li><a href="#_records_vs_data">Records vs data</a></li>
 <li><a href="#_e_discovery_cyberlaw">E-Discovery &amp; Cyberlaw</a></li>
 </ul>
 </li>
 <li><a href="#_agile_information_management">Agile information management</a></li>
-<li><a href="#_information_management_topics">Information management topics</a>
-<ul class="sectlevel4">
-<li><a href="#_eim_applied_to_digital_delivery">EIM applied to digital delivery</a></li>
-</ul>
-</li>
+<li><a href="#_information_management_topics">Information management topics</a></li>
 <li><a href="#_conclusion_11">Conclusion</a>
 <ul class="sectlevel4">
 <li><a href="#_discussion_questions_11">Discussion questions</a></li>
@@ -21173,6 +21165,8 @@ picture of early adding machine</pre>
 <h4 id="_managing_the_information_resource">Managing the information resource</h4>
 <div class="sect4">
 <h5 id="_the_road_to_information_management">The road to information management</h5>
+<div class="sect5">
+<h6 id="_what_do_we_mean_by_that">What do we mean by that?</h6>
 <div class="paragraph">
 <p>Information management as we will discuss in the rest of this chapter derives first from the large scale absorption of data into highly efficient, miniaturized, automated digital infrastructures with capacity orders of magnitude greater than anything previously known.</p>
 </div>
@@ -21280,17 +21274,29 @@ picture of early adding machine</pre>
 <p>Semantic, pragmatic, and social concerns (information and knowledge) are fundamental to this book and chapter. At digital scale - terabytes, petabytes, exabytes - establishing the meaning and social consequence of data is a massive undertaking.  Data management and records management are two practices by which such meaning is developed and managed operationally. We will start by examining data management as a practice.</p>
 </div>
 </div>
+<div class="sect5">
+<h6 id="_data_and_process">Data and process</h6>
+<div class="paragraph">
+<p>We covered process management in Chapter 9. Data is often contrasted with process: processes take data inputs and produce data outputs. The fundamental difference between the two can be seen in the core computer science concepts of algorithms (process) and data structures.</p>
+</div>
+<div class="paragraph">
+<p>Data emerges, almost unavoidably, when processes are conceived and implemented. A process such as "Hire Employee" implies that there is an employee, and also a concept of "hire" with associated date and other circumstances.</p>
+</div>
+<div class="paragraph">
+<p>a brief look, more later in chapter 12</p>
+</div>
+</div>
+</div>
 <div class="sect4">
-<h5 id="_the_practice_of_data_management">The practice of data management</h5>
+<h5 id="_data_management_practices">Data management Practices</h5>
 <div class="paragraph">
 <p>Data management is a long established practice in larger IT organizations. As a profession, it is represented by the Data Management Association (DAMA). DAMA developed and supports the Data Management Body of Knowledge (DMBOK), which is a primary influence on this chapter section.</p>
 </div>
+<div class="sect5">
+<h6 id="_the_data_management_body_of_knowledge">The Data Management Body of Knowledge</h6>
 <div class="paragraph">
 <p><a id="DMBOK"></a></p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_dmbok">DMBOK</h5>
 <div class="paragraph">
 <p>The Data Management Body of Knowledge is similar to other frameworks presented in this book (e.g. ITIL, COBIT, and PMBOK.) It includes ten major functions:</p>
 </div>
@@ -21335,20 +21341,33 @@ picture of early adding machine</pre>
 <p>We won&#8217;t go through each of the DMBOK functions in order, but we will be addressing most of them throughout this chapter.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_data_and_process">Data and process</h5>
-<div class="paragraph">
-<p>We covered process management in Chapter 9. Data is often contrasted with process: processes take data inputs and produce data outputs. The fundamental difference between the two can be seen in the core computer science concepts of algorithms (process) and data structures.</p>
+<div class="sect5">
+<h6 id="_the_ontology_problem">The ontology problem</h6>
+<div class="quoteblock">
+<blockquote>
+The boundaries of an entity are arbitrary, our selection of entity types is arbitrary, the
+distinction between entities, attributes, and relationships is arbitrary.
+</blockquote>
+<div class="attribution">
+&#8212; Graeme Simsion<br>
+<cite>Preface to Kent's Data and Reality</cite>
+</div>
+</div>
+<div class="quoteblock">
+<blockquote>
+An information system (e.g., database) is a model of a small, finite subset of the real world&#8230;&#8203;We expect certain correspondences between constructs inside the information system and in the real world. We expect to have one record in the employee file for each person employed by the company. If an employee works in a certain department, we expect to find that department&#8217;s number in that employee&#8217;s record.
+</blockquote>
+<div class="attribution">
+&#8212; William Kent<br>
+<cite>Data and Reality</cite>
+</div>
 </div>
 <div class="paragraph">
-<p>Data emerges, almost unavoidably, when processes are conceived and implemented. A process such as "Hire Employee" implies that there is an employee, and also a concept of "hire" with associated date and other circumstances.</p>
+<p><a href="https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/" class="bare">https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/</a></p>
 </div>
 <div class="paragraph">
-<p>a brief look, more later in chapter 12</p>
+<p>Controlled vocabularies</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_the_ontology_problem">The ontology problem</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -21375,81 +21394,25 @@ picture of early adding machine</pre>
 <p>abstraction through supertype
 abstraction through subject area (choosing a focal concept)</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_data_solutions">Data solutions</h5>
-<div class="quoteblock">
-<blockquote>
-The boundaries of an entity are arbitrary, our selection of entity types is arbitrary, the
-distinction between entities, attributes, and relationships is arbitrary.
-</blockquote>
-<div class="attribution">
-&#8212; Graeme Simsion<br>
-<cite>Preface to Kent's Data and Reality</cite>
-</div>
-</div>
-<div class="quoteblock">
-<blockquote>
-An information system (e.g., database) is a model of a small, finite subset of the real world&#8230;&#8203;We expect certain correspondences between constructs inside the information system and in the real world. We expect to have one record in the employee file for each person employed by the company. If an employee works in a certain department, we expect to find that department&#8217;s number in that employee&#8217;s record.
-</blockquote>
-<div class="attribution">
-&#8212; William Kent<br>
-<cite>Data and Reality</cite>
-</div>
-</div>
-<div class="paragraph">
-<p><a href="https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/" class="bare">https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/</a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_eim_processes_practices">EIM processes &amp; practices</h5>
 <div class="paragraph">
 <p>Data as a lifecycle</p>
 </div>
-<div class="paragraph">
-<p>Data and the SDLC</p>
 </div>
+<div class="sect5">
+<h6 id="_data_and_the_sdlc">Data and the SDLC</h6>
 <div class="paragraph">
-<p>Controlled vocabularies</p>
+<p>data modeling overview -</p>
 </div>
-<div class="paragraph">
-<p>Master data management &amp; its limitations (get Kevin M to write on product?)</p>
 </div>
+<div class="sect5">
+<h6 id="_master_data_management">Master data management</h6>
 <div class="paragraph">
-<p>Slowly changing dimensions</p>
+<p>&amp; its limitations (get Kevin M to write on product?)</p>
 </div>
-<div class="paragraph">
-<p>Data quality</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_eim_functions_classic">EIM functions (classic)</h5>
-<div class="paragraph">
-<p>data management</p>
-</div>
-<div class="paragraph">
-<p>DMBOK goals</p>
-</div>
-<div class="paragraph">
-<p>data warehousing</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_eim_artifacts_deliverables">EIM artifacts &amp; deliverables</h5>
-<div class="paragraph">
-<p>backref prev section</p>
-</div>
-<div class="paragraph">
-<p>definitions/designs
-conceptual/logical/physical schema
-Metadata</p>
-</div>
-<div class="paragraph">
-<p>How do you manage data? How do you manage anything? In part, through collecting data about it. Wait - "data about data"? There&#8217;s a word for that: <strong>metadata</strong>. We&#8217;ll take some time examining it, and its broader relationships to the digital delivery pipeline.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_eim_infrastructure">EIM infrastructure</h5>
+<h5 id="_data_infrastructure">Data infrastructure</h5>
 <div class="paragraph">
 <p>engineering &amp; operations</p>
 </div>
@@ -21479,29 +21442,6 @@ Metadata</p>
 <li>
 <p>records mgmt</p>
 </li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_eim_sourcing">EIM Sourcing</h5>
-<div class="ulist">
-<ul>
-<li>
-<p>market data</p>
-</li>
-<li>
-<p>infrastructure</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Package management, CVE, market data</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_data_infrastructure">Data infrastructure</h5>
-<div class="ulist">
-<ul>
 <li>
 <p>Pre-SQL</p>
 </li>
@@ -21544,6 +21484,16 @@ At a time when companies in many industries offer similar products and use compa
 <p>Data science</p>
 </li>
 </ul>
+</div>
+<div class="sect4">
+<h5 id="_data_warehousing">Data warehousing</h5>
+<div class="paragraph">
+<p>Slowly changing dimensions</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_business_intelligence_analytics_and_data_science">Business intelligence, analytics, and data science</h5>
+
 </div>
 </div>
 <div class="sect3">
@@ -21600,6 +21550,26 @@ or purely instrumental like "SOX" or "HIPAA" vs understanding the MEANING - e.g.
 <div class="paragraph">
 <p>Data leakage</p>
 </div>
+<div class="sect5">
+<h6 id="_data_quality">Data quality</h6>
+<div class="paragraph">
+<p>data warehousing</p>
+</div>
+<div class="paragraph">
+<p>definitions/designs
+conceptual/logical/physical schema
+Metadata</p>
+</div>
+<div class="paragraph">
+<p>How do you manage data? How do you manage anything? In part, through collecting data about it. Wait - "data about data"? There&#8217;s a word for that: <strong>metadata</strong>. We&#8217;ll take some time examining it, and its broader relationships to the digital delivery pipeline.</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_enterprise_content_mgmt">Enterprise content mgmt</h5>
+<div class="paragraph">
+<p>unstructured analytics</p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_records_vs_data">Records vs data</h5>
@@ -21609,10 +21579,6 @@ or purely instrumental like "SOX" or "HIPAA" vs understanding the MEANING - e.g.
 <div class="paragraph">
 <p>ARMA</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_enterprise_content_mgmt">Enterprise content mgmt</h5>
-
 </div>
 <div class="sect4">
 <h5 id="_e_discovery_cyberlaw">E-Discovery &amp; Cyberlaw</h5>
@@ -21714,15 +21680,31 @@ Federal Rules of Civil Procedure</pre>
 </li>
 <li>
 <p>The enterprise information model: a failed vision that will never go away.</p>
-</li>
-</ul>
+<div class="literalblock">
+<div class="content">
+<pre>===== Internet of Things</pre>
 </div>
-<div class="sect4">
-<h5 id="_eim_applied_to_digital_delivery">EIM applied to digital delivery</h5>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>===== Social media</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>===== EIM applied to digital delivery</pre>
+</div>
+</div>
 <div class="literalblock">
 <div class="content">
 <pre>next material is EIM applied to IT, keep but reduce scope/importance somewhat - should still be a major chapter section</pre>
 </div>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Repositories, CMDBs, IT4IT</p>
 </div>
 <div class="paragraph">
 <p>Analytics and metrics are a related topic for IT management. There are many ways that metrics can be used and misused. A clear understanding of organizational goals is essential to any metrics strategy. Analytics similarly requre an overall framework of continuous improvement so that their insights lead to real actions and value.</p>
@@ -21768,12 +21750,32 @@ Federal Rules of Civil Procedure</pre>
 <pre>Each room looks out on an arena where horses are being shown. Count the horses.</pre>
 </div>
 </div>
-</li>
-</ul>
+<div class="literalblock">
+<div class="content">
+<pre>===== EIM Sourcing (the market for data)</pre>
+</div>
 </div>
 </li>
 </ul>
 </div>
+</li>
+<li>
+<p>market data</p>
+</li>
+<li>
+<p>infrastructure</p>
+<div class="literalblock">
+<div class="content">
+<pre>Package management, CVE, market data</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>===== Metadata and metamodels</pre>
+</div>
+</div>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -22828,7 +22830,7 @@ IEEE Press.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-07-02 13:44:03 CDT
+Last updated 2016-06-04 16:55:01 CDT
 </div>
 </div>
 </body>
