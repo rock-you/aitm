@@ -22429,10 +22429,10 @@ Notice that this database would only work for regions where customers have "firs
 <div class="ulist">
 <ul>
 <li>
-<p>Reference data management</p>
+<p>Master data management and The "System of Record"</p>
 </li>
 <li>
-<p>Master data management and The "System of Record"</p>
+<p>Reference data management</p>
 </li>
 <li>
 <p>Data quality management</p>
@@ -22454,7 +22454,7 @@ Notice that this database would only work for regions where customers have "firs
 <p><span class="image"><img src="images/integrations.png" alt="integrations"></span></p>
 </div>
 <div class="paragraph">
-<p>The process of identifying such remote data and loading it into a database to enable work to be done is known as "integration" and is a complex domain. There are many ways data can be integrated, and industry views of what is "good practice" have changed over the years. Take the above diagram and multiply it by several hundred times, and you will start to get an idea of the complexity of enterprise information management at scale in the enterprise.</p>
+<p>The process of identifying such remote data and loading it into a database to enable work to be done is known as "integration" and is a complex domain. There are many ways data can be integrated, and industry views of what is "good practice" have changed over the years.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -22463,10 +22463,54 @@ Notice that this database would only work for regions where customers have "firs
 <div class="title">Note</div>
 </td>
 <td class="content">
-Thinking in terms of the emergence model, you have likely been integrating data in various ways for some time. However, in a large governed organization, you need to formalize your understandings and approach. More on this in the next chapter section.
+Thinking in terms of the emergence model, you have likely been integrating data in various ways for some time. However, in a large governed organization, you need to formalize your understandings and approach.
 </td>
 </tr>
 </table>
+</div>
+<div class="paragraph">
+<p>Take the above diagram and multiply it by several hundred times, and you will start to get an idea of the complexity of enterprise information management at scale in the enterprise. How do we decide what data needs to flow where? What happens if we acquire another company and can&#8217;t simply move them over to our systems immediately? What department should properly own a given database? These and similar questions occupy data professionals worldwide.</p>
+</div>
+<div class="paragraph">
+<p>As we see from the above picture, the same data may exist in multiple systems. Understanding what system is the "master" is critical. Product data should (in general) not flow from the sales database back into the product system. But what about sales information flowing from the sales database back to the CRM system? This might be helpful, so that people using the CRM system understand how much business a customer represents.</p>
+</div>
+<div class="paragraph">
+<p>The "system of record" concept is widely used in data management, records management, and enterprise architecture to resolve these kinds of questions. In general, the system of record represents data that is viewed as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the most complete and accurate</p>
+</li>
+<li>
+<p>authoritative, in terms of resolving questions</p>
+</li>
+<li>
+<p>suitable for legal and regulatory purposes</p>
+</li>
+<li>
+<p>the "source" for other systems to refer to</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>It is important to realize that the designation "system of record" is a ROLE that a given database (or system) plays with respect to SOME DATA. The "Sales" database above might be the system of record for invoices, but is not the system of record for products or customers:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/SORs.png" alt="SORs">
+</div>
+</div>
+<div class="paragraph">
+<p>The system of record is often the system of origin - the system where the data is first captured - but not always. In retail, sales transactions are not considered authoritative until they pass through sales audit, and so the system of record for a transaction is not the cash register (which has a database in it):</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/salesFlow.png" alt="salesFlow">
+</div>
+</div>
+<div class="paragraph">
+<p>Systems of record logically would be the first place to pull data from, but sometimes due to performance or security concerns data may be replicated into an alternate source better suited for distributing the data. A good example of this is an HR system that feeds the corporate directory; the HR system (e.g. Oracle HR, or Workday) is the actual system of record for employee names and identifiers, but most people and other systems in the company will pull the data from the directory (e.g. Microsoft Exchange.)</p>
 </div>
 </div>
 <div class="sect5">
@@ -22501,12 +22545,6 @@ Reference data is any kind of data that is used solely to categorize other data 
 </div>
 <div class="paragraph">
 <p>Reference data is among the first data to be shared between systems.</p>
-</div>
-<div class="paragraph">
-<p>(pic?)</p>
-</div>
-<div class="paragraph">
-<p>the tricky boundary between configuration and customization</p>
 </div>
 </div>
 <div class="sect5">
