@@ -18611,6 +18611,9 @@ You will likely encounter the term control as "testing enablers" is not how secu
 <div class="paragraph">
 <p>While automation alone cannot solve problems such as "where do we put the people if our main call center is destroyed," it can help considerably in terms of recovering from disasters. If a company has been diligent in applying <a href="#infracode">Infrastructure as Code</a> techniques, and loses its data center, it can theoretically re-establish its system configurations readily, which can otherwise be a very challenging process, especially under time constraints. (Data still needs to have been backed up to multiple locations.)</p>
 </div>
+<div class="paragraph">
+<p><a id="compliance"></a></p>
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -21729,7 +21732,63 @@ Reference data is any kind of data that is used solely to categorize other data 
 </div>
 <div class="sect5">
 <h6 id="_data_quality">Data quality</h6>
-
+<div class="quoteblock">
+<blockquote>
+Human beings cannot make effective business decisions with flawed, incomplete, or misleading data.
+</blockquote>
+<div class="attribution">
+&#8212; Danette McGilvary<br>
+<cite>Executing Data Quality Projects</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>We touched on quality management and <a href="#continuous-improvement">continuous improvement</a> in Chapter 9. Data is an important subject for continuous improvement approaches. Sometimes, the best way to improve a process is to examine the data it is consuming and producing, and an entire field of data quality management has arisen (a number of books are referenced at the end of this chapter).</p>
+</div>
+<div class="paragraph">
+<p>Poor data quality costs the enterprise in many ways.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Customer dissatisfaction ("they lost my order/reservation")</p>
+</li>
+<li>
+<p>Increased support costs (30 minutes support operator time spent solving the problem)</p>
+</li>
+<li>
+<p>Governance issues and regulatory risk (<a href="#audit">auditors</a> and regulators often check data quality as evidence of <a href="#compliance">compliance</a>
+to <a href="#controls">controls</a> and regulations)</p>
+</li>
+<li>
+<p>Operational and supply chain issues</p>
+</li>
+<li>
+<p>Poor business outcomes</p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Sidebar: The power of bad data</strong></p>
+</div>
+<div class="paragraph">
+<p>In 2015, Minneapolis-based Target Corporation lost $7 billion when its attempt to expand into Canada failed. One primary reason for the loss was a failure of data quality in the supply chain system. As reported by <em>Canadian Business</em>:</p>
+</div>
+<div class="paragraph">
+<p>“It didn’t take long for Target to figure out the underlying cause of the breakdown: The data contained within the company’s supply chain software, which governs the movement of inventory, was riddled with flaws.</p>
+</div>
+<div class="paragraph">
+<p>"Product dimensions would be in inches, not centimeters or entered in the wrong order: width by height by length, instead of, say, length by width by height. Sometimes the wrong currency was used. Item descriptions were vague. Important information was missing. There were myriad typos. “You name it, it was wrong,” says a former employee. “It was a disaster.”</p>
+</div>
+<div class="paragraph">
+<p>The consequences were serious. “…products weren’t fitting into shipping containers as expected, or tariff codes were missing or incomplete. Merchandise that made it to a distribution center couldn’t be processed for shipping to a store. Other items weren’t able to fit properly onto store shelves. What appeared to be isolated fires quickly became a raging inferno threatening to destroy the company’s supply chain.”</p>
+</div>
+<div class="paragraph">
+<p>Ultimately, lack of inventory (empty shelves in the store) was a major cause of the expansion’s failure. <a href="#Castaldo2016">[Castaldo2016]</a></p>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -22726,6 +22785,9 @@ A foolish consistency is the hobgoblin of little minds.
 </li>
 <li>
 <p><a id="Carroll2013"></a>[Carroll2013]: Carroll, I. (2013), "Various", <a href="http://itopskanban.wordpress.com/before/" class="bare">http://itopskanban.wordpress.com/before/</a></p>
+</li>
+<li>
+<p><a id="Castaldo2016"></a>[Castaldo2016]: Castaldo, Joe. 2016. “The Last Days of Target: The Untold Tale of Target Canada’s Difficult Birth, Tough Life and Brutal Death.” Canadian Business. <a href="http://www.canadianbusiness.com/the-last-days-of-target-canada/" class="bare">http://www.canadianbusiness.com/the-last-days-of-target-canada/</a>. Accessed 2016-08-30.</p>
 </li>
 <li>
 <p><a id="Chacon2009"></a>[Chacon2009]: Chacon, S. &amp; Straub, B. (2009). Pro Git. Berkeley, CA. New York, Apress.</p>
