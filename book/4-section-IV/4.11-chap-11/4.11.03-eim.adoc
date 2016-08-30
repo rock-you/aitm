@@ -17,6 +17,8 @@ The previous chapter section gave us the basics of data storage. We turn to some
 * Reference data management
 * Data quality management
 
+anchor:system-of-record[]
+
 ====== Data integration and the "System of Record"
 
 In the last section, we analyzed a business problem as a data model and created a simple database. Notice that if data is NOT in a table in the database, the database doesn't know about it. Therefore, if there is data held in other parts of the company, it must be loaded into the database before it can be combined with that database's other data. This can also apply to data held by Cloud providers.
@@ -108,13 +110,44 @@ Data quality indicators may be automated (e.g. reports that identify exceptions)
 
 It is important to track trending over time, so that the organization understands if progress is being made.
 
-===== Enterprise content & records mgmt
-Not all 
+===== Enterprise records mgmt
+Not all enterprise information is stored in structured databases; in fact, most isn't. (We will leave aside the issues of rich content such as audio, images, and video.)
 
+Content management is a rich domain in and of itself, which shades into the general topic of knowledge management (to be covered in the Topics section). Here, we will focus on records management.
 
-https://en.wikipedia.org/wiki/Records_management <-decent
+As discussed above, businesses gained efficiency through converting paper records to digital forms. But we still see paper records to this day: loan applications, doctor's forms, and more. If you have a car, you likely have an official paper title to it issued by a governmental authority.
 
-ARMA
+Above, we defined the concept of a xref:system-of-record[System of Record]
+ as an authoritative source. Think about the various kinds of data that might be needed in the case of disputes or legal matters:
+
+ * Employee records
+ * Sales records (purchase orders and invoices)
+ * Contracts and other agreements
+ * Key correspondence with customers (e.g. emails directing a stock broker to "buy")
+
+These can be take the form of:
+
+* paper documents in a file cabinet
+* documents scanned into a document management system
+* records in a database
+
+In all cases, if they are "official" - if they represent the organization's best and most true understanding of important facts - they can be called "records."
+
+This use of the word "records" is distinct from the idea of a "record" in a database. Official records are of particular interest to the company's legal staff, regulators, and auditors. Records management is a professional practice, represented by the Association of Records Management Administrators (www.arma.org).
+
+Records management will remain important in digitally transforming enterprises, as lawyers, regulators, and auditors are not going away. One of the critical operational aspects of records management is the concept of the *retention schedule.*
+
+It is not in a corporation's interest to maintain all data related to all things in perpetuity. Obviously, there is a cost to doing this. However, as storage costs continue to decrease, other reasons become more important. For example, data maintained by the company can be used against it in a lawsuit. For this reason, companies establish records management policies such as:
+
+* Human Resources data is to be deleted 7 years after the employee leaves the company
+* Point of Sale data is to be deleted 3 years after the transaction
+* Real estate records are to be deleted 10 years after the property is sold or otherwise disposed of
+
+This is not necessarily encouraging illegal behavior. Lawsuits can be frivolous, and can "go fishing" through a company's data if a court orders it. A strict retention schedule, that can be shown to be adhered to, can be an important protection in the legal domain.
+
+IMPORTANT: If you or your company are involved in legal issues relating to the above, seek a lawyer. This discussion is not intended as legal advice.
+
+Records management drives us to consider questions such as "who owns that data" and "who takes care of it." This leads us to the concept of data governance. 
 
 ===== Data Governance
 
