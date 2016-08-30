@@ -21562,13 +21562,38 @@ CUST_LAST_N VARCHAR2(32))</pre>
 </div>
 <div class="sect4">
 <h5 id="_advanced_data_management">Advanced data management</h5>
+<div class="paragraph">
+<p>The previous chapter section gave us the basics of data storage. We turn to some of the emergent practices seen as enterprise information management scales up:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reference and master data management</p>
+</li>
+<li>
+<p>The "System of Record"</p>
+</li>
+<li>
+<p>Data quality management</p>
+</li>
+</ul>
+</div>
 <div class="sect5">
-<h6 id="_master_data_management">Master data management</h6>
+<h6 id="_reference_and_master_data_management">Reference and master data management</h6>
+<div class="quoteblock">
+<blockquote>
+Reference data is any kind of data that is used solely to categorize other data found in a database, or solely for relating data in a database to information beyond the boundaries of the enterprise.
+</blockquote>
+<div class="attribution">
+&#8212; Malcolm Chisholm<br>
+<cite>Managing Reference Data</cite>
+</div>
+</div>
 <div class="paragraph">
 <p>There are various ways to categorize data. Frequently, it is categorized by business process or functional area (Sales, Marketing, Support, etc). However, another important way to understand data is by its non-functional characteristics. Some data is transactional (e.g. Invoice and Invoice Line Item in the above example) and some is more persistent (Customer, Product).</p>
 </div>
 <div class="paragraph">
-<p>When data is highly persistent and used for many purposes across an enterprise, we may call it "master" or "reference" data. Classic examples of master data include:</p>
+<p>When data is highly persistent and used for many purposes across an enterprise, we may call it  "reference" data. Classic examples of master data include:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -21576,10 +21601,18 @@ CUST_LAST_N VARCHAR2(32))</pre>
 <p>Geographic information (cities, states, zip codes)</p>
 </li>
 <li>
-<p>Widely used "codes" in the business (medical insurance makes extensive use of these)
-*</p>
+<p>Widely used "codes" in the business (medical insurance makes extensive use of these)</p>
+</li>
+<li>
+<p>An organization&#8217;s chart of accounts</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Reference data is not all of master data however. Master data is a much broader topic.</p>
+</div>
+<div class="paragraph">
+<p>(pic?)</p>
 </div>
 <div class="paragraph">
 <p>the tricky boundary between configuration and customization</p>
@@ -22584,6 +22617,9 @@ A foolish consistency is the hobgoblin of little minds.
 </li>
 <li>
 <p><a id="Chacon2009"></a>[Chacon2009]: Chacon, S. &amp; Straub, B. (2009). Pro Git. Berkeley, CA. New York, Apress.</p>
+</li>
+<li>
+<p><a id="Chisholm2001"></a>[Chisholm2001]: Chisholm, M. (2001). Managing Reference Data in Enterprise Databases: Binding Corporate Data to the Wider World. San Diego: Academic Press.</p>
 </li>
 <li>
 <p><a id="Cobb2015"></a>[Cobb2015]: Cobb, C.G., (2015), <em>The Project MANAGER&#8217;S GUIDE TO MASTERING AGILE: Principles and Practices for an Adaptive Approach</em>, Hoboken, New Jersey: John Wiley &amp; Sons.</p>
