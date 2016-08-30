@@ -22336,7 +22336,13 @@ An information system (e.g., database) is a model of a small, finite subset of t
 </div>
 </div>
 <div class="paragraph">
-<p>The names are no longer human-readable in full, nor do they have spaces. Common data types such as "name" and "date" have been replaced with brief codes ("N" and "DT"). In this form, the physical data model can be (in theory) translated to data definition language that can result in the creation of the necessary database tables:</p>
+<p>The names are no longer human-readable in full, nor do they have spaces. Common data types such as "name" and "date" have been replaced with brief codes ("N" and "DT"). In this form, the physical data model can be (in theory) translated to data definition language that can result in the creation of the necessary database tables.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_database_administration">Database administration</h6>
+<div class="paragraph">
+<p>Continuing from above: the data modeling work might have been performed by  a data architect or analyst, or a developer. Perhaps a pictorial representation is not even created (formal data modeling as above is less likely in a startup). But at some point (assuming a relational database) the following statement will be developed:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -22348,6 +22354,36 @@ CUST_LAST_N VARCHAR2(32))</pre>
 </div>
 <div class="paragraph">
 <p>In the above SQL (Structured Query Language) statement, the Customer entity has been finally represented as a series of encoded statements an Oracle database can understand, including specification of the data types needed to contain Customer Identifier (a Number type) and the customer&#8217;s first and last names (a 32-character long string field, called "VARCHAR" in Oracle).</p>
+</div>
+<div class="paragraph">
+<p>Once the database structure is created, it can (within limits) hold any number of customers, in terms of knowing their first and last names and an ID number, which might or might not be assigned automatically by the system.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+Notice that this database would only work for regions where customers have "first" and "last" names. This may not be true in all areas of the world.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The Oracle software is installed on some node or machine, and receives the statement. The database adds the table suggested:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/1stTable.png" alt="1stTable"></span></p>
+</div>
+<div class="paragraph">
+<p>Further tables can easily be added in the same manner:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/multiTbl.png" alt="multiTbl"></span></p>
+</div>
+<div class="paragraph">
+<p>What is a database in this sense? The important point is that it is a common query space - you can ask for data from either the CUST or INVOICE table, or ask the database to "join" them so you can see data from both. (This is how, for example, we would report on sales by customer.)</p>
 </div>
 <div class="paragraph">
 <p>The above description is brief and "classic" - the techniques shown here date back decades, and there are many other ways the same problem might be represented, analyzed, and solved. But in all cases in data management, the following questions must be answered:</p>
@@ -22393,10 +22429,10 @@ CUST_LAST_N VARCHAR2(32))</pre>
 <div class="ulist">
 <ul>
 <li>
-<p>Reference and master data management</p>
+<p>Reference data management</p>
 </li>
 <li>
-<p>The "System of Record"</p>
+<p>Master data management and The "System of Record"</p>
 </li>
 <li>
 <p>Data quality management</p>
@@ -22404,7 +22440,37 @@ CUST_LAST_N VARCHAR2(32))</pre>
 </ul>
 </div>
 <div class="sect5">
-<h6 id="_reference_and_master_data_management">Reference and master data management</h6>
+<h6 id="_data_integration_and_the_system_of_record">Data integration and the "System of Record"</h6>
+<div class="paragraph">
+<p>In the last section, we analyzed a business problem as a data model and created a simple database. Notice that if data is NOT in a table in the database, the database doesn&#8217;t know about it. Therefore, if there is data held in other parts of the company, it must be loaded into the database before it can be combined with that database&#8217;s other data. This can also apply to data held by Cloud providers.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s go back to our <a href="#0.01-emergence">emergence model</a>. Think about moving from one database, to two.</p>
+</div>
+<div class="paragraph">
+<p>In the example below, the Customer Relationship Management (CRM) system is in the cloud, and data is also being imported from the product database:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/integrations.png" alt="integrations"></span></p>
+</div>
+<div class="paragraph">
+<p>The process of identifying such remote data and loading it into a database to enable work to be done is known as "integration" and is a complex domain. There are many ways data can be integrated, and industry views of what is "good practice" have changed over the years. Take the above diagram and multiply it by several hundred times, and you will start to get an idea of the complexity of enterprise information management at scale in the enterprise.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Thinking in terms of the emergence model, you have likely been integrating data in various ways for some time. However, in a large governed organization, you need to formalize your understandings and approach. More on this in the next chapter section.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_reference_data_management">Reference data management</h6>
 <div class="quoteblock">
 <blockquote>
 Reference data is any kind of data that is used solely to categorize other data found in a database, or solely for relating data in a database to information beyond the boundaries of the enterprise.
@@ -22418,7 +22484,7 @@ Reference data is any kind of data that is used solely to categorize other data 
 <p>There are various ways to categorize data. Frequently, it is categorized by business process or functional area (Sales, Marketing, Support, etc). However, another important way to understand data is by its non-functional characteristics. Some data is transactional (e.g. Invoice and Invoice Line Item in the above example) and some is more persistent (Customer, Product).</p>
 </div>
 <div class="paragraph">
-<p>When data is highly persistent and used for many purposes across an enterprise, we may call it  "reference" data. Classic examples of master data include:</p>
+<p>When data is highly persistent and used for primarily for categorizing across an enterprise, we may call it  "reference" data. Classic examples of reference data include:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -22434,19 +22500,13 @@ Reference data is any kind of data that is used solely to categorize other data 
 </ul>
 </div>
 <div class="paragraph">
-<p>Reference data is not all of master data however. Master data is a much broader topic.</p>
+<p>Reference data is among the first data to be shared between systems.</p>
 </div>
 <div class="paragraph">
 <p>(pic?)</p>
 </div>
 <div class="paragraph">
 <p>the tricky boundary between configuration and customization</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_the_system_of_record">The "System of Record"</h6>
-<div class="paragraph">
-<p>Defining ownership / stewardship - roles</p>
 </div>
 </div>
 <div class="sect5">
@@ -22507,6 +22567,9 @@ Metadata</p>
 </div>
 <div class="paragraph">
 <p>ways of abstracting</p>
+</div>
+<div class="paragraph">
+<p>Defining ownership / stewardship - roles</p>
 </div>
 </div>
 <div class="sect5">
@@ -22865,6 +22928,9 @@ ontology mining</p>
 <div class="paragraph">
 <p><strong>Books</strong>
 Data Management Body of Knowledge</p>
+</div>
+<div class="paragraph">
+<p>Hohpe</p>
 </div>
 <div class="paragraph">
 <p><strong>Articles</strong></p>
