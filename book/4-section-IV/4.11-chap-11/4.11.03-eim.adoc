@@ -13,8 +13,8 @@ And as these unique systems scale up, a variety of concerns emerge, requiring sp
 ===== Advanced data management
 The previous chapter section gave us the basics of data storage. We turn to some of the emergent practices seen as enterprise information management scales up:
 
-* Reference data management
 * Master data management and The "System of Record"
+* Reference data management
 * Data quality management
 
 ====== Data integration and the "System of Record"
@@ -27,9 +27,32 @@ In the example below, the Customer Relationship Management (CRM) system is in th
 
 image:images/integrations.png[]
 
-The process of identifying such remote data and loading it into a database to enable work to be done is known as "integration" and is a complex domain. There are many ways data can be integrated, and industry views of what is "good practice" have changed over the years. Take the above diagram and multiply it by several hundred times, and you will start to get an idea of the complexity of enterprise information management at scale in the enterprise.
+The process of identifying such remote data and loading it into a database to enable work to be done is known as "integration" and is a complex domain. There are many ways data can be integrated, and industry views of what is "good practice" have changed over the years.
 
-NOTE: Thinking in terms of the emergence model, you have likely been integrating data in various ways for some time. However, in a large governed organization, you need to formalize your understandings and approach. More on this in the next chapter section.
+NOTE: Thinking in terms of the emergence model, you have likely been integrating data in various ways for some time. However, in a large governed organization, you need to formalize your understandings and approach.
+
+Take the above diagram and multiply it by several hundred times, and you will start to get an idea of the complexity of enterprise information management at scale in the enterprise. How do we decide what data needs to flow where? What happens if we acquire another company and can't simply move them over to our systems immediately? What department should properly own a given database? These and similar questions occupy data professionals worldwide.
+
+As we see from the above picture, the same data may exist in multiple systems. Understanding what system is the "master" is critical. Product data should (in general) not flow from the sales database back into the product system. But what about sales information flowing from the sales database back to the CRM system? This might be helpful, so that people using the CRM system understand how much business a customer represents.
+
+The "system of record" concept is widely used in data management, records management, and enterprise architecture to resolve these kinds of questions. In general, the system of record represents data that is viewed as:
+
+* the most complete and accurate
+* authoritative, in terms of resolving questions
+* suitable for legal and regulatory purposes
+* the "source" for other systems to refer to
+
+It is important to realize that the designation "system of record" is a ROLE that a given database (or system) plays with respect to SOME DATA. The "Sales" database above might be the system of record for invoices, but is not the system of record for products or customers:
+
+image::images/SORs.png[]
+
+The system of record is often the system of origin - the system where the data is first captured - but not always. In retail, sales transactions are not considered authoritative until they pass through sales audit, and so the system of record for a transaction is not the cash register (which has a database in it):
+
+image::images/salesFlow.png[]
+
+Systems of record logically would be the first place to pull data from, but sometimes due to performance or security concerns data may be replicated into an alternate source better suited for distributing the data. A good example of this is an HR system that feeds the corporate directory; the HR system (e.g. Oracle HR, or Workday) is the actual system of record for employee names and identifiers, but most people and other systems in the company will pull the data from the directory (e.g. Microsoft Exchange.)
+
+
 
 ====== Reference data management
 [quote, Malcolm Chisholm, Managing Reference Data]
@@ -43,14 +66,7 @@ When data is highly persistent and used for primarily for categorizing across an
 * Widely used "codes" in the business (medical insurance makes extensive use of these)
 * An organization's chart of accounts
 
-
-
 Reference data is among the first data to be shared between systems.
-
-(pic?)
-
-the tricky boundary between configuration and customization
-
 
 ====== Data quality
 
