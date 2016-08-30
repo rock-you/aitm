@@ -13,31 +13,43 @@ And as these unique systems scale up, a variety of concerns emerge, requiring sp
 ===== Advanced data management
 The previous chapter section gave us the basics of data storage. We turn to some of the emergent practices seen as enterprise information management scales up:
 
-* Reference and master data management
-* The "System of Record"
+* Reference data management
+* Master data management and The "System of Record"
 * Data quality management
 
-====== Reference and master data management
+====== Data integration and the "System of Record"
+
+In the last section, we analyzed a business problem as a data model and created a simple database. Notice that if data is NOT in a table in the database, the database doesn't know about it. Therefore, if there is data held in other parts of the company, it must be loaded into the database before it can be combined with that database's other data. This can also apply to data held by Cloud providers.
+
+Let's go back to our xref:0.01-emergence[emergence model]. Think about moving from one database, to two.
+
+In the example below, the Customer Relationship Management (CRM) system is in the cloud, and data is also being imported from the product database:
+
+image:images/integrations.png[]
+
+The process of identifying such remote data and loading it into a database to enable work to be done is known as "integration" and is a complex domain. There are many ways data can be integrated, and industry views of what is "good practice" have changed over the years. Take the above diagram and multiply it by several hundred times, and you will start to get an idea of the complexity of enterprise information management at scale in the enterprise.
+
+NOTE: Thinking in terms of the emergence model, you have likely been integrating data in various ways for some time. However, in a large governed organization, you need to formalize your understandings and approach. More on this in the next chapter section.
+
+====== Reference data management
 [quote, Malcolm Chisholm, Managing Reference Data]
 Reference data is any kind of data that is used solely to categorize other data found in a database, or solely for relating data in a database to information beyond the boundaries of the enterprise.
 
 There are various ways to categorize data. Frequently, it is categorized by business process or functional area (Sales, Marketing, Support, etc). However, another important way to understand data is by its non-functional characteristics. Some data is transactional (e.g. Invoice and Invoice Line Item in the above example) and some is more persistent (Customer, Product).
 
-When data is highly persistent and used for many purposes across an enterprise, we may call it  "reference" data. Classic examples of master data include:
+When data is highly persistent and used for primarily for categorizing across an enterprise, we may call it  "reference" data. Classic examples of reference data include:
 
 * Geographic information (cities, states, zip codes)
 * Widely used "codes" in the business (medical insurance makes extensive use of these)
 * An organization's chart of accounts
 
-Reference data is not all of master data however. Master data is a much broader topic.
+
+
+Reference data is among the first data to be shared between systems.
 
 (pic?)
 
 the tricky boundary between configuration and customization
-
-====== The "System of Record"
-
-Defining ownership / stewardship - roles
 
 
 ====== Data quality
@@ -74,6 +86,9 @@ Data quality as a control <<DeLuccia2008>>
 Data leakage
 
 ways of abstracting
+
+Defining ownership / stewardship - roles
+
 
 ====== Information security & privacy
 
