@@ -173,20 +173,27 @@ By applying these principles we can keep the topic of "data governance" to a rea
 
 The biggest risk with information is unauthorized access, discussed previously as a xref:security[security] concern. Actual destruction, while possible, is less of a concern given the nature of information (it can be copied and is intangible). Other risks include regulatory and civil penalties for mis-handling, and operational risks (e.g. from bad xref:data-quality[data quality].)
 
+There are a wide variety of specific xref:security-taxonomy[threats] to data, leading to risk, for example:
+
+* Data theft (e.g. by targeted exploit)
+* Data leakage (i.e. unauthorized disclosure by insiders)
+* Data loss (e.g. by disaster & backup failure)
+
+The standard risk and security approaches suggested in Chapter 10 are appropriate to all of these. There are particular technical solutions such as data leakage analysis that may figure into a controls strategy.  
+
 A valuable contribution of information management is a better understanding of the risks represented by data. We've discussed simple info sensitivity xref:4-level-info-classification[models] (for example Public, Internal, Confidential, Restricted). However, a comprehensive information classification model must accommodate:
 
 * basic sensitivity (e.g. Confidential)
 * regulatory aspects (e.g. SOX or HIPAA)
 * records management (e.g. "Human Resources," "Broker/Client Communications," "Patient History")
 
+Beyond sensitivity, the regulatory aspects drive both regulatory and legal risks. For example, transmitting human resources data related to German citizens off of German soil is illegal, by German law. But if German HR data is not clearly understood for what it is, it may be transmitted illegally.
 
+Other countries have different regulations, but privacy is a key theme through many of them. The U.S. HIPAA regulations are stringent in the area of U.S. medical data.
 
-Data quality as a control <<DeLuccia2008>>
+To thoroughly manage for such risks, data stores should be tagged with the applicable regulations and the records type.
 
-Data leakage
-
-
-Defining ownership / stewardship - roles
+Bad data quality also presents risks as mentioned above. In fact, <<DeLuccia2008>> sees data quality as a kind of xref:controls[control] (in the sense of risk mitigation).
 
 
 ====== Information security & privacy
@@ -195,6 +202,7 @@ Defining ownership / stewardship - roles
 
 
 ====== Data and policy
+Defining ownership / stewardship - roles
 
 
 ====== E-Discovery & Cyberlaw
