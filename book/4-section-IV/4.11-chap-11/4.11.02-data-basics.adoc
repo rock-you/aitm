@@ -142,7 +142,7 @@ A simple conceptual model might look like this:
 
 image::images/4.11-conceptual.png[]
 
-The above model might be a fragment from a sales system. It shows that their are four major "entities":
+The above model might be a fragment from a sales system. It shows that their are four major _entities_:
 
 * Customer
 * Invoice
@@ -153,7 +153,7 @@ This might be elaborated into a logical model:
 
 image::images/4.11-logical.png[]
 
-The logical model includes attributes (Customer First Name). The line between them has particular "adornments" representing a well known data modeling notation called "crow's foot." In this case, the notation is stipulating that one customer may have zero to many invoices, but any invoice must have one and only one customer. Notice also that the entity and attribute names are human-readable.
+The logical model includes _attributes_ (Customer First Name). The line between them has particular "adornments" representing a well known data modeling notation called "crow's foot." In this case, the notation is stipulating that one customer may have zero to many invoices, but any invoice must have one and only one customer. Notice also that the entity and attribute names are human-readable.
 
 Then, the logical model might be transformed into physical:
 
@@ -171,9 +171,9 @@ Continuing from above: the data modeling work might have been performed by  a da
 
 In the above SQL (Structured Query Language) statement, the Customer entity has been finally represented as a series of encoded statements an Oracle database can understand, including specification of the data types needed to contain Customer Identifier (a Number type) and the customer's first and last names (a 32-character long string field, called "VARCHAR" in Oracle).
 
-Once the database structure is created, it can (within limits) hold any number of customers, in terms of knowing their first and last names and an ID number, which might or might not be assigned automatically by the system.
+If a database administrator (DBA) issues that statement to the Oracle database, the table will be created. Once the structure is created, it can (within limits) hold any number of customers, in terms of knowing their first and last names and an ID number, which might or might not be assigned automatically by the system. (Of course, we would want many more attributes, e.g. customer address.)
 
-IMPORTANT: Notice that this database would only work for regions where customers have "first" and "last" names. This may not be true in all areas of the world.
+IMPORTANT: Notice that this database would only work for regions where customers have "first" and "last" names. This may not be true in all areas of the world. See https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/[Falsehoods Programmers Believe about Names].
 
 The Oracle software is installed on some node or machine, and receives the statement. The database adds the table suggested:
 
@@ -184,6 +184,8 @@ Further tables can easily be added in the same manner:
 image:images/multiTbl.png[]
 
 What is a database in this sense? The important point is that it is a common query space - you can ask for data from either the CUST or INVOICE table, or ask the database to "join" them so you can see data from both. (This is how, for example, we would report on sales by customer.)
+
+====== Section conclusion
 
 The above description is brief and "classic" - the techniques shown here date back decades, and there are many other ways the same problem might be represented, analyzed, and solved. But in all cases in data management, the following questions must be answered:
 
