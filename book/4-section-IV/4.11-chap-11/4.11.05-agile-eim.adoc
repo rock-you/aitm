@@ -1,4 +1,6 @@
 ==== Agile information management
+
+===== Software versus data
 [quote, Dan McCrory]
 Services and Applications can have their own Gravity, but Data is the most massive and dense, therefore it has the most gravity. Data if large enough can be virtually impossible to move.
 <<McCrory2010>>
@@ -25,32 +27,88 @@ Because of these issues, there will always be some contention between the softwa
 
 An information professional, when faced with the problem of restructuring the now-massive data structure, might well say "Why did you build it that way? Couldn't you have thought a little more about this?"
 
-In fact, data management capabilities often have sought to intervene with developers, sometimes placing procedural requirements upon the development teams when database services were required. This approach is seen in waterfall development and when database teams are organized functionally. 
+In fact, data management capabilities often have sought to intervene with developers, sometimes placing procedural requirements upon the development teams when database services were required. This approach is seen in waterfall development and when database teams are organized functionally.
 
+We saw the classic model earlier in this chapter: define
 
+. Conceptual data model
+. Logical data model
+. Physical schema
 
-* The enterprise information model: a failed vision that will never go away.
+as a sequential process.
 
-BoundedContext and domain-driven design
+But organizations pressed for time often go straight to defining physical schemas. And indeed, if the xref:cost-of-delay[Cost of Delay] is steep, this behavior will *not* change.
 
-fundamental semiotics problems - universality is not possible
+The only reason to invest in richer understanding of information - is if the benefits outweigh the costs. Data and records management justifies itself when:
 
+* Systems are easier to adapt, because they are well understood
+* Systems are easier to use, because the meaning of their information is documented for the end consumer (reducing support costs and operational risks)
+* Data redundancy is lessened, saving storage and management attention
+* Data and records-related risks (security, regulatory, liability) are mitigated through better data management.
 
-* Domain driven design
-* importance of patterns and ref archs - learn data through practice and pragmatism, there is no "right" way
+But data management, like any functional domain, can become an end in itself, losing sight of the reasons for its existence.
+
+===== Next generation practices in information management
+
+====== The failure and persistence of the enterprise information model
+[quote, Martin Fowler]
+As you try to model a larger domain, it gets progressively harder to build a single unified model <<Fowler2014>>.
+
+The relational database, with its fast performance and integrated schemas allowing data to be joined with great flexibility, has fundamentally defined the worldview of data managers for decades now.
+
+This model arguably reached its peak in highly-scaled mainframe systems, where all corporate data might be available for instantaneous query and operational use.
+
+However, when data is shared for many purposes, it becomes very difficult to change. The analysis process starts to lengthen, and xref:cost-of-delay[Cost of Delay] increases for new or enhanced systems.
+
+This started to become a real problem right around the time that cheaper distributed systems became available in the market. Traditonal data managers of large scale mainframe database systems continued to have a perspective that "everything can fit in my database." But the demand for new digital product outstripped their capacity to analyze and incorporate the new data.
+
+The information management landscape became fragmented. One response was the enterprise conceptual data model. The idea was that such models could represent the enterprise's information, even if it was stored in multiple databases.
+
+However, attempting to establish such a model can run into difficulties getting agreement on definitions. (See the xref:ontology-problem[ontology problem] above.) Seeking such agreement again can impose cost of delay, if gaining agreement is required for the system. And if gaining agreement is optional, then why is agreement being sought? The risk is that the data architect becomes "ivory tower."
+
+NOTE: In fact, there are theoretical concerns at the heart of philosophy with attempting to formulate universal ontologies. They are beyond the scope of this text but if you are interested, start by researching semiotics and postmodernism. Such concerns may seem academic, but we see their consequences in the practical difficulty of creating universal data models.
+
+A pragmatic response to these difficulties is represented in the Martin Fowler quote above. Fowler recommends the practice of domain-driven design, which accepts the fact that "Different groups of people will use subtly different vocabularies in different parts of a large organization" <<Fowler2014>> and quotes Eric Evans that "total unification of the domain model for a large system will not be feasible or cost-effective" <<Evans2004>>. Instead, there are various techniques for relating these contexts, beyond the scope of this book. (See <<Evans2004>>.)
+
+And, before you completely adopt a domain-driven design approach, be certain you understand the consequences for data governance and records management. Regulators and courts will not accept "domain driven design" as a defense for non-compliance.
+
+====== Patterns and reference architectures
+
+Reference architectures and design patterns are examples of approaches that are known to work for solving certain problems. In other words, they are reusable (and usually free) solutions for commonly occurring scenarios. They apply to core software development, often suggesting particular class structures. <<Gamma1995>> However, the concept can also be applied to data and system architectures, e.g. <<Fowler2003>>, <<Betz2011a>>. David Hay <<Hay1996>> and Len Silverston <<Silverston2001>>, <<Silverston2001a>>, <<Silverston2008>> have documented data models for a variety of industries.
+
+Reference architectures also can provide guidance on data structures, as they often contain industry learnings. Examples include:
+
+[cols="3*", options="header"]
+|====
+|Organization|Domain|Standard(s)
+|Tele-Management Forum|Telecommunications|Frameworx, ETom (Enhanced Telecommunications Operating Model), NGOSS, SIDS
+|Association for Retail Technology Standards|Retail|ARTS model
+|ACORD.org |Insurance|ACORD Framework
+|Banking Industry Architecture Network|Banking|BIAN Service Landscape
+|The Open Group Exploration, Mining, Metals and Minerals Forum|Exploration, Mining, and Minerals|Exploration and Mining Business Reference Model
+|The Open Group IT4IT Forum|Information Technology Management|IT4IT Standard
+|====
+
+Patterns and reference architectures can accelerate understanding, but they also can over-complicate solutions. Understanding and applying them pragmatically is the challenge. Certainly, various well-known problems such as customer address management have surprising complexity, and can benefit from leveraging previous work. 
+
+====== Automated understandings
 * ontology mining
 * inferred schemas
+
 * Data as gravity
-* the monolithic schema problem
-* CAP revisited
+
+====== Next gen infrastructure
+* CAP revisited: ultimately, uncertainty wins
+
 * immutability: where does the data go?
 
 http://searchcio.techtarget.com/definition/agile-business-intelligence-BI?utm_medium=EM&asrc=EM_NLN_56914325&utm_campaign=20160510_Word%20of%20the%20Day:%20Agile%20business%20intelligence%20(BI)_kherbert&utm_source=NLN&track=NL-1823&ad=907631&src=907631
 
-* Non-invasive data governance (Seiner)
+====== Non-invasive data governance (Seiner)
 
 Centralized layer teams vs microservices
 
 Microservices as a more realistic implementation mechanism, better suited to human cognition
 
+====== Test data
 The test data problem - nontrivial - proven to be a precursor to org performance - see Puppet Labs survey (Humble presentation 8/2016)
