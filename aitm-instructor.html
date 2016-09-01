@@ -9977,6 +9977,9 @@ After extensive review and summarization of peer-reviewed research, Mintzberg de
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><a id="product-v-function"></a></p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_product_and_function">Product and function</h4>
@@ -22491,6 +22494,9 @@ Services and Applications can have their own Gravity, but Data is the most massi
 <p>Systems are easier to adapt, because they are well understood</p>
 </li>
 <li>
+<p>Costs and risks of data refactoring are reduced</p>
+</li>
+<li>
 <p>Systems are easier to use, because the meaning of their information is documented for the end consumer (reducing support costs and operational risks)</p>
 </li>
 <li>
@@ -22502,7 +22508,7 @@ Services and Applications can have their own Gravity, but Data is the most massi
 </ul>
 </div>
 <div class="paragraph">
-<p>But data management, like any functional domain, can become an end in itself, losing sight of the reasons for its existence.</p>
+<p>But data management, like any <a href="#product-v-function">functional</a> domain, can become an end in itself, losing sight of the reasons for its existence.</p>
 </div>
 </div>
 <div class="sect4">
@@ -22542,13 +22548,13 @@ As you try to model a larger domain, it gets progressively harder to build a sin
 <div class="title">Note</div>
 </td>
 <td class="content">
-In fact, there are theoretical concerns at the heart of philosophy with attempting to formulate universal ontologies. They are beyond the scope of this text but if you are interested, start by researching semiotics and postmodernism. Such concerns may seem academic, but we see their consequences in the practical difficulty of creating universal data models.
+In fact, there are theoretical concerns at the heart of philosophy with attempting to formulate universal ontologies. They are beyond the scope of this text but if you are interested, start by researching <em>semiotics</em> and <em>postmodernism</em>. Such concerns may seem academic, but we see their consequences in the practical difficulty of creating universal data models.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>A pragmatic response to these difficulties is represented in the Martin Fowler quote above. Fowler recommends the practice of domain-driven design, which accepts the fact that "Different groups of people will use subtly different vocabularies in different parts of a large organization" <a href="#Fowler2014">[Fowler2014]</a> and quotes Eric Evans that "total unification of the domain model for a large system will not be feasible or cost-effective" <a href="#Evans2004">[Evans2004]</a>. Instead, there are various techniques for relating these contexts, beyond the scope of this book. (See <a href="#Evans2004">[Evans2004]</a>.)</p>
+<p>A pragmatic response to these difficulties is represented in the Martin Fowler quote above. Fowler recommends the practice of domain-driven design, which accepts the fact that "Different groups of people will use subtly different vocabularies in different parts of a large organization" <a href="#Fowler2014">[Fowler2014]</a> and quotes Eric Evans that "total unification of the domain model for a large system will not be feasible or cost-effective" <a href="#Evans2004">[Evans2004]</a>. Instead, there are various techniques for relating these contexts, beyond the scope of this book. (See <a href="#Evans2004">[Evans2004]</a>.) Some will argue for the use of microservices, but data always wants to be recombined, so microservices have distinct limitations as a solution for the problems of information management.</p>
 </div>
 <div class="paragraph">
 <p>And, before you completely adopt a domain-driven design approach, be certain you understand the consequences for data governance and records management. Regulators and courts will not accept "domain driven design" as a defense for non-compliance.</p>
@@ -22613,7 +22619,10 @@ In fact, there are theoretical concerns at the heart of philosophy with attempti
 </div>
 </div>
 <div class="sect5">
-<h6 id="_automated_understandings">Automated understandings</h6>
+<h6 id="_generic_structures_and_inferred_schemas">Generic structures and inferred schemas</h6>
+<div class="paragraph">
+<p>Schema development - the creation of detailed logical and physical data and/or object models - is time consuming and requires certain skills. Sometimes, application developers try to use highly generic structures in the database. Relational databases and their administrators prefer distinct tables for Customer, Invoice, and Product, with specifically identified attributes such as Invoice Data</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -22622,9 +22631,6 @@ In fact, there are theoretical concerns at the heart of philosophy with attempti
 <li>
 <p>inferred schemas</p>
 </li>
-<li>
-<p>Data as gravity</p>
-</li>
 </ul>
 </div>
 </div>
@@ -22632,6 +22638,9 @@ In fact, there are theoretical concerns at the heart of philosophy with attempti
 <h6 id="_next_gen_infrastructure">Next gen infrastructure</h6>
 <div class="ulist">
 <ul>
+<li>
+<p>Data as gravity</p>
+</li>
 <li>
 <p>CAP revisited: ultimately, uncertainty wins</p>
 </li>
