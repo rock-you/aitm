@@ -5,7 +5,27 @@ Services and Applications can have their own Gravity, but Data is the most massi
 
 Enterprise information management (including data management) has had a contentious relationship to Agile methods. There are inherent differences in perspective between those who focus on implementing software, versus those who are concerned with data and information, especially at scale.
 
-The tendency among software engineers is to focus on the conceptual aspects of software, without concern for the physical issues of computing. (This also is the fundamental distinction at the heart of anchor:continuous-delivery[DevOps].)
+The tendency among software engineers is to focus on the conceptual aspects of software, without concern for the physical issues of computing. (This also is the fundamental distinction at the heart of xref:continuous-delivery[DevOps].)
+
+But when data reaches a certain scale, its concerns start to become priorities. The bandwidth of FedEx is still greater than that of the Internet (<<Munroe2013>>). That is to say, it is more effective and efficient, past a certain scale, to physically move data on hard drives than to copy the data. The reasons for this are well understood and trace back to fundamental laws of physics and information first understood by Claude Shannon <<Shannon1949>>.
+
+Notice that these limitations apply not just to simple movement of data, but also to more complex operations, notably the concept of xref:refactoring[refactoring].
+
+Refactoring is one of the critical practices of Agile development, keeping systems flexible and current when used appropriately. The simple act of turning one overly-large software class or module into two or three more cohesive elements is performed every day by developers around the world, as they strive for clean, well engineered code.
+
+But breaking an existing, overly-large database table into several more specialized tables is a different problem, if data is large. The data structure might take hours or days to be restructured, and what of the business needs in the meantime? These kinds of situations often have messy and risky solutions, that  cannot easily be "rolled back."
+
+. A copy might need to be made for the restructuring, leaving the original table in place.
+. When large restructuring operation is completed, and new code is released, a careful conversion exercise must identify the records that changed while the large restructuring occurred.
+. These records must then go through the conversion process AGAIN and be updated in the new data structure. They MUST replace the older data that was initially converted in step 1.
+
+All in all, this is an error-prone process, requiring careful auditing and cross-checking to mitigate the risk of information loss. Some system outage may be unvoidable, especially in systems with strong transactional needs for complete integrity. (See earlier discussion of xref:CAP-theorem[CAP theorem].)
+
+Because of these issues, there will always be some contention between the software and information management perspectives. Software developers, especially those schooled in Agile practices, tend to rely on heuristics such as "do the simplest thing that could possibly work." Such a heuristic might lead to a preference for a simpler data structure, that will not hold up past a certain scale.
+
+An information professional, when faced with the problem of restructuring the now-massive data structure, might well say "Why did you build it that way? Couldn't you have thought a little more about this?"
+
+In fact, data management capabilities often have sought to intervene with developers, sometimes placing procedural requirements upon the development teams when database services were required. This approach is seen in waterfall development and when database teams are organized functionally. 
 
 
 
