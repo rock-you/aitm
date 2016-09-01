@@ -6873,7 +6873,7 @@ Never confuse production with product development. The approaches, measures, and
 <div class="sect4">
 <h5 id="_cost_of_delay">Cost of Delay</h5>
 <div class="paragraph">
-<p>Reinertsen is well known for advocating the concept of "Cost of Delay" in understanding product economics. The term is intuitive; it represents the loss one experiences by delaying the delivery of some value. For example, if a delayed product misses a key trade show, and therefore its opportunity to launch against competitors, the cost of delay might be the entire market.</p>
+<p>Don Reinertsen is well known for advocating the concept of "Cost of Delay" in understanding product economics. The term is intuitive; it represents the loss one experiences by delaying the delivery of some value. For example, if a delayed product misses a key trade show, and therefore its opportunity to launch against competitors, the cost of delay might be the entire market.</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -22424,19 +22424,19 @@ Services and Applications can have their own Gravity, but Data is the most massi
 <p>Enterprise information management (including data management) has had a contentious relationship to Agile methods. There are inherent differences in perspective between those who focus on implementing software, versus those who are concerned with data and information, especially at scale.</p>
 </div>
 <div class="paragraph">
-<p>The tendency among software engineers is to focus on the conceptual aspects of software, without concern for the physical issues of computing. (This also is the fundamental distinction at the heart of <a href="#continuous-delivery">DevOps</a>.)</p>
+<p>The tendency among software engineers is to focus on the conceptual aspects of software, without concern for the physical issues of computing. (Logical versus physical is arguably the fundamental distinction at the heart of the <a href="#continuous-delivery">development vs operations divide</a>.)</p>
 </div>
 <div class="paragraph">
-<p>But when data reaches a certain scale, its concerns start to become priorities. The bandwidth of FedEx is still greater than that of the Internet (<a href="#Munroe2013">[Munroe2013]</a>). That is to say, it is more effective and efficient, past a certain scale, to physically move data on hard drives than to copy the data. The reasons for this are well understood and trace back to fundamental laws of physics and information first understood by Claude Shannon <a href="#Shannon1949">[Shannon1949]</a>.</p>
+<p>But when data reaches a certain scale, its concerns start to become priorities. The bandwidth of FedEx is still greater than that of the Internet (<a href="#Munroe2013">[Munroe2013]</a>). That is to say, it is more effective and efficient, past a certain scale, to physically move data on hard drives than to copy the data. The reasons are well understood and trace back to fundamental laws of physics and information first understood by Claude Shannon <a href="#Shannon1949">[Shannon1949]</a>. The concept of "data gravity" (quote above) seems consistent with Shannon&#8217;s work.</p>
 </div>
 <div class="paragraph">
-<p>Notice that these limitations apply not just to simple movement of data, but also to more complex operations, notably the concept of <a href="#refactoring">refactoring</a>.</p>
+<p>Notice that these physical limitations apply not just to simple movement of data, but also to more complex operations, notably the concept of <a href="#refactoring">refactoring</a>.</p>
 </div>
 <div class="paragraph">
-<p>Refactoring is one of the critical practices of Agile development, keeping systems flexible and current when used appropriately. The simple act of turning one overly-large software class or module into two or three more cohesive elements is performed every day by developers around the world, as they strive for clean, well engineered code.</p>
+<p>As we have previously discussed, refactoring is one of the critical practices of Agile development, keeping systems flexible and current when used appropriately. The simple act of turning one overly-large software class or module into two or three more cohesive elements is performed every day by developers around the world, as they strive for clean, well engineered code.</p>
 </div>
 <div class="paragraph">
-<p>But breaking an existing, overly-large database table into several more specialized tables is a different problem, if data is large. The data structure might take hours or days to be restructured, and what of the business needs in the meantime? These kinds of situations often have messy and risky solutions, that  cannot easily be "rolled back."</p>
+<p>But breaking an existing, overly-large database table into several more specialized tables is a different problem, if data is large. Each row of data has to be processed. The data might take hours or days to be restructured, and what of the business needs in the meantime? These kinds of situations often have messy and risky solutions, that  cannot easily be "rolled back."</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -22452,7 +22452,7 @@ Services and Applications can have their own Gravity, but Data is the most massi
 </ol>
 </div>
 <div class="paragraph">
-<p>All in all, this is an error-prone process, requiring careful auditing and cross-checking to mitigate the risk of information loss. Some system outage may be unvoidable, especially in systems with strong transactional needs for complete integrity. (See earlier discussion of <a href="#CAP-theorem">CAP theorem</a>.)</p>
+<p>All in all, this is an error-prone process, requiring careful auditing and cross-checking to mitigate the risk of information loss. Some system outage may be unavoidable, especially in systems with strong transactional needs for complete integrity. (See earlier discussion of <a href="#CAP-theorem">CAP theorem</a>.)</p>
 </div>
 <div class="paragraph">
 <p>Because of these issues, there will always be some contention between the software and information management perspectives. Software developers, especially those schooled in Agile practices, tend to rely on heuristics such as "do the simplest thing that could possibly work." Such a heuristic might lead to a preference for a simpler data structure, that will not hold up past a certain scale.</p>
@@ -22461,7 +22461,7 @@ Services and Applications can have their own Gravity, but Data is the most massi
 <p>An information professional, when faced with the problem of restructuring the now-massive data structure, might well say "Why did you build it that way? Couldn&#8217;t you have thought a little more about this?"</p>
 </div>
 <div class="paragraph">
-<p>In fact, data management capabilities often have sought to intervene with developers, sometimes placing procedural requirements upon the development teams when database services were required. This approach is seen in waterfall development and when database teams are organized functionally.</p>
+<p>In fact, data management capabilities often have sought to intervene with developers, sometimes placing procedural requirements upon the development teams when database services were required. This approach is seen in waterfall development and when database teams are organized <a href="#product-v-function">functionally</a>.</p>
 </div>
 <div class="paragraph">
 <p>We saw the classic model earlier in this chapter: define</p>
@@ -22554,7 +22554,7 @@ In fact, there are theoretical concerns at the heart of philosophy with attempti
 </table>
 </div>
 <div class="paragraph">
-<p>A pragmatic response to these difficulties is represented in the Martin Fowler quote above. Fowler recommends the practice of domain-driven design, which accepts the fact that "Different groups of people will use subtly different vocabularies in different parts of a large organization" <a href="#Fowler2014">[Fowler2014]</a> and quotes Eric Evans that "total unification of the domain model for a large system will not be feasible or cost-effective" <a href="#Evans2004">[Evans2004]</a>. Instead, there are various techniques for relating these contexts, beyond the scope of this book. (See <a href="#Evans2004">[Evans2004]</a>.) Some will argue for the use of microservices, but data always wants to be recombined, so microservices have distinct limitations as a solution for the problems of information management.</p>
+<p>A pragmatic response to these difficulties is represented in the Martin Fowler quote above. Fowler recommends the practice of domain-driven design, which accepts the fact that "Different groups of people will use subtly different vocabularies in different parts of a large organization" <a href="#Fowler2014">[Fowler2014]</a> and quotes Eric Evans that "total unification of the domain model for a large system will not be feasible or cost-effective" <a href="#Evans2004">[Evans2004]</a>. Instead, there are various techniques for relating these contexts, beyond the scope of this book. (See <a href="#Evans2004">[Evans2004]</a>.) Some will argue for the use of microservices, but data always wants to be recombined, so microservices have limitations as a solution for the problems of information management.</p>
 </div>
 <div class="paragraph">
 <p>And, before you completely adopt a domain-driven design approach, be certain you understand the consequences for data governance and records management. Regulators and courts will not accept "domain driven design" as a defense for non-compliance.</p>
@@ -22642,20 +22642,22 @@ In fact, there are theoretical concerns at the heart of philosophy with attempti
 <p>These conversations usually would result in an unsatisfied developer and a DBA further convinced that developers just didn&#8217;t understand data.</p>
 </div>
 <div class="paragraph">
-<p>In a relational database, for example, indexing and operations such as joins will be significantly less efficient in such a structure. Also, there is nothing preventing the developer from mixing data in the tables, using the same columns to store different things.</p>
+<p>A relational database, for example, will not perform well at scale using such an approach. Also, there is nothing preventing the developer from mixing data in the tables, using the same columns to store different things.</p>
 </div>
 <div class="paragraph">
 <p>This might not be a problem for smaller organizations, but in organizations with compliance requirements, knowing with confidence what data is stored where is not optional.</p>
 </div>
 <div class="paragraph">
-<p>This does not mean that the developer was off track. New approaches to data warehousing use generic schemas similar to what the developer was requesting. Speed of indexing and proper records management, can be solved in a variety of ways.</p>
+<p>This does not mean that the developer was completely off track. New approaches to data warehousing use generic schemas similar to what the developer was requesting. Speed of indexing and proper records management, can be solved in a variety of ways.</p>
 </div>
 <div class="paragraph">
 <p>Recently, the concept of the "data lake" has gained traction.</p>
 </div>
 <div class="paragraph">
-<p>Some data has always been a challenge to adapt into traditional, rigid, structured relational databases. Modern “web-scale” companies such as Google have pioneered new, less structured data management tools and techniques.
-The data lake integrates data from a large variety of sources, but does not seek to integrate them into one master structure (also known as a schema) when they are imported. Instead, the data lake requires the analysts to specify a structure when the data is extracted for analysis. This is known as "schema-on-read," in contrast to the traditional model of "schema on write."</p>
+<p>Some data has always been a challenge to adapt into traditional, rigid, structured relational databases. Modern “web-scale” companies such as Google have pioneered new, less structured data management tools and techniques.</p>
+</div>
+<div class="paragraph">
+<p>The data lake integrates data from a large variety of sources, but does not seek to integrate them into one master structure (also known as a schema) when they are imported. Instead, the data lake requires the analysts to specify a structure when the data is extracted for analysis. This is known as "schema-on-read," in contrast to the traditional model of "schema on write."</p>
 </div>
 <div class="paragraph">
 <p>Data lakes, and the platforms that support them (such as Hadoop) were originally created high volume web data such as generated by Google. There was no way that traditional relational databases could scale to these needs, and the data was not transactional – it was harvested and in general never updated afterwards.</p>
@@ -22667,7 +22669,35 @@ The data lake integrates data from a large variety of sources, but does not seek
 <p>Because log formats change, and the collaboration data is semi-structured, analytics will likely be better served with a “schema on read” approach. However, this means that the operational analysis is significant development. Simplifying the load logic only defers the complexity. The data lake analyst must have a thorough understanding of the various event formats and other data brought into the lake, in order to write the operational analysis query.</p>
 </div>
 <div class="paragraph">
-<p>Schema inference at the most general shades into ontology mining. In ontology mining, data (usually text-heavy) is analyzed by algorithms to essentially derive the data model. If one reads a textbook about the retail business, one might easily infer that there are concepts such as "store," "customer," "warehouse," and "supplier." Information technology has reached a point where such analysis itself can be automated, to a degree. Certain analytics systems have the ability to display an inferred table structure derived from unstructured or semi-structured data. This is an active area of research, development, and product innovation.</p>
+<p>Schema inference at the most general shades into ontology mining. In ontology mining, data (usually text-heavy) is analyzed by algorithms to derive the data model. If one reads a textbook about the retail business, one might easily infer that there are concepts such as "store," "customer," "warehouse," and "supplier." Information technology has reached a point where such analysis itself can be automated, to a degree. Certain analytics systems have the ability to display an inferred table structure derived from unstructured or semi-structured data. This is an active area of research, development, and product innovation.</p>
+</div>
+<div class="paragraph">
+<p>The challenge is that data still needs to be tagged and identified; the regulatory concerns do not go away. For further information and the current state of industry practice on these questions, see the professional associations at the end of this chapter.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_non_invasive_data_governance_seiner">Non-invasive data governance (Seiner?)</h6>
+
+</div>
+<div class="sect5">
+<h6 id="_test_data">Test data</h6>
+<div class="paragraph">
+<p>A non-obvious and non-trivial problem at the intersection of Enterprise Information Management and DevOps is test data management.</p>
+</div>
+<div class="paragraph">
+<p>What is test data management?</p>
+</div>
+<div class="paragraph">
+<p>Suppose you are a developer working on a data-intensive system, one that (for example) handles millions of customer or supply chain records.</p>
+</div>
+<div class="paragraph">
+<p>Your code needs to support a wide variety of data inputs and outputs. At first, you just entered a few test names and addresses, like "Mickey Mouse" or "Bugs Bunny, 123 Carrot Way, Albuquerque, New Mexico 10001."</p>
+</div>
+<div class="paragraph">
+<p>But this nonsensical data quickly</p>
+</div>
+<div class="paragraph">
+<p>The test data problem - nontrivial - proven to be a precursor to org performance - see Puppet Labs survey (Humble presentation 8/2016)</p>
 </div>
 </div>
 <div class="sect5">
@@ -22688,20 +22718,11 @@ The data lake integrates data from a large variety of sources, but does not seek
 <div class="paragraph">
 <p><a href="http://searchcio.techtarget.com/definition/agile-business-intelligence-BI?utm_medium=EM&amp;asrc=EM_NLN_56914325&amp;utm_campaign=20160510_Word%20of%20the%20Day:%20Agile%20business%20intelligence%20(BI)_kherbert&amp;utm_source=NLN&amp;track=NL-1823&amp;ad=907631&amp;src=907631" class="bare">http://searchcio.techtarget.com/definition/agile-business-intelligence-BI?utm_medium=EM&amp;asrc=EM_NLN_56914325&amp;utm_campaign=20160510_Word%20of%20the%20Day:%20Agile%20business%20intelligence%20(BI)_kherbert&amp;utm_source=NLN&amp;track=NL-1823&amp;ad=907631&amp;src=907631</a></p>
 </div>
-</div>
-<div class="sect5">
-<h6 id="_non_invasive_data_governance_seiner">Non-invasive data governance (Seiner)</h6>
 <div class="paragraph">
 <p>Centralized layer teams vs microservices</p>
 </div>
 <div class="paragraph">
 <p>Microservices as a more realistic implementation mechanism, better suited to human cognition</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_test_data">Test data</h6>
-<div class="paragraph">
-<p>The test data problem - nontrivial - proven to be a precursor to org performance - see Puppet Labs survey (Humble presentation 8/2016)</p>
 </div>
 </div>
 </div>
