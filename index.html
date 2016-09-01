@@ -3971,6 +3971,9 @@ As stated in Version Control with Git <a href="#Loeliger2009">[Loeliger2009]</a>
 <pre>source control versus package management</pre>
 </div>
 </div>
+<div class="paragraph">
+<p><a id="commit-as-metadata"></a></p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_sidebar_what_is_metadata">Sidebar: What is metadata?</h5>
@@ -4067,6 +4070,11 @@ It is not always easy to apply this approach in practice. There can be edge case
 <h5 id="_web_scale_it">Web-scale IT</h5>
 <div class="paragraph">
 <p>This chapter as of fall 2015 is yet to be written. Will summarize key insights from the site reliability community, including Allspaw and Limoncelli.</p>
+</div>
+<div class="paragraph">
+<p><a id="CAP-theorem"></a>
+====== CAP theorem
+ to be written</p>
 </div>
 </div>
 <div class="sect4">
@@ -4939,6 +4947,9 @@ In practice such regression testing must indeed approximate this theoretical ide
 </div>
 <div class="paragraph">
 <p>Employing test-driven development completely and correctly requires thought and experience. But it has emerged as a practice in the largest scale systems in the world. Google runs many millions of automated tests daily <a href="#Whittaker2012">[Whittaker2012]</a>.  It has even been successfully employed in hardware development <a href="#Gruver2013">[Gruver2013]</a>.</p>
+</div>
+<div class="paragraph">
+<p><a id="refactoring"></a></p>
 </div>
 <div class="sect4">
 <h5 id="_refactoring">Refactoring</h5>
@@ -22085,6 +22096,9 @@ Again, if you or your company are involved in legal issues relating to the above
 <cite>Competing on Analytics</cite>
 </div>
 </div>
+<div class="paragraph">
+<p>The analytics cycle&#8230;&#8203;</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -22123,7 +22137,44 @@ Services and Applications can have their own Gravity, but Data is the most massi
 <p>Enterprise information management (including data management) has had a contentious relationship to Agile methods. There are inherent differences in perspective between those who focus on implementing software, versus those who are concerned with data and information, especially at scale.</p>
 </div>
 <div class="paragraph">
-<p>The tendency among software engineers is to focus on the conceptual aspects of software, without concern for the physical issues of computing. (This also is the fundamental distinction at the heart of <a id="continuous-delivery"></a>.)</p>
+<p>The tendency among software engineers is to focus on the conceptual aspects of software, without concern for the physical issues of computing. (This also is the fundamental distinction at the heart of <a href="#continuous-delivery">DevOps</a>.)</p>
+</div>
+<div class="paragraph">
+<p>But when data reaches a certain scale, its concerns start to become priorities. The bandwidth of FedEx is still greater than that of the Internet (<a href="#Munroe2013">[Munroe2013]</a>). That is to say, it is more effective and efficient, past a certain scale, to physically move data on hard drives than to copy the data. The reasons for this are well understood and trace back to fundamental laws of physics and information first understood by Claude Shannon <a href="#Shannon1949">[Shannon1949]</a>.</p>
+</div>
+<div class="paragraph">
+<p>Notice that these limitations apply not just to simple movement of data, but also to more complex operations, notably the concept of <a href="#refactoring">refactoring</a>.</p>
+</div>
+<div class="paragraph">
+<p>Refactoring is one of the critical practices of Agile development, keeping systems flexible and current when used appropriately. The simple act of turning one overly-large software class or module into two or three more cohesive elements is performed every day by developers around the world, as they strive for clean, well engineered code.</p>
+</div>
+<div class="paragraph">
+<p>But breaking an existing, overly-large database table into several more specialized tables is a different problem, if data is large. The data structure might take hours or days to be restructured, and what of the business needs in the meantime? These kinds of situations often have messy and risky solutions, that  cannot easily be "rolled back."</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>A copy might need to be made for the restructuring, leaving the original table in place.</p>
+</li>
+<li>
+<p>When large restructuring operation is completed, and new code is released, a careful conversion exercise must identify the records that changed while the large restructuring occurred.</p>
+</li>
+<li>
+<p>These records must then go through the conversion process AGAIN and be updated in the new data structure. They MUST replace the older data that was initially converted in step 1.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>All in all, this is an error-prone process, requiring careful auditing and cross-checking to mitigate the risk of information loss. Some system outage may be unvoidable, especially in systems with strong transactional needs for complete integrity. (See earlier discussion of <a href="#CAP-theorem">CAP theorem</a>.)</p>
+</div>
+<div class="paragraph">
+<p>Because of these issues, there will always be some contention between the software and information management perspectives. Software developers, especially those schooled in Agile practices, tend to rely on heuristics such as "do the simplest thing that could possibly work." Such a heuristic might lead to a preference for a simpler data structure, that will not hold up past a certain scale.</p>
+</div>
+<div class="paragraph">
+<p>An information professional, when faced with the problem of restructuring the now-massive data structure, might well say "Why did you build it that way? Couldn&#8217;t you have thought a little more about this?"</p>
+</div>
+<div class="paragraph">
+<p>In fact, data management capabilities often have sought to intervene with developers, sometimes placing procedural requirements upon the development teams when database services were required. This approach is seen in waterfall development and when database teams are organized functionally.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -22375,8 +22426,17 @@ abstraction through subject area (choosing a focal concept)</pre>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>===== Metadata and metamodels
-Move up to 1st topic?</pre>
+<pre>===== Metadata and metamodels</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>xref:commit-as-metadata[]</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Move up to 1st topic?</pre>
 </div>
 </div>
 <div class="ulist">
@@ -23279,6 +23339,9 @@ IEEE Press.</p>
 </li>
 <li>
 <p><a id="Mintzberg1983"></a>[Mintzberg1983]: Mintzberg, H. (1983). <em>Structure in fives : designing effective organizations. Englewood Cliffs, N.J., Prentice-Hall.</em></p>
+</li>
+<li>
+<p><a id="Munroe2013"></a>[Munroe2013]: Munroe, Randall. 2013. “FedEx Bandwidth.” What If? <a href="http://what-if.xkcd.com/31/" class="bare">http://what-if.xkcd.com/31/</a>. Accessed 2016-09-01</p>
 </li>
 <li>
 <p><a id="Narayam2015"></a>[Narayam2015]: Narayam, S. (2015). Agile IT organization design: for digital transformation and continuous delivery, Pearson Education Inc.</p>
