@@ -21514,7 +21514,7 @@ An information system (e.g., database) is a model of a small, finite subset of t
 </div>
 </div>
 <div class="paragraph">
-<p>The above model might be a fragment from a sales system. It shows that their are four major "entities":</p>
+<p>The above model might be a fragment from a sales system. It shows that their are four major <em>entities</em>:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -21541,7 +21541,7 @@ An information system (e.g., database) is a model of a small, finite subset of t
 </div>
 </div>
 <div class="paragraph">
-<p>The logical model includes attributes (Customer First Name). The line between them has particular "adornments" representing a well known data modeling notation called "crow&#8217;s foot." In this case, the notation is stipulating that one customer may have zero to many invoices, but any invoice must have one and only one customer. Notice also that the entity and attribute names are human-readable.</p>
+<p>The logical model includes <em>attributes</em> (Customer First Name). The line between them has particular "adornments" representing a well known data modeling notation called "crow&#8217;s foot." In this case, the notation is stipulating that one customer may have zero to many invoices, but any invoice must have one and only one customer. Notice also that the entity and attribute names are human-readable.</p>
 </div>
 <div class="paragraph">
 <p>Then, the logical model might be transformed into physical:</p>
@@ -21572,7 +21572,7 @@ CUST_LAST_N VARCHAR2(32))</pre>
 <p>In the above SQL (Structured Query Language) statement, the Customer entity has been finally represented as a series of encoded statements an Oracle database can understand, including specification of the data types needed to contain Customer Identifier (a Number type) and the customer&#8217;s first and last names (a 32-character long string field, called "VARCHAR" in Oracle).</p>
 </div>
 <div class="paragraph">
-<p>Once the database structure is created, it can (within limits) hold any number of customers, in terms of knowing their first and last names and an ID number, which might or might not be assigned automatically by the system.</p>
+<p>If a database administrator (DBA) issues that statement to the Oracle database, the table will be created. Once the structure is created, it can (within limits) hold any number of customers, in terms of knowing their first and last names and an ID number, which might or might not be assigned automatically by the system. (Of course, we would want many more attributes, e.g. customer address.)</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -21581,7 +21581,7 @@ CUST_LAST_N VARCHAR2(32))</pre>
 <div class="title">Important</div>
 </td>
 <td class="content">
-Notice that this database would only work for regions where customers have "first" and "last" names. This may not be true in all areas of the world.
+Notice that this database would only work for regions where customers have "first" and "last" names. This may not be true in all areas of the world. See <a href="https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/">Falsehoods Programmers Believe about Names</a>.
 </td>
 </tr>
 </table>
@@ -21601,6 +21601,9 @@ Notice that this database would only work for regions where customers have "firs
 <div class="paragraph">
 <p>What is a database in this sense? The important point is that it is a common query space - you can ask for data from either the CUST or INVOICE table, or ask the database to "join" them so you can see data from both. (This is how, for example, we would report on sales by customer.)</p>
 </div>
+</div>
+<div class="sect5">
+<h6 id="_section_conclusion_2">Section conclusion</h6>
 <div class="paragraph">
 <p>The above description is brief and "classic" - the techniques shown here date back decades, and there are many other ways the same problem might be represented, analyzed, and solved. But in all cases in data management, the following questions must be answered:</p>
 </div>
