@@ -42,11 +42,12 @@ But organizations pressed for time often go straight to defining physical schema
 The only reason to invest in richer understanding of information - is if the benefits outweigh the costs. Data and records management justifies itself when:
 
 * Systems are easier to adapt, because they are well understood
+* Costs and risks of data refactoring are reduced
 * Systems are easier to use, because the meaning of their information is documented for the end consumer (reducing support costs and operational risks)
 * Data redundancy is lessened, saving storage and management attention
 * Data and records-related risks (security, regulatory, liability) are mitigated through better data management.
 
-But data management, like any functional domain, can become an end in itself, losing sight of the reasons for its existence.
+But data management, like any xref:product-v-function[functional] domain, can become an end in itself, losing sight of the reasons for its existence.
 
 ===== Next generation practices in information management
 
@@ -66,9 +67,9 @@ The information management landscape became fragmented. One response was the ent
 
 However, attempting to establish such a model can run into difficulties getting agreement on definitions. (See the xref:ontology-problem[ontology problem] above.) Seeking such agreement again can impose cost of delay, if gaining agreement is required for the system. And if gaining agreement is optional, then why is agreement being sought? The risk is that the data architect becomes "ivory tower."
 
-NOTE: In fact, there are theoretical concerns at the heart of philosophy with attempting to formulate universal ontologies. They are beyond the scope of this text but if you are interested, start by researching semiotics and postmodernism. Such concerns may seem academic, but we see their consequences in the practical difficulty of creating universal data models.
+NOTE: In fact, there are theoretical concerns at the heart of philosophy with attempting to formulate universal ontologies. They are beyond the scope of this text but if you are interested, start by researching _semiotics_ and _postmodernism_. Such concerns may seem academic, but we see their consequences in the practical difficulty of creating universal data models.
 
-A pragmatic response to these difficulties is represented in the Martin Fowler quote above. Fowler recommends the practice of domain-driven design, which accepts the fact that "Different groups of people will use subtly different vocabularies in different parts of a large organization" <<Fowler2014>> and quotes Eric Evans that "total unification of the domain model for a large system will not be feasible or cost-effective" <<Evans2004>>. Instead, there are various techniques for relating these contexts, beyond the scope of this book. (See <<Evans2004>>.)
+A pragmatic response to these difficulties is represented in the Martin Fowler quote above. Fowler recommends the practice of domain-driven design, which accepts the fact that "Different groups of people will use subtly different vocabularies in different parts of a large organization" <<Fowler2014>> and quotes Eric Evans that "total unification of the domain model for a large system will not be feasible or cost-effective" <<Evans2004>>. Instead, there are various techniques for relating these contexts, beyond the scope of this book. (See <<Evans2004>>.) Some will argue for the use of microservices, but data always wants to be recombined, so microservices have distinct limitations as a solution for the problems of information management.
 
 And, before you completely adopt a domain-driven design approach, be certain you understand the consequences for data governance and records management. Regulators and courts will not accept "domain driven design" as a defense for non-compliance.
 
@@ -89,15 +90,17 @@ Reference architectures also can provide guidance on data structures, as they of
 |The Open Group IT4IT Forum|Information Technology Management|IT4IT Standard
 |====
 
-Patterns and reference architectures can accelerate understanding, but they also can over-complicate solutions. Understanding and applying them pragmatically is the challenge. Certainly, various well-known problems such as customer address management have surprising complexity, and can benefit from leveraging previous work. 
+Patterns and reference architectures can accelerate understanding, but they also can over-complicate solutions. Understanding and applying them pragmatically is the challenge. Certainly, various well-known problems such as customer address management have surprising complexity, and can benefit from leveraging previous work.
 
-====== Automated understandings
+====== Generic structures and inferred schemas
+
+Schema development - the creation of detailed logical and physical data and/or object models - is time consuming and requires certain skills. Sometimes, application developers try to use highly generic structures in the database. Relational databases and their administrators prefer distinct tables for Customer, Invoice, and Product, with specifically identified attributes such as Invoice Data
+
 * ontology mining
 * inferred schemas
 
-* Data as gravity
-
 ====== Next gen infrastructure
+* Data as gravity
 * CAP revisited: ultimately, uncertainty wins
 
 * immutability: where does the data go?
