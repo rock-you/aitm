@@ -1026,7 +1026,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_business_intelligence_analytics_and_data_science">Business intelligence, analytics, and data science</a></li>
 </ul>
 </li>
-<li><a href="#_agile_information_management">Agile information management</a></li>
+<li><a href="#_agile_information_management">Agile information management</a>
+<ul class="sectlevel4">
+<li><a href="#_software_versus_data">Software versus data</a></li>
+<li><a href="#_next_generation_practices_in_information_management">Next generation practices in information management</a></li>
+</ul>
+</li>
 <li><a href="#_information_management_topics">Information management topics</a></li>
 <li><a href="#_conclusion_11">Conclusion</a>
 <ul class="sectlevel4">
@@ -21673,6 +21678,9 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="paragraph">
 <p>This may seem obvious, but data structures are surprisingly challenging to develop and gain consensus on.</p>
 </div>
+<div class="paragraph">
+<p><a id="ontology-problem"></a></p>
+</div>
 </div>
 <div class="sect5">
 <h6 id="_the_ontology_problem">The ontology problem</h6>
@@ -22398,6 +22406,8 @@ Again, if you or your company are involved in legal issues relating to the above
 </div>
 <div class="sect3">
 <h4 id="_agile_information_management">Agile information management</h4>
+<div class="sect4">
+<h5 id="_software_versus_data">Software versus data</h5>
 <div class="quoteblock">
 <blockquote>
 Services and Applications can have their own Gravity, but Data is the most massive and dense, therefore it has the most gravity. Data if large enough can be virtually impossible to move.
@@ -22450,27 +22460,162 @@ Services and Applications can have their own Gravity, but Data is the most massi
 <div class="paragraph">
 <p>In fact, data management capabilities often have sought to intervene with developers, sometimes placing procedural requirements upon the development teams when database services were required. This approach is seen in waterfall development and when database teams are organized functionally.</p>
 </div>
+<div class="paragraph">
+<p>We saw the classic model earlier in this chapter: define</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Conceptual data model</p>
+</li>
+<li>
+<p>Logical data model</p>
+</li>
+<li>
+<p>Physical schema</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>as a sequential process.</p>
+</div>
+<div class="paragraph">
+<p>But organizations pressed for time often go straight to defining physical schemas. And indeed, if the <a href="#cost-of-delay">Cost of Delay</a> is steep, this behavior will <strong>not</strong> change.</p>
+</div>
+<div class="paragraph">
+<p>The only reason to invest in richer understanding of information - is if the benefits outweigh the costs. Data and records management justifies itself when:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>The enterprise information model: a failed vision that will never go away.</p>
+<p>Systems are easier to adapt, because they are well understood</p>
+</li>
+<li>
+<p>Systems are easier to use, because the meaning of their information is documented for the end consumer (reducing support costs and operational risks)</p>
+</li>
+<li>
+<p>Data redundancy is lessened, saving storage and management attention</p>
+</li>
+<li>
+<p>Data and records-related risks (security, regulatory, liability) are mitigated through better data management.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>BoundedContext and domain-driven design</p>
+<p>But data management, like any functional domain, can become an end in itself, losing sight of the reasons for its existence.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_next_generation_practices_in_information_management">Next generation practices in information management</h5>
+<div class="sect5">
+<h6 id="_the_failure_and_persistence_of_the_enterprise_information_model">The failure and persistence of the enterprise information model</h6>
+<div class="quoteblock">
+<blockquote>
+As you try to model a larger domain, it gets progressively harder to build a single unified model <a href="#Fowler2014">[Fowler2014]</a>.
+</blockquote>
+<div class="attribution">
+&#8212; Martin Fowler
+</div>
 </div>
 <div class="paragraph">
-<p>fundamental semiotics problems - universality is not possible</p>
+<p>The relational database, with its fast performance and integrated schemas allowing data to be joined with great flexibility, has fundamentally defined the worldview of data managers for decades now.</p>
 </div>
+<div class="paragraph">
+<p>This model arguably reached its peak in highly-scaled mainframe systems, where all corporate data might be available for instantaneous query and operational use.</p>
+</div>
+<div class="paragraph">
+<p>However, when data is shared for many purposes, it becomes very difficult to change. The analysis process starts to lengthen, and <a href="#cost-of-delay">Cost of Delay</a> increases for new or enhanced systems.</p>
+</div>
+<div class="paragraph">
+<p>This started to become a real problem right around the time that cheaper distributed systems became available in the market. Traditonal data managers of large scale mainframe database systems continued to have a perspective that "everything can fit in my database." But the demand for new digital product outstripped their capacity to analyze and incorporate the new data.</p>
+</div>
+<div class="paragraph">
+<p>The information management landscape became fragmented. One response was the enterprise conceptual data model. The idea was that such models could represent the enterprise&#8217;s information, even if it was stored in multiple databases.</p>
+</div>
+<div class="paragraph">
+<p>However, attempting to establish such a model can run into difficulties getting agreement on definitions. (See the <a href="#ontology-problem">ontology problem</a> above.) Seeking such agreement again can impose cost of delay, if gaining agreement is required for the system. And if gaining agreement is optional, then why is agreement being sought? The risk is that the data architect becomes "ivory tower."</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+In fact, there are theoretical concerns at the heart of philosophy with attempting to formulate universal ontologies. They are beyond the scope of this text but if you are interested, start by researching semiotics and postmodernism. Such concerns may seem academic, but we see their consequences in the practical difficulty of creating universal data models.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>A pragmatic response to these difficulties is represented in the Martin Fowler quote above. Fowler recommends the practice of domain-driven design, which accepts the fact that "Different groups of people will use subtly different vocabularies in different parts of a large organization" <a href="#Fowler2014">[Fowler2014]</a> and quotes Eric Evans that "total unification of the domain model for a large system will not be feasible or cost-effective" <a href="#Evans2004">[Evans2004]</a>. Instead, there are various techniques for relating these contexts, beyond the scope of this book. (See <a href="#Evans2004">[Evans2004]</a>.)</p>
+</div>
+<div class="paragraph">
+<p>And, before you completely adopt a domain-driven design approach, be certain you understand the consequences for data governance and records management. Regulators and courts will not accept "domain driven design" as a defense for non-compliance.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_patterns_and_reference_architectures">Patterns and reference architectures</h6>
+<div class="paragraph">
+<p>Reference architectures and design patterns are examples of approaches that are known to work for solving certain problems. In other words, they are reusable (and usually free) solutions for commonly occurring scenarios. They apply to core software development, often suggesting particular class structures. <a href="#Gamma1995">[Gamma1995]</a> However, the concept can also be applied to data and system architectures, e.g. <a href="#Fowler2003">[Fowler2003]</a>, <a href="#Betz2011a">[Betz2011a]</a>. David Hay <a href="#Hay1996">[Hay1996]</a> and Len Silverston <a href="#Silverston2001">[Silverston2001]</a>, <a href="#Silverston2001a">[Silverston2001a]</a>, <a href="#Silverston2008">[Silverston2008]</a> have documented data models for a variety of industries.</p>
+</div>
+<div class="paragraph">
+<p>Reference architectures also can provide guidance on data structures, as they often contain industry learnings. Examples include:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Organization</th>
+<th class="tableblock halign-left valign-top">Domain</th>
+<th class="tableblock halign-left valign-top">Standard(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tele-Management Forum</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Telecommunications</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Frameworx, ETom (Enhanced Telecommunications Operating Model), NGOSS, SIDS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Association for Retail Technology Standards</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Retail</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ARTS model</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ACORD.org</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Insurance</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ACORD Framework</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Banking Industry Architecture Network</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Banking</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BIAN Service Landscape</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Open Group Exploration, Mining, Metals and Minerals Forum</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exploration, Mining, and Minerals</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exploration and Mining Business Reference Model</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Open Group IT4IT Forum</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Information Technology Management</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IT4IT Standard</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Patterns and reference architectures can accelerate understanding, but they also can over-complicate solutions. Understanding and applying them pragmatically is the challenge. Certainly, various well-known problems such as customer address management have surprising complexity, and can benefit from leveraging previous work.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_automated_understandings">Automated understandings</h6>
 <div class="ulist">
 <ul>
-<li>
-<p>Domain driven design</p>
-</li>
-<li>
-<p>importance of patterns and ref archs - learn data through practice and pragmatism, there is no "right" way</p>
-</li>
 <li>
 <p>ontology mining</p>
 </li>
@@ -22480,11 +22625,15 @@ Services and Applications can have their own Gravity, but Data is the most massi
 <li>
 <p>Data as gravity</p>
 </li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_next_gen_infrastructure">Next gen infrastructure</h6>
+<div class="ulist">
+<ul>
 <li>
-<p>the monolithic schema problem</p>
-</li>
-<li>
-<p>CAP revisited</p>
+<p>CAP revisited: ultimately, uncertainty wins</p>
 </li>
 <li>
 <p>immutability: where does the data go?</p>
@@ -22494,21 +22643,22 @@ Services and Applications can have their own Gravity, but Data is the most massi
 <div class="paragraph">
 <p><a href="http://searchcio.techtarget.com/definition/agile-business-intelligence-BI?utm_medium=EM&amp;asrc=EM_NLN_56914325&amp;utm_campaign=20160510_Word%20of%20the%20Day:%20Agile%20business%20intelligence%20(BI)_kherbert&amp;utm_source=NLN&amp;track=NL-1823&amp;ad=907631&amp;src=907631" class="bare">http://searchcio.techtarget.com/definition/agile-business-intelligence-BI?utm_medium=EM&amp;asrc=EM_NLN_56914325&amp;utm_campaign=20160510_Word%20of%20the%20Day:%20Agile%20business%20intelligence%20(BI)_kherbert&amp;utm_source=NLN&amp;track=NL-1823&amp;ad=907631&amp;src=907631</a></p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Non-invasive data governance (Seiner)</p>
-</li>
-</ul>
 </div>
+<div class="sect5">
+<h6 id="_non_invasive_data_governance_seiner">Non-invasive data governance (Seiner)</h6>
 <div class="paragraph">
 <p>Centralized layer teams vs microservices</p>
 </div>
 <div class="paragraph">
 <p>Microservices as a more realistic implementation mechanism, better suited to human cognition</p>
 </div>
+</div>
+<div class="sect5">
+<h6 id="_test_data">Test data</h6>
 <div class="paragraph">
 <p>The test data problem - nontrivial - proven to be a precursor to org performance - see Puppet Labs survey (Humble presentation 8/2016)</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -23407,13 +23557,19 @@ All web references were archived into the author&#8217;s files on the indicated 
 <p><a id="England2013"></a>[England2013]: England, Rob. 2013. <em>Plus! The Standard+Case Approach: See Service Response in a New Light</em>. Mana, New Zealand: Two Hills Ltd.</p>
 </li>
 <li>
+<p><a id="Evans2004"></a>[Evans2004]: Evans, Eric. 2004. Domain-Driven Design : Tackling Complexity in the Heart of Software. Book. Boston ; London: Addison-Wesley.</p>
+</li>
+<li>
 <p><a id="Flahiff2016"></a>[Flahiff2016]: Flahiff, J. (2016). "How organizational agility will save and destroy your company." from <a href="http://searchcio.techtarget.com/tip/How-organizational-agility-will-save-and-destroy-your-company" class="bare">http://searchcio.techtarget.com/tip/How-organizational-agility-will-save-and-destroy-your-company</a>. Accessed March 19, 2016.</p>
+</li>
+<li>
+<p><a id="Fowler1997"></a>[Fowler1997]: Fowler, M. (1997), <em>Analysis patterns : reusable object models</em>, Addison Wesley, Menlo Park, Calif.</p>
 </li>
 <li>
 <p><a id="Fowler2003"></a>[Fowler2003]: Fowler, M. (2003), <em>Patterns of enterprise application architecture</em>, Addison-Wesley, Boston</p>
 </li>
 <li>
-<p><a id="Fowler1997"></a>[Fowler1997]: Fowler, M. (1997), <em>Analysis patterns : reusable object models</em>, Addison Wesley, Menlo Park, Calif.</p>
+<p><a id="Fowler2014"></a>[Fowler2014]: Fowler, Martin. 2014. “BoundedContext.” Martin Fowler’s Bliki2. <a href="http://martinfowler.com/bliki/BoundedContext.html" class="bare">http://martinfowler.com/bliki/BoundedContext.html</a>. Accessed 2016-09-01.</p>
 </li>
 <li>
 <p><a id="Furr2013"></a>[Furr2013]: Furr, N. A., Ahlstronm, Paul (2013). <em>Nail It then Scale It: The Entrepreneur&#8217;s Guide to Creating and Managing Breakthrough Innovation</em>, NISI Publishing.</p>
@@ -23736,6 +23892,12 @@ IEEE Press.</p>
 </li>
 <li>
 <p><a id="Sigler2014"></a>[Sigler2014]: Sigler, Eric. 2014. “So, What Is ChatOps? And How Do I Get Started?” Pagerduty.Com. <a href="https://www.pagerduty.com/blog/what-is-chatops/" class="bare">https://www.pagerduty.com/blog/what-is-chatops/</a>.</p>
+</li>
+<li>
+<p><a id="Silverston2001"></a>[Silverston2001]:Silverston, Len. 2001. The Data Model Resource Book Vol 1: A Library of Universal Data Models for All Enterprises. Book. Rev. ed. New York ; Chichester: Wiley.</p>
+</li>
+<li>
+<p><a id="Silverston2001a"></a>[Silverston2001a]:Silverston, Len. 2001a. The Data Model Resource Book Vol 2: A Library of Universal Data Models by Industry Types. Book. Rev. ed. New York ; Chichester: Wiley.</p>
 </li>
 <li>
 <p><a id="Silverston2008"></a>[Silverston2008]: Silverston, L. (2008), <em>The data model resource book Vol 3: Universal patterns for data modeling</em>, Wiley, Indianapolis, Ind.</p>
