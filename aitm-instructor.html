@@ -21893,6 +21893,64 @@ Notice that this database would only work for regions where customers have "firs
 </div>
 </div>
 <div class="sect5">
+<h6 id="_patterns_and_reference_architectures">Patterns and reference architectures</h6>
+<div class="paragraph">
+<p>Reference architectures and design patterns are examples of approaches that are known to work for solving certain problems. In other words, they are reusable (and usually free) solutions for commonly occurring scenarios. They apply to core software development, often suggesting particular class structures. <a href="#Gamma1995">[Gamma1995]</a> However, the concept can also be applied to data and system architectures, e.g. <a href="#Fowler2003">[Fowler2003]</a>, <a href="#Betz2011a">[Betz2011a]</a>. David Hay <a href="#Hay1996">[Hay1996]</a> and Len Silverston <a href="#Silverston2001">[Silverston2001]</a>, <a href="#Silverston2001a">[Silverston2001a]</a>, <a href="#Silverston2008">[Silverston2008]</a> have documented data models for a variety of industries.</p>
+</div>
+<div class="paragraph">
+<p>Reference architectures also can provide guidance on data structures, as they often contain industry learnings. Examples include:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Organization</th>
+<th class="tableblock halign-left valign-top">Domain</th>
+<th class="tableblock halign-left valign-top">Standard(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tele-Management Forum</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Telecommunications</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Frameworx, ETom (Enhanced Telecommunications Operating Model), NGOSS, SIDS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Association for Retail Technology Standards</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Retail</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ARTS model</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ACORD.org</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Insurance</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ACORD Framework</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Banking Industry Architecture Network</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Banking</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BIAN Service Landscape</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Open Group Exploration, Mining, Metals and Minerals Forum</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exploration, Mining, and Minerals</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exploration and Mining Business Reference Model</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Open Group IT4IT Forum</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Information Technology Management</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IT4IT Standard</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Patterns and reference architectures can accelerate understanding, but they also can over-complicate solutions. Understanding and applying them pragmatically is the challenge. Certainly, various well-known problems such as customer address management have surprising complexity, and can benefit from leveraging previous work.</p>
+</div>
+</div>
+<div class="sect5">
 <h6 id="_section_conclusion_2">Section conclusion</h6>
 <div class="paragraph">
 <p>The above description is brief and "classic" - the techniques shown here date back decades, and there are many other ways the same problem might be represented, analyzed, and solved. But in all cases in data management, the following questions must be answered:</p>
@@ -22609,64 +22667,6 @@ In fact, there are theoretical concerns at the heart of philosophy with attempti
 </div>
 <div class="paragraph">
 <p>And, before you completely adopt a domain-driven design approach, be certain you understand the consequences for data governance and records management. Regulators and courts will not accept "domain driven design" as a defense for non-compliance.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_patterns_and_reference_architectures">Patterns and reference architectures</h6>
-<div class="paragraph">
-<p>Reference architectures and design patterns are examples of approaches that are known to work for solving certain problems. In other words, they are reusable (and usually free) solutions for commonly occurring scenarios. They apply to core software development, often suggesting particular class structures. <a href="#Gamma1995">[Gamma1995]</a> However, the concept can also be applied to data and system architectures, e.g. <a href="#Fowler2003">[Fowler2003]</a>, <a href="#Betz2011a">[Betz2011a]</a>. David Hay <a href="#Hay1996">[Hay1996]</a> and Len Silverston <a href="#Silverston2001">[Silverston2001]</a>, <a href="#Silverston2001a">[Silverston2001a]</a>, <a href="#Silverston2008">[Silverston2008]</a> have documented data models for a variety of industries.</p>
-</div>
-<div class="paragraph">
-<p>Reference architectures also can provide guidance on data structures, as they often contain industry learnings. Examples include:</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 33%;">
-<col style="width: 33%;">
-<col style="width: 33%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Organization</th>
-<th class="tableblock halign-left valign-top">Domain</th>
-<th class="tableblock halign-left valign-top">Standard(s)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Tele-Management Forum</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Telecommunications</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Frameworx, ETom (Enhanced Telecommunications Operating Model), NGOSS, SIDS</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Association for Retail Technology Standards</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Retail</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ARTS model</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ACORD.org</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Insurance</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ACORD Framework</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Banking Industry Architecture Network</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Banking</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">BIAN Service Landscape</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The Open Group Exploration, Mining, Metals and Minerals Forum</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Exploration, Mining, and Minerals</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Exploration and Mining Business Reference Model</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The Open Group IT4IT Forum</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Information Technology Management</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">IT4IT Standard</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Patterns and reference architectures can accelerate understanding, but they also can over-complicate solutions. Understanding and applying them pragmatically is the challenge. Certainly, various well-known problems such as customer address management have surprising complexity, and can benefit from leveraging previous work.</p>
 </div>
 </div>
 <div class="sect5">
