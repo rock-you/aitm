@@ -160,6 +160,9 @@ This is a powerful technique, especially as storage costs go down. It can be com
 
 This is now a xref:data-quality[data quality] issue, requiring after-the-fact exception analysis and remediation.
 
+
+anchor:test-data-mgmt[]
+
 ====== Test data
 [quote, Puppet Labs/DevOps Research and Assessment, 2016 State of DevOps Report]
 ...when teams have adequate test data to run automated tests, and can create that data on demand, they see better IT performance
@@ -174,9 +177,9 @@ Your code needs to support a wide variety of data inputs and outputs. At first, 
 
 But this nonsensical data quickly was shown to not work. For example, if you are testing integration with an address-scrubbing service, you will get an error with an address in New Mexico that shows a ZIP code of 10001. (Actually, the nonsensical data is useful in testing that particular error scenario. But that is only one of many error scenarios.)
 
-Based on hearing anecdotal concerns, the authors of the 2016 State of DevOps report examined test data management practices and found that they correlated postively with "better IT performance, lower change failure rates, and lower levels of deployment pain and rework" <<Forsgren2016>>, p. 29. In particular, the report suggests that test data be minimized and created from a blank slate wherever possible.
+Based on hearing anecdotal concerns, the authors of the _2016 State of DevOps_ report examined test data management practices and found that they correlated postively with "better IT performance, lower change failure rates, and lower levels of deployment pain and rework" <<Forsgren2016>>, p. 29. In particular, the report suggests that test data be minimized and created from a blank slate wherever possible.
 
-Taking data from production systems as a basis for testing is also frequently done. However, such data must be sanitized -- sensitive information such as social security number must be removed. This can be done automatically, but then such automation must itself be developed and maintained.
+Taking data from production systems as a basis for testing is also frequently done. However, such data must be sanitized -- sensitive information such as social security number must be removed. This can be done automatically, but then such automation must itself be developed and maintained, and the extensive production data set may (in effect) be driving a large amount of non-value-add testing.
 
 In general, test data management techniques will vary greatly by application and problem domain. The primary recommendation here is to invest in solving the problem, understanding that up-front investments in automation will pay off. The high-performing product team will have to solve the "how" of doing it appropriately for their particular situation.
 
