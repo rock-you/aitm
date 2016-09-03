@@ -75,25 +75,6 @@ A pragmatic response to these difficulties is represented in the Martin Fowler q
 
 And, before you completely adopt a domain-driven design approach, be certain you understand the consequences for data governance and records management. Regulators and courts will not accept "domain driven design" as a defense for non-compliance.
 
-====== Patterns and reference architectures
-
-Reference architectures and design patterns are examples of approaches that are known to work for solving certain problems. In other words, they are reusable (and usually free) solutions for commonly occurring scenarios. They apply to core software development, often suggesting particular class structures. <<Gamma1995>> However, the concept can also be applied to data and system architectures, e.g. <<Fowler2003>>, <<Betz2011a>>. David Hay <<Hay1996>> and Len Silverston <<Silverston2001>>, <<Silverston2001a>>, <<Silverston2008>> have documented data models for a variety of industries.
-
-Reference architectures also can provide guidance on data structures, as they often contain industry learnings. Examples include:
-
-[cols="3*", options="header"]
-|====
-|Organization|Domain|Standard(s)
-|Tele-Management Forum|Telecommunications|Frameworx, ETom (Enhanced Telecommunications Operating Model), NGOSS, SIDS
-|Association for Retail Technology Standards|Retail|ARTS model
-|ACORD.org |Insurance|ACORD Framework
-|Banking Industry Architecture Network|Banking|BIAN Service Landscape
-|The Open Group Exploration, Mining, Metals and Minerals Forum|Exploration, Mining, and Minerals|Exploration and Mining Business Reference Model
-|The Open Group IT4IT Forum|Information Technology Management|IT4IT Standard
-|====
-
-Patterns and reference architectures can accelerate understanding, but they also can over-complicate solutions. Understanding and applying them pragmatically is the challenge. Certainly, various well-known problems such as customer address management have surprising complexity, and can benefit from leveraging previous work.
-
 ====== Generic structures and inferred schemas
 
 Schema development - the creation of detailed logical and physical data and/or object models - is time consuming and requires certain skills. Sometimes, application developers try to use highly generic structures in the database. Relational databases and their administrators prefer distinct tables for Customer, Invoice, and Product, with specifically identified attributes such as Invoice Date. Periodically, developers might call up the database administrator and have a conversation like this (only slightly exaggerated):
