@@ -20781,18 +20781,6 @@ Social media</pre>
 <div class="paragraph">
 <p>Yet, when you have tried to manage for more efficient or better-governed uses of data, you&#8217;ve not been happy with the resulting cost and bureaucracy. Not to mention complaints of development delays and loss of business agility. It&#8217;s an ongoing challenge, and as best you can see, no-one anywhere has it entirely figured out.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-This chapter in certain sections has more technical material. information management at scale drives new infrastructure requirements which we will cover in some detail.
-</td>
-</tr>
-</table>
-</div>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -22110,6 +22098,20 @@ Again, if you or your company are involved in legal issues relating to the above
 </div>
 </div>
 <div class="paragraph">
+<p>One important aspect of digital product development is data analytics. Analysis of organizational records has always been a part of any concern large enough to have formal records management. The word for this originally was simply "reporting." A set of files or ledgers would be provided to one or more clerks, who would manually review them and extract the needed figures.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/reportingOldStyle.gif" alt="reportingOldStyle">
+</div>
+</div>
+<div class="paragraph">
+<p><em>Reporting and analytics, old style</em> <span class="footnote">[<a id="_footnoteref_9" class="footnote" href="#_footnote_9" title="View footnote.">9</a>]</span></p>
+</div>
+<div class="paragraph">
+<p>The need to analyze</p>
+</div>
+<div class="paragraph">
 <p>The analytics cycle&#8230;&#8203;</p>
 </div>
 <div class="ulist">
@@ -22161,6 +22163,9 @@ Services and Applications can have their own Gravity, but Data is the most massi
 <p>DevOps and Agile techniques can be applied to databases; in fact there are important technical books such as Refactoring Databases by Ambler and Sadalage <a href="#Ambler2006">[Ambler2006]</a>. With smaller systems, there is little reason to avoid ongoing  of data along with code.</p>
 </div>
 <div class="paragraph">
+<p>Infrastructure as Code techniques apply. Database artifacts (e.g. SQL scripts, export/import scripts, etc.) must be under version control and should leverage continuous integration techniques. Test-driven development can apply equally well to database-related development.</p>
+</div>
+<div class="paragraph">
 <p>But when data reaches a certain scale, its concerns start to become priorities. The bandwidth of FedEx is still greater than that of the Internet (<a href="#Munroe2013">[Munroe2013]</a>). That is to say, it is more effective and efficient, past a certain scale, to physically move data by moving the hard drives around, than to copy the data. The reasons are well understood and trace back to fundamental laws of physics and information first understood by Claude Shannon <a href="#Shannon1949">[Shannon1949]</a>. The concept of "data gravity" (quote above) seems consistent with Shannon&#8217;s work.</p>
 </div>
 <div class="paragraph">
@@ -22183,7 +22188,7 @@ Services and Applications can have their own Gravity, but Data is the most massi
 </ol>
 </div>
 <div class="paragraph">
-<p>All in all, this is an error-prone process, requiring careful auditing and cross-checking to mitigate the risk of information loss. It can and should be automated to the maximum degree possible. Modern web-scale architectures are built to accommodate rolling upgrades, but schema changes can still be problematic. Some system outage may be unavoidable, especially in systems with strong transactional needs for complete integrity. (See earlier discussion of <a href="#CAP-theorem">CAP theorem</a>.)</p>
+<p>All in all, this is an error-prone process, requiring careful auditing and cross-checking to mitigate the risk of information loss. It can and should be automated to the maximum degree possible. Modern web-scale architectures are often built to accommodate rolling upgrades, but schema changes can still be problematic. Some system outage may be unavoidable, especially in systems with strong transactional needs for complete integrity. (See earlier discussion of <a href="#CAP-theorem">CAP theorem</a>.)</p>
 </div>
 <div class="paragraph">
 <p>Because of these issues, there will always be some contention between the software and information management perspectives. Software developers, especially those schooled in Agile practices, tend to rely on heuristics such as "do the simplest thing that could possibly work." Such a heuristic might lead to a preference for a simpler data structure, that will not hold up past a certain scale.</p>
@@ -22217,7 +22222,7 @@ Services and Applications can have their own Gravity, but Data is the most massi
 <p>But organizations pressed for time often go straight to defining physical schemas. And indeed, if the <a href="#cost-of-delay">Cost of Delay</a> is steep, this behavior will <strong>not</strong> change.</p>
 </div>
 <div class="paragraph">
-<p>The only reason to invest in richer understanding of information, or more robust and proven data structures, is if the benefits outweigh the costs. Data and records management justifies itself when:</p>
+<p>The only reason to invest in richer understanding of information (e.g. conceptual and logical modeling), or more robust and proven data structures, is if the benefits outweigh the costs. Data and records management justifies itself when:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -22251,7 +22256,7 @@ Services and Applications can have their own Gravity, but Data is the most massi
 </div>
 </div>
 <div class="sect5">
-<h6 id="_the_failure_and_persistence_of_the_enterprise_information_model">The failure and persistence of the enterprise information model</h6>
+<h6 id="_domain_driven_design">Domain-driven design</h6>
 <div class="quoteblock">
 <blockquote>
 As you try to model a larger domain, it gets progressively harder to build a single unified model <a href="#Fowler2014">[Fowler2014]</a>.
@@ -23888,6 +23893,9 @@ IEEE Press.</p>
 </div>
 <div class="footnote" id="_footnote_8">
 <a href="#_footnoteref_8">8</a>. <em>Image credit <a href="https://www.flickr.com/photos/pargon/2444932424" class="bare">https://www.flickr.com/photos/pargon/2444932424</a>, commercial use permitted</em>
+</div>
+<div class="footnote" id="_footnote_9">
+<a href="#_footnoteref_9">9</a>. <em>Image credit <a href="https://www.flickr.com/photos/seattlemunicipalarchives/3347281230" class="bare">https://www.flickr.com/photos/seattlemunicipalarchives/3347281230</a>, commercial use permitted</em>
 </div>
 </div>
 <div id="footer">
