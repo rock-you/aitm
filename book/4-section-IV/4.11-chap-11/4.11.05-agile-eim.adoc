@@ -9,13 +9,15 @@ Enterprise information management (including data management) has had a contenti
 
 The tendency among software engineers is to focus on the conceptual aspects of software, without concern for the physical issues of computing. (Logical versus physical is arguably the fundamental distinction at the heart of the xref:continuous-delivery[development vs operations divide].)
 
-But when data reaches a certain scale, its concerns start to become priorities. The bandwidth of FedEx is still greater than that of the Internet (<<Munroe2013>>). That is to say, it is more effective and efficient, past a certain scale, to physically move data on hard drives than to copy the data. The reasons are well understood and trace back to fundamental laws of physics and information first understood by Claude Shannon <<Shannon1949>>. The concept of "data gravity" (quote above) seems consistent with Shannon's work.
+But when data reaches a certain scale, its concerns start to become priorities. The bandwidth of FedEx is still greater than that of the Internet (<<Munroe2013>>). That is to say, it is more effective and efficient, past a certain scale, to physically move data by moving the hard drives around, than to copy the data. The reasons are well understood and trace back to fundamental laws of physics and information first understood by Claude Shannon <<Shannon1949>>. The concept of "data gravity" (quote above) seems consistent with Shannon's work.
 
 Notice that these physical limitations apply not just to simple movement of data, but also to more complex operations, notably the concept of xref:refactoring[refactoring].
 
 As we have previously discussed, refactoring is one of the critical practices of Agile development, keeping systems flexible and current when used appropriately. The simple act of turning one overly-large software class or module into two or three more cohesive elements is performed every day by developers around the world, as they strive for clean, well engineered code.
 
-But breaking an existing, overly-large database table into several more specialized tables is a different problem, if data is large. Each row of data has to be processed. The data might take hours or days to be restructured, and what of the business needs in the meantime? These kinds of situations often have messy and risky solutions, that  cannot easily be "rolled back."
+But breaking an existing, overly-large database table into several more specialized tables is a different problem, if data is large. Data, in the sense understood by digital and IT professionals, is *persistent*. It exists as physical indications of state in the physical world: whether knotted ropes, clay tablets, or electromagnetic state.
+
+If you are transforming 3 billion rows in a table, each row of data has to be processed. The data might take hours or days to be restructured, and what of the business needs in the meantime? These kinds of situations often have messy and risky solutions, that  cannot easily be "rolled back."
 
 . A copy might need to be made for the restructuring, leaving the original table in place.
 . When large restructuring operation is completed, and new code is released, a careful conversion exercise must identify the records that changed while the large restructuring occurred.
@@ -130,6 +132,8 @@ Schema inference at the most general shades into ontology mining. In ontology mi
 
 The challenge is that data still needs to be tagged and identified; the regulatory concerns do not go away. For further information and the current state of industry practice on these questions, see the professional associations at the end of this chapter.
 
+====== Append-only to the rescue?
+
 ====== Non-invasive data governance (Seiner?)
 
 
@@ -143,7 +147,7 @@ Suppose you are a developer working on a data-intensive system, one that (for ex
 
 Your code needs to support a wide variety of data inputs and outputs. At first, you just entered a few test names and addresses, like "Mickey Mouse" or "Bugs Bunny, 123 Carrot Way, Albuquerque, New Mexico 10001."
 
-But this nonsensical data quickly was shown to not work. For example, if you are testing integration with an address-scrubbing service, you will get an error with an address in New Mexico that shows a ZIP code of 10001. 
+But this nonsensical data quickly was shown to not work. For example, if you are testing integration with an address-scrubbing service, you will get an error with an address in New Mexico that shows a ZIP code of 10001.
 
 The test data problem - nontrivial - proven to be a precursor to org performance - see Puppet Labs survey (Humble presentation 8/2016)
 
