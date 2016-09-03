@@ -126,18 +126,43 @@ Data lakes, and the platforms that support them (such as Hadoop) were originally
 
 This is an increasingly important kind of workload for  digital organizations. As the Internet of Things takes shape, and digital devices are embedded throughout daily experiences, high-volume, adaptable datastores (such as data lakes) will continue to spread.
 
-Because log formats change, and the collaboration data is semi-structured, analytics will likely be better served with a “schema on read” approach. However, this means that the operational analysis is significant development. Simplifying the load logic only defers the complexity. The data lake analyst must have a thorough understanding of the various event formats and other data brought into the lake, in order to write the operational analysis query.
+Because log formats change, and the collaboration data is semi-structured, analytics will likely be better served with a “schema on read” approach. However, this means that the operational analysis is significant development. Simplifying the load logic only defers the complexity. The data lake analyst must have a thorough understanding of the various event formats and other data brought into the lake, in order to write the operational analysis query. This still may be a more efficient approach however. Extensive schema development done up front may be invalidated by actual data use, and heavyweight approaches are not as compatible with fast feedback. (Data services are also a form of product development and therefore fast xref:2.00.01-feedback[feedback] on their use is beneficial; the problem again is one of data gravity. Fast feedback works in software because code is orders of magnitude easier to change.)
 
 Schema inference at the most general shades into ontology mining. In ontology mining, data (usually text-heavy) is analyzed by algorithms to derive the data model. If one reads a textbook about the retail business, one might easily infer that there are concepts such as "store," "customer," "warehouse," and "supplier." Information technology has reached a point where such analysis itself can be automated, to a degree. Certain analytics systems have the ability to display an inferred table structure derived from unstructured or semi-structured data. This is an active area of research, development, and product innovation.
 
-The challenge is that data still needs to be tagged and identified; the regulatory concerns do not go away. For further information and the current state of industry practice on these questions, see the professional associations at the end of this chapter.
+The challenge is that data still needs to be tagged and identified; *regulatory concerns do not go away* just because one is using a NoSQL database. For further information and the current state of industry practice on these questions, see the professional associations at the end of this chapter.
 
 ====== Append-only to the rescue?
+Another technique that is changing the data management landscape is the concept of append-only. Traditional databases *change* values; for example, if you change "1004 Oak Av." to "2010 Elm St." in an address field, the old value is (in general) *gone*, unless you have specifically engineered the system to preserve it.
 
-====== Non-invasive data governance (Seiner?)
+A common approach is the idea of "audited" or "effective-dated" fields, which have existed for decades. In an effective-dated approach, the "change" to the address actually looks like this in the database:
 
+[cols="3*", options="header"]
+|====
+|Street address|From|To
+|1004 Oak Av.|12/1/1995|9/1/2016
+|2010 Elm St.|9/2/2016|Present
+|====
+
+Determining the correct address requires a query on the To date field. (This is only an example, there are many ways of solving the problem.)
+
+In this approach, data accumulates and is not deleted. (Capacity problems can of course result.) Append-only takes the idea of effective dating and applies it across the entire database. No values are ever changed, they are only superseded by further appends.
+
+This is a powerful technique, especially as storage costs go down. It can be combined with the data lake to create systems of great flexibility. But there are no silver bullets. Suppose that a distributed system has sacrificed consistency for availability and partition-tolerance (see xref:CAP-theorem[CAP theorem]). In that case, the system may wind up with data such as:
+
+[cols="3*", options="header"]
+|====
+|Street address|From|To
+|1004 Oak Av.|12/1/1995|9/1/2016
+|2010 Elm St.|9/2/2016|Present
+|574 Maple St.|9/2/2016|Present
+|====
+
+This is now a xref:data-quality[data quality] issue, requiring after-the-fact exception analysis and remediation.
 
 ====== Test data
+[quote, Puppet Labs/DevOps Research and Assessment, 2016 State of DevOps Report]
+...when teams have adequate test data to run automated tests, and can create that data on demand, they see better IT performance
 
 A non-obvious and non-trivial problem at the intersection of Enterprise Information Management and DevOps is test data management.
 
@@ -147,19 +172,12 @@ Suppose you are a developer working on a data-intensive system, one that (for ex
 
 Your code needs to support a wide variety of data inputs and outputs. At first, you just entered a few test names and addresses, like "Mickey Mouse" or "Bugs Bunny, 123 Carrot Way, Albuquerque, New Mexico 10001."
 
-But this nonsensical data quickly was shown to not work. For example, if you are testing integration with an address-scrubbing service, you will get an error with an address in New Mexico that shows a ZIP code of 10001.
+But this nonsensical data quickly was shown to not work. For example, if you are testing integration with an address-scrubbing service, you will get an error with an address in New Mexico that shows a ZIP code of 10001. (Actually, the nonsensical data is useful in testing that particular error scenario. But that is only one of many error scenarios.)
 
-The test data problem - nontrivial - proven to be a precursor to org performance - see Puppet Labs survey (Humble presentation 8/2016)
+Based on hearing anecdotal concerns, the authors of the 2016 State of DevOps report examined test data management practices and found that they correlated postively with "better IT performance, lower change failure rates, and lower levels of deployment pain and rework" <<Forsgren2016>>, p. 29. In particular, the report suggests that test data be minimized and created from a blank slate wherever possible.
 
+Taking data from production systems as a basis for testing is also frequently done. However, such data must be sanitized -- sensitive information such as social security number must be removed. This can be done automatically, but then such automation must itself be developed and maintained.
 
-====== Next gen infrastructure
-* Data as gravity
-* CAP revisited: ultimately, uncertainty wins
+In general, test data management techniques will vary greatly by application and problem domain. The primary recommendation here is to invest in solving the problem, understanding that up-front investments in automation will pay off. The high-performing product team will have to solve the "how" of doing it appropriately for their particular situation.
 
-* immutability: where does the data go?
-
-http://searchcio.techtarget.com/definition/agile-business-intelligence-BI?utm_medium=EM&asrc=EM_NLN_56914325&utm_campaign=20160510_Word%20of%20the%20Day:%20Agile%20business%20intelligence%20(BI)_kherbert&utm_source=NLN&track=NL-1823&ad=907631&src=907631
-
-Centralized layer teams vs microservices
-
-Microservices as a more realistic implementation mechanism, better suited to human cognition
+====== Non-invasive data governance (Seiner column)
