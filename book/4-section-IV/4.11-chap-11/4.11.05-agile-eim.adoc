@@ -13,6 +13,8 @@ As we have previously discussed, xref:refactoring[refactoring] is one of the cri
 
 DevOps and Agile techniques can be applied to databases; in fact there are important technical books such as Refactoring Databases by Ambler and Sadalage <<Ambler2006>>. With smaller systems, there is little reason to avoid ongoing  of data along with code.
 
+Infrastructure as Code techniques apply. Database artifacts (e.g. SQL scripts, export/import scripts, etc.) must be under version control and should leverage continuous integration techniques. Test-driven development can apply equally well to database-related development.
+
 But when data reaches a certain scale, its concerns start to become priorities. The bandwidth of FedEx is still greater than that of the Internet (<<Munroe2013>>). That is to say, it is more effective and efficient, past a certain scale, to physically move data by moving the hard drives around, than to copy the data. The reasons are well understood and trace back to fundamental laws of physics and information first understood by Claude Shannon <<Shannon1949>>. The concept of "data gravity" (quote above) seems consistent with Shannon's work.
 
 Notice that these physical limitations apply not just to simple movement of data, but also to complex xref:refactoring[refactoring]. Breaking an existing, overly-large database table into several more specialized tables is a different problem, if data is large. Data, in the sense understood by digital and IT professionals, is *persistent*. It exists as physical indications of state in the physical world: whether knotted ropes, clay tablets, or electromagnetic state.
@@ -23,7 +25,7 @@ If you are transforming 3 billion rows in a table, each row of data has to be pr
 . When large restructuring operation is completed, and new code is released, a careful conversion exercise must identify the records that changed while the large restructuring occurred.
 . These records must then go through the conversion process AGAIN and be updated in the new data structure. They MUST replace the older data that was initially converted in step 1.
 
-All in all, this is an error-prone process, requiring careful auditing and cross-checking to mitigate the risk of information loss. It can and should be automated to the maximum degree possible. Modern web-scale architectures are built to accommodate rolling upgrades, but schema changes can still be problematic. Some system outage may be unavoidable, especially in systems with strong transactional needs for complete integrity. (See earlier discussion of xref:CAP-theorem[CAP theorem].)
+All in all, this is an error-prone process, requiring careful auditing and cross-checking to mitigate the risk of information loss. It can and should be automated to the maximum degree possible. Modern web-scale architectures are often built to accommodate rolling upgrades, but schema changes can still be problematic. Some system outage may be unavoidable, especially in systems with strong transactional needs for complete integrity. (See earlier discussion of xref:CAP-theorem[CAP theorem].)
 
 Because of these issues, there will always be some contention between the software and information management perspectives. Software developers, especially those schooled in Agile practices, tend to rely on heuristics such as "do the simplest thing that could possibly work." Such a heuristic might lead to a preference for a simpler data structure, that will not hold up past a certain scale.
 
@@ -41,7 +43,7 @@ as a sequential process.
 
 But organizations pressed for time often go straight to defining physical schemas. And indeed, if the xref:cost-of-delay[Cost of Delay] is steep, this behavior will *not* change.
 
-The only reason to invest in richer understanding of information, or more robust and proven data structures, is if the benefits outweigh the costs. Data and records management justifies itself when:
+The only reason to invest in richer understanding of information (e.g. conceptual and logical modeling), or more robust and proven data structures, is if the benefits outweigh the costs. Data and records management justifies itself when:
 
 * Systems are easier to adapt, because they are well understood and the data structures are flexible
 * Occurrence, costs, and risks of data refactoring are reduced
@@ -56,7 +58,7 @@ Again, back to our xref:0.01-emergence[emergence model]. By the time you are an 
 ====== Cross-functional teams
 The value of cross-functional teams was discussed at length in xref:product-v-function[chapter 7]. This applies to including data specialists as team members. This practice alone can reduce many data management issues.
 
-====== The failure and persistence of the enterprise information model
+====== Domain-driven design
 [quote, Martin Fowler]
 As you try to model a larger domain, it gets progressively harder to build a single unified model <<Fowler2014>>.
 
