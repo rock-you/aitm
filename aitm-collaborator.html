@@ -1022,8 +1022,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_analytics_2">Analytics</a>
 <ul class="sectlevel4">
-<li><a href="#_data_warehousing">Data warehousing</a></li>
 <li><a href="#_business_intelligence_analytics_and_data_science">Business intelligence, analytics, and data science</a></li>
+<li><a href="#_agile_methods_meet_business_intelligence">Agile methods meet business intelligence</a></li>
 </ul>
 </li>
 <li><a href="#_agile_information_management">Agile information management</a>
@@ -22919,7 +22919,7 @@ Again, if you or your company are involved in legal issues relating to the above
 <p>Instructor&#8217;s note:</p>
 </div>
 <div class="paragraph">
-<p>This is a brief discussion, because many aspects of big data, analytics, and data science are specific forms of product development. This book for example has avoided detailed discussion of programming languages or current vendor products. Similiarly, the intent here is to explore the management implications of big data, analytics, and data science, not to discuss specific techniques in any detail.</p>
+<p>This is a brief discussion, because many aspects of big data, analytics, and data science are specific forms of product development. This book for example has avoided detailed discussion of programming languages or current vendor products. Similiarly, the intent here is to explore the background and management implications of big data, analytics, and data science, not to discuss specific techniques in any detail.</p>
 </div>
 </div>
 </div>
@@ -22944,31 +22944,63 @@ Again, if you or your company are involved in legal issues relating to the above
 <p><em>Reporting and analytics, old style</em> <span class="footnote">[<a id="_footnoteref_11" class="footnote" href="#_footnote_11" title="View footnote.">11</a>]</span></p>
 </div>
 <div class="paragraph">
-<p>The need to analyze</p>
+<p>The compilation of data from physical sources, and its analysis for the purposes of organizational strategy, was distinct from the day to day creation and use of the data. The clerk who attended to the customer and updated their account records, had a different role than the clerk who added up the figures across dozens or hundreds of accounts for the annual corporate report.</p>
 </div>
 <div class="paragraph">
-<p>The analytics cycle&#8230;&#8203;</p>
+<p>What do we mean by the words "analysis" or "analytics" in this older context? Just compiling totals and averages was expensive and time-consuming. Cross-tabulating data (e.g. to understand sales by region) was even more so.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Big data</p>
-</li>
-<li>
-<p>Data science</p>
-</li>
-</ul>
-</div>
-<div class="sect4">
-<h5 id="_data_warehousing">Data warehousing</h5>
 <div class="paragraph">
-<p>Slowly changing dimensions</p>
+<p>As information became more and more automated, the field of "Decision Support" (and its academic partner "Decision Sciences") emerged. The power of extensively computerized information, that could support more and more ambitious forms of analysis, gave rise to the concept and practice of "Data Warehousing" <a href="#Inmon1992">[Inmon1992]</a>.</p>
 </div>
+<div class="paragraph">
+<p>A robust profession and set of practices emerged around data warehousing and analytics. And as infrastructure became more powerful and storage less expensive, the idea of full-lifecycle or closed-loop analytics originated.</p>
+</div>
+<div class="paragraph">
+<p>When analyzing data is costly and slow, the data analysis can only affect large, long-cycle decisions. It is not a form of fast feedback. The annual report may drive next year&#8217;s product portfolio investment decisions, but it cannot drive the day to day behavior of sales, marketing, and customer service:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/4.11-oldCycle.png" alt="4.11 oldCycle">
+</div>
+</div>
+<div class="paragraph">
+<p>However, as analysis becomes faster and faster, it can inform operational decisions.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/4.11-newCycle.png" alt="4.11 newCycle">
+</div>
+</div>
+<div class="paragraph">
+<p>And, for certain applications (such as an online traffic management application on your smartphone), analytics is such a fundamental part of the application that it becomes operational. Such pervasive use of analytics is one of the hallmarks of digital transformation.</p>
 </div>
 <div class="sect4">
 <h5 id="_business_intelligence_analytics_and_data_science">Business intelligence, analytics, and data science</h5>
+<div class="quoteblock">
+<blockquote>
+The reason to build a data warehouse is to have the ability to make better
+decisions faster based on information using current and historic data.
+</blockquote>
+<div class="attribution">
+&#8212; Paul Westerman<br>
+<cite>Data Warehousing: Using the Wal-Mart Model</cite>
+</div>
+</div>
 <div class="paragraph">
-<p>unstructured analytics</p>
+<p>Slowly changing dimensions</p>
+</div>
+<div class="paragraph">
+<p>unstructured analytics
+The analytics cycle&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>New sources: Social, IoT</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_agile_methods_meet_business_intelligence">Agile methods meet business intelligence</h5>
+<div class="paragraph">
+<p>The need to analyze</p>
 </div>
 </div>
 </div>
@@ -24385,6 +24417,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 <p><a id="IAASB2013"></a>[IAASB2013]: International Auditing and Assurance Standards Board (IAASB). 2013. “ISAE 3000 (Revised), Assurance Engagements Other than Audits or Reviews of Historical Financial Information.” <a href="https://www.ifac.org" class="bare">https://www.ifac.org</a>.</p>
 </li>
 <li>
+<p><a id="Inmon1992"></a>[Inmon1992]: Inmon, William H. 1992. Building the Data Warehouse. Wiley.</p>
+</li>
+<li>
 <p><a id="ISACA2012"></a>[ISACA2012]: ISACA. 2012. <em>COBIT 5: Enabling Processes.</em></p>
 </li>
 <li>
@@ -24684,6 +24719,9 @@ IEEE Press.</p>
 </li>
 <li>
 <p><a id="Vergun2015"></a>[Vergun2015]: Vergun, D. (2015). Toxic leaders decrease Soldiers’ effectiveness, experts say. Retrieved July 13, 2016, from <a href="https://www.army.mil/article/157327/Toxic_leaders_decrease_Soldiers" class="bare">https://www.army.mil/article/157327/Toxic_leaders_decrease_Soldiers</a><em>effectiveness</em>experts_say</p>
+</li>
+<li>
+<p><a id="Westerman2001"></a>[Westerman2001]: Westerman, Paul. 2001. Data Warehousing: Using the Wal-Mart Model. San Diego: Academic Press.</p>
 </li>
 <li>
 <p><a id="WFMC2010"></a>[WFMC2010]: WFMC. 2010. “Adaptive Case Management.”  <a href="http://www.xpdl.org/nugen/p/adaptive-case-management/public.htm" class="bare">http://www.xpdl.org/nugen/p/adaptive-case-management/public.htm</a>. Accessed 2016-06-04.</p>
