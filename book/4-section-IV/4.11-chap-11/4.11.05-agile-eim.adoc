@@ -9,31 +9,29 @@ Enterprise information management (including data management) has had a contenti
 
 The tendency among software engineers is to focus on the conceptual aspects of software, without concern for the physical issues of computing. (Logical versus physical is arguably the fundamental distinction at the heart of the xref:continuous-delivery[development vs operations divide].)
 
-As we have previously discussed, xref:refactoring[refactoring] is one of the critical practices of Agile development, keeping systems flexible and current when used appropriately. The simple act of turning one overly-large software class or module into two or three more cohesive elements is performed every day by developers around the world, as they strive for clean, well engineered code.
-
-DevOps and Agile techniques can be applied to databases; in fact there are important technical books such as Refactoring Databases by Ambler and Sadalage <<Ambler2006>>. With smaller systems, there is little reason to avoid ongoing  of data along with code.
-
-Infrastructure as Code techniques apply. Database artifacts (e.g. SQL scripts, export/import scripts, etc.) must be under version control and should leverage continuous integration techniques. Test-driven development can apply equally well to database-related development.
-
 But when data reaches a certain scale, its concerns start to become priorities. The bandwidth of FedEx is still greater than that of the Internet (<<Munroe2013>>). That is to say, it is more effective and efficient, past a certain scale, to physically move data by moving the hard drives around, than to copy the data. The reasons are well understood and trace back to fundamental laws of physics and information first understood by Claude Shannon <<Shannon1949>>. The concept of "data gravity" (quote above) seems consistent with Shannon's work.
 
-Notice that these physical limitations apply not just to simple movement of data, but also to complex xref:refactoring[refactoring]. Breaking an existing, overly-large database table into several more specialized tables is a different problem, if data is large. Data, in the sense understood by digital and IT professionals, is *persistent*. It exists as physical indications of state in the physical world: whether knotted ropes, clay tablets, or electromagnetic state.
+Notice that these physical limitations apply not just to simple movement of data, but also to more complex operations, notably the concept of xref:refactoring[refactoring].
 
-If you are transforming 3 billion rows in a table, each row of data has to be processed. The data might take hours or days to be restructured, and what of the business needs in the meantime? These kinds of situations often have messy and risky solutions, that cannot easily be "rolled back":
+As we have previously discussed, refactoring is one of the critical practices of Agile development, keeping systems flexible and current when used appropriately. The simple act of turning one overly-large software class or module into two or three more cohesive elements is performed every day by developers around the world, as they strive for clean, well engineered code.
+
+But breaking an existing, overly-large database table into several more specialized tables is a different problem, if data is large. Data, in the sense understood by digital and IT professionals, is *persistent*. It exists as physical indications of state in the physical world: whether knotted ropes, clay tablets, or electromagnetic state.
+
+If you are transforming 3 billion rows in a table, each row of data has to be processed. The data might take hours or days to be restructured, and what of the business needs in the meantime? These kinds of situations often have messy and risky solutions, that  cannot easily be "rolled back."
 
 . A copy might need to be made for the restructuring, leaving the original table in place.
 . When large restructuring operation is completed, and new code is released, a careful conversion exercise must identify the records that changed while the large restructuring occurred.
 . These records must then go through the conversion process AGAIN and be updated in the new data structure. They MUST replace the older data that was initially converted in step 1.
 
-All in all, this is an error-prone process, requiring careful auditing and cross-checking to mitigate the risk of information loss. It can and should be automated to the maximum degree possible. Modern web-scale architectures are often built to accommodate rolling upgrades, but schema changes can still be problematic. Some system outage may be unavoidable, especially in systems with strong transactional needs for complete integrity. (See earlier discussion of xref:CAP-theorem[CAP theorem].)
+All in all, this is an error-prone process, requiring careful auditing and cross-checking to mitigate the risk of information loss. Some system outage may be unavoidable, especially in systems with strong transactional needs for complete integrity. (See earlier discussion of xref:CAP-theorem[CAP theorem].)
 
 Because of these issues, there will always be some contention between the software and information management perspectives. Software developers, especially those schooled in Agile practices, tend to rely on heuristics such as "do the simplest thing that could possibly work." Such a heuristic might lead to a preference for a simpler data structure, that will not hold up past a certain scale.
 
-An information professional, when faced with the problem of restructuring the now-massive contents of the data structure, might well say "Why did you build it that way? Couldn't you have thought a little more about this?"
+An information professional, when faced with the problem of restructuring the now-massive data structure, might well say "Why did you build it that way? Couldn't you have thought a little more about this?"
 
-In fact, data management capabilities often have sought to intervene with developers, sometimes placing procedural requirements upon the development teams when database services were required. This approach is seen in waterfall development and when database teams are organized xref:product-v-function[functionally].
+In fact, data management capabilities often have sought to intervene with developers, sometimes placing procedural requirements upon the development teams when database services were required. This approach is seen in xref:1.03.02-Agile-history[waterfall] development and when database teams are organized xref:product-v-function[functionally].
 
-We saw the classic model earlier in this chapter: define
+We saw the classic model xref:data-modeling[earlier] in this chapter: in turn, define
 
 . Conceptual data model
 . Logical data model
@@ -43,10 +41,10 @@ as a sequential process.
 
 But organizations pressed for time often go straight to defining physical schemas. And indeed, if the xref:cost-of-delay[Cost of Delay] is steep, this behavior will *not* change.
 
-The only reason to invest in richer understanding of information (e.g. conceptual and logical modeling), or more robust and proven data structures, is if the benefits outweigh the costs. Data and records management justifies itself when:
+The only reason to invest in richer understanding of information, or more robust data structures, is if the benefits outweigh the costs. Data and records management justifies itself when:
 
-* Systems are easier to adapt, because they are well understood and the data structures are flexible
-* Occurrence, costs, and risks of data refactoring are reduced
+* Systems are easier to adapt, because they are flexible and well understood
+* Costs and risks of data refactoring are reduced
 * Systems are easier to use, because the meaning of their information is documented for the end consumer (reducing support costs and operational risks)
 * Data redundancy is lessened, saving storage and management attention
 * Data and records-related risks (security, regulatory, liability) are mitigated through better data management.
@@ -55,10 +53,7 @@ Again, back to our xref:0.01-emergence[emergence model]. By the time you are an 
 
 ===== Next generation practices in information management
 
-====== Cross-functional teams
-The value of cross-functional teams was discussed at length in xref:product-v-function[chapter 7]. This applies to including data specialists as team members. This practice alone can reduce many data management issues.
-
-====== Domain-driven design
+====== The failure and persistence of the enterprise information model
 [quote, Martin Fowler]
 As you try to model a larger domain, it gets progressively harder to build a single unified model <<Fowler2014>>.
 
@@ -68,38 +63,17 @@ This model arguably reached its peak in highly-scaled mainframe systems, where a
 
 However, when data is shared for many purposes, it becomes very difficult to change. The analysis process starts to lengthen, and xref:cost-of-delay[Cost of Delay] increases for new or enhanced systems.
 
-This started to become a real problem right around the time that cheaper distributed systems became available in the market. Traditional data managers of large scale mainframe database systems continued to have a perspective that "everything can fit in my database." But the demand for new digital product outstripped their capacity to analyze and incorporate the new data.
+This started to become a real problem right around the time that cheaper distributed systems became available in the market. Traditonal data managers of large scale mainframe database systems continued to have a perspective that "everything can fit in my database." But the demand for new digital product outstripped their capacity to analyze and incorporate the new data.
 
-The information management landscape became fragmented. One response was the enterprise conceptual data model. The idea was to create a sort of "master schema" for the enterprise, that would define all the major concepts in an unambiguous way.
+The information management landscape became fragmented. One response was the enterprise conceptual data model. The idea was that such models could represent the enterprise's information, even if it was stored in multiple databases.
 
 However, attempting to establish such a model can run into difficulties getting agreement on definitions. (See the xref:ontology-problem[ontology problem] above.) Seeking such agreement again can impose cost of delay, if gaining agreement is required for the system. And if gaining agreement is optional, then why is agreement being sought? The risk is that the data architect becomes "ivory tower."
 
 NOTE: In fact, there are theoretical concerns at the heart of philosophy with attempting to formulate universal ontologies. They are beyond the scope of this text but if you are interested, start by researching _semiotics_ and _postmodernism_. Such concerns may seem academic, but we see their consequences in the practical difficulty of creating universal data models.
 
-A pragmatic response to these difficulties is represented in the Martin Fowler quote above. Fowler recommends the practice of domain-driven design, which accepts the fact that "Different groups of people will use subtly different vocabularies in different parts of a large organization" <<Fowler2014>> and quotes Eric Evans that "total unification of the domain model for a large system will not be feasible or cost-effective" <<Evans2004>>.
+A pragmatic response to these difficulties is represented in the Martin Fowler quote above. Fowler recommends the practice of domain-driven design, which accepts the fact that "Different groups of people will use subtly different vocabularies in different parts of a large organization" <<Fowler2014>> and quotes Eric Evans that "total unification of the domain model for a large system will not be feasible or cost-effective" <<Evans2004>>. Instead, there are various techniques for relating these contexts, beyond the scope of this book. (See <<Evans2004>>.) Some will argue for the use of microservices, but data always wants to be recombined, so microservices have limitations as a solution for the problems of information management.
 
-Instead, there are various techniques for relating these contexts, beyond the scope of this book. (See <<Evans2004>>.) Some will argue for the use of microservices, but data always wants to be recombined, so microservices have limitations as a solution for the problems of information management.
-
-And, before you completely adopt a domain-driven design approach, be certain you understand the consequences for data governance and records management. Human resources records are human resources records and must be handled appropriately. Regulators and courts will not accept "domain driven design" as a defense for non-compliance.
-
-====== Patterns and reference architectures
-
-Reference architectures and design patterns are examples of approaches that are known to work for solving certain problems. In other words, they are reusable (and usually free) solutions for commonly occurring scenarios. They apply to core software development, often suggesting particular class structures. <<Gamma1995>> However, the concept can also be applied to data and system architectures, e.g. <<Fowler2003>>, <<Betz2011a>>. David Hay <<Hay1996>> and Len Silverston <<Silverston2001>>, <<Silverston2001a>>, <<Silverston2008>> have documented data models for a variety of industries.
-
-Reference architectures also can provide guidance on data structures, as they often contain industry learnings. Examples include:
-
-[cols="3*", options="header"]
-|====
-|Organization|Domain|Standard(s)
-|Tele-Management Forum|Telecommunications|Frameworx, ETom (Enhanced Telecommunications Operating Model), NGOSS, SIDS
-|Association for Retail Technology Standards|Retail|ARTS model
-|ACORD.org |Insurance|ACORD Framework
-|Banking Industry Architecture Network|Banking|BIAN Service Landscape
-|The Open Group Exploration, Mining, Metals and Minerals Forum|Exploration, Mining, and Minerals|Exploration and Mining Business Reference Model
-|The Open Group IT4IT Forum|Information Technology Management|IT4IT Standard
-|====
-
-Patterns and reference architectures can accelerate understanding, but they also can over-complicate solutions. Understanding and applying them pragmatically is the challenge. Certainly, various well-known problems such as customer address management have surprising complexity, and can benefit from leveraging previous work.
+And, before you completely adopt a domain-driven design approach, be certain you understand the consequences for data governance and records management. Regulators and courts will not accept "domain driven design" as a defense for non-compliance.
 
 ====== Generic structures and inferred schemas
 
@@ -135,47 +109,16 @@ This is an increasingly important kind of workload for  digital organizations. A
 
 Because log formats change, and the collaboration data is semi-structured, analytics will likely be better served with a “schema on read” approach. However, this means that the operational analysis is significant development. Simplifying the load logic only defers the complexity. The data lake analyst must have a thorough understanding of the various event formats and other data brought into the lake, in order to write the operational analysis query.
 
-"Schema on read" still may be a more efficient approach however. Extensive schema development done up front may be invalidated by actual data use, and heavyweight approaches are not as compatible with fast feedback. (Data services are also a form of product development and therefore fast xref:2.00.01-feedback[feedback] on their use is beneficial; the problem again is one of data gravity. Fast feedback works in software because code is orders of magnitude easier to change.)
+Schema inference at the most general shades into ontology mining. In ontology mining, data (usually text-heavy) is analyzed by algorithms to derive the data model. If one reads a textbook about the retail business, one might easily infer that there are concepts such as "store," "customer," "warehouse," and "supplier." Information technology has reached a point where such analysis itself can be automated, to a degree. Certain analytics systems have the ability to display an inferred table structure derived from unstructured or semi-structured data. This is an active area of research, development, and product innovation.
 
-Schema inference at the most general shades into _ontology mining_. In ontology mining, data (usually text-heavy) is analyzed by algorithms to derive the data model. If one reads a textbook about the retail business, one might easily infer that there are concepts such as "store," "customer," "warehouse," and "supplier." Information technology has reached a point where such analysis itself can be automated, to a degree. Certain analytics systems have the ability to display an inferred table structure derived from unstructured or semi-structured data. This is an active area of research, development, and product innovation.
-
-The challenge is that data still needs to be tagged and identified; *regulatory concerns do not go away* just because one is using a NoSQL database.
-
-For further information and the current state of industry practice on these questions, see the professional associations at the end of this chapter.
+The challenge is that data still needs to be tagged and identified; the regulatory concerns do not go away. For further information and the current state of industry practice on these questions, see the professional associations at the end of this chapter.
 
 ====== Append-only to the rescue?
-Another technique that is changing the data management landscape is the concept of append-only. Traditional databases *change* values; for example, if you change "1004 Oak Av." to "2010 Elm St." in an address field, the old value is (in general) *gone*, unless you have specifically engineered the system to preserve it.
+In the future, mutable could become the exception rather than the rule.
 
-A common approach is the idea of "audited" or "effective-dated" fields, which have existed for decades. In an effective-dated approach, the "change" to the address actually looks like this in the database:
-
-[cols="3*", options="header"]
-|====
-|Street address|From|To
-|1004 Oak Av.|12/1/1995|9/1/2016
-|2010 Elm St.|9/2/2016|Present
-|====
-
-Determining the correct address requires a query on the To date field. (This is only an example, there are many ways of solving the problem.)
-
-In this approach, data accumulates and is not deleted. (Capacity problems can of course result.) Append-only takes the idea of effective dating and applies it across the entire database. No values are ever changed, they are only superseded by further appends.
-
-This is a powerful technique, especially as storage costs go down. It can be combined with the data lake to create systems of great flexibility. But there are no silver bullets. Suppose that a distributed system has sacrificed consistency for availability and partition-tolerance (see xref:CAP-theorem[CAP theorem]). In that case, the system may wind up with data such as:
-
-[cols="3*", options="header"]
-|====
-|Street address|From|To
-|1004 Oak Av.|12/1/1995|9/1/2016
-|2010 Elm St.|9/2/2016|Present
-|574 Maple St.|9/2/2016|Present
-|====
-
-This is now a xref:data-quality[data quality] issue, requiring after-the-fact exception analysis and remediation.
-
-anchor:test-data-mgmt[]
+====== Non-invasive data governance (Seiner?)
 
 ====== Test data
-[quote, Puppet Labs/DevOps Research and Assessment, 2016 State of DevOps Report]
-...when teams have adequate test data to run automated tests, and can create that data on demand, they see better IT performance
 
 A non-obvious and non-trivial problem at the intersection of Enterprise Information Management and DevOps is test data management.
 
@@ -185,12 +128,19 @@ Suppose you are a developer working on a data-intensive system, one that (for ex
 
 Your code needs to support a wide variety of data inputs and outputs. At first, you just entered a few test names and addresses, like "Mickey Mouse" or "Bugs Bunny, 123 Carrot Way, Albuquerque, New Mexico 10001."
 
-But this nonsensical data quickly was shown to not work. For example, if you are testing integration with an address-scrubbing service, you will get an error with an address in New Mexico that shows a ZIP code of 10001. (Actually, the nonsensical data is useful in testing that particular error scenario. But that is only one of many error scenarios.)
+But this nonsensical data quickly was shown to not work. For example, if you are testing integration with an address-scrubbing service, you will get an error with an address in New Mexico that shows a ZIP code of 10001.
 
-Based on hearing anecdotal concerns, the authors of the _2016 State of DevOps_ report examined test data management practices and found that they correlated postively with "better IT performance, lower change failure rates, and lower levels of deployment pain and rework" <<Forsgren2016>>, p. 29. In particular, the report suggests that test data be minimized and created from a blank slate wherever possible.
+The test data problem - nontrivial - proven to be a precursor to org performance - see Puppet Labs survey (Humble presentation 8/2016)
 
-Taking data from production systems as a basis for testing is also frequently done. However, such data must be sanitized -- sensitive information such as social security number must be removed. This can be done automatically, but then such automation must itself be developed and maintained, and the extensive production data set may (in effect) be driving a large amount of non-value-add testing.
 
-In general, test data management techniques will vary greatly by application and problem domain. The primary recommendation here is to invest in solving the problem, understanding that up-front investments in automation will pay off. The high-performing product team will have to solve the "how" of doing it appropriately for their particular situation.
+====== Next gen infrastructure
+* Data as gravity
+* CAP revisited: ultimately, uncertainty wins
 
-====== Non-invasive data governance (Seiner column)
+* immutability: where does the data go?
+
+http://searchcio.techtarget.com/definition/agile-business-intelligence-BI?utm_medium=EM&asrc=EM_NLN_56914325&utm_campaign=20160510_Word%20of%20the%20Day:%20Agile%20business%20intelligence%20(BI)_kherbert&utm_source=NLN&track=NL-1823&ad=907631&src=907631
+
+Centralized layer teams vs microservices
+
+Microservices as a more realistic implementation mechanism, better suited to human cognition
