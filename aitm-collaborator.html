@@ -23066,10 +23066,15 @@ The reason to build a data warehouse is to have the ability to make better decis
 </ul>
 </div>
 <div class="paragraph">
-<p>These are not equivalent terms; in fact, they have certain relationships to each other:</p>
+<p>Others would add the Internet of Things.</p>
 </div>
 <div class="paragraph">
-<p>New sources: Social, IoT</p>
+<p>These are not equivalent terms; in fact, they have certain relationships to each other:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/4.11-SMAC.png" alt="4.11 SMAC">
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -23102,7 +23107,7 @@ Services and Applications can have their own Gravity, but Data is the most massi
 <p>As we have previously discussed, <a href="#refactoring">refactoring</a> is one of the critical practices of Agile development, keeping systems flexible and current when used appropriately. The simple act of turning one overly-large software class or module into two or three more cohesive elements is performed every day by developers around the world, as they strive for clean, well engineered code.</p>
 </div>
 <div class="paragraph">
-<p>DevOps and Agile techniques can be applied to databases; in fact there are important technical books such as Refactoring Databases by Ambler and Sadalage <a href="#Ambler2006">[Ambler2006]</a>. With smaller systems, there is little reason to avoid ongoing  of data along with code.</p>
+<p>DevOps and Agile techniques can be applied to databases; in fact there are important technical books such as Refactoring Databases by Ambler and Sadalage <a href="#Ambler2006">[Ambler2006]</a>. With smaller systems, there is little reason to avoid ongoing refactoring of data along with code.</p>
 </div>
 <div class="paragraph">
 <p>Infrastructure as Code techniques apply. Database artifacts (e.g. SQL scripts, export/import scripts, etc.) must be under version control and should leverage continuous integration techniques. Test-driven development can apply equally well to database-related development.</p>
@@ -23111,7 +23116,7 @@ Services and Applications can have their own Gravity, but Data is the most massi
 <p>But when data reaches a certain scale, its concerns start to become priorities. The bandwidth of FedEx is still greater than that of the Internet (<a href="#Munroe2013">[Munroe2013]</a>). That is to say, it is more effective and efficient, past a certain scale, to physically move data by moving the hard drives around, than to copy the data. The reasons are well understood and trace back to fundamental laws of physics and information first understood by Claude Shannon <a href="#Shannon1949">[Shannon1949]</a>. The concept of "data gravity" (quote above) seems consistent with Shannon&#8217;s work.</p>
 </div>
 <div class="paragraph">
-<p>Notice that these physical limitations apply not just to simple movement of data, but also to complex <a href="#refactoring">refactoring</a>. Breaking an existing, overly-large database table into several more specialized tables is a different problem, if data is large. Data, in the sense understood by digital and IT professionals, is <strong>persistent</strong>. It exists as physical indications of state in the physical world: whether knotted ropes, clay tablets, or electromagnetic state.</p>
+<p>Notice that these physical limitations apply not just to simple movement of data, but also to complex <a href="#refactoring">refactoring</a>. It&#8217;s one thing to refactor code&#8201;&#8212;&#8201;even the SQL defining a table. Breaking an existing, overly-large database table and its contents into several more specialized tables is a different problem, if data is large. Data, in the sense understood by digital and IT professionals, is <strong>persistent</strong>. It exists as physical indications of state in the physical world: whether knotted ropes, clay tablets, or electromagnetic state.</p>
 </div>
 <div class="paragraph">
 <p>If you are transforming 3 billion rows in a table, each row of data has to be processed. The data might take hours or days to be restructured, and what of the business needs in the meantime? These kinds of situations often have messy and risky solutions, that cannot easily be "rolled back":</p>
