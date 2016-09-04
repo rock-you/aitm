@@ -11,13 +11,13 @@ The tendency among software engineers is to focus on the conceptual aspects of s
 
 As we have previously discussed, xref:refactoring[refactoring] is one of the critical practices of Agile development, keeping systems flexible and current when used appropriately. The simple act of turning one overly-large software class or module into two or three more cohesive elements is performed every day by developers around the world, as they strive for clean, well engineered code.
 
-DevOps and Agile techniques can be applied to databases; in fact there are important technical books such as Refactoring Databases by Ambler and Sadalage <<Ambler2006>>. With smaller systems, there is little reason to avoid ongoing  of data along with code.
+DevOps and Agile techniques can be applied to databases; in fact there are important technical books such as Refactoring Databases by Ambler and Sadalage <<Ambler2006>>. With smaller systems, there is little reason to avoid ongoing refactoring of data along with code.
 
 Infrastructure as Code techniques apply. Database artifacts (e.g. SQL scripts, export/import scripts, etc.) must be under version control and should leverage continuous integration techniques. Test-driven development can apply equally well to database-related development.
 
 But when data reaches a certain scale, its concerns start to become priorities. The bandwidth of FedEx is still greater than that of the Internet (<<Munroe2013>>). That is to say, it is more effective and efficient, past a certain scale, to physically move data by moving the hard drives around, than to copy the data. The reasons are well understood and trace back to fundamental laws of physics and information first understood by Claude Shannon <<Shannon1949>>. The concept of "data gravity" (quote above) seems consistent with Shannon's work.
 
-Notice that these physical limitations apply not just to simple movement of data, but also to complex xref:refactoring[refactoring]. Breaking an existing, overly-large database table into several more specialized tables is a different problem, if data is large. Data, in the sense understood by digital and IT professionals, is *persistent*. It exists as physical indications of state in the physical world: whether knotted ropes, clay tablets, or electromagnetic state.
+Notice that these physical limitations apply not just to simple movement of data, but also to complex xref:refactoring[refactoring]. It's one thing to refactor code -- even the SQL defining a table. Breaking an existing, overly-large database table and its contents into several more specialized tables is a different problem, if data is large. Data, in the sense understood by digital and IT professionals, is *persistent*. It exists as physical indications of state in the physical world: whether knotted ropes, clay tablets, or electromagnetic state.
 
 If you are transforming 3 billion rows in a table, each row of data has to be processed. The data might take hours or days to be restructured, and what of the business needs in the meantime? These kinds of situations often have messy and risky solutions, that cannot easily be "rolled back":
 
