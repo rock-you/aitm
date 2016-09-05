@@ -6459,13 +6459,13 @@ The goal of a startup is to figure out the right thing to build— the thing cus
 <pre>Foreshadow BPM</pre>
 </div>
 </div>
-<div class="paragraph">
-<p><a id="feature-v-component"></a></p>
-</div>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_product_architecture">Product architecture</h5>
+<div class="paragraph">
+<p><a id="feature-v-component"></a></p>
+</div>
 <div class="sect5">
 <h6 id="_features_vs_components">Features vs. components</h6>
 <div class="paragraph">
@@ -23025,6 +23025,9 @@ Again, if you or your company are involved in legal issues relating to the above
 <div class="paragraph">
 <p>When analyzing data is costly and slow, the data analysis can only affect large, long-cycle decisions. It is not a form of fast feedback. The annual report may drive next year&#8217;s product portfolio investment decisions, but it cannot drive the day to day behavior of sales, marketing, and customer service:</p>
 </div>
+<div class="paragraph">
+<p><a id="analytics-context"></a></p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="images/4.11-oldCycle.png" alt="4.11 oldCycle">
@@ -23072,8 +23075,17 @@ The reason to build a data warehouse is to have the ability to make better decis
 <img src="images/4.11-DW-BI.png" alt="4.11 DW BI">
 </div>
 </div>
+<div class="paragraph">
+<p>The above diagram expands on the above <a href="#analytics-context">contextual diagrams</a>, showing the major business areas (Sales etc) as data sources. (In a large organization this might be dozens or hundreds of source systems.) These systems feed a "data services layer" that</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s important to understand that in terms of this book&#8217;s emphasis on product-centric development that the data services layer itself is an internal product. Some might call it more of a <a href="#feature-v-component">component than a feature</a>, but it is intended in any case as a general-purpose platform that can support a wide variety of use cases.</p>
+</div>
+<div class="paragraph">
+<p>"Factoring out" data services in this way may or may not be optimal for any given organization, depending on maturity, business objectives, and a variety of other concerns. However, at scale the skills and practices do become specialized, and so it&#8217;s anticipated we&#8217;ll continue to see implementation strategies similar to the above figure.</p>
+</div>
 <div class="sect5">
-<h6 id="_agile_methods_meet_business_intelligence">Agile methods meet business intelligence</h6>
+<h6 id="_agile_methods_meet_dw_bi">Agile methods meet DW/BI</h6>
 <div class="paragraph">
 <p>The need to analyze</p>
 </div>
