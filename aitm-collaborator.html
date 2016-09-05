@@ -23394,7 +23394,7 @@ Services and Applications can have their own Gravity, but Data is the most massi
 <p>All in all, this is an error-prone process, requiring careful auditing and cross-checking to mitigate the risk of information loss. It can and should be automated to the maximum degree possible.</p>
 </div>
 <div class="paragraph">
-<p>Modern web-scale architectures are often built to accommodate rolling upgrades in a more efficient manner (see <a href="#Limoncelli2014">[Limoncelli2014]</a> Chapter 11, "Upgrading Live Services"), but schema changes can still be problematic. Some system outage may be unavoidable, especially in systems with strong transactional needs for complete integrity. (See earlier discussion of <a href="#CAP-theorem">CAP theorem</a>.)</p>
+<p>Modern web-scale architectures are often built to accommodate rolling upgrades in a more efficient manner (see <a href="#Limoncelli2014">[Limoncelli2014]</a> Chapter 11, "Upgrading Live Services"). Perhaps the data can be transformed on a "if changed, then transform" basis, or via other techniques. Nevertheless, schema changes can still be problematic. Some system outage may be unavoidable, especially in systems with strong transactional needs for complete integrity. (See earlier discussion of <a href="#CAP-theorem">CAP theorem</a>.)</p>
 </div>
 <div class="paragraph">
 <p>Because of these issues, there will always be some contention between the software and information management perspectives. Software developers, especially those schooled in Agile practices, tend to rely on heuristics such as "do the simplest thing that could possibly work." Such a heuristic might lead to a preference for a simpler data structure, that will not hold up past a certain scale.</p>
