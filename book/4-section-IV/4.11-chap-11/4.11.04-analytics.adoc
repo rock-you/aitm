@@ -73,26 +73,36 @@ This is the capability to analyze data for consistency, integrity, and conformit
 As data storage has become less expensive, maintaining a historical record of data extracts in original format is seen more often in data warehousing. (This may use a schema-less data lake for implementation.)
 
 ====== Master data reconciliation
-When master data exists in diverse locations (e.g. in multiple xref:system-of-record[Systems of Record]) the ability to reconcile and define the true or "golden" master may be required.
+When master data exists in diverse locations (e.g. in multiple xref:system-of-record[Systems of Record]) the ability to reconcile and define the true or "golden" master may be required. This is useful directly to operational systems, as an online service (e.g. postal service address verification), and is also important when populating the data warehouse or mart.
 
 ====== Transformation and load
 Converting data to a consistent and normalized form has been the basis of enterprise data warehousing since it was first conceived. (We will discuss the xref:schema-less[schema-less] data lake approach in the next chapter section.) A broad market segment of "Extract, Transform, Load" (ETL) tooling exists to support this need.
 
 ====== Sourcing and archiving
+This represents the physical data store required for the extraction and archiving capability. Again, it may be implemented as a schema-less data lake, or as a traditional relational structure.
 
 ====== Integrated data warehouse
+The integrated or enterprise data warehouse is the classic, normalized, often massive, historical data store envisioned originally by Bill Inmon <<Inmon1992>>. While the development effort in creating fully normalized data warehouses has limited them, they nevertheless are important, valuable, and frequently encountered in larger organizations.
 
 ====== Schema-less lake
+A newer form of data aggregation is seen in the xref:schema-less[schema-less] lake. As discussed in the next chapter section, schema-less approaches accept data in native formats and defer the hard question of normalizing the data to to the reporting and analysis stage.
 
 ====== Mart(s)
+The integrated data warehouse is intended to provide a consistent and universal platform across the enterprise. The data mart on the other hand is usually seen as specific to a particular organization or problem.
 
 ====== Statistics
+Statistical analysis of the aggregated and cleansed data is a common use case, often performed using commercial software or the R programming language.
 
 ====== Machine learning
+Machine learning is broadly defined as "a field of study that gives computers the ability to learn without being explicitly programmed." [Arthur Samuel as quoted in Simon, waiting on book]. Machine learning allows computers to develop and improve algorithmic models for making predictions or decisions. Spam filters that "learn" are a good example.
 
 ====== Visualization
+Representing complex information effectively so that humans can understand it and derive value is itself a challenging topic. Many graphical forms have been developed to communicate various aspects of data. See for example the open source visualization library https://d3js.org/[D3.js] 
 
 ====== Ontology and inference
+
+
+
 
 ====== Agile methods meet DW/BI
 
