@@ -1036,6 +1036,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_social_mobile_analytics_and_cloud">Social, Mobile, Analytics, and Cloud</a></li>
 <li><a href="#_big_data">Big data</a></li>
+<li><a href="#_managing_the_information_of_digital_delivery">Managing the information of digital delivery</a></li>
+<li><a href="#_additional_topics">Additional topics</a></li>
 </ul>
 </li>
 <li><a href="#_conclusion_11">Conclusion</a>
@@ -22289,7 +22291,7 @@ distinction between entities, attributes, and relationships is arbitrary.
 <p>But in more flexible spaces, where a company may be creating its own business model, defining a controlled vocabulary may be essential. We see this even in books, which adopt glossaries. Why does a book have a glossary, when dictionaries exist? Because the book is defining a controlled vocabulary. General-purpose dictionaries may list multiple meanings for the same word, or not be very precise. The author, by developing a glossary, can make the book more consistent and accurate.</p>
 </div>
 <div class="paragraph">
-<p>There are techniques for developing controlled vocabularies in efficient and effective ways. The term "ontology engineering" is sometimes used. While specialists may debate the boundaries, another important practice is "conceptual data modeling."</p>
+<p>There are techniques for developing controlled vocabularies in efficient and effective ways. The term "ontology engineering" is sometimes used <a href="#DeNicola216">[DeNicola216]</a>. While specialists may debate the boundaries, another important practice is "conceptual data modeling."</p>
 </div>
 <div class="paragraph">
 <p>All of these concepts (controlled vocabularies, glossaries, ontologies, conceptual data models) are independent of computers. But the initial development of controlled vocabulary is the first step towards automating the information with computers.</p>
@@ -22686,35 +22688,55 @@ Reference data is any kind of data that is used solely to categorize other data 
 </div>
 </div>
 <div class="paragraph">
-<p><a id="market-data"></a></p>
+<p><a id="commercial-data"></a></p>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_market_ing_data">Market(ing) data</h6>
+<h6 id="_commercial_data">Commercial data</h6>
 <div class="paragraph">
-<p>Data is not just an internal artifact of organizations. Data can be bought and sold on the open market like any other commodity. Marketing organizations frequently acquire contact information for email and other campaigns. More specialized market data includes (for example):</p>
+<p>Data is not just an internal artifact of organizations. Data can be bought and sold on the open market like any other commodity. Marketing organizations frequently acquire contact information for email and other campaigns. Here are examples of commercial data available through market sources:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Data type</th>
+<th class="tableblock halign-left valign-top">Market provider</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stock prices</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bloomberg, Reuters</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Credit ratings</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Trans-Union, Experian</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Known security issues</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NIST Common Vulnerability database</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Other forms include:</p>
 </div>
 <div class="ulist">
 <ul>
-<li>
-<p>Stock prices</p>
-</li>
 <li>
 <p>Transactions of record (e.g. real estate)</p>
 </li>
 <li>
 <p>Governmental actions (these may be nominally free from the government, but frequently are resold by vendors who make the data more accessible)</p>
 </li>
-<li>
-<p>Credit ratings</p>
-</li>
-<li>
-<p>Known security issues</p>
-</li>
 </ul>
 </div>
 <div class="paragraph">
-<p>and many more. (Notice the term "market data" can be understood as "data about markets" or more broadly as "data acquired from a market.")</p>
+<p>For a detailed examination of the privacy issues relating to commercial data, especially when governmental data is commercialized, see <a href="#DHS2006">[DHS2006]</a>.</p>
 </div>
 <div class="paragraph">
 <p><a id="data-quality"></a></p>
@@ -23619,10 +23641,10 @@ In fact, there are theoretical concerns at the heart of philosophy with attempti
 </div>
 </div>
 <div class="paragraph">
-<p>Social media is generally external to an organization and manifests as a form of <a href="#market-data">market data</a>, that provide essential insights into bow a company&#8217;s products are performing and being received.</p>
+<p>Social media is generally external to an organization and manifests as a form of <a href="#commercial-data">commercial data</a>, that provide essential insights into bow a company&#8217;s products are performing and being received.</p>
 </div>
 <div class="paragraph">
-<p>Mobile (or mobility) has two distinct aspects: mobility as an engagement platform (e.g. for deployment of "apps" as one product form), versus the <a href="#market-data">market data</a> available from mobile carriers, notably geolocation data.</p>
+<p>Mobile (or mobility) has two distinct aspects: mobility as an engagement platform (e.g. for deployment of "apps" as one product form), versus the <a href="#commercial-data">commercial data</a> available from mobile carriers, notably geolocation data.</p>
 </div>
 <div class="paragraph">
 <p>Internet of Things can be either an internal or external data source, often extremely high volume and velocity, requiring analysis services for sense-making and value extraction.</p>
@@ -23659,55 +23681,13 @@ As proposed by analyst Doug Laney in 2001 <a href="#Laney2001">[Laney2001]</a>, 
 <div class="paragraph">
 <p>All of these dimensions require increasingly specialized techniques as they scale, and the data management product ecosystem has continued to diversify as a result.</p>
 </div>
-<div class="paragraph">
-<p>ERP systems (special section??)</p>
 </div>
-<div class="paragraph">
-<p>Knowledge mgmt</p>
-</div>
+<div class="sect4">
+<h5 id="_managing_the_information_of_digital_delivery">Managing the information of digital delivery</h5>
 <div class="ulist">
 <ul>
 <li>
 <p>Metadata: data management of the digital pipeline</p>
-</li>
-<li>
-<p>Big data and digital management - each apply to the other - two sides of the coin -</p>
-</li>
-<li>
-<p>Defining "analytics"</p>
-</li>
-<li>
-<p>The enterprise information model: a failed vision that will never go away.</p>
-<div class="literalblock">
-<div class="content">
-<pre>===== Business rules management</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>===== ontology engineering
-* OPAL, BORO, etc</pre>
-</div>
-</div>
-</li>
-<li>
-<p>ontology/concept/domain</p>
-</li>
-<li>
-<p>ontologies. Problems in developing them.
-ontology mining</p>
-<div class="literalblock">
-<div class="content">
-<pre>CACM 3/16 article on lightweight ontology engineering.
-abstraction through supertype
-abstraction through subject area (choosing a focal concept)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>===== EIM applied to digital delivery</pre>
-</div>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>next material is EIM applied to IT, keep but reduce scope/importance somewhat - should still be a major chapter section</pre>
@@ -23741,49 +23721,6 @@ abstraction through subject area (choosing a focal concept)</pre>
 <p>Looking ahead: Big Data, machine learning, text analytics</p>
 <div class="literalblock">
 <div class="content">
-<pre>The problem of representation</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Put three people in three rooms</pre>
-</div>
-</div>
-</li>
-<li>
-<p>one has a pencil &amp; paper</p>
-</li>
-<li>
-<p>one has a box of wooden matches</p>
-</li>
-<li>
-<p>one has two cups, one with a number of marbles in it</p>
-<div class="literalblock">
-<div class="content">
-<pre>Each room looks out on an arena where horses are being shown. Count the horses.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>===== EIM Sourcing (the market for data)</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>market data</p>
-</li>
-<li>
-<p>infrastructure</p>
-<div class="literalblock">
-<div class="content">
-<pre>Package management, CVE, market data</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
 <pre>===== Metadata and metamodels</pre>
 </div>
 </div>
@@ -23797,8 +23734,7 @@ abstraction through subject area (choosing a focal concept)</pre>
 <pre>Move up to 1st topic?</pre>
 </div>
 </div>
-<div class="ulist">
-<ul>
+</li>
 <li>
 <p>revisit BORO
 Metadata</p>
@@ -23812,6 +23748,16 @@ Metadata</p>
 </div>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_additional_topics">Additional topics</h5>
+<div class="literalblock">
+<div class="content">
+<pre>===== ERP systems (special section??)
+===== Business rules management
+===== Knowledge mgmt</pre>
+</div>
 </div>
 </div>
 </div>
@@ -23854,6 +23800,9 @@ Data Management Body of Knowledge</p>
 </li>
 <li>
 <p><a href="http://ht.ly/X1ej300XPZj">Applied Infonomics: Why and How to Value Your Information as an Asset</a></p>
+</li>
+<li>
+<p><a href="https://www.dhs.gov/xlibrary/assets/privacy/privacy_advcom_12-2006_rpt_commdata.pdf">DHS Report No. 2006-03, The Use of Commercial Data</a></p>
 </li>
 </ul>
 </div>
@@ -24475,6 +24424,12 @@ All web references were archived into the author&#8217;s files on the indicated 
 </li>
 <li>
 <p><a id="DeLuccia2015"></a>[DeLuccia2015]: DeLuccia, James, Jeff Gallimore, Gene Kim, and Byron Miller. 2015. “DevOps Audit Defense Toolkit.” <a href="http://itrevolution.com/devops-and-auditors-the-devops-audit-defense-toolkit/" class="bare">http://itrevolution.com/devops-and-auditors-the-devops-audit-defense-toolkit/</a>.</p>
+</li>
+<li>
+<p><a id="DeNicola216"></a>[DeNicola216]: De Nicola, Antonio, and Michelle Missikoff. 2016. “A Lightweight Methodology for Rapid Ontology Engineering.” Communications of the ACM2 59 (3): 79–86.</p>
+</li>
+<li>
+<p><a id="DHS2006"></a>[DHS2006]: Department of Homeland Security. 2006. “Report No. 2006-03, The Use of Commercial Data.” DHS Data Privacy and Integrity Advisory Committee.</p>
 </li>
 <li>
 <p><a id="Drucker1993"></a>[Drucker1993]: Drucker, Peter F. 1993. <em>Post-Capitalist Society</em>. 1st ed. New York, NY: HarperBusiness.</p>
