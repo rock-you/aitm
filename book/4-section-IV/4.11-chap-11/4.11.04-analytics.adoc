@@ -64,14 +64,19 @@ Notice also that the data services layer is not solely for analytics; it also su
 Here are discussions of the diagrams's various elements:
 
 ====== Operational applications
+These are the source systems that provide the data and require data services.
 
 ====== Quality analysis
+This is the capability to analyze data for consistency, integrity, and conformity with expectations, and to track associated metrics over time. (See xref:data-quality[data quality].)
 
 ====== Extraction and archiving
+As data storage has become less expensive, maintaining a historical record of data extracts in original format is seen more often in data warehousing. (This may use a schema-less data lake for implementation.)
 
 ====== Master data reconciliation
+When master data exists in diverse locations (e.g. in multiple xref:system-of-record[Systems of Record]) the ability to reconcile and define the true or "golden" master may be required.
 
 ====== Transformation and load
+Converting data to a consistent and normalized form has been the basis of enterprise data warehousing since it was first conceived. (We will discuss the xref:schema-less[schema-less] data lake approach in the next chapter section.) A broad market segment of "Extract, Transform, Load" (ETL) tooling exists to support this need.
 
 ====== Sourcing and archiving
 
