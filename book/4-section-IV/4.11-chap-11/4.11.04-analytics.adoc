@@ -17,7 +17,7 @@ endif::instructor-ed[]
 
 One important aspect of digital product development is data analytics. Analysis of organizational records has always been a part of any concern large enough to have formal records management. The word for this originally was simply "reporting." A set of files or ledgers would be provided to one or more clerks, who would manually review them and extract the needed figures.
 
-image::images/reportingOldStyle.gif[]
+image::images/4.11-reportingOldStyle.gif[]
 _Reporting and analytics, old style_ footnote:[_Image credit https://www.flickr.com/photos/seattlemunicipalarchives/3347281230, commercial use permitted_]
 
 The compilation of data from physical sources, and its analysis for the purposes of organizational strategy, was distinct from the day to day creation and use of the data. The clerk who attended to the customer and updated their account records, had a different role than the clerk who added up the figures across dozens or hundreds of accounts for the annual corporate report.
@@ -49,6 +49,8 @@ The reason to build a data warehouse is to have the ability to make better decis
 
 The vision of an integrated data warehouse for decision support is compelling and has provided enough value to support an industry sector of specialized hardware, software, training, and consulting. It can be seen as a common architectural pattern, in which disparate data is aggregated and consolidated for purposes of analysis, reporting, and for feedback into strategy, tactics, and operational concerns.
 
+anchor:DW-BI-illustrated[]
+
 Here is an illustration of an data warehousing/business intelligence (DW/BI) implementation pattern:
 
 image::images/4.11-DW-BI.png[]
@@ -74,6 +76,9 @@ As data storage has become less expensive, maintaining a historical record of da
 
 ====== Master data reconciliation
 When master data exists in diverse locations (e.g. in multiple xref:system-of-record[Systems of Record]) the ability to reconcile and define the true or "golden" master may be required. This is useful directly to operational systems, as an online service (e.g. postal service address verification), and is also important when populating the data warehouse or mart.
+
+====== Metadata
+Commonly understood as "data about data," we have xref:commit-as-metadata[previously] encountered the concept of metadata and will further discuss it in the next chapter section. 
 
 ====== Transformation and load
 Converting data to a consistent and normalized form has been the basis of enterprise data warehousing since it was first conceived. (We will discuss the xref:schema-less[schema-less] data lake approach in the next chapter section.) A broad market segment of "Extract, Transform, Load" (ETL) tooling exists to support this need.

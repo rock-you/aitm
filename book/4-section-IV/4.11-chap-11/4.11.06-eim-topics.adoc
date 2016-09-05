@@ -40,33 +40,48 @@ All of these dimensions require increasingly specialized techniques as they scal
 
 ===== Managing the information of digital delivery
 
+In terms of our previous data warehousing architecture, the digital pipeline can be seen as related to four areas:
 
+* Product management
+* IT
+* Support
+* Operations
 
- * Metadata: data management of the digital pipeline
+image::images/4.11-digitalPipeline.png[]
 
- next material is EIM applied to IT, keep but reduce scope/importance somewhat - should still be a major chapter section
+Assume the primary product of the organization is an information-centric digital service, based ultimately on data. How do you manage data? How do you manage anything? In part, through collecting data about it. Wait - "data about data"? There's a word for that: *metadata*. We'll take some time examining it, and its broader relationships to the digital delivery pipeline.
 
+We've talked about xref:commit-as-metadata[metadata] previously and you should review that section before continuing. The association of business definitions with particular data structures, is one form of metadata.
 
-Repositories, CMDBs, IT4IT
+Data governance, records management, and ongoing support for digital consumers all require some layer of interpretation and context to enrich the raw data resource.
 
-Analytics and metrics are a related topic for IT management. There are many ways that metrics can be used and misused. A clear understanding of organizational goals is essential to any metrics strategy. Analytics similarly requre an overall framework of continuous improvement so that their insights lead to real actions and value.
+Consider the following list:
 
-* IT analytics
- - grounded in continuous improvement
- - Portfolio and process data
- - The IT data warehouse
- - Looking ahead: Big Data, machine learning, text analytics
+[cols="2*", options="header"]
+|====
+|Server|Database
+|SRV001|DB0023
+|SRV001|DB0045
+|SRV002|DB0067
+|====
 
- ===== Metadata and metamodels
+Not very useful, is it? Compare it to:
 
- xref:commit-as-metadata[]
+[cols="4*", options="header"]
+|====
+|Server|Database|Product|Regulatory
+|SRV001|DB0023|Online reviews|Customer privacy
+|SRV001|DB0045|Employee records management|HIPAA, PII
+|SRV002|DB0067|Online sales|PCI, PII
+|====
 
- Move up to 1st topic?
+We could also include definitions of the tables and columns held in each of those databases. But what system would contain such data? There have been a couple primary answers over the years: metadata repositories and configuration management databases.
 
-  - revisit BORO
-  Metadata
+In terms of this book's general definition of xref:commit-as-metadata[metadata] as non-runtime information related to digital assets, both the metadata repository and the CMDB contain metadata. But they are not the only systems in which data related to digital services is seen. Other systems include monitoring systems, portfolio management systems, risk and policy management systems, and many more. All of these systems themselves can be aggregated into a data warehousing/BI closed-loop infrastructure.
 
-  How do you manage data? How do you manage anything? In part, through collecting data about it. Wait - "data about data"? There's a word for that: *metadata*. We'll take some time examining it, and its broader relationships to the digital delivery pipeline.
+This means that the digital organization, including organizations transforming from older IT-centric models, can apply Big Data, machine learning, text analytics, and the rest of the techniques and practices covered in this chapter.
+
+NOTE: We will examine a full "business of IT/digital delivery pipeline" architecture in the next chapter.
 
 
 ===== Additional topics
