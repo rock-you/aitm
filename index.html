@@ -21849,7 +21849,12 @@ Reference data is any kind of data that is used solely to categorize other data 
 </ul>
 </div>
 <div class="paragraph">
-<p>Reference data is among the first data to be shared between systems.</p>
+<p>Reference data is among the first data to be shared between systems. It is often the basis for dimensions in analytic processing.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>define dimension.</pre>
+</div>
 </div>
 <div class="paragraph">
 <p><a id="data-quality"></a></p>
@@ -22276,7 +22281,7 @@ The reason to build a data warehouse is to have the ability to make better decis
 <div class="sect5">
 <h6 id="_master_data_reconciliation">Master data reconciliation</h6>
 <div class="paragraph">
-<p>When master data exists in diverse locations (e.g. in multiple <a href="#system-of-record">Systems of Record</a>) the ability to reconcile and define the true or "golden" master may be required.</p>
+<p>When master data exists in diverse locations (e.g. in multiple <a href="#system-of-record">Systems of Record</a>) the ability to reconcile and define the true or "golden" master may be required. This is useful directly to operational systems, as an online service (e.g. postal service address verification), and is also important when populating the data warehouse or mart.</p>
 </div>
 </div>
 <div class="sect5">
@@ -22287,31 +22292,45 @@ The reason to build a data warehouse is to have the ability to make better decis
 </div>
 <div class="sect5">
 <h6 id="_sourcing_and_archiving">Sourcing and archiving</h6>
-
+<div class="paragraph">
+<p>This represents the physical data store required for the extraction and archiving capability. Again, it may be implemented as a schema-less data lake, or as a traditional relational structure.</p>
+</div>
 </div>
 <div class="sect5">
 <h6 id="_integrated_data_warehouse">Integrated data warehouse</h6>
-
+<div class="paragraph">
+<p>The integrated or enterprise data warehouse is the classic, normalized, often massive, historical data store envisioned originally by Bill Inmon <a href="#Inmon1992">[Inmon1992]</a>. While the development effort in creating fully normalized data warehouses has limited them, they nevertheless are important, valuable, and frequently encountered in larger organizations.</p>
+</div>
 </div>
 <div class="sect5">
 <h6 id="_schema_less_lake">Schema-less lake</h6>
-
+<div class="paragraph">
+<p>A newer form of data aggregation is seen in the <a href="#schema-less">schema-less</a> lake. As discussed in the next chapter section, schema-less approaches accept data in native formats and defer the hard question of normalizing the data to to the reporting and analysis stage.</p>
+</div>
 </div>
 <div class="sect5">
 <h6 id="_mart_s">Mart(s)</h6>
-
+<div class="paragraph">
+<p>The integrated data warehouse is intended to provide a consistent and universal platform across the enterprise. The data mart on the other hand is usually seen as specific to a particular organization or problem.</p>
+</div>
 </div>
 <div class="sect5">
 <h6 id="_statistics">Statistics</h6>
-
+<div class="paragraph">
+<p>Statistical analysis of the aggregated and cleansed data is a common use case, often performed using commercial software or the R programming language.</p>
+</div>
 </div>
 <div class="sect5">
 <h6 id="_machine_learning">Machine learning</h6>
-
+<div class="paragraph">
+<p>Machine learning is broadly defined as "a field of study that gives computers the ability to learn without being explicitly programmed." [Arthur Samuel as quoted in Simon, waiting on book]. Machine learning allows computers to develop and improve algorithmic models for making predictions or decisions. Spam filters that "learn" are a good example.</p>
+</div>
 </div>
 <div class="sect5">
 <h6 id="_visualization_2">Visualization</h6>
-
+<div class="paragraph">
+<p>Representing complex information effectively so that humans can understand it and derive value is itself a challenging topic. Many graphical forms have been developed to communicate various aspects of data. See for example the open source visualization library <a href="https://d3js.org/">D3.js</a></p>
+</div>
 </div>
 <div class="sect5">
 <h6 id="_ontology_and_inference">Ontology and inference</h6>
@@ -22588,6 +22607,11 @@ In fact, there are theoretical concerns at the heart of philosophy with attempti
 </div>
 <div class="paragraph">
 <p>Schema inference at the most general shades into <em>ontology mining</em>. In ontology mining, data (usually text-heavy) is analyzed by algorithms to derive the data model. If one reads a textbook about the retail business, one might easily infer that there are concepts such as "store," "customer," "warehouse," and "supplier." Information technology has reached a point where such analysis itself can be automated, to a degree. Certain analytics systems have the ability to display an inferred table structure derived from unstructured or semi-structured data. This is an active area of research, development, and product innovation.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>cite</pre>
+</div>
 </div>
 <div class="paragraph">
 <p>The challenge is that data still needs to be tagged and identified; <strong>regulatory concerns do not go away</strong> just because one is using a NoSQL database.</p>
