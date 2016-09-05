@@ -152,6 +152,8 @@ This is a powerful technique, especially as storage costs go down. It can be com
 
 This is now a xref:data-quality[data quality] issue, requiring after-the-fact exception analysis and remediation.
 
+Append-only complements architectural and programming language trends towards _immutability_.
+
 anchor:test-data-mgmt[]
 
 ====== Test data
@@ -173,20 +175,6 @@ Based on hearing anecdotal concerns, the authors of the _2016 State of DevOps_ r
 Taking data from production systems as a basis for testing is also frequently done. However, such data must be sanitized -- sensitive information such as social security number must be removed. This can be done automatically, but then such automation must itself be developed and maintained, and the extensive production data set may (in effect) be driving a large amount of non-value-add testing.
 
 In general, test data management techniques will vary greatly by application and problem domain. The primary recommendation here is to invest in solving the problem, understanding that up-front investments in automation will pay off. The high-performing product team will have to solve the "how" of doing it appropriately for their particular situation.
-
-===== Social, mobile, analtyics and cloud: the next generation
-Discuttions of digital transformation often reference the algorithm SMAC:
-
-* Social
-* Mobile
-* Analytics
-* Cloud
-
-Others would add the Internet of Things.
-
-These are not equivalent terms; in fact, they have certain relationships to each other:
-
-image::images/4.11-SMAC.png[]
 
 
 ====== Non-invasive data governance (Seiner?)
