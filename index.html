@@ -888,6 +888,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_w_e_deming_and_variation">W.E. Deming and variation</a></li>
 <li><a href="#_lean_product_development_and_cost_of_delay">Lean Product Development and cost of delay</a></li>
 <li><a href="#_scrum_and_empirical_process_control">Scrum and empirical process control</a></li>
+<li><a href="#_metrics_measurements_and_kpis">Metrics, measurements, and KPIs</a></li>
 </ul>
 </li>
 <li><a href="#_process_frameworks">Process frameworks</a>
@@ -8967,6 +8968,12 @@ Use directory creation example with failure of script b/c not idempotent</pre>
 <li>
 <p>John Allspaw, <a href="http://www.goodreads.com/book/show/8571725-web-operations">Web Operations: Keeping the Data On Time</a></p>
 </li>
+<li>
+<p>Sidney Dekker, <a href="https://www.goodreads.com/book/show/376964.Field_Guide_to_Understanding_Human_Error">Field Guide to Understanding Human Error</a></p>
+</li>
+<li>
+<p>Sidney Dekker, <a href="https://www.goodreads.com/book/show/10258783-drift-into-failure">Drift into Failure</a></p>
+</li>
 </ul>
 </div>
 </div>
@@ -15362,15 +15369,95 @@ The defined and empirical models of process control are concepts from formal <a 
 <p><em>During my visit to DuPont . . . I realized why [software development] was in such trouble and had such a poor reputation. We were wasting our time trying to control our work by thinking we had an assembly line when the only proper control was frequent and first-hand inspection, followed by immediate adjustments.</em> <a href="#Schwaber2002">[Schwaber2002]</a>, p. 25.</p>
 </div>
 <div class="paragraph">
-<p>We will now turn to a critical examination of the IT management frameworks. While there is much of value in them, there are many places where they may lead you into the "defined process" trap, and they may not provide enough support for the alternative approach of empirical process control.</p>
+<p><a id="metrics-KPIs"></a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_metrics_measurements_and_kpis">Metrics, measurements, and KPIs</h5>
+<div class="literalblock">
+<div class="content">
+<pre>needs work</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We&#8217;ve deferred discussion of metrics and KPIs until now, due to the risk of their mis-application.</p>
+</div>
+<div class="paragraph">
+<p>Operations (often in the form of business processes) generate data, and data can be aggregated and reported on. Examples of metrics might include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Quarterly sales as a dollar amount</p>
+</li>
+<li>
+<p>Percentage of time a service or system is available</p>
+</li>
+<li>
+<p>Number of successful releases or pushes of code (new functionality)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Such reporting serves as a form of feedback for management, and even governance. A variety of terms and practices exist, such as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The Balanced Scorecard</p>
+</li>
+<li>
+<p>The concept of a metrics hierarchy</p>
+</li>
+<li>
+<p>Leading versus lagging indicators</p>
+</li>
+</ul>
+</div>
+<div class="sect5">
+<h6 id="_balanced_scorecard">Balanced Scorecard</h6>
+<div class="paragraph">
+<p>The balanced score card is a commonly-seen approach for measuring and managing organizations. First proposed by Kaplan and Norton <a href="#Kaplan1992">[Kaplan1992]</a> in the Harvard Business Review, the Balanced Scorecard groups metrics into the following subject areas:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Financial</p>
+</li>
+<li>
+<p>Customer</p>
+</li>
+<li>
+<p>Internal business processes</p>
+</li>
+<li>
+<p>Learning and growth</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_metrics_hierarchy">Metrics Hierarchy</h6>
+<div class="paragraph">
+<p>Metrics can be seen as "lower" versus "higher" level. For example, the metrics from a particular product might be aggregated with the metrics from all products, to provide an overall metric of product success.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_leading_lagging_indicators">Leading &amp; Lagging Indicators</h6>
+<div class="paragraph">
+<p>Metrics can indicate past performance (lagging), or predict future performance (leading).</p>
 </div>
 <div class="paragraph">
 <p><a id="frameworks"></a></p>
 </div>
 </div>
 </div>
+</div>
 <div class="sect3">
 <h4 id="_process_frameworks">Process frameworks</h4>
+<div class="paragraph">
+<p>We will now turn to a critical examination of the IT management frameworks. While there is much of value in them, there are many places where they may lead you into the "defined process" trap, and they may not provide enough support for the alternative approach of empirical process control.</p>
+</div>
 <div class="sect4">
 <h5 id="_defining_frameworks">Defining frameworks</h5>
 <div class="admonitionblock note">
@@ -22182,6 +22269,9 @@ from management</p>
 <p>To thoroughly manage for such risks, data stores should be tagged with the applicable regulations and the records type.</p>
 </div>
 <div class="paragraph">
+<p>The broad topic of individuals' expectations for how data relating to them is stored and secured is called <em>data privacy</em>. It drives regulations, lawsuits, standards, and is a frequent topic of news coverage (e.g. when a mass data breach occurs.)</p>
+</div>
+<div class="paragraph">
 <p>Bad data quality also presents risks as mentioned above. In fact, <a href="#DeLuccia2008">[DeLuccia2008]</a> sees data quality as a kind of <a href="#controls">control</a> (in the sense of risk mitigation).</p>
 </div>
 </div>
@@ -22231,6 +22321,9 @@ Again, if you or your company are involved in legal issues relating to the above
 </div>
 <div class="paragraph">
 <p><em>Reporting and analytics, old style</em> <span class="footnote">[<a id="_footnoteref_9" class="footnote" href="#_footnote_9" title="View footnote.">9</a>]</span></p>
+</div>
+<div class="paragraph">
+<p>We have touched on reporting previously, in our discussion of <a href="#metrics-KPIs">metrics</a>. This is a more detailed examination.</p>
 </div>
 <div class="paragraph">
 <p>The compilation of data from physical sources, and its analysis for the purposes of organizational strategy, was distinct from the day to day creation and use of the data. The clerk who attended to the customer and updated their account records, had a different role than the clerk who added up the figures across dozens or hundreds of accounts for the annual corporate report.</p>
@@ -22993,37 +23086,87 @@ We will examine a full "business of IT/digital delivery pipeline" architecture i
 <div class="sect3">
 <h4 id="_conclusion_11">Conclusion</h4>
 <div class="paragraph">
-<p>Conclusion placeholder</p>
+<p>Information management is far more than creating databases. At scale, it is a challenging topic invoking fundamental questions of human understanding and meaning. It drives specialization and non-trivial governance issues, and has inherent contrasts with the perspectives of software development.</p>
+</div>
+<div class="paragraph">
+<p>The exabytes of stored data accumulated by the human race represent an asset of incalculable value. Organizations that invest in and cultivate the ability to understand and effectively use this data to create information and actionable knowledge may prosper and serve their stakeholders well.</p>
 </div>
 <div class="sect4">
 <h5 id="_discussion_questions_11">Discussion questions</h5>
-
+<div class="ulist">
+<ul>
+<li>
+<p>Identify a situation where you can put a price tag on having or not having information.</p>
+</li>
+<li>
+<p>As a group, each of you list at least 5 organizations who you know to store significant data about you. Compare and discuss.</p>
+</li>
+<li>
+<p>Have you ever had your data poorly handled, e.g. either corrupted or exposed? Do you have any privacy concerns? Compare experiences and discuss.</p>
+</li>
+<li>
+<p>Have conflicting definitions of some word ever caused you problems or led to interesting experiences? Discuss.</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_research_practice_11">Research &amp; practice</h5>
-
+<div class="ulist">
+<ul>
+<li>
+<p>Develop a simple conceptual data model of some aspect of your experience: hobbies, interests, extracurricular activities, etc. How would you build a small database for a social club, for example?</p>
+</li>
+<li>
+<p>Implement your concept as a simple database, e.g. in Microsoft Access or equivalent.</p>
+</li>
+<li>
+<p>Work through <a href="https://cran.r-project.org/doc/manuals/R-intro.pdf">An Introduction to R</a>.</p>
+</li>
+<li>
+<p>Build a minimum viable demonstration of some <a href="https://d3js.org/">D3.js</a> visualization.</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_further_reading_11">Further reading</h5>
 <div class="paragraph">
-<p><a href="http://www.amazon.com/Drift-into-Failure-Sidney-Dekker/dp/1409422216" class="bare">http://www.amazon.com/Drift-into-Failure-Sidney-Dekker/dp/1409422216</a></p>
-</div>
-<div class="paragraph">
-<p><strong>Books</strong>
-Data Management Body of Knowledge</p>
-</div>
-<div class="paragraph">
-<p>Hohpe</p>
-</div>
-<div class="paragraph">
-<p><strong>Articles</strong></p>
-</div>
-<div class="paragraph">
-<p><a href="http://tdan.com/agile-methodologies-in-edm-projects/19062" class="bare">http://tdan.com/agile-methodologies-in-edm-projects/19062</a>
-* <a href="http://martinfowler.com/bliki/BoundedContext.html">BoundedContext</a> (alternative to the full enterprise conceptual model or ontology)</p>
+<p><strong>Books</strong></p>
 </div>
 <div class="ulist">
 <ul>
+<li>
+<p>Scott Ambler, <a href="https://www.goodreads.com/book/show/8268861-refactoring-databases">Refactoring Databases</a></p>
+</li>
+<li>
+<p>Alex Berson, <a href="https://www.goodreads.com/book/show/11317816-master-data-management-and-data-governance">Master Data Management and Data Governance</a></p>
+</li>
+<li>
+<p><a href="https://www.goodreads.com/book/show/11489479-the-dama-guide-to-the-data-management-body-of-knowledge-dama-dmbok-pri">The Dama Guide To The Data Management Body Of Knowledge</a></p>
+</li>
+<li>
+<p>Danette McGilvray, <a href="https://www.goodreads.com/book/show/6097087-executing-data-quality-projects">Executing Data Quality Projects: Ten Steps to Quality Data and Trusted Information</a></p>
+</li>
+<li>
+<p>Gregor Hohpe, <a href="https://www.goodreads.com/book/show/85012.Enterprise_Integration_Patterns">Enteprise Integration Patterns</a></p>
+</li>
+<li>
+<p>William Kent, <a href="https://www.goodreads.com/book/show/1753248.Data_And_Reality">Data and Reality</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Articles/Reports</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://tdan.com/agile-methodologies-in-edm-projects/19062">Agile methodologies in EDM projects</a></p>
+</li>
+<li>
+<p><a href="http://martinfowler.com/bliki/BoundedContext.html">BoundedContext</a> (alternative to the full enterprise conceptual model or ontology)</p>
+</li>
 <li>
 <p><a href="https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/">Falsehoods Programmers Believe about Names</a></p>
 </li>
@@ -23039,9 +23182,20 @@ Data Management Body of Knowledge</p>
 <p><strong>Videos</strong></p>
 </div>
 <div class="paragraph">
-<p><strong>Professional</strong>
-Data Management Association, www.dama.org
-Association of Records Management Administrators, www.arma.org</p>
+<p><strong>Professional</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.dama.org">Data Management Association</a></p>
+</li>
+<li>
+<p><a href="http://www.arma.org">Association of Records Management Administrators</a></p>
+</li>
+<li>
+<p><a href="https://tdwi.org/Home.aspx">The Data Warehousing Institute</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -23818,6 +23972,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 </li>
 <li>
 <p><a id="Kaner1999"></a>[Kaner1999]: Kaner, C., Falk, J. L., &amp; Nguyen, H. Q. (1999). Testing computer software (2nd ed.). New York: Wiley.</p>
+</li>
+<li>
+<p><a id="Kaplan1992"></a>[Kaplan1992]: Kaplan, Robert S., and David P. Norton. 1992. “The Balanced Scorecard - Measure That Drive Performance.” Harvard Business Review, no. January-February: 71–79. doi:00178012.</p>
 </li>
 <li>
 <p><a id="Keefer2006"></a>[Keefer2006]: Keefer, G. "The CMMI Considered Harmful For Quality Improvement And Supplier Selection."" 2006. <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.130.4292&amp;rep=rep1&amp;type=pdf" class="bare">http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.130.4292&amp;rep=rep1&amp;type=pdf</a></p>
