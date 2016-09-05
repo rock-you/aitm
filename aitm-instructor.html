@@ -1030,10 +1030,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_software_versus_data">Software versus data</a></li>
 <li><a href="#_next_generation_practices_in_information_management">Next generation practices in information management</a></li>
-<li><a href="#_social_mobile_analtyics_and_cloud_the_next_generation">Social, mobile, analtyics and cloud: the next generation</a></li>
 </ul>
 </li>
-<li><a href="#_information_management_topics">Information management topics</a></li>
+<li><a href="#_information_management_topics">Information management topics</a>
+<ul class="sectlevel4">
+<li><a href="#_social_mobile_analytics_and_cloud">Social, Mobile, Analytics, and Cloud</a></li>
+<li><a href="#_big_data">Big data</a></li>
+</ul>
+</li>
 <li><a href="#_conclusion_11">Conclusion</a>
 <ul class="sectlevel4">
 <li><a href="#_discussion_questions_11">Discussion questions</a></li>
@@ -22153,6 +22157,9 @@ Reference data is any kind of data that is used solely to categorize other data 
 <li>
 <p>Credit ratings</p>
 </li>
+<li>
+<p>Known security issues</p>
+</li>
 </ul>
 </div>
 <div class="paragraph">
@@ -22976,6 +22983,9 @@ In fact, there are theoretical concerns at the heart of philosophy with attempti
 <p>This is now a <a href="#data-quality">data quality</a> issue, requiring after-the-fact exception analysis and remediation.</p>
 </div>
 <div class="paragraph">
+<p>Append-only complements architectural and programming language trends towards <em>immutability</em>.</p>
+</div>
+<div class="paragraph">
 <p><a id="test-data-mgmt"></a></p>
 </div>
 </div>
@@ -23015,11 +23025,18 @@ In fact, there are theoretical concerns at the heart of philosophy with attempti
 <p>In general, test data management techniques will vary greatly by application and problem domain. The primary recommendation here is to invest in solving the problem, understanding that up-front investments in automation will pay off. The high-performing product team will have to solve the "how" of doing it appropriately for their particular situation.</p>
 </div>
 </div>
+<div class="sect5">
+<h6 id="_non_invasive_data_governance_seiner">Non-invasive data governance (Seiner?)</h6>
+
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_information_management_topics">Information management topics</h4>
 <div class="sect4">
-<h5 id="_social_mobile_analtyics_and_cloud_the_next_generation">Social, mobile, analtyics and cloud: the next generation</h5>
+<h5 id="_social_mobile_analytics_and_cloud">Social, Mobile, Analytics, and Cloud</h5>
 <div class="paragraph">
-<p>Discuttions of digital transformation often reference the algorithm SMAC:</p>
+<p>Discussions of digital transformation often reference the algorithm SMAC:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -23048,14 +23065,47 @@ In fact, there are theoretical concerns at the heart of philosophy with attempti
 <img src="images/4.11-SMAC.png" alt="4.11 SMAC">
 </div>
 </div>
-<div class="sect5">
-<h6 id="_non_invasive_data_governance_seiner">Non-invasive data governance (Seiner?)</h6>
-
+<div class="paragraph">
+<p>Social media is generally external to an organization and manifests as a form of <a href="#market-data">market data</a>, that provide essential insights into bow a company&#8217;s products are performing and being received.</p>
+</div>
+<div class="paragraph">
+<p>Mobile (or mobility) has two distinct aspects: mobility as an engagement platform (e.g. for deployment of "apps" as one product form), versus the <a href="#market-data">market data</a> available from mobile carriers, notably geolocation data.</p>
+</div>
+<div class="paragraph">
+<p>Internet of Things can be either an internal or external data source, often extremely high volume and velocity, requiring analysis services for sense-making and value extraction.</p>
 </div>
 </div>
+<div class="sect4">
+<h5 id="_big_data">Big data</h5>
+<div class="paragraph">
+<p>The term "Big Data" in general refers to data that exceeds the traditional data management and data warehousing approaches we have discussed above.
+As proposed by analyst Doug Laney in 2001 <a href="#Laney2001">[Laney2001]</a>, its most well known definition identifies 3 dimensions of scale:</p>
 </div>
-<div class="sect3">
-<h4 id="_information_management_topics">Information management topics</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Volume</p>
+</li>
+<li>
+<p>Variety</p>
+</li>
+<li>
+<p>Velocity</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>High volume data is seen for example in the search history logs of search engines such as Google.</p>
+</div>
+<div class="paragraph">
+<p>High variety data encompasses rich media and unstructured data, such as social media interactions.</p>
+</div>
+<div class="paragraph">
+<p>High velocity data includes telemetry from Internet of Things devices or other sources capable of emitting large volumes of data very quickly.</p>
+</div>
+<div class="paragraph">
+<p>All of these dimensions require increasingly specialized techniques as they scale, and the data management product ecosystem has continued to diversify as a result.</p>
+</div>
 <div class="paragraph">
 <p>ERP systems (special section??)</p>
 </div>
@@ -23077,69 +23127,7 @@ In fact, there are theoretical concerns at the heart of philosophy with attempti
 <p>The enterprise information model: a failed vision that will never go away.</p>
 <div class="literalblock">
 <div class="content">
-<pre> ===== Data infrastructure
-engineering &amp; operations</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>core DBMS</p>
-</div>
-<div class="paragraph">
-<p>ETL &amp; messaging</p>
-</div>
-<div class="paragraph">
-<p>BI &amp; analytics</p>
-</div>
-<div class="paragraph">
-<p>control layer</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>modeling</p>
-</li>
-<li>
-<p>profiling/cleansing</p>
-</li>
-<li>
-<p>MDM</p>
-</li>
-<li>
-<p>records mgmt</p>
-</li>
-<li>
-<p>Pre-SQL</p>
-</li>
-<li>
-<p>SQL</p>
-</li>
-<li>
-<p>NoSQL</p>
-</li>
-<li>
-<p>Schema inference</p>
-</li>
-<li>
-<p>CAP</p>
-</li>
-<li>
-<p>Advanced analytics</p>
-<div class="literalblock">
-<div class="content">
 <pre>===== Business rules management</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>===== Internet of Things</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>===== Social media</pre>
 </div>
 </div>
 <div class="literalblock">
@@ -23271,6 +23259,7 @@ Metadata</p>
 </div>
 </li>
 </ul>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -24122,6 +24111,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 </li>
 <li>
 <p><a id="Landis2011"></a>[Landis2011]: Sean Landis. 2011. Agile Hiring. Artima, Inc.</p>
+</li>
+<li>
+<p><a id="Laney2001"></a>[Laney2001]: Laney, Douglas. 2001. “3D Data Management: Controlling Data Volume, Velocity, and Variety.” <a href="http://blogs.gartner.com/doug-laney/files/2012/01/ad949-3D-Data-Management-Controlling-Data-Volume-Velocity-and-Variety.pdf" class="bare">http://blogs.gartner.com/doug-laney/files/2012/01/ad949-3D-Data-Management-Controlling-Data-Volume-Velocity-and-Variety.pdf</a>. Accessed 2016-09-05.</p>
 </li>
 <li>
 <p><a id="Larman2002"></a>[Larman2002]: Larman, C. (2002), <em>Applying UML and patterns : an introduction to object-oriented analysis and design and the unified process</em>, Prentice Hall PTR, Upper Saddle River, NJ</p>
