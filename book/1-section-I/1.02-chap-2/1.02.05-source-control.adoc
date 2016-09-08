@@ -37,7 +37,7 @@ This is because symbolic files can be “differenced” in a way that is meaning
 On the other hand, if I take a picture (e.g. as a JPEG file) and alter one pixel, and compare the resulting before and after binary files in terms of their data, it would be more difficult to understand what had changed. I would be able to easily tell that they are two different files (they would have different checksums), but they would look very similar.
 
 ifdef::collaborator-draft[]
-  *** consider an illustration
+ consider an illustration
 endif::collaborator-draft[]
 
 IT starts with symbolic files. Text editors create source code, scripts, and configuration files. These may be transformed in defined ways (e.g. by compilers and build tools) but the human understandable end of the process is mostly based on text files.
@@ -57,9 +57,9 @@ Also, the concept of an atomic “commit” is essential to the concept of a “
 
 ifdef::collaborator-draft[]
   Discussion of branching & merging?
+  source control versus package management
 endif::collaborator-draft[]
 
- source control versus package management
 
 anchor:commit-as-metadata[]
 
@@ -75,13 +75,13 @@ Metadata is a tricky term, that tends to generate confusion. The term “meta”
 
 Some examples:
 
-* In traditional data management, metadata is the description of the data structures, especially from a business point of view. A database column might be named “CUST_L_NM,” but the business description or metadata would be “The given last, family, or surname of the customer.”
+* In traditional data management, metadata is the description of the data structures, especially from a business point of view. A database column might be named “CUST_L_NM,” but the business description or metadata would be “The last, family, or surname of the customer.”
 * In document management, the document metadata is the record of who created the document and when, when it was last updated, and so forth. Failure to properly sanitize document metadata has led to various privacy and data security related issues.
 * In telephony,  “data” is the actual call signal — the audio of the phone conversation, nowadays usually digitally encoded. Metadata on the other hand is all the information about the call: from who to who, when, how long, and so forth.
 
 In computer systems, metadata can be difficult to isolate. Sometimes, computing professionals will speak of a “metadata” layer that may define physical database structures, data extracts, business process behavior, even file locations. The trouble is, from a computer’s point of view, a processing instruction is an instruction, and the prefix “meta” has no real meaning.
 
-Because of this, I favor a principle that *metadata is by definition non-runtime.* It is documentation, usually represented as structured or semi-structured data, but not usually a primary processing input or output. It might be “digital exhaust” - log files are a form of metadata. It is not executable. If it’s  executable (directly or indirectly), it’s digital logic or configuration, plain and simple.
+Because of this, this book favors a principle that *metadata is by definition non-runtime.* It is documentation, usually represented as structured or semi-structured data, but not usually a primary processing input or output. It might be “digital exhaust” - log files are a form of metadata. It is not executable. If it’s  executable (directly or indirectly), it’s digital logic or configuration, plain and simple.
 
 So what about our infrastructure as code example? The artifact - the configuration file, the script - is NOT metadata, because it is executable. But the source repository commit IS metadata. It has no meaning for the script. The dependency is one way - without the artifact, the commit ID is meaningless, but the artifact is completely ignorant of the commit. However, the commit may become an essential data point for human beings trying to make sense of the state of a resource defined by that artifact.
 
