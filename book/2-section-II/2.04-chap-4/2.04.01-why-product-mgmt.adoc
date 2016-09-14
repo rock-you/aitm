@@ -5,9 +5,9 @@ ifdef::collaborator-draft[]
 ****
 *Collaborative*
 
- Status: This chapter is first draft as of spring 2016. Comments appreciated.
+ Status: This chapter is in active development from 2016-09-14 through 2016-09-18. Expect volatility.
 
- This chapter is in the author's opinion still in need of significant work, especially int he area of product design/discovery.
+ This chapter is in the author's opinion still in need of significant work, especially in the area of product design/discovery.
 
 include::../../../collab-links.adoc[]
 
@@ -15,21 +15,30 @@ include::../../../collab-links.adoc[]
 
 endif::collaborator-draft[]
 
-Before work, before operations, there must be a vision of product. You already established a preliminary vision in Chapter 1, but now as your organization grows, you need to consider further how you will sustain that vision and establish an ongoing flow of work to realize it.
+image::images/2.04-design.jpg[]
+_Product design session_ footnote:[_Image credit https://www.flickr.com/photos/daonb/6223628837, downloaded 2016-09-14, commercial use permitted_]
+
+===== The product vision
+
+Before work, before operations, there must be a vision of product. You already established a preliminary vision in Chapter 1, but now as your organization grows, you need to consider further how you will sustain that vision and establish an ongoing capability for realizing it.
 
 Like many other topics in this book, product management is a significant field in and of itself. Historically, product management has not been a major theme in enterprise IT management.
 
 IT systems served narrow purposes, often “back office” functions such as accounting or https://en.wikipedia.org/wiki/Material_requirements_planning[materials planning]. Mostly, such systems were managed as projects assembled on a temporary basis, resulting in the creation of a system to be “thrown over the wall” to operations.
 
-Product management, on the other hand, is concerned with the entire lifecycle. The product manager cares about the vision, its execution, the market reaction to the vision (even if an internal market), the health, care and feeding of the product, and the product’s eventual sunset or replacement. In the enterprise IT world, "third party" vendors (e.g. IBM) providing the back office systems had product management approaches, but these were external to the IT operations.
+Product management, on the other hand, is concerned with the entire lifecycle. The product manager cares about the vision, its execution, the market reaction to the vision (even if an internal market), the health, care and feeding of the product, and the product’s eventual sunset or replacement.
 
-Nor were IT-based product companies as numerous forty years ago as they are today; as noted above, the digital component of modern products continues to increase to the point where it's often not clear whether a product is "IT" or not...
+In the enterprise IT world, "third party" vendors (e.g. IBM) providing the back office systems had product management approaches, but these were external to the IT operations.
+
+Nor were IT-based product companies as numerous forty years ago as they are today; as noted above, the digital component of modern products continues to increase to the point where it's often not clear whether a product is "IT" or not.
 
 Reacting to market feedback and adapting product direction is an essential role of the product owner. In the older model, feedback was often unwelcome, as the project manager typically was committed to the open-loop dead reckoning (see http://dm-academy.github.io/aitm/#_special_section_systems_thinking_and_feedback[previous discussion]) of the project plan and changing scope or direction was seen as a failure, more often than not.
 
-Now, it’s accepted that systems evolve, perhaps in unexpected directions. Rapidly testing, learning, failing fast, and pivoting direction are all part of the lexicon, at least for market-facing IT-based products. And even back-office IT systems with better understood scope are being managed more as systems (or products) with lifecycles, as opposed to transient projects. (See the Amazon discussion, below.)
+Now, it’s accepted that systems evolve, perhaps in unexpected directions. Rapidly testing, failing fast, learning, and pivoting direction are all part of the lexicon, at least for market-facing IT-based products. And even back-office IT systems with better understood scope are being managed more as systems (or products) with lifecycles, as opposed to transient projects. (See the Amazon discussion, below.)
 
 So, what is product management and what does it mean for your team?
+
+anchor:prod-mgmt-definition[]
 
 ===== Defining Product Management
 
@@ -49,21 +58,11 @@ Product strategy for *internally-facing* products is likely not defined by the e
 
 NOTE: As a field, product management has a professional association, the http://www.pdma.org[Product Development and Marketing Association], which publishes an extensive and continuously-refined handbook, and supports local chapters, training and certification, and other activities typical of a mature professional organization.
 
-http://dm-academy.github.io/aitm/#_defining_information_technology[As stated in chapter 1], all kinds of industrial products have increasing amounts of “IT” in them. This means that an understanding of IT, and ready access to any needed IT specialty skills, is increasingly important to the general field of product management.
+With xref:digital-transformation[digital transformation], all kinds of industrial products have increasing amounts of “IT” in them. This means that an understanding of IT, and ready access to any needed IT specialty skills, is increasingly important to the general field of product management.
 
-Perhaps the most important aspect of product design is focusing on the user, and what she or he needs. This is easier said than done. Entire books have been written on the various tools and techniques for doing this, from  focus groups to ethnographic analysis.
+Perhaps the most important aspect of product design is focusing on the user, and what she or he needs. This is easier said than done. The general problem area is market research, a core business school topic. Entire books have been written on the various tools and techniques for doing this, from  focus groups to ethnographic analysis.
 
-Product management includes research and development, which means that there is an element of uncertainty. This is of course also true of IT systems development.
-
-So, what does product management have to do with IT and software?
-
-Often, IT professionals resist drawing lessons from non-IT fields, because of a perception (only partially true) that these other fields (especially manufacturing) are “deterministic” while IT systems development is too “uncertain.”
-
-In reality, manufacturing is less deterministic than IT professionals often perceive, while software development is, at its most uncertain, just another form of https://en.wikipedia.org/wiki/New_product_development[new product development], and/or https://en.wikipedia.org/wiki/Research_and_development[research and development] and therefore can be managed on that basis.
-
-See The Phoenix Project, Chapter 30, for an interesting discussion of these issues in an IT context <<Kim2013>>.
-
-We will dive more into the characteristics of R&D processes in the discussion of Don Reinertsen in this chapter.
+Product management includes research and development, which means that there is considerable uncertainty. This is of course also true of IT systems development.
 
 ===== Process, project, and product management
 [quote, Mark Kennaley, SDLC 3.0]
@@ -72,8 +71,8 @@ A holistic product-oriented approach contradicts a convenient over-simplificatio
 In the remainder of this book, we will continually encounter three major topics:
 
 * Product Management (Chapter 4)
-* Project Management (Chapter 8)
-* Process Management (Chapter 9)
+* Project Management (covered in Chapters 8 and 9)
+* Process Management (covered in Chapter 9)
 
 Each has a dedicated chapter, and they will appear in all the other chapters as well. But they have an important commonality: *all of them are means for driving results across functional or skill silos.*
 
@@ -99,17 +98,29 @@ Here are some of the key differences between process, project and product manage
 
 The above distinctions are deliberately exaggerated and there are of course exceptions (short projects, processes that take years). However, it is in the friction between these perspectives we see some of the major problems in modern IT management.
 
-Here is another view that frames the three as a short of hierarchy:
+Here is another way to explain it:
 
-* Process: Activities
-* Project: Activities, Resources/Skills
-* Product: Activities, Resources/Skills, Outcomes
+An activity, which may be a one-time task or a repeatable process, results in some Work Product:
 
- Process success: project mgr happy
- Project success: product mgmt happy
- Product success: market happy
+image::images/2.04-process.png[]
 
-In our scenario, you are now on a tight-knit, collaborative team. It is preferable that you think in terms of developing and sustaining a product. However, projects still exist, and sometimes you may find yourself on a team that is funded and operated on that basis. We will return to projects in Chapter 8.
+The consumer or stakeholder of that work product might be a Project Manager.
+
+Project management includes concern for both the activities, AND the resources (people, assets, software) required to produce some deliverable:
+
+image::images/2.04-project.png[]
+
+The consumer of that deliverable might be a Product Manager.
+
+Product management includes concern for projects and their deliverables, and their ultimate *outcomes* (either in the external market or internally):
+
+image::images/2.04-product.png[]
+
+Notice that product management may directly access activities and resources. In fact, earlier-stage companies often do not formalize project management.
+
+image::images/2.04-productNoProject.png[]
+
+In our scenario, you are now on a tight-knit, collaborative team. It is preferable that you think in terms of developing and sustaining a product. However, projects still exist, and sometimes you may find yourself on a team that is funded and operated on that basis. We will return to projects and formal process management in Chapters 8 and 9.
 
 ===== Market facing, supporting, back office
 In Chapter 1 we discussed the question of "who pays/who benefits" for the service, http://dm-academy.github.io/aitm/#_defining_consumer_customer_and_sponsor[proposing that] the service consumer, the service customer, and the service sponsor might be three distinct roles (sometimes collapsing into 2 or 1 individual.)
