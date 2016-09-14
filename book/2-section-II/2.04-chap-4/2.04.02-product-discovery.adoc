@@ -16,97 +16,15 @@ For our discussion here, the challege with the ideas of projects and deliverable
 
 There are a wide variety of techniques and even "schools" of product discovery and design; we will consider a few representatives in this chapter section.
 
-
 ===== Product context
 technology evolution - context - Wardley, Everett Rodgers diffusion theory
 
 you can't fully understand the context without feedback
 
-anchor:impact-mapping[]
 
-====== Three business strategies
+====== Discovery versus design
 
-can you PIVOT to/from these
-
-* operational excellence
-* product leadership
-* customer focus
-
-====== Business model canvas
-
-
-====== Impact mapping
-
-====== Business analysis and architecture
- Foreshadow BPM
-
-
-===== Product discovery techniques
-
-anchor:lean-startup[]
-
-
-====== Lean Startup
-[quote, Eric Ries, The Lean Startup]
-The goal of a startup is to figure out the right thing to build— the thing customers want and will pay for— as quickly as possible. In other words, the Lean Startup is a new way of looking at the development of innovative new products that emphasizes fast iteration and customer insight, a huge vision, and great ambition, all at the same time.
-
-Lean Startup is a philosophy of entrepreneurship developed by Eric Ries <<Ries2011>>. It is not specific to information technology; rather, it is broadly applicable to all attempts to understand a product and its market. (Remember according to our xref:prod-mgmt-definition[definition of product management] that a workable market position is essential to any product.)
-
-The idea of the Lean Startup has had profound influence on product design, including market-facing and even internal IT systems. It is grounded in Agile concepts such as:
-
-"Do the simplest thing that could possibly work."
-
-Lean Startup calls for an iterative, "Build-Measure-Learn" cycle. Repeating this cycle frequently is the essential process of building a successful startup (whatever the digital proportion).
-
-* Develop an idea for a Minimum Viable Product (MVP)
-* Measure its effectiveness in the market (internal/external)
-* Learn from the experiment
-* Decide to persevere or pivot (change direction while leveraging momentum)
-* New idea development, evolution of MVP
-
-====== Others
-
- Review Steve Blank
-
-
- [TBW]
- * Effectiveness/efficiency/risk
- * INVEST
- * MoSCoW
- * 5 Whys
-
-
-===== Product architecture
-
- a little more architecture
-
-anchor:feature-v-component[]
-
-====== Features vs. components
-
-anchor:2.04.02-features-v-components[]
-As your product evolves, you may see an increasing differentiation of concerns, between features and components.
-
-Features are *what* your product *does*. They are what the customers perceive as valuable. “Scope as viewed by the customer” as <<Kennaley2010>> says (p. 169).
-
-Components are *how* your product is *built*, such as database vs. Web components. In other words, they are a form of infrastructure (but infrastructure you may need to build yourself, rather than just spin up in the Cloud).
-
-Feature teams are dedicated to a clearly defined functional scope, while component teams are defined by their technology platform. Component teams may become shared services, which need to be carefully understood and managed (more on this in Section 3).
-
-It may be easy to say that features are more important than components, but this can easily be carried too far. Do you want each feature team choosing its own database? Not recommended. Allowing feature teams to define their own technical direction can result in brittle, fragmented architectures, technical debt, and rework.
-
-Software product management needs to be a careful balance between these two perspectives. Some http://blog.octo.com/en/feature-team-beyond-the-buzzword/[recommend] a ratio of:
-
-* 70-80% Feature teams to
-
-* 20-30% Component teams
-
-We will be revisiting this more systematically in chapter 7.
-
-
-====== Software and systems engineering
-
-Some of the most contentious discussions related to IT management and Agile come at the intersection of software and systems engineering, especially when large investments are at stake.
+Some of the most contentious discussions related to IT management and Agile come at the intersection of software and systems engineering, especially when large investments are at stake. We call this the "discovery versus design" problem.
 
 Frequent criticisms of Lean Startup and related trends are:
 
@@ -183,3 +101,85 @@ The cog represents the world of classic systems engineering -- a larger objectiv
 The flower represents the market-facing digital product that may "pivot," grow and adapt according to conditions. It also is constrained, by available space and energy, but within certain boundaries has greater adaptability.
 
 Neither is better than the other, but they do require different approaches. In general, we are coming from a world that saw digital systems strictly as cogs, and moving towards a world in which digital systems are more flexible, dynamic, and adaptable.
+
+
+====== Business model canvas
+
+anchor:impact-mapping[]
+
+
+====== Business strategy
+
+ can you PIVOT to/from these
+
+ * operational excellence
+ * product leadership
+ * customer focus
+
+====== Impact mapping
+
+
+====== Business analysis and architecture
+  Foreshadow BPM
+
+===== Product discovery techniques
+
+anchor:lean-startup[]
+
+
+====== Lean Startup
+[quote, Eric Ries, The Lean Startup]
+The goal of a startup is to figure out the right thing to build— the thing customers want and will pay for— as quickly as possible. In other words, the Lean Startup is a new way of looking at the development of innovative new products that emphasizes fast iteration and customer insight, a huge vision, and great ambition, all at the same time.
+
+Lean Startup is a philosophy of entrepreneurship developed by Eric Ries <<Ries2011>>. It is not specific to information technology; rather, it is broadly applicable to all attempts to understand a product and its market. (Remember according to our xref:prod-mgmt-definition[definition of product management] that a workable market position is essential to any product.)
+
+The idea of the Lean Startup has had profound influence on product design, including market-facing and even internal IT systems. It is grounded in Agile concepts such as:
+
+"Do the simplest thing that could possibly work."
+
+Lean Startup calls for an iterative, "Build-Measure-Learn" cycle. Repeating this cycle frequently is the essential process of building a successful startup (whatever the digital proportion).
+
+* Develop an idea for a Minimum Viable Product (MVP)
+* Measure its effectiveness in the market (internal/external)
+* Learn from the experiment
+* Decide to persevere or pivot (change direction while leveraging momentum)
+* New idea development, evolution of MVP
+
+====== Others
+
+ Review Steve Blank
+
+
+ [TBW]
+ * Effectiveness/efficiency/risk
+ * INVEST
+ * MoSCoW
+ * 5 Whys
+
+
+===== Product architecture
+
+ a little more architecture
+
+anchor:feature-v-component[]
+
+====== Features vs. components
+
+anchor:2.04.02-features-v-components[]
+As your product evolves, you may see an increasing differentiation of concerns, between features and components.
+
+Features are *what* your product *does*. They are what the customers perceive as valuable. “Scope as viewed by the customer” as <<Kennaley2010>> says (p. 169).
+
+Components are *how* your product is *built*, such as database vs. Web components. In other words, they are a form of infrastructure (but infrastructure you may need to build yourself, rather than just spin up in the Cloud).
+
+Feature teams are dedicated to a clearly defined functional scope, while component teams are defined by their technology platform. Component teams may become shared services, which need to be carefully understood and managed (more on this in Section 3).
+
+It may be easy to say that features are more important than components, but this can easily be carried too far. Do you want each feature team choosing its own database? Not recommended. Allowing feature teams to define their own technical direction can result in brittle, fragmented architectures, technical debt, and rework.
+
+Software product management needs to be a careful balance between these two perspectives. Some http://blog.octo.com/en/feature-team-beyond-the-buzzword/[recommend] a ratio of:
+
+* 70-80% Feature teams to
+
+* 20-30% Component teams
+
+We will be revisiting this more systematically in chapter 7.
