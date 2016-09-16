@@ -618,13 +618,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_the_product_vision">The product vision</a></li>
 <li><a href="#_defining_product_management">Defining Product Management</a></li>
 <li><a href="#_process_project_and_product_management">Process, project, and product management</a></li>
-<li><a href="#_market_facing_supporting_back_office">Market facing, supporting, back office</a></li>
 <li><a href="#_productization_as_a_strategy_at_amazon">Productization as a strategy at Amazon</a></li>
 </ul>
 </li>
 <li><a href="#_product_discovery">Product discovery</a>
 <ul class="sectlevel4">
 <li><a href="#_product_context">Product context</a></li>
+<li><a href="#_market_facing_supporting_back_office">Market facing, supporting, back office</a></li>
 <li><a href="#_product_discovery_techniques">Product discovery techniques</a></li>
 <li><a href="#_discovery_versus_design">Discovery versus design</a></li>
 <li><a href="#_product_architecture">Product architecture</a></li>
@@ -1821,15 +1821,6 @@ There are hundreds of books on Agile. In this section I will seek to credit spec
 <h3 id="_a_process_of_emergence">A process of emergence</h3>
 <div class="quoteblock">
 <blockquote>
-A complex system that works is invariably found to have evolved from a simple system that worked. A complex system designed from scratch never works and cannot be patched up to make it work. You have to start over, beginning with a working simple system.
-</blockquote>
-<div class="attribution">
-&#8212; John Gall<br>
-<cite>The Systems Bible</cite>
-</div>
-</div>
-<div class="quoteblock">
-<blockquote>
 Joseph Campbell popularized the notion of an archetypal journey that recurs in the mythologies and religions of cultures around the world. From Moses and the burning bush to Luke Skywalker meeting Obi wan Kenobi, the journey always begins with a hero who hears a calling to a quest&#8230;&#8203;<br>
 <br>
 The hero’s journey is an apt way to think of startups. All new companies and new products begin with an almost mythological vision— a hope of what could be, with a goal few others can see&#8230;&#8203; <br>
@@ -1841,8 +1832,17 @@ Most entrepreneurs feel their journey is unique. Yet what Campbell perceived abo
 <cite>The Four Steps to Epiphany</cite>
 </div>
 </div>
+<div class="quoteblock">
+<blockquote>
+A complex system that works is invariably found to have evolved from a simple system that worked. A complex system designed from scratch never works and cannot be patched up to make it work. You have to start over, beginning with a working simple system.
+</blockquote>
+<div class="attribution">
+&#8212; John Gall<br>
+<cite>The Systems Bible</cite>
+</div>
+</div>
 <div class="paragraph">
-<p>One of the most important and distinguishing features of this book is its "emergence model." In keeping with the entrepreneurial spirit that gave rise to the Agile movement and works like Ries' <a href="http://www.amazon.com/dp/0307887898/"><em>The Lean Startup</em>,</a> the book adopts a progressive, evolutionary approach. Your journey through it reflects a process of emergence. Such processes are often associated with founding and scaling a startup. There are many helpful books on this topic, such as:</p>
+<p>One of the most important and distinguishing features of this book is its "emergence model." In keeping with the entrepreneurial spirit of works like Ries' <a href="http://www.amazon.com/dp/0307887898/"><em>The Lean Startup</em>,</a> the book adopts a progressive, evolutionary approach. Your journey through it reflects a process of emergence. Such processes are often associated with founding and scaling a startup. There are many helpful books on this topic, such as:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -6120,7 +6120,7 @@ No system can ever be fully "open loop" indefinitely.  Sooner or later, you take
 <p>Nor were IT-based product companies as numerous forty years ago as they are today; as noted above, the digital component of modern products continues to increase to the point where it&#8217;s often not clear whether a product is "IT" or not.</p>
 </div>
 <div class="paragraph">
-<p>Reacting to market feedback and adapting product direction is an essential role of the product owner. In the older model, feedback was often unwelcome, as the project manager typically was committed to the open-loop dead reckoning (see <a href="http://dm-academy.github.io/aitm/#_special_section_systems_thinking_and_feedback">previous discussion</a>) of the project plan and changing scope or direction was seen as a failure, more often than not.</p>
+<p>Reacting to market feedback and adapting product direction is an essential role of the product owner. In the older model, feedback was often unwelcome, as the project manager typically was committed to the <a href="#2.00.1-open-loop">open-loop dead reckoning</a> of the project plan and changing scope or direction was seen as a failure, more often than not.</p>
 </div>
 <div class="paragraph">
 <p>Now, it’s accepted that systems evolve, perhaps in unexpected directions. Rapidly testing, failing fast, learning, and pivoting direction are all part of the lexicon, at least for market-facing IT-based products. And even back-office IT systems with better understood scope are being managed more as systems (or products) with lifecycles, as opposed to transient projects. (See the Amazon discussion, below.)</p>
@@ -6311,34 +6311,6 @@ Here are some of the key differences between process, project and product manage
 <div class="paragraph">
 <p>In our scenario, you are now on a tight-knit, collaborative team. It is preferable that you think in terms of developing and sustaining a product. However, projects still exist, and sometimes you may find yourself on a team that is funded and operated on that basis. We will return to projects and formal process management in Chapters 8 and 9.</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_market_facing_supporting_back_office">Market facing, supporting, back office</h5>
-<div class="paragraph">
-<p>In Chapter 1 we discussed the question of "who pays/who benefits" for the service, <a href="http://dm-academy.github.io/aitm/#_defining_consumer_customer_and_sponsor">proposing that</a> the service consumer, the service customer, and the service sponsor might be three distinct roles (sometimes collapsing into 2 or 1 individual.)</p>
-</div>
-<div class="paragraph">
-<p>We see this again in how we can categorize the "customers" of IT services and systems. Roughly, such services can be:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Directly market- and consumer-facing (e.g. Facebook), to be used by external consumers and paid for by either them or closely associated customers (e.g. Netflix, or an online banking system).</p>
-</li>
-<li>
-<p>Customer "supporting" systems, such as the online system that a bank teller uses when interacting with a customer. Customers do not interact directly with such systems, but customer-facing representatives do, and problems with such systems may be readily apparent to the end customer.</p>
-</li>
-<li>
-<p>Completely "back-office" systems (HR, payroll, marketing, etc)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Note however, that (especially in the current digitally transforming market) a service previously thought of as "back office" (when run internally) becomes "market-facing" when developed as a profit-seeking offering. For example, an HR system built internally is "back office," but Workday is a directly market-facing product, even though the two services may be similar in functionality.</p>
-</div>
-<div class="paragraph">
-<p>In other words, it&#8217;s all relative.</p>
-</div>
 <div class="paragraph">
 <p><a id="amazon-productization"></a></p>
 </div>
@@ -6507,49 +6479,86 @@ The term "intrapreneurship" means "entrepreneurship inside a large company."
 <p>Understanding which category you are attempting is critical, because "the four types of startups have very different rates of customer adoption and acceptance."</p>
 </div>
 <div class="paragraph">
-<p>Another related and well known categorization of competitive strategies comes from Treacy and Wiersma:</p>
+<p>Another related and well known categorization of competitive strategies comes from Michael Treacy and Fred Wiersma <a href="#Treacy1997">[Treacy1997]</a>:</p>
 </div>
 <div class="ulist">
 <ul>
-<li>
-<p>Operational excellence</p>
-</li>
 <li>
 <p>Customer intimacy</p>
 </li>
 <li>
 <p>Product leadership</p>
 </li>
+<li>
+<p>Operational excellence</p>
+</li>
 </ul>
 </div>
 <div class="paragraph">
-<p>you can&#8217;t fully understand the context without feedback</p>
+<p>It is not difficult to categorize well known brands in this way:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Customer intimacy</th>
+<th class="tableblock halign-left valign-top">Product leadership</th>
+<th class="tableblock halign-left valign-top">Operational excellence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nordstrom<br>
+Home Depot</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Apple<br>
+Nike</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dell Computer<br>
+Wal-Mart</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>However, deciding which strategy to pursue as a startup may require some experimentation.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_market_facing_supporting_back_office">Market facing, supporting, back office</h5>
+<div class="paragraph">
+<p>In Chapter 1 we discussed the question of "who pays/who benefits" for the service, <a href="http://dm-academy.github.io/aitm/#_defining_consumer_customer_and_sponsor">proposing that</a> the service consumer, the service customer, and the service sponsor might be three distinct roles (sometimes collapsing into 2 or 1 individual.)</p>
+</div>
+<div class="paragraph">
+<p>We see this again in how we can categorize the "customers" of IT services and systems. Roughly, such services can be:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Directly market- and consumer-facing (e.g. Facebook), to be used by external consumers and paid for by either them or closely associated customers (e.g. Netflix, or an online banking system).</p>
+</li>
+<li>
+<p>Customer "supporting" systems, such as the online system that a bank teller uses when interacting with a customer. Customers do not interact directly with such systems, but customer-facing representatives do, and problems with such systems may be readily apparent to the end customer.</p>
+</li>
+<li>
+<p>Completely "back-office" systems (HR, payroll, marketing, etc)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Note however, that (especially in the current digitally transforming market) a service previously thought of as "back office" (when run internally) becomes "market-facing" when developed as a profit-seeking offering. For example, an HR system built internally is "back office," but Workday is a directly market-facing product, even though the two services may be similar in functionality.</p>
+</div>
+<div class="paragraph">
+<p>In other words, it&#8217;s all relative.</p>
+</div>
+<div class="paragraph">
+<p>Especially when products are <strong>not</strong> market facing, we start to run into the problem of distinguishing <a href="#discovery-v-design">discovery versus design</a>, as we discuss below.</p>
 </div>
 <div class="sect5">
 <h6 id="_business_model_canvas">Business model canvas</h6>
 <div class="paragraph">
 <p><a id="impact-mapping"></a></p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_business_strategy">Business strategy</h6>
-<div class="literalblock">
-<div class="content">
-<pre>can you PIVOT to/from these</pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>operational excellence</p>
-</li>
-<li>
-<p>product leadership</p>
-</li>
-<li>
-<p>customer focus</p>
-</li>
-</ul>
 </div>
 </div>
 <div class="sect5">
@@ -6628,12 +6637,14 @@ The goal of a startup is to figure out the right thing to build— the thing cus
 <div class="literalblock">
 <div class="content">
 <pre>[TBW]
-* Effectiveness/efficiency/risk
 * INVEST
 * MoSCoW
 * 5 Whys
 * JTBD</pre>
 </div>
+</div>
+<div class="paragraph">
+<p><a id="discovery-v-design"></a></p>
 </div>
 </div>
 </div>
@@ -24886,6 +24897,9 @@ IEEE Press.</p>
 </li>
 <li>
 <p><a id="Sterman2000"></a>[Sterman2000]: 	Sterman, J., 2000. <em>Business dynamics : systems thinking and modeling for a complex world</em> Boston: Irwin/McGraw-Hill. xxvi, 982 p.</p>
+</li>
+<li>
+<p><a id="Treacy1997"></a>[Treacy1997]: Treacy, Michael, and Fred Wiersema. 1997. The Discipline of Market Leaders: Choose Your Customers, Narrow Your Focus, Dominate Your Market. New York, N.Y.: Basic Books - Perseus Books Group.</p>
 </li>
 <li>
 <p><a id="TSO2011a"></a>[TSO2011a]: 	The Stationery Office. 2011. Information Technology Infrastructure Library ITIL Service Strategy: 2011 Edition. Norwich, U.K: The Stationery Office.</p>
