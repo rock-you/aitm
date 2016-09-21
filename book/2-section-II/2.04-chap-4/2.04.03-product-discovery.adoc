@@ -6,6 +6,8 @@
 
 Now that we have discussed the overall concept of product management and why it is important, we can turn more specifically to the topic of product discovery and design.
 
+We have previously discussed the overall xref:digital-context[digital business context], as a startup founder might think of the problem. But the process of discovery continues as the product idea is refined, new business problems are identified, and solutions (such as specific feature ideas) are designed and tested for outcomes.
+
 NOTE: In this book, we favor the idea that products are "discovered" as much or more than they are "designed." But you will see both terms used throughout this chapter. See the parable xref:flower-and-cog[the Flower and the Cog] for an illustration of the difference.
 
 The presence of a section entitled "product discovery" in this book is a  departure from other IT management textbooks. "Traditional" models of IT delivery focus on projects and deliverables, concepts we touched on in the  xref:2.04.01-process-project-product[last chapter section] but that we will not explore in depth until later in the book.
@@ -16,158 +18,9 @@ NOTE: The term "intrapreneurship" means "entrepreneurship inside a large company
 
 For our discussion here, the challenge with the ideas of projects and deliverables is that they represent approaches that are more xref:2.00.1-open-loop[open loop], or at least delayed in xref:2.00.01-feedback[feedback]. Design processes do not perform well when feedback is delayed. xref:system-intent[System intent], captured as a user story or requirement, is only an hypothesis until tested via implementation and user confirmation.
 
-anchor:product-context[]
-
-===== Product context
-
- move this section to Chapter 1 after  10/1/2016
-
-As you consider embarking on a journey of IT value, you need to orient to your surroundings and create an initial proposal or plan for how you will proceed. If you are actually a startup, you need a business plan. If you are working as an intrapreneur in a larger organization, you will still need some kind of formal proposal. This section describes some tools and thinking approaches that may be useful at this very earliest stage. There are more focused, product-specific techniques in the chapter section on anchor:prod-discovery-techniques[product discovery techniques].
-
-====== Diffusion theory and other approaches
-
-As you start to think about digital value, you must think about the context for your startup or product idea. A well known approach for this is the idea of the "diffusion theory," first researched by Everett Rogers and proposed in his _Diffusion of Innovations,_ <<Rogers2003>>.
-
-Rogers' research proposed the idea of "Adopter Categorization on the Basis of Innovativeness," with a well-known graphic:
-
-image:images/2.04-adoption.png[]
-_Technology adoption categories, similar to <<Rogers2003>>, figure 7-3, page 281._
-
-Rogers went on to characterize the various stages:
-
-* Innovators: Venturesome risk-takers
-* Early adopters: Opinion leaders
-* Early majority: Deliberative, numerous
-* Late majority: Skeptical, also numerous
-* Laggards: Traditional, isolated, conservative
-
-The above figure was popularized in the following variation by Geoffrey Moore <<Moore2014>> in his bestseller _Crossing the Chasm_:
-
-image:images/2.04-chasm.png[]
-_Purported "chasm" between adopter categories, similar to <<Moore2004>>, page 21._
-
-You'll see this diagram often, but you should be aware that Rogers himself (the person who has researched the data) says that (p.282):
-
-_Past research shows no support for this claim of a “chasm” between certain adopter categories. On the contrary, innovativeness, if measured properly, is a continuous variable and there are no sharp breaks or discontinuities between adjacent adopter categories (although there are important differences between them)_.
-
-The idea of technology diffusion frames the problem for us, but we need more. Steve Blank, in his influential book _The Four Steps to Epiphany_ <<Blank2013>>, argues there are four categories for startups (p.31):
-
-* Startups that are entering an existing market
-* Startups that are creating an entirely new market
-* Startups that want to re-segment an existing market as a low-cost entrant
-* Startups that want to re-segment an existing market as a niche player
-
-Understanding which category you are attempting is critical, because "the four types of startups have very different rates of customer adoption and acceptance."
-
-Another related and well known categorization of competitive strategies comes from Michael Treacy and Fred Wiersma <<Treacy1997>>:
-
-* Customer intimacy
-* Product leadership
-* Operational excellence
-
-It is not difficult to categorize well known brands in this way:
-
-[cols="3*", options="header"]
-|====
-|Customer intimacy|Product leadership|Operational excellence
-|Nordstrom +
-Home Depot
-|Apple +
-Nike
-|Dell Computer +
-Wal-Mart
-|====
-
-However, deciding which strategy to pursue as a startup may require some experimentation.
-
-====== Market facing, supporting, back office
-In Chapter 1 we discussed the question of "who pays/who benefits" for the service, http://dm-academy.github.io/aitm/#_defining_consumer_customer_and_sponsor[proposing that] the service consumer, the service customer, and the service sponsor might be three distinct roles (sometimes collapsing into 2 or 1 individual.)
-
-We see this again in how we can categorize the "customers" of IT services and systems. Roughly, such services can be:
-
-* Directly market- and consumer-facing (e.g. Facebook), to be used by external consumers and paid for by either them or closely associated customers (e.g. Netflix, or an online banking system).
-* Customer "supporting" systems, such as the online system that a bank teller uses when interacting with a customer. Customers do not interact directly with such systems, but customer-facing representatives do, and problems with such systems may be readily apparent to the end customer.
-* Completely "back-office" systems (HR, payroll, marketing, etc)
-
-Note however, that (especially in the current digitally transforming market) a service previously thought of as "back office" (when run internally) becomes "market-facing" when developed as a profit-seeking offering. For example, an HR system built internally is "back office," but Workday is a directly market-facing product, even though the two services may be similar in functionality.
-
-In other words, it's all relative.
-
-Especially when products are *not* market facing, we start to run into the problem of distinguishing xref:discovery-v-design[discovery versus design], as we discuss below.
-
 anchor:prod-discovery-techniques[]
 
-===== Business discovery frameworks
-[quote, Steve Blank, The Four Steps to Epiphany]
-Startups that survive the first few tough years do not follow the traditional product-centric launch model espoused by product managers or the venture capital community...In particular, the winners invent and live by a process of customer learning and discovery. I call this process “Customer Development,” a sibling to “Product Development,” and each and every startup that succeeds recapitulates it, knowingly or not.
-
- also move to ch 1
-
-Let's start with two well known approaches that can help you bridge from an understanding of your product context, to an effective vision for building and sustaining a product:
-
-* Eric Ries' Lean Startup
-* Alexander Osterwalder's Business Model Canvas
-
-anchor:lean-startup[]
-
-====== Lean Startup
-
-[quote, Eric Ries, The Lean Startup]
-The goal of a startup is to figure out the right thing to build— the thing customers want and will pay for— as quickly as possible. In other words, the Lean Startup is a new way of looking at the development of innovative new products that emphasizes fast iteration and customer insight, a huge vision, and great ambition, all at the same time.
-
-Lean Startup is a philosophy of entrepreneurship developed by Eric Ries <<Ries2011>>. It is not specific to information technology; rather, it is broadly applicable to all attempts to understand a product and its market. (Remember according to our xref:prod-mgmt-definition[definition of product management] that a workable market position is essential to any product.)
-
-The idea of the Lean Startup has had profound influence on product design, including market-facing and even internal IT systems. It is grounded in Agile concepts such as:
-
-"Do the simplest thing that could possibly work."
-
-Lean Startup calls for an iterative, "Build-Measure-Learn" cycle. Repeating this cycle frequently is the essential process of building a successful startup (whatever the digital proportion).
-
-* Develop an idea for a Minimum Viable Product (MVP)
-* Measure its effectiveness in the market (internal/external)
-* Learn from the experiment
-* Decide to persevere or pivot (change direction while leveraging momentum)
-* New idea development, evolution of MVP
-
-Flowcharts such as this are often seen to describe the Lean Startup process:
-
-image::images/2.04-leanStartup.png[]
-
-anchor:biz-model-canvas[]
-
-====== Business model canvas
-
-One recent book that's been influential among enterpreneurs is Alex Osterwalder's _Business Model Generation_ <<Osterwalder2010>>.
-
-This book is perhaps best known for introducing the concept of the Business Model Canvas, which it defines as "A shared language for describing, visualizing, assessing, and changing business models."
-
-The Business Model Canvas uses 9 major categories to describe the business model:
-
-* Key Partners
-* Key Activities
-* Value Proposition
-* Customer Relationships
-* Customer Segments
-* Key Resources
-* Channels
-* Cost Structure
-* Revenue Streams
-
-and suggests they be visualized in this manner:
-
-image::images/2.04-BizModelCanvas.png[]
-_similar to <<Osterwalder2010>>, p. 44_
-
-The canvas is then used in collaborative planning, e.g. as a large format wall poster where the business team can brainstorm, discuss, and fill in the boxes (e.g., what is the main "Value Proposition"? Mobile bank account access?):
-
-image::images/2.04-BMC-example.png[]
-_A rough approximation of the author's business model on the Business Model Canvas_
-
-Osterwalder and his colleagues, in _Business Model Generation_ and the followup _Value Proposition Design_ <<Osterwalder2014>>, suggest a wide variety of imaginative and creative approaches to developing business models and value propositions, in terms of patterns, processes, design approaches, and overall strategy.
-
 ===== Product discovery techniques
-
-
 
 In Chapter 3, we needed to consider the means for describing  xref:system-intent[system intent]. Even as a bare-bones startup, some formalization of this starts to emerge, at the very least in the form of test-driven development:
 
@@ -378,9 +231,6 @@ Notice that the product you are using is no longer just the phone, or computer. 
 Designing delivery
 
 Seddon
-
-====== Lean UX
-
 
 ====== Human factors
 Usability
