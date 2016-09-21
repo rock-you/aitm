@@ -5,6 +5,7 @@ namespace :book do
     Dir.glob("book/**/images/*").each do |image|
       FileUtils.copy(image, "images/" + File.basename(image))
       # all images must be uniquely named
+      # will break if any directories are created in any image directory, "EISDIR" error
     end
   end
 
