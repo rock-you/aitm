@@ -9,6 +9,7 @@ How are you going to organize? How are you going to work? Events move quickly, a
 ===== The concept of collaboration
 [quote, Agile Manifesto]
 Individuals and interactions over processes and tools. +
+ +
 The most efficient and effective method of conveying information to and within a development team is face-to-face conversation.
 
 Team collaboration is one of the key values of Agile. The Agile Alliance states that
@@ -17,9 +18,7 @@ _A "team" in the Agile sense is a small group of people, assigned to the same pr
 
 Teams are multi-skilled, share accountability, and individuals on the team may play multiple roles. <<Alliance2015>>
 
-Face to face interactions, usually enabled by giving the team its own space, are seen as essential for collaboration.
-
-Collaboration does not just happen because people are fed pizzas and work in a room together. Google has established that the most significant predictor of team performance is a sense of psychological safety (see sidebar).
+Face to face interactions, usually enabled by giving the team its own space, are seen as essential for collaboration. However, collaboration does not just happen because people are fed pizzas and work in a room together. Google has established that the most significant predictor of team performance is a sense of psychological safety (see sidebar).
 
 image::images/2.04-psych-safety.jpg[]
 _Psychological safety is essential to collaboration_ footnote:[_Image credit https://www.flickr.com/photos/marckjerland/4633544440, downloaded 2016-09-20, commercial use permitted_]
@@ -56,7 +55,7 @@ Lean UX is a term coined by author and consultant Jeff Gothelf <<Gothelf2013>>, 
 * Agile software development
 * Lean Startup
 
-We briefly discussed xref:lean-startup[Lean Startup] in Chapter 1, and the history and motivations for xref:1.03.02-Agile-history[Agile] in Chapter 3. We'll look in more depth at product discovery techniques, and xref:design[design and design thinking] in the next chapter section. However, Lean UX has much to say about forming the product team, suggesting (among others) the following principles for forming and sustaining teams:
+We briefly discussed xref:lean-startup[Lean Startup] in Chapter 1, and the history and motivations for xref:1.03.02-Agile-history[Agile software development] in Chapter 3. We'll look in more depth at product discovery techniques, and xref:design[design and design thinking] in the next chapter section. However, Lean UX has much to say about forming the product team, suggesting (among others) the following principles for forming and sustaining teams:
 
 * Dedicated, cross-functional teams
 * Outcome (not deliverable/output) focus
@@ -66,10 +65,9 @@ We briefly discussed xref:lean-startup[Lean Startup] in Chapter 1, and the histo
 
 (Other Lean UX principles such as small batch sizes and visualizing work will be discussed elsewhere; there is significant overlap between Lean UX and other schools of thought covered in this book.)
 
-Lean UX is a broadly influential work among digital firms and summarizes modern development practices well, especially for small, team-based organizations with minimal external dependencies.
+Lean UX is an influential work among digital firms and summarizes modern development practices well, especially for small, team-based organizations with minimal external dependencies. It is a broad and conceptual, principles-based framework open for interpretation in multiple ways. We continue with more "prescriptive" methods and techniques, such as Scrum.
 
-Lean UX is a broad and conceptual, principles-based framework open for interpretation in multiple ways. We continue with more "prescriptive" methods and techniques, such as Scrum.
-
+anchor:2.0.4.03-scrum[Scrum]
 
 ===== Scrum
 
@@ -79,9 +77,11 @@ Scrum is a lightweight framework designed to help small, close-knit teams of peo
 [quote, Jeff Sutherland, Scrum: The Art of Doing Twice the Work in Half the Time]
 There Are No Tasks; There Are Only Stories.
 
-One of the first prescriptive Agile methodologies you are likely to encounter as a practitioner is Scrum. There are many books, classes, and websites where you can learn more about this framework; <<Sims2012>> is a good introduction.
+One of the first prescriptive Agile methodologies you are likely to encounter as a practitioner is Scrum. There are many books, classes, and websites where you can learn more about this framework; <<Sims2012>> is a good brief introduction, and <<Rubin2012>> is well suited for more in-depth study.
 
-NOTE: "Prescriptive" means detailed and precise. A doctor's prescription is specific as to what medicine to take, how much, and when. A prescriptive method is similarly specific. "Agile software development" is not prescriptive; as currently published by the Agile Alliance, it is a collection of principles and ideas you may or may not use. By comparison, Scrum is prescriptive; it states roles and activities specifically and trainers and practitioners in general seek to follow the method completely and accurately.
+NOTE: "Prescriptive" means detailed and precise. A doctor's prescription is specific as to what medicine to take, how much, and when. A prescriptive method is similarly specific. "Agile software development" is not prescriptive; as currently published by the Agile Alliance, it is a collection of principles and ideas you may or may not use. +
+ +
+ By comparison, Scrum is prescriptive; it states roles and activities specifically and trainers and practitioners in general seek to follow the method completely and accurately.
 
 Scrum is appropriate to this chapter, as it is product-focused. It calls for the roles of:
 
@@ -130,11 +130,23 @@ Scrum at its most prescriptive can be seen as a shu-level practice; it gives det
 (See <<Fowler2006>> and <<Cockburn2007>>, pp. 17-18.)
 ****
 
-===== Product owner, product manager?
+===== More on product team roles
 
-   "Boundaries are provided by the product owner and often come in the form of constraints, such as
+[quote, Mike Cohn, Succeeding with Agile Software Development Using Scrum]
+Boundaries are provided by the product owner and often come in the form of constraints, such as * I need it by June. * We need to reduce the per-unit cost by half. * It needs to run at twice the speed.
+* It can use only half the memory of the current version.
 
-   * I need it by June.
-   * We need to reduce the per-unit cost by half.
-   * It needs to run at twice the speed.
-   * It can use only half the memory of the current version."" <<Cohn2010>>, p 126
+Marty Cagan suggests that the product team has three primary concerns, requiring three critical roles <<Cagan2008>>, (ch.12):
+
+* Value: Product Owner/Manager
+* Feasibility: Engineering
+* Usability: User Experience Design
+
+Jeff Patton represents these concepts as a Venn diagram:
+
+image::images/2.04-VUF.png[]
+_similar to <<Patton2014>>, ch.12_
+
+Finally, a word on the product manager. xref:2.0.4.03-scrum[Scrum] is prescriptive around the product *owner* role, but does not identify a role for product *manager*. This can lead to two people performing product management: a marketing-aligned "manager" responsible for high-level requirements, with the Scrum "product owner" attempting to translate them for the team. Marty Cagan warns against this approach, recommending instead that the product manager and owner be the same person, separate from marketing <<Cagan2008>>, pp. 7-8.
+
+In the next chapter, we will consider the challenge of product discovery -- at a product level, what practices do we follow to generate the creative insights that will result in customer value?
