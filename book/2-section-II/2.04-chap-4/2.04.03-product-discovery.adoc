@@ -20,7 +20,11 @@ For our discussion here, the challenge with the ideas of projects and deliverabl
 
 anchor:prod-discovery-techniques[]
 
-===== Product discovery techniques
+===== Formalizing product discovery
+
+[quote, Ronnie Kohavi, Online Experimentation at Microsoft]
+It is humbling to see how bad experts are at estimating the value of features (us included).
+
 
 In Chapter 3, we needed to consider the means for describing  xref:system-intent[system intent]. Even as a bare-bones startup, some formalization of this starts to emerge, at the very least in the form of test-driven development:
 
@@ -29,6 +33,23 @@ image::images/2.04-simplePipeline.png[]
 But, the assumption in our emergence model is that more formalized product management emerges with the formation of a team. As a team, we now need to expand "upstream" of the core delivery pipeline, so that we can collaborate and discover more effectively. Notice the grey box in the following:
 
 image::images/2.04-PipelinewProdDisc.png[]
+
+The most important foundation for your newly formalized product discovery capability is that it must be *empirical and hypothesis-driven*. Too often, product strategy is based on the HIPPO: The Highest Paid Person's Opinion.
+
+image::images/2.04-hippo.jpg[]
+_Beware of the HIPPO approach to product discovery_ footnote:[Image credit https://www.flickr.com/photos/puliarfanita/6002022840
+, downloaded 2016-09-22, commercial use permitted]
+
+The problem with relying on "gut feel" or personal opinions is that people -- regardless of experience or seniority -- perform poorly in assessing the likely outcome of their product ideas.
+
+Some well known research on this topic was conducted by Microsoft's Ronny Kohavi. In this research, Kohavi and team determiend that "only about 1/3 of ideas improve the metrics they were designed to improve." <<Kohavi2009>> As background, the same report cites that:
+
+* "Netflix considers 90% of what they try to be wrong"
+* "75 percent of important business decisions and business improvement ideas either have no impact on performance or actually hurt performance" according to Qualpro (a consultancy specializing in controlled experiments)
+
+It is therefore critical to establish a strong practice of data-driven experimentation when forming a product team, and avoid any cultural acceptance of "gut feel" or deferring to HIPPOs. This can be a difficult transition for the company founder, who has until now served as the de facto product manager. 
+
+===== Product discovery techniques
 
 There are a wide variety of techniques and even "schools" of product discovery and design; we will consider a few representatives in this chapter section.
 
@@ -234,7 +255,7 @@ Notice that the product you are using is no longer just the phone, or computer. 
 ====== Hypothesis testing
 The concept of hypothesis testing is key to product discovery and design. The power of scalable Cloud architectures and fast Continuous Delivery pipelines has made it possible to test product hypotheses against real-world customers at scale and in real time. Companies like Netflix and Facebook have pioneered techniques like "canary deployments" and "A/B testing."
 
-In these approaches, two different feature approaches are tried out simultaneously and the business results are measured. For example, are customers more likely to click on a green button or a yellow one? Testing such questions in the era of packaged software would have required lab-based usability engineering approaches, which risked being invalid because of their small sample size. Testing against larger numbers is possible, now that software is increasingly delivered as a service. 
+In these approaches, two different feature approaches are tried out simultaneously and the business results are measured. For example, are customers more likely to click on a green button or a yellow one? Testing such questions in the era of packaged software would have required lab-based usability engineering approaches, which risked being invalid because of their small sample size. Testing against larger numbers is possible, now that software is increasingly delivered as a service.
 
 ====== Usability and interaction
 At a lower level than the holistic concerns of design thinking, we have practices such as usability engineering. This takes many forms. There are any number of systematic and well-researched approaches to usability & interaction design, visualization, color theory, the pros and cons of various GUI elements, and related topics.
