@@ -15,13 +15,17 @@ endif::collaborator-draft[]
 
 ==== Introduction to Chapter 12
 
-You have now reached the scale of a large enterprise, perhaps on your way to the Fortune 500. Regardless of whether you started off as a digital startup, or are an older corporation now digitally transforming, your world is complex and getting more so.
+Regardless of whether you started off as a digital startup, or are an older corporation now digitally transforming, your world is complex and getting more so.
 
-Decisions that might have been made quickly and casually by a product or project team become more difficult, due to increasingly challenging structural factors both internal and external. Decisions made years ago come back to haunt current strategies with a vengeance. With scale, management needs higher level technical abstractions in order to manage. Architecture provides these abstractions, but doing so is difficult and controversial. What happens when management decides to set direction using these same abstractions, and architects find themselves now enforcing what had originally started as mere sense-making?
+Decisions that might have been made quickly and casually by a product or project team become more difficult, due to increasing challenges both internal and external. Decisions made years ago come back to haunt current strategies with a vengeance. With scale, management needs some way of making sense across digital operations of mind-numbing complexity. Should we invest in 15 new internally-developed microservices, or sunset 12 existing ones and implement a commercial package developed by people we trust? When we have 1500 applications or services in our portfolio, how do we know that proposed #1501 is not redundant or outright conflicting with existing services?
 
-Vendor relationships become a two-edged sword, providing increased value with access to higher levels of vendor resources, but at the cost of increased lock-in. Pure open-source strategies inevitably become corrupted by business realities.
+Architecture provides tools to manage such problems, but doing so is difficult and controversial. How do we know that our understanding of the digital operation is current and up to date? How much should we spend on keeping it so? What happens when management decides to set direction using these same abstractions, and architects find themselves now enforcing what had originally started as mere explanation and sense-making?
 
-Portfolio management in terms of information technology means looking at long-lived IT investments in terms of their overall cost, risk, and benefit to the corporation. This can and should be done regardless of whether the IT investment is external or internal facing. Products, services, and applications are the most useful portrfolio constructs, although assets, technology products, and even projects also can figure into longer-horizon value management. Enterprise architecture benefits from a tight alignment with IT portfolio management, as well; it's not clear that a firm boundary between them could be drawn.
+Vendor relationships become a two-edged sword, providing increased value with access to higher levels of vendor resources, but at the cost of increased lock-in. Pure open-source strategies inevitably give way to monetized relationships, as the risk of not having support becomes unacceptable.
+
+Portfolio management in terms of information technology means looking at long-lived IT investments in terms of their overall benefit, cost, and risk to the organization. This can and should be done regardless of whether the IT investment is external or internal facing. Products, services, and applications are the most useful portfolio constructs, although assets, technology products, and even projects also figure into longer-horizon value management. Enterprise architecture benefits from a tight alignment with IT portfolio management, as well; it's not clear that a firm boundary between them could be drawn.
+
+This chapter is in a way summative: it reflects all of the concerns discussed through the previous 11 chapters. Every chapter represents topics of interest to the architect. Now, we discuss a language and way of thinking to bring these concerns all together.
 
 IMPORTANT: As with other chapters in the later part of this book, we are going to introduce this topic "on its own terms." We will then add additional context and critique in subsequent sections.
 
@@ -29,9 +33,7 @@ IMPORTANT: As with other chapters in the later part of this book, we are going t
 
 ===== Chapter 12 outline
 
-* Why architecture?
-** Value of architecture - impact mapping
-** Origins of architecture
+* Value of architecture - impact mapping
 
 * Defining architecture
   - Enteprise
@@ -39,16 +41,20 @@ IMPORTANT: As with other chapters in the later part of this book, we are going t
   - Data
   - Solutions
   - Technical
+
 * Architecture processes and practices
 ** But what do architects *do*?
+** The problems with "method" - waterfall...
+** The repository problem
+
+* "Service-izaton" - pros and cons
+ - need in higher ed, health -
 
 * Portfolio management
 
 * The digital architecture
 
 * Topics
-* "Service-izaton" - pros and cons
- - need in higher ed, health -
 
 ****
 Sidebar: IT analytics experts
@@ -68,7 +74,6 @@ Magennis, Cantor, etc
 
 * Identify current approaches to understanding complex systems and their failure modes
 
-* Describe Snowden's Cynefin and its major elements
 
 Process capability is the inherent variation of the process in relation to the specification limits. The smaller the process variation, the better the process's capability. <<Kan1995>>
 
