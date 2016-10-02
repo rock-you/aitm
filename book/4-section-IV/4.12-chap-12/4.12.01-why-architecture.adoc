@@ -24,10 +24,19 @@ As we have progressed in our journey, and scaled our company up, all these areas
 
 Your product portfolio (internal and external) is now in the hundreds or thousands. Some were built with the latest technology, and others run on older technologies now perceived to be dead ends. But rewriting them is out of the question, so you have to manage the risk of the older technology.
 
-Investment decisions become harder. You're far beyond the days when you had a one-product focus. You have multiple interacting products and multiple interacting teams, and the relationship between the teams and products is not one to one. 
+Investment decisions become harder. You're far beyond the days when you had a one-product focus. You have multiple interacting products and multiple interacting teams, and the relationship between the teams and products is not one to one. Understanding the business case for the investment gets harder; when you have a thousand services over multiple business units, how do you know if someone is proposing a redundant new one?
 
+And then there are the big headaches. A major commercial product version is going off support, and it's the perfect time to think about a rewrite or replatform (say into the Cloud). But the moving pieces and interdependencies are formidably complex, and if you get the analysis wrong the business impact will be severe. Or a major outage does impact the business, and all of a sudden the organizational priority (from the Board on down) is "fix this so it never happens again." Everything else is to go "on hold." Except, of course, it can't.
 
+===== The varying definitions
 
+_The goal of enterprise architecture is to act as a guide, perhaps a pathfinder, who takes the enterprise on a transformational journey—from an incoherent and complex world with line-of-business separation, product-specific stovepipes, legacy systems estate, and costly operation to a more rationally organized and useful state with multiservice, revenue-generating platforms and an efficient operational regime. On the way, radical surgeries may be required to eliminate duplication, reduce costs, improve reliability, and increase agility in the business. EA acts as a strategic foundation for business enablement._ <<Bente2012>> p9
+
+Architecture represents the significant design decisions that shape a system, where significant is measured by cost of change <<booch find this>>
+
+"Architecture of software is a collection of design decisions that are expensive to change." <<Ran2001>>
+
+“...things that people perceive as hard to change.” <<Fowler2003a>>
 
 Roots in Berthier
 
@@ -68,7 +77,7 @@ This is about formalizing it. Not the idea that products should be well designed
 
  Cockburn quote on CCC project - disbanded & disintegrated due to relying on oral tradition
 
-===== Drivers
+===== The value of EA
 On the value side, EA is unique in its ability to promote enterprise-wide thinking about resource utilization. EA replaces the systems-level approaches to IT resource development that have characterized the last several decades, and has left many enterprises with stovepipe and/or duplicative IT resources. EA promotes the development of more efficient enterprise-wide common operating environments for business and technology, within which more capable and flexible business services and systems can be hosted. This in turn makes an enterprise more agile and able to respond to internal and external drivers of change, which promotes greater levels of competitiveness in the marketplace.
 
 Bernard, Scott A. (2012-08-13). An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 1113-1117). AuthorHouse. Kindle Edition.
@@ -81,7 +90,7 @@ Barnard asserted value:
 * Reducing headcount (e.g. in processes)
 * Improved communication
 
-
+Whether EA is perceived as a hygiene factor for the IT landscape or as a strategic foundation for business enablement, it is obliged to deliver value. As a hygiene factor, benefits from EA can be valued in terms of reduction in management escalations, emergency occurrences, and year-on-year operational expenses. As a strategic foundation, EA facilitates the deployment of new capabilities. This way it helps IT gain more business trust—and hence more funding for new IT projects. Unfortunately, these benefits are difficult to quantify on a short-term base. Therefore they need to be tracked over a sufficient time period and then be normalized to a common baseline. Only then can they serve as a sensible benchmark for measuring the success of EA. <<Bente2012>>
 
 ===== Architecture versus corporate strategy & planning
 
@@ -89,7 +98,7 @@ the business-IT alignment gap
 exists because there is a pervasive
 assumption that technology is a
 tactical rather than a strategic
-concern.
+concern. <<???>>
 
 model stability
 strat consults tend to swap out methods & frameworks as needed for the problem - this is good but no consistency
@@ -148,12 +157,19 @@ reinertsen critique of the concept
 Scrum vs XP - Scrum as promoter of tech debt - inattention to practices... (blogs was reading 9/28/16 PM)
 
 
-
+===== Reframing biz v it -> demand v supply
 
 ===== Architecture as knowledge mgmt
 
 
 ===== The hubris of architecture
+[quote, Bente et al, Collaborative Enterprise Architecture]
+...we encountered companies that, despite having a fully institutionalized EA in place, were in a state close to paralysis...Although EA has reached the mainstream, a skeptical undertone with regard to its effectiveness has
+always existed. (p 12-13)
+
+ from bente: Anti-patterns in EA and architecture in general can be found, for instance, in Kruchten (2008), Mar and Spacey (2011),
+Ambler, Nalbone. and Vizdos (2005), and Coplien and Harrison (2005).
+
 The challenge of Taylorism, top-down planning, determinism...
 example of antipatterns
 
