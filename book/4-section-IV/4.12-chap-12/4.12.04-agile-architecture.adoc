@@ -19,17 +19,57 @@ can make it hard to discover the essential structure from
 bottom-up decisions made entirely through the medium
 of code. <<Malan2010>>
 
+Bente's four perspectives & eight caricatures
+
+[quote, Bente et al]
+With regard to the nature of complex systems, it is not advisable to search for the "optimal enterprise architecture." Optimality is always relative to an environment, and the frame conditions are likely to change. Hence it is better to accept certain ugly spots of the IT landscape and strengthen the viability of the whole, which means developing and using capabilities such as being able to learn, solve problems, adapt, or absorb disruptions.
+
+ critical importance of not confusing solutions with EA. Scale matters.
+
 ===== The hubris of Agile
+
+https://philippe.kruchten.com/2011/02/13/the-elephants-in-the-agile-room/
+
 We don't always build. Software may be eating the world, but that doesn't mean everyone employs - or should employ - software developers.
 
 Suppose you have a business product/value prop and you know that you will be assembling complex services/products produced by others? And these services overlap? You need a strategy? Who is it that analyzes these services and their capabilities, interfaces, non-functional characteristics, and makes a final recommendation as to how you are going to bring them all into one unified system?
 
 Point back to sourcing chapter. (And forward ref from that chapter to architecture.) Open source, COTS, Cloud, in-house... the options are bewildering and take experience. A consistent evaluation approach is important (pref. under an economic framework Reinertsen/Hubbard)
 
+EA wastes... have covered elsewhere
+
+===== Solution arch consequences to scaling agile
+* systems too big for 1 team
+* features that are too complex to be implemented in 1 iteration
+* features that cause too much org chg mgmt
+
+EA "process"
+
+Another possible objection against agile methods is that the processes in EA, and in the
+enterprise generally, are simply not operating with a time window of the typical sprint length of three
+weeks. This, of course, is true. But it is at closer inspection not a counter-argument against the appli
+cation of agile principles to EA—just the opposite. The long process cycles add to EA's lack of trans
+parency and promote a silo mentality. Agile techniques can help here. <<Bente2012>> - queuing and fast feedback
+
+Lot of confusion in the literature about sol arch vs EA.
+
 ===== A worked example of architecture cost of delay vs TLM
 
 
 ===== Avoiding the big batch of EA "cleanup" that never works
+
+A common response to getting stuck in a big ball of mud is to fund a large systems replacement project. Such projects typically take months or years before they deliver any value to users, and the switchover from the old to the new system is often performed in “big bang” fashion. These projects also run an unusually high risk of running late and over budget and being cancelled. Systems rearchitecture should not be done as a large program of work funded from the capital budget. It should be a continuous activity that happens as part of the product development process. <<Humble2013>> ch10
+
+ Amazon Obidos example, strangler pattern.
+ * Start by delivering new functionality—at least at first
+ * Do not attempt to port existing functionality unless it is to support a business process change
+ * Deliver something fast
+ * Design for testability and deployability
+ * Architect the new software to run on a PaaS
+
+Our experience is that standardization on a particular toolchain or technology stack is neither necessary nor sufficient for achieving enterprise architecture goals such as enabling teams to respond rapidly to changing requirements, creating high-performance systems at scale, or reducing the risk of intrusion or data theft. Just like we drive product and process innovation through the Improvement Kata, we can drive architectural alignment through it too. Architectural goals—for example, desired performance, availability, and security—should be approached by iteratively specifying target conditions at the program level. Following the Principle of Mission, set out a clear vision of the goals of your enterprise architecture without specifying how the goals are to be achieved, and create a context in which teams can determine how to achieve them through experimentation and collaboration. We cover alternatives to standardization and related issues in more detail in Chapter 14. <<Humble2013>> ch10
+
+
 preparing along the way
 understand inventories and dependencies - importance of Bezos mandate to the dependency question - if there is one battle you fight, make it that one -
 the importance of documentation - speech to text, text analytics... image recognition... what might the future hold? At least get technical writers... don't make developers write...
@@ -37,3 +77,15 @@ the importance of documentation - speech to text, text analytics... image recogn
 If you started from day 1 with source, build, & package mgmt, and have kept it clean, you have a great asset
 
  is EA using the right tools? systems theory, semantics vs dynamics. Also, IT finance typically doesn't appear...
+
+ Review SAFE on architecture, also Reinertsen
+
+ All the coordination mechs can be applied... cadence/synch - queue understanding, CoD critical
+
+ Agile & docs "In
+an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it
+as part of the condition of satisfaction of a user story or in the definition of done" <<Bente2012>> p 170
+
+ Bente p 194 looks @ arch process optimization - local optima, bad. Goes down the work/wait alley and DSM (anti-rework). Limitations.
+
+ Toyota Kata and EA  - importance of target condition
