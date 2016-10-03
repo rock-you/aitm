@@ -1072,6 +1072,59 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_chapter_raw_material">Chapter raw material</a></li>
 </ul>
 </li>
+<li><a href="#_why_architecture">Why architecture?</a>
+<ul class="sectlevel4">
+<li><a href="#_our_journey_to_date">Our journey to date</a></li>
+<li><a href="#_the_varying_definitions">The varying definitions</a></li>
+<li><a href="#_the_value_of_ea">The value of EA</a></li>
+<li><a href="#_architecture_versus_corporate_strategy_planning">Architecture versus corporate strategy &amp; planning</a></li>
+<li><a href="#_architecture_vs_program_project">Architecture vs program/project</a></li>
+<li><a href="#_ea_as_operating_model">EA as operating model</a></li>
+<li><a href="#_arch_as_design_vs_arch_as_map">Arch as design vs arch as map</a></li>
+<li><a href="#_architecture_as_just_good_design">Architecture as just good design</a></li>
+<li><a href="#_architecture_as_a_language_for_reasoning_about_complexity_at_scale">Architecture as a language for reasoning about complexity at scale</a></li>
+<li><a href="#_ea_as_systems_thinking">EA as systems thinking</a></li>
+<li><a href="#_technical_debt">Technical debt</a></li>
+<li><a href="#_reframing_biz_v_it_demand_v_supply">Reframing biz v it &#8594; demand v supply</a></li>
+<li><a href="#_architecture_as_knowledge_mgmt">Architecture as knowledge mgmt</a></li>
+<li><a href="#_the_hubris_of_architecture">The hubris of architecture</a></li>
+<li><a href="#_architecture_as_re_emergent">Architecture as re-emergent</a></li>
+</ul>
+</li>
+<li><a href="#_architecture_domains">Architecture domains</a>
+<ul class="sectlevel4">
+<li><a href="#_business_model_vs_operating_model">Business model vs operating model</a></li>
+<li><a href="#_business_architecture">Business architecture</a></li>
+<li><a href="#_solutions_architecture">Solutions architecture</a></li>
+<li><a href="#_software_architecture">Software architecture</a></li>
+<li><a href="#_data_architecture">Data architecture</a></li>
+<li><a href="#_technical_architecture">Technical architecture</a></li>
+<li><a href="#_enterprise_architecture">Enterprise architecture</a></li>
+<li><a href="#_bm_vs_om_matrix">BM vs OM - matrix</a></li>
+</ul>
+</li>
+<li><a href="#_architecture_practices">Architecture practices</a>
+<ul class="sectlevel4">
+<li><a href="#_context">Context</a></li>
+<li><a href="#_architecture_as_a_management_program">Architecture as a management program</a></li>
+<li><a href="#_the_repository_question">The repository question</a></li>
+<li><a href="#_application_rationalization">application rationalization</a></li>
+<li><a href="#__coding_architects">"Coding architects?"</a></li>
+<li><a href="#_architecture_governance_process">Architecture, governance, process</a></li>
+<li><a href="#_visualization_and_abstraction">visualization and abstraction</a></li>
+<li><a href="#_tlm">TLM</a></li>
+</ul>
+</li>
+<li><a href="#_agile_and_architecture">Agile and architecture</a>
+<ul class="sectlevel4">
+<li><a href="#_the_hubris_of_agile">The hubris of Agile</a></li>
+<li><a href="#_solution_arch_consequences_to_scaling_agile">Solution arch consequences to scaling agile</a></li>
+<li><a href="#_a_worked_example_of_architecture_cost_of_delay_vs_tlm">A worked example of architecture cost of delay vs TLM</a></li>
+<li><a href="#_avoiding_the_big_batch_of_ea_cleanup_that_never_works">Avoiding the big batch of EA "cleanup" that never works</a></li>
+</ul>
+</li>
+<li><a href="#_portfolio_management">Portfolio management</a></li>
+<li><a href="#_topics_2">Topics</a></li>
 <li><a href="#_conclusion_12">Conclusion</a>
 <ul class="sectlevel4">
 <li><a href="#_discussion_questions_12">Discussion questions</a></li>
@@ -25730,6 +25783,748 @@ A foolish consistency is the hobgoblin of little minds.
 <div class="paragraph">
 <p><strong>Digital pipeline analytics</strong>
 Over time, the IT operation develops significant data by which to manage itself. It may develop one or more definitive portfolio list, typically applications, services, assets, and/or technology products. Distinguishing and baselining high quality versions of these data sets can consume inordinate resource, and yet managing the IT organization at scale is nearly impossible without them.. [<em>didn&#8217;t want to discuss data per se in the introduction</em>]</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_why_architecture">Why architecture?</h4>
+<div class="sect4">
+<h5 id="_our_journey_to_date">Our journey to date</h5>
+<div class="paragraph">
+<p>The architecture concept is not something new or foreign. In our journey to date, we have covered:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Business <a href="#what-is-IT-value">motivations</a> and <a href="#digital-context">context</a>,</p>
+</li>
+<li>
+<p><a href="#what-is-IT-infrastructure">Infrastructure</a></p>
+</li>
+<li>
+<p><a href="#chapter-app-deliv">Applications</a>,</p>
+</li>
+<li>
+<p><a href="#prod-mgmt-definition">Products</a> and/or services,</p>
+</li>
+<li>
+<p><a href="#organization">Organization</a> and <a href="#chap-process-mgmt">process</a>, and</p>
+</li>
+<li>
+<p><a href="#chap-ent-info-mgmt">Data and information</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>We have also covered the practices by which ideas and intentions are established and translated by investment into actions, including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Investment of time and resources towards digital objectives (e.g. through <a href="#project-mgmt">project management</a>),</p>
+</li>
+<li>
+<p>Acquisition of technologies and external services (i.e. <a href="#it-sourcing">sourcing</a>),</p>
+</li>
+<li>
+<p><a href="#resource-mgmt">Hiring of employees</a>,</p>
+</li>
+<li>
+<p><a href="#gov-chap">Governance</a> of digital organizations for <a href="#risk-management">risk</a>, <a href="#security">security</a>, and other purposes.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Enterprise architecture is nothing but the unification of these topics into a common, scalable framework.</strong></p>
+</div>
+<div class="paragraph">
+<p>As we have progressed in our journey, and scaled our company up, all these areas have continued to evolve. Specialization emerges. You have people with deep experience in Cloud architectures, and people with deep experience in e-records management and compliance. You don&#8217;t have too many who are deep in both.</p>
+</div>
+<div class="paragraph">
+<p>Your product portfolio (internal and external) is now in the hundreds or thousands. Some were built with the latest technology, and others run on older technologies now perceived to be dead ends. But rewriting them is out of the question, so you have to manage the risk of the older technology.</p>
+</div>
+<div class="paragraph">
+<p>Investment decisions become harder. You&#8217;re far beyond the days when you had a one-product focus. You have multiple interacting products and multiple interacting teams, and the relationship between the teams and products is not one to one. Understanding the business case for the investment gets harder; when you have a thousand services over multiple business units, how do you know if someone is proposing a redundant new one?</p>
+</div>
+<div class="paragraph">
+<p>And then there are the big headaches. A major commercial product version is going off support, and it&#8217;s the perfect time to think about a rewrite or replatform (say into the Cloud). But the moving pieces and interdependencies are formidably complex, and if you get the analysis wrong the business impact will be severe. Or a major outage does impact the business, and all of a sudden the organizational priority (from the Board on down) is "fix this so it never happens again." Everything else is to go "on hold." Except, of course, it can&#8217;t.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_the_varying_definitions">The varying definitions</h5>
+<div class="paragraph">
+<p><em>The goal of enterprise architecture is to act as a guide, perhaps a pathfinder, who takes the enterprise on a transformational journey—from an incoherent and complex world with line-of-business separation, product-specific stovepipes, legacy systems estate, and costly operation to a more rationally organized and useful state with multiservice, revenue-generating platforms and an efficient operational regime. On the way, radical surgeries may be required to eliminate duplication, reduce costs, improve reliability, and increase agility in the business. EA acts as a strategic foundation for business enablement.</em> <a href="#Bente2012">[Bente2012]</a> p9</p>
+</div>
+<div class="paragraph">
+<p>Enterprise architecture (EA) is the representation of the structure and behavior of an enterprise&#8217;s IT landscape In
+relation to its business environment. It reflects the current and future use of IT in the enterprise and provides a
+roadmap to reach a future state. <a href="#Bente2012">[Bente2012]</a> p 35</p>
+</div>
+<div class="paragraph">
+<p>Architecture represents the significant design decisions that shape a system, where significant is measured by cost of change <a href="#booch find this">[booch find this]</a></p>
+</div>
+<div class="paragraph">
+<p>"Architecture of software is a collection of design decisions that are expensive to change." <a href="#Ran2001">[Ran2001]</a></p>
+</div>
+<div class="paragraph">
+<p>“&#8230;&#8203;things that people perceive as hard to change.” <a href="#Fowler2003a">[Fowler2003a]</a></p>
+</div>
+<div class="paragraph">
+<p>Roots in Berthier</p>
+</div>
+<div class="paragraph">
+<p>vision of EA is an integrated language/set of concepts</p>
+</div>
+<div class="paragraph">
+<p>runs into domain driven design problems if not careful</p>
+</div>
+<div class="paragraph">
+<p>complex graph&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Sense-making at scale will not go away.</p>
+</div>
+<div class="paragraph">
+<p>But Cockcroft: if it changes too quickly, how to capture/represent?</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Bezos: all service oriented</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>For enduring competitive
+advantage, the organization needs
+to seek leverage across its prod-
+ucts and/or services and to create
+strategic capabilities that are hard
+to imitate because they rely on a
+mix of process, technology, skills,
+resources, facilities, culture, and
+even history &lt;&lt;Malan2005&gt;&gt;</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>projects tended to disregard - systems were more monolithic</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>will microservices be better? SOA finally done right?</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>CEO as architect&#8230;&#8203; go back to chapter 1 -</p>
+</div>
+<div class="paragraph">
+<p>But you can have the goodness without formalizing architecture as a program, practice, discipline, or capability.</p>
+</div>
+<div class="paragraph">
+<p>This is about formalizing it. Not the idea that products should be well designed and delightful. We covered that in Chapter 4.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Cockburn quote on CCC project - disbanded &amp; disintegrated due to relying on oral tradition</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Cathedral / bazaar</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_the_value_of_ea">The value of EA</h5>
+<div class="paragraph">
+<p>On the value side, EA is unique in its ability to promote enterprise-wide thinking about resource utilization. EA replaces the systems-level approaches to IT resource development that have characterized the last several decades, and has left many enterprises with stovepipe and/or duplicative IT resources. EA promotes the development of more efficient enterprise-wide common operating environments for business and technology, within which more capable and flexible business services and systems can be hosted. This in turn makes an enterprise more agile and able to respond to internal and external drivers of change, which promotes greater levels of competitiveness in the marketplace.</p>
+</div>
+<div class="paragraph">
+<p>Bernard, Scott A. (2012-08-13). An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 1113-1117). AuthorHouse. Kindle Edition.</p>
+</div>
+<div class="paragraph">
+<p>Barnard asserted value:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Shorting planning &amp; decision-making</p>
+</li>
+<li>
+<p>Reducing duplication</p>
+</li>
+<li>
+<p>Reducing re-work</p>
+</li>
+<li>
+<p>Reducing headcount (e.g. in processes)</p>
+</li>
+<li>
+<p>Improved communication</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Whether EA is perceived as a hygiene factor for the IT landscape or as a strategic foundation for business enablement, it is obliged to deliver value. As a hygiene factor, benefits from EA can be valued in terms of reduction in management escalations, emergency occurrences, and year-on-year operational expenses. As a strategic foundation, EA facilitates the deployment of new capabilities. This way it helps IT gain more business trust—and hence more funding for new IT projects. Unfortunately, these benefits are difficult to quantify on a short-term base. Therefore they need to be tracked over a sufficient time period and then be normalized to a common baseline. Only then can they serve as a sensible benchmark for measuring the success of EA. <a href="#Bente2012">[Bente2012]</a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_architecture_versus_corporate_strategy_planning">Architecture versus corporate strategy &amp; planning</h5>
+<div class="paragraph">
+<p>the business-IT alignment gap
+exists because there is a pervasive
+assumption that technology is a
+tactical rather than a strategic
+concern. &lt;&lt;???&gt;&gt;</p>
+</div>
+<div class="paragraph">
+<p>model stability
+strat consults tend to swap out methods &amp; frameworks as needed for the problem - this is good but no consistency</p>
+</div>
+<div class="paragraph">
+<p>arch is poorly quantified, limited line of sight to revenue &amp; profitability</p>
+</div>
+<div class="paragraph">
+<p>formalisms don&#8217;t give a good sense of scale - give a visual example</p>
+</div>
+<div class="paragraph">
+<p>arch formalisms weak on dynamics - semantics vs dynamics problem
+semantics gravitate to first order predicate logic, binary thinking
+continuous math&#8230;&#8203; required&#8230;&#8203; how to measure anything. systems thinking.</p>
+</div>
+<div class="paragraph">
+<p>but visualization is valuable otherwise we would not see so much of it</p>
+</div>
+<div class="paragraph">
+<p>Cockburn communication problem - artifacts stimulate internal mental models but not Shannon&#8230;&#8203; hence the endless attention to EA metamodels</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_architecture_vs_program_project">Architecture vs program/project</h5>
+<div class="paragraph">
+<p>“Enterprise architecture tends to be viewed as a hostile takeover by program managers and executives who have previously had a lot of independence in developing solutions for their own requirements” <a href="#Bernard2012">[Bernard2012]</a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_ea_as_operating_model">EA as operating model</h5>
+<div class="paragraph">
+<p>as opposed to business model</p>
+</div>
+<div class="paragraph">
+<p>Bernard claims: [without EA]&#8230;&#8203;leadership will not have the ability to generate clear, consistent views of the overall enterprise on an ongoing basis, they won’t be able to effectively compare business units, and the locus of power for planning and decision-making will be at the line-of-business, program, and/or system owner levels-with significant differences in how things are done and high potential for overlapping or duplicative functions and resources.</p>
+</div>
+<div class="paragraph">
+<p>Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 456-459). AuthorHouse. Kindle Edition.</p>
+</div>
+<div class="paragraph">
+<p>Of course, corporations compare business units all the time, on P&amp;L and other enterprise metrics, without an architecture. If an enterprise is a holding company, by definition it is not seeking a common operating model.</p>
+</div>
+<div class="paragraph">
+<p>Parsimony. What is the value of saying that EA and EOM are distinct? We have too many abstractions.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_arch_as_design_vs_arch_as_map">Arch as design vs arch as map</h5>
+<div class="paragraph">
+<p><em>the sheer absurdity of undertaking something so ambitious, on the one hand, and, foolhardy, on the other, as any kind of intentional design of so complex and poorly (and even mis-) understood an entity as an organization in a context of rapid change.</em> <a href="#Malan2010">[Malan2010]</a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_architecture_as_just_good_design">Architecture as just good design</h5>
+<div class="paragraph">
+<p>Design is ACID. Architecture is BASE.?</p>
+</div>
+<div class="paragraph">
+<p>Design thinking is encroaching on architecture. Enterprise design?</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_architecture_as_a_language_for_reasoning_about_complexity_at_scale">Architecture as a language for reasoning about complexity at scale</h5>
+<div class="paragraph">
+<p>standard EA language and methodology is especially helpful in large, complex enterprises that are geographically dispersed, and which may have multiple social and work cultures that have promoted different ways of doing things.</p>
+</div>
+<div class="paragraph">
+<p>Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 1147-1149). AuthorHouse. Kindle Edition.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_ea_as_systems_thinking">EA as systems thinking</h5>
+<div class="paragraph">
+<p>hard to argue with</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_technical_debt">Technical debt</h5>
+<div class="paragraph">
+<p>reinertsen critique of the concept</p>
+</div>
+<div class="paragraph">
+<p>Scrum vs XP - Scrum as promoter of tech debt - inattention to practices&#8230;&#8203; (blogs was reading 9/28/16 PM)</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_reframing_biz_v_it_demand_v_supply">Reframing biz v it &#8594; demand v supply</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_architecture_as_knowledge_mgmt">Architecture as knowledge mgmt</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_the_hubris_of_architecture">The hubris of architecture</h5>
+<div class="quoteblock">
+<blockquote>
+&#8230;&#8203;we encountered companies that, despite having a fully institutionalized EA in place, were in a state close to paralysis&#8230;&#8203;Although EA has reached the mainstream, a skeptical undertone with regard to its effectiveness has
+always existed. (p 12-13)
+</blockquote>
+<div class="attribution">
+&#8212; Bente et al<br>
+<cite>Collaborative Enterprise Architecture</cite>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> from bente: Anti-patterns in EA and architecture in general can be found, for instance, in Kruchten (2008), Mar and Spacey (2011),
+Ambler, Nalbone. and Vizdos (2005), and Coplien and Harrison (2005).</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The challenge of Taylorism, top-down planning, determinism&#8230;&#8203;
+example of antipatterns</p>
+</div>
+<div class="paragraph">
+<p>EA arguably reluctant to see itself in terms of testing hypotheses and making bets</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>BPR?</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"mess," "gratuitous complexity," etc</p>
+</li>
+<li>
+<p>all loaded terms that disregard operational reality of the moment</p>
+</li>
+<li>
+<p>why is "inconsistency" bad - need to demonstrate impact map</p>
+</li>
+<li>
+<p>hypothetical "synergies down the road" - need evidence</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>(above from <a href="#Malan2010">[Malan2010]</a>)</p>
+</div>
+<div class="paragraph">
+<p>Laundry list discussions of all that&#8217;s wrong with IT, with a strong implication that EA is a magical silver bullet&#8201;&#8212;&#8201;but poorly documented as to how in fact it solves all this wrongness. These <strong>are</strong> complex systems and even in the best managed contexts they fail and degrade.</p>
+</div>
+<div class="paragraph">
+<p>The reality is that enterprise architecture presented itself as a solution to complexity, long IT time scales, business frustration, and all kinds of badness. And when those problems were finally solved, it was not by architecture, but by Agile and DevOps practices finally overthrowing open-loop, slow feedback, batch-oriented delivery. Architects also failed to realize the emergent issue of too much enterprise work in process, instead championing the proliferation of enterprise processes and their associated queues.</p>
+</div>
+<div class="paragraph">
+<p>Finally, architects' efficiency motivations and interest in capability mapping did not help the cause of cross-functional teams. Instead, functional silos were reinforced as supply-side "capabilities" and the  antipattern of "bringing the team to the work" was accepted as enterprise SOP - despite the growing evidence of Scrum and Agile success. The iterative, experimental narrative of Lean Startup did not originate from EA.</p>
+</div>
+<div class="paragraph">
+<p>In particular, despite dabbling in systems theory, architects did not realize the fundamental problems of stage-gated delivery, big bang releases, and so forth. They were too sympathetic to the now-discredited Capability Maturity Model and PMBOK.</p>
+</div>
+<div class="paragraph">
+<p>Architecture promoted the idea that standardizing platforms would make them more adaptive and agile, without sufficient caution that such standardization might have the opposite effect. Wrong lesson learned from software?</p>
+</div>
+<div class="paragraph">
+<p>Yes tightly coupled M:M architectures are hard to change. But SPOFs also bad. When too much is centralized, the general case issues become intractable. Domain driven design&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>nor was this all architecture&#8217;s fault. A materialist explanation for the success of Agile and DevOps starts with Cloud, which in turn relies on Moore&#8217;s Law and related dimensions of progress in manufacturing computing infrastructure.</p>
+</div>
+<div class="paragraph">
+<p>Architecture overreach - here, we restrict to OM. Business model questions are discussed throughout other chapters. But biz arch overlaps. Finance &amp; competitive strat is not primarily EA, even BA.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_architecture_as_re_emergent">Architecture as re-emergent</h5>
+<div class="paragraph">
+<p>Who has the best overall understanding of your digital capabilities?</p>
+</div>
+<div class="paragraph">
+<p>Potts - CEO as arch?</p>
+</div>
+<div class="paragraph">
+<p>Architect as wise counselor, lore-master</p>
+</div>
+<div class="paragraph">
+<p>Sense-making across the landscape
+Guidance on key decisions
+Identification of opportunities otherwise un-apparent</p>
+</div>
+<div class="paragraph">
+<p>Stewardship of longer horizon, expensive to change&#8230;&#8203; where are the constraints &amp; degrees of freedom</p>
+</div>
+<div class="paragraph">
+<p>CoD as inherent weakness&#8230;&#8203; remediable</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_architecture_domains">Architecture domains</h4>
+<div class="sect4">
+<h5 id="_business_model_vs_operating_model">Business model vs operating model</h5>
+<div class="paragraph">
+<p>blurry boundaries, certainly</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_business_architecture">Business architecture</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_solutions_architecture">Solutions architecture</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_software_architecture">Software architecture</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_data_architecture">Data architecture</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_technical_architecture">Technical architecture</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_enterprise_architecture">Enterprise architecture</h5>
+<div class="paragraph">
+<p>all of the above</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_bm_vs_om_matrix">BM vs OM - matrix</h5>
+
+</div>
+</div>
+<div class="sect3">
+<h4 id="_architecture_practices">Architecture practices</h4>
+<div class="sect4">
+<h5 id="_context">Context</h5>
+<div class="paragraph">
+<p>One core question decided by governance is how much autonomy is granted to business units or
+geographical regions. In case this autonomy is high, would a quest for high IT integration and stan
+dardization not be like fighting windmills? <a href="#bente2012">[bente2012]</a> p.45 and cross ref ch 1</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_architecture_as_a_management_program">Architecture as a management program</h5>
+<div class="paragraph">
+<p>Bernard fig 1-4: Governance, Framework, Methodology, Best Practices, Standards, Artifacts</p>
+</div>
+<div class="paragraph">
+<p>Activities/Bernard: (loc 561)
+* Management program
+* analysis &amp; design method - how to factor out?? key weakness. waterfall.</p>
+</div>
+<div class="paragraph">
+<p>As a management program, EA provides:     Strategic Alignment: Connects goals, activities, and resources     Standardized Policy: Resource governance and implementation     Decision Support: Financial control and configuration management     Resource Oversight: Lifecycle approach to development/management As an analysis and design method, EA provides:     EA Approach: The framework, analysis/design method, and artifact set     Current Views: Views of as-is strategies, processes, and resources     Future Views: Views of to-be strategies, processes, and resources     EA Management Plan: A plan to move from the current to the future EA</p>
+</div>
+<div class="paragraph">
+<p>Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 585-601). AuthorHouse. Kindle Edition.</p>
+</div>
+<div class="paragraph">
+<p>so, without EA&#8230;&#8203; all this stuff is NOT getting done?</p>
+</div>
+<div class="paragraph">
+<p>EA as policy vehicle&#8230;&#8203; how is it that policies are enforced? process gating?</p>
+</div>
+<div class="paragraph">
+<p>without EA.. how technical standards? how is a config image determined to be gold?</p>
+</div>
+<div class="paragraph">
+<p>risk mgmt can&#8217;t do it alone</p>
+</div>
+<div class="paragraph">
+<p>In Bernard - goals &amp; initiatives are above products &amp; services - showing multiple product orientation - indicative of emergence phase</p>
+</div>
+<div class="paragraph">
+<p>Entire language/mental model around gaps brings back flower &amp; cog</p>
+</div>
+<div class="paragraph">
+<p>A flower is not engineered to fill a gap. A cog is.</p>
+</div>
+<div class="paragraph">
+<p>how do we know there is a gap? We have hypotheses&#8230;&#8203; need to establish that there is a valuable, usable, feasible future state, and if there is progress towards it must not be delayed by queues, cycle time, etc &#8230;&#8203; need to move with alacrity&#8230;&#8203; Cost of Delay outweighs much&#8230;&#8203;</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_the_repository_question">The repository question</h5>
+<div class="paragraph">
+<p>CMDBs, metadata, EA</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_application_rationalization">application rationalization</h5>
+
+</div>
+<div class="sect4">
+<h5 id="__coding_architects">"Coding architects?"</h5>
+<div class="paragraph">
+<p>Primarily in SW domain
+But virtualization now makes it possible for all archs to be hands-on, even w/pkgs</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_architecture_governance_process">Architecture, governance, process</h5>
+<div class="paragraph">
+<p>Many EA-originated policies that appear obsolete today have not always been meaningless. Most probably they have emerged as the architecture group&#8217;s overreactions to unlikely-to-recur situations that they experienced in their organization in the past. A frequent example is the uncontrolled prolif
+eration of newly hyped technologies by the IT crowd, and the EA group&#8217;s rigid attempt to reinstitute order. Once the technology has matured, the EA rules often appear overly strict and suppress a flexible use of the appropriate technology. <a href="#Bente2012">[Bente2012]</a> p19</p>
+</div>
+<div class="paragraph">
+<p>Bente is correct to focus on collaborative issues. but the overall benefits of having (for example) a TLM are not usually quantified in terms of cost and risk avoidance. This can be done. TLM should route via corp governance &amp; perf mgmt, align w/vendor mgmt&#8230;&#8203; find sources on how these processes work in non IT domains&#8230;&#8203; (have already discussed in book)</p>
+</div>
+<div class="paragraph">
+<p>arch review boards as <a href="#coord-struct">coordination structures</a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_visualization_and_abstraction">visualization and abstraction</h5>
+<div class="paragraph">
+<p>The big picture is part of the standard mindset of EA, which
+everyoneimmediatelyassociateswiththeactivitiesofanenterprisearchitect.
+However, many of these big pictures you meet in practice have been over-
+abstracted to the point of insignificance and no longer address any relevant
+question.<a href="#Bente2012">[Bente2012]</a> p16</p>
+</div>
+<div class="paragraph">
+<p>"semantic distortions" - simple example: equal-sized boxes on an EA capability map.</p>
+</div>
+<div class="paragraph">
+<p>the EA&#8217;s role is to facilitate discussions by abstracting and visualizing powerfully so that decisions are illuminated.</p>
+</div>
+<div class="paragraph">
+<p>usually, the resulting diagrams are only good tactically.</p>
+</div>
+<div class="paragraph">
+<p>EA needs catalogs and matrices maintained. diagrams? it&#8217;s questionable. every so often there is a ritual expression of a catalog as nested boxes. Of questionable utility. The graph complexity bogs down representation of the matrices.</p>
+</div>
+<div class="paragraph">
+<p>illustrate: diagrams vs reporting, isometric catalog/matrix/diagram
+why draw boxes when a textual report is all that is needed (e.g. Bente p52)</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_tlm">TLM</h5>
+<div class="paragraph">
+<p>Lifecycle management can extend to internal products/services</p>
+</div>
+<div class="paragraph">
+<p>EA provides guidance about what technologies are a strategic fit, which ones are deprecated, and which are emerging. <a href="#Bente2012">[Bente2012]</a> p8</p>
+</div>
+<div class="paragraph">
+<p>Case study: The version control controversy: service vs TLM</p>
+</div>
+<div class="paragraph">
+<p>if enterprise architects claim to be the only decision-making body
+in technical matters, there is a huge risk that they create a bottleneck, if decisions take ages due to pending strategic issues, imminent changes in the business model, and so forth, IT projects can be seriously delayed. The practical consequence is that projects deliberately circumvent the enterprise architects—for example, by choosing less suitable technologies not managed by the EA group.<a href="#Bente2012">[Bente2012]</a> p19</p>
+</div>
+<div class="paragraph">
+<p>Note that we compensate developers with money AND experience. Developer pressure to use a new technology should be seen in part as a demand for increased compensation.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_agile_and_architecture">Agile and architecture</h4>
+<div class="literalblock">
+<div class="content">
+<pre>Cockcroft quote</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> When it
+comes to system implementation, the temptation to be
+fast, often under the nom de guerre of agile, can soften
+quality controls and threaten product usability, relia-
+bility, safety, and lifecycle cost. &lt;&lt;Malan2010&gt;&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Re: "the code is documentation"</p>
+</div>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>for systems of sufficient scope and complexity
+to warrant teams (of teams) working on (incremental)
+implementation and evolution, the sheer mass of code
+can make it hard to discover the essential structure from
+bottom-up decisions made entirely through the medium
+of code. <a href="#Malan2010">[Malan2010]</a></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Bente&#8217;s four perspectives &amp; eight caricatures</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+With regard to the nature of complex systems, it is not advisable to search for the "optimal enterprise architecture." Optimality is always relative to an environment, and the frame conditions are likely to change. Hence it is better to accept certain ugly spots of the IT landscape and strengthen the viability of the whole, which means developing and using capabilities such as being able to learn, solve problems, adapt, or absorb disruptions.
+</blockquote>
+<div class="attribution">
+&#8212; Bente et al
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>critical importance of not confusing solutions with EA. Scale matters.</pre>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_the_hubris_of_agile">The hubris of Agile</h5>
+<div class="paragraph">
+<p><a href="https://philippe.kruchten.com/2011/02/13/the-elephants-in-the-agile-room/" class="bare">https://philippe.kruchten.com/2011/02/13/the-elephants-in-the-agile-room/</a></p>
+</div>
+<div class="paragraph">
+<p>We don&#8217;t always build. Software may be eating the world, but that doesn&#8217;t mean everyone employs - or should employ - software developers.</p>
+</div>
+<div class="paragraph">
+<p>Suppose you have a business product/value prop and you know that you will be assembling complex services/products produced by others? And these services overlap? You need a strategy? Who is it that analyzes these services and their capabilities, interfaces, non-functional characteristics, and makes a final recommendation as to how you are going to bring them all into one unified system?</p>
+</div>
+<div class="paragraph">
+<p>Point back to sourcing chapter. (And forward ref from that chapter to architecture.) Open source, COTS, Cloud, in-house&#8230;&#8203; the options are bewildering and take experience. A consistent evaluation approach is important (pref. under an economic framework Reinertsen/Hubbard)</p>
+</div>
+<div class="paragraph">
+<p>EA wastes&#8230;&#8203; have covered elsewhere</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_solution_arch_consequences_to_scaling_agile">Solution arch consequences to scaling agile</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>systems too big for 1 team</p>
+</li>
+<li>
+<p>features that are too complex to be implemented in 1 iteration</p>
+</li>
+<li>
+<p>features that cause too much org chg mgmt</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>EA "process"</p>
+</div>
+<div class="paragraph">
+<p>Another possible objection against agile methods is that the processes in EA, and in the
+enterprise generally, are simply not operating with a time window of the typical sprint length of three
+weeks. This, of course, is true. But it is at closer inspection not a counter-argument against the appli
+cation of agile principles to EA—just the opposite. The long process cycles add to EA&#8217;s lack of trans
+parency and promote a silo mentality. Agile techniques can help here. <a href="#Bente2012">[Bente2012]</a> - queuing and fast feedback</p>
+</div>
+<div class="paragraph">
+<p>Lot of confusion in the literature about sol arch vs EA.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_a_worked_example_of_architecture_cost_of_delay_vs_tlm">A worked example of architecture cost of delay vs TLM</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_avoiding_the_big_batch_of_ea_cleanup_that_never_works">Avoiding the big batch of EA "cleanup" that never works</h5>
+<div class="paragraph">
+<p>A common response to getting stuck in a big ball of mud is to fund a large systems replacement project. Such projects typically take months or years before they deliver any value to users, and the switchover from the old to the new system is often performed in “big bang” fashion. These projects also run an unusually high risk of running late and over budget and being cancelled. Systems rearchitecture should not be done as a large program of work funded from the capital budget. It should be a continuous activity that happens as part of the product development process. <a href="#Humble2013">[Humble2013]</a> ch10</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Amazon Obidos example, strangler pattern.
+* Start by delivering new functionality—at least at first
+* Do not attempt to port existing functionality unless it is to support a business process change
+* Deliver something fast
+* Design for testability and deployability
+* Architect the new software to run on a PaaS</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Our experience is that standardization on a particular toolchain or technology stack is neither necessary nor sufficient for achieving enterprise architecture goals such as enabling teams to respond rapidly to changing requirements, creating high-performance systems at scale, or reducing the risk of intrusion or data theft. Just like we drive product and process innovation through the Improvement Kata, we can drive architectural alignment through it too. Architectural goals—for example, desired performance, availability, and security—should be approached by iteratively specifying target conditions at the program level. Following the Principle of Mission, set out a clear vision of the goals of your enterprise architecture without specifying how the goals are to be achieved, and create a context in which teams can determine how to achieve them through experimentation and collaboration. We cover alternatives to standardization and related issues in more detail in Chapter 14. <a href="#Humble2013">[Humble2013]</a> ch10</p>
+</div>
+<div class="paragraph">
+<p>preparing along the way
+understand inventories and dependencies - importance of Bezos mandate to the dependency question - if there is one battle you fight, make it that one -
+the importance of documentation - speech to text, text analytics&#8230;&#8203; image recognition&#8230;&#8203; what might the future hold? At least get technical writers&#8230;&#8203; don&#8217;t make developers write&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>If you started from day 1 with source, build, &amp; package mgmt, and have kept it clean, you have a great asset</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>is EA using the right tools? systems theory, semantics vs dynamics. Also, IT finance typically doesn't appear...</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Review SAFE on architecture, also Reinertsen</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>All the coordination mechs can be applied... cadence/synch - queue understanding, CoD critical</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> Agile &amp; docs "In
+an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it
+as part of the condition of satisfaction of a user story or in the definition of done" &lt;&lt;Bente2012&gt;&gt; p 170</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Bente p 194 looks @ arch process optimization - local optima, bad. Goes down the work/wait alley and DSM (anti-rework). Limitations.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Toyota Kata and EA  - importance of target condition</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_portfolio_management">Portfolio management</h4>
+<div class="paragraph">
+<p>EA &amp; M&amp;A - Bernard location 432 - like that value prop  - who is an EA? the person you would bring in to help assess a potential acquisition&#8217;s systems for fit/overlap etc.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_topics_2">Topics</h4>
+<div class="literalblock">
+<div class="content">
+<pre> ===== complex systems
+* Describe Snowden's Cynefin and its major elements</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>===== metamodels</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>app v svc def'n</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>===== standards</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>===== Sol Arch for EA</pre>
 </div>
 </div>
 </div>
