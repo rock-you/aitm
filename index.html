@@ -1077,6 +1077,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_ea_organizational_models">EA organizational models</a></li>
 <li><a href="#_business_architecture">Business architecture</a></li>
+<li><a href="#_solutions_architecture">Solutions architecture</a></li>
 <li><a href="#_technical_architecture">Technical architecture</a></li>
 <li><a href="#_enterprise_architecture">Enterprise architecture</a></li>
 </ul>
@@ -1086,7 +1087,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_architecture_as_a_management_program">Architecture as a management program</a></li>
 <li><a href="#_arch_as_visual_facilitator">Arch as visual facilitator</a></li>
 <li><a href="#_rationalization_and_simplification">Rationalization and simplification</a></li>
-<li><a href="#_architecture_as_knowledge_mgmt">Architecture as knowledge mgmt</a></li>
+<li><a href="#_knowledge_management_and_architecture_repositories">Knowledge management and architecture repositories</a></li>
 </ul>
 </li>
 <li><a href="#_agile_and_architecture">Agile and architecture</a>
@@ -1094,8 +1095,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_the_hubris_of_architecture">The hubris of architecture</a></li>
 <li><a href="#_the_hubris_of_agile">The hubris of Agile</a></li>
 <li><a href="#_scaling_architecture">Scaling &amp; architecture</a></li>
-<li><a href="#_a_worked_example_of_architecture_cost_of_delay_vs_tlm">A worked example of architecture cost of delay vs TLM</a></li>
-<li><a href="#_devops_assets_to_architecture">DevOps assets to architecture</a></li>
+<li><a href="#_architecture_queues_and_cost_of_delay">Architecture, queues, and Cost of Delay</a></li>
 </ul>
 </li>
 <li><a href="#_architecture_standards">Architecture standards</a>
@@ -1103,6 +1103,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_bizbok">Bizbok</a></li>
 <li><a href="#_togaf_2">TOGAF</a></li>
 <li><a href="#_industry_verticals">Industry verticals</a></li>
+<li><a href="#_safe_and_architecture">SAFE and architecture</a></li>
 </ul>
 </li>
 <li><a href="#_portfolio_management">Portfolio management</a></li>
@@ -24901,6 +24902,12 @@ runs into domain driven design problems if not careful</p>
 <div class="sect4">
 <h5 id="_the_value_of_ea">The value of EA</h5>
 <div class="paragraph">
+<p>Critical importance of an economic model</p>
+</div>
+<div class="paragraph">
+<p>Architecture HIPPOS</p>
+</div>
+<div class="paragraph">
 <p>Present master impact map &amp; discuss step by step</p>
 </div>
 <div class="paragraph">
@@ -24971,6 +24978,15 @@ runs into domain driven design problems if not careful</p>
 </div>
 <div class="sect3">
 <h4 id="_architecture_domains">Architecture domains</h4>
+<div class="paragraph">
+<p>Zachman as intro</p>
+</div>
+<div class="paragraph">
+<p>matrix illuminates question of "EA v biz etc"</p>
+</div>
+<div class="paragraph">
+<p>people align w/columns and w/rows</p>
+</div>
 <div class="sect4">
 <h5 id="_ea_organizational_models">EA organizational models</h5>
 <div class="sect5">
@@ -24991,10 +25007,10 @@ One core question decided by governance is how much autonomy is granted to busin
 </div>
 <div class="sect4">
 <h5 id="_business_architecture">Business architecture</h5>
-<div class="sect5">
-<h6 id="_solutions_architecture">Solutions architecture</h6>
 
 </div>
+<div class="sect4">
+<h5 id="_solutions_architecture">Solutions architecture</h5>
 <div class="sect5">
 <h6 id="_software_architecture">Software architecture</h6>
 
@@ -25222,11 +25238,23 @@ in technical matters, there is a huge risk that they create a bottleneck, if dec
 </div>
 </div>
 <div class="sect4">
-<h5 id="_architecture_as_knowledge_mgmt">Architecture as knowledge mgmt</h5>
+<h5 id="_knowledge_management_and_architecture_repositories">Knowledge management and architecture repositories</h5>
+<div class="paragraph">
+<p>backref to ch 11?</p>
+</div>
+<div class="paragraph">
+<p>Agile &amp; docs "In an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it as part of the condition of satisfaction of a user story or in the definition of done" <a href="#Bente2012">[Bente2012]</a> p 170</p>
+</div>
 <div class="sect5">
 <h6 id="_the_repository_question">The repository question</h6>
 <div class="paragraph">
 <p>CMDBs, metadata, EA</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_devops_assets_to_architecture">DevOps assets to architecture</h6>
+<div class="paragraph">
+<p>If you started from day 1 with source, build, &amp; package mgmt, and have kept it clean, you have a great asset</p>
 </div>
 </div>
 <div class="sect5">
@@ -25340,6 +25368,9 @@ example of antipatterns</p>
 <div class="paragraph">
 <p>Bente EA wastes</p>
 </div>
+<div class="paragraph">
+<p>The often-minimal value of expert opinion revisited (also covered chapter 4)</p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_the_hubris_of_agile">The hubris of Agile</h5>
@@ -25392,9 +25423,6 @@ example of antipatterns</p>
 <p>Lot of confusion in the literature about sol arch vs EA.</p>
 </div>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_a_worked_example_of_architecture_cost_of_delay_vs_tlm">A worked example of architecture cost of delay vs TLM</h5>
 <div class="sect5">
 <h6 id="_big_batch_rationalization_risks">Big batch rationalization risks</h6>
 <div class="paragraph">
@@ -25422,46 +25450,22 @@ example of antipatterns</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_devops_assets_to_architecture">DevOps assets to architecture</h5>
+<h5 id="_architecture_queues_and_cost_of_delay">Architecture, queues, and Cost of Delay</h5>
 <div class="paragraph">
-<p>If you started from day 1 with source, build, &amp; package mgmt, and have kept it clean, you have a great asset</p>
+<p>worked TLM example
+review Reinertsen</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>is EA using the right tools? systems theory, semantics vs dynamics. Also, IT finance typically doesn't appear...</pre>
+<div class="paragraph">
+<p>Bente p 194 looks @ arch process optimization - local optima, bad. Goes down the work/wait alley and DSM (anti-rework). Limitations.</p>
 </div>
+<div class="paragraph">
+<p>Also, IT finance typically doesn&#8217;t appear&#8230;&#8203;</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>Review SAFE on architecture, also Reinertsen</pre>
+<div class="paragraph">
+<p>All the coordination mechs can be applied&#8230;&#8203; cadence/synch - queue understanding, CoD critical</p>
 </div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>All the coordination mechs can be applied... cadence/synch - queue understanding, CoD critical</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> Agile &amp; docs "In
-an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it
-as part of the condition of satisfaction of a user story or in the definition of done" &lt;&lt;Bente2012&gt;&gt; p 170</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Bente p 194 looks @ arch process optimization - local optima, bad. Goes down the work/wait alley and DSM (anti-rework). Limitations.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Toyota Kata and EA  - importance of target condition</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>The often-minimal value of expert opinion revisited (also covered chapter 4)</pre>
-</div>
+<div class="paragraph">
+<p>Toyota Kata and EA  - importance of target condition</p>
 </div>
 </div>
 </div>
@@ -25473,12 +25477,6 @@ as part of the condition of satisfaction of a user story or in the definition of
 <p>Sidebar: Introducing Open Group and OMG.</p>
 </div>
 </div>
-</div>
-<div class="paragraph">
-<p><a id="deeper-TOGAF"></a></p>
-</div>
-<div class="paragraph">
-<p>Further on TOGA</p>
 </div>
 <div class="sect4">
 <h5 id="_bizbok">Bizbok</h5>
@@ -25509,6 +25507,11 @@ We previously discussed the Business Analysis Body of Knowledge. Although they h
 <pre>_"a blueprint of the enterprise that provides a common understanding of the organization and is used to align strategic objectives and tactical demands."_</pre>
 </div>
 </div>
+<div class="literalblock">
+<div class="content">
+<pre>anchor:deeper-TOGAF[]</pre>
+</div>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_togaf_2">TOGAF</h5>
@@ -25517,6 +25520,12 @@ We previously discussed the Business Analysis Body of Knowledge. Although they h
 <div class="sect4">
 <h5 id="_industry_verticals">Industry verticals</h5>
 
+</div>
+<div class="sect4">
+<h5 id="_safe_and_architecture">SAFE and architecture</h5>
+<div class="paragraph">
+<p>Review SAFE on architecture, also Reinertsen</p>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -25542,6 +25551,11 @@ Over time, the IT operation develops significant data by which to manage itself.
 * Cynefin
 * self-steering, autopoeisis
 * post-industrial</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>is EA using the right tools? systems theory, semantics vs dynamics.</pre>
 </div>
 </div>
 <div class="literalblock">
