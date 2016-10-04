@@ -1074,15 +1074,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_why_architecture">Why architecture?</a>
 <ul class="sectlevel4">
 <li><a href="#_our_journey_to_date">Our journey to date</a></li>
-<li><a href="#_the_varying_definitions">The varying definitions</a></li>
+<li><a href="#_defining_enterprise_architecture">Defining Enterprise Architecture</a></li>
 <li><a href="#_architecture_as_staff_function">Architecture as staff function</a></li>
 <li><a href="#_the_value_of_ea">The value of EA</a></li>
-<li><a href="#_technical_debt">Technical debt</a></li>
 </ul>
 </li>
 <li><a href="#_architecture_domains">Architecture domains</a>
 <ul class="sectlevel4">
 <li><a href="#_business_model_vs_operating_model">Business model vs operating model</a></li>
+<li><a href="#_ea_organizational_models">EA organizational models</a></li>
 <li><a href="#_business_architecture">Business architecture</a></li>
 <li><a href="#_solutions_architecture">Solutions architecture</a></li>
 <li><a href="#_software_architecture">Software architecture</a></li>
@@ -1094,23 +1094,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_architecture_practices">Architecture practices</a>
 <ul class="sectlevel4">
-<li><a href="#_context">Context</a></li>
 <li><a href="#_architecture_as_a_management_program">Architecture as a management program</a></li>
+<li><a href="#_arch_as_visual_facilitator">Arch as visual facilitator</a></li>
+<li><a href="#_rationalization_and_simplification">Rationalization and simplification</a></li>
 <li><a href="#_architecture_as_knowledge_mgmt">Architecture as knowledge mgmt</a></li>
-<li><a href="#_application_rationalization">application rationalization</a></li>
-<li><a href="#__coding_architects">"Coding architects?"</a></li>
-<li><a href="#_architecture_governance_process">Architecture, governance, process</a></li>
-<li><a href="#_arch_as_visualization">Arch as visualization</a></li>
-<li><a href="#_tlm">TLM</a></li>
 </ul>
 </li>
 <li><a href="#_agile_and_architecture">Agile and architecture</a>
 <ul class="sectlevel4">
 <li><a href="#_the_hubris_of_architecture">The hubris of architecture</a></li>
 <li><a href="#_the_hubris_of_agile">The hubris of Agile</a></li>
-<li><a href="#_solution_arch_consequences_to_scaling_agile">Solution arch consequences to scaling agile</a></li>
+<li><a href="#_the_scaling_problem_revisited_in_arch_tems">The scaling problem revisited in arch tems</a></li>
 <li><a href="#_a_worked_example_of_architecture_cost_of_delay_vs_tlm">A worked example of architecture cost of delay vs TLM</a></li>
-<li><a href="#_avoiding_the_big_batch_of_ea_cleanup_that_never_works">Avoiding the big batch of EA "cleanup" that never works</a></li>
+<li><a href="#_devops_assets_to_architecture">DevOps assets to architecture</a></li>
 </ul>
 </li>
 <li><a href="#_architecture_standards">Architecture standards</a>
@@ -24974,7 +24970,7 @@ Magennis, Cantor, etc</p>
 <h4 id="_why_architecture">Why architecture?</h4>
 <div class="quoteblock">
 <blockquote>
-Computer architecture, like other architecture, is the art of determining the needs of the user of a structure and then designing to meet those needs as effectively as possible within economic and technological constraints. Architecture must include engineering considerations, so that the design will be economica1 and feasible; but the emphasis in architecture is upon the needs of the user, whereas in engineering the emphasis is upon the needs of the fabricator. [1962, first known use of the term "architecture" with respect to computing system organization.]
+Computer architecture, like other architecture, is the art of determining the needs of the user of a structure and then designing to meet those needs as effectively as possible within economic and technological constraints. Architecture must include engineering considerations, so that the design will be economical and feasible; but the emphasis in architecture is upon the needs of the user, whereas in engineering the emphasis is upon the needs of the fabricator. [1962, first known use of the term "architecture" with respect to computing system organization.]
 </blockquote>
 <div class="attribution">
 &#8212; Fred Brooks<br>
@@ -25065,7 +25061,7 @@ Value</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_the_varying_definitions">The varying definitions</h5>
+<h5 id="_defining_enterprise_architecture">Defining Enterprise Architecture</h5>
 <div class="paragraph">
 <p><em>The goal of enterprise architecture is to act as a guide, perhaps a pathfinder, who takes the enterprise on a transformational journey—from an incoherent and complex world with line-of-business separation, product-specific stovepipes, legacy systems estate, and costly operation to a more rationally organized and useful state with multiservice, revenue-generating platforms and an efficient operational regime. On the way, radical surgeries may be required to eliminate duplication, reduce costs, improve reliability, and increase agility in the business. EA acts as a strategic foundation for business enablement.</em> <a href="#Bente2012">[Bente2012]</a> p9</p>
 </div>
@@ -25170,6 +25166,9 @@ tactical rather than a strategic concern. &lt;&lt;???&gt;&gt;</p>
 <div class="paragraph">
 <p>Architecture overreach - here, we restrict to OM. Business model questions are discussed throughout other chapters. But biz arch overlaps. Finance &amp; competitive strat is not primarily EA, even BA.</p>
 </div>
+<div class="paragraph">
+<p>Logistics vs strategy</p>
+</div>
 </div>
 <div class="sect5">
 <h6 id="_architecture_vs_program_project">Architecture vs program/project</h6>
@@ -25232,14 +25231,23 @@ tactical rather than a strategic concern. &lt;&lt;???&gt;&gt;</p>
 <div class="paragraph">
 <p>limiting options</p>
 </div>
+<div class="sect5">
+<h6 id="_reducing_cost_of_delay">Reducing Cost of Delay</h6>
+<div class="paragraph">
+<p>need baseline COD (should we introduce this in Chapter 8? probably.)</p>
 </div>
-<div class="sect4">
-<h5 id="_technical_debt">Technical debt</h5>
+</div>
+<div class="sect5">
+<h6 id="_technical_debt">Technical debt</h6>
 <div class="paragraph">
 <p>reinertsen critique of the concept</p>
 </div>
 <div class="paragraph">
 <p>Scrum vs XP - Scrum as promoter of tech debt - inattention to practices&#8230;&#8203; (blogs was reading 9/28/16 PM)</p>
+</div>
+<div class="paragraph">
+<p>how does it monetize?</p>
+</div>
 </div>
 </div>
 </div>
@@ -25252,6 +25260,12 @@ tactical rather than a strategic concern. &lt;&lt;???&gt;&gt;</p>
 </div>
 </div>
 <div class="sect4">
+<h5 id="_ea_organizational_models">EA organizational models</h5>
+<div class="paragraph">
+<p>One core question decided by governance is how much autonomy is granted to business units or geographical regions. In case this autonomy is high, would a quest for high IT integration and standardization not be like fighting windmills? <a href="#bente2012">[bente2012]</a> p.45 and cross ref ch 1</p>
+</div>
+</div>
+<div class="sect4">
 <h5 id="_business_architecture">Business architecture</h5>
 
 </div>
@@ -25261,7 +25275,19 @@ tactical rather than a strategic concern. &lt;&lt;???&gt;&gt;</p>
 </div>
 <div class="sect4">
 <h5 id="_software_architecture">Software architecture</h5>
-
+<div class="sect5">
+<h6 id="__coding_architects">"Coding architects?"</h6>
+<div class="paragraph">
+<p>Primarily in SW domain
+But virtualization now makes it possible for all archs to be hands-on, even w/pkgs</p>
+</div>
+<div class="paragraph">
+<p><a href="#Cohn2010">[Cohn2010]</a> chapter on architect role - confusion of software &amp; enterprise arch</p>
+</div>
+<div class="paragraph">
+<p>keep EAs off product teams, agree but they set overall direction @ portfolio level difficult for them to stay hands on</p>
+</div>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_data_architecture">Data architecture</h5>
@@ -25284,14 +25310,6 @@ tactical rather than a strategic concern. &lt;&lt;???&gt;&gt;</p>
 </div>
 <div class="sect3">
 <h4 id="_architecture_practices">Architecture practices</h4>
-<div class="sect4">
-<h5 id="_context">Context</h5>
-<div class="paragraph">
-<p>One core question decided by governance is how much autonomy is granted to business units or
-geographical regions. In case this autonomy is high, would a quest for high IT integration and stan
-dardization not be like fighting windmills? <a href="#bente2012">[bente2012]</a> p.45 and cross ref ch 1</p>
-</div>
-</div>
 <div class="sect4">
 <h5 id="_architecture_as_a_management_program">Architecture as a management program</h5>
 <div class="paragraph">
@@ -25332,35 +25350,8 @@ dardization not be like fighting windmills? <a href="#bente2012">[bente2012]</a>
 <div class="paragraph">
 <p>how do we know there is a gap? We have hypotheses&#8230;&#8203; need to establish that there is a valuable, usable, feasible future state, and if there is progress towards it must not be delayed by queues, cycle time, etc &#8230;&#8203; need to move with alacrity&#8230;&#8203; Cost of Delay outweighs much&#8230;&#8203;</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_architecture_as_knowledge_mgmt">Architecture as knowledge mgmt</h5>
 <div class="sect5">
-<h6 id="_the_repository_question">The repository question</h6>
-<div class="paragraph">
-<p>CMDBs, metadata, EA</p>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_application_rationalization">application rationalization</h5>
-
-</div>
-<div class="sect4">
-<h5 id="__coding_architects">"Coding architects?"</h5>
-<div class="paragraph">
-<p>Primarily in SW domain
-But virtualization now makes it possible for all archs to be hands-on, even w/pkgs</p>
-</div>
-<div class="paragraph">
-<p><a href="#Cohn2010">[Cohn2010]</a> chapter on architect role - confusion of software &amp; enterprise arch</p>
-</div>
-<div class="paragraph">
-<p>keep EAs off product teams, agree but they set overall direction @ portfolio level difficult for them to stay hands on</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_architecture_governance_process">Architecture, governance, process</h5>
+<h6 id="_architecture_governance_process">Architecture, governance, process</h6>
 <div class="paragraph">
 <p>Many EA-originated policies that appear obsolete today have not always been meaningless. Most probably they have emerged as the architecture group&#8217;s overreactions to unlikely-to-recur situations that they experienced in their organization in the past. A frequent example is the uncontrolled prolif
 eration of newly hyped technologies by the IT crowd, and the EA group&#8217;s rigid attempt to reinstitute order. Once the technology has matured, the EA rules often appear overly strict and suppress a flexible use of the appropriate technology. <a href="#Bente2012">[Bente2012]</a> p19</p>
@@ -25372,8 +25363,9 @@ eration of newly hyped technologies by the IT crowd, and the EA group&#8217;s ri
 <p>arch review boards as <a href="#coord-struct">coordination structures</a></p>
 </div>
 </div>
+</div>
 <div class="sect4">
-<h5 id="_arch_as_visualization">Arch as visualization</h5>
+<h5 id="_arch_as_visual_facilitator">Arch as visual facilitator</h5>
 <div class="paragraph">
 <p><strong>Architect as visual thinker</strong></p>
 </div>
@@ -25437,7 +25429,17 @@ why draw boxes when a textual report is all that is needed (e.g. Bente p52)</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_tlm">TLM</h5>
+<h5 id="_rationalization_and_simplification">Rationalization and simplification</h5>
+<div class="sect5">
+<h6 id="_application_rationalization">application rationalization</h6>
+
+</div>
+<div class="sect5">
+<h6 id="_data_info">Data &amp; info</h6>
+
+</div>
+<div class="sect5">
+<h6 id="_tlm">TLM</h6>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
@@ -25475,10 +25477,8 @@ A foolish consistency is the hobgoblin of little minds.
 </div>
 </div>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>1 billion pounds ($1.6B) would have bought a lot of support &amp; vendor leverage for the "nonstandard" technologies.</pre>
-</div>
+<div class="paragraph">
+<p>1 billion pounds ($1.6B) would have bought a lot of support &amp; vendor leverage for the "nonstandard" technologies.</p>
 </div>
 <div class="paragraph">
 <p>Lifecycle management can extend to internal products/services</p>
@@ -25498,6 +25498,16 @@ in technical matters, there is a huge risk that they create a bottleneck, if dec
 </div>
 <div class="paragraph">
 <p>EA makes the decision to insource or outsource</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_architecture_as_knowledge_mgmt">Architecture as knowledge mgmt</h5>
+<div class="sect5">
+<h6 id="_the_repository_question">The repository question</h6>
+<div class="paragraph">
+<p>CMDBs, metadata, EA</p>
+</div>
 </div>
 </div>
 </div>
@@ -25603,6 +25613,9 @@ example of antipatterns</p>
 <div class="paragraph">
 <p>nor was this all architecture&#8217;s fault. A materialist explanation for the success of Agile and DevOps starts with Cloud, which in turn relies on Moore&#8217;s Law and related dimensions of progress in manufacturing computing infrastructure.</p>
 </div>
+<div class="paragraph">
+<p>Bente EA wastes</p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_the_hubris_of_agile">The hubris of Agile</h5>
@@ -25619,7 +25632,7 @@ example of antipatterns</p>
 <p>Point back to sourcing chapter. (And forward ref from that chapter to architecture.) Open source, COTS, Cloud, in-house&#8230;&#8203; the options are bewildering and take experience. A consistent evaluation approach is important (pref. under an economic framework Reinertsen/Hubbard)</p>
 </div>
 <div class="paragraph">
-<p>EA wastes&#8230;&#8203; have covered elsewhere</p>
+<p>Arch as emergent is one of the most troubled Agile memes. Within one team, perhaps. Across teams - no.</p>
 </div>
 <div class="paragraph">
 <p>You can&#8217;t call for a systems perspective and then say "but the code is self documenting" on the other hand.</p>
@@ -25629,7 +25642,9 @@ example of antipatterns</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_solution_arch_consequences_to_scaling_agile">Solution arch consequences to scaling agile</h5>
+<h5 id="_the_scaling_problem_revisited_in_arch_tems">The scaling problem revisited in arch tems</h5>
+<div class="sect5">
+<h6 id="_solutions_arch">Solutions arch</h6>
 <div class="ulist">
 <ul>
 <li>
@@ -25647,22 +25662,17 @@ example of antipatterns</p>
 <p>EA "process"</p>
 </div>
 <div class="paragraph">
-<p>Another possible objection against agile methods is that the processes in EA, and in the
-enterprise generally, are simply not operating with a time window of the typical sprint length of three
-weeks. This, of course, is true. But it is at closer inspection not a counter-argument against the appli
-cation of agile principles to EA—just the opposite. The long process cycles add to EA&#8217;s lack of trans
-parency and promote a silo mentality. Agile techniques can help here. <a href="#Bente2012">[Bente2012]</a> - queuing and fast feedback</p>
+<p>Another possible objection against agile methods is that the processes in EA, and in the enterprise generally, are simply not operating with a time window of the typical sprint length of three weeks. This, of course, is true. But it is at closer inspection not a counter-argument against the application of agile principles to EA—just the opposite. The long process cycles add to EA&#8217;s lack of transparency and promote a silo mentality. Agile techniques can help here. <a href="#Bente2012">[Bente2012]</a> - queuing and fast feedback</p>
 </div>
 <div class="paragraph">
 <p>Lot of confusion in the literature about sol arch vs EA.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_a_worked_example_of_architecture_cost_of_delay_vs_tlm">A worked example of architecture cost of delay vs TLM</h5>
-
 </div>
 <div class="sect4">
-<h5 id="_avoiding_the_big_batch_of_ea_cleanup_that_never_works">Avoiding the big batch of EA "cleanup" that never works</h5>
+<h5 id="_a_worked_example_of_architecture_cost_of_delay_vs_tlm">A worked example of architecture cost of delay vs TLM</h5>
+<div class="sect5">
+<h6 id="_big_batch_rationalization_risks">Big batch rationalization risks</h6>
 <div class="paragraph">
 <p>A common response to getting stuck in a big ball of mud is to fund a large systems replacement project. Such projects typically take months or years before they deliver any value to users, and the switchover from the old to the new system is often performed in “big bang” fashion. These projects also run an unusually high risk of running late and over budget and being cancelled. Systems rearchitecture should not be done as a large program of work funded from the capital budget. It should be a continuous activity that happens as part of the product development process. <a href="#Humble2013">[Humble2013]</a> ch10</p>
 </div>
@@ -25677,13 +25687,18 @@ parency and promote a silo mentality. Agile techniques can help here. <a href="#
 </div>
 </div>
 <div class="paragraph">
-<p>Our experience is that standardization on a particular toolchain or technology stack is neither necessary nor sufficient for achieving enterprise architecture goals such as enabling teams to respond rapidly to changing requirements, creating high-performance systems at scale, or reducing the risk of intrusion or data theft. Just like we drive product and process innovation through the Improvement Kata, we can drive architectural alignment through it too. Architectural goals—for example, desired performance, availability, and security—should be approached by iteratively specifying target conditions at the program level. Following the Principle of Mission, set out a clear vision of the goals of your enterprise architecture without specifying how the goals are to be achieved, and create a context in which teams can determine how to achieve them through experimentation and collaboration. We cover alternatives to standardization and related issues in more detail in Chapter 14. <a href="#Humble2013">[Humble2013]</a> ch10</p>
+<p>Our experience is that standardization on a particular toolchain or technology stack is neither necessary nor sufficient for achieving enterprise architecture goals such as enabling teams to respond rapidly to changing requirements, creating high-performance systems at scale, or reducing the risk of intrusion or data theft. Just like we drive product and process innovation through the Improvement Kata, we can drive architectural alignment through it too. Architectural goals—for example, desired performance, availability, and security—should be approached by iteratively specifying target conditions at the program level. Following the Principle of Mission, set out a clear vision of the goals of your enterprise architecture without specifying how the goals are to be achieved, and create a context in which teams can determine how to achieve them through experimentation and collaboration.   <a href="#Humble2013">[Humble2013]</a> ch10</p>
 </div>
 <div class="paragraph">
-<p>preparing along the way
-understand inventories and dependencies - importance of Bezos mandate to the dependency question - if there is one battle you fight, make it that one -
-the importance of documentation - speech to text, text analytics&#8230;&#8203; image recognition&#8230;&#8203; what might the future hold? At least get technical writers&#8230;&#8203; don&#8217;t make developers write&#8230;&#8203;</p>
+<p>preparing along the way understand inventories and dependencies - importance of Bezos mandate to the dependency question - if there is one battle you fight, make it that one -</p>
 </div>
+<div class="paragraph">
+<p>the importance of documentation - speech to text, text analytics&#8230;&#8203; image recognition&#8230;&#8203; what might the future hold? At least get technical writers&#8230;&#8203; don&#8217;t make developers write&#8230;&#8203;</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_devops_assets_to_architecture">DevOps assets to architecture</h5>
 <div class="paragraph">
 <p>If you started from day 1 with source, build, &amp; package mgmt, and have kept it clean, you have a great asset</p>
 </div>
