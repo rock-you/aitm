@@ -1072,14 +1072,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_the_varying_definitions">The varying definitions</a></li>
 <li><a href="#_architecture_as_staff_function">Architecture as staff function</a></li>
 <li><a href="#_the_value_of_ea">The value of EA</a></li>
-<li><a href="#_architecture_vs_program_project">Architecture vs program/project</a></li>
-<li><a href="#_arch_as_design_vs_arch_as_map">Arch as design vs arch as map</a></li>
-<li><a href="#_architecture_as_just_good_design">Architecture as just good design</a></li>
-<li><a href="#_architecture_as_a_language_for_reasoning_about_complexity_at_scale">Architecture as a language for reasoning about complexity at scale</a></li>
-<li><a href="#_ea_as_systems_thinking">EA as systems thinking</a></li>
 <li><a href="#_technical_debt">Technical debt</a></li>
 <li><a href="#_reframing_biz_v_it_demand_v_supply">Reframing biz v it &#8594; demand v supply</a></li>
-<li><a href="#_the_hubris_of_architecture">The hubris of architecture</a></li>
 <li><a href="#_architecture_as_re_emergent">Architecture as re-emergent</a></li>
 <li><a href="#_chapter_raw_material">Chapter raw material</a></li>
 </ul>
@@ -1110,13 +1104,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_agile_and_architecture">Agile and architecture</a>
 <ul class="sectlevel4">
+<li><a href="#_the_hubris_of_architecture">The hubris of architecture</a></li>
 <li><a href="#_the_hubris_of_agile">The hubris of Agile</a></li>
 <li><a href="#_solution_arch_consequences_to_scaling_agile">Solution arch consequences to scaling agile</a></li>
 <li><a href="#_a_worked_example_of_architecture_cost_of_delay_vs_tlm">A worked example of architecture cost of delay vs TLM</a></li>
 <li><a href="#_avoiding_the_big_batch_of_ea_cleanup_that_never_works">Avoiding the big batch of EA "cleanup" that never works</a></li>
 </ul>
 </li>
-<li><a href="#_architecture_standards">Architecture standards</a></li>
+<li><a href="#_architecture_standards">Architecture standards</a>
+<ul class="sectlevel4">
+<li><a href="#_bizbok">Bizbok</a></li>
+</ul>
+</li>
 <li><a href="#_portfolio_management">Portfolio management</a></li>
 <li><a href="#_topics_2">Topics</a></li>
 <li><a href="#_conclusion_12">Conclusion</a>
@@ -24778,9 +24777,7 @@ Computer architecture, like other architecture, is the art of determining the ne
 <p><em>The goal of enterprise architecture is to act as a guide, perhaps a pathfinder, who takes the enterprise on a transformational journey—from an incoherent and complex world with line-of-business separation, product-specific stovepipes, legacy systems estate, and costly operation to a more rationally organized and useful state with multiservice, revenue-generating platforms and an efficient operational regime. On the way, radical surgeries may be required to eliminate duplication, reduce costs, improve reliability, and increase agility in the business. EA acts as a strategic foundation for business enablement.</em> <a href="#Bente2012">[Bente2012]</a> p9</p>
 </div>
 <div class="paragraph">
-<p>Enterprise architecture (EA) is the representation of the structure and behavior of an enterprise&#8217;s IT landscape In
-relation to its business environment. It reflects the current and future use of IT in the enterprise and provides a
-roadmap to reach a future state. <a href="#Bente2012">[Bente2012]</a> p 35</p>
+<p>Enterprise architecture (EA) is the representation of the structure and behavior of an enterprise&#8217;s IT landscape In relation to its business environment. It reflects the current and future use of IT in the enterprise and provides a roadmap to reach a future state. <a href="#Bente2012">[Bente2012]</a> p 35</p>
 </div>
 <div class="paragraph">
 <p>Architecture represents the significant design decisions that shape a system, where significant is measured by cost of change <a href="#booch find this">[booch find this]</a></p>
@@ -24834,15 +24831,11 @@ runs into domain driven design problems if not careful</p>
 <div class="sect5">
 <h6 id="_architecture_versus_corporate_strategy_planning">Architecture versus corporate strategy &amp; planning</h6>
 <div class="paragraph">
-<p>the business-IT alignment gap
-exists because there is a pervasive
-assumption that technology is a
-tactical rather than a strategic
-concern. &lt;&lt;???&gt;&gt;</p>
+<p>the business-IT alignment gap exists because there is a pervasive assumption that technology is a
+tactical rather than a strategic concern. &lt;&lt;???&gt;&gt;</p>
 </div>
 <div class="paragraph">
-<p>model stability
-strat consults tend to swap out methods &amp; frameworks as needed for the problem - this is good but no consistency</p>
+<p>model stability&#8201;&#8212;&#8201;strat consults tend to swap out methods &amp; frameworks as needed for the problem - this is good but no consistency</p>
 </div>
 <div class="paragraph">
 <p>arch is poorly quantified, limited line of sight to revenue &amp; profitability</p>
@@ -24853,8 +24846,14 @@ strat consults tend to swap out methods &amp; frameworks as needed for the probl
 <div class="paragraph">
 <p>will microservices be better? SOA finally done right?</p>
 </div>
+</div>
+<div class="sect5">
+<h6 id="_architecture_vs_program_project">Architecture vs program/project</h6>
 <div class="paragraph">
-<p>Cockburn quote on CCC project - disbanded &amp; disintegrated due to relying on oral tradition</p>
+<p>projects tended to disregard - systems were more monolithic</p>
+</div>
+<div class="paragraph">
+<p>“Enterprise architecture tends to be viewed as a hostile takeover by program managers and executives who have previously had a lot of independence in developing solutions for their own requirements” <a href="#Bernard2012">[Bernard2012]</a></p>
 </div>
 </div>
 </div>
@@ -24897,18 +24896,14 @@ strat consults tend to swap out methods &amp; frameworks as needed for the probl
 <div class="paragraph">
 <p>Whether EA is perceived as a hygiene factor for the IT landscape or as a strategic foundation for business enablement, it is obliged to deliver value. As a hygiene factor, benefits from EA can be valued in terms of reduction in management escalations, emergency occurrences, and year-on-year operational expenses. As a strategic foundation, EA facilitates the deployment of new capabilities. This way it helps IT gain more business trust—and hence more funding for new IT projects. Unfortunately, these benefits are difficult to quantify on a short-term base. Therefore they need to be tracked over a sufficient time period and then be normalized to a common baseline. Only then can they serve as a sensible benchmark for measuring the success of EA. <a href="#Bente2012">[Bente2012]</a></p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_architecture_vs_program_project">Architecture vs program/project</h5>
 <div class="paragraph">
-<p>projects tended to disregard - systems were more monolithic</p>
+<p>Flexibility at high levels in the architecture comes from standardization at low levels in the architecture. Paradoxically, structure is the key to freedom. ibid 120</p>
 </div>
 <div class="paragraph">
-<p>“Enterprise architecture tends to be viewed as a hostile takeover by program managers and executives who have previously had a lot of independence in developing solutions for their own requirements” <a href="#Bernard2012">[Bernard2012]</a></p>
+<p>"work not done"</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_arch_as_design_vs_arch_as_map">Arch as design vs arch as map</h5>
+<div class="sect5">
+<h6 id="_arch_as_design_vs_arch_as_map">Arch as design vs arch as map</h6>
 <div class="paragraph">
 <p><em>the sheer absurdity of undertaking something so ambitious, on the one hand, and, foolhardy, on the other, as any kind of intentional design of so complex and poorly (and even mis-) understood an entity as an organization in a context of rapid change.</em> <a href="#Malan2010">[Malan2010]</a></p>
 </div>
@@ -24916,8 +24911,8 @@ strat consults tend to swap out methods &amp; frameworks as needed for the probl
 <p>All arch is design not all design is arch (Booch)</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_architecture_as_just_good_design">Architecture as just good design</h5>
+<div class="sect5">
+<h6 id="_architecture_as_just_good_design">Architecture as just good design</h6>
 <div class="paragraph">
 <p>Design is ACID. Architecture is BASE.?</p>
 </div>
@@ -24925,8 +24920,8 @@ strat consults tend to swap out methods &amp; frameworks as needed for the probl
 <p>Design thinking is encroaching on architecture. Enterprise design?</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_architecture_as_a_language_for_reasoning_about_complexity_at_scale">Architecture as a language for reasoning about complexity at scale</h5>
+<div class="sect5">
+<h6 id="_architecture_as_a_language_for_reasoning_about_complexity_at_scale">Architecture as a language for reasoning about complexity at scale</h6>
 <div class="paragraph">
 <p>standard EA language and methodology is especially helpful in large, complex enterprises that are geographically dispersed, and which may have multiple social and work cultures that have promoted different ways of doing things.</p>
 </div>
@@ -24934,10 +24929,11 @@ strat consults tend to swap out methods &amp; frameworks as needed for the probl
 <p>Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 1147-1149). AuthorHouse. Kindle Edition.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_ea_as_systems_thinking">EA as systems thinking</h5>
+<div class="sect5">
+<h6 id="_ea_as_systems_thinking">EA as systems thinking</h6>
 <div class="paragraph">
 <p>hard to argue with</p>
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -24951,77 +24947,6 @@ strat consults tend to swap out methods &amp; frameworks as needed for the probl
 </div>
 <div class="sect4">
 <h5 id="_reframing_biz_v_it_demand_v_supply">Reframing biz v it &#8594; demand v supply</h5>
-
-</div>
-<div class="sect4">
-<h5 id="_the_hubris_of_architecture">The hubris of architecture</h5>
-<div class="quoteblock">
-<blockquote>
-&#8230;&#8203;we encountered companies that, despite having a fully institutionalized EA in place, were in a state close to paralysis&#8230;&#8203;Although EA has reached the mainstream, a skeptical undertone with regard to its effectiveness has always existed. (p 12-13)
-</blockquote>
-<div class="attribution">
-&#8212; Bente et al<br>
-<cite>Collaborative Enterprise Architecture</cite>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> from bente: Anti-patterns in EA and architecture in general can be found, for instance, in Kruchten (2008), Mar and Spacey (2011),
-Ambler, Nalbone. and Vizdos (2005), and Coplien and Harrison (2005).</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The challenge of Taylorism, top-down planning, determinism&#8230;&#8203;
-example of antipatterns</p>
-</div>
-<div class="paragraph">
-<p>EA arguably reluctant to see itself in terms of testing hypotheses and making bets</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>BPR?</pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>"mess," "gratuitous complexity," etc</p>
-</li>
-<li>
-<p>all loaded terms that disregard operational reality of the moment</p>
-</li>
-<li>
-<p>why is "inconsistency" bad - need to demonstrate impact map</p>
-</li>
-<li>
-<p>hypothetical "synergies down the road" - need evidence</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>(above from <a href="#Malan2010">[Malan2010]</a>)</p>
-</div>
-<div class="paragraph">
-<p>Laundry list discussions of all that&#8217;s wrong with IT, with a strong implication that EA is a magical silver bullet&#8201;&#8212;&#8201;but poorly documented as to how in fact it solves all this wrongness. These <strong>are</strong> complex systems and even in the best managed contexts they fail and degrade.</p>
-</div>
-<div class="paragraph">
-<p>The reality is that enterprise architecture presented itself as a solution to complexity, long IT time scales, business frustration, and all kinds of badness. And when those problems were finally solved, it was not by architecture, but by Agile and DevOps practices finally overthrowing open-loop, slow feedback, batch-oriented delivery. Architects also failed to realize the emergent issue of too much enterprise work in process, instead championing the proliferation of enterprise processes and their associated queues.</p>
-</div>
-<div class="paragraph">
-<p>Architects' efficiency motivations and interest in capability mapping did not help the cause of cross-functional teams. Instead, functional silos were reinforced as supply-side "capabilities" and the  antipattern of "bringing the team to the work" was accepted as enterprise SOP - despite the growing evidence of Scrum and Agile success. The iterative, experimental narrative of Lean Startup did not originate from EA.</p>
-</div>
-<div class="paragraph">
-<p>In particular, despite dabbling in systems theory, architects did not realize the fundamental problems of stage-gated delivery, big bang releases, and so forth. They were too sympathetic to the now-discredited Capability Maturity Model and PMBOK.</p>
-</div>
-<div class="paragraph">
-<p>Architecture promoted the idea that standardizing platforms would make them more adaptive and agile, without sufficient caution that such standardization might have the opposite effect. Wrong lesson learned from software?</p>
-</div>
-<div class="paragraph">
-<p>Yes tightly coupled M:M architectures are hard to change. But SPOFs also bad. When too much is centralized, the general case issues become intractable. Domain driven design&#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<p>nor was this all architecture&#8217;s fault. A materialist explanation for the success of Agile and DevOps starts with Cloud, which in turn relies on Moore&#8217;s Law and related dimensions of progress in manufacturing computing infrastructure.</p>
-</div>
 <div class="paragraph">
 <p>Architecture overreach - here, we restrict to OM. Business model questions are discussed throughout other chapters. But biz arch overlaps. Finance &amp; competitive strat is not primarily EA, even BA.</p>
 </div>
@@ -25052,58 +24977,10 @@ Identification of opportunities otherwise un-apparent</p>
 <div class="sect4">
 <h5 id="_chapter_raw_material">Chapter raw material</h5>
 <div class="paragraph">
-<p>Flexibility at high levels in the architecture comes from standardization at low levels in the architecture. Paradoxically, structure is the key to freedom. ibid 120</p>
-</div>
-<div class="paragraph">
-<p>this chapter brings us full circle</p>
-</div>
-<div class="paragraph">
-<p>F</p>
-</div>
-<div class="paragraph">
-<p>The often-minimal value of expert opinion revisited (also covered chapter 4)</p>
-</div>
-<div class="paragraph">
-<p><a href="https://www.itpreneurs.com/blog/agile-togaf-and-enterprise-architecture-will-they-blend/" class="bare">https://www.itpreneurs.com/blog/agile-togaf-and-enterprise-architecture-will-they-blend/</a></p>
-</div>
-<div class="paragraph">
-<p>"work not done"</p>
-</div>
-<div class="paragraph">
-<p>Architecture = intersection of technical management with sourcing, information, goveranance</p>
+<p>Architecture = intersection of technical management with investment, sourcing, information, governance</p>
 </div>
 <div class="paragraph">
 <p>Architecture, documentation, big picture</p>
-</div>
-<div class="paragraph">
-<p>You can&#8217;t call for a systems perspective and then say "but the code is self documenting" on the other hand.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The <em>Business Architecture Body of Knowledge</em> (BIZBOK), from the Business Architecture Guild <a href="#BAGuild2016">[BAGuild2016]</a></p>
-</li>
-</ul>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-We previously discussed the Business Analysis Body of Knowledge. Although they have similiar names, BABOK and BIZBOK are distinct in terms of content and their sponsoring organizations.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The Business Architecture Body of Knowledge is a broader, more diverse set of guidance. It defines business architecture as (p.1):</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>_"a blueprint of the enterprise that provides a common understanding of the organization and is used to align strategic objectives and tactical demands."_</pre>
-</div>
 </div>
 </div>
 </div>
@@ -25367,15 +25244,11 @@ in technical matters, there is a huge risk that they create a bottleneck, if dec
 </div>
 <div class="sect3">
 <h4 id="_agile_and_architecture">Agile and architecture</h4>
-<div class="literalblock">
-<div class="content">
-<pre>Cockcroft quote</pre>
+<div class="paragraph">
+<p>Cockcroft quote</p>
 </div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Cathedral / bazaar</pre>
-</div>
+<div class="paragraph">
+<p>Cathedral / bazaar</p>
 </div>
 <div class="paragraph">
 <p>When it  comes to system implementation, the temptation to be  fast, often under the nom de guerre of agile, can soften  quality controls and threaten product usability, reliability, safety, and lifecycle cost. <a href="#Malan2010">[Malan2010]</a></p>
@@ -25407,6 +25280,72 @@ With regard to the nature of complex systems, it is not advisable to search for 
 </div>
 </div>
 <div class="sect4">
+<h5 id="_the_hubris_of_architecture">The hubris of architecture</h5>
+<div class="quoteblock">
+<blockquote>
+&#8230;&#8203;we encountered companies that, despite having a fully institutionalized EA in place, were in a state close to paralysis&#8230;&#8203;Although EA has reached the mainstream, a skeptical undertone with regard to its effectiveness has always existed. (p 12-13)
+</blockquote>
+<div class="attribution">
+&#8212; Bente et al<br>
+<cite>Collaborative Enterprise Architecture</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>from bente: Anti-patterns in EA and architecture in general can be found, for instance, in Kruchten (2008), Mar and Spacey (2011),
+Ambler, Nalbone. and Vizdos (2005), and Coplien and Harrison (2005).</p>
+</div>
+<div class="paragraph">
+<p>The challenge of Taylorism, top-down planning, determinism&#8230;&#8203;
+example of antipatterns</p>
+</div>
+<div class="paragraph">
+<p>EA arguably reluctant to see itself in terms of testing hypotheses and making bets</p>
+</div>
+<div class="paragraph">
+<p>BPR?</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>"mess," "gratuitous complexity," etc</p>
+</li>
+<li>
+<p>all loaded terms that disregard operational reality of the moment</p>
+</li>
+<li>
+<p>why is "inconsistency" bad - need to demonstrate impact map</p>
+</li>
+<li>
+<p>hypothetical "synergies down the road" - need evidence</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>(above from <a href="#Malan2010">[Malan2010]</a>)</p>
+</div>
+<div class="paragraph">
+<p>Laundry list discussions of all that&#8217;s wrong with IT, with a strong implication that EA is a magical silver bullet&#8201;&#8212;&#8201;but poorly documented as to how in fact it solves all this wrongness. These <strong>are</strong> complex systems and even in the best managed contexts they fail and degrade.</p>
+</div>
+<div class="paragraph">
+<p>The reality is that enterprise architecture presented itself as a solution to complexity, long IT time scales, business frustration, and all kinds of badness. And when those problems were finally solved, it was not by architecture, but by Agile and DevOps practices finally overthrowing open-loop, slow feedback, batch-oriented delivery. Architects also failed to realize the emergent issue of too much enterprise work in process, instead championing the proliferation of enterprise processes and their associated queues. Fundamentally, they did not adopt enough of a systems view of IT delivery. That took Gene Kim and others.</p>
+</div>
+<div class="paragraph">
+<p>Architects' efficiency motivations and interest in capability mapping did not help the cause of cross-functional teams. Instead, functional silos were reinforced as supply-side "capabilities" and the  antipattern of "bringing the team to the work" was accepted as enterprise SOP - despite the growing evidence of Scrum and Agile success. The iterative, experimental narrative of Lean Startup did not originate from EA.</p>
+</div>
+<div class="paragraph">
+<p>In particular, despite dabbling in systems theory, architects did not realize the fundamental problems of stage-gated delivery, big bang releases, and so forth. They were too sympathetic to the now-discredited Capability Maturity Model and PMBOK.</p>
+</div>
+<div class="paragraph">
+<p>Architecture promoted the idea that standardizing platforms would make them more adaptive and agile, without sufficient caution that such standardization might have the opposite effect. Wrong lesson learned from software?</p>
+</div>
+<div class="paragraph">
+<p>Yes tightly coupled M:M architectures are hard to change. But SPOFs also bad. When too much is centralized, the general case issues become intractable. Domain driven design&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>nor was this all architecture&#8217;s fault. A materialist explanation for the success of Agile and DevOps starts with Cloud, which in turn relies on Moore&#8217;s Law and related dimensions of progress in manufacturing computing infrastructure.</p>
+</div>
+</div>
+<div class="sect4">
 <h5 id="_the_hubris_of_agile">The hubris of Agile</h5>
 <div class="paragraph">
 <p><a href="https://philippe.kruchten.com/2011/02/13/the-elephants-in-the-agile-room/" class="bare">https://philippe.kruchten.com/2011/02/13/the-elephants-in-the-agile-room/</a></p>
@@ -25422,6 +25361,12 @@ With regard to the nature of complex systems, it is not advisable to search for 
 </div>
 <div class="paragraph">
 <p>EA wastes&#8230;&#8203; have covered elsewhere</p>
+</div>
+<div class="paragraph">
+<p>You can&#8217;t call for a systems perspective and then say "but the code is self documenting" on the other hand.</p>
+</div>
+<div class="paragraph">
+<p>Cockburn quote on CCC project - disbanded &amp; disintegrated due to relying on oral tradition</p>
 </div>
 </div>
 <div class="sect4">
@@ -25515,6 +25460,11 @@ as part of the condition of satisfaction of a user story or in the definition of
 <pre>Toyota Kata and EA  - importance of target condition</pre>
 </div>
 </div>
+<div class="literalblock">
+<div class="content">
+<pre>The often-minimal value of expert opinion revisited (also covered chapter 4)</pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -25531,6 +25481,36 @@ as part of the condition of satisfaction of a user story or in the definition of
 </div>
 <div class="paragraph">
 <p>Further on TOGA</p>
+</div>
+<div class="sect4">
+<h5 id="_bizbok">Bizbok</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>The <em>Business Architecture Body of Knowledge</em> (BIZBOK), from the Business Architecture Guild <a href="#BAGuild2016">[BAGuild2016]</a></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+We previously discussed the Business Analysis Body of Knowledge. Although they have similiar names, BABOK and BIZBOK are distinct in terms of content and their sponsoring organizations.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The Business Architecture Body of Knowledge is a broader, more diverse set of guidance. It defines business architecture as (p.1):</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>_"a blueprint of the enterprise that provides a common understanding of the organization and is used to align strategic objectives and tactical demands."_</pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -25634,6 +25614,9 @@ Over time, the IT operation develops significant data by which to manage itself.
 </div>
 <div class="paragraph">
 <p><a href="http://www.ruthmalan.com/journal/2011/2011JournalSeptember.htm#When_Are_Diagrams_Useful" class="bare">http://www.ruthmalan.com/journal/2011/2011JournalSeptember.htm#When_Are_Diagrams_Useful</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.itpreneurs.com/blog/agile-togaf-and-enterprise-architecture-will-they-blend/" class="bare">https://www.itpreneurs.com/blog/agile-togaf-and-enterprise-architecture-will-they-blend/</a></p>
 </div>
 <div class="paragraph">
 <p><strong>Videos</strong></p>
