@@ -1,9 +1,8 @@
 ==== Agile and architecture
 
-  Cockcroft quote
+Cockcroft quote
 
-
-  Cathedral / bazaar
+Cathedral / bazaar
 
 When it  comes to system implementation, the temptation to be  fast, often under the nom de guerre of agile, can soften  quality controls and threaten product usability, reliability, safety, and lifecycle cost. <<Malan2010>>
 
@@ -18,6 +17,46 @@ With regard to the nature of complex systems, it is not advisable to search for 
 
  critical importance of not confusing solutions with EA. Scale matters.
 
+
+===== The hubris of architecture
+
+[quote, Bente et al, Collaborative Enterprise Architecture]
+...we encountered companies that, despite having a fully institutionalized EA in place, were in a state close to paralysis...Although EA has reached the mainstream, a skeptical undertone with regard to its effectiveness has always existed. (p 12-13)
+
+from bente: Anti-patterns in EA and architecture in general can be found, for instance, in Kruchten (2008), Mar and Spacey (2011),
+Ambler, Nalbone. and Vizdos (2005), and Coplien and Harrison (2005).
+
+The challenge of Taylorism, top-down planning, determinism...
+example of antipatterns
+
+EA arguably reluctant to see itself in terms of testing hypotheses and making bets
+
+BPR?
+
+* "mess," "gratuitous complexity," etc
+
+* all loaded terms that disregard operational reality of the moment
+
+* why is "inconsistency" bad - need to demonstrate impact map
+
+* hypothetical "synergies down the road" - need evidence
+
+(above from <<Malan2010>>)
+
+Laundry list discussions of all that's wrong with IT, with a strong implication that EA is a magical silver bullet -- but poorly documented as to how in fact it solves all this wrongness. These *are* complex systems and even in the best managed contexts they fail and degrade.
+
+The reality is that enterprise architecture presented itself as a solution to complexity, long IT time scales, business frustration, and all kinds of badness. And when those problems were finally solved, it was not by architecture, but by Agile and DevOps practices finally overthrowing open-loop, slow feedback, batch-oriented delivery. Architects also failed to realize the emergent issue of too much enterprise work in process, instead championing the proliferation of enterprise processes and their associated queues. Fundamentally, they did not adopt enough of a systems view of IT delivery. That took Gene Kim and others.
+
+Architects' efficiency motivations and interest in capability mapping did not help the cause of cross-functional teams. Instead, functional silos were reinforced as supply-side "capabilities" and the  antipattern of "bringing the team to the work" was accepted as enterprise SOP - despite the growing evidence of Scrum and Agile success. The iterative, experimental narrative of Lean Startup did not originate from EA.
+
+In particular, despite dabbling in systems theory, architects did not realize the fundamental problems of stage-gated delivery, big bang releases, and so forth. They were too sympathetic to the now-discredited Capability Maturity Model and PMBOK.
+
+Architecture promoted the idea that standardizing platforms would make them more adaptive and agile, without sufficient caution that such standardization might have the opposite effect. Wrong lesson learned from software?
+
+Yes tightly coupled M:M architectures are hard to change. But SPOFs also bad. When too much is centralized, the general case issues become intractable. Domain driven design...
+
+nor was this all architecture's fault. A materialist explanation for the success of Agile and DevOps starts with Cloud, which in turn relies on Moore's Law and related dimensions of progress in manufacturing computing infrastructure.
+
 ===== The hubris of Agile
 
 https://philippe.kruchten.com/2011/02/13/the-elephants-in-the-agile-room/
@@ -29,6 +68,10 @@ Suppose you have a business product/value prop and you know that you will be ass
 Point back to sourcing chapter. (And forward ref from that chapter to architecture.) Open source, COTS, Cloud, in-house... the options are bewildering and take experience. A consistent evaluation approach is important (pref. under an economic framework Reinertsen/Hubbard)
 
 EA wastes... have covered elsewhere
+
+You can't call for a systems perspective and then say "but the code is self documenting" on the other hand.
+
+Cockburn quote on CCC project - disbanded & disintegrated due to relying on oral tradition
 
 ===== Solution arch consequences to scaling agile
 * systems too big for 1 team
@@ -81,3 +124,5 @@ as part of the condition of satisfaction of a user story or in the definition of
  Bente p 194 looks @ arch process optimization - local optima, bad. Goes down the work/wait alley and DSM (anti-rework). Limitations.
 
  Toyota Kata and EA  - importance of target condition
+
+ The often-minimal value of expert opinion revisited (also covered chapter 4)

@@ -44,9 +44,7 @@ For enduring competitive advantage, the organization needs to seek leverage acro
 
 _The goal of enterprise architecture is to act as a guide, perhaps a pathfinder, who takes the enterprise on a transformational journey—from an incoherent and complex world with line-of-business separation, product-specific stovepipes, legacy systems estate, and costly operation to a more rationally organized and useful state with multiservice, revenue-generating platforms and an efficient operational regime. On the way, radical surgeries may be required to eliminate duplication, reduce costs, improve reliability, and increase agility in the business. EA acts as a strategic foundation for business enablement._ <<Bente2012>> p9
 
-Enterprise architecture (EA) is the representation of the structure and behavior of an enterprise's IT landscape In
-relation to its business environment. It reflects the current and future use of IT in the enterprise and provides a
-roadmap to reach a future state. <<Bente2012>> p 35
+Enterprise architecture (EA) is the representation of the structure and behavior of an enterprise's IT landscape In relation to its business environment. It reflects the current and future use of IT in the enterprise and provides a roadmap to reach a future state. <<Bente2012>> p 35
 
 Architecture represents the significant design decisions that shape a system, where significant is measured by cost of change <<booch find this>>
 
@@ -82,14 +80,10 @@ Parsimony. What is the value of saying that EA and EOM are distinct? We have too
 
 ====== Architecture versus corporate strategy & planning
 
-the business-IT alignment gap
-exists because there is a pervasive
-assumption that technology is a
-tactical rather than a strategic
-concern. <<???>>
+the business-IT alignment gap exists because there is a pervasive assumption that technology is a
+tactical rather than a strategic concern. <<???>>
 
-model stability
-strat consults tend to swap out methods & frameworks as needed for the problem - this is good but no consistency
+model stability -- strat consults tend to swap out methods & frameworks as needed for the problem - this is good but no consistency
 
 arch is poorly quantified, limited line of sight to revenue & profitability
 
@@ -97,9 +91,14 @@ Bezos: all service oriented
 
 will microservices be better? SOA finally done right?
 
-Cockburn quote on CCC project - disbanded & disintegrated due to relying on oral tradition
+====== Architecture vs program/project
+projects tended to disregard - systems were more monolithic
+
+“Enterprise architecture tends to be viewed as a hostile takeover by program managers and executives who have previously had a lot of independence in developing solutions for their own requirements” <<Bernard2012>>
+
 
 ===== The value of EA
+
 On the value side, EA is unique in its ability to promote enterprise-wide thinking about resource utilization. EA replaces the systems-level approaches to IT resource development that have characterized the last several decades, and has left many enterprises with stovepipe and/or duplicative IT resources. EA promotes the development of more efficient enterprise-wide common operating environments for business and technology, within which more capable and flexible business services and systems can be hosted. This in turn makes an enterprise more agile and able to respond to internal and external drivers of change, which promotes greater levels of competitiveness in the marketplace. <<Bernard2012>>
 
 The true measure of the value of a model is whether it actually influences behavior. Smith/Reinertsen 1998 p46.
@@ -118,31 +117,27 @@ Barnard asserted value:
 
 Whether EA is perceived as a hygiene factor for the IT landscape or as a strategic foundation for business enablement, it is obliged to deliver value. As a hygiene factor, benefits from EA can be valued in terms of reduction in management escalations, emergency occurrences, and year-on-year operational expenses. As a strategic foundation, EA facilitates the deployment of new capabilities. This way it helps IT gain more business trust—and hence more funding for new IT projects. Unfortunately, these benefits are difficult to quantify on a short-term base. Therefore they need to be tracked over a sufficient time period and then be normalized to a common baseline. Only then can they serve as a sensible benchmark for measuring the success of EA. <<Bente2012>>
 
-===== Architecture vs program/project
-projects tended to disregard - systems were more monolithic
+Flexibility at high levels in the architecture comes from standardization at low levels in the architecture. Paradoxically, structure is the key to freedom. ibid 120
 
-“Enterprise architecture tends to be viewed as a hostile takeover by program managers and executives who have previously had a lot of independence in developing solutions for their own requirements” <<Bernard2012>>
+"work not done"
 
-
-
-
-===== Arch as design vs arch as map
+====== Arch as design vs arch as map
 _the sheer absurdity of undertaking something so ambitious, on the one hand, and, foolhardy, on the other, as any kind of intentional design of so complex and poorly (and even mis-) understood an entity as an organization in a context of rapid change._ <<Malan2010>>
 
 All arch is design not all design is arch (Booch)
 
-===== Architecture as just good design
+====== Architecture as just good design
 
 Design is ACID. Architecture is BASE.?
 
 Design thinking is encroaching on architecture. Enterprise design?
 
-===== Architecture as a language for reasoning about complexity at scale
+====== Architecture as a language for reasoning about complexity at scale
 standard EA language and methodology is especially helpful in large, complex enterprises that are geographically dispersed, and which may have multiple social and work cultures that have promoted different ways of doing things.
 
 Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 1147-1149). AuthorHouse. Kindle Edition.
 
-===== EA as systems thinking
+====== EA as systems thinking
 hard to argue with
 
 ===== Technical debt
@@ -156,43 +151,6 @@ Scrum vs XP - Scrum as promoter of tech debt - inattention to practices... (blog
 
 
 
-===== The hubris of architecture
-[quote, Bente et al, Collaborative Enterprise Architecture]
-...we encountered companies that, despite having a fully institutionalized EA in place, were in a state close to paralysis...Although EA has reached the mainstream, a skeptical undertone with regard to its effectiveness has always existed. (p 12-13)
-
- from bente: Anti-patterns in EA and architecture in general can be found, for instance, in Kruchten (2008), Mar and Spacey (2011),
-Ambler, Nalbone. and Vizdos (2005), and Coplien and Harrison (2005).
-
-The challenge of Taylorism, top-down planning, determinism...
-example of antipatterns
-
-EA arguably reluctant to see itself in terms of testing hypotheses and making bets
-
- BPR?
-
-* "mess," "gratuitous complexity," etc
-
-* all loaded terms that disregard operational reality of the moment
-
-* why is "inconsistency" bad - need to demonstrate impact map
-
-* hypothetical "synergies down the road" - need evidence
-
-(above from <<Malan2010>>)
-
-Laundry list discussions of all that's wrong with IT, with a strong implication that EA is a magical silver bullet -- but poorly documented as to how in fact it solves all this wrongness. These *are* complex systems and even in the best managed contexts they fail and degrade.
-
-The reality is that enterprise architecture presented itself as a solution to complexity, long IT time scales, business frustration, and all kinds of badness. And when those problems were finally solved, it was not by architecture, but by Agile and DevOps practices finally overthrowing open-loop, slow feedback, batch-oriented delivery. Architects also failed to realize the emergent issue of too much enterprise work in process, instead championing the proliferation of enterprise processes and their associated queues.
-
-Architects' efficiency motivations and interest in capability mapping did not help the cause of cross-functional teams. Instead, functional silos were reinforced as supply-side "capabilities" and the  antipattern of "bringing the team to the work" was accepted as enterprise SOP - despite the growing evidence of Scrum and Agile success. The iterative, experimental narrative of Lean Startup did not originate from EA.
-
-In particular, despite dabbling in systems theory, architects did not realize the fundamental problems of stage-gated delivery, big bang releases, and so forth. They were too sympathetic to the now-discredited Capability Maturity Model and PMBOK.
-
-Architecture promoted the idea that standardizing platforms would make them more adaptive and agile, without sufficient caution that such standardization might have the opposite effect. Wrong lesson learned from software?
-
-Yes tightly coupled M:M architectures are hard to change. But SPOFs also bad. When too much is centralized, the general case issues become intractable. Domain driven design...
-
-nor was this all architecture's fault. A materialist explanation for the success of Agile and DevOps starts with Cloud, which in turn relies on Moore's Law and related dimensions of progress in manufacturing computing infrastructure.
 
 Architecture overreach - here, we restrict to OM. Business model questions are discussed throughout other chapters. But biz arch overlaps. Finance & competitive strat is not primarily EA, even BA.
 
@@ -214,35 +172,6 @@ CoD as inherent weakness... remediable
 
 ===== Chapter raw material
 
-
-
-
-
-
-
-Flexibility at high levels in the architecture comes from standardization at low levels in the architecture. Paradoxically, structure is the key to freedom. ibid 120
-
-this chapter brings us full circle
-
-
-F
-
-The often-minimal value of expert opinion revisited (also covered chapter 4)
-
-https://www.itpreneurs.com/blog/agile-togaf-and-enterprise-architecture-will-they-blend/
-
-"work not done"
-
-Architecture = intersection of technical management with sourcing, information, goveranance
+Architecture = intersection of technical management with investment, sourcing, information, governance
 
 Architecture, documentation, big picture
-
-You can't call for a systems perspective and then say "but the code is self documenting" on the other hand.
-
-* The _Business Architecture Body of Knowledge_ (BIZBOK), from the Business Architecture Guild <<BAGuild2016>>
-
-NOTE: We previously discussed the Business Analysis Body of Knowledge. Although they have similiar names, BABOK and BIZBOK are distinct in terms of content and their sponsoring organizations.
-
-The Business Architecture Body of Knowledge is a broader, more diverse set of guidance. It defines business architecture as (p.1):
-
- _"a blueprint of the enterprise that provides a common understanding of the organization and is used to align strategic objectives and tactical demands."_
