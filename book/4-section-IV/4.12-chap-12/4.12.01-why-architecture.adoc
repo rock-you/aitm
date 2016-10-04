@@ -35,7 +35,7 @@ Investment decisions become harder. You're far beyond the days when you had a on
 
 And then there are the big headaches. A major commercial product version is going off support, and it's the perfect time to think about a rewrite or replatform (say into the Cloud). But the moving pieces and interdependencies are formidably complex, and if you get the analysis wrong the business impact will be severe. Or a major outage does impact the business, and all of a sudden the organizational priority (from the Board on down) is "fix this so it never happens again." Everything else is to go "on hold." Except, of course, it can't.
 
-In response to these and a thousand other complexities of digital management as organizations scale up, a general purpose coordination capability emerges sometimes called Enterprise Architecture.
+In response to these and a thousand other complexities of digital management as organizations scale up, a general purpose coordination capability emerges sometimes called Enterprise Architecture. In this chapter section, we will discuss its definition, organizational dynamics, and value proposition.
 
 ===== Defining Enterprise Architecture
 [quote, Jeanne Weill and Peter Ross, Enterprise Architecture as Strategy]
@@ -57,40 +57,44 @@ Enterprise architecture in the whole covers organizational as well as technical 
 
 In general, definitions of enterprise architecture characterize it as a coordination and problem solving discipline, suited to large scale problems at the intersection of digital technology and human organization. It has a variety of specialist domains, as we'll discuss in the next chapter section. Its definition can be extended pragmatically through looking at its relationships to other significant capabilities in the large organization.
 
+===== Architecture organization
 
+There are three major themes we'll discuss in terms of the overall organizational positioning of enterprise architecture:
 
-====== Business model vs operating model
+* The military concept of a "general staff" and line versus staff concept generally
+* Contrasting the concepts of "business model" versus "operating model"
+* The other major organizational units of interest to enterprise architecture, and some typical organizational approaches
 
+====== Architecture as staff function
+[quote, Elihu Root, 1903 congressional testimony on US army re-organization]
+\... the organization is weak at the top ... because there is ... no coordination of the exercise of powers provided for in the system. That coordination ... can be done only by a body ... organized for that purpose and having no other duties to perform; and in all the armies of the civilized world that duty is ... performed by a ... General Staff ... because their duties are staff duties ... pertaining to the general conduct of affairs, and not merely to the work [of specific departments].
+
+We saw in xref:gov-chap[Chapter 10] how governance anchor:gov-shop-example[emerges], as a xref:gov-as-env-resp[response] to scale and growth, and the concerns for xref:risk-management[risk] and xref:assurance[assurance] in the face of increasing pressures of the external environment.
+
+Architecture has a similar emergence story, but for somewhat different reasons. Consider the quote from Elihu Root, above. Root was tasked with re-organizing the US Army at the turn of the 20th century. There had been some embarassing failures of coordination and organization, and it was clear that something was missing in the US military: a centralized coordination function responsible for planning and logistics.
+
+Nearly 100 years earlier, similar lessons had been learned by the Austrian, Prussian, and French militaries.
+
+image::images/4.12-moritz.jpg[]
+_Franz Moritz Graf von Lacy, Austrian field marshall and pioneer of staff/line organization_ footnote:[Image credit https://en.wikipedia.org/wiki/Franz_Moritz_von_Lacy#/media/File:Count_Franz_Moritz_von_Lacy_(oil_on_canvas_portrait_HGM).jpg, downloaded 2016-10-04, labeled as public domain by Wikipedia]
+
+In previous ages, nobles would assemble and fight for their King, but their armies were poorly coordinated, and disputes over strategy would often arise. Each army would have its own quartermaster, couriers, intelligence, supply chains, and the like. This was both inefficient, and ineffective: overall plans of battle could not be made or executed, and military operations were too often bungled.
+
+As fighting wars became (unfortunately) a larger and larger scale endeavor, the need to centralize certain capabilities became more and more obvious. This culminated in the late 1700s and early 1800s with the creation of "general staffs" that were responsible for coordination of planning and execution across the increasingly complex military operations. For example, the role of Frency staff officer Pierre-Joseph Bourcet is described thus:
+
+_'On every occasion when an important decision had to be made Bourcet would write a memorandum in which he analyzed the situation and set forth in detail, with full explanations and reasons, the course which seemed to him best. In very many cases, his suggestions were adopted and were usually justified by success, and when they were rejected the results were seldom fortunate.'_ <<Kiley2001>>
+
+Why do obscure French and Austrian military officers have to do with today's digital organizations? Because "Many elements that have become integral parts of managerial economics and organizing sciences can be traced back" to military staff systems <<Millotat1992>>, p. 7. We also see tensions similar to those between Enterprise Architecture and advocates of Agile methods. The challenges, debates, and conflicts have only changed in their content... not their essential form.
+
+Staff functions in the enterprise include 
+
+====== EA vs operating model
 
 blurry boundaries, certainly
 One core question decided by governance is how much autonomy is granted to business units or geographical regions. In case this autonomy is high, would a quest for high IT integration and standardization not be like fighting windmills? <<bente2012>> p.45 and cross ref ch 1
 
  BM vs OM - matrix
 
-
-
-All arch is design not all design is arch (Booch)
-
-
-===== Architecture organization
-
-
-"Office of CIO" - general staff model
-
-
-====== Architecture as staff function
-[quote, Elihu Root, 1903 congressional testimony on US army re-organization]
-\... the organization is weak at the top ... because there is ... no coordination of the exercise of powers provided for in the system. That coordination ... can be done only by a body ... organized for that purpose and having no other duties to perform; and in all the armies of the civilized world that duty is ... performed by a ... General Staff ... because their duties are staff duties ... pertaining to the general conduct of affairs, and not merely to the work [of specific departments].
-
-Architecture = intersection of technical management with investment, sourcing, information, governance
-
-Roots in Berthier
-
-Sense-making at scale will not go away.
-
-Many elements that have become integral parts of managerial economics and organizing sciences can be traced back to the Prussian-German General Staff system. <<Millotat1992>>, p. 7
-
-====== EA vs operating model
 as opposed to business model
 
 Bernard claims: [without EA]...leadership will not have the ability to generate clear, consistent views of the overall enterprise on an ongoing basis, they won’t be able to effectively compare business units, and the locus of power for planning and decision-making will be at the line-of-business, program, and/or system owner levels-with significant differences in how things are done and high potential for overlapping or duplicative functions and resources.
@@ -101,7 +105,9 @@ Of course, corporations compare business units all the time, on P&L and other en
 
 Parsimony. What is the value of saying that EA and EOM are distinct? We have too many abstractions.
 
-====== Architecture versus corporate strategy & planning
+====== Peer organizations
+
+Architecture = intersection of technical management with investment, sourcing, information, governance
 
 the business-IT alignment gap exists because there is a pervasive assumption that technology is a tactical rather than a strategic concern. <<???>>
 
@@ -117,7 +123,7 @@ Architecture overreach - here, we restrict to OM. Business model questions are d
 
 Logistics vs strategy
 
-====== Architecture vs program/project
+* Architecture vs program/project
 projects tended to disregard - systems were more monolithic
 
 “Enterprise architecture tends to be viewed as a hostile takeover by program managers and executives who have previously had a lot of independence in developing solutions for their own requirements” <<Bernard2012>>
