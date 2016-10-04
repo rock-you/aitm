@@ -1068,7 +1068,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_chapter_12_outline">Chapter 12 outline</a></li>
 <li><a href="#_chapter_12_learning_objectives">Chapter 12 learning objectives</a></li>
-<li><a href="#_learning_objectives_3">Learning objectives</a></li>
 </ul>
 </li>
 <li><a href="#_why_architecture">Why architecture?</a>
@@ -1081,7 +1080,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_architecture_domains">Architecture domains</a>
 <ul class="sectlevel4">
-<li><a href="#_business_model_vs_operating_model">Business model vs operating model</a></li>
 <li><a href="#_ea_organizational_models">EA organizational models</a></li>
 <li><a href="#_business_architecture">Business architecture</a></li>
 <li><a href="#_solutions_architecture">Solutions architecture</a></li>
@@ -1089,7 +1087,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_data_architecture">Data architecture</a></li>
 <li><a href="#_technical_architecture">Technical architecture</a></li>
 <li><a href="#_enterprise_architecture">Enterprise architecture</a></li>
-<li><a href="#_bm_vs_om_matrix">BM vs OM - matrix</a></li>
 </ul>
 </li>
 <li><a href="#_architecture_practices">Architecture practices</a>
@@ -1104,7 +1101,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_the_hubris_of_architecture">The hubris of architecture</a></li>
 <li><a href="#_the_hubris_of_agile">The hubris of Agile</a></li>
-<li><a href="#_the_scaling_problem_revisited_in_arch_tems">The scaling problem revisited in arch tems</a></li>
+<li><a href="#_scaling_architecture">Scaling &amp; architecture</a></li>
 <li><a href="#_a_worked_example_of_architecture_cost_of_delay_vs_tlm">A worked example of architecture cost of delay vs TLM</a></li>
 <li><a href="#_devops_assets_to_architecture">DevOps assets to architecture</a></li>
 </ul>
@@ -1112,6 +1109,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_architecture_standards">Architecture standards</a>
 <ul class="sectlevel4">
 <li><a href="#_bizbok">Bizbok</a></li>
+<li><a href="#_togaf_2">TOGAF</a></li>
+<li><a href="#_industry_verticals">Industry verticals</a></li>
 </ul>
 </li>
 <li><a href="#_portfolio_management">Portfolio management</a></li>
@@ -18729,6 +18728,11 @@ Sidebar: Lessons from manufacturing, operations research, etc</pre>
 <pre>review &amp; incorporate more grounding from http://www.computing.dcu.ie/~mcrane/CA441/BPMLectureNotes.pdf[BPM Lecture Notes]</pre>
 </div>
 </div>
+<div class="literalblock">
+<div class="content">
+<pre>Process capability is the inherent variation of the process in relation to the specification limits. The smaller the process variation, the better the process's capability. &lt;&lt;Kan1995&gt;&gt;</pre>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_conclusion_9">Conclusion</h4>
@@ -25545,20 +25549,10 @@ Magennis, Cantor, etc</p>
 <li>
 <p>Characterize some typical challenges for architects</p>
 </li>
-</ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_learning_objectives_3">Learning objectives</h5>
-<div class="ulist">
-<ul>
 <li>
 <p>Identify current approaches to understanding complex systems and their failure modes</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>Process capability is the inherent variation of the process in relation to the specification limits. The smaller the process variation, the better the process&#8217;s capability. <a href="#Kan1995">[Kan1995]</a></p>
 </div>
 </div>
 </div>
@@ -25744,8 +25738,7 @@ runs into domain driven design problems if not careful</p>
 <div class="sect5">
 <h6 id="_architecture_versus_corporate_strategy_planning">Architecture versus corporate strategy &amp; planning</h6>
 <div class="paragraph">
-<p>the business-IT alignment gap exists because there is a pervasive assumption that technology is a
-tactical rather than a strategic concern. &lt;&lt;???&gt;&gt;</p>
+<p>the business-IT alignment gap exists because there is a pervasive assumption that technology is a tactical rather than a strategic concern. &lt;&lt;???&gt;&gt;</p>
 </div>
 <div class="paragraph">
 <p>model stability&#8201;&#8212;&#8201;strat consults tend to swap out methods &amp; frameworks as needed for the problem - this is good but no consistency</p>
@@ -25850,15 +25843,18 @@ tactical rather than a strategic concern. &lt;&lt;???&gt;&gt;</p>
 <div class="sect3">
 <h4 id="_architecture_domains">Architecture domains</h4>
 <div class="sect4">
-<h5 id="_business_model_vs_operating_model">Business model vs operating model</h5>
-<div class="paragraph">
-<p>blurry boundaries, certainly</p>
-</div>
-</div>
-<div class="sect4">
 <h5 id="_ea_organizational_models">EA organizational models</h5>
+<div class="sect5">
+<h6 id="_business_model_vs_operating_model">Business model vs operating model</h6>
 <div class="paragraph">
-<p>One core question decided by governance is how much autonomy is granted to business units or geographical regions. In case this autonomy is high, would a quest for high IT integration and standardization not be like fighting windmills? <a href="#bente2012">[bente2012]</a> p.45 and cross ref ch 1</p>
+<p>blurry boundaries, certainly
+One core question decided by governance is how much autonomy is granted to business units or geographical regions. In case this autonomy is high, would a quest for high IT integration and standardization not be like fighting windmills? <a href="#bente2012">[bente2012]</a> p.45 and cross ref ch 1</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>BM vs OM - matrix</pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -25898,10 +25894,6 @@ But virtualization now makes it possible for all archs to be hands-on, even w/pk
 <div class="paragraph">
 <p>all of the above</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_bm_vs_om_matrix">BM vs OM - matrix</h5>
-
 </div>
 </div>
 <div class="sect3">
@@ -26238,7 +26230,7 @@ example of antipatterns</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_the_scaling_problem_revisited_in_arch_tems">The scaling problem revisited in arch tems</h5>
+<h5 id="_scaling_architecture">Scaling &amp; architecture</h5>
 <div class="sect5">
 <h6 id="_solutions_arch">Solutions arch</h6>
 <div class="ulist">
@@ -26381,6 +26373,14 @@ We previously discussed the Business Analysis Body of Knowledge. Although they h
 <pre>_"a blueprint of the enterprise that provides a common understanding of the organization and is used to align strategic objectives and tactical demands."_</pre>
 </div>
 </div>
+</div>
+<div class="sect4">
+<h5 id="_togaf_2">TOGAF</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_industry_verticals">Industry verticals</h5>
+
 </div>
 </div>
 <div class="sect3">
