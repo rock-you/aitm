@@ -25451,11 +25451,6 @@ As with other chapters in the later part of this book, we are going to introduce
 </tr>
 </table>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>Decide: get more technical in this part as well, as we did in previous?</pre>
-</div>
-</div>
 <div class="sect4">
 <h5 id="_chapter_12_outline">Chapter 12 outline</h5>
 <div class="ulist">
@@ -25521,14 +25516,6 @@ As with other chapters in the later part of this book, we are going to introduce
 <p>Topics</p>
 </li>
 </ul>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>Sidebar: IT analytics experts
-Magennis, Cantor, etc</p>
-</div>
-</div>
 </div>
 </div>
 <div class="sect4">
@@ -25643,7 +25630,7 @@ Architecture represents the significant design decisions that shape a system, wh
 <p>And then there are the big headaches. A major commercial product version is going off support, and it&#8217;s the perfect time to think about a rewrite or replatform (say into the Cloud). But the moving pieces and interdependencies are formidably complex, and if you get the analysis wrong the business impact will be severe. Or a major outage does impact the business, and all of a sudden the organizational priority (from the Board on down) is "fix this so it never happens again." Everything else is to go "on hold." Except, of course, it can&#8217;t.</p>
 </div>
 <div class="paragraph">
-<p>In response to these and a thousand other complexities of digital management as organizations scale up, a general purpose coordination capability emerges sometimes called Enterprise Architecture.</p>
+<p>In response to these and a thousand other complexities of digital management as organizations scale up, a general purpose coordination capability emerges sometimes called Enterprise Architecture. In this chapter section, we will discuss its definition, organizational dynamics, and value proposition.</p>
 </div>
 <div class="sect4">
 <h5 id="_defining_enterprise_architecture">Defining Enterprise Architecture</h5>
@@ -25696,26 +25683,24 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <div class="paragraph">
 <p>In general, definitions of enterprise architecture characterize it as a coordination and problem solving discipline, suited to large scale problems at the intersection of digital technology and human organization. It has a variety of specialist domains, as we&#8217;ll discuss in the next chapter section. Its definition can be extended pragmatically through looking at its relationships to other significant capabilities in the large organization.</p>
 </div>
-<div class="sect5">
-<h6 id="_business_model_vs_operating_model">Business model vs operating model</h6>
-<div class="paragraph">
-<p>blurry boundaries, certainly
-One core question decided by governance is how much autonomy is granted to business units or geographical regions. In case this autonomy is high, would a quest for high IT integration and standardization not be like fighting windmills? <a href="#bente2012">[bente2012]</a> p.45 and cross ref ch 1</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>BM vs OM - matrix</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>All arch is design not all design is arch (Booch)</p>
-</div>
-</div>
 </div>
 <div class="sect4">
 <h5 id="_architecture_organization">Architecture organization</h5>
 <div class="paragraph">
-<p>"Office of CIO" - general staff model</p>
+<p>There are three major themes we&#8217;ll discuss in terms of the overall organizational positioning of enterprise architecture:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The military concept of a "general staff" and line versus staff concept generally</p>
+</li>
+<li>
+<p>Contrasting the concepts of "business model" versus "operating model"</p>
+</li>
+<li>
+<p>The other major organizational units of interest to enterprise architecture, and some typical organizational approaches</p>
+</li>
+</ul>
 </div>
 <div class="sect5">
 <h6 id="_architecture_as_staff_function">Architecture as staff function</h6>
@@ -25729,20 +25714,128 @@ One core question decided by governance is how much autonomy is granted to busin
 </div>
 </div>
 <div class="paragraph">
-<p>Architecture = intersection of technical management with investment, sourcing, information, governance</p>
+<p>We saw in <a href="#gov-chap">Chapter 10</a> how governance <a id="gov-shop-example"></a>, as a <a href="#gov-as-env-resp">response</a> to scale and growth, and the concerns for <a href="#risk-management">risk</a> and <a href="#assurance">assurance</a> in the face of increasing pressures of the external environment.</p>
 </div>
 <div class="paragraph">
-<p>Roots in Berthier</p>
+<p>Architecture has a similar emergence story, but for somewhat different reasons. Consider the quote from Elihu Root, above. Root was tasked with re-organizing the US Army at the turn of the 20th century. There had been some embarassing failures of coordination and organization, and it was clear that something was missing in the US military: a centralized coordination function responsible for planning and logistics.</p>
 </div>
 <div class="paragraph">
-<p>Sense-making at scale will not go away.</p>
+<p>Nearly 100 years earlier, similar lessons had been learned by the Austrian, Prussian, and French militaries.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/4.12-moritz.jpg" alt="4.12 moritz">
+</div>
 </div>
 <div class="paragraph">
-<p>Many elements that have become integral parts of managerial economics and organizing sciences can be traced back to the Prussian-German General Staff system. <a href="#Millotat1992">[Millotat1992]</a>, p. 7</p>
+<p><em>Franz Moritz Graf von Lacy, Austrian field marshall and pioneer of staff/line organization</em> <span class="footnote">[<a id="_footnoteref_21" class="footnote" href="#_footnote_21" title="View footnote.">21</a>]</span></p>
+</div>
+<div class="paragraph">
+<p>In previous ages, nobles would assemble and fight for their King, but their armies were poorly coordinated, and disputes over strategy would often arise. Each army would have its own quartermaster, couriers, intelligence, supply chains, and the like. This was both inefficient, and ineffective: overall plans of battle could not be made or executed, and military operations were too often bungled.</p>
+</div>
+<div class="paragraph">
+<p>As fighting wars became (unfortunately) a larger and larger scale endeavor, the need to centralize certain capabilities became more and more obvious. This culminated in the late 1700s and early 1800s with the creation of "general staffs" that were responsible for coordination of planning and execution across the increasingly complex military operations. For example, the role of Frency staff officer Pierre-Joseph Bourcet under Napoleon is described thus:</p>
+</div>
+<div class="paragraph">
+<p><em>'On every occasion when an important decision had to be made Bourcet would write a memorandum in which he analyzed the situation and set forth in detail, with full explanations and reasons, the course which seemed to him best. In very many cases, his suggestions were adopted and were usually justified by success, and when they were rejected the results were seldom fortunate.'</em> <a href="#Kiley2001">[Kiley2001]</a></p>
+</div>
+<div class="paragraph">
+<p>Why do obscure French and Austrian military officers have to do with today&#8217;s digital organizations? Because "Many elements that have become integral parts of managerial economics and organizing sciences can be traced back" to military staff systems <a href="#Millotat1992">[Millotat1992]</a>, p. 7. Certainly, an Enterprise Architecture organization is a form of staff organization. We also see tensions similar to those between Enterprise Architecture and advocates of Agile methods. The challenges, debates, and conflicts have only changed in their content&#8230;&#8203; not their essential form.</p>
+</div>
+<div class="paragraph">
+<p>Staff functions in the enterprise include planning, coordination, and operations; broadly speaking, and with key differences depending on the indsutry, the following are considered "staff":</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Financial management</p>
+</li>
+<li>
+<p>Human resources management</p>
+</li>
+<li>
+<p>Legal services</p>
+</li>
+<li>
+<p>Purchasing &amp; vendor management (varies w/company and industry; for example in retail "merchandising" is a line function)</p>
+</li>
+<li>
+<p>Information technology</p>
+</li>
+<li>
+<p>Facilities management</p>
+</li>
+<li>
+<p>Strategic planning &amp; forecasting</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>While the following are considered "line" (analogous to the warfighting units in the military):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sales</p>
+</li>
+<li>
+<p>Marketing</p>
+</li>
+<li>
+<p>Operations</p>
+</li>
+<li>
+<p>Research and development (varies w/company and industry)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>EA most often is seen as a specialized staff function within the larger staff function of IT management, and with the increased role of digital technology there are corresponding pressures to "move EA out of IT" as we&#8217;ll discuss below.</p>
+</div>
+<div class="paragraph">
+<p>The classic line/staff division is a powerful concept, pervasive throughout organizational theory. But it has important limitations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Staff organizations can become insular and self-serving, and indeed can accumulate power in dangerous and unaccountable ways. For this reason, officers are rotated between line and staff positions in the US military.</p>
+</li>
+<li>
+<p>Staff "expertise" may matter less and less in complex and chaotic environments requiring experimental and adaptive approaches.</p>
+</li>
+<li>
+<p>If a feedback loop involves both line and staff organizations, it risks being delayed.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>But in many cases, centralizing staff expertise and the definition of acceptable practices for a domain is still essential. We have seen echoes of this throughout our discussion of <a href="#product-v-function">matrix organizations</a> and even <a href="#feature-v-component">feature versus component</a>
+teams.</p>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_ea_vs_operating_model">EA vs operating model</h6>
+<h6 id="_enterprise_architecture_and_the_operating_model">Enterprise architecture and the operating model</h6>
+<div class="quoteblock">
+<blockquote>
+The operating model is the necessary level of business process integration and standardization for delivering goods and services to customers. Different companies have different levels of process integration across
+their business units (i.e., the extent to which business units share data). Integration enables end-to-end processing and a single face to the customer, but it forces a common understanding of data across diverse business units.
+</blockquote>
+<div class="attribution">
+&#8212; Weill and Ross<br>
+<cite>Enterprise Architecture as Strategy</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>For the purposes of this textbook, we define enterprise architecture&#8217;s concerns as essentially the enterprise operating model: process, data, organizational capabilities, and systems. While some draw fine distinctions between the architecture and the operating model, it is difficult to see the value of doing so, as long as the architecture is not too technical.</p>
+</div>
+<div class="paragraph">
+<p>One of the most frequently used visualizations of enterprise architecture&#8217;s concerns is the Zachman Framework:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>BM vs OM - matrix</pre>
+</div>
+</div>
 <div class="paragraph">
 <p>as opposed to business model</p>
 </div>
@@ -25760,7 +25853,10 @@ One core question decided by governance is how much autonomy is granted to busin
 </div>
 </div>
 <div class="sect5">
-<h6 id="_architecture_versus_corporate_strategy_planning">Architecture versus corporate strategy &amp; planning</h6>
+<h6 id="_peer_organizations">Peer organizations</h6>
+<div class="paragraph">
+<p>Architecture = intersection of technical management with investment, sourcing, information, governance</p>
+</div>
 <div class="paragraph">
 <p>the business-IT alignment gap exists because there is a pervasive assumption that technology is a tactical rather than a strategic concern. &lt;&lt;???&gt;&gt;</p>
 </div>
@@ -25782,11 +25878,13 @@ One core question decided by governance is how much autonomy is granted to busin
 <div class="paragraph">
 <p>Logistics vs strategy</p>
 </div>
-</div>
-<div class="sect5">
-<h6 id="_architecture_vs_program_project">Architecture vs program/project</h6>
-<div class="paragraph">
-<p>projects tended to disregard - systems were more monolithic</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Architecture vs program/project
+projects tended to disregard - systems were more monolithic</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>“Enterprise architecture tends to be viewed as a hostile takeover by program managers and executives who have previously had a lot of independence in developing solutions for their own requirements” <a href="#Bernard2012">[Bernard2012]</a></p>
@@ -26141,7 +26239,8 @@ why draw boxes when a textual report is all that is needed (e.g. Bente p52)</p>
 <div class="sect4">
 <h5 id="_the_rationalization_quest">The "rationalization" quest</h5>
 <div class="paragraph">
-<p>are the economics well understood?</p>
+<p>are the economics well understood?
+One core question decided by governance is how much autonomy is granted to business units or geographical regions. In case this autonomy is high, would a quest for high IT integration and standardization not be like fighting windmills? <a href="#bente2012">[bente2012]</a> p.45 and cross ref ch 1</p>
 </div>
 <div class="sect5">
 <h6 id="_application_rationalization">application rationalization</h6>
@@ -26543,6 +26642,14 @@ We previously discussed the Business Analysis Body of Knowledge. Although they h
 <div class="paragraph">
 <p>EA &amp; M&amp;A - Bernard location 432 - like that value prop  - who is an EA? the person you would bring in to help assess a potential acquisition&#8217;s systems for fit/overlap etc.</p>
 </div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Sidebar: IT analytics experts
+Magennis, Cantor, etc</p>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p><strong>Digital pipeline analytics</strong>
 Over time, the IT operation develops significant data by which to manage itself. It may develop one or more definitive portfolio list, typically applications, services, assets, and/or technology products. Distinguishing and baselining high quality versions of these data sets can consume inordinate resource, and yet managing the IT organization at scale is nearly impossible without them.. [<em>didn&#8217;t want to discuss data per se in the introduction</em>]</p>
@@ -26741,6 +26848,11 @@ Review SAFE on architecture, also Reinertsen</pre>
 <div class="content">
 <pre>[quote, Ruth Malan]
 For enduring competitive advantage, the organization needs to seek leverage across its products and/or services and to create strategic capabilities that are hard to imitate because they rely on a mix of process, technology, skills, resources, facilities, culture, and even history &lt;&lt;Malan2005&gt;&gt;</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>All arch is design not all design is arch (Booch)</pre>
 </div>
 </div>
 </li>
@@ -27296,6 +27408,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 <p><a id="KARE2015"></a>[KARE2015]: KARE 11 Staff. 2015. “Target Cuts 275 Positions, Most in Technology.” <a href="http://www.kare11.com/story/news/2015/09/01/target-cuts-275-jobs-most&#8212;&#8203;technology/71512016/" class="bare">http://www.kare11.com/story/news/2015/09/01/target-cuts-275-jobs-most&#8212;&#8203;technology/71512016/</a>.</p>
 </li>
 <li>
+<p><a id="Kiley2001"></a>[Kiley2001]: Kiley, Kevin. 2001. “The Grand Quartier-General Imperial and the Corps d’Armée: Developments in the Military Art, 1795-1815.” Military Subjects: Organization, Strategy &amp; Tactics. <a href="http://www.napoleon-series.org/military/organization/c_staff1.html" class="bare">http://www.napoleon-series.org/military/organization/c_staff1.html</a>. Accessed 2016-10-04.</p>
+</li>
+<li>
 <p><a id="Kim2013"></a>[Kim2013]: Kim, G.; Behr, K. &amp; Spafford, G. (2013), <em>The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win</em>, IT Revolution Press</p>
 </li>
 <li>
@@ -27695,6 +27810,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 </div>
 <div class="footnote" id="_footnote_20">
 <a href="#_footnoteref_20">20</a>. <em>Image credit <a href="https://www.flickr.com/photos/seattlemunicipalarchives/3347281230" class="bare">https://www.flickr.com/photos/seattlemunicipalarchives/3347281230</a>, commercial use permitted</em>
+</div>
+<div class="footnote" id="_footnote_21">
+<a href="#_footnoteref_21">21</a>. Image credit <a href="https://en.wikipedia.org/wiki/Franz_Moritz_von_Lacy#/media/File:Count_Franz_Moritz_von_Lacy_(oil_on_canvas_portrait_HGM).jpg" class="bare">https://en.wikipedia.org/wiki/Franz_Moritz_von_Lacy#/media/File:Count_Franz_Moritz_von_Lacy_(oil_on_canvas_portrait_HGM).jpg</a>, downloaded 2016-10-04, labeled as public domain by Wikipedia
 </div>
 </div>
 <div id="footer">
