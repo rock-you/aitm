@@ -1,18 +1,15 @@
 ==== Why architecture?
 [quote, Fred Brooks, Planning a Computer System: Project Stretch]
-Computer architecture, like other architecture, is the art of determining the needs of the user of a structure and then designing to meet those needs as effectively as possible within economic and technological constraints. Architecture must include engineering considerations, so that the design will be economical and feasible; but the emphasis in architecture is upon the needs of the user, whereas in engineering the emphasis is upon the needs of the fabricator. [1962, first known use of the term "architecture" with respect to computing system organization.]
+Computer architecture, like other architecture, is the art of determining the needs of the user of a structure and then designing to meet those needs as effectively as possible within economic and technological constraints. Architecture must include engineering considerations, so that the design will be economical and feasible; but the emphasis in architecture is upon the needs of the user, whereas in engineering the emphasis is upon the needs of the fabricator. [1962, first published use of the term "architecture" with respect to computing system organization.]
 
-****
-*Use of the word "architecture" in information technology*
+[quote, Grady Booch]
+Architecture represents the significant design decisions that shape a system, where significant is measured by cost of change.
 
-"Architecture" is of course a word usually associated with physical construction: buildings, landscapes, etc. It was https://en.wikipedia.org/wiki/Computer_architecture[appropriated by systems engineers at IBM in 1959] to describe the problems of designing complex information processing hardware and software.
+"Architecture" is of course a word usually associated with physical construction: buildings, landscapes, etc. It was appropriated by systems engineers at IBM around 1960 to describe the problems of designing complex information processing hardware and software.
 
 This leads to some confusion, and occasional questions from "real" architects as to why IT people are calling themselves "architects." Perhaps a different choice of word would have been advisable.
-****
 
-===== Our journey to date
-
-The architecture concept is not something new or foreign. In our journey to date, we have covered:
+Regardless, the architecture concept is not something new or foreign. In our journey to date, we have covered:
 
 * Business xref:what-is-IT-value[motivations] and xref:digital-context[context],
 * xref:what-is-IT-infrastructure[Infrastructure]
@@ -28,65 +25,52 @@ We have also covered the practices by which ideas and intentions are established
 * xref:resource-mgmt[Hiring of employees],
 * xref:gov-chap[Governance] of digital organizations for xref:risk-management[risk], xref:security[security], and other purposes.
 
-*Enterprise architecture is nothing but the unification of these topics into a common, scalable framework.*
+*Enterprise architecture is nothing but the unification of these topics into a common, formalized, scalable framework for understanding.*
 
 As we have progressed in our journey, and scaled our company up, all these areas have continued to evolve. Specialization emerges. You have people with deep experience in Cloud architectures, and people with deep experience in e-records management and compliance. You don't have too many who are deep in both.
 
-Your product portfolio (internal and external) is now in the hundreds or thousands. Some were built with the latest technology, and others run on older technologies now perceived to be dead ends. But rewriting them is out of the question, so you have to manage the risk of the older technology.
+Your product portfolio (internal and external) is now in the hundreds or thousands. Some were built with the latest technology, and others run on older technologies now perceived to be dead ends. But investing in rewriting them would not provide as much value as other uses of the funds, so you have to manage the risk of the older technology.
 
 Investment decisions become harder. You're far beyond the days when you had a one-product focus. You have multiple interacting products and multiple interacting teams, and the relationship between the teams and products is not one to one. Understanding the business case for the investment gets harder; when you have a thousand services over multiple business units, how do you know if someone is proposing a redundant new one?
 
 And then there are the big headaches. A major commercial product version is going off support, and it's the perfect time to think about a rewrite or replatform (say into the Cloud). But the moving pieces and interdependencies are formidably complex, and if you get the analysis wrong the business impact will be severe. Or a major outage does impact the business, and all of a sudden the organizational priority (from the Board on down) is "fix this so it never happens again." Everything else is to go "on hold." Except, of course, it can't.
 
-For enduring competitive advantage, the organization needs to seek leverage across its products and/or services and to create strategic capabilities that are hard to imitate because they rely on a mix of process, technology, skills, resources, facilities, culture, and even history <<Malan2005>>
-
-Definition
-Context
-Value
+In response to these and a thousand other complexities of digital management as organizations scale up, a general purpose coordination capability emerges sometimes called Enterprise Architecture.
 
 ===== Defining Enterprise Architecture
+[quote, Jeanne Weill and Peter Ross, Enterprise Architecture as Strategy]
+The enterprise architecture is the organizing logic for business processes and IT infrastructure, reflecting the integration and standardization requirements of the company's operating model. The enterprise architecture provides a long-term view of a company's processes, systems, and technologies so that individual projects can build capabilities—not just fulfill immediate needs.
 
-_The goal of enterprise architecture is to act as a guide, perhaps a pathfinder, who takes the enterprise on a transformational journey—from an incoherent and complex world with line-of-business separation, product-specific stovepipes, legacy systems estate, and costly operation to a more rationally organized and useful state with multiservice, revenue-generating platforms and an efficient operational regime. On the way, radical surgeries may be required to eliminate duplication, reduce costs, improve reliability, and increase agility in the business. EA acts as a strategic foundation for business enablement._ <<Bente2012>> p9
+[quote, Bente et al, Collaborative Enterprise Architecture]
+Enterprise architecture (EA) is the representation of the structure and behavior of an enterprise's IT landscape in relation to its business environment. It reflects the current and future use of IT in the enterprise and provides a roadmap to reach a future state. <<Bente2012>> p 35
 
-Enterprise architecture (EA) is the representation of the structure and behavior of an enterprise's IT landscape In relation to its business environment. It reflects the current and future use of IT in the enterprise and provides a roadmap to reach a future state. <<Bente2012>> p 35
+There are numerous definitions of enterprise architecture. It can be defined as:
 
-Architecture represents the significant design decisions that shape a system, where significant is measured by cost of change <<booch find this>>
+* an organizational unit
+* an organizational capability
+* a professional discipline or set of practices
+* a process or process group; a ongoing activity or activities
+* a large-scale artifact (i.e. an integrated model consisting of catalogs, diagrams, and matrices) maintained on an ongoing basis for communication and planning
+* an integrated and standardized language for reasoning about complexity
 
-"Architecture of software is a collection of design decisions that are expensive to change." <<Ran2001>>
+Enterprise architecture in the whole covers organizational as well as technical domains; we will discuss this in more detail in the next chapter section.
 
-“...things that people perceive as hard to change.” <<Fowler2003a>>
+In general, definitions of enterprise architecture characterize it as a coordination and problem solving discipline, suited to large scale problems at the intersection of digital technology and human organization. It has a variety of specialist domains, as we'll discuss in the next chapter section. Its definition can be extended pragmatically through looking at its relationships to other significant capabilities in the large organization.
 
-vision of EA is an integrated language/set of concepts
-runs into domain driven design problems if not careful
 
-CEO as architect... go back to chapter 1 -
-
-But you can have the goodness without formalizing architecture as a program, practice, discipline, or capability.
-
-This is about formalizing it. Not the idea that products should be well designed and delightful. We covered that in Chapter 4.
 
 ====== Business model vs operating model
+
 
 blurry boundaries, certainly
 One core question decided by governance is how much autonomy is granted to business units or geographical regions. In case this autonomy is high, would a quest for high IT integration and standardization not be like fighting windmills? <<bente2012>> p.45 and cross ref ch 1
 
  BM vs OM - matrix
 
-====== Architecture as just good design
 
-Design is ACID. Architecture is BASE.?
-
-Design thinking is encroaching on architecture. Enterprise design?
-_the sheer absurdity of undertaking something so ambitious, on the one hand, and, foolhardy, on the other, as any kind of intentional design of so complex and poorly (and even mis-) understood an entity as an organization in a context of rapid change._ <<Malan2010>>
 
 All arch is design not all design is arch (Booch)
 
-====== Architecture as a language for reasoning about complexity at scale
-standard EA language and methodology is especially helpful in large, complex enterprises that are geographically dispersed, and which may have multiple social and work cultures that have promoted different ways of doing things.
-
-Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 1147-1149). AuthorHouse. Kindle Edition.
-
-Architecture, documentation, big picture
 
 ===== Architecture organization
 
