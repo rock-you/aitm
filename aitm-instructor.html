@@ -1072,7 +1072,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_why_architecture">Why architecture?</a>
 <ul class="sectlevel4">
-<li><a href="#_our_journey_to_date">Our journey to date</a></li>
 <li><a href="#_defining_enterprise_architecture">Defining Enterprise Architecture</a></li>
 <li><a href="#_architecture_organization">Architecture organization</a></li>
 <li><a href="#_the_value_of_ea">The value of EA</a></li>
@@ -1106,6 +1105,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_bizbok">Bizbok</a></li>
 <li><a href="#_togaf_2">TOGAF</a></li>
 <li><a href="#_archimate">Archimate</a></li>
+<li><a href="#_governmental_frameworks">Governmental frameworks</a></li>
 <li><a href="#_industry_verticals">Industry verticals</a></li>
 </ul>
 </li>
@@ -7305,6 +7305,9 @@ It is humbling to see how bad experts are at estimating the value of features (u
 <div class="content">
 <img src="images/2.04-PipelinewProdDisc.png" alt="2.04 PipelinewProdDisc">
 </div>
+</div>
+<div class="paragraph">
+<p><a id=":HIPPO"></a></p>
 </div>
 <div class="paragraph">
 <p>The most important foundation for your newly formalized product discovery capability is that it must be <strong>empirical and hypothesis-driven</strong>. Too often, product strategy is based on the HIPPO: The Highest Paid Person&#8217;s Opinion.</p>
@@ -24829,7 +24832,7 @@ We will examine a full "business of IT/digital delivery pipeline" architecture i
 <p>Decisions that might have been made quickly and casually by a product or project team become more difficult, due to increasing challenges both internal and external. Decisions made years ago come back to haunt current strategies with a vengeance. With scale, management needs some way of making sense across digital operations of mind-numbing complexity. Should we invest in 15 new internally-developed microservices, or sunset 12 existing ones and implement a commercial package developed by people we trust? When we have 1500 applications or services in our portfolio, how do we know that proposed #1501 is not redundant or outright conflicting with existing services?</p>
 </div>
 <div class="paragraph">
-<p>Architecture provides tools to manage such problems, but doing so is difficult and controversial. How do we know that our understanding of the digital operation is current and up to date? How much should we spend on keeping it so? What happens when management decides to set direction using these same abstractions, and architects find themselves now enforcing what had originally started as mere explanation and sense-making?</p>
+<p>Architecture provides tools to manage such problems, but doing so is difficult and controversial. Are the architects merely just <a href="#:HIPPO">HIPPOS</a> with drawing tools? How can we maintain an experimental and hypothesis-driven approach in the midst of all the complexity? How do we know that our understanding of the digital operation is current and up to date? How much should we spend on keeping it so? What happens when management decides to set direction using these same abstractions, and architects find themselves now enforcing what had originally started as mere explanation and sense-making?</p>
 </div>
 <div class="paragraph">
 <p>Vendor relationships become a two-edged sword, providing increased value with access to higher levels of vendor resources, but at the cost of increased lock-in. Pure open-source strategies inevitably give way to monetized relationships, as the risk of not having support becomes unacceptable.</p>
@@ -24963,30 +24966,29 @@ Magennis, Cantor, etc</p>
 <h4 id="_why_architecture">Why architecture?</h4>
 <div class="quoteblock">
 <blockquote>
-Computer architecture, like other architecture, is the art of determining the needs of the user of a structure and then designing to meet those needs as effectively as possible within economic and technological constraints. Architecture must include engineering considerations, so that the design will be economical and feasible; but the emphasis in architecture is upon the needs of the user, whereas in engineering the emphasis is upon the needs of the fabricator. [1962, first known use of the term "architecture" with respect to computing system organization.]
+Computer architecture, like other architecture, is the art of determining the needs of the user of a structure and then designing to meet those needs as effectively as possible within economic and technological constraints. Architecture must include engineering considerations, so that the design will be economical and feasible; but the emphasis in architecture is upon the needs of the user, whereas in engineering the emphasis is upon the needs of the fabricator. [1962, first published use of the term "architecture" with respect to computing system organization.]
 </blockquote>
 <div class="attribution">
 &#8212; Fred Brooks<br>
 <cite>Planning a Computer System: Project Stretch</cite>
 </div>
 </div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Use of the word "architecture" in information technology</strong></p>
+<div class="quoteblock">
+<blockquote>
+Architecture represents the significant design decisions that shape a system, where significant is measured by cost of change.
+</blockquote>
+<div class="attribution">
+&#8212; Grady Booch
+</div>
 </div>
 <div class="paragraph">
-<p>"Architecture" is of course a word usually associated with physical construction: buildings, landscapes, etc. It was <a href="https://en.wikipedia.org/wiki/Computer_architecture">appropriated by systems engineers at IBM in 1959</a> to describe the problems of designing complex information processing hardware and software.</p>
+<p>"Architecture" is of course a word usually associated with physical construction: buildings, landscapes, etc. It was appropriated by systems engineers at IBM around 1960 to describe the problems of designing complex information processing hardware and software.</p>
 </div>
 <div class="paragraph">
 <p>This leads to some confusion, and occasional questions from "real" architects as to why IT people are calling themselves "architects." Perhaps a different choice of word would have been advisable.</p>
 </div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_our_journey_to_date">Our journey to date</h5>
 <div class="paragraph">
-<p>The architecture concept is not something new or foreign. In our journey to date, we have covered:</p>
+<p>Regardless, the architecture concept is not something new or foreign. In our journey to date, we have covered:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -25030,13 +25032,13 @@ Computer architecture, like other architecture, is the art of determining the ne
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Enterprise architecture is nothing but the unification of these topics into a common, scalable framework.</strong></p>
+<p><strong>Enterprise architecture is nothing but the unification of these topics into a common, formalized, scalable framework for understanding.</strong></p>
 </div>
 <div class="paragraph">
 <p>As we have progressed in our journey, and scaled our company up, all these areas have continued to evolve. Specialization emerges. You have people with deep experience in Cloud architectures, and people with deep experience in e-records management and compliance. You don&#8217;t have too many who are deep in both.</p>
 </div>
 <div class="paragraph">
-<p>Your product portfolio (internal and external) is now in the hundreds or thousands. Some were built with the latest technology, and others run on older technologies now perceived to be dead ends. But rewriting them is out of the question, so you have to manage the risk of the older technology.</p>
+<p>Your product portfolio (internal and external) is now in the hundreds or thousands. Some were built with the latest technology, and others run on older technologies now perceived to be dead ends. But investing in rewriting them would not provide as much value as other uses of the funds, so you have to manage the risk of the older technology.</p>
 </div>
 <div class="paragraph">
 <p>Investment decisions become harder. You&#8217;re far beyond the days when you had a one-product focus. You have multiple interacting products and multiple interacting teams, and the relationship between the teams and products is not one to one. Understanding the business case for the investment gets harder; when you have a thousand services over multiple business units, how do you know if someone is proposing a redundant new one?</p>
@@ -25045,43 +25047,58 @@ Computer architecture, like other architecture, is the art of determining the ne
 <p>And then there are the big headaches. A major commercial product version is going off support, and it&#8217;s the perfect time to think about a rewrite or replatform (say into the Cloud). But the moving pieces and interdependencies are formidably complex, and if you get the analysis wrong the business impact will be severe. Or a major outage does impact the business, and all of a sudden the organizational priority (from the Board on down) is "fix this so it never happens again." Everything else is to go "on hold." Except, of course, it can&#8217;t.</p>
 </div>
 <div class="paragraph">
-<p>For enduring competitive advantage, the organization needs to seek leverage across its products and/or services and to create strategic capabilities that are hard to imitate because they rely on a mix of process, technology, skills, resources, facilities, culture, and even history <a href="#Malan2005">[Malan2005]</a></p>
-</div>
-<div class="paragraph">
-<p>Definition
-Context
-Value</p>
-</div>
+<p>In response to these and a thousand other complexities of digital management as organizations scale up, a general purpose coordination capability emerges sometimes called Enterprise Architecture.</p>
 </div>
 <div class="sect4">
 <h5 id="_defining_enterprise_architecture">Defining Enterprise Architecture</h5>
-<div class="paragraph">
-<p><em>The goal of enterprise architecture is to act as a guide, perhaps a pathfinder, who takes the enterprise on a transformational journey—from an incoherent and complex world with line-of-business separation, product-specific stovepipes, legacy systems estate, and costly operation to a more rationally organized and useful state with multiservice, revenue-generating platforms and an efficient operational regime. On the way, radical surgeries may be required to eliminate duplication, reduce costs, improve reliability, and increase agility in the business. EA acts as a strategic foundation for business enablement.</em> <a href="#Bente2012">[Bente2012]</a> p9</p>
+<div class="quoteblock">
+<blockquote>
+The enterprise architecture is the organizing logic for business processes and IT infrastructure, reflecting the integration and standardization requirements of the company&#8217;s operating model. The enterprise architecture provides a long-term view of a company&#8217;s processes, systems, and technologies so that individual projects can build capabilities—not just fulfill immediate needs.
+</blockquote>
+<div class="attribution">
+&#8212; Jeanne Weill and Peter Ross<br>
+<cite>Enterprise Architecture as Strategy</cite>
+</div>
+</div>
+<div class="quoteblock">
+<blockquote>
+Enterprise architecture (EA) is the representation of the structure and behavior of an enterprise&#8217;s IT landscape in relation to its business environment. It reflects the current and future use of IT in the enterprise and provides a roadmap to reach a future state. <a href="#Bente2012">[Bente2012]</a> p 35
+</blockquote>
+<div class="attribution">
+&#8212; Bente et al<br>
+<cite>Collaborative Enterprise Architecture</cite>
+</div>
 </div>
 <div class="paragraph">
-<p>Enterprise architecture (EA) is the representation of the structure and behavior of an enterprise&#8217;s IT landscape In relation to its business environment. It reflects the current and future use of IT in the enterprise and provides a roadmap to reach a future state. <a href="#Bente2012">[Bente2012]</a> p 35</p>
+<p>There are numerous definitions of enterprise architecture. It can be defined as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>an organizational unit</p>
+</li>
+<li>
+<p>an organizational capability</p>
+</li>
+<li>
+<p>a professional discipline or set of practices</p>
+</li>
+<li>
+<p>a process or process group; a ongoing activity or activities</p>
+</li>
+<li>
+<p>a large-scale artifact (i.e. an integrated model consisting of catalogs, diagrams, and matrices) maintained on an ongoing basis for communication and planning</p>
+</li>
+<li>
+<p>an integrated and standardized language for reasoning about complexity</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Architecture represents the significant design decisions that shape a system, where significant is measured by cost of change <a href="#booch find this">[booch find this]</a></p>
+<p>Enterprise architecture in the whole covers organizational as well as technical domains; we will discuss this in more detail in the next chapter section.</p>
 </div>
 <div class="paragraph">
-<p>"Architecture of software is a collection of design decisions that are expensive to change." <a href="#Ran2001">[Ran2001]</a></p>
-</div>
-<div class="paragraph">
-<p>“&#8230;&#8203;things that people perceive as hard to change.” <a href="#Fowler2003a">[Fowler2003a]</a></p>
-</div>
-<div class="paragraph">
-<p>vision of EA is an integrated language/set of concepts
-runs into domain driven design problems if not careful</p>
-</div>
-<div class="paragraph">
-<p>CEO as architect&#8230;&#8203; go back to chapter 1 -</p>
-</div>
-<div class="paragraph">
-<p>But you can have the goodness without formalizing architecture as a program, practice, discipline, or capability.</p>
-</div>
-<div class="paragraph">
-<p>This is about formalizing it. Not the idea that products should be well designed and delightful. We covered that in Chapter 4.</p>
+<p>In general, definitions of enterprise architecture characterize it as a coordination and problem solving discipline, suited to large scale problems at the intersection of digital technology and human organization. It has a variety of specialist domains, as we&#8217;ll discuss in the next chapter section. Its definition can be extended pragmatically through looking at its relationships to other significant capabilities in the large organization.</p>
 </div>
 <div class="sect5">
 <h6 id="_business_model_vs_operating_model">Business model vs operating model</h6>
@@ -25094,30 +25111,8 @@ One core question decided by governance is how much autonomy is granted to busin
 <pre>BM vs OM - matrix</pre>
 </div>
 </div>
-</div>
-<div class="sect5">
-<h6 id="_architecture_as_just_good_design">Architecture as just good design</h6>
-<div class="paragraph">
-<p>Design is ACID. Architecture is BASE.?</p>
-</div>
-<div class="paragraph">
-<p>Design thinking is encroaching on architecture. Enterprise design?
-<em>the sheer absurdity of undertaking something so ambitious, on the one hand, and, foolhardy, on the other, as any kind of intentional design of so complex and poorly (and even mis-) understood an entity as an organization in a context of rapid change.</em> <a href="#Malan2010">[Malan2010]</a></p>
-</div>
 <div class="paragraph">
 <p>All arch is design not all design is arch (Booch)</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_architecture_as_a_language_for_reasoning_about_complexity_at_scale">Architecture as a language for reasoning about complexity at scale</h6>
-<div class="paragraph">
-<p>standard EA language and methodology is especially helpful in large, complex enterprises that are geographically dispersed, and which may have multiple social and work cultures that have promoted different ways of doing things.</p>
-</div>
-<div class="paragraph">
-<p>Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 1147-1149). AuthorHouse. Kindle Edition.</p>
-</div>
-<div class="paragraph">
-<p>Architecture, documentation, big picture</p>
 </div>
 </div>
 </div>
@@ -25281,6 +25276,9 @@ One core question decided by governance is how much autonomy is granted to busin
 </div>
 <div class="sect3">
 <h4 id="_architecture_domains">Architecture domains</h4>
+<div class="paragraph">
+<p>One of the most widely known visual depictions of enterprise architecture is the Zachman framework.</p>
+</div>
 <div class="paragraph">
 <p>Zachman as intro</p>
 </div>
@@ -25646,10 +25644,17 @@ in technical matters, there is a huge risk that they create a bottleneck, if dec
 <div class="sect5">
 <h6 id="_metamodels_and_ontologies">Metamodels and ontologies</h6>
 <div class="paragraph">
-<p>app v svc def&#8217;n</p>
+<p>app v svc def&#8217;n
+runs into domain driven design problems if not careful</p>
 </div>
 <div class="paragraph">
 <p>Canon law disputes</p>
+</div>
+<div class="paragraph">
+<p>"standard EA language and methodology is especially helpful in large, complex enterprises that are geographically dispersed, and which may have multiple social and work cultures that have promoted different ways of doing things." &lt;&lt;Bernard</p>
+</div>
+<div class="paragraph">
+<p>Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 1147-1149). AuthorHouse. Kindle Edition.</p>
 </div>
 </div>
 </div>
@@ -25706,6 +25711,12 @@ With regard to the nature of complex systems, it is not advisable to search for 
 &#8212; Bente et al<br>
 <cite>Collaborative Enterprise Architecture</cite>
 </div>
+</div>
+<div class="paragraph">
+<p><em>The goal of enterprise architecture is to act as a guide, perhaps a pathfinder, who takes the enterprise on a transformational journey—from an incoherent and complex world with line-of-business separation, product-specific stovepipes, legacy systems estate, and costly operation to a more rationally organized and useful state with multiservice, revenue-generating platforms and an efficient operational regime. On the way, radical surgeries may be required to eliminate duplication, reduce costs, improve reliability, and increase agility in the business. EA acts as a strategic foundation for business enablement.</em> <a href="#Bente2012">[Bente2012]</a> p9</p>
+</div>
+<div class="paragraph">
+<p>ugh - "radical surgeries" - risky with the human body which is relatively well understood&#8230;&#8203; need better quote.</p>
 </div>
 <div class="paragraph">
 <p>from bente: Anti-patterns in EA and architecture in general can be found, for instance, in Kruchten (2008), Mar and Spacey (2011),
@@ -25923,6 +25934,10 @@ We previously discussed the Business Analysis Body of Knowledge. Although they h
 </div>
 </div>
 <div class="sect4">
+<h5 id="_governmental_frameworks">Governmental frameworks</h5>
+
+</div>
+<div class="sect4">
 <h5 id="_industry_verticals">Industry verticals</h5>
 
 </div>
@@ -26092,8 +26107,23 @@ hard to argue with but evidence is limited</pre>
 <div class="ulist">
 <ul>
 <li>
-<p>Postscript: Thought experiment on complete mainstreaming of IT
-===== metamodels</p>
+<p>Postscript: Thought experiment on complete mainstreaming of IT</p>
+<div class="literalblock">
+<div class="content">
+<pre>===== EA and design thinking</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> Design thinking is encroaching on architecture. Enterprise design?
+_the sheer absurdity of undertaking something so ambitious, on the one hand, and, foolhardy, on the other, as any kind of intentional design of so complex and poorly (and even mis-) understood an entity as an organization in a context of rapid change._ &lt;&lt;Malan2010&gt;&gt;</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>===== metamodels</pre>
+</div>
+</div>
 <div class="literalblock">
 <div class="content">
 <pre>===== SAFE and architecture
@@ -26103,6 +26133,18 @@ Review SAFE on architecture, also Reinertsen</pre>
 <div class="literalblock">
 <div class="content">
 <pre>===== Sol Arch for EA</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>===== misc
+"Architecture of software is a collection of design decisions that are expensive to change." &lt;&lt;Ran2001&gt;&gt;</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[quote, Ruth Malan]
+For enduring competitive advantage, the organization needs to seek leverage across its products and/or services and to create strategic capabilities that are hard to imitate because they rely on a mix of process, technology, skills, resources, facilities, culture, and even history &lt;&lt;Malan2005&gt;&gt;</pre>
 </div>
 </div>
 </li>
@@ -27026,7 +27068,7 @@ All web references were archived into the author&#8217;s files on the indicated 
 <a href="#_footnoteref_9">9</a>. <em>Image credit <a href="https://www.flickr.com/photos/marckjerland/4633544440" class="bare">https://www.flickr.com/photos/marckjerland/4633544440</a>, downloaded 2016-09-20, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_10">
-<a href="#_footnoteref_10">10</a>. <em>Image credit <a href="https://www.flickr.com/photos/puliarfanita/6002022840" class="bare">https://www.flickr.com/photos/puliarfanita/6002022840</a> , downloaded 2016-09-22, commercial use permitted</em>
+<a href="#_footnoteref_10">10</a>. <em>Image credit <a href="https://www.flickr.com/photos/puliarfanita/6002022840" class="bare">https://www.flickr.com/photos/puliarfanita/6002022840</a>, downloaded 2016-09-22, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_11">
 <a href="#_footnoteref_11">11</a>. <em>Image credit <a href="https://www.flickr.com/photos/djs1021/101948321/" class="bare">https://www.flickr.com/photos/djs1021/101948321/</a>, downloaded 2016-09-19, commercial use permitted</em>
