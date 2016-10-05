@@ -75,16 +75,18 @@ Architecture has a similar emergence story, but for somewhat different reasons. 
 
 Nearly 100 years earlier, similar lessons had been learned by the Austrian, Prussian, and French militaries.
 
-.Franz Moritz Graf von Lacy, Austrian field marshall and pioneer of staff/line organization footnote:[Image credit https://en.wikipedia.org/wiki/Franz_Moritz_von_Lacy#/media/File:Count_Franz_Moritz_von_Lacy_(oil_on_canvas_portrait_HGM).jpg, downloaded 2016-10-04, labeled as public domain by Wikipedia]
+.Franz Moritz Graf von Lacy footnote:[Image credit https://en.wikipedia.org/wiki/Franz_Moritz_von_Lacy#/media/File:Count_Franz_Moritz_von_Lacy_(oil_on_canvas_portrait_HGM).jpg, downloaded 2016-10-04, labeled as public domain by Wikipedia]
 image::images/4.12-moritz.jpg[Moritz,300, float="left" ]
 
 In previous ages, nobles would assemble and fight for their King, but their armies were poorly coordinated, and disputes over strategy would often arise. Each army would have its own quartermaster, couriers, intelligence, supply chains, and the like. This was both inefficient, and ineffective: overall plans of battle could not be made or executed, and military operations were too often bungled.
 
-As fighting wars became (unfortunately) a larger and larger scale endeavor, the need to centralize certain capabilities became more and more obvious. This culminated in the late 1700s and early 1800s with the creation of "general staffs" that were responsible for coordination of planning and execution across the increasingly complex military operations. For example, the role of Frency staff officer Pierre-Joseph Bourcet under Napoleon is described thus:
+As fighting wars became (unfortunately) a larger and larger scale endeavor, the need to centralize certain capabilities became more and more obvious. This culminated in the late 1700s and early 1800s with the creation of "general staffs" that were responsible for coordination of planning and execution across the increasingly complex military operations. The Austrian field marshall  Franz Moritz Graf von Lacy was one of the pioneers of staff/line organization, which was soon copied by the French army under Napoleon Bonaparte.
+
+For example, the role of Napoleon's staff officer Pierre-Joseph Bourcet under Napoleon is described thus:
 
 _'On every occasion when an important decision had to be made Bourcet would write a memorandum in which he analyzed the situation and set forth in detail, with full explanations and reasons, the course which seemed to him best. In very many cases, his suggestions were adopted and were usually justified by success, and when they were rejected the results were seldom fortunate.'_ <<Kiley2001>>
 
-Why do obscure French and Austrian military officers have to do with today's digital organizations? Because "Many elements that have become integral parts of managerial economics and organizing sciences can be traced back" to military staff systems <<Millotat1992>>, p. 7. These include:
+Why do obscure French and Austrian military officers have to do with today's digital organizations? Because, as Christian Millotat notes, "[m]any elements that have become integral parts of managerial economics and organizing sciences can be traced back" to military staff systems (<<Millotat1992>>, p. 7). These include:
 
 * Collecting and combining knowledge so that decisions are as well informed as possible
 * Supporting specialized roles and functions (e.g. military engineers)
@@ -96,7 +98,7 @@ Of these reasons, EA clearly has a mission of collecting and combining knowledge
 * Human resources management
 * Legal services
 * Purchasing & vendor management (varies w/company and industry; for example in retail "merchandising" is a line function)
-* Information technology
+* Information technology (however, with digital transformation this is increasingly overlapping with R&D and driven directly by line management)
 * Facilities management
 * Strategic planning & forecasting
 
@@ -124,7 +126,18 @@ teams.
 [quote, Weill and Ross, Enterprise Architecture as Strategy]
 The operating model is the necessary level of business process integration and standardization for delivering goods and services to customers. Different companies have different levels of process integration across their business units (i.e., the extent to which business units share data). Integration enables end-to-end processing and a single face to the customer, but it forces a common understanding of data across diverse business units.
 
-For the purposes of this textbook, we define enterprise architecture's concerns as essentially the enterprise operating model: process, data, organizational capabilities, and systems. While some draw fine distinctions between the architecture and the operating model, it is difficult to see the value of doing so, as long as the architecture is not too technical.
+For the purposes of this textbook, we define enterprise architecture's concerns as essentially the enterprise operating model: process, data, organizational capabilities, and systems.
+
+.Author's note
+****
+While the concept of an "operating model" is somewhat loose, I believe there is a general consensus that it is distinct from a "business model." I also do not think that there is much value in distinguishing between the "enterprise architecture" and the "enterprise operating model," especially at the higher levels of the enterprise architecture.
+****
+
+Scott Bernard (author of _An Introduction to Enterprise Architecture_) claims that: [without enterprise architecture] "_...leadership will not have the ability to generate clear, consistent views of the overall enterprise on an ongoing basis, they won’t be able to effectively compare business units, and the locus of power for planning and decision-making will be at the line-of-business, program, and/or system owner levels-with significant differences in how things are done and high potential for overlapping or duplicative functions and resources._" <<Bernard2012>>, introduction.
+
+Now, truth be told, corporations compare business units all the time, on P&L and other enterprise metrics, *without* an architecture. If an enterprise is a holding company, by definition it is not seeking a common operating model. So, it is important to understand the role of enterprise architecture within the context of the enterprise strategy and business model, which remain distinct.
+
+But, assuming that some shared vision, intelligence, and services are part of the business model, the concept of an operating model is a powerful tool for categorizing critical information, and identifying redundancies, overlaps, and potential synergies.
 
 One of the most frequently used visualizations of enterprise architecture's concerns is the Zachman Framework:
 
@@ -143,10 +156,7 @@ We were exposed to the xref:data-modeling[data modeling] progression from concep
 
 We'll discuss the various types of architecture views and concerns in more detail in the next chapter section.
 
-.Author's note
-****
-While the concept of an "operating model" is somewhat loose, I believe there is a general consensus that it is distinct from a "business model."
-****
+====== Peer organizations
 
 The Zachman framework can be contrasted with the Business Model Canvas:
 
@@ -155,59 +165,51 @@ image::images/4.12-BM-OM.png[]
 
 This distinction helps us position the Enterprise Architecture group with respect to key partner organizations:
 
-* Corporate strategy
+* Organizational strategy
 * Program and investment management
-* IT infrastructure
+* Infrastructure and operations
 
+*Organizational strategy*
 
+The operating model needs to support the business model, and so therefore Enterprise Architecture needs a close and ongoing relationship with organizational strategists, whether they are themselves line or staff.
 
-Bernard claims: [without EA]...leadership will not have the ability to generate clear, consistent views of the overall enterprise on an ongoing basis, they won’t be able to effectively compare business units, and the locus of power for planning and decision-making will be at the line-of-business, program, and/or system owner levels-with significant differences in how things are done and high potential for overlapping or duplicative functions and resources.
+Defining digital strategies is a challenging topic; we have touched on it in xref:digital-context[Chapter 1], xref:product-mgmt-chap[Chapter 4], and Chapter 8. Further discussion at the enterprise level will be deferred to a future edition of this book.
 
-Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 456-459). AuthorHouse. Kindle Edition.
+*Program and investment management*
 
-Of course, corporations compare business units all the time, on P&L and other enterprise metrics, without an architecture. If an enterprise is a holding company, by definition it is not seeking a common operating model.
+Architecture and portfolio management need to be tied to the organization's investment management process. This may be easier said that done, given the silos that exist. As Scott Bernard notes, “Enterprise architecture tends to be viewed as a hostile takeover by program managers and executives who have previously had a lot of independence in developing solutions for their own requirements” (<<Bernard2012>>, case study scene 1).
 
-Parsimony. What is the value of saying that EA and EOM are distinct? We have too many abstractions.
+Many organizations have a long legacy of project-driven development, in which the operational consequences of the project were too often given short shrift. The resulting xref:technical-debt[technical debt] can be crippling. Now that there is more of a move towards "you build it, you run it" the operability aspects of systems are (perhaps) improving. However, ongoing scrutiny and management are still needed at the investment front end, if the enterprise is to manage important objectives like vendor leverage, minimizing technical debt, reducing investment redundancy, controlling the security perimeter, and keeping skills acquisition economical (more on this below in section on Enterprise Architecture value).
 
-====== Peer organizations
+*Infrastructure and operations*
 
-Architecture = intersection of technical management with investment, sourcing, information, governance
+Finally, the EA group often has a close relationship with infrastructure and operations groups. This is because in organizations where operations is a shared service, the risks and inefficiencies of technical fragmentation are often most apparent to the operations team.
 
-the business-IT alignment gap exists because there is a pervasive assumption that technology is a tactical rather than a strategic concern. <<???>>
+In organizations where operations is increasingly distributed to the application teams ("you build it, you run it") the above may be less true.
 
-model stability -- strat consults tend to swap out methods & frameworks as needed for the problem - this is good but no consistency
-
-arch is poorly quantified, limited line of sight to revenue & profitability
-
-Bezos: all service oriented
-
-will microservices be better? SOA finally done right?
-
-Architecture overreach - here, we restrict to OM. Business model questions are discussed throughout other chapters. But biz arch overlaps. Finance & competitive strat is not primarily EA, even BA.
-
-Logistics vs strategy
-
-* Architecture vs program/project
-projects tended to disregard - systems were more monolithic
-
-“Enterprise architecture tends to be viewed as a hostile takeover by program managers and executives who have previously had a lot of independence in developing solutions for their own requirements” <<Bernard2012>>
-
+Other staff organizations that may develop close relationships with enterprise architecture include xref:sourcing[vendor management and sourcing], xref:risk-management[risk management], and xref:security[security].
 
 ===== The value of EA
 
-Critical importance of an economic model
-
-Architecture HIPPOS
-
-Present master impact map & discuss step by step
-
+[quote, Scott Bernard]
 On the value side, EA is unique in its ability to promote enterprise-wide thinking about resource utilization. EA replaces the systems-level approaches to IT resource development that have characterized the last several decades, and has left many enterprises with stovepipe and/or duplicative IT resources. EA promotes the development of more efficient enterprise-wide common operating environments for business and technology, within which more capable and flexible business services and systems can be hosted. This in turn makes an enterprise more agile and able to respond to internal and external drivers of change, which promotes greater levels of competitiveness in the marketplace. <<Bernard2012>>
 
-The true measure of the value of a model is whether it actually influences behavior. Smith/Reinertsen 1998 p46.
-
-Instead of tapping into the existing knowledge of the organization the autonomous team is prone to reinvent the wheel, and the wheel that they reinvent will not always be superior to the one we are currently using. <<Reinertsen1997>> p 104
-
 Bernard, Scott A. (2012-08-13). An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 1113-1117). AuthorHouse. Kindle Edition.
+
+[quote, Bente et al, Collaborative Enterprise Architecture]
+Whether EA is perceived as a hygiene factor for the IT landscape or as a strategic foundation for business enablement, it is obliged to deliver value. As a hygiene factor, benefits from EA can be valued in terms of reduction in management escalations, emergency occurrences, and year-on-year operational expenses. As a strategic foundation, EA facilitates the deployment of new capabilities. This way it helps IT gain more business trust—and hence more funding for new IT projects. Unfortunately, these benefits are difficult to quantify on a short-term base. Therefore they need to be tracked over a sufficient time period and then be normalized to a common baseline. Only then can they serve as a sensible benchmark for measuring the success of EA. <<Bente2012>>
+
+Enterprise architecture often struggles to demonstrate clear, quantifiable value to the organization. Architects are usually among the most experienced and therefore expensive staff in the organization. While it may seem to make historical and intuitive sense that architecture as a staff function is necessary, demonstrating this takes some thought and effort.
+
+
+.Author's note
+****
+Some might say that architecture's value is "intangible." If you are tempted to say this, you should read Douglas Hubbard's _How to Measure Anything: Finding the Value of "Intangibles" in Business_ <<Hubbard2010>>.
+****
+
+The following model is a high level representation:
+
+
 
 Barnard asserted value:
 
@@ -217,20 +219,35 @@ Barnard asserted value:
 * Reducing headcount (e.g. in processes)
 * Improved communication
 
-Whether EA is perceived as a hygiene factor for the IT landscape or as a strategic foundation for business enablement, it is obliged to deliver value. As a hygiene factor, benefits from EA can be valued in terms of reduction in management escalations, emergency occurrences, and year-on-year operational expenses. As a strategic foundation, EA facilitates the deployment of new capabilities. This way it helps IT gain more business trust—and hence more funding for new IT projects. Unfortunately, these benefits are difficult to quantify on a short-term base. Therefore they need to be tracked over a sufficient time period and then be normalized to a common baseline. Only then can they serve as a sensible benchmark for measuring the success of EA. <<Bente2012>>
-
-Flexibility at high levels in the architecture comes from standardization at low levels in the architecture. Paradoxically, structure is the key to freedom. ibid 120
-
 "work not done"
 
 limiting options
 
+arch is poorly quantified, limited line of sight to revenue & profitability
+
+Critical importance of an economic model
+
+
+Present master impact map & discuss step by step
+
+Flexibility at high levels in the architecture comes from standardization at low levels in the architecture. Paradoxically, structure is the key to freedom. ibid 120
+
+Architecture HIPPOS
+
+
+
 ====== Reducing Cost of Delay
 need baseline COD (should we introduce this in Chapter 8? probably.)
+
+architecture can reduce CoD. architecture can increase CoD.
+
+anchor:technical-debt[]
 
 ====== Technical debt
 
 reinertsen critique of the concept
+
+Instead of tapping into the existing knowledge of the organization the autonomous team is prone to reinvent the wheel, and the wheel that they reinvent will not always be superior to the one we are currently using. <<Reinertsen1997>> p 104
 
 Scrum vs XP - Scrum as promoter of tech debt - inattention to practices... (blogs was reading 9/28/16 PM)
 
