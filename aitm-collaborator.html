@@ -25722,13 +25722,11 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <div class="paragraph">
 <p>Nearly 100 years earlier, similar lessons had been learned by the Austrian, Prussian, and French militaries.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock" style="float: left">
 <div class="content">
-<img src="images/4.12-moritz.jpg" alt="4.12 moritz">
+<img src="images/4.12-moritz.jpg" alt="Moritz" width="300">
 </div>
-</div>
-<div class="paragraph">
-<p><em>Franz Moritz Graf von Lacy, Austrian field marshall and pioneer of staff/line organization</em> <span class="footnote">[<a id="_footnoteref_21" class="footnote" href="#_footnote_21" title="View footnote.">21</a>]</span></p>
+<div class="title">Figure 1. Franz Moritz Graf von Lacy, Austrian field marshall and pioneer of staff/line organization <span class="footnote">[<a id="_footnoteref_21" class="footnote" href="#_footnote_21" title="View footnote.">21</a>]</span></div>
 </div>
 <div class="paragraph">
 <p>In previous ages, nobles would assemble and fight for their King, but their armies were poorly coordinated, and disputes over strategy would often arise. Each army would have its own quartermaster, couriers, intelligence, supply chains, and the like. This was both inefficient, and ineffective: overall plans of battle could not be made or executed, and military operations were too often bungled.</p>
@@ -25740,10 +25738,23 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <p><em>'On every occasion when an important decision had to be made Bourcet would write a memorandum in which he analyzed the situation and set forth in detail, with full explanations and reasons, the course which seemed to him best. In very many cases, his suggestions were adopted and were usually justified by success, and when they were rejected the results were seldom fortunate.'</em> <a href="#Kiley2001">[Kiley2001]</a></p>
 </div>
 <div class="paragraph">
-<p>Why do obscure French and Austrian military officers have to do with today&#8217;s digital organizations? Because "Many elements that have become integral parts of managerial economics and organizing sciences can be traced back" to military staff systems <a href="#Millotat1992">[Millotat1992]</a>, p. 7. Certainly, an Enterprise Architecture organization is a form of staff organization. We also see tensions similar to those between Enterprise Architecture and advocates of Agile methods. The challenges, debates, and conflicts have only changed in their content&#8230;&#8203; not their essential form.</p>
+<p>Why do obscure French and Austrian military officers have to do with today&#8217;s digital organizations? Because "Many elements that have become integral parts of managerial economics and organizing sciences can be traced back" to military staff systems <a href="#Millotat1992">[Millotat1992]</a>, p. 7. These include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Collecting and combining knowledge so that decisions are as well informed as possible</p>
+</li>
+<li>
+<p>Supporting specialized roles and functions (e.g. military engineers)</p>
+</li>
+<li>
+<p>Operating supply chains and other services that function best when shared</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Staff functions in the enterprise include planning, coordination, and operations; broadly speaking, and with key differences depending on the indsutry, the following are considered "staff":</p>
+<p>Of these reasons, EA clearly has a mission of collecting and combining knowledge to support decisionmaking. Therefore, an Enterprise Architecture organization can be seen as a form of staff organization. Staff functions in the enterprise include planning, coordination, and operations; broadly speaking, and with key differences depending on the indsutry, the following are considered "staff":</p>
 </div>
 <div class="ulist">
 <ul>
@@ -25809,7 +25820,10 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 </ul>
 </div>
 <div class="paragraph">
-<p>But in many cases, centralizing staff expertise and the definition of acceptable practices for a domain is still essential. We have seen echoes of this throughout our discussion of <a href="#product-v-function">matrix organizations</a> and even <a href="#feature-v-component">feature versus component</a>
+<p>In the history of line versus staff relations, we see tensions similar to those between Enterprise Architecture and advocates of Agile methods. The challenges, debates, and conflicts have only changed in their content&#8230;&#8203; not their essential form.</p>
+</div>
+<div class="paragraph">
+<p>But in many cases, centralizing staff expertise and the definition of acceptable practices for a domain is still essential. See the discussions of <a href="#product-v-function">matrix organizations</a> and even <a href="#feature-v-component">feature versus component</a>
 teams.</p>
 </div>
 </div>
@@ -25817,8 +25831,7 @@ teams.</p>
 <h6 id="_enterprise_architecture_and_the_operating_model">Enterprise architecture and the operating model</h6>
 <div class="quoteblock">
 <blockquote>
-The operating model is the necessary level of business process integration and standardization for delivering goods and services to customers. Different companies have different levels of process integration across
-their business units (i.e., the extent to which business units share data). Integration enables end-to-end processing and a single face to the customer, but it forces a common understanding of data across diverse business units.
+The operating model is the necessary level of business process integration and standardization for delivering goods and services to customers. Different companies have different levels of process integration across their business units (i.e., the extent to which business units share data). Integration enables end-to-end processing and a single face to the customer, but it forces a common understanding of data across diverse business units.
 </blockquote>
 <div class="attribution">
 &#8212; Weill and Ross<br>
@@ -25831,13 +25844,75 @@ their business units (i.e., the extent to which business units share data). Inte
 <div class="paragraph">
 <p>One of the most frequently used visualizations of enterprise architecture&#8217;s concerns is the Zachman Framework:</p>
 </div>
-<div class="literalblock">
+<div class="imageblock">
 <div class="content">
-<pre>BM vs OM - matrix</pre>
+<img src="images/4.12-zachman.png" alt="4.12 zachman">
+</div>
+<div class="title">Figure 2. A variation on the Zachman framework</div>
+</div>
+<div class="paragraph">
+<p><em>(loosely based on <a href="#Zachman1987">[Zachman1987]</a> and succeeding work.)</em></p>
+</div>
+<div class="paragraph">
+<p>We were exposed to the <a href="#data-modeling">data modeling</a> progression from conceptual to logical to physical data model in Chapter 11. The Zachman framework generalizes this progression to various views of importance to organizations, as shown in the columns:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>What</p>
+</li>
+<li>
+<p>How</p>
+</li>
+<li>
+<p>Where</p>
+</li>
+<li>
+<p>Who</p>
+</li>
+<li>
+<p>When</p>
+</li>
+<li>
+<p>Why</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>We&#8217;ll discuss the various types of architecture views and concerns in more detail in the next chapter section.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Author&#8217;s note</div>
+<div class="paragraph">
+<p>While the concept of an "operating model" is somewhat loose, I believe there is a general consensus that it is distinct from a "business model."</p>
+</div>
 </div>
 </div>
 <div class="paragraph">
-<p>as opposed to business model</p>
+<p>The Zachman framework can be contrasted with the Business Model Canvas:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/4.12-BM-OM.png" alt="4.12 BM OM">
+</div>
+<div class="title">Figure 3. Business model versus operating model</div>
+</div>
+<div class="paragraph">
+<p>This distinction helps us position the Enterprise Architecture group with respect to key partner organizations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Corporate strategy</p>
+</li>
+<li>
+<p>Program and investment management</p>
+</li>
+<li>
+<p>IT infrastructure</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>Bernard claims: [without EA]&#8230;&#8203;leadership will not have the ability to generate clear, consistent views of the overall enterprise on an ongoing basis, they won’t be able to effectively compare business units, and the locus of power for planning and decision-making will be at the line-of-business, program, and/or system owner levels-with significant differences in how things are done and high potential for overlapping or duplicative functions and resources.</p>
@@ -27742,6 +27817,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 </li>
 <li>
 <p><a id="Womack1990"></a>[Womack1990]: Womack, J. P.; Jones, D. T. &amp; Roos, D. (1990), <em>The machine that changed the world : based on the Massachusetts Institute of Technology 5-million dollar 5-year study on the future of the automobile</em>, Rawson Associates, New York</p>
+</li>
+<li>
+<p><a id="Zachman1987"></a>[Zachman1987]: Zachman, John. 1987. “Zachman Framework.” IBM Systems Journal 26 (3): 276–92.</p>
 </li>
 </ul>
 </div>
