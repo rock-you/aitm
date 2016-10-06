@@ -15798,6 +15798,11 @@ A holistic product-oriented approach contradicts a convenient over-simplificatio
 <div class="paragraph">
 <p>When this chapter is refactored to Investment, forward refs to Chapter 12 Portfolio Mgmt.</p>
 </div>
+<div class="literalblock">
+<div class="content">
+<pre>portfolio-level  xref:portfolio-CoD[Cost of Delay] as essential to defining execution management. &lt;&lt;Reinertsen1997&gt;&gt; pp.35-38.</pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -24261,6 +24266,9 @@ to <a href="#controls">controls</a> and regulations)</p>
 <div class="paragraph">
 <p>It is important to track trending over time, so that the organization understands if progress is being made.</p>
 </div>
+<div class="paragraph">
+<p><a id="records-mgmt"></a></p>
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -25567,22 +25575,11 @@ Computer architecture, like other architecture, is the art of determining the ne
 <cite>Planning a Computer System: Project Stretch</cite>
 </div>
 </div>
-<div class="quoteblock">
-<blockquote>
-Architecture represents the significant design decisions that shape a system, where significant is measured by cost of change.
-</blockquote>
-<div class="attribution">
-&#8212; Grady Booch
-</div>
+<div class="paragraph">
+<p>The word "architecture" is usually associated with physical construction: buildings, landscapes, etc. It was appropriated by systems engineers at IBM around 1960 <a href="#Buchholz1962">[Buchholz1962]</a> to describe the problems of designing complex information processing hardware and software. This leads to some confusion, and occasional questions from "real" architects as to why IT people are calling themselves "architects." Perhaps a different choice of word would have been advisable.</p>
 </div>
 <div class="paragraph">
-<p>"Architecture" is of course a word usually associated with physical construction: buildings, landscapes, etc. It was appropriated by systems engineers at IBM around 1960 to describe the problems of designing complex information processing hardware and software.</p>
-</div>
-<div class="paragraph">
-<p>This leads to some confusion, and occasional questions from "real" architects as to why IT people are calling themselves "architects." Perhaps a different choice of word would have been advisable.</p>
-</div>
-<div class="paragraph">
-<p>Regardless, the architecture concept is not something new or foreign. In our journey to date, we have covered:</p>
+<p>In our journey to date, we have covered:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -25626,13 +25623,13 @@ Architecture represents the significant design decisions that shape a system, wh
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Enterprise architecture is nothing but the unification of these topics into a common, formalized, scalable framework for understanding.</strong></p>
+<p>The architecture concept is not something new or foreign. <strong>Enterprise architecture is nothing but the unification of these topics into a common, formalized, scalable framework for understanding.</strong></p>
 </div>
 <div class="paragraph">
 <p>As we have progressed in our journey, and scaled our company up, all these areas have continued to evolve. Specialization emerges. You have people with deep experience in Cloud architectures, and people with deep experience in e-records management and compliance. You don&#8217;t have too many who are deep in both.</p>
 </div>
 <div class="paragraph">
-<p>Your product portfolio (internal and external) is now in the hundreds or thousands. Some were built with the latest technology, and others run on older technologies now perceived to be dead ends. But investing in rewriting them would not provide as much value as other uses of the funds, so you have to manage the risk of the older technology.</p>
+<p>Your product portfolio (internal and external) is now in the hundreds or thousands. Some were built with the latest technology, and others run on older technologies now perceived to be dead ends. But investing in rewriting or replatforming them would not provide as much value as other uses of the funds, so you have to manage the risk of the older technology.</p>
 </div>
 <div class="paragraph">
 <p>Investment decisions become harder. You&#8217;re far beyond the days when you had a one-product focus. You have multiple interacting products and multiple interacting teams, and the relationship between the teams and products is not one to one. Understanding the business case for the investment gets harder; when you have a thousand services over multiple business units, how do you know if someone is proposing a redundant new one?</p>
@@ -25645,6 +25642,14 @@ Architecture represents the significant design decisions that shape a system, wh
 </div>
 <div class="sect4">
 <h5 id="_defining_enterprise_architecture">Defining Enterprise Architecture</h5>
+<div class="quoteblock">
+<blockquote>
+The fundamental organization of a system embodied in its components, their relationships to each other, and to the environment, and the principles guiding its design and evolution.
+</blockquote>
+<div class="attribution">
+&#8212; ISO/IEC IEEE 42010
+</div>
+</div>
 <div class="quoteblock">
 <blockquote>
 The enterprise architecture is the organizing logic for business processes and IT infrastructure, reflecting the integration and standardization requirements of the company&#8217;s operating model. The enterprise architecture provides a long-term view of a company&#8217;s processes, systems, and technologies so that individual projects can build capabilities—not just fulfill immediate needs.
@@ -25664,7 +25669,7 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 </div>
 </div>
 <div class="paragraph">
-<p>There are numerous definitions of enterprise architecture. It can be defined as:</p>
+<p>There are numerous definitions of <em>enterprise architecture</em>. The examples above are typical. It can be defined as:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -25673,6 +25678,9 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 </li>
 <li>
 <p>an organizational capability</p>
+</li>
+<li>
+<p>a formalized program</p>
 </li>
 <li>
 <p>a professional discipline or set of practices</p>
@@ -25703,13 +25711,13 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <div class="ulist">
 <ul>
 <li>
-<p>The military concept of a "general staff" and line versus staff concept generally</p>
+<p>The line versus staff concept and its origins</p>
 </li>
 <li>
 <p>Contrasting the concepts of "business model" versus "operating model"</p>
 </li>
 <li>
-<p>The other major organizational units of interest to enterprise architecture, and some typical organizational approaches</p>
+<p>The other major organizational units of interest to enterprise architecture</p>
 </li>
 </ul>
 </div>
@@ -25760,7 +25768,7 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <p>Collecting and combining knowledge so that decisions are as well informed as possible</p>
 </li>
 <li>
-<p>Supporting specialized roles and functions (e.g. military engineers)</p>
+<p>Supporting specialized roles and functions (e.g. legal experts, engineers)</p>
 </li>
 <li>
 <p>Operating supply chains and other services that function best when shared</p>
@@ -25768,7 +25776,7 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 </ul>
 </div>
 <div class="paragraph">
-<p>Of these reasons, EA clearly has a mission of collecting and combining knowledge to support decisionmaking. Therefore, an Enterprise Architecture organization can be seen as a form of staff organization. Staff functions in the enterprise include planning, coordination, and operations; broadly speaking, and with key differences depending on the indsutry, the following are considered "staff":</p>
+<p>Staff functions in the enterprise include planning, coordination, and operations; broadly speaking, and with key differences depending on the industry, the following are considered "staff":</p>
 </div>
 <div class="ulist">
 <ul>
@@ -25815,7 +25823,7 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 </ul>
 </div>
 <div class="paragraph">
-<p>EA most often is seen as a specialized staff function within the larger staff function of IT management, and with the increased role of digital technology there are corresponding pressures to "move EA out of IT" as we&#8217;ll discuss below.</p>
+<p>Enterprise architecture has as a key part of its mission the task of collecting and combining knowledge to support decision-making. Therefore, an Enterprise Architecture organization can be seen as a form of staff organization. Most often it is seen as a specialized staff function within the larger staff function of IT management, and with the increased role of digital technology there are corresponding pressures to "move EA out of IT" as we&#8217;ll discuss below.</p>
 </div>
 <div class="paragraph">
 <p>The classic line/staff division is a powerful concept, pervasive throughout organizational theory. But it has important limitations:</p>
@@ -25823,13 +25831,13 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <div class="ulist">
 <ul>
 <li>
-<p>Staff organizations can become insular and self-serving, and indeed can accumulate power in dangerous and unaccountable ways. For this reason, officers are rotated between line and staff positions in the US military.</p>
+<p>Staff organizations can "lose touch," become insular and self-serving, and indeed accumulate power in dangerous and unaccountable ways. For this reason, officers are rotated between line and staff positions in the US military.</p>
 </li>
 <li>
-<p>Staff "expertise" may matter less and less in complex and chaotic environments requiring experimental and adaptive approaches.</p>
+<p>Staff "expertise" may matter less and less in <a href="#complex-systems">complex and chaotic</a> environments requiring experimental and adaptive approaches.</p>
 </li>
 <li>
-<p>If a feedback loop involves both line and staff organizations, it risks being delayed.</p>
+<p>If a <a href="#2.00.01-feedback">feedback</a> loop involves both line and staff organizations, it risks being delayed. The delay waiting for "headquarters approvals" has been a common theme in line/staff organizations.</p>
 </li>
 </ul>
 </div>
@@ -25837,8 +25845,7 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <p>In the history of line versus staff relations, we see tensions similar to those between Enterprise Architecture and advocates of Agile methods. The challenges, debates, and conflicts have only changed in their content&#8230;&#8203; not their essential form.</p>
 </div>
 <div class="paragraph">
-<p>But in many cases, centralizing staff expertise and the definition of acceptable practices for a domain is still essential. See the discussions of <a href="#product-v-function">matrix organizations</a> and even <a href="#feature-v-component">feature versus component</a>
-teams.</p>
+<p>But in many cases, centralizing staff expertise and the definition of acceptable practices for a domain is still essential. See the discussion of <a href="#product-v-function">matrix organizations</a> and even <a href="#feature-v-component">feature versus component</a> teams.</p>
 </div>
 </div>
 <div class="sect5">
@@ -25859,7 +25866,7 @@ The operating model is the necessary level of business process integration and s
 <div class="content">
 <div class="title">Author&#8217;s note</div>
 <div class="paragraph">
-<p>While the concept of an "operating model" is somewhat loose, I believe there is a general consensus that it is distinct from a "business model." I also do not think that there is much value in distinguishing between the "enterprise architecture" and the "enterprise operating model," especially at the higher levels of the enterprise architecture.</p>
+<p>While the concept of an "operating model" is somewhat loose, I believe there is a general consensus that it is distinct from a "business model." I also do not think that there is much value in distinguishing between the "enterprise architecture" (as an artifact) and the "enterprise operating model," especially at the higher levels of the enterprise architecture.</p>
 </div>
 </div>
 </div>
@@ -25867,10 +25874,10 @@ The operating model is the necessary level of business process integration and s
 <p>Scott Bernard (author of <em>An Introduction to Enterprise Architecture</em>) claims that: [without enterprise architecture] "<em>&#8230;&#8203;leadership will not have the ability to generate clear, consistent views of the overall enterprise on an ongoing basis, they won’t be able to effectively compare business units, and the locus of power for planning and decision-making will be at the line-of-business, program, and/or system owner levels-with significant differences in how things are done and high potential for overlapping or duplicative functions and resources.</em>" <a href="#Bernard2012">[Bernard2012]</a>, introduction.</p>
 </div>
 <div class="paragraph">
-<p>Now, truth be told, corporations compare business units all the time, on P&amp;L and other enterprise metrics, <strong>without</strong> an architecture. If an enterprise is a holding company, by definition it is not seeking a common operating model. So, it is important to understand the role of enterprise architecture within the context of the enterprise strategy and business model, which remain distinct.</p>
+<p>Now, truth be told, corporations compare business units all the time, on profit and loss and other enterprise metrics, <strong>without</strong> an architecture. If an enterprise is a holding company, by definition it is not seeking a common operating model. So, it is important to understand the role of enterprise architecture within the context of the enterprise strategy and business model, which remain distinct.</p>
 </div>
 <div class="paragraph">
-<p>But, assuming that some shared vision, intelligence, and services are part of the business model, the concept of an operating model is a powerful tool for categorizing critical information, and identifying redundancies, overlaps, and potential synergies.</p>
+<p>But, assuming that some shared vision, intelligence, economies of scale, and shared services are part of the business model, the concept of an operating model is a powerful tool for categorizing critical information, and identifying redundancies, overlaps, and potential synergies.</p>
 </div>
 <div class="paragraph">
 <p>One of the most frequently used visualizations of enterprise architecture&#8217;s concerns is the Zachman Framework:</p>
@@ -26031,13 +26038,13 @@ As a hygiene factor, benefits from EA can be valued in terms of reduction in man
 <div class="ulist">
 <ul>
 <li>
-<p>A reduced technology portfolio can and should result in more favorable vendor terms, improved support, improved security, reduced IT staffing spend, and potentially reduced development time</p>
+<p>A reduced technology portfolio can and should result in improved <a href="#it-sourcing">sourcing</a>, improved support, improved security, reduced IT staffing spend, and potentially reduced development time. For example, vendors may offer more favorable terms when their products are preferred standards throughout an organization. A smaller product portfolio is easier to  <a href="#sourcing-and-security">secure</a>.</p>
 </li>
 <li>
-<p>Better understanding of the current estate should reduce investigation times and outages, and reduce the risk of regulatory violations</p>
+<p>Better understanding of the current estate should reduce investigation times and outages, and reduce the risk of regulatory violations. For example, if regulators require evidence that employee medical <a href="#records-mgmt">records</a> have not been removed from the country, architecture&#8217;s curating of that information will expedite <a href="#compliance">compliance</a> response.</p>
 </li>
 <li>
-<p>Ensuring systems are adaptable (e.g. they have service interfaces) and resilient (they are designed for operability) should improve both time to market and ultimately effectiveness in customer acquisition and retention.</p>
+<p>Ensuring systems are adaptable (e.g. they have service interfaces) and resilient (they are designed for operability) should improve both <a href="#cost-of-delay">time to market</a> and ultimately effectiveness in customer acquisition and retention.</p>
 </li>
 </ul>
 </div>
@@ -26065,19 +26072,36 @@ As a hygiene factor, benefits from EA can be valued in terms of reduction in man
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p><a id="portfolio-CoD"></a></p>
+</div>
 <div class="sect5">
 <h6 id="_reducing_cost_of_delay">Reducing Cost of Delay</h6>
 <div class="paragraph">
-<p>We have covered the concept of <a href="#cost-of-delay">Cost of Delay</a> previously, at the level of product feature. However, this powerful concept can also be applied at higher levels.</p>
+<p>We have covered the concept of <a href="#cost-of-delay">Cost of Delay</a> previously, at the team and product level. However, this powerful concept can also be applied at higher levels. Cost of Delay is not a concept familiar to most architects. It poses two important challenges:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>How can architecture help reduce Cost of Delay within the product portfolio?</p>
+</li>
+<li>
+<p>How can architecture not, itself, <strong>introduce</strong> un-economical Cost of Delay?</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Cost of Delay is not a concept familiar to most architects, but</p>
+<p>As we&#8217;ve discussed previously, the definition of Cost of Delay is intuitive. It is the opportunity cost of <strong>not</strong> having a given product or service available for use: the foregone revenues, the cost of the workarounds and inefficiencies. If the Architecture process becomes the critical path for a product or service’s release (a common experience), then the Architecture process is responsible for that product’s or services’ Cost of Delay.</p>
 </div>
 <div class="paragraph">
-<p>need baseline COD (should we introduce this in Chapter 8? probably.)</p>
+<p>Cost of Delay can take various forms, some of the significant. For example: suppose there is a need to demonstrate a product to key clients at a trade show. This could be the company’s best opportunity to develop business; the sales team estimates $12 million in funnel opportunities based on previous experience that should result in at least $2 million in sales in the year, with projections of another $1 million in maintenance and renewals.
+However, if the product is not ready, these benefits will not materialize. If everything else is ready, but the Architecture process is delaying product readiness, then the Architecture process is incurring $2 million in the cost of delay. This is bad.  The Architecture process is clearly impacting significant business objectives and revenue.</p>
 </div>
 <div class="paragraph">
-<p>architecture can reduce CoD. architecture can increase CoD.</p>
+<p>But the question still needs to be asked, “what benefits do we recieve from having an Architecture process?” We discussed such benefits above. Are these benefits adding up to $2 million a year? No? Then your Architecture process does not make good economic sense.</p>
+</div>
+<div class="paragraph">
+<p>Quantifying these benefits across a portfolio is difficult, but should be attempted. Cost of Delay can and should be calculated at the portfolio level, and this can provide "enterprise-level decision rules" that can help an organization understand the cost and value of operating model changes (<a href="#Reinertsen1997">[Reinertsen1997]</a>, pp. 35-38) including the establishment of Enterprise Architecture itself. We&#8217;ll work through <a href="#TLM-CoD-worked">an example</a> in a future chapter section.</p>
 </div>
 <div class="paragraph">
 <p><a id="technical-debt"></a></p>
@@ -26085,17 +26109,20 @@ As a hygiene factor, benefits from EA can be valued in terms of reduction in man
 </div>
 <div class="sect5">
 <h6 id="_technical_debt">Technical debt</h6>
-<div class="paragraph">
-<p>reinertsen critique of the concept</p>
+<div class="quoteblock">
+<blockquote>
+Although immature code may work fine and be completely acceptable to the customer, excess quantities will make a program unmasterable, leading to extreme specialization of programmers and finally an inflexible product. Shipping first time code is like going into debt. A little debt speeds development so long as it is paid back promptly with a rewrite&#8230;&#8203; The danger occurs when the debt is not repaid. Every minute spent on not-quite-right code counts as interest on that debt. Entire engineering organizations can be brought to a stand-still under the debt load of an unconsolidated implementation&#8230;&#8203;
+</blockquote>
+<div class="attribution">
+&#8212; Ward Cunningham<br>
+<cite>OOPSLA '92</cite>
+</div>
 </div>
 <div class="paragraph">
-<p>Instead of tapping into the existing knowledge of the organization the autonomous team is prone to reinvent the wheel, and the wheel that they reinvent will not always be superior to the one we are currently using. <a href="#Reinertsen1997">[Reinertsen1997]</a> p 104</p>
+<p>Technical debt is a metaphor first introduced by Ward Cunningham <a href="#Cunningham1992">[Cunningham1992]</a> in the context of software, widely discussed in the industry. It can be applied more broadly at the portfolio level, and in that sense is sometimes discussed in enterprise architecture. Debt exists in the form of obsolete products and technologies; redundant capabilities and systems; interfaces tightly coupled where they should be loose and open; and many other forms.</p>
 </div>
 <div class="paragraph">
-<p>Scrum vs XP - Scrum as promoter of tech debt - inattention to practices&#8230;&#8203; (blogs was reading 9/28/16 PM)</p>
-</div>
-<div class="paragraph">
-<p>how does it monetize?</p>
+<p>Technical debt, like Cost of Delay, can and should be quantified. We&#8217;ll discuss approaches to that in the chapter section on <a href="#portfolio-management">portfolio management</a>.</p>
 </div>
 </div>
 </div>
@@ -26119,6 +26146,20 @@ As a hygiene factor, benefits from EA can be valued in terms of reduction in man
 </div>
 <div class="sect4">
 <h5 id="_business_architecture">Business architecture</h5>
+<div class="paragraph">
+<p>Business architecture offers views of the business that are un
+available from other sources, including IT. Business architecture
+can tell you what is being done, by which business units, for cer
+tain customers, involving various products, via certain processes,
+involving selected business information. Business
+architecture
+generated blueprints serve as the basis for root cause analysis of
+critical business requirements while providing the foundation for
+establishing a solution-oriented roadmap that leaves the specula
+tion and guesswork by the roadside. In a word, business architec
+ture delivers "transparency" to a wide variety of internal teams,
+roles and business units. Ulrich p 195</p>
+</div>
 <div class="paragraph">
 <p>The repeatable development of a
 structured,
@@ -26178,7 +26219,14 @@ Technology product</p>
 <h5 id="_solutions_architecture">Solutions architecture</h5>
 <div class="sect5">
 <h6 id="_software_architecture">Software architecture</h6>
-
+<div class="quoteblock">
+<blockquote>
+Architecture represents the significant design decisions that shape a system, where significant is measured by cost of change.
+</blockquote>
+<div class="attribution">
+&#8212; Grady Booch
+</div>
+</div>
 </div>
 <div class="sect5">
 <h6 id="__coding_architects">"Coding architects?"</h6>
@@ -26615,6 +26663,9 @@ example of antipatterns</p>
 <div class="sect4">
 <h5 id="_the_hubris_of_agile">The hubris of Agile</h5>
 <div class="paragraph">
+<p>Instead of tapping into the existing knowledge of the organization the autonomous team is prone to reinvent the wheel, and the wheel that they reinvent will not always be superior to the one we are currently using. <a href="#Reinertsen1997">[Reinertsen1997]</a> p 104</p>
+</div>
+<div class="paragraph">
 <p><a href="https://philippe.kruchten.com/2011/02/13/the-elephants-in-the-agile-room/" class="bare">https://philippe.kruchten.com/2011/02/13/the-elephants-in-the-agile-room/</a></p>
 </div>
 <div class="paragraph">
@@ -26694,6 +26745,9 @@ example of antipatterns</p>
 <div class="paragraph">
 <p>we can assess the degree to which architecture is influencing real choices</p>
 </div>
+<div class="paragraph">
+<p><a id="TLM-CoD-worked"></a></p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_architecture_queues_and_cost_of_delay">Architecture, queues, and Cost of Delay</h5>
@@ -26769,7 +26823,7 @@ We previously discussed the Business Analysis Body of Knowledge. Although they h
 <div class="sect4">
 <h5 id="_archimate">Archimate</h5>
 <div class="paragraph">
-<p>Not just a drawing spec&#8230;&#8203;</p>
+<p>Not just a drawing spec&#8230;&#8203; as a simplification of Zachman, more practical</p>
 </div>
 </div>
 <div class="sect4">
@@ -26778,7 +26832,9 @@ We previously discussed the Business Analysis Body of Knowledge. Although they h
 </div>
 <div class="sect4">
 <h5 id="_industry_verticals">Industry verticals</h5>
-
+<div class="paragraph">
+<p><a id="portfolio-management"></a></p>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -26918,19 +26974,35 @@ Application customer feedback</p>
 <pre>===== digital strategy</pre>
 </div>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre> ===== complex systems
-* Describe Snowden's Cynefin and its major elements
-* complexity (w/r/t Burgess)
-* stability, state, etc
-* complex system failures (Allspaw sidebar?)
-* antifragility
-* Cynefin
-* self-steering, autopoeisis
-* post-industrial</pre>
+<div class="paragraph">
+<p><a id="complex-systems"></a>
+ ===== complex systems</p>
 </div>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Describe Snowden&#8217;s Cynefin and its major elements</p>
+</li>
+<li>
+<p>complexity (w/r/t Burgess)</p>
+</li>
+<li>
+<p>stability, state, etc</p>
+</li>
+<li>
+<p>complex system failures (Allspaw sidebar?)</p>
+</li>
+<li>
+<p>antifragility</p>
+</li>
+<li>
+<p>Cynefin</p>
+</li>
+<li>
+<p>self-steering, autopoeisis</p>
+</li>
+<li>
+<p>post-industrial</p>
 <div class="literalblock">
 <div class="content">
 <pre>is EA using the right tools? systems theory, semantics vs dynamics.</pre>
@@ -26941,6 +27013,9 @@ Application customer feedback</p>
 <pre> ====== EA as systems thinking
 hard to argue with but evidence is limited</pre>
 </div>
+</div>
+</li>
+</ul>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -27263,6 +27338,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 <p><a id="Brustein2013"></a>[Brustein2013]: Brustein, Joshua. 2013. “Microsoft Kills Its Hated Stack Rankings. Does Anyone Do Employee Reviews Right?” Bloomberg Business Week. <a href="http://www.bloomberg.com/news/articles/2013-11-13/microsoft-kills-its-hated-stack-rankings-dot-does-anyone-do-employee-reviews-right" class="bare">http://www.bloomberg.com/news/articles/2013-11-13/microsoft-kills-its-hated-stack-rankings-dot-does-anyone-do-employee-reviews-right</a> (March 5, 2016).</p>
 </li>
 <li>
+<p><a id="Buchholz1962"></a>[Buchholz1962]: Buchholz, Werner. 1962. Planning a Computer System: Project Stretch. New York: McGraw-Hill Book Company, Inc.</p>
+</li>
+<li>
 <p><a id="Buckingham2015"></a>[Buckingham2015]: Buckingham, Marcus, and Ashley Goodall. 2015. “Reinventing Performance Management.” Harvard Business Review 93(4): 40–50. <a href="https://hbr.org/2015/04/reinventing-performance-management" class="bare">https://hbr.org/2015/04/reinventing-performance-management</a>.</p>
 </li>
 <li>
@@ -27339,6 +27417,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 </li>
 <li>
 <p><a id="Csikszentmihalyi1990"></a>[Csikszentmihalyi1990]: Csikszentmihalyi, M. (1990). Flow : the psychology of optimal experience. New York, Harper &amp; Row.</p>
+</li>
+<li>
+<p><a id="Cunningham1992"></a>[Cunningham1992]: Cunningham, Ward. 1992. “Experience Report: The WyCash Portfolio Management System.” OOPSLA ’92. <a href="http://c2.com/doc/oopsla92.html" class="bare">http://c2.com/doc/oopsla92.html</a>. Accessed 2016-10-6.</p>
 </li>
 <li>
 <p><a id="DAMA2009"></a>[DAMA2009]: Data Management Association, The. 2009. The DAMA Guide to The Data Management Body of Knowledge (DAMA-DMBOK Guide). Bradley Beach, NJ: Technics Publications, LLC.</p>
@@ -27534,6 +27615,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 </li>
 <li>
 <p><a id="ISO2009"></a>[ISO2009]: ISO/IEC. 2009. “ISO 31000:2009 - Risk Management.”</p>
+</li>
+<li>
+<p><a id="ISO2011"></a>[ISO2011]: ISO/IEC/IEEE. 2011. “ISO/IEC/IEEE 42010:2011 - Systems and Software Engineering&#8201;&#8212;&#8201;Architecture Description.” Vol. 2011. doi:10.1109/IEEESTD.2011.6129467.</p>
 </li>
 <li>
 <p><a id="Izrailevsky2011"></a>[Izrailevsky2011]: Izrailevsky, Y., &amp; Tseitlin, A. (2011). The Netflix Simian Army. Retrieved May 4, 2016, from <a href="http://techblog.netflix.com/2011/07/netflix-simian-army.html" class="bare">http://techblog.netflix.com/2011/07/netflix-simian-army.html</a></p>
