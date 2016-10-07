@@ -667,7 +667,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_why_work_management">Why work management?</a>
 <ul class="sectlevel4">
-<li><a href="#_queuing_theory_and_limiting_work_in_process">Queuing theory and limiting work in process</a></li>
+<li><a href="#_queues_and_limiting_work_in_process">Queues and limiting work in process</a></li>
 </ul>
 </li>
 <li><a href="#_introducing_kanban">Introducing Kanban</a>
@@ -8228,6 +8228,9 @@ As two more assistants were added, however, coordination problems did arise. One
 <p>The help desk and the "ticket"</p>
 </li>
 <li>
+<p>Lean product management</p>
+</li>
+<li>
 <p>Advanced topics</p>
 <div class="ulist">
 <ul>
@@ -8257,8 +8260,10 @@ As two more assistants were added, however, coordination problems did arise. One
 <p>Define Kanban and identify its key practices</p>
 </li>
 <li>
-<p>Compare and contrast Scrum and Kanban
-*</p>
+<p>Compare and contrast Scrum and Kanban</p>
+</li>
+<li>
+<p>Understand concepts from Lean Product Management</p>
 </li>
 </ul>
 </div>
@@ -8291,13 +8296,14 @@ As two more assistants were added, however, coordination problems did arise. One
 <div class="paragraph">
 <p>In this situation, each person has their own “mental model” of what needs to be done, and their own tracking mechanism. We don’t know how the work is being transmitted: emails, phone calls, hallway conversations (”Say Sara, there is an issue with Customer X’s bill, can you please look into it?”)</p>
 </div>
-<div class="paragraph">
-<p>But what happens when there are three of you? You ask coworker B to do something and in order to complete it she needs something from coworker C, whom you are also asking to complete tasks. As an organization scales, this can easily start to become like the children&#8217;s game of <a href="http://www.wikihow.com/Play-the-Telephone-Game">“telephone”</a>:</p>
-</div>
-<div class="literalblock">
+<div class="imageblock" style="float: right">
 <div class="content">
-<pre>broken image::http://redeapp.com/images/blog/WordofMouth.jpg[]</pre>
+<img src="images/2.05-handoff.jpg" alt="Handoff">
 </div>
+<div class="title">Figure 1. Task handoffs present risk <span class="footnote">[<a id="_footnoteref_13" class="footnote" href="#_footnote_13" title="View footnote.">13</a>]</span></div>
+</div>
+<div class="paragraph">
+<p>But what happens when there are three of you? You ask coworker B to do something and in order to complete it she needs something from coworker C, whom you are also asking to complete tasks. As an organization scales, this can easily lead to confusion and "dropped balls."</p>
 </div>
 <div class="paragraph">
 <p>At some point, you need to formalize your model of the work, how it is described, and how it flows. This is such a fundamental problem in human society that many different systems, tools, and processes have been developed over the centuries to address it.</p>
@@ -8324,7 +8330,7 @@ Task management is the process of managing a task through its life cycle. It inv
 <p>Notice also that the artifact - the ticket, the post-it note - is <strong>not</strong> the actual task, which is an intangible, consensus concept. It is a <em>representation</em> of this intangible "intent to perform." We will discuss these issues of representation further in Chapter 11.</p>
 </div>
 <div class="paragraph">
-<p>A complex IT-based system is not needed! (Nor for that matter a complex process framework, such as ITIL. This author sees little value in using such frameworks at this stage of evolution.)</p>
+<p>A complex IT-based system is not needed! (Nor for that matter a complex process framework, such as <a href="#ITIL">ITIL</a>. There is risk in using such frameworks at this stage of evolution - they add too much overhead for your level of growth.)</p>
 </div>
 <div class="paragraph">
 <p>It&#8217;s also still too early for formal project management. The "project team" would be most or all of the organization, so what would be the point?</p>
@@ -8358,24 +8364,69 @@ Task management is the process of managing a task through its life cycle. It inv
 <p><a id="queuing"></a></p>
 </div>
 <div class="sect4">
-<h5 id="_queuing_theory_and_limiting_work_in_process">Queuing theory and limiting work in process</h5>
-<div class="literalblock">
-<div class="content">
-<pre>Mentioned Reinertsen in last chapter
-Product development is invisible WIP
-Digital product mgmt - doubly so</pre>
+<h5 id="_queues_and_limiting_work_in_process">Queues and limiting work in process</h5>
+<div class="quoteblock">
+<blockquote>
+Queues matter because they are economically important, they are
+poorly managed, and they have the potential to be much better man
+aged. Queues profoundly affect the economics of product devel
+opment. They cause valuable work products to sit idle, waiting to
+access busy resources. This idle time increases inventory, which is
+the root cause of many other economic problems&#8230;&#8203;queues hurt cycle time, quality, and
+efficiency.
+</blockquote>
+<div class="attribution">
+&#8212; Don Reinertsen<br>
+<cite>Principles of Product Development Flow</cite>
 </div>
+</div>
+<div id="queuing" class="imageblock" style="float: right">
+<div class="content">
+<img src="images/2.05-queue.jpg" alt="alt text" width="300" height="200">
+</div>
+<div class="title">Figure 2. A queue <span class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</span></div>
 </div>
 <div class="paragraph">
-<p>At this time, we’ll foreshadow some material to be covered more in depth in Section 3.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>correct this</pre>
-</div>
+<p>Even at this stage of our evolution, with just one co-located collaborative team, it’s important to consider work in progress and how to limit it. One topic we will emphasize throughout the rest of this book is <em>queuing</em>.</p>
 </div>
 <div class="paragraph">
-<p>But even at this stage of our evolution, with just one co-located collaborative team, it’s important to consider work in progress and how to limit it. We’ll touch on the queuing theory in section 3. For now, some rules of thumb are advisable:</p>
+<p>What is a queue? A queue, intuitively, is a collection of tasks to be done, being serviced by some worker or resource in some sequence.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+Queuing theory is an important branch of mathematics used extensively in computing, operations research, networking, and other fields. It&#8217;s a topic getting much attention of late in the Agile and related movements, especially as it relates to team productivity.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Lean manufacturing has been an important movement throughout the 20th century, and one of its central principles is to limit work in process. Work in process is obvious on a shop floor, because physical raw materials (inventory) are quite visible.</p>
+</div>
+<div id="wip" class="imageblock" style="float: left">
+<div class="content">
+<img src="images/2.05-wip.jpg" alt="alt text" width="300" height="200">
+</div>
+<div class="title">Figure 3. Physical Work in Process <span class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</span></div>
+</div>
+<div class="paragraph">
+<p>Don Reinertsen, quoted above, developed the insight that product design and development had an <strong>invisible</strong> inventory of "Work in Process" that he called Design in Process (DIP). Just as managing physical work in process on the factory floor is key to a factory&#8217;s success, so correctly understanding and managing design in process is essential to all kinds of research and development organizations&#8201;&#8212;&#8201;<strong>including digital product development.</strong> In fact, because digital systems are largely invisible even when finished, understanding their work in process is even more challenging.</p>
+</div>
+<div class="paragraph">
+<p>It is easy and tempting for a product development team to accumulate excessive amounts of work in process. And, to some degree, having a rich backlog of ideas is an asset. But, just as some inventory (e.g. groceries) is perishable, so are design ideas. They have a limited time in which they might be relevant to a customer or a market. Therefore, accumulating too many of them at any point in time can be wasteful.</p>
+</div>
+<div class="paragraph">
+<p>What does this have to do with queuing? Design in process is one form of queue seen in the digital organization. Other forms include unplanned work (incidents and defects), implementation work, and many other concepts we&#8217;ll discuss in this chapter.</p>
+</div>
+<div class="paragraph">
+<p>But at the end of the day, whether it is a "Requirement," a "User Story," an "Epic," "Defect,", "Issue," or "Service Request," it&#8217;s <strong>all just work.</strong> It needs to be logged, prioritized, assigned, and tracked to completion. Queues are the fundamental concept for doing this, and it&#8217;s critical that digital management specialists understand this.</p>
+</div>
+<div class="paragraph">
+<p>We will revisit the topic of queuing in Chapter 9. For now, some rules of thumb:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -8880,11 +8931,6 @@ As a “service desk,” it may expand its purview to accepting provisioning or 
 </div>
 <div class="sect3">
 <h4 id="_lean_lean_product_development_and_don_reinertsen">Lean, Lean product development, and Don Reinertsen</h4>
-<div class="literalblock">
-<div class="content">
-<pre>todo: move execution-oriented aspects of Reinertsen to chapter 5</pre>
-</div>
-</div>
 <div class="paragraph">
 <p>Often, IT professionals resist drawing lessons from non-IT fields, because of a perception (only partially true) that these other fields (especially manufacturing) are “deterministic” while IT systems development is too “uncertain.”</p>
 </div>
@@ -8974,7 +9020,7 @@ Never confuse production with product development. The approaches, measures, and
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/2.04-books.png" alt="2.04 books">
+<img src="images/2.05-books.png" alt="2.05 books">
 </div>
 </div>
 <div class="paragraph">
@@ -8982,7 +9028,7 @@ Never confuse production with product development. The approaches, measures, and
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/2.04-books-dr.png" alt="2.04 books dr">
+<img src="images/2.05-books-dr.png" alt="2.05 books dr">
 </div>
 </div>
 <div class="paragraph">
@@ -9024,7 +9070,7 @@ Never confuse production with product development. The approaches, measures, and
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/2.04-pyramid.png" alt="2.04 pyramid">
+<img src="images/2.05-pyramid.png" alt="2.05 pyramid">
 </div>
 </div>
 <div class="literalblock">
@@ -23209,7 +23255,7 @@ No enterprise can be effective without high quality data.
 </div>
 </div>
 <div class="paragraph">
-<p><em>How many trees?</em> <span class="footnote">[<a id="_footnoteref_13" class="footnote" href="#_footnote_13" title="View footnote.">13</a>]</span></p>
+<p><em>How many trees?</em> <span class="footnote">[<a id="_footnoteref_14" class="footnote" href="#_footnote_14" title="View footnote.">14</a>]</span></p>
 </div>
 <div class="paragraph">
 <p>Someone might tell you that this is the number of trees on your neighbor&#8217;s farm. That makes all the difference. But wait - you know for a fact that there are many more trees than 12! You inquire further and find out it is actually the number of producing apple trees, a very different concept.</p>
@@ -23257,7 +23303,7 @@ A message to mapmakers: Highways are not painted red, rivers don&#8217;t have co
 </div>
 </div>
 <div class="paragraph">
-<p><em>Sumerian cuneiform</em> <span class="footnote">[<a id="_footnoteref_14" class="footnote" href="#_footnote_14" title="View footnote.">14</a>]</span></p>
+<p><em>Sumerian cuneiform</em> <span class="footnote">[<a id="_footnoteref_15" class="footnote" href="#_footnote_15" title="View footnote.">15</a>]</span></p>
 </div>
 <div class="paragraph">
 <p>At around the same time as the Sumerians, the Inca empire in what is now Peru [?] also started to represent information. They used a radically different approach from the Sumerians: carefully knotted ropes:</p>
@@ -23268,7 +23314,7 @@ A message to mapmakers: Highways are not painted red, rivers don&#8217;t have co
 </div>
 </div>
 <div class="paragraph">
-<p><em>Inca quipu</em> <span class="footnote">[<a id="_footnoteref_15" class="footnote" href="#_footnote_15" title="View footnote.">15</a>]</span></p>
+<p><em>Inca quipu</em> <span class="footnote">[<a id="_footnoteref_16" class="footnote" href="#_footnote_16" title="View footnote.">16</a>]</span></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -23324,7 +23370,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 </div>
 </div>
 <div class="paragraph">
-<p><em>Could you keep track of what people owe you by memory?</em> <span class="footnote">[<a id="_footnoteref_16" class="footnote" href="#_footnote_16" title="View footnote.">16</a>]</span></p>
+<p><em>Could you keep track of what people owe you by memory?</em> <span class="footnote">[<a id="_footnoteref_17" class="footnote" href="#_footnote_17" title="View footnote.">17</a>]</span></p>
 </div>
 <div class="paragraph">
 <p>As the town grows, and your customers increase, you grow increasingly uncertain as to whether they all are paying you what they owe. You purchase a notebook and a pen (today&#8217;s equivalent of clay tablets or knotted ropes) and start writing down the amounts owed you.</p>
@@ -23409,7 +23455,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 </div>
 </div>
 <div class="paragraph">
-<p><em>Babbage Difference Engine, an advanced mechanical calculating machine</em> <span class="footnote">[<a id="_footnoteref_17" class="footnote" href="#_footnote_17" title="View footnote.">17</a>]</span></p>
+<p><em>Babbage Difference Engine, an advanced mechanical calculating machine</em> <span class="footnote">[<a id="_footnoteref_18" class="footnote" href="#_footnote_18" title="View footnote.">18</a>]</span></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -23463,7 +23509,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 </div>
 </div>
 <div class="paragraph">
-<p><em>Punchcard</em> <span class="footnote">[<a id="_footnoteref_18" class="footnote" href="#_footnote_18" title="View footnote.">18</a>]</span></p>
+<p><em>Punchcard</em> <span class="footnote">[<a id="_footnoteref_19" class="footnote" href="#_footnote_19" title="View footnote.">19</a>]</span></p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -23471,7 +23517,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 </div>
 </div>
 <div class="paragraph">
-<p><em>Card Sorter</em> <span class="footnote">[<a id="_footnoteref_19" class="footnote" href="#_footnote_19" title="View footnote.">19</a>]</span></p>
+<p><em>Card Sorter</em> <span class="footnote">[<a id="_footnoteref_20" class="footnote" href="#_footnote_20" title="View footnote.">20</a>]</span></p>
 </div>
 <div class="paragraph">
 <p>During World War II, many business professionals found themselves in the military, and some encountered the new electronic computers being used to calculate artillery trajectories or decrypt enemy messages. Edmund Berkeley, the first secretary of the Association for Computing Machinery, was one such professional who grasped the the potential of the new technology <a href="#Akera2007">[Akera2007]</a>. After the war, Berkeley advocated for the use of these machines to the leadership of the Prudential insurance company, while others did the same in the United Kingdom.</p>
@@ -24516,7 +24562,7 @@ Again, if you or your company are involved in legal issues relating to the above
 </div>
 </div>
 <div class="paragraph">
-<p><em>Reporting and analytics, old style</em> <span class="footnote">[<a id="_footnoteref_20" class="footnote" href="#_footnote_20" title="View footnote.">20</a>]</span></p>
+<p><em>Reporting and analytics, old style</em> <span class="footnote">[<a id="_footnoteref_21" class="footnote" href="#_footnote_21" title="View footnote.">21</a>]</span></p>
 </div>
 <div class="paragraph">
 <p>We have touched on reporting previously, in our discussion of <a href="#metrics-KPIs">metrics</a>. This is a more detailed examination.</p>
@@ -25773,7 +25819,7 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <div class="content">
 <img src="images/4.12-moritz.jpg" alt="Moritz" width="300">
 </div>
-<div class="title">Figure 1. Franz Moritz Graf von Lacy <span class="footnote">[<a id="_footnoteref_21" class="footnote" href="#_footnote_21" title="View footnote.">21</a>]</span></div>
+<div class="title">Figure 4. Franz Moritz Graf von Lacy <span class="footnote">[<a id="_footnoteref_22" class="footnote" href="#_footnote_22" title="View footnote.">22</a>]</span></div>
 </div>
 <div class="paragraph">
 <p>In previous ages, nobles would assemble and fight for their King, but their armies were poorly coordinated, and disputes over strategy would often arise. Each army would have its own quartermaster, couriers, intelligence, supply chains, and the like. This was both inefficient, and ineffective: overall plans of battle could not be made or executed, and military operations were too often bungled.</p>
@@ -25914,7 +25960,7 @@ The operating model is the necessary level of business process integration and s
 <div class="content">
 <img src="images/4.12-zachman.png" alt="4.12 zachman">
 </div>
-<div class="title">Figure 2. A variation on the Zachman framework</div>
+<div class="title">Figure 5. A variation on the Zachman framework</div>
 </div>
 <div class="paragraph">
 <p><em>(loosely based on <a href="#Zachman1987">[Zachman1987]</a> and succeeding work.)</em></p>
@@ -25957,7 +26003,7 @@ The operating model is the necessary level of business process integration and s
 <div class="content">
 <img src="images/4.12-BM-OM.png" alt="4.12 BM OM">
 </div>
-<div class="title">Figure 3. Business model versus operating model</div>
+<div class="title">Figure 6. Business model versus operating model</div>
 </div>
 <div class="paragraph">
 <p>This distinction helps us position the Enterprise Architecture group with respect to key partner organizations:</p>
@@ -26058,7 +26104,7 @@ As a hygiene factor, benefits from EA can be valued in terms of reduction in man
 <div class="content">
 <img src="images/4.12-impact.png" alt="4.12 impact">
 </div>
-<div class="title">Figure 4. Architecture impacts on enterprise value</div>
+<div class="title">Figure 7. Architecture impacts on enterprise value</div>
 </div>
 <div class="paragraph">
 <p>In the above diagram, we see that there are specific, measurable outcomes from typical enterprise architecture goals. Without exploring every line of value:</p>
@@ -28044,6 +28090,12 @@ All web references were archived into the author&#8217;s files on the indicated 
 <div id="footnotes">
 <hr>
 <div class="footnote" id="_footnote_1">
+<a href="#_footnoteref_1">1</a>. <em>Image credit <a href="https://www.flickr.com/photos/hktang/4243300265" class="bare">https://www.flickr.com/photos/hktang/4243300265</a>, downloaded 2016-10-07, commercial use permitted</em>
+</div>
+<div class="footnote" id="_footnote_2">
+<a href="#_footnoteref_2">2</a>. <em>Image credit <a href="https://www.flickr.com/photos/jayburkhalter/6679328027/" class="bare">https://www.flickr.com/photos/jayburkhalter/6679328027/</a>, downloaded 2016-10-07, commercial use permitted</em>
+</div>
+<div class="footnote" id="_footnote_1">
 <a href="#_footnoteref_1">1</a>. I admit my bias is US-centric. There is a European discipline called "informatics," that may be closer to what is needed.
 </div>
 <div class="footnote" id="_footnote_2">
@@ -28080,31 +28132,34 @@ All web references were archived into the author&#8217;s files on the indicated 
 <a href="#_footnoteref_12">12</a>. <em>Image credit <a href="https://www.flickr.com/photos/dong/2691594470/" class="bare">https://www.flickr.com/photos/dong/2691594470/</a>, downloaded 2016-09-19, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_13">
-<a href="#_footnoteref_13">13</a>. <em>Image credit <a href="https://www.flickr.com/photos/bgreenlee/1389858104/" class="bare">https://www.flickr.com/photos/bgreenlee/1389858104/</a>, commercial use permitted</em>
+<a href="#_footnoteref_13">13</a>. <em>Image credit <a href="https://www.flickr.com/photos/chrisbrooks/42588998" class="bare">https://www.flickr.com/photos/chrisbrooks/42588998</a>, downloaded 2016-10-07, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_14">
-<a href="#_footnoteref_14">14</a>. <em>Image credit <a href="https://www.flickr.com/photos/auxesis/3920533954" class="bare">https://www.flickr.com/photos/auxesis/3920533954</a>, commercial use permitted</em>
+<a href="#_footnoteref_14">14</a>. <em>Image credit <a href="https://www.flickr.com/photos/bgreenlee/1389858104/" class="bare">https://www.flickr.com/photos/bgreenlee/1389858104/</a>, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_15">
-<a href="#_footnoteref_15">15</a>. <em>Image credit <a href="https://www.flickr.com/photos/136041510@N05/24338977000" class="bare">https://www.flickr.com/photos/136041510@N05/24338977000</a>, commercial use permitted</em>
+<a href="#_footnoteref_15">15</a>. <em>Image credit <a href="https://www.flickr.com/photos/auxesis/3920533954" class="bare">https://www.flickr.com/photos/auxesis/3920533954</a>, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_16">
-<a href="#_footnoteref_16">16</a>. <em>Image credit <a href="https://www.flickr.com/photos/stevensnodgrass/6625148339" class="bare">https://www.flickr.com/photos/stevensnodgrass/6625148339</a>, commercial use permitted</em>
+<a href="#_footnoteref_16">16</a>. <em>Image credit <a href="https://www.flickr.com/photos/136041510@N05/24338977000" class="bare">https://www.flickr.com/photos/136041510@N05/24338977000</a>, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_17">
-<a href="#_footnoteref_17">17</a>. <em>Image credit <a href="https://www.flickr.com/photos/tolomea/4847227935" class="bare">https://www.flickr.com/photos/tolomea/4847227935</a>, commercial use permitted</em>
+<a href="#_footnoteref_17">17</a>. <em>Image credit <a href="https://www.flickr.com/photos/stevensnodgrass/6625148339" class="bare">https://www.flickr.com/photos/stevensnodgrass/6625148339</a>, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_18">
-<a href="#_footnoteref_18">18</a>. <em>Image credit <a href="https://www.flickr.com/photos/129953653@N05/16540457804" class="bare">https://www.flickr.com/photos/129953653@N05/16540457804</a>, commercial use permitted</em>
+<a href="#_footnoteref_18">18</a>. <em>Image credit <a href="https://www.flickr.com/photos/tolomea/4847227935" class="bare">https://www.flickr.com/photos/tolomea/4847227935</a>, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_19">
-<a href="#_footnoteref_19">19</a>. <em>Image credit <a href="https://www.flickr.com/photos/pargon/2444932424" class="bare">https://www.flickr.com/photos/pargon/2444932424</a>, commercial use permitted</em>
+<a href="#_footnoteref_19">19</a>. <em>Image credit <a href="https://www.flickr.com/photos/129953653@N05/16540457804" class="bare">https://www.flickr.com/photos/129953653@N05/16540457804</a>, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_20">
-<a href="#_footnoteref_20">20</a>. <em>Image credit <a href="https://www.flickr.com/photos/seattlemunicipalarchives/3347281230" class="bare">https://www.flickr.com/photos/seattlemunicipalarchives/3347281230</a>, commercial use permitted</em>
+<a href="#_footnoteref_20">20</a>. <em>Image credit <a href="https://www.flickr.com/photos/pargon/2444932424" class="bare">https://www.flickr.com/photos/pargon/2444932424</a>, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_21">
-<a href="#_footnoteref_21">21</a>. Image credit <a href="https://en.wikipedia.org/wiki/Franz_Moritz_von_Lacy#/media/File:Count_Franz_Moritz_von_Lacy_(oil_on_canvas_portrait_HGM).jpg" class="bare">https://en.wikipedia.org/wiki/Franz_Moritz_von_Lacy#/media/File:Count_Franz_Moritz_von_Lacy_(oil_on_canvas_portrait_HGM).jpg</a>, downloaded 2016-10-04, labeled as public domain by Wikipedia
+<a href="#_footnoteref_21">21</a>. <em>Image credit <a href="https://www.flickr.com/photos/seattlemunicipalarchives/3347281230" class="bare">https://www.flickr.com/photos/seattlemunicipalarchives/3347281230</a>, commercial use permitted</em>
+</div>
+<div class="footnote" id="_footnote_22">
+<a href="#_footnoteref_22">22</a>. Image credit <a href="https://en.wikipedia.org/wiki/Franz_Moritz_von_Lacy#/media/File:Count_Franz_Moritz_von_Lacy_(oil_on_canvas_portrait_HGM).jpg" class="bare">https://en.wikipedia.org/wiki/Franz_Moritz_von_Lacy#/media/File:Count_Franz_Moritz_von_Lacy_(oil_on_canvas_portrait_HGM).jpg</a>, downloaded 2016-10-04, labeled as public domain by Wikipedia
 </div>
 </div>
 <div id="footer">
