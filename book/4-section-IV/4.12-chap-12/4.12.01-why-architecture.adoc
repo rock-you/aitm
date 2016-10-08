@@ -34,8 +34,6 @@ We have also covered the practices by which ideas and intentions are established
 * xref:resource-mgmt[Hiring of employees],
 * xref:gov-chap[Governance] of digital organizations for xref:risk-management[risk], xref:security[security], and other purposes.
 
-"Architecture" as a term by itself is something you've encountered since your earliest days as a startup. Perhaps you used it to describe the choice of technologies you used for your products. Or the most important components in your application. Or the common services (e.g. authentication) you developed to support multiple products. The architecture concept is therefore not something new or foreign. But what does it mean to say we have an "enterprise" architecture? *Enterprise architecture is nothing but the unification of all the above topics into a common, formalized, scalable framework for understanding.*
-
 As we have progressed in our journey, and scaled our company up, all these areas have continued to evolve. Specialization emerges. You have people with deep experience in Cloud architectures, and people with deep experience in e-records management and compliance. You don't have too many who are deep in both.
 
 Your product portfolio (internal and external) is now in the hundreds or thousands. Some were built with the latest technology, and others run on older technologies now perceived to be dead ends. But investing in rewriting or replatforming them would not provide as much value as other uses of the funds, so you have to manage the risk of the older technology.
@@ -46,6 +44,8 @@ And then there are the big headaches. A major commercial product version is goin
 
 In response to these and a thousand other complexities of digital management as organizations scale up, a general purpose coordination capability emerges sometimes called Enterprise Architecture. In this chapter section, we will discuss its definition, organizational dynamics, and value proposition.
 
+anchor:defining-ea[]
+
 ===== Defining Enterprise Architecture
 [quote, ISO/IEC IEEE 42010]
 The fundamental organization of a system embodied in its components, their relationships to each other, and to the environment, and the principles guiding its design and evolution.
@@ -55,6 +55,8 @@ The enterprise architecture is the organizing logic for business processes and I
 
 [quote, Bente et al, Collaborative Enterprise Architecture]
 Enterprise architecture (EA) is the representation of the structure and behavior of an enterprise's IT landscape in relation to its business environment. It reflects the current and future use of IT in the enterprise and provides a roadmap to reach a future state. <<Bente2012>> p 35
+
+"Architecture" as a term by itself is something you've encountered since your earliest days as a startup. Perhaps you used it to describe the choice of technologies you used for your products. Or the most important components in your application. Or the common services (e.g. authentication) you developed to support multiple products. The architecture concept is therefore not something new or foreign. But what does it mean to say we have an "enterprise" architecture? *Enterprise architecture is nothing but the unification of all the above topics into a common, formalized, scalable framework for understanding.* It means we are "doing architecture" comprehensively, considering the enterprise itself as a system to be architected. It also may mean we have a program for sustaining the work of those doing architecture in the technical, application, solution, data, process, or business domains.
 
 There are numerous definitions of _enterprise architecture_. The examples above are typical. It can be defined as:
 
@@ -86,20 +88,20 @@ We saw in xref:gov-chap[Chapter 10] how governance xref:gov-shop-example[emerges
 
 Architecture has a comparable emergence story, but for somewhat different reasons. Consider the quote from Elihu Root, above. Root was tasked with re-organizing the US Army at the turn of the 20th century. There had been some embarrassing failures of coordination and organization, and it was clear that something was missing in the US military: a centralized coordination function responsible for planning and logistics.
 
-Nearly 100 years earlier, similar lessons had been learned by the Austrian, Prussian, and French militaries.
+These lessons had also been learned by the Austrian, Prussian, and French militaries.
 
 .Franz Moritz Graf von Lacy footnote:[Image credit https://en.wikipedia.org/wiki/Franz_Moritz_von_Lacy#/media/File:Count_Franz_Moritz_von_Lacy_(oil_on_canvas_portrait_HGM).jpg, downloaded 2016-10-04, labeled as public domain by Wikipedia]
 image::images/4.12-moritz.jpg[Moritz,300, float="left" ]
 
-In previous ages, nobles would assemble and fight for their King, but their armies were poorly coordinated, and disputes over strategy would often arise. Each army would have its own quartermaster, couriers, intelligence, supply chains, and the like. This was both inefficient, and ineffective: overall plans of battle could not be made or executed, and military operations were too often bungled.
+In previous ages, nobles would assemble and fight for their King, but their armies were poorly coordinated, and disputes over strategy would often arise. Each noble's army would have its own quartermaster, couriers, intelligence, supply chains, and the like. This was both inefficient, and ineffective: overall plans of battle often could not be made or executed, and military operations would be bungled.
 
-As fighting wars became (unfortunately) a larger and larger scale endeavor, the need to centralize certain capabilities became more and more obvious. This culminated in the late 1700s and early 1800s with the creation of "general staffs" that were responsible for coordination of planning and execution across the increasingly complex military operations. The Austrian field marshall  Franz Moritz Graf von Lacy was one of the pioneers of staff/line organization, which was soon copied by the French army under Napoleon Bonaparte.
+As fighting wars became (unfortunately) a larger and larger scale endeavor, the need to centralize certain capabilities became more and more obvious. This culminated in the late 1700s and early 1800s with the creation of "general staffs" that were responsible for coordination of planning and execution across the increasingly complex military operations. The HQ "staff" and its shared services were deliberately distinguished from the warfighting "line." The Austrian field marshall  Franz Moritz Graf von Lacy was one of the pioneers of this new style of organization, which was soon copied by the French army under Napoleon Bonaparte.
 
 For example, the role of Napoleon's staff officer Pierre-Joseph Bourcet under Napoleon is described thus:
 
 _'On every occasion when an important decision had to be made Bourcet would write a memorandum in which he analyzed the situation and set forth in detail, with full explanations and reasons, the course which seemed to him best. In very many cases, his suggestions were adopted and were usually justified by success, and when they were rejected the results were seldom fortunate.'_ <<Kiley2001>>
 
-Why do obscure French and Austrian military officers have to do with today's digital organizations? Because, as Christian Millotat notes, "[m]any elements that have become integral parts of managerial economics and organizing sciences can be traced back" to military staff systems (<<Millotat1992>>, p. 7). These include:
+Why do obscure French and Austrian military officers have to do with today's digital organizations? Because the line/staff distinction became the basis for large organizations of all kinds. As Christian Millotat (and many others) have noted, "[m]any elements that have become integral parts of managerial economics and organizing sciences can be traced back" to military staff systems (<<Millotat1992>>, p. 7). These include:
 
 * Collecting and combining knowledge so that decisions are as well informed as possible
 * Supporting specialized roles and functions (e.g. legal experts, engineers)
@@ -256,7 +258,9 @@ As we've discussed previously, the definition of Cost of Delay is intuitive. It 
 Cost of Delay can take various forms, some of the significant. For example: suppose there is a need to demonstrate a product to key clients at a trade show. This could be the company’s best opportunity to develop business; the sales team estimates $12 million in funnel opportunities based on previous experience that should result in at least $2 million in sales in the year, with projections of another $1 million in maintenance and renewals.
 However, if the product is not ready, these benefits will not materialize. If everything else is ready, but the Architecture process is delaying product readiness, then the Architecture process is incurring $2 million in the cost of delay. This is bad.  The Architecture process is clearly impacting significant business objectives and revenue.
 
-But the question still needs to be asked, “what benefits do we recieve from having an Architecture process?” We discussed such benefits above. Are these benefits adding up to $2 million a year? No? Then your Architecture process does not make good economic sense.
+But the question still needs to be asked, “what benefits do we receive from having an Architecture process?” We discussed such benefits above. Are these benefits adding up to $2 million a year? No? Then your Architecture process does not make good economic sense.
+
+On the other hand, what if the architects were kept out of the picture, and the product team chooses an untested technology, instead of re-using a well known and reliable approach already proven for that company? What if that decision were the cause of missing the trade show? What if it can be shown that re-usable components identified as architecture standards were increasing the speed of delivery, and reducing the Cost of Delay, because they are reducing the need for product teams to perform risky (and yet redundant) Research and Development activities?
 
 Quantifying these benefits across a portfolio is difficult, but should be attempted. Cost of Delay can and should be calculated at the portfolio level, and this can provide "enterprise-level decision rules" that can help an organization understand the cost and value of operating model changes (<<Reinertsen1997>>, pp. 35-38) including the establishment of Enterprise Architecture itself. We'll work through xref:TLM-CoD-worked[an example] in a future chapter section.
 
