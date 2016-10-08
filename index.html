@@ -1072,7 +1072,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="#_architecture_practices">Architecture practices</a>
-<ul class="sectlevel4">
+<ul class="sectlevel5">
+<li><a href="#_architecture_and_governance">Architecture and governance</a></li>
 <li><a href="#_architecture_as_a_management_program">Architecture as a management program</a></li>
 <li><a href="#_modeling_and_visualization">Modeling and visualization</a></li>
 <li><a href="#_the_rationalization_quest">The "rationalization" quest</a></li>
@@ -19361,6 +19362,9 @@ Some companies need to institute formal policies quite early. Even a startup may
 </div>
 </div>
 </div>
+<div class="paragraph">
+<p><a id="policy-hierarchy"></a></p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_mission_principle_strategy_and_policy">Mission, principle, strategy, and policy</h5>
@@ -24850,7 +24854,7 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 </div>
 </div>
 <div class="paragraph">
-<p>"Architecture" as a term by itself is something you&#8217;ve encountered since your earliest days as a startup. Perhaps you used it to describe the choice of technologies you used for your products. Or the most important components in your application. Or the common services (e.g. authentication) you developed to support multiple products. The architecture concept is therefore not something new or foreign. But what does it mean to say we have an "enterprise" architecture? <strong>Enterprise architecture is nothing but the unification of all the above topics into a common, formalized, scalable framework for understanding.</strong> It means we are "doing architecture" comprehensively, considering the enterprise itself as a system to be architected. It also may mean we have a program for sustaining the work of those doing architecture in the technical, application, solution, data, process, or business domains.</p>
+<p>"Architecture" as a term by itself is something you&#8217;ve encountered since your earliest days as a startup. Perhaps you used it to describe the choice of technologies you used for your products. Or the most important components in your application. Or the common services (e.g. authentication) you developed to support multiple products. The architecture concept is therefore not something new or foreign. But what does it mean to say we have an "enterprise" architecture? <strong>Enterprise architecture is nothing but the unification of this book&#8217;s topics into a common, formalized, scalable framework for understanding.</strong> It means we are "doing architecture" comprehensively, considering the enterprise itself as a system to be architected. It also may mean we have a program for sustaining the work of those doing architecture in the technical, application, solution, data, process, or business domains.</p>
 </div>
 <div class="paragraph">
 <p>There are numerous definitions of <em>enterprise architecture</em>. The examples above are typical. It can be defined as:</p>
@@ -24904,6 +24908,9 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <p>The other major organizational units of interest to enterprise architecture</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p><a id="arch-as-staff"></a></p>
 </div>
 <div class="sect5">
 <h6 id="_architecture_as_staff_function">Architecture as staff function</h6>
@@ -25159,7 +25166,8 @@ The operating model is the necessary level of business process integration and s
 <p>In organizations where operations is increasingly distributed to the application teams ("you build it, you run it") the above may be less true.</p>
 </div>
 <div class="paragraph">
-<p>Other staff organizations that may develop close relationships with enterprise architecture include <a href="#sourcing">vendor management and sourcing</a>, <a href="#risk-management">risk management</a>, and <a href="#security">security</a>.</p>
+<p>Other staff organizations that may develop close relationships with enterprise architecture include <a href="#sourcing">vendor management and sourcing</a>, <a href="#risk-management">risk management</a>, <a href="#compliance">compliance</a>
+, and <a href="#security">security</a>. Notice that some of these have strong <a href="#gov-chap">governance</a> connections (although we do not consider "governance" itself to be an organization, which is why it was not included in the discussion above.)</p>
 </div>
 </div>
 </div>
@@ -25183,10 +25191,10 @@ As a hygiene factor, benefits from EA can be valued in terms of reduction in man
 </div>
 </div>
 <div class="paragraph">
-<p>Enterprise architecture often struggles to demonstrate clear, quantifiable value to the organization. Architects are usually among the most experienced and therefore expensive staff in the organization. While it may seem to make historical and intuitive sense that architecture as a staff function is necessary, demonstrating this takes some thought and effort.</p>
+<p>Enterprise architecture often struggles to demonstrate clear, quantifiable value to the organization. Architects are usually among the most experienced and therefore expensive staff in the organization. While it may seem to make historical and intuitive sense that architecture as a staff function is necessary, demonstrating this takes some thought and effort. Statements like "promoting enterprise-wide thinking" easily provoke skepticism. What are the benefits of so-called "enterprise-wide thinking"? And who receives them?</p>
 </div>
 <div class="paragraph">
-<p>The following benefits are often asserted for enterprise architecture:</p>
+<p>The following outcomes are often asserted for enterprise architecture:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -25217,7 +25225,7 @@ As a hygiene factor, benefits from EA can be valued in terms of reduction in man
 <div class="title">Figure 7. Architecture impacts on enterprise value</div>
 </div>
 <div class="paragraph">
-<p>In the above diagram, we see that there are specific, measurable outcomes from typical enterprise architecture goals. Without exploring every line of value:</p>
+<p>The above diagram suggests a number of specific, measurable outcomes from typical enterprise architecture goals. Without exploring every line of value:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -25346,10 +25354,13 @@ Although immature code may work fine and be completely acceptable to the custome
 <p>IT portfolio management</p>
 </li>
 <li>
-<p>Program architect (e.g. Application Decommissioning for the Wells Fargo/Wachovia merger)</p>
+<p>Program architect (e.g. Application Decommissioning and Portfolio Rationalization for the Wells Fargo/Wachovia merger)</p>
 </li>
 <li>
 <p>Technology standards governance</p>
+</li>
+<li>
+<p>RFP owner for selecting new technologies</p>
 </li>
 <li>
 <p>Data governance</p>
@@ -25381,8 +25392,43 @@ Although immature code may work fine and be completely acceptable to the custome
 </ul>
 </div>
 <div class="paragraph">
-<p>If I had to characterize the important skills for this role, they would start with communication and facilitation. In terms of the principles discussed in this book, the architecture team was a mechanism for synchronizing across the organization.</p>
+<p>If I had to characterize the important skills for this role, they would start with communication and facilitation. In terms of the principles discussed in this book, the architecture team was a mechanism for synchronizing across the organization. It definitely fit the classic definition and value proposition of a <a href="#arch-as-staff">staff organization</a>.</p>
 </div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_architecture_and_governance">Architecture and governance</h6>
+<div class="paragraph">
+<p>Enterprise architecture has a clear relationship to <a href="#gov-chap">governance</a> as we discussed it in Chapter 10. It provides a framework for managing <a href="#tech-prod-lifecycle">long-lifecycle concerns</a> and various forms of enterprise <a href="#risk-management">risk</a>, especially as related to digital and IT systems.</p>
+</div>
+<div class="paragraph">
+<p>EA therefore may have a role in defining <a href="#how-policy-begins">policies</a>, especially at the mid-tier of the <a href="#policy-hierarchy">policy hierarchy</a> - neither the highest enterprise principles, nor the most detailed technical standards, but rather policies and standards related to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Choice of certain enterprise products expected to be heavily leveraged (e.g. common database and middleware products)</p>
+</li>
+<li>
+<p>Design patterns for solving recurring requirements (e.g. user authentication, load balancing, etc)</p>
+</li>
+<li>
+<p><a href="#system-of-record">System of Record</a>
+identification and enforcement</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>As discussed in <a href="#policy-hierarchy">Chapter 10</a>, there needs to be traceability from tactical standards to strategic codes and principles. The preference for a given database should not be a policy, but having a process that establishes such a preference <strong>would</strong> be&#8201;&#8212;&#8201;that is, a policy should exist saying (for example) "there shall be a Technology Lifecycle Management process with the following objectives and scope." Where appropriate, such policies might also be linked to specific risks as <a href="#controls">controls</a> or <a href="#enablers">enablers</a>.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s important to have some sort of sunset mechanism. As Bente et al note, <em>Many EA-originated policies that appear obsolete today have not always been meaningless. Most probably they have emerged as the architecture group&#8217;s overreactions to unlikely-to-recur situations that they experienced in their organization in the past. A frequent example is the uncontrolled proliferation of newly hyped technologies by the IT crowd, and the EA group&#8217;s rigid attempt to reinstitute order. Once the technology has matured, the EA rules often appear overly strict and suppress a flexible use of the appropriate technology.</em> <a href="#Bente2012">[Bente2012]</a> p19</p>
+</div>
+<div class="paragraph">
+<p>The issue with the quote above is that the overall benefits of having (for example) a Technology Lifecycle Management process are not usually quantified in terms of cost and risk avoidance. Without an overall governance mandate and value proposition, Enterprise Architecture activities may seesaw in response to the "issue of the moment." This is not a recipe for sustainable architecture; whose most important value proposition lies in the long term.</p>
+</div>
+<div class="paragraph">
+<p>arch review boards as <a href="#coord-struct">coordination structures</a></p>
 </div>
 </div>
 <div class="sect4">
@@ -25438,18 +25484,6 @@ EA Management Plan: A plan to move from the current to the future EA</p>
 </div>
 <div class="paragraph">
 <p>how do we know there is a gap? We have hypotheses&#8230;&#8203; need to establish that there is a valuable, usable, feasible future state, and if there is progress towards it must not be delayed by queues, cycle time, etc &#8230;&#8203; need to move with alacrity&#8230;&#8203; Cost of Delay outweighs much&#8230;&#8203;</p>
-</div>
-<div class="sect5">
-<h6 id="_architecture_governance_process">Architecture, governance, process</h6>
-<div class="paragraph">
-<p>Many EA-originated policies that appear obsolete today have not always been meaningless. Most probably they have emerged as the architecture group&#8217;s overreactions to unlikely-to-recur situations that they experienced in their organization in the past. A frequent example is the uncontrolled proliferation of newly hyped technologies by the IT crowd, and the EA group&#8217;s rigid attempt to reinstitute order. Once the technology has matured, the EA rules often appear overly strict and suppress a flexible use of the appropriate technology. <a href="#Bente2012">[Bente2012]</a> p19</p>
-</div>
-<div class="paragraph">
-<p>Bente is correct to focus on collaborative issues. but the overall benefits of having (for example) a TLM are not usually quantified in terms of cost and risk avoidance. This can be done. TLM should route via corp governance &amp; perf mgmt, align w/vendor mgmt&#8230;&#8203; find sources on how these processes work in non IT domains&#8230;&#8203; (have already discussed in book)</p>
-</div>
-<div class="paragraph">
-<p>arch review boards as <a href="#coord-struct">coordination structures</a></p>
-</div>
 </div>
 </div>
 <div class="sect4">
@@ -25994,8 +26028,13 @@ example of antipatterns</p>
 <div class="sect4">
 <h5 id="_architecture_queues_and_cost_of_delay">Architecture, queues, and Cost of Delay</h5>
 <div class="paragraph">
-<p>worked TLM example
-review Reinertsen</p>
+<p>worked TLM example</p>
+</div>
+<div class="paragraph">
+<p>TLM should route via corp governance &amp; perf mgmt, align w/vendor mgmt&#8230;&#8203; find sources on how these processes work in non IT domains&#8230;&#8203; (have already discussed in book)</p>
+</div>
+<div class="paragraph">
+<p>review Reinertsen</p>
 </div>
 <div class="paragraph">
 <p>Bente p 194 looks @ arch process optimization - local optima, bad. Goes down the work/wait alley and DSM (anti-rework). Limitations.</p>
