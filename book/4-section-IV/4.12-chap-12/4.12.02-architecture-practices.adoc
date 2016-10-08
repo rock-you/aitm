@@ -1,22 +1,33 @@
 ==== Architecture practices
 
-IT strategic planning
-IT portfolio management
-Technology standards governance
-Internal analyst/advisory firm
-Solutions design standards and patterns
-Continuous service improvement
-Center of Excellence for data, process (BPM), and systems analysis and modeling
-Data governance
-Project governance
-High level configuration management
-Consulting “bench”
-IT ombudsman
-Networking nexus – inquiry routing, referrals
-Shuttle diplomacy…
+Before
 
 
-The true measure of the value of a model is whether it actually influences behavior. Smith/Reinertsen 1998 p46.
+.Author's corner
+****
+What do architects do, actually?
+
+I was a Lead Architect (job class Systems Architect 6) for Wells Fargo for 6 years. This is a director-level position, and I was ultimately awarded the VP title, which in financial services tends to be honorary. (I never managed a large organization.) My assigned domain was the "business of IT," including systems management, service management, portfolio management, and the data, processes, and tools of architecture itself. Across an annual IT spend of around $5 billion, many of course were involved in all these questions, but I was a nexus and was often called on to lead workshops and discussions with senior executives (typically at the "2-down" level from the CIO, that is, executives reporting to one of the CIO's direct reports, themselves leading large teams of teams) struggling with managing one of the larger IT shops on the planet.
+
+Comparing my activities during those 6 years with how industry standards (such as TOGAF) describe architecture is interesting. Building models and "architectures" was only a small part of my work. I found myself involved in, or playing the role of:
+
+* IT strategic planning
+* IT portfolio management
+* Program architect (e.g. Application Decommissioning for the Wells Fargo/Wachovia merger)
+* Technology standards governance
+* Data governance
+* Vendor product analysis (often in liaison with analyst firms such as Gartner Group)
+* Center of Excellence for data, process (BPM), and systems analysis and modeling
+* Solutions design standards and patterns
+* Continuous service improvement
+* Major incident root cause analysis
+* Project governance
+* IT ombudsman and process troubleshooter ("you architects say the process should work this way, but it doesn't - help me")
+* Shuttle diplomat - driving agreement between deeply conflicted business units or individuals, where relationships had broken down.
+
+If I had to characterize the important skills for this role, they would start with communication and facilitation. In terms of the principles discussed in this book, the architecture team was a mechanism for synchronizing across the organization.
+****
+
 
 ===== Architecture as a management program
 Bernard fig 1-4: Governance, Framework, Methodology, Best Practices, Standards, Artifacts
@@ -59,15 +70,15 @@ how do we know there is a gap? We have hypotheses... need to establish that ther
 
 ====== Architecture, governance, process
 
-Many EA-originated policies that appear obsolete today have not always been meaningless. Most probably they have emerged as the architecture group's overreactions to unlikely-to-recur situations that they experienced in their organization in the past. A frequent example is the uncontrolled prolif
-eration of newly hyped technologies by the IT crowd, and the EA group's rigid attempt to reinstitute order. Once the technology has matured, the EA rules often appear overly strict and suppress a flexible use of the appropriate technology. <<Bente2012>> p19
+Many EA-originated policies that appear obsolete today have not always been meaningless. Most probably they have emerged as the architecture group's overreactions to unlikely-to-recur situations that they experienced in their organization in the past. A frequent example is the uncontrolled proliferation of newly hyped technologies by the IT crowd, and the EA group's rigid attempt to reinstitute order. Once the technology has matured, the EA rules often appear overly strict and suppress a flexible use of the appropriate technology. <<Bente2012>> p19
 
 Bente is correct to focus on collaborative issues. but the overall benefits of having (for example) a TLM are not usually quantified in terms of cost and risk avoidance. This can be done. TLM should route via corp governance & perf mgmt, align w/vendor mgmt... find sources on how these processes work in non IT domains... (have already discussed in book)
 
 arch review boards as xref:coord-struct[coordination structures]
 
 
-===== Visualization
+===== Modeling and visualization
+The true measure of the value of a model is whether it actually influences behavior. Smith/Reinertsen 1998 p46.
 
 Architect as visual facilitator
 
@@ -75,8 +86,10 @@ Architect as visual facilitator
 “The goal of architecture was to create the right emergent behaviors,”
 “Our architecture was changing faster than you can draw it… As a result, it wasn’t useful to try to draw it.”
 
-
 *Architect as visual thinker*
+
+EA needs catalogs and matrices maintained. diagrams? it's questionable. every so often there is a ritual expression of a catalog as nested boxes. Of questionable utility. The graph complexity bogs down representation of the matrices.
+
 
 Because of these facts, it is useful to understand some of the fundamentals of how humans interpret symbolic data.
 
@@ -102,7 +115,10 @@ arch formalisms weak on dynamics - semantics vs dynamics problem semantics gravi
 
 but visualization is valuable otherwise we would not see so much of it
 
-Cockburn communication problem - artifacts stimulate internal mental models but not Shannon... hence the endless attention to EA metamodelsThe big picture is part of the standard mindset of EA, which
+Cockburn communication problem - artifacts stimulate internal mental models but not Shannon... hence the endless attention to EA metamodels
+
+
+The big picture is part of the standard mindset of EA, which
 everyoneimmediatelyassociateswiththeactivitiesofanenterprisearchitect.
 However, many of these big pictures you meet in practice have been over-
 abstracted to the point of insignificance and no longer address any relevant
@@ -114,7 +130,6 @@ the EA's role is to facilitate discussions by abstracting and visualizing powerf
 
 usually, the resulting diagrams are only good tactically.
 
-EA needs catalogs and matrices maintained. diagrams? it's questionable. every so often there is a ritual expression of a catalog as nested boxes. Of questionable utility. The graph complexity bogs down representation of the matrices.
 
 illustrate: diagrams vs reporting, isometric catalog/matrix/diagram
 why draw boxes when a textual report is all that is needed (e.g. Bente p52)
