@@ -667,7 +667,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_introducing_kanban">Introducing Kanban</a>
 <ul class="sectlevel4">
-<li><a href="#_the_early_importance_of_culture">The early importance of culture</a></li>
 <li><a href="#_scrum_kanban_or_both">Scrum, Kanban, or both?</a></li>
 </ul>
 </li>
@@ -690,11 +689,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="#_from_plan_build_run_to_demand_supply_execute">From Plan, Build, Run to Demand, Supply, Execute</a></li>
-<li><a href="#_advanced_topics">Advanced topics</a>
-<ul class="sectlevel4">
-<li><a href="#_the_idea_of_pmdb_and_pis">The idea of PMDB and PIs</a></li>
-</ul>
-</li>
+<li><a href="#_advanced_topics">Advanced topics</a></li>
 <li><a href="#_conclusion_5">Conclusion</a>
 <ul class="sectlevel4">
 <li><a href="#_discussion_questions_5">Discussion questions</a></li>
@@ -925,7 +920,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_process_improvement">Process improvement</a></li>
 </ul>
 </li>
-<li><a href="#_topics_in_process_management">Topics in process management</a></li>
+<li><a href="#_topics_in_process_management">Topics in process management</a>
+<ul class="sectlevel4">
+<li><a href="#_the_idea_of_pmdb_and_pis">The idea of PMDB and PIs</a></li>
+</ul>
+</li>
 <li><a href="#_conclusion_9">Conclusion</a>
 <ul class="sectlevel4">
 <li><a href="#_discussion_questions_9">Discussion questions</a></li>
@@ -1072,19 +1071,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_the_value_of_ea">The value of EA</a></li>
 </ul>
 </li>
+<li><a href="#_architecture_practices">Architecture practices</a>
+<ul class="sectlevel4">
+<li><a href="#_architecture_as_a_management_program">Architecture as a management program</a></li>
+<li><a href="#_modeling_and_visualization">Modeling and visualization</a></li>
+<li><a href="#_the_rationalization_quest">The "rationalization" quest</a></li>
+<li><a href="#_repositories_and_knowledge_management">Repositories and knowledge management</a></li>
+</ul>
+</li>
 <li><a href="#_architecture_domains">Architecture domains</a>
 <ul class="sectlevel4">
 <li><a href="#_business_architecture">Business architecture</a></li>
 <li><a href="#_solutions_architecture">Solutions architecture</a></li>
 <li><a href="#_technical_architecture">Technical architecture</a></li>
-</ul>
-</li>
-<li><a href="#_architecture_practices">Architecture practices</a>
-<ul class="sectlevel4">
-<li><a href="#_architecture_as_a_management_program">Architecture as a management program</a></li>
-<li><a href="#_visualization_3">Visualization</a></li>
-<li><a href="#_the_rationalization_quest">The "rationalization" quest</a></li>
-<li><a href="#_repositories_and_knowledge_management">Repositories and knowledge management</a></li>
 </ul>
 </li>
 <li><a href="#_agile_and_architecture">Agile and architecture</a>
@@ -6635,6 +6634,18 @@ The most efficient and effective method of conveying information to and within a
 &#8212; Agile Manifesto
 </div>
 </div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+We will discuss this in more depth in Chapters 7 and 8. But this chapter  is the first discussion of "how are we with each other." Culture requires attention at the earliest stages, as it can be very difficult to change later.
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>Team collaboration is one of the key values of Agile. The Agile Alliance states that</p>
 </div>
@@ -7917,9 +7928,13 @@ As two more assistants were added, however, coordination problems did arise. One
 </div>
 <div class="sect3">
 <h4 id="_why_work_management">Why work management?</h4>
-<div class="literalblock">
-<div class="content">
-<pre>[Dan Pink, Drive: Task, time, technique, and team]</pre>
+<div class="quoteblock">
+<blockquote>
+Task management is the process of managing a task through its life cycle. It involves planning, testing, tracking and reporting. Task management can help either individuals achieve goals, or groups of individuals collaborate and share knowledge for the accomplishment of collective goal
+</blockquote>
+<div class="attribution">
+&#8212; Wikipedia<br>
+<cite>https://en.wikipedia.org/wiki/Task_management</cite>
 </div>
 </div>
 <div class="paragraph">
@@ -7957,15 +7972,6 @@ As two more assistants were added, however, coordination problems did arise. One
 <div class="paragraph">
 <p>Probably the most important is the shared task reference point. What does this mean? The “task” is reified (see definition) into a common artifact.</p>
 </div>
-<div class="quoteblock">
-<blockquote>
-Task management is the process of managing a task through its life cycle. It involves planning, testing, tracking and reporting. Task management can help either individuals achieve goals, or groups of individuals collaborate and share knowledge for the accomplishment of collective goal
-</blockquote>
-<div class="attribution">
-&#8212; Wikipedia<br>
-<cite>https://en.wikipedia.org/wiki/Task_management</cite>
-</div>
-</div>
 <div class="paragraph">
 <p><a id="representation"></a></p>
 </div>
@@ -7976,7 +7982,7 @@ Task management is the process of managing a task through its life cycle. It inv
 <p>Notice also that the artifact - the ticket, the post-it note - is <strong>not</strong> the actual task, which is an intangible, consensus concept. It is a <em>representation</em> of this intangible "intent to perform." We will discuss these issues of representation further in Chapter 11.</p>
 </div>
 <div class="paragraph">
-<p>A complex IT-based system is not needed! (Nor for that matter a complex process framework, such as <a href="#ITIL">ITIL</a>. There is risk in using such frameworks at this stage of evolution - they add too much overhead for your level of growth.)</p>
+<p>A complex IT-based system is not needed, if you are all in the same room! (Nor for that matter a complex process framework, such as <a href="#ITIL">ITIL</a>. There is risk in using such frameworks at this stage of evolution - they add too much overhead for your level of growth.)</p>
 </div>
 <div class="paragraph">
 <p>It&#8217;s also still too early for formal project management. The "project team" would be most or all of the organization, so what would be the point?</p>
@@ -8077,7 +8083,7 @@ Queuing theory is an important branch of mathematics used extensively in computi
 <div class="ulist">
 <ul>
 <li>
-<p>Finish what you start, if you can, before starting anything else.</p>
+<p>Finish what you start, if you can, before starting anything else. When you work on three things at once, the multi-tasking wastes time and it takes you three times longer to get any one of the things done. (More on <a href="#multi-tasking">multi-tasking</a> in this chapter.)</p>
 </li>
 <li>
 <p>Infinitely long to-do lists (backlog) sap motivation. Consider limiting backlog as well as work in process.</p>
@@ -8169,12 +8175,6 @@ Historically, there has been resistance in IT circles to learning lessons derive
 </div>
 </li>
 </ul>
-</div>
-<div class="sect4">
-<h5 id="_the_early_importance_of_culture">The early importance of culture</h5>
-<div class="paragraph">
-<p>We will discuss this in more depth in Chapters 7 and 8. But this chapter on Work Management is the first discussion of "how are we with each other." Culture requires attention at the earliest stages, as it can be very difficult to change later.</p>
-</div>
 </div>
 <div class="sect4">
 <h5 id="_scrum_kanban_or_both">Scrum, Kanban, or both?</h5>
@@ -8585,9 +8585,6 @@ As a “service desk,” it may expand its purview to accepting provisioning or 
 </div>
 <div class="paragraph">
 <p>See The Phoenix Project, Chapter 30, for an interesting discussion of these issues in an IT context <a href="#Kim2013">[Kim2013]</a>.</p>
-</div>
-<div class="paragraph">
-<p>We will dive more into the characteristics of R&amp;D processes in the discussion of Don Reinertsen in this chapter.</p>
 </div>
 <div class="sect4">
 <h5 id="_lean_product_development">Lean product development</h5>
@@ -9045,6 +9042,20 @@ Never confuse production with product development. The approaches, measures, and
 <div class="sect3">
 <h4 id="_advanced_topics">Advanced topics</h4>
 <div class="paragraph">
+<p><a id="multi-tasking"></a></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>===== Multi-tasking</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Context switching and multi-tasking
+[Human factors discussion]</pre>
+</div>
+</div>
+<div class="paragraph">
 <p>Need to allocate between chapters 5, 8, 9 - or touch on &amp; elaborate later?</p>
 </div>
 <div class="literalblock">
@@ -9061,15 +9072,6 @@ Reinertsen Boeing case</pre>
 <div class="literalblock">
 <div class="content">
 <pre>Rule engines</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><a id="multi-tasking"></a></p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Context switching and multi-tasking
-[Human factors discussion]</pre>
 </div>
 </div>
 <div class="literalblock">
@@ -9100,104 +9102,6 @@ Reinertsen Boeing case</pre>
 <div class="paragraph">
 <p>Stories are meant to be independent and valuable. Tasks aren’t. By earning velocity at the level of tasks, it is possible to be 70% dev-complete for a release without a single story being dev-complete. <a href="#Narayan2015">[Narayan2015]</a></p>
 </div>
-<div class="sect4">
-<h5 id="_the_idea_of_pmdb_and_pis">The idea of PMDB and PIs</h5>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>Originally published at <a href="http://www.lean4it.com/2014/06/in-search-of-the-pcmdb-and-pcis.html" class="bare">http://www.lean4it.com/2014/06/in-search-of-the-pcmdb-and-pcis.html</a>.</p>
-</div>
-<div class="paragraph">
-<p>In search of the PMDB and PIs</p>
-</div>
-<div class="paragraph">
-<p>As I was preparing chicken piccata last night, I had one of those flashes.</p>
-</div>
-<div class="paragraph">
-<p>In the IT industry, why don&#8217;t we care about process information the same way we care about configuration information?</p>
-</div>
-<div class="paragraph">
-<p>We&#8217;ve had a 15-year conversation about CMDBs. It&#8217;s a well known idea that all configuration data should be put in a repository, or short of that, should be seen as part of an federated system. Applications, servers, databases, files, queues, executables, services, racks, switches, etc, etc, etc should all be seen as Configuration Items, or "CIs."</p>
-</div>
-<div class="paragraph">
-<p>But, if you ask ITSM advocates about processes, they will talk specifically about Incidents, Problems, Changes, Releases, etc as if they all are fundamentally different.</p>
-</div>
-<div class="paragraph">
-<p>I think we need the concept of a Process Item - just as a specific Server and an Application can both be CIs, so can a specific Incident and a Change both be PIs. They could inhabit the same PMDB, or be federated in a common PMS. [Yes, I recognize the unfortunate acronym :-) Let&#8217;s figure out better naming later.]</p>
-</div>
-<div class="paragraph">
-<p>This in fact is how many actual implementations of IT management tools work. But at a framework level, it is NOT how people are educated in IT management - the education and mental model continues to be that Incidents, Changes and Problems are very distinct and at best cross-reference each other.</p>
-</div>
-<div class="paragraph">
-<p>In the world of Process, we have a series of related terms that indicate a</p>
-</div>
-<div class="paragraph">
-<p>"potentially recurring series of events with various complexity (parallelism, sequentially related or not, and so on)"</p>
-</div>
-<div class="paragraph">
-<p>as the Oracle Communications Model states. Under this general heading we have:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Program</p>
-</li>
-<li>
-<p>Project</p>
-</li>
-<li>
-<p>Release</p>
-</li>
-<li>
-<p>Change</p>
-</li>
-<li>
-<p>Service Request</p>
-</li>
-<li>
-<p>Incident</p>
-</li>
-<li>
-<p>Problem (and other Improvement Opportunity)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>But (as I have pointed out elsewhere) the way these are currently implemented is too often as distinct queues of work with no coordination and understanding of aggregate demand. There is no awareness or concern when people who are critical to a Project also wind up handling high criticality Incidents.</p>
-</div>
-<div class="paragraph">
-<p>I think there is much justification for promoting the ideas of Process Item and a unified PMDB as  industry guidance.</p>
-</div>
-<div class="paragraph">
-<p>First, it aligns well with the growing interest in Kanban and limiting work in process. All these Process types compete for resources. If all are seen as fundamentally similar then it is possible to understand the aggregate demand.</p>
-</div>
-<div class="paragraph">
-<p>My coverage as an analyst of the Professional Services Automation tool sector (e.g. Tigerpaw) suggests that this class of tooling is already moving in this direction.</p>
-</div>
-<div class="paragraph">
-<p>There are complex dependencies between PIs just as with CIs - larger grained PIs such as Project may contain any number of smaller grained PI types such as Release, Change, and Request.</p>
-</div>
-<div class="paragraph">
-<p>The above-mentioned Oracle Communications Model (which is now conformant with eTOM) requires that the PROCESS entity be used as the overarching parent for all process activity.</p>
-</div>
-<div class="paragraph">
-<p>During one large program I was part of, all Releases, Project milesones, and Changes were consolidated into a single timeline view which was praised by senior executives as one of the best orienting mechanisms they had seen.
-I have seen various attempts and interest along these lines, but always company or vendor specific. I wonder if the lack of a PI/PMDB concept in fact may be why the concept of CMDB has had such struggles.</p>
-</div>
-<div class="paragraph">
-<p>People have often said to me, "Isn&#8217;t the CMDB the basis of ERP for IT"?</p>
-</div>
-<div class="paragraph">
-<p>My view is no, no more than the Bill of Materials is the basis for manufacturing ERP. The core of ERP systems is more about process and execution, and that is what we are missing in large scale IT management. We&#8217;ve spent years struggling with the data-centric orientation the CMDB discussion gave us, while shortchanging the process and execution side of the work.</p>
-</div>
-<div class="paragraph">
-<p>I realize the red flags that come up with any suggestion of a centralized system, which is why I am more in favor of seeing the PI concept as a logical interface. If all Process Items had some degree of overarching consistency, they could be exchanged and federated as part of execution activities, without requiring a monolithic centralized data store.</p>
-</div>
-<div class="paragraph">
-<p>Thoughts?</p>
-</div>
-</div>
-</div>
 <div class="literalblock">
 <div class="content">
 <pre>A look ahead to project and process</pre>
@@ -9212,7 +9116,6 @@ I have seen various attempts and interest along these lines, but always company 
 <div class="literalblock">
 <div class="content">
 <pre>deferrable commitments</pre>
-</div>
 </div>
 </div>
 </div>
@@ -17913,6 +17816,104 @@ There tended to be no big picture waiting to be revealed . . . there was only pr
 </div>
 <div class="sect3">
 <h4 id="_topics_in_process_management">Topics in process management</h4>
+<div class="sect4">
+<h5 id="_the_idea_of_pmdb_and_pis">The idea of PMDB and PIs</h5>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Originally published at <a href="http://www.lean4it.com/2014/06/in-search-of-the-pcmdb-and-pcis.html" class="bare">http://www.lean4it.com/2014/06/in-search-of-the-pcmdb-and-pcis.html</a>.</p>
+</div>
+<div class="paragraph">
+<p>In search of the PMDB and PIs</p>
+</div>
+<div class="paragraph">
+<p>As I was preparing chicken piccata last night, I had one of those flashes.</p>
+</div>
+<div class="paragraph">
+<p>In the IT industry, why don&#8217;t we care about process information the same way we care about configuration information?</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;ve had a 15-year conversation about CMDBs. It&#8217;s a well known idea that all configuration data should be put in a repository, or short of that, should be seen as part of an federated system. Applications, servers, databases, files, queues, executables, services, racks, switches, etc, etc, etc should all be seen as Configuration Items, or "CIs."</p>
+</div>
+<div class="paragraph">
+<p>But, if you ask ITSM advocates about processes, they will talk specifically about Incidents, Problems, Changes, Releases, etc as if they all are fundamentally different.</p>
+</div>
+<div class="paragraph">
+<p>I think we need the concept of a Process Item - just as a specific Server and an Application can both be CIs, so can a specific Incident and a Change both be PIs. They could inhabit the same PMDB, or be federated in a common PMS. [Yes, I recognize the unfortunate acronym :-) Let&#8217;s figure out better naming later.]</p>
+</div>
+<div class="paragraph">
+<p>This in fact is how many actual implementations of IT management tools work. But at a framework level, it is NOT how people are educated in IT management - the education and mental model continues to be that Incidents, Changes and Problems are very distinct and at best cross-reference each other.</p>
+</div>
+<div class="paragraph">
+<p>In the world of Process, we have a series of related terms that indicate a</p>
+</div>
+<div class="paragraph">
+<p>"potentially recurring series of events with various complexity (parallelism, sequentially related or not, and so on)"</p>
+</div>
+<div class="paragraph">
+<p>as the Oracle Communications Model states. Under this general heading we have:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Program</p>
+</li>
+<li>
+<p>Project</p>
+</li>
+<li>
+<p>Release</p>
+</li>
+<li>
+<p>Change</p>
+</li>
+<li>
+<p>Service Request</p>
+</li>
+<li>
+<p>Incident</p>
+</li>
+<li>
+<p>Problem (and other Improvement Opportunity)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>But (as I have pointed out elsewhere) the way these are currently implemented is too often as distinct queues of work with no coordination and understanding of aggregate demand. There is no awareness or concern when people who are critical to a Project also wind up handling high criticality Incidents.</p>
+</div>
+<div class="paragraph">
+<p>I think there is much justification for promoting the ideas of Process Item and a unified PMDB as  industry guidance.</p>
+</div>
+<div class="paragraph">
+<p>First, it aligns well with the growing interest in Kanban and limiting work in process. All these Process types compete for resources. If all are seen as fundamentally similar then it is possible to understand the aggregate demand.</p>
+</div>
+<div class="paragraph">
+<p>My coverage as an analyst of the Professional Services Automation tool sector (e.g. Tigerpaw) suggests that this class of tooling is already moving in this direction.</p>
+</div>
+<div class="paragraph">
+<p>There are complex dependencies between PIs just as with CIs - larger grained PIs such as Project may contain any number of smaller grained PI types such as Release, Change, and Request.</p>
+</div>
+<div class="paragraph">
+<p>The above-mentioned Oracle Communications Model (which is now conformant with eTOM) requires that the PROCESS entity be used as the overarching parent for all process activity.</p>
+</div>
+<div class="paragraph">
+<p>During one large program I was part of, all Releases, Project milesones, and Changes were consolidated into a single timeline view which was praised by senior executives as one of the best orienting mechanisms they had seen.
+I have seen various attempts and interest along these lines, but always company or vendor specific. I wonder if the lack of a PI/PMDB concept in fact may be why the concept of CMDB has had such struggles.</p>
+</div>
+<div class="paragraph">
+<p>People have often said to me, "Isn&#8217;t the CMDB the basis of ERP for IT"?</p>
+</div>
+<div class="paragraph">
+<p>My view is no, no more than the Bill of Materials is the basis for manufacturing ERP. The core of ERP systems is more about process and execution, and that is what we are missing in large scale IT management. We&#8217;ve spent years struggling with the data-centric orientation the CMDB discussion gave us, while shortchanging the process and execution side of the work.</p>
+</div>
+<div class="paragraph">
+<p>I realize the red flags that come up with any suggestion of a centralized system, which is why I am more in favor of seeing the PI concept as a logical interface. If all Process Items had some degree of overarching consistency, they could be exchanged and federated as part of execution activities, without requiring a monolithic centralized data store.</p>
+</div>
+<div class="paragraph">
+<p>Thoughts?</p>
+</div>
+</div>
+</div>
 <div class="literalblock">
 <div class="content">
 <pre>===== Management cadencing - e.g. kanban</pre>
@@ -18119,6 +18120,7 @@ Sidebar: Lessons from manufacturing, operations research, etc</pre>
 <div class="literalblock">
 <div class="content">
 <pre>http://jeffreymbradshaw.net/publications/Common_Ground_Single.pdf &amp; allspaw commentary - the basic questions underlying various current arguments such as "DevOps v ITIL" and "No Projects"</pre>
+</div>
 </div>
 </div>
 </div>
@@ -24641,26 +24643,17 @@ As with other chapters in the later part of this book, we are going to introduce
 <div class="ulist">
 <ul>
 <li>
-<p>Value of architecture - impact mapping</p>
-</li>
-<li>
-<p>Defining architecture</p>
+<p>Why architecture?</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Enteprise</p>
+<p>Defining Enterprise Architecture</p>
 </li>
 <li>
-<p>Business</p>
+<p>Architecture organization</p>
 </li>
 <li>
-<p>Data</p>
-</li>
-<li>
-<p>Solutions</p>
-</li>
-<li>
-<p>Technical</p>
+<p>The value of EA</p>
 </li>
 </ul>
 </div>
@@ -24677,6 +24670,28 @@ As with other chapters in the later part of this book, we are going to introduce
 </li>
 <li>
 <p>The repository problem</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Architecture domains</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Enteprise</p>
+</li>
+<li>
+<p>Business</p>
+</li>
+<li>
+<p>Data</p>
+</li>
+<li>
+<p>Solutions</p>
+</li>
+<li>
+<p>Technical</p>
 </li>
 </ul>
 </div>
@@ -24789,7 +24804,7 @@ Computer architecture, like other architecture, is the art of determining the ne
 </ul>
 </div>
 <div class="paragraph">
-<p>The architecture concept is not something new or foreign. <strong>Enterprise architecture is nothing but the unification of these topics into a common, formalized, scalable framework for understanding.</strong></p>
+<p>"Architecture" as a term by itself is something you&#8217;ve encountered since your earliest days as a startup. Perhaps you used it to describe the choice of technologies you used for your products. Or the most important components in your application. Or the common services (e.g. authentication) you developed to support multiple products. The architecture concept is therefore not something new or foreign. But what does it mean to say we have an "enterprise" architecture? <strong>Enterprise architecture is nothing but the unification of all the above topics into a common, formalized, scalable framework for understanding.</strong></p>
 </div>
 <div class="paragraph">
 <p>As we have progressed in our journey, and scaled our company up, all these areas have continued to evolve. Specialization emerges. You have people with deep experience in Cloud architectures, and people with deep experience in e-records management and compliance. You don&#8217;t have too many who are deep in both.</p>
@@ -24801,7 +24816,7 @@ Computer architecture, like other architecture, is the art of determining the ne
 <p>Investment decisions become harder. You&#8217;re far beyond the days when you had a one-product focus. You have multiple interacting products and multiple interacting teams, and the relationship between the teams and products is not one to one. Understanding the business case for the investment gets harder; when you have a thousand services over multiple business units, how do you know if someone is proposing a redundant new one?</p>
 </div>
 <div class="paragraph">
-<p>And then there are the big headaches. A major commercial product version is going off support, and it&#8217;s the perfect time to think about a rewrite or replatform (say into the Cloud). But the moving pieces and interdependencies are formidably complex, and if you get the analysis wrong the business impact will be severe. Or a major outage does impact the business, and all of a sudden the organizational priority (from the Board on down) is "fix this so it never happens again." Everything else is to go "on hold." Except, of course, it can&#8217;t.</p>
+<p>And then there are the big headaches. A major commercial product version is going off support, and it&#8217;s the perfect time to think about a rewrite or replatform (say into the Cloud). But the moving pieces and interdependencies are formidably complex, and if you get the analysis wrong the business impact will be severe. You start to see the need for "Business Architecture," to clarify your understanding of business processes, organizations, and capabilities. Or a major outage does impact the business, and all of a sudden the organizational priority (from the Board on down) is "fix this so it never happens again." Everything else is to go "on hold." Except, of course, it can&#8217;t.</p>
 </div>
 <div class="paragraph">
 <p>In response to these and a thousand other complexities of digital management as organizations scale up, a general purpose coordination capability emerges sometimes called Enterprise Architecture. In this chapter section, we will discuss its definition, organizational dynamics, and value proposition.</p>
@@ -24866,7 +24881,7 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <p>Enterprise architecture in the whole covers organizational as well as technical domains; we will discuss this in more detail in the next chapter section.</p>
 </div>
 <div class="paragraph">
-<p>In general, definitions of enterprise architecture characterize it as a coordination and problem solving discipline, suited to large scale problems at the intersection of digital technology and human organization. It has a variety of specialist domains, as we&#8217;ll discuss in the next chapter section. Its definition can be extended pragmatically through looking at its relationships to other significant capabilities in the large organization.</p>
+<p>In general, definitions of enterprise architecture characterize it as a coordination and problem solving discipline, suited to large scale problems at the intersection of digital technology and human organization. It has a variety of specialist domains (some of which we&#8217;ve already encountered) as we&#8217;ll discuss in the next chapter section. Its definition can be extended pragmatically through looking at its relationships to other significant capabilities in the large organization.</p>
 </div>
 </div>
 <div class="sect4">
@@ -25294,6 +25309,334 @@ Although immature code may work fine and be completely acceptable to the custome
 </div>
 </div>
 <div class="sect3">
+<h4 id="_architecture_practices">Architecture practices</h4>
+<div class="paragraph">
+<p>Before</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Author&#8217;s corner</div>
+<div class="paragraph">
+<p>What do architects do, actually?</p>
+</div>
+<div class="paragraph">
+<p>I was a Lead Architect (job class Systems Architect 6) for Wells Fargo for 6 years. This is a director-level position, and I was ultimately awarded the VP title, which in financial services tends to be honorary. (I never managed a large organization.) My assigned domain was the "business of IT," including systems management, service management, portfolio management, and the data, processes, and tools of architecture itself. Across an annual IT spend of around $5 billion, many of course were involved in all these questions, but I was a nexus and was often called on to lead workshops and discussions with senior executives (typically at the "2-down" level from the CIO, that is, executives reporting to one of the CIO&#8217;s direct reports, themselves leading large teams of teams) struggling with managing one of the larger IT shops on the planet.</p>
+</div>
+<div class="paragraph">
+<p>Comparing my activities during those 6 years with how industry standards (such as TOGAF) describe architecture is interesting. Building models and "architectures" was only a small part of my work. I found myself involved in, or playing the role of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>IT strategic planning</p>
+</li>
+<li>
+<p>IT portfolio management</p>
+</li>
+<li>
+<p>Program architect (e.g. Application Decommissioning for the Wells Fargo/Wachovia merger)</p>
+</li>
+<li>
+<p>Technology standards governance</p>
+</li>
+<li>
+<p>Data governance</p>
+</li>
+<li>
+<p>Vendor product analysis (often in liaison with analyst firms such as Gartner Group)</p>
+</li>
+<li>
+<p>Center of Excellence for data, process (BPM), and systems analysis and modeling</p>
+</li>
+<li>
+<p>Solutions design standards and patterns</p>
+</li>
+<li>
+<p>Continuous service improvement</p>
+</li>
+<li>
+<p>Major incident root cause analysis</p>
+</li>
+<li>
+<p>Project governance</p>
+</li>
+<li>
+<p>IT ombudsman and process troubleshooter ("you architects say the process should work this way, but it doesn&#8217;t - help me")</p>
+</li>
+<li>
+<p>Shuttle diplomat - driving agreement between deeply conflicted business units or individuals, where relationships had broken down.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If I had to characterize the important skills for this role, they would start with communication and facilitation. In terms of the principles discussed in this book, the architecture team was a mechanism for synchronizing across the organization.</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_architecture_as_a_management_program">Architecture as a management program</h5>
+<div class="paragraph">
+<p>Bernard fig 1-4: Governance, Framework, Methodology, Best Practices, Standards, Artifacts</p>
+</div>
+<div class="paragraph">
+<p>Activities/Bernard: (loc 561)
+* Management program
+* analysis &amp; design method - how to factor out?? key weakness. waterfall.</p>
+</div>
+<div class="paragraph">
+<p>As a management program, EA provides:     
+Strategic Alignment: Connects goals, activities, and resources    
+Standardized Policy: Resource governance and implementation     
+Decision Support: Financial control and configuration management   
+Resource Oversight: Lifecycle approach to development/management</p>
+</div>
+<div class="paragraph">
+<p>As an analysis and design method, EA provides:     
+EA Approach: The framework, analysis/design method, and artifact set
+Current Views: Views of as-is strategies, processes, and resources
+Future Views: Views of to-be strategies, processes, and resources
+EA Management Plan: A plan to move from the current to the future EA</p>
+</div>
+<div class="paragraph">
+<p>Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 585-601). AuthorHouse. Kindle Edition.</p>
+</div>
+<div class="paragraph">
+<p>Got to bring in TOGAF</p>
+</div>
+<div class="paragraph">
+<p>so, without EA&#8230;&#8203; all this stuff is NOT getting done?</p>
+</div>
+<div class="paragraph">
+<p>EA as policy vehicle&#8230;&#8203; how is it that policies are enforced? process gating?</p>
+</div>
+<div class="paragraph">
+<p>without EA.. how technical standards? how is a config image determined to be gold?</p>
+</div>
+<div class="paragraph">
+<p>risk mgmt can&#8217;t do it alone</p>
+</div>
+<div class="paragraph">
+<p>In Bernard - goals &amp; initiatives are above products &amp; services - showing multiple product orientation - indicative of emergence phase</p>
+</div>
+<div class="paragraph">
+<p>Entire language/mental model around gaps brings back flower &amp; cog</p>
+</div>
+<div class="paragraph">
+<p>A flower is not engineered to fill a gap. A cog is.</p>
+</div>
+<div class="paragraph">
+<p>how do we know there is a gap? We have hypotheses&#8230;&#8203; need to establish that there is a valuable, usable, feasible future state, and if there is progress towards it must not be delayed by queues, cycle time, etc &#8230;&#8203; need to move with alacrity&#8230;&#8203; Cost of Delay outweighs much&#8230;&#8203;</p>
+</div>
+<div class="sect5">
+<h6 id="_architecture_governance_process">Architecture, governance, process</h6>
+<div class="paragraph">
+<p>Many EA-originated policies that appear obsolete today have not always been meaningless. Most probably they have emerged as the architecture group&#8217;s overreactions to unlikely-to-recur situations that they experienced in their organization in the past. A frequent example is the uncontrolled proliferation of newly hyped technologies by the IT crowd, and the EA group&#8217;s rigid attempt to reinstitute order. Once the technology has matured, the EA rules often appear overly strict and suppress a flexible use of the appropriate technology. <a href="#Bente2012">[Bente2012]</a> p19</p>
+</div>
+<div class="paragraph">
+<p>Bente is correct to focus on collaborative issues. but the overall benefits of having (for example) a TLM are not usually quantified in terms of cost and risk avoidance. This can be done. TLM should route via corp governance &amp; perf mgmt, align w/vendor mgmt&#8230;&#8203; find sources on how these processes work in non IT domains&#8230;&#8203; (have already discussed in book)</p>
+</div>
+<div class="paragraph">
+<p>arch review boards as <a href="#coord-struct">coordination structures</a></p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_modeling_and_visualization">Modeling and visualization</h5>
+<div class="paragraph">
+<p>The true measure of the value of a model is whether it actually influences behavior. Smith/Reinertsen 1998 p46.</p>
+</div>
+<div class="paragraph">
+<p>Architect as visual facilitator</p>
+</div>
+<div class="paragraph">
+<p>“At Netflix, we had no central control” of the architecture,
+“The goal of architecture was to create the right emergent behaviors,”
+“Our architecture was changing faster than you can draw it… As a result, it wasn’t useful to try to draw it.”</p>
+</div>
+<div class="paragraph">
+<p><strong>Architect as visual thinker</strong></p>
+</div>
+<div class="paragraph">
+<p>EA needs catalogs and matrices maintained. diagrams? it&#8217;s questionable. every so often there is a ritual expression of a catalog as nested boxes. Of questionable utility. The graph complexity bogs down representation of the matrices.</p>
+</div>
+<div class="paragraph">
+<p>Because of these facts, it is useful to understand some of the fundamentals of how humans interpret symbolic data.</p>
+</div>
+<div class="paragraph">
+<p>(<strong>*</strong> re-read and summarize Moody)</p>
+</div>
+<div class="paragraph">
+<p>More on these in future chapters</p>
+</div>
+<div class="paragraph">
+<p>Moody, but what are his sources?
+<a href="http://simplybrainy.com/wp-content/uploads/2011/01/2008-Int-Vis-Other-Senses-All-Illustrations.pdf" class="bare">http://simplybrainy.com/wp-content/uploads/2011/01/2008-Int-Vis-Other-Senses-All-Illustrations.pdf</a></p>
+</div>
+<div class="paragraph">
+<p>Further reading on visual processing:</p>
+</div>
+<div class="paragraph">
+<p>Moody
+Tufte &amp; others (that comparison paper cited by Moody)</p>
+</div>
+<div class="paragraph">
+<p>complex graph&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>But Cockcroft: if it changes too quickly, how to capture/represent?</p>
+</div>
+<div class="paragraph">
+<p>formalisms don&#8217;t give a good sense of scale - give a visual example</p>
+</div>
+<div class="paragraph">
+<p>arch formalisms weak on dynamics - semantics vs dynamics problem semantics gravitate to first order predicate logic, binary thinking continuous math&#8230;&#8203; required&#8230;&#8203; how to measure anything. systems thinking.</p>
+</div>
+<div class="paragraph">
+<p>but visualization is valuable otherwise we would not see so much of it</p>
+</div>
+<div class="paragraph">
+<p>Cockburn communication problem - artifacts stimulate internal mental models but not Shannon&#8230;&#8203; hence the endless attention to EA metamodels</p>
+</div>
+<div class="paragraph">
+<p>The big picture is part of the standard mindset of EA, which
+everyoneimmediatelyassociateswiththeactivitiesofanenterprisearchitect.
+However, many of these big pictures you meet in practice have been over-
+abstracted to the point of insignificance and no longer address any relevant
+question.<a href="#Bente2012">[Bente2012]</a> p16</p>
+</div>
+<div class="paragraph">
+<p>"semantic distortions" - simple example: equal-sized boxes on an EA capability map.</p>
+</div>
+<div class="paragraph">
+<p>the EA&#8217;s role is to facilitate discussions by abstracting and visualizing powerfully so that decisions are illuminated.</p>
+</div>
+<div class="paragraph">
+<p>usually, the resulting diagrams are only good tactically.</p>
+</div>
+<div class="paragraph">
+<p>illustrate: diagrams vs reporting, isometric catalog/matrix/diagram
+why draw boxes when a textual report is all that is needed (e.g. Bente p52)</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_the_rationalization_quest">The "rationalization" quest</h5>
+<div class="paragraph">
+<p>are the economics well understood?
+One core question decided by governance is how much autonomy is granted to business units or geographical regions. In case this autonomy is high, would a quest for high IT integration and standardization not be like fighting windmills? <a href="#bente2012">[bente2012]</a> p.45 and cross ref ch 1</p>
+</div>
+<div class="sect5">
+<h6 id="_application_rationalization">application rationalization</h6>
+
+</div>
+<div class="sect5">
+<h6 id="_data_info">Data &amp; info</h6>
+
+</div>
+<div class="sect5">
+<h6 id="_tlm">TLM</h6>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Bad times at Airbus</strong></p>
+</div>
+<div class="paragraph">
+<p>In 2006, (Ulrich)</p>
+</div>
+<div class="paragraph">
+<p>TLM governance</p>
+</div>
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="quoteblock">
+<blockquote>
+A foolish consistency is the hobgoblin of little minds.
+</blockquote>
+<div class="attribution">
+&#8212; Anonymous
+</div>
+</div>
+<div class="paragraph">
+<p><strong>The folly of letting TLM dominate</strong></p>
+</div>
+<div class="paragraph">
+<p>Henrik Kniberg tells the story of one of his most successful projects — a system built for the Swedish police that allowed them to use laptops in the field — and what happened afterwards <a href="#Kniberg2011">[Kniberg2011]</a>. Because the project was extremely urgent, the group was allowed to use an agile approach and break out of the traditional organizational culture. Everything went well, the police organization viewed it as a success, and the project even won a “project of the year” award.</p>
+</div>
+<div class="paragraph">
+<p>What came next, however, was even more interesting. A high-level decision was made to rebuild from scratch that same system police had used in the field, using Siebel. This was part of a standardization effort to reduce the complexity and number of systems. Not only was the decision made to use a technology that the development team didn’t agree with, but it was decided to use a more traditional, sequential project-management approach to development. Development took a couple years and when it finally rolled out, it was a disaster because the police found it to be slow and clumsy and basically unusable. Making the change even more difficult was that the police preferred their existing system, which worked. Kniberg estimates that this cost the Swedish police more than £1 billion.</p>
+</div>
+<div class="paragraph">
+<p>in <a href="http://www.infoq.com/resource/minibooks/why-agile-works/en/pdf/InfoQ-Why-Agile-Works-Mini-book.pdf" class="bare">http://www.infoq.com/resource/minibooks/why-agile-works/en/pdf/InfoQ-Why-Agile-Works-Mini-book.pdf</a></p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>1 billion pounds ($1.6B) would have bought a lot of support &amp; vendor leverage for the "nonstandard" technologies.</p>
+</div>
+<div class="paragraph">
+<p>Lifecycle management can extend to internal products/services</p>
+</div>
+<div class="paragraph">
+<p>EA provides guidance about what technologies are a strategic fit, which ones are deprecated, and which are emerging. <a href="#Bente2012">[Bente2012]</a> p8</p>
+</div>
+<div class="paragraph">
+<p>Case study: The version control controversy: service vs TLM</p>
+</div>
+<div class="paragraph">
+<p>if enterprise architects claim to be the only decision-making body
+in technical matters, there is a huge risk that they create a bottleneck, if decisions take ages due to pending strategic issues, imminent changes in the business model, and so forth, IT projects can be seriously delayed. The practical consequence is that projects deliberately circumvent the enterprise architects—for example, by choosing less suitable technologies not managed by the EA group.<a href="#Bente2012">[Bente2012]</a> p19</p>
+</div>
+<div class="paragraph">
+<p>Note that we compensate developers with money AND experience. Developer pressure to use a new technology should be seen in part as a demand for increased compensation. developers seeking experience, it is in part how they are compensated. this leads to conflicts over choice of tools. (good blog as well). rational framework for deciding. might go to chapter 8, resource mgmt. intersection between that &amp; tech lifecycle is key.</p>
+</div>
+<div class="paragraph">
+<p>EA makes the decision to insource or outsource</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_repositories_and_knowledge_management">Repositories and knowledge management</h5>
+<div class="paragraph">
+<p>backref to ch 11?</p>
+</div>
+<div class="paragraph">
+<p>Agile &amp; docs "In an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it as part of the condition of satisfaction of a user story or in the definition of done" <a href="#Bente2012">[Bente2012]</a> p 170</p>
+</div>
+<div class="paragraph">
+<p>Catalogs - Need for registration process for subjective concepts - decision authority</p>
+</div>
+<div class="sect5">
+<h6 id="_the_repository_question">The repository question</h6>
+<div class="paragraph">
+<p>CMDBs, metadata, EA</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_devops_assets_to_architecture">DevOps assets to architecture</h6>
+<div class="paragraph">
+<p>If you started from day 1 with source, build, &amp; package mgmt, and have kept it clean, you have a great asset</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_metamodels_and_ontologies">Metamodels and ontologies</h6>
+<div class="paragraph">
+<p>app v svc def&#8217;n
+runs into domain driven design problems if not careful</p>
+</div>
+<div class="paragraph">
+<p>Canon law disputes</p>
+</div>
+<div class="paragraph">
+<p>"standard EA language and methodology is especially helpful in large, complex enterprises that are geographically dispersed, and which may have multiple social and work cultures that have promoted different ways of doing things." &lt;&lt;Bernard</p>
+</div>
+<div class="paragraph">
+<p>Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 1147-1149). AuthorHouse. Kindle Edition.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
 <h4 id="_architecture_domains">Architecture domains</h4>
 <div class="paragraph">
 <p>One of the most widely known visual depictions of enterprise architecture is the Zachman framework.</p>
@@ -25420,285 +25763,6 @@ But virtualization now makes it possible for all archs to be hands-on, even w/pk
 <div class="content">
 <pre> ===== Enterprise architecture
 all of the above</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_architecture_practices">Architecture practices</h4>
-<div class="paragraph">
-<p>IT strategic planning
-IT portfolio management
-Technology standards governance
-Internal analyst/advisory firm
-Solutions design standards and patterns
-Continuous service improvement
-Center of Excellence for data, process (BPM), and systems analysis and modeling
-Data governance
-Project governance
-High level configuration management
-Consulting “bench”
-IT ombudsman
-Networking nexus – inquiry routing, referrals
-Shuttle diplomacy…</p>
-</div>
-<div class="paragraph">
-<p>The true measure of the value of a model is whether it actually influences behavior. Smith/Reinertsen 1998 p46.</p>
-</div>
-<div class="sect4">
-<h5 id="_architecture_as_a_management_program">Architecture as a management program</h5>
-<div class="paragraph">
-<p>Bernard fig 1-4: Governance, Framework, Methodology, Best Practices, Standards, Artifacts</p>
-</div>
-<div class="paragraph">
-<p>Activities/Bernard: (loc 561)
-* Management program
-* analysis &amp; design method - how to factor out?? key weakness. waterfall.</p>
-</div>
-<div class="paragraph">
-<p>As a management program, EA provides:     
-Strategic Alignment: Connects goals, activities, and resources    
-Standardized Policy: Resource governance and implementation     
-Decision Support: Financial control and configuration management   
-Resource Oversight: Lifecycle approach to development/management</p>
-</div>
-<div class="paragraph">
-<p>As an analysis and design method, EA provides:     
-EA Approach: The framework, analysis/design method, and artifact set
-Current Views: Views of as-is strategies, processes, and resources
-Future Views: Views of to-be strategies, processes, and resources
-EA Management Plan: A plan to move from the current to the future EA</p>
-</div>
-<div class="paragraph">
-<p>Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 585-601). AuthorHouse. Kindle Edition.</p>
-</div>
-<div class="paragraph">
-<p>Got to bring in TOGAF</p>
-</div>
-<div class="paragraph">
-<p>so, without EA&#8230;&#8203; all this stuff is NOT getting done?</p>
-</div>
-<div class="paragraph">
-<p>EA as policy vehicle&#8230;&#8203; how is it that policies are enforced? process gating?</p>
-</div>
-<div class="paragraph">
-<p>without EA.. how technical standards? how is a config image determined to be gold?</p>
-</div>
-<div class="paragraph">
-<p>risk mgmt can&#8217;t do it alone</p>
-</div>
-<div class="paragraph">
-<p>In Bernard - goals &amp; initiatives are above products &amp; services - showing multiple product orientation - indicative of emergence phase</p>
-</div>
-<div class="paragraph">
-<p>Entire language/mental model around gaps brings back flower &amp; cog</p>
-</div>
-<div class="paragraph">
-<p>A flower is not engineered to fill a gap. A cog is.</p>
-</div>
-<div class="paragraph">
-<p>how do we know there is a gap? We have hypotheses&#8230;&#8203; need to establish that there is a valuable, usable, feasible future state, and if there is progress towards it must not be delayed by queues, cycle time, etc &#8230;&#8203; need to move with alacrity&#8230;&#8203; Cost of Delay outweighs much&#8230;&#8203;</p>
-</div>
-<div class="sect5">
-<h6 id="_architecture_governance_process">Architecture, governance, process</h6>
-<div class="paragraph">
-<p>Many EA-originated policies that appear obsolete today have not always been meaningless. Most probably they have emerged as the architecture group&#8217;s overreactions to unlikely-to-recur situations that they experienced in their organization in the past. A frequent example is the uncontrolled prolif
-eration of newly hyped technologies by the IT crowd, and the EA group&#8217;s rigid attempt to reinstitute order. Once the technology has matured, the EA rules often appear overly strict and suppress a flexible use of the appropriate technology. <a href="#Bente2012">[Bente2012]</a> p19</p>
-</div>
-<div class="paragraph">
-<p>Bente is correct to focus on collaborative issues. but the overall benefits of having (for example) a TLM are not usually quantified in terms of cost and risk avoidance. This can be done. TLM should route via corp governance &amp; perf mgmt, align w/vendor mgmt&#8230;&#8203; find sources on how these processes work in non IT domains&#8230;&#8203; (have already discussed in book)</p>
-</div>
-<div class="paragraph">
-<p>arch review boards as <a href="#coord-struct">coordination structures</a></p>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_visualization_3">Visualization</h5>
-<div class="paragraph">
-<p>Architect as visual facilitator</p>
-</div>
-<div class="paragraph">
-<p>“At Netflix, we had no central control” of the architecture,
-“The goal of architecture was to create the right emergent behaviors,”
-“Our architecture was changing faster than you can draw it… As a result, it wasn’t useful to try to draw it.”</p>
-</div>
-<div class="paragraph">
-<p><strong>Architect as visual thinker</strong></p>
-</div>
-<div class="paragraph">
-<p>Because of these facts, it is useful to understand some of the fundamentals of how humans interpret symbolic data.</p>
-</div>
-<div class="paragraph">
-<p>(<strong>*</strong> re-read and summarize Moody)</p>
-</div>
-<div class="paragraph">
-<p>More on these in future chapters</p>
-</div>
-<div class="paragraph">
-<p>Moody, but what are his sources?
-<a href="http://simplybrainy.com/wp-content/uploads/2011/01/2008-Int-Vis-Other-Senses-All-Illustrations.pdf" class="bare">http://simplybrainy.com/wp-content/uploads/2011/01/2008-Int-Vis-Other-Senses-All-Illustrations.pdf</a></p>
-</div>
-<div class="paragraph">
-<p>Further reading on visual processing:</p>
-</div>
-<div class="paragraph">
-<p>Moody
-Tufte &amp; others (that comparison paper cited by Moody)</p>
-</div>
-<div class="paragraph">
-<p>complex graph&#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<p>But Cockcroft: if it changes too quickly, how to capture/represent?</p>
-</div>
-<div class="paragraph">
-<p>formalisms don&#8217;t give a good sense of scale - give a visual example</p>
-</div>
-<div class="paragraph">
-<p>arch formalisms weak on dynamics - semantics vs dynamics problem semantics gravitate to first order predicate logic, binary thinking continuous math&#8230;&#8203; required&#8230;&#8203; how to measure anything. systems thinking.</p>
-</div>
-<div class="paragraph">
-<p>but visualization is valuable otherwise we would not see so much of it</p>
-</div>
-<div class="paragraph">
-<p>Cockburn communication problem - artifacts stimulate internal mental models but not Shannon&#8230;&#8203; hence the endless attention to EA metamodelsThe big picture is part of the standard mindset of EA, which
-everyoneimmediatelyassociateswiththeactivitiesofanenterprisearchitect.
-However, many of these big pictures you meet in practice have been over-
-abstracted to the point of insignificance and no longer address any relevant
-question.<a href="#Bente2012">[Bente2012]</a> p16</p>
-</div>
-<div class="paragraph">
-<p>"semantic distortions" - simple example: equal-sized boxes on an EA capability map.</p>
-</div>
-<div class="paragraph">
-<p>the EA&#8217;s role is to facilitate discussions by abstracting and visualizing powerfully so that decisions are illuminated.</p>
-</div>
-<div class="paragraph">
-<p>usually, the resulting diagrams are only good tactically.</p>
-</div>
-<div class="paragraph">
-<p>EA needs catalogs and matrices maintained. diagrams? it&#8217;s questionable. every so often there is a ritual expression of a catalog as nested boxes. Of questionable utility. The graph complexity bogs down representation of the matrices.</p>
-</div>
-<div class="paragraph">
-<p>illustrate: diagrams vs reporting, isometric catalog/matrix/diagram
-why draw boxes when a textual report is all that is needed (e.g. Bente p52)</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_the_rationalization_quest">The "rationalization" quest</h5>
-<div class="paragraph">
-<p>are the economics well understood?
-One core question decided by governance is how much autonomy is granted to business units or geographical regions. In case this autonomy is high, would a quest for high IT integration and standardization not be like fighting windmills? <a href="#bente2012">[bente2012]</a> p.45 and cross ref ch 1</p>
-</div>
-<div class="sect5">
-<h6 id="_application_rationalization">application rationalization</h6>
-
-</div>
-<div class="sect5">
-<h6 id="_data_info">Data &amp; info</h6>
-
-</div>
-<div class="sect5">
-<h6 id="_tlm">TLM</h6>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Bad times at Airbus</strong></p>
-</div>
-<div class="paragraph">
-<p>In 2006, (Ulrich)</p>
-</div>
-<div class="paragraph">
-<p>TLM governance</p>
-</div>
-</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="quoteblock">
-<blockquote>
-A foolish consistency is the hobgoblin of little minds.
-</blockquote>
-<div class="attribution">
-&#8212; Anonymous
-</div>
-</div>
-<div class="paragraph">
-<p><strong>The folly of letting TLM dominate</strong></p>
-</div>
-<div class="paragraph">
-<p>Henrik Kniberg tells the story of one of his most successful projects — a system built for the Swedish police that allowed them to use laptops in the field — and what happened afterwards <a href="#Kniberg2011">[Kniberg2011]</a>. Because the project was extremely urgent, the group was allowed to use an agile approach and break out of the traditional organizational culture. Everything went well, the police organization viewed it as a success, and the project even won a “project of the year” award.</p>
-</div>
-<div class="paragraph">
-<p>What came next, however, was even more interesting. A high-level decision was made to rebuild from scratch that same system police had used in the field, using Siebel. This was part of a standardization effort to reduce the complexity and number of systems. Not only was the decision made to use a technology that the development team didn’t agree with, but it was decided to use a more traditional, sequential project-management approach to development. Development took a couple years and when it finally rolled out, it was a disaster because the police found it to be slow and clumsy and basically unusable. Making the change even more difficult was that the police preferred their existing system, which worked. Kniberg estimates that this cost the Swedish police more than £1 billion.</p>
-</div>
-<div class="paragraph">
-<p>in <a href="http://www.infoq.com/resource/minibooks/why-agile-works/en/pdf/InfoQ-Why-Agile-Works-Mini-book.pdf" class="bare">http://www.infoq.com/resource/minibooks/why-agile-works/en/pdf/InfoQ-Why-Agile-Works-Mini-book.pdf</a></p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>1 billion pounds ($1.6B) would have bought a lot of support &amp; vendor leverage for the "nonstandard" technologies.</p>
-</div>
-<div class="paragraph">
-<p>Lifecycle management can extend to internal products/services</p>
-</div>
-<div class="paragraph">
-<p>EA provides guidance about what technologies are a strategic fit, which ones are deprecated, and which are emerging. <a href="#Bente2012">[Bente2012]</a> p8</p>
-</div>
-<div class="paragraph">
-<p>Case study: The version control controversy: service vs TLM</p>
-</div>
-<div class="paragraph">
-<p>if enterprise architects claim to be the only decision-making body
-in technical matters, there is a huge risk that they create a bottleneck, if decisions take ages due to pending strategic issues, imminent changes in the business model, and so forth, IT projects can be seriously delayed. The practical consequence is that projects deliberately circumvent the enterprise architects—for example, by choosing less suitable technologies not managed by the EA group.<a href="#Bente2012">[Bente2012]</a> p19</p>
-</div>
-<div class="paragraph">
-<p>Note that we compensate developers with money AND experience. Developer pressure to use a new technology should be seen in part as a demand for increased compensation. developers seeking experience, it is in part how they are compensated. this leads to conflicts over choice of tools. (good blog as well). rational framework for deciding. might go to chapter 8, resource mgmt. intersection between that &amp; tech lifecycle is key.</p>
-</div>
-<div class="paragraph">
-<p>EA makes the decision to insource or outsource</p>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_repositories_and_knowledge_management">Repositories and knowledge management</h5>
-<div class="paragraph">
-<p>backref to ch 11?</p>
-</div>
-<div class="paragraph">
-<p>Agile &amp; docs "In an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it as part of the condition of satisfaction of a user story or in the definition of done" <a href="#Bente2012">[Bente2012]</a> p 170</p>
-</div>
-<div class="paragraph">
-<p>Catalogs - Need for registration process for subjective concepts - decision authority</p>
-</div>
-<div class="sect5">
-<h6 id="_the_repository_question">The repository question</h6>
-<div class="paragraph">
-<p>CMDBs, metadata, EA</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_devops_assets_to_architecture">DevOps assets to architecture</h6>
-<div class="paragraph">
-<p>If you started from day 1 with source, build, &amp; package mgmt, and have kept it clean, you have a great asset</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_metamodels_and_ontologies">Metamodels and ontologies</h6>
-<div class="paragraph">
-<p>app v svc def&#8217;n
-runs into domain driven design problems if not careful</p>
-</div>
-<div class="paragraph">
-<p>Canon law disputes</p>
-</div>
-<div class="paragraph">
-<p>"standard EA language and methodology is especially helpful in large, complex enterprises that are geographically dispersed, and which may have multiple social and work cultures that have promoted different ways of doing things." &lt;&lt;Bernard</p>
-</div>
-<div class="paragraph">
-<p>Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 1147-1149). AuthorHouse. Kindle Edition.</p>
 </div>
 </div>
 </div>
