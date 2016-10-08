@@ -2,7 +2,7 @@
 
 Before we get into a detailed discussion of architecture domains, let's talk in general about what architects do and some common practices and themes.
 
-As we mentioned xref:defining-ea[previously], architecture itself as a term shows up in many ways, as role, artifact, program, and organization. 
+As we mentioned xref:defining-ea[previously], architecture itself as a term shows up in many ways, as role, artifact, program, and organization.
 
 
 .Author's corner
@@ -17,8 +17,9 @@ Comparing my activities during those 6 years with how industry standards (such a
 
 * IT strategic planning
 * IT portfolio management
-* Program architect (e.g. Application Decommissioning for the Wells Fargo/Wachovia merger)
+* Program architect (e.g. Application Decommissioning and Portfolio Rationalization for the Wells Fargo/Wachovia merger)
 * Technology standards governance
+* RFP owner for selecting new technologies
 * Data governance
 * Vendor product analysis (often in liaison with analyst firms such as Gartner Group)
 * Center of Excellence for data, process (BPM), and systems analysis and modeling
@@ -29,9 +30,28 @@ Comparing my activities during those 6 years with how industry standards (such a
 * IT ombudsman and process troubleshooter ("you architects say the process should work this way, but it doesn't - help me")
 * Shuttle diplomat - driving agreement between deeply conflicted business units or individuals, where relationships had broken down.
 
-If I had to characterize the important skills for this role, they would start with communication and facilitation. In terms of the principles discussed in this book, the architecture team was a mechanism for synchronizing across the organization.
+If I had to characterize the important skills for this role, they would start with communication and facilitation. In terms of the principles discussed in this book, the architecture team was a mechanism for synchronizing across the organization. It definitely fit the classic definition and value proposition of a xref:arch-as-staff[staff organization].
 ****
 
+====== Architecture and governance
+
+Enterprise architecture has a clear relationship to xref:gov-chap[governance] as we discussed it in Chapter 10. It provides a framework for managing xref:tech-prod-lifecycle[long-lifecycle concerns] and various forms of enterprise xref:risk-management[risk], especially as related to digital and IT systems.
+
+EA therefore may have a role in defining xref:how-policy-begins[policies], especially at the mid-tier of the xref:policy-hierarchy[policy hierarchy] - neither the highest enterprise principles, nor the most detailed technical standards, but rather policies and standards related to:
+
+* Choice of certain enterprise products expected to be heavily leveraged (e.g. common database and middleware products)
+* Design patterns for solving recurring requirements (e.g. user authentication, load balancing, etc)
+* xref:system-of-record[System of Record]
+ identification and enforcement
+
+As discussed in xref:policy-hierarchy[Chapter 10], there needs to be traceability from tactical standards to strategic codes and principles. The preference for a given database should not be a policy, but having a process that establishes such a preference *would* be -- that is, a policy should exist saying (for example) "there shall be a Technology Lifecycle Management process with the following objectives and scope." Where appropriate, such policies might also be linked to specific risks as xref:controls[controls] or xref:enablers[enablers].
+
+It's important to have some sort of sunset mechanism. As Bente et al note, _Many EA-originated policies that appear obsolete today have not always been meaningless. Most probably they have emerged as the architecture group's overreactions to unlikely-to-recur situations that they experienced in their organization in the past. A frequent example is the uncontrolled proliferation of newly hyped technologies by the IT crowd, and the EA group's rigid attempt to reinstitute order. Once the technology has matured, the EA rules often appear overly strict and suppress a flexible use of the appropriate technology._ <<Bente2012>> p19
+
+The issue with the quote above is that the overall benefits of having (for example) a Technology Lifecycle Management process are not usually quantified in terms of cost and risk avoidance. Without an overall governance mandate and value proposition, Enterprise Architecture activities may seesaw in response to the "issue of the moment." This is not a recipe for sustainable architecture; whose most important value proposition lies in the long term.
+
+
+arch review boards as xref:coord-struct[coordination structures]
 
 ===== Architecture as a management program
 Bernard fig 1-4: Governance, Framework, Methodology, Best Practices, Standards, Artifacts
@@ -71,15 +91,6 @@ Entire language/mental model around gaps brings back flower & cog
 A flower is not engineered to fill a gap. A cog is.
 
 how do we know there is a gap? We have hypotheses... need to establish that there is a valuable, usable, feasible future state, and if there is progress towards it must not be delayed by queues, cycle time, etc ... need to move with alacrity... Cost of Delay outweighs much...
-
-====== Architecture, governance, process
-
-Many EA-originated policies that appear obsolete today have not always been meaningless. Most probably they have emerged as the architecture group's overreactions to unlikely-to-recur situations that they experienced in their organization in the past. A frequent example is the uncontrolled proliferation of newly hyped technologies by the IT crowd, and the EA group's rigid attempt to reinstitute order. Once the technology has matured, the EA rules often appear overly strict and suppress a flexible use of the appropriate technology. <<Bente2012>> p19
-
-Bente is correct to focus on collaborative issues. but the overall benefits of having (for example) a TLM are not usually quantified in terms of cost and risk avoidance. This can be done. TLM should route via corp governance & perf mgmt, align w/vendor mgmt... find sources on how these processes work in non IT domains... (have already discussed in book)
-
-arch review boards as xref:coord-struct[coordination structures]
-
 
 ===== Modeling and visualization
 The true measure of the value of a model is whether it actually influences behavior. Smith/Reinertsen 1998 p46.

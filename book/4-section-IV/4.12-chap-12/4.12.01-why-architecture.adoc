@@ -56,7 +56,7 @@ The enterprise architecture is the organizing logic for business processes and I
 [quote, Bente et al, Collaborative Enterprise Architecture]
 Enterprise architecture (EA) is the representation of the structure and behavior of an enterprise's IT landscape in relation to its business environment. It reflects the current and future use of IT in the enterprise and provides a roadmap to reach a future state. <<Bente2012>> p 35
 
-"Architecture" as a term by itself is something you've encountered since your earliest days as a startup. Perhaps you used it to describe the choice of technologies you used for your products. Or the most important components in your application. Or the common services (e.g. authentication) you developed to support multiple products. The architecture concept is therefore not something new or foreign. But what does it mean to say we have an "enterprise" architecture? *Enterprise architecture is nothing but the unification of all the above topics into a common, formalized, scalable framework for understanding.* It means we are "doing architecture" comprehensively, considering the enterprise itself as a system to be architected. It also may mean we have a program for sustaining the work of those doing architecture in the technical, application, solution, data, process, or business domains.
+"Architecture" as a term by itself is something you've encountered since your earliest days as a startup. Perhaps you used it to describe the choice of technologies you used for your products. Or the most important components in your application. Or the common services (e.g. authentication) you developed to support multiple products. The architecture concept is therefore not something new or foreign. But what does it mean to say we have an "enterprise" architecture? *Enterprise architecture is nothing but the unification of this book's topics into a common, formalized, scalable framework for understanding.* It means we are "doing architecture" comprehensively, considering the enterprise itself as a system to be architected. It also may mean we have a program for sustaining the work of those doing architecture in the technical, application, solution, data, process, or business domains.
 
 There are numerous definitions of _enterprise architecture_. The examples above are typical. It can be defined as:
 
@@ -79,6 +79,8 @@ There are three major themes we'll discuss in terms of the overall organizationa
 * The line versus staff concept and its origins
 * Contrasting the concepts of "business model" versus "operating model"
 * The other major organizational units of interest to enterprise architecture
+
+anchor:arch-as-staff[]
 
 ====== Architecture as staff function
 [quote, Elihu Root, 1903 congressional testimony on US army re-organization (condensed)]
@@ -201,7 +203,8 @@ Finally, the EA group often has a close relationship with xref:ops-mgmt[infrastr
 
 In organizations where operations is increasingly distributed to the application teams ("you build it, you run it") the above may be less true.
 
-Other staff organizations that may develop close relationships with enterprise architecture include xref:sourcing[vendor management and sourcing], xref:risk-management[risk management], and xref:security[security].
+Other staff organizations that may develop close relationships with enterprise architecture include xref:sourcing[vendor management and sourcing], xref:risk-management[risk management], xref:compliance[compliance]
+, and xref:security[security]. Notice that some of these have strong xref:gov-chap[governance] connections (although we do not consider "governance" itself to be an organization, which is why it was not included in the discussion above.)
 
 ===== The value of EA
 
@@ -211,9 +214,9 @@ On the value side, EA is unique in its ability to promote enterprise-wide thinki
 [quote, Bente et al, Collaborative Enterprise Architecture]
 As a hygiene factor, benefits from EA can be valued in terms of reduction in management escalations, emergency occurrences, and year-on-year operational expenses. As a strategic foundation, EA facilitates the deployment of new capabilities. <<Bente2012>>
 
-Enterprise architecture often struggles to demonstrate clear, quantifiable value to the organization. Architects are usually among the most experienced and therefore expensive staff in the organization. While it may seem to make historical and intuitive sense that architecture as a staff function is necessary, demonstrating this takes some thought and effort.
+Enterprise architecture often struggles to demonstrate clear, quantifiable value to the organization. Architects are usually among the most experienced and therefore expensive staff in the organization. While it may seem to make historical and intuitive sense that architecture as a staff function is necessary, demonstrating this takes some thought and effort. Statements like "promoting enterprise-wide thinking" easily provoke skepticism. What are the benefits of so-called "enterprise-wide thinking"? And who receives them?
 
-The following benefits are often asserted for enterprise architecture:
+The following outcomes are often asserted for enterprise architecture:
 
 * Shortening planning & decision-making (e.g. through curating information)
 * Increased speed of delivering new functionality
@@ -226,7 +229,7 @@ The following model is a high level xref:impact-mapping[impact mapping] represen
 .Architecture impacts on enterprise value
 image::images/4.12-impact.png[]
 
-In the above diagram, we see that there are specific, measurable outcomes from typical enterprise architecture goals. Without exploring every line of value:
+The above diagram suggests a number of specific, measurable outcomes from typical enterprise architecture goals. Without exploring every line of value:
 
 * A reduced technology portfolio can and should result in improved xref:it-sourcing[sourcing], improved support, improved security, reduced IT staffing spend, and potentially reduced development time. For example, vendors may offer more favorable terms when their products are preferred standards throughout an organization. A smaller product portfolio is easier to  xref:sourcing-and-security[secure].
 * Better understanding of the current estate should reduce investigation times and outages, and reduce the risk of regulatory violations. For example, if regulators require evidence that employee medical xref:records-mgmt[records] have not been removed from the country, architecture's curating of that information will expedite xref:compliance[compliance] response.
