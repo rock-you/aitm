@@ -1072,7 +1072,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="#_architecture_practices">Architecture practices</a>
-<ul class="sectlevel5">
+<ul class="sectlevel4">
 <li><a href="#_architecture_and_governance">Architecture and governance</a></li>
 <li><a href="#_architecture_as_a_management_program">Architecture as a management program</a></li>
 <li><a href="#_modeling_and_visualization">Modeling and visualization</a></li>
@@ -20196,6 +20196,9 @@ Trust, but verify.
 <p>The following diagram, derived from previous illustrations, shows how this book views assurance: as a set of practices overlaid across the enablers, and in particular concerned with external forces.</p>
 </div>
 <div class="paragraph">
+<p><a id="assurance-external-forces"></a></p>
+</div>
+<div class="paragraph">
 <p><span class="image"><img src="images/4.10-AudComRisk.png" alt="4.10-AudComRisk"></span></p>
 </div>
 <div class="paragraph">
@@ -23303,6 +23306,9 @@ Thinking in terms of the emergence model, you have likely been integrating data 
 <img src="images/4.11-HRData.png" alt="4.11 HRData">
 </div>
 </div>
+<div class="paragraph">
+<p><a id="reference-data"></a></p>
+</div>
 </div>
 <div class="sect5">
 <h6 id="_reference_data_management">Reference data management</h6>
@@ -25354,6 +25360,9 @@ Although immature code may work fine and be completely acceptable to the custome
 <p>IT portfolio management</p>
 </li>
 <li>
+<p>"Zoning authority" e.g. defining what systems are <a href="#system-of-record">"of record"</a> for what data</p>
+</li>
+<li>
 <p>Program architect (e.g. Application Decommissioning and Portfolio Rationalization for the Wells Fargo/Wachovia merger)</p>
 </li>
 <li>
@@ -25396,8 +25405,8 @@ Although immature code may work fine and be completely acceptable to the custome
 </div>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_architecture_and_governance">Architecture and governance</h6>
+<div class="sect4">
+<h5 id="_architecture_and_governance">Architecture and governance</h5>
 <div class="paragraph">
 <p>Enterprise architecture has a clear relationship to <a href="#gov-chap">governance</a> as we discussed it in Chapter 10. It provides a framework for managing <a href="#tech-prod-lifecycle">long-lifecycle concerns</a> and various forms of enterprise <a href="#risk-management">risk</a>, especially as related to digital and IT systems.</p>
 </div>
@@ -25422,17 +25431,55 @@ identification and enforcement</p>
 <p>As discussed in <a href="#policy-hierarchy">Chapter 10</a>, there needs to be traceability from tactical standards to strategic codes and principles. The preference for a given database should not be a policy, but having a process that establishes such a preference <strong>would</strong> be&#8201;&#8212;&#8201;that is, a policy should exist saying (for example) "there shall be a Technology Lifecycle Management process with the following objectives and scope." Where appropriate, such policies might also be linked to specific risks as <a href="#controls">controls</a> or <a href="#enablers">enablers</a>.</p>
 </div>
 <div class="paragraph">
-<p>It&#8217;s important to have some sort of sunset mechanism. As Bente et al note, <em>Many EA-originated policies that appear obsolete today have not always been meaningless. Most probably they have emerged as the architecture group&#8217;s overreactions to unlikely-to-recur situations that they experienced in their organization in the past. A frequent example is the uncontrolled proliferation of newly hyped technologies by the IT crowd, and the EA group&#8217;s rigid attempt to reinstitute order. Once the technology has matured, the EA rules often appear overly strict and suppress a flexible use of the appropriate technology.</em> <a href="#Bente2012">[Bente2012]</a> p19</p>
+<p>As for all policies, it&#8217;s important to have some sort of sunset mechanism for EA guidance. As Bente et al note, <em>Many EA-originated policies that appear obsolete today have not always been meaningless&#8230;&#8203;A frequent example is the uncontrolled proliferation of newly hyped technologies by the IT crowd, and the EA group&#8217;s rigid attempt to reinstitute order. Once the technology has matured, the EA rules often appear overly strict and suppress a flexible use of the appropriate technology.</em> <a href="#Bente2012">[Bente2012]</a> p19</p>
 </div>
 <div class="paragraph">
-<p>The issue with the quote above is that the overall benefits of having (for example) a Technology Lifecycle Management process are not usually quantified in terms of cost and risk avoidance. Without an overall governance mandate and value proposition, Enterprise Architecture activities may seesaw in response to the "issue of the moment." This is not a recipe for sustainable architecture; whose most important value proposition lies in the long term.</p>
+<p>The issue with the quote above is that the overall benefits of having (for example) a Technology Lifecycle Management process are not usually quantified in terms of cost and risk avoidance. Without an overall governance mandate and value proposition, Enterprise Architecture activities may seesaw in response to the "issue of the moment." This is not a recipe for sustainable architecture; whose most important value proposition lies in the long term. Architecture, as a component of coherent governance, requires no less.</p>
 </div>
 <div class="paragraph">
-<p>arch review boards as <a href="#coord-struct">coordination structures</a></p>
+<p>As we discussed in Chapter 10 governance emerges in part as a response to <a href="#assurance-external-forces">external forces</a>. Architecture often plays a consultative role when external forces become governance issues, for example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Data custody and <a href="#system-of-record">Systems of Record</a>, and relationship to <a href="#records-mgmt">records management</a></p>
+</li>
+<li>
+<p>Vendor relationship strategies</p>
+</li>
+<li>
+<p>Security risks and controls</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Governance is also concerned with efficiency, which also becomes a key architecture concern with associated practices:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>IT portfolio rationalization</p>
+</li>
+<li>
+<p>Business process optimization</p>
+</li>
+<li>
+<p>Shared services and APIs re-use</p>
+</li>
+<li>
+<p>Master and <a href="#reference-data">reference data management</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>assurance and other governance topics</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_architecture_as_a_management_program">Architecture as a management program</h5>
+<div class="paragraph">
+<p>arch review boards as <a href="#coord-struct">coordination structures</a></p>
+</div>
 <div class="paragraph">
 <p>Bernard fig 1-4: Governance, Framework, Methodology, Best Practices, Standards, Artifacts</p>
 </div>
