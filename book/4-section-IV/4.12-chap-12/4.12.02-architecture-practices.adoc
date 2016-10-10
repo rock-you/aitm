@@ -4,6 +4,12 @@ Before we get into a detailed discussion of architecture domains, let's talk in 
 
 As we mentioned xref:defining-ea[previously], architecture itself as a term shows up in many ways, as role, artifact, program, and organization.
 
+In this chapter section, we will look at:
+
+* The relationship of architecture and governance
+* Architecture as a management program
+* The importance of visualization as a practice in architecture
+* Architecture and the quest for "rationalization"
 
 .Author's corner
 ****
@@ -37,6 +43,8 @@ If I had to characterize the important skills for this role, they would start wi
 ===== Architecture and governance
 
 Enterprise architecture has a clear relationship to xref:gov-chap[governance] as we discussed it in Chapter 10. It provides a framework for managing xref:tech-prod-lifecycle[long-lifecycle concerns] and various forms of enterprise xref:risk-management[risk], especially as related to digital and IT systems.
+
+Architecture is an important part of the governance equation. Architecture becomes the vehicle for technical standards that are essential risk controls; a risk management organization cannot achieve this alone.
 
 EA therefore may have a role in defining xref:how-policy-begins[policies], especially at the mid-tier of the xref:policy-hierarchy[policy hierarchy] - neither the highest enterprise principles, nor the most detailed technical standards, but rather policies and standards related to:
 
@@ -86,46 +94,63 @@ intended to serve a key xref:coord-struct[coordination] role.
 .Large scale architecture program
 image::images/4.12-archProgram.png[]
 
+The above diagram represents a large scale, coordinated architecture program in a large enterprise. Notice that this is not a single organization. As a program, the Architecture Program in this example is a coordinated set of activities that span a centralized Enterprise Architecture group as well as teams of Line of Business architects.
 
-generic diagram of large scale program
+The Enterprise Architecture organization might report to a CTO, the Chief of Staff for the Office of the CIO, or the head of Corporate Strategy and Planning. It is a centralized organization with a small staff of domain architects and an Architecture Standards organization that owns two key cross-functional architecture processes.
 
-Bernard fig 1-4: Governance, Framework, Methodology, Best Practices, Standards, Artifacts
+Lines of Business have dedicated IT organizations, and these organizations have Chief Architects with their own staffs. In terms of our discussion of  xref:arch-as-staff[line/staff] organization, it is as if the line organization has its own staff function within it; another way to think about it is that the line/staff
+division is _fractal_ (that is, it reproduces at different scales).
 
-Activities/Bernard: (loc 561)
-* Management program
-* analysis & design method - how to factor out?? key weakness. waterfall.
+Within the central Enterprise Architecture organization, we have a number of director-level Domain Architects. These architects might focus on particular business problems (e.g. Supply Chain) or architectural domains (e.g. Data and Information, or Security).
 
-As a management program, EA provides:     
-Strategic Alignment: Connects goals, activities, and resources    
-Standardized Policy: Resource governance and implementation     
-Decision Support: Financial control and configuration management   
-Resource Oversight: Lifecycle approach to development/management
+It is the responsibility of the Domain Architects to create Domain Architectures, which are documents that lay out an overall point of view on a particular domain and often serve as standards. These architectures may be created according to a methodology such as TOGAF, with the support of a repository-based tool and language such as Archimate or various standards from the Object Management Group.
 
-As an analysis and design method, EA provides:     
-EA Approach: The framework, analysis/design method, and artifact set
-Current Views: Views of as-is strategies, processes, and resources
-Future Views: Views of to-be strategies, processes, and resources
-EA Management Plan: A plan to move from the current to the future EA
+The domain architects also serve as a senior consulting pool and are assigned to significant programs and projects as needed.
 
-Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 585-601). AuthorHouse. Kindle Edition.
+The Architecture Standards organization is responsible for two organization-wide architecture processes:
 
-Got to bring in TOGAF
+* Architecture Review
+* Technology Lifecycle Management
 
-so, without EA... all this stuff is NOT getting done?
+The *Architecture Review* process is part of the investment process, when initiatives are initially scoped and direction set. The process requires architects to review significant proposed investments in new systems for consistency with standards (e.g. the Domain Architectures and approved technologies). In terms of the previous section's xref:arch-impacts[impact] model, this process is attempting to support many of the lines of value through controlling redundancy, and ensuring re-use and application of previously learned architectural lessons.
 
-EA as policy vehicle... how is it that policies are enforced? process gating?
+The *Technology Lifecycle Management* process is the means by which new vendor and open source products are approved as fit for purpose and/or preferred within the organization. In terms of the previous section's xref:arch-impacts[impact] model, this process is tasked with reducing the portfolio of vendor products which reduces cost and risk as shown.
 
-without EA.. how technical standards? how is a config image determined to be gold?
+Both of these processes are enterprise-wide processes. They are owned, defined, and modified by the Architecture Standards organization, but projects and products across the enterprise follow these processes.
 
-risk mgmt can't do it alone
+Overall, this may seem like a complex structure, but similar structures are in place in IT organizations with budgets of $1bn or more. It would be questionable to see comparable structures in much smaller organizations.
 
-In Bernard - goals & initiatives are above products & services - showing multiple product orientation - indicative of emergence phase
+However, this structure is useful to examine; organizations of various sizes might choose to use different parts of it.
 
-Entire language/mental model around gaps brings back flower & cog
+Finally, the Architectural Governance Council brings together the senior architects from the central EA organization and the LOB Chief Architects. It is a virtual organization operating on a xref:cadence[cadence], responsible for setting direction and resolving the most difficult questions that may emerge from the architecture processes and domain architectures.
 
-A flower is not engineered to fill a gap. A cog is.
 
-how do we know there is a gap? We have hypotheses... need to establish that there is a valuable, usable, feasible future state, and if there is progress towards it must not be delayed by queues, cycle time, etc ... need to move with alacrity... Cost of Delay outweighs much...
+===== Repositories and knowledge management
+
+backref to ch 11?
+
+Agile & docs "In an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it as part of the condition of satisfaction of a user story or in the definition of done" <<Bente2012>> p 170
+
+Catalogs - Need for registration process for subjective concepts - decision authority
+
+====== The repository question
+
+CMDBs, metadata, EA
+
+====== DevOps assets to architecture
+
+If you started from day 1 with source, build, & package mgmt, and have kept it clean, you have a great asset
+
+====== Metamodels and ontologies
+app v svc def'n
+runs into domain driven design problems if not careful
+
+Canon law disputes
+
+"standard EA language and methodology is especially helpful in large, complex enterprises that are geographically dispersed, and which may have multiple social and work cultures that have promoted different ways of doing things." <<Bernard
+
+Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 1147-1149). AuthorHouse. Kindle Edition.
+
 
 ===== Modeling and visualization
 The true measure of the value of a model is whether it actually influences behavior. Smith/Reinertsen 1998 p46.
@@ -231,29 +256,3 @@ in technical matters, there is a huge risk that they create a bottleneck, if dec
 Note that we compensate developers with money AND experience. Developer pressure to use a new technology should be seen in part as a demand for increased compensation. developers seeking experience, it is in part how they are compensated. this leads to conflicts over choice of tools. (good blog as well). rational framework for deciding. might go to chapter 8, resource mgmt. intersection between that & tech lifecycle is key.
 
 EA makes the decision to insource or outsource
-
-===== Repositories and knowledge management
-
-backref to ch 11?
-
-Agile & docs "In an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it as part of the condition of satisfaction of a user story or in the definition of done" <<Bente2012>> p 170
-
-Catalogs - Need for registration process for subjective concepts - decision authority
-
-====== The repository question
-
-CMDBs, metadata, EA
-
-====== DevOps assets to architecture
-
-If you started from day 1 with source, build, & package mgmt, and have kept it clean, you have a great asset
-
-====== Metamodels and ontologies
-app v svc def'n
-runs into domain driven design problems if not careful
-
-Canon law disputes
-
-"standard EA language and methodology is especially helpful in large, complex enterprises that are geographically dispersed, and which may have multiple social and work cultures that have promoted different ways of doing things." <<Bernard
-
-Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 1147-1149). AuthorHouse. Kindle Edition.
