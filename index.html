@@ -1075,9 +1075,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_architecture_and_governance">Architecture and governance</a></li>
 <li><a href="#_architecture_as_a_management_program">Architecture as a management program</a></li>
+<li><a href="#_repositories_and_knowledge_management">Repositories and knowledge management</a></li>
 <li><a href="#_modeling_and_visualization">Modeling and visualization</a></li>
 <li><a href="#_the_rationalization_quest">The "rationalization" quest</a></li>
-<li><a href="#_repositories_and_knowledge_management">Repositories and knowledge management</a></li>
 </ul>
 </li>
 <li><a href="#_architecture_domains">Architecture domains</a>
@@ -9084,6 +9084,9 @@ Reinertsen Boeing case</pre>
 <div class="content">
 <pre>I think there is a fundamental abstract model here of tasks and synch points - OS scheduling analogs? Mutexes/semaphores? emergent dependencies?</pre>
 </div>
+</div>
+<div class="paragraph">
+<p><a id="cadence"></a></p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -25226,6 +25229,9 @@ As a hygiene factor, benefits from EA can be valued in terms of reduction in man
 <div class="paragraph">
 <p>The following model is a high level <a href="#impact-mapping">impact mapping</a> representation.</p>
 </div>
+<div class="paragraph">
+<p><a id="arch-impacts"></a></p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="images/4.12-impact.png" alt="4.12 impact">
@@ -25338,6 +25344,25 @@ Although immature code may work fine and be completely acceptable to the custome
 <div class="paragraph">
 <p>As we mentioned <a href="#defining-ea">previously</a>, architecture itself as a term shows up in many ways, as role, artifact, program, and organization.</p>
 </div>
+<div class="paragraph">
+<p>In this chapter section, we will look at:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The relationship of architecture and governance</p>
+</li>
+<li>
+<p>Architecture as a management program</p>
+</li>
+<li>
+<p>The importance of visualization as a practice in architecture</p>
+</li>
+<li>
+<p>Architecture and the quest for "rationalization"</p>
+</li>
+</ul>
+</div>
 <div class="sidebarblock">
 <div class="content">
 <div class="title">Author&#8217;s corner</div>
@@ -25411,6 +25436,9 @@ Although immature code may work fine and be completely acceptable to the custome
 <h5 id="_architecture_and_governance">Architecture and governance</h5>
 <div class="paragraph">
 <p>Enterprise architecture has a clear relationship to <a href="#gov-chap">governance</a> as we discussed it in Chapter 10. It provides a framework for managing <a href="#tech-prod-lifecycle">long-lifecycle concerns</a> and various forms of enterprise <a href="#risk-management">risk</a>, especially as related to digital and IT systems.</p>
+</div>
+<div class="paragraph">
+<p>Architecture is an important part of the governance equation. Architecture becomes the vehicle for technical standards that are essential risk controls; a risk management organization cannot achieve this alone.</p>
 </div>
 <div class="paragraph">
 <p>EA therefore may have a role in defining <a href="#how-policy-begins">policies</a>, especially at the mid-tier of the <a href="#policy-hierarchy">policy hierarchy</a> - neither the highest enterprise principles, nor the most detailed technical standards, but rather policies and standards related to:</p>
@@ -25520,59 +25548,94 @@ identification and enforcement</p>
 <div class="title">Figure 8. Large scale architecture program</div>
 </div>
 <div class="paragraph">
-<p>generic diagram of large scale program</p>
+<p>The above diagram represents a large scale, coordinated architecture program in a large enterprise. Notice that this is not a single organization. As a program, the Architecture Program in this example is a coordinated set of activities that span a centralized Enterprise Architecture group as well as teams of Line of Business architects.</p>
 </div>
 <div class="paragraph">
-<p>Bernard fig 1-4: Governance, Framework, Methodology, Best Practices, Standards, Artifacts</p>
+<p>The Enterprise Architecture organization might report to a CTO, the Chief of Staff for the Office of the CIO, or the head of Corporate Strategy and Planning. It is a centralized organization with a small staff of domain architects and an Architecture Standards organization that owns two key cross-functional architecture processes.</p>
 </div>
 <div class="paragraph">
-<p>Activities/Bernard: (loc 561)
-* Management program
-* analysis &amp; design method - how to factor out?? key weakness. waterfall.</p>
+<p>Lines of Business have dedicated IT organizations, and these organizations have Chief Architects with their own staffs. In terms of our discussion of  <a href="#arch-as-staff">line/staff</a> organization, it is as if the line organization has its own staff function within it; another way to think about it is that the line/staff
+division is <em>fractal</em> (that is, it reproduces at different scales).</p>
 </div>
 <div class="paragraph">
-<p>As a management program, EA provides:     
-Strategic Alignment: Connects goals, activities, and resources    
-Standardized Policy: Resource governance and implementation     
-Decision Support: Financial control and configuration management   
-Resource Oversight: Lifecycle approach to development/management</p>
+<p>Within the central Enterprise Architecture organization, we have a number of director-level Domain Architects. These architects might focus on particular business problems (e.g. Supply Chain) or architectural domains (e.g. Data and Information, or Security).</p>
 </div>
 <div class="paragraph">
-<p>As an analysis and design method, EA provides:     
-EA Approach: The framework, analysis/design method, and artifact set
-Current Views: Views of as-is strategies, processes, and resources
-Future Views: Views of to-be strategies, processes, and resources
-EA Management Plan: A plan to move from the current to the future EA</p>
+<p>It is the responsibility of the Domain Architects to create Domain Architectures, which are documents that lay out an overall point of view on a particular domain and often serve as standards. These architectures may be created according to a methodology such as TOGAF, with the support of a repository-based tool and language such as Archimate or various standards from the Object Management Group.</p>
 </div>
 <div class="paragraph">
-<p>Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 585-601). AuthorHouse. Kindle Edition.</p>
+<p>The domain architects also serve as a senior consulting pool and are assigned to significant programs and projects as needed.</p>
 </div>
 <div class="paragraph">
-<p>Got to bring in TOGAF</p>
+<p>The Architecture Standards organization is responsible for two organization-wide architecture processes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Architecture Review</p>
+</li>
+<li>
+<p>Technology Lifecycle Management</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>so, without EA&#8230;&#8203; all this stuff is NOT getting done?</p>
+<p>The <strong>Architecture Review</strong> process is part of the investment process, when initiatives are initially scoped and direction set. The process requires architects to review significant proposed investments in new systems for consistency with standards (e.g. the Domain Architectures and approved technologies). In terms of the previous section&#8217;s <a href="#arch-impacts">impact</a> model, this process is attempting to support many of the lines of value through controlling redundancy, and ensuring re-use and application of previously learned architectural lessons.</p>
 </div>
 <div class="paragraph">
-<p>EA as policy vehicle&#8230;&#8203; how is it that policies are enforced? process gating?</p>
+<p>The <strong>Technology Lifecycle Management</strong> process is the means by which new vendor and open source products are approved as fit for purpose and/or preferred within the organization. In terms of the previous section&#8217;s <a href="#arch-impacts">impact</a> model, this process is tasked with reducing the portfolio of vendor products which reduces cost and risk as shown.</p>
 </div>
 <div class="paragraph">
-<p>without EA.. how technical standards? how is a config image determined to be gold?</p>
+<p>Both of these processes are enterprise-wide processes. They are owned, defined, and modified by the Architecture Standards organization, but projects and products across the enterprise follow these processes.</p>
 </div>
 <div class="paragraph">
-<p>risk mgmt can&#8217;t do it alone</p>
+<p>Overall, this may seem like a complex structure, but similar structures are in place in IT organizations with budgets of $1bn or more. It would be questionable to see comparable structures in much smaller organizations.</p>
 </div>
 <div class="paragraph">
-<p>In Bernard - goals &amp; initiatives are above products &amp; services - showing multiple product orientation - indicative of emergence phase</p>
+<p>However, this structure is useful to examine; organizations of various sizes might choose to use different parts of it.</p>
 </div>
 <div class="paragraph">
-<p>Entire language/mental model around gaps brings back flower &amp; cog</p>
+<p>Finally, the Architectural Governance Council brings together the senior architects from the central EA organization and the LOB Chief Architects. It is a virtual organization operating on a <a href="#cadence">cadence</a>, responsible for setting direction and resolving the most difficult questions that may emerge from the architecture processes and domain architectures.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_repositories_and_knowledge_management">Repositories and knowledge management</h5>
+<div class="paragraph">
+<p>backref to ch 11?</p>
 </div>
 <div class="paragraph">
-<p>A flower is not engineered to fill a gap. A cog is.</p>
+<p>Agile &amp; docs "In an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it as part of the condition of satisfaction of a user story or in the definition of done" <a href="#Bente2012">[Bente2012]</a> p 170</p>
 </div>
 <div class="paragraph">
-<p>how do we know there is a gap? We have hypotheses&#8230;&#8203; need to establish that there is a valuable, usable, feasible future state, and if there is progress towards it must not be delayed by queues, cycle time, etc &#8230;&#8203; need to move with alacrity&#8230;&#8203; Cost of Delay outweighs much&#8230;&#8203;</p>
+<p>Catalogs - Need for registration process for subjective concepts - decision authority</p>
+</div>
+<div class="sect5">
+<h6 id="_the_repository_question">The repository question</h6>
+<div class="paragraph">
+<p>CMDBs, metadata, EA</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_devops_assets_to_architecture">DevOps assets to architecture</h6>
+<div class="paragraph">
+<p>If you started from day 1 with source, build, &amp; package mgmt, and have kept it clean, you have a great asset</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_metamodels_and_ontologies">Metamodels and ontologies</h6>
+<div class="paragraph">
+<p>app v svc def&#8217;n
+runs into domain driven design problems if not careful</p>
+</div>
+<div class="paragraph">
+<p>Canon law disputes</p>
+</div>
+<div class="paragraph">
+<p>"standard EA language and methodology is especially helpful in large, complex enterprises that are geographically dispersed, and which may have multiple social and work cultures that have promoted different ways of doing things." &lt;&lt;Bernard</p>
+</div>
+<div class="paragraph">
+<p>Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 1147-1149). AuthorHouse. Kindle Edition.</p>
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -25727,46 +25790,6 @@ in technical matters, there is a huge risk that they create a bottleneck, if dec
 </div>
 <div class="paragraph">
 <p>EA makes the decision to insource or outsource</p>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_repositories_and_knowledge_management">Repositories and knowledge management</h5>
-<div class="paragraph">
-<p>backref to ch 11?</p>
-</div>
-<div class="paragraph">
-<p>Agile &amp; docs "In an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it as part of the condition of satisfaction of a user story or in the definition of done" <a href="#Bente2012">[Bente2012]</a> p 170</p>
-</div>
-<div class="paragraph">
-<p>Catalogs - Need for registration process for subjective concepts - decision authority</p>
-</div>
-<div class="sect5">
-<h6 id="_the_repository_question">The repository question</h6>
-<div class="paragraph">
-<p>CMDBs, metadata, EA</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_devops_assets_to_architecture">DevOps assets to architecture</h6>
-<div class="paragraph">
-<p>If you started from day 1 with source, build, &amp; package mgmt, and have kept it clean, you have a great asset</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_metamodels_and_ontologies">Metamodels and ontologies</h6>
-<div class="paragraph">
-<p>app v svc def&#8217;n
-runs into domain driven design problems if not careful</p>
-</div>
-<div class="paragraph">
-<p>Canon law disputes</p>
-</div>
-<div class="paragraph">
-<p>"standard EA language and methodology is especially helpful in large, complex enterprises that are geographically dispersed, and which may have multiple social and work cultures that have promoted different ways of doing things." &lt;&lt;Bernard</p>
-</div>
-<div class="paragraph">
-<p>Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 1147-1149). AuthorHouse. Kindle Edition.</p>
 </div>
 </div>
 </div>
@@ -26023,6 +26046,15 @@ example of antipatterns</p>
 </div>
 <div class="paragraph">
 <p>Architecture HIPPOS</p>
+</div>
+<div class="paragraph">
+<p>Entire language/mental model around gaps brings back flower &amp; cog</p>
+</div>
+<div class="paragraph">
+<p>A flower is not engineered to fill a gap. A cog is.</p>
+</div>
+<div class="paragraph">
+<p>how do we know there is a gap? We have hypotheses&#8230;&#8203; need to establish that there is a valuable, usable, feasible future state, and if there is progress towards it must not be delayed by queues, cycle time, etc &#8230;&#8203; need to move with alacrity&#8230;&#8203; Cost of Delay outweighs much&#8230;&#8203;</p>
 </div>
 </div>
 <div class="sect4">
