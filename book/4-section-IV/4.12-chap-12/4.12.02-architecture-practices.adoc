@@ -164,7 +164,7 @@ image::images/4.12-tiger.jpg[blueprint, 350, 200, float="right"]
 
 .The first software flowchart footnote:[_<<vonNeumann1947>>, figure 7.9, public domain assumed_]
 image::images/4.12-neumann-flowchart.png[blueprint, 350, 200, float="left"]
-Architects in general don't write code; instead the most visible aspect of their work takes the form of diagrams -- abstract graphical representations of complex systems. The first known instance of this was in 1947 <<vonNeumann1947>> and visual notations have evolved along with the field of computing ever since. Notable examples include:
+Architects in general don't write code; instead the most visible aspect of their work takes the form of diagrams -- abstract graphical representations of complex systems. The first known instance of applying graphical techniques to a digital problem was in 1947 <<vonNeumann1947>> and visual notations have evolved along with the field of computing ever since. Notable examples include:
 
 * The IBM flowcharting template
 * The Gane-Sarson data-flow diagram notation
@@ -190,7 +190,7 @@ If we're building systems to be operated and maintained by humans, it would seem
 
 The strength of human visual processing is why we will (probably) always have graphical design to assist in the building of shared mental models. Specialists in the syntax and semantics of such designs will therefore likely continue to play a role in complex systems development and maintenance. Currently, if one seeks to hire such a specialist, one recruits some kind of architect - that is the professional role with the skills.
 
-Note that flowcharts, data models, and other such diagrams tend to be associated more with the idea of "solutions" or "software" architecture. (We'll cover the xref:architecture-domains[architecture domains] in the next chapter section.)
+Note that flowcharts, data models, and other such diagrams tend to be associated more with the idea of "solutions" or "software" architecture. We'll cover the xref:architecture-domains[architecture domains] in the next chapter section, including examples of business architecture diagrams.
 
 ====== Limitations of visualization
 [quote, Bente et al, Collaborative Enterprise Architecture]
@@ -199,21 +199,36 @@ The big picture is part of the standard mindset of EA, which everyone immediatel
 Visualization has a number of limitations:
 
 * It is better for static structures than for dynamic processes,
-* it can result in distorted understandings,
 * diagrams become less accessible the more complex they are, and
+* it can result in distorted understandings,
 * ultimately, diagrams rely on deeper shared understandings that must be understood and managed.
 
+Despite the familiarity of simple flowcharting, visual notations don't scale well in terms of representing program logic. Therefore they tend to be used informally, as sketch or whiteboarding, or at the business analysis level (where the flowchart represents business logic, not detailed software).
+
+More static structures, including data models and systems interactions, are still often represented visually and in the case of xref:data-modeling[data models] can be transformed from conceptual representations to physical schema.
+
+However, any diagram, whether of a dynamic or static problem, can reach a level of density where it's no longer useful as a visual explanation. As diagrams become more complex, their audience narrows to those most familiar with them. Past a certain point they exceed the limits of human visual processing, and then are of little use to anyone.
+
+For example, the diagram below, while intimidating, might be useful to those who work with and study it. It would take some familiarization:
+
+.Complex diagram footnote:[_Image https://www.flickr.com/photos/pushandplay/2968259379, downloaded 2016-10-10, commercial use permitted_]
+image::images/4.12-obesity.jpg[blueprint, 550, 200]
+
+However, this next diagram is essentially unusable, as visually tracing any given line is too difficult, and it would be easy to mistakenly identify one bubble as dependent on another:
+
+.Another complex diagram footnote:[_Image https://www.flickr.com/photos/taedc/9614791576, downloaded 2016-10-10, commercial use permitted_]
+image::images/4.12-complex-network.jpg[blueprint, 550, 200]
+
+Another issue with some diagrams is that they do not give a good sense of perspective or scale. This is sometimes seen in the business architecture practice of "capability mapping."
+formalisms don't give a good sense of scale. For example, suppose you see this diagram:
+
+.Simple capability map
+image::images/4.12-capabilities.png[capabilities, 500, ]
+
+Diagrams like this are common, but what does it mean that all the boxes are equally sized? Are there as many lawyers as sales people? Operations staff? It's not clear what the advantage is to putting information like this into a graphical form; no interactions are seen and the eight areas could more easily be expressed as a list. This brings us to the final problem listed above: visualizations rely on some common ground understanding. If boxes and lines are used for communication, their meaning should be agreed upon - otherwise, there is risk of mis-understanding, and the diagram may do more harm than good.
 
 
-long abandoned for dynamic aspects
-
-complex graph...
-
-formalisms don't give a good sense of scale - give a visual example "semantic distortions" - simple example: equal-sized boxes on an EA capability map.
-
-arch formalisms weak on dynamics - semantics vs dynamics problem semantics gravitate to first order predicate logic, binary thinking continuous math... required... how to measure anything. systems thinking.
-
-still of utility for more static aspects - but show Death Star diagrams -
+===== Repositories and knowledge management
 
 why draw boxes when a textual report is all that is needed (e.g. Bente p52)
 
@@ -223,14 +238,7 @@ every so often there is a ritual expression of a catalog as nested boxes. Of que
 
 next: intersection of visualization and master data management. semantics of the visualization.
 
-Cockburn communication problem - artifacts stimulate internal mental models but not Shannon... hence the endless attention to EA metamodels
-
-===== Repositories and knowledge management
-
-
-Finally, enterprise architecture does not solely consist of diagrams; per TOGAF, the basic artifacts are catalogs, diagrams, and matrices and the act of drawing pictures itself may be the least important thing the architect does . The picture, if valuable, concisely represents a shared mental model on how the enterprise will undertake complex activities, and the discussions and negotiations the architect facilitates on the journey to such agreement are the real added value.
-
-
+enterprise architecture does not solely consist of diagrams; per TOGAF, the basic artifacts are catalogs, diagrams, and matrices and the act of drawing pictures itself may be the least important thing the architect does . The picture, if valuable, concisely represents a shared mental model on how the enterprise will undertake complex activities, and the discussions and negotiations the architect facilitates on the journey to such agreement are the real added value.
 
 the EA's role is to facilitate discussions by abstracting and visualizing powerfully so that decisions are illuminated.
 
