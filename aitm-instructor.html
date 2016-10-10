@@ -25906,10 +25906,7 @@ The true measure of the value of a model is whether it actually influences behav
 <div class="title">Figure 10. Whiteboard <span class="footnote">[<a id="_footnoteref_24" class="footnote" href="#_footnote_24" title="View footnote.">24</a>]</span></div>
 </div>
 <div class="paragraph">
-<p>Even in construction and engineering trades that rely on blueprints as a source of truth, keeping them up to date requires considerable discipline and process. In faster-moving digital organizations, visual models are almost always out of date unless they have been specifically refreshed for a purpose, or unless there is a strong formal process in place (and the value of such a process may be difficult to establish). That doesn&#8217;t mean that people won&#8217;t continue to use them. Co-located teams use whiteboards and dry-erase markers and will continue to use them. There are important cognitive and human factors reasons for this that will not go away.</p>
-</div>
-<div class="paragraph">
-<p>Because of these facts, it is useful to understand some of the fundamentals of how humans interpret symbolic data.</p>
+<p>Even in construction and engineering trades that rely on blueprints as a source of truth, keeping them up to date requires considerable discipline and process. In faster-moving digital organizations, visual models are almost always out of date unless they have been specifically refreshed for a purpose, or unless there is a strong formal process in place (and the value of such a process may be difficult to establish). That doesn&#8217;t mean that diagrams will go away. Co-located teams use whiteboards and dry-erase markers and will continue to use them. There are important cognitive and human factors reasons for this that will not go away. Because of these facts, it is useful to understand some of the fundamentals of how humans interpret visual data.</p>
 </div>
 <div class="sect5">
 <h6 id="_human_visual_processing">Human visual processing</h6>
@@ -26051,10 +26048,10 @@ The big picture is part of the standard mindset of EA, which everyone immediatel
 </ul>
 </div>
 <div class="paragraph">
-<p>Despite the familiarity of simple flowcharting, visual notations don&#8217;t scale well in terms of representing program logic. Therefore they tend to be used informally, as sketch or whiteboarding, or at the business analysis level (where the flowchart represents business logic, not detailed software).</p>
+<p>Despite the familiarity of simple flowcharting, visual notations don&#8217;t scale well in terms of representing program logic. Therefore, for dynamic or procedural problems, they tend to be used informally, as sketch or whiteboarding, or at the business analysis level (where the flowchart represents business logic, not detailed software).</p>
 </div>
 <div class="paragraph">
-<p>More static structures, including data models and systems interactions, are still often represented visually and in the case of <a href="#data-modeling">data models</a> can be transformed from conceptual representations to physical schema.</p>
+<p>More static structures, including data and class models and systems interactions, are still often represented visually and in the case of <a href="#data-modeling">data models</a> can be transformed from conceptual representations to physical schema.</p>
 </div>
 <div class="paragraph">
 <p>However, any diagram, whether of a dynamic or static problem, can reach a level of density where it&#8217;s no longer useful as a visual explanation. As diagrams become more complex, their audience narrows to those most familiar with them. Past a certain point they exceed the limits of human visual processing, and then are of little use to anyone.</p>
@@ -26078,6 +26075,9 @@ The big picture is part of the standard mindset of EA, which everyone immediatel
 <div class="title">Figure 16. Another complex diagram <span class="footnote">[<a id="_footnoteref_30" class="footnote" href="#_footnote_30" title="View footnote.">30</a>]</span></div>
 </div>
 <div class="paragraph">
+<p>This may seem like an obvious critique, but architectural diagrams of similar complexity and unusability have too often been produced.</p>
+</div>
+<div class="paragraph">
 <p>Another issue with some diagrams is that they do not give a good sense of perspective or scale. This is sometimes seen in the business architecture practice of "capability mapping."
 formalisms don&#8217;t give a good sense of scale. For example, suppose you see this diagram:</p>
 </div>
@@ -26094,8 +26094,57 @@ formalisms don&#8217;t give a good sense of scale. For example, suppose you see 
 </div>
 <div class="sect4">
 <h5 id="_repositories_and_knowledge_management">Repositories and knowledge management</h5>
+<div class="quoteblock">
+<blockquote>
+Artifacts are generally classified as catalogs (lists of things), matrices (showing relationships between things), and diagrams (pictures of things).
+</blockquote>
+<div class="attribution">
+&#8212; TOGAF Version 9
+</div>
+</div>
 <div class="paragraph">
-<p>why draw boxes when a textual report is all that is needed (e.g. Bente p52)</p>
+<p>The question was asked above, "why put things into a picture when a report is all that is needed?" We know that sometimes a picture is worth a thousand words, but not always. And sometimes the picture&#8217;s components need more description than can conveniently fit on the actual diagram. This brings us to the topic of enterprise architecture as knowledge management.</p>
+</div>
+<div class="paragraph">
+<p>Knowledge management is a broad topic, with a scope far beyond this book. But in the context of a digital organization, architecture can serve as an important component of an overall knowledge management strategy. Without some common ground of understanding, digital organizations struggle, and EA can help.</p>
+</div>
+<div class="paragraph">
+<p>As the quote from TOGAF above indicates, architecture can elegantly be represented as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Catalogs</p>
+</li>
+<li>
+<p>Diagrams</p>
+</li>
+<li>
+<p>Matrices</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For example, consider this diagram:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/4.12-proc-func.png" alt="process-function" width="400"></span></p>
+</div>
+<div class="paragraph">
+<p>It can be read as saying that the "Quote to Cash" process depends on the following functions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sales</p>
+</li>
+<li>
+<p>Contracts</p>
+</li>
+<li>
+<p>Accounts Receivable</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>EA needs catalogs and matrices maintained. diagrams? it&#8217;s questionable.</p>
@@ -26257,18 +26306,7 @@ in technical matters, there is a huge risk that they create a bottleneck, if dec
 <div class="sect4">
 <h5 id="_business_architecture">Business architecture</h5>
 <div class="paragraph">
-<p>Business architecture offers views of the business that are un
-available from other sources, including IT. Business architecture
-can tell you what is being done, by which business units, for cer
-tain customers, involving various products, via certain processes,
-involving selected business information. Business
-architecture
-generated blueprints serve as the basis for root cause analysis of
-critical business requirements while providing the foundation for
-establishing a solution-oriented roadmap that leaves the specula
-tion and guesswork by the roadside. In a word, business architec
-ture delivers "transparency" to a wide variety of internal teams,
-roles and business units. Ulrich p 195</p>
+<p>Business architecture offers views of the business that are unavailable from other sources, including IT. Business architecture can tell you what is being done, by which business units, for certain customers, involving various products, via certain processes, involving selected business information. Business architecture generated blueprints serve as the basis for root cause analysis of critical business requirements while providing the foundation for establishing a solution-oriented roadmap that leaves the speculation and guesswork by the roadside. In a word, business architecture delivers "transparency" to a wide variety of internal teams, roles and business units. Ulrich p 195</p>
 </div>
 <div class="paragraph">
 <p>The repeatable development of a
