@@ -87,12 +87,10 @@ Architecture as a program refers to a coordinated set of
 * organizations, and
 * cadenced and ad-hoc activities
 
-intended to serve a key xref:coord-struct[coordination] role.
+intended to serve a key xref:coord-struct[coordination] role. The below diagram represents a large scale, coordinated architecture program in a large enterprise. Notice that this is not a single organization. The Architecture Program in this example spans a centralized Enterprise Architecture group as well as teams of Line of Business architects.
 
 .Large scale architecture program
 image::images/4.12-archProgram.png[]
-
-The above diagram represents a large scale, coordinated architecture program in a large enterprise. Notice that this is not a single organization. The Architecture Program in this example spans a centralized Enterprise Architecture group as well as teams of Line of Business architects.
 
 The Enterprise Architecture organization might report to a CTO, the Chief of Staff for the Office of the CIO, or the head of Corporate Strategy and Planning. It is a centralized organization with a small staff of domain architects and an Architecture Standards organization that owns two key cross-functional architecture processes.
 
@@ -120,8 +118,113 @@ Finally, the *Architectural Governance Council* brings together the senior archi
 
 Overall, this may seem like a complex structure, but similar structures are in place in IT organizations with budgets of $1bn or more. It would be questionable to see comparable structures in much smaller organizations. However, this structure is useful to examine; organizations of various sizes might choose to use different parts of it.
 
-===== Repositories and knowledge management
 
+===== Modeling and visualization
+
+.Gudea with blueprint, ~2140 BCE footnote:[_Image https://www.flickr.com/photos/daryl_mitchell/16189447931, downloaded 2016-10-10, commercial use permitted_]
+image::images/4.12-gudea.jpg[blueprint, 350, 200, float="right"]
+
+[quote, Preston Smith and Don Reinertsen, Developing Products in Half the Time]
+The true measure of the value of a model is whether it actually influences behavior.
+
+The word "architect," whether in a building or digital context,  is often associated with visualizations: blueprints, sketches, specialized notations, and so forth. Drawings have been used to represent structures for likely as long as xref:writing-history[writing has existed]. The image at the beginning of this section is of Gudea, a Mesopotamian ruler known for building temples; on his lap is a blueprint.
+
+Judging simply by its history, visualization is therefore an essential tool for humans dealing with large scale complexity (and erecting buildings has always been one of the more complex domains of human activity.) In digital and IT contexts, however, visualization has certain challenges and notable skeptics. Adrian Cockcroft, the former CTO of Netflix, stated: “Our architecture was changing faster than you can draw it... As a result, it wasn’t useful to try to draw it” <<Bloomberg2014>>.
+
+
+.Whiteboard footnote:[_Image https://www.flickr.com/photos/simonov/15484240880, downloaded 2016-10-10, commercial use permitted_]
+image::images/4.12-whiteboard.jpg[blueprint, 350, 200, float="left"]
+
+Even in construction and engineering trades that rely on blueprints as a source of truth, keeping them up to date requires considerable discipline and process. In faster-moving digital organizations, visual models are almost always out of date unless they have been specifically refreshed for a purpose, or unless there is a strong formal process in place (and the value of such a process may be difficult to establish). That doesn't mean that people won't continue to use them. Co-located teams use whiteboards and dry-erase markers and will continue to use them. There are important cognitive and human factors reasons for this that will not go away.
+
+Because of these facts, it is useful to understand some of the fundamentals of how humans interpret symbolic data.
+
+====== Human visual processing
+[quote, Dan Moody, The "Physics" of Notations]
+Visual representations are effective because they tap into the
+capabilities of the powerful and highly parallel human visual
+system. We like receiving information in visual form and can
+process it very efficiently: around a quarter of our brains are
+devoted to vision, more than all our other senses combined [63].
+In addition, diagrams can convey information more concisely
+[27] and precisely than ordinary language [8, 68]. Information
+represented visually is also more likely to be remembered due
+to the picture superiority effect [38, 70] ...Visual representations are also processed differently: according to dual channel theory [80], the human mind has separate systems for processing pictorial and verbal material. Visual representations are processed in parallel by the visual system, while textual representations are processed serially by the auditory system... <<Moody2009>>.
+
+As the above quote shows, there are clear neurological reasons for diagramming as a communication form. To expand a bit more on the points Dan Moody is making:
+
+.Fast recognition means survival footnote:[_Image https://www.flickr.com/photos/samiksha/2436037856, downloaded 2016-10-10, commercial use permitted_]
+image::images/4.12-tiger.jpg[blueprint, 350, 200, float="right"]
+
+* Human vision uses parallel processing. This means that a given image or visual stimulus is processed by many neurons simultaneously. This is how we recognize threats, such as a crouching tiger.
+* A large percentage of our brain is devoted to visual processing (you will see figures quoted from 25% to 66% depending on whether it's "pure" visual tasks or visual-driven tasks involving other brain areas)
+* The old saying "a picture is worth a thousand words" is consistent with the science. Diagrams can be both faster and more precise at conveying information; however, this has limits.
+* Pictures can be more memorable than words.
+
+
+====== Visualization in digital systems
+
+.The first software flowchart footnote:[_<<vonNeumann1947>>, figure 7.9, public domain assumed_]
+image::images/4.12-neumann-flowchart.png[blueprint, 350, 200, float="left"]
+Architects in general don't write code; instead the most visible aspect of their work takes the form of diagrams -- abstract graphical representations of complex systems. The first known instance of this was in 1947 <<vonNeumann1947>> and visual notations have evolved along with the field of computing ever since. Notable examples include:
+
+* The IBM flowcharting template
+* The Gane-Sarson data-flow diagram notation
+* The Chen entity-relationship notation
+* The Barker entity-relationship notation, including the "crow's foot" to indicate cardinality
+* The Unified Modeling Language
+
+and many more. (We touched on xref:data-modeling[data modeling] in Chapter 11.) We will examine Archimate, a current and widely used notation, in more detail in a future chapter section.
+
+.IBM flowcharting template footnote:[_Image https://www.flickr.com/photos/mwichary/3249179483, , downloaded 2016-10-10, commercial use permitted_]
+image::images/4.12-flowchart-template.jpg[blueprint, 350, 200, float="right"]
+
+But visual notations have been problematic in the Agile community; as Fowler notes in his classic essay Is Design Dead:
+
+_XP de-emphasizes diagrams to a great extent. Although the official position is along the lines of "use them if they are useful", there is a strong subtext of "real XPers don't do diagrams".... I think the issue comes from two separate causes. One is the fact that some people find software diagrams helpful and some people don't. The danger is that those who do think that those who don't should do and vice-versa. Instead we should just accept that some people will use diagrams and some won't._ <<Fowler2004>>
+
+There is no question that some IT professionals, including perhaps some of the most skilled software engineers, find little of use in diagrams . As Martin Fowler says, "people like Kent [Beck, eXtreme Progamming originator] aren't at all comfortable with diagrams, indeed I've never seen Kent voluntarily draw a software diagram in any fixed notation." However, it seems likely that Kent Beck and others like him are members of a programming elite, with a well-honed ability to process source code in its "raw" form.
+
+However, if we are building systems to be operated and maintained by humans in general, it would seem that we should support the cognitive and perceptual strengths of humans. (It is also notable that Kanban is a strongly visual system for building a shared mental model of work in process.) Humans more readily understand complex systems through diagrams. Because diagrams are more readily processed, they are often used to represent high level system interactions - how a given service, product or application is related to peer systems and services. Building such depictions can be helpful to fostering a shared mental model of the overall system objectives and context. The more complex and highly scaled the environment, the more likely one will encounter such artifacts as a means to creating the mental model.
+
+The strength of human visual processing is why we will always have graphical designs to assist in the building of shared mental models. Specialists in the syntax and semantics of such designs will continue to play a notable role in complex systems development and maintenance. Currently, if one seeks to hire such a specialist, one recruits an enterprise architect - that is the professional role with the skills.
+
+Of course enterprise architecture does not solely consist of diagrams; per TOGAF, the basic artifacts are catalogs, diagrams, and matrices and the act of drawing pictures itself may be the least important thing the architect does . The picture, if valuable, concisely represents a shared mental model on how the enterprise will undertake complex activities, and the discussions and negotiations the architect facilitates on the journey to such agreement are the real added value.
+
+The big picture is part of the standard mindset of EA, which everyone immediately associates with the activities of an enterprise architect. However, many of these big pictures you meet in practice have been over-abstracted to the point of insignificance and no longer address any relevant question. <<Bente2012>> p16
+
+the EA's role is to facilitate discussions by abstracting and visualizing powerfully so that decisions are illuminated.
+
+usually, the resulting diagrams are only good tactically.
+
+illustrate: diagrams vs reporting, isometric catalog/matrix/diagram
+
+====== Limitations of visualization
+
+it would be handy if we had already discussed OPAL. Bring it in after Zachman discussion??
+
+long abandoned for dynamic aspects
+
+complex graph...
+
+formalisms don't give a good sense of scale - give a visual example "semantic distortions" - simple example: equal-sized boxes on an EA capability map.
+
+arch formalisms weak on dynamics - semantics vs dynamics problem semantics gravitate to first order predicate logic, binary thinking continuous math... required... how to measure anything. systems thinking.
+
+still of utility for more static aspects - but show Death Star diagrams -
+
+why draw boxes when a textual report is all that is needed (e.g. Bente p52)
+
+EA needs catalogs and matrices maintained. diagrams? it's questionable.
+
+every so often there is a ritual expression of a catalog as nested boxes. Of questionable utility. The graph complexity bogs down representation of the matrices.
+
+next: intersection of visualization and master data management. semantics of the visualization.
+
+Cockburn communication problem - artifacts stimulate internal mental models but not Shannon... hence the endless attention to EA metamodels
+
+
+===== Repositories and knowledge management
 backref to ch 11?
 
 Agile & docs "In an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it as part of the condition of satisfaction of a user story or in the definition of done" <<Bente2012>> p 170
@@ -131,10 +234,6 @@ Catalogs - Need for registration process for subjective concepts - decision auth
 ====== The repository question
 
 CMDBs, metadata, EA
-
-====== DevOps assets to architecture
-
-If you started from day 1 with source, build, & package mgmt, and have kept it clean, you have a great asset
 
 ====== Metamodels and ontologies
 app v svc def'n
@@ -147,62 +246,12 @@ Canon law disputes
 Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 1147-1149). AuthorHouse. Kindle Edition.
 
 
-===== Modeling and visualization
-The true measure of the value of a model is whether it actually influences behavior. Smith/Reinertsen 1998 p46.
+====== DevOps assets to architecture
 
-Architect as visual facilitator
-
-“At Netflix, we had no central control” of the architecture,
-“The goal of architecture was to create the right emergent behaviors,”
-“Our architecture was changing faster than you can draw it… As a result, it wasn’t useful to try to draw it.”
-
-*Architect as visual thinker*
-
-EA needs catalogs and matrices maintained. diagrams? it's questionable. every so often there is a ritual expression of a catalog as nested boxes. Of questionable utility. The graph complexity bogs down representation of the matrices.
+If you started from day 1 with source, build, & package mgmt, and have kept it clean, you have a great asset
 
 
-Because of these facts, it is useful to understand some of the fundamentals of how humans interpret symbolic data.
 
-(*** re-read and summarize Moody)
-
-More on these in future chapters
-
-Moody, but what are his sources?
-http://simplybrainy.com/wp-content/uploads/2011/01/2008-Int-Vis-Other-Senses-All-Illustrations.pdf
-
-Further reading on visual processing:
-
-Moody
-Tufte & others (that comparison paper cited by Moody)
-
-complex graph...
-
-But Cockcroft: if it changes too quickly, how to capture/represent?
-
-formalisms don't give a good sense of scale - give a visual example
-
-arch formalisms weak on dynamics - semantics vs dynamics problem semantics gravitate to first order predicate logic, binary thinking continuous math... required... how to measure anything. systems thinking.
-
-but visualization is valuable otherwise we would not see so much of it
-
-Cockburn communication problem - artifacts stimulate internal mental models but not Shannon... hence the endless attention to EA metamodels
-
-
-The big picture is part of the standard mindset of EA, which
-everyoneimmediatelyassociateswiththeactivitiesofanenterprisearchitect.
-However, many of these big pictures you meet in practice have been over-
-abstracted to the point of insignificance and no longer address any relevant
-question.<<Bente2012>> p16
-
-"semantic distortions" - simple example: equal-sized boxes on an EA capability map.
-
-the EA's role is to facilitate discussions by abstracting and visualizing powerfully so that decisions are illuminated.
-
-usually, the resulting diagrams are only good tactically.
-
-
-illustrate: diagrams vs reporting, isometric catalog/matrix/diagram
-why draw boxes when a textual report is all that is needed (e.g. Bente p52)
 
 
 ===== The "rationalization" quest
