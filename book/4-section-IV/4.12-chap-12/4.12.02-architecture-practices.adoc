@@ -133,9 +133,7 @@ Judging simply by its history, visualization is therefore an essential tool for 
 .Whiteboard footnote:[_Image https://www.flickr.com/photos/simonov/15484240880, downloaded 2016-10-10, commercial use permitted_]
 image::images/4.12-whiteboard.jpg[blueprint, 350, 200, float="left"]
 
-Even in construction and engineering trades that rely on blueprints as a source of truth, keeping them up to date requires considerable discipline and process. In faster-moving digital organizations, visual models are almost always out of date unless they have been specifically refreshed for a purpose, or unless there is a strong formal process in place (and the value of such a process may be difficult to establish). That doesn't mean that people won't continue to use them. Co-located teams use whiteboards and dry-erase markers and will continue to use them. There are important cognitive and human factors reasons for this that will not go away.
-
-Because of these facts, it is useful to understand some of the fundamentals of how humans interpret symbolic data.
+Even in construction and engineering trades that rely on blueprints as a source of truth, keeping them up to date requires considerable discipline and process. In faster-moving digital organizations, visual models are almost always out of date unless they have been specifically refreshed for a purpose, or unless there is a strong formal process in place (and the value of such a process may be difficult to establish). That doesn't mean that diagrams will go away. Co-located teams use whiteboards and dry-erase markers and will continue to use them. There are important cognitive and human factors reasons for this that will not go away. Because of these facts, it is useful to understand some of the fundamentals of how humans interpret visual data.
 
 ====== Human visual processing
 [quote, Dan Moody, The "Physics" of Notations]
@@ -203,9 +201,9 @@ Visualization has a number of limitations:
 * it can result in distorted understandings,
 * ultimately, diagrams rely on deeper shared understandings that must be understood and managed.
 
-Despite the familiarity of simple flowcharting, visual notations don't scale well in terms of representing program logic. Therefore they tend to be used informally, as sketch or whiteboarding, or at the business analysis level (where the flowchart represents business logic, not detailed software).
+Despite the familiarity of simple flowcharting, visual notations don't scale well in terms of representing program logic. Therefore, for dynamic or procedural problems, they tend to be used informally, as sketch or whiteboarding, or at the business analysis level (where the flowchart represents business logic, not detailed software).
 
-More static structures, including data models and systems interactions, are still often represented visually and in the case of xref:data-modeling[data models] can be transformed from conceptual representations to physical schema.
+More static structures, including data and class models and systems interactions, are still often represented visually and in the case of xref:data-modeling[data models] can be transformed from conceptual representations to physical schema.
 
 However, any diagram, whether of a dynamic or static problem, can reach a level of density where it's no longer useful as a visual explanation. As diagrams become more complex, their audience narrows to those most familiar with them. Past a certain point they exceed the limits of human visual processing, and then are of little use to anyone.
 
@@ -219,6 +217,8 @@ However, this next diagram is essentially unusable, as visually tracing any give
 .Another complex diagram footnote:[_Image https://www.flickr.com/photos/taedc/9614791576, downloaded 2016-10-10, commercial use permitted_]
 image::images/4.12-complex-network.jpg[blueprint, 550, 200]
 
+This may seem like an obvious critique, but architectural diagrams of similar complexity and unusability have too often been produced.
+
 Another issue with some diagrams is that they do not give a good sense of perspective or scale. This is sometimes seen in the business architecture practice of "capability mapping."
 formalisms don't give a good sense of scale. For example, suppose you see this diagram:
 
@@ -229,8 +229,31 @@ Diagrams like this are common, but what does it mean that all the boxes are equa
 
 
 ===== Repositories and knowledge management
+[quote, TOGAF Version 9]
+Artifacts are generally classified as catalogs (lists of things), matrices (showing relationships between things), and diagrams (pictures of things).
 
-why draw boxes when a textual report is all that is needed (e.g. Bente p52)
+The question was asked above, "why put things into a picture when a report is all that is needed?" We know that sometimes a picture is worth a thousand words, but not always. And sometimes the picture's components need more description than can conveniently fit on the actual diagram. This brings us to the topic of enterprise architecture as knowledge management.
+
+Knowledge management is a broad topic, with a scope far beyond this book. But in the context of a digital organization, architecture can serve as an important component of an overall knowledge management strategy. Without some common ground of understanding, digital organizations struggle, and EA can help.
+
+As the quote from TOGAF above indicates, architecture can elegantly be represented as:
+
+* Catalogs
+* Diagrams
+* Matrices
+
+For example, consider this diagram:
+
+image:images/4.12-proc-func.png[process-function, 400]
+
+It can be read as saying that the "Quote to Cash" process depends on the following functions:
+
+* Sales
+* Contracts
+* Accounts Receivable
+
+
+
 
 EA needs catalogs and matrices maintained. diagrams? it's questionable.
 
