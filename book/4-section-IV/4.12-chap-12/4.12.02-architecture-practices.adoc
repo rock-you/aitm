@@ -118,7 +118,6 @@ Finally, the *Architectural Governance Council* brings together the senior archi
 
 Overall, this may seem like a complex structure, but similar structures are in place in IT organizations with budgets of $1bn or more. It would be questionable to see comparable structures in much smaller organizations. However, this structure is useful to examine; organizations of various sizes might choose to use different parts of it.
 
-
 ===== Modeling and visualization
 
 .Gudea with blueprint, ~2140 BCE footnote:[_Image https://www.flickr.com/photos/daryl_mitchell/16189447931, downloaded 2016-10-10, commercial use permitted_]
@@ -130,7 +129,6 @@ The true measure of the value of a model is whether it actually influences behav
 The word "architect," whether in a building or digital context,  is often associated with visualizations: blueprints, sketches, specialized notations, and so forth. Drawings have been used to represent structures for likely as long as xref:writing-history[writing has existed]. The image at the beginning of this section is of Gudea, a Mesopotamian ruler known for building temples; on his lap is a blueprint.
 
 Judging simply by its history, visualization is therefore an essential tool for humans dealing with large scale complexity (and erecting buildings has always been one of the more complex domains of human activity.) In digital and IT contexts, however, visualization has certain challenges and notable skeptics. Adrian Cockcroft, the former CTO of Netflix, stated: “Our architecture was changing faster than you can draw it... As a result, it wasn’t useful to try to draw it” <<Bloomberg2014>>.
-
 
 .Whiteboard footnote:[_Image https://www.flickr.com/photos/simonov/15484240880, downloaded 2016-10-10, commercial use permitted_]
 image::images/4.12-whiteboard.jpg[blueprint, 350, 200, float="left"]
@@ -185,23 +183,27 @@ _XP de-emphasizes diagrams to a great extent. Although the official position is 
 
 There is no question that some IT professionals, including perhaps some of the most skilled software engineers, find little of use in diagrams . As Martin Fowler says, "people like Kent [Beck, eXtreme Progamming originator] aren't at all comfortable with diagrams, indeed I've never seen Kent voluntarily draw a software diagram in any fixed notation." However, it seems likely that Kent Beck and others like him are members of a programming elite, with a well-honed ability to process source code in its "raw" form.
 
-However, if we are building systems to be operated and maintained by humans in general, it would seem that we should support the cognitive and perceptual strengths of humans. (It is also notable that Kanban is a strongly visual system for building a shared mental model of work in process.) Humans more readily understand complex systems through diagrams. Because diagrams are more readily processed, they are often used to represent high level system interactions - how a given service, product or application is related to peer systems and services. Building such depictions can be helpful to fostering a shared mental model of the overall system objectives and context. The more complex and highly scaled the environment, the more likely one will encounter such artifacts as a means to creating the mental model.
+.UML sequence diagram footnote:[_Image https://www.flickr.com/photos/raphaelstolt/514643232, , downloaded 2016-10-10, commercial use permitted_]
+image::images/4.12-sequence-diagram.png[blueprint, 450, 200, float="left"]
 
-The strength of human visual processing is why we will always have graphical designs to assist in the building of shared mental models. Specialists in the syntax and semantics of such designs will continue to play a notable role in complex systems development and maintenance. Currently, if one seeks to hire such a specialist, one recruits an enterprise architect - that is the professional role with the skills.
+If we're building systems to be operated and maintained by humans, it would seem that we should support the cognitive and perceptual strengths of humans.  Because diagrams are more readily processed, they are often used to represent high level system interactions - how a given service, product or application is related to peer systems and services. Building such depictions can be helpful to fostering a shared mental model of the overall system objectives and context. The more complex and highly scaled the environment, the more likely one will encounter such artifacts as a means to creating the mental model.
 
-Of course enterprise architecture does not solely consist of diagrams; per TOGAF, the basic artifacts are catalogs, diagrams, and matrices and the act of drawing pictures itself may be the least important thing the architect does . The picture, if valuable, concisely represents a shared mental model on how the enterprise will undertake complex activities, and the discussions and negotiations the architect facilitates on the journey to such agreement are the real added value.
+The strength of human visual processing is why we will (probably) always have graphical design to assist in the building of shared mental models. Specialists in the syntax and semantics of such designs will therefore likely continue to play a role in complex systems development and maintenance. Currently, if one seeks to hire such a specialist, one recruits some kind of architect - that is the professional role with the skills.
 
-The big picture is part of the standard mindset of EA, which everyone immediately associates with the activities of an enterprise architect. However, many of these big pictures you meet in practice have been over-abstracted to the point of insignificance and no longer address any relevant question. <<Bente2012>> p16
-
-the EA's role is to facilitate discussions by abstracting and visualizing powerfully so that decisions are illuminated.
-
-usually, the resulting diagrams are only good tactically.
-
-illustrate: diagrams vs reporting, isometric catalog/matrix/diagram
+Note that flowcharts, data models, and other such diagrams tend to be associated more with the idea of "solutions" or "software" architecture. (We'll cover the xref:architecture-domains[architecture domains] in the next chapter section.)
 
 ====== Limitations of visualization
+[quote, Bente et al, Collaborative Enterprise Architecture]
+The big picture is part of the standard mindset of EA, which everyone immediately associates with the activities of an enterprise architect. However, many of these big pictures you meet in practice have been over-abstracted to the point of insignificance and no longer address any relevant question. <<Bente2012>>, p16.
 
-it would be handy if we had already discussed OPAL. Bring it in after Zachman discussion??
+Visualization has a number of limitations:
+
+* It is better for static structures than for dynamic processes,
+* it can result in distorted understandings,
+* diagrams become less accessible the more complex they are, and
+* ultimately, diagrams rely on deeper shared understandings that must be understood and managed.
+
+
 
 long abandoned for dynamic aspects
 
@@ -223,8 +225,19 @@ next: intersection of visualization and master data management. semantics of the
 
 Cockburn communication problem - artifacts stimulate internal mental models but not Shannon... hence the endless attention to EA metamodels
 
-
 ===== Repositories and knowledge management
+
+
+Finally, enterprise architecture does not solely consist of diagrams; per TOGAF, the basic artifacts are catalogs, diagrams, and matrices and the act of drawing pictures itself may be the least important thing the architect does . The picture, if valuable, concisely represents a shared mental model on how the enterprise will undertake complex activities, and the discussions and negotiations the architect facilitates on the journey to such agreement are the real added value.
+
+
+
+the EA's role is to facilitate discussions by abstracting and visualizing powerfully so that decisions are illuminated.
+
+usually, the resulting diagrams are only good tactically.
+
+illustrate: diagrams vs reporting, isometric catalog/matrix/diagram
+
 backref to ch 11?
 
 Agile & docs "In an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it as part of the condition of satisfaction of a user story or in the definition of done" <<Bente2012>> p 170
@@ -249,9 +262,6 @@ Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Ki
 ====== DevOps assets to architecture
 
 If you started from day 1 with source, build, & package mgmt, and have kept it clean, you have a great asset
-
-
-
 
 
 ===== The "rationalization" quest
