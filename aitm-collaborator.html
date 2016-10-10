@@ -1080,8 +1080,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_architecture_and_governance">Architecture and governance</a></li>
 <li><a href="#_architecture_as_a_management_program">Architecture as a management program</a></li>
-<li><a href="#_repositories_and_knowledge_management">Repositories and knowledge management</a></li>
 <li><a href="#_modeling_and_visualization">Modeling and visualization</a></li>
+<li><a href="#_repositories_and_knowledge_management">Repositories and knowledge management</a></li>
 <li><a href="#_the_rationalization_quest">The "rationalization" quest</a></li>
 </ul>
 </li>
@@ -23304,6 +23304,9 @@ No enterprise can be effective without high quality data.
 <div class="paragraph">
 <p>So what does this piece of paper represent?</p>
 </div>
+<div class="paragraph">
+<p><a id="writing-history"></a></p>
+</div>
 <div class="sect4">
 <h5 id="_the_origins_of_digital_information">The origins of digital information</h5>
 <div class="quoteblock">
@@ -26470,16 +26473,13 @@ identification and enforcement</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>intended to serve a key <a href="#coord-struct">coordination</a> role.</p>
+<p>intended to serve a key <a href="#coord-struct">coordination</a> role. The below diagram represents a large scale, coordinated architecture program in a large enterprise. Notice that this is not a single organization. The Architecture Program in this example spans a centralized Enterprise Architecture group as well as teams of Line of Business architects.</p>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/4.12-archProgram.png" alt="4.12 archProgram">
 </div>
 <div class="title">Figure 8. Large scale architecture program</div>
-</div>
-<div class="paragraph">
-<p>The above diagram represents a large scale, coordinated architecture program in a large enterprise. Notice that this is not a single organization. The Architecture Program in this example spans a centralized Enterprise Architecture group as well as teams of Line of Business architects.</p>
 </div>
 <div class="paragraph">
 <p>The Enterprise Architecture organization might report to a CTO, the Chief of Staff for the Office of the CIO, or the head of Corporate Strategy and Planning. It is a centralized organization with a small staff of domain architects and an Architecture Standards organization that owns two key cross-functional architecture processes.</p>
@@ -26527,7 +26527,247 @@ division is <em>fractal</em> (that is, it reproduces at different scales).</p>
 </div>
 </div>
 <div class="sect4">
+<h5 id="_modeling_and_visualization">Modeling and visualization</h5>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img src="images/4.12-gudea.jpg" alt="blueprint" width="350" height="200">
+</div>
+<div class="title">Figure 9. Gudea with blueprint, ~2140 BCE <span class="footnote">[<a id="_footnoteref_23" class="footnote" href="#_footnote_23" title="View footnote.">23</a>]</span></div>
+</div>
+<div class="quoteblock">
+<blockquote>
+The true measure of the value of a model is whether it actually influences behavior.
+</blockquote>
+<div class="attribution">
+&#8212; Preston Smith and Don Reinertsen<br>
+<cite>Developing Products in Half the Time</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>The word "architect," whether in a building or digital context,  is often associated with visualizations: blueprints, sketches, specialized notations, and so forth. Drawings have been used to represent structures for likely as long as <a href="#writing-history">writing has existed</a>. The image at the beginning of this section is of Gudea, a Mesopotamian ruler known for building temples; on his lap is a blueprint.</p>
+</div>
+<div class="paragraph">
+<p>Judging simply by its history, visualization is therefore an essential tool for humans dealing with large scale complexity (and erecting buildings has always been one of the more complex domains of human activity.) In digital and IT contexts, however, visualization has certain challenges and notable skeptics. Adrian Cockcroft, the former CTO of Netflix, stated: “Our architecture was changing faster than you can draw it&#8230;&#8203; As a result, it wasn’t useful to try to draw it” <a href="#Bloomberg2014">[Bloomberg2014]</a>.</p>
+</div>
+<div class="imageblock" style="float: left">
+<div class="content">
+<img src="images/4.12-whiteboard.jpg" alt="blueprint" width="350" height="200">
+</div>
+<div class="title">Figure 10. Whiteboard <span class="footnote">[<a id="_footnoteref_24" class="footnote" href="#_footnote_24" title="View footnote.">24</a>]</span></div>
+</div>
+<div class="paragraph">
+<p>Even in construction and engineering trades that rely on blueprints as a source of truth, keeping them up to date requires considerable discipline and process. In faster-moving digital organizations, visual models are almost always out of date unless they have been specifically refreshed for a purpose, or unless there is a strong formal process in place (and the value of such a process may be difficult to establish). That doesn&#8217;t mean that people won&#8217;t continue to use them. Co-located teams use whiteboards and dry-erase markers and will continue to use them. There are important cognitive and human factors reasons for this that will not go away.</p>
+</div>
+<div class="paragraph">
+<p>Because of these facts, it is useful to understand some of the fundamentals of how humans interpret symbolic data.</p>
+</div>
+<div class="sect5">
+<h6 id="_human_visual_processing">Human visual processing</h6>
+<div class="quoteblock">
+<blockquote>
+Visual representations are effective because they tap into the
+capabilities of the powerful and highly parallel human visual
+system. We like receiving information in visual form and can
+process it very efficiently: around a quarter of our brains are
+devoted to vision, more than all our other senses combined [63].
+In addition, diagrams can convey information more concisely
+[27] and precisely than ordinary language [8, 68]. Information
+represented visually is also more likely to be remembered due
+to the picture superiority effect [38, 70] &#8230;&#8203;Visual representations are also processed differently: according to dual channel theory [80], the human mind has separate systems for processing pictorial and verbal material. Visual representations are processed in parallel by the visual system, while textual representations are processed serially by the auditory system&#8230;&#8203; <a href="#Moody2009">[Moody2009]</a>.
+</blockquote>
+<div class="attribution">
+&#8212; Dan Moody<br>
+<cite>The "Physics" of Notations</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>As the above quote shows, there are clear neurological reasons for diagramming as a communication form. To expand a bit more on the points Dan Moody is making:</p>
+</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img src="images/4.12-tiger.jpg" alt="blueprint" width="350" height="200">
+</div>
+<div class="title">Figure 11. Fast recognition means survival <span class="footnote">[<a id="_footnoteref_25" class="footnote" href="#_footnote_25" title="View footnote.">25</a>]</span></div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Human vision uses parallel processing. This means that a given image or visual stimulus is processed by many neurons simultaneously. This is how we recognize threats, such as a crouching tiger.</p>
+</li>
+<li>
+<p>A large percentage of our brain is devoted to visual processing (you will see figures quoted from 25% to 66% depending on whether it&#8217;s "pure" visual tasks or visual-driven tasks involving other brain areas)</p>
+</li>
+<li>
+<p>The old saying "a picture is worth a thousand words" is consistent with the science. Diagrams can be both faster and more precise at conveying information; however, this has limits.</p>
+</li>
+<li>
+<p>Pictures can be more memorable than words.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_visualization_in_digital_systems">Visualization in digital systems</h6>
+<div class="imageblock" style="float: left">
+<div class="content">
+<img src="images/4.12-neumann-flowchart.png" alt="blueprint" width="350" height="200">
+</div>
+<div class="title">Figure 12. The first software flowchart <span class="footnote">[<a id="_footnoteref_26" class="footnote" href="#_footnote_26" title="View footnote.">26</a>]</span></div>
+</div>
+<div class="paragraph">
+<p>Architects in general don&#8217;t write code; instead the most visible aspect of their work takes the form of diagrams&#8201;&#8212;&#8201;abstract graphical representations of complex systems. The first known instance of applying graphical techniques to a digital problem was in 1947 <a href="#vonNeumann1947">[vonNeumann1947]</a> and visual notations have evolved along with the field of computing ever since. Notable examples include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The IBM flowcharting template</p>
+</li>
+<li>
+<p>The Gane-Sarson data-flow diagram notation</p>
+</li>
+<li>
+<p>The Chen entity-relationship notation</p>
+</li>
+<li>
+<p>The Barker entity-relationship notation, including the "crow&#8217;s foot" to indicate cardinality</p>
+</li>
+<li>
+<p>The Unified Modeling Language</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>and many more. (We touched on <a href="#data-modeling">data modeling</a> in Chapter 11.) We will examine Archimate, a current and widely used notation, in more detail in a future chapter section.</p>
+</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img src="images/4.12-flowchart-template.jpg" alt="blueprint" width="350" height="200">
+</div>
+<div class="title">Figure 13. IBM flowcharting template <span class="footnote">[<a id="_footnoteref_27" class="footnote" href="#_footnote_27" title="View footnote.">27</a>]</span></div>
+</div>
+<div class="paragraph">
+<p>But visual notations have been problematic in the Agile community; as Fowler notes in his classic essay Is Design Dead:</p>
+</div>
+<div class="paragraph">
+<p><em>XP de-emphasizes diagrams to a great extent. Although the official position is along the lines of "use them if they are useful", there is a strong subtext of "real XPers don&#8217;t do diagrams"&#8230;&#8203;. I think the issue comes from two separate causes. One is the fact that some people find software diagrams helpful and some people don&#8217;t. The danger is that those who do think that those who don&#8217;t should do and vice-versa. Instead we should just accept that some people will use diagrams and some won&#8217;t.</em> <a href="#Fowler2004">[Fowler2004]</a></p>
+</div>
+<div class="paragraph">
+<p>There is no question that some IT professionals, including perhaps some of the most skilled software engineers, find little of use in diagrams . As Martin Fowler says, "people like Kent [Beck, eXtreme Progamming originator] aren&#8217;t at all comfortable with diagrams, indeed I&#8217;ve never seen Kent voluntarily draw a software diagram in any fixed notation." However, it seems likely that Kent Beck and others like him are members of a programming elite, with a well-honed ability to process source code in its "raw" form.</p>
+</div>
+<div class="imageblock" style="float: left">
+<div class="content">
+<img src="images/4.12-sequence-diagram.png" alt="blueprint" width="450" height="200">
+</div>
+<div class="title">Figure 14. UML sequence diagram <span class="footnote">[<a id="_footnoteref_28" class="footnote" href="#_footnote_28" title="View footnote.">28</a>]</span></div>
+</div>
+<div class="paragraph">
+<p>If we&#8217;re building systems to be operated and maintained by humans, it would seem that we should support the cognitive and perceptual strengths of humans.  Because diagrams are more readily processed, they are often used to represent high level system interactions - how a given service, product or application is related to peer systems and services. Building such depictions can be helpful to fostering a shared mental model of the overall system objectives and context. The more complex and highly scaled the environment, the more likely one will encounter such artifacts as a means to creating the mental model.</p>
+</div>
+<div class="paragraph">
+<p>The strength of human visual processing is why we will (probably) always have graphical design to assist in the building of shared mental models. Specialists in the syntax and semantics of such designs will therefore likely continue to play a role in complex systems development and maintenance. Currently, if one seeks to hire such a specialist, one recruits some kind of architect - that is the professional role with the skills.</p>
+</div>
+<div class="paragraph">
+<p>Note that flowcharts, data models, and other such diagrams tend to be associated more with the idea of "solutions" or "software" architecture. We&#8217;ll cover the <a href="#architecture-domains">architecture domains</a> in the next chapter section, including examples of business architecture diagrams.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_limitations_of_visualization">Limitations of visualization</h6>
+<div class="quoteblock">
+<blockquote>
+The big picture is part of the standard mindset of EA, which everyone immediately associates with the activities of an enterprise architect. However, many of these big pictures you meet in practice have been over-abstracted to the point of insignificance and no longer address any relevant question. <a href="#Bente2012">[Bente2012]</a>, p16.
+</blockquote>
+<div class="attribution">
+&#8212; Bente et al<br>
+<cite>Collaborative Enterprise Architecture</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>Visualization has a number of limitations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>It is better for static structures than for dynamic processes,</p>
+</li>
+<li>
+<p>diagrams become less accessible the more complex they are, and</p>
+</li>
+<li>
+<p>it can result in distorted understandings,</p>
+</li>
+<li>
+<p>ultimately, diagrams rely on deeper shared understandings that must be understood and managed.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Despite the familiarity of simple flowcharting, visual notations don&#8217;t scale well in terms of representing program logic. Therefore they tend to be used informally, as sketch or whiteboarding, or at the business analysis level (where the flowchart represents business logic, not detailed software).</p>
+</div>
+<div class="paragraph">
+<p>More static structures, including data models and systems interactions, are still often represented visually and in the case of <a href="#data-modeling">data models</a> can be transformed from conceptual representations to physical schema.</p>
+</div>
+<div class="paragraph">
+<p>However, any diagram, whether of a dynamic or static problem, can reach a level of density where it&#8217;s no longer useful as a visual explanation. As diagrams become more complex, their audience narrows to those most familiar with them. Past a certain point they exceed the limits of human visual processing, and then are of little use to anyone.</p>
+</div>
+<div class="paragraph">
+<p>For example, the diagram below, while intimidating, might be useful to those who work with and study it. It would take some familiarization:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/4.12-obesity.jpg" alt="blueprint" width="550" height="200">
+</div>
+<div class="title">Figure 15. Complex diagram <span class="footnote">[<a id="_footnoteref_29" class="footnote" href="#_footnote_29" title="View footnote.">29</a>]</span></div>
+</div>
+<div class="paragraph">
+<p>However, this next diagram is essentially unusable, as visually tracing any given line is too difficult, and it would be easy to mistakenly identify one bubble as dependent on another:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/4.12-complex-network.jpg" alt="blueprint" width="550" height="200">
+</div>
+<div class="title">Figure 16. Another complex diagram <span class="footnote">[<a id="_footnoteref_30" class="footnote" href="#_footnote_30" title="View footnote.">30</a>]</span></div>
+</div>
+<div class="paragraph">
+<p>Another issue with some diagrams is that they do not give a good sense of perspective or scale. This is sometimes seen in the business architecture practice of "capability mapping."
+formalisms don&#8217;t give a good sense of scale. For example, suppose you see this diagram:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/4.12-capabilities.png" alt="capabilities" width="500">
+</div>
+<div class="title">Figure 17. Simple capability map</div>
+</div>
+<div class="paragraph">
+<p>Diagrams like this are common, but what does it mean that all the boxes are equally sized? Are there as many lawyers as sales people? Operations staff? It&#8217;s not clear what the advantage is to putting information like this into a graphical form; no interactions are seen and the eight areas could more easily be expressed as a list. This brings us to the final problem listed above: visualizations rely on some common ground understanding. If boxes and lines are used for communication, their meaning should be agreed upon - otherwise, there is risk of mis-understanding, and the diagram may do more harm than good.</p>
+</div>
+</div>
+</div>
+<div class="sect4">
 <h5 id="_repositories_and_knowledge_management">Repositories and knowledge management</h5>
+<div class="paragraph">
+<p>why draw boxes when a textual report is all that is needed (e.g. Bente p52)</p>
+</div>
+<div class="paragraph">
+<p>EA needs catalogs and matrices maintained. diagrams? it&#8217;s questionable.</p>
+</div>
+<div class="paragraph">
+<p>every so often there is a ritual expression of a catalog as nested boxes. Of questionable utility. The graph complexity bogs down representation of the matrices.</p>
+</div>
+<div class="paragraph">
+<p>next: intersection of visualization and master data management. semantics of the visualization.</p>
+</div>
+<div class="paragraph">
+<p>enterprise architecture does not solely consist of diagrams; per TOGAF, the basic artifacts are catalogs, diagrams, and matrices and the act of drawing pictures itself may be the least important thing the architect does . The picture, if valuable, concisely represents a shared mental model on how the enterprise will undertake complex activities, and the discussions and negotiations the architect facilitates on the journey to such agreement are the real added value.</p>
+</div>
+<div class="paragraph">
+<p>the EA&#8217;s role is to facilitate discussions by abstracting and visualizing powerfully so that decisions are illuminated.</p>
+</div>
+<div class="paragraph">
+<p>usually, the resulting diagrams are only good tactically.</p>
+</div>
+<div class="paragraph">
+<p>illustrate: diagrams vs reporting, isometric catalog/matrix/diagram</p>
+</div>
 <div class="paragraph">
 <p>backref to ch 11?</p>
 </div>
@@ -26541,12 +26781,6 @@ division is <em>fractal</em> (that is, it reproduces at different scales).</p>
 <h6 id="_the_repository_question">The repository question</h6>
 <div class="paragraph">
 <p>CMDBs, metadata, EA</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_devops_assets_to_architecture">DevOps assets to architecture</h6>
-<div class="paragraph">
-<p>If you started from day 1 with source, build, &amp; package mgmt, and have kept it clean, you have a great asset</p>
 </div>
 </div>
 <div class="sect5">
@@ -26565,83 +26799,11 @@ runs into domain driven design problems if not careful</p>
 <p>Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 1147-1149). AuthorHouse. Kindle Edition.</p>
 </div>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_modeling_and_visualization">Modeling and visualization</h5>
+<div class="sect5">
+<h6 id="_devops_assets_to_architecture">DevOps assets to architecture</h6>
 <div class="paragraph">
-<p>The true measure of the value of a model is whether it actually influences behavior. Smith/Reinertsen 1998 p46.</p>
+<p>If you started from day 1 with source, build, &amp; package mgmt, and have kept it clean, you have a great asset</p>
 </div>
-<div class="paragraph">
-<p>Architect as visual facilitator</p>
-</div>
-<div class="paragraph">
-<p>“At Netflix, we had no central control” of the architecture,
-“The goal of architecture was to create the right emergent behaviors,”
-“Our architecture was changing faster than you can draw it… As a result, it wasn’t useful to try to draw it.”</p>
-</div>
-<div class="paragraph">
-<p><strong>Architect as visual thinker</strong></p>
-</div>
-<div class="paragraph">
-<p>EA needs catalogs and matrices maintained. diagrams? it&#8217;s questionable. every so often there is a ritual expression of a catalog as nested boxes. Of questionable utility. The graph complexity bogs down representation of the matrices.</p>
-</div>
-<div class="paragraph">
-<p>Because of these facts, it is useful to understand some of the fundamentals of how humans interpret symbolic data.</p>
-</div>
-<div class="paragraph">
-<p>(<strong>*</strong> re-read and summarize Moody)</p>
-</div>
-<div class="paragraph">
-<p>More on these in future chapters</p>
-</div>
-<div class="paragraph">
-<p>Moody, but what are his sources?
-<a href="http://simplybrainy.com/wp-content/uploads/2011/01/2008-Int-Vis-Other-Senses-All-Illustrations.pdf" class="bare">http://simplybrainy.com/wp-content/uploads/2011/01/2008-Int-Vis-Other-Senses-All-Illustrations.pdf</a></p>
-</div>
-<div class="paragraph">
-<p>Further reading on visual processing:</p>
-</div>
-<div class="paragraph">
-<p>Moody
-Tufte &amp; others (that comparison paper cited by Moody)</p>
-</div>
-<div class="paragraph">
-<p>complex graph&#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<p>But Cockcroft: if it changes too quickly, how to capture/represent?</p>
-</div>
-<div class="paragraph">
-<p>formalisms don&#8217;t give a good sense of scale - give a visual example</p>
-</div>
-<div class="paragraph">
-<p>arch formalisms weak on dynamics - semantics vs dynamics problem semantics gravitate to first order predicate logic, binary thinking continuous math&#8230;&#8203; required&#8230;&#8203; how to measure anything. systems thinking.</p>
-</div>
-<div class="paragraph">
-<p>but visualization is valuable otherwise we would not see so much of it</p>
-</div>
-<div class="paragraph">
-<p>Cockburn communication problem - artifacts stimulate internal mental models but not Shannon&#8230;&#8203; hence the endless attention to EA metamodels</p>
-</div>
-<div class="paragraph">
-<p>The big picture is part of the standard mindset of EA, which
-everyoneimmediatelyassociateswiththeactivitiesofanenterprisearchitect.
-However, many of these big pictures you meet in practice have been over-
-abstracted to the point of insignificance and no longer address any relevant
-question.<a href="#Bente2012">[Bente2012]</a> p16</p>
-</div>
-<div class="paragraph">
-<p>"semantic distortions" - simple example: equal-sized boxes on an EA capability map.</p>
-</div>
-<div class="paragraph">
-<p>the EA&#8217;s role is to facilitate discussions by abstracting and visualizing powerfully so that decisions are illuminated.</p>
-</div>
-<div class="paragraph">
-<p>usually, the resulting diagrams are only good tactically.</p>
-</div>
-<div class="paragraph">
-<p>illustrate: diagrams vs reporting, isometric catalog/matrix/diagram
-why draw boxes when a textual report is all that is needed (e.g. Bente p52)</p>
 </div>
 </div>
 <div class="sect4">
@@ -26718,6 +26880,9 @@ in technical matters, there is a huge risk that they create a bottleneck, if dec
 </div>
 <div class="paragraph">
 <p>EA makes the decision to insource or outsource</p>
+</div>
+<div class="paragraph">
+<p><a id="architecture-domains"></a></p>
 </div>
 </div>
 </div>
@@ -26923,8 +27088,14 @@ With regard to the nature of complex systems, it is not advisable to search for 
 <pre>feedback loop between line &amp; staff???</pre>
 </div>
 </div>
+<div class="paragraph">
+<p>In the Agile world,  <a href="#2.05.02-kanban">Kanban</a> is a strongly visual system for building a shared mental model of work in process. Humans more readily understand complex systems through diagrams.</p>
+</div>
 <div class="sect4">
 <h5 id="_the_hubris_of_architecture">The hubris of architecture</h5>
+<div class="paragraph">
+<p>“At Netflix, we had no central control [of the architecture] &#8230;&#8203; The goal of architecture was to create the right emergent behaviors,”</p>
+</div>
 <div class="quoteblock">
 <blockquote>
 &#8230;&#8203;we encountered companies that, despite having a fully institutionalized EA in place, were in a state close to paralysis&#8230;&#8203;Although EA has reached the mainstream, a skeptical undertone with regard to its effectiveness has always existed. (p 12-13)
@@ -26971,7 +27142,7 @@ example of antipatterns</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>(above from <a href="#Malan2010">[Malan2010]</a>)</p>
+<p>(see <a href="#Malan2010">[Malan2010]</a>)</p>
 </div>
 <div class="paragraph">
 <p>Laundry list discussions of all that&#8217;s wrong with IT, with a strong implication that EA is a magical silver bullet&#8201;&#8212;&#8201;but poorly documented as to how in fact it solves all this wrongness. These <strong>are</strong> complex systems and even in the best managed contexts they fail and degrade.</p>
@@ -27393,6 +27564,12 @@ hard to argue with but evidence is limited</pre>
 <ul>
 <li>
 <p>Postscript: Thought experiment on complete mainstreaming of IT</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>arch formalisms weak on dynamics - semantics vs dynamics problem semantics gravitate to first order predicate logic, binary thinking continuous math&#8230;&#8203; required&#8230;&#8203; how to measure anything. systems thinking.</p>
+</div>
 <div class="literalblock">
 <div class="content">
 <pre>===== EA and design thinking</pre>
@@ -27434,11 +27611,13 @@ For enduring competitive advantage, the organization needs to seek leverage acro
 </div>
 <div class="literalblock">
 <div class="content">
+<pre>https://structurizr.com/help/about</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
 <pre>All arch is design not all design is arch (Booch)</pre>
 </div>
-</div>
-</li>
-</ul>
 </div>
 </div>
 <div class="sect3">
@@ -27505,6 +27684,16 @@ Identification of opportunities otherwise un-apparent</p>
 </div>
 <div class="paragraph">
 <p><a href="https://www.itpreneurs.com/blog/agile-togaf-and-enterprise-architecture-will-they-blend/" class="bare">https://www.itpreneurs.com/blog/agile-togaf-and-enterprise-architecture-will-they-blend/</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.forbes.com/sites/jasonbloomberg/2014/07/11/is-enterprise-architecture-completely-broken/#1febba552f30" class="bare">http://www.forbes.com/sites/jasonbloomberg/2014/07/11/is-enterprise-architecture-completely-broken/#1febba552f30</a></p>
+</li>
+<li>
+<p><a href="http://www.forbes.com/sites/jasonbloomberg/2014/07/23/agile-enterprise-architecture-finally-crosses-the-chasm/#224402cb3c77" class="bare">http://www.forbes.com/sites/jasonbloomberg/2014/07/23/agile-enterprise-architecture-finally-crosses-the-chasm/#224402cb3c77</a></p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p><strong>Videos</strong></p>
@@ -27678,6 +27867,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 <p><a id="Blank2013"></a>[Blank2013]: Blank, Steve. 2013. The Four Steps to the Epiphany: Successful Strategies for Products That Win. 2nd ed. Steve Blank, publisher.</p>
 </li>
 <li>
+<p><a id="Bloomberg2014"></a>[Bloomberg2014]: Bloomberg, Jason. 2014. “Agile Enterprise Architecture Finally Crosses the Chasm.” Forbes. July. <a href="http://www.forbes.com/sites/jasonbloomberg/2014/07/23/agile-enterprise-architecture-finally-crosses-the-chasm/print/" class="bare">http://www.forbes.com/sites/jasonbloomberg/2014/07/23/agile-enterprise-architecture-finally-crosses-the-chasm/print/</a>. Accessed 2015-11-12.</p>
+</li>
+<li>
 <p><a id="BPTrends2013"></a>[BPTrends2013]: BPTrends. 2013. “Scope Diagram (or Input-Guides-Outputs-Enablers – IGOE Diagram).” BPTrends. <a href="http://www.bptrends.com/resources/glossary/scope-diagram-or-input-guides-outputs-enablers-igoe-diagram/" class="bare">http://www.bptrends.com/resources/glossary/scope-diagram-or-input-guides-outputs-enablers-igoe-diagram/</a>.</p>
 </li>
 <li>
@@ -27835,6 +28027,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 </li>
 <li>
 <p><a id="Fowler2003a"></a>[Fowler2003a]: Fowler. 2003. “Who Needs an Architect?” IEEE Software, no. July/August. <a href="http://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf" class="bare">http://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf</a>.</p>
+</li>
+<li>
+<p><a id="Fowler2004"></a>[Fowler2004]: Fowler, Martin. 2004. “Is Design Dead?” Martinfowler.com. <a href="http://martinfowler.com/articles/designDead.html" class="bare">http://martinfowler.com/articles/designDead.html</a>. Accessed 2016-10-10.</p>
 </li>
 <li>
 <p><a id="Fowler2006"></a>[Fowler2006]: Fowler, Martin. 2006. “Shu-Ha-Ri.” Martin Fowler’s Bliki. <a href="http://martinfowler.com/bliki/ShuHaRi.html" class="bare">http://martinfowler.com/bliki/ShuHaRi.html</a>.</p>
@@ -28089,6 +28284,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 <p><a id="Moeller2013"></a>[Moeller2013]: Moeller, Robert R. 2013. Executive’s Guide to IT Governance: Improving Systems Processes with Service Management, COBIT, and ITIL. Hoboken, New Jersey: John Wiley &amp; Sons, Inc.</p>
 </li>
 <li>
+<p><a id="Moody2009"></a>[Moody2009]: Moody, Dan. 2009. “The ‘Physics’ of Notations: Towards a Scientific Basis for Constructing Visual Notations in Software Engineering.” Journal Article. IEEE Transactions on Software Engineering 35 (5): 756–78.</p>
+</li>
+<li>
 <p><a id="Moore2014"></a>[Moore2014]: Moore, Geoffrey. 2014. Crossing the Chasm: Marketing and Selling Disruptive Products to Mainstream Customers. 3rd ed. New York, N.Y.: HarperCollins Publishers, Inc.</p>
 </li>
 <li>
@@ -28320,6 +28518,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 <p><a id="Vergun2015"></a>[Vergun2015]: Vergun, D. (2015). Toxic leaders decrease Soldiers’ effectiveness, experts say. Retrieved July 13, 2016, from <a href="https://www.army.mil/article/157327/Toxic_leaders_decrease_Soldiers" class="bare">https://www.army.mil/article/157327/Toxic_leaders_decrease_Soldiers</a><em>effectiveness</em>experts_say</p>
 </li>
 <li>
+<p><a id="vonNeumann1947"></a>[vonNeumann1947]: von Neumann, John, and Herman H. Goldstine. 1947. “Planning and Coding of Problems for an Electronic Computing Instrument.” Princeton N.J. <a href="https://library.ias.edu/files/pdfs/ecp/planningcodingof0103inst.pdf" class="bare">https://library.ias.edu/files/pdfs/ecp/planningcodingof0103inst.pdf</a>. Accessed 2016-10-10.</p>
+</li>
+<li>
 <p><a id="Westerman2001"></a>[Westerman2001]: Westerman, Paul. 2001. Data Warehousing: Using the Wal-Mart Model. San Diego: Academic Press.</p>
 </li>
 <li>
@@ -28416,6 +28617,30 @@ All web references were archived into the author&#8217;s files on the indicated 
 </div>
 <div class="footnote" id="_footnote_22">
 <a href="#_footnoteref_22">22</a>. Image credit <a href="https://en.wikipedia.org/wiki/Franz_Moritz_von_Lacy#/media/File:Count_Franz_Moritz_von_Lacy_(oil_on_canvas_portrait_HGM).jpg" class="bare">https://en.wikipedia.org/wiki/Franz_Moritz_von_Lacy#/media/File:Count_Franz_Moritz_von_Lacy_(oil_on_canvas_portrait_HGM).jpg</a>, downloaded 2016-10-04, labeled as public domain by Wikipedia
+</div>
+<div class="footnote" id="_footnote_23">
+<a href="#_footnoteref_23">23</a>. <em>Image <a href="https://www.flickr.com/photos/daryl_mitchell/16189447931" class="bare">https://www.flickr.com/photos/daryl_mitchell/16189447931</a>, downloaded 2016-10-10, commercial use permitted</em>
+</div>
+<div class="footnote" id="_footnote_24">
+<a href="#_footnoteref_24">24</a>. <em>Image <a href="https://www.flickr.com/photos/simonov/15484240880" class="bare">https://www.flickr.com/photos/simonov/15484240880</a>, downloaded 2016-10-10, commercial use permitted</em>
+</div>
+<div class="footnote" id="_footnote_25">
+<a href="#_footnoteref_25">25</a>. <em>Image <a href="https://www.flickr.com/photos/samiksha/2436037856" class="bare">https://www.flickr.com/photos/samiksha/2436037856</a>, downloaded 2016-10-10, commercial use permitted</em>
+</div>
+<div class="footnote" id="_footnote_26">
+<a href="#_footnoteref_26">26</a>. <em><a href="#vonNeumann1947">[vonNeumann1947]</a>, figure 7.9, public domain assumed</em>
+</div>
+<div class="footnote" id="_footnote_27">
+<a href="#_footnoteref_27">27</a>. <em>Image <a href="https://www.flickr.com/photos/mwichary/3249179483" class="bare">https://www.flickr.com/photos/mwichary/3249179483</a>, , downloaded 2016-10-10, commercial use permitted</em>
+</div>
+<div class="footnote" id="_footnote_28">
+<a href="#_footnoteref_28">28</a>. <em>Image <a href="https://www.flickr.com/photos/raphaelstolt/514643232" class="bare">https://www.flickr.com/photos/raphaelstolt/514643232</a>, , downloaded 2016-10-10, commercial use permitted</em>
+</div>
+<div class="footnote" id="_footnote_29">
+<a href="#_footnoteref_29">29</a>. <em>Image <a href="https://www.flickr.com/photos/pushandplay/2968259379" class="bare">https://www.flickr.com/photos/pushandplay/2968259379</a>, downloaded 2016-10-10, commercial use permitted</em>
+</div>
+<div class="footnote" id="_footnote_30">
+<a href="#_footnoteref_30">30</a>. <em>Image <a href="https://www.flickr.com/photos/taedc/9614791576" class="bare">https://www.flickr.com/photos/taedc/9614791576</a>, downloaded 2016-10-10, commercial use permitted</em>
 </div>
 </div>
 <div id="footer">
