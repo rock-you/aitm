@@ -153,7 +153,7 @@ As the above quote shows, there are clear neurological reasons for diagramming a
 image::images/4.12-tiger.jpg[blueprint, 350, 200, float="right"]
 
 * Human vision uses parallel processing. This means that a given image or visual stimulus is processed by many neurons simultaneously. This is how we recognize threats, such as a crouching tiger.
-* A large percentage of our brain is devoted to visual processing (you will see figures quoted from 25% to 66% depending on whether it's "pure" visual tasks or visual-driven tasks involving other brain areas)
+* A large percentage of our brain is devoted to visual processing (you will see figures quoted from 25% to 66% depending on whether it's "pure" visual tasks or vision-driven tasks involving other brain areas)
 * The old saying "a picture is worth a thousand words" is consistent with the science. Diagrams can be both faster and more precise at conveying information; however, this has limits.
 * Pictures can be more memorable than words.
 
@@ -162,7 +162,7 @@ image::images/4.12-tiger.jpg[blueprint, 350, 200, float="right"]
 
 .The first software flowchart footnote:[_<<vonNeumann1947>>, figure 7.9, public domain assumed_]
 image::images/4.12-neumann-flowchart.png[blueprint, 350, 200, float="left"]
-Architects in general don't write code; instead the most visible aspect of their work takes the form of diagrams -- abstract graphical representations of complex systems. The first known instance of applying graphical techniques to a digital problem was in 1947 <<vonNeumann1947>> and visual notations have evolved along with the field of computing ever since. Notable examples include:
+Architects and architecture are known for creating diagrams -- abstract graphical representations of complex systems. The first known instance of applying graphical techniques to a digital problem was in 1947 <<vonNeumann1947>> and visual notations have evolved along with the field of computing ever since. Notable examples include:
 
 * The IBM flowcharting template
 * The Gane-Sarson data-flow diagram notation
@@ -177,14 +177,14 @@ image::images/4.12-flowchart-template.jpg[blueprint, 350, 200, float="right"]
 
 But visual notations have been problematic in the Agile community; as Fowler notes in his classic essay Is Design Dead:
 
-_XP de-emphasizes diagrams to a great extent. Although the official position is along the lines of "use them if they are useful", there is a strong subtext of "real XPers don't do diagrams".... I think the issue comes from two separate causes. One is the fact that some people find software diagrams helpful and some people don't. The danger is that those who do think that those who don't should do and vice-versa. Instead we should just accept that some people will use diagrams and some won't._ <<Fowler2004>>
+_[Agile method eXtreme Progamming] de-emphasizes diagrams to a great extent. Although the official position is along the lines of "use them if they are useful", there is a strong subtext of "real XPers don't do diagrams".... I think the issue comes from two separate causes. One is the fact that some people find software diagrams helpful and some people don't. The danger is that those who do think that those who don't should do and vice-versa. Instead we should just accept that some people will use diagrams and some won't._ <<Fowler2004>>
 
-There is no question that some IT professionals, including perhaps some of the most skilled software engineers, find little of use in diagrams . As Martin Fowler says, "people like Kent [Beck, eXtreme Progamming originator] aren't at all comfortable with diagrams, indeed I've never seen Kent voluntarily draw a software diagram in any fixed notation." However, it seems likely that Kent Beck and others like him are members of a programming elite, with a well-honed ability to process source code in its "raw" form.
+There is no question that some IT professionals, including perhaps some of the most skilled software engineers, find little of use in diagrams . As Martin Fowler says, "people like Kent [Beck, eXtreme Progamming originator] aren't at all comfortable with diagrams, indeed I've never seen Kent voluntarily draw a software diagram in any fixed notation." However, it seems likely that Kent Beck and others like him are members of a programming elite, with a well-honed mental ability to process source code in its "raw" form.
 
 .UML sequence diagram footnote:[_Image https://www.flickr.com/photos/raphaelstolt/514643232, , downloaded 2016-10-10, commercial use permitted_]
 image::images/4.12-sequence-diagram.png[blueprint, 450, 200, float="left"]
 
-If we're building systems to be operated and maintained by humans, it would seem that we should support the cognitive and perceptual strengths of humans.  Because diagrams are more readily processed, they are often used to represent high level system interactions - how a given service, product or application is related to peer systems and services. Building such depictions can be helpful to fostering a shared mental model of the overall system objectives and context. The more complex and highly scaled the environment, the more likely one will encounter such artifacts as a means to creating the mental model.
+However, if we're building systems to be operated and maintained by humans, it would seem that we should support the cognitive and perceptual strengths of humans.  Because diagrams are more readily processed, they are often used to represent high level system interactions - how a given service, product or application is related to peer systems and services. Building such depictions can be helpful to fostering a shared mental model of the overall system objectives and context. The more complex and highly scaled the environment, the more likely one will encounter such artifacts as a means to creating the mental model.
 
 The strength of human visual processing is why we will (probably) always have graphical design to assist in the building of shared mental models. Specialists in the syntax and semantics of such designs will therefore likely continue to play a role in complex systems development and maintenance. Currently, if one seeks to hire such a specialist, one recruits some kind of architect - that is the professional role with the skills.
 
@@ -201,13 +201,13 @@ Visualization has a number of limitations:
 * it can result in distorted understandings,
 * ultimately, diagrams rely on deeper shared understandings that must be understood and managed.
 
-Despite the familiarity of simple flowcharting, visual notations don't scale well in terms of representing program logic. Therefore, for dynamic or procedural problems, they tend to be used informally, as sketch or whiteboarding, or at the business analysis level (where the flowchart represents business logic, not detailed software).
+Despite the familiarity of simple flowcharting, visual notations don't scale well in terms of representing program logic. Therefore, for dynamic or procedural problems, they tend to be used informally, as sketch or whiteboarding, or at the business analysis level (where the flowchart represents business logic, not detailed software). Dynamic processes also change more often than the static structures, and so must be updated more frequently.
 
 More static structures, including data and class models and systems interactions, are still often represented visually and in the case of xref:data-modeling[data models] can be transformed from conceptual representations to physical schema.
 
 However, any diagram, whether of a dynamic or static problem, can reach a level of density where it's no longer useful as a visual explanation. As diagrams become more complex, their audience narrows to those most familiar with them. Past a certain point they exceed the limits of human visual processing, and then are of little use to anyone.
 
-For example, the diagram below, while intimidating, might be useful to those who work with and study it. It would take some familiarization:
+For example, the diagram below, while intimidating, is likely useful to those who work with and study it. It would take some familiarization:
 
 .Complex diagram footnote:[_Image https://www.flickr.com/photos/pushandplay/2968259379, downloaded 2016-10-10, commercial use permitted_]
 image::images/4.12-obesity.jpg[blueprint, 550, 200]
@@ -244,6 +244,7 @@ As the quote from TOGAF above indicates, architecture can elegantly be represent
 
 For example, consider this diagram:
 
+.Process and function diagram
 image:images/4.12-proc-func.png[process-function, 400]
 
 It can be read as saying that the "Quote to Cash" process depends on the following functions:
@@ -252,10 +253,35 @@ It can be read as saying that the "Quote to Cash" process depends on the followi
 * Contracts
 * Accounts Receivable
 
+Notice that the following matrix can be read in the same way:
+
+.Process and function matrix
+image:images/4.12-proc-func-matrix.png[matrix, 500]
+
+"Quote to cash," which appeared as a chevron in the diagram, is now one of a list:
+
+* Quote to Cash
+* Procure to Pay
+* Hire to Retire
+
+This list can be called a "catalog." Similarly, there is another catalog of functions:
+
+* Sales
+* Contracts
+* Accounts Receivable
+* Vendor Management
+* Accounts Payable
+* Human Resources
+* Information Technology
+* Payroll
+* Benefits
+
+The functions appeared as rounded rectangles in the diagram.
+
+There are pros and cons to each approach. Notice that in about the same amount of space, the matrix also documented the dependencies for two other processes and six other functions. The matrix may also be easier to maintain; it requires a spreadsheet-like tool, where the diagram requires a drawing tool. But it takes more effort to understand the matrix.
 
 
 
-EA needs catalogs and matrices maintained. diagrams? it's questionable.
 
 every so often there is a ritual expression of a catalog as nested boxes. Of questionable utility. The graph complexity bogs down representation of the matrices.
 
