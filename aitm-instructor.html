@@ -25514,10 +25514,10 @@ As a hygiene factor, benefits from EA can be valued in terms of reduction in man
 </ul>
 </div>
 <div class="paragraph">
-<p>The following model is a high level <a href="#impact-mapping">impact mapping</a> representation.</p>
+<p><a id="arch-impacts"></a></p>
 </div>
 <div class="paragraph">
-<p><a id="arch-impacts"></a></p>
+<p>The following model is a high level <a href="#impact-mapping">impact mapping</a> representation.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -26097,7 +26097,7 @@ formalisms don&#8217;t give a good sense of scale. For example, suppose you see 
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/4.12-capabilities.png" alt="capabilities" width="500">
+<img src="images/4.12-capabilities.png" alt="capabilities" width="600">
 </div>
 <div class="title">Figure 17. Simple capability map</div>
 </div>
@@ -26146,7 +26146,7 @@ Artifacts are generally classified as catalogs (lists of things), matrices (show
 </div>
 <div class="paragraph">
 <div class="title">Process and function diagram</div>
-<p><span class="image"><img src="images/4.12-proc-func.png" alt="process-function" width="400"></span></p>
+<p><span class="image"><img src="images/4.12-proc-func.png" alt="process-function" width="600"></span></p>
 </div>
 <div class="paragraph">
 <p>It can be read as saying that the "Quote to Cash" process depends on the following functions:</p>
@@ -26169,7 +26169,7 @@ Artifacts are generally classified as catalogs (lists of things), matrices (show
 </div>
 <div class="paragraph">
 <div class="title">Process and function matrix</div>
-<p><span class="image"><img src="images/4.12-proc-func-matrix.png" alt="matrix" width="500"></span></p>
+<p><span class="image"><img src="images/4.12-proc-func-matrix.png" alt="matrix" width="600"></span></p>
 </div>
 <div class="paragraph">
 <p>"Quote to cash," which appeared as a chevron in the diagram, is now one of a list:</p>
@@ -26304,81 +26304,122 @@ A data model that organizes data about data and its related systems can be calle
 <div class="paragraph">
 <p>Finally, there are a number of other systems that may interoperate with the architecture repository. The most important of these is the configuration management database (CMDB) or system (CMS) that underlies the IT service management tooling. These tools also need to know at least about systems and technologies, and may be interested in higher level concepts such as business capability. However, they usually do not include sophisticated diagramming capabilities or the ability to represent a system&#8217;s future state.</p>
 </div>
+<div class="paragraph">
+<p>Other tools may include project management systems, portfolio management systems, risk management systems, service level management systems, and others. Application and service master data in particular is widely used, and if the EA repository is <a href="#system-of-record">System of Record</a> for this data there will be many outbound interfaces.</p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_the_rationalization_quest">The "rationalization" quest</h5>
-<div class="paragraph">
-<p>are the economics well understood?
-One core question decided by governance is how much autonomy is granted to business units or geographical regions. In case this autonomy is high, would a quest for high IT integration and standardization not be like fighting windmills? <a href="#bente2012">[bente2012]</a> p.45 and cross ref ch 1</p>
-</div>
-<div class="sect5">
-<h6 id="_application_rationalization">application rationalization</h6>
-
-</div>
-<div class="sect5">
-<h6 id="_data_info">Data &amp; info</h6>
-
-</div>
-<div class="sect5">
-<h6 id="_tlm">TLM</h6>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Bad times at Airbus</strong></p>
-</div>
-<div class="paragraph">
-<p>In 2006, (Ulrich)</p>
-</div>
-<div class="paragraph">
-<p>TLM governance</p>
-</div>
-</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
 <div class="quoteblock">
 <blockquote>
 A foolish consistency is the hobgoblin of little minds.
 </blockquote>
 <div class="attribution">
-&#8212; Anonymous
+&#8212; Ralph Waldo Emerson
 </div>
 </div>
 <div class="paragraph">
-<p><strong>The folly of letting TLM dominate</strong></p>
+<p>"Rationalization" is often listed as one of the major outcomes of enterprise architecture. What is meant by this? Let&#8217;s return to our scenario of <a href="#how-policy-begins">one company acquiring another</a>. As the newly merged company takes stock of its combined assets, it becomes clear that decisions need to be made. Among other areas, redundant systems exist for:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Marketing</p>
+</li>
+<li>
+<p>Human resources</p>
+</li>
+<li>
+<p>Accounting</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Henrik Kniberg tells the story of one of his most successful projects — a system built for the Swedish police that allowed them to use laptops in the field — and what happened afterwards <a href="#Kniberg2011">[Kniberg2011]</a>. Because the project was extremely urgent, the group was allowed to use an agile approach and break out of the traditional organizational culture. Everything went well, the police organization viewed it as a success, and the project even won a “project of the year” award.</p>
+<p>The digital pipelines also are inconsistent, one being based on Github and Travis CI, the other being based on local git and Jenkins.</p>
 </div>
 <div class="paragraph">
-<p>What came next, however, was even more interesting. A high-level decision was made to rebuild from scratch that same system police had used in the field, using Siebel. This was part of a standardization effort to reduce the complexity and number of systems. Not only was the decision made to use a technology that the development team didn’t agree with, but it was decided to use a more traditional, sequential project-management approach to development. Development took a couple years and when it finally rolled out, it was a disaster because the police found it to be slow and clumsy and basically unusable. Making the change even more difficult was that the police preferred their existing system, which worked. Kniberg estimates that this cost the Swedish police more than £1 billion.</p>
+<p>Decisions need to be made as to which systems will be "go-forward." While the teams involved will have strong input into the system decisions that affect them, and will do most of the work, there is concern that some overall view and coordination of the effort is required. What if teams cannot come to consensus? What if there is an opportunity to save money by standardizing on one vendor to support multiple diverse teams? For these reasons, the company assigns an architect to work closely with the overall merger program.</p>
 </div>
 <div class="paragraph">
-<p>in <a href="http://www.infoq.com/resource/minibooks/why-agile-works/en/pdf/InfoQ-Why-Agile-Works-Mini-book.pdf" class="bare">http://www.infoq.com/resource/minibooks/why-agile-works/en/pdf/InfoQ-Why-Agile-Works-Mini-book.pdf</a></p>
+<p>A merger is a dramatic example of a rationalization scenario. Established, ongoing companies, even without mergers, find that redundancy tends to accumulate. This is a normal outcome of the <a href="#innovation-cycle">innovation and commoditization cycle</a>; when technologies are new, organizations may experiment with several providers. When they become more standardized and commodity, the desire for efficiency drives rationalization.</p>
 </div>
+<div class="paragraph">
+<p>One of the challenges for rationalization is whether the economics and buisness context of any given rationalization effort are well understood. Consistency as an end in itself is not necessarily valuable. The impact on enterprise value must be established: will the organization actually benefit from improved vendor leverage, operational integration, or a reduced security attack surface? If not, perhaps seeking "rationalization" is not the best use of organizational resources.</p>
+</div>
+<div class="paragraph">
+<p>We close this section with some case studies on rationalization.</p>
+</div>
+<div class="sect5">
+<h6 id="_application_rationalization">Application rationalization</h6>
+<div class="quoteblock">
+<blockquote>
+One core question decided by governance is how much autonomy is granted to business units or geographical regions. In case this autonomy is high, would a quest for high IT integration and standardization not be like fighting windmills? <a href="#bente2012">[bente2012]</a> p.45
+</blockquote>
+<div class="attribution">
+&#8212; Bente et al<br>
+<cite>Collaborative Enterprise Architecture</cite>
 </div>
 </div>
 <div class="paragraph">
-<p>1 billion pounds ($1.6B) would have bought a lot of support &amp; vendor leverage for the "nonstandard" technologies.</p>
+<p>A large electronics retailer purchases a smaller chain of stores specializing in vinyl records and CDs, just as the market for these are declining. The decision is made to integrate all the systems: Point of Sale, inventory, HR &amp; Payroll, etc, in the interest of efficiency and rationalization.</p>
 </div>
 <div class="paragraph">
-<p>Lifecycle management can extend to internal products/services</p>
+<p>Work progresses on this effort for nearly a year, and then the surprising news is announced: the newly acquired company is to be sold off! All the work that went into rationalizing the systems is wasted, and the independent operating model for the smaller chain has to be completely restored. Clearly, in this case, rationalization was not rational.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_data_and_information">Data and information</h6>
+<div class="paragraph">
+<p>A large financial institution had allowed its computer systems to become fragmented. Acquisitions and independence among the lines of business meant that if a customer moved, they might need to contact customer service repeatedly to change their address. This was a failure of <a href="#system-of-record">master data management</a>; there was no clear system of record for the customer address.</p>
 </div>
 <div class="paragraph">
-<p>EA provides guidance about what technologies are a strategic fit, which ones are deprecated, and which are emerging. <a href="#Bente2012">[Bente2012]</a> p8</p>
+<p>While we first discussed this kind of issue in Chapter 11, solving the problem requires more than data architecture. Establishing one data source as "master" requires considerable engineering in such an environment: there are capacity, security, interface, and business process concerns to work through, that in this particular case tooks tens of millions of dollars of investment, in response to increasing customer unhappiness.</p>
 </div>
 <div class="paragraph">
-<p>Case study: The version control controversy: service vs TLM</p>
+<p>And once a system of record is established and the data interfaces have been constructed reflecting its status, its role needs to be preserved. Independent teams may once again start to master their own customer data, "just for now," because perhaps accessing the system of record seems to be too much work. Avoiding such scenarios is why some architecture organizations institute project reviews.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_technology_rationalization_case_1">Technology rationalization case #1</h6>
+<div class="imageblock" style="float: left">
+<div class="content">
+<img src="images/4.12-A-380.jpg" alt="A-380" width="300" height="200">
+</div>
+<div class="title">Figure 19. Airbus A-380 <span class="footnote">[<a id="_footnoteref_31" class="footnote" href="#_footnote_31" title="View footnote.">31</a>]</span></div>
 </div>
 <div class="paragraph">
-<p>if enterprise architects claim to be the only decision-making body
-in technical matters, there is a huge risk that they create a bottleneck, if decisions take ages due to pending strategic issues, imminent changes in the business model, and so forth, IT projects can be seriously delayed. The practical consequence is that projects deliberately circumvent the enterprise architects—for example, by choosing less suitable technologies not managed by the EA group.<a href="#Bente2012">[Bente2012]</a> p19</p>
+<p>In 2006, Airbus was in the midst of developing the gigantic A-380 aircraft. Because of the scale of the effort, multiple teams of engineers in different countries were working on the effort. As William Ulrich says of the German and French teams, "having failed to coordinate efforts to wire the world&#8217;s largest plane, they were surprised to learn that they had used different approaches to designing the A380&#8217;s wiring system" <a href="#Ulrich2010">[Ulrich2010]</a>, p. 32. This was because the teams were using different software for wiring design of the critical wiring design software <a href="#Clark2006">[Clark2006]</a>. The use of different software to fulfill the capability resulted in a year&#8217;s delay, a $4.5bn order loss to Boeing, and a 26% drop in Airbus stock.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_technology_rationalization_case_2">Technology rationalization case #2</h6>
+<div class="paragraph">
+<p>Henrik Kniberg worked on the PUST project for the Swedish national police, which was a project to deploy laptops to the Swedish police. Because of its urgency, it was allowed to use Lean and Agile techniques, and received favorable media coverage and was generally deemed a success  <a href="#Kniberg2011">[Kniberg2011]</a>.</p>
 </div>
 <div class="paragraph">
-<p>Note that we compensate developers with money AND experience. Developer pressure to use a new technology should be seen in part as a demand for increased compensation. developers seeking experience, it is in part how they are compensated. this leads to conflicts over choice of tools. (good blog as well). rational framework for deciding. might go to chapter 8, resource mgmt. intersection between that &amp; tech lifecycle is key.</p>
+<p>Unfortunately, a drive for technology "rationalization" resulted in the re-platforming of the system on a commercial platform (Siebel) <a href="#Kniberg2013">[Kniberg2013]</a>. Furthermore, an <a href="#2.00.1-open-loop">open loop</a>
+<a href="#1.03.02-Agile-history">waterfall</a> method was used to deliver the system.</p>
 </div>
 <div class="paragraph">
-<p>EA makes the decision to insource or outsource</p>
+<p>As we have discussed, there can be an economic case for rationalization. It reduces support costs and increases vendor leverage. However, 1 billion pounds ($1.6B) would have bought a lot of support &amp; vendor leverage for the "nonstandard" technologies. It is hard to see that this was an economically rational decision, especially given the particular risks of police work (the system in question is used by officers in the field, to keep records on criminal cases.) It does not take much imagination to think of scenarios where a difficult to use system for a police officer could have costly or even tragic results. In this case, the quest for rationalization appears misguided.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_service_or_technology_rationalization">Service or technology rationalization?</h6>
+<div class="paragraph">
+<p>A large US company with a robust architecture program found itself with a serious controversy. A request had been made of the Technology Lifecycle Management process for the Subversion version control system to be approved for use by development teams. A central version control team (what might now be called a Release Engineering team) was opposed to this, citing duplication of technologies.</p>
+</div>
+<div class="paragraph">
+<p>Multiple version management systems already did exist, as different plaforms had different requirements. In general, the thinking was that  the approval process should simply verify that the tool was "fit for use" and not worry about redundancy.</p>
+</div>
+<div class="paragraph">
+<p>However, as the discussion escalated, it became clear that the central release engineering team was worried not so much about the technical capabilities of Subversion, but rather a "loss of franchise" for their services - they had been established as the primary shared service for source control. Many teams did use their shared services, but there was also a regulatory issue - they were seen as an authoritative and auditable repository by regulators.</p>
+</div>
+<div class="paragraph">
+<p>So the situation was complex; was the company "rationalizing" at the technology or service level? Ultimately, a solution (unsatisfactory to most) was arrived at that the Subversion-using team still had to use the central source repository as a system of record. They could develop locally using Subversion, but were still expected to archive their source in the central tool.</p>
+</div>
+<div class="paragraph">
+<p>In the next chapter section we will go into a more thorough discussion of the service/application "level" versus the technology "level."</p>
 </div>
 <div class="paragraph">
 <p><a id="architecture-domains"></a></p>
@@ -26498,6 +26539,10 @@ But virtualization now makes it possible for all archs to be hands-on, even w/pk
 </div>
 <div class="sect4">
 <h5 id="_technical_architecture">Technical architecture</h5>
+<div class="paragraph">
+<p>cost of entry lower and lower
+cost of support - still a problem</p>
+</div>
 <div class="literalblock">
 <div class="content">
 <pre> ===== Enterprise architecture
@@ -26553,6 +26598,9 @@ With regard to the nature of complex systems, it is not advisable to search for 
 </div>
 <div class="sect4">
 <h5 id="_the_hubris_of_architecture">The hubris of architecture</h5>
+<div class="paragraph">
+<p>if enterprise architects claim to be the only decision-making body in technical matters, there is a huge risk that they create a bottleneck, if decisions take ages due to pending strategic issues, imminent changes in the business model, and so forth, IT projects can be seriously delayed. The practical consequence is that projects deliberately circumvent the enterprise architects—for example, by choosing less suitable technologies not managed by the EA group.<a href="#Bente2012">[Bente2012]</a> p19</p>
+</div>
 <div class="paragraph">
 <p>“At Netflix, we had no central control [of the architecture] &#8230;&#8203; The goal of architecture was to create the right emergent behaviors,”</p>
 </div>
@@ -26669,6 +26717,16 @@ example of antipatterns</p>
 </div>
 <div class="paragraph">
 <p>Cockburn quote on CCC project - disbanded &amp; disintegrated due to relying on oral tradition</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>toward a rapprochement: it  all starts with "respect the team" - and this applies to teams of architects - or one architect on a team - trouble is that architects are often spread too thin...</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Note that we compensate developers with money AND experience. Developer pressure to use a new technology should be seen in part as a demand for increased compensation. developers seeking experience, it is in part how they are compensated. this leads to conflicts over choice of tools. (good blog as well). rational framework for deciding. might go to chapter 8, resource mgmt. intersection between that &amp; tech lifecycle is key.</pre>
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -27414,6 +27472,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 <p><a id="Christensen2015"></a>[Christensen2015]: Clayton Christensen Institute. 2015. “Jobs to Be Done.” Http://www.christenseninstitute.org/. <a href="http://www.christenseninstitute.org/key-concepts/jobs-to-be-done/" class="bare">http://www.christenseninstitute.org/key-concepts/jobs-to-be-done/</a>. Accessed 2016-09-18.</p>
 </li>
 <li>
+<p><a id="Clark2006"></a>[Clark2006]: Clark, Nicola. 2006. “The Airbus Saga: Crossed Wires and a Multibillion-Euro Delay.” New York Times, December 11. <a href="http://www.nytimes.com/2006/12/11/business/worldbusiness/11iht-airbus.3860198.html" class="bare">http://www.nytimes.com/2006/12/11/business/worldbusiness/11iht-airbus.3860198.html</a>. Accessed 2016-10-11.</p>
+</li>
+<li>
 <p><a id="Coase1937"></a>[Coase1937]: Coase, R. (1937). The nature of the firm. <em>Economica</em>, 4, 386–405.</p>
 </li>
 <li>
@@ -27445,6 +27506,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 </li>
 <li>
 <p><a id="Davenport2007"></a>[Davenport2007]: Davenport, Thomas H, and Jeanne G Harris. 2007. Competing on Analytics : The New Science of Winning. Boston, Mass.: Harvard Business School ; London : McGraw-Hill [distributor]. Table of contents only <a href="http://www.loc.gov/catdir/toc/ecip073/2006035422.html" class="bare">http://www.loc.gov/catdir/toc/ecip073/2006035422.html</a>.</p>
+</li>
+<li>
+<p><a id="delaMaza2016"></a>[delaMaza2016]: de la Maza, Michael, and David Benz. 2016. Why Agile Works: The Values Behind the Results. C4Media - InfoQ.com. <a href="http://www.infoq.com/resource/minibooks/why-agile-works" class="bare">http://www.infoq.com/resource/minibooks/why-agile-works</a>. Accessed 2016-10-11.</p>
 </li>
 <li>
 <p><a id="DeLuccia2008"></a>[DeLuccia2008]: DeLuccia, James. 2008. <em>IT COMPLIANCE AND CONTROLS: Best Practices for Implementation</em>. Hoboken, N.J.: John Wiley &amp; Sons, Inc.</p>
@@ -27673,6 +27737,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 </li>
 <li>
 <p><a id="Kniberg2011"></a>[Kniberg2011]: Kniberg, H.; Beck, K. &amp; Keppler, K. (2011), <em>Lean from the trenches : managing large-scale projects with Kanban</em>, Pragmatic Bookshelf, Dallas, Tex.</p>
+</li>
+<li>
+<p><a id="Kniberg2013"></a>[Kniberg2013]: Kniberg, Henrik. 2013. “Culture Over Process.” Youtube. <a href="https://www.youtube.com/watch?v=Rb0O0Lgs9zU" class="bare">https://www.youtube.com/watch?v=Rb0O0Lgs9zU</a>.</p>
 </li>
 <li>
 <p><a id="Kohavi2009"></a>[Kohavi2009]: Kohavi, Ronny, Thomas Crook, and Roger Longbotham. 2009. “Online Experimentation At Microsoft.” Online. <a href="http://www.exp-platform.com/Documents/ExPThinkWeek2009Public.pdf" class="bare">http://www.exp-platform.com/Documents/ExPThinkWeek2009Public.pdf</a>. Accessed 2016-09-22.</p>
@@ -27972,6 +28039,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 <p><a id="Tufte2001"></a>[Tufte2001]: Tufte, E. R. (2001). The Visual Display of Quantitative Information. The Visual Display of Quantitative Information (Vol. 4).</p>
 </li>
 <li>
+<p><a id="Ulrich2010"></a>[Ulrich2010]: Ulrich, William, and Neal McWhorter. 2010. Business Architecture: The Art and Practice of Business Transformation. Book. Tampa, Florida: Meghan-Kiffer.</p>
+</li>
+<li>
 <p><a id="Uptime2014"></a>[Uptime2014]: Uptime Institute. 2014. “Explaining the Uptime Institute’s Tier Classification System.” Uptime Institute Journal. <a href="https://journal.uptimeinstitute.com/explaining-uptime-institutes-tier-classification-system/" class="bare">https://journal.uptimeinstitute.com/explaining-uptime-institutes-tier-classification-system/</a>. Accessed 2016-07-04.</p>
 </li>
 <li>
@@ -28110,6 +28180,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 </div>
 <div class="footnote" id="_footnote_30">
 <a href="#_footnoteref_30">30</a>. <em>Image <a href="https://www.flickr.com/photos/taedc/9614791576" class="bare">https://www.flickr.com/photos/taedc/9614791576</a>, downloaded 2016-10-10, commercial use permitted</em>
+</div>
+<div class="footnote" id="_footnote_31">
+<a href="#_footnoteref_31">31</a>. <em>Image credit <a href="https://www.flickr.com/photos/44400809@N07/4081438180" class="bare">https://www.flickr.com/photos/44400809@N07/4081438180</a>, downloaded 2016-10-11, commercial use permitted</em>
 </div>
 </div>
 <div id="footer">
