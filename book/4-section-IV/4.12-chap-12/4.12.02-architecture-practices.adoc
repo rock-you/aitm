@@ -197,8 +197,9 @@ The big picture is part of the standard mindset of EA, which everyone immediatel
 Visualization has a number of limitations:
 
 * It is better for static structures than for dynamic processes,
-* diagrams become less accessible the more complex they are, and
-* it can result in distorted understandings,
+* diagrams may have no real information content,
+* conversely, diagrams become less accessible the more complex they are,
+* visualization can result in distorted understandings,
 * ultimately, diagrams rely on deeper shared understandings that must be understood and managed.
 
 Despite the familiarity of simple flowcharting, visual notations don't scale well in terms of representing program logic. Therefore, for dynamic or procedural problems, they tend to be used informally, as sketch or whiteboarding, or at the business analysis level (where the flowchart represents business logic, not detailed software). Dynamic processes also change more often than the static structures, and so must be updated more frequently.
@@ -225,8 +226,9 @@ formalisms don't give a good sense of scale. For example, suppose you see this d
 .Simple capability map
 image::images/4.12-capabilities.png[capabilities, 500, ]
 
-Diagrams like this are common, but what does it mean that all the boxes are equally sized? Are there as many lawyers as sales people? Operations staff? It's not clear what the advantage is to putting information like this into a graphical form; no interactions are seen and the eight areas could more easily be expressed as a list. This brings us to the final problem listed above: visualizations rely on some common ground understanding. If boxes and lines are used for communication, their meaning should be agreed upon - otherwise, there is risk of mis-understanding, and the diagram may do more harm than good.
+Diagrams like this are common, but what does it mean that all the boxes are equally sized? Are there as many lawyers as sales people? Operations staff? It's not clear what the advantage is to putting information like this into a graphical form; no interactions are seen and the eight areas could more easily be expressed as a list (or "catalog" in the terms we'll introduce below). This brings us to the final problem listed above: visualizations rely on some common ground understanding. If boxes and lines are used for communication, their meaning should be agreed upon - otherwise, there is risk of mis-understanding, and the diagram may do more harm than good.
 
+Regardless of the pitfalls, many architecture diagrams are valuable. Whether drawn on a whiteboard, in Powerpoint or Omnigraffle, or in a repository-based architecture tool, the visualization concisely represents a shared mental model on how the organizations will undertake complex activities. The diagram leverages the human preference for visual processing, accessing the powerful parallel processing of the visual cortex. Ultimately, the discussions and negotiations the architect facilitates on the journey to drivng organizational direction are the real added value. The architect's role is to facilitate discussions by abstracting and visualizing powerfully so that decisions are illuminated and understood across the team, or broader organization.
 
 ===== Repositories and knowledge management
 [quote, TOGAF Version 9]
@@ -280,46 +282,35 @@ The functions appeared as rounded rectangles in the diagram.
 
 There are pros and cons to each approach. Notice that in about the same amount of space, the matrix also documented the dependencies for two other processes and six other functions. The matrix may also be easier to maintain; it requires a spreadsheet-like tool, where the diagram requires a drawing tool. But it takes more effort to understand the matrix.
 
+Maintaining a catalog of the concepts in a diagram becomes more and more important as the diagram scales up. This is a xref:data-quality[data quality] issue. What if the boxes on the diagram are redundant? Or inaccurate? This may not matter as much with a tight-knit team working on their whiteboard, but if the diagram is circulated more broadly, the quality expectations are higher.
 
+Furthermore, it is convenient to have data such as a master lists or catalogs of processes, systems, functions, or data topics. We might also want to document various attributes associated with these catalogs. This data can then be used for operational processes, such as xref:risk-management[risk management], as we have discussed previously. For these reasons and others, enterprise architecture repositories emerge.
 
+When we establish a catalog of architectural entities, we are engaging in xref:system-of-record[master data management]. In fact, the architectural concepts can be represented as a form of xref:data-modeling[database schema]:
 
-every so often there is a ritual expression of a catalog as nested boxes. Of questionable utility. The graph complexity bogs down representation of the matrices.
+.A simple metamodel
+image::images/4.12-simpleMetamodel.png[metamodel, 400]
 
-next: intersection of visualization and master data management. semantics of the visualization.
+NOTE: A data model that organizes data about data and its related systems can be called a _metamodel_.
 
-enterprise architecture does not solely consist of diagrams; per TOGAF, the basic artifacts are catalogs, diagrams, and matrices and the act of drawing pictures itself may be the least important thing the architect does . The picture, if valuable, concisely represents a shared mental model on how the enterprise will undertake complex activities, and the discussions and negotiations the architect facilitates on the journey to such agreement are the real added value.
+Thus, material that we first saw in diagram form can be stored in a database. Systems that enable this are called enterprise architecture repositories.
 
-the EA's role is to facilitate discussions by abstracting and visualizing powerfully so that decisions are illuminated.
+Architecture repositories require careful management. A common anti-pattern is to acquire them without considering how the data will be maintained. The concepts in the repository can be subjective, and if it is intended that they be of high xref:data-quality[data quality], investments must be made. Some kind of registration process or decision authority must exist for the creation of (for example) a new, official "system" record. Misunderstandings and disagreements about the very meaning of terms like "system" or "technology." (We discussed some of the general issues in Chapter 11, with the xref:ontology-problem[ontology problem]). Such issues are especially difficult when enterprise architecture repositories and metamodels are involved. Frequent topics:
 
-usually, the resulting diagrams are only good tactically.
+* Is an "application" different from a "service"? How?
+* What is the relationship between a "capability" and a "function"? Or a "capability" and a "process?"
+* How can we distinguish between "systems" and "technologies"?
+* What is the relationship between a "product" and a "service," especially if the service is a market-facing digital one?
+* What is the relationship between:
+** Value chain
+** Value stream
+** Process
+** Activity
+** Task
 
-illustrate: diagrams vs reporting, isometric catalog/matrix/diagram
+And so on. One might expect that there would be industry standards clarifying such issues, and in some cases there are. In other cases, there are either no standards, or the standards are obsolete or conflicting.
 
-backref to ch 11?
-
-Agile & docs "In an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it as part of the condition of satisfaction of a user story or in the definition of done" <<Bente2012>> p 170
-
-Catalogs - Need for registration process for subjective concepts - decision authority
-
-====== The repository question
-
-CMDBs, metadata, EA
-
-====== Metamodels and ontologies
-app v svc def'n
-runs into domain driven design problems if not careful
-
-Canon law disputes
-
-"standard EA language and methodology is especially helpful in large, complex enterprises that are geographically dispersed, and which may have multiple social and work cultures that have promoted different ways of doing things." <<Bernard
-
-Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 1147-1149). AuthorHouse. Kindle Edition.
-
-
-====== DevOps assets to architecture
-
-If you started from day 1 with source, build, & package mgmt, and have kept it clean, you have a great asset
-
+Finally, there are a number of other systems that may interoperate with the architecture repository. The most important of these is the configuration management database (CMDB) or system (CMS) that underlies the IT service management tooling. These tools also need to know at least about systems and technologies, and may be interested in higher level concepts such as business capability. However, they usually do not include sophisticated diagramming capabilities or the ability to represent a system's future state.
 
 ===== The "rationalization" quest
 are the economics well understood?

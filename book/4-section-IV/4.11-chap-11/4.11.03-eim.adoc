@@ -13,7 +13,7 @@ And as these unique systems scale up, a variety of concerns emerge, requiring sp
 ===== Advanced data management
 The previous chapter section gave us the basics of data storage. We turn to some of the emergent practices seen as enterprise information management scales up:
 
-* Master data management and the "System of Record"
+* Data integration and the "System of Record"
 * Reference data management
 * Data quality management
 
@@ -37,7 +37,7 @@ Take the above diagram and multiply it by several hundred times, and you will st
 
 As we see from the above picture, the same data may exist in multiple systems. Understanding what system is the "master" is critical. Product data should (in general) not flow from the sales database back into the product system. But what about sales information flowing from the sales database back to the CRM system? This might be helpful, so that people using the CRM system understand how much business a customer represents.
 
-The "system of record" concept is widely used in data management, records management, and enterprise architecture to resolve these kinds of questions. In general, the system of record represents data that is viewed as:
+The "system of record" concept is widely used in data management, records management, and enterprise architecture to resolve these kinds of questions. It is often said that the system of record is the "master" for the data in question, and sustaining the System of Record concept may also be called Master Data Management. In general, the system of record represents data that is viewed as:
 
 * the most complete and accurate
 * authoritative, in terms of resolving questions
