@@ -23221,7 +23221,7 @@ Notice that this database would only work for regions where customers have "firs
 <div class="ulist">
 <ul>
 <li>
-<p>Master data management and the "System of Record"</p>
+<p>Data integration and the "System of Record"</p>
 </li>
 <li>
 <p>Reference data management</p>
@@ -23270,7 +23270,7 @@ Thinking in terms of the emergence model, you have likely been integrating data 
 <p>As we see from the above picture, the same data may exist in multiple systems. Understanding what system is the "master" is critical. Product data should (in general) not flow from the sales database back into the product system. But what about sales information flowing from the sales database back to the CRM system? This might be helpful, so that people using the CRM system understand how much business a customer represents.</p>
 </div>
 <div class="paragraph">
-<p>The "system of record" concept is widely used in data management, records management, and enterprise architecture to resolve these kinds of questions. In general, the system of record represents data that is viewed as:</p>
+<p>The "system of record" concept is widely used in data management, records management, and enterprise architecture to resolve these kinds of questions. It is often said that the system of record is the "master" for the data in question, and sustaining the System of Record concept may also be called Master Data Management. In general, the system of record represents data that is viewed as:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -25337,6 +25337,17 @@ Although immature code may work fine and be completely acceptable to the custome
 <p>Technical debt, like Cost of Delay, can and should be quantified. We&#8217;ll discuss approaches to that in the chapter section on <a href="#portfolio-management">portfolio management</a>.</p>
 </div>
 </div>
+<div class="sect5">
+<h6 id="_scaling_the_enterprise_mental_model">Scaling the enterprise mental model</h6>
+<div class="paragraph">
+<p>"standard EA language and methodology is especially helpful in large, complex enterprises that are geographically dispersed, and which may have multiple social and work cultures that have promoted different ways of doing things." <a href="#Bernard2012">[Bernard2012]</a> Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 1147-1149). AuthorHouse. Kindle Edition.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>convo w/Lounsbury</pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -25753,10 +25764,13 @@ The big picture is part of the standard mindset of EA, which everyone immediatel
 <p>It is better for static structures than for dynamic processes,</p>
 </li>
 <li>
-<p>diagrams become less accessible the more complex they are, and</p>
+<p>diagrams may have no real information content,</p>
 </li>
 <li>
-<p>it can result in distorted understandings,</p>
+<p>conversely, diagrams become less accessible the more complex they are,</p>
+</li>
+<li>
+<p>visualization can result in distorted understandings,</p>
 </li>
 <li>
 <p>ultimately, diagrams rely on deeper shared understandings that must be understood and managed.</p>
@@ -25804,7 +25818,10 @@ formalisms don&#8217;t give a good sense of scale. For example, suppose you see 
 <div class="title">Figure 17. Simple capability map</div>
 </div>
 <div class="paragraph">
-<p>Diagrams like this are common, but what does it mean that all the boxes are equally sized? Are there as many lawyers as sales people? Operations staff? It&#8217;s not clear what the advantage is to putting information like this into a graphical form; no interactions are seen and the eight areas could more easily be expressed as a list. This brings us to the final problem listed above: visualizations rely on some common ground understanding. If boxes and lines are used for communication, their meaning should be agreed upon - otherwise, there is risk of mis-understanding, and the diagram may do more harm than good.</p>
+<p>Diagrams like this are common, but what does it mean that all the boxes are equally sized? Are there as many lawyers as sales people? Operations staff? It&#8217;s not clear what the advantage is to putting information like this into a graphical form; no interactions are seen and the eight areas could more easily be expressed as a list (or "catalog" in the terms we&#8217;ll introduce below). This brings us to the final problem listed above: visualizations rely on some common ground understanding. If boxes and lines are used for communication, their meaning should be agreed upon - otherwise, there is risk of mis-understanding, and the diagram may do more harm than good.</p>
+</div>
+<div class="paragraph">
+<p>Regardless of the pitfalls, many architecture diagrams are valuable. Whether drawn on a whiteboard, in Powerpoint or Omnigraffle, or in a repository-based architecture tool, the visualization concisely represents a shared mental model on how the organizations will undertake complex activities. The diagram leverages the human preference for visual processing, accessing the powerful parallel processing of the visual cortex. Ultimately, the discussions and negotiations the architect facilitates on the journey to drivng organizational direction are the real added value. The architect&#8217;s role is to facilitate discussions by abstracting and visualizing powerfully so that decisions are illuminated and understood across the team, or broader organization.</p>
 </div>
 </div>
 </div>
@@ -25927,59 +25944,81 @@ Artifacts are generally classified as catalogs (lists of things), matrices (show
 <p>There are pros and cons to each approach. Notice that in about the same amount of space, the matrix also documented the dependencies for two other processes and six other functions. The matrix may also be easier to maintain; it requires a spreadsheet-like tool, where the diagram requires a drawing tool. But it takes more effort to understand the matrix.</p>
 </div>
 <div class="paragraph">
-<p>every so often there is a ritual expression of a catalog as nested boxes. Of questionable utility. The graph complexity bogs down representation of the matrices.</p>
+<p>Maintaining a catalog of the concepts in a diagram becomes more and more important as the diagram scales up. This is a <a href="#data-quality">data quality</a> issue. What if the boxes on the diagram are redundant? Or inaccurate? This may not matter as much with a tight-knit team working on their whiteboard, but if the diagram is circulated more broadly, the quality expectations are higher.</p>
 </div>
 <div class="paragraph">
-<p>next: intersection of visualization and master data management. semantics of the visualization.</p>
+<p>Furthermore, it is convenient to have data such as a master lists or catalogs of processes, systems, functions, or data topics. We might also want to document various attributes associated with these catalogs. This data can then be used for operational processes, such as <a href="#risk-management">risk management</a>, as we have discussed previously. For these reasons and others, enterprise architecture repositories emerge.</p>
 </div>
 <div class="paragraph">
-<p>enterprise architecture does not solely consist of diagrams; per TOGAF, the basic artifacts are catalogs, diagrams, and matrices and the act of drawing pictures itself may be the least important thing the architect does . The picture, if valuable, concisely represents a shared mental model on how the enterprise will undertake complex activities, and the discussions and negotiations the architect facilitates on the journey to such agreement are the real added value.</p>
+<p>When we establish a catalog of architectural entities, we are engaging in <a href="#system-of-record">master data management</a>. In fact, the architectural concepts can be represented as a form of <a href="#data-modeling">database schema</a>:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/4.12-simpleMetamodel.png" alt="metamodel" width="400">
+</div>
+<div class="title">Figure 18. A simple metamodel</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+A data model that organizes data about data and its related systems can be called a <em>metamodel</em>.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p>the EA&#8217;s role is to facilitate discussions by abstracting and visualizing powerfully so that decisions are illuminated.</p>
+<p>Thus, material that we first saw in diagram form can be stored in a database. Systems that enable this are called enterprise architecture repositories.</p>
 </div>
 <div class="paragraph">
-<p>usually, the resulting diagrams are only good tactically.</p>
+<p>Architecture repositories require careful management. A common anti-pattern is to acquire them without considering how the data will be maintained. The concepts in the repository can be subjective, and if it is intended that they be of high <a href="#data-quality">data quality</a>, investments must be made. Some kind of registration process or decision authority must exist for the creation of (for example) a new, official "system" record. Misunderstandings and disagreements about the very meaning of terms like "system" or "technology." (We discussed some of the general issues in Chapter 11, with the <a href="#ontology-problem">ontology problem</a>). Such issues are especially difficult when enterprise architecture repositories and metamodels are involved. Frequent topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Is an "application" different from a "service"? How?</p>
+</li>
+<li>
+<p>What is the relationship between a "capability" and a "function"? Or a "capability" and a "process?"</p>
+</li>
+<li>
+<p>How can we distinguish between "systems" and "technologies"?</p>
+</li>
+<li>
+<p>What is the relationship between a "product" and a "service," especially if the service is a market-facing digital one?</p>
+</li>
+<li>
+<p>What is the relationship between:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Value chain</p>
+</li>
+<li>
+<p>Value stream</p>
+</li>
+<li>
+<p>Process</p>
+</li>
+<li>
+<p>Activity</p>
+</li>
+<li>
+<p>Task</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>illustrate: diagrams vs reporting, isometric catalog/matrix/diagram</p>
+<p>And so on. One might expect that there would be industry standards clarifying such issues, and in some cases there are. In other cases, there are either no standards, or the standards are obsolete or conflicting.</p>
 </div>
 <div class="paragraph">
-<p>backref to ch 11?</p>
-</div>
-<div class="paragraph">
-<p>Agile &amp; docs "In an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it as part of the condition of satisfaction of a user story or in the definition of done" <a href="#Bente2012">[Bente2012]</a> p 170</p>
-</div>
-<div class="paragraph">
-<p>Catalogs - Need for registration process for subjective concepts - decision authority</p>
-</div>
-<div class="sect5">
-<h6 id="_the_repository_question">The repository question</h6>
-<div class="paragraph">
-<p>CMDBs, metadata, EA</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_metamodels_and_ontologies">Metamodels and ontologies</h6>
-<div class="paragraph">
-<p>app v svc def&#8217;n
-runs into domain driven design problems if not careful</p>
-</div>
-<div class="paragraph">
-<p>Canon law disputes</p>
-</div>
-<div class="paragraph">
-<p>"standard EA language and methodology is especially helpful in large, complex enterprises that are geographically dispersed, and which may have multiple social and work cultures that have promoted different ways of doing things." &lt;&lt;Bernard</p>
-</div>
-<div class="paragraph">
-<p>Bernard, Scott A.. An Introduction to Enterprise Architecture: Third Edition (Kindle Locations 1147-1149). AuthorHouse. Kindle Edition.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_devops_assets_to_architecture">DevOps assets to architecture</h6>
-<div class="paragraph">
-<p>If you started from day 1 with source, build, &amp; package mgmt, and have kept it clean, you have a great asset</p>
-</div>
+<p>Finally, there are a number of other systems that may interoperate with the architecture repository. The most important of these is the configuration management database (CMDB) or system (CMS) that underlies the IT service management tooling. These tools also need to know at least about systems and technologies, and may be interested in higher level concepts such as business capability. However, they usually do not include sophisticated diagramming capabilities or the ability to represent a system&#8217;s future state.</p>
 </div>
 </div>
 <div class="sect4">
@@ -26285,10 +26324,10 @@ example of antipatterns</p>
 <p>Laundry list discussions of all that&#8217;s wrong with IT, with a strong implication that EA is a magical silver bullet&#8201;&#8212;&#8201;but poorly documented as to how in fact it solves all this wrongness. These <strong>are</strong> complex systems and even in the best managed contexts they fail and degrade.</p>
 </div>
 <div class="paragraph">
-<p>The reality is that enterprise architecture presented itself as a solution to complexity, long IT time scales, business frustration, and all kinds of badness. And when those problems were finally solved, it was not by architecture, but by Agile and DevOps practices finally overthrowing open-loop, slow feedback, batch-oriented delivery. Architects also failed to realize the emergent issue of too much enterprise work in process, instead championing the proliferation of enterprise processes and their associated queues. Fundamentally, they did not adopt enough of a systems view of IT delivery. That took Gene Kim and others.</p>
+<p>The reality is that enterprise architecture presented itself as a solution to complexity, long IT time scales, business frustration, and all kinds of badness. And when those problems were finally solved, it was not by architecture, but by Agile and DevOps practices overthrowing open-loop, slow feedback, batch-oriented delivery. Architects also failed to realize the emergent issue of too much enterprise work in process, instead championing the proliferation of enterprise processes and their associated queues. Fundamentally, they did not adopt enough of a systems view of IT delivery. That took Gene Kim and others.</p>
 </div>
 <div class="paragraph">
-<p>Architects' efficiency motivations and interest in capability mapping did not help the cause of cross-functional teams. Instead, functional silos were reinforced as supply-side "capabilities" and the  antipattern of "bringing the team to the work" was accepted as enterprise SOP - despite the growing evidence of Scrum and Agile success. The iterative, experimental narrative of Lean Startup did not originate from EA.</p>
+<p>Architects' efficiency motivations and interest in capability mapping did not help the cause of cross-functional teams. Instead, functional silos were reinforced as supply-side "capabilities" and the antipattern of "bringing the team to the work" was accepted as enterprise SOP - despite the growing evidence of Scrum and Agile success. The iterative, experimental narrative of Lean Startup did not originate from EA.</p>
 </div>
 <div class="paragraph">
 <p>In particular, despite dabbling in systems theory, architects did not realize the fundamental problems of stage-gated delivery, big bang releases, and so forth. They were too sympathetic to the now-discredited Capability Maturity Model and PMBOK.</p>
@@ -26407,7 +26446,16 @@ example of antipatterns</p>
 <p>we can assess the degree to which architecture is influencing real choices</p>
 </div>
 <div class="paragraph">
+<p>Agile &amp; docs "In an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it as part of the condition of satisfaction of a user story or in the definition of done" <a href="#Bente2012">[Bente2012]</a> p 170</p>
+</div>
+<div class="sect5">
+<h6 id="_devops_assets_to_architecture">DevOps assets to architecture</h6>
+<div class="paragraph">
+<p>If you started from day 1 with source, build, &amp; package mgmt, and have kept it clean, you have a great asset</p>
+</div>
+<div class="paragraph">
 <p><a id="TLM-CoD-worked"></a></p>
+</div>
 </div>
 </div>
 <div class="sect4">
