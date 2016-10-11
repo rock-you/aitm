@@ -1,5 +1,18 @@
 ==== Architecture practices
 
+ifdef::collaborator-draft[]
+
+****
+*Collaborative*
+
+ Status: This chapter section is in first draft as of 2016-10-11. Comments appreciated.
+
+include::../../../collab-links.adoc[]
+
+****
+
+endif::collaborator-draft[]
+
 Before we get into a detailed discussion of architecture domains, let's talk in general about what architects do and some common practices and themes.
 
 As we mentioned xref:defining-ea[previously], architecture itself as a term shows up in many ways, as role, artifact, program, and organization.
@@ -224,7 +237,7 @@ Another issue with some diagrams is that they do not give a good sense of perspe
 formalisms don't give a good sense of scale. For example, suppose you see this diagram:
 
 .Simple capability map
-image::images/4.12-capabilities.png[capabilities, 500, ]
+image::images/4.12-capabilities.png[capabilities, 600, ]
 
 Diagrams like this are common, but what does it mean that all the boxes are equally sized? Are there as many lawyers as sales people? Operations staff? It's not clear what the advantage is to putting information like this into a graphical form; no interactions are seen and the eight areas could more easily be expressed as a list (or "catalog" in the terms we'll introduce below). This brings us to the final problem listed above: visualizations rely on some common ground understanding. If boxes and lines are used for communication, their meaning should be agreed upon - otherwise, there is risk of mis-understanding, and the diagram may do more harm than good.
 
@@ -247,7 +260,7 @@ As the quote from TOGAF above indicates, architecture can elegantly be represent
 For example, consider this diagram:
 
 .Process and function diagram
-image:images/4.12-proc-func.png[process-function, 400]
+image:images/4.12-proc-func.png[process-function, 600]
 
 It can be read as saying that the "Quote to Cash" process depends on the following functions:
 
@@ -258,7 +271,7 @@ It can be read as saying that the "Quote to Cash" process depends on the followi
 Notice that the following matrix can be read in the same way:
 
 .Process and function matrix
-image:images/4.12-proc-func-matrix.png[matrix, 500]
+image:images/4.12-proc-func-matrix.png[matrix, 600]
 
 "Quote to cash," which appeared as a chevron in the diagram, is now one of a list:
 
@@ -312,49 +325,66 @@ And so on. One might expect that there would be industry standards clarifying su
 
 Finally, there are a number of other systems that may interoperate with the architecture repository. The most important of these is the configuration management database (CMDB) or system (CMS) that underlies the IT service management tooling. These tools also need to know at least about systems and technologies, and may be interested in higher level concepts such as business capability. However, they usually do not include sophisticated diagramming capabilities or the ability to represent a system's future state.
 
+Other tools may include project management systems, portfolio management systems, risk management systems, service level management systems, and others. Application and service master data in particular is widely used, and if the EA repository is xref:system-of-record[System of Record] for this data there will be many outbound interfaces.
+
 ===== The "rationalization" quest
-are the economics well understood?
-One core question decided by governance is how much autonomy is granted to business units or geographical regions. In case this autonomy is high, would a quest for high IT integration and standardization not be like fighting windmills? <<bente2012>> p.45 and cross ref ch 1
-
-====== application rationalization
-
-====== Data & info
-
-====== TLM
-****
-*Bad times at Airbus*
-
-In 2006, (Ulrich)
-
-TLM governance
-
-****
-
-
-****
-[quote, Anonymous]
+[quote, Ralph Waldo Emerson]
 A foolish consistency is the hobgoblin of little minds.
 
-*The folly of letting TLM dominate*
+"Rationalization" is often listed as one of the major outcomes of enterprise architecture. What is meant by this? Let's return to our scenario of xref:how-policy-begins[one company acquiring another]. As the newly merged company takes stock of its combined assets, it becomes clear that decisions need to be made. Among other areas, redundant systems exist for:
 
-Henrik Kniberg tells the story of one of his most successful projects — a system built for the Swedish police that allowed them to use laptops in the field — and what happened afterwards <<Kniberg2011>>. Because the project was extremely urgent, the group was allowed to use an agile approach and break out of the traditional organizational culture. Everything went well, the police organization viewed it as a success, and the project even won a “project of the year” award.
+* Marketing
+* Human resources
+* Accounting
 
-What came next, however, was even more interesting. A high-level decision was made to rebuild from scratch that same system police had used in the field, using Siebel. This was part of a standardization effort to reduce the complexity and number of systems. Not only was the decision made to use a technology that the development team didn’t agree with, but it was decided to use a more traditional, sequential project-management approach to development. Development took a couple years and when it finally rolled out, it was a disaster because the police found it to be slow and clumsy and basically unusable. Making the change even more difficult was that the police preferred their existing system, which worked. Kniberg estimates that this cost the Swedish police more than £1 billion.
+The digital pipelines also are inconsistent, one being based on Github and Travis CI, the other being based on local git and Jenkins.
 
-in http://www.infoq.com/resource/minibooks/why-agile-works/en/pdf/InfoQ-Why-Agile-Works-Mini-book.pdf
-****
+Decisions need to be made as to which systems will be "go-forward." While the teams involved will have strong input into the system decisions that affect them, and will do most of the work, there is concern that some overall view and coordination of the effort is required. What if teams cannot come to consensus? What if there is an opportunity to save money by standardizing on one vendor to support multiple diverse teams? For these reasons, the company assigns an architect to work closely with the overall merger program.
 
-1 billion pounds ($1.6B) would have bought a lot of support & vendor leverage for the "nonstandard" technologies.
+A merger is a dramatic example of a rationalization scenario. Established, ongoing companies, even without mergers, find that redundancy tends to accumulate. This is a normal outcome of the xref:innovation-cycle[innovation and commoditization cycle]; when technologies are new, organizations may experiment with several providers. When they become more standardized and commodity, the desire for efficiency drives rationalization.
 
-Lifecycle management can extend to internal products/services
+One of the challenges for rationalization is whether the economics and buisness context of any given rationalization effort are well understood. Consistency as an end in itself is not necessarily valuable. The impact on enterprise value must be established: will the organization actually benefit from improved vendor leverage, operational integration, or a reduced security attack surface? If not, perhaps seeking "rationalization" is not the best use of organizational resources.
 
-EA provides guidance about what technologies are a strategic fit, which ones are deprecated, and which are emerging. <<Bente2012>> p8
+We close this section with some case studies on rationalization.
 
-Case study: The version control controversy: service vs TLM
+====== Application rationalization
+[quote, Bente et al, Collaborative Enterprise Architecture]
+One core question decided by governance is how much autonomy is granted to business units or geographical regions. In case this autonomy is high, would a quest for high IT integration and standardization not be like fighting windmills? <<bente2012>> p.45
 
-if enterprise architects claim to be the only decision-making body
-in technical matters, there is a huge risk that they create a bottleneck, if decisions take ages due to pending strategic issues, imminent changes in the business model, and so forth, IT projects can be seriously delayed. The practical consequence is that projects deliberately circumvent the enterprise architects—for example, by choosing less suitable technologies not managed by the EA group.<<Bente2012>> p19
+A large electronics retailer purchases a smaller chain of stores specializing in vinyl records and CDs, just as the market for these are declining. The decision is made to integrate all the systems: Point of Sale, inventory, HR & Payroll, etc, in the interest of efficiency and rationalization.
 
-Note that we compensate developers with money AND experience. Developer pressure to use a new technology should be seen in part as a demand for increased compensation. developers seeking experience, it is in part how they are compensated. this leads to conflicts over choice of tools. (good blog as well). rational framework for deciding. might go to chapter 8, resource mgmt. intersection between that & tech lifecycle is key.
+Work progresses on this effort for nearly a year, and then the surprising news is announced: the newly acquired company is to be sold off! All the work that went into rationalizing the systems is wasted, and the independent operating model for the smaller chain has to be completely restored. Clearly, in this case, rationalization was not rational.
 
-EA makes the decision to insource or outsource
+====== Data and information
+A large financial institution had allowed its computer systems to become fragmented. Acquisitions and independence among the lines of business meant that if a customer moved, they might need to contact customer service repeatedly to change their address. This was a failure of xref:system-of-record[master data management]; there was no clear system of record for the customer address.
+
+While we first discussed this kind of issue in Chapter 11, solving the problem requires more than data architecture. Establishing one data source as "master" requires considerable engineering in such an environment: there are capacity, security, interface, and business process concerns to work through, that in this particular case tooks tens of millions of dollars of investment, in response to increasing customer unhappiness.
+
+And once a system of record is established and the data interfaces have been constructed reflecting its status, its role needs to be preserved. Independent teams may once again start to master their own customer data, "just for now," because perhaps accessing the system of record seems to be too much work. Avoiding such scenarios is why some architecture organizations institute project reviews.
+
+====== Technology rationalization case #1
+.Airbus A-380 footnote:[_Image credit https://www.flickr.com/photos/44400809@N07/4081438180, downloaded 2016-10-11, commercial use permitted_]
+image::images/4.12-A-380.jpg[A-380, 300, 200, float="left"]
+
+In 2006, Airbus was in the midst of developing the gigantic A-380 aircraft. Because of the scale of the effort, multiple teams of engineers in different countries were working on the effort. As William Ulrich says of the German and French teams, "having failed to coordinate efforts to wire the world's largest plane, they were surprised to learn that they had used different approaches to designing the A380's wiring system" <<Ulrich2010>>, p. 32. This was because the teams were using different software for wiring design of the critical wiring design software <<Clark2006>>. The use of different software to fulfill the capability resulted in a year's delay, a $4.5bn order loss to Boeing, and a 26% drop in Airbus stock.
+
+====== Technology rationalization case #2
+
+Henrik Kniberg worked on the PUST project for the Swedish national police, which was a project to deploy laptops to the Swedish police. Because of its urgency, it was allowed to use Lean and Agile techniques, and received favorable media coverage and was generally deemed a success  <<Kniberg2011>>.
+
+Unfortunately, a drive for technology "rationalization" resulted in the re-platforming of the system on a commercial platform (Siebel) <<Kniberg2013>>. Furthermore, an xref:2.00.1-open-loop[open loop]
+xref:1.03.02-Agile-history[waterfall] method was used to deliver the system.
+
+As we have discussed, there can be an economic case for rationalization. It reduces support costs and increases vendor leverage. However, 1 billion pounds ($1.6B) would have bought a lot of support & vendor leverage for the "nonstandard" technologies. It is hard to see that this was an economically rational decision, especially given the particular risks of police work (the system in question is used by officers in the field, to keep records on criminal cases.) It does not take much imagination to think of scenarios where a difficult to use system for a police officer could have costly or even tragic results. In this case, the quest for rationalization appears misguided.
+
+====== Service or technology rationalization?
+
+A large US company with a robust architecture program found itself with a serious controversy. A request had been made of the Technology Lifecycle Management process for the Subversion version control system to be approved for use by development teams. A central version control team (what might now be called a Release Engineering team) was opposed to this, citing duplication of technologies.
+
+Multiple version management systems already did exist, as different plaforms had different requirements. In general, the thinking was that  the approval process should simply verify that the tool was "fit for use" and not worry about redundancy.
+
+However, as the discussion escalated, it became clear that the central release engineering team was worried not so much about the technical capabilities of Subversion, but rather a "loss of franchise" for their services - they had been established as the primary shared service for source control. Many teams did use their shared services, but there was also a regulatory issue - they were seen as an authoritative and auditable repository by regulators.
+
+So the situation was complex; was the company "rationalizing" at the technology or service level? Ultimately, a solution (unsatisfactory to most) was arrived at that the Subversion-using team still had to use the central source repository as a system of record. They could develop locally using Subversion, but were still expected to archive their source in the central tool.
+
+In the next chapter section we will go into a more thorough discussion of the service/application "level" versus the technology "level."
