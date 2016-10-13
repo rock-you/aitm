@@ -20,20 +20,25 @@ In the last section, we discussed what architects *do*. The focus was primarily 
 
 We have seen the xref:Zachman[Zachman Framework] previously. The higher levels are considered "business" or "operating model" concerns, while the lower levels are more technical. In discussing the various domains of architecture, however, a simpler structure is useful. The numerous columns in the Zachman framework don't necessarily translate to specific architecture domains (there are many data architects, but not many who specialize in questions of timing -- the "when" column.)
 
-Archimate is a modeling language and standard of The Open Group, which we will discuss more later in the chapter. It uses a framework that can be viewed as a simplification of the Zachman model:
+Archimate(r) is a modeling language and standard of The Open Group, which we will discuss more later in the chapter. It uses a framework that can be viewed as a simplification of the Zachman model:
 
+.Similar to <<Open2012>>, section 2.6
 image::images/4.12-archimate.png[archimate, 500]
 
+The interesting wrinkle, as we look at the overall structure of the architecture disciplines, is that we have three disciplines that correspond to hierarchical "layers":
+
+* Business architecture
+* Application architecture
+* Technology architecture
+
+And one discipline (Information and Data architecture) that corresponds to an entire column (Passive Structure, or "What" in Zachman terms). For evidence of this, see the Data Management Body of Knowledge, which covers the gamut of information and data topics from high level glossaries all the way down to physical database administration.
 
 ===== Business architecture
-Business architecture offers views of the business that are unavailable from other sources, including IT. Business architecture can tell you what is being done, by which business units, for certain customers, involving various products, via certain processes, involving selected business information. Business architecture generated blueprints serve as the basis for root cause analysis of critical business requirements while providing the foundation for establishing a solution-oriented roadmap that leaves the speculation and guesswork by the roadside. In a word, business architecture delivers "transparency" to a wide variety of internal teams, roles and business units. Ulrich p 195
+[quote, William Ulrich, Business Architecture: The Art and Practice of Transformation]
+Business architecture offers views of the business that are unavailable from other sources, including IT. Business architecture can tell you what is being done, by which business units, for certain customers, involving various products, via certain processes, involving selected business information. Business architecture generated blueprints serve as the basis for root cause analysis of critical business requirements while providing the foundation for establishing a solution-oriented roadmap that leaves the speculation and guesswork by the roadside. In a word, business architecture delivers "transparency" to a wide variety of internal teams, roles and business units <<Ulrich2010>>, p. 195.
 
-The repeatable development of a
-structured,
-consensus,
-representation of
-demand-side concepts
-essential to the organization’s goals.
+The repeatable development of a structured, consensus representation of
+demand-side concepts essential to the organization’s goals.
 
 Things we DO NOT expect to see in business architecture
 Specific technology products (Oracle 11g)
@@ -77,7 +82,10 @@ Service (sometimes)
 Technology product
 
 ====== Data architecture
-ch 11 backref
+
+We covered data architecture in depth in xref:chap-ent-info-mgmt[Chapter 11], and so we won't do so here.
+
+Some notes..
 
 ===== Solutions architecture
 
