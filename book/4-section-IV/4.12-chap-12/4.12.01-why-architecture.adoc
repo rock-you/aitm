@@ -58,6 +58,8 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 
 "Architecture" as a term by itself is something you've encountered since your earliest days as a startup. Perhaps you used it to describe the choice of technologies you used for your products. Or the most important components in your application. Or the common services (e.g. authentication) you developed to support multiple products. The architecture concept is therefore not something new or foreign. But what does it mean to say we have an "enterprise" architecture? *Enterprise architecture is nothing but the unification of this book's topics into a common, formalized, scalable framework for understanding.* It means we are "doing architecture" comprehensively, considering the enterprise itself as a system to be architected. It also may mean we have a program for sustaining the work of those doing architecture in the technical, application, solution, data, process, or business domains.
 
+In terms of our emergence model, enterprise architecture assumes multi-product, "team of teams" problems. As an overall domain of practice, enterprise architecture encompasses a variety of specialist domains (some of which we've already encountered) as we'll discuss in the next chapter section. Some of those domains *do* make sense at smaller, single-product contexts (e.g., software architecture.)
+
 There are numerous definitions of _enterprise architecture_. The examples above are typical. It can be defined as:
 
 * an organizational unit
@@ -68,11 +70,33 @@ There are numerous definitions of _enterprise architecture_. The examples above 
 * a large-scale artifact (i.e. an integrated model consisting of catalogs, diagrams, and matrices) maintained on an ongoing basis for communication and planning
 * an integrated and standardized language for reasoning about complexity
 
-Enterprise architecture in the whole covers organizational as well as technical domains; we will discuss this in more detail in the next chapter section.
+In general, definitions of enterprise architecture characterize it as a coordination and problem solving discipline, suited to large scale problems at the intersection of digital technology and human organization. An important function of architecture is supporting a shared mental model of the complex organization; we were first introduced to the importance of xref:shared-mental-model[shared mental models] in Chapter 5 and this need has only increased as the organization became more complex. Enterprise Architecture provides the tools and techniques for sustaining shared mental models of complexity at scale.
 
-In general, definitions of enterprise architecture characterize it as a coordination and problem solving discipline, suited to large scale problems at the intersection of digital technology and human organization. It has a variety of specialist domains (some of which we've already encountered) as we'll discuss in the next chapter section. Its definition can be extended pragmatically through looking at its relationships to other significant capabilities in the large organization.
+.The terrain footnote:[_Image credit https://www.flickr.com/photos/endogamia/3979040177, downloaded 2016-10-16, commercial use permitted_]
+image::images/4.12-serengeti.jpg[alt text, 250, 200, float="left"]
 
- more on the definition problem, "EA" vs other forms, re-interpret in terms of emergence model - are they within the bounds of 1 team or facing the coordination problem? in general architecture grai
+.The mapmaker footnote:[_Image credit https://www.flickr.com/photos/perspective/8474999166, downloaded 2016-10-16, commercial use permitted_]
+image::images/4.12-surveyor.jpg[alt text, 200, 200, float="left"]
+
+.The map footnote:[_Image credit https://www.flickr.com/photos/martye_green/2354576085, downloaded 2016-10-16, commercial use permitted_]
+image::images/4.12-map.jpg[alt text, 235, 200, float=""]
+
+Confused? Consider the activity of map-making. In map-making you have:
+
+* The actual terrain
+* The capability of map making: surveying, drawing, etc.
+* The process of surveying and mapping it
+* The resulting map as a document
+
+And once the map is made, you might use it for a wide variety of purposes, and you also might find that once you start to use the map, you wish it had more information. Similarly, in enterprise architecture, it's important to remember that there are different concerns:
+
+* Operational reality
+* The capability of representing it for planning and analysis ("being" an architect or an architecture organization; having the skills and tools)
+* The process of representing and analyzing the operational reality ("doing" architecture)
+* The actual representation (the "architecture" as a "thing" - a model, an artifact, etc.)
+
+And, like a map, once you have the architecture, you can use it for a wide variety of purposes, but also you may find it incomplete in various ways.
+
 
 ===== Architecture organization
 
@@ -144,11 +168,16 @@ But in many cases, centralizing staff expertise and the definition of acceptable
 [quote, Weill and Ross, Enterprise Architecture as Strategy]
 The operating model is the necessary level of business process integration and standardization for delivering goods and services to customers. Different companies have different levels of process integration across their business units (i.e., the extent to which business units share data). Integration enables end-to-end processing and a single face to the customer, but it forces a common understanding of data across diverse business units.
 
-For the purposes of this textbook, we define enterprise architecture's concerns as essentially the enterprise operating model: process, data, organizational capabilities, and systems.
+In terms of overall positioning, Enterprise Architecture is often portrayed as mediating between strategy and portfolio management:
+
+.EA context, based on <<Ross2006>>, fig 1-2, p.10.
+image::images/4.12-EA-context.png[EA context, 500]
+
+Notice the distinction between Enterprise Architecture as a capability and as an artifact. The *practice* of Enterprise Architecture is not the same as the actual Enterprise Architecture. For the purposes of this textbook, we define enterprise architecture's concerns as essentially the enterprise operating model: process, data, organizational capabilities, and systems.
 
 .Author's note
 ****
-While the concept of an "operating model" is somewhat loose, I believe there is a general consensus that it is distinct from a "business model." I also do not think that there is much value in distinguishing between the "enterprise architecture" (as an artifact) and the "enterprise operating model," especially at the higher levels of the enterprise architecture. However there are certain paradoxes and definition problems that emerge with business architecture. Is business architecture about the business model? Or is it about the higher levels of the operating model?
+While the concept of an "operating model" is somewhat loose, I believe there is a general consensus that it is distinct from a "business model." I also do not think that there is much value in distinguishing between the "enterprise architecture" (as an artifact) and the "enterprise operating model," especially at the higher levels of the enterprise architecture.
 ****
 
 Scott Bernard (author of _An Introduction to Enterprise Architecture_) claims that: [without enterprise architecture] "_...leadership will not have the ability to generate clear, consistent views of the overall enterprise on an ongoing basis, they won’t be able to effectively compare business units, and the locus of power for planning and decision-making will be at the line-of-business, program, and/or system owner levels-with significant differences in how things are done and high potential for overlapping or duplicative functions and resources._" <<Bernard2012>>, introduction.
@@ -174,19 +203,20 @@ We were exposed to the xref:data-modeling[data modeling] progression from concep
 * When
 * Why
 
-We'll discuss the various types of architecture views and concerns in more detail in the next chapter section.
+Overall, the Zachman framework represents the range of organizational operating model concerns well. Certainly, sustaining a large and complex organization requires attention to all its concerns. But what good does it do to simply document the contents of each cell? Such activity needs to have relevance for organizational planning and strategy; otherwise, it is just waste.
 
 ====== Peer organizations
 
-The Zachman framework can be contrasted with the Business Model Canvas:
+It's reasonable to associate the xref:biz-model-canvas[Business Model Canvas]
+ with strategy, and the Zachman framework with the enterprise architecture (as an artifact):
 
 .Business model versus operating model
-image::images/4.12-BM-OM.png[]
+image::images/4.12-BM-OM.png[Business model versus operating model, 500]
 
 This distinction helps us position the Enterprise Architecture group with respect to key partner organizations:
 
 * Organizational strategy
-* Program and investment management
+* Portfolio and investment management
 * Infrastructure and operations
 
 *Organizational strategy*
@@ -195,9 +225,9 @@ The operating model needs to support the business model, and so therefore Enterp
 
 Defining digital strategies is a challenging topic; we have touched on it in xref:digital-context[Chapter 1], xref:product-mgmt-chap[Chapter 4], and Chapter 8. Further discussion at the enterprise level will be deferred to a future edition of this book.
 
-*Program and investment management*
+*Portfolio and investment management*
 
-Architecture and portfolio management need to be tied to the organization's investment management process. This may be easier said that done, given the silos that exist. As Scott Bernard notes, “Enterprise architecture tends to be viewed as a hostile takeover by program managers and executives who have previously had a lot of independence in developing solutions for their own requirements” (<<Bernard2012>>, case study scene 1).
+Architecture needs to be tied to the organization's investment management process. This may be easier said that done, given the silos that exist. As Scott Bernard notes, “Enterprise architecture tends to be viewed as a hostile takeover by program managers and executives who have previously had a lot of independence in developing solutions for their own requirements” (<<Bernard2012>>, case study scene 1).
 
 Many organizations have a long legacy of project-driven development, in which the operational consequences of the project were too often given short shrift. The resulting xref:technical-debt[technical debt] can be crippling. Now that there is more of a move towards "you build it, you run it" the operability aspects of systems are (perhaps) improving. However, ongoing scrutiny and management are still needed at the investment front end, if the enterprise is to manage important objectives like vendor leverage, minimizing technical debt, reducing investment redundancy, controlling the security perimeter, and keeping skills acquisition economical (more on this below in section on Enterprise Architecture value).
 

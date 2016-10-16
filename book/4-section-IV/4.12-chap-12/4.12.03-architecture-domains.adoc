@@ -18,9 +18,9 @@ endif::collaborator-draft[]
 
 In the last section, we discussed what architects *do*. The focus was primarily architects in a "team of teams" environment, not strictly at the level of a single product team. However, while this chapter has a strong Enterprise Architecture orientation, it is about the practice of "architecture" more generally. In this chapter, we will break down the different practices of architecture and their relationships.
 
-We have seen the xref:Zachman[Zachman Framework] previously. The higher levels are considered "business" or "operating model" concerns, while the lower levels are more technical. In discussing the various domains of architecture, however, a simpler structure is useful. The numerous columns in the Zachman framework don't necessarily translate to specific architecture domains (there are many data architects, but not many who specialize in questions of timing -- the "when" column.)
+We have seen the xref:Zachman[Zachman Framework] previously. The higher levels are considered "business" or "operating model" concerns, while the lower levels are more technical. In discussing the various domains of architecture, however, a simpler structure is useful. The numerous columns in the Zachman framework don't necessarily translate to specific architecture domains (for example, there are many data architects representing  the "what" column, but not many who specialize strictly in questions of timing -- the "when" column.)
 
-Archimate(r) is a modeling language and standard of The Open Group, which we will discuss more later in the chapter. It uses a framework that can be viewed as a simplification of the Zachman model:
+ArchimateⓇ is a modeling language and standard of The Open Group, which we will discuss more later in the chapter. It uses a framework that can be viewed as a simplification of the Zachman model:
 
 .Similar to <<Open2012>>, section 2.6
 image::images/4.12-archimate.png[archimate, 500]
@@ -31,9 +31,7 @@ The interesting wrinkle, as we look at the overall structure of the architecture
 * Application architecture
 * Technology architecture
 
-And one discipline (Information and Data architecture) that corresponds to an entire column (Passive Structure, or "What" in Zachman terms). For evidence of this, see the Data Management Body of Knowledge, which covers the gamut of information and data topics from high level glossaries all the way down to physical database administration.
-
-There are other kinds of architecture that don't fit neatly into this arrangement. *Software architecture and solutions architecture* are perhaps more on the application level, but solutions architecture especially is a loose term. In general, it is restricted to one product, or a few products working together. Within that scope, it may incorporate concepts from infrastructure to business architecture. Software architecture is usually aligned with application architecture, but not all application architecture is software architecture. For example, information architecture is also a form of application architecture, in the sense of how the user understands the meaning and data represented by a web site or application.
+And one discipline (Information and Data architecture) that corresponds to an entire column (Passive Structure, or "What" in Zachman terms). For evidence, see the Data Management Body of Knowledge <<DAMA2009>>, which covers the gamut of information and data topics from high level glossaries all the way down to physical database administration.
 
 ===== Business architecture
 [quote, William Ulrich, Business Architecture: The Art and Practice of Transformation]
@@ -107,6 +105,17 @@ We covered data architecture in depth in xref:chap-ent-info-mgmt[Chapter 11], an
 
 Some notes..
 
+
+===== Technical architecture
+
+cost of entry lower and lower
+cost of support - still a problem
+
+Other forms of architecture
+
+There are other kinds of architecture that don't fit neatly into this arrangement. *Software architecture and solutions architecture* are perhaps more on the application level, but solutions architecture especially is a loose term. In general, it is restricted to one product, or a few products working together. Within that scope, it may incorporate concepts from infrastructure to business architecture. Software architecture is usually aligned with application architecture, but not all application architecture is software architecture. For example, information architecture is also a form of application architecture, in the sense of how the user understands the meaning and data represented by a web site or application.
+
+
 ===== Solutions architecture
 
 System and its relatives
@@ -129,10 +138,6 @@ But virtualization now makes it possible for all archs to be hands-on, even w/pk
 keep EAs off product teams, agree but they set overall direction @ portfolio level difficult for them to stay hands on
 
 
-===== Technical architecture
-
-cost of entry lower and lower
-cost of support - still a problem
 
  ===== Enterprise architecture
 all of the above
