@@ -1096,8 +1096,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_the_hubris_of_architecture">The hubris of architecture</a></li>
 <li><a href="#_the_hubris_of_agile">The hubris of Agile</a></li>
-<li><a href="#_scaling_architecture">Scaling &amp; architecture</a></li>
-<li><a href="#_architecture_and_digital_exhaust">Architecture and digital exhaust</a></li>
+<li><a href="#_some_ways_forward">Some ways forward</a></li>
 <li><a href="#_architecture_queues_and_cost_of_delay">Architecture, queues, and Cost of Delay</a></li>
 </ul>
 </li>
@@ -26876,56 +26875,14 @@ Architecture represents the significant design decisions that shape a system, wh
 </div>
 <div class="sect3">
 <h4 id="_agile_and_architecture">Agile and architecture</h4>
-<div class="paragraph">
-<p>Cockcroft quote</p>
-</div>
-<div class="paragraph">
-<p>Cathedral / bazaar</p>
-</div>
-<div class="paragraph">
-<p>When it  comes to system implementation, the temptation to be  fast, often under the nom de guerre of agile, can soften  quality controls and threaten product usability, reliability, safety, and lifecycle cost. <a href="#Malan2010">[Malan2010]</a></p>
-</div>
-<div class="paragraph">
-<p>Re: "the code is documentation"</p>
-</div>
-<div class="olist lowerroman">
-<ol class="lowerroman" type="i">
-<li>
-<p>for systems of sufficient scope and complexity to warrant teams (of teams) working on (incremental) implementation and evolution, the sheer mass of code can make it hard to discover the essential structure from bottom-up decisions made entirely through the medium of code. <a href="#Malan2010">[Malan2010]</a></p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Bente&#8217;s four perspectives &amp; eight caricatures</p>
-</div>
 <div class="quoteblock">
 <blockquote>
-With regard to the nature of complex systems, it is not advisable to search for the "optimal enterprise architecture." Optimality is always relative to an environment, and the frame conditions are likely to change. Hence it is better to accept certain ugly spots of the IT landscape and strengthen the viability of the whole, which means developing and using capabilities such as being able to learn, solve problems, adapt, or absorb disruptions.
+“At Netflix, we had no central control [of the architecture] &#8230;&#8203; The goal of architecture was to create the right emergent behaviors&#8230;&#8203;”
 </blockquote>
 <div class="attribution">
-&#8212; Bente et al
+&#8212; Adrian Cockcroft<br>
+<cite>former CTO Netflix</cite>
 </div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>critical importance of not confusing solutions with EA. Scale matters.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>feedback loop between line &amp; staff???</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>In the Agile world,  <a href="#2.05.02-kanban">Kanban</a> is a strongly visual system for building a shared mental model of work in process. Humans more readily understand complex systems through diagrams.</p>
-</div>
-<div class="sect4">
-<h5 id="_the_hubris_of_architecture">The hubris of architecture</h5>
-<div class="paragraph">
-<p>if enterprise architects claim to be the only decision-making body in technical matters, there is a huge risk that they create a bottleneck, if decisions take ages due to pending strategic issues, imminent changes in the business model, and so forth, IT projects can be seriously delayed. The practical consequence is that projects deliberately circumvent the enterprise architects—for example, by choosing less suitable technologies not managed by the EA group.<a href="#Bente2012">[Bente2012]</a> p19</p>
-</div>
-<div class="paragraph">
-<p>“At Netflix, we had no central control [of the architecture] &#8230;&#8203; The goal of architecture was to create the right emergent behaviors,”</p>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -26936,8 +26893,39 @@ With regard to the nature of complex systems, it is not advisable to search for 
 <cite>Collaborative Enterprise Architecture</cite>
 </div>
 </div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Author&#8217;s Note</div>
+<div class="paragraph">
+<p>As a practicing architect I can confirm that there is often friction between developers with an Agile perspective and enterprise architects. This carries through into industry discussions and conference presentations.</p>
+</div>
+<div class="paragraph">
+<p>I think the best approach to resolving this conflict is through careful understanding of the perspective of each "side." Both have validity. I recommend framing the conversation in terms of <a href="#arch-impacts">architecture&#8217;s value impacts</a>.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The relationship between architecture (both "enterprise" and other forms of architecture) is too often troubled. However, the hope is that this book has given you a set of tools for resolving these concepts in a productive way.</p>
+</div>
+<div class="paragraph">
+<p>This chapter will challenge you by presenting the arguments directly and frankly, as two sides to a debate, concluding with thoughts on finding common ground.</p>
+</div>
+<div class="sect4">
+<h5 id="_the_hubris_of_architecture">The hubris of architecture</h5>
+<div class="quoteblock">
+<blockquote>
+if enterprise architects claim to be the only decision-making body in technical matters, there is a huge risk that they create a bottleneck&#8230;&#8203;The practical consequence is that projects deliberately circumvent the enterprise architects&#8230;&#8203;<a href="#Bente2012">[Bente2012]</a> p19
+</blockquote>
+<div class="attribution">
+&#8212; Bente et al<br>
+<cite>Collaborative Enterprise Architecture</cite>
+</div>
+</div>
 <div class="paragraph">
 <p><em>The goal of enterprise architecture is to act as a guide, perhaps a pathfinder, who takes the enterprise on a transformational journey—from an incoherent and complex world with line-of-business separation, product-specific stovepipes, legacy systems estate, and costly operation to a more rationally organized and useful state with multiservice, revenue-generating platforms and an efficient operational regime. On the way, radical surgeries may be required to eliminate duplication, reduce costs, improve reliability, and increase agility in the business. EA acts as a strategic foundation for business enablement.</em> <a href="#Bente2012">[Bente2012]</a> p9</p>
+</div>
+<div class="paragraph">
+<p>A common response to getting stuck in a big ball of mud is to fund a large systems replacement project. Such projects typically take months or years before they deliver any value to users, and the switchover from the old to the new system is often performed in “big bang” fashion. These projects also run an unusually high risk of running late and over budget and being cancelled. Systems rearchitecture should not be done as a large program of work funded from the capital budget. It should be a continuous activity that happens as part of the product development process. <a href="#Humble2013">[Humble2013]</a> ch10</p>
 </div>
 <div class="paragraph">
 <p>ugh - "radical surgeries" - risky with the human body which is relatively well understood&#8230;&#8203; need better quote.</p>
@@ -27024,6 +27012,19 @@ example of antipatterns</p>
 <p><a href="https://philippe.kruchten.com/2011/02/13/the-elephants-in-the-agile-room/" class="bare">https://philippe.kruchten.com/2011/02/13/the-elephants-in-the-agile-room/</a></p>
 </div>
 <div class="paragraph">
+<p>When it  comes to system implementation, the temptation to be  fast, often under the nom de guerre of agile, can soften  quality controls and threaten product usability, reliability, safety, and lifecycle cost. <a href="#Malan2010">[Malan2010]</a></p>
+</div>
+<div class="paragraph">
+<p>Re: "the code is documentation"</p>
+</div>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>for systems of sufficient scope and complexity to warrant teams (of teams) working on (incremental) implementation and evolution, the sheer mass of code can make it hard to discover the essential structure from bottom-up decisions made entirely through the medium of code. <a href="#Malan2010">[Malan2010]</a></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
 <p>We don&#8217;t always build. Software may be eating the world, but that doesn&#8217;t mean everyone employs - or should employ - software developers.</p>
 </div>
 <div class="paragraph">
@@ -27058,7 +27059,23 @@ example of antipatterns</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_scaling_architecture">Scaling &amp; architecture</h5>
+<h5 id="_some_ways_forward">Some ways forward</h5>
+<div class="paragraph">
+<p>feedback loop between line &amp; staff???
+In the Agile world,  <a href="#2.05.02-kanban">Kanban</a> is a strongly visual system for building a shared mental model of work in process. Humans more readily understand complex systems through diagrams.</p>
+</div>
+<div class="paragraph">
+<p>Amazon Obidos example, strangler pattern.
+* Start by delivering new functionality—at least at first
+* Do not attempt to port existing functionality unless it is to support a business process change
+* Deliver something fast
+* Design for testability and deployability
+* Architect the new software to run on a PaaS</p>
+</div>
+<div class="sect5">
+<h6 id="_scaling_architecture">Scaling &amp; architecture</h6>
+
+</div>
 <div class="sect5">
 <h6 id="__coding_architects">"Coding architects?"</h6>
 <div class="paragraph">
@@ -27095,20 +27112,7 @@ But virtualization now makes it possible for all archs to be hands-on, even w/pk
 </div>
 </div>
 <div class="sect5">
-<h6 id="_big_batch_rationalization_risks">Big batch rationalization risks</h6>
-<div class="paragraph">
-<p>A common response to getting stuck in a big ball of mud is to fund a large systems replacement project. Such projects typically take months or years before they deliver any value to users, and the switchover from the old to the new system is often performed in “big bang” fashion. These projects also run an unusually high risk of running late and over budget and being cancelled. Systems rearchitecture should not be done as a large program of work funded from the capital budget. It should be a continuous activity that happens as part of the product development process. <a href="#Humble2013">[Humble2013]</a> ch10</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Amazon Obidos example, strangler pattern.
-* Start by delivering new functionality—at least at first
-* Do not attempt to port existing functionality unless it is to support a business process change
-* Deliver something fast
-* Design for testability and deployability
-* Architect the new software to run on a PaaS</pre>
-</div>
-</div>
+<h6 id="_arch_kata">Arch kata</h6>
 <div class="paragraph">
 <p>Our experience is that standardization on a particular toolchain or technology stack is neither necessary nor sufficient for achieving enterprise architecture goals such as enabling teams to respond rapidly to changing requirements, creating high-performance systems at scale, or reducing the risk of intrusion or data theft. Just like we drive product and process innovation through the Improvement Kata, we can drive architectural alignment through it too. Architectural goals—for example, desired performance, availability, and security—should be approached by iteratively specifying target conditions at the program level. Following the Principle of Mission, set out a clear vision of the goals of your enterprise architecture without specifying how the goals are to be achieved, and create a context in which teams can determine how to achieve them through experimentation and collaboration.   <a href="#Humble2013">[Humble2013]</a> ch10</p>
 </div>
@@ -27119,14 +27123,14 @@ But virtualization now makes it possible for all archs to be hands-on, even w/pk
 <p>the importance of documentation - speech to text, text analytics&#8230;&#8203; image recognition&#8230;&#8203; what might the future hold? At least get technical writers&#8230;&#8203; don&#8217;t make developers write&#8230;&#8203;</p>
 </div>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_architecture_and_digital_exhaust">Architecture and digital exhaust</h5>
+<div class="sect5">
+<h6 id="_architecture_and_digital_exhaust">Architecture and digital exhaust</h6>
 <div class="paragraph">
 <p>we can assess the degree to which architecture is influencing real choices</p>
 </div>
 <div class="paragraph">
 <p>Agile &amp; docs "In an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it as part of the condition of satisfaction of a user story or in the definition of done" <a href="#Bente2012">[Bente2012]</a> p 170</p>
+</div>
 </div>
 <div class="sect5">
 <h6 id="_devops_assets_to_architecture">DevOps assets to architecture</h6>
@@ -27160,6 +27164,31 @@ But virtualization now makes it possible for all archs to be hands-on, even w/pk
 </div>
 <div class="paragraph">
 <p>Toyota Kata and EA  - importance of target condition</p>
+</div>
+<div class="sect5">
+<h6 id="_notes_2">NOTES</h6>
+<div class="paragraph">
+<p>Cockcroft quote</p>
+</div>
+<div class="paragraph">
+<p>Cathedral / bazaar</p>
+</div>
+<div class="paragraph">
+<p>Bente&#8217;s four perspectives &amp; eight caricatures</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+With regard to the nature of complex systems, it is not advisable to search for the "optimal enterprise architecture." Optimality is always relative to an environment, and the frame conditions are likely to change. Hence it is better to accept certain ugly spots of the IT landscape and strengthen the viability of the whole, which means developing and using capabilities such as being able to learn, solve problems, adapt, or absorb disruptions.
+</blockquote>
+<div class="attribution">
+&#8212; Bente et al
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>critical importance of not confusing solutions with EA. Scale matters.</pre>
+</div>
+</div>
 </div>
 </div>
 </div>
