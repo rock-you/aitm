@@ -42,42 +42,61 @@ _A common response to getting stuck in a big ball of mud is to fund a large syst
 Architecture methodology, with its focus on identifying capability gaps for feeding into the project portfolio process, has perhaps been too prone to supporting these large, troubled programs. As we know from our earlier chapters, large system changes are inherently risky and any intervention into a complex system is better undertaken as a series of smaller, incremental changes with frequent monitoring and assessment.
 
 ===== The hubris of Agile
+[quote, Ruth Malan]
+When it  comes to system implementation, the temptation to be  fast, often under the nom de guerre of agile, can soften  quality controls and threaten product usability, reliability, safety, and lifecycle cost <<Malan2010>>.
 
-Instead of tapping into the existing knowledge of the organization the autonomous team is prone to reinvent the wheel, and the wheel that they reinvent will not always be superior to the one we are currently using. <<Reinertsen1997>> p 104
+[quote, Donald Reinertsen, Managing the Design Factory]
+Instead of tapping into the existing knowledge of the organization the autonomous team is prone to reinvent the wheel, and the wheel that they reinvent will not always be superior to the one we are currently using <<Reinertsen1997>>, p. 104.
 
-https://philippe.kruchten.com/2011/02/13/the-elephants-in-the-agile-room/
+====== Cost of Delay
 
-When it  comes to system implementation, the temptation to be  fast, often under the nom de guerre of agile, can soften  quality controls and threaten product usability, reliability, safety, and lifecycle cost. <<Malan2010>>
+Cost of Delay is a real and often overlooked issue, in understanding the net value of architecture. But it is only a factor, and does not eliminate the value proposition of architecture. If the Cost of Delay is only a few hundred dollars a month, but the long term cost of the technical debt is millions, then Cost of Delay does not decide the issue. Don Reinertsen, who has done more than anyone to promote the idea of Cost of Delay, emphasizes that *all* decision making must take place within an economic framework (<<Reinertsen2009>>, chapter 2) and that means that the other xref:arch-impacts[architectural impact factors] on organization value must also be considered.
 
-Re: "the code is documentation"
+====== Documentation
 
-... for systems of sufficient scope and complexity to warrant teams (of teams) working on (incremental) implementation and evolution, the sheer mass of code can make it hard to discover the essential structure from bottom-up decisions made entirely through the medium of code. <<Malan2010>>
+Documentation has been a core concern of the Agile movement, being mentioned in one of the four core principles of the Agile Manifesto:
 
-We don't always build. Software may be eating the world, but that doesn't mean everyone employs - or should employ - software developers.
+_"Working software over comprehensive documentation" <<Alliance2001>>_.
+
+When documentation primarily takes the form of xref:secondary-artifacts[secondary artifacts], it is appropriate to question the need for it. "The code is the documentation," some will argue. While it is true that good coding practices result in easier-to-understand (and maintain) source code, the code cannot be the only documentation.
+
+As Ruth Malan notes,
+
+_...for systems of sufficient scope and complexity to warrant teams (of teams) working on (incremental) implementation and evolution, the sheer mass of code can make it hard to discover the essential structure from bottom-up decisions made entirely through the medium of code. <<Malan2010>>_
+
+In terms of systems theory, a complex software system has emergent behavior, not obvious from just looking at its components. Because the system's behavior can't be reduced to its pieces, "self documenting code" can only go so far. The behavior of the assembled components as a system needs to be represented somehow, in a way that transcends the mere mechanics of the pieces. Abstraction is necessary to understand emergent behavior, and this leads inevitably to xref:arch-visualization[visual representation].
+
+====== Sourcing
+
+Agile and DevOps are software-development centric, and have transformed that world. However, we don't always build. Software may be eating the world, but that doesn't mean everyone employs - or should employ - software developers. Agile has not had a primary focus on sourcing, and certainly evaluating commercial software is not a common topic.
 
 Suppose you have a business product/value prop and you know that you will be assembling complex services/products produced by others? And these services overlap? You need a strategy? Who is it that analyzes these services and their capabilities, interfaces, non-functional characteristics, and makes a final recommendation as to how you are going to bring them all into one unified system?
 
 Point back to sourcing chapter. (And forward ref from that chapter to architecture.) Open source, COTS, Cloud, in-house... the options are bewildering and take experience. A consistent evaluation approach is important (pref. under an economic framework Reinertsen/Hubbard)
 
+====== arch as emergent
+
 Arch as emergent is one of the most troubled Agile memes. Within one team, perhaps. Across teams - no.
 
-You can't call for a systems perspective and then say "but the code is self documenting" on the other hand.
+As in the line/staff discussion - war, for better or worse, is one of the most complex phenomena ... if a line/staff structure is deemed insufficient, the burden is on those saying so to propose something superior. Scrum of Scrums is just naive.
 
-Cockburn quote on CCC project - disbanded & disintegrated due to relying on oral tradition
-
- toward a rapprochement: it  all starts with "respect the team" - and this applies to teams of architects - or one architect on a team - trouble is that architects are often spread too thin...
+====== tech mgmt
 
  Note that we compensate developers with money AND experience. Developer pressure to use a new technology should be seen in part as a demand for increased compensation. developers seeking experience, it is in part how they are compensated. this leads to conflicts over choice of tools. (good blog as well). rational framework for deciding. might go to chapter 8, resource mgmt. intersection between that & tech lifecycle is key.
 
 
- great Josh A insight: what problems can be handled w/projects vs. which need steady state capaiblities? Cynefin: simple/complicated vs complex/chaotic.. - if your strategy is to elucidate the complex you need an ongoing mental model... preserve the team -
+
+ https://philippe.kruchten.com/2011/02/13/the-elephants-in-the-agile-room/
 
 ===== Some ways forward
+
 Entire language/mental model around gaps brings back flower & cog
 
 A flower is not engineered to fill a gap. A cog is.
 
 how do we know there is a gap? We have hypotheses... need to establish that there is a valuable, usable, feasible future state, and if there is progress towards it must not be delayed by queues, cycle time, etc ... need to move with alacrity... Cost of Delay outweighs much...
+
+toward a rapprochement: it  all starts with "respect the team" - and this applies to teams of architects - or one architect on a team - trouble is that architects are often spread too thin...
 
 
 feedback loop between line & staff???
@@ -90,6 +109,9 @@ Amazon Obidos example, strangler pattern.
 * Deliver something fast
 * Design for testability and deployability
 * Architect the new software to run on a PaaS
+
+
+ great Josh A insight: what problems can be handled w/projects vs. which need steady state capaiblities? Cynefin: simple/complicated vs complex/chaotic.. - if your strategy is to elucidate the complex you need an ongoing mental model... preserve the team -
 
 ====== Scaling & architecture
 
@@ -167,3 +189,5 @@ With regard to the nature of complex systems, it is not advisable to search for 
  critical importance of not confusing solutions with EA. Scale matters.
 
  from bente: Anti-patterns in EA and architecture in general can be found, for instance, in Kruchten (2008), Mar and Spacey (2011), Ambler, Nalbone. and Vizdos (2005), and Coplien and Harrison (2005).
+
+ Cockburn quote on CCC project - disbanded & disintegrated due to relying on oral tradition
