@@ -159,7 +159,7 @@ As the above quote shows, there are clear neurological reasons for diagramming a
 .Fast recognition means survival footnote:[_Image https://www.flickr.com/photos/samiksha/2436037856, downloaded 2016-10-10, commercial use permitted_]
 image::images/4.12-tiger.jpg[blueprint, 350, 200, float="right"]
 
-* Human vision uses parallel processing. This means that a given image or visual stimulus is processed by many neurons simultaneously. This is how we recognize threats, such as a crouching tiger.
+* Human vision uses parallel processing. This means that a given image or visual stimulus is processed by many neurons simultaneously. This is how we can quickly recognize and act on threats, such as a crouching tiger.
 * A large percentage of our brain is devoted to visual processing (you will see figures quoted from 25% to 66% depending on whether it's "pure" visual tasks or vision-driven tasks involving other brain areas)
 * The old saying "a picture is worth a thousand words" is consistent with the science. Diagrams can be both faster and more precise at conveying information; however, this has limits.
 * Pictures can be more memorable than words.
@@ -182,6 +182,15 @@ and many more. (We touched on xref:data-modeling[data modeling] in Chapter 11.) 
 .IBM flowcharting template footnote:[_Image https://www.flickr.com/photos/mwichary/3249179483, , downloaded 2016-10-10, commercial use permitted_]
 image::images/4.12-flowchart-template.jpg[blueprint, 350, 200, float="right"]
 
+Research at Microsoft suggests that developers use diagrams for four purposes:
+
+* Sharing
+* Grounding (defining ambiguous interpretations)
+* Manipulating
+* Brainstorming
+
+They argue "diagrams support communicating, capturing attention and grounding conversations [4]. They reduce the cognitive burden of evaluating a design or considering new ideas [13]" <<Cherubini2007>>.
+
 But visual notations have been problematic in the Agile community; as Fowler notes in his classic essay Is Design Dead:
 
 _[Agile method eXtreme Progamming] de-emphasizes diagrams to a great extent. Although the official position is along the lines of "use them if they are useful", there is a strong subtext of "real XPers don't do diagrams".... I think the issue comes from two separate causes. One is the fact that some people find software diagrams helpful and some people don't. The danger is that those who do think that those who don't should do and vice-versa. Instead we should just accept that some people will use diagrams and some won't._ <<Fowler2004>>
@@ -193,7 +202,7 @@ image::images/4.12-sequence-diagram.png[blueprint, 450, 200, float="left"]
 
 However, if we're building systems to be operated and maintained by humans, it would seem that we should support the cognitive and perceptual strengths of humans.  Because diagrams are more readily processed, they are often used to represent high level system interactions - how a given service, product or application is related to peer systems and services. Building such depictions can be helpful to fostering a shared mental model of the overall system objectives and context. The more complex and highly scaled the environment, the more likely one will encounter such artifacts as a means to creating the mental model.
 
-The strength of human visual processing is why we will (probably) always have graphical design to assist in the building of shared mental models. Specialists in the syntax and semantics of such designs will therefore likely continue to play a role in complex systems development and maintenance. Currently, if one seeks to hire such a specialist, one recruits some kind of architect - that is the professional role with the skills.
+The strength of human visual processing is why we will (probably) always use graphical representation to assist in the building of shared mental models. Specialists in the syntax and semantics of such designs will therefore likely continue to play a role in complex systems development and maintenance. Currently, if one seeks to hire such a specialist, one recruits some kind of architect - that is the professional role with the skills.
 
 Note that flowcharts, data models, and other such diagrams tend to be associated more with the idea of "solutions" or "software" architecture. We'll cover the xref:architecture-domains[architecture domains] in the next chapter section, including examples of business architecture diagrams.
 
@@ -205,6 +214,7 @@ Visualization has a number of limitations:
 
 * It is better for static structures than for dynamic processes,
 * diagrams may have no real information content,
+* diagrams are difficult to maintain, and there are diminishing returns the more they are elaborated and refined (e.g. for archival purposes)
 * conversely, diagrams become less accessible the more complex they are,
 * visualization can result in distorted understandings,
 * ultimately, diagrams rely on deeper shared understandings that must be understood and managed.
