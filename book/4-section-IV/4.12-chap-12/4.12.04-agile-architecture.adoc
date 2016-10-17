@@ -1,7 +1,4 @@
 ==== Agile and architecture
-[quote, Adrian Cockcroft, former CTO Netflix]
-“At Netflix, we had no central control [of the architecture] ... The goal of architecture was to create the right emergent behaviors...”
-
 [quote, Bente et al, Collaborative Enterprise Architecture]
 ...we encountered companies that, despite having a fully institutionalized EA in place, were in a state close to paralysis...Although EA has reached the mainstream, a skeptical undertone with regard to its effectiveness has always existed. (p 12-13)
 
@@ -72,23 +69,27 @@ Agile and DevOps are software-development centric, and have transformed that wor
 
 Suppose you have an idea for a digital product, and you know that you will be (at least in part) assembling complex services/products produced by others? Suppose further that these provided services overlap (the providers compete)? You need to carefully analyze which services you are going to acquire from which provider.  You will need a strategy, and who is it that analyzes these services and their capabilities, interfaces, non-functional characteristics, and makes a final recommendation as to how you are going to bring them all into one unified system?
 
-Point back to sourcing chapter. (And forward ref from that chapter to architecture.) Open source, COTS, Cloud, in-house... the options are bewildering and take experience. A consistent evaluation approach is important (pref. under an economic framework Reinertsen/Hubbard)
+It is easy to say things like, "the teams get to define their own architecture" but at some point the enterprise must reckon with the cost of an overly diverse supplier base. This is a very old topic in business, not restricted to IT. At the end of the day, supplier and sourcing fragmentation costs real money. Open source, Commercial-off-the-shelf, Cloud, in-house... the options are bewildering and take experience. A consistent evaluation approach is important (preferably under an economic framework Reinertsen/Hubbard). And at some point, product development teams should not have to do too much of their own R&D on possible platforms for their work.
 
-====== arch as emergent
+====== Architecture as emergent
+[quote, Adrian Cockcroft, former CTO Netflix]
+“At Netflix, we had no central control [of the architecture] ... The goal of architecture was to create the right emergent behaviors...”
 
-Arch as emergent is one of the most troubled Agile memes. Within one team, perhaps. Across teams - no.
+The Agile Manifesto is also well known for saying "The best architectures, requirements, and designs emerge from self-organizing teams" <<Alliance2001>>. This is one of the more frequently discussed Agile statements. Netflix CTO Adrian Cockcroft has expressed similar views (quote above).
 
-As in the line/staff discussion - war, for better or worse, is one of the most complex phenomena ... if a line/staff structure is deemed insufficient, the burden is on those saying so to propose something superior. Scrum of Scrums is just naive.
+A key question is whether "architecture" is considered at the single product or multi-product level. At the single product level, collaborative teams routinely develop effective architectures. However, when multiple products are involved, it is hard to see how all the xref:arch-impacts[architectural value] scenarios are fulfilled without some investment being directed to the goal.
+
+It helps when rules of the road are established; both Amazon and Netflix have benefitted from having certain widely accepted platform standards. The question does get harder when layered products and services with xref:IT-lifecycles[complex lifecycle interactions] are involved.
 
 ====== tech mgmt
 
- Note that we compensate developers with money AND experience. Developer pressure to use a new technology should be seen in part as a demand for increased compensation. developers seeking experience, it is in part how they are compensated. this leads to conflicts over choice of tools. (good blog as well). rational framework for deciding. might go to chapter 8, resource mgmt. intersection between that & tech lifecycle is key.
 
 
 
- https://philippe.kruchten.com/2011/02/13/the-elephants-in-the-agile-room/
+
 
 ===== Some ways forward
+Note that we compensate developers with money AND experience. Developer pressure to use a new technology should be seen in part as a demand for increased compensation. developers seeking experience, it is in part how they are compensated. this leads to conflicts over choice of tools. (good blog as well). rational framework for deciding. might go to chapter 8, resource mgmt. intersection between that & tech lifecycle is key.
 
 Entire language/mental model around gaps brings back flower & cog
 
@@ -191,3 +192,5 @@ With regard to the nature of complex systems, it is not advisable to search for 
  from bente: Anti-patterns in EA and architecture in general can be found, for instance, in Kruchten (2008), Mar and Spacey (2011), Ambler, Nalbone. and Vizdos (2005), and Coplien and Harrison (2005).
 
  Cockburn quote on CCC project - disbanded & disintegrated due to relying on oral tradition
+
+ https://philippe.kruchten.com/2011/02/13/the-elephants-in-the-agile-room/
