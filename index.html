@@ -10072,6 +10072,11 @@ Use directory creation example with failure of script b/c not idempotent</pre>
 https://gist.github.com/jallspaw/2140086</pre>
 </div>
 </div>
+<div class="literalblock">
+<div class="content">
+<pre>https://newtraell.cs.uchicago.edu/research/publications/techreports/TR-2016-03</pre>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_conclusion_6">Conclusion</h4>
@@ -26621,84 +26626,55 @@ Architecture represents the significant design decisions that shape a system, wh
 </div>
 </div>
 <div class="paragraph">
-<p>The relationship between architecture (both "enterprise" and other forms of architecture) is too often troubled. However, the hope is that this book has given you a set of tools for resolving these concepts in a productive way.</p>
+<p>The relationship between architecture (both "enterprise" and other forms of architecture) and current Agile, DevOps, and digital product development approahces is too often troubled. However, the hope is that this book has given you a set of tools for resolving these concepts in a productive way.</p>
 </div>
 <div class="paragraph">
-<p>This chapter will challenge you by presenting the arguments directly and frankly, as two sides to a debate, concluding with thoughts on finding common ground.</p>
+<p>This chapter will challenge you by presenting the arguments directly and frankly, as two sides to a debate, concluding with thoughts on finding common ground. Note that these points of view are deliberately extreme, to make the point:</p>
 </div>
 <div class="sect4">
 <h5 id="_the_hubris_of_architecture">The hubris of architecture</h5>
-<div class="quoteblock">
-<blockquote>
-if enterprise architects claim to be the only decision-making body in technical matters, there is a huge risk that they create a bottleneck&#8230;&#8203;The practical consequence is that projects deliberately circumvent the enterprise architects&#8230;&#8203;<a href="#Bente2012">[Bente2012]</a> p19
-</blockquote>
-<div class="attribution">
-&#8212; Bente et al<br>
-<cite>Collaborative Enterprise Architecture</cite>
-</div>
-</div>
 <div class="paragraph">
 <p><em>The goal of enterprise architecture is to act as a guide, perhaps a pathfinder, who takes the enterprise on a transformational journey—from an incoherent and complex world with line-of-business separation, product-specific stovepipes, legacy systems estate, and costly operation to a more rationally organized and useful state with multiservice, revenue-generating platforms and an efficient operational regime. On the way, radical surgeries may be required to eliminate duplication, reduce costs, improve reliability, and increase agility in the business. EA acts as a strategic foundation for business enablement.</em> <a href="#Bente2012">[Bente2012]</a> p9</p>
 </div>
 <div class="paragraph">
-<p>A common response to getting stuck in a big ball of mud is to fund a large systems replacement project. Such projects typically take months or years before they deliver any value to users, and the switchover from the old to the new system is often performed in “big bang” fashion. These projects also run an unusually high risk of running late and over budget and being cancelled. Systems rearchitecture should not be done as a large program of work funded from the capital budget. It should be a continuous activity that happens as part of the product development process. <a href="#Humble2013">[Humble2013]</a> ch10</p>
-</div>
-<div class="paragraph">
-<p>ugh - "radical surgeries" - risky with the human body which is relatively well understood&#8230;&#8203; need better quote.</p>
-</div>
-<div class="paragraph">
-<p>from bente: Anti-patterns in EA and architecture in general can be found, for instance, in Kruchten (2008), Mar and Spacey (2011),
-Ambler, Nalbone. and Vizdos (2005), and Coplien and Harrison (2005).</p>
-</div>
-<div class="paragraph">
-<p>The challenge of Taylorism, top-down planning, determinism&#8230;&#8203;
-example of antipatterns</p>
-</div>
-<div class="paragraph">
-<p>EA arguably reluctant to see itself in terms of testing hypotheses and making bets</p>
-</div>
-<div class="paragraph">
-<p>BPR?</p>
+<p>Product development organizations often experience architecture and its goals as unwarranted interference, imposing a high <a href="#cost-of-delay">Cost of Delay</a> with little apparent return on investment. Architecture approvals can be required on:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>"mess," "gratuitous complexity," etc</p>
+<p>application designs</p>
 </li>
 <li>
-<p>all loaded terms that disregard operational reality of the moment</p>
+<p>database designs</p>
 </li>
 <li>
-<p>why is "inconsistency" bad - need to demonstrate impact map</p>
-</li>
-<li>
-<p>hypothetical "synergies down the road" - need evidence</p>
+<p>selection of technology products</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>(see <a href="#Malan2010">[Malan2010]</a>)</p>
+<p>and other such topics. When development cannot proceed without those approvals - or if the approvals come at the cost of expensive re-work - the experience can often be challenging. Bente et al warn: "if enterprise architects claim to be the only decision-making body in technical matters, there is a huge risk that they create a bottleneck&#8230;&#8203;The practical consequence is that projects deliberately circumvent the enterprise architects&#8230;&#8203;" <a href="#Bente2012">[Bente2012]</a> p19</p>
 </div>
 <div class="paragraph">
-<p>Laundry list discussions of all that&#8217;s wrong with IT, with a strong implication that EA is a magical silver bullet&#8201;&#8212;&#8201;but poorly documented as to how in fact it solves all this wrongness. These <strong>are</strong> complex systems and even in the best managed contexts they fail and degrade.</p>
+<p>And, looking more broadly at the practice and history of architecture, the case against it is strong. Enterprise architecture has presented itself as a solution to complexity, long IT time scales, business frustration, and other various IT problems. But in the past decade to the extent these issues have been solved, it has not been by architecture but by Agile and DevOps practices rethinking open-loop, slow feedback, batch-oriented delivery. Architecture has failed in many ways:</p>
 </div>
 <div class="paragraph">
-<p>The reality is that enterprise architecture presented itself as a solution to complexity, long IT time scales, business frustration, and all kinds of badness. And when those problems were finally solved, it was not by architecture, but by Agile and DevOps practices overthrowing open-loop, slow feedback, batch-oriented delivery. Architects also failed to realize the emergent issue of too much enterprise work in process, instead championing the proliferation of enterprise processes and their associated queues. Fundamentally, they did not adopt enough of a systems view of IT delivery. That took Gene Kim and others.</p>
+<p>It failed to realize the emergent issue of too much enterprise work in process, instead championing the proliferation of enterprise processes and their associated queues. Fundamentally, they did not adopt enough of a systems view of IT delivery.</p>
 </div>
 <div class="paragraph">
-<p>Architects' efficiency motivations and interest in capability mapping did not help the cause of cross-functional teams. Instead, functional silos were reinforced as supply-side "capabilities" and the antipattern of "bringing the team to the work" was accepted as enterprise SOP - despite the growing evidence of Scrum and Agile success. The iterative, experimental narrative of Lean Startup did not originate from EA.</p>
+<p>Architects' motivation for "efficiency" and interest in capability mapping did not help the cause of cross-functional teams. Instead, functional silos were reinforced as supply-centric "capabilities" and the antipattern of "bringing the team to the work" was accepted as enterprise standard operating procedure - despite the growing evidence of Scrum and Agile success. The iterative, experimental narrative of Lean Startup did not originate from EA.</p>
 </div>
 <div class="paragraph">
-<p>In particular, despite dabbling in systems theory, architects did not realize the fundamental problems of stage-gated delivery, big bang releases, and so forth. They were too sympathetic to the now-discredited Capability Maturity Model and PMBOK.</p>
+<p>Despite dabbling in systems theory, architects did not realize the fundamental problems of stage-gated delivery, big bang releases, and so forth. They were too sympathetic to the now-discredited Capability Maturity Model and PMBOK and cannot escape the criticism of "top down planning," which in complex systems domains too often doesn&#8217;t work. Hypothetical "synergies" emerging from "common platforms" are often offered as justification for architecture, with little follow up as to actual value delivered. A sense of <a href="#lean-startup">Lean Startup</a> experimentation, of placing bets on options and testing hypotheses, is not part of the mainstream enterprise architecture understanding.</p>
 </div>
 <div class="paragraph">
-<p>Architecture promoted the idea that standardizing platforms would make them more adaptive and agile, without sufficient caution that such standardization might have the opposite effect. Wrong lesson learned from software?</p>
+<p>Justifications for architecture often invoke "complex" systems. In response, architecture has often given in to the desire for a  complete "radical surgery" systems re-engineering, the temptation of the "clean slate." But as Jez Humble accurately notes,</p>
 </div>
 <div class="paragraph">
-<p>Yes tightly coupled M:M architectures are hard to change. But SPOFs also bad. When too much is centralized, the general case issues become intractable. Domain driven design&#8230;&#8203;</p>
+<p><em>A common response to getting stuck in a big ball of mud is to fund a large systems replacement project. Such projects typically take months or years before they deliver any value to users, and the switchover from the old to the new system is often performed in “big bang” fashion. These projects also run an unusually high risk of running late and over budget and being cancelled. Systems rearchitecture should not be done as a large program of work funded from the capital budget. It should be a continuous activity that happens as part of the product development process. <a href="#Humble2013">[Humble2013]</a> ch10</em></p>
 </div>
 <div class="paragraph">
-<p>nor was this all architecture&#8217;s fault. A materialist explanation for the success of Agile and DevOps starts with Cloud, which in turn relies on Moore&#8217;s Law and related dimensions of progress in manufacturing computing infrastructure.</p>
+<p>Architecture methodology, with its focus on identifying capability gaps for feeding into the project portfolio process, has perhaps been too prone to supporting these large, troubled programs. As we know from our earlier chapters, large system changes are inherently risky and any intervention into a complex system is better undertaken as a series of smaller, incremental changes with frequent monitoring and assessment.</p>
 </div>
 <div class="paragraph">
 <p>Bente EA wastes</p>
@@ -26903,6 +26879,11 @@ With regard to the nature of complex systems, it is not advisable to search for 
 <div class="literalblock">
 <div class="content">
 <pre>critical importance of not confusing solutions with EA. Scale matters.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>from bente: Anti-patterns in EA and architecture in general can be found, for instance, in Kruchten (2008), Mar and Spacey (2011), Ambler, Nalbone. and Vizdos (2005), and Coplien and Harrison (2005).</pre>
 </div>
 </div>
 </div>
