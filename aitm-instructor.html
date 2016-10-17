@@ -1096,7 +1096,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_the_hubris_of_architecture">The hubris of architecture</a></li>
 <li><a href="#_the_hubris_of_agile">The hubris of Agile</a></li>
-<li><a href="#_some_ways_forward">Some ways forward</a></li>
+<li><a href="#_towards_reconciliation">Towards reconciliation</a></li>
 <li><a href="#_architecture_queues_and_cost_of_delay">Architecture, queues, and Cost of Delay</a></li>
 </ul>
 </li>
@@ -1109,7 +1109,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_industry_verticals">Industry verticals</a></li>
 </ul>
 </li>
-<li><a href="#_portfolio_management">Portfolio management</a></li>
+<li><a href="#_portfolio_management">Portfolio management</a>
+<ul class="sectlevel4">
+<li><a href="#_digital_pipeline_analytics">Digital pipeline analytics</a></li>
+</ul>
+</li>
 <li><a href="#_topics_2">Topics</a></li>
 <li><a href="#_conclusion_12">Conclusion</a>
 <ul class="sectlevel4">
@@ -1859,6 +1863,9 @@ There are hundreds of books on Agile. In this section I will seek to credit spec
 </div>
 <div class="paragraph">
 <p>Thanks to Chris Little and Jabe Bloom for quote provenance.</p>
+</div>
+<div class="paragraph">
+<p>Thanks to Lorin Hochstein for references.</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -26051,7 +26058,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="ulist">
 <ul>
 <li>
-<p>Human vision uses parallel processing. This means that a given image or visual stimulus is processed by many neurons simultaneously. This is how we recognize threats, such as a crouching tiger.</p>
+<p>Human vision uses parallel processing. This means that a given image or visual stimulus is processed by many neurons simultaneously. This is how we can quickly recognize and act on threats, such as a crouching tiger.</p>
 </li>
 <li>
 <p>A large percentage of our brain is devoted to visual processing (you will see figures quoted from 25% to 66% depending on whether it&#8217;s "pure" visual tasks or vision-driven tasks involving other brain areas)</p>
@@ -26105,6 +26112,28 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="title">Figure 17. IBM flowcharting template <span class="footnote">[<a id="_footnoteref_30" class="footnote" href="#_footnote_30" title="View footnote.">30</a>]</span></div>
 </div>
 <div class="paragraph">
+<p>Research at Microsoft suggests that developers use diagrams for four purposes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sharing</p>
+</li>
+<li>
+<p>Grounding (defining ambiguous interpretations)</p>
+</li>
+<li>
+<p>Manipulating</p>
+</li>
+<li>
+<p>Brainstorming</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>They argue "diagrams support communicating, capturing attention and grounding conversations [4]. They reduce the cognitive burden of evaluating a design or considering new ideas [13]" <a href="#Cherubini2007">[Cherubini2007]</a>.</p>
+</div>
+<div class="paragraph">
 <p>But visual notations have been problematic in the Agile community; as Fowler notes in his classic essay Is Design Dead:</p>
 </div>
 <div class="paragraph">
@@ -26123,7 +26152,7 @@ Visual representations are effective because they tap into the capabilities of t
 <p>However, if we&#8217;re building systems to be operated and maintained by humans, it would seem that we should support the cognitive and perceptual strengths of humans.  Because diagrams are more readily processed, they are often used to represent high level system interactions - how a given service, product or application is related to peer systems and services. Building such depictions can be helpful to fostering a shared mental model of the overall system objectives and context. The more complex and highly scaled the environment, the more likely one will encounter such artifacts as a means to creating the mental model.</p>
 </div>
 <div class="paragraph">
-<p>The strength of human visual processing is why we will (probably) always have graphical design to assist in the building of shared mental models. Specialists in the syntax and semantics of such designs will therefore likely continue to play a role in complex systems development and maintenance. Currently, if one seeks to hire such a specialist, one recruits some kind of architect - that is the professional role with the skills.</p>
+<p>The strength of human visual processing is why we will (probably) always use graphical representation to assist in the building of shared mental models. Specialists in the syntax and semantics of such designs will therefore likely continue to play a role in complex systems development and maintenance. Currently, if one seeks to hire such a specialist, one recruits some kind of architect - that is the professional role with the skills.</p>
 </div>
 <div class="paragraph">
 <p>Note that flowcharts, data models, and other such diagrams tend to be associated more with the idea of "solutions" or "software" architecture. We&#8217;ll cover the <a href="#architecture-domains">architecture domains</a> in the next chapter section, including examples of business architecture diagrams.</p>
@@ -26150,6 +26179,9 @@ The big picture is part of the standard mindset of EA, which everyone immediatel
 </li>
 <li>
 <p>diagrams may have no real information content,</p>
+</li>
+<li>
+<p>diagrams are difficult to maintain, and there are diminishing returns the more they are elaborated and refined (e.g. for archival purposes)</p>
 </li>
 <li>
 <p>conversely, diagrams become less accessible the more complex they are,</p>
@@ -26694,6 +26726,11 @@ One core question decided by governance is how much autonomy is granted to busin
 <div class="paragraph">
 <p>Capability is an important concept in business architecture, as it has emerged as the preferred concept for investment. We do not invest in data, or process, except as they are realized by a supporting capability.</p>
 </div>
+<div class="literalblock">
+<div class="content">
+<pre>Capability heat mapping</pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -26902,7 +26939,7 @@ Architecture represents the significant design decisions that shape a system, wh
 <p>The relationship between architecture (both "enterprise" and other forms of architecture) and current Agile, DevOps, and digital product development approahces is too often troubled. However, the hope is that this book has given you a set of tools for resolving these concepts in a productive way.</p>
 </div>
 <div class="paragraph">
-<p>This chapter will challenge you by presenting the arguments directly and frankly, as two sides to a debate, concluding with thoughts on finding common ground. Note that these points of view are deliberately extreme, to make the point:</p>
+<p>This chapter will challenge you by presenting the polemical arguments directly and frankly, as two sides to a debate, concluding with thoughts on finding common ground. Note that these points of view are deliberately extreme, to make the point:</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -26949,10 +26986,10 @@ Architecture represents the significant design decisions that shape a system, wh
 <p>Architects' motivation for "efficiency" and interest in capability mapping did not help the cause of cross-functional teams. Instead, functional silos were reinforced as supply-centric "capabilities" and the antipattern of "bringing the team to the work" was accepted as enterprise standard operating procedure - despite the growing evidence of Scrum and Agile success. The iterative, experimental narrative of Lean Startup did not originate from EA.</p>
 </div>
 <div class="paragraph">
-<p>Architects too often come across as <a href="#:HIPPO">HIPPOs</a>. Despite dabbling in systems theory, architecture has only recently begun to realize the fundamental problems of stage-gated delivery, big bang releases, and so forth. It has been too sympathetic to the now-discredited Capability Maturity Model and PMBOK and cannot escape the criticism of "top down planning," which in complex systems domains too often doesn&#8217;t work. Hypothetical "synergies" emerging from "common platforms" are often offered as justification for architecture, with little follow up as to actual value delivered.  A sense of <a href="#lean-startup">Lean Startup</a> experimentation, of placing bets on options and testing hypotheses, is not part of the mainstream enterprise architecture understanding.</p>
+<p>Architects too often fall into the trap of the  <a href="#:HIPPO">HIPPO</a> (Highest Paid Person&#8217;s Opinion). Despite dabbling in systems theory, architecture has only recently begun to realize the fundamental problems of stage-gated delivery, big bang releases, and so forth. It has been too sympathetic to the now-discredited Capability Maturity Model and PMBOK and cannot escape the criticism of "top down planning," which in complex systems domains too often doesn&#8217;t work. Hypothetical "synergies" emerging from "common platforms" are often offered as justification for architecture, with little follow up in measuring actual value delivered.  A sense of <a href="#lean-startup">Lean Startup</a> experimentation, of placing bets on options and testing hypotheses, is not part of the mainstream enterprise architecture understanding. Instead, the architecture is presented as an established fact, with "governance" to ensure conformity.</p>
 </div>
 <div class="paragraph">
-<p>Justifications for architecture often invoke "complex" systems. In response, architecture has often given in to the desire for a  complete "radical surgery" systems re-engineering, the temptation of the "clean slate." But as Jez Humble accurately notes,</p>
+<p>Justifications for architecture often invoke "complexity" in the portfolio of systems. In response, architecture has often given in to the desire for a  complete "radical surgery" systems re-engineering, the temptation of the "clean slate." But as Jez Humble accurately notes,</p>
 </div>
 <div class="paragraph">
 <p><em>A common response to getting stuck in a big ball of mud is to fund a large systems replacement project. Such projects typically take months or years before they deliver any value to users, and the switchover from the old to the new system is often performed in “big bang” fashion. These projects also run an unusually high risk of running late and over budget and being cancelled. Systems rearchitecture should not be done as a large program of work funded from the capital budget. It should be a continuous activity that happens as part of the product development process. <a href="#Humble2013">[Humble2013]</a> ch10</em></p>
@@ -26965,14 +27002,6 @@ Architecture represents the significant design decisions that shape a system, wh
 <h5 id="_the_hubris_of_agile">The hubris of Agile</h5>
 <div class="quoteblock">
 <blockquote>
-When it  comes to system implementation, the temptation to be  fast, often under the nom de guerre of agile, can soften  quality controls and threaten product usability, reliability, safety, and lifecycle cost <a href="#Malan2010">[Malan2010]</a>.
-</blockquote>
-<div class="attribution">
-&#8212; Ruth Malan
-</div>
-</div>
-<div class="quoteblock">
-<blockquote>
 Instead of tapping into the existing knowledge of the organization the autonomous team is prone to reinvent the wheel, and the wheel that they reinvent will not always be superior to the one we are currently using <a href="#Reinertsen1997">[Reinertsen1997]</a>, p. 104.
 </blockquote>
 <div class="attribution">
@@ -26981,9 +27010,17 @@ Instead of tapping into the existing knowledge of the organization the autonomou
 </div>
 </div>
 <div class="sect5">
-<h6 id="_cost_of_delay_2">Cost of Delay</h6>
+<h6 id="_the_limitations_of_cost_of_delay">The limitations of Cost of Delay</h6>
+<div class="quoteblock">
+<blockquote>
+When it  comes to system implementation, the temptation to be  fast, often under the nom de guerre of agile, can soften  quality controls and threaten product usability, reliability, safety, and lifecycle cost <a href="#Malan2010">[Malan2010]</a>.
+</blockquote>
+<div class="attribution">
+&#8212; Ruth Malan
+</div>
+</div>
 <div class="paragraph">
-<p>Cost of Delay is a real and often overlooked issue, in understanding the net value of architecture. But it is only a factor, and does not eliminate the value proposition of architecture. If the Cost of Delay is only a few hundred dollars a month, but the long term cost of the technical debt is millions, then Cost of Delay does not decide the issue. Don Reinertsen, who has done more than anyone to promote the idea of Cost of Delay, emphasizes that <strong>all</strong> decision making must take place within an economic framework (<a href="#Reinertsen2009">[Reinertsen2009]</a>, chapter 2) and that means that the other <a href="#arch-impacts">architectural impact factors</a> on organization value must also be considered.</p>
+<p>Cost of Delay is a real and often overlooked issue, in understanding the net value of architecture. But it is only a factor, and does not eliminate the value proposition of architecture. If the Cost of Delay is only a few hundred dollars a month, but the risk or technical debt represent millions, then delay may be appropriate. Don Reinertsen, who has done more than anyone to promote the idea of Cost of Delay, emphasizes that <strong>all</strong> decision making must take place within an economic framework (<a href="#Reinertsen2009">[Reinertsen2009]</a>, chapter 2) and that means that the other <a href="#arch-impacts">architectural impact factors</a> on organization value must also be considered.</p>
 </div>
 </div>
 <div class="sect5">
@@ -27016,7 +27053,7 @@ Instead of tapping into the existing knowledge of the organization the autonomou
 <p>Suppose you have an idea for a digital product, and you know that you will be (at least in part) assembling complex services/products produced by others? Suppose further that these provided services overlap (the providers compete)? You need to carefully analyze which services you are going to acquire from which provider.  You will need a strategy, and who is it that analyzes these services and their capabilities, interfaces, non-functional characteristics, and makes a final recommendation as to how you are going to bring them all into one unified system?</p>
 </div>
 <div class="paragraph">
-<p>It is easy to say things like, "the teams get to define their own architecture" but at some point the enterprise must reckon with the cost of an overly diverse supplier base. This is a very old topic in business, not restricted to IT. At the end of the day, supplier and sourcing fragmentation costs real money. Open source, Commercial-off-the-shelf, Cloud, in-house&#8230;&#8203; the options are bewildering and take experience. A consistent evaluation approach is important (preferably under an economic framework Reinertsen/Hubbard). And at some point, product development teams should not have to do too much of their own R&amp;D on possible platforms for their work.</p>
+<p>It is easy to say things like, "the teams get to define their own architecture" but at some point the enterprise must reckon with the cost of an overly diverse supplier base. This is a very old topic in business, not restricted to IT. At the end of the day, supplier and sourcing fragmentation costs real money. Open source, Commercial-off-the-shelf, Cloud, in-house&#8230;&#8203; the options are bewildering and require experience. A consistent evaluation approach is important (preferably under an economic framework Reinertsen/Hubbard). And at some point, product development teams should not have to do too much of their own R&amp;D on possible platforms for their work.</p>
 </div>
 </div>
 <div class="sect5">
@@ -27031,7 +27068,7 @@ Instead of tapping into the existing knowledge of the organization the autonomou
 </div>
 </div>
 <div class="paragraph">
-<p>The Agile Manifesto is also well known for saying "The best architectures, requirements, and designs emerge from self-organizing teams" <a href="#Alliance2001">[Alliance2001]</a>. This is one of the more frequently discussed Agile statements. Netflix CTO Adrian Cockcroft has expressed similar views (quote above).</p>
+<p>The Agile Manifesto is well known for saying "The best architectures, requirements, and designs emerge from self-organizing teams" <a href="#Alliance2001">[Alliance2001]</a>. This is one of the more frequently discussed Agile statements. Netflix CTO Adrian Cockcroft has expressed similar views (quote above).</p>
 </div>
 <div class="paragraph">
 <p>A key question is whether "architecture" is considered at the single product or multi-product level. At the single product level, collaborative teams routinely develop effective architectures. However, when multiple products are involved, it is hard to see how all the <a href="#arch-impacts">architectural value</a> scenarios are fulfilled without some investment being directed to the goal.</p>
@@ -27042,9 +27079,38 @@ Instead of tapping into the existing knowledge of the organization the autonomou
 </div>
 </div>
 <div class="sect4">
-<h5 id="_some_ways_forward">Some ways forward</h5>
+<h5 id="_towards_reconciliation">Towards reconciliation</h5>
 <div class="paragraph">
-<p>Note that we compensate developers with money AND experience. Developer pressure to use a new technology should be seen in part as a demand for increased compensation. developers seeking experience, it is in part how they are compensated. this leads to conflicts over choice of tools. (good blog as well). rational framework for deciding. might go to chapter 8, resource mgmt. intersection between that &amp; tech lifecycle is key.</p>
+<p>toward a rapprochement: it  all starts with "respect the team" - and this applies to teams of architects - or one architect on a team - trouble is that architects are often spread too thin&#8230;&#8203;</p>
+</div>
+<div class="sect5">
+<h6 id="_rethinking_investment">Rethinking investment</h6>
+<div class="paragraph">
+<p>great Josh A insight: what problems can be handled w/projects vs. which need steady state capaiblities? Cynefin: simple/complicated vs complex/chaotic.. - if your strategy is to elucidate the complex you need an ongoing mental model&#8230;&#8203; preserve the team -</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_architecture_kata">Architecture kata</h6>
+<div class="paragraph">
+<p>Our experience is that standardization on a particular toolchain or technology stack is neither necessary nor sufficient for achieving enterprise architecture goals such as enabling teams to respond rapidly to changing requirements, creating high-performance systems at scale, or reducing the risk of intrusion or data theft. Just like we drive product and process innovation through the Improvement Kata, we can drive architectural alignment through it too. Architectural goals—for example, desired performance, availability, and security—should be approached by iteratively specifying target conditions at the program level. Following the Principle of Mission, set out a clear vision of the goals of your enterprise architecture without specifying how the goals are to be achieved, and create a context in which teams can determine how to achieve them through experimentation and collaboration.   <a href="#Humble2013">[Humble2013]</a> ch10</p>
+</div>
+<div class="paragraph">
+<p>Toyota Kata and EA  - importance of target condition</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_cost_of_delay_based_prioritization">Cost of Delay-based prioritization</h6>
+<div class="quoteblock">
+<blockquote>
+Another possible objection against agile methods is that the processes in EA, and in the enterprise generally, are simply not operating with a time window of the typical sprint length of three weeks. This, of course, is true. But it is at closer inspection not a counter-argument against the application of agile principles to EA—just the opposite. The long process cycles add to EA&#8217;s lack of transparency and promote a silo mentality. Agile techniques can help here. <a href="#Bente2012">[Bente2012]</a>
+</blockquote>
+<div class="attribution">
+&#8212; Bente et al<br>
+<cite>Collaborative Enterprise Architecture</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>feedback loop between line &amp; staff???</p>
 </div>
 <div class="paragraph">
 <p>Entire language/mental model around gaps brings back flower &amp; cog</p>
@@ -27056,12 +27122,18 @@ Instead of tapping into the existing knowledge of the organization the autonomou
 <p>how do we know there is a gap? We have hypotheses&#8230;&#8203; need to establish that there is a valuable, usable, feasible future state, and if there is progress towards it must not be delayed by queues, cycle time, etc &#8230;&#8203; need to move with alacrity&#8230;&#8203; Cost of Delay outweighs much&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
-<p>toward a rapprochement: it  all starts with "respect the team" - and this applies to teams of architects - or one architect on a team - trouble is that architects are often spread too thin&#8230;&#8203;</p>
+<p>EA "process"</p>
 </div>
-<div class="paragraph">
-<p>feedback loop between line &amp; staff???
-In the Agile world,  <a href="#2.05.02-kanban">Kanban</a> is a strongly visual system for building a shared mental model of work in process. Humans more readily understand complex systems through diagrams.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>queuing and fast feedback</p>
+</li>
+</ul>
 </div>
+</div>
+<div class="sect5">
+<h6 id="_ongoing_portfolio_evolution">Ongoing portfolio evolution</h6>
 <div class="paragraph">
 <p>Amazon Obidos example, strangler pattern.
 * Start by delivering new functionality—at least at first
@@ -27070,27 +27142,24 @@ In the Agile world,  <a href="#2.05.02-kanban">Kanban</a> is a strongly visual s
 * Design for testability and deployability
 * Architect the new software to run on a PaaS</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>great Josh A insight: what problems can be handled w/projects vs. which need steady state capaiblities? Cynefin: simple/complicated vs complex/chaotic.. - if your strategy is to elucidate the complex you need an ongoing mental model... preserve the team -</pre>
+</div>
+<div class="sect5">
+<h6 id="_visualization_and_documentation">Visualization and documentation</h6>
+<div class="paragraph">
+<p>understanding purposes of diagrams and appropriate level of investment/formality</p>
+</div>
+<div class="paragraph">
+<p>In the Agile world,  <a href="#2.05.02-kanban">Kanban</a> is a strongly visual system for building a shared mental model of work in process.</p>
+</div>
+<div class="paragraph">
+<p>preparing along the way understand inventories and dependencies - importance of Bezos mandate to the dependency question - if there is one battle you fight, make it that one -</p>
+</div>
+<div class="paragraph">
+<p>the importance of documentation - speech to text, text analytics&#8230;&#8203; image recognition&#8230;&#8203; what might the future hold? At least get technical writers&#8230;&#8203; don&#8217;t make developers write&#8230;&#8203;</p>
 </div>
 </div>
 <div class="sect5">
 <h6 id="_scaling_architecture">Scaling &amp; architecture</h6>
-
-</div>
-<div class="sect5">
-<h6 id="__coding_architects">"Coding architects?"</h6>
-<div class="paragraph">
-<p>Primarily in SW domain
-But virtualization now makes it possible for all archs to be hands-on, even w/pkgs</p>
-</div>
-<div class="paragraph">
-<p><a href="#Cohn2010">[Cohn2010]</a> chapter on architect role - confusion of software &amp; enterprise arch</p>
-</div>
-<div class="paragraph">
-<p>keep EAs off product teams, agree but they set overall direction @ portfolio level difficult for them to stay hands on</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
@@ -27104,26 +27173,21 @@ But virtualization now makes it possible for all archs to be hands-on, even w/pk
 </li>
 </ul>
 </div>
+</div>
+<div class="sect5">
+<h6 id="__coding_architects">"Coding architects?"</h6>
 <div class="paragraph">
-<p>EA "process"</p>
+<p>Primarily in SW domain
+But virtualization now makes it possible for all archs to be hands-on, even w/pkgs</p>
 </div>
 <div class="paragraph">
-<p>Another possible objection against agile methods is that the processes in EA, and in the enterprise generally, are simply not operating with a time window of the typical sprint length of three weeks. This, of course, is true. But it is at closer inspection not a counter-argument against the application of agile principles to EA—just the opposite. The long process cycles add to EA&#8217;s lack of transparency and promote a silo mentality. Agile techniques can help here. <a href="#Bente2012">[Bente2012]</a> - queuing and fast feedback</p>
+<p><a href="#Cohn2010">[Cohn2010]</a> chapter on architect role - confusion of software &amp; enterprise arch</p>
+</div>
+<div class="paragraph">
+<p>keep EAs off product teams, agree but they set overall direction @ portfolio level difficult for them to stay hands on</p>
 </div>
 <div class="paragraph">
 <p>Lot of confusion in the literature about sol arch vs EA.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_arch_kata">Arch kata</h6>
-<div class="paragraph">
-<p>Our experience is that standardization on a particular toolchain or technology stack is neither necessary nor sufficient for achieving enterprise architecture goals such as enabling teams to respond rapidly to changing requirements, creating high-performance systems at scale, or reducing the risk of intrusion or data theft. Just like we drive product and process innovation through the Improvement Kata, we can drive architectural alignment through it too. Architectural goals—for example, desired performance, availability, and security—should be approached by iteratively specifying target conditions at the program level. Following the Principle of Mission, set out a clear vision of the goals of your enterprise architecture without specifying how the goals are to be achieved, and create a context in which teams can determine how to achieve them through experimentation and collaboration.   <a href="#Humble2013">[Humble2013]</a> ch10</p>
-</div>
-<div class="paragraph">
-<p>preparing along the way understand inventories and dependencies - importance of Bezos mandate to the dependency question - if there is one battle you fight, make it that one -</p>
-</div>
-<div class="paragraph">
-<p>the importance of documentation - speech to text, text analytics&#8230;&#8203; image recognition&#8230;&#8203; what might the future hold? At least get technical writers&#8230;&#8203; don&#8217;t make developers write&#8230;&#8203;</p>
 </div>
 </div>
 <div class="sect5">
@@ -27134,9 +27198,6 @@ But virtualization now makes it possible for all archs to be hands-on, even w/pk
 <div class="paragraph">
 <p>Agile &amp; docs "In an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it as part of the condition of satisfaction of a user story or in the definition of done" <a href="#Bente2012">[Bente2012]</a> p 170</p>
 </div>
-</div>
-<div class="sect5">
-<h6 id="_devops_assets_to_architecture">DevOps assets to architecture</h6>
 <div class="paragraph">
 <p>If you started from day 1 with source, build, &amp; package mgmt, and have kept it clean, you have a great asset</p>
 </div>
@@ -27164,9 +27225,6 @@ But virtualization now makes it possible for all archs to be hands-on, even w/pk
 </div>
 <div class="paragraph">
 <p>All the coordination mechs can be applied&#8230;&#8203; cadence/synch - queue understanding, CoD critical</p>
-</div>
-<div class="paragraph">
-<p>Toyota Kata and EA  - importance of target condition</p>
 </div>
 <div class="sect5">
 <h6 id="_notes_2">NOTES</h6>
@@ -27280,6 +27338,23 @@ We previously discussed the Business Analysis Body of Knowledge. Although they h
 </div>
 <div class="sect3">
 <h4 id="_portfolio_management">Portfolio management</h4>
+<div class="quoteblock">
+<blockquote>
+…every product and every activity of a business begins to obsolesce as soon as it is started. Every product, every operation, and every activity in a business should be put on trial for its life every two or three years.
+</blockquote>
+<div class="attribution">
+&#8212; Peter Drucker
+</div>
+</div>
+<div class="paragraph">
+<p>Each should be considered the way we consider a proposal to go into a new product, a new operation, or activity – complete with budget, capital appropriation request, and so on.</p>
+</div>
+<div class="paragraph">
+<p>One question should be asked of each: “if we were not in this already, would we now go into it?” And if the answer is “no,” the next question should be: “How do we get out and how fast?”</p>
+</div>
+<div class="paragraph">
+<p>Peter F. Drucker</p>
+</div>
 <div class="paragraph">
 <p>EA &amp; M&amp;A - Bernard location 432 - like that value prop  - who is an EA? the person you would bring in to help assess a potential acquisition&#8217;s systems for fit/overlap etc.</p>
 </div>
@@ -27291,31 +27366,16 @@ Magennis, Cantor, etc</p>
 </div>
 </div>
 </div>
+<div class="sect4">
+<h5 id="_digital_pipeline_analytics">Digital pipeline analytics</h5>
 <div class="paragraph">
-<p><strong>Digital pipeline analytics</strong>
-Over time, the IT operation develops significant data by which to manage itself. It may develop one or more definitive portfolio list, typically applications, services, assets, and/or technology products. Distinguishing and baselining high quality versions of these data sets can consume inordinate resource, and yet managing the IT organization at scale is nearly impossible without them.. [<em>didn&#8217;t want to discuss data per se in the introduction</em>]</p>
+<p>Over time, the IT operation develops significant data by which to manage itself. It may develop one or more definitive portfolio list, typically applications, services, assets, and/or technology products. Distinguishing and baselining high quality versions of these data sets can consume inordinate resource, and yet managing the IT organization at scale is nearly impossible without them.. [<em>didn&#8217;t want to discuss data per se in the introduction</em>]</p>
 </div>
 <div class="paragraph">
 <p>Feedback loop from architecture to investment (chapter 8) - hopefully you have been quantitative enough, now you are formalizing (e.g.) an "IT mgmt data warehouse"</p>
 </div>
 <div class="paragraph">
 <p>ARch: limited by lack of analytics. That&#8217;s where PM comes in. For example discussion in Bente is badly weakened by reliance on interviews/expert opinions. A problem for EA in general.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>…every product and every activity of a business begins to obsolesce as soon as it is started. Every product, every operation, and every activity in a business should be put on trial for its life every two or three years.</p>
-</div>
-<div class="paragraph">
-<p>Each should be considered the way we consider a proposal to go into a new product, a new operation, or activity – complete with budget, capital appropriation request, and so on.</p>
-</div>
-<div class="paragraph">
-<p>One question should be asked of each: “if we were not in this already, would we now go into it?” And if the answer is “no,” the next question should be: “How do we get out and how fast?”</p>
-</div>
-<div class="paragraph">
-<p>Peter F. Drucker</p>
-</div>
-</div>
 </div>
 <div class="paragraph">
 <p>Defining portfolio. "Things of consequence managed over long time horizon (betz)" TOGAF catalogs</p>
@@ -27408,6 +27468,7 @@ Application service performance
 Application customer feedback</p>
 </div>
 </div>
+</div>
 <div class="sect3">
 <h4 id="_topics_2">Topics</h4>
 <div class="literalblock">
@@ -27496,6 +27557,16 @@ _the sheer absurdity of undertaking something so ambitious, on the one hand, and
 <div class="literalblock">
 <div class="content">
 <pre>===== metamodels</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>===== tech platform as compensation</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Note that we compensate developers with money AND experience. Developer pressure to use a new technology should be seen in part as a demand for increased compensation. developers seeking experience, it is in part how they are compensated. this leads to conflicts over choice of tools. (good blog as well). rational framework for deciding. might go to chapter 8, resource mgmt. intersection between that &amp; tech lifecycle is key.</pre>
 </div>
 </div>
 <div class="literalblock">
@@ -27612,6 +27683,9 @@ Identification of opportunities otherwise un-apparent</p>
 <p><a href="http://www.forbes.com/sites/jasonbloomberg/2014/07/23/agile-enterprise-architecture-finally-crosses-the-chasm/#224402cb3c77" class="bare">http://www.forbes.com/sites/jasonbloomberg/2014/07/23/agile-enterprise-architecture-finally-crosses-the-chasm/#224402cb3c77</a></p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p><a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/p557-cherubini.pdf">Let’s Go to the Whiteboard: How and Why Software Developers Use Drawings</a></p>
 </div>
 <div class="paragraph">
 <p><strong>Videos</strong></p>
@@ -27852,6 +27926,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 </li>
 <li>
 <p><a id="Chacon2009"></a>[Chacon2009]: Chacon, S. &amp; Straub, B. (2009). Pro Git. Berkeley, CA. New York, Apress.</p>
+</li>
+<li>
+<p><a id="Cherubini2007"></a>[Cherubini2007]: Cherubini, M., Venolia, G., Deline, R., &amp; Ko, A. J. (2007). Let ’ s Go to the Whiteboard: How and Why Software Developers Use Drawings. CHI 2007 Proceedings, 557–566. <a href="http://doi.org/10.1145/1240624.1240714" class="bare">http://doi.org/10.1145/1240624.1240714</a>. <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/p557-cherubini.pdf" class="bare">https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/p557-cherubini.pdf</a>, accessed 2016-10-17.</p>
 </li>
 <li>
 <p><a id="Chisholm2001"></a>[Chisholm2001]: Chisholm, M. (2001). Managing Reference Data in Enterprise Databases: Binding Corporate Data to the Wider World. San Diego: Academic Press.</p>
