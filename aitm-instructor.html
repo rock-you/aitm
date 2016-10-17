@@ -25986,6 +25986,9 @@ division is <em>fractal</em> (that is, it reproduces at different scales).</p>
 <div class="paragraph">
 <p>Overall, this may seem like a complex structure, but similar structures are in place in IT organizations with budgets of $1bn or more. It would be questionable to see comparable structures in much smaller organizations. However, this structure is useful to examine; organizations of various sizes might choose to use different parts of it.</p>
 </div>
+<div class="paragraph">
+<p><a id="arch-visualization"></a></p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_modeling_and_visualization">Modeling and visualization</h5>
@@ -26963,27 +26966,54 @@ Architecture represents the significant design decisions that shape a system, wh
 </div>
 <div class="sect4">
 <h5 id="_the_hubris_of_agile">The hubris of Agile</h5>
+<div class="quoteblock">
+<blockquote>
+When it  comes to system implementation, the temptation to be  fast, often under the nom de guerre of agile, can soften  quality controls and threaten product usability, reliability, safety, and lifecycle cost <a href="#Malan2010">[Malan2010]</a>.
+</blockquote>
+<div class="attribution">
+&#8212; Ruth Malan
+</div>
+</div>
+<div class="quoteblock">
+<blockquote>
+Instead of tapping into the existing knowledge of the organization the autonomous team is prone to reinvent the wheel, and the wheel that they reinvent will not always be superior to the one we are currently using <a href="#Reinertsen1997">[Reinertsen1997]</a>, p. 104.
+</blockquote>
+<div class="attribution">
+&#8212; Donald Reinertsen<br>
+<cite>Managing the Design Factory</cite>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_cost_of_delay_2">Cost of Delay</h6>
 <div class="paragraph">
-<p>Instead of tapping into the existing knowledge of the organization the autonomous team is prone to reinvent the wheel, and the wheel that they reinvent will not always be superior to the one we are currently using. <a href="#Reinertsen1997">[Reinertsen1997]</a> p 104</p>
+<p>Cost of Delay is a real and often overlooked issue, in understanding the net value of architecture. But it is only a factor, and does not eliminate the value proposition of architecture. If the Cost of Delay is only a few hundred dollars a month, but the long term cost of the technical debt is millions, then Cost of Delay does not decide the issue. Don Reinertsen, who has done more than anyone to promote the idea of Cost of Delay, emphasizes that <strong>all</strong> decision making must take place within an economic framework (<a href="#Reinertsen2009">[Reinertsen2009]</a>, chapter 2) and that means that the other <a href="#arch-impacts">architectural impact factors</a> on organization value must also be considered.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_documentation">Documentation</h6>
+<div class="paragraph">
+<p>Documentation has been a core concern of the Agile movement, being mentioned in one of the four core principles of the Agile Manifesto:</p>
 </div>
 <div class="paragraph">
-<p><a href="https://philippe.kruchten.com/2011/02/13/the-elephants-in-the-agile-room/" class="bare">https://philippe.kruchten.com/2011/02/13/the-elephants-in-the-agile-room/</a></p>
+<p><em>"Working software over comprehensive documentation" <a href="#Alliance2001">[Alliance2001]</a></em>.</p>
 </div>
 <div class="paragraph">
-<p>When it  comes to system implementation, the temptation to be  fast, often under the nom de guerre of agile, can soften  quality controls and threaten product usability, reliability, safety, and lifecycle cost. <a href="#Malan2010">[Malan2010]</a></p>
+<p>When documentation primarily takes the form of <a href="#secondary-artifacts">secondary artifacts</a>, it is appropriate to question the need for it. "The code is the documentation," some will argue. While it is true that good coding practices result in easier-to-understand (and maintain) source code, the code cannot be the only documentation.</p>
 </div>
 <div class="paragraph">
-<p>Re: "the code is documentation"</p>
-</div>
-<div class="olist lowerroman">
-<ol class="lowerroman" type="i">
-<li>
-<p>for systems of sufficient scope and complexity to warrant teams (of teams) working on (incremental) implementation and evolution, the sheer mass of code can make it hard to discover the essential structure from bottom-up decisions made entirely through the medium of code. <a href="#Malan2010">[Malan2010]</a></p>
-</li>
-</ol>
+<p>As Ruth Malan notes,</p>
 </div>
 <div class="paragraph">
-<p>We don&#8217;t always build. Software may be eating the world, but that doesn&#8217;t mean everyone employs - or should employ - software developers.</p>
+<p><em>&#8230;&#8203;for systems of sufficient scope and complexity to warrant teams (of teams) working on (incremental) implementation and evolution, the sheer mass of code can make it hard to discover the essential structure from bottom-up decisions made entirely through the medium of code. <a href="#Malan2010">[Malan2010]</a></em></p>
+</div>
+<div class="paragraph">
+<p>In terms of systems theory, a complex software system has emergent behavior, not obvious from just looking at its components. Because the system&#8217;s behavior can&#8217;t be reduced to its pieces, "self documenting code" can only go so far. The behavior of the assembled components as a system needs to be represented somehow, in a way that transcends the mere mechanics of the pieces. Abstraction is necessary to understand emergent behavior, and this leads inevitably to <a href="#arch-visualization">visual representation</a>.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_sourcing">Sourcing</h6>
+<div class="paragraph">
+<p>Agile and DevOps are software-development centric, and have transformed that world. However, we don&#8217;t always build. Software may be eating the world, but that doesn&#8217;t mean everyone employs - or should employ - software developers. Agile has not had a primary focus on sourcing, and certainly evaluating commercial software is not a common topic.</p>
 </div>
 <div class="paragraph">
 <p>Suppose you have a business product/value prop and you know that you will be assembling complex services/products produced by others? And these services overlap? You need a strategy? Who is it that analyzes these services and their capabilities, interfaces, non-functional characteristics, and makes a final recommendation as to how you are going to bring them all into one unified system?</p>
@@ -26991,20 +27021,18 @@ Architecture represents the significant design decisions that shape a system, wh
 <div class="paragraph">
 <p>Point back to sourcing chapter. (And forward ref from that chapter to architecture.) Open source, COTS, Cloud, in-house&#8230;&#8203; the options are bewildering and take experience. A consistent evaluation approach is important (pref. under an economic framework Reinertsen/Hubbard)</p>
 </div>
+</div>
+<div class="sect5">
+<h6 id="_arch_as_emergent">arch as emergent</h6>
 <div class="paragraph">
 <p>Arch as emergent is one of the most troubled Agile memes. Within one team, perhaps. Across teams - no.</p>
 </div>
 <div class="paragraph">
-<p>You can&#8217;t call for a systems perspective and then say "but the code is self documenting" on the other hand.</p>
-</div>
-<div class="paragraph">
-<p>Cockburn quote on CCC project - disbanded &amp; disintegrated due to relying on oral tradition</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>toward a rapprochement: it  all starts with "respect the team" - and this applies to teams of architects - or one architect on a team - trouble is that architects are often spread too thin...</pre>
+<p>As in the line/staff discussion - war, for better or worse, is one of the most complex phenomena &#8230;&#8203; if a line/staff structure is deemed insufficient, the burden is on those saying so to propose something superior. Scrum of Scrums is just naive.</p>
 </div>
 </div>
+<div class="sect5">
+<h6 id="_tech_mgmt">tech mgmt</h6>
 <div class="literalblock">
 <div class="content">
 <pre>Note that we compensate developers with money AND experience. Developer pressure to use a new technology should be seen in part as a demand for increased compensation. developers seeking experience, it is in part how they are compensated. this leads to conflicts over choice of tools. (good blog as well). rational framework for deciding. might go to chapter 8, resource mgmt. intersection between that &amp; tech lifecycle is key.</pre>
@@ -27012,7 +27040,8 @@ Architecture represents the significant design decisions that shape a system, wh
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>great Josh A insight: what problems can be handled w/projects vs. which need steady state capaiblities? Cynefin: simple/complicated vs complex/chaotic.. - if your strategy is to elucidate the complex you need an ongoing mental model... preserve the team -</pre>
+<pre>https://philippe.kruchten.com/2011/02/13/the-elephants-in-the-agile-room/</pre>
+</div>
 </div>
 </div>
 </div>
@@ -27028,6 +27057,9 @@ Architecture represents the significant design decisions that shape a system, wh
 <p>how do we know there is a gap? We have hypotheses&#8230;&#8203; need to establish that there is a valuable, usable, feasible future state, and if there is progress towards it must not be delayed by queues, cycle time, etc &#8230;&#8203; need to move with alacrity&#8230;&#8203; Cost of Delay outweighs much&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
+<p>toward a rapprochement: it  all starts with "respect the team" - and this applies to teams of architects - or one architect on a team - trouble is that architects are often spread too thin&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
 <p>feedback loop between line &amp; staff???
 In the Agile world,  <a href="#2.05.02-kanban">Kanban</a> is a strongly visual system for building a shared mental model of work in process. Humans more readily understand complex systems through diagrams.</p>
 </div>
@@ -27038,6 +27070,11 @@ In the Agile world,  <a href="#2.05.02-kanban">Kanban</a> is a strongly visual s
 * Deliver something fast
 * Design for testability and deployability
 * Architect the new software to run on a PaaS</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>great Josh A insight: what problems can be handled w/projects vs. which need steady state capaiblities? Cynefin: simple/complicated vs complex/chaotic.. - if your strategy is to elucidate the complex you need an ongoing mental model... preserve the team -</pre>
+</div>
 </div>
 <div class="sect5">
 <h6 id="_scaling_architecture">Scaling &amp; architecture</h6>
@@ -27159,6 +27196,11 @@ With regard to the nature of complex systems, it is not advisable to search for 
 <div class="literalblock">
 <div class="content">
 <pre>from bente: Anti-patterns in EA and architecture in general can be found, for instance, in Kruchten (2008), Mar and Spacey (2011), Ambler, Nalbone. and Vizdos (2005), and Coplien and Harrison (2005).</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Cockburn quote on CCC project - disbanded &amp; disintegrated due to relying on oral tradition</pre>
 </div>
 </div>
 </div>
