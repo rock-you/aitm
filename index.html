@@ -4644,6 +4644,11 @@ to be written</pre>
 <pre>what makes a good infrastructure engineer</pre>
 </div>
 </div>
+<div class="literalblock">
+<div class="content">
+<pre>http://jpmorgenthal.com/2016/08/24/a-reality-check-on-everyones-moving-everything-to-the-cloud/ excellent</pre>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_conclusion_2">Conclusion</h4>
@@ -13575,7 +13580,7 @@ Humble toyota quote</pre>
 <p>Contract and vendor management is more than just establishing the initial agreement. The ongoing relationship must be monitored for its consistency with the contract. If the vendor agrees that its service will be available 99.999% of the time, the availability of that service should be measured and if it falls below that threshhold, contractual penalties may need to be applied.</p>
 </div>
 <div class="paragraph">
-<p>In larger organizations, where a vendor might hold multiple contracts, a concept of "Vendor Management" emerges. Vendors may be provided "scorecards" that aggregate metrics describing their performance and the overall impression of the customer. Perhaps key stakeholders are internally surveyed as to their impression of the vendor&#8217;s performance and whether they would be likely to recommend them again. Low scores may penalize a vendor&#8217;s chances in future RFI/RFP processes; high scores may enhance them.</p>
+<p>In larger organizations, where a vendor might hold multiple contracts, a concept of "Vendor Management" emerges. Vendors may be provided "scorecards" that aggregate metrics describing their performance and the overall impression of the customer. Perhaps key stakeholders are internally surveyed as to their impression of the vendor&#8217;s performance and whether they would be likely to recommend them again. Low scores may penalize a vendor&#8217;s chances in future RFI/RFP processes; high scores may enhance them. Finally, advising on sourcing is one of the main services an <a href="#chap-arch-portfolio">Enterprise Architecture</a> group may provide.</p>
 </div>
 </div>
 <div class="sect4">
@@ -13599,11 +13604,9 @@ cloud computing has some fundamental characteristics that distinguish it from tr
 </li>
 <li>
 <p>insurance</p>
-<div class="literalblock">
-<div class="content">
-<pre>solicit contributor for Cloud contracting</pre>
-</div>
-</div>
+</li>
+<li>
+<p><a href="http://jpmorgenthal.com/2016/08/24/a-reality-check-on-everyones-moving-everything-to-the-cloud/" class="bare">http://jpmorgenthal.com/2016/08/24/a-reality-check-on-everyones-moving-everything-to-the-cloud/</a></p>
 </li>
 </ul>
 </div>
@@ -24647,6 +24650,9 @@ McGilvary (based on English) pp 23-24 - perhaps into 4.11.03.</pre>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p><a id="chap-arch-portfolio"></a></p>
+</div>
 </div>
 </div>
 </div>
@@ -26601,15 +26607,6 @@ Architecture represents the significant design decisions that shape a system, wh
 <h4 id="_agile_and_architecture">Agile and architecture</h4>
 <div class="quoteblock">
 <blockquote>
-“At Netflix, we had no central control [of the architecture] &#8230;&#8203; The goal of architecture was to create the right emergent behaviors&#8230;&#8203;”
-</blockquote>
-<div class="attribution">
-&#8212; Adrian Cockcroft<br>
-<cite>former CTO Netflix</cite>
-</div>
-</div>
-<div class="quoteblock">
-<blockquote>
 &#8230;&#8203;we encountered companies that, despite having a fully institutionalized EA in place, were in a state close to paralysis&#8230;&#8203;Although EA has reached the mainstream, a skeptical undertone with regard to its effectiveness has always existed. (p 12-13)
 </blockquote>
 <div class="attribution">
@@ -26735,34 +26732,40 @@ Instead of tapping into the existing knowledge of the organization the autonomou
 <p>Suppose you have an idea for a digital product, and you know that you will be (at least in part) assembling complex services/products produced by others? Suppose further that these provided services overlap (the providers compete)? You need to carefully analyze which services you are going to acquire from which provider.  You will need a strategy, and who is it that analyzes these services and their capabilities, interfaces, non-functional characteristics, and makes a final recommendation as to how you are going to bring them all into one unified system?</p>
 </div>
 <div class="paragraph">
-<p>Point back to sourcing chapter. (And forward ref from that chapter to architecture.) Open source, COTS, Cloud, in-house&#8230;&#8203; the options are bewildering and take experience. A consistent evaluation approach is important (pref. under an economic framework Reinertsen/Hubbard)</p>
+<p>It is easy to say things like, "the teams get to define their own architecture" but at some point the enterprise must reckon with the cost of an overly diverse supplier base. This is a very old topic in business, not restricted to IT. At the end of the day, supplier and sourcing fragmentation costs real money. Open source, Commercial-off-the-shelf, Cloud, in-house&#8230;&#8203; the options are bewildering and take experience. A consistent evaluation approach is important (preferably under an economic framework Reinertsen/Hubbard). And at some point, product development teams should not have to do too much of their own R&amp;D on possible platforms for their work.</p>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_arch_as_emergent">arch as emergent</h6>
-<div class="paragraph">
-<p>Arch as emergent is one of the most troubled Agile memes. Within one team, perhaps. Across teams - no.</p>
+<h6 id="_architecture_as_emergent">Architecture as emergent</h6>
+<div class="quoteblock">
+<blockquote>
+“At Netflix, we had no central control [of the architecture] &#8230;&#8203; The goal of architecture was to create the right emergent behaviors&#8230;&#8203;”
+</blockquote>
+<div class="attribution">
+&#8212; Adrian Cockcroft<br>
+<cite>former CTO Netflix</cite>
+</div>
 </div>
 <div class="paragraph">
-<p>As in the line/staff discussion - war, for better or worse, is one of the most complex phenomena &#8230;&#8203; if a line/staff structure is deemed insufficient, the burden is on those saying so to propose something superior. Scrum of Scrums is just naive.</p>
+<p>The Agile Manifesto is also well known for saying "The best architectures, requirements, and designs emerge from self-organizing teams" <a href="#Alliance2001">[Alliance2001]</a>. This is one of the more frequently discussed Agile statements. Netflix CTO Adrian Cockcroft has expressed similar views (quote above).</p>
+</div>
+<div class="paragraph">
+<p>A key question is whether "architecture" is considered at the single product or multi-product level. At the single product level, collaborative teams routinely develop effective architectures. However, when multiple products are involved, it is hard to see how all the <a href="#arch-impacts">architectural value</a> scenarios are fulfilled without some investment being directed to the goal.</p>
+</div>
+<div class="paragraph">
+<p>It helps when rules of the road are established; both Amazon and Netflix have benefitted from having certain widely accepted platform standards. The question does get harder when layered products and services with <a href="#IT-lifecycles">complex lifecycle interactions</a> are involved.</p>
 </div>
 </div>
 <div class="sect5">
 <h6 id="_tech_mgmt">tech mgmt</h6>
-<div class="literalblock">
-<div class="content">
-<pre>Note that we compensate developers with money AND experience. Developer pressure to use a new technology should be seen in part as a demand for increased compensation. developers seeking experience, it is in part how they are compensated. this leads to conflicts over choice of tools. (good blog as well). rational framework for deciding. might go to chapter 8, resource mgmt. intersection between that &amp; tech lifecycle is key.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>https://philippe.kruchten.com/2011/02/13/the-elephants-in-the-agile-room/</pre>
-</div>
-</div>
+
 </div>
 </div>
 <div class="sect4">
 <h5 id="_some_ways_forward">Some ways forward</h5>
+<div class="paragraph">
+<p>Note that we compensate developers with money AND experience. Developer pressure to use a new technology should be seen in part as a demand for increased compensation. developers seeking experience, it is in part how they are compensated. this leads to conflicts over choice of tools. (good blog as well). rational framework for deciding. might go to chapter 8, resource mgmt. intersection between that &amp; tech lifecycle is key.</p>
+</div>
 <div class="paragraph">
 <p>Entire language/mental model around gaps brings back flower &amp; cog</p>
 </div>
@@ -26917,6 +26920,11 @@ With regard to the nature of complex systems, it is not advisable to search for 
 <div class="literalblock">
 <div class="content">
 <pre>Cockburn quote on CCC project - disbanded &amp; disintegrated due to relying on oral tradition</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>https://philippe.kruchten.com/2011/02/13/the-elephants-in-the-agile-room/</pre>
 </div>
 </div>
 </div>
