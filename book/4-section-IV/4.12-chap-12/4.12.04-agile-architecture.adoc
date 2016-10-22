@@ -30,7 +30,7 @@ It failed to realize the emergent issue of too much enterprise work in process, 
 
 Architects' motivation for "efficiency" and interest in capability mapping did not help the cause of cross-functional teams. Instead, functional silos were reinforced as supply-centric "capabilities" and the antipattern of "bringing the team to the work" was accepted as enterprise standard operating procedure - despite the growing evidence of Scrum and Agile success. The iterative, experimental narrative of Lean Startup did not originate from EA.
 
-Architects too often fall into the trap of the  xref::HIPPO[HIPPO] (Highest Paid Person's Opinion). Despite dabbling in systems theory, architecture has only recently begun to realize the fundamental problems of stage-gated delivery, big bang releases, and so forth. It has been too sympathetic to the now-discredited Capability Maturity Model and PMBOK and cannot escape the criticism of "top down planning," which in complex systems domains too often doesn't work. Hypothetical "synergies" emerging from "common platforms" are often offered as justification for architecture, with little follow up in measuring actual value delivered.  A sense of xref:lean-startup[Lean Startup] experimentation, of placing bets on options and testing hypotheses, is not part of the mainstream enterprise architecture understanding. Instead, the architecture is presented as an established fact, with "governance" to ensure conformity.
+Despite a professed interest in systems theory, architecture has only recently begun to realize the fundamental problems of stage-gated delivery, big bang releases, and so forth. It has been too sympathetic to PMBOK and the now-discredited Capability Maturity Model and cannot escape the criticism of "top down planning," which in complex systems domains too often doesn't work. Architects too often fall into the trap of the  xref::HIPPO[HiPPO] (Highest Paid Person's Opinion). A sense of xref:lean-startup[Lean Startup] experimentation, of placing bets on options and testing hypotheses, is not part of the mainstream enterprise architecture understanding. Instead, the architecture is presented as an established fact, with "governance" to ensure conformity. Hypothetical "synergies" emerging from "common platforms" are often offered as justification for architecture, with little follow up in measuring actual value delivered.
 
 Justifications for architecture often invoke "complexity" in the portfolio of systems. In response, architecture has often given in to the desire for a  complete "radical surgery" systems re-engineering, the temptation of the "clean slate." But as Jez Humble accurately notes,
 
@@ -42,11 +42,13 @@ Architecture methodology, with its focus on identifying capability gaps for feed
 [quote, Donald Reinertsen, Managing the Design Factory]
 Instead of tapping into the existing knowledge of the organization the autonomous team is prone to reinvent the wheel, and the wheel that they reinvent will not always be superior to the one we are currently using <<Reinertsen1997>>, p. 104.
 
+The Agile community has its own blind spots and challenges. Speed is seen as a good in itself, too often without an economic model. Agile teams often clash with enterprise governance processes that have sound compliance and financial benefits. Phrases like "you aren't gonna need it" are used to justify lapses of due diligence on critical capabilities, and standard platforms and vendors are seen as unreasonable limitations on team autonomy - to the point where it seems some teams' interest is primarily in padding their resumes with as many new technologies as possible, regardless of the long-term consequences for the organization.
+
 ====== The limitations of Cost of Delay
 [quote, Ruth Malan]
 When it  comes to system implementation, the temptation to be  fast, often under the nom de guerre of agile, can soften  quality controls and threaten product usability, reliability, safety, and lifecycle cost <<Malan2010>>.
 
-Cost of Delay is a real and often overlooked issue, in understanding the net value of architecture. But it is only a factor, and does not eliminate the value proposition of architecture. If the Cost of Delay is only a few hundred dollars a month, but the risk or technical debt represent millions, then delay may be appropriate. Don Reinertsen, who has done more than anyone to promote the idea of Cost of Delay, emphasizes that *all* decision making must take place within an economic framework (<<Reinertsen2009>>, chapter 2) and that means that the other xref:arch-impacts[architectural impact factors] on organization value must also be considered.
+xref:cost-of-delay[Cost of Delay] is a real and often overlooked issue, in understanding the net value of architecture. But it is only a factor, and does not eliminate the value proposition of architecture. If the Cost of Delay is only a few hundred dollars a month, but the risk or technical debt represent millions, then delay may be appropriate. Don Reinertsen, who has done more than anyone to promote the idea of Cost of Delay, emphasizes that *all* decision making must take place within an economic framework (<<Reinertsen2009>>, chapter 2) and that means that the other xref:arch-impacts[architectural impact factors] on organization value must also be considered.
 
 ====== Documentation
 
@@ -54,13 +56,14 @@ Documentation has been a core concern of the Agile movement, being mentioned in 
 
 _"Working software over comprehensive documentation" <<Alliance2001>>_.
 
-When documentation primarily takes the form of xref:secondary-artifacts[secondary artifacts], it is appropriate to question the need for it. "The code is the documentation," some will argue. While it is true that good coding practices result in easier-to-understand (and maintain) source code, the code cannot be the only documentation.
-
-As Ruth Malan notes,
+When documentation primarily takes the form of xref:secondary-artifacts[secondary artifacts], it is appropriate to question the need for it. "The code is the documentation," some will argue. While it is true that good coding practices result in easier-to-understand (and maintain) source code, the code cannot be the only documentation. However, as Ruth Malan notes,
 
 _...for systems of sufficient scope and complexity to warrant teams (of teams) working on (incremental) implementation and evolution, the sheer mass of code can make it hard to discover the essential structure from bottom-up decisions made entirely through the medium of code. <<Malan2010>>_
 
 In terms of systems theory, a complex software system has emergent behavior, not obvious from just looking at its components. Because the system's behavior can't be reduced to its pieces, "self documenting code" can only go so far. The behavior of the assembled components as a system needs to be represented somehow, in a way that transcends the mere mechanics of the pieces. Abstraction is necessary to understand emergent behavior, and this leads inevitably to xref:arch-visualization[visual representation].
+Without some attention to documenting overall context and systemic intent & behavior, the effectiveness of the overall human/computer system degrades. For example, Adrian Cockcroft reports that the Chrysler Comprehensive Compensation project, one of the first widely-reported Agile projects, was eventually halted, and
+
+_...left no archived documentation ... other than two sentence user stories, the tests, and the code. Eventually, enough people left that the oral tradition and group memory were lost <<Cockburn2007>>, pp. 41-43_
 
 ====== Sourcing and technology standards
 
@@ -76,24 +79,24 @@ It is easy to say things like, "the teams get to define their own architecture" 
 
 The Agile Manifesto is well known for saying "The best architectures, requirements, and designs emerge from self-organizing teams" <<Alliance2001>>. This is one of the more frequently discussed Agile statements. Netflix CTO Adrian Cockcroft has expressed similar views (quote above).
 
-A key question is whether "architecture" is considered at the single product or multi-product level. At the single product level, collaborative teams routinely develop effective architectures. However, when multiple products are involved, it is hard to see how all the xref:arch-impacts[architectural value] scenarios are fulfilled without some investment being directed to the goal.
-
-It helps when rules of the road are established; both Amazon and Netflix have benefitted from having certain widely accepted platform standards. The question does get harder when layered products and services with xref:IT-lifecycles[complex lifecycle interactions] are involved.
+A key question is whether "architecture" is considered at the single product or multi-product level. At the single product level, collaborative teams routinely develop effective software architectures. However, when multiple products are involved, it is hard to see how all the xref:arch-impacts[architectural value] scenarios are fulfilled without some investment being directed to the goals of cross-product architectural coordination. It helps when rules of the road are established; both Amazon and Netflix have benefitted from having certain widely accepted platform standards, such as "every product communicates through APIs". The question does get harder when layered products and services with xref:IT-lifecycles[complex lifecycle interactions] are involved.
 
 ===== Towards reconciliation
 
-toward a rapprochement: it  all starts with "respect the team" - and this applies to teams of architects - or one architect on a team - trouble is that architects are often spread too thin...
+So how do we reconcile Agile with architecture practices, especially enterprise architecture and its concerns for longer lifecycles, aggregate technical debt, and governance?
 
-====== Rethinking investment
+One principle that should be apparent through this book has been "respect the team," because true product value originates there. If teams are constantly fragmented by enterprise operating models and governance mandates, their ability to creatively solve business problems is hampered. Enterprise architecture should take as a fundamental principle the protection of this precious resource that is the high-performing, collaborative, creative team. And while it's inevitable that the team will be subject to organization-wide mandates, they should be given the benefit of the doubt when autonomy collides with standardization.
 
-great Josh A insight: what problems can be handled w/projects vs. which need steady state capaiblities? Cynefin: simple/complicated vs complex/chaotic.. - if your strategy is to elucidate the complex you need an ongoing mental model... preserve the team -
-
+When enterprise architecture takes on true business architecture questions, including how capabilities are to be enabled and enhanced, Agile insights actually become an input or kind of requirement to business architecture. What capabilities require high-performing, cross-functional teams? What capabilities can be supported with project-based temporary teams? It seems likely that the more valuable and difficult the work, the more it calls for the careful development of a common mental model among a close-knit team over time. Driving organizational capability investment into long-running team structures becomes a strategy that organizational architects should consider as they develop the overall organizational portfolio.
 
 ====== Architecture kata
 
-Our experience is that standardization on a particular toolchain or technology stack is neither necessary nor sufficient for achieving enterprise architecture goals such as enabling teams to respond rapidly to changing requirements, creating high-performance systems at scale, or reducing the risk of intrusion or data theft. Just like we drive product and process innovation through the Improvement Kata, we can drive architectural alignment through it too. Architectural goals—for example, desired performance, availability, and security—should be approached by iteratively specifying target conditions at the program level. Following the Principle of Mission, set out a clear vision of the goals of your enterprise architecture without specifying how the goals are to be achieved, and create a context in which teams can determine how to achieve them through experimentation and collaboration.   <<Humble2013>> ch10
+[quote, Humble/Molesky, Lean Enterprise]
+...standardization on a particular toolchain or technology stack is neither necessary nor sufficient for achieving enterprise architecture goals such as enabling teams to respond rapidly to changing requirements, creating high-performance systems at scale, or reducing the risk of intrusion or data theft. Just like we drive product and process innovation through the Improvement Kata, we can drive architectural alignment through it too. +
+ +
+Architectural goals—for example, desired performance, availability, and security—should be approached by iteratively specifying target conditions at the program level. Following the Principle of Mission, set out a clear vision of the goals of your enterprise architecture without specifying how the goals are to be achieved, and create a context in which teams can determine how to achieve them through experimentation and collaboration.   <<Humble2013>>, chap. 10.
 
-Toyota Kata and EA  - importance of target condition
+xref:Toyota-Kata[Toyota Kata] was discussed in Chapter 7. As Humble and Molesky argue, it provides a useful framework for architecture objectives. Toyota Kata emphasizes end-state goals ("target condition") and calls for hands-on investigation and response by participating workers, not consultants or distant executives.
 
 
 ====== Cost of Delay-based prioritization
@@ -102,15 +105,18 @@ Another possible objection against agile methods is that the processes in EA, an
 
 feedback loop between line & staff???
 
+EA "process"
+
+- queuing and fast feedback
+
+====== gap analysis vs test, learn, pivot
+
 Entire language/mental model around gaps brings back flower & cog
 
 A flower is not engineered to fill a gap. A cog is.
 
 how do we know there is a gap? We have hypotheses... need to establish that there is a valuable, usable, feasible future state, and if there is progress towards it must not be delayed by queues, cycle time, etc ... need to move with alacrity... Cost of Delay outweighs much...
 
-EA "process"
-
-- queuing and fast feedback
 
 ====== Ongoing portfolio evolution
 
@@ -126,7 +132,6 @@ Amazon Obidos example, strangler pattern.
 understanding purposes of diagrams and appropriate level of investment/formality
 
 In the Agile world,  xref:2.05.02-kanban[Kanban] is a strongly visual system for building a shared mental model of work in process.
-
 
 preparing along the way understand inventories and dependencies - importance of Bezos mandate to the dependency question - if there is one battle you fight, make it that one -
 
@@ -175,8 +180,6 @@ All the coordination mechs can be applied... cadence/synch - queue understanding
 
 ====== NOTES
 
-Cockcroft quote
-
 Cathedral / bazaar
 
 
@@ -190,6 +193,5 @@ With regard to the nature of complex systems, it is not advisable to search for 
 
  from bente: Anti-patterns in EA and architecture in general can be found, for instance, in Kruchten (2008), Mar and Spacey (2011), Ambler, Nalbone. and Vizdos (2005), and Coplien and Harrison (2005).
 
- Cockburn quote on CCC project - disbanded & disintegrated due to relying on oral tradition
 
  https://philippe.kruchten.com/2011/02/13/the-elephants-in-the-agile-room/
