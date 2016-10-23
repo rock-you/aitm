@@ -118,7 +118,36 @@ If architecture's fundamental purpose is enabling the right emergent behavior, t
 
 As a coordination mechanism, it can operate in various ways including planning, controlling, and collaborating. Each may be appropriate for a given challenge or situation. For example, different approaches are required depending on whether the product challenge is xref:flower-and-cog[Flower or Cog]. A flower is not engineered to fill a gap. A cog is. Market-facing experiments need leeway to pivot, where initiatives intended to fill a gap in a larger system may require more constraints and control. And how do architects know there is a gap? It should be an hypothesis-driven process, that needs to establish that there is a valuable, usable, feasible future state.
 
-====== How: Architecture Kata
+====== How: Execution
+
+As an xref:arch-practices[executing capability], architecture operates in various ways:
+
+* Planning and analysis
+* Governance and approvals
+* Collaboration and guidance
+
+Ideally, planning and analysis occurs "upstream" of the creation of a product team. In that guise, architecture functions as a sort of zoning or planning authority, and ideally there is no conflict with product teams because once the team is formed, the architect's job is done. However, this assumes that all the planning associated with launching a new product or capability was done correctly, and this itself is a kind of waterfall assumption. Some form of feedback and coordination is required in xref:multi-product-scaling[multi-product environments].
+
+It is in the "governance and approval" kind of activity that conflict is most likely to emerge. Solving this rationally requires an economic model, such as establishing a nominal or xref:portfolio-CoD[portfolio-level Cost of Delay]. Like other processes, architecture itself can be assessed against such a baseline.
+
+** Is enterprise cost of delay understood?
+ We need to write this section, in Chapter 9, and cross-reference.
+** should "architecture" even be something experienced by product teams?
+** what the arch is doing and whether they are blocking the work
+** Are they servicing a queue? Or developing a product?
+** ticketed approvals only one way of solving issues
+** market-based approaches - put in economic disincentives - project budget charged for new product onboarding - impersonal mechanics
+
+[quote, Bente et al, Collaborative Enterprise Architecture]
+Another possible objection against agile methods is that the processes in EA, and in the enterprise generally, are simply not operating with a time window of the typical sprint length of three weeks. This, of course, is true. But it is at closer inspection not a counter-argument against the application of agile principles to EA—just the opposite. The long process cycles add to EA's lack of transparency and promote a silo mentality. Agile techniques can help here. <<Bente2012>>
+
+feedback loop between line & staff???
+
+EA "process"
+
+- queuing and fast feedback
+
+====== Architecture Kata
 
 [quote, Humble/Molesky, Lean Enterprise]
 ...standardization on a particular toolchain or technology stack is neither necessary nor sufficient for achieving enterprise architecture goals such as enabling teams to respond rapidly to changing requirements, creating high-performance systems at scale, or reducing the risk of intrusion or data theft. Just like we drive product and process innovation through the Improvement Kata, we can drive architectural alignment through it too. +
@@ -138,13 +167,12 @@ Keeping the target operating condition specific is preferable. When architecture
 
 To use the strangler pattern is not to replace the system all at once, but rather to do so incrementally, replacing one feature at a time. This may seem more expensive, as it means that both the old and new systems are running (and cost savings through sunsetting the old system will be delayed.) But the risk of replacing complex systems is serious, and needs to be considered along with any hoped-for cost savings through replacement. Humble and Molesky suggest:
 
-Amazon Obidos example, strangler pattern - .
 * Start by delivering new functionality—at least at first
 * Do not attempt to port existing functionality unless it is to support a business process change
 * Deliver something fast
 * Design for testability and deployability
 
-Paul Hammant provides a large number of strangler pattern case studies, including:
+The strangler pattern is proven in practice. Paul Hammant provides a large number of strangler pattern case studies, including:
 
 * Airline booking application
 * Energy trading application
@@ -152,26 +180,9 @@ Paul Hammant provides a large number of strangler pattern case studies, includin
 
 and others <<Hammant2013>>.
 
-===== Execution
+Of course, there are other ways architecture might add value beyond system replacement, in which case the strangler pattern may not be relevant.
 
- (of what? shared arch svcs? decisions?)
-** Is enterprise cost of delay understood?
- We need to write this section, in Chapter 9, and cross-reference.
-** The nature of arch work
-** should "architecture" even be something experienced by product teams?
-** what the arch is doing and whether they are blocking the work
-** Are they servicing a queue? Or developing a product?
-** ticketed approvals only one way of solving issues
-** market-based approaches - put in economic disincentives - project budget charged for new product onboarding - impersonal mechanics
 
-[quote, Bente et al, Collaborative Enterprise Architecture]
-Another possible objection against agile methods is that the processes in EA, and in the enterprise generally, are simply not operating with a time window of the typical sprint length of three weeks. This, of course, is true. But it is at closer inspection not a counter-argument against the application of agile principles to EA—just the opposite. The long process cycles add to EA's lack of transparency and promote a silo mentality. Agile techniques can help here. <<Bente2012>>
-
-feedback loop between line & staff???
-
-EA "process"
-
-- queuing and fast feedback
 
 ====== Arch as design
 ** Having a bench of archs that are assigned to collaborate with teams is generally uncontroversial. It's when archs are assigned governance (higher-order) responsibilities. Especially w/r/t design
