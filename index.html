@@ -1092,6 +1092,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_the_hubris_of_architecture">The hubris of architecture</a></li>
 <li><a href="#_the_hubris_of_agile">The hubris of Agile</a></li>
 <li><a href="#_towards_reconciliation">Towards reconciliation</a></li>
+<li><a href="#_execution">Execution</a></li>
 <li><a href="#_architecture_queues_and_cost_of_delay">Architecture, queues, and Cost of Delay</a></li>
 </ul>
 </li>
@@ -21634,6 +21635,9 @@ concepts including the <a href="#submittal-schedule">submittal schedule</a>. As 
 <div class="paragraph">
 <p>The automated enablers then can report their status up to the Monitoring activity of governance, closing the loop. Auditors should periodically re-assess their effectiveness.</p>
 </div>
+<div class="paragraph">
+<p><a id="digital-risk-management"></a></p>
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -26696,13 +26700,13 @@ Architecture represents the significant design decisions that shape a system, wh
 <p>And, looking more broadly at the practice and history of architecture, the case against it is strong. Enterprise architecture has presented itself as a solution to complexity, long IT time scales, business frustration, and other various IT problems. But in the past decade to the extent these issues have been solved, it has not been by architecture but by Agile and DevOps practices rethinking open-loop, slow feedback, batch-oriented delivery. Architecture has failed in many ways:</p>
 </div>
 <div class="paragraph">
-<p>It failed to realize the emergent issue of too much enterprise work in process, instead championing the proliferation of enterprise processes and their associated queues. Fundamentally, they did not adopt enough of a systems view of IT delivery.</p>
-</div>
-<div class="paragraph">
-<p>Architects' motivation for "efficiency" and interest in capability mapping did not help the cause of cross-functional teams. Instead, functional silos were reinforced as supply-centric "capabilities" and the antipattern of "bringing the team to the work" was accepted as enterprise standard operating procedure - despite the growing evidence of Scrum and Agile success. The iterative, experimental narrative of Lean Startup did not originate from EA.</p>
+<p>It failed to realize the emergent issue of too much enterprise work in process, instead championing the proliferation of enterprise processes and their associated queues. Fundamentally, they did not adopt enough of a systems view of IT delivery. Architects' motivation for "efficiency" and interest in capability mapping did not help the cause of cross-functional teams. Instead, functional silos were reinforced as supply-centric "capabilities" and the antipattern of "bringing the team to the work" were promoted as enterprise standard operating procedure - despite the growing evidence of Scrum and Agile success. The iterative, experimental narrative of Lean Startup did not originate from EA.</p>
 </div>
 <div class="paragraph">
 <p>Despite a professed interest in systems theory, architecture has only recently begun to realize the fundamental problems of stage-gated delivery, big bang releases, and so forth. It has been too sympathetic to PMBOK and the now-discredited Capability Maturity Model and cannot escape the criticism of "top down planning," which in complex systems domains too often doesn&#8217;t work. Architects too often fall into the trap of the  <a href="#:HIPPO">HiPPO</a> (Highest Paid Person&#8217;s Opinion). A sense of <a href="#lean-startup">Lean Startup</a> experimentation, of placing bets on options and testing hypotheses, is not part of the mainstream enterprise architecture understanding. Instead, the architecture is presented as an established fact, with "governance" to ensure conformity. Hypothetical "synergies" emerging from "common platforms" are often offered as justification for architecture, with little follow up in measuring actual value delivered.</p>
+</div>
+<div class="paragraph">
+<p><a id="large-arch-xform-risk"></a></p>
 </div>
 <div class="paragraph">
 <p>Justifications for architecture often invoke "complexity" in the portfolio of systems. In response, architecture has often given in to the desire for a  complete "radical surgery" systems re-engineering, the temptation of the "clean slate." But as Jez Humble accurately notes,</p>
@@ -26803,157 +26807,66 @@ Without some attention to documenting overall context and systemic intent &amp; 
 </div>
 <div class="sect4">
 <h5 id="_towards_reconciliation">Towards reconciliation</h5>
-<div class="ulist">
-<ul>
-<li>
-<p>Curating the shared mental model &#8230;&#8203; common ground "Joint activity depends on interpredictability of the participants’ attitudes and actions. Such interpredictability is based on common ground — pertinent knowledge, beliefs and
-assumptions that are shared among the involved parties."</p>
-</li>
-<li>
-<p>the architecture of architecture, of the digital pipeline itself</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Arch - like staff functions generally - is a coordination mech</p>
-</li>
-<li>
-<p>The economic framework is essential</p>
-</li>
-<li>
-<p>WHEN does arch add value: coordination problems, gap problems</p>
-</li>
-<li>
-<p>understanding the nature of the work: flower v cog</p>
-</li>
-<li>
-<p>should "architecture" even be something experienced by product teams?</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Create the right context for behavior to emerge</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Prioritize team value</p>
-</li>
-<li>
-<p>Impacts: constraining choices can empower - minimize R&amp;D</p>
-</li>
-<li>
-<p>Support the common ground</p>
-</li>
-<li>
-<p>Understand the risks of coordination mechs</p>
-</li>
-<li>
-<p>Optimize flow</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Architecture Kata &amp; strangler pattern</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Identifying target conditions - good role for archs - impact model backref</p>
-</li>
-<li>
-<p>multi-constraint optimization</p>
-</li>
-<li>
-<p>e.g. "reduce tech debt" through supplier mgmt</p>
-</li>
-<li>
-<p>enable agility etc</p>
-</li>
-<li>
-<p>How are results to be evaluated - unused archs / patterns</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Execution (of what? shared arch svcs? decisions?)</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Is enterprise cost of delay understood? We need to write this section, in Chapter 9, and cross-reference.</p>
-</li>
-<li>
-<p>The nature of arch work</p>
-</li>
-<li>
-<p>what the arch is doing and whether they are blocking the work</p>
-</li>
-<li>
-<p>Are they servicing a queue? Or developing a product?</p>
-</li>
-<li>
-<p>Having a bench of archs that are assigned to collaborate with teams is generally uncontroversial. It&#8217;s when archs are assigned governance (higher-order) responsibilities. Especially w/r/t design</p>
-</li>
-<li>
-<p>ticketed approvals only one way of solving issues</p>
-</li>
-<li>
-<p>market-based approaches - put in economic disincentives - project budget charged for new product onboarding - impersonal mechanics</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Arch as design</p>
-<div class="ulist">
-<ul>
-<li>
-<p>HOW products are assembled into a platform - cannot be impersonal - hard design problem - requires teaming - CoD needs to inform the right people working on it at the right time</p>
-</li>
-<li>
-<p>architect credibility: the <strong>hands-on</strong> problem (sidebar)</p>
-</li>
-<li>
-<p>direct engagement and trust-building - harder to scale - Guilds</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>outcomes</p>
-<div class="ulist">
-<ul>
-<li>
-<p>product first</p>
-</li>
-<li>
-<p>artifacts &amp; documentation</p>
-</li>
-<li>
-<p>digital exhaust - test/learning -</p>
-</li>
-<li>
-<p>inherently longer cycles in arch "experiments" - validation of effectiveness</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>conclusion: arch re-emerges always - as humans we think in abstractions and the value drivers for arch continually surface</p>
-</li>
-</ul>
-</div>
 <div class="paragraph">
-<p>So how do we reconcile Agile with architecture practices, especially enterprise architecture and its concerns for longer lifecycles, aggregate technical debt, and governance?</p>
-</div>
-<div class="paragraph">
-<p>One principle that should be apparent through this book has been "respect the team," because true product value originates there. If teams are constantly fragmented by enterprise operating models and governance mandates, their ability to creatively solve business problems is hampered. Enterprise architecture should take as a fundamental principle the protection of this precious resource that is the high-performing, collaborative, creative team. And while it&#8217;s inevitable that the team will be subject to organization-wide mandates, they should be given the benefit of the doubt when autonomy collides with standardization.</p>
-</div>
-<div class="paragraph">
-<p>When enterprise architecture takes on true business architecture questions, including how capabilities are to be enabled and enhanced, Agile insights actually become an input or kind of requirement to business architecture. What capabilities require high-performing, cross-functional teams? What capabilities can be supported with project-based temporary teams? It seems likely that the more valuable and difficult the work, the more it calls for the careful development of a common mental model among a close-knit team over time. Driving organizational capability investment into long-running team structures becomes a strategy that organizational architects should consider as they develop the overall organizational portfolio.</p>
+<p>So how do we reconcile Agile with architecture practices, especially enterprise architecture and its concerns for longer lifecycles, aggregate technical debt, and governance? We need to understand why we look to architecture, what utilizing it means, and how it ultimately adds value, or doesn&#8217;t, in the organization.</p>
 </div>
 <div class="sect5">
-<h6 id="_architecture_kata">Architecture kata</h6>
+<h6 id="_why_creating_the_context">Why: Creating the context</h6>
+<div class="quoteblock">
+<blockquote>
+Joint activity depends on interpredictability of the participants’ attitudes and actions. Such interpredictability is based on common ground — pertinent knowledge, beliefs and  assumptions that are shared among the involved parties. <a href="#Klein2005">[Klein2005]</a>
+</blockquote>
+<div class="attribution">
+&#8212; Gary Klein et al<br>
+<cite>Common Ground and Coordination in Joint Activity</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>The above quote reflects one of the most important objectives for the practice of architecture: supporting a common ground, a base of "knowledge, beliefs, and assumptions" enabling collaboration and coordination. In other words, architecture curates a shared mental model for the organization. In doing so, it enables the "right emergent behaviors" (as Adrian Cockcroft suggests).</p>
+</div>
+<div class="paragraph">
+<p>One principle throughout this book has been "respect the team," because true product value originates there. If teams are constantly fragmented by enterprise operating models and governance mandates, their ability to creatively solve business problems is hampered. Command and control replaces emergence, motivation declines, and valuable creativity is lost. <strong>Enterprise architecture should operate on the fundamental principle of protecting the precious resource that is the high-performing, collaborative, creative team.</strong> As we&#8217;ve discussed, imposing multiple governance checkpoints itself <a href="#digital-risk-management">adds risk</a>. And while it&#8217;s inevitable that the team will be subject to organization-wide mandates, they should be given the benefit of the doubt when autonomy collides with standardization.</p>
+</div>
+<div class="paragraph">
+<p>When enterprise architecture takes on true business architecture questions, including how digital capabilities are to be enabled and enhanced, Agile insights become an input or kind of requirement to business architecture. What capabilities require high-performing, cross-functional teams? What capabilities can be supported with project-based temporary teams? The more valuable and difficult the work, the more it calls for the careful development of a common mental model among a close-knit team over time. Driving organizational capability investment into long-running team structures becomes a strategy that organizational architects should consider as they develop the overall organizational portfolio.</p>
+</div>
+<div class="paragraph">
+<p>Architecture adds value through constraining choices. This may seem counterintuitive, but the choice is often between re-using a known existing platform, or engaging in risky research and development of alternatives. R&amp;D costs money, and itself can impose delay on establishing a reliable digital pipeline.</p>
+</div>
+<div class="paragraph">
+<p>But ultimately, the fundamental objective remains customer and product discovery. All other objectives are secondary; without fulfilling customer needs, architectural consistency is meaningless. Optimizing for the fast creation of product information, tested and validated against operational reality, needs to be top of mind for the architect.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_what_the_architecture_of_architecture_of_the_digital_pipeline_itself">What: the architecture of architecture, of the digital pipeline itself</h6>
+<div class="paragraph">
+<p>The digital pipeline ultimately is a finely tuned tool for this creation  of information. It, itself, has an architecture: business, application, and technical. It operates within an economic framework. To understand the architecture of the digital pipeline is in a sense to understand the "architecture of architecture."</p>
+</div>
+<div class="paragraph">
+<p>As we&#8217;ve discussed above, architecture, like <a href="#arch-as-staff">staff functions</a> generally, is in part a coordination mechanism. It collects and curates knowledge and sustains the organization&#8217;s understanding of its complex systems.  Architecture also identifies gaps and informs the investment process, in part through collecting feedback from the organization.</p>
+</div>
+<div class="paragraph">
+<p>If architecture&#8217;s fundamental purpose is enabling the right emergent behavior, there are still questions about how it does so. Architecture adds value in assisting when:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>systems are too big for 1 team</p>
+</li>
+<li>
+<p>features are too complex to be implemented in 1 iteration</p>
+</li>
+<li>
+<p>features require significant organizational change management</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>As a coordination mechanism, it can operate in various ways including planning, controlling, and collaborating. Each may be appropriate for a given challenge or situation. For example, different approaches are required depending on whether the product challenge is <a href="#flower-and-cog">Flower or Cog</a>. A flower is not engineered to fill a gap. A cog is. Market-facing experiments need leeway to pivot, where initiatives intended to fill a gap in a larger system may require more constraints and control. And how do architects know there is a gap? It should be an hypothesis-driven process, that needs to establish that there is a valuable, usable, feasible future state.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_how_architecture_kata">How: Architecture Kata</h6>
 <div class="quoteblock">
 <blockquote>
 &#8230;&#8203;standardization on a particular toolchain or technology stack is neither necessary nor sufficient for achieving enterprise architecture goals such as enabling teams to respond rapidly to changing requirements, creating high-performance systems at scale, or reducing the risk of intrusion or data theft. Just like we drive product and process innovation through the Improvement Kata, we can drive architectural alignment through it too.<br>
@@ -26966,19 +26879,76 @@ Architectural goals—for example, desired performance, availability, and securi
 </div>
 </div>
 <div class="paragraph">
-<p><a href="#Toyota-Kata">Toyota Kata</a> was discussed in Chapter 7. As Humble and Molesky argue, it provides a useful framework for architecture objectives. Toyota Kata emphasizes end-state goals ("target condition") and calls for hands-on investigation and response by participating workers, not consultants or distant executives.</p>
+<p><a href="#Toyota-Kata">Toyota Kata</a> was discussed in Chapter 7. In <em>Lean Enterprise,</em> Jez Humble and Joanne Molesky argue that it can provide a useful framework for architecture objectives. Toyota Kata emphasizes end-state goals ("target condition") and calls for hands-on investigation and response by participating workers, not consultants or distant executives. Architecture can benefit by understanding "gaps" in the sense of Toyota&#8217;s target conditions, and then supporting teams in their collaborative efforts to understand and achieve the desired state. The <a href="#arch-impacts">architectural impact</a> model can assist in thinking through suitable target conditions for architecture:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>top-line impact through re-use (lowering Cost of Delay)</p>
+</li>
+<li>
+<p>bottom-line impact through portfolio rationalization</p>
+</li>
+<li>
+<p>risk impact through minimizing attack surface and re-use of known good patterns and platforms</p>
+</li>
+</ul>
+</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img src="images/4.12-strangler-vine.jpg" alt="alt text" width="400" height="200">
+</div>
+<div class="title">Figure 26. Australian strangler vine surrounding tree <span class="footnote">[<a id="_footnoteref_34" class="footnote" href="#_footnote_34" title="View footnote.">34</a>]</span></div>
+</div>
+<div class="paragraph">
+<p>Keeping the target operating condition specific is preferable. When architecture scopes problems too broadly, the temptation is to undertake <a href="#large-arch-xform-risk">large and risky transformation programs</a>. As an alternative, Humble and Molesky suggest the "strangler pattern," proposed by Martin Fowler in 2004. This pattern uses as a metaphor Australian "strangler" vines that grow around trees until the original tree dies, at which point the strangler vine is now itself a sturdy, rooted structure (see picture).</p>
+</div>
+<div class="paragraph">
+<p>To use the strangler pattern is not to replace the system all at once, but rather to do so incrementally, replacing one feature at a time. This may seem more expensive, as it means that both the old and new systems are running (and cost savings through sunsetting the old system will be delayed.) But the risk of replacing complex systems is serious, and needs to be considered along with any hoped-for cost savings through replacement. Humble and Molesky suggest:</p>
 </div>
 <div class="paragraph">
 <p>Amazon Obidos example, strangler pattern - .
 * Start by delivering new functionality—at least at first
 * Do not attempt to port existing functionality unless it is to support a business process change
 * Deliver something fast
-* Design for testability and deployability
-* Architect the new software to run on a PaaS</p>
+* Design for testability and deployability</p>
+</div>
+<div class="paragraph">
+<p>Paul Hammant provides a large number of strangler pattern case studies, including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Airline booking application</p>
+</li>
+<li>
+<p>Energy trading application</p>
+</li>
+<li>
+<p>Rail booking application</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>and others <a href="#Hammant2013">[Hammant2013]</a>.</p>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_cost_of_delay_based_prioritization">Cost of Delay-based prioritization</h6>
+</div>
+<div class="sect4">
+<h5 id="_execution">Execution</h5>
+<div class="literalblock">
+<div class="content">
+<pre> (of what? shared arch svcs? decisions?)
+** Is enterprise cost of delay understood?
+ We need to write this section, in Chapter 9, and cross-reference.
+** The nature of arch work
+** should "architecture" even be something experienced by product teams?
+** what the arch is doing and whether they are blocking the work
+** Are they servicing a queue? Or developing a product?
+** ticketed approvals only one way of solving issues
+** market-based approaches - put in economic disincentives - project budget charged for new product onboarding - impersonal mechanics</pre>
+</div>
+</div>
 <div class="quoteblock">
 <blockquote>
 Another possible objection against agile methods is that the processes in EA, and in the enterprise generally, are simply not operating with a time window of the typical sprint length of three weeks. This, of course, is true. But it is at closer inspection not a counter-argument against the application of agile principles to EA—just the opposite. The long process cycles add to EA&#8217;s lack of transparency and promote a silo mentality. Agile techniques can help here. <a href="#Bente2012">[Bente2012]</a>
@@ -27001,21 +26971,69 @@ Another possible objection against agile methods is that the processes in EA, an
 </li>
 </ul>
 </div>
+<div class="sect5">
+<h6 id="_arch_as_design">Arch as design</h6>
+<div class="ulist">
+<ul>
+<li>
+<p>Having a bench of archs that are assigned to collaborate with teams is generally uncontroversial. It&#8217;s when archs are assigned governance (higher-order) responsibilities. Especially w/r/t design</p>
+</li>
+<li>
+<p>HOW products are assembled into a platform - cannot be impersonal - hard design problem - requires teaming - CoD needs to inform the right people working on it at the right time</p>
+</li>
+<li>
+<p>architect credibility: the <strong>hands-on</strong> problem (sidebar&#8201;&#8212;&#8201;use "ground truth")</p>
+</li>
+<li>
+<p>direct engagement and trust-building - harder to scale - Guilds</p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">The challenge of the "hands-on architect"</div>
+<div class="paragraph">
+<p>Primarily in SW domain</p>
+</div>
+<div class="paragraph">
+<p>But virtualization now makes it possible for all archs to be hands-on, even w/pkgs</p>
+</div>
+<div class="paragraph">
+<p><a href="#Cohn2010">[Cohn2010]</a> chapter on architect role - confusion of software &amp; enterprise arch</p>
+</div>
+<div class="paragraph">
+<p>keep EAs off product teams, agree but they set overall direction @ portfolio level difficult for them to stay hands on</p>
+</div>
+<div class="paragraph">
+<p>Lot of confusion in the literature about sol arch vs EA.</p>
+</div>
+</div>
+</div>
 </div>
 <div class="sect5">
-<h6 id="_gap_analysis_vs_test_learn_pivot">gap analysis vs test, learn, pivot</h6>
-<div class="paragraph">
-<p>Entire language/mental model around gaps brings back flower &amp; cog</p>
+<h6 id="_evaluating_outcomes">Evaluating outcomes</h6>
+<div class="ulist">
+<ul>
+<li>
+<p>product first</p>
+</li>
+<li>
+<p>artifacts &amp; documentation</p>
+</li>
+<li>
+<p>digital exhaust - test/learning -</p>
+</li>
+<li>
+<p>inherently longer cycles in arch "experiments" - validation of effectiveness</p>
+</li>
+<li>
+<p>How are results to be evaluated - unused archs / patterns</p>
+</li>
+<li>
+<p>The ultimate target op con for architecture: show economic value</p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
-<p>A flower is not engineered to fill a gap. A cog is.</p>
-</div>
-<div class="paragraph">
-<p>how do we know there is a gap? We have hypotheses&#8230;&#8203; need to establish that there is a valuable, usable, feasible future state, and if there is progress towards it must not be delayed by queues, cycle time, etc &#8230;&#8203; need to move with alacrity&#8230;&#8203; Cost of Delay outweighs much&#8230;&#8203;</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_visualization_and_documentation">Visualization and documentation</h6>
 <div class="paragraph">
 <p>understanding purposes of diagrams and appropriate level of investment/formality</p>
 </div>
@@ -27028,41 +27046,6 @@ Another possible objection against agile methods is that the processes in EA, an
 <div class="paragraph">
 <p>the importance of documentation - speech to text, text analytics&#8230;&#8203; image recognition&#8230;&#8203; what might the future hold? At least get technical writers&#8230;&#8203; don&#8217;t make developers write&#8230;&#8203;</p>
 </div>
-</div>
-<div class="sect5">
-<h6 id="_scaling_architecture">Scaling &amp; architecture</h6>
-<div class="ulist">
-<ul>
-<li>
-<p>systems too big for 1 team</p>
-</li>
-<li>
-<p>features that are too complex to be implemented in 1 iteration</p>
-</li>
-<li>
-<p>features that cause too much org chg mgmt</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect5">
-<h6 id="__coding_architects">"Coding architects?"</h6>
-<div class="paragraph">
-<p>Primarily in SW domain
-But virtualization now makes it possible for all archs to be hands-on, even w/pkgs</p>
-</div>
-<div class="paragraph">
-<p><a href="#Cohn2010">[Cohn2010]</a> chapter on architect role - confusion of software &amp; enterprise arch</p>
-</div>
-<div class="paragraph">
-<p>keep EAs off product teams, agree but they set overall direction @ portfolio level difficult for them to stay hands on</p>
-</div>
-<div class="paragraph">
-<p>Lot of confusion in the literature about sol arch vs EA.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_architecture_and_digital_exhaust">Architecture and digital exhaust</h6>
 <div class="paragraph">
 <p>we can assess the degree to which architecture is influencing real choices</p>
 </div>
@@ -27071,6 +27054,16 @@ But virtualization now makes it possible for all archs to be hands-on, even w/pk
 </div>
 <div class="paragraph">
 <p>If you started from day 1 with source, build, &amp; package mgmt, and have kept it clean, you have a great asset</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>conclusion: If the cost of operating the coordination mechanism exceeds the value it provides, then continuing to operate it is irrational.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>but arch re-emerges always - as humans we think in abstractions and the value drivers for arch continually surface</p>
 </div>
 <div class="paragraph">
 <p><a id="TLM-CoD-worked"></a></p>
@@ -27905,6 +27898,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 <p><a id="Fowler2004"></a>[Fowler2004]: Fowler, Martin. 2004. “Is Design Dead?” Martinfowler.com. <a href="http://martinfowler.com/articles/designDead.html" class="bare">http://martinfowler.com/articles/designDead.html</a>. Accessed 2016-10-10.</p>
 </li>
 <li>
+<p><a id="Fowler2004a"></a>[Fowler2004a]: Fowler, Martin. 2004. “Bliki: StranglerApplication.” Accessed October 23. <a href="http://martinfowler.com/bliki/StranglerApplication.html" class="bare">http://martinfowler.com/bliki/StranglerApplication.html</a>.</p>
+</li>
+<li>
 <p><a id="Fowler2006"></a>[Fowler2006]: Fowler, Martin. 2006. “Shu-Ha-Ri.” Martin Fowler’s Bliki. <a href="http://martinfowler.com/bliki/ShuHaRi.html" class="bare">http://martinfowler.com/bliki/ShuHaRi.html</a>.</p>
 </li>
 <li>
@@ -27951,6 +27947,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 </li>
 <li>
 <p><a id="Guldentops2011"></a>[Guldentops2011]:	Guldentops, Erik. 2011. “Where Have All the Control Objectives Gone? They Have Picked Them Every One.” ISACA Journal 4. <a href="http://www.isaca.org/Journal/archives/2011/Volume-4/Documents/jpdf11v4-Where-Have-All.pdf" class="bare">http://www.isaca.org/Journal/archives/2011/Volume-4/Documents/jpdf11v4-Where-Have-All.pdf</a>.</p>
+</li>
+<li>
+<p><a id="Hammant2013"></a>[Hammant2013]:	Hammant, Paul. 2013. “Legacy Application Strangulation : Case Studies.” Paul Hammant’s Blog. <a href="http://paulhammant.com/2013/07/14/legacy-application-strangulation-case-studies/" class="bare">http://paulhammant.com/2013/07/14/legacy-application-strangulation-case-studies/</a>.</p>
 </li>
 <li>
 <p><a id="Hammer1993"></a>[Hammer1993]: Hammer, Michael, and James Champy. 1993. Reengineering the Corporation : A Manifesto for Business Revolution. Brealey Publishing.</p>
@@ -28071,6 +28070,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 </li>
 <li>
 <p><a id="Kim2013"></a>[Kim2013]: Kim, G.; Behr, K. &amp; Spafford, G. (2013), <em>The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win</em>, IT Revolution Press</p>
+</li>
+<li>
+<p><a id="Klein2005"></a>[Klein2005]: Klein, Gary, Paul J. Feltovich, and David D. Woods. 2005. “Common Ground and Coordination in Joint Activity.” In Organizational Simulation. Hoboken, New Jersey: John Wiley &amp; Sons, Inc.</p>
 </li>
 <li>
 <p><a id="Knez2002"></a>[Knez2002]: Knez, Mark, and Duncan Simester. 2002. “Making Across-the-Board Incentives Work.” Harvard Business Review (Feb 2002).</p>
@@ -28535,6 +28537,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 </div>
 <div class="footnote" id="_footnote_33">
 <a href="#_footnoteref_33">33</a>. <em>Image credit <a href="https://www.flickr.com/photos/lespetitescases/16715406524" class="bare">https://www.flickr.com/photos/lespetitescases/16715406524</a>, downloaded 2016-10-16, commercial use permitted</em>
+</div>
+<div class="footnote" id="_footnote_34">
+<a href="#_footnoteref_34">34</a>. <em>Image credit <a href="https://www.flickr.com/photos/cynren/16011788979" class="bare">https://www.flickr.com/photos/cynren/16011788979</a>, downloaded 2016-10-23, commercial use permitted</em>
 </div>
 </div>
 <div id="footer">
