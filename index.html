@@ -1092,12 +1092,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_the_hubris_of_architecture">The hubris of architecture</a></li>
 <li><a href="#_the_hubris_of_agile">The hubris of Agile</a></li>
 <li><a href="#_towards_reconciliation">Towards reconciliation</a></li>
-<li><a href="#_architecture_queues_and_cost_of_delay">Architecture, queues, and Cost of Delay</a></li>
 </ul>
 </li>
 <li><a href="#_architecture_standards">Architecture standards</a>
 <ul class="sectlevel4">
-<li><a href="#_bizbok">Bizbok</a></li>
+<li><a href="#_business_architecture_2">Business architecture</a></li>
 <li><a href="#_togaf_2">TOGAF</a></li>
 <li><a href="#_archimate">Archimate</a></li>
 <li><a href="#_governmental_frameworks">Governmental frameworks</a></li>
@@ -1109,7 +1108,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_digital_pipeline_analytics">Digital pipeline analytics</a></li>
 </ul>
 </li>
-<li><a href="#_topics_2">Topics</a></li>
+<li><a href="#_topics_2">Topics</a>
+<ul class="sectlevel4">
+<li><a href="#_architecture_queues_and_cost_of_delay">Architecture, queues, and Cost of Delay</a></li>
+</ul>
+</li>
 <li><a href="#_conclusion_12">Conclusion</a>
 <ul class="sectlevel4">
 <li><a href="#_architecture_as_re_emergent">Architecture as re-emergent</a></li>
@@ -13071,6 +13074,9 @@ What’s typically underestimated is the complexity and indivisibility of many l
 <div class="paragraph">
 <p>As the quote from Gary Hamel above indicates, a central point of coordination and accountability is advisable, otherwise the objective is at risk. (It becomes "someone else&#8217;s problem.")</p>
 </div>
+<div class="paragraph">
+<p><a id="multi-product-scaling"></a></p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_scaling_to_more_than_one_product">Scaling to more than one product</h5>
@@ -21778,6 +21784,9 @@ The proposed dynamic certification approach adopts the common certification proc
 </div>
 <div class="sect4">
 <h5 id="_automating_digital_governance">Automating digital governance</h5>
+<div class="paragraph">
+<p><a id="digital-exhaust-governance"></a></p>
+</div>
 <div class="sect5">
 <h6 id="_digital_exhaust">Digital exhaust</h6>
 <div class="paragraph">
@@ -26877,6 +26886,15 @@ Joint activity depends on interpredictability of the participants’ attitudes a
 </div>
 <div class="sect5">
 <h6 id="_how_execution">How: Execution</h6>
+<div class="quoteblock">
+<blockquote>
+Another possible objection against agile methods is that the processes in EA, and in the enterprise generally, are simply not operating with a time window of the typical sprint length of three weeks. This, of course, is true. But it is at closer inspection not a counter-argument against the application of agile principles to EA—just the opposite. The long process cycles add to EA&#8217;s lack of transparency and promote a silo mentality. Agile techniques can help here. <a href="#Bente2012">[Bente2012]</a>
+</blockquote>
+<div class="attribution">
+&#8212; Bente et al<br>
+<cite>Collaborative Enterprise Architecture</cite>
+</div>
+</div>
 <div class="paragraph">
 <p>As an <a href="#arch-practices">executing capability</a>, architecture operates in various ways:</p>
 </div>
@@ -26894,55 +26912,19 @@ Joint activity depends on interpredictability of the participants’ attitudes a
 </ul>
 </div>
 <div class="paragraph">
-<p>Ideally, planning and analysis occurs "upstream" of the creation of a product team. In that guise, architecture functions as a sort of zoning or planning authority, and ideally there is no conflict with product teams because once the team is formed, the architect&#8217;s job is done. However, this assumes that all the planning associated with launching a new product or capability was done correctly, and this itself is a kind of waterfall assumption. Some form of feedback and coordination is required in <a href="#multi-product-scaling">multi-product environments</a>.</p>
+<p>Ideally, planning and analysis occurs "upstream" of the creation of a product team. In that guise, architecture functions as a sort of zoning or planning authority&#8201;&#8212;&#8201;"architecture" is not a process or organization directly experienced by the product team. In this ideal, there is no conflict with product teams because once the team is formed, the architect&#8217;s job is done. I However, this assumes that all the planning associated with launching a new product or capability was done correctly, and this itself is a kind of waterfall assumption. Some form of feedback and coordination is required in <a href="#multi-product-scaling">multi-product environments</a>.</p>
 </div>
 <div class="paragraph">
-<p>It is in the "governance and approval" kind of activity that conflict is most likely to emerge. Solving this rationally requires an economic model, such as establishing a nominal or <a href="#portfolio-CoD">portfolio-level Cost of Delay</a>. Like other processes, architecture itself can be assessed against such a baseline.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Is enterprise cost of delay understood?
-We need to write this section, in Chapter 9, and cross-reference.</p>
-</li>
-<li>
-<p>should "architecture" even be something experienced by product teams?</p>
-</li>
-<li>
-<p>what the arch is doing and whether they are blocking the work</p>
-</li>
-<li>
-<p>Are they servicing a queue? Or developing a product?</p>
-</li>
-<li>
-<p>ticketed approvals only one way of solving issues</p>
-</li>
-<li>
-<p>market-based approaches - put in economic disincentives - project budget charged for new product onboarding - impersonal mechanics</p>
-</li>
-</ul>
-</div>
-<div class="quoteblock">
-<blockquote>
-Another possible objection against agile methods is that the processes in EA, and in the enterprise generally, are simply not operating with a time window of the typical sprint length of three weeks. This, of course, is true. But it is at closer inspection not a counter-argument against the application of agile principles to EA—just the opposite. The long process cycles add to EA&#8217;s lack of transparency and promote a silo mentality. Agile techniques can help here. <a href="#Bente2012">[Bente2012]</a>
-</blockquote>
-<div class="attribution">
-&#8212; Bente et al<br>
-<cite>Collaborative Enterprise Architecture</cite>
-</div>
+<p>It is in the "governance and approval" kind of activity that conflict is most likely to emerge. Cadence and synchronization (e.g. processes) with the potential to block teams from pursuing their mission should be very carefully considered. If there is a process or a queue of architecture approvals, it at least should be operated on Cost of Delay of the work it&#8217;s blocking. And more generally, across the organization, the process should be tested against an economic model such as establishing a nominal or <a href="#portfolio-CoD">portfolio-level Cost of Delay</a>. Like other processes, architecture itself can be assessed against such a baseline.</p>
 </div>
 <div class="paragraph">
-<p>feedback loop between line &amp; staff???</p>
+<p>Queued approvals are only one way of solving issues. A rich and under-utilized approach is using internal market-type mechanisms, where overall rules are set and teams make autonomous decisions based on those rules. Don Reinertsen, in the <em>Principles of Product Development Flow</em>, discusses how Boeing implemented distributed decision-making through setting tradeoff rules for cost and weight. Rather than constantly routing design approvals through a single control point, Boeing instead set the principle that project managers could "purchase" design changes up to $300 per unit, to save a pound of weight. As Reinertsen notes,</p>
 </div>
 <div class="paragraph">
-<p>EA "process"</p>
+<p><em>The intrinsic elegance of this approach is that the superiors didn&#8217;t actually give up control over the decision. Instead, they recognized that they could still control the decision without participating in it. They simply had to control the economic logic of the decision.</em> <a href="#Reinertsen2009">[Reinertsen2009]</a>, p 42.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>queuing and fast feedback</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>One particular work product that architects often are concerned with is documentation. The desire for useful documentation, as mentioned above, reflects architecture&#8217;s goals of curating a common ground for collaboration. As Bente notes, In an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it as part of the condition of satisfaction of a user story or in the definition of done" <a href="#Bente2012">[Bente2012]</a> p 170</p>
 </div>
 </div>
 <div class="sect5">
@@ -27022,151 +27004,76 @@ Architectural goals—for example, desired performance, availability, and securi
 <p>and others <a href="#Hammant2013">[Hammant2013]</a>.</p>
 </div>
 <div class="paragraph">
-<p>Of course, there are other ways architecture might add value beyond system replacement, in which case the strangler pattern may not be relevant.</p>
+<p>Of course, there are other ways architecture might add value beyond system replacement, in which case the strangler pattern may not be relevant. In particular, architects may be called on to closely collaborate with product teams when certain kinds of issues emerge. This is not a governance or control interaction; it is instead architecture as a form of shared consulting "bench." Not every product team needs a full time architect, the reasoning goes, so architects can be assigned to them on a temporary basis, e.g. for one or a few sprints, perhaps of the technical "spike" (disovery/validation/experimentation) variety.</p>
 </div>
-</div>
-<div class="sect5">
-<h6 id="_arch_as_design">Arch as design</h6>
-<div class="ulist">
-<ul>
-<li>
-<p>Having a bench of archs that are assigned to collaborate with teams is generally uncontroversial. It&#8217;s when archs are assigned governance (higher-order) responsibilities. Especially w/r/t design</p>
-</li>
-<li>
-<p>HOW products are assembled into a platform - cannot be impersonal - hard design problem - requires teaming - CoD needs to inform the right people working on it at the right time</p>
-</li>
-<li>
-<p>architect credibility: the <strong>hands-on</strong> problem (sidebar&#8201;&#8212;&#8201;use "ground truth")</p>
-</li>
-<li>
-<p>direct engagement and trust-building - harder to scale - Guilds</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>In order to successfully meet this role, the architect needs to have hands-on technical ability. Many Agile authors are dismissive of "ivory-tower" architects who do not do "hands on" work, and in fact if an architect is going to sit with a technical team as a solutions advisor they clearly need the technical skills to do so. On the other hand, not all architects operate at the solutions level, nor are the problems they face necessarily programming problems. See sidebar, "The challenge of the <em>hands-on</em> architect."</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="title">The challenge of the "hands-on architect"</div>
 <div class="paragraph">
-<p>Primarily in SW domain</p>
+<p>Architect is a broad category as we have seen. It includes individuals who are talented at single-product designs, as well as those tasked with managing the overall interactions between hundreds of systems.</p>
 </div>
 <div class="paragraph">
-<p>But virtualization now makes it possible for all archs to be hands-on, even w/pkgs</p>
+<p>It is well and good for architects to maintain some technical facility, but in the case of true, portfolio-level enterprise architects, how to do so may not be obvious. What if one&#8217;s portfolio includes multiple platforms and languages? It is simply not possible to be hands-on in all of them. Some of the most challenging systems may be a complex mix of commercial product and customization, e.g. ERP or core banking systems. Choosing to be "hands on" may not even be welcomed by a given team, who may see it as meddlesome. And other teams may feel the architect is "playing favorites" in their choice of platform to be "hands-on" with.</p>
 </div>
 <div class="paragraph">
-<p><a href="#Cohn2010">[Cohn2010]</a> chapter on architect role - confusion of software &amp; enterprise arch</p>
+<p>Clearly, if the organization is running primarily on (for example) Node.js, having strong Javascript skills is important for the architect. But in more heterogenous environments the architect may find strong data management skills to be more useful, as often interfaces between systems become their primary concern.</p>
 </div>
 <div class="paragraph">
-<p>keep EAs off product teams, agree but they set overall direction @ portfolio level difficult for them to stay hands on</p>
+<p>Another form of being "hands on" is maintaining good systems administration skills, so that the architect can easily experiment with new technologies. This is different from being adept in a given programming language. One recent positive trend is lightweight virtualization. In years past, experimenting with new products was difficult on two fronts:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>First, one had to obtain high performance computing resources capable of running demanding software. Sometimes these resources needed unusual operating systems (e.g. "in order to try our software, you have to run HP-UX version 11"&#8201;&#8212;&#8201;not a capability most architects had in their back pocket.)</p>
+</li>
+<li>
+<p>Second, one had to obtain demonstration version of software from vendors, who would usually start a sales cycle if you asked for it.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Lot of confusion in the literature about sol arch vs EA.</p>
+<p>Times have changed. Demonstration versions of software are increasingly available with little overhead or risk of triggering unwanted sales calls. Platform requirements are less diverse. And lightweight virtualization (e.g. the combination of Vagrant and Virtualbox) now makes it possible for architects to be hands-on; modern laptops can run multiple VMs in cluster architectures. Significant experimentation can be carried out in working with systems of various characteristics. Being able to evaluate technologies in such a virtual lab setting is arguably even more useful than being a "coding architect." Product team developers do the programming; the architect should be more concerned with the suitability and feasibility of the integrated platform.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_evaluating_outcomes">Evaluating outcomes</h6>
-<div class="ulist">
-<ul>
-<li>
-<p>product first</p>
-</li>
-<li>
-<p>artifacts &amp; documentation</p>
-</li>
-<li>
-<p>digital exhaust - test/learning -</p>
-</li>
-<li>
-<p>inherently longer cycles in arch "experiments" - validation of effectiveness</p>
-</li>
-<li>
-<p>How are results to be evaluated - unused archs / patterns</p>
-</li>
-<li>
-<p>The ultimate target op con for architecture: show economic value</p>
-</li>
-</ul>
+<h6 id="_evaluating_architecture_outcomes">Evaluating architecture outcomes</h6>
+<div class="paragraph">
+<p>Finally, how do we evaluate architecture outcomes? If an organization adopts an experimental, Toyota Kata approach, it may find that architecture experiments run on long time horizons. Maintaining an organizational focus on value may be challenging, as the experiments don&#8217;t yield results quickly. Curating a common ground of understanding may sound like a fine ideal, but how do we measure it?</p>
 </div>
 <div class="paragraph">
-<p>understanding purposes of diagrams and appropriate level of investment/formality</p>
+<p>First, the concept of Net Promoter Score is relevant for any service organization, internal or external. Its single question "Based on your experience, on a scale of 1-10 would you recommend this product or service to a friend?" efficiently encapsulates value in a single, easy to respond to query.</p>
 </div>
 <div class="paragraph">
-<p>In the Agile world,  <a href="#2.05.02-kanban">Kanban</a> is a strongly visual system for building a shared mental model of work in process.</p>
-</div>
-<div class="paragraph">
-<p>preparing along the way understand inventories and dependencies - importance of Bezos mandate to the dependency question - if there is one battle you fight, make it that one -</p>
-</div>
-<div class="paragraph">
-<p>the importance of documentation - speech to text, text analytics&#8230;&#8203; image recognition&#8230;&#8203; what might the future hold? At least get technical writers&#8230;&#8203; don&#8217;t make developers write&#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<p>we can assess the degree to which architecture is influencing real choices</p>
-</div>
-<div class="paragraph">
-<p>Agile &amp; docs "In an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it as part of the condition of satisfaction of a user story or in the definition of done" <a href="#Bente2012">[Bente2012]</a> p 170</p>
-</div>
-<div class="paragraph">
-<p>If you started from day 1 with source, build, &amp; package mgmt, and have kept it clean, you have a great asset</p>
+<p>As digital pipelines become more automated, it may be possible to evaluate their <a href="#digital-exhaust-governance">"digital exhaust"</a> to evaluate the impact of architecture services:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>conclusion: If the cost of operating the coordination mechanism exceeds the value it provides, then continuing to operate it is irrational.</p>
+<p>are architecture standards evident in the source and package managers?</p>
+</li>
+<li>
+<p>are platform recommendations encountering performance or capacity challenges?</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>but arch re-emerges always - as humans we think in abstractions and the value drivers for arch continually surface</p>
+<p>In a world of increasing connectivity and automation, there is no reason for architects in the organization to lack visibility into the consequences of their recommendations. Ultimately, if the cost of operating the coordination mechanism that is architecture exceeds the value it provides, then continuing to operate it is irrational.</p>
 </div>
-<div class="paragraph">
-<p><a id="TLM-CoD-worked"></a></p>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_architecture_queues_and_cost_of_delay">Architecture, queues, and Cost of Delay</h5>
-<div class="paragraph">
-<p>worked TLM example</p>
-</div>
-<div class="paragraph">
-<p>TLM should route via corp governance &amp; perf mgmt, align w/vendor mgmt&#8230;&#8203; find sources on how these processes work in non IT domains&#8230;&#8203; (have already discussed in book)</p>
-</div>
-<div class="paragraph">
-<p>review Reinertsen</p>
-</div>
-<div class="paragraph">
-<p>Bente p 194 looks @ arch process optimization - local optima, bad. Goes down the work/wait alley and DSM (anti-rework). Limitations.</p>
-</div>
-<div class="paragraph">
-<p>Also, IT finance typically doesn&#8217;t appear&#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<p>All the coordination mechs can be applied&#8230;&#8203; cadence/synch - queue understanding, CoD critical</p>
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_architecture_standards">Architecture standards</h4>
-<div class="sidebarblock">
-<div class="content">
 <div class="paragraph">
-<p>Sidebar: Introducing Open Group and OMG.</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Historic: Finkelstein/Martin etc</p>
+<p>This section briefly describes a number of key architecture standards for the student&#8217;s reference.</p>
 </div>
 <div class="sect4">
-<h5 id="_bizbok">Bizbok</h5>
-<div class="ulist">
-<ul>
-<li>
-<p>The <em>Business Architecture Body of Knowledge</em> (BIZBOK), from the Business Architecture Guild <a href="#BAGuild2016">[BAGuild2016]</a></p>
-</li>
-</ul>
-</div>
+<h5 id="_business_architecture_2">Business architecture</h5>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -27174,28 +27081,30 @@ Architectural goals—for example, desired performance, availability, and securi
 <div class="title">Note</div>
 </td>
 <td class="content">
-We previously discussed the Business Analysis Body of Knowledge. Although they have similiar names, BABOK and BIZBOK are distinct in terms of content and their sponsoring organizations.
+We previously discussed the Business Analysis Body of Knowledge. Although they have similar names, BABOK and BIZBOK are distinct in terms of content and their sponsoring organizations.
 </td>
 </tr>
 </table>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <em>Business Analysis Body of Knowledge</em> (BABOK), from the International Institute of Business Analysis <a href="#IIBA2015">[IIBA2015]</a>, focuses on business analysis: "the practice of enabling change in an enterprise by defining needs and recommending solutions that deliver value to stakeholders."</p>
+</li>
+<li>
+<p>The Business Architecture Body of Knowledge (BIZBOK) is a broader, more diverse set of guidance from the BA Guild<a href="#BAGuild2016">[BAGuild2016]</a>. It defines business architecture as "a blueprint of the enterprise that provides a common understanding of the organization and is used to align strategic objectives and tactical demands."</p>
+</li>
+</ul>
+</div>
 <div class="paragraph">
-<p>The Business Architecture Body of Knowledge is a broader, more diverse set of guidance. It defines business architecture as (p.1):</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>_"a blueprint of the enterprise that provides a common understanding of the organization and is used to align strategic objectives and tactical demands."_</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>anchor:deeper-TOGAF[]</pre>
-</div>
+<p><a id="deeper-TOGAF"></a></p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_togaf_2">TOGAF</h5>
-
+<div class="paragraph">
+<p>The Open Group Architecture Framework is a</p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_archimate">Archimate</h5>
@@ -27349,6 +27258,24 @@ Application customer feedback</p>
 </div>
 <div class="sect3">
 <h4 id="_topics_2">Topics</h4>
+<div class="paragraph">
+<p><a id="TLM-CoD-worked"></a></p>
+</div>
+<div class="sect4">
+<h5 id="_architecture_queues_and_cost_of_delay">Architecture, queues, and Cost of Delay</h5>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>The following is an exploration of using Cost of Delay and impact mapping</p>
+</div>
+<div class="paragraph">
+<p>worked TLM example</p>
+</div>
+<div class="paragraph">
+<p>TLM should route via corp governance &amp; perf mgmt, align w/vendor mgmt&#8230;&#8203; find sources on how these processes work in non IT domains&#8230;&#8203; (have already discussed in book)</p>
+</div>
+</div>
+</div>
 <div class="literalblock">
 <div class="content">
 <pre>===== digital strategy</pre>
@@ -27522,12 +27449,16 @@ With regard to the nature of complex systems, it is not advisable to search for 
 </div>
 </div>
 </div>
+</div>
 <div class="sect3">
 <h4 id="_conclusion_12">Conclusion</h4>
 <div class="sect4">
 <h5 id="_architecture_as_re_emergent">Architecture as re-emergent</h5>
 <div class="paragraph">
-<p>Who has the best overall understanding of your digital capabilities?</p>
+<p>However, architecture tends to re-emerge.</p>
+</div>
+<div class="paragraph">
+<p>but arch re-emerges always - as humans we think in abstractions and the value drivers for arch continually surfaceWho has the best overall understanding of your digital capabilities?</p>
 </div>
 <div class="paragraph">
 <p>Potts - CEO as arch?</p>
