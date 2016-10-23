@@ -120,32 +120,24 @@ As a coordination mechanism, it can operate in various ways including planning, 
 
 ====== How: Execution
 
+[quote, Bente et al, Collaborative Enterprise Architecture]
+Another possible objection against agile methods is that the processes in EA, and in the enterprise generally, are simply not operating with a time window of the typical sprint length of three weeks. This, of course, is true. But it is at closer inspection not a counter-argument against the application of agile principles to EA—just the opposite. The long process cycles add to EA's lack of transparency and promote a silo mentality. Agile techniques can help here. <<Bente2012>>
+
 As an xref:arch-practices[executing capability], architecture operates in various ways:
 
 * Planning and analysis
 * Governance and approvals
 * Collaboration and guidance
 
-Ideally, planning and analysis occurs "upstream" of the creation of a product team. In that guise, architecture functions as a sort of zoning or planning authority, and ideally there is no conflict with product teams because once the team is formed, the architect's job is done. However, this assumes that all the planning associated with launching a new product or capability was done correctly, and this itself is a kind of waterfall assumption. Some form of feedback and coordination is required in xref:multi-product-scaling[multi-product environments].
+Ideally, planning and analysis occurs "upstream" of the creation of a product team. In that guise, architecture functions as a sort of zoning or planning authority -- "architecture" is not a process or organization directly experienced by the product team. In this ideal, there is no conflict with product teams because once the team is formed, the architect's job is done. I However, this assumes that all the planning associated with launching a new product or capability was done correctly, and this itself is a kind of waterfall assumption. Some form of feedback and coordination is required in xref:multi-product-scaling[multi-product environments].
 
-It is in the "governance and approval" kind of activity that conflict is most likely to emerge. Solving this rationally requires an economic model, such as establishing a nominal or xref:portfolio-CoD[portfolio-level Cost of Delay]. Like other processes, architecture itself can be assessed against such a baseline.
+It is in the "governance and approval" kind of activity that conflict is most likely to emerge. Cadence and synchronization (e.g. processes) with the potential to block teams from pursuing their mission should be very carefully considered. If there is a process or a queue of architecture approvals, it at least should be operated on Cost of Delay of the work it's blocking. And more generally, across the organization, the process should be tested against an economic model such as establishing a nominal or xref:portfolio-CoD[portfolio-level Cost of Delay]. Like other processes, architecture itself can be assessed against such a baseline.
 
-** Is enterprise cost of delay understood?
- We need to write this section, in Chapter 9, and cross-reference.
-** should "architecture" even be something experienced by product teams?
-** what the arch is doing and whether they are blocking the work
-** Are they servicing a queue? Or developing a product?
-** ticketed approvals only one way of solving issues
-** market-based approaches - put in economic disincentives - project budget charged for new product onboarding - impersonal mechanics
+Queued approvals are only one way of solving issues. A rich and under-utilized approach is using internal market-type mechanisms, where overall rules are set and teams make autonomous decisions based on those rules. Don Reinertsen, in the _Principles of Product Development Flow_, discusses how Boeing implemented distributed decision-making through setting tradeoff rules for cost and weight. Rather than constantly routing design approvals through a single control point, Boeing instead set the principle that project managers could "purchase" design changes up to $300 per unit, to save a pound of weight. As Reinertsen notes,
 
-[quote, Bente et al, Collaborative Enterprise Architecture]
-Another possible objection against agile methods is that the processes in EA, and in the enterprise generally, are simply not operating with a time window of the typical sprint length of three weeks. This, of course, is true. But it is at closer inspection not a counter-argument against the application of agile principles to EA—just the opposite. The long process cycles add to EA's lack of transparency and promote a silo mentality. Agile techniques can help here. <<Bente2012>>
+_The intrinsic elegance of this approach is that the superiors didn't actually give up control over the decision. Instead, they recognized that they could still control the decision without participating in it. They simply had to control the economic logic of the decision._ <<Reinertsen2009>>, p 42.
 
-feedback loop between line & staff???
-
-EA "process"
-
-- queuing and fast feedback
+One particular work product that architects often are concerned with is documentation. The desire for useful documentation, as mentioned above, reflects architecture's goals of curating a common ground for collaboration. As Bente notes, In an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it as part of the condition of satisfaction of a user story or in the definition of done" <<Bente2012>> p 170
 
 ====== Architecture Kata
 
@@ -180,69 +172,35 @@ The strangler pattern is proven in practice. Paul Hammant provides a large numbe
 
 and others <<Hammant2013>>.
 
-Of course, there are other ways architecture might add value beyond system replacement, in which case the strangler pattern may not be relevant.
+Of course, there are other ways architecture might add value beyond system replacement, in which case the strangler pattern may not be relevant. In particular, architects may be called on to closely collaborate with product teams when certain kinds of issues emerge. This is not a governance or control interaction; it is instead architecture as a form of shared consulting "bench." Not every product team needs a full time architect, the reasoning goes, so architects can be assigned to them on a temporary basis, e.g. for one or a few sprints, perhaps of the technical "spike" (disovery/validation/experimentation) variety.
 
-
-
-====== Arch as design
-** Having a bench of archs that are assigned to collaborate with teams is generally uncontroversial. It's when archs are assigned governance (higher-order) responsibilities. Especially w/r/t design
-** HOW products are assembled into a platform - cannot be impersonal - hard design problem - requires teaming - CoD needs to inform the right people working on it at the right time
-** architect credibility: the *hands-on* problem (sidebar -- use "ground truth")
-** direct engagement and trust-building - harder to scale - Guilds
+In order to successfully meet this role, the architect needs to have hands-on technical ability. Many Agile authors are dismissive of "ivory-tower" architects who do not do "hands on" work, and in fact if an architect is going to sit with a technical team as a solutions advisor they clearly need the technical skills to do so. On the other hand, not all architects operate at the solutions level, nor are the problems they face necessarily programming problems. See sidebar, "The challenge of the 'hands-on' architect."
 
 .The challenge of the "hands-on architect"
 ****
-Primarily in SW domain
+Architect is a broad category as we have seen. It includes individuals who are talented at single-product designs, as well as those tasked with managing the overall interactions between hundreds of systems.
 
-But virtualization now makes it possible for all archs to be hands-on, even w/pkgs
+It is well and good for architects to maintain some technical facility, but in the case of true, portfolio-level enterprise architects, how to do so may not be obvious. What if one's portfolio includes multiple platforms and languages? It is simply not possible to be hands-on in all of them. Some of the most challenging systems may be a complex mix of commercial product and customization, e.g. ERP or core banking systems. Choosing to be "hands on" may not even be welcomed by a given team, who may see it as meddlesome. And other teams may feel the architect is "playing favorites" in their choice of platform to be "hands-on" with.
 
-<<Cohn2010>> chapter on architect role - confusion of software & enterprise arch
+Clearly, if the organization is running primarily on (for example) Node.js, having strong Javascript skills is important for the architect. But in more heterogenous environments the architect may find strong data management skills to be more useful, as often interfaces between systems become their primary concern.
 
-keep EAs off product teams, agree but they set overall direction @ portfolio level difficult for them to stay hands on
+Another form of being "hands on" is maintaining good systems administration skills, so that the architect can easily experiment with new technologies. This is different from being adept in a given programming language. One recent positive trend is lightweight virtualization. In years past, experimenting with new products was difficult on two fronts:
 
-Lot of confusion in the literature about sol arch vs EA.
+* First, one had to obtain high performance computing resources capable of running demanding software. Sometimes these resources needed unusual operating systems (e.g. "in order to try our software, you have to run HP-UX version 11" -- not a capability most architects had in their back pocket.)
+* Second, one had to obtain demonstration version of software from vendors, who would usually start a sales cycle if you asked for it.
 
+Times have changed. Demonstration versions of software are increasingly available with little overhead or risk of triggering unwanted sales calls. Platform requirements are less diverse. And lightweight virtualization (e.g. the combination of Vagrant and Virtualbox) now makes it possible for architects to be hands-on; modern laptops can run multiple VMs in cluster architectures. Significant experimentation can be carried out in working with systems of various characteristics. Being able to evaluate technologies in such a virtual lab setting is arguably even more useful than being a "coding architect." Product team developers do the programming; the architect should be more concerned with the suitability and feasibility of the integrated platform.
 ****
 
-====== Evaluating outcomes
-** product first
-** artifacts & documentation
-** digital exhaust - test/learning -
-** inherently longer cycles in arch "experiments" - validation of effectiveness
-** How are results to be evaluated - unused archs / patterns
-** The ultimate target op con for architecture: show economic value
+====== Evaluating architecture outcomes
 
+Finally, how do we evaluate architecture outcomes? If an organization adopts an experimental, Toyota Kata approach, it may find that architecture experiments run on long time horizons. Maintaining an organizational focus on value may be challenging, as the experiments don't yield results quickly. Curating a common ground of understanding may sound like a fine ideal, but how do we measure it?
 
-understanding purposes of diagrams and appropriate level of investment/formality
+First, the concept of Net Promoter Score is relevant for any service organization, internal or external. Its single question "Based on your experience, on a scale of 1-10 would you recommend this product or service to a friend?" efficiently encapsulates value in a single, easy to respond to query.
 
-In the Agile world,  xref:2.05.02-kanban[Kanban] is a strongly visual system for building a shared mental model of work in process.
+As digital pipelines become more automated, it may be possible to evaluate their xref:digital-exhaust-governance["digital exhaust"] to evaluate the impact of architecture services:
 
-preparing along the way understand inventories and dependencies - importance of Bezos mandate to the dependency question - if there is one battle you fight, make it that one -
+* are architecture standards evident in the source and package managers?
+* are platform recommendations encountering performance or capacity challenges?
 
-the importance of documentation - speech to text, text analytics... image recognition... what might the future hold? At least get technical writers... don't make developers write...
-
-we can assess the degree to which architecture is influencing real choices
-
-Agile & docs "In an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it as part of the condition of satisfaction of a user story or in the definition of done" <<Bente2012>> p 170
-
-If you started from day 1 with source, build, & package mgmt, and have kept it clean, you have a great asset
-
-* conclusion: If the cost of operating the coordination mechanism exceeds the value it provides, then continuing to operate it is irrational.
-
-but arch re-emerges always - as humans we think in abstractions and the value drivers for arch continually surface
-
-anchor:TLM-CoD-worked[]
-
-===== Architecture, queues, and Cost of Delay
-
-worked TLM example
-
-TLM should route via corp governance & perf mgmt, align w/vendor mgmt... find sources on how these processes work in non IT domains... (have already discussed in book)
-
-review Reinertsen
-
-Bente p 194 looks @ arch process optimization - local optima, bad. Goes down the work/wait alley and DSM (anti-rework). Limitations.
-
-Also, IT finance typically doesn't appear...
-
-All the coordination mechs can be applied... cadence/synch - queue understanding, CoD critical
+In a world of increasing connectivity and automation, there is no reason for architects in the organization to lack visibility into the consequences of their recommendations. Ultimately, if the cost of operating the coordination mechanism that is architecture exceeds the value it provides, then continuing to operate it is irrational.
