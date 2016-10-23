@@ -42,7 +42,7 @@ Architecture methodology, with its focus on identifying capability gaps for feed
 [quote, Donald Reinertsen, Managing the Design Factory]
 Instead of tapping into the existing knowledge of the organization the autonomous team is prone to reinvent the wheel, and the wheel that they reinvent will not always be superior to the one we are currently using <<Reinertsen1997>>, p. 104.
 
-The Agile community has its own blind spots and challenges. Speed is seen as a good in itself, too often without an economic model. Agile teams often clash with enterprise governance processes that have sound compliance and financial benefits. Phrases like "you aren't gonna need it" are used to justify lapses of due diligence on critical capabilities, and standard platforms and vendors are seen as unreasonable limitations on team autonomy - to the point where it seems some teams' interest is primarily in padding their resumes with as many new technologies as possible, regardless of the long-term consequences for the organization.
+The Agile community has its own blind spots and challenges. Speed is seen as a good in itself, too often without an economic model. Agile teams often clash with enterprise governance processes that have sound compliance and financial benefits. Phrases like "you aren't gonna need it" are used to justify lapses of due diligence on critical capabilities, and standard platforms and vendors are seen as unreasonable limitations on team autonomy -- to the point where it seems some teams' interest is primarily in padding their resumes with as many new technologies as possible, regardless of the long-term consequences for the organization.
 
 ====== The limitations of Cost of Delay
 [quote, Ruth Malan]
@@ -61,17 +61,19 @@ When documentation primarily takes the form of xref:secondary-artifacts[secondar
 _...for systems of sufficient scope and complexity to warrant teams (of teams) working on (incremental) implementation and evolution, the sheer mass of code can make it hard to discover the essential structure from bottom-up decisions made entirely through the medium of code. <<Malan2010>>_
 
 In terms of systems theory, a complex software system has emergent behavior, not obvious from just looking at its components. Because the system's behavior can't be reduced to its pieces, "self documenting code" can only go so far. The behavior of the assembled components as a system needs to be represented somehow, in a way that transcends the mere mechanics of the pieces. Abstraction is necessary to understand emergent behavior, and this leads inevitably to xref:arch-visualization[visual representation].
-Without some attention to documenting overall context and systemic intent & behavior, the effectiveness of the overall human/computer system degrades. For example, Adrian Cockcroft reports that the Chrysler Comprehensive Compensation project, one of the first widely-reported Agile projects, was eventually halted, and
+Without some attention to documenting overall context and systemic intent & behavior, the effectiveness of the overall human/computer system degrades. For example, Alistair Cockburn reports that the Chrysler Comprehensive Compensation project, one of the first widely-reported Agile projects, was eventually halted, and
 
 _...left no archived documentation ... other than two sentence user stories, the tests, and the code. Eventually, enough people left that the oral tradition and group memory were lost <<Cockburn2007>>, pp. 41-43_
 
+Failure to sustain a shared mental model of a complex system is a risk that may result in loss of that system's value.
+
 ====== Sourcing and technology standards
 
-Agile and DevOps are software-development centric, and have transformed that world. However, we don't always build. Software may be eating the world, but that doesn't mean everyone employs - or should employ - software developers. Agile has not had a primary focus on xref:sourcing[sourcing], and certainly evaluating commercial software is not a common topic.
+Agile and DevOps are software-development centric, and have transformed that world. However, digital organizations don't always build everything. There is a complex web of supplier relationships even for organizations with robust software development capabilities, and many organizations would still prefer to "buy rather than build." Software may be eating the world, but that doesn't mean everyone employs - or should employ - software developers. Agile has not had a primary focus on xref:sourcing[sourcing], and certainly evaluating commercial software is not a common topic.
 
 Suppose you have an idea for a digital product, and you know that you will be (at least in part) assembling complex services/products produced by others? Suppose further that these provided services overlap (the providers compete)? You need to carefully analyze which services you are going to acquire from which provider.  You will need a strategy, and who is it that analyzes these services and their capabilities, interfaces, non-functional characteristics, and makes a final recommendation as to how you are going to bring them all into one unified system?
 
-It is easy to say things like, "the teams get to define their own architecture" but at some point the enterprise must reckon with the cost of an overly diverse supplier base. This is a very old topic in business, not restricted to IT. At the end of the day, supplier and sourcing fragmentation costs real money. Open source, Commercial-off-the-shelf, Cloud, in-house... the options are bewildering and require experience. A consistent evaluation approach is important (preferably under an economic framework Reinertsen/Hubbard). And at some point, product development teams should not have to do too much of their own R&D on possible platforms for their work.
+It is easy to say things like, "the teams get to define their own architecture" but at some point the enterprise must reckon with the cost of an overly diverse supplier base. This is a very old topic in business, not restricted to IT. At the end of the day, supplier and sourcing fragmentation costs real money. Open source, Commercial-off-the-shelf, Cloud, in-house... the options are bewildering and require experience. In a sense, the supplier base itself is an inventory, subject to aging and spoilage. (We can consider this another way of understanding technical debt.) A consistent evaluation approach is important (preferably under an economic framework Reinertsen/Hubbard). And at some point, product development teams should not have to do too much of their own R&D on possible platforms for their work.
 
 ====== Architecture as emergent
 [quote, Adrian Cockcroft, former CTO Netflix]
@@ -79,9 +81,58 @@ It is easy to say things like, "the teams get to define their own architecture" 
 
 The Agile Manifesto is well known for saying "The best architectures, requirements, and designs emerge from self-organizing teams" <<Alliance2001>>. This is one of the more frequently discussed Agile statements. Netflix CTO Adrian Cockcroft has expressed similar views (quote above).
 
-A key question is whether "architecture" is considered at the single product or multi-product level. At the single product level, collaborative teams routinely develop effective software architectures. However, when multiple products are involved, it is hard to see how all the xref:arch-impacts[architectural value] scenarios are fulfilled without some investment being directed to the goals of cross-product architectural coordination. It helps when rules of the road are established; both Amazon and Netflix have benefitted from having certain widely accepted platform standards, such as "every product communicates through APIs". The question does get harder when layered products and services with xref:IT-lifecycles[complex lifecycle interactions] are involved.
+A key question is whether "architecture" is considered at the single product or multi-product level. At the single product level, collaborative teams routinely develop effective software architectures. However, when multiple products are involved, it is hard to see how all the xref:arch-impacts[architectural value] scenarios are fulfilled without some investment being directed to the goals of cross-product architectural coordination. It helps when rules of the road are established; both Amazon and Netflix have benefited from having certain widely accepted platform standards, such as "every product communicates through APIs." Netflix has had a long term commitment to Amazon Cloud services; it is probably not acceptable for teams there to decide on a whim to deploy their services on Google Compute Engine or Microsoft Azure, so at least in that sense Netflix has an architecture. The question gets harder when layered products and services with xref:IT-lifecycles[complex lifecycle interactions] are involved.
+
+Microservices can reduce the need for cross-team coordination, but as we xref:google-chubby[previously discussed], coordination needs still do emerge.
 
 ===== Towards reconciliation
+
+* Curating the shared mental model ... common ground "Joint activity depends on interpredictability of the participants’ attitudes and actions. Such interpredictability is based on common ground — pertinent knowledge, beliefs and
+ assumptions that are shared among the involved parties."
+
+* the architecture of architecture, of the digital pipeline itself
+** Arch - like staff functions generally - is a coordination mech
+** The economic framework is essential
+** WHEN does arch add value: coordination problems, gap problems
+** understanding the nature of the work: flower v cog
+** should "architecture" even be something experienced by product teams?
+
+* Create the right context for behavior to emerge
+** Prioritize team value
+** Impacts: constraining choices can empower - minimize R&D
+** Support the common ground
+** Understand the risks of coordination mechs
+** Optimize flow
+
+* Architecture Kata & strangler pattern
+** Identifying target conditions - good role for archs - impact model backref
+** multi-constraint optimization
+** e.g. "reduce tech debt" through supplier mgmt
+** enable agility etc
+** How are results to be evaluated - unused archs / patterns
+
+* Execution (of what? shared arch svcs? decisions?)
+** Is enterprise cost of delay understood? We need to write this section, in Chapter 9, and cross-reference.
+** The nature of arch work
+** what the arch is doing and whether they are blocking the work
+** Are they servicing a queue? Or developing a product?
+** Having a bench of archs that are assigned to collaborate with teams is generally uncontroversial. It's when archs are assigned governance (higher-order) responsibilities. Especially w/r/t design
+
+** ticketed approvals only one way of solving issues
+** market-based approaches - put in economic disincentives - project budget charged for new product onboarding - impersonal mechanics
+
+* Arch as design
+** HOW products are assembled into a platform - cannot be impersonal - hard design problem - requires teaming - CoD needs to inform the right people working on it at the right time
+** architect credibility: the *hands-on* problem (sidebar)
+** direct engagement and trust-building - harder to scale - Guilds
+
+* outcomes
+** product first
+** artifacts & documentation
+** digital exhaust - test/learning -
+** inherently longer cycles in arch "experiments" - validation of effectiveness
+
+* conclusion: arch re-emerges always - as humans we think in abstractions and the value drivers for arch continually surface
 
 So how do we reconcile Agile with architecture practices, especially enterprise architecture and its concerns for longer lifecycles, aggregate technical debt, and governance?
 
@@ -98,6 +149,12 @@ Architectural goals—for example, desired performance, availability, and securi
 
 xref:Toyota-Kata[Toyota Kata] was discussed in Chapter 7. As Humble and Molesky argue, it provides a useful framework for architecture objectives. Toyota Kata emphasizes end-state goals ("target condition") and calls for hands-on investigation and response by participating workers, not consultants or distant executives.
 
+Amazon Obidos example, strangler pattern - .
+* Start by delivering new functionality—at least at first
+* Do not attempt to port existing functionality unless it is to support a business process change
+* Deliver something fast
+* Design for testability and deployability
+* Architect the new software to run on a PaaS
 
 ====== Cost of Delay-based prioritization
 [quote, Bente et al, Collaborative Enterprise Architecture]
@@ -116,16 +173,6 @@ Entire language/mental model around gaps brings back flower & cog
 A flower is not engineered to fill a gap. A cog is.
 
 how do we know there is a gap? We have hypotheses... need to establish that there is a valuable, usable, feasible future state, and if there is progress towards it must not be delayed by queues, cycle time, etc ... need to move with alacrity... Cost of Delay outweighs much...
-
-
-====== Ongoing portfolio evolution
-
-Amazon Obidos example, strangler pattern.
-* Start by delivering new functionality—at least at first
-* Do not attempt to port existing functionality unless it is to support a business process change
-* Deliver something fast
-* Design for testability and deployability
-* Architect the new software to run on a PaaS
 
 ====== Visualization and documentation
 
@@ -175,23 +222,3 @@ Bente p 194 looks @ arch process optimization - local optima, bad. Goes down the
 Also, IT finance typically doesn't appear...
 
 All the coordination mechs can be applied... cadence/synch - queue understanding, CoD critical
-
-
-
-====== NOTES
-
-Cathedral / bazaar
-
-
-
-Bente's four perspectives & eight caricatures
-
-[quote, Bente et al]
-With regard to the nature of complex systems, it is not advisable to search for the "optimal enterprise architecture." Optimality is always relative to an environment, and the frame conditions are likely to change. Hence it is better to accept certain ugly spots of the IT landscape and strengthen the viability of the whole, which means developing and using capabilities such as being able to learn, solve problems, adapt, or absorb disruptions.
-
- critical importance of not confusing solutions with EA. Scale matters.
-
- from bente: Anti-patterns in EA and architecture in general can be found, for instance, in Kruchten (2008), Mar and Spacey (2011), Ambler, Nalbone. and Vizdos (2005), and Coplien and Harrison (2005).
-
-
- https://philippe.kruchten.com/2011/02/13/the-elephants-in-the-agile-room/
