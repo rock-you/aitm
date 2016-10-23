@@ -26,11 +26,11 @@ and other such topics. When development cannot proceed without those approvals -
 
 And, looking more broadly at the practice and history of architecture, the case against it is strong. Enterprise architecture has presented itself as a solution to complexity, long IT time scales, business frustration, and other various IT problems. But in the past decade to the extent these issues have been solved, it has not been by architecture but by Agile and DevOps practices rethinking open-loop, slow feedback, batch-oriented delivery. Architecture has failed in many ways:
 
-It failed to realize the emergent issue of too much enterprise work in process, instead championing the proliferation of enterprise processes and their associated queues. Fundamentally, they did not adopt enough of a systems view of IT delivery.
-
-Architects' motivation for "efficiency" and interest in capability mapping did not help the cause of cross-functional teams. Instead, functional silos were reinforced as supply-centric "capabilities" and the antipattern of "bringing the team to the work" was accepted as enterprise standard operating procedure - despite the growing evidence of Scrum and Agile success. The iterative, experimental narrative of Lean Startup did not originate from EA.
+It failed to realize the emergent issue of too much enterprise work in process, instead championing the proliferation of enterprise processes and their associated queues. Fundamentally, they did not adopt enough of a systems view of IT delivery. Architects' motivation for "efficiency" and interest in capability mapping did not help the cause of cross-functional teams. Instead, functional silos were reinforced as supply-centric "capabilities" and the antipattern of "bringing the team to the work" were promoted as enterprise standard operating procedure - despite the growing evidence of Scrum and Agile success. The iterative, experimental narrative of Lean Startup did not originate from EA.
 
 Despite a professed interest in systems theory, architecture has only recently begun to realize the fundamental problems of stage-gated delivery, big bang releases, and so forth. It has been too sympathetic to PMBOK and the now-discredited Capability Maturity Model and cannot escape the criticism of "top down planning," which in complex systems domains too often doesn't work. Architects too often fall into the trap of the  xref::HIPPO[HiPPO] (Highest Paid Person's Opinion). A sense of xref:lean-startup[Lean Startup] experimentation, of placing bets on options and testing hypotheses, is not part of the mainstream enterprise architecture understanding. Instead, the architecture is presented as an established fact, with "governance" to ensure conformity. Hypothetical "synergies" emerging from "common platforms" are often offered as justification for architecture, with little follow up in measuring actual value delivered.
+
+anchor:large-arch-xform-risk[]
 
 Justifications for architecture often invoke "complexity" in the portfolio of systems. In response, architecture has often given in to the desire for a  complete "radical surgery" systems re-engineering, the temptation of the "clean slate." But as Jez Humble accurately notes,
 
@@ -87,76 +87,83 @@ Microservices can reduce the need for cross-team coordination, but as we xref:go
 
 ===== Towards reconciliation
 
-* Curating the shared mental model ... common ground "Joint activity depends on interpredictability of the participants’ attitudes and actions. Such interpredictability is based on common ground — pertinent knowledge, beliefs and
- assumptions that are shared among the involved parties."
+So how do we reconcile Agile with architecture practices, especially enterprise architecture and its concerns for longer lifecycles, aggregate technical debt, and governance? We need to understand why we look to architecture, what utilizing it means, and how it ultimately adds value, or doesn't, in the organization.
 
-* the architecture of architecture, of the digital pipeline itself
-** Arch - like staff functions generally - is a coordination mech
-** The economic framework is essential
-** WHEN does arch add value: coordination problems, gap problems
-** understanding the nature of the work: flower v cog
-** should "architecture" even be something experienced by product teams?
+====== Why: Creating the context
 
-* Create the right context for behavior to emerge
-** Prioritize team value
-** Impacts: constraining choices can empower - minimize R&D
-** Support the common ground
-** Understand the risks of coordination mechs
-** Optimize flow
+[quote, Gary Klein et al, "Common Ground and Coordination in Joint Activity"]
+Joint activity depends on interpredictability of the participants’ attitudes and actions. Such interpredictability is based on common ground — pertinent knowledge, beliefs and  assumptions that are shared among the involved parties. <<Klein2005>>
 
-* Architecture Kata & strangler pattern
-** Identifying target conditions - good role for archs - impact model backref
-** multi-constraint optimization
-** e.g. "reduce tech debt" through supplier mgmt
-** enable agility etc
-** How are results to be evaluated - unused archs / patterns
+The above quote reflects one of the most important objectives for the practice of architecture: supporting a common ground, a base of "knowledge, beliefs, and assumptions" enabling collaboration and coordination. In other words, architecture curates a shared mental model for the organization. In doing so, it enables the "right emergent behaviors" (as Adrian Cockcroft suggests).
 
-* Execution (of what? shared arch svcs? decisions?)
-** Is enterprise cost of delay understood? We need to write this section, in Chapter 9, and cross-reference.
-** The nature of arch work
-** what the arch is doing and whether they are blocking the work
-** Are they servicing a queue? Or developing a product?
-** Having a bench of archs that are assigned to collaborate with teams is generally uncontroversial. It's when archs are assigned governance (higher-order) responsibilities. Especially w/r/t design
+One principle throughout this book has been "respect the team," because true product value originates there. If teams are constantly fragmented by enterprise operating models and governance mandates, their ability to creatively solve business problems is hampered. Command and control replaces emergence, motivation declines, and valuable creativity is lost. *Enterprise architecture should operate on the fundamental principle of protecting the precious resource that is the high-performing, collaborative, creative team.* As we've discussed, imposing multiple governance checkpoints itself xref:digital-risk-management[adds risk]. And while it's inevitable that the team will be subject to organization-wide mandates, they should be given the benefit of the doubt when autonomy collides with standardization.
 
-** ticketed approvals only one way of solving issues
-** market-based approaches - put in economic disincentives - project budget charged for new product onboarding - impersonal mechanics
+When enterprise architecture takes on true business architecture questions, including how digital capabilities are to be enabled and enhanced, Agile insights become an input or kind of requirement to business architecture. What capabilities require high-performing, cross-functional teams? What capabilities can be supported with project-based temporary teams? The more valuable and difficult the work, the more it calls for the careful development of a common mental model among a close-knit team over time. Driving organizational capability investment into long-running team structures becomes a strategy that organizational architects should consider as they develop the overall organizational portfolio.
 
-* Arch as design
-** HOW products are assembled into a platform - cannot be impersonal - hard design problem - requires teaming - CoD needs to inform the right people working on it at the right time
-** architect credibility: the *hands-on* problem (sidebar)
-** direct engagement and trust-building - harder to scale - Guilds
+Architecture adds value through constraining choices. This may seem counterintuitive, but the choice is often between re-using a known existing platform, or engaging in risky research and development of alternatives. R&D costs money, and itself can impose delay on establishing a reliable digital pipeline.
 
-* outcomes
-** product first
-** artifacts & documentation
-** digital exhaust - test/learning -
-** inherently longer cycles in arch "experiments" - validation of effectiveness
+But ultimately, the fundamental objective remains customer and product discovery. All other objectives are secondary; without fulfilling customer needs, architectural consistency is meaningless. Optimizing for the fast creation of product information, tested and validated against operational reality, needs to be top of mind for the architect.
 
-* conclusion: arch re-emerges always - as humans we think in abstractions and the value drivers for arch continually surface
+====== What: the architecture of architecture, of the digital pipeline itself
 
-So how do we reconcile Agile with architecture practices, especially enterprise architecture and its concerns for longer lifecycles, aggregate technical debt, and governance?
+The digital pipeline ultimately is a finely tuned tool for this creation  of information. It, itself, has an architecture: business, application, and technical. It operates within an economic framework. To understand the architecture of the digital pipeline is in a sense to understand the "architecture of architecture."
 
-One principle that should be apparent through this book has been "respect the team," because true product value originates there. If teams are constantly fragmented by enterprise operating models and governance mandates, their ability to creatively solve business problems is hampered. Enterprise architecture should take as a fundamental principle the protection of this precious resource that is the high-performing, collaborative, creative team. And while it's inevitable that the team will be subject to organization-wide mandates, they should be given the benefit of the doubt when autonomy collides with standardization.
+As we've discussed above, architecture, like xref:arch-as-staff[staff functions] generally, is in part a coordination mechanism. It collects and curates knowledge and sustains the organization's understanding of its complex systems.  Architecture also identifies gaps and informs the investment process, in part through collecting feedback from the organization.
 
-When enterprise architecture takes on true business architecture questions, including how capabilities are to be enabled and enhanced, Agile insights actually become an input or kind of requirement to business architecture. What capabilities require high-performing, cross-functional teams? What capabilities can be supported with project-based temporary teams? It seems likely that the more valuable and difficult the work, the more it calls for the careful development of a common mental model among a close-knit team over time. Driving organizational capability investment into long-running team structures becomes a strategy that organizational architects should consider as they develop the overall organizational portfolio.
+If architecture's fundamental purpose is enabling the right emergent behavior, there are still questions about how it does so. Architecture adds value in assisting when:
 
-====== Architecture kata
+* systems are too big for 1 team
+* features are too complex to be implemented in 1 iteration
+* features require significant organizational change management
+
+As a coordination mechanism, it can operate in various ways including planning, controlling, and collaborating. Each may be appropriate for a given challenge or situation. For example, different approaches are required depending on whether the product challenge is xref:flower-and-cog[Flower or Cog]. A flower is not engineered to fill a gap. A cog is. Market-facing experiments need leeway to pivot, where initiatives intended to fill a gap in a larger system may require more constraints and control. And how do architects know there is a gap? It should be an hypothesis-driven process, that needs to establish that there is a valuable, usable, feasible future state.
+
+====== How: Architecture Kata
 
 [quote, Humble/Molesky, Lean Enterprise]
 ...standardization on a particular toolchain or technology stack is neither necessary nor sufficient for achieving enterprise architecture goals such as enabling teams to respond rapidly to changing requirements, creating high-performance systems at scale, or reducing the risk of intrusion or data theft. Just like we drive product and process innovation through the Improvement Kata, we can drive architectural alignment through it too. +
  +
 Architectural goals—for example, desired performance, availability, and security—should be approached by iteratively specifying target conditions at the program level. Following the Principle of Mission, set out a clear vision of the goals of your enterprise architecture without specifying how the goals are to be achieved, and create a context in which teams can determine how to achieve them through experimentation and collaboration.   <<Humble2013>>, chap. 10.
 
-xref:Toyota-Kata[Toyota Kata] was discussed in Chapter 7. As Humble and Molesky argue, it provides a useful framework for architecture objectives. Toyota Kata emphasizes end-state goals ("target condition") and calls for hands-on investigation and response by participating workers, not consultants or distant executives.
+xref:Toyota-Kata[Toyota Kata] was discussed in Chapter 7. In _Lean Enterprise,_ Jez Humble and Joanne Molesky argue that it can provide a useful framework for architecture objectives. Toyota Kata emphasizes end-state goals ("target condition") and calls for hands-on investigation and response by participating workers, not consultants or distant executives. Architecture can benefit by understanding "gaps" in the sense of Toyota's target conditions, and then supporting teams in their collaborative efforts to understand and achieve the desired state. The xref:arch-impacts[architectural impact] model can assist in thinking through suitable target conditions for architecture:
+
+* top-line impact through re-use (lowering Cost of Delay)
+* bottom-line impact through portfolio rationalization
+* risk impact through minimizing attack surface and re-use of known good patterns and platforms
+
+.Australian strangler vine surrounding tree footnote:[_Image credit https://www.flickr.com/photos/cynren/16011788979, downloaded 2016-10-23, commercial use permitted_]
+image::images/4.12-strangler-vine.jpg[alt text, 400, 200, float="right"]
+
+Keeping the target operating condition specific is preferable. When architecture scopes problems too broadly, the temptation is to undertake xref:large-arch-xform-risk[large and risky transformation programs]. As an alternative, Humble and Molesky suggest the "strangler pattern," proposed by Martin Fowler in 2004. This pattern uses as a metaphor Australian "strangler" vines that grow around trees until the original tree dies, at which point the strangler vine is now itself a sturdy, rooted structure (see picture).
+
+To use the strangler pattern is not to replace the system all at once, but rather to do so incrementally, replacing one feature at a time. This may seem more expensive, as it means that both the old and new systems are running (and cost savings through sunsetting the old system will be delayed.) But the risk of replacing complex systems is serious, and needs to be considered along with any hoped-for cost savings through replacement. Humble and Molesky suggest:
 
 Amazon Obidos example, strangler pattern - .
 * Start by delivering new functionality—at least at first
 * Do not attempt to port existing functionality unless it is to support a business process change
 * Deliver something fast
 * Design for testability and deployability
-* Architect the new software to run on a PaaS
 
-====== Cost of Delay-based prioritization
+Paul Hammant provides a large number of strangler pattern case studies, including:
+
+* Airline booking application
+* Energy trading application
+* Rail booking application
+
+and others <<Hammant2013>>.
+
+===== Execution
+
+ (of what? shared arch svcs? decisions?)
+** Is enterprise cost of delay understood?
+ We need to write this section, in Chapter 9, and cross-reference.
+** The nature of arch work
+** should "architecture" even be something experienced by product teams?
+** what the arch is doing and whether they are blocking the work
+** Are they servicing a queue? Or developing a product?
+** ticketed approvals only one way of solving issues
+** market-based approaches - put in economic disincentives - project budget charged for new product onboarding - impersonal mechanics
+
 [quote, Bente et al, Collaborative Enterprise Architecture]
 Another possible objection against agile methods is that the processes in EA, and in the enterprise generally, are simply not operating with a time window of the typical sprint length of three weeks. This, of course, is true. But it is at closer inspection not a counter-argument against the application of agile principles to EA—just the opposite. The long process cycles add to EA's lack of transparency and promote a silo mentality. Agile techniques can help here. <<Bente2012>>
 
@@ -166,15 +173,34 @@ EA "process"
 
 - queuing and fast feedback
 
-====== gap analysis vs test, learn, pivot
+====== Arch as design
+** Having a bench of archs that are assigned to collaborate with teams is generally uncontroversial. It's when archs are assigned governance (higher-order) responsibilities. Especially w/r/t design
+** HOW products are assembled into a platform - cannot be impersonal - hard design problem - requires teaming - CoD needs to inform the right people working on it at the right time
+** architect credibility: the *hands-on* problem (sidebar -- use "ground truth")
+** direct engagement and trust-building - harder to scale - Guilds
 
-Entire language/mental model around gaps brings back flower & cog
+.The challenge of the "hands-on architect"
+****
+Primarily in SW domain
 
-A flower is not engineered to fill a gap. A cog is.
+But virtualization now makes it possible for all archs to be hands-on, even w/pkgs
 
-how do we know there is a gap? We have hypotheses... need to establish that there is a valuable, usable, feasible future state, and if there is progress towards it must not be delayed by queues, cycle time, etc ... need to move with alacrity... Cost of Delay outweighs much...
+<<Cohn2010>> chapter on architect role - confusion of software & enterprise arch
 
-====== Visualization and documentation
+keep EAs off product teams, agree but they set overall direction @ portfolio level difficult for them to stay hands on
+
+Lot of confusion in the literature about sol arch vs EA.
+
+****
+
+====== Evaluating outcomes
+** product first
+** artifacts & documentation
+** digital exhaust - test/learning -
+** inherently longer cycles in arch "experiments" - validation of effectiveness
+** How are results to be evaluated - unused archs / patterns
+** The ultimate target op con for architecture: show economic value
+
 
 understanding purposes of diagrams and appropriate level of investment/formality
 
@@ -184,28 +210,15 @@ preparing along the way understand inventories and dependencies - importance of 
 
 the importance of documentation - speech to text, text analytics... image recognition... what might the future hold? At least get technical writers... don't make developers write...
 
-====== Scaling & architecture
-* systems too big for 1 team
-* features that are too complex to be implemented in 1 iteration
-* features that cause too much org chg mgmt
-
-====== "Coding architects?"
-Primarily in SW domain
-But virtualization now makes it possible for all archs to be hands-on, even w/pkgs
-
-<<Cohn2010>> chapter on architect role - confusion of software & enterprise arch
-
-keep EAs off product teams, agree but they set overall direction @ portfolio level difficult for them to stay hands on
-
-Lot of confusion in the literature about sol arch vs EA.
-
-
-====== Architecture and digital exhaust
 we can assess the degree to which architecture is influencing real choices
 
 Agile & docs "In an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it as part of the condition of satisfaction of a user story or in the definition of done" <<Bente2012>> p 170
 
 If you started from day 1 with source, build, & package mgmt, and have kept it clean, you have a great asset
+
+* conclusion: If the cost of operating the coordination mechanism exceeds the value it provides, then continuing to operate it is irrational.
+
+but arch re-emerges always - as humans we think in abstractions and the value drivers for arch continually surface
 
 anchor:TLM-CoD-worked[]
 
