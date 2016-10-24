@@ -1,0 +1,89 @@
+anchor:portfolio-management[]
+
+==== Portfolio management
+[quote, Peter F. Drucker]
+…every product and every activity of a business begins to obsolesce as soon as it is started. Every product, every operation, and every activity in a business should be put on trial for its life every two or three years. +
+ +
+Each should be considered the way we consider a proposal to go into a new product, a new operation, or activity – complete with budget, capital appropriation request, and so on. +
+ +
+One question should be asked of each: “if we were not in this already, would we now go into it?” And if the answer is “no,” the next question should be: “How do we get out and how fast?”
+
+The aggregate digital investments of any large enterprise are massive. Whether capital or expense, whether internally hosted or externally sourced, the IT portfolio consumes tremendous amounts of time, money, and expertise.
+
+In this chapter, we have discussed architecture in terms of xref:arch-repos[catalogs, diagrams,and matrices], sometimes stored in architecture repositories. But architecture repositories are in general not xref:analytics[analytic] tools. Nor is architecture an analytic discipline (it is not usually strongly quantitative). Architecture too often relies heavily on interviews and expert opinions, approaches that are sometimes critiqued as relying on the "xref:HIPPO[Highest Paid Person's Opinion]
+." Portfolio management can be a means to bringing in a more quantitative approach.
+
+First, the definition of portfolio. <<Betz2011>> defines it as "things of consequence managed over long time horizon." The concept of xref:arch-repos[TOGAF catalog] is a good place to start. Frequently, portfolio management starts at the application level; the application portfolio can be seen as a sort of alternate "chart of accounts" by which digital investments can be grouped.
+
+Portfolios are intended to provide a consistent basis for comparison and understanding. *Items in the portfolio should be comparable.* They may rely on both objective and subjective data points:
+
+* Objective data
+** Business revenue/value
+** Cost
+** Risks
+** Staffing
+** Service levels, changes, incidents
+** Product obsolescence (quantifiable technical debt)
+* Subjective data
+** Usability
+** Customer satisfaction (net promoter score)
+** Engineering assessments (subjective perceptions of technical debt)
+
+Digital investments and costs typically include some or all of the following:
+
+* Hardware investment, depreciation or leasing
+* Software licensing (typically 15%-20% annually of initial acquisition, required for vendor support).
+* Floor space – i.e., real estate charges
+* Facilities infrastructure: power, high volume air conditioning (HVAC), raised floor, racks, etc.
+* Network connectivity and related infrastructure (e.g. directory services software, security perimeters, and the like)
+* Operational software infrastructure: monitoring systems, batch schedulers, backup systems, and so on, all with their own associated costs.
+* Operations and support staff. Staffing typically can come in various flavors:
+** Data center operations monitors
+** Help desk operators
+** Application specialists
+** Senior engineers
+** Senior IT executives and customer relationship managers
+** Business-side lead users and process and information specialists
+** Vendor relationship owners and contract managers
+
+===== Application value analysis
+
+Application portofolio management may concern itself with any or all of the following:
+
+* Application functions (examined for redundancy)
+* Application total cost of ownership
+* Application complexity
+* Fitness and currency of underlying technical products
+* Application service performance
+* Application customer feedback
+
+A four-box is often used for application value analysis:
+
+[cols="h,2*", options="header"]
+|====
+||Low Technical Fitness|High Technical Fitness
+|High Business Value
+|Re-engineer or replatform.
+
+Consider outsourcing carefully.
+|Invest as needed to exploit value.
+
+|Low Business Value
+|Retire if possible or outsource
+|Improve understanding of customer requirements
+
+Retire service if no longer serving a purpose but reclaim/re-use platform, capabilities & assets
+|====
+
+===== Application rationalization
+What does it mean to rationalize"? There are three steps:
+
+. Take an inventory of the items to be rationalized.
+. Categorize them to identify redundancy.
+. Consolidate redundancy
+
+This implies some basis for classification, so that the investments can be compared. This is where industry taxonomies, such as found in xref:vertical-standards[vertical standards,] may help. You may call your application "Peoplesoft HR," "Workday," or even an internal brand like "HR2020," but a reference taxonomy categorizes it as simply a "Human Resource Management System."
+
+xref:system-of-record[Data integrations] may also be a way to identify redundancy. When two systems start exchanging more and more data, a useful question is whether there is still a need for both or if a more economical, integrated solution is possible. Just beware of the xref:large-arch-xform-risk[risk of overly ambitious consolidation efforts].
+
+Through analysis and understanding of redundancy, business and technical value, applications (and related concepts such as services and capabilities) can be managed as a coherent investment strategy. For further information, see the books referenced at the end of this chapter.
