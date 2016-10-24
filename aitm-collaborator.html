@@ -1099,6 +1099,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_towards_reconciliation">Towards reconciliation</a></li>
 </ul>
 </li>
+<li><a href="#_portfolio_management">Portfolio management</a>
+<ul class="sectlevel4">
+<li><a href="#_application_value_analysis">Application value analysis</a></li>
+<li><a href="#_application_rationalization_2">Application rationalization</a></li>
+</ul>
+</li>
 <li><a href="#_architecture_standards">Architecture standards</a>
 <ul class="sectlevel4">
 <li><a href="#_business_architecture_2">Business architecture</a></li>
@@ -1108,11 +1114,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_governmental_frameworks">Governmental frameworks</a></li>
 </ul>
 </li>
-<li><a href="#_portfolio_management">Portfolio management</a>
-<ul class="sectlevel4">
-<li><a href="#_digital_pipeline_analytics">Digital pipeline analytics</a></li>
-</ul>
-</li>
 <li><a href="#_topics_2">Topics</a>
 <ul class="sectlevel4">
 <li><a href="#_architecture_queues_and_cost_of_delay">Architecture, queues, and Cost of Delay</a></li>
@@ -1120,7 +1121,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_conclusion_12">Conclusion</a>
 <ul class="sectlevel4">
-<li><a href="#_architecture_as_re_emergent">Architecture as re-emergent</a></li>
 <li><a href="#_discussion_questions_12">Discussion questions</a></li>
 <li><a href="#_research_practice_12">Research &amp; practice</a></li>
 <li><a href="#_further_reading_12">Further reading</a></li>
@@ -24630,6 +24630,9 @@ Again, if you or your company are involved in legal issues relating to the above
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p><a id="analytics"></a></p>
+</div>
 </div>
 </div>
 </div>
@@ -26943,6 +26946,9 @@ formalisms don&#8217;t give a good sense of scale. For example, suppose you see 
 <div class="paragraph">
 <p>Regardless of the pitfalls, many architecture diagrams are valuable. Whether drawn on a whiteboard, in Powerpoint or Omnigraffle, or in a repository-based architecture tool, the visualization concisely represents a shared mental model on how the organizations will undertake complex activities. The diagram leverages the human preference for visual processing, accessing the powerful parallel processing of the visual cortex. Ultimately, the discussions and negotiations the architect facilitates on the journey to drivng organizational direction are the real added value. The architect&#8217;s role is to facilitate discussions by abstracting and visualizing powerfully so that decisions are illuminated and understood across the team, or broader organization.</p>
 </div>
+<div class="paragraph">
+<p><a id="arch-repos"></a></p>
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -27064,7 +27070,7 @@ Artifacts are generally classified as catalogs (lists of things), matrices (show
 <p>There are pros and cons to each approach. Notice that in about the same amount of space, the matrix also documented the dependencies for two other processes and six other functions. The matrix may also be easier to maintain; it requires a spreadsheet-like tool, where the diagram requires a drawing tool. But it takes more effort to understand the matrix.</p>
 </div>
 <div class="paragraph">
-<p>Maintaining a catalog of the concepts in a diagram becomes more and more important as the diagram scales up. This is a <a href="#data-quality">data quality</a> issue. What if the boxes on the diagram are redundant? Or inaccurate? This may not matter as much with a tight-knit team working on their whiteboard, but if the diagram is circulated more broadly, the quality expectations are higher.</p>
+<p>Maintaining a catalog of the concepts in a diagram becomes more and more important as the diagram scales up. Over time, the IT operation develops significant data by which to manage itself. It may develop one or more definitive portfolio list, typically applications, services, assets, and/or technology products. Distinguishing and baselining high quality versions of these data sets can consume much resource, and yet managing the IT organization at scale is nearly impossible without them. In other words, there is a <a href="#data-quality">data quality</a> issue. What if the boxes on the diagram are redundant? Or inaccurate? This may not matter as much with a tight-knit team working on their whiteboard, but if the diagram is circulated more broadly, the quality expectations are higher.</p>
 </div>
 <div class="paragraph">
 <p>Furthermore, it is convenient to have data such as a master lists or catalogs of processes, systems, functions, or data topics. We might also want to document various attributes associated with these catalogs. This data can then be used for operational processes, such as <a href="#risk-management">risk management</a>, as we have discussed previously. For these reasons and others, enterprise architecture repositories emerge.</p>
@@ -27714,7 +27720,7 @@ Architecture represents the significant design decisions that shape a system, wh
 <p>It failed to realize the emergent issue of too much enterprise work in process, instead championing the proliferation of enterprise processes and their associated queues. Fundamentally, they did not adopt enough of a systems view of IT delivery. Architects' motivation for "efficiency" and interest in capability mapping did not help the cause of cross-functional teams. Instead, functional silos were reinforced as supply-centric "capabilities" and the antipattern of "bringing the team to the work" were promoted as enterprise standard operating procedure - despite the growing evidence of Scrum and Agile success. The iterative, experimental narrative of Lean Startup did not originate from EA.</p>
 </div>
 <div class="paragraph">
-<p>Despite a professed interest in systems theory, architecture has only recently begun to realize the fundamental problems of stage-gated delivery, big bang releases, and so forth. It has been too sympathetic to PMBOK and the now-discredited Capability Maturity Model and cannot escape the criticism of "top down planning," which in complex systems domains too often doesn&#8217;t work. Architects too often fall into the trap of the  <a href="#:HIPPO">HiPPO</a> (Highest Paid Person&#8217;s Opinion). A sense of <a href="#lean-startup">Lean Startup</a> experimentation, of placing bets on options and testing hypotheses, is not part of the mainstream enterprise architecture understanding. Instead, the architecture is presented as an established fact, with "governance" to ensure conformity. Hypothetical "synergies" emerging from "common platforms" are often offered as justification for architecture, with little follow up in measuring actual value delivered.</p>
+<p>Despite a professed interest in systems theory, architecture has only recently begun to realize the fundamental problems of stage-gated delivery, big bang releases, and so forth. It has been too sympathetic to PMBOK and the now-discredited Capability Maturity Model and merits the criticism of "top down planning," which in complex systems domains too often doesn&#8217;t work. Architects too often fall into the trap of the  <a href="#:HIPPO">HiPPO</a> (Highest Paid Person&#8217;s Opinion). A sense of <a href="#lean-startup">Lean Startup</a> experimentation, of placing bets on options and testing hypotheses, is not part of the mainstream enterprise architecture understanding. Instead, the architecture is presented as an established fact, with "governance" to ensure conformity. Hypothetical "synergies" emerging from "common platforms" are often offered as justification for architecture, with little follow up in measuring actual value delivered.</p>
 </div>
 <div class="paragraph">
 <p><a id="large-arch-xform-risk"></a></p>
@@ -28056,6 +28062,222 @@ Architectural goals—for example, desired performance, availability, and securi
 <div class="paragraph">
 <p>In a world of increasing connectivity and automation, there is no reason for architects in the organization to lack visibility into the consequences of their recommendations. Ultimately, if the cost of operating the coordination mechanism that is architecture exceeds the value it provides, then continuing to operate it is irrational.</p>
 </div>
+<div class="paragraph">
+<p><a id="portfolio-management"></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_portfolio_management">Portfolio management</h4>
+<div class="quoteblock">
+<blockquote>
+…every product and every activity of a business begins to obsolesce as soon as it is started. Every product, every operation, and every activity in a business should be put on trial for its life every two or three years.<br>
+<br>
+Each should be considered the way we consider a proposal to go into a new product, a new operation, or activity – complete with budget, capital appropriation request, and so on.<br>
+<br>
+One question should be asked of each: “if we were not in this already, would we now go into it?” And if the answer is “no,” the next question should be: “How do we get out and how fast?”
+</blockquote>
+<div class="attribution">
+&#8212; Peter F. Drucker
+</div>
+</div>
+<div class="paragraph">
+<p>The aggregate digital investments of any large enterprise are massive. Whether capital or expense, whether internally hosted or externally sourced, the IT portfolio consumes tremendous amounts of time, money, and expertise.</p>
+</div>
+<div class="paragraph">
+<p>In this chapter, we have discussed architecture in terms of <a href="#arch-repos">catalogs, diagrams,and matrices</a>, sometimes stored in architecture repositories. But architecture repositories are in general not <a href="#analytics">analytic</a> tools. Nor is architecture an analytic discipline (it is not usually strongly quantitative). Architecture too often relies heavily on interviews and expert opinions, approaches that are sometimes critiqued as relying on the "<a href="#HIPPO">Highest Paid Person&#8217;s Opinion</a>
+." Portfolio management can be a means to bringing in a more quantitative approach.</p>
+</div>
+<div class="paragraph">
+<p>First, the definition of portfolio. <a href="#Betz2011">[Betz2011]</a> defines it as "things of consequence managed over long time horizon." The concept of <a href="#arch-repos">TOGAF catalog</a> is a good place to start. Frequently, portfolio management starts at the application level; the application portfolio can be seen as a sort of alternate "chart of accounts" by which digital investments can be grouped.</p>
+</div>
+<div class="paragraph">
+<p>Portfolios are intended to provide a consistent basis for comparison and understanding. <strong>Items in the portfolio should be comparable.</strong> They may rely on both objective and subjective data points:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Objective data</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Business revenue/value</p>
+</li>
+<li>
+<p>Cost</p>
+</li>
+<li>
+<p>Risks</p>
+</li>
+<li>
+<p>Staffing</p>
+</li>
+<li>
+<p>Service levels, changes, incidents</p>
+</li>
+<li>
+<p>Product obsolescence (quantifiable technical debt)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Subjective data</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Usability</p>
+</li>
+<li>
+<p>Customer satisfaction (net promoter score)</p>
+</li>
+<li>
+<p>Engineering assessments (subjective perceptions of technical debt)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Digital investments and costs typically include some or all of the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Hardware investment, depreciation or leasing</p>
+</li>
+<li>
+<p>Software licensing (typically 15%-20% annually of initial acquisition, required for vendor support).</p>
+</li>
+<li>
+<p>Floor space – i.e., real estate charges</p>
+</li>
+<li>
+<p>Facilities infrastructure: power, high volume air conditioning (HVAC), raised floor, racks, etc.</p>
+</li>
+<li>
+<p>Network connectivity and related infrastructure (e.g. directory services software, security perimeters, and the like)</p>
+</li>
+<li>
+<p>Operational software infrastructure: monitoring systems, batch schedulers, backup systems, and so on, all with their own associated costs.</p>
+</li>
+<li>
+<p>Operations and support staff. Staffing typically can come in various flavors:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Data center operations monitors</p>
+</li>
+<li>
+<p>Help desk operators</p>
+</li>
+<li>
+<p>Application specialists</p>
+</li>
+<li>
+<p>Senior engineers</p>
+</li>
+<li>
+<p>Senior IT executives and customer relationship managers</p>
+</li>
+<li>
+<p>Business-side lead users and process and information specialists</p>
+</li>
+<li>
+<p>Vendor relationship owners and contract managers</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="_application_value_analysis">Application value analysis</h5>
+<div class="paragraph">
+<p>Application portofolio management may concern itself with any or all of the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Application functions (examined for redundancy)</p>
+</li>
+<li>
+<p>Application total cost of ownership</p>
+</li>
+<li>
+<p>Application complexity</p>
+</li>
+<li>
+<p>Fitness and currency of underlying technical products</p>
+</li>
+<li>
+<p>Application service performance</p>
+</li>
+<li>
+<p>Application customer feedback</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>A four-box is often used for application value analysis:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33%;">
+<col style="width: 33%;">
+<col style="width: 33%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top">Low Technical Fitness</th>
+<th class="tableblock halign-left valign-top">High Technical Fitness</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">High Business Value</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Re-engineer or replatform.
+</p><p class="tableblock">Consider outsourcing carefully.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Invest as needed to exploit value.</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Low Business Value</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Retire if possible or outsource</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Improve understanding of customer requirements
+</p><p class="tableblock">Retire service if no longer serving a purpose but reclaim/re-use platform, capabilities &amp; assets</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_application_rationalization_2">Application rationalization</h5>
+<div class="paragraph">
+<p>What does it mean to rationalize"? There are three steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Take an inventory of the items to be rationalized.</p>
+</li>
+<li>
+<p>Categorize them to identify redundancy.</p>
+</li>
+<li>
+<p>Consolidate redundancy</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This implies some basis for classification, so that the investments can be compared. This is where industry taxonomies, such as found in <a href="#vertical-standards">vertical standards,</a> may help. You may call your application "Peoplesoft HR," "Workday," or even an internal brand like "HR2020," but a reference taxonomy categorizes it as simply a "Human Resource Management System."</p>
+</div>
+<div class="paragraph">
+<p><a href="#system-of-record">Data integrations</a> may also be a way to identify redundancy. When two systems start exchanging more and more data, a useful question is whether there is still a need for both or if a more economical, integrated solution is possible. Just beware of the <a href="#large-arch-xform-risk">risk of overly ambitious consolidation efforts</a>.</p>
+</div>
+<div class="paragraph">
+<p>Through analysis and understanding of redundancy, business and technical value, applications (and related concepts such as services and capabilities) can be managed as a coherent investment strategy. For further information, see the books referenced at the end of this chapter.</p>
 </div>
 </div>
 </div>
@@ -28102,6 +28324,9 @@ We previously discussed the Business Analysis Body of Knowledge. Although they h
 <h5 id="_archimate">Archimate</h5>
 <div class="paragraph">
 <p>Archimate is an architectural notation specification, now owned by The Open Group.</p>
+</div>
+<div class="paragraph">
+<p><a id="vertical-standards"></a></p>
 </div>
 </div>
 <div class="sect4">
@@ -28150,142 +28375,6 @@ We previously discussed the Business Analysis Body of Knowledge. Although they h
 <div class="paragraph">
 <p><em>This section to be expanded in future editions.</em></p>
 </div>
-<div class="paragraph">
-<p><a id="portfolio-management"></a></p>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_portfolio_management">Portfolio management</h4>
-<div class="quoteblock">
-<blockquote>
-…every product and every activity of a business begins to obsolesce as soon as it is started. Every product, every operation, and every activity in a business should be put on trial for its life every two or three years.
-</blockquote>
-<div class="attribution">
-&#8212; Peter Drucker
-</div>
-</div>
-<div class="paragraph">
-<p>Each should be considered the way we consider a proposal to go into a new product, a new operation, or activity – complete with budget, capital appropriation request, and so on.</p>
-</div>
-<div class="paragraph">
-<p>One question should be asked of each: “if we were not in this already, would we now go into it?” And if the answer is “no,” the next question should be: “How do we get out and how fast?”</p>
-</div>
-<div class="paragraph">
-<p>Peter F. Drucker</p>
-</div>
-<div class="paragraph">
-<p>EA &amp; M&amp;A - Bernard location 432 - like that value prop  - who is an EA? the person you would bring in to help assess a potential acquisition&#8217;s systems for fit/overlap etc.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>Sidebar: IT analytics experts
-Magennis, Cantor, etc</p>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_digital_pipeline_analytics">Digital pipeline analytics</h5>
-<div class="paragraph">
-<p>Over time, the IT operation develops significant data by which to manage itself. It may develop one or more definitive portfolio list, typically applications, services, assets, and/or technology products. Distinguishing and baselining high quality versions of these data sets can consume inordinate resource, and yet managing the IT organization at scale is nearly impossible without them.. [<em>didn&#8217;t want to discuss data per se in the introduction</em>]</p>
-</div>
-<div class="paragraph">
-<p>Feedback loop from architecture to investment (chapter 8) - hopefully you have been quantitative enough, now you are formalizing (e.g.) an "IT mgmt data warehouse"</p>
-</div>
-<div class="paragraph">
-<p>ARch: limited by lack of analytics. That&#8217;s where PM comes in. For example discussion in Bente is badly weakened by reliance on interviews/expert opinions. A problem for EA in general.</p>
-</div>
-<div class="paragraph">
-<p>Defining portfolio. "Things of consequence managed over long time horizon (betz)" TOGAF catalogs</p>
-</div>
-<div class="paragraph">
-<p>Apples to apples
-Objective vs. subjective data
-Subjective
-Usability
-Customer satisfaction
-Objective
-Service levels, changes, incidents
-Cost
-Staffing
-Technical debt &amp; complexity</p>
-</div>
-<div class="paragraph">
-<p>Types of portfolio segmentation</p>
-</div>
-<div class="paragraph">
-<p>Portfolio hazards
-Throwing money down a hole –
-is the (proposed or in-flight) project a good idea?
-Will it add value?
-In light of changing business conditions?
-Expensive and un-anticipated sourcing requirements.
-Does the IT organization have the staff to execute the project portfolio?
-Will local contractors need to be brought on at the last minute, at a negotiation disadvantage?</p>
-</div>
-<div class="paragraph">
-<p>No project plan for steady state
-Was total cost of ownership analyzed and defined?
-Were the resulting staff increases for operations and maintenance agreed to as additional to the current base budget?
-Poor systems quality – even when the project is deemed a “success.”
-What is the incident rate?
-Unplanned maintenance releases?</p>
-</div>
-<div class="paragraph">
-<p>Lack of re-use and re-usability –
-were expensive investments made in functionality that cannot easily be integrated into new business models?
-Is there redundancy in the infrastructure or applications?
-Were new technologies acquired requiring new systems engineering skills?
-Complexity – even when the system “works.”
-Does it take 8 hours staff time on average every week (or night!) to get the overnight batch to completion?
-Did the last team working on a maintenance release spend half their time re-analyzing the system’s current state?</p>
-</div>
-<div class="paragraph">
-<p>Obsolescence –
-Are knowledgeable staff more and more expensive?
-Is the hardware beyond a total cost of ownership “sweet spot”?
-Vendor/product issues –
-did your database vendor force you into a new version, imposing new maintenance releases across 25% of the applications in your portfolio?
-Did you understand the impact of this sufficiently in advance?
-Security risks due to obsolescence?
-Service non-use.
-Has this capability simply outlived its usefulness?
-Business value.
-Does the capability make sense to continue?</p>
-</div>
-<div class="paragraph">
-<p>Costs
-Hardware depreciation or leasing
-Software licensing (typically 15%-20% annually of initial acquisition, required for vendor support).
-Floor space – i.e., real estate charges
-Facilities infrastructure: power, high volume air conditioning (HVAC), raised floor, racks, etc.
-Network connectivity and related infrastructure (e.g. directory services software, security perimeters, and the like)
-Operational software infrastructure: monitoring systems, batch schedulers, backup systems, and so on, all with their own associated costs.
-Operations and support staff. Staffing typically can come in various flavors:
-Data center operations monitors
-Help desk operators
-Application specialists
-Senior engineers
-Senior IT executives and customer relationship managers
-Business-side lead users and process and information specialists
-Vendor relationship owners and contract managers
-Etc..</p>
-</div>
-<div class="paragraph">
-<p>4-box</p>
-</div>
-<div class="paragraph">
-<p>Taxonomies for classification</p>
-</div>
-<div class="paragraph">
-<p>Application functions (examined for redundancy)
-Application total cost of ownership
-Application complexity,
-Fitness and currency of underlying technical products
-Application service performance
-Application customer feedback</p>
-</div>
 </div>
 </div>
 <div class="sect3">
@@ -28326,7 +28415,7 @@ Application customer feedback</p>
 <p>complexity (w/r/t Burgess)</p>
 </li>
 <li>
-<p>stability, state, etc</p>
+<p>stability, state, etc (Burgess)</p>
 </li>
 <li>
 <p>complex system failures (Allspaw sidebar?)</p>
@@ -28367,6 +28456,14 @@ hard to argue with but evidence is limited</pre>
 <div class="content">
 <div class="paragraph">
 <p>Sidebar: Introducing Snowden &amp; Taleb.</p>
+</div>
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>Sidebar: IT analytics experts
+Magennis, Cantor, etc</p>
 </div>
 </div>
 </div>
@@ -28484,43 +28581,47 @@ With regard to the nature of complex systems, it is not advisable to search for 
 </div>
 <div class="sect3">
 <h4 id="_conclusion_12">Conclusion</h4>
-<div class="sect4">
-<h5 id="_architecture_as_re_emergent">Architecture as re-emergent</h5>
 <div class="paragraph">
-<p>However, architecture tends to re-emerge.</p>
+<p>Architecture is a challenging topic for both the student and the practitioner. Its value is too often unclear, but when it is eliminated, it tends to re-emerge in response to operational learnings. "If we&#8217;d just had some architecture, X would not have happened" is too often heard.</p>
 </div>
 <div class="paragraph">
-<p>but arch re-emerges always - as humans we think in abstractions and the value drivers for arch continually surfaceWho has the best overall understanding of your digital capabilities?</p>
-</div>
-<div class="paragraph">
-<p>Potts - CEO as arch?</p>
-</div>
-<div class="paragraph">
-<p>Architect as wise counselor, lore-master</p>
-</div>
-<div class="paragraph">
-<p>Sense-making across the landscape
-Guidance on key decisions
-Identification of opportunities otherwise un-apparent</p>
-</div>
-<div class="paragraph">
-<p>Stewardship of longer horizon, expensive to change&#8230;&#8203; where are the constraints &amp; degrees of freedom</p>
-</div>
-<div class="paragraph">
-<p>CoD as inherent weakness&#8230;&#8203; remediable</p>
-</div>
-<div class="paragraph">
-<p>Conclusion placeholder</p>
-</div>
+<p>As humans we think in abstractions and architecture is an expression of this. The architect skilled in doing so, in sense-making across the landscape and providing guidance on key decisions, identifying opportunities, and taking care for stewardship of the longer horizon will remain a valuable asset to the digital organization as it scales up into the largest problems.</p>
 </div>
 <div class="sect4">
 <h5 id="_discussion_questions_12">Discussion questions</h5>
-
+<div class="ulist">
+<ul>
+<li>
+<p>Should digital professions continue to use the term "architect"?</p>
+</li>
+<li>
+<p>Debate the pros and cons of having an architecture organization approve designs or technology platform choices. Be prepared to argue either side.</p>
+</li>
+<li>
+<p>Debate the pros and cons of visual modeling</p>
+</li>
+<li>
+<p>Do you agree that architecture is a form of staff function? Why or why not?</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_research_practice_12">Research &amp; practice</h5>
 <div class="ulist">
 <ul>
+<li>
+<p>Build a virtual machine cluster and install or develop software for it, ideally including a database. Download the free <a href="http://www.archimatetool.com/">Archi</a> tool for Archimate and draw a representation of the software or data architecture.</p>
+</li>
+<li>
+<p>Draw the same idea in two different ways in Archimate.</p>
+</li>
+<li>
+<p>Draw two or three catalogs and associated matrices and diagrams. Make sure all are consistent (e.g. lines correspond to matrix intersection data)</p>
+</li>
+<li>
+<p>Compare and contrast any two <a href="#vertical-standards">industry vertical architectures.</a></p>
+</li>
 <li>
 <p>Compare and contrast business model versus operating model, and in the same analysis consider the distinction between enterprise architecture and business architecture. Can enterprise architecture be equated with the operating model? If business architecture is a subset of enterprise architecture, does that mean it also is primarily concerned with the operating model? Or is business architecture also concerned with the business model?</p>
 </li>
@@ -28529,9 +28630,6 @@ Identification of opportunities otherwise un-apparent</p>
 </div>
 <div class="sect4">
 <h5 id="_further_reading_12">Further reading</h5>
-<div class="paragraph">
-<p>Lean Enterprise, Humble</p>
-</div>
 <div class="paragraph">
 <p><strong>Books</strong></p>
 </div>
