@@ -131,6 +131,9 @@ image::images/4.12-gudea.jpg[blueprint, 350, 200, float="right"]
 [quote, Preston Smith and Don Reinertsen, Developing Products in Half the Time]
 The true measure of the value of a model is whether it actually influences behavior.
 
+We discussed the importance of visual management in Chapter 5. Making information visually available to help create xref:shared-mental-model[common ground], is an important Lean practice
+(see xref:andon[Andon]).
+
 The word "architect," whether in a building or digital context,  is often associated with visualizations: blueprints, sketches, specialized notations, and so forth. Drawings have been used to represent structures for likely as long as xref:writing-history[writing has existed]. The image at the beginning of this section is of Gudea, a Mesopotamian ruler known for building temples; on his lap is a blueprint.
 
 Judging simply by its history, visualization is therefore an essential tool for humans dealing with large scale complexity (and erecting buildings has always been one of the more complex domains of human activity.) In digital and IT contexts, however, visualization has certain challenges and notable skeptics. Adrian Cockcroft, the former CTO of Netflix, stated: “Our architecture was changing faster than you can draw it... As a result, it wasn’t useful to try to draw it” <<Bloomberg2014>>.
@@ -165,6 +168,7 @@ Architects and architecture are known for creating diagrams -- abstract graphica
 * The Gane-Sarson data-flow diagram notation
 * The Chen entity-relationship notation
 * The Barker entity-relationship notation, including the "crow's foot" to indicate cardinality
+* Harel state charts
 * The Unified Modeling Language
 
 and many more. (We touched on xref:data-modeling[data modeling] in Chapter 11.) We will examine Archimate, a current and widely used notation, in more detail in a future chapter section.
@@ -202,7 +206,7 @@ The big picture is part of the standard mindset of EA, which everyone immediatel
 
 Visualization has a number of limitations:
 
-* It is better for static structures than for dynamic processes,
+* It may be better suited for static structures than for dynamic processes,
 * diagrams may have no real information content,
 * diagrams are difficult to maintain, and there are diminishing returns the more they are elaborated and refined (e.g. for archival purposes)
 * conversely, diagrams become less accessible the more complex they are,
@@ -233,7 +237,7 @@ formalisms don't give a good sense of scale. For example, suppose you see this d
 .Simple capability map
 image::images/4.12-capabilities.png[capabilities, 600, ]
 
-Diagrams like this are common, but what does it mean that all the boxes are equally sized? Are there as many lawyers as sales people? Operations staff? It's not clear what the advantage is to putting information like this into a graphical form; no interactions are seen and the eight areas could more easily be expressed as a list (or "catalog" in the terms we'll introduce below). This brings us to the final problem listed above: visualizations rely on some common ground understanding. If boxes and lines are used for communication, their meaning should be agreed upon - otherwise, there is risk of mis-understanding, and the diagram may do more harm than good.
+Diagrams like this are common, but what does it mean that all the boxes are equally sized? Are there as many lawyers as sales people? Operations staff? It's not clear what the advantage is to putting information like this into a graphical form; no interactions are seen and the eight areas could more easily be expressed as a list (or "catalog" in the terms we'll introduce below). This brings us to the final problem listed above: visualizations rely on some xref:shared-mental-model[common ground] understanding. If boxes and lines are used for communication, their meaning should be agreed upon - otherwise, there is risk of mis-understanding, and the diagram may do more harm than good.
 
 Regardless of the pitfalls, many architecture diagrams are valuable. Whether drawn on a whiteboard, in Powerpoint or Omnigraffle, or in a repository-based architecture tool, the visualization concisely represents a shared mental model on how the organizations will undertake complex activities. The diagram leverages the human preference for visual processing, accessing the powerful parallel processing of the visual cortex. Ultimately, the discussions and negotiations the architect facilitates on the journey to drivng organizational direction are the real added value. The architect's role is to facilitate discussions by abstracting and visualizing powerfully so that decisions are illuminated and understood across the team, or broader organization.
 
@@ -245,7 +249,7 @@ Artifacts are generally classified as catalogs (lists of things), matrices (show
 
 The question was asked above, "why put things into a picture when a report is all that is needed?" We know that sometimes a picture is worth a thousand words, but not always. And sometimes the picture's components need more description than can conveniently fit on the actual diagram. This brings us to the topic of enterprise architecture as knowledge management.
 
-Knowledge management is a broad topic, with a scope far beyond this book. But in the context of a digital organization, architecture can serve as an important component of an overall knowledge management strategy. Without some common ground of understanding, digital organizations struggle, and EA can help.
+Knowledge management is a broad topic, with a scope far beyond this book. But in the context of a digital organization, architecture can serve as an important component of an overall knowledge management strategy. Without some xref:shared-mental-model[common ground] of understanding, digital organizations struggle, and EA can help.
 
 ====== Catalogs, diagrams, matrics
 
@@ -333,8 +337,10 @@ NOTE: The discussion below also applies to the Configuration Management Database
 
 Part of the challenge of any repository is what data to manage. How do we think more systematically about this?
 First, we need to understand why we want to assemble this data in a ready-to-query repository. There are two major reasons why we store data:
-1.	There are no other sources for it. If we don’t establish a system of record, the data will go unmanaged. We won’t know what servers we have, or what applications we are running.
-2.	There may be other sources for the data, even systems of record. But we need an operational data store to bring the various data sources together in a way that makes them more efficient to query.
+
+* There are no other sources for it. If we don’t establish a system of record, the data will go unmanaged. We won’t know what servers we have, or what applications we are running.
+* There may be other sources for the data, even systems of record. But we need an operational data store to bring the various data sources together in a way that makes them more efficient to query.
+
 For either kind of data, you need to have an economic understanding of why you want it. Suppose you need to find out what applications you are running, because you want to rationalize them. You could invest weeks of research into the question, costing perhaps tens of thousands of dollars worth of yours and others’ time, to create a one-time spreadsheet.
 
 But what happens when there are multiple purposes for the data? You find out that the security group also wants a master list of applications and has been compiling a different spreadsheet, for example. What happens when the same engineers and managers are asked for the same data over and over again, because there is no repository to maintain this organizational memory?
@@ -371,7 +377,7 @@ Decisions need to be made as to which systems will be "go-forward." While the te
 
 A merger is a dramatic example of a rationalization scenario. Established, ongoing companies, even without mergers, find that redundancy tends to accumulate. This is a normal outcome of the xref:innovation-cycle[innovation and commoditization cycle]; when technologies are new, organizations may experiment with several providers. When they become more standardized and commodity, the desire for efficiency drives rationalization.
 
-One of the challenges for rationalization is whether the economics and buisness context of any given rationalization effort are well understood. Consistency as an end in itself is not necessarily valuable. The impact on enterprise value must be established: will the organization actually benefit from improved vendor leverage, operational integration, or a reduced security attack surface? If not, perhaps seeking "rationalization" is not the best use of organizational resources.
+One of the challenges for rationalization is whether the economics and business context of any given rationalization effort are well understood. Consistency as an end in itself is not necessarily valuable. The impact on enterprise value must be established: will the organization actually benefit from improved vendor leverage, operational integration, or a reduced security attack surface? If not, perhaps seeking "rationalization" is not the best use of organizational resources.
 
 We close this section with some case studies on rationalization.
 
