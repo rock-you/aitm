@@ -246,6 +246,8 @@ The question was asked above, "why put things into a picture when a report is al
 
 Knowledge management is a broad topic, with a scope far beyond this book. But in the context of a digital organization, architecture can serve as an important component of an overall knowledge management strategy. Without some common ground of understanding, digital organizations struggle, and EA can help.
 
+====== Catalogs, diagrams, matrics
+
 As the quote from TOGAF above indicates, architecture can elegantly be represented as:
 
 * Catalogs
@@ -294,6 +296,8 @@ Maintaining a catalog of the concepts in a diagram becomes more and more importa
 
 Furthermore, it is convenient to have data such as a master lists or catalogs of processes, systems, functions, or data topics. We might also want to document various attributes associated with these catalogs. This data can then be used for operational processes, such as xref:risk-management[risk management], as we have discussed previously. For these reasons and others, enterprise architecture repositories emerge.
 
+====== Architecture data management
+
 When we establish a catalog of architectural entities, we are engaging in xref:system-of-record[master data management]. In fact, the architectural concepts can be represented as a form of xref:data-modeling[database schema]:
 
 .A simple metamodel
@@ -321,6 +325,34 @@ And so on. One might expect that there would be industry standards clarifying su
 Finally, there are a number of other systems that may interoperate with the architecture repository. The most important of these is the configuration management database (CMDB) or system (CMS) that underlies the IT service management tooling. These tools also need to know at least about systems and technologies, and may be interested in higher level concepts such as business capability. However, they usually do not include sophisticated diagramming capabilities or the ability to represent a system's future state.
 
 Other tools may include project management systems, portfolio management systems, risk management systems, service level management systems, and others. Application and service master data in particular is widely used, and if the EA repository is xref:system-of-record[System of Record] for this data there will be many outbound interfaces.
+
+====== An economic view
+
+NOTE: The discussion below also applies to the Configuration Management Database (CMDB) as well as other similar repositories.
+
+Part of the challenge of any repository is what data to manage. How do we think more systematically about this?
+First, we need to understand why we want to assemble this data in a ready-to-query repository. There are two major reasons why we store data:
+1.	There are no other sources for it. If we don’t establish a system of record, the data will go unmanaged. We won’t know what servers we have, or what applications we are running.
+2.	There may be other sources for the data, even systems of record. But we need an operational data store to bring the various data sources together in a way that makes them more efficient to query.
+For either kind of data, you need to have an economic understanding of why you want it. Suppose you need to find out what applications you are running, because you want to rationalize them. You could invest weeks of research into the question, costing perhaps tens of thousands of dollars worth of yours and others’ time, to create a one-time spreadsheet.
+
+But what happens when there are multiple purposes for the data? You find out that the security group also wants a master list of applications and has been compiling a different spreadsheet, for example. What happens when the same engineers and managers are asked for the same data over and over again, because there is no repository to maintain this organizational memory?
+
+The challenge is, when does it make economic sense to pre-aggregate the data? The following economic graph may help:
+
+image:images/4.12-econRepo.png[]
+
+The graph may be familiar to those of you who studied economics. On the left, you have the assumption of no architecture repository, and on the right you have a comprehensive architecture repository.
+With a less comprehensive architecture repository, you are paying some cost in research and outage impacts. You also are incurring more risk, which can be quantified. On the other hand, with a comprehensive architecture repository, you incur more costs in maintaining it. You need processes that have direct cost to operate, as well as imposing indirect costs such as cost of delay (e.g. if updating the architecture repository slows down the release schedule).
+
+But in the middle is a sweet spot, where you have “just enough” architecture repository data. This optimal architecture repository scope represents the real savings you might realize from instituting the architecture repository and the necessary processes to sustain it.
+This is not a complete business case, of course. Your projected savings must be offset against the costs of acquisition and operations, and the remaining “benefit” needs to exceed your organization’s hurdle rate for investments.
+
+A simple example:
+
+Let’s say that you have identified a set of use cases indicating $250,000 maximum savings from an accurate and optimally scoped architecture repository. The implementation is projected to cost $200,000 over 3 years, for net benefits of $50,000. This means that you have an ROI of 25% ($50k/$200k). You can’t get 25% return on investment in the stock market, so the CFO sees this as a good use of money. On the other hand, if you only are projecting $15,000 in net benefits, for an ROI of 8%, the CFO may well say, “I can do better with other projects, or by leaving our money in the stock market.”
+
+Of course, estimating benefits such as reducing redundant research are not simple. The book How to Measure Anything by Doug Hubbard <<Hubbard2010>> is a very useful resource for these kinds of problems. You may need to consider using techniques such as Monte Carlo Analysis for business benefits that are more probabilistic. But you do not need to throw up your hands and say it’s all just “intangible,” successfully making challenging business cases of this nature is possible.
 
 ===== The "rationalization" quest
 [quote, Ralph Waldo Emerson]
