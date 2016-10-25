@@ -25600,10 +25600,10 @@ McGilvary (based on English) pp 23-24 - perhaps into 4.11.03.</pre>
 <p>Regardless of whether you started off as a digital startup, or are an older corporation now digitally transforming, your world is complex and getting more so.</p>
 </div>
 <div class="paragraph">
-<p>Decisions that might have been made quickly and casually by a product or project team become more difficult, due to increasing challenges both internal and external. Decisions made years ago come back to haunt current strategies with a vengeance. With scale, management needs some way of making sense across digital operations of mind-numbing complexity. Should we invest in 15 new internally-developed microservices, or sunset 12 existing ones and implement a commercial package developed by people we trust? When we have 1500 applications or services in our portfolio, how do we know that proposed #1501 is not redundant or outright conflicting with existing services?</p>
+<p>Decisions that might have been made quickly and casually by a product or project team become more difficult, due to increasing challenges both internal and external. Decisions made years ago come back to haunt current strategies with a vengeance. With scale, management needs some way of making sense across digital operations of mind-numbing complexity. Should we invest in 15 new internally-developed microservices, or sunset 12 existing ones and implement a commercial package developed by people we trust? When we have 1500 applications or services in our portfolio, how do we know that the proposed number 1501 is not redundant or outright conflicting with existing services?</p>
 </div>
 <div class="paragraph">
-<p>Architecture provides tools to manage such problems, but doing so is difficult and controversial. Are the architects merely just <a href="#:HIPPO">HIPPOS</a> with drawing tools? How can we maintain an experimental and hypothesis-driven approach in the midst of all the complexity? How do we know that our understanding of the digital operation is current and up to date? How much should we spend on keeping it so? What happens when management decides to set direction using these same abstractions, and architects find themselves now enforcing what had originally started as mere explanation and sense-making?</p>
+<p>Architecture provides tools to manage such problems, but doing so is difficult and controversial. Are the architects merely producing <a href="#:HIPPO">HiPPOS</a> with drawing tools? How can we maintain an experimental and hypothesis-driven approach in the midst of all the complexity? How do we know that our understanding of the digital operation is current and up to date? How much should we spend on keeping it so? What happens when management decides to set direction using these same abstractions, and architects find themselves now enforcing what had originally started as mere explanation and sense-making?</p>
 </div>
 <div class="paragraph">
 <p>Vendor relationships become a two-edged sword, providing increased value with access to higher levels of vendor resources, but at the cost of increased lock-in. Pure open-source strategies inevitably give way to monetized relationships, as the risk of not having support becomes unacceptable.</p>
@@ -26937,6 +26937,8 @@ Artifacts are generally classified as catalogs (lists of things), matrices (show
 <div class="paragraph">
 <p>Knowledge management is a broad topic, with a scope far beyond this book. But in the context of a digital organization, architecture can serve as an important component of an overall knowledge management strategy. Without some common ground of understanding, digital organizations struggle, and EA can help.</p>
 </div>
+<div class="sect5">
+<h6 id="_catalogs_diagrams_matrics">Catalogs, diagrams, matrics</h6>
 <div class="paragraph">
 <p>As the quote from TOGAF above indicates, architecture can elegantly be represented as:</p>
 </div>
@@ -27045,6 +27047,9 @@ Artifacts are generally classified as catalogs (lists of things), matrices (show
 <div class="paragraph">
 <p>Furthermore, it is convenient to have data such as a master lists or catalogs of processes, systems, functions, or data topics. We might also want to document various attributes associated with these catalogs. This data can then be used for operational processes, such as <a href="#risk-management">risk management</a>, as we have discussed previously. For these reasons and others, enterprise architecture repositories emerge.</p>
 </div>
+</div>
+<div class="sect5">
+<h6 id="_architecture_data_management">Architecture data management</h6>
 <div class="paragraph">
 <p>When we establish a catalog of architectural entities, we are engaging in <a href="#system-of-record">master data management</a>. In fact, the architectural concepts can be represented as a form of <a href="#data-modeling">database schema</a>:</p>
 </div>
@@ -27118,6 +27123,55 @@ A data model that organizes data about data and its related systems can be calle
 </div>
 <div class="paragraph">
 <p>Other tools may include project management systems, portfolio management systems, risk management systems, service level management systems, and others. Application and service master data in particular is widely used, and if the EA repository is <a href="#system-of-record">System of Record</a> for this data there will be many outbound interfaces.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_an_economic_view">An economic view</h6>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The discussion below also applies to the Configuration Management Database (CMDB) as well as other similar repositories.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Part of the challenge of any repository is what data to manage. How do we think more systematically about this?
+First, we need to understand why we want to assemble this data in a ready-to-query repository. There are two major reasons why we store data:
+1.	There are no other sources for it. If we don’t establish a system of record, the data will go unmanaged. We won’t know what servers we have, or what applications we are running.
+2.	There may be other sources for the data, even systems of record. But we need an operational data store to bring the various data sources together in a way that makes them more efficient to query.
+For either kind of data, you need to have an economic understanding of why you want it. Suppose you need to find out what applications you are running, because you want to rationalize them. You could invest weeks of research into the question, costing perhaps tens of thousands of dollars worth of yours and others’ time, to create a one-time spreadsheet.</p>
+</div>
+<div class="paragraph">
+<p>But what happens when there are multiple purposes for the data? You find out that the security group also wants a master list of applications and has been compiling a different spreadsheet, for example. What happens when the same engineers and managers are asked for the same data over and over again, because there is no repository to maintain this organizational memory?</p>
+</div>
+<div class="paragraph">
+<p>The challenge is, when does it make economic sense to pre-aggregate the data? The following economic graph may help:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="images/4.12-econRepo.png" alt="4.12-econRepo"></span></p>
+</div>
+<div class="paragraph">
+<p>The graph may be familiar to those of you who studied economics. On the left, you have the assumption of no architecture repository, and on the right you have a comprehensive architecture repository.
+With a less comprehensive architecture repository, you are paying some cost in research and outage impacts. You also are incurring more risk, which can be quantified. On the other hand, with a comprehensive architecture repository, you incur more costs in maintaining it. You need processes that have direct cost to operate, as well as imposing indirect costs such as cost of delay (e.g. if updating the architecture repository slows down the release schedule).</p>
+</div>
+<div class="paragraph">
+<p>But in the middle is a sweet spot, where you have “just enough” architecture repository data. This optimal architecture repository scope represents the real savings you might realize from instituting the architecture repository and the necessary processes to sustain it.
+This is not a complete business case, of course. Your projected savings must be offset against the costs of acquisition and operations, and the remaining “benefit” needs to exceed your organization’s hurdle rate for investments.</p>
+</div>
+<div class="paragraph">
+<p>A simple example:</p>
+</div>
+<div class="paragraph">
+<p>Let’s say that you have identified a set of use cases indicating $250,000 maximum savings from an accurate and optimally scoped architecture repository. The implementation is projected to cost $200,000 over 3 years, for net benefits of $50,000. This means that you have an ROI of 25% ($50k/$200k). You can’t get 25% return on investment in the stock market, so the CFO sees this as a good use of money. On the other hand, if you only are projecting $15,000 in net benefits, for an ROI of 8%, the CFO may well say, “I can do better with other projects, or by leaving our money in the stock market.”</p>
+</div>
+<div class="paragraph">
+<p>Of course, estimating benefits such as reducing redundant research are not simple. The book How to Measure Anything by Doug Hubbard <a href="#Hubbard2010">[Hubbard2010]</a> is a very useful resource for these kinds of problems. You may need to consider using techniques such as Monte Carlo Analysis for business benefits that are more probabilistic. But you do not need to throw up your hands and say it’s all just “intangible,” successfully making challenging business cases of this nature is possible.</p>
+</div>
 </div>
 </div>
 <div class="sect4">
