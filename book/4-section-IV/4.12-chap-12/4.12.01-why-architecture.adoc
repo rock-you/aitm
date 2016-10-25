@@ -1,7 +1,7 @@
 ==== Why architecture?
 
 .St. Vitus Cathedral, Prague footnote:[_Image credit https://www.flickr.com/photos/aigle_dore/6365091333, downloaded 2016-10-25, image copyrights Moyan Brenn, commercial use permitted_]
-image::images/4.12-architecture.jpg[alt text, 900, 200, float=""]
+image::images/4.12-architecture.jpg[alt text, 900, , float=""]
 
 [quote, Fred Brooks, Planning a Computer System: Project Stretch]
 Computer architecture, like other architecture, is the art of determining the needs of the user of a structure and then designing to meet those needs as effectively as possible within economic and technological constraints. Architecture must include engineering considerations, so that the design will be economical and feasible; but the emphasis in architecture is upon the needs of the user, whereas in engineering the emphasis is upon the needs of the fabricator. [<<Buchholz1962>>, first published use of the term "architecture" with respect to computing system organization.]
@@ -30,7 +30,7 @@ Your product portfolio (internal and external) is now in the hundreds or thousan
 
 Investment decisions become harder. You're far beyond the days when you had a one-product focus. You have multiple interacting products and multiple interacting teams, and the relationship between the teams and products is not one to one. Understanding the business case for the investment gets harder; when you have a thousand services over multiple business units, how do you know if someone is proposing a redundant new one?
 
-And then there are the big headaches. A major commercial product version is going off support, and it's the perfect time to think about a rewrite or replatform (say into the Cloud). But the moving pieces and interdependencies are formidably complex, and if you get the analysis wrong the business impact will be severe. You start to see the need for "Business Architecture," to clarify your understanding of business processes, organizations, and capabilities. Or a major outage does impact the business, and all of a sudden the organizational priority (from the Board on down) is "fix this so it never happens again." Everything else is to go "on hold." Except, of course, it can't.
+And then there are the big headaches. A major commercial product version is going off support, and it's the perfect time to think about a rewrite or replatform (say into the Cloud). But the moving pieces and interdependencies are formidably complex, and if you get the analysis wrong the business impact will be severe. You acquire another firm, with a lot of overlapping activities, and start to see the need for "Business Architecture" to clarify your understanding of business processes, organizations, and capabilities. Or a major outage hits the business hard, and all of a sudden the organizational priority (from the Board on down) is "fix this so it never happens again." Everything else is to go "on hold." Except, of course, it can't.
 
 In response to these and a thousand other complexities of digital management as organizations scale up, a general purpose coordination capability emerges sometimes called Enterprise Architecture. In this chapter section, we will discuss its definition, organizational dynamics, and value proposition.
 
@@ -161,7 +161,7 @@ The operating model is the necessary level of business process integration and s
 In terms of overall positioning, Enterprise Architecture is often portrayed as mediating between strategy and portfolio management:
 
 .EA context, based on <<Ross2006>>, fig 1-2, p.10.
-image::images/4.12-EA-context.png[EA context, 500]
+image::images/4.12-EA-context.png[EA context, 900]
 
 Notice the distinction between Enterprise Architecture as a capability and as an artifact. The *practice* of Enterprise Architecture is not the same as the actual Enterprise Architecture. For the purposes of this textbook, we define enterprise architecture's concerns as essentially the enterprise operating model: process, data, organizational capabilities, and systems.
 
@@ -201,7 +201,7 @@ It's reasonable to associate the xref:biz-model-canvas[Business Model Canvas]
  with strategy, and the Zachman framework with the enterprise architecture (as an artifact):
 
 .Business model versus operating model
-image::images/4.12-BM-OM.png[Business model versus operating model, 500]
+image::images/4.12-BM-OM.png[Business model versus operating model, 900]
 
 This distinction helps us position the Enterprise Architecture group with respect to key partner organizations:
 
@@ -221,6 +221,8 @@ Architecture needs to be tied to the organization's investment management proces
 
 Many organizations have a long legacy of project-driven development, in which the operational consequences of the project were too often given short shrift. The resulting xref:technical-debt[technical debt] can be crippling. Now that there is more of a move towards "you build it, you run it" the operability aspects of systems are (perhaps) improving. However, ongoing scrutiny and management are still needed at the investment front end, if the enterprise is to manage important objectives like vendor leverage, minimizing technical debt, reducing investment redundancy, controlling the security perimeter, and keeping skills acquisition economical (more on this below in section on Enterprise Architecture value).
 
+xref:portfolio-management[Portfolio management] is discussed in depth in a subsequent chapter section.
+
 *Infrastructure and operations*
 
 Finally, the EA group often has a close relationship with xref:ops-mgmt[infrastructure and operations] groups. This is because in organizations where operations is a shared service, the risks and inefficiencies of technical fragmentation are often most apparent to the operations team.
@@ -229,8 +231,6 @@ In organizations where operations is increasingly distributed to the application
 
 Other staff organizations that may develop close relationships with enterprise architecture include xref:sourcing[vendor management and sourcing], xref:risk-management[risk management], xref:compliance[compliance]
 , and xref:security[security]. Notice that some of these have strong xref:gov-chap[governance] connections (although we do not consider "governance" itself to be an organization, which is why it was not included in the discussion above.)
-
-
 
 ===== The value of EA
 
