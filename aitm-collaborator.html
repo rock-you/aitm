@@ -25575,7 +25575,7 @@ McGilvary (based on English) pp 23-24 - perhaps into 4.11.03.</pre>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>Status: Chapter 12 is in active development as of 5 September 2016. Expect volatility.</pre>
+<pre>Status: Chapter 12 is in first draft as of 25 October 2016. Comments appreciated.</pre>
 </div>
 </div>
 <div class="ulist">
@@ -25633,6 +25633,9 @@ As with other chapters in the later part of this book, we are going to introduce
 <div class="ulist">
 <ul>
 <li>
+<p>Introduction</p>
+</li>
+<li>
 <p>Why architecture?</p>
 <div class="ulist">
 <ul>
@@ -25649,17 +25652,23 @@ As with other chapters in the later part of this book, we are going to introduce
 </div>
 </li>
 <li>
-<p>Architecture processes and practices</p>
+<p>Architecture practices</p>
 <div class="ulist">
 <ul>
 <li>
-<p>But what do architects <strong>do</strong>?</p>
+<p>Architecture and governance</p>
 </li>
 <li>
-<p>The problems with "method" - waterfall&#8230;&#8203;</p>
+<p>Architecture as a management program</p>
 </li>
 <li>
-<p>The repository problem</p>
+<p>Modeling and visualization</p>
+</li>
+<li>
+<p>Repositories and knowledge management</p>
+</li>
+<li>
+<p>The "rationalization" quest</p>
 </li>
 </ul>
 </div>
@@ -25669,41 +25678,67 @@ As with other chapters in the later part of this book, we are going to introduce
 <div class="ulist">
 <ul>
 <li>
-<p>Enteprise</p>
+<p>Architecture perspectives</p>
 </li>
 <li>
-<p>Business</p>
+<p>Architecture layers</p>
 </li>
 <li>
-<p>Data</p>
-</li>
-<li>
-<p>Solutions</p>
-</li>
-<li>
-<p>Technical</p>
+<p>Other forms of architecture</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>"Service-izaton" - pros and cons</p>
+<p>Agile and architecture</p>
 <div class="ulist">
 <ul>
 <li>
-<p>need in higher ed, health -</p>
+<p>The hubris of architecture</p>
+</li>
+<li>
+<p>The hubris of Agile</p>
+</li>
+<li>
+<p>Towards reconciliation</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
 <p>Portfolio management</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Application value analysis</p>
 </li>
 <li>
-<p>The digital architecture</p>
+<p>Application rationalization</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p>Topics</p>
+<p>Architecture standards</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Business architecture</p>
+</li>
+<li>
+<p>TOGAF</p>
+</li>
+<li>
+<p>Archimate</p>
+</li>
+<li>
+<p>Industry verticals</p>
+</li>
+<li>
+<p>Governmental frameworks</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -25713,23 +25748,16 @@ As with other chapters in the later part of this book, we are going to introduce
 <div class="ulist">
 <ul>
 <li>
-<p>Identify various use cases for IT analytics</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Identify the basic types of IT architecture</p>
-</li>
-</ul>
-</div>
+<p>Identify the value of architecture</p>
 </li>
 <li>
 <p>Describe basic architectural practices</p>
 </li>
 <li>
-<p>Characterize some typical challenges for architects</p>
+<p>Define and distinguish between various forms of architecture</p>
 </li>
 <li>
-<p>Identify current approaches to understanding complex systems and their failure modes</p>
+<p>Characterize the friction between Agile and architecture, and techniques for resolving it</p>
 </li>
 </ul>
 </div>
@@ -25737,34 +25765,6 @@ As with other chapters in the later part of this book, we are going to introduce
 </div>
 <div class="sect3">
 <h4 id="_why_architecture">Why architecture?</h4>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Collaborative</strong></p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Status: This section is in first draft as of 2016-10-06. Comments appreciated.</pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/dm-academy/aitm/blob/master/collaborator-instructions.adoc" target="_blank">Collaborator instructions</a></p>
-</li>
-<li>
-<p>Raise an <a href="https://github.com/dm-academy/aitm/issues" target="_blank">issue</a> to comment</p>
-</li>
-<li>
-<p><a href="https://github.com/dm-academy/aitm/tree/master/book" target="_blank">Github source files</a></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><em>Please remember that the intended audience of this one or two semester survey text is incoming students at a Masters' level in Information Technology, Information Systems, and Software Engineering programs. The most useful feedback comes from the perspective of, "what do you think today&#8217;s students need to learn, given the last 20 years' developments with Agile, Lean IT, DevOps, web- and cloud-scale IT, digital transformation, and related themes?"</em></p>
-</div>
-</div>
-</div>
 <div class="quoteblock">
 <blockquote>
 Computer architecture, like other architecture, is the art of determining the needs of the user of a structure and then designing to meet those needs as effectively as possible within economic and technological constraints. Architecture must include engineering considerations, so that the design will be economical and feasible; but the emphasis in architecture is upon the needs of the user, whereas in engineering the emphasis is upon the needs of the fabricator. [1962, first published use of the term "architecture" with respect to computing system organization.]
@@ -26427,34 +26427,6 @@ Although immature code may work fine and be completely acceptable to the custome
 </div>
 <div class="sect3">
 <h4 id="_architecture_practices">Architecture practices</h4>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Collaborative</strong></p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Status: This chapter section is in first draft as of 2016-10-11. Comments appreciated.</pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/dm-academy/aitm/blob/master/collaborator-instructions.adoc" target="_blank">Collaborator instructions</a></p>
-</li>
-<li>
-<p>Raise an <a href="https://github.com/dm-academy/aitm/issues" target="_blank">issue</a> to comment</p>
-</li>
-<li>
-<p><a href="https://github.com/dm-academy/aitm/tree/master/book" target="_blank">Github source files</a></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><em>Please remember that the intended audience of this one or two semester survey text is incoming students at a Masters' level in Information Technology, Information Systems, and Software Engineering programs. The most useful feedback comes from the perspective of, "what do you think today&#8217;s students need to learn, given the last 20 years' developments with Agile, Lean IT, DevOps, web- and cloud-scale IT, digital transformation, and related themes?"</em></p>
-</div>
-</div>
-</div>
 <div class="paragraph">
 <p>Before we get into a detailed discussion of architecture domains, let&#8217;s talk in general about what architects do and some common practices and themes.</p>
 </div>
@@ -27270,34 +27242,6 @@ One core question decided by governance is how much autonomy is granted to busin
 </div>
 <div class="sect3">
 <h4 id="_architecture_domains">Architecture domains</h4>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Collaborative</strong></p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Status: This and later sections are in active development as of 5 September 2016. Expect volatility.</pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/dm-academy/aitm/blob/master/collaborator-instructions.adoc" target="_blank">Collaborator instructions</a></p>
-</li>
-<li>
-<p>Raise an <a href="https://github.com/dm-academy/aitm/issues" target="_blank">issue</a> to comment</p>
-</li>
-<li>
-<p><a href="https://github.com/dm-academy/aitm/tree/master/book" target="_blank">Github source files</a></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><em>Please remember that the intended audience of this one or two semester survey text is incoming students at a Masters' level in Information Technology, Information Systems, and Software Engineering programs. The most useful feedback comes from the perspective of, "what do you think today&#8217;s students need to learn, given the last 20 years' developments with Agile, Lean IT, DevOps, web- and cloud-scale IT, digital transformation, and related themes?"</em></p>
-</div>
-</div>
-</div>
 <div class="paragraph">
 <p>In the last section, we discussed what architects <strong>do</strong>. The focus was primarily architects in a "team of teams" environment, not strictly at the level of a single product team. However, while this chapter has a strong Enterprise Architecture orientation, it is also about the practice of "architecture" more generally. In this chapter, we will break down the different practices of architecture and their relationships.</p>
 </div>
@@ -28085,7 +28029,7 @@ Architectural goals—for example, desired performance, availability, and securi
 <br>
 Each should be considered the way we consider a proposal to go into a new product, a new operation, or activity – complete with budget, capital appropriation request, and so on.<br>
 <br>
-One question should be asked of each: “if we were not in this already, would we now go into it?” And if the answer is “no,” the next question should be: “How do we get out and how fast?”
+One question should be asked of each: “if we were not in this already, would we now go into it?” And if the answer is “no,” the next question should be: “How do we get out and how fast?” <a href="#Drucker1963">[Drucker1963]</a>
 </blockquote>
 <div class="attribution">
 &#8212; Peter F. Drucker
@@ -29037,6 +28981,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 </li>
 <li>
 <p><a id="DHS2006"></a>[DHS2006]: Department of Homeland Security. 2006. “Report No. 2006-03, The Use of Commercial Data.” DHS Data Privacy and Integrity Advisory Committee.</p>
+</li>
+<li>
+<p><a id="Drucker1963"></a>[Drucker1963]: Drucker, Peter F. 1963. “Managing for Business Effectiveness.” Magazine Article. Harvard Business Review.</p>
 </li>
 <li>
 <p><a id="Drucker1993"></a>[Drucker1993]: Drucker, Peter F. 1993. <em>Post-Capitalist Society</em>. 1st ed. New York, NY: HarperBusiness.</p>
