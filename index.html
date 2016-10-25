@@ -25509,7 +25509,7 @@ However, if the product is not ready, these benefits will not materialize. If ev
 <p>On the other hand, what if the architects were kept out of the picture, and the product team chooses an untested technology, instead of re-using a well known and reliable approach already proven for that company? What if that decision were the cause of missing the trade show? What if it can be shown that re-usable components identified as architecture standards were increasing the speed of delivery, and reducing the Cost of Delay, because they are reducing the need for product teams to perform risky (and yet redundant) Research and Development activities?</p>
 </div>
 <div class="paragraph">
-<p>Quantifying these benefits across a portfolio is difficult, but should be attempted. Cost of Delay can and should be calculated at the portfolio level, and this can provide "enterprise-level decision rules" that can help an organization understand the cost and value of operating model changes (<a href="#Reinertsen1997">[Reinertsen1997]</a>, pp. 35-38) including the establishment of Enterprise Architecture itself. We&#8217;ll work through <a href="#TLM-CoD-worked">an example</a> in a future chapter section.</p>
+<p>Quantifying these benefits across a portfolio is difficult, but should be attempted. Cost of Delay can and should be calculated at the portfolio level, and this can provide "enterprise-level decision rules" that can help an organization understand the cost and value of operating model changes (<a href="#Reinertsen1997">[Reinertsen1997]</a>, pp. 35-38) including the establishment of Enterprise Architecture itself.</p>
 </div>
 <div class="paragraph">
 <p><a id="technical-debt"></a></p>
@@ -25830,6 +25830,10 @@ The true measure of the value of a model is whether it actually influences behav
 </div>
 </div>
 <div class="paragraph">
+<p>We discussed the importance of visual management in Chapter 5. Making information visually available to help create <a href="#shared-mental-model">common ground</a>, is an important Lean practice
+(see <a href="#andon">Andon</a>).</p>
+</div>
+<div class="paragraph">
 <p>The word "architect," whether in a building or digital context,  is often associated with visualizations: blueprints, sketches, specialized notations, and so forth. Drawings have been used to represent structures for likely as long as <a href="#writing-history">writing has existed</a>. The image at the beginning of this section is of Gudea, a Mesopotamian ruler known for building temples; on his lap is a blueprint.</p>
 </div>
 <div class="paragraph">
@@ -25905,6 +25909,9 @@ Visual representations are effective because they tap into the capabilities of t
 </li>
 <li>
 <p>The Barker entity-relationship notation, including the "crow&#8217;s foot" to indicate cardinality</p>
+</li>
+<li>
+<p>Harel state charts</p>
 </li>
 <li>
 <p>The Unified Modeling Language</p>
@@ -25984,7 +25991,7 @@ The big picture is part of the standard mindset of EA, which everyone immediatel
 <div class="ulist">
 <ul>
 <li>
-<p>It is better for static structures than for dynamic processes,</p>
+<p>It may be better suited for static structures than for dynamic processes,</p>
 </li>
 <li>
 <p>diagrams may have no real information content,</p>
@@ -26044,7 +26051,7 @@ formalisms don&#8217;t give a good sense of scale. For example, suppose you see 
 <div class="title">Figure 23. Simple capability map</div>
 </div>
 <div class="paragraph">
-<p>Diagrams like this are common, but what does it mean that all the boxes are equally sized? Are there as many lawyers as sales people? Operations staff? It&#8217;s not clear what the advantage is to putting information like this into a graphical form; no interactions are seen and the eight areas could more easily be expressed as a list (or "catalog" in the terms we&#8217;ll introduce below). This brings us to the final problem listed above: visualizations rely on some common ground understanding. If boxes and lines are used for communication, their meaning should be agreed upon - otherwise, there is risk of mis-understanding, and the diagram may do more harm than good.</p>
+<p>Diagrams like this are common, but what does it mean that all the boxes are equally sized? Are there as many lawyers as sales people? Operations staff? It&#8217;s not clear what the advantage is to putting information like this into a graphical form; no interactions are seen and the eight areas could more easily be expressed as a list (or "catalog" in the terms we&#8217;ll introduce below). This brings us to the final problem listed above: visualizations rely on some <a href="#shared-mental-model">common ground</a> understanding. If boxes and lines are used for communication, their meaning should be agreed upon - otherwise, there is risk of mis-understanding, and the diagram may do more harm than good.</p>
 </div>
 <div class="paragraph">
 <p>Regardless of the pitfalls, many architecture diagrams are valuable. Whether drawn on a whiteboard, in Powerpoint or Omnigraffle, or in a repository-based architecture tool, the visualization concisely represents a shared mental model on how the organizations will undertake complex activities. The diagram leverages the human preference for visual processing, accessing the powerful parallel processing of the visual cortex. Ultimately, the discussions and negotiations the architect facilitates on the journey to drivng organizational direction are the real added value. The architect&#8217;s role is to facilitate discussions by abstracting and visualizing powerfully so that decisions are illuminated and understood across the team, or broader organization.</p>
@@ -26068,7 +26075,7 @@ Artifacts are generally classified as catalogs (lists of things), matrices (show
 <p>The question was asked above, "why put things into a picture when a report is all that is needed?" We know that sometimes a picture is worth a thousand words, but not always. And sometimes the picture&#8217;s components need more description than can conveniently fit on the actual diagram. This brings us to the topic of enterprise architecture as knowledge management.</p>
 </div>
 <div class="paragraph">
-<p>Knowledge management is a broad topic, with a scope far beyond this book. But in the context of a digital organization, architecture can serve as an important component of an overall knowledge management strategy. Without some common ground of understanding, digital organizations struggle, and EA can help.</p>
+<p>Knowledge management is a broad topic, with a scope far beyond this book. But in the context of a digital organization, architecture can serve as an important component of an overall knowledge management strategy. Without some <a href="#shared-mental-model">common ground</a> of understanding, digital organizations struggle, and EA can help.</p>
 </div>
 <div class="sect5">
 <h6 id="_catalogs_diagrams_matrics">Catalogs, diagrams, matrics</h6>
@@ -26274,10 +26281,20 @@ The discussion below also applies to the Configuration Management Database (CMDB
 </div>
 <div class="paragraph">
 <p>Part of the challenge of any repository is what data to manage. How do we think more systematically about this?
-First, we need to understand why we want to assemble this data in a ready-to-query repository. There are two major reasons why we store data:
-1.	There are no other sources for it. If we don’t establish a system of record, the data will go unmanaged. We won’t know what servers we have, or what applications we are running.
-2.	There may be other sources for the data, even systems of record. But we need an operational data store to bring the various data sources together in a way that makes them more efficient to query.
-For either kind of data, you need to have an economic understanding of why you want it. Suppose you need to find out what applications you are running, because you want to rationalize them. You could invest weeks of research into the question, costing perhaps tens of thousands of dollars worth of yours and others’ time, to create a one-time spreadsheet.</p>
+First, we need to understand why we want to assemble this data in a ready-to-query repository. There are two major reasons why we store data:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>There are no other sources for it. If we don’t establish a system of record, the data will go unmanaged. We won’t know what servers we have, or what applications we are running.</p>
+</li>
+<li>
+<p>There may be other sources for the data, even systems of record. But we need an operational data store to bring the various data sources together in a way that makes them more efficient to query.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For either kind of data, you need to have an economic understanding of why you want it. Suppose you need to find out what applications you are running, because you want to rationalize them. You could invest weeks of research into the question, costing perhaps tens of thousands of dollars worth of yours and others’ time, to create a one-time spreadsheet.</p>
 </div>
 <div class="paragraph">
 <p>But what happens when there are multiple purposes for the data? You find out that the security group also wants a master list of applications and has been compiling a different spreadsheet, for example. What happens when the same engineers and managers are asked for the same data over and over again, because there is no repository to maintain this organizational memory?</p>
@@ -26343,7 +26360,7 @@ A foolish consistency is the hobgoblin of little minds.
 <p>A merger is a dramatic example of a rationalization scenario. Established, ongoing companies, even without mergers, find that redundancy tends to accumulate. This is a normal outcome of the <a href="#innovation-cycle">innovation and commoditization cycle</a>; when technologies are new, organizations may experiment with several providers. When they become more standardized and commodity, the desire for efficiency drives rationalization.</p>
 </div>
 <div class="paragraph">
-<p>One of the challenges for rationalization is whether the economics and buisness context of any given rationalization effort are well understood. Consistency as an end in itself is not necessarily valuable. The impact on enterprise value must be established: will the organization actually benefit from improved vendor leverage, operational integration, or a reduced security attack surface? If not, perhaps seeking "rationalization" is not the best use of organizational resources.</p>
+<p>One of the challenges for rationalization is whether the economics and business context of any given rationalization effort are well understood. Consistency as an end in itself is not necessarily valuable. The impact on enterprise value must be established: will the organization actually benefit from improved vendor leverage, operational integration, or a reduced security attack surface? If not, perhaps seeking "rationalization" is not the best use of organizational resources.</p>
 </div>
 <div class="paragraph">
 <p>We close this section with some case studies on rationalization.</p>
@@ -26475,13 +26492,10 @@ One core question decided by governance is how much autonomy is granted to busin
 </ul>
 </div>
 <div class="paragraph">
-<p>And</p>
-</div>
-<div class="paragraph">
 <p>Does this mean that we have nine flavors of architecture, one for each intersection? Not necessarily. Some intersections make more sense than others, and some tend to merge with their neighbors.</p>
 </div>
 <div class="paragraph">
-<p>For evidence, see the Data Management Body of Knowledge <a href="#DAMA2009">[DAMA2009]</a>, which covers the gamut of information and data topics from high level glossaries all the way down to physical database administration.</p>
+<p>For example, see the Data Management Body of Knowledge <a href="#DAMA2009">[DAMA2009]</a>, which covers the gamut of information and data topics from high level glossaries all the way down to physical database administration. Data architects can and do work across all levels in their perspective.</p>
 </div>
 <div class="sect4">
 <h5 id="_architecture_perspectives">Architecture perspectives</h5>
@@ -26592,6 +26606,9 @@ One core question decided by governance is how much autonomy is granted to busin
 <div class="paragraph">
 <p>Capability is an important concept in business architecture, as it has emerged as the preferred concept for investment. We do not invest in data, or process, except as they are realized by a supporting capability.</p>
 </div>
+<div class="paragraph">
+<p>A comprehensive graphical depiction of "capabilities" may be used to help visualize portfolio investments, sometimes using green/yellow/red color coding - this is called "capability heat mapping."</p>
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -26681,11 +26698,6 @@ Business architecture offers views of the business that are unavailable from oth
 </li>
 <li>
 <p>Specific devices</p>
-<div class="literalblock">
-<div class="content">
-<pre>Capability heat mapping</pre>
-</div>
-</div>
 </li>
 </ul>
 </div>
@@ -26811,10 +26823,10 @@ Architecture represents the significant design decisions that shape a system, wh
 <div class="content">
 <div class="title">Author&#8217;s Note</div>
 <div class="paragraph">
-<p>As a practicing architect I can confirm that there is often friction between developers with an Agile perspective and enterprise architects. This carries through into industry discussions and conference presentations.</p>
+<p>As a practicing architect I can confirm that there is often friction between developers with an Agile perspective and architects, whether "enterprise" or other kinds. This carries through into industry discussions and conference presentations.</p>
 </div>
 <div class="paragraph">
-<p>I think the best approach to resolving this conflict is through careful understanding of the perspective of each "side." Both have validity. I recommend framing the conversation in terms of <a href="#arch-impacts">architecture&#8217;s value impacts</a>.</p>
+<p>I think the best approach to resolving this conflict is through careful understanding of the perspective of each "side." Both have validity. I recommend framing the conversation in terms of <a href="#arch-impacts">architecture&#8217;s value impacts</a> and quantifying wherever possible.</p>
 </div>
 </div>
 </div>
@@ -26840,16 +26852,16 @@ Architecture represents the significant design decisions that shape a system, wh
 </ul>
 </div>
 <div class="paragraph">
-<p>and other such topics. When development cannot proceed without those approvals - or if the approvals come at the cost of expensive re-work - the experience can often be challenging. Bente et al warn: "if enterprise architects claim to be the only decision-making body in technical matters, there is a huge risk that they create a bottleneck&#8230;&#8203;The practical consequence is that projects deliberately circumvent the enterprise architects&#8230;&#8203;" <a href="#Bente2012">[Bente2012]</a> p19</p>
+<p>and other such topics. When development cannot proceed without those approvals&#8201;&#8212;&#8201;or if the approvals come at the cost of expensive re-work&#8201;&#8212;&#8201;the experience can often be challenging. Bente et al warn: "if enterprise architects claim to be the only decision-making body in technical matters, there is a huge risk that they create a bottleneck&#8230;&#8203;The practical consequence is that projects deliberately circumvent the enterprise architects&#8230;&#8203;" <a href="#Bente2012">[Bente2012]</a> p19</p>
 </div>
 <div class="paragraph">
-<p>And, looking more broadly at the practice and history of architecture, the case against it is strong. Enterprise architecture has presented itself as a solution to complexity, long IT time scales, business frustration, and other various IT problems. But in the past decade to the extent these issues have been solved, it has not been by architecture but by Agile and DevOps practices rethinking open-loop, slow feedback, batch-oriented delivery. Architecture has failed in many ways:</p>
+<p>And, looking more broadly at the practice and history of IT architecture, the case against it is strong. Enterprise architecture has presented itself as a solution to complexity, long IT time scales, business frustration, and other various IT problems. These issues are at this writing being solved, but not by architecture&#8201;&#8212;&#8201;at least not visibly. Instead, visible and publicized progress has come through the increasing adoption of Agile and DevOps practices rethinking open-loop, slow feedback, batch-oriented delivery. Architecture has failed in many ways:</p>
 </div>
 <div class="paragraph">
 <p>It failed to realize the emergent issue of too much enterprise work in process, instead championing the proliferation of enterprise processes and their associated queues. Fundamentally, they did not adopt enough of a systems view of IT delivery. Architects' motivation for "efficiency" and interest in capability mapping did not help the cause of cross-functional teams. Instead, functional silos were reinforced as supply-centric "capabilities" and the antipattern of "bringing the team to the work" were promoted as enterprise standard operating procedure - despite the growing evidence of Scrum and Agile success. The iterative, experimental narrative of Lean Startup did not originate from EA.</p>
 </div>
 <div class="paragraph">
-<p>Despite a professed interest in systems theory, architecture has only recently begun to realize the fundamental problems of stage-gated delivery, big bang releases, and so forth. It has been too sympathetic to PMBOK and the now-discredited Capability Maturity Model and merits the criticism of "top down planning," which in complex systems domains too often doesn&#8217;t work. Architects too often fall into the trap of the  <a href="#:HIPPO">HiPPO</a> (Highest Paid Person&#8217;s Opinion). A sense of <a href="#lean-startup">Lean Startup</a> experimentation, of placing bets on options and testing hypotheses, is not part of the mainstream enterprise architecture understanding. Instead, the architecture is presented as an established fact, with "governance" to ensure conformity. Hypothetical "synergies" emerging from "common platforms" are often offered as justification for architecture, with little follow up in measuring actual value delivered.</p>
+<p>Despite a professed interest in systems theory, architecture has only recently begun to realize the fundamental problems of stage-gated delivery, big bang releases, and so forth. Architecture gap analysis usually assumed that project investment would be used to fill them. Architecture often merited the criticism of "top down planning," which in complex systems domains too often doesn&#8217;t work. Architects too often fall into the trap of the  <a href="#:HIPPO">HiPPO</a> (Highest Paid Person&#8217;s Opinion). A sense of <a href="#lean-startup">Lean Startup</a> experimentation, of placing bets on options and testing hypotheses, is not part of the mainstream enterprise architecture understanding. Instead, the architecture is presented as an established fact, with "governance" to ensure conformity. Hypothetical "synergies" emerging from "common platforms" are often offered as justification for architecture, with little follow up in measuring actual value delivered.</p>
 </div>
 <div class="paragraph">
 <p><a id="large-arch-xform-risk"></a></p>
@@ -26858,7 +26870,7 @@ Architecture represents the significant design decisions that shape a system, wh
 <p>Justifications for architecture often invoke "complexity" in the portfolio of systems. In response, architecture has often given in to the desire for a  complete "radical surgery" systems re-engineering, the temptation of the "clean slate." But as Jez Humble accurately notes,</p>
 </div>
 <div class="paragraph">
-<p><em>A common response to getting stuck in a big ball of mud is to fund a large systems replacement project. Such projects typically take months or years before they deliver any value to users, and the switchover from the old to the new system is often performed in “big bang” fashion. These projects also run an unusually high risk of running late and over budget and being cancelled. Systems rearchitecture should not be done as a large program of work funded from the capital budget. It should be a continuous activity that happens as part of the product development process. <a href="#Humble2013">[Humble2013]</a> ch10</em></p>
+<p><em>A common response to getting stuck in a big ball of mud is to fund a large systems replacement project. Such projects typically take months or years before they deliver any value to users, and the switchover from the old to the new system is often performed in “big bang” fashion. These projects also run an unusually high risk of running late and over budget and being canceled. Systems rearchitecture should not be done as a large program of work funded from the capital budget. It should be a continuous activity that happens as part of the product development process. <a href="#Humble2013">[Humble2013]</a> ch10</em></p>
 </div>
 <div class="paragraph">
 <p>Architecture methodology, with its focus on identifying capability gaps for feeding into the project portfolio process, has perhaps been too prone to supporting these large, troubled programs. As we know from our earlier chapters, large system changes are inherently risky and any intervention into a complex system is better undertaken as a series of smaller, incremental changes with frequent monitoring and assessment.</p>
@@ -26907,14 +26919,13 @@ When it  comes to system implementation, the temptation to be  fast, often under
 <p><em>&#8230;&#8203;for systems of sufficient scope and complexity to warrant teams (of teams) working on (incremental) implementation and evolution, the sheer mass of code can make it hard to discover the essential structure from bottom-up decisions made entirely through the medium of code. <a href="#Malan2010">[Malan2010]</a></em></p>
 </div>
 <div class="paragraph">
-<p>In terms of systems theory, a complex software system has emergent behavior, not obvious from just looking at its components. Because the system&#8217;s behavior can&#8217;t be reduced to its pieces, "self documenting code" can only go so far. The behavior of the assembled components as a system needs to be represented somehow, in a way that transcends the mere mechanics of the pieces. Abstraction is necessary to understand emergent behavior, and this leads inevitably to <a href="#arch-visualization">visual representation</a>.
-Without some attention to documenting overall context and systemic intent &amp; behavior, the effectiveness of the overall human/computer system degrades. For example, Alistair Cockburn reports that the Chrysler Comprehensive Compensation project, one of the first widely-reported Agile projects, was eventually halted, and</p>
+<p>In terms of systems theory, a complex software system has emergent behavior, not obvious from just looking at its components. Because the system&#8217;s behavior can&#8217;t be reduced to its pieces, "self documenting code" can only go so far. The behavior of the assembled components as a system needs to be represented somehow, in a way that transcends the mere mechanics of the pieces. Abstraction is necessary to understand emergent behavior, and this leads inevitably to <a href="#arch-visualization">visual representation</a>. Without some attention to documenting overall context and systemic intent &amp; behavior, the effectiveness of the overall human/computer system degrades. For example, Alistair Cockburn reports that the Chrysler Comprehensive Compensation project, one of the first widely-reported Agile projects, was eventually halted, and</p>
 </div>
 <div class="paragraph">
 <p><em>&#8230;&#8203;left no archived documentation &#8230;&#8203; other than two sentence user stories, the tests, and the code. Eventually, enough people left that the oral tradition and group memory were lost <a href="#Cockburn2007">[Cockburn2007]</a>, pp. 41-43</em></p>
 </div>
 <div class="paragraph">
-<p>Failure to sustain a shared mental model of a complex system is a risk that may result in loss of that system&#8217;s value.</p>
+<p>In short, failure to sustain a shared mental model of a complex system is a risk that may result in loss of that system&#8217;s value.</p>
 </div>
 </div>
 <div class="sect5">
@@ -26962,7 +26973,7 @@ Without some attention to documenting overall context and systemic intent &amp; 
 <div class="sect5">
 <h6 id="_why_creating_the_context">Why: Creating the context</h6>
 <div class="paragraph">
-<p>One principle throughout this book has been "respect the team," because true product value originates there. If teams are constantly fragmented by enterprise operating models and governance mandates, their ability to creatively solve business problems is hampered. Command and control replaces emergence, motivation declines, and valuable creativity is lost. <strong>Enterprise architecture should operate on the fundamental principle of protecting the precious resource that is the high-performing, collaborative, creative team.</strong> As we&#8217;ve discussed, imposing multiple governance checkpoints itself <a href="#digital-risk-management">adds risk</a>. And while it&#8217;s inevitable that the team will be subject to organization-wide mandates, they should be given the benefit of the doubt when autonomy collides with standardization.</p>
+<p>One principle throughout this book has been "respect the team," because true product value originates there. If teams are constantly fragmented by enterprise operating models and governance mandates, their ability to creatively solve business problems is hampered. Command and control replaces emergence, motivation declines, and valuable creativity is lost. <strong>Enterprise architecture must first and foremost protect the precious resource that is the high-performing, collaborative, creative team.</strong> As we&#8217;ve discussed, imposing multiple governance checkpoints itself <a href="#digital-risk-management">adds risk</a>. And while it&#8217;s inevitable that the team will be subject to organization-wide mandates, they should be given the benefit of the doubt when autonomy collides with standardization.</p>
 </div>
 <div class="paragraph">
 <p>When enterprise architecture takes on true business architecture questions, including how digital capabilities are to be enabled and enhanced, Agile insights become an input or kind of requirement to business architecture. What capabilities require high-performing, cross-functional teams? What capabilities can be supported with project-based temporary teams? The more valuable and difficult the work, the more it calls for the careful development of a common mental model among a close-knit team over time. Driving organizational capability investment into long-running team structures becomes a strategy that organizational architects should consider as they develop the overall organizational portfolio.</p>
@@ -27065,7 +27076,7 @@ Architectural goals—for example, desired performance, availability, and securi
 </div>
 </div>
 <div class="paragraph">
-<p><a href="#Toyota-Kata">Toyota Kata</a> was discussed in Chapter 7. In <em>Lean Enterprise,</em> Jez Humble and Joanne Molesky argue that it can provide a useful framework for architecture objectives. Toyota Kata emphasizes end-state goals ("target condition") and calls for hands-on investigation and response by participating workers, not consultants or distant executives. Architecture can benefit by understanding "gaps" in the sense of Toyota&#8217;s target conditions, and then supporting teams in their collaborative efforts to understand and achieve the desired state. The <a href="#arch-impacts">architectural impact</a> model can assist in thinking through suitable target conditions for architecture:</p>
+<p><a href="#Toyota-Kata">Toyota Kata</a> was discussed in Chapter 7. In <em>Lean Enterprise,</em> Jez Humble and Joanne Molesky argue that it can provide a useful framework for architecture objectives. Toyota Kata emphasizes end-state goals ("target conditions") and calls for hands-on investigation and response by participating workers, not consultants or distant executives. Architecture can benefit by understanding "gaps" in the sense of Toyota&#8217;s target conditions, and then supporting teams in their collaborative efforts to understand and achieve the desired state. The <a href="#arch-impacts">architectural impact</a> model can assist in thinking through suitable target conditions for architecture:</p>
 </div>
 <div class="ulist">
 <ul>
