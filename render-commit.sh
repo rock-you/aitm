@@ -22,6 +22,8 @@ git push origin master
 # bundle exec rake book:build
 
 yes|cp  book/*/*/images/* images   #rewriting rakefile
+yes|cp  book/*/images/* images  # why book/**/ doesn't work?
+
 
 asciidoctor aitm-student.adoc
 asciidoctor aitm-instructor.adoc
@@ -42,11 +44,4 @@ git add . -A && git commit -m "commit"
 git push origin gh-pages
 cd ../aitm
 
-
-
-# build pdf
-# a2x --verbose -fpdf -dbook --fop --icons --icons-dir=$HOME/opt/asciidoc/images/icons aitm.adoc
-#!/bin/bash
-
-
-#cp *.pdf ../aitm-pages/
+asciidoctor-pdf -a allow-uri-read aitm-collaborator-pdf.adoc  #need to fix URI-based figures
