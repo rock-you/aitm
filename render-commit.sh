@@ -19,7 +19,14 @@ git add . -A && git commit -m "commit"
 git push origin master
 
 #build html
-bundle exec rake book:build
+# bundle exec rake book:build
+
+yes|cp  book/*/*/images/* images   #rewriting rakefile
+
+asciidoctor aitm-student.adoc
+asciidoctor aitm-instructor.adoc
+asciidoctor aitm-collaborator.adoc
+
 mv aitm-student.html index.html  # hack, I should figure out the CLI parm for the rake command
 
 # copy html & images to github pages
@@ -34,6 +41,8 @@ git pull # pull down previous html. never gets edited by hand.
 git add . -A && git commit -m "commit"
 git push origin gh-pages
 cd ../aitm
+
+
 
 # build pdf
 # a2x --verbose -fpdf -dbook --fop --icons --icons-dir=$HOME/opt/asciidoc/images/icons aitm.adoc
