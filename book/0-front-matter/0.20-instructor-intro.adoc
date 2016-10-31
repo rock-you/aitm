@@ -1,14 +1,78 @@
-== Introduction
+ifdef::instructor-ed[]
+
+== Instructor's Introduction
 
 anchor:0.01-emergence[]
 
 Welcome to Agile IT Management: From Startup to Enterprise.
+
+=== Emergence: vision for a new Agile textbook
+
+So, what exactly IS this textbook, anyhow?
+
+* It is the first general, survey-level text on IT management with a specific Agile and Lean IT orientation.
+* It both covers, and is written using, Agile, Lean, and continuous delivery techniques.
+* It has a unique and innovative narrative structure.
+* Because it is written with continuous integration and print on demand techniques, it can be continually updated to reflect current industry trends.
 
 This is a "survey" text intended for the advanced undergraduate or graduate student interested in the general field of applied IT management. It is grounded in basic computing fundamentals, but does not require any particular technical skills to understand. You do not need to have taken any courses in networking, security, or particular programming languages to read this book.
 
 However, you will be presented with material on such topics, including fragments of programming languages and pseudocode, and need to be willing to invest the time and effort to understand.
 
 anchor:0.01-emergence[]
+
+A primary goal of this book, as a textbook, is to prepare the student for a career in this new digital industry. “Industry” is broadly defined as both those industries that offer digital products per se, as well as industries that rely on digital technology instrumentally for delivering all kinds of products. A central theme of the book is that “IT,” considered as a component, represents an increasing proportion of ALL industrial products (both consumer and business facing). This is known as "digital transformation."
+
+Because of this, the IT industry, and my understanding of it, have transformed dramatically in the past ten years, and the transformation has accelerated even more in the last five.
+
+However, IT remains under-managed and poorly understood relative to peer functions in the enterprise. It struggles with a reputation for expensive inflexibility and Dilbert-esque dysfunction. The DevOps and Agile movements promise transformation, but are encountering an entrenched legacy of:
+
+* enterprise architecture,
+* program and project management,
+* business process management,
+* IT service management practices, and
+* IT governance concerns
+
+Understanding and engaging with the challenges of this legacy are an ongoing theme throughout this introductory text.
+
+=== What this book does not cover
+This book does not cover specific technologies in any depth. Many examples are used, but carefully framed to not require previous expertise. This is about broader, longer-lifecycle trends.
+
+=== Some cautions
+However, some of the more radical voices in the Agile movement seem to think that the legacy can be simply swept away. The following cautionary message from Mike Burrows shows that, in terms of core Agile philosophy, this would be ill-advised:
+
+_“…some will tell you that when things are this bad, you throw it all away and start again. It's ironic: The same people who would champion incremental and evolutionary approaches to product development seem only too eager to recommend disruptive and revolutionary changes in people-based systems – in which the outcomes are so much less certain.”_ <<Burrows2014>>, Kindle Locations 827-829.
+
+IT management at scale within an organization is a complex system. Complex systems do not respond well to dramatic perturbations. They are best changed incrementally, with careful monitoring of the consequences of each small change. (This is part of the systems theory foundation underlying the Agile movement.)
+
+This is why the book, especially in the later chapters, starts with relatively straightforward and uncritical presentations of the following topics:
+
+* Investment, sourcing, and people
+* Project and process management
+* Governance, risk, security, and compliance
+* Enterprise information management
+* Enterprise architecture and portfolio management
+
+While these practices, and their associated approaches and policies, have caused friction with digital and Agile practitioners, they all have their reasons for existing. The goal of this book is to understand their interaction with the new digital approaches, but in order to do this we must first understand them on their own terms. It does no good to develop a critique based on misconceptions or exaggerations about what (for example) "process management" is all about.
+
+Instead, we try to break these large and sometimes controversial topics down into smaller, more specific topics - "lowest common denominators," perhaps:
+
+* Work
+* Ordering of tasks
+* Task dependencies
+* Estimation vs. commitment
+* Repeatability
+* Defined vs. empirical process control
+* Synchronization and cadence
+* Resource demand
+* Shared mental models
+* Mission objectives vs perimeter defense
+* Technical debt
+* Risk
+
+and so forth.
+
+ Distinguishing value: critical approach to frameworks and "best practices" where  other texts seem to blindly accept them
 
 === A process of emergence
 
@@ -110,9 +174,8 @@ But by the time they are a team of teams, specialization has emerged and more ro
 
 By careful examining these stages of maturation, and the industry responses to them, it is the author's hope that the student will have effective tools to critically engage with the problem of scaling the digital organization.
 
-ifdef::instructor-ed[]
 ****
-_Instructor's note_
+_Author's note_
 
 I have spent considerable time thinking (agonizing) about the correct ordering of the chapters within these sections. This is possibly the tenth or twelfth version of the chapter ordering. This is an area where I want critical review, but also have strong opinions.
 
@@ -132,7 +195,7 @@ Also, you may notice that *the chapter titles don't necessarily reflect "Agile" 
 
 The first word of the book's title is "Agile." That declares the orientation, and the proof will be in the reading. My intent is to involve experienced Agile practitioners in contributing to the sections most relevant to them, and I anticipate a high quality end result that is recognizably supportive of the Agile movement's goals and ambitions.
 
-The book however is not a complete dismissal of older models of IT delivery. Wherever possible, Agile is presented as an evolutionary step relative to what has gone before. The specifics of "what's different" are identified, in the interest of de-mystifying what can be a fraught and quasi-religious topic. In the words of Don Reinertsen, you can have "faith based Agile or science based Agile." This book is strictly interested in the latter. Pointers to relevant theory are included, although this is NOT a theoretical text. That will come later...footnote:[Effective pedagogy requires theory. I seek assistance in both the emerging theory of IT, and relevant theories of pedagogy. I am an amateur in both.]
+The book however is not a complete dismissal of older models of IT delivery. Wherever possible, Agile is presented as an evolutionary step relative to what has gone before. The specifics of "what's different" are identified, in the interest of de-mystifying what can be a fraught and quasi-religious topic. In the words of Don Reinertsen, you can have "faith based Agile or science based Agile." This book is strictly interested in the latter. Pointers to relevant theory are included, although this is NOT a theoretical text. That may come later.
 
 *This emergence model can also be understood as an individual's progression within a larger enterprise.* Even if one starts from Day 1 at a Fortune 100 corporation, I believe the progression of one's understanding still progresses through individual, to team, to "team of teams," to enterprise. Of course, one may cease evolving one's understanding at any of these stages, with corresponding implications for one's career.
 
@@ -146,5 +209,45 @@ More structure w/in structure: Each chapter flows in a roughly "top-down" fashio
 
 _End instructor's note_
 ****
+
+=== Labs
+_Notes for instructors_
+With three chapters in each section, the book can be covered in one intense semester at a chapter a week, although expanding it to a two-semester treatment would allow for more in-depth coverage and increased lab exposure.
+
+I give great credit to both my students and Dr. Misra for challenging me to add a practical component to the course. This required new thinking on my part. How to demonstrate IT management at scale in a lab setting? I have learned that a hands on component is critical, as IT management discussions can be  abstract and meaningless to many students. (”Incidents are different from Problems!”)
+
+Ten years ago, the best that would have been possible would be paper case studies, perhaps augmented with spreadsheets. But new options are now available. The power of modern computers (even lightweight laptops) coupled with the widespread availability of open source software, makes it is now possible to expose students to industrial computing in a meaningful, experiential way.
+
+I have found great utility in the use of lightweight virtualization technologies such as Vagrant, Virtualbox and Docker.  I recommend this approach wholeheartedly. I am always interested in hearing from other instructors who are working from the same approach.
+
+At this writing I maintain my labs publicly on Github.  My syllabus and lab structure is under continual improvement. This is my current aspirational plan.
+
+[cols="5*", options="header"]
+|====
+|Lecture|Topic|Business lab |Technical lab |Team size
+|Course introduction |Structure, approach |None|SSH & workstation setup |Individual
+5+|SECTION I: FOUNDER
+|Chapter 1 |IT value |Defining an IT product - review SaaS examples |Linux command line | 2
+|Chapter 2 |IT Infrastructure |Reviewing current IaaS offerings |Cloud and infrastructure as code - configuring a Vagrant machine manually & w/script that is checked into Github & modified | 2
+|Chapter 3 |Applications||Continuous delivery pipeline | 2
+5+|SECTION II: TEAM
+|Chapter 4 |Product management |User stories. Fail fast/risk mgmt |Behavior-driven development |6-8
+|Chapter 5 |Work management 2+^|Scrum, ticketing and kanban |6-8
+|Chapter 6 |Operations management |Service definition |Monitoring (Calavera + Nagios) | 6-8
+5+|SECTION III: TEAM OF TEAMS
+|Chapter 7 |Organizational structure |Organizational forms & communication channels (paper exercise?) |Continue Nagios | >11 (full class)
+|Chapter 8 |Project & resource management | |Open-source project tool | >11 (full class)
+|Chapter 9 |Process management | |Open-source ITSM suite | >11 (full class)
+5+|SECTION IV: ENTERPRISE
+|Chapter 10 |Security, governance, risk, and compliance |  | | 5
+|Chapter 11 |Enterprise Information Management |Portfolio simulation |Porfolio simulation with R? | 5
+|Chapter 12 |Architecture and portfolio | Archi (open source modeling tool) | |5
+|====
+
+I use a central server in teaching my classes, but even that is not necessary. This class can be taught with a zero computing budget, assuming that each team of students at least has access to a modern laptop and a fast Internet connection. As of this writing, I am using free and open source versions of Chef, Jenkins, iTOP, jUnit, Ant, and other tools (see github for the current approach).
+
+Some may question the inclusion of command-line experience, but without some common technical platform it is hard to provide a meaningful “hands-on” experience in the first half of the course. I structure my class on the assumption that the students are at least willing to learn computing techniques, with no prerequisites beyond that. Not even a programming language is required; the Java currently used as a sample is minimal.
+
+Truly beginning students will have to work at the Linux tutorials, but all they need master is basic command line navigation, and I have found this possible with a diverse student body, some with no previous direct experience. The labs for the second half of the course use games, experiential paper-based classroom exercises, GUI-based software, databases, and office productivity tools.
 
 endif::instructor-ed[]
