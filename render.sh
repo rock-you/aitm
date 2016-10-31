@@ -25,3 +25,4 @@ asciidoctor aitm-instructor.adoc
 asciidoctor aitm-collaborator.adoc
 
 # asciidoctor-pdf -a allow-uri-read aitm-collaborator-pdf.adoc  #need to fix URI-based figures
+# asciidoctor-epub3 aitm-student-epub.adoc
