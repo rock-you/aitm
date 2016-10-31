@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.5">
+<meta name="generator" content="Asciidoctor 1.5.4">
 <meta name="author" content="Charles T. Betz">
 <title>Agile IT Management: From Startup to Enterprise (Instructor&#8217;s Edition)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -18,6 +18,7 @@ audio:not([controls]){display:none;height:0}
 [hidden],template{display:none}
 script{display:none!important}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{margin:0}
 a{background:transparent}
 a:focus{outline:thin dotted}
 a:active,a:hover{outline:0}
@@ -52,7 +53,7 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -64,6 +65,7 @@ img{-ms-interpolation-mode:bicubic}
 .text-center{text-align:center!important}
 .text-justify{text-align:justify!important}
 .hide{display:none}
+body{-webkit-font-smoothing:antialiased}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
@@ -118,16 +120,13 @@ table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
 table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+body{tab-size:4}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
 .clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
 .clearfix:after,.float-group:after{clear:both}
-*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
-*:not(pre)>code.nobreak{word-wrap:normal}
-*:not(pre)>code.nowrap{white-space:nowrap}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
 pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
-em em{font-style:normal}
-strong strong{font-weight:400}
 .keyseq{color:rgba(51,51,51,.8)}
 kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
@@ -432,20 +431,21 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_copyright">Copyright</a></li>
 <li><a href="#_dedication">Dedication</a></li>
 <li><a href="#_preface">Preface</a></li>
-<li><a href="#_instructor_s_introduction">Instructor&#8217;s Introduction</a>
+<li><a href="#_introduction_to_the_instructor_s_edition">Introduction to the Instructor&#8217;s Edition</a>
 <ul class="sectlevel2">
-<li><a href="#_emergence_vision_for_a_new_agile_textbook">Emergence: vision for a new Agile textbook</a></li>
-<li><a href="#_what_this_book_does_not_cover">What this book does not cover</a></li>
-<li><a href="#_some_cautions">Some cautions</a></li>
+<li><a href="#_this_book_s_positioning">This book&#8217;s positioning</a></li>
 <li><a href="#_a_process_of_emergence">A process of emergence</a></li>
-<li><a href="#_this_book_s_structure">This book&#8217;s structure</a></li>
-<li><a href="#_emergence_means_formalization">Emergence means formalization</a></li>
+<li><a href="#_some_notes_on_book_structure">Some notes on book structure</a></li>
+<li><a href="#_what_this_book_does_not_cover">What this book does not cover</a></li>
 <li><a href="#_labs">Labs</a></li>
 </ul>
 </li>
 <li><a href="#_introduction">Introduction</a>
 <ul class="sectlevel2">
+<li><a href="#_for_the_student">For the student</a></li>
 <li><a href="#_the_it_industry_and_the_rise_of_digital">The IT industry, and the rise of digital</a></li>
+<li><a href="#_this_book_s_structure">This book&#8217;s structure</a></li>
+<li><a href="#_emergence_means_formalization">Emergence means formalization</a></li>
 </ul>
 </li>
 <li><a href="#_section_i_founder">Section I: Founder</a>
@@ -790,52 +790,56 @@ Although the author and publisher have made every effort to ensure that the info
 </div>
 </div>
 <div class="sect1">
-<h2 id="_instructor_s_introduction">Instructor&#8217;s Introduction</h2>
+<h2 id="_introduction_to_the_instructor_s_edition">Introduction to the Instructor&#8217;s Edition</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a id="0.01-emergence"></a></p>
-</div>
-<div class="paragraph">
-<p>Welcome to Agile IT Management: From Startup to Enterprise.</p>
-</div>
-<div class="sect2">
-<h3 id="_emergence_vision_for_a_new_agile_textbook">Emergence: vision for a new Agile textbook</h3>
-<div class="paragraph">
-<p>So, what exactly IS this textbook, anyhow?</p>
+<p>Welcome to Agile IT Management: From Startup to Enterprise. So, what exactly IS this textbook, anyhow?</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>It is the first general, survey-level text on IT management with a specific Agile and Lean IT orientation.</p>
+<p>It is the first general, survey-level text on IT management with a specific Agile, Lean IT, and DevOps orientation.</p>
 </li>
 <li>
-<p>It both covers, and is written using, Agile, Lean, and continuous delivery techniques.</p>
+<p>It has a unique and innovative narrative structure based on the concept of organizational evolution and scaling.</p>
 </li>
 <li>
-<p>It has a unique and innovative narrative structure.</p>
+<p>It both covers and is written using Agile, Lean, and continuous delivery techniques.</p>
 </li>
 <li>
 <p>Because it is written with continuous integration and print on demand techniques, it can be continually updated to reflect current industry trends.</p>
 </li>
 </ul>
 </div>
+<div class="sect2">
+<h3 id="_this_book_s_positioning">This book&#8217;s positioning</h3>
 <div class="paragraph">
-<p>This is a "survey" text intended for the advanced undergraduate or graduate student interested in the general field of applied IT management. It is grounded in basic computing fundamentals, but does not require any particular technical skills to understand. You do not need to have taken any courses in networking, security, or particular programming languages to read this book.</p>
+<p>Modern Information Systems texts, especially at the undergraduate, survey level, take an "outside-in" approach to instruction. They are intended to orient <strong>all</strong> students as to the role and function of information systems and their possibilities and value in the modern enterprise. These books have some common characteristics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>They tend to focus on the largest organizations, and their applications of computing. This can lead to puzzling topic choices; for example, in one well-known text, one of the first sections is dedicated to the problem of enterprise IT asset management - a narrow topic certainly not suitable (in my opinion) in the earlier sections of a survey course.</p>
+</li>
+<li>
+<p>Their learning progression (structure and narrative) is often arbitrary, e.g., covering "databases," "networking," "ERP systems," "security," and so forth in various orderings.</p>
+</li>
+<li>
+<p>They do not (and this is a primary failing) cover Agile and its associated digital ecosystem. Brief mentions of Agile may appear in sections on project management, but in general there is a lack of awareness of the fundamental characteristics of digital transformation, and the critical role of Agile and related methods to accelerating digital transformation.</p>
+</li>
+<li>
+<p>Their coverage of Cloud infrastructure also tends to be limited, even with new editions coming out every year.</p>
+</li>
+<li>
+<p>Finally, these books often uncritically accept and cite "best practice" IT frameworks such as CMMI, ITIL, PMBOK, and COBIT. New digital organizations do not, in general, use such guidance and the industry at this writing is rife with controversy as to the value and future of such frameworks. This book provides a clear and objective overview of these critical issues.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>However, you will be presented with material on such topics, including fragments of programming languages and pseudocode, and need to be willing to invest the time and effort to understand.</p>
+<p>This book, by contrast, is an "inside-out" book, intended to prepare the student for a career in digital industry. “Industry” is broadly defined as both those industries that offer digital products <em>per se</em>, as well as industries that rely on digital technology instrumentally for delivering all kinds of products. A central theme of the book is that “IT,” considered as a component, represents an increasing proportion of ALL industrial products (both consumer and business facing). This is known as "digital transformation."</p>
 </div>
 <div class="paragraph">
-<p><a id="0.01-emergence"></a></p>
-</div>
-<div class="paragraph">
-<p>A primary goal of this book, as a textbook, is to prepare the student for a career in this new digital industry. “Industry” is broadly defined as both those industries that offer digital products per se, as well as industries that rely on digital technology instrumentally for delivering all kinds of products. A central theme of the book is that “IT,” considered as a component, represents an increasing proportion of ALL industrial products (both consumer and business facing). This is known as "digital transformation."</p>
-</div>
-<div class="paragraph">
-<p>Because of this, the IT industry, and my understanding of it, have transformed dramatically in the past ten years, and the transformation has accelerated even more in the last five.</p>
-</div>
-<div class="paragraph">
-<p>However, IT remains under-managed and poorly understood relative to peer functions in the enterprise. It struggles with a reputation for expensive inflexibility and Dilbert-esque dysfunction. The DevOps and Agile movements promise transformation, but are encountering an entrenched legacy of:</p>
+<p>However, IT, or the digital function, remains under-managed and poorly understood relative to peer functions in the enterprise. It struggles with a reputation for expensive inflexibility and Dilbert-esque dysfunction. The DevOps and Agile movements promise transformation, but are encountering an entrenched legacy of:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -859,26 +863,14 @@ Although the author and publisher have made every effort to ensure that the info
 <div class="paragraph">
 <p>Understanding and engaging with the challenges of this legacy are an ongoing theme throughout this introductory text.</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_what_this_book_does_not_cover">What this book does not cover</h3>
 <div class="paragraph">
-<p>This book does not cover specific technologies in any depth. Many examples are used, but carefully framed to not require previous expertise. This is about broader, longer-lifecycle trends.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_some_cautions">Some cautions</h3>
-<div class="paragraph">
-<p>However, some of the more radical voices in the Agile movement seem to think that the legacy can be simply swept away. The following cautionary message from Mike Burrows shows that, in terms of core Agile philosophy, this would be ill-advised:</p>
+<p>Some of the more radical voices in the Agile movement sometimes give the impression that the legacy can be simply swept away. The following cautionary message from Mike Burrows shows that, in terms of core Agile philosophy, this would be ill-advised:</p>
 </div>
 <div class="paragraph">
 <p><em>“…some will tell you that when things are this bad, you throw it all away and start again. It&#8217;s ironic: The same people who would champion incremental and evolutionary approaches to product development seem only too eager to recommend disruptive and revolutionary changes in people-based systems – in which the outcomes are so much less certain.”</em> <a href="#Burrows2014">[Burrows2014]</a>, Kindle Locations 827-829.</p>
 </div>
 <div class="paragraph">
-<p>IT management at scale within an organization is a complex system. Complex systems do not respond well to dramatic perturbations. They are best changed incrementally, with careful monitoring of the consequences of each small change. (This is part of the systems theory foundation underlying the Agile movement.)</p>
-</div>
-<div class="paragraph">
-<p>This is why the book, especially in the later chapters, starts with relatively straightforward and uncritical presentations of the following topics:</p>
+<p>IT management at scale within an organization is a complex system. Complex systems do not respond well to dramatic perturbations. They are best changed incrementally, with careful monitoring of the consequences of each small change. (This is part of the systems theory foundation underlying the Agile movement.) This is why the book, especially in the later chapters, starts with relatively straightforward and uncritical presentations of the following topics:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -900,10 +892,7 @@ Although the author and publisher have made every effort to ensure that the info
 </ul>
 </div>
 <div class="paragraph">
-<p>While these practices, and their associated approaches and policies, have caused friction with digital and Agile practitioners, they all have their reasons for existing. The goal of this book is to understand their interaction with the new digital approaches, but in order to do this we must first understand them on their own terms. It does no good to develop a critique based on misconceptions or exaggerations about what (for example) "process management" is all about.</p>
-</div>
-<div class="paragraph">
-<p>Instead, we try to break these large and sometimes controversial topics down into smaller, more specific topics - "lowest common denominators," perhaps:</p>
+<p>While these practices, and their associated approaches and policies, have caused friction with digital and Agile practitioners, they all have their reasons for existing. The goal of this book is to understand their interaction with the new digital approaches, but in order to do this we must first understand them on their own terms. It does no good to develop a critique based on misconceptions or exaggerations about what (for example) "process management" or "governance" is all about. Instead, we try to break these large and sometimes controversial topics down into smaller, more specific topics - "lowest common denominators," perhaps:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -946,12 +935,10 @@ Although the author and publisher have made every effort to ensure that the info
 </ul>
 </div>
 <div class="paragraph">
-<p>and so forth.</p>
+<p>and so forth. By examining IT management in these more neutral, specific terms, we can develop a responsible critique of current industry "best practices" in content and form that will benefit students as they go out on their careers.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>Distinguishing value: critical approach to frameworks and "best practices" where  other texts seem to blindly accept them</pre>
-</div>
+<div class="paragraph">
+<p><a id="0.01-emergence"></a></p>
 </div>
 </div>
 <div class="sect2">
@@ -979,7 +966,7 @@ A complex system that works is invariably found to have evolved from a simple sy
 </div>
 </div>
 <div class="paragraph">
-<p>One of the most important and distinguishing features of this book is its "emergence model." In keeping with the entrepreneurial spirit of works like Ries' <a href="http://www.amazon.com/dp/0307887898/"><em>The Lean Startup</em>,</a> the book adopts a progressive, evolutionary approach. Your journey through it reflects a process of emergence. Such processes are often associated with founding and scaling a startup. There are many helpful books on this topic, such as:</p>
+<p>One of the most important and distinguishing features of this book is its "emergence model." In keeping with the entrepreneurial spirit of works like Ries' <a href="http://www.amazon.com/dp/0307887898/"><em>The Lean Startup</em>,</a> the book adopts a progressive, evolutionary approach. The student&#8217;s journey through it reflects a process of emergence. Such processes are often associated with founding and scaling a startup. There are many helpful books on this topic, such as:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -998,204 +985,11 @@ A complex system that works is invariably found to have evolved from a simple sy
 </ul>
 </div>
 <div class="paragraph">
-<p>However, this is not a textbook (or course) on entrepreneurship. It remains IT-centric. <strong>And, the book is also intended to be relevant to students entering directly into large, established enterprises.</strong> In fact, it prepares you for working in all stages of growth because it progresses through these four contexts:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Individual (founder)</p>
-</li>
-<li>
-<p>Team</p>
-</li>
-<li>
-<p>Small company (team of teams)</p>
-</li>
-<li>
-<p>Enterprise</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Whether you are in a startup, or on a journey within a larger, established organization, you will (hopefully) become aware as you progress through a broadening context:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Other team members</p>
-</li>
-<li>
-<p>Customers</p>
-</li>
-<li>
-<p>Suppliers</p>
-</li>
-<li>
-<p>Sponsors</p>
-</li>
-<li>
-<p>Necessary non-IT capabilities (finance, legal, HR, sales, marketing, etc)</p>
-</li>
-<li>
-<p>Channel partners</p>
-</li>
-<li>
-<p>Senior executives and funders</p>
-</li>
-<li>
-<p>Auditors and regulators</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Part of maturing in one&#8217;s career is understanding how all these relationships figure into your own overall system of value delivery. This will be a lifelong journey for the student; the author&#8217;s intent is to provide some useful tools.</p>
+<p>The emergence model and overall book structure is discussed in depth in the main introduction.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_this_book_s_structure">This book&#8217;s structure</h3>
-<div class="paragraph">
-<p>Here is a conceptual illustration of an IT management progression:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/ITProgression.png" alt="ITProgression">
-</div>
-</div>
-<div class="paragraph">
-<p>Elaborating the above outline into chapters, we have:</p>
-</div>
-<div class="olist upperroman">
-<ol class="upperroman" type="I">
-<li>
-<p><strong>Founder</strong></p>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><em>IT value</em>. Why do we need computers? What can they do for us?</p>
-</li>
-<li>
-<p><em>IT infrastructure</em> We want to build something. We have to choose a platform first.</p>
-</li>
-<li>
-<p><em>IT applications</em> Let&#8217;s start building something of use to someone.</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p><strong>Team</strong></p>
-<div class="olist arabic">
-<ol class="arabic" start="4">
-<li>
-<p><em>Product management</em> What exactly is it we are building? What is the process of discovering our customer&#8217;s needs and quickly testing how to meet them? How do we better define the product vision, and the way of working towards it, for a bigger team?</p>
-</li>
-<li>
-<p><em>Work management</em> How do we keep track of what we are doing, and communicate our progress and needs at the simplest level?</p>
-</li>
-<li>
-<p><em>Operations management</em> How do we sustain this surprisingly fragile digital service, in its ongoing delivery of value?</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p><strong>Team of Teams</strong></p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><em>The boundary between the "team" and the "team of teams" is a challenging area, and industry responses remain incomplete and evolving. Hence the notation "THE SCALING PROBLEM" on the diagram.</em></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="7">
-<li>
-<p><em>Organization and culture</em> We&#8217;re getting big. How do we deal with this? How are we structured? Why this way and not that? How can we benefit from increasing maturity and specialization, while still maintaining a responsive product? What are the unwritten values and rules in our company?</p>
-</li>
-<li>
-<p><em>Project and resource management</em> Work is becoming larger and more complex. How can we  track and execute larger segments of it, and coordinate across multiple teams?</p>
-</li>
-<li>
-<p><em>Process management</em> We have a structure. Work needs to flow across it. Product and project teams increasingly demand predictable, consistent delivery of internal services, and synchronization points such as enterprise releases are increasingly critical signals.</p>
-<div class="olist upperroman">
-<ol class="upperroman" type="I">
-<li>
-<p><strong>Enterprise</strong></p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p><em>Security, and governance, risk, and compliance</em> We need to cope with external forces (regulators, vendor partners, security adversaries, auditors) increasingly defining our options.</p>
-</li>
-<li>
-<p><em>Enterprise information management</em> We&#8217;ve been concerned with data, information, and knowledge since the earliest days of our journey. But at this scale, we have to formalize our approaches and understandings; without that, we will never capture the full value available with modern analytics and Big Data. Compliance issues are also compelling us to formalize here.</p>
-</li>
-<li>
-<p><em>Architecture and portfolio</em> We need to understand the big picture of interacting lifecycles, reduce technical debt and redundancy, accelerate development through establishing platforms, and obtain better economies of scale. We need to define our investment strategy based on a sound understanding of both business needs and technology limitations.</p>
-<div class="olist upperroman">
-<ol class="upperroman" type="I">
-<li>
-<p><strong>Appendices</strong></p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p><em>A review of IT frameworks and standards</em></p>
-</li>
-<li>
-<p><em>Architectural depictions</em></p>
-</li>
-<li>
-<p><em>Towards a theory of IT management</em></p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>The intent is that the more complex, "enterprise"-scale concerns at the end of the book are presented as part of a logical progression.</p>
-</div>
-<div class="paragraph">
-<p><a id="formalization"></a></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_emergence_means_formalization">Emergence means formalization</h3>
-<div class="paragraph">
-<p>The emergence model seeks to define a likely order in which concerns are <strong>formalized</strong>. Any concern may of course arise at any time: the startup founder certainly is concerned with security!</p>
-</div>
-<div class="paragraph">
-<p>Formalization means at least one or more of the following:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Dedicated resources</p>
-</li>
-<li>
-<p>Dedicated organization</p>
-</li>
-<li>
-<p>Defined policies and processes</p>
-</li>
-<li>
-<p>Automated tooling</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>In the author&#8217;s experience, for example, startups avoid formalized process and project management. To the extent the concerns exist, they are <em>tacit</em> (understood or implied; suggested; implicit). Certainly, a small startup does not invest in an enterprise-class service desk tool supporting a full array of IT management processes, or a full-blown Project Management Office with its own Vice President and associated portfolio automation. Simple work management, with a manual or automated Kanban board, is likely their choice for work management.</p>
-</div>
-<div class="paragraph">
-<p>But by the time they are a team of teams, specialization has emerged and more robust processes and tools are required. The danger of course is that the formalization effort may be driven by its own logic, and start to lose track of the all-critical business context.</p>
-</div>
-<div class="paragraph">
-<p>By careful examining these stages of maturation, and the industry responses to them, it is the author&#8217;s hope that the student will have effective tools to critically engage with the problem of scaling the digital organization.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><em>Author&#8217;s note</em></p>
-</div>
+<h3 id="_some_notes_on_book_structure">Some notes on book structure</h3>
 <div class="paragraph">
 <p>I have spent considerable time thinking (agonizing) about the correct ordering of the chapters within these sections. This is possibly the tenth or twelfth version of the chapter ordering. This is an area where I want critical review, but also have strong opinions.</p>
 </div>
@@ -1248,10 +1042,11 @@ A complex system that works is invariably found to have evolved from a simple sy
 </li>
 </ol>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_what_this_book_does_not_cover">What this book does not cover</h3>
 <div class="paragraph">
-<p><em>End instructor&#8217;s note</em></p>
-</div>
-</div>
+<p>This book does not cover specific technologies in any depth. Many examples are used, but carefully framed to not require previous expertise. This is about broader, longer-lifecycle trends.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1410,6 +1205,15 @@ With three chapters in each section, the book can be covered in one intense seme
 <h2 id="_introduction">Introduction</h2>
 <div class="sectionbody">
 <div class="sect2">
+<h3 id="_for_the_student">For the student</h3>
+<div class="paragraph">
+<p>This is a "survey" text intended for the advanced undergraduate or graduate student interested in the general field of applied IT management. It is grounded in basic computing fundamentals, but does not require any particular technical skills to understand. You do not need to have taken any courses in networking, security, or particular programming languages to read this book.</p>
+</div>
+<div class="paragraph">
+<p>However, you will be presented with material on such topics, including fragments of programming languages and pseudocode, and need to be willing to invest the time and effort to understand.</p>
+</div>
+</div>
+<div class="sect2">
 <h3 id="_the_it_industry_and_the_rise_of_digital">The IT industry, and the rise of digital</h3>
 <div class="quoteblock">
 <blockquote>
@@ -1448,6 +1252,200 @@ Now agile methodologies—which involve new values, principles, practices, and b
 <p>[W]e&#8217;ve moved to a flatter organizational model with "teams of teams" who are focused on outcomes. These are colocated groups of people who own a small, minimal viable product deliverable that they can produce in 90 days. The team focuses on one piece of work that they will own through its complete lifecycle…in [the “back office”] model, the CIO controls infrastructure, the network, storage, and makes the PCs run. The CIOs who choose to play that role will not be relevant for long…” <a href="#Heller2016">[Heller2016]</a></p>
 </div>
 </div>
+</div>
+<div class="paragraph">
+<p>However, this is not a textbook (or course) on entrepreneurship. It remains IT-centric. <strong>And, the book is also intended to be relevant to students entering directly into large, established enterprises.</strong> In fact, it prepares the student for working in all stages of growth because it progresses through these four contexts:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Individual (founder)</p>
+</li>
+<li>
+<p>Team</p>
+</li>
+<li>
+<p>Small company (team of teams)</p>
+</li>
+<li>
+<p>Enterprise</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Whether in a startup, or on a journey within a larger, established organization, you will (hopefully) become aware as you progress through a broadening context:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Other team members</p>
+</li>
+<li>
+<p>Customers</p>
+</li>
+<li>
+<p>Suppliers</p>
+</li>
+<li>
+<p>Sponsors</p>
+</li>
+<li>
+<p>Necessary non-IT capabilities (finance, legal, HR, sales, marketing, etc)</p>
+</li>
+<li>
+<p>Channel partners</p>
+</li>
+<li>
+<p>Senior executives and funders</p>
+</li>
+<li>
+<p>Auditors and regulators</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Part of maturing in one&#8217;s career is understanding how all these relationships figure into your own overall system of value delivery. This will be a lifelong journey for the student; the author&#8217;s intent is to provide some useful tools.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_this_book_s_structure">This book&#8217;s structure</h3>
+<div class="paragraph">
+<p>Here is a conceptual illustration of an IT management progression:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/ITProgression.png" alt="ITProgression">
+</div>
+</div>
+<div class="paragraph">
+<p>Elaborating the above outline into chapters, we have:</p>
+</div>
+<div class="olist upperroman">
+<ol class="upperroman" type="I">
+<li>
+<p><strong>Founder</strong></p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><em>IT value</em>. Why do we need computers? What can they do for us?</p>
+</li>
+<li>
+<p><em>IT infrastructure</em> We want to build something. We have to choose a platform first.</p>
+</li>
+<li>
+<p><em>IT applications</em> Let&#8217;s start building something of use to someone.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><strong>Team</strong></p>
+<div class="olist arabic">
+<ol class="arabic" start="4">
+<li>
+<p><em>Product management</em> What exactly is it we are building? What is the process of discovering our customer&#8217;s needs and quickly testing how to meet them? How do we better define the product vision, and the way of working towards it, for a bigger team?</p>
+</li>
+<li>
+<p><em>Work management</em> How do we keep track of what we are doing, and communicate our progress and needs at the simplest level?</p>
+</li>
+<li>
+<p><em>Operations management</em> How do we sustain this surprisingly fragile digital service, in its ongoing delivery of value?</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><strong>Team of Teams</strong></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><em>The boundary between the "team" and the "team of teams" is a challenging area, and industry responses remain incomplete and evolving. Hence the notation "THE SCALING PROBLEM" on the diagram.</em></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic" start="7">
+<li>
+<p><em>Organization and culture</em> We&#8217;re getting big. How do we deal with this? How are we structured? Why this way and not that? How can we benefit from increasing maturity and specialization, while still maintaining a responsive product? What are the unwritten values and rules in our company?</p>
+</li>
+<li>
+<p><em>Investment, sourcing, and people</em> Work is becoming larger and more complex. How can we  track and execute larger segments of it, and coordinate across multiple teams?</p>
+</li>
+<li>
+<p><em>Execution management</em> We have a structure. Work needs to flow across it. Product and project teams increasingly demand predictable, consistent delivery of internal services, and synchronization points such as enterprise releases are increasingly critical signals.</p>
+<div class="olist upperroman">
+<ol class="upperroman" type="I">
+<li>
+<p><strong>Enterprise</strong></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><em>Governance, risk, security, and compliance</em> We need to cope with external forces (regulators, vendor partners, security adversaries, auditors) increasingly defining our options.</p>
+</li>
+<li>
+<p><em>Enterprise information management</em> We&#8217;ve been concerned with data, information, and knowledge since the earliest days of our journey. But at this scale, we have to formalize our approaches and understandings; without that, we will never capture the full value available with modern analytics and Big Data. Compliance issues are also compelling us to formalize here.</p>
+</li>
+<li>
+<p><em>Architecture and portfolio</em> We need to understand the big picture of interacting lifecycles, reduce technical debt and redundancy, accelerate development through establishing platforms, and obtain better economies of scale. We need to define our investment strategy based on a sound understanding of both business needs and technology limitations.</p>
+<div class="olist upperroman">
+<ol class="upperroman" type="I">
+<li>
+<p><strong>Appendices</strong></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p><em>A review of IT frameworks and standards</em></p>
+</li>
+<li>
+<p><em>Architectural depictions</em></p>
+</li>
+<li>
+<p><em>Towards a theory of IT management</em></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The intent is that the more complex, "enterprise"-scale concerns at the end of the book are presented as part of a logical progression.</p>
+</div>
+<div class="paragraph">
+<p><a id="formalization"></a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_emergence_means_formalization">Emergence means formalization</h3>
+<div class="paragraph">
+<p>The emergence model seeks to define a likely order in which concerns are <strong>formalized</strong>. Any concern may of course arise at any time: the startup founder certainly is concerned with security!</p>
+</div>
+<div class="paragraph">
+<p>Formalization means at least one or more of the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Dedicated resources</p>
+</li>
+<li>
+<p>Dedicated organization</p>
+</li>
+<li>
+<p>Defined policies and processes</p>
+</li>
+<li>
+<p>Automated tooling</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the author&#8217;s experience, for example, startups avoid formalized process and project management. To the extent the concerns exist, they are <em>tacit</em> (understood or implied; suggested; implicit). Certainly, a small startup does not invest in an enterprise-class service desk tool supporting a full array of IT management processes, or a full-blown Project Management Office with its own Vice President and associated portfolio automation. Simple work management, with a manual or automated Kanban board, is likely their choice for work management.</p>
+</div>
+<div class="paragraph">
+<p>But by the time they are a team of teams, specialization has emerged and more robust processes and tools are required. The danger of course is that the formalization effort may be driven by its own logic, and start to lose track of the all-critical business context.</p>
+</div>
+<div class="paragraph">
+<p>By careful examining these stages of maturation, and the industry responses to them, it is the author&#8217;s hope that the student will have effective tools to critically engage with the problem of scaling the digital organization.</p>
 </div>
 <div class="paragraph">
 <p><a id="Sec-I"></a></p>
@@ -28295,7 +28293,7 @@ All web references were archived into the author&#8217;s files on the indicated 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-31 07:42:01 CDT
+Last updated 2016-10-31 08:48:39 CDT
 </div>
 </div>
 </body>
