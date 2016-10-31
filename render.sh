@@ -24,4 +24,4 @@ asciidoctor aitm-student.adoc
 asciidoctor aitm-instructor.adoc
 asciidoctor aitm-collaborator.adoc
 
-asciidoctor-pdf -a allow-uri-read aitm-collaborator-pdf.adoc  #need to fix URI-based figures
+# asciidoctor-pdf -a allow-uri-read aitm-collaborator-pdf.adoc  #need to fix URI-based figures

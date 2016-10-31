@@ -21,7 +21,7 @@ git push origin master
 mv aitm-student.html index.html  # hack, I should figure out the CLI parm for the rake command
 
 # copy html & images to github pages
-# dependent on successfully changing directories along relative paths. heaven help the person who runs this other than from the aitm dir.
+# dependent on successfully changing directories along relative paths. heaven help the person who runs this other than from the aitm dir, with aitm-pages at the same level.
 
 cp -R images ../aitm-pages/
 cp *.html ../aitm-pages/
