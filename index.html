@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.4">
+<meta name="generator" content="Asciidoctor 1.5.5">
 <title>Agile IT Management: From Startup to Enterprise (Student Edition)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -17,7 +17,6 @@ audio:not([controls]){display:none;height:0}
 [hidden],template{display:none}
 script{display:none!important}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
-body{margin:0}
 a{background:transparent}
 a:focus{outline:thin dotted}
 a:active,a:hover{outline:0}
@@ -52,7 +51,7 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -64,7 +63,6 @@ img{-ms-interpolation-mode:bicubic}
 .text-center{text-align:center!important}
 .text-justify{text-align:justify!important}
 .hide{display:none}
-body{-webkit-font-smoothing:antialiased}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
@@ -119,13 +117,16 @@ table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
 table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
-body{tab-size:4}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
 .clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
 .clearfix:after,.float-group:after{clear:both}
-*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+*:not(pre)>code.nobreak{word-wrap:normal}
+*:not(pre)>code.nowrap{white-space:nowrap}
 pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
+em em{font-style:normal}
+strong strong{font-weight:400}
 .keyseq{color:rgba(51,51,51,.8)}
 kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
@@ -423,8 +424,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_table_of_contents">Table of Contents</a></li>
-<li><a href="#_foreword">Foreword</a></li>
+<li><a href="#_praise_for_this_book">Praise for this book</a></li>
+<li><a href="#_copyright">Copyright</a></li>
+<li><a href="#_dedication">Dedication</a></li>
 <li><a href="#_preface_to_the_instructor">Preface to the Instructor</a>
 <ul class="sectlevel2">
 <li><a href="#_the_it_industry_and_the_rise_of_digital">The IT industry, and the rise of digital</a></li>
@@ -1140,43 +1142,59 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div id="content">
-<div id="preamble">
+<div class="sect1">
+<h2 id="_praise_for_this_book">Praise for this book</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Agile IT management
-From startup to enterprise</p>
+<p><em>Agile IT Management is a perfect fit for my Management Information Systems class to introduce students to the fast-paced world of IT Infrastructure that they will be dealing with shortly upon graduation.  This book uses multiple perspectives (Founder, Team Leader, VP, C-level executive) to demonstrate to the student not only how a business grows, but how they need to continually grow their skill set.  The use of hands-on exercises encouraged by the format of this book complements my teaching style that allows students to learn by doing, failing and doing again.  An additional benefit is that this book begins with a focus on the startup mentality which I will use in my Business Innovation class.</em></p>
 </div>
 <div class="paragraph">
-<p>Agile IT Management: From Startup to Enterprise</p>
-</div>
-<div class="paragraph">
-<p><em>New approaches for digital transformation</em></p>
-</div>
-<div class="paragraph">
-<p>Charles Thomas Betz</p>
-</div>
-<div class="paragraph">
-<p>Digital Management Academy
-Minneapolis, Minnesota</p>
-</div>
-<div class="paragraph">
-<p>All rights reserved.</p>
-</div>
-<div class="paragraph">
-<p>To&#8230;&#8203;</p>
+<p><em>Prof. Pat Paulson, Winona State University</em></p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_table_of_contents">Table of Contents</h2>
+<h2 id="_copyright">Copyright</h2>
 <div class="sectionbody">
-<!-- toc disabled -->
+<div class="paragraph">
+<p>Published by Digital Management Academy, LLC<br>
+14 Sidney Place<br>
+Minneapolis, MN  55414</p>
+</div>
+<div class="paragraph">
+<p>Copyright © 2016 by Charles T. Betz</p>
+</div>
+<div class="paragraph">
+<p>All rights reserved, for information about permission to reproduce selections from this book, write to Permissions, Digital Management Academy LLC,
+14 Sidney Place, Minneapolis, MN  55414</p>
+</div>
+<div class="paragraph">
+<p>First Edition</p>
+</div>
+<div class="paragraph">
+<p>Produced in the United States of America</p>
+</div>
+<div class="paragraph">
+<p>Cover illustration by Go To Media, LLC</p>
+</div>
+<div class="paragraph">
+<p>ISBN: 978-0-9981346-0-4</p>
+</div>
+<div class="paragraph">
+<p>Publisher&#8217;s note to readers:
+Although the author and publisher have made every effort to ensure that the information in this book was correct at press time, the author and publisher do not assume and hereby disclaim any liability to any party for any loss, damage, or disruption caused by errors or omissions, whether such errors or omissions result from negligence, accident, or any other cause.</p>
+</div>
+<div class="paragraph">
+<p>For information about special discounts for bulk purchases or for information on booking authors for an event, please visit www.dm-academy.com.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_foreword">Foreword</h2>
+<h2 id="_dedication">Dedication</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p><em>To my students</em></p>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -7568,9 +7586,6 @@ Poppendieck wastes as cited by Cobb, p177</pre>
 <div class="content">
 <pre>Lean Enterprise "Turn central IT into a product development organization."</pre>
 </div>
-</div>
-<div class="paragraph">
-<p>#include::book/2-section-II/2.04-chap-4/2.04.10-domain-model.adoc[]</p>
 </div>
 </div>
 <div class="sect3">
@@ -28829,7 +28844,7 @@ All web references were archived into the author&#8217;s files on the indicated 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-30 14:34:25 CDT
+Last updated 2016-10-30 18:12:05 CDT
 </div>
 </div>
 </body>
