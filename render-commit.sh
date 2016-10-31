@@ -44,4 +44,4 @@ git add . -A && git commit -m "commit"
 git push origin gh-pages
 cd ../aitm
 
-asciidoctor-pdf -a allow-uri-read aitm-collaborator-pdf.adoc  #need to fix URI-based figures
+#asciidoctor-pdf -a allow-uri-read aitm-collaborator-pdf.adoc  #need to fix URI-based figures
