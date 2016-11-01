@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.4">
+<meta name="generator" content="Asciidoctor 1.5.5">
+<meta name="author" content="Charles T. Betz">
 <title>Agile IT Management: From Startup to Enterprise (Student Edition)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -17,7 +18,6 @@ audio:not([controls]){display:none;height:0}
 [hidden],template{display:none}
 script{display:none!important}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
-body{margin:0}
 a{background:transparent}
 a:focus{outline:thin dotted}
 a:active,a:hover{outline:0}
@@ -52,7 +52,7 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -64,7 +64,6 @@ img{-ms-interpolation-mode:bicubic}
 .text-center{text-align:center!important}
 .text-justify{text-align:justify!important}
 .hide{display:none}
-body{-webkit-font-smoothing:antialiased}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
@@ -119,13 +118,16 @@ table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
 table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
-body{tab-size:4}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
 .clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
 .clearfix:after,.float-group:after{clear:both}
-*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+*:not(pre)>code.nobreak{word-wrap:normal}
+*:not(pre)>code.nowrap{white-space:nowrap}
 pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
+em em{font-style:normal}
+strong strong{font-weight:400}
 .keyseq{color:rgba(51,51,51,.8)}
 kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
@@ -417,27 +419,225 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .show-for-print{display:inherit!important}}
 </style>
 </head>
-<body class="article">
+<body class="book toc2 toc-left">
 <div id="header">
 <h1>Agile IT Management: From Startup to Enterprise (Student Edition)</h1>
+<div class="details">
+<span id="author" class="author">Charles T. Betz</span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_praise_for_this_book">Praise for this book</a></li>
+<li><a href="#_copyright">Copyright</a></li>
+<li><a href="#_dedication">Dedication</a></li>
+<li><a href="#_preface">Preface</a></li>
+<li><a href="#_introduction">Introduction</a>
+<ul class="sectlevel2">
+<li><a href="#_the_it_industry_and_the_rise_of_digital">The IT industry, and the rise of digital</a></li>
+</ul>
+</li>
+<li><a href="#_section_i_founder">Section I: Founder</a>
+<ul class="sectlevel2">
+<li><a href="#_chapter_1_it_value">Chapter 1. IT Value</a>
+<ul class="sectlevel3">
+<li><a href="#_introduction_to_chapter_1">Introduction to Chapter 1</a></li>
+<li><a href="#_what_is_it_value">What is IT value?</a></li>
+<li><a href="#_defining_information_technology">Defining Information Technology</a></li>
+<li><a href="#_it_services_systems_and_applications">IT services, systems, and applications</a></li>
+<li><a href="#_the_it_service_lifecycle">The IT service lifecycle</a></li>
+<li><a href="#_defining_consumer_customer_and_sponsor">Defining consumer, customer, and sponsor</a></li>
+<li><a href="#_understanding_digital_context">Understanding digital context</a></li>
+<li><a href="#_conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li><a href="#_chapter_2_infrastructure_management">Chapter 2: Infrastructure Management</a>
+<ul class="sectlevel3">
+<li><a href="#_introduction_to_chapter_2">Introduction to Chapter 2</a></li>
+<li><a href="#_infrastructure_overview">Infrastructure overview</a></li>
+<li><a href="#_choosing_infrastructure">Choosing infrastructure</a></li>
+<li><a href="#_from_physical_compute_to_cloud">From "physical" compute to Cloud</a></li>
+<li><a href="#_infrastructure_as_code">Infrastructure as code</a></li>
+<li><a href="#_version_control_the_agile_foundation">Version control: the Agile foundation</a></li>
+<li><a href="#_policy_based_approaches">Policy-based approaches</a></li>
+<li><a href="#_topics_in_it_infrastructure">Topics in IT infrastructure</a></li>
+<li><a href="#_conclusion_2">Conclusion</a></li>
+</ul>
+</li>
+<li><a href="#_chapter_3_application_delivery">Chapter 3: Application Delivery</a>
+<ul class="sectlevel3">
+<li><a href="#_introduction_to_chapter_3">Introduction to Chapter 3</a></li>
+<li><a href="#_basics_of_applications_and_their_development">Basics of applications and their development</a></li>
+<li><a href="#_history_of_the_agile_movement">History of the Agile movement</a></li>
+<li><a href="#_the_devops_challenge">The DevOps challenge</a></li>
+<li><a href="#_describing_system_intent">Describing system intent</a></li>
+<li><a href="#_test_driven_development_and_refactoring">Test-driven development and refactoring</a></li>
+<li><a href="#_continuous_integration">Continuous integration</a></li>
+<li><a href="#_continuous_deployment">Continuous deployment</a></li>
+<li><a href="#_conclusion_3">Conclusion</a></li>
+</ul>
+</li>
+<li><a href="#_section_i_conclusion">Section I Conclusion</a></li>
+</ul>
+</li>
+<li><a href="#_section_ii_team">Section II: Team</a>
+<ul class="sectlevel2">
+<li><a href="#_section_ii_introduction">Section II introduction</a></li>
+<li><a href="#_special_section_systems_thinking_and_feedback">Special section: Systems thinking and feedback</a>
+<ul class="sectlevel3">
+<li><a href="#_a_brief_introduction_to_feedback">A brief introduction to feedback</a></li>
+<li><a href="#_what_does_systems_thinking_have_to_do_with_it">What does systems thinking have to do with IT?</a></li>
+<li><a href="#_quality_management">Quality management</a></li>
+</ul>
+</li>
+<li><a href="#_chapter_4_product_management">Chapter 4: Product Management</a>
+<ul class="sectlevel3">
+<li><a href="#_introduction_to_chapter_4">Introduction to Chapter 4</a></li>
+<li><a href="#_why_product_management">Why product management?</a></li>
+<li><a href="#_organizing_the_product_team">Organizing the product team</a></li>
+<li><a href="#_product_discovery">Product discovery</a></li>
+<li><a href="#_assorted_topics_in_product_management">Assorted topics in Product Management</a></li>
+<li><a href="#_conclusion_4">Conclusion</a></li>
+</ul>
+</li>
+<li><a href="#_chapter_5_work_management">Chapter 5: Work Management</a>
+<ul class="sectlevel3">
+<li><a href="#_introduction_to_chapter_5">Introduction to Chapter 5</a></li>
+<li><a href="#_why_work_management">Why work management?</a></li>
+<li><a href="#_introducing_kanban">Introducing Kanban</a></li>
+<li><a href="#_the_shared_mental_model_of_the_work_to_be_done">The shared mental model of the work to be done</a></li>
+<li><a href="#_the_service_desk">The service desk</a></li>
+<li><a href="#_lean_lean_product_development_and_don_reinertsen">Lean, Lean product development, and Don Reinertsen</a></li>
+<li><a href="#_from_plan_build_run_to_demand_supply_execute">From Plan, Build, Run to Demand, Supply, Execute</a></li>
+<li><a href="#_advanced_topics">Advanced topics</a></li>
+<li><a href="#_conclusion_5">Conclusion</a></li>
+</ul>
+</li>
+<li><a href="#_chapter_6_operations_management">Chapter 6: Operations Management</a>
+<ul class="sectlevel3">
+<li><a href="#_introduction_to_chapter_6">Introduction to Chapter 6</a></li>
+<li><a href="#_introducing_operations_management">Introducing operations management</a></li>
+<li><a href="#_monitoring">Monitoring</a></li>
+<li><a href="#_state_configuration_and_discovery">State, configuration, and discovery</a></li>
+<li><a href="#_capacity_and_performance_management">Capacity and performance management</a></li>
+<li><a href="#_other_operations_techniques_and_tools">Other operations techniques and tools</a></li>
+<li><a href="#_advanced_topics_in_operations">Advanced topics in operations</a></li>
+<li><a href="#_conclusion_6">Conclusion</a></li>
+</ul>
+</li>
+<li><a href="#_section_ii_conclusion">Section II Conclusion</a></li>
+</ul>
+</li>
+<li><a href="#_section_iii_team_of_teams">Section III: Team of Teams</a>
+<ul class="sectlevel2">
+<li><a href="#_section_iii_introduction">Section III introduction</a></li>
+<li><a href="#_special_section_the_elaborated_it_organization">Special section: The elaborated IT organization</a>
+<ul class="sectlevel3">
+<li><a href="#_the_perils_of_best_practices">The perils of "best practices"</a></li>
+<li><a href="#_the_it_senior_executive">The IT senior executive</a></li>
+</ul>
+</li>
+<li><a href="#_chapter_7_organization_and_culture">Chapter 7: Organization and Culture</a>
+<ul class="sectlevel3">
+<li><a href="#_introduction_to_chapter_7">Introduction to Chapter 7</a></li>
+<li><a href="#_why_organization_matters">Why organization matters</a></li>
+<li><a href="#_organizational_transition_and_the_spotify_model">Organizational transition and the Spotify model</a></li>
+<li><a href="#_organizational_theory">Organizational theory</a></li>
+<li><a href="#_product_and_function">Product and function</a></li>
+<li><a href="#_culture">Culture</a></li>
+<li><a href="#_topics_in_organization_and_culture">Topics in organization and culture</a></li>
+<li><a href="#_conclusion_7">Conclusion</a></li>
+</ul>
+</li>
+<li><a href="#_chapter_8_project_resource_management">Chapter 8: Project &amp; Resource Management</a>
+<ul class="sectlevel3">
+<li><a href="#_introduction_to_chapter_8">Introduction to Chapter 8</a></li>
+<li><a href="#_why_project_management">Why project management?</a></li>
+<li><a href="#_principles_and_theories_of_project_management">Principles and theories of project management</a></li>
+<li><a href="#_agile_and_project_management">Agile and project management</a></li>
+<li><a href="#_it_sourcing_and_contract_management">IT sourcing and contract management</a></li>
+<li><a href="#_it_human_resource_management">IT human resource management</a></li>
+<li><a href="#_it_financial_management">IT financial management</a></li>
+<li><a href="#_topics_in_it_project_management_and_related_fields">Topics in IT project management and related fields</a></li>
+<li><a href="#_conclusion_8">Conclusion</a></li>
+</ul>
+</li>
+<li><a href="#_chapter_9_process_management">Chapter 9: Process Management</a>
+<ul class="sectlevel3">
+<li><a href="#_introduction_to_chapter_9">Introduction to Chapter 9</a></li>
+<li><a href="#_why_process_management">Why process management?</a></li>
+<li><a href="#_process_basics">Process basics</a></li>
+<li><a href="#_process_control_and_continuous_improvement">Process control and continuous improvement</a></li>
+<li><a href="#_process_frameworks">Process frameworks</a></li>
+<li><a href="#_lean_agile_and_it_process_management">Lean, Agile, and IT process management</a></li>
+<li><a href="#_topics_in_process_management">Topics in process management</a></li>
+<li><a href="#_conclusion_9">Conclusion</a></li>
+</ul>
+</li>
+<li><a href="#_section_conclusion">Section conclusion</a></li>
+</ul>
+</li>
+<li><a href="#_section_iv_enterprise">Section IV: Enterprise</a>
+<ul class="sectlevel2">
+<li><a href="#_section_iv_introduction">Section IV introduction</a></li>
+<li><a href="#_special_section_the_it_lifecycles">Special section: The IT lifecycles</a></li>
+<li><a href="#_chapter_10_governance_risk_security_and_compliance">Chapter 10: Governance, Risk, Security, and Compliance</a>
+<ul class="sectlevel3">
+<li><a href="#_introduction_to_chapter_10">Introduction to Chapter 10</a></li>
+<li><a href="#_governance">Governance</a></li>
+<li><a href="#_enablers">Enablers</a></li>
+<li><a href="#_risk_management_2">Risk management</a></li>
+<li><a href="#_assurance_and_audit">Assurance and audit</a></li>
+<li><a href="#_security">Security</a></li>
+<li><a href="#_digital_governance">Digital Governance</a></li>
+<li><a href="#_topics">Topics</a></li>
+<li><a href="#_conclusion_10">Conclusion</a></li>
+</ul>
+</li>
+<li><a href="#_chapter_11_enterprise_information_management">Chapter 11: Enterprise Information Management</a>
+<ul class="sectlevel3">
+<li><a href="#_introduction_to_chapter_11">Introduction to Chapter 11</a></li>
+<li><a href="#_chapter_11_outline">Chapter 11 outline</a></li>
+<li><a href="#_information_and_value">Information and value</a></li>
+<li><a href="#_data_management_basics">Data management basics</a></li>
+<li><a href="#_towards_enterprise_information_management">Towards enterprise information management</a></li>
+<li><a href="#_analytics_2">Analytics</a></li>
+<li><a href="#_agile_information_management">Agile information management</a></li>
+<li><a href="#_information_management_topics">Information management topics</a></li>
+<li><a href="#_conclusion_11">Conclusion</a></li>
+</ul>
+</li>
+<li><a href="#_chapter_12_architecture_and_portfolio">Chapter 12: Architecture and Portfolio</a>
+<ul class="sectlevel3">
+<li><a href="#_introduction_to_chapter_12">Introduction to Chapter 12</a></li>
+<li><a href="#_why_architecture">Why architecture?</a></li>
+<li><a href="#_architecture_practices">Architecture practices</a></li>
+<li><a href="#_architecture_domains">Architecture domains</a></li>
+<li><a href="#_agile_and_architecture">Agile and architecture</a></li>
+<li><a href="#_portfolio_management">Portfolio management</a></li>
+<li><a href="#_architecture_standards">Architecture standards</a></li>
+<li><a href="#_topics_2">Topics</a></li>
+<li><a href="#_conclusion_12">Conclusion</a></li>
+</ul>
+</li>
+<li><a href="#_section_and_book_conclusion">Section and book conclusion</a></li>
+</ul>
+</li>
+<li><a href="#_appendices_back_matter">Appendices &amp; back matter</a>
+<ul class="sectlevel2">
+<li><a href="#_current_agile_texts">Current Agile texts</a></li>
+<li><a href="#_the_major_frameworks">The major frameworks</a></li>
+<li><a href="#_towards_a_theory_of_it_management">Towards a theory of IT management</a></li>
+<li><a href="#_references">References</a></li>
+<li><a href="#_colophon">Colophon</a></li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>Charles T. Betz
-:doctype:   book
-:docinfo:
-:toc: left
-:toclevels: 3
-:front-cover-image: images/cover.jpg
-:linkattrs:
-:numbered!:</p>
-</div>
-</div>
-</div>
 <div class="sect1">
-<h2 id="Praise">Praise for this book</h2>
+<h2 id="_praise_for_this_book">Praise for this book</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><em>Agile IT Management is a perfect fit for my Management Information Systems class to introduce students to the fast-paced world of IT Infrastructure that they will be dealing with shortly upon graduation.  This book uses multiple perspectives (Founder, Team Leader, VP, C-level executive) to demonstrate to the student not only how a business grows, but how they need to continually grow their skill set.  The use of hands-on exercises encouraged by the format of this book complements my teaching style that allows students to learn by doing, failing and doing again.  An additional benefit is that this book begins with a focus on the startup mentality which I will use in my Business Innovation class.</em></p>
@@ -448,7 +648,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="Copyright">Copyright</h2>
+<h2 id="_copyright">Copyright</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Published by Digital Management Academy, LLC<br>
@@ -481,10 +681,11 @@ Although the author and publisher have made every effort to ensure that the info
 <div class="paragraph">
 <p>For information about special discounts for bulk purchases or for information on booking authors for an event, please visit www.dm-academy.com.</p>
 </div>
+<div style="page-break-after: always;"></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="Dedication">Dedication</h2>
+<h2 id="_dedication">Dedication</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><em>To my students</em></p>
@@ -492,7 +693,7 @@ Although the author and publisher have made every effort to ensure that the info
 </div>
 </div>
 <div class="sect1">
-<h2 id="Preface">Preface</h2>
+<h2 id="_preface">Preface</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>In 2013, I was approached by Dr. Bhabani Misra, the head of the Graduate Programs in Software at the University of St. Thomas in St. Paul. Dr. Misra asked me to teach an "IT Infrastructure" course (SEIS660), focusing on the Information Technology Infrastructure Library, or ITIL.</p>
@@ -576,23 +777,11 @@ Although the author and publisher have made every effort to ensure that the info
 <div class="paragraph">
 <p>Thanks to Gene Kim for ongoing mentoring and advice on writing and publishing, and unwavering support and confidence in my efforts.</p>
 </div>
-<div class="paragraph">
-<p>Thanks to the Go to Marketing team (Will Goddard, Terry Brown, Francisco Piniero) for design assistance and invaluable partnership.</p>
-</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="Introduction">Introduction</h2>
+<h2 id="_introduction">Introduction</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_for_the_student">For the student</h3>
-<div class="paragraph">
-<p>This is a "survey" text intended for the advanced undergraduate or graduate student interested in the general field of applied IT management. It is grounded in basic computing fundamentals, but does not require any particular technical skills to understand. You do not need to have taken any courses in networking, security, or particular programming languages to read this book.</p>
-</div>
-<div class="paragraph">
-<p>However, you will be presented with material on such topics, including fragments of programming languages and pseudocode, and need to be willing to invest the time and effort to understand.</p>
-</div>
-</div>
 <div class="sect2">
 <h3 id="_the_it_industry_and_the_rise_of_digital">The IT industry, and the rise of digital</h3>
 <div class="quoteblock">
@@ -634,208 +823,16 @@ Now agile methodologies—which involve new values, principles, practices, and b
 </div>
 </div>
 <div class="paragraph">
-<p>However, this is not a textbook (or course) on entrepreneurship. It remains IT-centric. <strong>And, the book is also intended to be relevant to students entering directly into large, established enterprises.</strong> In fact, it prepares the student for working in all stages of growth because it progresses through these four contexts:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Individual (founder)</p>
-</li>
-<li>
-<p>Team</p>
-</li>
-<li>
-<p>Small company (team of teams)</p>
-</li>
-<li>
-<p>Enterprise</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Whether in a startup, or on a journey within a larger, established organization, you will (hopefully) become aware as you progress through a broadening context:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Other team members</p>
-</li>
-<li>
-<p>Customers</p>
-</li>
-<li>
-<p>Suppliers</p>
-</li>
-<li>
-<p>Sponsors</p>
-</li>
-<li>
-<p>Necessary non-IT capabilities (finance, legal, HR, sales, marketing, etc)</p>
-</li>
-<li>
-<p>Channel partners</p>
-</li>
-<li>
-<p>Senior executives and funders</p>
-</li>
-<li>
-<p>Auditors and regulators</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Part of maturing in one&#8217;s career is understanding how all these relationships figure into your own overall system of value delivery. This will be a lifelong journey for the student; the author&#8217;s intent is to provide some useful tools.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_this_book_s_structure">This book&#8217;s structure</h3>
-<div class="paragraph">
-<p>Here is a conceptual illustration of an IT management progression:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/ITProgression.png" alt="ITProgression">
-</div>
-</div>
-<div class="paragraph">
-<p>Elaborating the above outline into chapters, we have:</p>
-</div>
-<div class="olist upperroman">
-<ol class="upperroman" type="I">
-<li>
-<p><strong>Founder</strong></p>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><em>IT value</em>. Why do we need computers? What can they do for us?</p>
-</li>
-<li>
-<p><em>IT infrastructure</em> We want to build something. We have to choose a platform first.</p>
-</li>
-<li>
-<p><em>IT applications</em> Let&#8217;s start building something of use to someone.</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p><strong>Team</strong></p>
-<div class="olist arabic">
-<ol class="arabic" start="4">
-<li>
-<p><em>Product management</em> What exactly is it we are building? What is the process of discovering our customer&#8217;s needs and quickly testing how to meet them? How do we better define the product vision, and the way of working towards it, for a bigger team?</p>
-</li>
-<li>
-<p><em>Work management</em> How do we keep track of what we are doing, and communicate our progress and needs at the simplest level?</p>
-</li>
-<li>
-<p><em>Operations management</em> How do we sustain this surprisingly fragile digital service, in its ongoing delivery of value?</p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p><strong>Team of Teams</strong></p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><em>The boundary between the "team" and the "team of teams" is a challenging area, and industry responses remain incomplete and evolving. Hence the notation "THE SCALING PROBLEM" on the diagram.</em></p>
-</div>
-<div class="olist arabic">
-<ol class="arabic" start="7">
-<li>
-<p><em>Organization and culture</em> We&#8217;re getting big. How do we deal with this? How are we structured? Why this way and not that? How can we benefit from increasing maturity and specialization, while still maintaining a responsive product? What are the unwritten values and rules in our company?</p>
-</li>
-<li>
-<p><em>Investment, sourcing, and people</em> Work is becoming larger and more complex. How can we  track and execute larger segments of it, and coordinate across multiple teams?</p>
-</li>
-<li>
-<p><em>Execution management</em> We have a structure. Work needs to flow across it. Product and project teams increasingly demand predictable, consistent delivery of internal services, and synchronization points such as enterprise releases are increasingly critical signals.</p>
-<div class="olist upperroman">
-<ol class="upperroman" type="I">
-<li>
-<p><strong>Enterprise</strong></p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p><em>Governance, risk, security, and compliance</em> We need to cope with external forces (regulators, vendor partners, security adversaries, auditors) increasingly defining our options.</p>
-</li>
-<li>
-<p><em>Enterprise information management</em> We&#8217;ve been concerned with data, information, and knowledge since the earliest days of our journey. But at this scale, we have to formalize our approaches and understandings; without that, we will never capture the full value available with modern analytics and Big Data. Compliance issues are also compelling us to formalize here.</p>
-</li>
-<li>
-<p><em>Architecture and portfolio</em> We need to understand the big picture of interacting lifecycles, reduce technical debt and redundancy, accelerate development through establishing platforms, and obtain better economies of scale. We need to define our investment strategy based on a sound understanding of both business needs and technology limitations.</p>
-<div class="olist upperroman">
-<ol class="upperroman" type="I">
-<li>
-<p><strong>Appendices</strong></p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p><em>A review of IT frameworks and standards</em></p>
-</li>
-<li>
-<p><em>Architectural depictions</em></p>
-</li>
-<li>
-<p><em>Towards a theory of IT management</em></p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>The intent is that the more complex, "enterprise"-scale concerns at the end of the book are presented as part of a logical progression.</p>
-</div>
-<div class="paragraph">
-<p><a id="formalization"></a></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_emergence_means_formalization">Emergence means formalization</h3>
-<div class="paragraph">
-<p>The emergence model seeks to define a likely order in which concerns are <strong>formalized</strong>. Any concern may of course arise at any time: the startup founder certainly is concerned with security!</p>
-</div>
-<div class="paragraph">
-<p>Formalization means at least one or more of the following:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Dedicated resources</p>
-</li>
-<li>
-<p>Dedicated organization</p>
-</li>
-<li>
-<p>Defined policies and processes</p>
-</li>
-<li>
-<p>Automated tooling</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>In the author&#8217;s experience, for example, startups avoid formalized process and project management. To the extent the concerns exist, they are <em>tacit</em> (understood or implied; suggested; implicit). Certainly, a small startup does not invest in an enterprise-class service desk tool supporting a full array of IT management processes, or a full-blown Project Management Office with its own Vice President and associated portfolio automation. Simple work management, with a manual or automated Kanban board, is likely their choice for work management.</p>
-</div>
-<div class="paragraph">
-<p>But by the time they are a team of teams, specialization has emerged and more robust processes and tools are required. The danger of course is that the formalization effort may be driven by its own logic, and start to lose track of the all-critical business context.</p>
-</div>
-<div class="paragraph">
-<p>By careful examining these stages of maturation, and the industry responses to them, it is the author&#8217;s hope that the student will have effective tools to critically engage with the problem of scaling the digital organization.</p>
+<p><a id="Sec-I"></a></p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="Section-I-intro">Section I: Founder</h2>
+<h2 id="_section_i_founder">Section I: Founder</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><a id="Sec-I"></a>
-This is the introduction to Section I.</p>
+<p>This is the introduction to Section I.</p>
 </div>
 <div class="paragraph">
 <p>In this section, we  explore the fundamentals of information technology delivery.</p>
@@ -888,7 +885,7 @@ This is the introduction to Section I.</p>
 <div class="sect2">
 <h3 id="_chapter_1_it_value">Chapter 1. IT Value</h3>
 <div class="sect3">
-<h4 id="_introduction">Introduction</h4>
+<h4 id="_introduction_to_chapter_1">Introduction to Chapter 1</h4>
 <div class="paragraph">
 <p>As noted at the outset, you are a small core of a startup. You are building a product of which IT is a significant part (otherwise why are you reading this book/in this class?) Your motivations are entrepreneurial; you want to create a successful business.</p>
 </div>
@@ -944,13 +941,13 @@ This is the introduction to Section I.</p>
 </li>
 </ul>
 </div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="what-is-IT-value">What is IT value?</h4>
 <div class="paragraph">
 <p><a id="what-is-IT-value"></a></p>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_what_is_it_value">What is IT value?</h4>
 <div class="sect4">
 <h5 id="_an_it_value_scenario">An IT value scenario</h5>
 <div class="imageblock">
@@ -2087,7 +2084,7 @@ We will discuss in Chapter 12. For now, assume that your role and priorities are
 <p>Discuss: How does information technology contribute to your enjoyment of life and experiences of value?</p>
 </li>
 <li>
-<p>Read <a href="http://www.wsj.com/news/articles/SB20001424052702303743604579350710633713786">"Apps Are Wrecking Mom-and-Pop Pizza Shops"</a> and discuss whether "IT matters" to the local pizzerias.</p>
+<p>Read <a href="http://www.wsj.com/news/articles/SB20001424052702303743604579350710633713786">Apps Are Wrecking Mom-and-Pop Pizza Shops</a> and discuss whether "IT matters" to the local pizzerias.</p>
 </li>
 <li>
 <p>Read the Wikipedia articles on <a href="https://en.wikipedia.org/wiki/Mainframe_computer">mainframe computing</a> and <a href="https://en.wikipedia.org/wiki/Amazon_Web_Services">Amazon Web Services</a> and discuss with your team. What has changed in computing? What remains the same?</p>
@@ -2174,7 +2171,7 @@ Entrepreneurs tell a story entrepreneurs tell a story https://silvialisam.com/ch
 <div class="sect2">
 <h3 id="_chapter_2_infrastructure_management">Chapter 2: Infrastructure Management</h3>
 <div class="sect3">
-<h4 id="_introduction_2">Introduction</h4>
+<h4 id="_introduction_to_chapter_2">Introduction to Chapter 2</h4>
 <div class="paragraph">
 <p>As mentioned in the section introduction, you cannot start developing a product until you decide what you will build it with. (You may have a difficult time writing an app for a mobile phone if you choose the COBOL programming language!)  You also need to understand something of how computers are operated, enough so that you can make decisions on how your system will run. Most startups choose to run IT services on infrastructure owned by a Cloud provider, but there are other options. Certainly, as you scale up, you&#8217;ll need to be more and more sophisticated in your understanding of your underlying IT services.</p>
 </div>
@@ -2793,7 +2790,7 @@ Scrum-based development uses the concept of a <a href="https://www.scrumalliance
 <p><em>Figure XX. Virtualization is computers within a computer.</em></p>
 </div>
 <div class="paragraph">
-<p>In the simplest form of virtualization, a specialized application known as a hypervisor is loaded like any other application. The purpose of this hypervisor is to emulate the hardware computer in software. Once the hypervisor is running, it can emulate any number of "virtual" computers, each of which can have its own operating system. The hypervisor mediates the <a href="https://en.wikipedia.org/wiki/Virtual_machine">"virtual machine"</a> (VM) access to the actual, physical hardware of the laptop; the VM can take input from the USB port, and output to the Bluetooth interface, just like the master OS that launched when the laptop was turned on.</p>
+<p>In the simplest form of virtualization, a specialized application known as a hypervisor is loaded like any other application. The purpose of this hypervisor is to emulate the hardware computer in software. Once the hypervisor is running, it can emulate any number of "virtual" computers, each of which can have its own operating system. The hypervisor mediates the <a href="https://en.wikipedia.org/wiki/Virtual_machine">virtual machine</a> (VM) access to the actual, physical hardware of the laptop; the VM can take input from the USB port, and output to the Bluetooth interface, just like the master OS that launched when the laptop was turned on.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -3314,7 +3311,7 @@ It is not always easy to apply this approach in practice. There can be edge case
 <p>Chef, Puppet, Salt Stack, and Ansible are all declarative to some degree.</p>
 </div>
 <div class="paragraph">
-<p>This is a complex topic and there are advantages and disadvantages to each approach. (See <a href="http://markburgess.org/blog_order.html">"When and Where Order Matters"</a> by Mark Burgess for an advanced discussion.) But policy-based approaches seem to have the upper hand for now.</p>
+<p>This is a complex topic and there are advantages and disadvantages to each approach. (See <a href="http://markburgess.org/blog_order.html">When and Where Order Matters</a> by Mark Burgess for an advanced discussion.) But policy-based approaches seem to have the upper hand for now.</p>
 </div>
 <div class="paragraph">
 <p><em>describe modern infra managers, policy management, auto-scaling as an example, provide an example Chef script..</em></p>
@@ -3478,7 +3475,7 @@ risk management &amp; infrastructure choices (Charity Majors talk 7/21/2016 DevO
 <div class="sect2">
 <h3 id="_chapter_3_application_delivery">Chapter 3: Application Delivery</h3>
 <div class="sect3">
-<h4 id="_introduction_3">Introduction</h4>
+<h4 id="_introduction_to_chapter_3">Introduction to Chapter 3</h4>
 <div class="paragraph">
 <p>Now that we have some idea of IT value (and how we might turn it into a product), and have decided on some infrastructure, we can start building.</p>
 </div>
@@ -3682,7 +3679,7 @@ To "provision" in an IT sense means to make the needed resources or services ava
 <p>The design and architecture of applications is a large topic (see e.g. <a href="#Gamma1995">[Gamma1995]</a> and <a href="#Fowler2003">[Fowler2003]</a>) and this text only touches lightly on it. <a href="http://www.iso-architecture.org/ieee-1471/defining-architecture.html">ISO/IEC 41010</a> defines architecture as “the fundamental organization of a system, embodied in its components, their relationships to each other and the environment, and the principles governing its design and evolution.”</p>
 </div>
 <div class="paragraph">
-<p>A computer program can be as simple as <a href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">"Hello World."</a> Such a program requires only one or a few files to compile and execute. However, significant applications such as an online video streaming service require hardware and software configurations of <a href="http://techblog.netflix.com/search/label/cloud%20architecture">tremendous complexity</a>.  Specialized visual notations are used to describe this complexity, as in the image above. We will discuss this further in Chapter 11.</p>
+<p>A computer program can be as simple as <a href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">Hello World.</a> Such a program requires only one or a few files to compile and execute. However, significant applications such as an online video streaming service require hardware and software configurations of <a href="http://techblog.netflix.com/search/label/cloud%20architecture">tremendous complexity</a>.  Specialized visual notations are used to describe this complexity, as in the image above. We will discuss this further in Chapter 11.</p>
 </div>
 </div>
 <div class="sect4">
@@ -4023,7 +4020,7 @@ Development tools such as text editors and integrated development environments (
 <p>The developer is continually testing the software as the build progresses, and keeping a local source control repository up to date with their changes at all times. When she or he reaches a level of satisfaction with the software, it is submitted to a centralized source repository.</p>
 </li>
 <li>
-<p>When the repository detects the new "check-in," it launches a dedicated environment to build and test the new code. The environment is likely configured using <a href="http://dm-academy.github.io/aitm/#_infrastructure_as_code">"infrastructure as code"</a> techniques; in this way, it can be created automatically and quickly.</p>
+<p>When the repository detects the new "check-in," it launches a dedicated environment to build and test the new code. The environment is likely configured using <a href="http://dm-academy.github.io/aitm/#_infrastructure_as_code">infrastructure as code</a> techniques; in this way, it can be created automatically and quickly.</p>
 </li>
 <li>
 <p>If the code passes all tests, the compiled and built binary executables may then be "checked in" to a package management repository.</p>
@@ -4764,14 +4761,6 @@ You are part of a tight-knit team. You’ve moved out of the garage into a more 
 <div class="paragraph">
 <p>More rabbits equals more foxes (notice the “+” symbol on the line), because there are more rabbits to eat! But what does this do to the rabbits? It means LESS rabbits. Which, ultimately, means less foxes… and at some point, the populations balance. This is classic negative feedback. However, the local foxes don’t see it as negative (nor do the local gardeners!)  That is why feedback experts prefer to call this “balancing” feedback.</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/CLD_links_ANI.gif" alt="CLD links ANI">
-</div>
-</div>
-<div class="paragraph">
-<p>Linked from <a href="https://en.wikipedia.org/wiki/Causal_loop_diagram">Wikipedia</a></p>
-</div>
 <div class="paragraph">
 <p>Wikipedia has good articles on <a href="https://en.wikipedia.org/wiki/Causal_loop_diagram">Causal Loop Diagramming</a> and <a href="https://en.wikipedia.org/wiki/System_dynamics">Systems Dynamics</a> (with cool dynamic visuals.) <a href="#Sterman2000">[Sterman2000]</a> is the definitive text with applications.</p>
 </div>
@@ -4780,16 +4769,28 @@ You are part of a tight-knit team. You’ve moved out of the garage into a more 
 <div class="sect3">
 <h4 id="_what_does_systems_thinking_have_to_do_with_it">What does systems thinking have to do with IT?</h4>
 <div class="paragraph">
-<p>In an engineering sense, positive feedback is often dangerous and a topic of concern. The classic example of bad positive feedback in engineering is the collapse of the Tacoma Narrows bridge, "Galloping Gertie."</p>
+<p>In an engineering sense, positive feedback is often dangerous and a topic of concern.</p>
 </div>
-<div class="imageblock" style="float: right">
+<div class="sidebarblock">
 <div class="content">
-<img src="images/2.00-bridge.jpg" alt="collapsing bridge" width="400">
+<div class="paragraph">
+<p>The classic example of bad positive feedback in engineering is the collapse of the Tacoma Narrows bridge, "Galloping Gertie."</p>
 </div>
-<div class="title">Figure 1. "Galloping Gertie" <sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnote_5" title="View footnote.">5</a>]</sup></div>
+<div class="imageblock">
+<div class="content">
+<img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/TacomaNarrowsBridgeCollapse_in_color.jpg/220px-TacomaNarrowsBridgeCollapse_in_color.jpg" alt="220px TacomaNarrowsBridgeCollapse in color">
+</div>
 </div>
 <div class="paragraph">
-<p>As with bridges, at a technical level, reinforcing feedback can be a very bad thing in IT systems. In general, any process that is self-amplified without any balancing feedback will eventually consume all available resources, just like rabbits will eat all the food available to them. So, if you create a process (e.g. write and run a computer program) that recursively spawns itself, it will sooner or later crash the computer as it devours memory and CPU. See <a href="http://osr507doc.sco.com/en/HANDBOOK/runaway_proc.html">Runaway processes.</a></p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/1/19/Tacoma_Narrows_Bridge_destruction.ogg">Video</a></p>
+</div>
+<div class="paragraph">
+<p>Linked from <a href="https://en.wikipedia.org/wiki/Tacoma_Narrows_Bridge_(1940)">Wikipedia</a>.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>As with bridges, at a technical level, reinforcing feedback can be a very bad thing in IT systems. In general, any process that is amplified without any balancing feedback will eventually consume itself and all its resources, just like rabbits will eat all the food available to them. So, if you create a process (e.g. write and run a computer program) that recursively spawns itself, it will sooner or later crash the computer as it devours memory and CPU. See <a href="http://osr507doc.sco.com/en/HANDBOOK/runaway_proc.html">Runaway processes.</a></p>
 </div>
 <div class="paragraph">
 <p>Balancing feedback, on the other hand, is critical to make sure you are “staying on track.” Engineers use concepts of <a href="https://en.wikipedia.org/wiki/Control_theory">control theory</a>, for example <a href="https://en.wikipedia.org/wiki/Damping">damping</a>, to keep bridges from falling down. Balancing feedback in a business and IT context takes a wide variety of forms:</p>
@@ -4834,14 +4835,6 @@ Still confused? Think about the last time you saw a "reply-all" email storm. The
 </div>
 <div class="sect4">
 <h5 id="_positive_feedback_the_special_case_investors_want">Positive feedback: the special case investors want</h5>
-<div class="imageblock">
-<div class="content">
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Adoption_SFD_ANI_s.gif" alt="Adoption SFD ANI s">
-</div>
-</div>
-<div class="paragraph">
-<p>Linked from <a href="https://en.wikipedia.org/wiki/System_dynamics">Wikipedia</a></p>
-</div>
 <div class="paragraph">
 <p>At a business level, there is a special kind of positive feedback that defines the successful business:</p>
 </div>
@@ -4949,7 +4942,7 @@ No system can ever be fully "open loop" indefinitely.  Sooner or later, you take
 <div class="sect2">
 <h3 id="_chapter_4_product_management">Chapter 4: Product Management</h3>
 <div class="sect3">
-<h4 id="_introduction_4">Introduction</h4>
+<h4 id="_introduction_to_chapter_4">Introduction to Chapter 4</h4>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
@@ -5067,7 +5060,7 @@ No system can ever be fully "open loop" indefinitely.  Sooner or later, you take
 </div>
 </div>
 <div class="paragraph">
-<p><em>Product design session</em> <sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnote_6" title="View footnote.">6</a>]</sup></p>
+<p><em>Product design session</em> <sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnote_5" title="View footnote.">5</a>]</sup></p>
 </div>
 <div class="sect4">
 <h5 id="_the_product_vision">The product vision</h5>
@@ -5318,7 +5311,7 @@ As a field, product management has a professional association, the <a href="http
 </div>
 </div>
 <div class="paragraph">
-<p><em>Can you feed your team with two pizzas?</em> <sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnote_7" title="View footnote.">7</a>]</sup></p>
+<p><em>Can you feed your team with two pizzas?</em> <sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnote_6" title="View footnote.">6</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>Second, a widely reported practice at Amazon.com is the <a href="http://www.fastcompany.com/3037542/productivity-hack-of-the-week-the-two-pizza-approach-to-productive-teamwork">limitation of product teams to between 5-7 people</a>, the number that can be fed by “two pizzas” (depending on how hungry they are).</p>
@@ -5402,7 +5395,7 @@ We will discuss this in more depth in Chapters 7 and 8. But this chapter  is the
 </div>
 </div>
 <div class="paragraph">
-<p><em>Psychological safety is essential to collaboration</em> <sup class="footnote">[<a id="_footnoteref_8" class="footnote" href="#_footnote_8" title="View footnote.">8</a>]</sup></p>
+<p><em>Psychological safety is essential to collaboration</em> <sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnote_7" title="View footnote.">7</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p><a id="psych-safety"></a></p>
@@ -5815,7 +5808,7 @@ It is humbling to see how bad experts are at estimating the value of features (u
 </div>
 </div>
 <div class="paragraph">
-<p><em>Beware of the HIPPO approach to product discovery</em> <sup class="footnote">[<a id="_footnoteref_9" class="footnote" href="#_footnote_9" title="View footnote.">9</a>]</sup></p>
+<p><em>Beware of the HIPPO approach to product discovery</em> <sup class="footnote">[<a id="_footnoteref_8" class="footnote" href="#_footnote_8" title="View footnote.">8</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>The problem with relying on "gut feel" or personal opinions is that people&#8201;&#8212;&#8201;regardless of experience or seniority&#8201;&#8212;&#8201;perform poorly in assessing the likely outcome of their product ideas.</p>
@@ -6144,7 +6137,7 @@ They had to try making me out of different metals, and different ways to make me
 </div>
 </div>
 <div class="paragraph">
-<p><sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnote_10" title="View footnote.">10</a>]</sup></p>
+<p><sup class="footnote">[<a id="_footnoteref_9" class="footnote" href="#_footnote_9" title="View footnote.">9</a>]</sup></p>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -6199,7 +6192,7 @@ Design thinking is essentially a human-centered innovation process that emphasiz
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="images/2.04-geniusBar.jpg" alt="2.04 geniusBar"></span>
-<em>Apple Genius Bar</em> <sup class="footnote">[<a id="_footnoteref_11" class="footnote" href="#_footnote_11" title="View footnote.">11</a>]</sup></p>
+<em>Apple Genius Bar</em> <sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnote_10" title="View footnote.">10</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>Notice that the product you are using is no longer just the phone, or computer. <strong>It is the combination of the device PLUS your support experience</strong>. This is essential to understanding the modern practices of design thinking and Lean UX. As Jeff Sussna, author of <em>Designing Delivery</em>, notes, "In order to provide high-quality, digitally infused service, the entire delivery organization must function as an integrated whole." <a href="#Sussna2015">[Sussna2015]</a>, p. 18.</p>
@@ -6522,7 +6515,7 @@ https://www.amazon.com/Inspired-Create-Products-Customers-Love/dp/0981690408</pr
 <div class="sect2">
 <h3 id="_chapter_5_work_management">Chapter 5: Work Management</h3>
 <div class="sect3">
-<h4 id="_introduction_5">Introduction</h4>
+<h4 id="_introduction_to_chapter_5">Introduction to Chapter 5</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -6696,7 +6689,7 @@ Task management is the process of managing a task through its life cycle. It inv
 <div class="content">
 <img src="images/2.05-handoff.jpg" alt="Handoff">
 </div>
-<div class="title">Figure 2. Task handoffs present risk <sup class="footnote">[<a id="_footnoteref_12" class="footnote" href="#_footnote_12" title="View footnote.">12</a>]</sup></div>
+<div class="title">Figure 1. Task handoffs present risk <sup class="footnote">[<a id="_footnoteref_11" class="footnote" href="#_footnote_11" title="View footnote.">11</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>But what happens when there are three of you? You ask coworker B to do something and in order to complete it she needs something from coworker C, whom you are also asking to complete tasks. As an organization scales, this can easily lead to confusion and "dropped balls."</p>
@@ -6771,7 +6764,7 @@ efficiency.
 <div class="content">
 <img src="images/2.05-queue.jpg" alt="alt text" width="300" height="200">
 </div>
-<div class="title">Figure 3. A queue <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup></div>
+<div class="title">Figure 2. A queue <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Even at this stage of our evolution, with just one co-located collaborative team, it’s important to consider work in progress and how to limit it. One topic we will emphasize throughout the rest of this book is <em>queuing</em>.</p>
@@ -6798,7 +6791,7 @@ Queuing theory is an important branch of mathematics used extensively in computi
 <div class="content">
 <img src="images/2.05-wip.jpg" alt="alt text" width="300" height="200">
 </div>
-<div class="title">Figure 4. Physical Work in Process <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup></div>
+<div class="title">Figure 3. Physical Work in Process <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Don Reinertsen, quoted above, developed the insight that product design and development had an <strong>invisible</strong> inventory of "Work in Process" that he called Design in Process (DIP). Just as managing physical work in process on the factory floor is key to a factory&#8217;s success, so correctly understanding and managing design in process is essential to all kinds of research and development organizations&#8201;&#8212;&#8201;<strong>including digital product development.</strong> In fact, because digital systems are largely invisible even when finished, understanding their work in process is even more challenging.</p>
@@ -7259,7 +7252,7 @@ https://t.co/2X92CFcKqU</pre>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/1.01-ITStates.png" alt="1.01 ITStates">
+<img src="http://dm-academy.github.io/aitm/images/1.01-ITStates.png" alt="1.01 ITStates">
 </div>
 </div>
 <div class="paragraph">
@@ -7943,7 +7936,7 @@ Reinertsen Boeing case</pre>
 <div class="sect2">
 <h3 id="_chapter_6_operations_management">Chapter 6: Operations Management</h3>
 <div class="sect3">
-<h4 id="_introduction_6">Introduction</h4>
+<h4 id="_introduction_to_chapter_6">Introduction to Chapter 6</h4>
 <div class="paragraph">
 <p>As your product gains more use, you find that running it inevitably becomes a distinct concern from building it. For all their logic, computers are still surprisingly unreliable. Servers running well tested software that remain "up" for weeks all of a sudden hang and have to be rebooted. Sometimes it&#8217;s clear why (for example, a log filled up that no-one expected) and in other cases there just is no explanation.</p>
 </div>
@@ -8645,11 +8638,13 @@ Use directory creation example with failure of script b/c not idempotent</pre>
 <div class="paragraph">
 <p>A capacity management system may include large quantities of data harvested from monitoring and event management systems, stored for long periods of time so that history of system utilization is understood and some degree of prediction can be ventured for upcoming utilization.</p>
 </div>
-<div class="imageblock" style="float: left">
+<div class="imageblock">
 <div class="content">
-<img src="images/2.06-BlackFriday.jpg" alt="alt text" width="400" height="200">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/DCUSA.Gallery10.TargetBlackFriday.Wikipedia.jpg/240px-DCUSA.Gallery10.TargetBlackFriday.Wikipedia.jpg" alt="240px DCUSA.Gallery10.TargetBlackFriday.Wikipedia">
 </div>
-<div class="title">Figure 5. Black Friday at Macy&#8217;s <sup class="footnote">[<a id="_footnoteref_13" class="footnote" href="#_footnote_13" title="View footnote.">13</a>]</sup></div>
+</div>
+<div class="paragraph">
+<p><em>Black Friday at Target, from <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/DCUSA.Gallery10.TargetBlackFriday.Wikipedia.jpg/240px-DCUSA.Gallery10.TargetBlackFriday.Wikipedia.jpg">Wikipedia</a></em></p>
 </div>
 <div class="paragraph">
 <p>The classic example of significant capacity utilization is the <a href="https://en.wikipedia.org/wiki/Black_Friday_(shopping)">Black Friday/Cyber Monday</a> experience of retailers. Both physical store and online ecommerce systems are placed under great strain annually around this time, with the year&#8217;s profits potentially on the line.</p>
@@ -9017,7 +9012,7 @@ Helping to resolve project issues and decisions that can’t be handled successf
 <div class="sect2">
 <h3 id="_chapter_7_organization_and_culture">Chapter 7: Organization and Culture</h3>
 <div class="sect3">
-<h4 id="_introduction_7">Introduction</h4>
+<h4 id="_introduction_to_chapter_7">Introduction to Chapter 7</h4>
 <div class="quoteblock">
 <blockquote>
 Roughly speaking those who work in connection with the [Automated Computing Engine] will be divided into its masters and its servants. Its masters will plan out instruction tables for it, thinking up deeper and deeper ways of using it. Its servants will feed it with cards as it calls for them. They will put right any parts that go wrong. They will assemble data that it requires. In fact the servants will take the place of limbs&#8230;&#8203;<br>
@@ -10005,7 +10000,7 @@ When we look at a particular attribute of corporate culture, we can ask what asp
 <p>But what motivates people?</p>
 </div>
 <div class="paragraph">
-<p>One of the oldest discussions of culture is Douglas McGregor&#8217;s idea of <a href="http://www.wikipedia.org/">"Theory X" vs "Theory Y"</a> organizations, which he developed in the 1960s at the Massachusetts Institute of Technology.</p>
+<p>One of the oldest discussions of culture is Douglas McGregor&#8217;s idea of <a href="http://www.wikipedia.org/">Theory X</a> organizations, which he developed in the 1960s at the Massachusetts Institute of Technology.</p>
 </div>
 <div class="paragraph">
 <p>"Theory X" organizations rely on extrinsic motivators and operate on the assumption that workers must be cajoled and punished in order to produce results. We see Theory X approaches when organizations focus on pay scales, bonuses, titles, awards, writeups/demerits, performance appraisals, and the like.</p>
@@ -10565,7 +10560,7 @@ Product Development</a> (Research supporting Conway&#8217;s Law)</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_introduction_8">Introduction</h4>
+<h4 id="_introduction_to_chapter_8">Introduction to Chapter 8</h4>
 <div class="quoteblock">
 <blockquote>
 A project is a temporary endeavor undertaken to create a unique product, service, or result.
@@ -10965,23 +10960,32 @@ As with other chapters in the later part of this book, we are going to introduce
 </div>
 <div class="sect4">
 <h5 id="_the_iron_triangle">The "iron triangle"</h5>
-<div class="imageblock" style="float: right">
+<div class="imageblock">
 <div class="content">
-<img src="images/3.08-triad-constraints.jpg" alt="Iron triangle" width="400">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/The_triad_constraints.jpg/375px-The_triad_constraints.jpg" alt="375px The triad constraints">
 </div>
-<div class="title">Figure 6. Project "Iron Triangle" <sup class="footnote">[<a id="_footnoteref_14" class="footnote" href="#_footnote_14" title="View footnote.">14</a>]</sup></div>
 </div>
 <div class="paragraph">
-<p>The project management <a href="https://en.wikipedia.org/wiki/Project_management_triangle">"Iron Triangle"</a> represents the interaction of cost, time, scope, and quality on a project. The idea is that, in general, one or more of these factors may be a constraint. The following sign is often seen in service organizations:</p>
-</div>
-<div class="imageblock" style="float: left">
-<div class="content">
-<img src="images/3.08-good-cheap-fast.jpg" alt="Good-Cheap-Fast" width="400">
-</div>
-<div class="title">Figure 7. Pick any two <sup class="footnote">[<a id="_footnoteref_15" class="footnote" href="#_footnote_15" title="View footnote.">15</a>]</sup></div>
+<p><em>Project Management "Iron Triangle" from Wikipedia</em></p>
 </div>
 <div class="paragraph">
-<p>The same applies to project management and reflects well the "iron triangle" of tradeoffs. (Note: we will critique the iron triangle subsquently.)</p>
+<p>The project management <a href="https://en.wikipedia.org/wiki/Project_management_triangle">Iron Triangle</a> represents the interaction of cost, time, scope, and quality on a project. The idea is that, in general, one or more of these factors may be a constraint. The following sign is often seen in service organizations:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="http://www.industrialbrand.com/wp-content/uploads/2012/05/fast-and-cheap-visual-for-blog-436x313.jpg" alt="fast and cheap visual for blog 436x313">
+</div>
+</div>
+<div class="paragraph">
+<p><a href="http://www.industrialbrand.com/why-great-design-doesnt-come-fast-and-cheap">photo credit</a></p>
+</div>
+<div class="paragraph">
+<p>The same applies to project management and reflects well the "iron triangle" of tradeoffs.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>note: we will critique the iron triangle subsquently</pre>
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -11543,11 +11547,13 @@ Production scheduling is a large topic in and of itself. It is part of the domai
 <div class="paragraph">
 <p>If we re-imagine the diagram with the different functional areas along the horizontal, we start to develop an understanding of the interrelatedness of product development. The following is one representation of the Rational Unified Process, an early depiction of this interrelatedness:</p>
 </div>
-<div class="imageblock" style="float: right">
+<div class="imageblock">
 <div class="content">
-<img src="images/3.08-development-iterative.png" alt="Rational Unified Process" width="493">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Development-iterative.png" alt="Development iterative">
 </div>
-<div class="title">Figure 8. Rational Unified Process <sup class="footnote">[<a id="_footnoteref_16" class="footnote" href="#_footnote_16" title="View footnote.">16</a>]</sup></div>
+</div>
+<div class="paragraph">
+<p><em>Rational Unified Process, from <a href="https://en.wikipedia.org/wiki/Rational_Unified_Process">Wikpedia</a></em></p>
 </div>
 <div class="paragraph">
 <p>One interesting aspect of the diagram is that it shows just how difficult it can be to staff a project. Demand for given functional roles ebbs and flows unpredictably. The project manager is expected to manage the uncertain handoffs between the various functional areas, and anticipate resource requirements stemming from unexpected feedback demands. This is why "T-shaped" professionals (see Chapter 7) are desirable, because they can move from area to area in response to demand.</p>
@@ -13154,7 +13160,7 @@ IT organizations typically adhere to annual budgeting and planning cycles—whic
 <p>What if the mainframe has excess capacity? Who pays for that?</p>
 </li>
 <li>
-<p>What if Sales Operations stops using the mainframe? Do Accounting and Supply Chain have to make up the loss? What if Accounting decides to stop using it because of the price increase? (In public utilities, this is known as a <a href="http://www.greentechmedia.com/articles/read/this-is-what-the-utility-death-spiral-looks-like">"death spiral."</a>)</p>
+<p>What if Sales Operations stops using the mainframe? Do Accounting and Supply Chain have to make up the loss? What if Accounting decides to stop using it because of the price increase? (In public utilities, this is known as a <a href="http://www.greentechmedia.com/articles/read/this-is-what-the-utility-death-spiral-looks-like">death spiral.</a>)</p>
 </li>
 <li>
 <p>The mainframe requires power, floor space, and cooling. How are these incorporated into the departmental charges?</p>
@@ -13722,13 +13728,13 @@ The iconic entrepreneur asking for one more round</pre>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://github.com/dm-academy/aitm/blob/master/collaborator-instructions.adoc">Collaborator instructions, window="_blank"</a></p>
+<p><a href="https://github.com/dm-academy/aitm/blob/master/collaborator-instructions.adoc" target="_blank">Collaborator instructions</a></p>
 </li>
 <li>
-<p>Raise an <a href="https://github.com/dm-academy/aitm/issues">issue, window="_blank"</a> to comment</p>
+<p>Raise an <a href="https://github.com/dm-academy/aitm/issues" target="_blank">issue</a> to comment</p>
 </li>
 <li>
-<p><a href="https://github.com/dm-academy/aitm/tree/master/book">Github source files, window="_blank"</a></p>
+<p><a href="https://github.com/dm-academy/aitm/tree/master/book" target="_blank">Github source files</a></p>
 </li>
 </ul>
 </div>
@@ -14137,7 +14143,7 @@ A holistic product-oriented approach contradicts a convenient over-simplificatio
 <div class="sect2">
 <h3 id="_chapter_9_process_management">Chapter 9: Process Management</h3>
 <div class="sect3">
-<h4 id="_introduction_9">Introduction</h4>
+<h4 id="_introduction_to_chapter_9">Introduction to Chapter 9</h4>
 <div class="paragraph">
 <p>You&#8217;re hiring more specialized people with specialized backgrounds. Many of them enter your organization and immediately ask process questions:</p>
 </div>
@@ -16698,11 +16704,6 @@ I have seen various attempts and interest along these lines, but always company 
 <pre>===== KPIs and metrics</pre>
 </div>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>In the 1970s, social scientist Donald Campbell wrote that any metric of quality can become corrupted if people start prioritizing the metric itself over the traits it supposedly reflects. “We realized that his argument works even if individuals aren’t trying to maximize their metrics,” says Smaldino. [http://www.theatlantic.com/science/archive/2016/09/the-inevitable-evolution-of-bad-science/500609/?utm_source=fbia]</pre>
-</div>
-</div>
 </li>
 </ul>
 </div>
@@ -17260,7 +17261,7 @@ Sidebar: Lessons from manufacturing, operations research, etc</pre>
 <div class="sect2">
 <h3 id="_chapter_10_governance_risk_security_and_compliance">Chapter 10: Governance, Risk, Security, and Compliance</h3>
 <div class="sect3">
-<h4 id="_introduction_10">Introduction</h4>
+<h4 id="_introduction_to_chapter_10">Introduction to Chapter 10</h4>
 <div class="paragraph">
 <p>Operating at scale requires a different mindset. When you were starting out, the horizon seemed bounded only by your imagination, will, and talent.</p>
 </div>
@@ -17414,7 +17415,7 @@ The COBIT 5 framework makes a clear distinction between governance and managemen
 <div class="content">
 <img src="images/4.10-shopkeeper.jpg" alt="two men in front of a store" width="600">
 </div>
-<div class="title">Figure 9. Someone to "mind the store" <sup class="footnote">[<a id="_footnoteref_17" class="footnote" href="#_footnote_17" title="View footnote.">17</a>]</sup></div>
+<div class="title">Figure 4. Someone to "mind the store" <sup class="footnote">[<a id="_footnoteref_12" class="footnote" href="#_footnote_12" title="View footnote.">12</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Now, you wish to go on an extended vacation - perhaps a cruise around the world, or a trek in the Himalayas. You need someone who can count the cash and deposit it, and place orders with and pay your suppliers. You need to hire a professional manager.</p>
@@ -17590,7 +17591,7 @@ We&#8217;ve encountered systems theory and associated concepts such as <a href="
 <div class="content">
 <img src="images/4.10-centrifugal_governor.png" alt="mechanism" width="300">
 </div>
-<div class="title">Figure 10. Centrifugal governor <sup class="footnote">[<a id="_footnoteref_18" class="footnote" href="#_footnote_18" title="View footnote.">18</a>]</sup></div>
+<div class="title">Figure 5. Centrifugal governor <sup class="footnote">[<a id="_footnoteref_13" class="footnote" href="#_footnote_13" title="View footnote.">13</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>"Governors" have been part of mechanical systems for centuries. These mechanisms have the effect of automatically controlling a system so that it (for example) operates at the desired revolutions per minute. Without governors, steam engines tended to blow up, or go out; applying devices such as the <a href="https://en.wikipedia.org/wiki/Centrifugal_governor">centrifugal governor</a> to regulate them was an important step in the development of steam power. Importantly, such devices operated to control the process from variation on either side, whether too fast or too slow. They did not operate merely as brakes.</p>
@@ -21010,7 +21011,7 @@ Social media</pre>
 <div class="sect2">
 <h3 id="_chapter_11_enterprise_information_management">Chapter 11: Enterprise Information Management</h3>
 <div class="sect3">
-<h4 id="_introduction_11">Introduction</h4>
+<h4 id="_introduction_to_chapter_11">Introduction to Chapter 11</h4>
 <div class="paragraph">
 <p>Information? That&#8217;s nothing new. Like many other topics, we start by noting that you&#8217;ve been managing information in some way since the earliest days of your organization.</p>
 </div>
@@ -21183,7 +21184,7 @@ No enterprise can be effective without high quality data.
 <div class="content">
 <img src="images/4.11-hashes.png" alt="4.11 hashes">
 </div>
-<div class="title">Figure 11. Hashmarks</div>
+<div class="title">Figure 6. Hashmarks</div>
 </div>
 <div class="paragraph">
 <p>If you are of European descent, you might perceive this as the number twelve, or a count of twelve "somethings." What "somethings"? You don&#8217;t know.</p>
@@ -21192,7 +21193,7 @@ No enterprise can be effective without high quality data.
 <div class="content">
 <img src="images/4.11-appleTrees.jpg" alt="Apple trees" width="300">
 </div>
-<div class="title">Figure 12. How many trees? <sup class="footnote">[<a id="_footnoteref_19" class="footnote" href="#_footnote_19" title="View footnote.">19</a>]</sup></div>
+<div class="title">Figure 7. How many trees? <sup class="footnote">[<a id="_footnoteref_14" class="footnote" href="#_footnote_14" title="View footnote.">14</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Someone might tell you that this is the number of trees on your neighbor&#8217;s farm. That makes all the difference. But wait - you know for a fact that there are many more trees than 12! You inquire further and find out it is actually the number of producing apple trees, a very different concept.</p>
@@ -21232,7 +21233,7 @@ A message to mapmakers: Highways are not painted red, rivers don&#8217;t have co
 <div class="content">
 <img src="images/4.11-cuneiform.jpg" alt="Clay tablet with markings" width="300">
 </div>
-<div class="title">Figure 13. Sumerian cuneiform <sup class="footnote">[<a id="_footnoteref_20" class="footnote" href="#_footnote_20" title="View footnote.">20</a>]</sup></div>
+<div class="title">Figure 8. Sumerian cuneiform <sup class="footnote">[<a id="_footnoteref_15" class="footnote" href="#_footnote_15" title="View footnote.">15</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Humans have been representing information since at least the creation of writing. As early as 3000 BCE, the ancient Sumerians used cuneiform to record&#8201;&#8212;&#8201;among other things&#8201;&#8212;&#8201;how much beer people got. (The more things change, the more they stay the same.)</p>
@@ -21247,7 +21248,7 @@ A message to mapmakers: Highways are not painted red, rivers don&#8217;t have co
 <div class="content">
 <img src="images/4.11-quipu.jpg" alt="knotted cords" width="300">
 </div>
-<div class="title">Figure 14. Inca quipu <sup class="footnote">[<a id="_footnoteref_21" class="footnote" href="#_footnote_21" title="View footnote.">21</a>]</sup></div>
+<div class="title">Figure 9. Inca quipu <sup class="footnote">[<a id="_footnoteref_16" class="footnote" href="#_footnote_16" title="View footnote.">16</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>At around the same time as the Sumerians, the Inca empire in what is now Peru [?] also started to represent information. They used a radically different approach from the Sumerians: carefully knotted ropes:</p>
@@ -21304,7 +21305,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4.11-gasPump.jpg" alt="old gas pump" width="400">
 </div>
-<div class="title">Figure 15. What do they owe you? <sup class="footnote">[<a id="_footnoteref_22" class="footnote" href="#_footnote_22" title="View footnote.">22</a>]</sup></div>
+<div class="title">Figure 10. What do they owe you? <sup class="footnote">[<a id="_footnoteref_17" class="footnote" href="#_footnote_17" title="View footnote.">17</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>As the town grows, and your customers increase, you grow increasingly uncertain as to whether they all are paying you what they owe. You purchase a notebook and a pen (today&#8217;s equivalent of clay tablets or knotted ropes) and start writing down the amounts owed you.</p>
@@ -21387,7 +21388,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4.11-diffEngine.jpg" alt="Complex mechanical calculator" width="400">
 </div>
-<div class="title">Figure 16. Babbage Difference Engine <sup class="footnote">[<a id="_footnoteref_23" class="footnote" href="#_footnote_23" title="View footnote.">23</a>]</sup></div>
+<div class="title">Figure 11. Babbage Difference Engine <sup class="footnote">[<a id="_footnoteref_18" class="footnote" href="#_footnote_18" title="View footnote.">18</a>]</sup></div>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -21439,13 +21440,13 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4.11-punchedCard.jpg" alt="punched data card" width="300">
 </div>
-<div class="title">Figure 17. Punchcard <sup class="footnote">[<a id="_footnoteref_24" class="footnote" href="#_footnote_24" title="View footnote.">24</a>]</sup></div>
+<div class="title">Figure 12. Punchcard <sup class="footnote">[<a id="_footnoteref_19" class="footnote" href="#_footnote_19" title="View footnote.">19</a>]</sup></div>
 </div>
 <div class="imageblock" style="float: right">
 <div class="content">
 <img src="images/4.11-cardSorter.jpg" alt="mechanical card sorting machine" width="400">
 </div>
-<div class="title">Figure 18. Card Sorter <sup class="footnote">[<a id="_footnoteref_25" class="footnote" href="#_footnote_25" title="View footnote.">25</a>]</sup></div>
+<div class="title">Figure 13. Card Sorter <sup class="footnote">[<a id="_footnoteref_20" class="footnote" href="#_footnote_20" title="View footnote.">20</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>During World War II, many business professionals found themselves in the military, and some encountered the new electronic computers being used to calculate artillery trajectories or decrypt enemy messages. Edmund Berkeley, the first secretary of the Association for Computing Machinery, was one such professional who grasped the the potential of the new technology <a href="#Akera2007">[Akera2007]</a>. After the war, Berkeley advocated for the use of these machines to the leadership of the Prudential insurance company, while others did the same in the United Kingdom.</p>
@@ -22484,7 +22485,7 @@ Again, if you or your company are involved in legal issues relating to the above
 <div class="content">
 <img src="images/4.11-reportingOldStyle.png" alt="1900s clerk with adding machine" width="300" height="200">
 </div>
-<div class="title">Figure 19. Reporting and analytics, old style <sup class="footnote">[<a id="_footnoteref_26" class="footnote" href="#_footnote_26" title="View footnote.">26</a>]</sup></div>
+<div class="title">Figure 14. Reporting and analytics, old style <sup class="footnote">[<a id="_footnoteref_21" class="footnote" href="#_footnote_21" title="View footnote.">21</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>We have touched on reporting previously, in our discussion of <a href="#metrics-KPIs">metrics</a>. This is a more detailed examination.</p>
@@ -23385,7 +23386,7 @@ McGilvary (based on English) pp 23-24 - perhaps into 4.11.03.</pre>
 <div class="sect2">
 <h3 id="_chapter_12_architecture_and_portfolio">Chapter 12: Architecture and Portfolio</h3>
 <div class="sect3">
-<h4 id="_introduction_12">Introduction</h4>
+<h4 id="_introduction_to_chapter_12">Introduction to Chapter 12</h4>
 <div class="paragraph">
 <p>Regardless of whether you started off as a digital startup, or are an older corporation now digitally transforming, your world is complex and getting more so.</p>
 </div>
@@ -23557,7 +23558,7 @@ As with other chapters in the later part of this book, we are going to introduce
 <div class="content">
 <img src="images/4.12-architecture.jpg" alt="alt text" width="900">
 </div>
-<div class="title">Figure 20. St. Vitus Cathedral, Prague <sup class="footnote">[<a id="_footnoteref_27" class="footnote" href="#_footnote_27" title="View footnote.">27</a>]</sup></div>
+<div class="title">Figure 15. St. Vitus Cathedral, Prague <sup class="footnote">[<a id="_footnoteref_22" class="footnote" href="#_footnote_22" title="View footnote.">22</a>]</sup></div>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -23702,19 +23703,19 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <div class="content">
 <img src="images/4.12-serengeti.jpg" alt="alt text" width="250" height="200">
 </div>
-<div class="title">Figure 21. The terrain <sup class="footnote">[<a id="_footnoteref_28" class="footnote" href="#_footnote_28" title="View footnote.">28</a>]</sup></div>
+<div class="title">Figure 16. The terrain <sup class="footnote">[<a id="_footnoteref_23" class="footnote" href="#_footnote_23" title="View footnote.">23</a>]</sup></div>
 </div>
 <div class="imageblock" style="float: left">
 <div class="content">
 <img src="images/4.12-surveyor.jpg" alt="alt text" width="200" height="200">
 </div>
-<div class="title">Figure 22. The mapmaker <sup class="footnote">[<a id="_footnoteref_29" class="footnote" href="#_footnote_29" title="View footnote.">29</a>]</sup></div>
+<div class="title">Figure 17. The mapmaker <sup class="footnote">[<a id="_footnoteref_24" class="footnote" href="#_footnote_24" title="View footnote.">24</a>]</sup></div>
 </div>
 <div class="imageblock" style="float: ">
 <div class="content">
 <img src="images/4.12-map.jpg" alt="alt text" width="235" height="200">
 </div>
-<div class="title">Figure 23. The map <sup class="footnote">[<a id="_footnoteref_30" class="footnote" href="#_footnote_30" title="View footnote.">30</a>]</sup></div>
+<div class="title">Figure 18. The map <sup class="footnote">[<a id="_footnoteref_25" class="footnote" href="#_footnote_25" title="View footnote.">25</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Confused? Consider the activity of map-making. In map-making you have:</p>
@@ -23803,7 +23804,7 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <div class="content">
 <img src="images/4.12-moritz.jpg" alt="Moritz" width="300">
 </div>
-<div class="title">Figure 24. Franz Moritz Graf von Lacy <sup class="footnote">[<a id="_footnoteref_31" class="footnote" href="#_footnote_31" title="View footnote.">31</a>]</sup></div>
+<div class="title">Figure 19. Franz Moritz Graf von Lacy <sup class="footnote">[<a id="_footnoteref_26" class="footnote" href="#_footnote_26" title="View footnote.">26</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>In previous ages, nobles would assemble and fight for their King, but their armies were poorly coordinated, and disputes over strategy would often arise. Each noble&#8217;s army would have its own quartermaster, couriers, intelligence, supply chains, and the like. This was both inefficient, and ineffective: overall plans of battle often could not be made or executed, and military operations would be bungled.</p>
@@ -23924,7 +23925,7 @@ The operating model is the necessary level of business process integration and s
 <div class="content">
 <img src="images/4.12-EA-context.png" alt="EA context" width="900">
 </div>
-<div class="title">Figure 25. EA context, based on <a href="#Ross2006">[Ross2006]</a>, fig 1-2, p.10.</div>
+<div class="title">Figure 20. EA context, based on <a href="#Ross2006">[Ross2006]</a>, fig 1-2, p.10.</div>
 </div>
 <div class="paragraph">
 <p>Notice the distinction between Enterprise Architecture as a capability and as an artifact. The <strong>practice</strong> of Enterprise Architecture is not the same as the actual Enterprise Architecture. For the purposes of this textbook, we define enterprise architecture&#8217;s concerns as essentially the enterprise operating model: process, data, organizational capabilities, and systems.</p>
@@ -23956,7 +23957,7 @@ The operating model is the necessary level of business process integration and s
 <div class="content">
 <img src="images/4.12-zachman.png" alt="4.12 zachman">
 </div>
-<div class="title">Figure 26. A variation on the Zachman framework</div>
+<div class="title">Figure 21. A variation on the Zachman framework</div>
 </div>
 <div class="paragraph">
 <p><em>(loosely based on <a href="#Zachman1987">[Zachman1987]</a> and succeeding work.)</em></p>
@@ -24000,7 +24001,7 @@ The operating model is the necessary level of business process integration and s
 <div class="content">
 <img src="images/4.12-BM-OM.png" alt="Business model versus operating model" width="900">
 </div>
-<div class="title">Figure 27. Business model versus operating model</div>
+<div class="title">Figure 22. Business model versus operating model</div>
 </div>
 <div class="paragraph">
 <p>This distinction helps us position the Enterprise Architecture group with respect to key partner organizations:</p>
@@ -24111,7 +24112,7 @@ As a hygiene factor, benefits from EA can be valued in terms of reduction in man
 <div class="content">
 <img src="images/4.12-impact.png" alt="4.12 impact">
 </div>
-<div class="title">Figure 28. Architecture impacts on enterprise value</div>
+<div class="title">Figure 23. Architecture impacts on enterprise value</div>
 </div>
 <div class="paragraph">
 <p>The above diagram suggests a number of specific, measurable outcomes from typical enterprise architecture goals. Without exploring every line of value:</p>
@@ -24442,7 +24443,7 @@ identification and enforcement</p>
 <div class="content">
 <img src="images/4.12-archProgram.png" alt="4.12 archProgram">
 </div>
-<div class="title">Figure 29. Large scale architecture program</div>
+<div class="title">Figure 24. Large scale architecture program</div>
 </div>
 <div class="paragraph">
 <p>The Enterprise Architecture organization might report to a CTO, the Chief of Staff for the Office of the CIO, or the head of Corporate Strategy and Planning. It is a centralized organization with a small staff of domain architects and an Architecture Standards organization that owns two key cross-functional architecture processes.</p>
@@ -24498,7 +24499,7 @@ division is <em>fractal</em> (that is, it reproduces at different scales).</p>
 <div class="content">
 <img src="images/4.12-gudea.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 30. Gudea with blueprint, ~2140 BCE <sup class="footnote">[<a id="_footnoteref_32" class="footnote" href="#_footnote_32" title="View footnote.">32</a>]</sup></div>
+<div class="title">Figure 25. Gudea with blueprint, ~2140 BCE <sup class="footnote">[<a id="_footnoteref_27" class="footnote" href="#_footnote_27" title="View footnote.">27</a>]</sup></div>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -24523,7 +24524,7 @@ The true measure of the value of a model is whether it actually influences behav
 <div class="content">
 <img src="images/4.12-whiteboard.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 31. Whiteboard <sup class="footnote">[<a id="_footnoteref_33" class="footnote" href="#_footnote_33" title="View footnote.">33</a>]</sup></div>
+<div class="title">Figure 26. Whiteboard <sup class="footnote">[<a id="_footnoteref_28" class="footnote" href="#_footnote_28" title="View footnote.">28</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Even in construction and engineering trades that rely on blueprints as a source of truth, keeping them up to date requires considerable discipline and process. In faster-moving digital organizations, visual models are almost always out of date unless they have been specifically refreshed for a purpose, or unless there is a strong formal process in place (and the value of such a process may be difficult to establish). That doesn&#8217;t mean that diagrams will go away. Co-located teams use whiteboards and dry-erase markers and will continue to use them. There are important cognitive and human factors reasons for this that will not go away. Because of these facts, it is useful to understand some of the fundamentals of how humans interpret visual data.</p>
@@ -24546,7 +24547,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4.12-tiger.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 32. Fast recognition means survival <sup class="footnote">[<a id="_footnoteref_34" class="footnote" href="#_footnote_34" title="View footnote.">34</a>]</sup></div>
+<div class="title">Figure 27. Fast recognition means survival <sup class="footnote">[<a id="_footnoteref_29" class="footnote" href="#_footnote_29" title="View footnote.">29</a>]</sup></div>
 </div>
 <div class="ulist">
 <ul>
@@ -24571,7 +24572,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4.12-neumann-flowchart.png" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 33. The first software flowchart <sup class="footnote">[<a id="_footnoteref_35" class="footnote" href="#_footnote_35" title="View footnote.">35</a>]</sup></div>
+<div class="title">Figure 28. The first software flowchart <sup class="footnote">[<a id="_footnoteref_30" class="footnote" href="#_footnote_30" title="View footnote.">30</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Architects and architecture are known for creating diagrams&#8201;&#8212;&#8201;abstract graphical representations of complex systems. The first known instance of applying graphical techniques to a digital problem was in 1947 <a href="#vonNeumann1947">[vonNeumann1947]</a> and visual notations have evolved along with the field of computing ever since. Notable examples include:</p>
@@ -24605,7 +24606,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4.12-flowchart-template.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 34. IBM flowcharting template <sup class="footnote">[<a id="_footnoteref_36" class="footnote" href="#_footnote_36" title="View footnote.">36</a>]</sup></div>
+<div class="title">Figure 29. IBM flowcharting template <sup class="footnote">[<a id="_footnoteref_31" class="footnote" href="#_footnote_31" title="View footnote.">31</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Research at Microsoft suggests that developers use diagrams for four purposes:</p>
@@ -24642,7 +24643,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4.12-sequence-diagram.png" alt="blueprint" width="450" height="200">
 </div>
-<div class="title">Figure 35. UML sequence diagram <sup class="footnote">[<a id="_footnoteref_37" class="footnote" href="#_footnote_37" title="View footnote.">37</a>]</sup></div>
+<div class="title">Figure 30. UML sequence diagram <sup class="footnote">[<a id="_footnoteref_32" class="footnote" href="#_footnote_32" title="View footnote.">32</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>However, if we&#8217;re building systems to be operated and maintained by humans, it would seem that we should support the cognitive and perceptual strengths of humans.  Because diagrams are more readily processed, they are often used to represent high level system interactions - how a given service, product or application is related to peer systems and services. Building such depictions can be helpful to fostering a shared mental model of the overall system objectives and context. The more complex and highly scaled the environment, the more likely one will encounter such artifacts as a means to creating the mental model.</p>
@@ -24706,7 +24707,7 @@ The big picture is part of the standard mindset of EA, which everyone immediatel
 <div class="content">
 <img src="images/4.12-obesity.jpg" alt="blueprint" width="550" height="200">
 </div>
-<div class="title">Figure 36. Complex diagram <sup class="footnote">[<a id="_footnoteref_38" class="footnote" href="#_footnote_38" title="View footnote.">38</a>]</sup></div>
+<div class="title">Figure 31. Complex diagram <sup class="footnote">[<a id="_footnoteref_33" class="footnote" href="#_footnote_33" title="View footnote.">33</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>However, this next diagram is essentially unusable, as visually tracing any given line is too difficult, and it would be easy to mistakenly identify one bubble as dependent on another:</p>
@@ -24715,7 +24716,7 @@ The big picture is part of the standard mindset of EA, which everyone immediatel
 <div class="content">
 <img src="images/4.12-complex-network.jpg" alt="blueprint" width="550" height="200">
 </div>
-<div class="title">Figure 37. Another complex diagram <sup class="footnote">[<a id="_footnoteref_39" class="footnote" href="#_footnote_39" title="View footnote.">39</a>]</sup></div>
+<div class="title">Figure 32. Another complex diagram <sup class="footnote">[<a id="_footnoteref_34" class="footnote" href="#_footnote_34" title="View footnote.">34</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>This may seem like an obvious critique, but architectural diagrams of similar complexity and unusability have too often been produced.</p>
@@ -24728,7 +24729,7 @@ formalisms don&#8217;t give a good sense of scale. For example, suppose you see 
 <div class="content">
 <img src="images/4.12-capabilities.png" alt="capabilities" width="600">
 </div>
-<div class="title">Figure 38. Simple capability map</div>
+<div class="title">Figure 33. Simple capability map</div>
 </div>
 <div class="paragraph">
 <p>Diagrams like this are common, but what does it mean that all the boxes are equally sized? Are there as many lawyers as sales people? Operations staff? It&#8217;s not clear what the advantage is to putting information like this into a graphical form; no interactions are seen and the eight areas could more easily be expressed as a list (or "catalog" in the terms we&#8217;ll introduce below). This brings us to the final problem listed above: visualizations rely on some <a href="#shared-mental-model">common ground</a> understanding. If boxes and lines are used for communication, their meaning should be agreed upon - otherwise, there is risk of mis-understanding, and the diagram may do more harm than good.</p>
@@ -24877,7 +24878,7 @@ Artifacts are generally classified as catalogs (lists of things), matrices (show
 <div class="content">
 <img src="images/4.12-simpleMetamodel.png" alt="metamodel" width="400">
 </div>
-<div class="title">Figure 39. A simple metamodel</div>
+<div class="title">Figure 34. A simple metamodel</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -25081,7 +25082,7 @@ One core question decided by governance is how much autonomy is granted to busin
 <div class="content">
 <img src="images/4.12-A-380.jpg" alt="A-380" width="300" height="200">
 </div>
-<div class="title">Figure 40. Airbus A-380 <sup class="footnote">[<a id="_footnoteref_40" class="footnote" href="#_footnote_40" title="View footnote.">40</a>]</sup></div>
+<div class="title">Figure 35. Airbus A-380 <sup class="footnote">[<a id="_footnoteref_35" class="footnote" href="#_footnote_35" title="View footnote.">35</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>In 2006, Airbus was in the midst of developing the gigantic A-380 aircraft. Because of the scale of the effort, multiple teams of engineers in different countries were working on the effort. As William Ulrich says of the German and French teams, "having failed to coordinate efforts to wire the world&#8217;s largest plane, they were surprised to learn that they had used different approaches to designing the A380&#8217;s wiring system" <a href="#Ulrich2010">[Ulrich2010]</a>, p. 32. This was because the teams were using different software for wiring design of the critical wiring design software <a href="#Clark2006">[Clark2006]</a>. The use of different software to fulfill the capability resulted in a year&#8217;s delay, a $4.5bn order loss to Boeing, and a 26% drop in Airbus stock.</p>
@@ -25137,7 +25138,7 @@ One core question decided by governance is how much autonomy is granted to busin
 <div class="content">
 <img src="images/4.12-archimate.png" alt="archimate" width="500">
 </div>
-<div class="title">Figure 41. Similar to <a href="#Open2012">[Open2012]</a>, section 2.6</div>
+<div class="title">Figure 36. Similar to <a href="#Open2012">[Open2012]</a>, section 2.6</div>
 </div>
 <div class="paragraph">
 <p>As we look at the overall structure of the architecture disciplines, we have three disciplines that correspond to the columns. We&#8217;ll call these "perspectives":</p>
@@ -25219,7 +25220,7 @@ One core question decided by governance is how much autonomy is granted to busin
 <div class="content">
 <img src="images/4.12-flowchart.jpg" alt="flowchart" width="300" height="200">
 </div>
-<div class="title">Figure 42. A flowchart <sup class="footnote">[<a id="_footnoteref_41" class="footnote" href="#_footnote_41" title="View footnote.">41</a>]</sup></div>
+<div class="title">Figure 37. A flowchart <sup class="footnote">[<a id="_footnoteref_36" class="footnote" href="#_footnote_36" title="View footnote.">36</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Process architecture is concerned with why and how activities are performed. It includes the detailed, step by step understanding of activities, in a transparent way. From top to bottom, it includes concepts such as:</p>
@@ -25727,7 +25728,7 @@ Another possible objection against agile methods is that the processes in EA, an
 <div class="content">
 <img src="images/4.12-stopwatch.jpg" alt="alt text" width="300" height="200">
 </div>
-<div class="title">Figure 43. What is your Cost of Delay? <sup class="footnote">[<a id="_footnoteref_42" class="footnote" href="#_footnote_42" title="View footnote.">42</a>]</sup></div>
+<div class="title">Figure 38. What is your Cost of Delay? <sup class="footnote">[<a id="_footnoteref_37" class="footnote" href="#_footnote_37" title="View footnote.">37</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>It is in the "governance and approval" kind of activity that conflict is most likely to emerge. Cadence and synchronization (e.g. processes) with the potential to block teams from pursuing their mission should be very carefully considered. If there is a process or a queue of architecture approvals, it at least should be operated on Cost of Delay of the work it&#8217;s blocking. And more generally, across the organization, the process should be tested against an economic model such as establishing a nominal or <a href="#portfolio-CoD">portfolio-level Cost of Delay</a>. Like other processes, architecture itself can be assessed against such a baseline.</p>
@@ -25775,7 +25776,7 @@ Architectural goals—for example, desired performance, availability, and securi
 <div class="content">
 <img src="images/4.12-strangler-vine.jpg" alt="alt text" width="400" height="200">
 </div>
-<div class="title">Figure 44. Australian strangler vine surrounding tree <sup class="footnote">[<a id="_footnoteref_43" class="footnote" href="#_footnote_43" title="View footnote.">43</a>]</sup></div>
+<div class="title">Figure 39. Australian strangler vine surrounding tree <sup class="footnote">[<a id="_footnoteref_38" class="footnote" href="#_footnote_38" title="View footnote.">38</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Keeping the target operating condition specific is preferable. When architecture scopes problems too broadly, the temptation is to undertake <a href="#large-arch-xform-risk">large and risky transformation programs</a>. As an alternative, Humble and Molesky suggest the "strangler pattern," proposed by Martin Fowler in 2004 <a href="#Fowler2004a">[Fowler2004a]</a>. This pattern uses as a metaphor Australian "strangler" vines that grow around trees until the original tree dies, at which point the strangler vine is now itself a sturdy, rooted structure (see picture).</p>
@@ -27505,126 +27506,111 @@ All web references were archived into the author&#8217;s files on the indicated 
 <a href="#_footnoteref_4">4</a>. Both project management and CMMI have come in for significant criticism <a href="#Koskela2002">[Koskela2002]</a>, <a href="#Keefer2006">[Keefer2006]</a>, and will be discussed further in Sections 3 and 4.
 </div>
 <div class="footnote" id="_footnote_5">
-<a href="#_footnoteref_5">5</a>. <em>Image credit <a href="https://en.wikipedia.org/w/index.php?curid=23093518" class="bare">https://en.wikipedia.org/w/index.php?curid=23093518</a>, downloaded 2016-10-31, By Barney Elliott; The Camera Shop - Screenshot taken from 16MM Kodachrome motion picture film by Barney Elliott. Fair use</em>.
+<a href="#_footnoteref_5">5</a>. <em>Image credit <a href="https://www.flickr.com/photos/daonb/6223628837" class="bare">https://www.flickr.com/photos/daonb/6223628837</a>, downloaded 2016-09-14, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_6">
-<a href="#_footnoteref_6">6</a>. <em>Image credit <a href="https://www.flickr.com/photos/daonb/6223628837" class="bare">https://www.flickr.com/photos/daonb/6223628837</a>, downloaded 2016-09-14, commercial use permitted</em>
+<a href="#_footnoteref_6">6</a>. <em>Image credit <a href="https://www.flickr.com/photos/ramblinbears/7937873272" class="bare">https://www.flickr.com/photos/ramblinbears/7937873272</a>, downloaded 2016-09-20, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_7">
-<a href="#_footnoteref_7">7</a>. <em>Image credit <a href="https://www.flickr.com/photos/ramblinbears/7937873272" class="bare">https://www.flickr.com/photos/ramblinbears/7937873272</a>, downloaded 2016-09-20, commercial use permitted</em>
+<a href="#_footnoteref_7">7</a>. <em>Image credit <a href="https://www.flickr.com/photos/marckjerland/4633544440" class="bare">https://www.flickr.com/photos/marckjerland/4633544440</a>, downloaded 2016-09-20, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_8">
-<a href="#_footnoteref_8">8</a>. <em>Image credit <a href="https://www.flickr.com/photos/marckjerland/4633544440" class="bare">https://www.flickr.com/photos/marckjerland/4633544440</a>, downloaded 2016-09-20, commercial use permitted</em>
+<a href="#_footnoteref_8">8</a>. <em>Image credit <a href="https://www.flickr.com/photos/puliarfanita/6002022840" class="bare">https://www.flickr.com/photos/puliarfanita/6002022840</a>, downloaded 2016-09-22, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_9">
-<a href="#_footnoteref_9">9</a>. <em>Image credit <a href="https://www.flickr.com/photos/puliarfanita/6002022840" class="bare">https://www.flickr.com/photos/puliarfanita/6002022840</a>, downloaded 2016-09-22, commercial use permitted</em>
+<a href="#_footnoteref_9">9</a>. <em>Image credit <a href="https://www.flickr.com/photos/djs1021/101948321/" class="bare">https://www.flickr.com/photos/djs1021/101948321/</a>, downloaded 2016-09-19, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_10">
-<a href="#_footnoteref_10">10</a>. <em>Image credit <a href="https://www.flickr.com/photos/djs1021/101948321/" class="bare">https://www.flickr.com/photos/djs1021/101948321/</a>, downloaded 2016-09-19, commercial use permitted</em>
+<a href="#_footnoteref_10">10</a>. <em>Image credit <a href="https://www.flickr.com/photos/dong/2691594470/" class="bare">https://www.flickr.com/photos/dong/2691594470/</a>, downloaded 2016-09-19, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_11">
-<a href="#_footnoteref_11">11</a>. <em>Image credit <a href="https://www.flickr.com/photos/dong/2691594470/" class="bare">https://www.flickr.com/photos/dong/2691594470/</a>, downloaded 2016-09-19, commercial use permitted</em>
+<a href="#_footnoteref_11">11</a>. <em>Image credit <a href="https://www.flickr.com/photos/chrisbrooks/42588998" class="bare">https://www.flickr.com/photos/chrisbrooks/42588998</a>, downloaded 2016-10-07, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_12">
-<a href="#_footnoteref_12">12</a>. <em>Image credit <a href="https://www.flickr.com/photos/chrisbrooks/42588998" class="bare">https://www.flickr.com/photos/chrisbrooks/42588998</a>, downloaded 2016-10-07, commercial use permitted</em>
+<a href="#_footnoteref_12">12</a>. <em>image credit <a href="https://www.flickr.com/photos/garryknight/11240024613" class="bare">https://www.flickr.com/photos/garryknight/11240024613</a>, commercial use permitted.</em>
 </div>
 <div class="footnote" id="_footnote_13">
-<a href="#_footnoteref_13">13</a>. <em>Image credit <a href="https://www.flickr.com/photos/diariocriticove/8211477590" class="bare">https://www.flickr.com/photos/diariocriticove/8211477590</a>, downloaded 2016-10-31, commercial use permitted</em>
+<a href="#_footnoteref_13">13</a>. Public domain image via Wikipedia
 </div>
 <div class="footnote" id="_footnote_14">
-<a href="#_footnoteref_14">14</a>. _Image credit <a href="https://commons.wikimedia.org/w/index.php?curid=4282986" class="bare">https://commons.wikimedia.org/w/index.php?curid=4282986</a>, "By I, John Manuel Kennedy T., CC BY-SA 3.0," downloaded 2016-10-31, fair use
+<a href="#_footnoteref_14">14</a>. <em>Image credit <a href="https://www.flickr.com/photos/bgreenlee/1389858104/" class="bare">https://www.flickr.com/photos/bgreenlee/1389858104/</a>, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_15">
-<a href="#_footnoteref_15">15</a>. _Image credit <a href="https://www.flickr.com/photos/centralasian/4534292595" class="bare">https://www.flickr.com/photos/centralasian/4534292595</a>, downloaded 2016-10-31, commercial use permitted
+<a href="#_footnoteref_15">15</a>. <em>Image credit <a href="https://www.flickr.com/photos/auxesis/3920533954" class="bare">https://www.flickr.com/photos/auxesis/3920533954</a>, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_16">
-<a href="#_footnoteref_16">16</a>. _Image credit By Dutchguilder - Own work, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=37249677" class="bare">https://commons.wikimedia.org/w/index.php?curid=37249677</a>, downloaded 2016-10-31, fair use
+<a href="#_footnoteref_16">16</a>. <em>Image credit <a href="https://www.flickr.com/photos/136041510@N05/24338977000" class="bare">https://www.flickr.com/photos/136041510@N05/24338977000</a>, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_17">
-<a href="#_footnoteref_17">17</a>. <em>image credit <a href="https://www.flickr.com/photos/garryknight/11240024613" class="bare">https://www.flickr.com/photos/garryknight/11240024613</a>, commercial use permitted.</em>
+<a href="#_footnoteref_17">17</a>. <em>Image credit <a href="https://www.flickr.com/photos/stevensnodgrass/6625148339" class="bare">https://www.flickr.com/photos/stevensnodgrass/6625148339</a>, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_18">
-<a href="#_footnoteref_18">18</a>. Public domain image via Wikipedia
+<a href="#_footnoteref_18">18</a>. <em>Image credit <a href="https://www.flickr.com/photos/tolomea/4847227935" class="bare">https://www.flickr.com/photos/tolomea/4847227935</a>, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_19">
-<a href="#_footnoteref_19">19</a>. <em>Image credit <a href="https://www.flickr.com/photos/bgreenlee/1389858104/" class="bare">https://www.flickr.com/photos/bgreenlee/1389858104/</a>, commercial use permitted</em>
+<a href="#_footnoteref_19">19</a>. <em>Image credit <a href="https://www.flickr.com/photos/129953653@N05/16540457804" class="bare">https://www.flickr.com/photos/129953653@N05/16540457804</a>, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_20">
-<a href="#_footnoteref_20">20</a>. <em>Image credit <a href="https://www.flickr.com/photos/auxesis/3920533954" class="bare">https://www.flickr.com/photos/auxesis/3920533954</a>, commercial use permitted</em>
+<a href="#_footnoteref_20">20</a>. <em>Image credit <a href="https://www.flickr.com/photos/pargon/2444932424" class="bare">https://www.flickr.com/photos/pargon/2444932424</a>, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_21">
-<a href="#_footnoteref_21">21</a>. <em>Image credit <a href="https://www.flickr.com/photos/136041510@N05/24338977000" class="bare">https://www.flickr.com/photos/136041510@N05/24338977000</a>, commercial use permitted</em>
+<a href="#_footnoteref_21">21</a>. <em>Image credit <a href="https://www.flickr.com/photos/seattlemunicipalarchives/3347281230" class="bare">https://www.flickr.com/photos/seattlemunicipalarchives/3347281230</a>, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_22">
-<a href="#_footnoteref_22">22</a>. <em>Image credit <a href="https://www.flickr.com/photos/stevensnodgrass/6625148339" class="bare">https://www.flickr.com/photos/stevensnodgrass/6625148339</a>, commercial use permitted</em>
+<a href="#_footnoteref_22">22</a>. <em>Image credit <a href="https://www.flickr.com/photos/aigle_dore/6365091333" class="bare">https://www.flickr.com/photos/aigle_dore/6365091333</a>, downloaded 2016-10-25, image copyrights Moyan Brenn, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_23">
-<a href="#_footnoteref_23">23</a>. <em>Image credit <a href="https://www.flickr.com/photos/tolomea/4847227935" class="bare">https://www.flickr.com/photos/tolomea/4847227935</a>, commercial use permitted</em>
+<a href="#_footnoteref_23">23</a>. <em>Image credit <a href="https://www.flickr.com/photos/endogamia/3979040177" class="bare">https://www.flickr.com/photos/endogamia/3979040177</a>, downloaded 2016-10-16, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_24">
-<a href="#_footnoteref_24">24</a>. <em>Image credit <a href="https://www.flickr.com/photos/129953653@N05/16540457804" class="bare">https://www.flickr.com/photos/129953653@N05/16540457804</a>, commercial use permitted</em>
+<a href="#_footnoteref_24">24</a>. <em>Image credit <a href="https://www.flickr.com/photos/perspective/8474999166" class="bare">https://www.flickr.com/photos/perspective/8474999166</a>, downloaded 2016-10-16, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_25">
-<a href="#_footnoteref_25">25</a>. <em>Image credit <a href="https://www.flickr.com/photos/pargon/2444932424" class="bare">https://www.flickr.com/photos/pargon/2444932424</a>, commercial use permitted</em>
+<a href="#_footnoteref_25">25</a>. <em>Image credit <a href="https://www.flickr.com/photos/martye_green/2354576085" class="bare">https://www.flickr.com/photos/martye_green/2354576085</a>, downloaded 2016-10-16, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_26">
-<a href="#_footnoteref_26">26</a>. <em>Image credit <a href="https://www.flickr.com/photos/seattlemunicipalarchives/3347281230" class="bare">https://www.flickr.com/photos/seattlemunicipalarchives/3347281230</a>, commercial use permitted</em>
+<a href="#_footnoteref_26">26</a>. Image credit <a href="https://en.wikipedia.org/wiki/Franz_Moritz_von_Lacy#/media/File:Count_Franz_Moritz_von_Lacy_(oil_on_canvas_portrait_HGM).jpg" class="bare">https://en.wikipedia.org/wiki/Franz_Moritz_von_Lacy#/media/File:Count_Franz_Moritz_von_Lacy_(oil_on_canvas_portrait_HGM).jpg</a>, downloaded 2016-10-04, labeled as public domain by Wikipedia
 </div>
 <div class="footnote" id="_footnote_27">
-<a href="#_footnoteref_27">27</a>. <em>Image credit <a href="https://www.flickr.com/photos/aigle_dore/6365091333" class="bare">https://www.flickr.com/photos/aigle_dore/6365091333</a>, downloaded 2016-10-25, image copyrights Moyan Brenn, commercial use permitted</em>
+<a href="#_footnoteref_27">27</a>. <em>Image <a href="https://www.flickr.com/photos/daryl_mitchell/16189447931" class="bare">https://www.flickr.com/photos/daryl_mitchell/16189447931</a>, downloaded 2016-10-10, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_28">
-<a href="#_footnoteref_28">28</a>. <em>Image credit <a href="https://www.flickr.com/photos/endogamia/3979040177" class="bare">https://www.flickr.com/photos/endogamia/3979040177</a>, downloaded 2016-10-16, commercial use permitted</em>
+<a href="#_footnoteref_28">28</a>. <em>Image <a href="https://www.flickr.com/photos/simonov/15484240880" class="bare">https://www.flickr.com/photos/simonov/15484240880</a>, downloaded 2016-10-10, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_29">
-<a href="#_footnoteref_29">29</a>. <em>Image credit <a href="https://www.flickr.com/photos/perspective/8474999166" class="bare">https://www.flickr.com/photos/perspective/8474999166</a>, downloaded 2016-10-16, commercial use permitted</em>
+<a href="#_footnoteref_29">29</a>. <em>Image <a href="https://www.flickr.com/photos/samiksha/2436037856" class="bare">https://www.flickr.com/photos/samiksha/2436037856</a>, downloaded 2016-10-10, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_30">
-<a href="#_footnoteref_30">30</a>. <em>Image credit <a href="https://www.flickr.com/photos/martye_green/2354576085" class="bare">https://www.flickr.com/photos/martye_green/2354576085</a>, downloaded 2016-10-16, commercial use permitted</em>
+<a href="#_footnoteref_30">30</a>. <em><a href="#vonNeumann1947">[vonNeumann1947]</a>, figure 7.9, public domain assumed</em>
 </div>
 <div class="footnote" id="_footnote_31">
-<a href="#_footnoteref_31">31</a>. Image credit <a href="https://en.wikipedia.org/wiki/Franz_Moritz_von_Lacy#/media/File:Count_Franz_Moritz_von_Lacy_(oil_on_canvas_portrait_HGM).jpg" class="bare">https://en.wikipedia.org/wiki/Franz_Moritz_von_Lacy#/media/File:Count_Franz_Moritz_von_Lacy_(oil_on_canvas_portrait_HGM).jpg</a>, downloaded 2016-10-04, labeled as public domain by Wikipedia
+<a href="#_footnoteref_31">31</a>. <em>Image <a href="https://www.flickr.com/photos/mwichary/3249179483" class="bare">https://www.flickr.com/photos/mwichary/3249179483</a>, , downloaded 2016-10-10, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_32">
-<a href="#_footnoteref_32">32</a>. <em>Image <a href="https://www.flickr.com/photos/daryl_mitchell/16189447931" class="bare">https://www.flickr.com/photos/daryl_mitchell/16189447931</a>, downloaded 2016-10-10, commercial use permitted</em>
+<a href="#_footnoteref_32">32</a>. <em>Image <a href="https://www.flickr.com/photos/raphaelstolt/514643232" class="bare">https://www.flickr.com/photos/raphaelstolt/514643232</a>, , downloaded 2016-10-10, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_33">
-<a href="#_footnoteref_33">33</a>. <em>Image <a href="https://www.flickr.com/photos/simonov/15484240880" class="bare">https://www.flickr.com/photos/simonov/15484240880</a>, downloaded 2016-10-10, commercial use permitted</em>
+<a href="#_footnoteref_33">33</a>. <em>Image <a href="https://www.flickr.com/photos/pushandplay/2968259379" class="bare">https://www.flickr.com/photos/pushandplay/2968259379</a>, downloaded 2016-10-10, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_34">
-<a href="#_footnoteref_34">34</a>. <em>Image <a href="https://www.flickr.com/photos/samiksha/2436037856" class="bare">https://www.flickr.com/photos/samiksha/2436037856</a>, downloaded 2016-10-10, commercial use permitted</em>
+<a href="#_footnoteref_34">34</a>. <em>Image <a href="https://www.flickr.com/photos/taedc/9614791576" class="bare">https://www.flickr.com/photos/taedc/9614791576</a>, downloaded 2016-10-10, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_35">
-<a href="#_footnoteref_35">35</a>. <em><a href="#vonNeumann1947">[vonNeumann1947]</a>, figure 7.9, public domain assumed</em>
+<a href="#_footnoteref_35">35</a>. <em>Image credit <a href="https://www.flickr.com/photos/44400809@N07/4081438180" class="bare">https://www.flickr.com/photos/44400809@N07/4081438180</a>, downloaded 2016-10-11, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_36">
-<a href="#_footnoteref_36">36</a>. <em>Image <a href="https://www.flickr.com/photos/mwichary/3249179483" class="bare">https://www.flickr.com/photos/mwichary/3249179483</a>, , downloaded 2016-10-10, commercial use permitted</em>
+<a href="#_footnoteref_36">36</a>. <em>Image credit <a href="https://www.flickr.com/photos/lespetitescases/16715406524" class="bare">https://www.flickr.com/photos/lespetitescases/16715406524</a>, downloaded 2016-10-16, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_37">
-<a href="#_footnoteref_37">37</a>. <em>Image <a href="https://www.flickr.com/photos/raphaelstolt/514643232" class="bare">https://www.flickr.com/photos/raphaelstolt/514643232</a>, , downloaded 2016-10-10, commercial use permitted</em>
+<a href="#_footnoteref_37">37</a>. <em>Image credit <a href="https://www.flickr.com/photos/julianlim/4598412264" class="bare">https://www.flickr.com/photos/julianlim/4598412264</a>, downloaded 2016-10-25, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_38">
-<a href="#_footnoteref_38">38</a>. <em>Image <a href="https://www.flickr.com/photos/pushandplay/2968259379" class="bare">https://www.flickr.com/photos/pushandplay/2968259379</a>, downloaded 2016-10-10, commercial use permitted</em>
-</div>
-<div class="footnote" id="_footnote_39">
-<a href="#_footnoteref_39">39</a>. <em>Image <a href="https://www.flickr.com/photos/taedc/9614791576" class="bare">https://www.flickr.com/photos/taedc/9614791576</a>, downloaded 2016-10-10, commercial use permitted</em>
-</div>
-<div class="footnote" id="_footnote_40">
-<a href="#_footnoteref_40">40</a>. <em>Image credit <a href="https://www.flickr.com/photos/44400809@N07/4081438180" class="bare">https://www.flickr.com/photos/44400809@N07/4081438180</a>, downloaded 2016-10-11, commercial use permitted</em>
-</div>
-<div class="footnote" id="_footnote_41">
-<a href="#_footnoteref_41">41</a>. <em>Image credit <a href="https://www.flickr.com/photos/lespetitescases/16715406524" class="bare">https://www.flickr.com/photos/lespetitescases/16715406524</a>, downloaded 2016-10-16, commercial use permitted</em>
-</div>
-<div class="footnote" id="_footnote_42">
-<a href="#_footnoteref_42">42</a>. <em>Image credit <a href="https://www.flickr.com/photos/julianlim/4598412264" class="bare">https://www.flickr.com/photos/julianlim/4598412264</a>, downloaded 2016-10-25, commercial use permitted</em>
-</div>
-<div class="footnote" id="_footnote_43">
-<a href="#_footnoteref_43">43</a>. <em>Image credit <a href="https://www.flickr.com/photos/cynren/16011788979" class="bare">https://www.flickr.com/photos/cynren/16011788979</a>, downloaded 2016-10-23, commercial use permitted</em>
+<a href="#_footnoteref_38">38</a>. <em>Image credit <a href="https://www.flickr.com/photos/cynren/16011788979" class="bare">https://www.flickr.com/photos/cynren/16011788979</a>, downloaded 2016-10-23, commercial use permitted</em>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-31 14:23:26 CDT
+Last updated 2016-10-31 07:47:44 CDT
 </div>
 </div>
 </body>
