@@ -17,8 +17,20 @@
 #build html
 # bundle exec rake book:build
 
-yes|cp  book/*/*/images/* images   #rewriting rakefile
-yes|cp  book/*/images/* images  # why book/**/ doesn't work?
+rm -rf images
+mkdir images
+#rewriting rakefile
+
+# section-level images
+yes|cp -P book/*/images/*.png images/
+yes|cp -P book/*/images/*.jpg images/
+# chapter-level images
+yes|cp -P book/*/*/images/*.png images/
+yes|cp -P book/*/*/images/*.jpg images/
+
+
+
+#yes|cp  book/*/images/* images  # why book/**/ doesn't work?
 
 asciidoctor aitm-student.adoc
 asciidoctor aitm-instructor.adoc
@@ -26,5 +38,5 @@ asciidoctor aitm-collaborator.adoc
 
 # asciidoctor-pdf -a allow-uri-read aitm-collaborator-pdf.adoc  #need to fix URI-based figures
 # asciidoctor-epub3 aitm-student-epub.adoc
-# asciidoctor-epub3 -D output -a ebook-validate data/samples/sample-book.adoc # with validation
-# asciidoctor-epub3 -D output -a ebook-format=kf8 aitm-student-epub.adoc
+# asciidoctor-epub3 -a ebook-validate aitm-student-epub.adoc # with validation
+# asciidoctor-epub3 -a ebook-format=kf8 aitm-student-epub.adoc
