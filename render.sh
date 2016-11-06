@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # don't go running this thing without a thorough understanding.
 # (well, it probably wouldn't hurt you, but it'll certainly blow up all over the place.)
 # MUST be run from aitm dir
@@ -27,8 +26,6 @@ yes|cp -P book/*/images/*.jpg images/
 # chapter-level images
 yes|cp -P book/*/*/images/*.png images/
 yes|cp -P book/*/*/images/*.jpg images/
-
-
 
 #yes|cp  book/*/images/* images  # why book/**/ doesn't work?
 
