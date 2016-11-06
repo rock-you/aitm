@@ -38,6 +38,8 @@ asciidoctor aitm-collaborator.adoc
 
 # asciidoctor-epub3 -a ebook-validate aitm-student-epub.adoc # with validation
 # asciidoctor-epub3 -a ebook-format=kf8 aitm-student-epub.adoc
-=======
+
+#############
+
 # asciidoctor-epub3 -D output -a ebook-validate aitm-student-epub.adoc # with validation
 # asciidoctor-epub3 -D output -a ebook-format=kf8 aitm-student-epub.adoc
