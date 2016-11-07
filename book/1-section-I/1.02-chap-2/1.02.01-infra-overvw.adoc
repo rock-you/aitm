@@ -75,21 +75,24 @@ TIP: For a beginner-level introduction to the world of digital logic at its most
 
 If we have a picture of our friend, and we use a digital filter to adjust the brightness, that is an application of compute power. The picture is made up of "pixels" which are nothing but numbers representing the color of some tiny square of the picture. Each of those numbers needs to be evaluated and the brightness adjusted. There may be millions in a single image.
 
- Add illustration of bitmap
 
-For example, let's say that the pixel values range from 1 to 10, with 1 being the darkest and 10 being the lightest (in reality, the range is much larger.) We might tell the computer:
+.Picture enlarged to show pixels footnote:[_Image credit https://url, downloaded 2016-XX-XX, commercial use permitted_]
+image::images/1.02-bitmap.png[bitmap, 300,,float="right"]
 
-   Look at a pixel
-   If it is between 0 and 3 add 2
-   If it is between 4 and 6 add 1
-   Move to a new pixel
-   Repeat the above 4 lines until all pixels are done
+
+For example, let's say that the pixel values range from 1 to 10, with 1 being the darkest and 10 being the lightest (in reality, the range is much larger.) To brighten a picture, we might tell the computer:
+
+. Look at a pixel
+. If it is between 0 and 3 add 2
+. If it is between 4 and 6 add 1
+. Move to a new pixel
+. Repeat the above 4 lines until all pixels are done
 
 At a more realistic level, the process might be executed as a batch on a workstation, for hundreds or thousands of photos at a time.
 
 Computers process instructions at the level of "true" and "false," represented as https://en.wikipedia.org/wiki/Binary_number[binary] "1s" and "0s." Because humans cannot easily understand binary data and processing, higher-level abstractions of https://en.wikipedia.org/wiki/Machine_code[machine code] and https://en.wikipedia.org/wiki/Programming_language[programming languages] are used.
 
-Computer processing is not free. Moving data from one point to another - the fundamental https://en.wikipedia.org/wiki/Data_transmission[transmission of information] - requires matter and energy, and is bound up in physical reality and the https://en.wikipedia.org/wiki/Thermodynamics[laws of thermodynamics]. (This despite claims like, "information wants to be free.") In the real world, even running the simplest calculation has physical and therefore economic cost, and so we must pay for computing.
+Computer processing is not free. Moving data from one point to another - the fundamental https://en.wikipedia.org/wiki/Data_transmission[transmission of information] - requires matter and energy, and is bound up in physical reality and the https://en.wikipedia.org/wiki/Thermodynamics[laws of thermodynamics]. The same applies for changing the state of data, which usually involves moving it somewhere, operating on it, and returning it to its original location. In the real world, even running the simplest calculation has physical and therefore economic cost, and so we must pay for computing. 
 
 IMPORTANT: If these concepts are strange to you, spend some time with the suggested Wikipedia articles, or otherwise researching the topics. Wikipedia in the area of fundamental computer concepts is generally accurate.
 
