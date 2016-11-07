@@ -21,18 +21,20 @@ anchor:virtualization[]
 
 ===== Virtualization
 
-https://en.wikipedia.org/wiki/Virtualization[Virtualization], for the purposes of this section, starts with the idea of a computer within a computer.footnote:[it has applicability to storage and networking as well but we will skip that for now] In order to understand this, we need to understand a little bit about operating systems and how they relate to the physical computer.
+https://en.wikipedia.org/wiki/Virtualization[Virtualization], for the purposes of this section, starts with the idea of a computer within a computer. (It has applicability to storage and networking as well but we will skip that for now.) In order to understand this, we need to understand a little bit about operating systems and how they relate to the physical computer.
 
 Assume a simple, physical computer such as a laptop:
 
-image::images/1.02-laptop.jpg[]
+
+.Laptop computer footnote:[_Image credit https://www.flickr.com/photos/125417539@N06/14657459654/, downloaded 2016-11-07, commercial use permitted_]
+image::images/1.02-laptop.jpg[laptop, 300, 200, float="left"]
 
 When the laptop is first turned on, the operating system (OS) loads; the OS is itself software, but is able to directly control the computer's physical resources: its CPU, memory, screen, and any interfaces such as WiFi, USB, and Bluetooth.
 
 The operating system (in a traditional approach) then is used to run "applications" such as Web browsers, media players, word processors, spreadsheets, and the like. Many such programs can also be run as applications within the browser, but the browser still needs to be run as an application.
 
+.Virtualization is computers within a computer
 image::images/1.02-virt.png[]
-_Figure XX. Virtualization is computers within a computer._
 
 In the simplest form of virtualization, a specialized application known as a hypervisor is loaded like any other application. The purpose of this hypervisor is to emulate the hardware computer in software. Once the hypervisor is running, it can emulate any number of "virtual" computers, each of which can have its own operating system. The hypervisor mediates the https://en.wikipedia.org/wiki/Virtual_machine["virtual machine"] (VM) access to the actual, physical hardware of the laptop; the VM can take input from the USB port, and output to the Bluetooth interface, just like the master OS that launched when the laptop was turned on.
 
@@ -46,6 +48,7 @@ Paravirtualization, e.g. containers, is another form of virtualization found in 
 
 However, while hypervisors can support a diverse array of virtual machines with different operating systems on a single computing node, guest environments in a paravirtualized system generally share a single OS.
 
+.Virtualization types
 image::images/1.02-virtualization-types.png[]
 
 ===== Why is virtualization important?
