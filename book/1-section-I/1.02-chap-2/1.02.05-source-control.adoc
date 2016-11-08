@@ -4,8 +4,6 @@ anchor:version-control[]
 [quote, Andrew Clay Shafer, in Allspaw-Web Operations:Keeping the Data On Time]
 In software development, version control is the foundation of every other Agile technical practice. Without version control, there is no build, no TDD, no continuous integration.
 
- cite Forsgren http://www.slideshare.net/nicolefv/nf-final-agileindia2016 - evidence on centrality of version control
-
 ===== What is version control?
 
 Now, because this is a general book on IT management, we’re going to take a bit of a different turn here. As mentioned previously, there are numerous sources available to you to learn Linux scripting, policy-based configuration management of infrastructure, and source control. Competency with source control is essential to your career and you should devote some serious time to it. This book has a different purpose: to orient you to the fundamental principles and architectures of IT management at all scales.
@@ -22,6 +20,7 @@ NOTE: It’s significant that the Agile Alliance indicates “version control”
  +
 "Version control" also includes what we will cover as package management: the management of binary files, as distinct from human-understandable symbolic files. There is also a need to understand what versions are installed on what computers; this can be termed "deployment management." (With the advent of containers, this is a particularly fast changing area.)
 
+.Types of version control
 image::images/1.02-versionControlTypes.png[]
 
 Source control works like an advanced file system with a memory. (Actual file systems that do this are called https://en.wikipedia.org/wiki/Versioning_file_system[_versioning_] file systems.) It can remember all the changes you make to its contents, tell you the differences between any two versions, and also bring back the version you had at any point in time.
@@ -30,7 +29,7 @@ Source control, as you may imagine, is critical for any kind of system with comp
 
 You can find many references to source control on the Internet and in books such as _Pro Git_ by Scott Chacon and Ben Straub <<Chacon2009>>. As it is the most important foundational technology for professional IT, whether in a garage or in the largest corporations, you need to have a deep familiarity with it.
 
-Source control is at its most powerful when dealing with symbolic data, which we usually see as text files. It is less useful in dealing with unstructured, binary data, such as image files.
+Source control is at its most powerful when dealing with symbolic data, which we usually see as text files. It is less useful in dealing with  binary data, such as image files.
 
 This is because symbolic files can be “differenced” in a way that is meaningful to humans. If I change “abc” to “abd” it is clear that the third character has been changed from “c” to “d.”
 
@@ -40,7 +39,7 @@ ifdef::collaborator-draft[]
  consider an illustration
 endif::collaborator-draft[]
 
-IT starts with symbolic files. Text editors create source code, scripts, and configuration files. These may be transformed in defined ways (e.g. by compilers and build tools) but the human understandable end of the process is mostly based on text files.
+Digital systems start with symbolic files. Text editors create source code, scripts, and configuration files. These may be transformed in defined ways (e.g. by compilers and build tools) but the human understandable end of the process is mostly based on text files.
 
 We care very much about when a text file changes. One wrong character can completely alter the behavior of a large, complex system. Therefore, our configuration management approach must track to that level of detail.
 
@@ -60,10 +59,21 @@ ifdef::collaborator-draft[]
   source control versus package management
 endif::collaborator-draft[]
 
-
 anchor:commit-as-metadata[]
 
-===== Sidebar: What is metadata?
+===== Applying version control
+
+[quote, Puppet Labs 2015 State of DevOps report]
+Implement version control for all production artifacts.
+
+Version control is important - but how important? Survey research presented in the annual State of DevOps report indicates that version control is one of the most critical practices associated with high performing IT organizations <<Forsgren2016>>. Nicole Forsgren <<Forsgren2016a>>  summarizes the practice of version control as:
+
+* Our application code is in a version control system
+* Our system configurations are in a version control system
+* Our application configurations are in a version control system
+* Our scripts for automating build and configuration are in a version control system.
+
+===== Version control and metadata
 
 An understanding of the term "metadata" is required for this book's approach to IT management.
 
