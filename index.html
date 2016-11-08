@@ -3443,23 +3443,12 @@ It is not always easy to apply this approach in practice. There can be edge case
 <div class="sect3">
 <h4 id="_policy_based_approaches">Policy-based approaches</h4>
 <div class="paragraph">
-<p>DRAFT
- [As of fall 2015 this section needs to be elaborated.]</p>
-</div>
-<div class="paragraph">
 <p>Before we turned to source control, we looked at a simple script that changed the configuration of a computer. It did so in an <em>imperative</em> fashion.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-<strong>Imperative vs Declarative.</strong> These are two important terms from computer science. In an imperative approach, we tell the computer specifically how we want to accomplish a task. Many traditional programming languages take an imperative approach. Whereas with a declarative approach, we tell the computer the task we want to accomplish and let the computer figure out the best way to do it. Structured Query Language (SQL) statements are a great example of a declarative approach. We can provide a database system with a set of SQL statements, and the database will generate an execution plan to provide us with the data we are seeking.
-</td>
-</tr>
-</table>
+<div class="sect4">
+<h5 id="_imperative_and_declarative">Imperative and Declarative</h5>
+<div class="paragraph">
+<p>Imperative and declarative are two important terms from computer science. In an imperative approach, we tell the computer specifically how we want to accomplish a task. Many traditional programming languages take an imperative approach. Whereas with a declarative approach, we tell the computer the task we want to accomplish and let the computer figure out the best way to do it. Structured Query Language (SQL) statements are a good example of a declarative approach. We can provide a database system with a set of SQL statements, and the database will generate an execution plan to provide us with the data we are seeking. Functional languages such as Lisp and Erlang are considered declarative.</p>
 </div>
 <div class="paragraph">
 <p>A script such as iac.sh is executed line by line, i.e., it is imperative. But in policy-based approaches, the object is to define the desired end state of the resource, not the steps needed to get there.</p>
@@ -3472,6 +3461,7 @@ It is not always easy to apply this approach in practice. There can be edge case
 </div>
 <div class="paragraph">
 <p><em>describe modern infra managers, policy management, auto-scaling as an example, provide an example Chef script..</em></p>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -10418,6 +10408,11 @@ Micromanagement.</p>
 <pre>5 Dysfunctions of a team</pre>
 </div>
 </div>
+<div class="literalblock">
+<div class="content">
+<pre>http://www.mindgarden.com/117-maslach-burnout-inventory</pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -13590,9 +13585,11 @@ making</p>
 </ul>
 </div>
 <div class="paragraph">
-<p><a id="internal-venture"></a>
-====== Internal "venture" funding</p>
+<p><a id="internal-venture"></a></p>
 </div>
+</div>
+<div class="sect5">
+<h6 id="_internal_venture_funding">Internal "venture" funding</h6>
 <div class="quoteblock">
 <blockquote>
 A handful of companies are even exploring a venture-capital-style budgeting model. Initial funding is provided for minimally viable products (MVPs), which can be released quickly, refined according to customer feedback, and relaunched in the marketplace . . . And subsequent funding is based on how those MVPs perform in the market. Under this model, companies can reduce the risk that a project will fail, since MVPs are continually monitored and development tasks reprioritized . . . <a href="#Comella2016">[Comella2016]</a>
