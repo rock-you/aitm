@@ -1,24 +1,27 @@
 anchor:version-control[]
 
 ==== Configuration management: the basics
-Configuration management is a critically important practice in digital systems, and has always been so. How it is performed has evolved over time. At this stage in our journ
+Configuration management is a critically important practice in digital systems, and has always been so. How it is performed has evolved over time. At this stage in our journey, we are one or two people in a startup, working with digital artifacts such as our iac.sh file discussed in the previous section.
+
+One or two people can achieve an impressive amount with modern digital platforms. But the work is complex. Tracking and controlling your work products as they evolve through change after change is important from day one of your efforts. It's not something you want to put off to "later when I have time." This applies to computer code, configurations, and increasingly even documentation (often written in a lightweight markup language like Markdown or Asciidoc).
+
+In this section, we will discuss the following topics:
+
+* Version control
+* Source control
+* Package management
+* Configuration management
+
+and their relationships.
 
 ===== What is version control?
 
-[quote, Andrew Clay Shafer, in Allspaw-Web Operations:Keeping the Data On Time]
+[quote, Andrew Clay Shafer, Web Operations:Keeping the Data On Time]
 In software development, version control is the foundation of every other Agile technical practice. Without version control, there is no build, no TDD, no continuous integration.
-
-In the previous section, we described a simple script that altered the state of a computer system.
-
-As mentioned previously, there are numerous sources available to you to learn Linux scripting, policy-based configuration management of infrastructure, and source control. Competency with source control is essential to your career and you should devote some serious time to it. This book has a different purpose: to orient you to the fundamental principles and architectures of IT management at all scales.
-
-We are going to take a deep look at version control, in particular source control,  because it is here that we start to see the emergence of an architecture of IT management. It is in the source control system that we first start to see metadata emerge as an independent concern.
-
-(For a definition of metadata, see the sidebar.)
 
 The concept of a software version control system (variously known as source control, revision control, software configuration management, and other terms) is our first major software system for the “business of IT.” (The virtualization architecture previously discussed is what is under management; the source control system is part of the management architecture.)
 
-The evolution of version control systems to the pivotal role they now hold has been somewhat unexpected. While version control was always deemed important for software artifacts, it has only recently become the preferred paradigm for managing infrastructure state as well.  Because of this, a version control system is easily and without question the first IT management system you should acquire and implement.
+The evolution of version control systems to the pivotal role they now hold has been somewhat unexpected. While version control was always deemed important for software artifacts, it has only recently become the preferred paradigm for managing infrastructure state as well.  Because of this, a version control system is easily and without question the first IT management system you should acquire and implement (perhaps as a cloud service, such as Github).
 
 The Agile Alliance indicates “version control” as one of the http://guide.agilealliance.org/subway.html[four foundational areas of Agile], along with team, iterative development, and incremental development.
 
@@ -27,15 +30,17 @@ The Agile Alliance indicates “version control” as one of the http://guide.ag
 .Types of version control
 image::images/1.02-versionControlTypes.png[]
 
-Source control works like an advanced file system with a memory. (Actual file systems that do this are called https://en.wikipedia.org/wiki/Versioning_file_system[_versioning_] file systems.) It can remember all the changes you make to its contents, tell you the differences between any two versions, and also bring back the version you had at any point in time.
+Version control works like an advanced file system with a memory. (Actual file systems that do this are called https://en.wikipedia.org/wiki/Versioning_file_system[_versioning_] file systems.) It can remember all the changes you make to its contents, tell you the differences between any two versions, and also bring back the version you had at any point in time.
+
+In the previous section, we described a simple script that altered the state of a computer system.
+
+As mentioned previously, there are numerous sources available to you to learn Linux scripting, policy-based configuration management of infrastructure, and source control. Competency with source control is essential to your career and you should devote some serious time to it.
 
 Source control, as you may imagine, is critical for any kind of system with complex, changing content, especially when many people are working on that content, and there is a need to see the exact sequence of its evolution and isolate any particular moment in its history, or provide detailed analysis on how two versions differ.
 
 You can find many references to source control on the Internet and in books such as _Pro Git_ by Scott Chacon and Ben Straub <<Chacon2009>>. As it is the most important foundational technology for professional IT, whether in a garage or in the largest corporations, you need to have a deep familiarity with it.
 
-Source control is at its most powerful when dealing with symbolic data, which we usually see as text files. It is less useful in dealing with  binary data, such as image files.
-
-This is because symbolic files can analyzed for their differences in an easy to understand way. If I change “abc” to “abd” it is clear that the third character has been changed from “c” to “d.”
+Source control is at its most powerful when dealing with symbolic data, which we usually see as text files. It is less useful in dealing with  binary data, such as image files. Symbolic files can analyzed for their differences in an easy to understand way. If I change “abc” to “abd” it is clear that the third character has been changed from “c” to “d.”
 
 On the other hand, if I take a picture (e.g. as a JPEG file) and alter one pixel, and compare the resulting before and after binary files in terms of their data, it would be more difficult to understand what had changed. I would be able to easily tell that they are two different files (they would have different checksums), but they would look very similar.
 
@@ -63,7 +68,7 @@ endif::collaborator-draft[]
 
 anchor:commit-as-metadata[]
 
-===== Applying version control
+===== Package management
 
 [quote, Puppet Labs 2015 State of DevOps report]
 Implement version control for all production artifacts.
@@ -74,31 +79,6 @@ Version control is important - but how important? Survey research presented in t
 * Our system configurations are in a version control system
 * Our application configurations are in a version control system
 * Our scripts for automating build and configuration are in a version control system.
-
-===== Version control and metadata
-
-An understanding of the term "metadata" is required for this book's approach to IT management.
-
-Metadata is a tricky term, that tends to generate confusion. The term “meta” implies a concept that is somehow self-referential, and/or operating at a higher level of abstraction. So,
-
-* the term meta-discussion is a discussion about the discussion;
-* meta-cognition is cognition about cognition, and
-* meta-data (aka metadata) is data about data.
-
-Some examples:
-
-* In traditional data management, metadata is the description of the data structures, especially from a business point of view. A database column might be named “CUST_L_NM,” but the business description or metadata would be “The last, family, or surname of the customer.”
-* In document management, the document metadata is the record of who created the document and when, when it was last updated, and so forth. Failure to properly sanitize document metadata has led to various privacy and data security related issues.
-* In telephony,  “data” is the actual call signal — the audio of the phone conversation, nowadays usually digitally encoded. Metadata on the other hand is all the information about the call: from who to who, when, how long, and so forth.
-
-In computer systems, metadata can be difficult to isolate. Sometimes, computing professionals will speak of a “metadata” layer that may define physical database structures, data extracts, business process behavior, even file locations. The trouble is, from a computer’s point of view, a processing instruction is an instruction, and the prefix “meta” has no real meaning.
-
-Because of this, this book favors a principle that *metadata is by definition non-runtime.* It is documentation, usually represented as structured or semi-structured data, but not usually a primary processing input or output. It might be “digital exhaust” - log files are a form of metadata. It is not executable. If it’s  executable (directly or indirectly), it’s digital logic or configuration, plain and simple.
-
-So what about our infrastructure as code example? The artifact - the configuration file, the script - is NOT metadata, because it is executable. But the source repository commit IS metadata. It has no meaning for the script. The dependency is one way - without the artifact, the commit ID is meaningless, but the artifact is completely ignorant of the commit. However, the commit may become an essential data point for human beings trying to make sense of the state of a resource defined by that artifact.
-
-*In this microcosm, we see the origins of IT management.*
-It is not always easy to apply this approach in practice. There can be edge cases. But *the concept of metadata provides a basis for distinguishing the _management_ of information technology from the actual _practice_ of information technology.*
 
 anchor:policy-config[]
 
@@ -120,3 +100,25 @@ This is a complex topic and there are advantages and disadvantages to each appro
 
 
 _describe modern infra managers, policy management, auto-scaling as an example, provide an example Chef script.._
+
+===== Configuration management, version control, and metadata
+Version control, in particular source control, is where we start to see the emergence of an _architecture of IT management_. It is in the source control system that we first start to see _metadata_ emerge as an independent concern. Metadata is a tricky term, that tends to generate confusion. The term “meta” implies a concept that is somehow self-referential, and/or operating at a higher level of abstraction. So,
+
+* the term meta-discussion is a discussion about the discussion;
+* meta-cognition is cognition about cognition, and
+* meta-data (aka metadata) is data about data.
+
+Some examples:
+
+* In traditional data management, metadata is the description of the data structures, especially from a business point of view. A database column might be named “CUST_L_NM,” but the business description or metadata would be “The last, family, or surname of the customer.”
+* In document management, the document metadata is the record of who created the document and when, when it was last updated, and so forth. Failure to properly sanitize document metadata has led to various privacy and data security related issues.
+* In telephony,  “data” is the actual call signal — the audio of the phone conversation, nowadays usually digitally encoded. Metadata on the other hand is all the information about the call: from who to who, when, how long, and so forth.
+
+In computer systems, metadata can be difficult to isolate. Sometimes, computing professionals will speak of a “metadata” layer that may define physical database structures, data extracts, business process behavior, even file locations. The trouble is, from a computer’s point of view, a processing instruction is an instruction, and the prefix “meta” has no real meaning.
+
+Because of this, this book favors a principle that *metadata is by definition non-runtime.* It is documentation, usually represented as structured or semi-structured data, but not usually a primary processing input or output. It might be “digital exhaust” - log files are a form of metadata. It is not executable. If it’s  executable (directly or indirectly), it’s digital logic or configuration, plain and simple.
+
+So what about our infrastructure as code example? The artifact - the configuration file, the script - is NOT metadata, because it is executable. But the source repository commit IS metadata. It has no meaning for the script. The dependency is one way - without the artifact, the commit ID is meaningless, but the artifact is completely ignorant of the commit. However, the commit may become an essential data point for human beings trying to make sense of the state of a resource defined by that artifact.
+
+*In this microcosm, we see the origins of IT management.*
+It is not always easy to apply this approach in practice. There can be edge cases. But *the concept of metadata provides a basis for distinguishing the _management_ of information technology from the actual _practice_ of information technology.*
