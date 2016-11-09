@@ -1,14 +1,18 @@
 anchor:version-control[]
 
-==== Version control: the Agile foundation
-[quote, Andrew Clay Shafer, in Allspaw-Web Operations:Keeping the Data On Time]
-In software development, version control is the foundation of every other Agile technical practice. Without version control, there is no build, no TDD, no continuous integration.
+==== Configuration management: the basics
+Configuration management is a critically important practice in digital systems, and has always been so. How it is performed has evolved over time. At this stage in our journ
 
 ===== What is version control?
 
-Now, because this is a general book on IT management, we’re going to take a bit of a different turn here. As mentioned previously, there are numerous sources available to you to learn Linux scripting, policy-based configuration management of infrastructure, and source control. Competency with source control is essential to your career and you should devote some serious time to it. This book has a different purpose: to orient you to the fundamental principles and architectures of IT management at all scales.
+[quote, Andrew Clay Shafer, in Allspaw-Web Operations:Keeping the Data On Time]
+In software development, version control is the foundation of every other Agile technical practice. Without version control, there is no build, no TDD, no continuous integration.
 
-We are going to take a very deep and targeted look at version control, in particular source control,  because it is here that we start to see the emergence of an architecture of IT management. It is in the source control system that we first start to see metadata emerge as an independent concern.
+In the previous section, we described a simple script that altered the state of a computer system.
+
+As mentioned previously, there are numerous sources available to you to learn Linux scripting, policy-based configuration management of infrastructure, and source control. Competency with source control is essential to your career and you should devote some serious time to it. This book has a different purpose: to orient you to the fundamental principles and architectures of IT management at all scales.
+
+We are going to take a deep look at version control, in particular source control,  because it is here that we start to see the emergence of an architecture of IT management. It is in the source control system that we first start to see metadata emerge as an independent concern.
 
 (For a definition of metadata, see the sidebar.)
 
@@ -16,8 +20,8 @@ The concept of a software version control system (variously known as source cont
 
 The evolution of version control systems to the pivotal role they now hold has been somewhat unexpected. While version control was always deemed important for software artifacts, it has only recently become the preferred paradigm for managing infrastructure state as well.  Because of this, a version control system is easily and without question the first IT management system you should acquire and implement.
 
-NOTE: It’s significant that the Agile Alliance indicates “version control” as one of the http://guide.agilealliance.org/subway.html[four foundational areas of Agile], along with team, iterative development, and incremental development. +
- +
+The Agile Alliance indicates “version control” as one of the http://guide.agilealliance.org/subway.html[four foundational areas of Agile], along with team, iterative development, and incremental development.
+
 "Version control" also includes what we will cover as package management: the management of binary files, as distinct from human-understandable symbolic files. There is also a need to understand what versions are installed on what computers; this can be termed "deployment management." (With the advent of containers, this is a particularly fast changing area.)
 
 .Types of version control
@@ -31,17 +35,15 @@ You can find many references to source control on the Internet and in books such
 
 Source control is at its most powerful when dealing with symbolic data, which we usually see as text files. It is less useful in dealing with  binary data, such as image files.
 
-This is because symbolic files can be “differenced” in a way that is meaningful to humans. If I change “abc” to “abd” it is clear that the third character has been changed from “c” to “d.”
+This is because symbolic files can analyzed for their differences in an easy to understand way. If I change “abc” to “abd” it is clear that the third character has been changed from “c” to “d.”
 
 On the other hand, if I take a picture (e.g. as a JPEG file) and alter one pixel, and compare the resulting before and after binary files in terms of their data, it would be more difficult to understand what had changed. I would be able to easily tell that they are two different files (they would have different checksums), but they would look very similar.
-
-ifdef::collaborator-draft[]
- consider an illustration
-endif::collaborator-draft[]
 
 Digital systems start with symbolic files. Text editors create source code, scripts, and configuration files. These may be transformed in defined ways (e.g. by compilers and build tools) but the human understandable end of the process is mostly based on text files.
 
 We care very much about when a text file changes. One wrong character can completely alter the behavior of a large, complex system. Therefore, our configuration management approach must track to that level of detail.
+
+===== The "commit" concept
 
 Although implementation details may differ, all version control systems have some concept of “commit.”
 As stated in Version Control with Git <<Loeliger2009>>:
@@ -97,3 +99,24 @@ So what about our infrastructure as code example? The artifact - the configurati
 
 *In this microcosm, we see the origins of IT management.*
 It is not always easy to apply this approach in practice. There can be edge cases. But *the concept of metadata provides a basis for distinguishing the _management_ of information technology from the actual _practice_ of information technology.*
+
+anchor:policy-config[]
+
+==== Configuration management
+
+Version control is an important part of configuration management,
+
+Before we turned to source control, we looked at a simple script that changed the configuration of a computer. It did so in an _imperative_ fashion.
+
+===== Imperative and Declarative
+
+Imperative and declarative are two important terms from computer science. In an imperative approach, we tell the computer specifically how we want to accomplish a task. Many traditional programming languages take an imperative approach. Whereas with a declarative approach, we tell the computer the task we want to accomplish and let the computer figure out the best way to do it. Structured Query Language (SQL) statements are a good example of a declarative approach. We can provide a database system with a set of SQL statements, and the database will generate an execution plan to provide us with the data we are seeking. Functional languages such as Lisp and Erlang are considered declarative.
+
+A script such as iac.sh is executed line by line, i.e., it is imperative. But in policy-based approaches, the object is to define the desired end state of the resource, not the steps needed to get there.
+
+Chef, Puppet, Salt Stack, and Ansible are all declarative to some degree.
+
+This is a complex topic and there are advantages and disadvantages to each approach. (See http://markburgess.org/blog_order.html["When and Where Order Matters"] by Mark Burgess for an advanced discussion.) But policy-based approaches seem to have the upper hand for now.
+
+
+_describe modern infra managers, policy management, auto-scaling as an example, provide an example Chef script.._
