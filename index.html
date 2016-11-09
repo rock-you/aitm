@@ -461,8 +461,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_choosing_infrastructure">Choosing infrastructure</a></li>
 <li><a href="#_from_physical_compute_to_cloud">From "physical" compute to Cloud</a></li>
 <li><a href="#_infrastructure_as_code">Infrastructure as code</a></li>
-<li><a href="#_version_control_the_agile_foundation">Version control: the Agile foundation</a></li>
-<li><a href="#_policy_based_approaches">Policy-based approaches</a></li>
+<li><a href="#_configuration_management_the_basics">Configuration management: the basics</a></li>
+<li><a href="#_configuration_management">Configuration management</a></li>
 <li><a href="#_topics_in_it_infrastructure">Topics in IT infrastructure</a></li>
 <li><a href="#_conclusion">Conclusion</a></li>
 </ul>
@@ -3240,9 +3240,6 @@ touch a b c</pre>
 <div class="paragraph">
 <p>We might name that file iac.sh, set its permissions correctly, and run it (so that the computer executes all the commands for us, rather than us running them one at a time at the console).  If we did so in an empty directory, we’d again wind up with that same configuration. (If we did it in a directory already containing foo and bar directories, we’d get errors. More on this to come.)</p>
 </div>
-<div class="paragraph">
-<p>This will be familiar material to many of you, including the fact that beyond creating directories and files we can use shell scripts to create and destroy virtual servers, install and remove software, set up and delete users, check on the status of running processes, and much more.</p>
-</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -3256,7 +3253,13 @@ The state of the art in infrastructure configuration is not to use shell scripts
 </table>
 </div>
 <div class="paragraph">
-<p>Let’s return to our iac.sh file. It’s valuable. It documents our intentions for how this configuration should look. We can reliably run it on thousands of machines and it will always give us two directories and six files. In terms of the previous section, we might choose to run it on every new server we create. We want to establish it as a known resource in our technical ecosystem. This is where version control comes in.</p>
+<p>This will be familiar material to many of you, including the fact that beyond creating directories and files we can use shell scripts to create and destroy virtual servers, install and remove software, set up and delete users, check on the status of running processes, and much more.</p>
+</div>
+<div class="paragraph">
+<p>Sophisticated infrastructure as code techniques are are essential part of modern site reliability engineering practices such as used by Google. Auto-scaling, self-healing systems, fast deployments of new features all require that infrastructure be represented as code for maximum speed and reliability of creation.</p>
+</div>
+<div class="paragraph">
+<p>Let’s return to our iac.sh file. It’s valuable. It documents our intentions for how this configuration should look. We can reliably run it on thousands of machines and it will always give us two directories and six files. In terms of the previous section, we might choose to run it on every new server we create. We want to establish it as a known resource in our technical ecosystem. This is where version control and the broader concept of configuration management come in.</p>
 </div>
 <div class="paragraph">
 <p><a id="version-control"></a></p>
@@ -3264,7 +3267,12 @@ The state of the art in infrastructure configuration is not to use shell scripts
 </div>
 </div>
 <div class="sect3">
-<h4 id="_version_control_the_agile_foundation">Version control: the Agile foundation</h4>
+<h4 id="_configuration_management_the_basics">Configuration management: the basics</h4>
+<div class="paragraph">
+<p>Configuration management is a critically important practice in digital systems, and has always been so. How it is performed has evolved over time. At this stage in our journ</p>
+</div>
+<div class="sect4">
+<h5 id="_what_is_version_control">What is version control?</h5>
 <div class="quoteblock">
 <blockquote>
 In software development, version control is the foundation of every other Agile technical practice. Without version control, there is no build, no TDD, no continuous integration.
@@ -3274,13 +3282,14 @@ In software development, version control is the foundation of every other Agile 
 <cite>in Allspaw-Web Operations:Keeping the Data On Time</cite>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_what_is_version_control">What is version control?</h5>
 <div class="paragraph">
-<p>Now, because this is a general book on IT management, we’re going to take a bit of a different turn here. As mentioned previously, there are numerous sources available to you to learn Linux scripting, policy-based configuration management of infrastructure, and source control. Competency with source control is essential to your career and you should devote some serious time to it. This book has a different purpose: to orient you to the fundamental principles and architectures of IT management at all scales.</p>
+<p>In the previous section, we described a simple script that altered the state of a computer system.</p>
 </div>
 <div class="paragraph">
-<p>We are going to take a very deep and targeted look at version control, in particular source control,  because it is here that we start to see the emergence of an architecture of IT management. It is in the source control system that we first start to see metadata emerge as an independent concern.</p>
+<p>As mentioned previously, there are numerous sources available to you to learn Linux scripting, policy-based configuration management of infrastructure, and source control. Competency with source control is essential to your career and you should devote some serious time to it. This book has a different purpose: to orient you to the fundamental principles and architectures of IT management at all scales.</p>
+</div>
+<div class="paragraph">
+<p>We are going to take a deep look at version control, in particular source control,  because it is here that we start to see the emergence of an architecture of IT management. It is in the source control system that we first start to see metadata emerge as an independent concern.</p>
 </div>
 <div class="paragraph">
 <p>(For a definition of metadata, see the sidebar.)</p>
@@ -3291,19 +3300,11 @@ In software development, version control is the foundation of every other Agile 
 <div class="paragraph">
 <p>The evolution of version control systems to the pivotal role they now hold has been somewhat unexpected. While version control was always deemed important for software artifacts, it has only recently become the preferred paradigm for managing infrastructure state as well.  Because of this, a version control system is easily and without question the first IT management system you should acquire and implement.</p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-It’s significant that the Agile Alliance indicates “version control” as one of the <a href="http://guide.agilealliance.org/subway.html">four foundational areas of Agile</a>, along with team, iterative development, and incremental development.<br>
-<br>
-"Version control" also includes what we will cover as package management: the management of binary files, as distinct from human-understandable symbolic files. There is also a need to understand what versions are installed on what computers; this can be termed "deployment management." (With the advent of containers, this is a particularly fast changing area.)
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>The Agile Alliance indicates “version control” as one of the <a href="http://guide.agilealliance.org/subway.html">four foundational areas of Agile</a>, along with team, iterative development, and incremental development.</p>
+</div>
+<div class="paragraph">
+<p>"Version control" also includes what we will cover as package management: the management of binary files, as distinct from human-understandable symbolic files. There is also a need to understand what versions are installed on what computers; this can be termed "deployment management." (With the advent of containers, this is a particularly fast changing area.)</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -3324,7 +3325,7 @@ It’s significant that the Agile Alliance indicates “version control” as on
 <p>Source control is at its most powerful when dealing with symbolic data, which we usually see as text files. It is less useful in dealing with  binary data, such as image files.</p>
 </div>
 <div class="paragraph">
-<p>This is because symbolic files can be “differenced” in a way that is meaningful to humans. If I change “abc” to “abd” it is clear that the third character has been changed from “c” to “d.”</p>
+<p>This is because symbolic files can analyzed for their differences in an easy to understand way. If I change “abc” to “abd” it is clear that the third character has been changed from “c” to “d.”</p>
 </div>
 <div class="paragraph">
 <p>On the other hand, if I take a picture (e.g. as a JPEG file) and alter one pixel, and compare the resulting before and after binary files in terms of their data, it would be more difficult to understand what had changed. I would be able to easily tell that they are two different files (they would have different checksums), but they would look very similar.</p>
@@ -3335,6 +3336,9 @@ It’s significant that the Agile Alliance indicates “version control” as on
 <div class="paragraph">
 <p>We care very much about when a text file changes. One wrong character can completely alter the behavior of a large, complex system. Therefore, our configuration management approach must track to that level of detail.</p>
 </div>
+</div>
+<div class="sect4">
+<h5 id="_the_commit_concept">The "commit" concept</h5>
 <div class="paragraph">
 <p>Although implementation details may differ, all version control systems have some concept of “commit.”
 As stated in Version Control with Git <a href="#Loeliger2009">[Loeliger2009]</a>:</p>
@@ -3441,7 +3445,10 @@ It is not always easy to apply this approach in practice. There can be edge case
 </div>
 </div>
 <div class="sect3">
-<h4 id="_policy_based_approaches">Policy-based approaches</h4>
+<h4 id="_configuration_management">Configuration management</h4>
+<div class="paragraph">
+<p>Version control is an important part of configuration management,</p>
+</div>
 <div class="paragraph">
 <p>Before we turned to source control, we looked at a simple script that changed the configuration of a computer. It did so in an <em>imperative</em> fashion.</p>
 </div>
@@ -6492,6 +6499,11 @@ Poppendieck wastes as cited by Cobb, p177</pre>
 <div class="literalblock">
 <div class="content">
 <pre>Cynevin. Complicated vs complex, what is computable.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>"double diamond" of design thinking</pre>
 </div>
 </div>
 </div>
