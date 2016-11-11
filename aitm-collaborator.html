@@ -3950,7 +3950,7 @@ Implement version control for all production artifacts.
 </div>
 </div>
 <div class="paragraph">
-<p>Previously, it has been common practice for compiled binaries to be stored in the same repositories as source code. However, this is no longer considered a best practice. Source and package management are now viewed as two separate things.  Source repositories should be reserved for symbolic artifacts whose differences can be made visible in a human-understandable way. Package repositories in contrast are for binary artifacts that can be deployed.</p>
+<p>Previously, it has been common practice for compiled binaries to be stored in the same repositories as source code. However, this is no longer considered a best practice. Source and package management are now viewed as two separate things.  Source repositories should be reserved for text-based artifacts whose differences can be made visible in a human-understandable way. Package repositories in contrast are for binary artifacts that can be deployed.</p>
 </div>
 <div class="paragraph">
 <p>Package repositories also can serve as a proxy to the external world of downloadable software. That is, they are a cache, an intermediate store of the software provided by various "upstream" sources. For example, developers may be told to download the approved Ruby on Rails version from the local package repository, rather than going to the getting the latest version, which may not be suitable for the environment.</p>
@@ -3959,7 +3959,7 @@ Implement version control for all production artifacts.
 <p>Package repositories are also used to enable collaboration between teams working on large systems. Teams can check in their built components into the package repository for other teams to download. This is more efficient than everyone  always building all parts of the application from the source repository.</p>
 </div>
 <div class="paragraph">
-<p>The boundary between source and package is not hard and fast, however. One does see binary files in source repositories, such as images used in an application. Also, when interpreted languages (such as Javascript) are "packaged," they still appear in the package as symbolic files, perhaps compressed or otherwise incorporated into some larger containing structure.</p>
+<p>The boundary between source and package is not hard and fast, however. One does see binary files in source repositories, such as images used in an application. Also, when interpreted languages (such as Javascript) are "packaged," they still appear in the package as text files, perhaps compressed or otherwise incorporated into some larger containing structure.</p>
 </div>
 <div class="paragraph">
 <p><a id="policy-config"></a></p>
@@ -3977,11 +3977,11 @@ Implement version control for all production artifacts.
 </div>
 <div class="title">Figure 19. Configuration management and its components</div>
 </div>
+<div class="sect4">
+<h5 id="_imperative_and_declarative">Imperative and Declarative</h5>
 <div class="paragraph">
 <p>Before we turned to source control, we looked at a simple script that changed the configuration of a computer. It did so in an <em>imperative</em> fashion.</p>
 </div>
-<div class="sect4">
-<h5 id="_imperative_and_declarative">Imperative and Declarative</h5>
 <div class="paragraph">
 <p>Imperative and declarative are two important terms from computer science. In an imperative approach, we tell the computer specifically how we want to accomplish a task. Many traditional programming languages take an imperative approach. Whereas with a declarative approach, we tell the computer the task we want to accomplish and let the computer figure out the best way to do it. Structured Query Language (SQL) statements are a good example of a declarative approach. We can provide a database system with a set of SQL statements, and the database will generate an execution plan to provide us with the data we are seeking. Functional languages such as Lisp and Erlang are considered declarative.</p>
 </div>
@@ -3996,9 +3996,6 @@ Implement version control for all production artifacts.
 </div>
 <div class="paragraph">
 <p><em>describe modern infra managers, policy management, auto-scaling as an example, provide an example Chef script..</em></p>
-</div>
-<div class="paragraph">
-<p><a id="commit-as-metadata"></a></p>
 </div>
 </div>
 </div>
