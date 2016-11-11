@@ -63,13 +63,13 @@ Also, the concept of an atomic “commit” is essential to the concept of a “
 [quote, Puppet Labs 2015 State of DevOps report]
 Implement version control for all production artifacts.
 
-Previously, it has been common practice for compiled binaries to be stored in the same repositories as source code. However, this is no longer considered a best practice. Source and package management are now viewed as two separate things.  Source repositories should be reserved for symbolic artifacts whose differences can be made visible in a human-understandable way. Package repositories in contrast are for binary artifacts that can be deployed.
+Previously, it has been common practice for compiled binaries to be stored in the same repositories as source code. However, this is no longer considered a best practice. Source and package management are now viewed as two separate things.  Source repositories should be reserved for text-based artifacts whose differences can be made visible in a human-understandable way. Package repositories in contrast are for binary artifacts that can be deployed.
 
 Package repositories also can serve as a proxy to the external world of downloadable software. That is, they are a cache, an intermediate store of the software provided by various "upstream" sources. For example, developers may be told to download the approved Ruby on Rails version from the local package repository, rather than going to the getting the latest version, which may not be suitable for the environment.
 
 Package repositories are also used to enable collaboration between teams working on large systems. Teams can check in their built components into the package repository for other teams to download. This is more efficient than everyone  always building all parts of the application from the source repository.
 
-The boundary between source and package is not hard and fast, however. One does see binary files in source repositories, such as images used in an application. Also, when interpreted languages (such as Javascript) are "packaged," they still appear in the package as symbolic files, perhaps compressed or otherwise incorporated into some larger containing structure.
+The boundary between source and package is not hard and fast, however. One does see binary files in source repositories, such as images used in an application. Also, when interpreted languages (such as Javascript) are "packaged," they still appear in the package as text files, perhaps compressed or otherwise incorporated into some larger containing structure.
 
 anchor:policy-config[]
 
@@ -80,9 +80,10 @@ Version control is an important part of the overall concept of configuration man
 .Configuration management and its components
 image::images/1.02-configMgmt.png[]
 
-Before we turned to source control, we looked at a simple script that changed the configuration of a computer. It did so in an _imperative_ fashion.
 
 ===== Imperative and Declarative
+
+Before we turned to source control, we looked at a simple script that changed the configuration of a computer. It did so in an _imperative_ fashion.
 
 Imperative and declarative are two important terms from computer science. In an imperative approach, we tell the computer specifically how we want to accomplish a task. Many traditional programming languages take an imperative approach. Whereas with a declarative approach, we tell the computer the task we want to accomplish and let the computer figure out the best way to do it. Structured Query Language (SQL) statements are a good example of a declarative approach. We can provide a database system with a set of SQL statements, and the database will generate an execution plan to provide us with the data we are seeking. Functional languages such as Lisp and Erlang are considered declarative.
 
@@ -94,5 +95,3 @@ This is a complex topic and there are advantages and disadvantages to each appro
 
 
 _describe modern infra managers, policy management, auto-scaling as an example, provide an example Chef script.._
-
-anchor:commit-as-metadata[]
