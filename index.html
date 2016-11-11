@@ -2734,7 +2734,7 @@ Iterative development and rapid scaling, while possible, was often more difficul
 </div>
 </div>
 <div class="paragraph">
-<p>There is a long tradition in IT management of  saying “How can you be thinking about infrastructure before you have gone deeply into requirements?”</p>
+<p>There is a long tradition in IT management of saying “How can you be thinking about infrastructure before you have gone deeply into requirements?”</p>
 </div>
 <div class="paragraph">
 <p>Let’s be clear, in defining a product (Chapter 1) you already have started to think about requirements, although we have not yet started to use that term. The idea that all requirements need to be understood in detail before considering technical platform is, in general, an outmoded concept that made more sense when hardware was more specialized and only available as expensive, organization-owned assets. With the emergence of Cloud providers able to sell computing services, companies no longer need to commit to large capital outlays. And digital product professionals realize that requirements are never fully "understood" up front (more on this in the next chapter). Your Minimum Marketable Feature is an initial statement of requirements from which you should be able to infer at least initial toolset and platform requirements. Here to get you started are the major players as of fall 2015:</p>
@@ -2782,13 +2782,13 @@ Iterative development and rapid scaling, while possible, was often more difficul
 </tbody>
 </table>
 <div class="paragraph">
-<p>Ruby on Rails is another frequently-encountered platform.</p>
+<p>Ruby on Rails is another frequently-encountered platform. If you are building a data or analytics-centric product, there are other alternatives as well.</p>
 </div>
 <div class="paragraph">
 <p>There is a good reason, however, why you should not spend too much time “analyzing” before you make platform decisions. The reality is that you cannot know all of the factors necessary to make a perfect decision, and in fact the way you will learn them is by moving forward and testing out various approaches.</p>
 </div>
 <div class="paragraph">
-<p>So, choose Ruby on Rails, or LAMP, or MEAN, and a hosting provider who supports them, and start. Do not fall into analysis paralysis. But <strong>be critical of everything</strong> especially in your first few weeks of development. Ask yourself:</p>
+<p>So, choose Ruby on Rails, or LAMP, or MEAN, and a hosting provider who supports them, and start. You can easily stand up environments for comparison using Cloud services, or even with lightweight virtualization on your own personal laptop. Do not fall into analysis paralysis. But <strong>be critical of everything</strong> especially in your first few weeks of development. Ask yourself:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3166,6 +3166,9 @@ not manage or control the underlying cloud infrastructure including network, ser
 <div class="paragraph">
 <p>Previously, because of the expense and complexity of bare-metal servers, and the cost of having them offline, great pains were taken to fix troubled servers. Systems administrators would spend hours or days troubleshooting obscure configuration problems, such as residual settings left by removed software. Certain servers might start to develop “personalities.” Industry practice has changed dramatically here since around 2010.</p>
 </div>
+<div class="paragraph">
+<p><a id="infra-code-example"></a></p>
+</div>
 <div class="sect4">
 <h5 id="_a_simple_infrastructure_as_code_example">A simple infrastructure as code example</h5>
 <div class="paragraph">
@@ -3242,6 +3245,26 @@ The state of the art in infrastructure configuration is not to use shell scripts
 <div class="paragraph">
 <p>Let’s return to our iac.sh file. It’s valuable. It documents our intentions for how this configuration should look. We can reliably run it on thousands of machines and it will always give us two directories and six files. In terms of the previous section, we might choose to run it on every new server we create. We want to establish it as a known resource in our technical ecosystem. This is where version control and the broader concept of configuration management come in.</p>
 </div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Cattle not pets?</div>
+<div class="paragraph">
+<p>In 20XX, Cloud analyst Randy Bias coined the saying, "Servers are cattle, not pets." Previously, servers (that is, computers managed on a distributed network) were usually configured without virtualization. They arrived from the manufacturer unconfigured, and would be painstakingly "built" by the systems administrator: the operating system would be installed, key software packages (such as Java) installed, and then the organization&#8217;s customer software installed.</p>
+</div>
+<div class="paragraph">
+<p>At best, the systems administrators, or server engineers, might have written guidelines or perhaps some shell scripts that would be run on the server to configure it in a semi-consistent way. But that documentation would often be out of date, the scripts would be unique to a given administrator, and there would be great reluctance to "rebuild the box" - that is, to delete everything on it and do a "clean re-install." Instead, if there were problems, the administrator would try to fix the server by going in and adjusting particular settings (typically by changing configuration files and restarting services), or deleting software packages and re-installing them.</p>
+</div>
+<div class="paragraph">
+<p>The problem with this is that modern computing systems are so complex that deleting software can be difficult; if the uninstall process fails in some way, the server can be left in a compromised state. Similarly, one-time configuration adjustments made to one server means that it may be inconsistent with similar devices, and this can cause problems. For example, if the first systems administrator is on vacation, their substitute may expect the server to be configured in a certain way and make adjustments that have unexpected effects. Or the first systems administrator themselves may forget exactly what it is they did.</p>
+</div>
+<div class="paragraph">
+<p>As people started to work more and more with virtualization, they realized it was easier to rebuild virtual servers from scratch, rather than trying to fix them. Automated configuration management tools helped by promoting a consistent process for rebuilding. Randy Bias, noting this, put forth the provocative idea that "servers are cattle, not pets." That is, when a pet is sick, one takes it to the vet, but a sick cow might simply  be taken out and shot.</p>
+</div>
+<div class="paragraph">
+<p>I prefer the saying that "servers are fleet vehicles, not collectible cars" as it seems less cruel, and Bias overlooked the fact that large animal veterinarians are routinely employed in the cattle industry.</p>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p><a id="version-control"></a></p>
 </div>
@@ -3250,7 +3273,7 @@ The state of the art in infrastructure configuration is not to use shell scripts
 <div class="sect3">
 <h4 id="_configuration_management_the_basics">Configuration management: the basics</h4>
 <div class="paragraph">
-<p>Configuration management is a critically important practice in digital systems, and has always been so. How it is performed has evolved over time. At this stage in our journey, we are one or two people in a startup, working with digital artifacts such as our iac.sh file discussed in the previous section.</p>
+<p>Configuration management is a critically important practice in digital systems, and has always been so. How it is performed has evolved over time. At this stage in our journey, we are one or two people in a startup, working with digital artifacts such as our <a href="#infra-code-example">iac.sh example</a> discussed in the previous section.</p>
 </div>
 <div class="paragraph">
 <p>One or two people can achieve an impressive amount with modern digital platforms. But the work is complex. Tracking and controlling your work products as they evolve through change after change is important from day one of your efforts. It&#8217;s not something you want to put off to "later when I have time." This applies to computer code, configurations, and increasingly even documentation (often written in a lightweight markup language like Markdown or Asciidoc).</p>
@@ -3268,6 +3291,9 @@ The state of the art in infrastructure configuration is not to use shell scripts
 </li>
 <li>
 <p>Package management</p>
+</li>
+<li>
+<p>Deployment management</p>
 </li>
 <li>
 <p>Configuration management</p>
@@ -3289,16 +3315,13 @@ In software development, version control is the foundation of every other Agile 
 </div>
 </div>
 <div class="paragraph">
-<p>The concept of a software version control system (variously known as source control, revision control, software configuration management, and other terms) is our first major software system for the “business of IT.” (The virtualization architecture previously discussed is what is under management; the source control system is part of the management architecture.)</p>
+<p>The Agile Alliance indicates “version control” as one of the <a href="http://guide.agilealliance.org/subway.html">four foundational areas of Agile</a>, along with team, iterative development, and incremental development. Why is this? Version control is critical for any kind of system with complex, changing content, especially when many people are working on that content. Version control provides the capability of seeing the exact sequence of a complex system&#8217;s evolution and isolating any particular moment in its history, or providing detailed analysis on how two versions differ. With version control, we can understand what changed and when, which is essential to coping with complexity.</p>
 </div>
 <div class="paragraph">
-<p>The evolution of version control systems to the pivotal role they now hold has been somewhat unexpected. While version control was always deemed important for software artifacts, it has only recently become the preferred paradigm for managing infrastructure state as well.  Because of this, a version control system is easily and without question the first IT management system you should acquire and implement (perhaps as a cloud service, such as Github).</p>
+<p>While version control was always deemed important for software artifacts, it has only recently become the preferred paradigm for managing infrastructure state as well.  Because of this, version control is possibly the first IT management system you should acquire and implement (perhaps as a cloud service, such as Github).</p>
 </div>
 <div class="paragraph">
-<p>The Agile Alliance indicates “version control” as one of the <a href="http://guide.agilealliance.org/subway.html">four foundational areas of Agile</a>, along with team, iterative development, and incremental development.</p>
-</div>
-<div class="paragraph">
-<p>"Version control" also includes what we will cover as package management: the management of binary files, as distinct from human-understandable symbolic files. There is also a need to understand what versions are installed on what computers; this can be termed "deployment management." (With the advent of containers, this is a particularly fast changing area.)</p>
+<p>Version control in recent years increasingly distinguishes between source and package management: the management of binary files, as distinct from human-understandable symbolic files. There is also a need to understand what versions are installed on what computers; this can be termed "deployment management." (With the advent of containers, this is a particularly fast changing area.)</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -3307,67 +3330,7 @@ In software development, version control is the foundation of every other Agile 
 <div class="title">Figure 17. Types of version control</div>
 </div>
 <div class="paragraph">
-<p>Version control works like an advanced file system with a memory. (Actual file systems that do this are called <a href="https://en.wikipedia.org/wiki/Versioning_file_system"><em>versioning</em></a> file systems.) It can remember all the changes you make to its contents, tell you the differences between any two versions, and also bring back the version you had at any point in time.</p>
-</div>
-<div class="paragraph">
-<p>In the previous section, we described a simple script that altered the state of a computer system.</p>
-</div>
-<div class="paragraph">
-<p>As mentioned previously, there are numerous sources available to you to learn Linux scripting, policy-based configuration management of infrastructure, and source control. Competency with source control is essential to your career and you should devote some serious time to it.</p>
-</div>
-<div class="paragraph">
-<p>Source control, as you may imagine, is critical for any kind of system with complex, changing content, especially when many people are working on that content, and there is a need to see the exact sequence of its evolution and isolate any particular moment in its history, or provide detailed analysis on how two versions differ.</p>
-</div>
-<div class="paragraph">
-<p>You can find many references to source control on the Internet and in books such as <em>Pro Git</em> by Scott Chacon and Ben Straub <a href="#Chacon2009">[Chacon2009]</a>. As it is the most important foundational technology for professional IT, whether in a garage or in the largest corporations, you need to have a deep familiarity with it.</p>
-</div>
-<div class="paragraph">
-<p>Source control is at its most powerful when dealing with symbolic data, which we usually see as text files. It is less useful in dealing with  binary data, such as image files. Symbolic files can analyzed for their differences in an easy to understand way. If I change “abc” to “abd” it is clear that the third character has been changed from “c” to “d.”</p>
-</div>
-<div class="paragraph">
-<p>On the other hand, if I take a picture (e.g. as a JPEG file) and alter one pixel, and compare the resulting before and after binary files in terms of their data, it would be more difficult to understand what had changed. I would be able to easily tell that they are two different files (they would have different checksums), but they would look very similar.</p>
-</div>
-<div class="paragraph">
-<p>Digital systems start with symbolic files. Text editors create source code, scripts, and configuration files. These may be transformed in defined ways (e.g. by compilers and build tools) but the human understandable end of the process is mostly based on text files.</p>
-</div>
-<div class="paragraph">
-<p>We care very much about when a text file changes. One wrong character can completely alter the behavior of a large, complex system. Therefore, our configuration management approach must track to that level of detail.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_the_commit_concept">The "commit" concept</h5>
-<div class="paragraph">
-<p>Although implementation details may differ, all version control systems have some concept of “commit.”
-As stated in Version Control with Git <a href="#Loeliger2009">[Loeliger2009]</a>:</p>
-</div>
-<div class="paragraph">
-<p><em>In Git, a commit is used to record changes to a repository  . . . Every Git commit represents a single, <strong>atomic</strong> changeset with respect to the previous state. Regardless of the number of directories, files, lines, or bytes that change with a commit… either all changes apply or none do. In terms of the underlying object model, atomicity just makes sense: A commit snapshot represents the total set of modified files and directories…  Git doesn’t care why files are changing. That is, the content of the changes doesn’t matter. As the developer, you might move a function from here to there and expect this to be handled as one unitary move. But you could, alternatively, commit the removal and then later commit the addition. Git doesn’t care. It has nothing to do with the semantics of what is in the files.</em> [emphasis added]</p>
-</div>
-<div class="paragraph">
-<p>The concept of a version or source control <a href="https://en.wikipedia.org/wiki/Commit_(data_management)">“commit”</a> is a rich foundation for IT management and governance. It both represents the state of the computing system as well as providing evidence of the human activity affecting it.</p>
-</div>
-<div class="paragraph">
-<p>As we will see in Chapter 3, the “commit” identifier is directly referenced by build activity, which in turn is referenced by the release activity, which is typically visible across the IT value chain.</p>
-</div>
-<div class="paragraph">
-<p>Also, the concept of an atomic “commit” is essential to the concept of a “branch” - the creation of an experimental version, completely separate from the main version, so that various alterations can be tried without compromising the overall system stability. Starting at the point of a “commit,” the branched version also becomes evidence of human activity around a potential future for the system. In some environments, the branch is automatically created with the assignment of a requirement or story - again, more on this to come in chapter 3. In other environments, the very concept of branching is avoided.</p>
-</div>
-<div class="paragraph">
-<p><a id="commit-as-metadata"></a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_package_management">Package management</h5>
-<div class="quoteblock">
-<blockquote>
-Implement version control for all production artifacts.
-</blockquote>
-<div class="attribution">
-&#8212; Puppet Labs 2015 State of DevOps report
-</div>
-</div>
-<div class="paragraph">
-<p>Version control is important - but how important? Survey research presented in the annual State of DevOps report indicates that version control is one of the most critical practices associated with high performing IT organizations <a href="#Forsgren2016">[Forsgren2016]</a>. Nicole Forsgren <a href="#Forsgren2016a">[Forsgren2016a]</a>  summarizes the practice of version control as:</p>
+<p>Version control works like an advanced file system with a memory. (Actual file systems that do this are called <a href="https://en.wikipedia.org/wiki/Versioning_file_system"><em>versioning</em></a> file systems.) It can remember all the changes you make to its contents, tell you the differences between any two versions, and also bring back the version you had at any point in time. Version control is important - but how important? Survey research presented in the annual State of DevOps report indicates that version control is one of the most critical practices associated with high performing IT organizations <a href="#Forsgren2016">[Forsgren2016]</a>. Nicole Forsgren <a href="#Forsgren2016a">[Forsgren2016a]</a>  summarizes the practice of version control as:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3384,6 +3347,75 @@ Implement version control for all production artifacts.
 <p>Our scripts for automating build and configuration are in a version control system.</p>
 </li>
 </ul>
+</div>
+<div class="sect5">
+<h6 id="_source_control">Source control</h6>
+<div class="literalblock">
+<div class="content">
+<pre>is symbolic data a thing?</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Digital systems start with symbolic files. Text editors create source code, scripts, and configuration files. These may be transformed in defined ways (e.g. by compilers and build tools) but the human understandable end of the process is mostly based on text files. In the previous section, we described a <a href="#infra-code-example">simple script</a> that altered the state of a computer system. That script, represented in ASCII or Unicode characters, is symbolic data. We care very much about when a text file changes. One wrong character can completely alter the behavior of a large, complex system. Therefore, our configuration management approach must track to that level of detail.</p>
+</div>
+<div class="paragraph">
+<p>Source control is at its most powerful when dealing with symbolic data, which we usually see as text files. It is less useful in dealing with  binary data, such as image files. Symbolic files can analyzed for their differences in an easy to understand way. If I change <code>abc'' to </code>abd'' it is clear that the third character has been changed from “c” to “d.” On the other hand, if I take a picture (e.g. as a JPEG file) and alter one pixel, and compare the resulting before and after binary files in terms of their data, it would be more difficult to understand what had changed. I might be able to easily tell that they are two different files, but they would look very similar and the difference in the binary data might be difficult to understand.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>illustrate this with examples from git and a jpeg file.</pre>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_the_commit_concept">The "commit" concept</h6>
+<div class="paragraph">
+<p>Although implementation details may differ, all version control systems have some concept of “commit.” As stated in Version Control with Git <a href="#Loeliger2009">[Loeliger2009]</a>:</p>
+</div>
+<div class="paragraph">
+<p><em>In Git, a commit is used to record changes to a repository… Every Git commit represents a single, <strong>atomic</strong> changeset with respect to the previous state. Regardless of the number of directories, files, lines, or bytes that change with a commit… either all changes apply or none do.</em> [emphasis added]</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+*Why ``atomic''? The word atomic derives from the Greek, and means "indivisible." An atomic set of changes is either entirely applied, or entirely rejected. Atomicity is an important concept in computing, and transaction processing in particular. If our user tries to move money from her savings to her checking account, two operations are required: (1) reduce savings and (2) increase checking. Either both need to succeed, or both need to fail. That is the classic definition of an "atomic" transaction. Version control commits should be atomic.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The concept of a version or source control <a href="https://en.wikipedia.org/wiki/Commit_(data_management)">“commit”</a> is a rich foundation for IT management and governance. It both represents the state of the computing system as well as providing evidence of the human activity affecting it. As we will see in Chapter 3, the “commit” identifier is directly referenced by build activity, which in turn is referenced by the release activity, which is typically visible across the IT value chain.</p>
+</div>
+<div class="paragraph">
+<p>Also, the concept of an atomic “commit” is essential to the concept of a “branch” - the creation of an experimental version, completely separate from the main version, so that various alterations can be tried without compromising the overall system stability. Starting at the point of a “commit,” the branched version also becomes evidence of human activity around a potential future for the system. In some environments, the branch is automatically created with the assignment of a requirement or story - again, more on this to come in chapter 3. In other environments, the very concept of branching is avoided.</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_package_management">Package management</h5>
+<div class="quoteblock">
+<blockquote>
+Implement version control for all production artifacts.
+</blockquote>
+<div class="attribution">
+&#8212; Puppet Labs 2015 State of DevOps report
+</div>
+</div>
+<div class="paragraph">
+<p>Previously, it has been common practice for compiled binaries to be stored in the same repositories as source code. However, this is no longer considered a best practice. Source and package management are now viewed as two separate things.  Source repositories should be reserved for symbolic artifacts whose differences can be made visible in a human-understandable way. Package repositories in contrast are for binary artifacts that can be deployed.</p>
+</div>
+<div class="paragraph">
+<p>Package repositories also can serve as a proxy to the external world of downloadable software. That is, they are a cache, an intermediate store of the software provided by various "upstream" sources. For example, developers may be told to download the approved Ruby on Rails version from the local package repository, rather than going to the getting the latest version, which may not be suitable for the environment.</p>
+</div>
+<div class="paragraph">
+<p>Package repositories are also used to enable collaboration between teams working on large systems. Teams can check in their built components into the package repository for other teams to download. This is more efficient than everyone  always building all parts of the application from the source repository.</p>
+</div>
+<div class="paragraph">
+<p>The boundary between source and package is not hard and fast, however. One does see binary files in source repositories, such as images used in an application. Also, when interpreted languages (such as Javascript) are "packaged," they still appear in the package as symbolic files, perhaps compressed or otherwise incorporated into some larger containing structure.</p>
 </div>
 <div class="paragraph">
 <p><a id="policy-config"></a></p>
@@ -3414,6 +3446,9 @@ Implement version control for all production artifacts.
 </div>
 <div class="paragraph">
 <p><em>describe modern infra managers, policy management, auto-scaling as an example, provide an example Chef script..</em></p>
+</div>
+<div class="paragraph">
+<p><a id="commit-as-metadata"></a></p>
 </div>
 </div>
 <div class="sect4">
@@ -3457,11 +3492,14 @@ Implement version control for all production artifacts.
 <p>Because of this, this book favors a principle that <strong>metadata is by definition non-runtime.</strong> It is documentation, usually represented as structured or semi-structured data, but not usually a primary processing input or output. It might be “digital exhaust” - log files are a form of metadata. It is not executable. If it’s  executable (directly or indirectly), it’s digital logic or configuration, plain and simple.</p>
 </div>
 <div class="paragraph">
-<p>So what about our infrastructure as code example? The artifact - the configuration file, the script - is NOT metadata, because it is executable. But the source repository commit IS metadata. It has no meaning for the script. The dependency is one way - without the artifact, the commit ID is meaningless, but the artifact is completely ignorant of the commit. However, the commit may become an essential data point for human beings trying to make sense of the state of a resource defined by that artifact.</p>
+<p>So what about our infrastructure as code example? The artifact - the configuration file, the script - is NOT metadata, because it is executable. But the source repository commit IS metadata. It has no meaning for the script. The dependency is one way - without the artifact, the commit ID is meaningless, but the artifact is completely ignorant of the commit. The commit may become an essential data point for human beings trying to make sense of the state of a resource defined by that artifact. However, the version control system &#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p><em>doesn’t care why files are changing. That is, the content of the changes doesn’t matter. As the developer, you might move a function from here to there and expect this to be handled as one unitary move. But you could, alternatively, commit the removal and then later commit the addition. Git doesn’t care. It has nothing to do with the semantics of what is in the files</em> <a href="#Loeliger2009">[Loeliger2009]</a>.</p>
 </div>
 <div class="paragraph">
 <p><strong>In this microcosm, we see the origins of IT management.</strong>
-It is not always easy to apply this approach in practice. There can be edge cases. But <strong>the concept of metadata provides a basis for distinguishing the <em>management</em> of information technology from the actual <em>practice</em> of information technology.</strong></p>
+It is not always easy to apply this approach in practice. There can be edge cases. Documentation stored in version control needs to be seen as "executable" in the context of the business process. But it too does not require or "know about" the comit. Ultimately <strong>the concept of metadata provides a basis for distinguishing the <em>management</em> of information technology from the actual <em>practice</em> of information technology.</strong></p>
 </div>
 </div>
 </div>
@@ -3469,11 +3507,18 @@ It is not always easy to apply this approach in practice. There can be edge case
 <h4 id="_topics_in_it_infrastructure">Topics in IT infrastructure</h4>
 <div class="literalblock">
 <div class="content">
+<pre>===== Operations basics
+Just enough Operations for the startup
+Prep chap 6</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
 <pre>===== Web-scale IT</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>This chapter as of fall 2015 is yet to be written. Will summarize key insights from the site reliability community, including Allspaw and Limoncelli.</p>
+<p>This section as of fall 2015 is yet to be written. Will summarize key insights from the site reliability community, including Allspaw and Limoncelli.</p>
 </div>
 <div class="paragraph">
 <p><a id="CAP-theorem"></a></p>
@@ -3524,6 +3569,16 @@ to be written</pre>
 <pre>http://jpmorgenthal.com/2016/08/24/a-reality-check-on-everyones-moving-everything-to-the-cloud/ excellent</pre>
 </div>
 </div>
+<div class="literalblock">
+<div class="content">
+<pre>choreography &amp; orchestration - John Willis convo</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>The concept of a version control system (variously known as source control, revision control, software configuration management, and other terms) is our first major software system for the “business of IT.” (The virtualized system previously discussed is what is *under management*; the source control system is part of the *management architecture*.)</pre>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_conclusion">Conclusion</h4>
@@ -3535,6 +3590,9 @@ to be written</pre>
 </div>
 <div class="paragraph">
 <p>IT infrastructure is a rich and complex topic, and a person can spend their career specializing in it. For this class, we always want to keep chapter 1 in mind: why do we want it? How does it provide for our needs, contribute to our enjoyment?</p>
+</div>
+<div class="paragraph">
+<p>There are numerous sources available to you to learn Linux scripting, policy-based configuration management of infrastructure, and source control. Competency with source control is essential to your career and you should devote some serious time to it. You can find many references to source control on the Internet and in books such as <em>Pro Git</em> by Scott Chacon and Ben Straub <a href="#Chacon2009">[Chacon2009]</a>. As it is the most important foundational technology for professional IT, whether in a garage or in the largest corporations, you need to have a deep familiarity with it.</p>
 </div>
 <div class="sect4">
 <h5 id="_discussion_questions_2">Discussion questions</h5>
@@ -27848,7 +27906,7 @@ All web references were archived into the author&#8217;s files on the indicated 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-11-05 16:44:41 PDT
+Last updated 2016-11-05 18:44:41 CDT
 </div>
 </div>
 </body>
