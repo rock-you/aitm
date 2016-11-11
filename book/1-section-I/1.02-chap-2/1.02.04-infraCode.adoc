@@ -20,6 +20,8 @@ In fact, because virtualization is becoming so powerful, servers increasingly ar
 
 Previously, because of the expense and complexity of bare-metal servers, and the cost of having them offline, great pains were taken to fix troubled servers. Systems administrators would spend hours or days troubleshooting obscure configuration problems, such as residual settings left by removed software. Certain servers might start to develop “personalities.” Industry practice has changed dramatically here since around 2010.
 
+anchor:infra-code-example[]
+
 ===== A simple infrastructure as code example
 
 *Note, the below section is illustrative only, and is not intended as a lab. The associated lab for this book goes into much more depth on these topics.*
@@ -65,3 +67,16 @@ This will be familiar material to many of you, including the fact that beyond cr
 Sophisticated infrastructure as code techniques are are essential part of modern site reliability engineering practices such as used by Google. Auto-scaling, self-healing systems, fast deployments of new features all require that infrastructure be represented as code for maximum speed and reliability of creation.
 
 Let’s return to our iac.sh file. It’s valuable. It documents our intentions for how this configuration should look. We can reliably run it on thousands of machines and it will always give us two directories and six files. In terms of the previous section, we might choose to run it on every new server we create. We want to establish it as a known resource in our technical ecosystem. This is where version control and the broader concept of configuration management come in.
+
+.Cattle not pets?
+****
+In 20XX, Cloud analyst Randy Bias coined the saying, "Servers are cattle, not pets." Previously, servers (that is, computers managed on a distributed network) were usually configured without virtualization. They arrived from the manufacturer unconfigured, and would be painstakingly "built" by the systems administrator: the operating system would be installed, key software packages (such as Java) installed, and then the organization's customer software installed.
+
+At best, the systems administrators, or server engineers, might have written guidelines or perhaps some shell scripts that would be run on the server to configure it in a semi-consistent way. But that documentation would often be out of date, the scripts would be unique to a given administrator, and there would be great reluctance to "rebuild the box" - that is, to delete everything on it and do a "clean re-install." Instead, if there were problems, the administrator would try to fix the server by going in and adjusting particular settings (typically by changing configuration files and restarting services), or deleting software packages and re-installing them.
+
+The problem with this is that modern computing systems are so complex that deleting software can be difficult; if the uninstall process fails in some way, the server can be left in a compromised state. Similarly, one-time configuration adjustments made to one server means that it may be inconsistent with similar devices, and this can cause problems. For example, if the first systems administrator is on vacation, their substitute may expect the server to be configured in a certain way and make adjustments that have unexpected effects. Or the first systems administrator themselves may forget exactly what it is they did.
+
+As people started to work more and more with virtualization, they realized it was easier to rebuild virtual servers from scratch, rather than trying to fix them. Automated configuration management tools helped by promoting a consistent process for rebuilding. Randy Bias, noting this, put forth the provocative idea that "servers are cattle, not pets." That is, when a pet is sick, one takes it to the vet, but a sick cow might simply  be taken out and shot.
+
+I prefer the saying that "servers are fleet vehicles, not collectible cars" as it seems less cruel, and Bias overlooked the fact that large animal veterinarians are routinely employed in the cattle industry.
+****
