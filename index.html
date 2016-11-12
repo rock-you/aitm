@@ -3137,6 +3137,15 @@ not manage or control the underlying cloud infrastructure including network, ser
 </div>
 <div class="sect3">
 <h4 id="_infrastructure_as_code">Infrastructure as code</h4>
+<div class="quoteblock">
+<blockquote>
+Infrastructure as code is an approach to infrastructure automation based on practices from software development. It emphasizes consistent, repeatable routines for provisioning and changing systems and their configuration. Changes are made to definitions and then rolled out to systems through unattended processes that include thorough validation. The premise is that modern tooling can treat infrastructure as if it were software and data. This allows people to apply software development tools such as version control systems (VCS), automated testing libraries, and deployment orchestration to manage infrastructure. It also opens the door to exploit development practices such as test-driven development (TDD), continuous integration (CI), and continuous delivery (CD).
+</blockquote>
+<div class="attribution">
+&#8212; Kief Morris<br>
+<cite>Infrastructure as Code: Managing Servers in the Cloud</cite>
+</div>
+</div>
 <div class="paragraph">
 <p>So, what is infrastructure as code?</p>
 </div>
@@ -3170,25 +3179,41 @@ not manage or control the underlying cloud infrastructure including network, ser
 <div class="sect4">
 <h5 id="_a_simple_infrastructure_as_code_example">A simple infrastructure as code example</h5>
 <div class="paragraph">
-<p><strong>Note, the below section is illustrative only, and is not intended as a lab. The associated lab for this book goes into much more depth on these topics.</strong></p>
+<p><strong>Note, the below section is illustrative only, and is not intended as a lab. The associated lab for this book goes into depth on these topics.</strong></p>
 </div>
 <div class="paragraph">
-<p>In presenting infrastructure as code at its simplest, we will start with the concept of a shell script. While this is not a deep Linux book (there are many others out there, starting with the excellent O’Reilly lineup), some basic technical literacy is assumed in this book.
-Consider the following set of commands:</p>
+<p>In presenting infrastructure as code at its simplest, we will start with the concept of a shell script. While this is not a deep Linux book (there are many others out there, starting with the excellent O’Reilly lineup), some basic technical literacy is assumed in this book. Consider the following set of commands:</p>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>$ mkdir foo
+<pre>$ mkdir foo bar
 $ cd foo
 $ touch x y z
-$ cd ..
-$ mkdir bar
-$ cd bar
+$ cd ../bar
 $ touch a b c</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>What does this do? It tells the computer, “Create two directories, one named foo and one named bar. In the one named foo, create three blank files named x,y, and z; in the one named bar, create three blank files, named a, b, and c.”</p>
+<p>What does this do? It tells the computer:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create (<code>mkdir</code>) two directories, one named foo and one named bar.</p>
+</li>
+<li>
+<p>Move (<code>cd</code>) to the one named foo</p>
+</li>
+<li>
+<p>Create (<code>touch</code>) three files, named x, y, and z</p>
+</li>
+<li>
+<p>Move to the directory named bar</p>
+</li>
+<li>
+<p>Create three blank files, named a, b, and c.</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p>If you find yourself (with the appropriate permissions) at a Unix command prompt, and run those commands, you will wind up with a configuration that could be visualized as this:</p>
@@ -3210,17 +3235,15 @@ $ touch a b c</pre>
 <div class="literalblock">
 <div class="content">
 <pre>#!/bin/bash
-mkdir foo
+mkdir foo bar
 cd foo
 touch x y z
-cd ..
-mkdir bar
-cd bar
+cd ../bar
 touch a b c</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>We might name that file iac.sh, set its permissions correctly, and run it (so that the computer executes all the commands for us, rather than us running them one at a time at the console).  If we did so in an empty directory, we’d again wind up with that same configuration. (If we did it in a directory already containing foo and bar directories, we’d get errors. More on this to come.)</p>
+<p>We might name that file <code>iac.sh</code>, set its permissions correctly, and run it (so that the computer executes all the commands for us, rather than us running them one at a time at the console).  If we did so in an empty directory, we’d again wind up with that same configuration. (If we did it in a directory already containing foo and bar directories, we’d get errors. More on this to come.)</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3268,6 +3291,9 @@ The state of the art in infrastructure configuration is not to use shell scripts
 <div class="title">Figure 17. Collectible car versus fleet vehicles <sup class="footnote">[<a id="_footnoteref_9" class="footnote" href="#_footnote_9" title="View footnote.">9</a>]</sup></div>
 </div>
 </div>
+</div>
+<div class="paragraph">
+<p>For further information and practical examples, see <em>Infrastructure as Code</em> by Kief Morris <a href="#Morris2016">[Morris2016]</a>.</p>
 </div>
 <div class="paragraph">
 <p><a id="version-control"></a></p>
@@ -27543,6 +27569,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 </li>
 <li>
 <p><a id="Moore2014"></a>[Moore2014]: Moore, Geoffrey. 2014. Crossing the Chasm: Marketing and Selling Disruptive Products to Mainstream Customers. 3rd ed. New York, N.Y.: HarperCollins Publishers, Inc.</p>
+</li>
+<li>
+<p><a id="Morris2016"></a>[Morris2016]: Morris, Kief. 2016. Infrastructure as Code: Managing Servers in the Cloud. Sebastopol, CA, CA: O’Reilly Media, Inc.</p>
 </li>
 <li>
 <p><a id="Munroe2013"></a>[Munroe2013]: Munroe, Randall. 2013. “FedEx Bandwidth.” What If? <a href="http://what-if.xkcd.com/31/" class="bare">http://what-if.xkcd.com/31/</a>. Accessed 2016-09-01</p>
