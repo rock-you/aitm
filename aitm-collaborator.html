@@ -874,7 +874,7 @@ Now agile methodologies—which involve new values, principles, practices, and b
 <p>Their learning progression (structure and narrative) is often arbitrary, e.g., covering "databases," "networking," "ERP systems," "security," and so forth in various orderings.</p>
 </li>
 <li>
-<p>They do not (and this is a primary failing) cover Agile and its associated digital ecosystem. Brief mentions of Agile may appear in sections on project management, but in general there is a lack of awareness of the fundamental characteristics of digital transformation, and the critical role of Agile and related methods to accelerating digital transformation.</p>
+<p>They do not (and this is a primary failing) cover Agile and its associated digital ecosystem at all well. Brief mentions of Agile may appear in sections on project management, but in general there is a lack of awareness of the fundamental characteristics of digital transformation, and the critical role of Agile and related methods to accelerating digital transformation.</p>
 </li>
 <li>
 <p>Their coverage of Cloud infrastructure also tends to be limited, even with new editions coming out every year.</p>
@@ -1049,19 +1049,13 @@ A complex system that works is invariably found to have evolved from a simple sy
 <p>Note that this would be a testable and falsifiable hypothesis, if empirical research were done to inventory and characterize organization scaling patterns. If we found (for example) that a majority of organizations formalize governance, risk, security and compliance practices before formalizing project management, that would indicate that those chapters should be re-ordered.</p>
 </div>
 <div class="paragraph">
-<p>(In my experience, small/medium businesses may have some formal IT project management capability but security &amp; GRC are still tacit, not formalized. This does not mean security is not a concern, but they have not yet hired a CISO, nor instituted formal controls).</p>
+<p>In my experience, small/medium businesses may have some formal IT project management capability but governance, risk, and compliance  are still tacit, not formalized. This does not mean that GRC is not a concern, but they have not yet instituted formal policy management, internal audit, or controls.</p>
 </div>
 <div class="paragraph">
-<p>The presence of Product Management at an early stage is intended to provoke. Product management is poorly addressed in most current CSci/MIS/IT education, as well as the reigning industry standards. Yet formalizing it is one of the earliest concerns for a startup, and the imperatives of the product vision drive all that comes after.</p>
+<p>The presence of Product Management at an early stage is intended to provoke. Product management is poorly addressed in most current CSci/MIS/IT education, as well as the reigning industry standards. Yet formalizing it is one of the earliest concerns for a startup, and the imperatives of the product vision drive all that comes after. Evidence to this effect is seen (as of 2015) at the University of California at Berkeley I-School, which has replaced its Project Management course with <a href="http://www.ischool.berkeley.edu/courses/i290m-lapm">Lean/Agile Product Management</a>, taught currently by the esteemed Jez Humble.</p>
 </div>
 <div class="paragraph">
-<p>Evidence to this effect is seen (as of 2015) at the University of California at Berkeley I-School, which has replaced its Project Management course with <a href="http://www.ischool.berkeley.edu/courses/i290m-lapm">Lean/Agile Product Management</a>, taught currently by the esteemed Jez Humble.</p>
-</div>
-<div class="paragraph">
-<p>Also, you may notice that <strong>the chapter titles don&#8217;t necessarily reflect "Agile" terminology</strong>. This is also deliberate, as students are going into a diverse world of much long-established IT. Furthermore, putting "Agile" as a qualifier on each chapter seems gratuitous (e.g. "Agile Operations Management" instead of just "Operations Management.")</p>
-</div>
-<div class="paragraph">
-<p>The first word of the book&#8217;s title is "Agile." That declares the orientation, and the proof will be in the reading. My intent is to involve experienced Agile practitioners in contributing to the sections most relevant to them, and I anticipate a high quality end result that is recognizably supportive of the Agile movement&#8217;s goals and ambitions.</p>
+<p>Also, you may notice that <strong>the chapter titles don&#8217;t necessarily reflect "Agile" terminology</strong>. This is also deliberate, as students are going into a diverse world of much long-established IT. Furthermore, putting "Agile" as a qualifier on each chapter seems gratuitous (e.g. "Agile Operations Management" instead of just "Operations Management.") The first word of the book&#8217;s title is "Agile." That declares the orientation, and the proof will be in the reading. My intent is to involve experienced Agile practitioners in contributing to the sections most relevant to them, and I anticipate a high quality end result that is recognizably supportive of the Agile movement&#8217;s goals and ambitions.</p>
 </div>
 <div class="paragraph">
 <p>The book however is not a complete dismissal of older models of IT delivery. Wherever possible, Agile is presented as an evolutionary step relative to what has gone before. The specifics of "what&#8217;s different" are identified, in the interest of de-mystifying what can be a fraught and quasi-religious topic. In the words of Don Reinertsen, you can have "faith based Agile or science based Agile." This book is strictly interested in the latter. Pointers to relevant theory are included, although this is NOT a theoretical text. That may come later.</p>
@@ -3565,7 +3559,7 @@ Some database professionals still don’t like virtualization, that is, making t
 </div>
 </div>
 <div class="sect4">
-<h5 id="_virtualization_vs_cloud">Virtualization vs cloud</h5>
+<h5 id="_virtualization_versus_cloud">Virtualization versus cloud</h5>
 <div class="paragraph">
 <p>Virtualization is necessary, but not sufficient for cloud. True Cloud services are highly automated, and most Cloud analysts will insist that if virtual machines cannot be created and configured in a completely automated fashion, the service is not true Cloud. This is currently where many in-house "private" Cloud efforts struggle; they may have virtualization, but struggle to make it fully self-service.</p>
 </div>
@@ -3583,6 +3577,9 @@ Traditional managed services are sometimes called "your mess for less." With Clo
 </td>
 </tr>
 </table>
+</div>
+<div class="paragraph">
+<p><a id="cloud-models"></a></p>
 </div>
 <div class="paragraph">
 <p>Cloud services have refined into at least three major models:</p>
@@ -4133,28 +4130,60 @@ Implement version control for all production artifacts.
 <div class="sect5">
 <h6 id="_deployment_basics">Deployment basics</h6>
 <div class="paragraph">
-<p>Resources in version control in general are not yet activated</p>
+<p>Resources in version control in general are not yet active in any value-adding sense. In order for them to deliver experiences, they must be combined with computing resources: servers (physical or virtual), storage, nettworking, and the rest, whether owned by the organization or leased as <a href="#Cloud">Cloud services</a>. The process of doing so is called deployment. Version control manages the state of the artifacts; deployment management (as another configuration management practice) manages the <strong>combination of those artifacts with the needed resources for value delivery</strong>.</p>
 </div>
 </div>
 <div class="sect5">
 <h6 id="_imperative_and_declarative">Imperative and Declarative</h6>
 <div class="paragraph">
-<p>Before we turned to source control, we looked at a simple script that changed the configuration of a computer. It did so in an <em>imperative</em> fashion.</p>
+<p>Before we turned to source control, we looked at a <a href="#infra-code-example">simple script</a> that changed the configuration of a computer. It did so in an <em>imperative</em> fashion.</p>
 </div>
 <div class="paragraph">
-<p>Imperative and declarative are two important terms from computer science. In an imperative approach, we tell the computer specifically how we want to accomplish a task. Many traditional programming languages take an imperative approach. Whereas with a declarative approach, we tell the computer the task we want to accomplish and let the computer figure out the best way to do it. Structured Query Language (SQL) statements are a good example of a declarative approach. We can provide a database system with a set of SQL statements, and the database will generate an execution plan to provide us with the data we are seeking. Functional languages such as Lisp and Erlang are considered declarative.</p>
+<p>Imperative and declarative are two important terms from computer science. In an imperative approach, we tell the computer specifically how we want to accomplish a task, e.g.:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Create a directory</p>
+</li>
+<li>
+<p>Create some files</p>
+</li>
+<li>
+<p>Create another directory</p>
+</li>
+<li>
+<p>Create more files</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
-<p>A script such as iac.sh is executed line by line, i.e., it is imperative. But in policy-based approaches, the object is to define the desired end state of the resource, not the steps needed to get there.</p>
+<p>And so on. Many traditional programming languages take an imperative approach.</p>
 </div>
 <div class="paragraph">
-<p>Chef, Puppet, Salt Stack, and Ansible are all declarative to some degree.</p>
+<p>By contrast, with a declarative approach, we tell the computer the task we want to accomplish and let the computer figure out the best way to do it. Structured Query Language (SQL) statements are a good example of a declarative approach. We can provide a database system with a set of SQL statements, and the database will generate an execution plan to provide us with the data we are seeking. Functional languages such as Lisp and Erlang are considered declarative.</p>
+</div>
+<div class="paragraph">
+<p>A script such as <a href="#infra-code-example">iac.sh example</a> is executed line by line, i.e., it is imperative. But the state of the art in infrastructure as code is policy-based approaches, in which the object is to define the desired end state of the resource, not the steps needed to get there. Instead of defining a set of steps, a policy-based approach simply defines the proper configuration as a target, saying (in essence) that "this computer should always have a directory structure thus; do what you need to do to make it so and keep it this way":</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>.
+├── bar
+│   ├── a
+│   ├── b
+│   └── c
+└── foo
+    ├── x
+    ├── y
+    └── z</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>More practically, imperative approaches are used to ensure that the proper versions of software are always present on a system, and that configurations such as Internet ports and security settings do not vary from the intended specification.</p>
 </div>
 <div class="paragraph">
 <p>This is a complex topic and there are advantages and disadvantages to each approach. (See <a href="http://markburgess.org/blog_order.html">When and Where Order Matters</a> by Mark Burgess for an advanced discussion.) But policy-based approaches seem to have the upper hand for now.</p>
-</div>
-<div class="paragraph">
-<p><em>describe modern infra managers, policy management, auto-scaling as an example, provide an example Chef script..</em></p>
 </div>
 </div>
 </div>
@@ -4278,6 +4307,11 @@ to be written</pre>
 </div>
 <div class="literalblock">
 <div class="content">
+<pre>===== Cloud transition</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
 <pre>http://jpmorgenthal.com/2016/08/24/a-reality-check-on-everyones-moving-everything-to-the-cloud/ excellent</pre>
 </div>
 </div>
@@ -4288,7 +4322,22 @@ to be written</pre>
 </div>
 <div class="literalblock">
 <div class="content">
+<pre>risk management &amp; infrastructure choices (Charity Majors talk 7/21/2016 DevOpsDays MSP)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>===== Architecture of IT management</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
 <pre>The concept of a version control system (variously known as source control, revision control, software configuration management, and other terms) is our first major software system for the “business of IT.” (The virtualized system previously discussed is what is *under management*; the source control system is part of the *management architecture*.)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>_describe modern infra managers, policy management, auto-scaling as an example, provide an example Chef script.._</pre>
 </div>
 </div>
 </div>
@@ -4307,12 +4356,24 @@ to be written</pre>
 <div class="paragraph">
 <p>There are numerous sources available to you to learn Linux scripting, policy-based configuration management of infrastructure, and source control. Competency with source control is essential to your career and you should devote some serious time to it. You can find many references to source control on the Internet and in books such as <em>Pro Git</em> by Scott Chacon and Ben Straub <a href="#Chacon2009">[Chacon2009]</a>. As it is the most important foundational technology for professional IT, whether in a garage or in the largest corporations, you need to have a deep familiarity with it.</p>
 </div>
+<div class="paragraph">
+<p>We will discuss further infrastructure issues in Chapter 6, including designing systems for failure and availability.</p>
+</div>
 <div class="sect4">
 <h5 id="_discussion_questions_2">Discussion questions</h5>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Consider your product idea. Does it have any particular infrastructure needs you can identify, having read this chapter?</p>
+<p>Consider your product idea from the previous chapter. Does it have any particular infrastructure needs you can identify, having read this chapter?</p>
+</li>
+<li>
+<p>Your personal laptop or smart phone is infrastructure. What issues have you had with it? Have you had to change its configuration?</p>
+</li>
+<li>
+<p>Would you prefer to build your product on an IaaS or PaaS platform (see <a href="#cloud-models">the Cloud models</a>)? Is there an SaaS product that might serve? (If so, what is your value-adding idea?)</p>
+</li>
+<li>
+<p>Compare the costs of Cloud to owning your own server. Assume you buy a server inexpensively on EBay and put it in your garage. What other factors might you consider before doing this?</p>
 </li>
 </ol>
 </div>
@@ -4323,6 +4384,18 @@ to be written</pre>
 <ol class="arabic">
 <li>
 <p>Research Cloud providers and recommend which you would prefer to build your new product on.</p>
+</li>
+<li>
+<p>Interview someone who has worked in a data center as to what a "day in the life" is, and how it&#8217;s changed for them.</p>
+</li>
+<li>
+<p>Install Vagrant and Virtualbox on your personal device and bring up a Linux virtual machine. Run a Linux tutorial.</p>
+</li>
+<li>
+<p>Configure a declarative infrastructure manager (Chef, Puppet, Ansible, or Salt Stack) to control your Vagrant VMs. Use git to control your configurations.</p>
+</li>
+<li>
+<p>Install Docker and run a tutorial on it.</p>
 </li>
 </ol>
 </div>
@@ -4360,6 +4433,9 @@ to be written</pre>
 <p><a href="http://vmboomerang.com/posts/cloud-jumping-why-amazon-aws-is-kicking-paas/">Clouds Jumping – Why AWS Is Kicking PaaS</a></p>
 </li>
 <li>
+<p><a href="http://jpmorgenthal.com/2016/08/24/a-reality-check-on-everyones-moving-everything-to-the-cloud/">A reality check on everyone moving everything to the Cloud</a></p>
+</li>
+<li>
 <p><a href="https://gist.github.com/jboner/2841832">Latency Numbers Every Programmer Should Know</a></p>
 </li>
 <li>
@@ -4372,18 +4448,6 @@ to be written</pre>
 <p><a href="http://continuousdelivery.com/2011/07/on-dvcs-continuous-integration-and-feature-branches/">On DVCS, continuous integration, and feature branches</a></p>
 </li>
 </ul>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_picture_credits">Picture credits</h5>
-<div class="paragraph">
-<p><a href="https://www.flickr.com/photos/arbron/56216585/" class="bare">https://www.flickr.com/photos/arbron/56216585/</a></p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>2nd draft
-risk management &amp; infrastructure choices (Charity Majors talk 7/21/2016 DevOpsDays MSP)</pre>
-</div>
 </div>
 <div class="paragraph">
 <p><a id="chapter-app-deliv"></a></p>
