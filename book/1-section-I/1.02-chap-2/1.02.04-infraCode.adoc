@@ -2,6 +2,10 @@ anchor:infracode[]
 
 ==== Infrastructure as code
 
+[quote, Kief Morris, Infrastructure as Code: Managing Servers in the Cloud]
+Infrastructure as code is an approach to infrastructure automation based on practices from software development. It emphasizes consistent, repeatable routines for provisioning and changing systems and their configuration. Changes are made to definitions and then rolled out to systems through unattended processes that include thorough validation. The premise is that modern tooling can treat infrastructure as if it were software and data. This allows people to apply software development tools such as version control systems (VCS), automated testing libraries, and deployment orchestration to manage infrastructure. It also opens the door to exploit development practices such as test-driven development (TDD), continuous integration (CI), and continuous delivery (CD).
+
+
 So, what is infrastructure as code?
 
 As cloud infrastructures have scaled, there has been an increasing need to configure many servers identically. Auto-scaling (adding more servers in response to increasing load) has become a widely used strategy as well. Both call for increased automation in the provisioning of IT infrastructure. It is simply not possible for a human being to be hands on at all times in configuring and enabling such infrastructures, so automation is called for.
@@ -24,20 +28,23 @@ anchor:infra-code-example[]
 
 ===== A simple infrastructure as code example
 
-*Note, the below section is illustrative only, and is not intended as a lab. The associated lab for this book goes into much more depth on these topics.*
+*Note, the below section is illustrative only, and is not intended as a lab. The associated lab for this book goes into depth on these topics.*
 
-In presenting infrastructure as code at its simplest, we will start with the concept of a shell script. While this is not a deep Linux book (there are many others out there, starting with the excellent O’Reilly lineup), some basic technical literacy is assumed in this book.
-Consider the following set of commands:
+In presenting infrastructure as code at its simplest, we will start with the concept of a shell script. While this is not a deep Linux book (there are many others out there, starting with the excellent O’Reilly lineup), some basic technical literacy is assumed in this book. Consider the following set of commands:
 
- $ mkdir foo
+ $ mkdir foo bar
  $ cd foo
  $ touch x y z
- $ cd ..
- $ mkdir bar
- $ cd bar
+ $ cd ../bar
  $ touch a b c
 
-What does this do? It tells the computer, “Create two directories, one named foo and one named bar. In the one named foo, create three blank files named x,y, and z; in the one named bar, create three blank files, named a, b, and c.”
+What does this do? It tells the computer:
+
+. Create (`mkdir`) two directories, one named foo and one named bar.
+. Move (`cd`) to the one named foo
+. Create (`touch`) three files, named x, y, and z
+. Move to the directory named bar
+. Create three blank files, named a, b, and c.
 
 If you find yourself (with the appropriate permissions) at a Unix command prompt, and run those commands, you will wind up with a configuration that could be visualized as this:
 
@@ -50,15 +57,13 @@ Configuration, you ask? Something this trivial? Yes, directory and file layouts 
 Now, what if we take that same set of commands, and put them in a file thus:
 
  #!/bin/bash
- mkdir foo
+ mkdir foo bar
  cd foo
  touch x y z
- cd ..
- mkdir bar
- cd bar
+ cd ../bar
  touch a b c
 
-We might name that file iac.sh, set its permissions correctly, and run it (so that the computer executes all the commands for us, rather than us running them one at a time at the console).  If we did so in an empty directory, we’d again wind up with that same configuration. (If we did it in a directory already containing foo and bar directories, we’d get errors. More on this to come.)
+We might name that file `iac.sh`, set its permissions correctly, and run it (so that the computer executes all the commands for us, rather than us running them one at a time at the console).  If we did so in an empty directory, we’d again wind up with that same configuration. (If we did it in a directory already containing foo and bar directories, we’d get errors. More on this to come.)
 
 NOTE: The state of the art in infrastructure configuration is not to use shell scripts at all but rather policy-based infrastructure management approaches, which we discuss subsequently.
 
@@ -84,3 +89,5 @@ I prefer the saying that "servers are fleet vehicles, not collectible cars" as i
 image::images/1.02-vehicles.png[collectible car, 500, , float="left"]
 
 ****
+
+For further information and practical examples, see _Infrastructure as Code_ by Kief Morris <<Morris2016>>.
