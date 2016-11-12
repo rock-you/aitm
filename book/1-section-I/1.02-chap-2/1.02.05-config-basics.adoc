@@ -158,19 +158,37 @@ image::images/1.02-configMgmt.png[]
 
 ====== Deployment basics
 
-Resources in version control in general are not yet activated
+Resources in version control in general are not yet active in any value-adding sense. In order for them to deliver experiences, they must be combined with computing resources: servers (physical or virtual), storage, nettworking, and the rest, whether owned by the organization or leased as xref:Cloud[Cloud services]. The process of doing so is called deployment. Version control manages the state of the artifacts; deployment management (as another configuration management practice) manages the *combination of those artifacts with the needed resources for value delivery*.
 
 ====== Imperative and Declarative
 
-Before we turned to source control, we looked at a simple script that changed the configuration of a computer. It did so in an _imperative_ fashion.
+Before we turned to source control, we looked at a xref:infra-code-example[simple script] that changed the configuration of a computer. It did so in an _imperative_ fashion.
 
-Imperative and declarative are two important terms from computer science. In an imperative approach, we tell the computer specifically how we want to accomplish a task. Many traditional programming languages take an imperative approach. Whereas with a declarative approach, we tell the computer the task we want to accomplish and let the computer figure out the best way to do it. Structured Query Language (SQL) statements are a good example of a declarative approach. We can provide a database system with a set of SQL statements, and the database will generate an execution plan to provide us with the data we are seeking. Functional languages such as Lisp and Erlang are considered declarative.
+Imperative and declarative are two important terms from computer science. In an imperative approach, we tell the computer specifically how we want to accomplish a task, e.g.:
 
-A script such as iac.sh is executed line by line, i.e., it is imperative. But in policy-based approaches, the object is to define the desired end state of the resource, not the steps needed to get there.
+. Create a directory
+. Create some files
+. Create another directory
+. Create more files
 
-Chef, Puppet, Salt Stack, and Ansible are all declarative to some degree.
+And so on. Many traditional programming languages take an imperative approach.
+
+By contrast, with a declarative approach, we tell the computer the task we want to accomplish and let the computer figure out the best way to do it. Structured Query Language (SQL) statements are a good example of a declarative approach. We can provide a database system with a set of SQL statements, and the database will generate an execution plan to provide us with the data we are seeking. Functional languages such as Lisp and Erlang are considered declarative.
+
+A script such as xref:infra-code-example[iac.sh example] is executed line by line, i.e., it is imperative. But the state of the art in infrastructure as code is policy-based approaches, in which the object is to define the desired end state of the resource, not the steps needed to get there. Instead of defining a set of steps, a policy-based approach simply defines the proper configuration as a target, saying (in essence) that "this computer should always have a directory structure thus; do what you need to do to make it so and keep it this way":
+
+....
+.
+├── bar
+│   ├── a
+│   ├── b
+│   └── c
+└── foo
+    ├── x
+    ├── y
+    └── z
+....
+
+More practically, imperative approaches are used to ensure that the proper versions of software are always present on a system, and that configurations such as Internet ports and security settings do not vary from the intended specification.
 
 This is a complex topic and there are advantages and disadvantages to each approach. (See http://markburgess.org/blog_order.html["When and Where Order Matters"] by Mark Burgess for an advanced discussion.) But policy-based approaches seem to have the upper hand for now.
-
-
-_describe modern infra managers, policy management, auto-scaling as an example, provide an example Chef script.._

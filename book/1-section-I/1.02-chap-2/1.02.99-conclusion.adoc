@@ -8,11 +8,20 @@ IT infrastructure is a rich and complex topic, and a person can spend their care
 
 There are numerous sources available to you to learn Linux scripting, policy-based configuration management of infrastructure, and source control. Competency with source control is essential to your career and you should devote some serious time to it. You can find many references to source control on the Internet and in books such as _Pro Git_ by Scott Chacon and Ben Straub <<Chacon2009>>. As it is the most important foundational technology for professional IT, whether in a garage or in the largest corporations, you need to have a deep familiarity with it.
 
+We will discuss further infrastructure issues in Chapter 6, including designing systems for failure and availability.
+
 ===== Discussion questions
-. Consider your product idea. Does it have any particular infrastructure needs you can identify, having read this chapter?
+. Consider your product idea from the previous chapter. Does it have any particular infrastructure needs you can identify, having read this chapter?
+. Your personal laptop or smart phone is infrastructure. What issues have you had with it? Have you had to change its configuration?
+. Would you prefer to build your product on an IaaS or PaaS platform (see xref:cloud-models[the Cloud models])? Is there an SaaS product that might serve? (If so, what is your value-adding idea?)
+. Compare the costs of Cloud to owning your own server. Assume you buy a server inexpensively on EBay and put it in your garage. What other factors might you consider before doing this?
 
 ===== Research & practice
 . Research Cloud providers and recommend which you would prefer to build your new product on.
+. Interview someone who has worked in a data center as to what a "day in the life" is, and how it's changed for them.
+. Install Vagrant and Virtualbox on your personal device and bring up a Linux virtual machine. Run a Linux tutorial.
+. Configure a declarative infrastructure manager (Chef, Puppet, Ansible, or Salt Stack) to control your Vagrant VMs. Use git to control your configurations.
+. Install Docker and run a tutorial on it.
 
 ===== Further reading
 *Books*
@@ -27,13 +36,8 @@ There are numerous sources available to you to learn Linux scripting, policy-bas
 * http://www.lauradhamilton.com/servers-pets-versus-cattle[Are your servers pets or cattle?]
 
 * http://vmboomerang.com/posts/cloud-jumping-why-amazon-aws-is-kicking-paas/[Clouds Jumping – Why AWS Is Kicking PaaS]
+* http://jpmorgenthal.com/2016/08/24/a-reality-check-on-everyones-moving-everything-to-the-cloud/[A reality check on everyone moving everything to the Cloud]
 * https://gist.github.com/jboner/2841832[Latency Numbers Every Programmer Should Know]
 * http://csrc.nist.gov/publications/nistpubs/800-145/SP800-145.pdf[NIST definition of Cloud computing]
 * http://www.wired.com/2015/09/google-2-billion-lines-codeand-one-place/[Google Is 2 Billion Lines of Code—And It’s All in One Place]
 * http://continuousdelivery.com/2011/07/on-dvcs-continuous-integration-and-feature-branches/[On DVCS, continuous integration, and feature branches]
-
-===== Picture credits
-https://www.flickr.com/photos/arbron/56216585/
-
- 2nd draft
- risk management & infrastructure choices (Charity Majors talk 7/21/2016 DevOpsDays MSP)
