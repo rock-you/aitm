@@ -38,21 +38,97 @@ Version control works like an advanced file system with a memory. (Actual file s
 
 ====== Source control
 
-Digital systems start with text files, typically encoded in ASCII. Text editors create source code, scripts, and configuration files. These may be transformed in defined ways (e.g. by compilers and build tools) but the human understandable end of the process is mostly based on text files. In the previous section, we described a xref:infra-code-example[simple script] that altered the state of a computer system. We care very much about when such a text file changes. One wrong character can completely alter the behavior of a large, complex system. Therefore, our configuration management approach must track to that level of detail.
+Digital systems start with text files, typically encoded in https://en.wikipedia.org/wiki/ASCII[ASCII]. Text editors create source code, scripts, and configuration files. These may be transformed in defined ways (e.g. by compilers and build tools) but the human understandable end of the process is mostly based on text files. In the previous section, we described a xref:infra-code-example[simple script] that altered the state of a computer system. We care very much about when such a text file changes. One wrong character can completely alter the behavior of a large, complex system. Therefore, our configuration management approach must track to that level of detail.
 
-Source control is at its most powerful when dealing with textual data. It is less useful in dealing with  binary data, such as image files. Text files can analyzed for their differences in an easy to understand way. If I change ``abc'' to ``abd'' it is clear that the third character has been changed from “c” to “d.” On the other hand, if I take a picture (e.g. as a JPEG file) and alter one pixel, and compare the resulting before and after binary files in terms of their data, it would be more difficult to understand what had changed. I might be able to easily tell that they are two different files, but they would look very similar and the difference in the binary data might be difficult to understand.
+Source control is at its most powerful when dealing with textual data. It is less useful in dealing with  binary data, such as image files. Text files can analyzed for their differences in an easy to understand way. If I change "abc" to "abcd" it is clear that the third character has been changed from “c” to “d.” On the other hand, if I take a picture (e.g. as a *.png file) and alter one pixel, and compare the resulting before and after binary files in terms of their data, it would be more difficult to understand what had changed. I might be able to easily tell that they are two different files, but they would look very similar and the difference in the binary data might be difficult to understand. Here is a detailed demonstration, using the command line in Ubuntu Linux. (Don't worry, we will explain what is going on.)
 
-image::images/pixels.png[grid]
+NOTE: In the below sequence, what you see after the "$" sign is what is being typed. If there is no "$" sign, it is what the system is saying in response.
 
- illustrate this with examples from git and a jpeg file.
+First, we create a directory (similar to the xref:infra-code-example[iac.sh example script]):
+
+ ~$ mkdir tmpgit
+
+Then, we navigate to it:
+
+ ~$ cd tmpgit/
+
+And activate git source control:
+
+ ~/tmpgit$ git init
+ Initialized empty Git repository in /home/char/tmpgit/.git/
+
+We create a simple program:
+
+ ~/tmpgit$ echo 'print "hello world!";' > tmp.py
+
+And run it:
+
+ ~/tmpgit$ python tmp.py
+ hello world!
+
+We stage it for source control:
+
+ ~/tmpgit$ git add . tmp.py
+
+And commit it:
+
+ ~/tmpgit$ git commit -m "first commit"
+ [master (root-commit) cabdbe3] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 tmp.py
+
+The file is now under version control. We can change our working copy and run it:
+
+ ~/tmpgit$ echo 'print "hello universe\n";' > tmp.py
+ ~/tmpgit$ python tmp.py
+ hello universe!
+
+When the "echo" command is run with just one ">" it replaces the data in the target file completely. So we have completely replaced "hello world!" with "hello universe!"
+
+And - *most critically* - we can see what we have changed!
+....
+~/tmpgit$ git diff
+diff --git a/tmp.py b/tmp.py
+index 0ecbd83..a203522 100644
+--- a/tmp.py
++++ b/tmp.py
+@@ -1 +1 @@
+-print "hello world!";
++print "hello universe!";
+....
+
+Notice the "-" (minus) sign before 'print "hello world!";' -- that means it has been deleted. The "+" (plus) sign before 'print "hello universe!";' means that line has been added.
+
+We can restore the original file (note that this eradicates the working change we made!)
+
+ char@elsa:~/tmpgit$ git checkout .
+ char@elsa:~/tmpgit$ python tmp.py
+ hello world!
+
+If you have access to a Linux computer, try it! (It should also work on recent Macs as presented here.)
+
+In comparison, the following are two 10x10 gray-scale bitmap images being edited in the https://www.gimp.org/[Gimp image editor]. They are about as simple as you can get. Notice that they are slightly different:
+
+.Bitmap images
+image::images/1.02-bothPixels.png[grid]
+
+If we save these in the *.png format, we can see they are different sizes (242 k vs 239k). But if we open them in a binary editor it is very difficult to understand how they differ:
+
+.First image binary data
+image::images/1.02-pixelHex1.png[data]
+
+.Second image binary data
+image::images/1.02-pixelHex2.png[data]
+
+Even if we analyzed the differences, we would need to know much about the .png format in order to understand how the two images differ. We can still track both versions these files, of course, with the proper version control. But again, binary data is not ideal for source control tools like git.
 
 ====== The "commit" concept
 
-Although implementation details may differ, all version control systems have some concept of “commit.” As stated in Version Control with Git <<Loeliger2009>>:
+Although implementation details may differ, all version control systems have some concept of “commit.” As stated in _Version Control with Git_ <<Loeliger2009>>:
 
 _In Git, a commit is used to record changes to a repository… Every Git commit represents a single, *atomic* changeset with respect to the previous state. Regardless of the number of directories, files, lines, or bytes that change with a commit… either all changes apply or none do._ [emphasis added]
 
-NOTE: *Why ``atomic''? The word atomic derives from the Greek, and means "indivisible." An atomic set of changes is either entirely applied, or entirely rejected. Atomicity is an important concept in computing, and transaction processing in particular. If our user tries to move money from her savings to her checking account, two operations are required: (1) reduce savings and (2) increase checking. Either both need to succeed, or both need to fail. That is the classic definition of an "atomic" transaction. Version control commits should be atomic.
+NOTE: *Why "atomic"? The word atomic derives from the ancient Latin language, and means "indivisible." An atomic set of changes is either entirely applied, or entirely rejected. Atomicity is an important concept in computing, and transaction processing in particular. If our user tries to move money from her savings to her checking account, two operations are required: (1) reduce savings and (2) increase checking. Either both need to succeed, or both need to fail. That is the classic definition of an "atomic" transaction. Version control commits should be atomic.
 
 The concept of a version or source control https://en.wikipedia.org/wiki/Commit_(data_management)[“commit”] is a rich foundation for IT management and governance. It both represents the state of the computing system as well as providing evidence of the human activity affecting it. As we will see in Chapter 3, the “commit” identifier is directly referenced by build activity, which in turn is referenced by the release activity, which is typically visible across the IT value chain.
 
@@ -63,7 +139,7 @@ Also, the concept of an atomic “commit” is essential to the concept of a “
 [quote, Puppet Labs 2015 State of DevOps report]
 Implement version control for all production artifacts.
 
-Previously, it has been common practice for compiled binaries to be stored in the same repositories as source code. However, this is no longer considered a best practice. Source and package management are now viewed as two separate things.  Source repositories should be reserved for text-based artifacts whose differences can be made visible in a human-understandable way. Package repositories in contrast are for binary artifacts that can be deployed.
+In some organizations, it was once common for compiled binaries to be stored in the same repositories as source code. However, this is no longer considered a best practice. Source and package management are now viewed as two separate things.  Source repositories should be reserved for text-based artifacts whose differences can be made visible in a human-understandable way. Package repositories in contrast are for binary artifacts that can be deployed.
 
 Package repositories also can serve as a proxy to the external world of downloadable software. That is, they are a cache, an intermediate store of the software provided by various "upstream" sources. For example, developers may be told to download the approved Ruby on Rails version from the local package repository, rather than going to the getting the latest version, which may not be suitable for the environment.
 
