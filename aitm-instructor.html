@@ -511,7 +511,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_virtualization">Virtualization</a></li>
 <li><a href="#_why_is_virtualization_important">Why is virtualization important?</a></li>
-<li><a href="#_virtualization_versus_cloud">Virtualization versus cloud</a></li>
+<li><a href="#_virtualization_managed_services_and_cloud">Virtualization, managed services, and cloud</a></li>
 <li><a href="#_containers_and_looking_ahead">Containers and looking ahead</a></li>
 </ul>
 </li>
@@ -3814,21 +3814,21 @@ Scrum-based development uses the concept of a <a href="https://www.scrumalliance
 <p>Before Cloud, people generally bought computers of varying sizes and power ratings to deliver the IT value they sought. With Cloud services, the same compute capacity can be rented or leased by the minute or hour, and accessed over the Internet.</p>
 </div>
 <div class="paragraph">
-<p>There is much to learn about Cloud computing. In this introduction, we will discuss the following aspects:</p>
+<p>There is much to learn about Cloud computing. In this section, we will discuss the following aspects:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Virtualization</p>
+<p>Virtualization basics</p>
 </li>
 <li>
-<p>Managed hosting</p>
-</li>
-<li>
-<p>What differentiates Cloud</p>
+<p>Virtualization, managed services, and Cloud</p>
 </li>
 <li>
 <p>The various kinds of Cloud services</p>
+</li>
+<li>
+<p>Future trends</p>
 </li>
 </ul>
 </div>
@@ -3837,12 +3837,6 @@ Scrum-based development uses the concept of a <a href="https://www.scrumalliance
 </div>
 <div class="sect4">
 <h5 id="_virtualization">Virtualization</h5>
-<div class="paragraph">
-<p><a href="https://en.wikipedia.org/wiki/Virtualization">Virtualization</a>, for the purposes of this section, starts with the idea of a computer within a computer. (It has applicability to storage and networking as well but we will skip that for now.) In order to understand this, we need to understand a little bit about operating systems and how they relate to the physical computer.</p>
-</div>
-<div class="paragraph">
-<p>Assume a simple, physical computer such as a laptop:</p>
-</div>
 <div class="imageblock" style="float: left">
 <div class="content">
 <img src="images/1.02-laptop.jpg" alt="laptop" width="300" height="200">
@@ -3850,19 +3844,19 @@ Scrum-based development uses the concept of a <a href="https://www.scrumalliance
 <div class="title">Figure 17. Laptop computer <sup class="footnote">[<a id="_footnoteref_11" class="footnote" href="#_footnote_11" title="View footnote.">11</a>]</sup></div>
 </div>
 <div class="paragraph">
-<p>When the laptop is first turned on, the operating system (OS) loads; the OS is itself software, but is able to directly control the computer&#8217;s physical resources: its CPU, memory, screen, and any interfaces such as WiFi, USB, and Bluetooth.</p>
+<p><a href="https://en.wikipedia.org/wiki/Virtualization">Virtualization</a>, for the purposes of this section, starts with the idea of a computer within a computer. (It has applicability to storage and networking as well but we will skip that for now.) In order to understand this, we need to understand a little bit about operating systems and how they relate to the physical computer.</p>
 </div>
 <div class="paragraph">
-<p>The operating system (in a traditional approach) then is used to run "applications" such as Web browsers, media players, word processors, spreadsheets, and the like. Many such programs can also be run as applications within the browser, but the browser still needs to be run as an application.</p>
+<p>Assume a simple, physical computer such as a laptop. When the laptop is first turned on, the operating system (OS) loads; the OS is itself software, but is able to directly control the computer&#8217;s physical resources: its central processing unit (CPU), memory, screen, and any interfaces such as WiFi, USB, and Bluetooth. The operating system (in a traditional approach) then is used to run "applications" such as Web browsers, media players, word processors, spreadsheets, and the like. Many such programs can also be run as applications within the browser, but the browser still needs to be run as an application.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock" style="float: right">
 <div class="content">
-<img src="images/1.02-virt.png" alt="1.02 virt">
+<img src="images/1.02-virt.png" alt="little computers inside big one" width="400">
 </div>
 <div class="title">Figure 18. Virtualization is computers within a computer</div>
 </div>
 <div class="paragraph">
-<p>In the simplest form of virtualization, a specialized application known as a hypervisor is loaded like any other application. The purpose of this hypervisor is to emulate the hardware computer in software. Once the hypervisor is running, it can emulate any number of "virtual" computers, each of which can have its own operating system. The hypervisor mediates the <a href="https://en.wikipedia.org/wiki/Virtual_machine">virtual machine</a> (VM) access to the actual, physical hardware of the laptop; the VM can take input from the USB port, and output to the Bluetooth interface, just like the master OS that launched when the laptop was turned on.</p>
+<p>In the simplest form of virtualization, a specialized application known as a <em>hypervisor</em> is loaded like any other application. The purpose of this hypervisor is to emulate the hardware computer in software. Once the hypervisor is running, it can emulate any number of "virtual" computers, each of which can have its own operating system. The hypervisor mediates the <a href="https://en.wikipedia.org/wiki/Virtual_machine">virtual machine</a> (VM) access to the actual, physical hardware of the laptop; the VM can take input from the USB port, and output to the Bluetooth interface, just like the master OS that launched when the laptop was turned on.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -3882,7 +3876,7 @@ You can experiment with a hypervisor by downloading <a href="https://www.virtual
 <p>There are two different kinds of hypervisors. The example we just discussed was an example of a Type 2 hypervisor, which runs on top of a host operating system. In a Type 1 hypervisor, a master host OS is not used; the hypervisor runs on the "bare metal" of the computer and in turn "hosts" multiple VMs.</p>
 </div>
 <div class="paragraph">
-<p>Paravirtualization, e.g. containers, is another form of virtualization found in the marketplace. In a paravirtualized environment, a core operating system is able to abstract hardware resources for multiple virtual guest environments without having to virtualize hardware for each guest. The benefit of this type of virtualization is increased I/O efficiency and performance for each of the guest environments.</p>
+<p><em>Paravirtualization</em>, e.g. containers, is another form of virtualization found in the marketplace. In a paravirtualized environment, a core operating system is able to abstract hardware resources for multiple virtual guest environments without having to virtualize hardware for each guest. The benefit of this type of virtualization is increased input/output (I/O) efficiency and performance for each of the guest environments.</p>
 </div>
 <div class="paragraph">
 <p>However, while hypervisors can support a diverse array of virtual machines with different operating systems on a single computing node, guest environments in a paravirtualized system generally share a single OS.</p>
@@ -3893,28 +3887,6 @@ You can experiment with a hypervisor by downloading <a href="https://www.virtual
 </div>
 <div class="title">Figure 19. Virtualization types</div>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_why_is_virtualization_important">Why is virtualization important?</h5>
-<div class="paragraph">
-<p>While the conceptual idea of Cloud and utility computing was foreseeable fifty years ago, it took many years of hard-won IT evolution to support the vision. Reliable hardware of exponentially increasing performance, robust open-source software, Internet backbones of massive speed and capacity, and many other factors converged towards this end.</p>
-</div>
-<div class="paragraph">
-<p>Cloud computing has its uses even on a laptop (as you will see if you follow certain paths in the labs.) However, it is in larger industrial uses where it has the greatest utility.</p>
-</div>
-<div class="paragraph">
-<p>The idea of running IT as a utility service goes back at least to 1965 and the publication of _The Challenge of the Computer Utility, by Douglas Parkhill.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/1.02-parkhill.png" alt="1.02 parkhill">
-</div>
-</div>
-<div class="paragraph">
-<p><em>The author&#8217;s copy of Parkhill&#8217;s book</em></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -3930,25 +3902,8 @@ And yes, you can run computers within computers within computers with virtualiza
 </table>
 </div>
 </div>
-</div>
-<div class="paragraph">
-<p>In order to run compute as a utility, multi-tenancy was essential. This is different from electricity (but similar to the phone system). As noted elsewhere, one watt of electric power is like any other and there is less concern for leakage or unexpected interactions. People&#8217;s bank balances are not encoded somehow into the power generation and distribution infrastructure.</p>
-</div>
-<div class="paragraph">
-<p>However, people store data - often private - on computers. In order to deliver compute as a utility, it is essential to segregate each customer&#8217;s workload from all others. This is called multi-tenancy. In multi-tenancy, multiple customers share physical resources that provide the illusion of being dedicated.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-The phone system has been multi-tenant ever since they got rid of <a href="https://en.wikipedia.org/wiki/Party_line_(telephony)">party lines</a>. A party line was a shared line where anyone on it could hear every other person.
-</td>
-</tr>
-</table>
-</div>
+<div class="sect4">
+<h5 id="_why_is_virtualization_important">Why is virtualization important?</h5>
 <div class="paragraph">
 <p>Virtualization attracted business attention as a means to consolidate computing workloads. For years, companies would purchase servers to run applications of various sizes, and in many cases the computers were badly underutilized. Because of configuration issues (legitimate) and an overabundance of caution (questionable), average utilization in a pre-virtualization data center might average 10-20%. (That&#8217;s 90% of the computer&#8217;s capacity being wasted.)</p>
 </div>
@@ -3984,31 +3939,28 @@ For illustration only. A utilization of 62.5% might actually be a bit too high f
 <p>In most virtualized architectures, the physical servers supporting workloads share a consistent configuration, which made it easy to add and remove resources from the environment. The virtual machines may still vary greatly in configuration, but the fact of virtualization makes managing that easier - the virtual machines can be easily copied and moved, and increasingly can be defined as a form of code (see next section).</p>
 </div>
 <div class="paragraph">
-<p>Virtualization thus introduced a new design pattern into the enterprise where computing and storage infrastructure became commoditized building blocks supporting an ever-increasing array of services.</p>
-</div>
-<div class="paragraph">
-<p>But what about where the application is large and virtualization is mostly overhead? Virtualization still may make sense in terms of management consistency and ease of system recovery.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-Some database professionals still don’t like virtualization, that is, making them run Oracle RDBMS or Microsoft SQL Server on top of virtual servers, instead of directly on the host operating system. “The database IS virtualization” they will say.
-</td>
-</tr>
-</table>
+<p>Virtualization thus introduced a new design pattern into the enterprise where computing and storage infrastructure became commoditized building blocks supporting an ever-increasing array of services. But what about where the application is large and virtualization is mostly overhead? Virtualization still may make sense in terms of management consistency and ease of system recovery.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_virtualization_versus_cloud">Virtualization versus cloud</h5>
+<h5 id="_virtualization_managed_services_and_cloud">Virtualization, managed services, and cloud</h5>
 <div class="paragraph">
-<p>Virtualization is necessary, but not sufficient for cloud. True Cloud services are highly automated, and most Cloud analysts will insist that if virtual machines cannot be created and configured in a completely automated fashion, the service is not true Cloud. This is currently where many in-house "private" Cloud efforts struggle; they may have virtualization, but struggle to make it fully self-service.</p>
+<p>Companies have always sought alternatives to owning their own computers.  is a long tradition of managed services, where applications are built out by a customer and then their management is outsourced to a third party. Using fractions of mainframe "time-sharing" systems is a practice that dates back decades. However, such relationships took effort to set up and manage, and might even require bringing physical tapes to the third party (sometimes called a "service bureau.") Fixed price commitments were usually high (the customer had to guarantee to spend X dollars.) Such relationships left much to be desired in terms of  responsiveness to change.</p>
 </div>
 <div class="paragraph">
-<p>There also is a long tradition of managed services, where applications are built out by a customer and then their management is outsourced to a third party.</p>
+<p>As computers became cheaper, companies increasingly acquired their own data centers, investing large amounts of capital in high-technology spaces with extensive power and cooling infrastructure. This was the trend through the late 1980s to about 2010, when Cloud computing started to provide a realistic alternative with true "pay as you go" pricing, analogous to electric metering.</p>
+</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img src="images/1.02-parkhill.png" alt="book" width="300">
+</div>
+<div class="title">Figure 20. Cloud computing started here</div>
+</div>
+<div class="paragraph">
+<p>The idea of running IT completely as a utility service goes back at least to 1965 and the publication of <em>The Challenge of the Computer Utility</em>, by Douglas Parkhill. While the conceptual idea of Cloud and utility computing was foreseeable fifty years ago, it took many years of hard-won IT evolution to support the vision. Reliable hardware of exponentially increasing performance, robust open-source software, Internet backbones of massive speed and capacity, and many other factors converged towards this end.</p>
+</div>
+<div class="paragraph">
+<p>However, people store data - often private - on computers. In order to deliver compute as a utility, it is essential to segregate each customer&#8217;s workload from all others. This is called <em>multi-tenancy</em>. In multi-tenancy, multiple customers share physical resources that provide the illusion of being dedicated.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -4017,10 +3969,16 @@ Some database professionals still don’t like virtualization, that is, making t
 <div class="title">Note</div>
 </td>
 <td class="content">
-Traditional managed services are sometimes called "your mess for less." With Cloud, you have to "clean it up first."
+The phone system has been multi-tenant ever since they got rid of <a href="https://en.wikipedia.org/wiki/Party_line_(telephony)">party lines</a>. A party line was a shared line where anyone on it could hear every other person.
 </td>
 </tr>
 </table>
+</div>
+<div class="paragraph">
+<p>In order to run compute as a utility, multi-tenancy was essential. This is different from electricity (but similar to the phone system). As noted elsewhere, one watt of electric power is like any other and there is less concern for leakage or unexpected interactions. People&#8217;s bank balances are not encoded somehow into the power generation and distribution infrastructure.</p>
+</div>
+<div class="paragraph">
+<p>Virtualization is necessary, but not sufficient for cloud. True Cloud services are highly automated, and most Cloud analysts will insist that if virtual machines cannot be created and configured in a completely automated fashion, the service is not true Cloud. This is currently where many in-house "private" Cloud efforts struggle; they may have virtualization, but struggle to make it fully self-service.</p>
 </div>
 <div class="paragraph">
 <p><a id="cloud-models"></a></p>
@@ -4061,6 +4019,18 @@ not manage or control the underlying cloud infrastructure including network, ser
 <div class="paragraph">
 <p>There are Cloud services beyond those listed above (e.g. Storage as a Service). Various platform services have become extensive on providers such as Amazon, which offers load balancing, development pipelines, various kinds of storage, and much more.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Traditional managed services are sometimes called "your mess for less." With Cloud, you have to "clean it up first."
+</td>
+</tr>
+</table>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_containers_and_looking_ahead">Containers and looking ahead</h5>
@@ -4079,7 +4049,7 @@ not manage or control the underlying cloud infrastructure including network, ser
 <div class="ulist">
 <ul>
 <li>
-<p>Containers are lighter weight</p>
+<p>Containers are lighter weight than virtual machines</p>
 <div class="ulist">
 <ul>
 <li>
@@ -4092,7 +4062,7 @@ not manage or control the underlying cloud infrastructure including network, ser
 </div>
 </li>
 <li>
-<p>Containers must be same OS as host</p>
+<p>Containers must be the same OS as host</p>
 </li>
 </ul>
 </div>
@@ -4263,7 +4233,7 @@ The state of the art in infrastructure configuration is not to use shell scripts
 <div class="content">
 <img src="images/1.02-vehicles.png" alt="collectible car" width="500">
 </div>
-<div class="title">Figure 20. Collectible car versus fleet vehicles <sup class="footnote">[<a id="_footnoteref_12" class="footnote" href="#_footnote_12" title="View footnote.">12</a>]</sup></div>
+<div class="title">Figure 21. Collectible car versus fleet vehicles <sup class="footnote">[<a id="_footnoteref_12" class="footnote" href="#_footnote_12" title="View footnote.">12</a>]</sup></div>
 </div>
 </div>
 </div>
@@ -4332,7 +4302,7 @@ In software development, version control is the foundation of every other Agile 
 <div class="content">
 <img src="images/1.02-versionControlTypes.png" alt="1.02 versionControlTypes">
 </div>
-<div class="title">Figure 21. Types of version control</div>
+<div class="title">Figure 22. Types of version control</div>
 </div>
 <div class="paragraph">
 <p>Version control works like an advanced file system with a memory. (Actual file systems that do this are called <a href="https://en.wikipedia.org/wiki/Versioning_file_system"><em>versioning</em></a> file systems.) It can remember all the changes you make to its contents, tell you the differences between any two versions, and also bring back the version you had at any point in time. Version control is important - but how important? Survey research presented in the annual State of DevOps report indicates that version control is one of the most critical practices associated with high performing IT organizations <a href="#Forsgren2016">[Forsgren2016]</a>. Nicole Forsgren <a href="#Forsgren2016a">[Forsgren2016a]</a>  summarizes the practice of version control as:</p>
@@ -4485,7 +4455,7 @@ hello world!</pre>
 <div class="content">
 <img src="images/1.02-bothPixels.png" alt="grid">
 </div>
-<div class="title">Figure 22. Bitmap images</div>
+<div class="title">Figure 23. Bitmap images</div>
 </div>
 <div class="paragraph">
 <p>If we save these in the *.png format, we can see they are different sizes (242 k vs 239k). But if we open them in a binary editor it is very difficult to understand how they differ:</p>
@@ -4494,13 +4464,13 @@ hello world!</pre>
 <div class="content">
 <img src="images/1.02-pixelHex1.png" alt="data">
 </div>
-<div class="title">Figure 23. First image binary data</div>
+<div class="title">Figure 24. First image binary data</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="images/1.02-pixelHex2.png" alt="data">
 </div>
-<div class="title">Figure 24. Second image binary data</div>
+<div class="title">Figure 25. Second image binary data</div>
 </div>
 <div class="paragraph">
 <p>Even if we analyzed the differences, we would need to know much about the .png format in order to understand how the two images differ. We can still track both versions these files, of course, with the proper version control. But again, binary data is not ideal for source control tools like git.</p>
@@ -4569,7 +4539,7 @@ Implement version control for all production artifacts.
 <div class="content">
 <img src="images/1.02-configMgmt.png" alt="1.02 configMgmt">
 </div>
-<div class="title">Figure 25. Configuration management and its components</div>
+<div class="title">Figure 26. Configuration management and its components</div>
 </div>
 <div class="sect5">
 <h6 id="_deployment_basics">Deployment basics</h6>
@@ -6133,7 +6103,7 @@ You are part of a tight-knit team. You’ve moved out of the garage into a more 
 <div class="content">
 <img src="images/2.00-bridge.jpg" alt="collapsing bridge" width="400">
 </div>
-<div class="title">Figure 26. "Galloping Gertie" <sup class="footnote">[<a id="_footnoteref_14" class="footnote" href="#_footnote_14" title="View footnote.">14</a>]</sup></div>
+<div class="title">Figure 27. "Galloping Gertie" <sup class="footnote">[<a id="_footnoteref_14" class="footnote" href="#_footnote_14" title="View footnote.">14</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>As with bridges, at a technical level, reinforcing feedback can be a very bad thing in IT systems. In general, any process that is self-amplified without any balancing feedback will eventually consume all available resources, just like rabbits will eat all the food available to them. So, if you create a process (e.g. write and run a computer program) that recursively spawns itself, it will sooner or later crash the computer as it devours memory and CPU. See <a href="http://osr507doc.sco.com/en/HANDBOOK/runaway_proc.html">Runaway processes.</a></p>
@@ -8064,7 +8034,7 @@ Task management is the process of managing a task through its life cycle. It inv
 <div class="content">
 <img src="images/2.05-handoff.jpg" alt="Handoff">
 </div>
-<div class="title">Figure 27. Task handoffs present risk <sup class="footnote">[<a id="_footnoteref_21" class="footnote" href="#_footnote_21" title="View footnote.">21</a>]</sup></div>
+<div class="title">Figure 28. Task handoffs present risk <sup class="footnote">[<a id="_footnoteref_21" class="footnote" href="#_footnote_21" title="View footnote.">21</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>But what happens when there are three of you? You ask coworker B to do something and in order to complete it she needs something from coworker C, whom you are also asking to complete tasks. As an organization scales, this can easily lead to confusion and "dropped balls."</p>
@@ -8139,7 +8109,7 @@ efficiency.
 <div class="content">
 <img src="images/2.05-queue.jpg" alt="alt text" width="300" height="200">
 </div>
-<div class="title">Figure 28. A queue <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup></div>
+<div class="title">Figure 29. A queue <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Even at this stage of our evolution, with just one co-located collaborative team, it’s important to consider work in progress and how to limit it. One topic we will emphasize throughout the rest of this book is <em>queuing</em>.</p>
@@ -8166,7 +8136,7 @@ Queuing theory is an important branch of mathematics used extensively in computi
 <div class="content">
 <img src="images/2.05-wip.jpg" alt="alt text" width="300" height="200">
 </div>
-<div class="title">Figure 29. Physical Work in Process <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup></div>
+<div class="title">Figure 30. Physical Work in Process <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Don Reinertsen, quoted above, developed the insight that product design and development had an <strong>invisible</strong> inventory of "Work in Process" that he called Design in Process (DIP). Just as managing physical work in process on the factory floor is key to a factory&#8217;s success, so correctly understanding and managing design in process is essential to all kinds of research and development organizations&#8201;&#8212;&#8201;<strong>including digital product development.</strong> In fact, because digital systems are largely invisible even when finished, understanding their work in process is even more challenging.</p>
@@ -10038,7 +10008,7 @@ Use directory creation example with failure of script b/c not idempotent</pre>
 <div class="content">
 <img src="images/2.06-BlackFriday.jpg" alt="alt text" width="400" height="200">
 </div>
-<div class="title">Figure 30. Black Friday at Macy&#8217;s <sup class="footnote">[<a id="_footnoteref_22" class="footnote" href="#_footnote_22" title="View footnote.">22</a>]</sup></div>
+<div class="title">Figure 31. Black Friday at Macy&#8217;s <sup class="footnote">[<a id="_footnoteref_22" class="footnote" href="#_footnote_22" title="View footnote.">22</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>The classic example of significant capacity utilization is the <a href="https://en.wikipedia.org/wiki/Black_Friday_(shopping)">Black Friday/Cyber Monday</a> experience of retailers. Both physical store and online ecommerce systems are placed under great strain annually around this time, with the year&#8217;s profits potentially on the line.</p>
@@ -12368,7 +12338,7 @@ As with other chapters in the later part of this book, we are going to introduce
 <div class="content">
 <img src="images/3.08-triad-constraints.jpg" alt="Iron triangle" width="400">
 </div>
-<div class="title">Figure 31. Project "Iron Triangle" <sup class="footnote">[<a id="_footnoteref_23" class="footnote" href="#_footnote_23" title="View footnote.">23</a>]</sup></div>
+<div class="title">Figure 32. Project "Iron Triangle" <sup class="footnote">[<a id="_footnoteref_23" class="footnote" href="#_footnote_23" title="View footnote.">23</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>The project management <a href="https://en.wikipedia.org/wiki/Project_management_triangle">Iron Triangle</a> represents the interaction of cost, time, scope, and quality on a project. The idea is that, in general, one or more of these factors may be a constraint. The following sign is often seen in service organizations:</p>
@@ -12377,7 +12347,7 @@ As with other chapters in the later part of this book, we are going to introduce
 <div class="content">
 <img src="images/3.08-good-cheap-fast.jpg" alt="Good-Cheap-Fast" width="400">
 </div>
-<div class="title">Figure 32. Pick any two <sup class="footnote">[<a id="_footnoteref_24" class="footnote" href="#_footnote_24" title="View footnote.">24</a>]</sup></div>
+<div class="title">Figure 33. Pick any two <sup class="footnote">[<a id="_footnoteref_24" class="footnote" href="#_footnote_24" title="View footnote.">24</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>The same applies to project management and reflects well the "iron triangle" of tradeoffs. (Note: we will critique the iron triangle subsquently.)</p>
@@ -12946,7 +12916,7 @@ Production scheduling is a large topic in and of itself. It is part of the domai
 <div class="content">
 <img src="images/3.08-development-iterative.png" alt="Rational Unified Process" width="493">
 </div>
-<div class="title">Figure 33. Rational Unified Process <sup class="footnote">[<a id="_footnoteref_25" class="footnote" href="#_footnote_25" title="View footnote.">25</a>]</sup></div>
+<div class="title">Figure 34. Rational Unified Process <sup class="footnote">[<a id="_footnoteref_25" class="footnote" href="#_footnote_25" title="View footnote.">25</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>One interesting aspect of the diagram is that it shows just how difficult it can be to staff a project. Demand for given functional roles ebbs and flows unpredictably. The project manager is expected to manage the uncertain handoffs between the various functional areas, and anticipate resource requirements stemming from unexpected feedback demands. This is why "T-shaped" professionals (see Chapter 7) are desirable, because they can move from area to area in response to demand.</p>
@@ -18843,7 +18813,7 @@ The COBIT 5 framework makes a clear distinction between governance and managemen
 <div class="content">
 <img src="images/4.10-shopkeeper.jpg" alt="two men in front of a store" width="600">
 </div>
-<div class="title">Figure 34. Someone to "mind the store" <sup class="footnote">[<a id="_footnoteref_26" class="footnote" href="#_footnote_26" title="View footnote.">26</a>]</sup></div>
+<div class="title">Figure 35. Someone to "mind the store" <sup class="footnote">[<a id="_footnoteref_26" class="footnote" href="#_footnote_26" title="View footnote.">26</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Now, you wish to go on an extended vacation - perhaps a cruise around the world, or a trek in the Himalayas. You need someone who can count the cash and deposit it, and place orders with and pay your suppliers. You need to hire a professional manager.</p>
@@ -19019,7 +18989,7 @@ We&#8217;ve encountered systems theory and associated concepts such as <a href="
 <div class="content">
 <img src="images/4.10-centrifugal_governor.png" alt="mechanism" width="300">
 </div>
-<div class="title">Figure 35. Centrifugal governor <sup class="footnote">[<a id="_footnoteref_27" class="footnote" href="#_footnote_27" title="View footnote.">27</a>]</sup></div>
+<div class="title">Figure 36. Centrifugal governor <sup class="footnote">[<a id="_footnoteref_27" class="footnote" href="#_footnote_27" title="View footnote.">27</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>"Governors" have been part of mechanical systems for centuries. These mechanisms have the effect of automatically controlling a system so that it (for example) operates at the desired revolutions per minute. Without governors, steam engines tended to blow up, or go out; applying devices such as the <a href="https://en.wikipedia.org/wiki/Centrifugal_governor">centrifugal governor</a> to regulate them was an important step in the development of steam power. Importantly, such devices operated to control the process from variation on either side, whether too fast or too slow. They did not operate merely as brakes.</p>
@@ -22612,7 +22582,7 @@ No enterprise can be effective without high quality data.
 <div class="content">
 <img src="images/4.11-hashes.png" alt="4.11 hashes">
 </div>
-<div class="title">Figure 36. Hashmarks</div>
+<div class="title">Figure 37. Hashmarks</div>
 </div>
 <div class="paragraph">
 <p>If you are of European descent, you might perceive this as the number twelve, or a count of twelve "somethings." What "somethings"? You don&#8217;t know.</p>
@@ -22621,7 +22591,7 @@ No enterprise can be effective without high quality data.
 <div class="content">
 <img src="images/4.11-appleTrees.jpg" alt="Apple trees" width="300">
 </div>
-<div class="title">Figure 37. How many trees? <sup class="footnote">[<a id="_footnoteref_28" class="footnote" href="#_footnote_28" title="View footnote.">28</a>]</sup></div>
+<div class="title">Figure 38. How many trees? <sup class="footnote">[<a id="_footnoteref_28" class="footnote" href="#_footnote_28" title="View footnote.">28</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Someone might tell you that this is the number of trees on your neighbor&#8217;s farm. That makes all the difference. But wait - you know for a fact that there are many more trees than 12! You inquire further and find out it is actually the number of producing apple trees, a very different concept.</p>
@@ -22661,7 +22631,7 @@ A message to mapmakers: Highways are not painted red, rivers don&#8217;t have co
 <div class="content">
 <img src="images/4.11-cuneiform.jpg" alt="Clay tablet with markings" width="300">
 </div>
-<div class="title">Figure 38. Sumerian cuneiform <sup class="footnote">[<a id="_footnoteref_29" class="footnote" href="#_footnote_29" title="View footnote.">29</a>]</sup></div>
+<div class="title">Figure 39. Sumerian cuneiform <sup class="footnote">[<a id="_footnoteref_29" class="footnote" href="#_footnote_29" title="View footnote.">29</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Humans have been representing information since at least the creation of writing. As early as 3000 BCE, the ancient Sumerians used cuneiform to record&#8201;&#8212;&#8201;among other things&#8201;&#8212;&#8201;how much beer people got. (The more things change, the more they stay the same.)</p>
@@ -22676,7 +22646,7 @@ A message to mapmakers: Highways are not painted red, rivers don&#8217;t have co
 <div class="content">
 <img src="images/4.11-quipu.jpg" alt="knotted cords" width="300">
 </div>
-<div class="title">Figure 39. Inca quipu <sup class="footnote">[<a id="_footnoteref_30" class="footnote" href="#_footnote_30" title="View footnote.">30</a>]</sup></div>
+<div class="title">Figure 40. Inca quipu <sup class="footnote">[<a id="_footnoteref_30" class="footnote" href="#_footnote_30" title="View footnote.">30</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>At around the same time as the Sumerians, the Inca empire in what is now Peru [?] also started to represent information. They used a radically different approach from the Sumerians: carefully knotted ropes:</p>
@@ -22733,7 +22703,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4.11-gasPump.jpg" alt="old gas pump" width="400">
 </div>
-<div class="title">Figure 40. What do they owe you? <sup class="footnote">[<a id="_footnoteref_31" class="footnote" href="#_footnote_31" title="View footnote.">31</a>]</sup></div>
+<div class="title">Figure 41. What do they owe you? <sup class="footnote">[<a id="_footnoteref_31" class="footnote" href="#_footnote_31" title="View footnote.">31</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>As the town grows, and your customers increase, you grow increasingly uncertain as to whether they all are paying you what they owe. You purchase a notebook and a pen (today&#8217;s equivalent of clay tablets or knotted ropes) and start writing down the amounts owed you.</p>
@@ -22816,7 +22786,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4.11-diffEngine.jpg" alt="Complex mechanical calculator" width="400">
 </div>
-<div class="title">Figure 41. Babbage Difference Engine <sup class="footnote">[<a id="_footnoteref_32" class="footnote" href="#_footnote_32" title="View footnote.">32</a>]</sup></div>
+<div class="title">Figure 42. Babbage Difference Engine <sup class="footnote">[<a id="_footnoteref_32" class="footnote" href="#_footnote_32" title="View footnote.">32</a>]</sup></div>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -22868,13 +22838,13 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4.11-punchedCard.jpg" alt="punched data card" width="300">
 </div>
-<div class="title">Figure 42. Punchcard <sup class="footnote">[<a id="_footnoteref_33" class="footnote" href="#_footnote_33" title="View footnote.">33</a>]</sup></div>
+<div class="title">Figure 43. Punchcard <sup class="footnote">[<a id="_footnoteref_33" class="footnote" href="#_footnote_33" title="View footnote.">33</a>]</sup></div>
 </div>
 <div class="imageblock" style="float: right">
 <div class="content">
 <img src="images/4.11-cardSorter.jpg" alt="mechanical card sorting machine" width="400">
 </div>
-<div class="title">Figure 43. Card Sorter <sup class="footnote">[<a id="_footnoteref_34" class="footnote" href="#_footnote_34" title="View footnote.">34</a>]</sup></div>
+<div class="title">Figure 44. Card Sorter <sup class="footnote">[<a id="_footnoteref_34" class="footnote" href="#_footnote_34" title="View footnote.">34</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>During World War II, many business professionals found themselves in the military, and some encountered the new electronic computers being used to calculate artillery trajectories or decrypt enemy messages. Edmund Berkeley, the first secretary of the Association for Computing Machinery, was one such professional who grasped the the potential of the new technology <a href="#Akera2007">[Akera2007]</a>. After the war, Berkeley advocated for the use of these machines to the leadership of the Prudential insurance company, while others did the same in the United Kingdom.</p>
@@ -23923,7 +23893,7 @@ Again, if you or your company are involved in legal issues relating to the above
 <div class="content">
 <img src="images/4.11-reportingOldStyle.png" alt="1900s clerk with adding machine" width="300" height="200">
 </div>
-<div class="title">Figure 44. Reporting and analytics, old style <sup class="footnote">[<a id="_footnoteref_35" class="footnote" href="#_footnote_35" title="View footnote.">35</a>]</sup></div>
+<div class="title">Figure 45. Reporting and analytics, old style <sup class="footnote">[<a id="_footnoteref_35" class="footnote" href="#_footnote_35" title="View footnote.">35</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>We have touched on reporting previously, in our discussion of <a href="#metrics-KPIs">metrics</a>. This is a more detailed examination.</p>
@@ -24693,6 +24663,11 @@ McGilvary (based on English) pp 23-24 - perhaps into 4.11.03.</pre>
 <pre>Schema.org &amp; phonetics transcription from CACM 02-2106</pre>
 </div>
 </div>
+<div class="literalblock">
+<div class="content">
+<pre>Some database professionals still don’t like virtualization, that is, making them run Oracle RDBMS or Microsoft SQL Server on top of virtual servers, instead of directly on the host operating system. “The database IS virtualization” they will say.</pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -24996,7 +24971,7 @@ As with other chapters in the later part of this book, we are going to introduce
 <div class="content">
 <img src="images/4.12-architecture.jpg" alt="alt text" width="900">
 </div>
-<div class="title">Figure 45. St. Vitus Cathedral, Prague <sup class="footnote">[<a id="_footnoteref_36" class="footnote" href="#_footnote_36" title="View footnote.">36</a>]</sup></div>
+<div class="title">Figure 46. St. Vitus Cathedral, Prague <sup class="footnote">[<a id="_footnoteref_36" class="footnote" href="#_footnote_36" title="View footnote.">36</a>]</sup></div>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -25141,19 +25116,19 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <div class="content">
 <img src="images/4.12-serengeti.jpg" alt="alt text" width="250" height="200">
 </div>
-<div class="title">Figure 46. The terrain <sup class="footnote">[<a id="_footnoteref_37" class="footnote" href="#_footnote_37" title="View footnote.">37</a>]</sup></div>
+<div class="title">Figure 47. The terrain <sup class="footnote">[<a id="_footnoteref_37" class="footnote" href="#_footnote_37" title="View footnote.">37</a>]</sup></div>
 </div>
 <div class="imageblock" style="float: left">
 <div class="content">
 <img src="images/4.12-surveyor.jpg" alt="alt text" width="200" height="200">
 </div>
-<div class="title">Figure 47. The mapmaker <sup class="footnote">[<a id="_footnoteref_38" class="footnote" href="#_footnote_38" title="View footnote.">38</a>]</sup></div>
+<div class="title">Figure 48. The mapmaker <sup class="footnote">[<a id="_footnoteref_38" class="footnote" href="#_footnote_38" title="View footnote.">38</a>]</sup></div>
 </div>
 <div class="imageblock" style="float: ">
 <div class="content">
 <img src="images/4.12-map.jpg" alt="alt text" width="235" height="200">
 </div>
-<div class="title">Figure 48. The map <sup class="footnote">[<a id="_footnoteref_39" class="footnote" href="#_footnote_39" title="View footnote.">39</a>]</sup></div>
+<div class="title">Figure 49. The map <sup class="footnote">[<a id="_footnoteref_39" class="footnote" href="#_footnote_39" title="View footnote.">39</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Confused? Consider the activity of map-making. In map-making you have:</p>
@@ -25242,7 +25217,7 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <div class="content">
 <img src="images/4.12-moritz.jpg" alt="Moritz" width="300">
 </div>
-<div class="title">Figure 49. Franz Moritz Graf von Lacy <sup class="footnote">[<a id="_footnoteref_40" class="footnote" href="#_footnote_40" title="View footnote.">40</a>]</sup></div>
+<div class="title">Figure 50. Franz Moritz Graf von Lacy <sup class="footnote">[<a id="_footnoteref_40" class="footnote" href="#_footnote_40" title="View footnote.">40</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>In previous ages, nobles would assemble and fight for their King, but their armies were poorly coordinated, and disputes over strategy would often arise. Each noble&#8217;s army would have its own quartermaster, couriers, intelligence, supply chains, and the like. This was both inefficient, and ineffective: overall plans of battle often could not be made or executed, and military operations would be bungled.</p>
@@ -25363,7 +25338,7 @@ The operating model is the necessary level of business process integration and s
 <div class="content">
 <img src="images/4.12-EA-context.png" alt="EA context" width="900">
 </div>
-<div class="title">Figure 50. EA context, based on <a href="#Ross2006">[Ross2006]</a>, fig 1-2, p.10.</div>
+<div class="title">Figure 51. EA context, based on <a href="#Ross2006">[Ross2006]</a>, fig 1-2, p.10.</div>
 </div>
 <div class="paragraph">
 <p>Notice the distinction between Enterprise Architecture as a capability and as an artifact. The <strong>practice</strong> of Enterprise Architecture is not the same as the actual Enterprise Architecture. For the purposes of this textbook, we define enterprise architecture&#8217;s concerns as essentially the enterprise operating model: process, data, organizational capabilities, and systems.</p>
@@ -25395,7 +25370,7 @@ The operating model is the necessary level of business process integration and s
 <div class="content">
 <img src="images/4.12-zachman.png" alt="4.12 zachman">
 </div>
-<div class="title">Figure 51. A variation on the Zachman framework</div>
+<div class="title">Figure 52. A variation on the Zachman framework</div>
 </div>
 <div class="paragraph">
 <p><em>(loosely based on <a href="#Zachman1987">[Zachman1987]</a> and succeeding work.)</em></p>
@@ -25439,7 +25414,7 @@ The operating model is the necessary level of business process integration and s
 <div class="content">
 <img src="images/4.12-BM-OM.png" alt="Business model versus operating model" width="900">
 </div>
-<div class="title">Figure 52. Business model versus operating model</div>
+<div class="title">Figure 53. Business model versus operating model</div>
 </div>
 <div class="paragraph">
 <p>This distinction helps us position the Enterprise Architecture group with respect to key partner organizations:</p>
@@ -25550,7 +25525,7 @@ As a hygiene factor, benefits from EA can be valued in terms of reduction in man
 <div class="content">
 <img src="images/4.12-impact.png" alt="4.12 impact">
 </div>
-<div class="title">Figure 53. Architecture impacts on enterprise value</div>
+<div class="title">Figure 54. Architecture impacts on enterprise value</div>
 </div>
 <div class="paragraph">
 <p>The above diagram suggests a number of specific, measurable outcomes from typical enterprise architecture goals. Without exploring every line of value:</p>
@@ -25881,7 +25856,7 @@ identification and enforcement</p>
 <div class="content">
 <img src="images/4.12-archProgram.png" alt="4.12 archProgram">
 </div>
-<div class="title">Figure 54. Large scale architecture program</div>
+<div class="title">Figure 55. Large scale architecture program</div>
 </div>
 <div class="paragraph">
 <p>The Enterprise Architecture organization might report to a CTO, the Chief of Staff for the Office of the CIO, or the head of Corporate Strategy and Planning. It is a centralized organization with a small staff of domain architects and an Architecture Standards organization that owns two key cross-functional architecture processes.</p>
@@ -25937,7 +25912,7 @@ division is <em>fractal</em> (that is, it reproduces at different scales).</p>
 <div class="content">
 <img src="images/4.12-gudea.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 55. Gudea with blueprint, ~2140 BCE <sup class="footnote">[<a id="_footnoteref_41" class="footnote" href="#_footnote_41" title="View footnote.">41</a>]</sup></div>
+<div class="title">Figure 56. Gudea with blueprint, ~2140 BCE <sup class="footnote">[<a id="_footnoteref_41" class="footnote" href="#_footnote_41" title="View footnote.">41</a>]</sup></div>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -25962,7 +25937,7 @@ The true measure of the value of a model is whether it actually influences behav
 <div class="content">
 <img src="images/4.12-whiteboard.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 56. Whiteboard <sup class="footnote">[<a id="_footnoteref_42" class="footnote" href="#_footnote_42" title="View footnote.">42</a>]</sup></div>
+<div class="title">Figure 57. Whiteboard <sup class="footnote">[<a id="_footnoteref_42" class="footnote" href="#_footnote_42" title="View footnote.">42</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Even in construction and engineering trades that rely on blueprints as a source of truth, keeping them up to date requires considerable discipline and process. In faster-moving digital organizations, visual models are almost always out of date unless they have been specifically refreshed for a purpose, or unless there is a strong formal process in place (and the value of such a process may be difficult to establish). That doesn&#8217;t mean that diagrams will go away. Co-located teams use whiteboards and dry-erase markers and will continue to use them. There are important cognitive and human factors reasons for this that will not go away. Because of these facts, it is useful to understand some of the fundamentals of how humans interpret visual data.</p>
@@ -25985,7 +25960,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4.12-tiger.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 57. Fast recognition means survival <sup class="footnote">[<a id="_footnoteref_43" class="footnote" href="#_footnote_43" title="View footnote.">43</a>]</sup></div>
+<div class="title">Figure 58. Fast recognition means survival <sup class="footnote">[<a id="_footnoteref_43" class="footnote" href="#_footnote_43" title="View footnote.">43</a>]</sup></div>
 </div>
 <div class="ulist">
 <ul>
@@ -26010,7 +25985,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4.12-neumann-flowchart.png" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 58. The first software flowchart <sup class="footnote">[<a id="_footnoteref_44" class="footnote" href="#_footnote_44" title="View footnote.">44</a>]</sup></div>
+<div class="title">Figure 59. The first software flowchart <sup class="footnote">[<a id="_footnoteref_44" class="footnote" href="#_footnote_44" title="View footnote.">44</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Architects and architecture are known for creating diagrams&#8201;&#8212;&#8201;abstract graphical representations of complex systems. The first known instance of applying graphical techniques to a digital problem was in 1947 <a href="#vonNeumann1947">[vonNeumann1947]</a> and visual notations have evolved along with the field of computing ever since. Notable examples include:</p>
@@ -26044,7 +26019,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4.12-flowchart-template.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 59. IBM flowcharting template <sup class="footnote">[<a id="_footnoteref_45" class="footnote" href="#_footnote_45" title="View footnote.">45</a>]</sup></div>
+<div class="title">Figure 60. IBM flowcharting template <sup class="footnote">[<a id="_footnoteref_45" class="footnote" href="#_footnote_45" title="View footnote.">45</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Research at Microsoft suggests that developers use diagrams for four purposes:</p>
@@ -26081,7 +26056,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4.12-sequence-diagram.png" alt="blueprint" width="450" height="200">
 </div>
-<div class="title">Figure 60. UML sequence diagram <sup class="footnote">[<a id="_footnoteref_46" class="footnote" href="#_footnote_46" title="View footnote.">46</a>]</sup></div>
+<div class="title">Figure 61. UML sequence diagram <sup class="footnote">[<a id="_footnoteref_46" class="footnote" href="#_footnote_46" title="View footnote.">46</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>However, if we&#8217;re building systems to be operated and maintained by humans, it would seem that we should support the cognitive and perceptual strengths of humans.  Because diagrams are more readily processed, they are often used to represent high level system interactions - how a given service, product or application is related to peer systems and services. Building such depictions can be helpful to fostering a shared mental model of the overall system objectives and context. The more complex and highly scaled the environment, the more likely one will encounter such artifacts as a means to creating the mental model.</p>
@@ -26145,7 +26120,7 @@ The big picture is part of the standard mindset of EA, which everyone immediatel
 <div class="content">
 <img src="images/4.12-obesity.jpg" alt="blueprint" width="550" height="200">
 </div>
-<div class="title">Figure 61. Complex diagram <sup class="footnote">[<a id="_footnoteref_47" class="footnote" href="#_footnote_47" title="View footnote.">47</a>]</sup></div>
+<div class="title">Figure 62. Complex diagram <sup class="footnote">[<a id="_footnoteref_47" class="footnote" href="#_footnote_47" title="View footnote.">47</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>However, this next diagram is essentially unusable, as visually tracing any given line is too difficult, and it would be easy to mistakenly identify one bubble as dependent on another:</p>
@@ -26154,7 +26129,7 @@ The big picture is part of the standard mindset of EA, which everyone immediatel
 <div class="content">
 <img src="images/4.12-complex-network.jpg" alt="blueprint" width="550" height="200">
 </div>
-<div class="title">Figure 62. Another complex diagram <sup class="footnote">[<a id="_footnoteref_48" class="footnote" href="#_footnote_48" title="View footnote.">48</a>]</sup></div>
+<div class="title">Figure 63. Another complex diagram <sup class="footnote">[<a id="_footnoteref_48" class="footnote" href="#_footnote_48" title="View footnote.">48</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>This may seem like an obvious critique, but architectural diagrams of similar complexity and unusability have too often been produced.</p>
@@ -26167,7 +26142,7 @@ formalisms don&#8217;t give a good sense of scale. For example, suppose you see 
 <div class="content">
 <img src="images/4.12-capabilities.png" alt="capabilities" width="600">
 </div>
-<div class="title">Figure 63. Simple capability map</div>
+<div class="title">Figure 64. Simple capability map</div>
 </div>
 <div class="paragraph">
 <p>Diagrams like this are common, but what does it mean that all the boxes are equally sized? Are there as many lawyers as sales people? Operations staff? It&#8217;s not clear what the advantage is to putting information like this into a graphical form; no interactions are seen and the eight areas could more easily be expressed as a list (or "catalog" in the terms we&#8217;ll introduce below). This brings us to the final problem listed above: visualizations rely on some <a href="#shared-mental-model">common ground</a> understanding. If boxes and lines are used for communication, their meaning should be agreed upon - otherwise, there is risk of mis-understanding, and the diagram may do more harm than good.</p>
@@ -26316,7 +26291,7 @@ Artifacts are generally classified as catalogs (lists of things), matrices (show
 <div class="content">
 <img src="images/4.12-simpleMetamodel.png" alt="metamodel" width="400">
 </div>
-<div class="title">Figure 64. A simple metamodel</div>
+<div class="title">Figure 65. A simple metamodel</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -26520,7 +26495,7 @@ One core question decided by governance is how much autonomy is granted to busin
 <div class="content">
 <img src="images/4.12-A-380.jpg" alt="A-380" width="300" height="200">
 </div>
-<div class="title">Figure 65. Airbus A-380 <sup class="footnote">[<a id="_footnoteref_49" class="footnote" href="#_footnote_49" title="View footnote.">49</a>]</sup></div>
+<div class="title">Figure 66. Airbus A-380 <sup class="footnote">[<a id="_footnoteref_49" class="footnote" href="#_footnote_49" title="View footnote.">49</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>In 2006, Airbus was in the midst of developing the gigantic A-380 aircraft. Because of the scale of the effort, multiple teams of engineers in different countries were working on the effort. As William Ulrich says of the German and French teams, "having failed to coordinate efforts to wire the world&#8217;s largest plane, they were surprised to learn that they had used different approaches to designing the A380&#8217;s wiring system" <a href="#Ulrich2010">[Ulrich2010]</a>, p. 32. This was because the teams were using different software for wiring design of the critical wiring design software <a href="#Clark2006">[Clark2006]</a>. The use of different software to fulfill the capability resulted in a year&#8217;s delay, a $4.5bn order loss to Boeing, and a 26% drop in Airbus stock.</p>
@@ -26576,7 +26551,7 @@ One core question decided by governance is how much autonomy is granted to busin
 <div class="content">
 <img src="images/4.12-archimate.png" alt="archimate" width="500">
 </div>
-<div class="title">Figure 66. Similar to <a href="#Open2012">[Open2012]</a>, section 2.6</div>
+<div class="title">Figure 67. Similar to <a href="#Open2012">[Open2012]</a>, section 2.6</div>
 </div>
 <div class="paragraph">
 <p>As we look at the overall structure of the architecture disciplines, we have three disciplines that correspond to the columns. We&#8217;ll call these "perspectives":</p>
@@ -26658,7 +26633,7 @@ One core question decided by governance is how much autonomy is granted to busin
 <div class="content">
 <img src="images/4.12-flowchart.jpg" alt="flowchart" width="300" height="200">
 </div>
-<div class="title">Figure 67. A flowchart <sup class="footnote">[<a id="_footnoteref_50" class="footnote" href="#_footnote_50" title="View footnote.">50</a>]</sup></div>
+<div class="title">Figure 68. A flowchart <sup class="footnote">[<a id="_footnoteref_50" class="footnote" href="#_footnote_50" title="View footnote.">50</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Process architecture is concerned with why and how activities are performed. It includes the detailed, step by step understanding of activities, in a transparent way. From top to bottom, it includes concepts such as:</p>
@@ -27166,7 +27141,7 @@ Another possible objection against agile methods is that the processes in EA, an
 <div class="content">
 <img src="images/4.12-stopwatch.jpg" alt="alt text" width="300" height="200">
 </div>
-<div class="title">Figure 68. What is your Cost of Delay? <sup class="footnote">[<a id="_footnoteref_51" class="footnote" href="#_footnote_51" title="View footnote.">51</a>]</sup></div>
+<div class="title">Figure 69. What is your Cost of Delay? <sup class="footnote">[<a id="_footnoteref_51" class="footnote" href="#_footnote_51" title="View footnote.">51</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>It is in the "governance and approval" kind of activity that conflict is most likely to emerge. Cadence and synchronization (e.g. processes) with the potential to block teams from pursuing their mission should be very carefully considered. If there is a process or a queue of architecture approvals, it at least should be operated on Cost of Delay of the work it&#8217;s blocking. And more generally, across the organization, the process should be tested against an economic model such as establishing a nominal or <a href="#portfolio-CoD">portfolio-level Cost of Delay</a>. Like other processes, architecture itself can be assessed against such a baseline.</p>
@@ -27214,7 +27189,7 @@ Architectural goals—for example, desired performance, availability, and securi
 <div class="content">
 <img src="images/4.12-strangler-vine.jpg" alt="alt text" width="400" height="200">
 </div>
-<div class="title">Figure 69. Australian strangler vine surrounding tree <sup class="footnote">[<a id="_footnoteref_52" class="footnote" href="#_footnote_52" title="View footnote.">52</a>]</sup></div>
+<div class="title">Figure 70. Australian strangler vine surrounding tree <sup class="footnote">[<a id="_footnoteref_52" class="footnote" href="#_footnote_52" title="View footnote.">52</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Keeping the target operating condition specific is preferable. When architecture scopes problems too broadly, the temptation is to undertake <a href="#large-arch-xform-risk">large and risky transformation programs</a>. As an alternative, Humble and Molesky suggest the "strangler pattern," proposed by Martin Fowler in 2004 <a href="#Fowler2004a">[Fowler2004a]</a>. This pattern uses as a metaphor Australian "strangler" vines that grow around trees until the original tree dies, at which point the strangler vine is now itself a sturdy, rooted structure (see picture).</p>
