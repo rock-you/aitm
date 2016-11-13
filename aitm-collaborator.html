@@ -5424,7 +5424,7 @@ its behavior accordingly.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>While definitions of "DevOps" are controversial, the fundamental goal of moving smaller changes more quickly through the pipeline is  common to all. There is a great deal written on the topic of DevOps currently; the Humble/Farley book is recommended  as an introduction. Let’s go into a little detail on some essential Agile/DevOps practices.</p>
+<p>While "DevOps" can be hard to define, the fundamental goal of moving smaller changes more quickly through the pipeline is a common theme. Other guiding principles include, "If it hurts, do it more frequently." (This is in part a response to the poor practice, or <em>antipattern</em>, of deferring integration testing and deployment until those tasks are so big as to be unmanageable.) There is a great deal written on the topic of DevOps currently; the Humble/Farley book is recommended  as an introduction. Let’s go into a little detail on some essential Agile/DevOps practices.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -5786,11 +5786,7 @@ Refactoring is a controlled technique for improving the design of an existing co
 <p>As systems engineering approaches transform to <a href="#cloud">Cloud</a> and <a href="#infracode">Infrastructure as Code</a>, a large and increasing percentage of IT work takes the form of altering text files and tracking their <a href="#version-control">versions</a>. We have seen this in the previous chapter, with artifacts such as <a href="#infra-code-example">scripts</a> being created to drive the provisioning and configuring of computing resources. Approaches which encourage ongoing development and evolution are increasingly recognized as less risky, since systems do not respond well to big "batches" of change. An important concept is that of "continuous integration,” popularized by Paul Duvall in his book of the same name <a href="#Duvall2007">[Duvall2007]</a>.</p>
 </div>
 <div class="paragraph">
-<p>In order to understand why continuous integration is important, it is necessary to further discuss the concept of source control and how it is employed in real world settings.</p>
-</div>
-<div class="paragraph">
-<p>Imagine you have been working for some time with your partner in your startup (or on your small team) and you have three code modules. You are writing the web front end (file set A), your partner is writing the administrative tools and reporting (file set B), and you both partner on the data access layer (file set C).
-The conflict of course arises on the file set C that you both need to work on.  A and B are mostly independent of each other, but changes to any part of C can have an impact on both your modules.</p>
+<p>In order to understand why continuous integration is important, it is necessary to further discuss the concept of source control and how it is employed in real world settings. Imagine you have been working for some time with your partner in your startup (or on your small team) and you have three code modules. You are writing the web front end (file set A), your partner is writing the administrative tools and reporting (file set B), and you both partner on the data access layer (file set C). The conflict of course arises on the file set C that you both need to work on.  A and B are mostly independent of each other, but changes to any part of C can have an impact on both your modules.</p>
 </div>
 <div class="paragraph">
 <p>If changes are frequently needed to C, and yet you cannot split it into logically separate modules, you have a problem; you cannot both work on the same file at the same time. You also are concerned that the other person does not introduce changes into C that “break” the code in your module A.</p>
@@ -5810,10 +5806,7 @@ The conflict of course arises on the file set C that you both need to work on.  
 </div>
 </div>
 <div class="paragraph">
-<p>These problems have driven the evolution of software configuration management for decades. In previous methods, to develop a new release, the code would be copied into a very long-lived branch. Ongoing “maintenance” fixes of the existing code base would also continue, and the two code bases would inevitably diverge. Switching over to the “new” code base might mean that once-fixed bugs (bugs that had been addressed by maintenance activities) would show up again, and of course this would not be acceptable.</p>
-</div>
-<div class="paragraph">
-<p>So, when the newer development was complete, it would need to be merged back into the older line of code, and this was rarely if ever easy. In a worst case scenario, the new development might have to be redone.</p>
+<p>These problems have driven the evolution of software configuration management for decades. In previous methods, to develop a new release, the code would be copied into a very long-lived branch. Ongoing “maintenance” fixes of the existing code base would also continue, and the two code bases would inevitably diverge. Switching over to the “new” code base might mean that once-fixed bugs (bugs that had been addressed by maintenance activities) would show up again, and of course this would not be acceptable. So, when the newer development was complete, it would need to be merged back into the older line of code, and this was rarely if ever easy (it was and is called "merge hell"). In a worst case scenario, the new development might have to be redone.</p>
 </div>
 <div class="paragraph">
 <p>Enter continuous integration. The key practices include:</p>
