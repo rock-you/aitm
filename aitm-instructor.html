@@ -567,7 +567,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_refactoring">Refactoring</a></li>
 </ul>
 </li>
-<li><a href="#_continuous_integration">Continuous integration</a></li>
+<li><a href="#_continuous_integration">Continuous integration</a>
+<ul class="sectlevel4">
+<li><a href="#_version_control_again_branching_and_merging">Version control, again: branching and merging</a></li>
+<li><a href="#_build_choreography">Build choreography</a></li>
+</ul>
+</li>
 <li><a href="#_continuous_deployment">Continuous deployment</a></li>
 <li><a href="#_application_development_topics">Application development topics</a>
 <ul class="sectlevel4">
@@ -5247,6 +5252,9 @@ Development tools such as text editors and integrated development environments (
 <div class="paragraph">
 <p>The assumption in this chapter is that you are going to start IMMEDIATELY with a continuous delivery pipeline. <strong>You want to set this up before developing a single line of code.</strong> This is not something to "get around to later." It’s not that difficult (see the online resources for further discussion and pointers to relevant open source projects). What is meant by a continuous delivery pipeline? Here is a simplified, starting overview, based on the <a href="https://github.com/dm-academy/Calavera">Calavera project</a> developed for the IT Delivery course at the University of St. Thomas:</p>
 </div>
+<div class="paragraph">
+<p><a id="pipeline"></a></p>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="images/1.03-pipeline.png" alt="1.03 pipeline">
@@ -5545,6 +5553,8 @@ Refactoring is a controlled technique for improving the design of an existing co
 </div>
 <div class="sect3">
 <h4 id="_continuous_integration">Continuous integration</h4>
+<div class="sect4">
+<h5 id="_version_control_again_branching_and_merging">Version control, again: branching and merging</h5>
 <div class="paragraph">
 <p>As systems engineering approaches transform to <a href="#cloud">Cloud</a> and <a href="#infracode">Infrastructure as Code</a>, a large and increasing percentage of IT work takes the form of altering text files and tracking their <a href="#version-control">versions</a>. We have seen this in the previous chapter, with artifacts such as <a href="#infra-code-example">scripts</a> being created to drive the provisioning and configuring of computing resources. Approaches which encourage ongoing development and evolution are increasingly recognized as less risky, since systems do not respond well to big "batches" of change. An important concept is that of "continuous integration,” popularized by Paul Duvall in his book of the same name <a href="#Duvall2007">[Duvall2007]</a>.</p>
 </div>
@@ -5619,6 +5629,13 @@ Refactoring is a controlled technique for improving the design of an existing co
 </div>
 <div class="paragraph">
 <p>Because the intent leads to the artifact, and the artifact leads to the commit, it makes sense to associate the requirement with a branch in the version control system. This is not required, but makes it easier to trace the requirement to the actual work by which it was fulfilled. This will be discussed further in Section II and its associated labs. This is a continuously evolving problem area, with practices changing rapidly.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_build_choreography">Build choreography</h5>
+<div class="paragraph">
+<p>Go back to the <a href="#pipeline">pipeline picture</a>.</p>
+</div>
 </div>
 </div>
 <div class="sect3">
