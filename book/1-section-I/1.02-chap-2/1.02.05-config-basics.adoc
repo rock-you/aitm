@@ -134,6 +134,8 @@ The concept of a version or source control https://en.wikipedia.org/wiki/Commit_
 
 Also, the concept of an atomic “commit” is essential to the concept of a “branch” - the creation of an experimental version, completely separate from the main version, so that various alterations can be tried without compromising the overall system stability. Starting at the point of a “commit,” the branched version also becomes evidence of human activity around a potential future for the system. In some environments, the branch is automatically created with the assignment of a requirement or story - again, more on this to come in chapter 3. In other environments, the very concept of branching is avoided.
 
+anchor:package-mgmt[]
+
 ===== Package management
 
 [quote, Puppet Labs 2015 State of DevOps report]
@@ -147,7 +149,7 @@ Package repositories are also used to enable collaboration between teams working
 
 The boundary between source and package is not hard and fast, however. One does see binary files in source repositories, such as images used in an application. Also, when interpreted languages (such as Javascript) are "packaged," they still appear in the package as text files, perhaps compressed or otherwise incorporated into some larger containing structure.
 
-anchor:policy-config[]
+anchor:deployment-mgmt[]
 
 ===== Deployment management
 
@@ -159,6 +161,8 @@ image::images/1.02-configMgmt.png[]
 ====== Deployment basics
 
 Resources in version control in general are not yet active in any value-adding sense. In order for them to deliver experiences, they must be combined with computing resources: servers (physical or virtual), storage, nettworking, and the rest, whether owned by the organization or leased as xref:Cloud[Cloud services]. The process of doing so is called deployment. Version control manages the state of the artifacts; deployment management (as another configuration management practice) manages the *combination of those artifacts with the needed resources for value delivery*.
+
+anchor:policy-config[]
 
 ====== Imperative and Declarative
 

@@ -2,13 +2,20 @@
 
 ===== Version control, again: branching and merging
 
+[quote, Martin Fowler, Foreword to Continuous Integration]
+Oddly enough, it seems that when you run into a painful activity, a good tip is to do it more often.
+
 As systems engineering approaches transform to xref:cloud[Cloud] and xref:infracode[Infrastructure as Code], a large and increasing percentage of IT work takes the form of altering text files and tracking their xref:version-control[versions]. We have seen this in the previous chapter, with artifacts such as xref:infra-code-example[scripts] being created to drive the provisioning and configuring of computing resources. Approaches which encourage ongoing development and evolution are increasingly recognized as less risky, since systems do not respond well to big "batches" of change. An important concept is that of "continuous integration,” popularized by Paul Duvall in his book of the same name <<Duvall2007>>.
 
-In order to understand why continuous integration is important, it is necessary to further discuss the concept of source control and how it is employed in real world settings. Imagine you have been working for some time with your partner in your startup (or on your small team) and you have three code modules. You are writing the web front end (file set A), your partner is writing the administrative tools and reporting (file set B), and you both partner on the data access layer (file set C). The conflict of course arises on the file set C that you both need to work on.  A and B are mostly independent of each other, but changes to any part of C can have an impact on both your modules.
+.Two developers, one file
+image::images/1.03-dual-access.png[2 devs 3 files,400, float="right"]
+In order to understand why continuous integration is important, it is necessary to further discuss the concept of source control and how it is employed in real world settings. Imagine Mary have been working for some time with her partner Aparna in their startup (or on a small team) and they have three code modules. Mary is writing the web front end (file A), Aparna is writing the administrative tools and reporting (file C), and they both partner on the data access layer (file C). The conflict of course arises on the file C that they both need to work on.  A and B are mostly independent of each other, but changes to any part of C can have an impact on both their modules.
 
 If changes are frequently needed to C, and yet you cannot split it into logically separate modules, you have a problem; you cannot both work on the same file at the same time. You also are concerned that the other person does not introduce changes into C that “break” the code in your module A.
 
-In smaller environments, or under older practices, perhaps there is no conflict, or perhaps you can agree to take turns. But even if you are taking turns, you still need to test your code in A to make sure it’s not been broken by changes your partner made in C.
+NOTE: Breaking a system apart by "layer" does not scale well. Microservices approaches encourage keeping data access and business logic together in functionally cohesive units. More on this in future chapters. But in this example, both developers are on the same small team. It is not possible (or worth it) to always divide work to avoid two people needing to change the same thing.
+
+In smaller environments, or under older practices, perhaps there is no conflict, or perhaps they can agree to take turns. But even if you are taking turns, you still need to test your code in A to make sure it’s not been broken by changes your partner made in C.
 
 And what if you really both need to work on C at the same time?
 
@@ -18,17 +25,17 @@ You might each choose to work on C on your own local copy. That way, you can mov
 
 These problems have driven the evolution of software configuration management for decades. In previous methods, to develop a new release, the code would be copied into a very long-lived branch. Ongoing “maintenance” fixes of the existing code base would also continue, and the two code bases would inevitably diverge. Switching over to the “new” code base might mean that once-fixed bugs (bugs that had been addressed by maintenance activities) would show up again, and of course this would not be acceptable. So, when the newer development was complete, it would need to be merged back into the older line of code, and this was rarely if ever easy (it was and is called "merge hell"). In a worst case scenario, the new development might have to be redone.
 
-Enter continuous integration. The key practices include:
+Enter continuous integration. As presented in <<Duvall2007>> the key practices (you will notice similarities to the xref:pipeline[pipeline discussion]) include:
 
-* Source control (hopefully we have been harping on this enough that you are taking it seriously by now). Distributed version control systems such as git are especially popular, although older centralized products are http://bitquabit.com/post/unorthodocs-abandon-your-dvcs-and-return-to-sanity/[starting to adopt some of their functionality]
-* Test-driven development
-* Automated build activities
-* Frequent integration of short-lived development branches with the main code repository (“mainline” or “trunk”)
-* A defined package repository as a definitive location for the build output.
+* Developers run private builds including their automated tests before committing to source control
+* Developers check in to source control at least daily (hopefully we have been harping on this enough that you are taking it seriously by now).
+** Distributed version control systems such as git are especially popular, although older centralized products are http://bitquabit.com/post/unorthodocs-abandon-your-dvcs-and-return-to-sanity/[starting to adopt some of their functionality]
+** Integration builds happen several times a day or more on a separate, dedicated machine
+* 100% of tests must pass for each build. Fixing failed builds is the highest priority.
+* A package or similar executable artifact is produced for functional testing
+* A defined package repository exists as a definitive location for the build output.
 
-Current practices are well developed and represent a highly evolved understanding gained through the painful trial and error of many development teams over many years.
-
-Rather than locking C so that only one person can work on it at a time, it’s been found that the best approach is to allow developers to actually make multiple copies of such a file or file set and work on them simultaneously. Wait, you say. How can that work?
+These practices are well developed and represent a highly evolved understanding gained through the painful trial and error of many development teams over many years. Rather than locking C so that only one person can work on it at a time, it’s been found that the best approach is to allow developers to actually make multiple copies of such a file or file set and work on them simultaneously. Wait, you say. How can that work?
 
 This is the principle of continuous integration at work. If the developers are continually pulling each other’s work into their own working copies, and continually testing that nothing has broken, then distributed development can take place. So, if you are a developer, the day’s work might be as follows:
 
@@ -44,6 +51,20 @@ This is the principle of continuous integration at work. If the developers are c
 
 Because the intent leads to the artifact, and the artifact leads to the commit, it makes sense to associate the requirement with a branch in the version control system. This is not required, but makes it easier to trace the requirement to the actual work by which it was fulfilled. This will be discussed further in Section II and its associated labs. This is a continuously evolving problem area, with practices changing rapidly.
 
+Controlling simultaneous changes to a common file is only one benefit of continuous integration. When software is developed by teams, even if each team has its own artifacts, the system often fails to "come together" for higher-order testing to confirm that all the parts are working correctly together. Discrepancies are often found in the interfaces between components; when component A calls component B, it may receive output it did not expect and processing halts. Continuous integration ensures that such issues are caught early.
+
 ===== Build choreography
 
-Go back to the xref:pipeline[pipeline picture]. 
+Go back to the xref:pipeline[pipeline picture] and consider step 4. While we discussed xref:version-control[version control], xref:package-mgmt[package management], and xref:deployment-mgmt[deployment management] in Chapter 2, this is our first encounter with build choreography.
+
+DevOps and continuous delivery call for automating everything that can be automated. This goal led to the creation of build choreography managers such as Hudson, Jenkins, Travis CI, and Bamboo. Build managers may control any or all of the following steps:
+
+* Detecting changes in version control repositories and building software in response
+* Alternately, building software on a fixed (e.g. nightly) schedule
+* Compiling source code and linking it to libraries
+* Executing automated tests
+* Combining compiled artifacts with other resources into installable packages
+* Registering new and updated packages in the package management repository, for deployment into downstream environments.
+* In some cases, driving deployment into downstream environments, including production. (This can be done directly by the build manager, or through the build manager sending a message to a xref:deployment-mgmt[deployment management] tool.)
+
+Build managers play a critical, central role in the modern, automated pipeline and will likely be a center of attention for the new digital professional in their career.
