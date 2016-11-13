@@ -10,32 +10,29 @@ What is waterfall development? It is a controversial question. The original theo
 
 Waterfall development as a term has become associated with a number of practices. The original illustration was similar to this:
 
-image::images/1.03-waterfall.png[]
+.Waterfall lifecycle
+image::images/1.03-waterfall.png[waterfall progression, 500,,]
 
-First, requirements need to be extensively captured and analyzed before the work of development should commence.
-
-So, we would develop enormous spreadsheets of requirements, spending weeks on making sure that they represented what “the customer” wanted. The objective was to get the customer’s signature. Any further alterations could be profitably billed as “change requests".
+First, requirements need to be extensively captured and analyzed before the work of development should commence. So, the project team would develop enormous spreadsheets of requirements, spending weeks on making sure that they represented what “the customer” wanted. The objective was to get the customer’s signature. Any further alterations could be profitably billed as “change requests."
 
 The analysis phase was used to develop a more structured understanding of the requirements, e.g. conceptual and logical data models, process models, business rules, and so forth.
 
-In the design phase, the actual technical platforms would be chosen; major subsystems determined with their connection points, initial volumetrics translated into system sizing, and so forth. (Perhaps hardware would not be ordered until this point, leading to issues with developers now being “ready”, but hardware not being available for weeks or months yet).
+In the design phase, the actual technical platforms would be chosen; major subsystems determined with their connection points, initial capacity analysis (_volumetrics_) translated into system sizing, and so forth. (Perhaps hardware would not be ordered until this point, leading to issues with developers now being “ready”, but hardware not being available for weeks or months yet).
 
 Only AFTER extensive requirements, analysis, and design would coding take place (implementation). Furthermore, there were separation of duties between developers and testers. Developers would write code and testers would try to break it, filing bug reports that the developers would then need to respond to.
 
 Another model sometimes encountered at this time was the V-model. This was intended to better represent the various levels of abstraction operating in the systems delivery activity. Requirements operate at various levels, from high level business intent through detailed specifications. It is all too possible that a system is “successfully” implemented at lower levels of specification, but fails to satisfy the original higher level intent.
 
+.V-model footnote:[_Image credit https://en.wikipedia.org/wiki/V-Model_(software_development), downloaded 2016-11-12, public domain_]
 image::images/1.03-vmodel.png[]
-_Public domain image of v-model from_ https://en.wikipedia.org/wiki/V-Model_(software_development)[_Wikipedia_]
 
-The failures of these approaches at scale are by now well known. Large distributed teams would wrestle with thousands of requirements. The customer would “sign off” on multiple large binders, with widely varying degrees of understanding of what they were agreeing to. Documentation became an end in itself, and yet did not meet its objectives of ensuring continuity if staff turned over.
+The failures of these approaches at scale are by now well known. Large distributed teams would wrestle with thousands of requirements. The customer would “sign off” on multiple large binders, with widely varying degrees of understanding of what they were agreeing to. Documentation became an end in itself, and yet did not meet its objectives of ensuring continuity if staff turned over. The development team would design and build extensive product implementations without checking the results with customers. They would also defer testing that various component parts would effectively interoperate until the very end of the project, when the time came to assemble the whole system.
 
-The development team would design and build out extensive product implementations without checking the results with customers. They would also defer testing that various component parts would effectively interoperate until the very end of the project, when the time came to assemble the whole system.
-
-Failure after failure of this approach is apparent in the historical record (<<Glass1998>>). This led to the perception of a “software crisis.”  (It should also be noted that many large systems were effectively constructed and operated during the "waterfall years", and that there are reasonable criticisms of the concept of a “software crisis” <<Bossavit2015>>).
+Failure after failure of this approach is apparent in the historical record (<<Glass1998>>). Recognition of such failures, dating from the 1960s, led to the perception of a “software crisis.”  (It should also be noted that many large systems were effectively constructed and operated during the "waterfall years", and that there are reasonable criticisms of the concept of a “software crisis” <<Bossavit2015>>).
 
 Successful development efforts existed back to the earliest days of computing (otherwise, we probably wouldn’t have computers, or at least not so many). Many of these successful efforts used prototypes and other means of building understanding and proving out approaches. But highly publicized failures continued, and a substantial movement against “waterfall” development started to take shape.
 
-By the 1990s, a number of thought leaders in software development had noticed some common themes with what seemed to work and what didn’t. Perhaps the first and best known was Kent Beck, who developed a methodology known as “eXtreme Programming,” or XP <<Beck2000>>. XP pioneered the concepts of iterative, fast-cycle development with ongoing stakeholder feedback, coupled with test-driven development, ongoing refactoring, pair programming, and other practices. (More on the specifics of these in the next section.)
+By the 1990s, a number of thought leaders in software development had noticed some common themes with what seemed to work and what didn’t. Kent Beck developed a methodology known as “eXtreme Programming,” or XP <<Beck2000>>. XP pioneered the concepts of iterative, fast-cycle development with ongoing stakeholder feedback, coupled with test-driven development, ongoing refactoring, pair programming, and other practices. (More on the specifics of these in the next section.)
 
 Various authors assembled in 2001 and developed the Agile Manifesto <<Alliance2001>>, which further emphasized an emergent set of values and practices:
 
@@ -104,16 +101,12 @@ its behavior accordingly.
 
 See http://agilemanifesto.org/.
 
-The Agile models for developing software aligned with the rise of Cloud and Web-scale IT. As new customer-facing sites like Flickr, Amazon, Netflix, Etsy, and Facebook scaled to massive proportions, it become increasingly clear that waterfall approaches were incompatible with their needs. The sheer size and complexity of these systems required much more incremental and iterative approaches to delivery.
+The Agile models for developing software aligned with the rise of Cloud and Web-scale IT. As new customer-facing sites like Flickr, Amazon, Netflix, Etsy, and Facebook scaled to massive proportions, it become increasingly clear that waterfall approaches were incompatible with their needs. Because these systems were directly user-facing, delivering monetized value in fast-moving competitive marketplaces, they required a degree of responsiveness previously not seen in “back-office” IT or military-aerospace domains (the major forms that large scale system development had taken to date). We will talk more of product-centricity and the overall DevOps movement in the next section.
 
-Furthermore, because these systems were directly user-facing, delivering monetized value, they required a degree of responsiveness previously not seen in “back-office” IT or military-aerospace domains (the major forms that large scale system development had taken to date).
+This new world did not think in terms of large requirements specifications. Capturing a requirement, analyzing and designing to it, implementing it, testing that implementation, and deploying the result to the end user for feedback became something that needed to happen at speed, with high repeatability. Requirements "backlogs" were (and are) never "done," and increasingly were the subject of ongoing re-prioritization, without high-overhead project "change" barriers.
 
-Web-based systems integrate the software development lifecycle tightly with operational concerns. The development of new functionality is moved rapidly into a user-facing state, as opposed to previous models where software development was more distant in time and personnel from operations staff. We will talk more of product-centricity and the overall DevOps movement in the next section.
+Web-based systems integrate the software development lifecycle tightly with operational concerns. The development of new functionality is moved rapidly into a user-facing state, as opposed to previous models where software development was more distant in time and personnel from operations staff. The sheer size and complexity of these systems required much more incremental and iterative approaches to delivery, as the system could never be taken offline for the "next major release" to be installed.
 
 Software was moving more directly into an operational state, and developers and operators were part of the same economic concern (contract software development never gained favor in the Silicon Valley web-scale community). So, it was possible to start breaking down the walls between “development” and “operations,” and that is just what happened.
 
-This new world also did not function at all in terms of large requirements specifications. Capturing a requirement, analyzing and designing to it, implementing it, testing that implementation, and deploying the result to the end user for feedback became something that needed to happen at speed, with high repeatability. Requirements "backlogs" were (and are) never "done," and increasingly were the subject of ongoing re-prioritization, without high-overhead project "change" barriers.
-
-These large scale web properties also started to “test in production” (more on this in Section 2) in the sense that they would deploy new functionality to only some of their users. Because large scale systems are complex and unpredictable, it is understood that new features are never fully understood until they are deployed at scale to the real end user base.
-
-Rather than trying to increase testing to better understand things before deployment, these new firms accepted a seemingly higher level of risk in exposing new functionality sooner. (Part of their belief is that it actually is not higher risk, because the impacts are never fully understood in any event.) This has paid off in many cases.
+Because large scale systems are complex and unpredictable, it is understood that new features are never fully understood until they are deployed at scale to the real end user base. Therefore, large scale web properties also started to “test in production” (more on this in Chapter 6) in the sense that they would deploy new functionality to only some of their users. Rather than trying to increase testing to better understand things before deployment, these new firms accepted a seemingly higher level of risk in exposing new functionality sooner. (Part of their belief is that it actually is lower risk, because the impacts are never fully understood in any event.) 
