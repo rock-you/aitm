@@ -565,15 +565,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_describing_system_intent">Describing system intent</a></li>
 <li><a href="#_test_driven_development_and_refactoring">Test-driven development and refactoring</a>
 <ul class="sectlevel4">
+<li><a href="#_test_driven_development">Test-driven development</a></li>
 <li><a href="#_refactoring">Refactoring</a></li>
 </ul>
 </li>
 <li><a href="#_continuous_integration">Continuous integration</a></li>
-<li><a href="#_continuous_deployment">Continuous deployment</a>
-<ul class="sectlevel4">
-<li><a href="#_future_trends_in_ad">Future trends in AD</a></li>
-</ul>
-</li>
+<li><a href="#_continuous_deployment">Continuous deployment</a></li>
 <li><a href="#_application_development_topics">Application development topics</a>
 <ul class="sectlevel4">
 <li><a href="#_application_architecture">Application architecture</a></li>
@@ -4993,9 +4990,9 @@ to be written</pre>
 <h3 id="_chapter_3_application_delivery">Chapter 3: Application Delivery</h3>
 <div class="sidebarblock">
 <div class="content">
+<div class="title">Instructor&#8217;s note</div>
 <div class="paragraph">
-<p><em>Instructor&#8217;s note</em>
-I have opted to defer the "theory" of Agile to Chapters 4 and 5. So, this chapter presents Agile and related concepts like iterative development without examining the underlying principles.</p>
+<p>I have opted to defer the "theory" of Agile to Chapters 4 and 5. So, this chapter presents Agile and related concepts like iterative development without examining the underlying principles.</p>
 </div>
 <div class="paragraph">
 <p>I do this because I have discovered that theory sometimes works better in retrospect. Many students increasingly come in with some exposure to Cloud and Agile methods at least, and Chapters 2 and 3 will seem comfortable and familiar. In Chapters 4 and on we challenge them with <strong>why</strong> Agile works.</p>
@@ -5018,35 +5015,76 @@ I have opted to defer the "theory" of Agile to Chapters 4 and 5. So, this chapte
 <div class="ulist">
 <ul>
 <li>
-<p>What is an "application"</p>
+<p>Introduction</p>
 </li>
 <li>
-<p>How applications have been delivered over time</p>
+<p>Learning objectives</p>
 </li>
 <li>
-<p>Application lifecycle</p>
-</li>
-<li>
-<p>Introduction to Agile</p>
-</li>
-<li>
-<p>Introduction to DevOps</p>
+<p>Basics of applications and their development</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Application toolchain</p>
+<p>Defining "Application"</p>
+</li>
+<li>
+<p>History of applications and application software</p>
+</li>
+<li>
+<p>Applications and infrastructure: the old way</p>
+</li>
+<li>
+<p>Applications and infrastructure today</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
+<p>From waterfall to Agile</p>
+</li>
+<li>
+<p>The DevOps challenge</p>
+</li>
+<li>
+<p>Describing system intent</p>
+</li>
+<li>
+<p>Test-driven development and refactoring</p>
+<div class="ulist">
+<ul>
+<li>
 <p>Test-driven development</p>
+</li>
+<li>
+<p>Refactoring</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p>Continuous integration</p>
 </li>
 <li>
 <p>Continuous deployment</p>
+</li>
+<li>
+<p>Application development topics</p>
+</li>
+<li>
+<p>Conclusion</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Discussion questions</p>
+</li>
+<li>
+<p>Research &amp; practice</p>
+</li>
+<li>
+<p>Further reading</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -5088,16 +5126,13 @@ I have opted to defer the "theory" of Agile to Chapters 4 and 5. So, this chapte
 <div class="title">Figure 27. The ENIAC&#8201;&#8212;&#8201;"programmed" by reconfiguring its cables, not by a programming language. <sup class="footnote">[<a id="_footnoteref_13" class="footnote" href="#_footnote_13" title="View footnote.">13</a>]</sup></div>
 </div>
 <div class="paragraph">
-<p>Without applications, computers would be merely a curiousity. Computers were first "applied" to military needs for codebreaking and artillery calculations. After World War II, ex-military officers like <a href="https://en.wikipedia.org/wiki/Edmund_Berkeley">Edmund Berkeley</a> at Prudential realized their potential if "applied" to problems like insurance record keeping. <a href="#Akera2007">[Akera2007]</a></p>
+<p>Without applications, computers would be merely a curiousity. Computers were first "applied" to military needs for codebreaking and artillery calculations. After World War II, ex-military officers like <a href="https://en.wikipedia.org/wiki/Edmund_Berkeley">Edmund Berkeley</a> at Prudential realized their potential if "applied" to problems like insurance record keeping. <a href="#Akera2007">[Akera2007]</a> At first, such systems required actual manual configuration (as in the ENIAC photo in this section), or painstaking programming in complex, tedious, and unforgiving <a href="https://en.wikipedia.org/wiki/Low-level_programming_language">low-level programming languages</a>. As the value of computers became obvious, investment was made in making programming easier through more powerful languages.</p>
 </div>
 <div class="paragraph">
-<p>At first, such systems required actual manual configuration (as in the ENIAC photo in this section), or painstaking programming in complex, tedious, and unforgiving low-level <a href="https://en.wikipedia.org/wiki/Programming_language">programming languages</a>. As the value of computers became obvious, investment was made in making programming easier through more powerful languages.</p>
+<p>The  <a href="https://en.wikipedia.org/wiki/History_of_software">history of software</a> is well documented. Low level languages (<a href="https://en.wikipedia.org/wiki/Binary_code">binary</a> and <a href="https://en.wikipedia.org/wiki/Assembly_language">assembler</a>) were increasingly replaced by higher level languages (<a href="https://en.wikipedia.org/wiki/Fortran">FORTAN</a>, <a href="https://en.wikipedia.org/wiki/COBOL">COBOL</a>, <a href="https://en.wikipedia.org/wiki/C_(programming_language)">C</a>). Proprietary machine/language combinations were replaced by open standards and <a href="https://en.wikipedia.org/wiki/Compiler">compilers</a> that could take one kind of source code and build it for different hardware platforms. Many languages followed, such as <a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Java</a>, <a href="https://en.wikipedia.org/wiki/Visual_Basic">Visual Basic</a>, and <a href="https://www.javascript.com/">Javascript</a>. Extensive middleware was developed to enable ease of programming, communication across networks, and standardize common functions.</p>
 </div>
 <div class="paragraph">
-<p>The  <a href="https://en.wikipedia.org/wiki/History_of_software">history of software</a> is well documented. Low level languages (<a href="https://en.wikipedia.org/wiki/Binary_code">binary</a> and <a href="https://en.wikipedia.org/wiki/Binary_code">assembler</a>) were increasingly replaced by higher level languages (<a href="https://en.wikipedia.org/wiki/Fortran">FORTAN</a>, <a href="https://en.wikipedia.org/wiki/COBOL">COBOL</a>, <a href="https://en.wikipedia.org/wiki/C_(programming_language)">C</a>). Proprietary machine/language combinations were replaced by open standards and <a href="https://en.wikipedia.org/wiki/Compiler">compilers</a> that could take one kind of source code and build it for different hardware platforms.</p>
-</div>
-<div class="paragraph">
-<p>Today, we have extensive frameworks like Struts, Spring, and Ruby on Rails, along with interpreted languages that take much of the friction out of building and testing code. But even today, the objective remains to create a <a href="https://en.wikipedia.org/wiki/Executable">binary executable</a> file or files that computer hardware can "execute," that is, turn into a computing-based value experience, mediated through devices such as workstations, laptops, smart phones, and their constituent components.</p>
+<p>Today, we have extensive frameworks like <a href="https://struts.apache.org/">Struts</a>, <a href="https://projects.spring.io/spring-framework/">Spring</a>, and <a href="http://rubyonrails.org/">Ruby on Rails</a>, along with interpreted languages that take much of the friction out of building and testing code. But even today, the objective remains to create a <a href="https://en.wikipedia.org/wiki/Executable">binary executable</a> file or files that computer hardware can "execute," that is, turn into a computing-based value experience, mediated through devices such as workstations, laptops, smart phones, and their constituent components.</p>
 </div>
 </div>
 <div class="sect4">
@@ -5106,10 +5141,7 @@ I have opted to defer the "theory" of Agile to Chapters 4 and 5. So, this chapte
 <p>In the first decades of computing, any significant application of computing power to a new problem typically required its own <a href="#what-is-IT-infrastructure">infrastructure</a>, often designed specifically for the problem. While awareness existed that computers in theory could be "general purpose," in practice this was not so easy. Military/aerospace needs differed from corporate information systems, which differed from scientific and technical uses. And major new applications required new compute capacity.</p>
 </div>
 <div class="paragraph">
-<p>Take for example when a corporation in 1998 decided to replace its mainframe Human Resources system due to <a href="https://en.wikipedia.org/wiki/Year_2000_problem">Y2K concerns</a>. Such a system might need to support several thousand users around the world. At that time, PeopleSoft was a frequent choice of software. Implementing such a system was often led by consulting firms such as Deloitte or Andersen Consulting (where the author worked).</p>
-</div>
-<div class="paragraph">
-<p>A typical PeopleSoft package implementation would include:</p>
+<p>Take for example when a corporation in 1998 decided to replace its mainframe Human Resources system due to <a href="https://en.wikipedia.org/wiki/Year_2000_problem">Y2K concerns</a>. Such a system might need to support several thousand users around the world. At that time, PeopleSoft was a frequent choice of software. Implementing such a system was often led by consulting firms such as Deloitte or Andersen Consulting (where the author worked). A typical PeopleSoft package implementation would include:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -5146,10 +5178,7 @@ I have opted to defer the "theory" of Agile to Chapters 4 and 5. So, this chapte
 <p>The software and hardware needed to be specified in keeping with requirements, and acquiring it took lengthy negotiations and logistics and installation processes. Such a project from inception to production might take 9 months (on the short side) to 18 or more months.</p>
 </div>
 <div class="paragraph">
-<p>Hardware was dedicated and rarely re-used. The HP servers compatible with PeopleSoft might have few other applications, if they became surplus. In fact, PeopleSoft would "certify" the infrastructure for compatibility. Upgrading the software might require also upgrading the hardware.</p>
-</div>
-<div class="paragraph">
-<p>In essence, this was more akin to <a href="https://en.wikipedia.org/wiki/Systems_engineering">systems engineering</a>, as designing and optimizing the hardware component was a significant portion of the work.</p>
+<p>Hardware was dedicated and rarely re-used. The HP servers compatible with PeopleSoft might have few other applications, if they became surplus. In fact, PeopleSoft would "certify" the infrastructure for compatibility. Upgrading the software might require also upgrading the hardware. In essence, this sort of effort had a strong component of <a href="https://en.wikipedia.org/wiki/Systems_engineering">systems engineering</a>, as designing and optimizing the hardware component was a significant portion of the work.</p>
 </div>
 </div>
 <div class="sect4">
@@ -5170,19 +5199,14 @@ To "provision" in an IT sense means to make the needed resources or services ava
 </table>
 </div>
 <div class="paragraph">
-<p>Instead, a variety of mechanisms (as covered in the previous chapter&#8217;s <a href="http://dm-academy.github.io/aitm/#_from_physical_compute_to_cloud">discussion of Cloud systems</a>) enable the sharing of compute capacity, the raw material of application development. The fungibility and agility of these mechanisms increase the velocity of creation and evolution of application software.</p>
+<p>Instead, a variety of mechanisms (as covered in the previous chapter&#8217;s <a href="http://dm-academy.github.io/aitm/#_from_physical_compute_to_cloud">discussion of Cloud systems</a>) enable the sharing of compute capacity, the raw material of application development. The fungibility and agility of these mechanisms increase the velocity of creation and evolution of application software. For small and medium sized applications, the overwhelming trend is to <a href="#virtualization">virtualize</a>
+ and run on  commodity hardware and operating systems. Even 15 years ago, non-trivial web sites with database integration would be hosted by internal <a href="https://en.wikipedia.org/wiki/Platform_as_a_service">PaaS</a> clusters at major enterprises (for example, Microsoft ASP, COM+, and SQL Server clusters could be managed as multi-tenant&#8201;&#8212;&#8201;the author wrote systems on such a platform).</p>
 </div>
 <div class="paragraph">
-<p>For small and medium sized applications, the overwhelming trend is to virtualize and run on  commodity hardware and operating systems. Even 15 years ago, non-trivial web sites with database integration would be hosted by internal <a href="https://en.wikipedia.org/wiki/Platform_as_a_service">PaaS</a> clusters at major enterprises (for example, Microsoft ASP, COM+, and SQL Server clusters could be managed as multi-tenant).</p>
+<p>The general purpose capabilities of virtualized public and private Cloud today are robust. Assuming the organization has the financial capability to purchase computing capacity in anticipation of use, it can be instantly available when the need surfaces. Hardware engineering is more and more independent of the application lifecycle; the trend is towards providing compute as a service, carefully specified in terms of performance, but NOT particular hardware. Hardware physically dedicated to a single application is rarer, and even the largest engineered systems are more standardized so that they may one day benefit from Cloud approaches.  Application architectures have also become much more powerful. Interfaces (interaction points for applications to exchange information with each other, generally in an automated way) are increasingly standardized. Applications are designed to scale dynamically with workload and are more stable and reliable than in years past.</p>
 </div>
 <div class="paragraph">
-<p>The general purpose capabilities of virtualized public and private Cloud today are robust. Assuming the organization has the financial capability to purchase computing capacity in anticipation of use, it can be instantly available when the need surfaces.</p>
-</div>
-<div class="paragraph">
-<p>Interfaces (interaction points for applications to exchange information with each other, generally in an automated way) are increasingly standardized. Hardware engineering is more and more independent of the application lifecycle; the trend is towards providing compute as a service, carefully specified in terms of performance, but NOT particular hardware.</p>
-</div>
-<div class="paragraph">
-<p>Hardware physically dedicated to a single application is rarer, and even the largest engineered systems are more standardized so that they may one day benefit from Cloud approaches.</p>
+<p>In the next chapter, we will discuss how the practices of application development have evolved to their current state.</p>
 </div>
 <div class="paragraph">
 <p><a id="1.03.02-Agile-history"></a></p>
@@ -5193,9 +5217,6 @@ To "provision" in an IT sense means to make the needed resources or services ava
 <h4 id="_from_waterfall_to_agile">From waterfall to Agile</h4>
 <div class="paragraph">
 <p>This is not a book on software development per se, nor on Agile development. There are hundreds of books available on those topics. But, no assumption is made that the reader has any familiarity with these topics, so some basic history is called for. (If you have taken an introductory course in software engineering, this will likely be review.)</p>
-</div>
-<div class="paragraph">
-<p>As we will cover in more detail in the next chapter, the product development process starts with a concept of requirements (whether we call it story, use case, or scenario is not important). Requirements are numerous and evolving, and we’re going to take some time looking at the process of converting them into IT-based functionality. There is history here back to the earliest days of computing.</p>
 </div>
 <div class="paragraph">
 <p>When the author first joined Andersen Consulting (now Accenture) in 1998, we were schooled in something called the Business Integration Method, or BIM. The BIM was a classic expression of what is called “waterfall development".</p>
@@ -5511,10 +5532,10 @@ Development tools such as text editors and integrated development environments (
 <div class="sect3">
 <h4 id="_describing_system_intent">Describing system intent</h4>
 <div class="paragraph">
-<p>So, you’ve got an idea for a product value experience, and you have tools for creating it and infrastructure for running it. It’s time to start building shippable product.</p>
+<p>So, you’ve got an idea for a product value experience, and you have tools for creating it and infrastructure for running it. It’s time to start building shippable product. As we will cover in more detail in the next chapter, the product development process starts with a concept of requirements (whether we call it story, use case, or scenario is not important). Requirements are numerous and evolving, and we’re going to take some time looking at the process of converting them into IT-based functionality. There is history here back to the earliest days of computing.</p>
 </div>
 <div class="paragraph">
-<p>In order to do this, you need to express what you need the product to do. The conceptual tool used to do this is called Requirement.
+<p>In order to design and build a digital product, you need to express what you need the product to do. The conceptual tool used to do this is called Requirement.
 The literal word “Requirement” has fallen out of favor with the rise of Agile <a href="#Patton2014">[Patton2014]</a>, and has a number of synonyms and variations:</p>
 </div>
 <div class="ulist">
@@ -5628,6 +5649,8 @@ In practice such regression testing must indeed approximate this theoretical ide
 <pre>comment on Brooks</pre>
 </div>
 </div>
+<div class="sect4">
+<h5 id="_test_driven_development">Test-driven development</h5>
 <div class="paragraph">
 <p>In test-driven development, the idea essence is to write code that tests itself. This is done through the creation of test harnesses and the tight association of tests with requirements. The logical culmination of test-driven development was expressed by Kent Beck in <em>eXtreme Programming</em>: write the test first <a href="#Beck2000">[Beck2000]</a>. Thus:</p>
 </div>
@@ -5737,6 +5760,7 @@ In practice such regression testing must indeed approximate this theoretical ide
 </div>
 <div class="paragraph">
 <p><a id="refactoring"></a></p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_refactoring">Refactoring</h5>
@@ -5871,26 +5895,6 @@ The conflict of course arises on the file set C that you both need to work on.  
 <div class="paragraph">
 <p>Timing varies by organization. Some strive for true "continuous deployment," in which the new code flows seamlessly from developer commit through build, test, package and deploy. Others put gates in between the developer and check-in to mainline, or source to build, or package to deploy, so that some human governance remains in the toolchain. We will go into more detail on these topics in chapters 6, 9, and 10.</p>
 </div>
-<div class="sect4">
-<h5 id="_future_trends_in_ad">Future trends in AD</h5>
-<div class="ulist">
-<ul>
-<li>
-<p>Microservices</p>
-<div class="literalblock">
-<div class="content">
-<pre>[this section needs to be written]</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>add discussion of patterns/antipatterns and link throughout.</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-</div>
 </div>
 <div class="sect3">
 <h4 id="_application_development_topics">Application development topics</h4>
@@ -5924,6 +5928,25 @@ The conflict of course arises on the file set C that you both need to work on.  
 </div>
 <div class="literalblock">
 <div class="content">
+<pre>===== Future trends in AD</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Microservices</p>
+<div class="literalblock">
+<div class="content">
+<pre>[this section needs to be written]</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>add discussion of patterns/antipatterns and link throughout.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
 <pre>===== SOA, APIs and microservices</pre>
 </div>
 </div>
@@ -5933,8 +5956,7 @@ The conflict of course arises on the file set C that you both need to work on.  
  [Packaged software acquisition - relatively more sequential - but open-loop approaches are always more risky - open loop not defined yet - ]</pre>
 </div>
 </div>
-<div class="ulist">
-<ul>
+</li>
 <li>
 <p>Pairing, swarming, mobbing <a href="http://www.jrothman.com/mpd/project-management/2014/07/how-pairing-swarming-work-why-they-will-improve-your-products/" class="bare">http://www.jrothman.com/mpd/project-management/2014/07/how-pairing-swarming-work-why-they-will-improve-your-products/</a></p>
 </li>
