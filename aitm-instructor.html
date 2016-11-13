@@ -5345,12 +5345,6 @@ The literal word “Requirement” has fallen out of favor with the rise of Agil
 </div>
 </div>
 <div class="paragraph">
-<p>As systems engineering approaches transform to Cloud and infrastructure as code, a large and increasing percentage of IT work takes the form of altering symbolic files and moving them between states. We have seen this in the previous chapter, with artifacts such as scripts being created to drive the provisioning and configuring of computing resources.</p>
-</div>
-<div class="paragraph">
-<p>Because the intent leads to the artifact, and the artifact leads to the commit, it makes sense to associate the requirement with a branch in the version control system. This is not required, but makes it easier to trace the requirement to the actual work by which it was fulfilled. This will be discussed further in Section II and its associated labs.</p>
-</div>
-<div class="paragraph">
 <p>User Story Mapping is a well known approach <a href="#Patton2014">[Patton2014]</a> with origins in the Scrum community. Here is an example from <a href="#Cohn2010">[Cohn2010]</a></p>
 </div>
 <div class="paragraph">
@@ -5368,19 +5362,15 @@ The literal word “Requirement” has fallen out of favor with the rise of Agil
 <div class="paragraph">
 <p>You don&#8217;t need an extensively automated system at this stage to capture requirements, but you need <strong>something</strong>. It could be a spreadsheet, or a shared word processing document, or sticky notes on a whiteboard (we&#8217;ll talk about Kanban in the next section.) The important thing is to start somewhere, with team agreement as to what the approach is, so you can move forward collaboratively.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>INVEST</p>
-</li>
-<li>
-<p>MoSCoW</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>We will discuss approaches for "discovering" user stories and product features in Chapter 4, where Product Management is formalized. For now, as an early startup of one or two people, it is sufficient that you have some basic ability to characterize your system intent&#8201;&#8212;&#8201;more formalized techniques come later.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_test_driven_development_and_refactoring">Test-driven development and refactoring</h4>
+<div class="paragraph">
+<p>Testing software and systems is a critically important part of digital product development. The earliest concepts of <a href="#1.03.02-Agile-history">waterfall development</a> called for it explicitly, and "software tester" as a role and "software quality assurance" as a practice have long histories. Evolutionary approaches to software have a potential major issue with software testing:</p>
+</div>
 <div class="quoteblock">
 <blockquote>
 As a consequence of the introduction of new bugs, program maintenance requires far more system testing per statement written than any other programming. Theoretically, after each fix one must run the entire bank of test cases previously run against the system, to ensure that it has not been damaged in an obscure way.
@@ -5391,6 +5381,9 @@ In practice such regression testing must indeed approximate this theoretical ide
 <cite>Mythical Man-Month</cite>
 </div>
 </div>
+<div class="paragraph">
+<p>This issue was and is well known to thought leaders in Agile software development. The key response has been the concept of automated testing, so that any change in the software can be immediately validated before more development along those lines continues. One pioneering tool was JUnit:</p>
+</div>
 <div class="quoteblock">
 <blockquote>
 <em>The reason JUnit is important . . . is that the presence of this tiny tool has been essential to a fundamental shift for many programmers. A shift where testing has moved to a front and central part of programming. People have advocated it before, but JUnit made it happen more than anything else.</em><br>
@@ -5400,15 +5393,13 @@ In practice such regression testing must indeed approximate this theoretical ide
 <cite>http://martinfowler.com/books/meszaros.html</cite>
 </div>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>comment on Brooks</pre>
-</div>
+<div class="paragraph">
+<p>From the reality that regression testing was "very costly" (as stated by Brooks in the above quote), the emergence of tools like JUnit (coupled with increasing computer power and availability) changed the face of software development, allowing the ongoing evolution of software systems in ways not previously possible.</p>
 </div>
 <div class="sect4">
 <h5 id="_test_driven_development">Test-driven development</h5>
 <div class="paragraph">
-<p>In test-driven development, the idea essence is to write code that tests itself. This is done through the creation of test harnesses and the tight association of tests with requirements. The logical culmination of test-driven development was expressed by Kent Beck in <em>eXtreme Programming</em>: write the test first <a href="#Beck2000">[Beck2000]</a>. Thus:</p>
+<p>In test-driven development, the idea essence is to write code that tests itself, and in fact to <strong>write the test before writing any code</strong>. This is done through the creation of test harnesses and the tight association of tests with requirements. The logical culmination of test-driven development was expressed by Kent Beck in <em>eXtreme Programming</em>: write the test first <a href="#Beck2000">[Beck2000]</a>. Thus:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -5473,10 +5464,7 @@ In practice such regression testing must indeed approximate this theoretical ide
 </div>
 </div>
 <div class="paragraph">
-<p>We run the test (e.g. through Junit and Ant, which we won&#8217;t detail here). It will fail.</p>
-</div>
-<div class="paragraph">
-<p>Then, we write the class:</p>
+<p>We run the test (e.g. through Junit and Ant, which we won&#8217;t detail here). It will fail. Then, we write the class:</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -5488,6 +5476,18 @@ In practice such regression testing must indeed approximate this theoretical ide
     }
 }</pre>
 </div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+These are simplified examples.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>When we run the test harness correctly (e.g. using a build tool such as Ant or Maven), the test class will perform the following actions:</p>
@@ -5503,10 +5503,7 @@ In practice such regression testing must indeed approximate this theoretical ide
 </ol>
 </div>
 <div class="paragraph">
-<p>If that string is not correctly generated, or the class cannot be created, or any other error occurs, the test fails and this is then reported via error results at the console, or (in the case of automated build) will be detected by the build manager and displayed as the build outcome.</p>
-</div>
-<div class="paragraph">
-<p>Other languages use different approaches from that shown here, but every serious platform at this point supports test-driven development.</p>
+<p>If that string is not correctly generated, or the class cannot be created, or any other error occurs, the test fails and this is then reported via error results at the console, or (in the case of automated build) will be detected by the build manager and displayed as the build outcome. Other languages use different approaches from that shown here, but every serious platform at this point supports test-driven development.</p>
 </div>
 <div class="paragraph">
 <p>The associated course lab provides a simple but complete example of a test-driven development environment, based on lightweight virtualization.</p>
@@ -5522,7 +5519,7 @@ In practice such regression testing must indeed approximate this theoretical ide
 <h5 id="_refactoring">Refactoring</h5>
 <div class="quoteblock">
 <blockquote>
-_Refactoring is a controlled technique for improving the design of an existing code base. Its essence is applying a series of small behavior-preserving transformations, each of which is "too small to be worth doing". However, the cumulative effect of each of these transformations is quite significant. By doing them in small steps you reduce the risk of introducing errors. You also avoid having the system broken while you are carrying out the restructuring - which allows you to gradually refactor a system over an extended period of time. _
+Refactoring is a controlled technique for improving the design of an existing code base. Its essence is applying a series of small behavior-preserving transformations, each of which is "too small to be worth doing". However, the cumulative effect of each of these transformations is quite significant. By doing them in small steps you reduce the risk of introducing errors. You also avoid having the system broken while you are carrying out the restructuring - which allows you to gradually refactor a system over an extended period of time.
 </blockquote>
 <div class="attribution">
 &#8212; Martin Fowler<br>
@@ -5530,25 +5527,23 @@ _Refactoring is a controlled technique for improving the design of an existing c
 </div>
 </div>
 <div class="paragraph">
-<p>Test-driven development enables the next major practice, that of refactoring. Refactoring is how you address technical debt. What is technical debt? Technical debt is defined by Wikipedia as</p>
+<p>Test-driven development enables the next major practice, that of refactoring. Refactoring is how you address technical debt. What is technical debt? Technical debt is a term coined by Ward Cunningham, and is now defined by Wikipedia as</p>
 </div>
 <div class="paragraph">
-<p><em>…the eventual consequences of poor system design, software architecture or software development within a codebase. The debt can be thought of as work that needs to be done before a particular job can be considered complete or proper. If the debt is not repaid, then it will keep on accumulating interest, making it hard to implement changes later on. Unaddressed technical debt increases software entropy.
-Analogous to monetary debt, technical debt is not necessarily a bad thing, and sometime technical debt is required to move projects forward.
-<a href="http://en.wikipedia.org/wiki/Technical_debt" class="bare">http://en.wikipedia.org/wiki/Technical_debt</a></em></p>
+<p><em>…the eventual consequences of poor system design, software architecture or software development within a codebase. The debt can be thought of as work that needs to be done before a particular job can be considered complete or proper. If the debt is not repaid, then it will keep on accumulating interest, making it hard to implement changes later on&#8230;&#8203; Analogous to monetary debt, technical debt is not necessarily a bad thing, and sometime technical debt is required to move projects forward.</em> <a href="#Wikipedia2016">[Wikipedia2016]</a></p>
 </div>
 <div class="paragraph">
-<p>Test driven development ensures that the system’s functionality remains consistent, while refactoring provides a means to address technical debt as part of ongoing development activities.</p>
+<p>Test driven development ensures that the system’s functionality remains consistent, while refactoring provides a means to address technical debt as part of ongoing development activities. Prioritizing the relative investment of repaying technical debt versus developing new functionality will be examined in future sections, but at least you now know the tools and concepts.</p>
 </div>
 <div class="paragraph">
-<p>Prioritizing the relative investment of repaying technical debt vs. developing new functionality will be examined in future sections, but at least you now know the tools and concepts.</p>
+<p>We discuss technical debt further in Chapter 12.</p>
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_continuous_integration">Continuous integration</h4>
 <div class="paragraph">
-<p>The term “continuous integration” was popularized by Paul Duvall in his book of the same name <a href="#Duvall2007">[Duvall2007]</a>.</p>
+<p>As systems engineering approaches transform to <a href="#cloud">Cloud</a> and <a href="#infracode">Infrastructure as Code</a>, a large and increasing percentage of IT work takes the form of altering text files and tracking their <a href="#version-control">versions</a>. We have seen this in the previous chapter, with artifacts such as <a href="#infra-code-example">scripts</a> being created to drive the provisioning and configuring of computing resources. Approaches which encourage ongoing development and evolution are increasingly recognized as less risky, since systems do not respond well to big "batches" of change. An important concept is that of "continuous integration,” popularized by Paul Duvall in his book of the same name <a href="#Duvall2007">[Duvall2007]</a>.</p>
 </div>
 <div class="paragraph">
 <p>In order to understand why continuous integration is important, it is necessary to further discuss the concept of source control and how it is employed in real world settings.</p>
@@ -5627,7 +5622,7 @@ The conflict of course arises on the file set C that you both need to work on.  
 <p>11:00: Your partner pulls your changes into their working directory. Unfortunately, some changes you made conflict with some work they are doing. You briefly consult and figure out a mutually acceptable approach.</p>
 </div>
 <div class="paragraph">
-<p>This is a continuously evolving problem area, with practices changing rapidly.</p>
+<p>Because the intent leads to the artifact, and the artifact leads to the commit, it makes sense to associate the requirement with a branch in the version control system. This is not required, but makes it easier to trace the requirement to the actual work by which it was fulfilled. This will be discussed further in Section II and its associated labs. This is a continuously evolving problem area, with practices changing rapidly.</p>
 </div>
 </div>
 <div class="sect3">
@@ -28815,6 +28810,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 </li>
 <li>
 <p><a id="Whittaker2012"></a>[Whittaker2012]: Whittaker, J.A., J. Arbon, and J. Carollo, 2012, <em>How Google tests software</em>, Upper Saddle River, NJ: Addison-Wesley. xxvii, 281 p.</p>
+</li>
+<li>
+<p><a id="Wikipedia2016"></a>[Wikipedia2016]: Wikipedia. 2016. “Wikipedia: Technical Debt.” <a href="http://en.wikipedia.org/wiki/Technical_debt" class="bare">http://en.wikipedia.org/wiki/Technical_debt</a>. Accessed 2016-11-13.</p>
 </li>
 <li>
 <p><a id="Womack2003"></a>[Womack2003]: Womack, J. P. &amp; Jones, D. T. (2003), <em>Lean thinking: banish waste and create wealth in your corporation</em>, Free Press, New York</p>
