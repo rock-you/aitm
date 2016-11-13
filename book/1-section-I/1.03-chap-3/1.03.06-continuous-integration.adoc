@@ -24,13 +24,10 @@ Now, because they took this book's advice and didn't start developing until they
 
 That way, they can move ahead on their local workstations. But when the time comes to combine both of your work, they may find themselves in "merge hell." They may have chosen very different approaches to solving the same problem, and code may need massive revision to settle on one code base. For example, in the accompanying illustration, Mary's changes to B are represented by triangles and Aparna's are represented by circles. They each had a local version on their workstation for far too long, without talking to each other.
 
-.Two sets of changes
-image::images/1.03-bigMerge.png[big merge,300,,float="right"]
-
 In the diagrams, we represent the changes graphically; of course, with real code, the different graphics represent different development approaches each person took. For example, Mary had certain needs for how errors were handled, while Aparna had different needs.
 
 .Merge hell
-image::images/1.03-merge-hell.png[big merge,300,,float="left"]
+image::images/1.03-merge-hell.png[big merge,640,,]
 
 In the diagram "Merge hell," where triangles and circles overlap, Mary and Aparna painstakingly have to go through and put in a consolidated error handling approach, so that the code supports both of their needs. The problem of course is now there are three ways errors are being handled in the code. This is not good, but they did not have time to go back and fix all the cases. This is a classic example of xref:technical-debt-1[technical debt].
 
