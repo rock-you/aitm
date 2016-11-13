@@ -5854,7 +5854,7 @@ Breaking a system apart by "layer" (e.g. front end versus data access) does not 
 <p>In the diagrams, we represent the changes graphically; of course, with real code, the different graphics represent different development approaches each person took. For example, Mary had certain needs for how errors were handled, while Aparna had different needs.</p>
 </div>
 <div class="paragraph">
-<p>These problems have driven the evolution of software configuration management for decades. In previous methods, to develop a new release, the code would be copied into a very long-lived branch. Ongoing “maintenance” fixes of the existing code base would also continue, and the two code bases would inevitably diverge. Switching over to the “new” code base might mean that once-fixed bugs (bugs that had been addressed by maintenance activities) would show up again, and of course this would not be acceptable. So, when the newer development was complete, it would need to be merged back into the older line of code, and this was rarely if ever easy (it was and is called "merge hell"). In a worst case scenario, the new development might have to be redone.</p>
+<p>These problems have driven the evolution of software configuration management for decades. In previous methods, to develop a new release, the code would be copied into a very long-lived branch. Ongoing “maintenance” fixes of the existing code base would also continue, and the two code bases would inevitably diverge. Switching over to the “new” code base might mean that once-fixed bugs (bugs that had been addressed by maintenance activities) would show up again, and of course this would not be acceptable.</p>
 </div>
 <div class="imageblock" style="float: left">
 <div class="content">
@@ -5863,7 +5863,8 @@ Breaking a system apart by "layer" (e.g. front end versus data access) does not 
 <div class="title">Figure 34. Merge hell</div>
 </div>
 <div class="paragraph">
-<p>In the diagram "Merge hell," where triangles and circles overlap, Mary and Aparna painstakingly go through and put in pentagons, so that the code supports both of their needs for error handling. The problem of course is now there are three ways errors are being handled in the code. This is not good, but they did not have time to go back and fix all the cases. This is a classic example of <a href="#technical-debt-1">technical debt</a>.</p>
+<p>So, when the newer development was complete, it would need to be merged back into the older line of code, and this was rarely if ever easy (it was and is called "merge hell"). In a worst case scenario, the new development might have to be redone.
+In the diagram "Merge hell," where triangles and circles overlap, Mary and Aparna painstakingly go through and put in a consolidated error handling approach, so that the code supports both of their needs. The problem of course is now there are three ways errors are being handled in the code. This is not good, but they did not have time to go back and fix all the cases. This is a classic example of <a href="#technical-debt-1">technical debt</a>.</p>
 </div>
 <div class="paragraph">
 <p>Suppose instead that they had been checking in every day. They can identify the first collision quickly, and have a conversation about what the best error handling approach is. This saves them <strong>both</strong> the rework of fixing the collisions, <strong>and</strong> the technical debt they might have otherwise accepted:</p>
