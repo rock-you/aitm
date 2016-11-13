@@ -15,29 +15,31 @@ If changes are frequently needed to B, and yet they cannot split it into logical
 
 NOTE: Breaking a system apart by "layer" (e.g. front end versus data access) does not scale well. Microservices approaches encourage keeping data access and business logic together in functionally cohesive units. More on this in future chapters. But in this example, both developers are on the same small team. It is not always possible (or worth it) to divide work to keep two people from ever needing to change the same thing.
 
-In smaller environments, or under older practices, perhaps there is no conflict, or perhaps they can agree to take turns. But even if they are taking turns, Mary still needs to test her code in A to make sure it’s not been broken by changes Aparna made in B. And what if they really both need to work on B at the same time?
 
 .File B being worked on by 2 people
 image::images/1.03-dual-vc.png[2 devs on same file,400,,float="left"]
+
+In smaller environments, or under older practices, perhaps there is no conflict, or perhaps they can agree to take turns. But even if they are taking turns, Mary still needs to test her code in A to make sure it’s not been broken by changes Aparna made in B. And what if they really both need to work on B at the same time?
 
 Now, because they took this book's advice and didn't start developing until they had xref:version-control[version control] in place, each of them works on a "local" copy of the file (see illustration "File B being worked on by 2 people").
 
 That way, they can move ahead on their local workstations. But when the time comes to combine both of your work, they may find themselves in "merge hell." They may have chosen very different approaches to solving the same problem, and code may need massive revision to settle on one code base. For example, in the accompanying illustration, Mary's changes to B are represented by triangles and Aparna's are represented by circles. They each had a local version on their workstation for far too long, without talking to each other.
 
-In the diagrams, we represent the changes graphically; of course, with real code, the different graphics represent different development approaches each person took. For example, Mary had certain needs for how errors were handled, while Aparna had different needs.
-
 .Two sets of changes
 image::images/1.03-bigMerge.png[big merge,300,,float="right"]
 
-These problems have driven the evolution of software configuration management for decades. In previous methods, to develop a new release, the code would be copied into a very long-lived branch. Ongoing “maintenance” fixes of the existing code base would also continue, and the two code bases would inevitably diverge. Switching over to the “new” code base might mean that once-fixed bugs (bugs that had been addressed by maintenance activities) would show up again, and of course this would not be acceptable. So, when the newer development was complete, it would need to be merged back into the older line of code, and this was rarely if ever easy (it was and is called "merge hell"). In a worst case scenario, the new development might have to be redone. In the diagram "Merge hell," where triangles and circles overlap, Mary and Aparna painstakingly go through and put in pentagons, so that the code supports both of their needs for error handling. 
+In the diagrams, we represent the changes graphically; of course, with real code, the different graphics represent different development approaches each person took. For example, Mary had certain needs for how errors were handled, while Aparna had different needs.
+
+These problems have driven the evolution of software configuration management for decades. In previous methods, to develop a new release, the code would be copied into a very long-lived branch. Ongoing “maintenance” fixes of the existing code base would also continue, and the two code bases would inevitably diverge. Switching over to the “new” code base might mean that once-fixed bugs (bugs that had been addressed by maintenance activities) would show up again, and of course this would not be acceptable. So, when the newer development was complete, it would need to be merged back into the older line of code, and this was rarely if ever easy (it was and is called "merge hell"). In a worst case scenario, the new development might have to be redone.
 
 .Merge hell
 image::images/1.03-merge-hell.png[big merge,300,,float="left"]
 
-The problem of course is now there are three ways errors are being handled in the code. This is not good, but they did not have time to go back and fix all the cases. This is a classic example of xref:technical-debt-1[technical debt].
+In the diagram "Merge hell," where triangles and circles overlap, Mary and Aparna painstakingly go through and put in pentagons, so that the code supports both of their needs for error handling. The problem of course is now there are three ways errors are being handled in the code. This is not good, but they did not have time to go back and fix all the cases. This is a classic example of xref:technical-debt-1[technical debt].
 
 Suppose instead that they had been checking in every day. They can identify the first collision quickly, and have a conversation about what the best error handling approach is. This saves them *both* the rework of fixing the collisions, *and* the technical debt they might have otherwise accepted:
 
+.Catching errors quickly is valuable
 image::images/1.03-fast-ID.png[errors caught quickly,640,,]
 
 Enter continuous integration. As presented in <<Duvall2007>> the key practices (you will notice similarities to the xref:pipeline[pipeline discussion]) include:
@@ -63,8 +65,6 @@ This is the principle of continuous integration at work. If the developers are c
 10:30: You complete your first update of the day; it passes all tests on your workstation. You commit it to the master repository. The master repository is continually monitored by the build server, which takes the code you created and deploys it, along with all necessary configurations, to a dedicated build server (which might be just a virtual machine or transient container). All tests pass there (the test you defined as indicating success for the module, as well as a host of older tests that are routinely run whenever the code is updated.
 
 11:00: Your partner pulls your changes into their working directory. Unfortunately, some changes you made conflict with some work they are doing. You briefly consult and figure out a mutually acceptable approach.
-
-Because the intent leads to the artifact, and the artifact leads to the commit, it makes sense to associate the requirement with a branch in the version control system. This is not required, but makes it easier to trace the requirement to the actual work by which it was fulfilled. This will be discussed further in Section II and its associated labs. This is a continuously evolving problem area, with practices changing rapidly.
 
 Controlling simultaneous changes to a common file is only one benefit of continuous integration. When software is developed by teams, even if each team has its own artifacts, the system often fails to "come together" for higher-order testing to confirm that all the parts are working correctly together. Discrepancies are often found in the interfaces between components; when component A calls component B, it may receive output it did not expect and processing halts. Continuous integration ensures that such issues are caught early.
 
