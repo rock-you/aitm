@@ -1,5 +1,7 @@
 ==== Continuous integration
-The term “continuous integration” was popularized by Paul Duvall in his book of the same name <<Duvall2007>>.
+
+
+As systems engineering approaches transform to xref:cloud[Cloud] and xref:infracode[Infrastructure as Code], a large and increasing percentage of IT work takes the form of altering text files and tracking their xref:version-control[versions]. We have seen this in the previous chapter, with artifacts such as xref:infra-code-example[scripts] being created to drive the provisioning and configuring of computing resources. Approaches which encourage ongoing development and evolution are increasingly recognized as less risky, since systems do not respond well to big "batches" of change. An important concept is that of "continuous integration,” popularized by Paul Duvall in his book of the same name <<Duvall2007>>.
 
 In order to understand why continuous integration is important, it is necessary to further discuss the concept of source control and how it is employed in real world settings.
 
@@ -44,4 +46,4 @@ This is the principle of continuous integration at work. If the developers are c
 
 11:00: Your partner pulls your changes into their working directory. Unfortunately, some changes you made conflict with some work they are doing. You briefly consult and figure out a mutually acceptable approach.
 
-This is a continuously evolving problem area, with practices changing rapidly.
+Because the intent leads to the artifact, and the artifact leads to the commit, it makes sense to associate the requirement with a branch in the version control system. This is not required, but makes it easier to trace the requirement to the actual work by which it was fulfilled. This will be discussed further in Section II and its associated labs. This is a continuously evolving problem area, with practices changing rapidly.

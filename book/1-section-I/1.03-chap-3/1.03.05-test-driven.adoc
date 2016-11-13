@@ -1,19 +1,23 @@
 
 
 ==== Test-driven development and refactoring
+
+Testing software and systems is a critically important part of digital product development. The earliest concepts of xref:1.03.02-Agile-history[waterfall development] called for it explicitly, and "software tester" as a role and "software quality assurance" as a practice have long histories. Evolutionary approaches to software have a potential major issue with software testing:
+
 [quote, Fred Brooks, Mythical Man-Month]
 As a consequence of the introduction of new bugs, program maintenance requires far more system testing per statement written than any other programming. Theoretically, after each fix one must run the entire bank of test cases previously run against the system, to ensure that it has not been damaged in an obscure way.
 In practice such regression testing must indeed approximate this theoretical ideal, and it is very costly.
 
+This issue was and is well known to thought leaders in Agile software development. The key response has been the concept of automated testing, so that any change in the software can be immediately validated before more development along those lines continues. One pioneering tool was JUnit:
 
 [quote, Martin Fowler, http://martinfowler.com/books/meszaros.html]
 _The reason JUnit is important . . . is that the presence of this tiny tool has been essential to a fundamental shift for many programmers. A shift where testing has moved to a front and central part of programming. People have advocated it before, but JUnit made it happen more than anything else._ +
 
- comment on Brooks
+From the reality that regression testing was "very costly" (as stated by Brooks in the above quote), the emergence of tools like JUnit (coupled with increasing computer power and availability) changed the face of software development, allowing the ongoing evolution of software systems in ways not previously possible.
 
-===== Test-driven development 
+===== Test-driven development
 
-In test-driven development, the idea essence is to write code that tests itself. This is done through the creation of test harnesses and the tight association of tests with requirements. The logical culmination of test-driven development was expressed by Kent Beck in _eXtreme Programming_: write the test first <<Beck2000>>. Thus:
+In test-driven development, the idea essence is to write code that tests itself, and in fact to *write the test before writing any code*. This is done through the creation of test harnesses and the tight association of tests with requirements. The logical culmination of test-driven development was expressed by Kent Beck in _eXtreme Programming_: write the test first <<Beck2000>>. Thus:
 
 	1.	Given a “user story” (i.e http://dm-academy.github.io/aitm/#_describing_system_intent[system intent]), figure out a test that will demonstrate its successful implementation.
 	2.	Write this test using the established testing framework.
@@ -49,9 +53,7 @@ The code above basically states,
 . the test passess if we get back "<h1>TestWebMessage</h1>" - the original message surrounded by <h1> and </h1> "tags," which are part of HTML.
 ****
 
-We run the test (e.g. through Junit and Ant, which we won't detail here). It will fail.
-
-Then, we write the class:
+We run the test (e.g. through Junit and Ant, which we won't detail here). It will fail. Then, we write the class:
 
  public class H1Class {
   String strMsg;
@@ -61,14 +63,14 @@ Then, we write the class:
     }
 }
 
+IMPORTANT: These are simplified examples.
+
 When we run the test harness correctly (e.g. using a build tool such as Ant or Maven), the test class will perform the following actions:
 
 . create an instance of the class H1Class, based on a string “TestWebMessage”
 . confirm that the returned string is “<h1>TestWebMessage</h1>”
 
-If that string is not correctly generated, or the class cannot be created, or any other error occurs, the test fails and this is then reported via error results at the console, or (in the case of automated build) will be detected by the build manager and displayed as the build outcome.
-
-Other languages use different approaches from that shown here, but every serious platform at this point supports test-driven development.
+If that string is not correctly generated, or the class cannot be created, or any other error occurs, the test fails and this is then reported via error results at the console, or (in the case of automated build) will be detected by the build manager and displayed as the build outcome. Other languages use different approaches from that shown here, but every serious platform at this point supports test-driven development.
 
 The associated course lab provides a simple but complete example of a test-driven development environment, based on lightweight virtualization.
 
@@ -79,14 +81,12 @@ anchor:refactoring[]
 ===== Refactoring
 
 [quote, Martin Fowler, Refactoring -- http://refactoring.com/]
-_Refactoring is a controlled technique for improving the design of an existing code base. Its essence is applying a series of small behavior-preserving transformations, each of which is "too small to be worth doing". However, the cumulative effect of each of these transformations is quite significant. By doing them in small steps you reduce the risk of introducing errors. You also avoid having the system broken while you are carrying out the restructuring - which allows you to gradually refactor a system over an extended period of time. _
+Refactoring is a controlled technique for improving the design of an existing code base. Its essence is applying a series of small behavior-preserving transformations, each of which is "too small to be worth doing". However, the cumulative effect of each of these transformations is quite significant. By doing them in small steps you reduce the risk of introducing errors. You also avoid having the system broken while you are carrying out the restructuring - which allows you to gradually refactor a system over an extended period of time.
 
-Test-driven development enables the next major practice, that of refactoring. Refactoring is how you address technical debt. What is technical debt? Technical debt is defined by Wikipedia as
+Test-driven development enables the next major practice, that of refactoring. Refactoring is how you address technical debt. What is technical debt? Technical debt is a term coined by Ward Cunningham, and is now defined by Wikipedia as
 
-_…the eventual consequences of poor system design, software architecture or software development within a codebase. The debt can be thought of as work that needs to be done before a particular job can be considered complete or proper. If the debt is not repaid, then it will keep on accumulating interest, making it hard to implement changes later on. Unaddressed technical debt increases software entropy.
-Analogous to monetary debt, technical debt is not necessarily a bad thing, and sometime technical debt is required to move projects forward.
-http://en.wikipedia.org/wiki/Technical_debt_
+_…the eventual consequences of poor system design, software architecture or software development within a codebase. The debt can be thought of as work that needs to be done before a particular job can be considered complete or proper. If the debt is not repaid, then it will keep on accumulating interest, making it hard to implement changes later on... Analogous to monetary debt, technical debt is not necessarily a bad thing, and sometime technical debt is required to move projects forward._ <<Wikipedia2016>>
 
-Test driven development ensures that the system’s functionality remains consistent, while refactoring provides a means to address technical debt as part of ongoing development activities.
+Test driven development ensures that the system’s functionality remains consistent, while refactoring provides a means to address technical debt as part of ongoing development activities. Prioritizing the relative investment of repaying technical debt versus developing new functionality will be examined in future sections, but at least you now know the tools and concepts.
 
-Prioritizing the relative investment of repaying technical debt vs. developing new functionality will be examined in future sections, but at least you now know the tools and concepts.
+We discuss technical debt further in Chapter 12. 
