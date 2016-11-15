@@ -1,26 +1,33 @@
-anchor:2.05.02-kanban[]
 
 ==== Introducing Kanban
+
+
+.Author's note: what can we learn from manufacturing?
+****
+Between 2005 and 2012, I was a lead enterprise architect at Wells Fargo Bank, primarily concerned with IT delivery capabilities such as portfolio and service management. One day around 2007, I arrived at my office to find an envelope from my friend Gene Kim, then CTO of Tripwire. Gene and I had been corresponding for some years on high-performing IT, IT processes, and related topics. In the envelope was a copy of a book called _The Goal_, by Eli Goldratt. I was a little mystified, but after reading the book I began to understand its potential.
+
+Eliyahu Moshe Goldratt was an Israeli physicist and management consultant, best known for his pioneering work in management theory, including  _The Goal_, which is a best-selling business novel frequently assigned in MBA programs. It and Goldratt's other novels have had a tremendous effect on industrial theory, and now, digital management. One of the best known stories in _The Goal_ centers around a Boy Scout march. Alex, the protagonist struggling to save his manufacturing plant, takes a troop of Scouts on a ten mile hike. The troop has hikers of various speeds, yet the goal is to arrive simultaneously. As Alex tries to keep the Scouts together, he discovers that the slowest, most overweight scout (Herbie) also has packed an unusually heavy backpack. The contents of Herbie's pack are redistributed, speeding up both Herbie and the troop.
+
+This story summarizes the Goldratt approach: finding the "constraint" to production (his work as a whole is called the Theory of Constraints). In Goldratt's view, a system is only as productive as its constraint. At Alex's factory, it's found that the "constraint" to the overall productivity issues is the newest computer-controlled machine tool -- one that could (in theory) do the work of several older models but was now jeopardizing the entire plant's survival. This novelization parallels in important regards actual Lean case studies on the often-negative impact of such capital-intensive approaches to production.
+
+There is a tremendous wealth of material available on Lean history and theory, and the IT student is urged to become familiar with it. Historically, there has been resistance in IT and digital circles to learning lessons derived from manufacturing, due to misperceptions that manufacturing is too “repetitive” compared to IT systems development.
+
+Gene Kim however saw the potential of the Theory of Constraints in understanding certain aspects of information technology management, and used it as a template to write another remarkable and influential book, _The Phoenix Project_. Rather than a manufacturing plant, the Phoenix Project centers on the struggles of the IT team at a medium-sized automotive parts manufacturer and retailer. From a state of chaos, uncontrolled work in process and resource constraints, the team applies Lean, Agile, and DevOps techniques to great effect. In my view, _The Phoenix Project_ is one of the most important works in the history of IT and digital management, and is also an enjoyable novel. If you are considering a career in IT or digital, it is essential reading.
+****
+
+anchor:2.05.02-kanban[]
 
 To understand Kanban it is advisable to discuss Lean briefly.
 
 Kanban is a term originating from Lean and the Toyota Production System. Originally, it signified a “pull” technique in which materials would only be transferred to a given workstation on a definite signal that the workstation required the materials. This was in contrast to “push” approaches where work was allowed to accumulate on the shop floor, on the (now discredited) idea that it was more “efficient” to operate workstations at maximum capacity.
 
-IMPORTANT: There is a tremendous wealth of material available on Lean history and theory, and the IT student is urged to become familiar with it. +
- +
-Historically, there has been resistance in IT circles to learning lessons derived from manufacturing, due to misperceptions that manufacturing is too “repetitive” compared to IT systems development. +
- +
- This resistance is disappearing with the new generation of thought leadership centered on Agile methods and related themes such as DevOps.
+David J. Anderson was a product manager at Microsoft who was seeking a more effective approach to managing software development. In consultation with Don Reinertsen (introduced in the xref:queuing[previous section]) he applied the original concept of Kanban to his software development activities <<Anderson2010>>.
 
-David J. Anderson was a product manager at Microsoft who was seeking a more effective approach to managing software development. In consultation with Don Reinertsen (introduced in the http://dm-academy.github.io/aitm/#_lean_lean_product_development_and_don_reinertsen[previous chapter]) he applied the original concept of Kanban to his development activities.<<Anderson2010>>
-
-Unlike Scrum, with its defined, high-pressure sprints, Kanban is a continuous process with no specified cadence. Work is “pulled” from backlog into active attention as resources are freed from previous work.
-
-This is perhaps the most important aspect of Kanban - the idea that work is not accepted until there is capacity to perform it.
+Scrum is based on a rhythm with its scheduled sprints, for example every two weeks. In contrast, Kanban is a continuous process with no specified rhythm (also known as _cadence_). Work is “pulled” from backlog into active attention as resources are freed from previous work. This is perhaps the most important aspect of Kanban - the idea that *work is not accepted until there is capacity to perform it.*
 
 You may have a white board covered with sticky notes, but if they are stacked on top of each other with no concern for worker availability, you are not doing Kanban. You are accepting too much work in process and you are likely to encounter a "high-queue state" in which work becomes slower and slower to get done.
 
-There are deeper philosophical and cultural tenets embedded in Kanban beyond workflow. Anderson and his colleagues continue to evolve Kanban into a more ambitious framework. Mike Burrows <<Burrows2014>> identifies the following key principles
+There are deeper philosophical and cultural qualities to Kanban beyond workflow and capacity. Anderson and his colleagues continue to evolve Kanban into a more ambitious framework. Mike Burrows <<Burrows2014>> identifies the following key principles
 
 * Start with what you do now.
 * Agree to pursue evolutionary change.
@@ -43,46 +50,5 @@ We can see in comparing Scrum and Kanban that their areas of focus are somewhat 
 
 * Scrum has achieved widespread success and formalization, which is why Scrum training is widespread and generally consistent in content.
 * Kanban is seen as more flexible but this comes at a cost of more management overhead. It requires more interpretation to translate to a given organization’s culture and practices.
-* “Scrum is not well suited to highly interrupt-driven work.” <<Rubin2012>>. (But if you are too small, it may be difficult to segregate out interrupt-driven work! We will discuss the issues around interrupt-driven work further in Chapter 06.)
+* “Scrum is not well suited to highly interrupt-driven work.” <<Rubin2012>>. (But if your company is too small, it may be difficult to segregate out interrupt-driven work! We will discuss the issues around interrupt-driven work further in Chapter 6.)
 * Finally, hybrids exist (Ladas' “Scrumban,” <<Ladas2009>>).
-
-More on this in Part III.
-
-****
-*Sidebar: Kanban, process, and respect for people*
-
-Processes cross functions.
-Processes (e.g. Quote to Cash, Idea to Production) are what actually deliver value.
-We need both process and function; we can’t organize solely around either.
-Therefore, get used to matrix management.
-
-The above statements are the management dogma I grew up with. Considered to be innovative at the time, originated by the likes of Michael Hammer and (more rigorously) Geary Rummler. (See Paul Harmon's http://www.bptrends.com/publicationfiles/advisor20081209.pdf[excellent obituary of Geary Rummler].)
-
-But consider a day in the life in the modern corporation: dozens or hundreds of cross functional processes that have become a daily barrage of work on the people housed in the functional areas. Driven by back end automation, front ended by automated (or even manual) email notifications, these required activities include:
-
-* service requests,
-* compliance certifications,
-* asset validations,
-* provisioning requests,
-* capacity assessments,
-* change approvals,
-* training obligations,
-* performance assessments,
-* audit responses,
-* expense reporting,
-* travel approvals,
-
-and more - infinitely more. This is the modern, “process"-centric enterprise.
-
-True, any one of these processes is (often) a relatively small burden to perform. Taken together, however, it’s the nightmare of http://www.waywordradio.org/adminisdribble_1/[Adminisdribble]: The daily death by a thousand cuts of required, cross-functional process.
-
-Continual context switching. End to end flow in concept across functions, but little experienced by the multitasking individual. Invisible, unmanaged demand. A thousand channels for flow, but no throughput, because of gridlock.
-
-What drives this? The combination of permanent downsizing, continually increasing governance & compliance burdens, and the assumption that the enterprise can always tolerate another process. Overall organizational capacity is rarely considered, especially for “supporting" processes. And there is no appreciation for the emergent behavior when these myriads of processes interact in unexpected ways.
-
-This is why kanban is so radical. Within a limited scope, it is starting to challenge the IT management dogma at least. User stories, incidents, defects, service requests, changes… they are all “just work.” Just another sticky note on the board. Someone has to perform the work; someone has to allocate time and attention to it. A simple but utterly profound change in orientation. Kanban is the labor movement of the 21st century.
-
-It seems to me that true “respect for people” (as advocated by Lean) of course must start with the recognition that work takes people’s time. I think the modern, process centric enterprise has lost sight of that reality. Is Kanban the answer?
-
-_originally posted at http://www.lean4it.com/2014/08/kanban-vs-process.html_
-****
