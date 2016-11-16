@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.5">
+<meta name="generator" content="Asciidoctor 1.5.4">
 <meta name="author" content="Charles T. Betz">
 <title>Agile IT Management: From Startup to Enterprise (Student Edition)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -18,6 +18,7 @@ audio:not([controls]){display:none;height:0}
 [hidden],template{display:none}
 script{display:none!important}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{margin:0}
 a{background:transparent}
 a:focus{outline:thin dotted}
 a:active,a:hover{outline:0}
@@ -52,7 +53,7 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -64,6 +65,7 @@ img{-ms-interpolation-mode:bicubic}
 .text-center{text-align:center!important}
 .text-justify{text-align:justify!important}
 .hide{display:none}
+body{-webkit-font-smoothing:antialiased}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
@@ -118,16 +120,13 @@ table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
 table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+body{tab-size:4}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
 .clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
 .clearfix:after,.float-group:after{clear:both}
-*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
-*:not(pre)>code.nobreak{word-wrap:normal}
-*:not(pre)>code.nowrap{white-space:nowrap}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
 pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
-em em{font-style:normal}
-strong strong{font-weight:400}
 .keyseq{color:rgba(51,51,51,.8)}
 kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
@@ -654,15 +653,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_chapter_5_learning_objectives">Chapter 5 learning objectives</a></li>
 </ul>
 </li>
-<li><a href="#_why_work_management">Why work management?</a>
-<ul class="sectlevel4">
 <li><a href="#_task_management">Task management</a></li>
-<li><a href="#_queues_and_limiting_work_in_process">Queues and limiting work in process</a></li>
-</ul>
-</li>
-<li><a href="#_introducing_kanban">Introducing Kanban</a>
+<li><a href="#_learning_from_manufacturing">Learning from manufacturing</a>
 <ul class="sectlevel4">
-<li><a href="#_lean_origins">Lean origins</a></li>
+<li><a href="#_kanban_and_its_lean_origins">Kanban and its Lean origins</a></li>
+<li><a href="#_queues_and_limiting_work_in_process">Queues and limiting work in process</a></li>
 <li><a href="#_scrum_kanban_or_both">Scrum, Kanban, or both?</a></li>
 </ul>
 </li>
@@ -7532,9 +7527,7 @@ As two more assistants were added, however, coordination problems did arise. One
 </div>
 </div>
 <div class="sect3">
-<h4 id="_why_work_management">Why work management?</h4>
-<div class="sect4">
-<h5 id="_task_management">Task management</h5>
+<h4 id="_task_management">Task management</h4>
 <div class="quoteblock">
 <blockquote>
 Task management is the process of managing a task through its life cycle. It involves planning, testing, tracking and reporting. Task management can help either individuals achieve goals, or groups of individuals collaborate and share knowledge for the accomplishment of collective goals.
@@ -7545,13 +7538,10 @@ Task management is the process of managing a task through its life cycle. It inv
 </div>
 </div>
 <div class="paragraph">
-<p>Work management may start with verbal requests, emails, even postal mail. The design process may call for a wide variety of deliverables that also drive work activity. As your product matures, the product itself generates both routine and non-routine work. Some of the work depends on other work getting done. Sometimes you do not realize this immediately. All of this work needs to be tracked.</p>
+<p>The product development process drives a wide variety of work activities. As your product matures, you encounter both routine and non-routine work. Some of the work depends on other work getting done. Sometimes you do not realize this immediately. All of this work needs to be tracked.</p>
 </div>
 <div class="paragraph">
-<p>If you ask your colleague to do one thing, and she doesn’t have anything else to do, it’s likely that the two of you will remember. If you ask her to do four things over a few days, you <strong>might</strong> both still remember. But if you are asking for new things every day, it is likely that some things will get missed.</p>
-</div>
-<div class="paragraph">
-<p>You each might start keeping your own “to do” list, and this mechanism can handle a dozen or two dozen tasks. Consider an example of three people, each with their own to do list:</p>
+<p>Work management may start with verbal requests, emails, even postal mail. If you ask your colleague to do one thing, and she doesn’t have anything else to do, it’s likely that the two of you will remember. If you ask her to do four things over a few days, you <strong>might</strong> both still remember. But if you are asking for new things every day, it is likely that some things will get missed. You each might start keeping your own “to do” list, and this mechanism can handle a dozen or two dozen tasks. Consider an example of three people, each with their own to do list:</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -7569,7 +7559,7 @@ Task management is the process of managing a task through its life cycle. It inv
 <div class="title">Figure 41. Task handoffs present risk <sup class="footnote">[<a id="_footnoteref_26" class="footnote" href="#_footnote_26" title="View footnote.">26</a>]</sup></div>
 </div>
 <div class="paragraph">
-<p>But what happens when there are three of you? You ask coworker B to do something and in order to complete it she needs something from coworker C, whom you are also asking to complete tasks. As an organization scales, this can easily lead to confusion and "dropped balls."</p>
+<p>But what happens when there are three of you? Mary asks Aparna to do something and in order to complete it she needs something from Joe, whom Mary is also asking to complete other tasks. As an organization scales, this can easily lead to confusion and "dropped balls."</p>
 </div>
 <div class="paragraph">
 <p>At some point, you need to formalize your model of the work, how it is described, and how it flows. This is such a fundamental problem in human society that many different systems, tools, and processes have been developed over the centuries to address it.
@@ -7579,16 +7569,10 @@ Probably the most important is the shared task reference point. What does this m
 <p><a id="representation"></a></p>
 </div>
 <div class="paragraph">
-<p>For example, a “ticket” may be created. Or a “story,” written down on a sticky note. At our current level of understanding, there is little difference between these concepts. The important thing they have in common is an independent existence. That is, Mary, Joe, and Sara might all change jobs, but the artifact persists independently of them.</p>
+<p>For example, a “ticket” may be created, or a "work order". Or a “story,” written down on a sticky note. At our current level of understanding, there is little difference between these concepts. <strong>The important thing they have in common is an independent existence.</strong> That is, Mary, Aparna, and Joe might all change jobs, but the artifact persists independently of them. Notice also that the artifact - the ticket, the post-it note - is <strong>not</strong> the actual task, which is an intangible, consensus concept. It is a <em>representation</em> of this intangible "intent to perform." We will discuss these issues of representation further in Chapter 11.</p>
 </div>
 <div class="paragraph">
-<p>Notice also that the artifact - the ticket, the post-it note - is <strong>not</strong> the actual task, which is an intangible, consensus concept. It is a <em>representation</em> of this intangible "intent to perform." We will discuss these issues of representation further in Chapter 11.</p>
-</div>
-<div class="paragraph">
-<p>A complex IT-based system is not needed, if you are all in the same room! (Nor for that matter a complex process framework, such as <a href="#ITIL">ITIL</a> or <a href="#COBIT">COBIT</a>. There is risk in using such frameworks at this stage of evolution - they add too much overhead for your level of growth.)</p>
-</div>
-<div class="paragraph">
-<p>It&#8217;s also still too early for formal project management. The "project team" would be most or all of the organization, so what would be the point? A shared white board in a public location might be all that is needed. This gives the team a “shared mental model” of who is doing what.</p>
+<p>A complex IT-based system is not needed, if you are all in the same room! (Nor for that matter a complex process framework, such as <a href="#ITIL">ITIL</a> or <a href="#COBIT">COBIT</a>. There is risk in using such frameworks at this stage of evolution - they add too much overhead for your level of growth.) It&#8217;s also still too early for formal project management. The "project team" would be most or all of the organization, so what would be the point? A shared white board in a public location might be all that is needed. This gives the team a “shared mental model” of who is doing what.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -7612,99 +7596,14 @@ Probably the most important is the shared task reference point. What does this m
 <p>The board itself might be a white board, or a cork bulletin board with push pins. The notes could be sticky, or index cards. There are automated solutions as well. The tool doesn’t really matter. The important thing is that, at a glance, the entire team can see its flow of work and who is doing what.</p>
 </div>
 <div class="paragraph">
-<p>This is sometimes called a “Kanban board," although David Anderson (originator of the Kanban software method) himself terms the basic technique a "card wall." Scrum originator Sutherland calls it a "Scrum board." The board at its most basic is not specific to either methodology. The term "Kanban" itself derives from Lean manufacturing principles; we will cover this in depth in the next section.</p>
-</div>
-<div class="paragraph">
-<p>The basic board is widely used because it is a powerful artifact. Behind its deceptive simplicity is considerable industrial experience and relevant theory from operations management and human factors. However, it has scalability limitations. What if the team is not all in the same room? We will cover this and related issues in Part III.</p>
+<p>This is sometimes called a “Kanban board," although David Anderson (originator of the Kanban software method) himself terms the basic technique a "card wall." The board at its most basic is not specific to either methodology. The term "Kanban" itself derives from Lean manufacturing principles; we will cover this in depth in the next section. The basic board is widely used because it is a powerful artifact. Behind its deceptive simplicity is considerable industrial experience and relevant theory from operations management and human factors. However, it has scalability limitations. What if the team is not all in the same room? We will cover this and related issues in Part III.</p>
 </div>
 <div class="paragraph">
 <p><a id="queuing"></a></p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_queues_and_limiting_work_in_process">Queues and limiting work in process</h5>
-<div class="quoteblock">
-<blockquote>
-Queues matter because they are economically important, they are poorly managed, and they have the potential to be much better man
-aged. Queues profoundly affect the economics of product development. They cause valuable work products to sit idle, waiting to access busy resources. This idle time increases inventory, which is the root cause of many other economic problems&#8230;&#8203;queues hurt cycle time, quality, and
-efficiency.
-</blockquote>
-<div class="attribution">
-&#8212; Don Reinertsen<br>
-<cite>Principles of Product Development Flow</cite>
-</div>
-</div>
-<div id="queuing" class="imageblock" style="float: right">
-<div class="content">
-<img src="images/2.05-queue.jpg" alt="alt text" width="300" height="200">
-</div>
-<div class="title">Figure 44. A queue <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup></div>
-</div>
-<div class="paragraph">
-<p>Even at this stage of our evolution, with just one co-located collaborative team, it’s important to consider work in progress and how to limit it. One topic we will emphasize throughout the rest of this book is <em>queuing</em>.</p>
-</div>
-<div class="paragraph">
-<p>What is a queue? A queue, intuitively, is a collection of tasks to be done, being serviced by some worker or resource in some sequence.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Important</div>
-</td>
-<td class="content">
-Queuing theory is an important branch of mathematics used extensively in computing, operations research, networking, and other fields. It&#8217;s a topic getting much attention of late in the Agile and related movements, especially as it relates to development team productivity.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Lean manufacturing has been an important movement throughout the 20th century, and one of its central principles is to limit work in process. Work in process is obvious on a shop floor, because physical raw materials (inventory) are quite visible.</p>
-</div>
-<div id="wip" class="imageblock" style="float: left">
-<div class="content">
-<img src="images/2.05-wip.jpg" alt="alt text" width="300" height="200">
-</div>
-<div class="title">Figure 45. Physical Work in Process <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup></div>
-</div>
-<div class="paragraph">
-<p>Don Reinertsen, quoted above, developed the insight that product design and development had an <strong>invisible</strong> inventory of "Work in Process" that he called Design in Process (DIP). Just as managing physical work in process on the factory floor is key to a factory&#8217;s success, so correctly understanding and managing design in process is essential to all kinds of research and development organizations&#8201;&#8212;&#8201;<strong>including digital product development.</strong> In fact, because digital systems are largely invisible even when finished, understanding their work in process is even more challenging.</p>
-</div>
-<div class="paragraph">
-<p>It is easy and tempting for a product development team to accumulate excessive amounts of work in process. And, to some degree, having a rich backlog of ideas is an asset. But, just as some inventory (e.g. groceries) is perishable, so are design ideas. They have a limited time in which they might be relevant to a customer or a market. Therefore, accumulating too many of them at any point in time can be wasteful.</p>
-</div>
-<div class="paragraph">
-<p>What does this have to do with queuing? Design in process is one form of queue seen in the digital organization. Other forms include unplanned work (incidents and defects), implementation work, and many other concepts we&#8217;ll discuss in this chapter.</p>
-</div>
-<div class="paragraph">
-<p>Regardless of whether it is a "Requirement," a "User Story," an "Epic," "Defect,", "Issue," or "Service Request," you should remember it&#8217;s <strong>all just work.</strong> It needs to be logged, prioritized, assigned, and tracked to completion. Queues are the fundamental concept for doing this, and it&#8217;s critical that digital management specialists understand this.</p>
-</div>
-<div class="paragraph">
-<p>We will revisit the topic of queuing in Chapter 9. For now, some rules of thumb:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Finish what you start, if you can, before starting anything else. When you work on three things at once, the multi-tasking wastes time and it takes you three times longer to get any one of the things done. (More on <a href="#multi-tasking">multi-tasking</a> in this chapter.)</p>
-</li>
-<li>
-<p>Infinitely long to-do lists (backlog) sap motivation. Consider limiting backlog as well as work in process.</p>
-</li>
-<li>
-<p>Visibility into work in progress is important for the collective mental model of the team.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
 <div class="sect3">
-<h4 id="_introducing_kanban">Introducing Kanban</h4>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Author&#8217;s note: what can we learn from manufacturing?</div>
-<div class="paragraph">
-<p>Between 2005 and 2012, I was a lead enterprise architect at Wells Fargo Bank, primarily concerned with IT delivery capabilities such as portfolio and service management. One day around 2007, I arrived at my office to find an envelope from my friend Gene Kim, then CTO of Tripwire. Gene and I had been corresponding for some years on high-performing IT, IT processes, and related topics. In the envelope was a copy of a book called <em>The Goal</em>, by Eli Goldratt. I was a little mystified, but after reading the book I began to understand its potential.</p>
-</div>
+<h4 id="_learning_from_manufacturing">Learning from manufacturing</h4>
 <div class="paragraph">
 <p>Eliyahu Moshe Goldratt was an Israeli physicist and management consultant, best known for his pioneering work in management theory, including  <em>The Goal</em>, which is a best-selling business novel frequently assigned in MBA programs. It and Goldratt&#8217;s other novels have had a tremendous effect on industrial theory, and now, digital management. One of the best known stories in <em>The Goal</em> centers around a Boy Scout march. Alex, the protagonist struggling to save his manufacturing plant, takes a troop of Scouts on a ten mile hike. The troop has hikers of various speeds, yet the goal is to arrive simultaneously. As Alex tries to keep the Scouts together, he discovers that the slowest, most overweight scout (Herbie) also has packed an unusually heavy backpack. The contents of Herbie&#8217;s pack are redistributed, speeding up both Herbie and the troop.</p>
 </div>
@@ -7714,8 +7613,14 @@ Queuing theory is an important branch of mathematics used extensively in computi
 <div class="paragraph">
 <p>There is a tremendous wealth of material available on Lean history and theory, and the IT student is urged to become familiar with it. Often, IT professionals resist drawing lessons from non-IT fields, because of a perception that these other fields (especially manufacturing) are “deterministic” while IT systems development is too “uncertain.” In reality, manufacturing is less deterministic than IT professionals often perceive, while software development is, at its most uncertain, just another form of <a href="https://en.wikipedia.org/wiki/New_product_development">new product development</a>, and/or <a href="https://en.wikipedia.org/wiki/Research_and_development">research and development</a> and therefore can be managed on that basis. Furthermore, much IT work is not R&amp;D (e.g. infrastructure provisionings), and that kind of work is even more suited for the application of manufacturing insights.</p>
 </div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Author&#8217;s note: Gene Kim and The Phoenix Project</div>
 <div class="paragraph">
-<p>Gene Kim saw the potential of the Theory of Constraints in understanding certain aspects of information technology management, and used it as a template to write another remarkable and influential book, <em>The Phoenix Project</em>. Rather than a manufacturing plant, the Phoenix Project centers on the struggles of the IT team at a medium-sized automotive parts manufacturer and retailer. From a state of chaos, uncontrolled work in process and resource constraints, the team applies Lean, Agile, and DevOps techniques to great effect. In my view, <em>The Phoenix Project</em> is one of the most important works in the history of IT and digital management, and is also an enjoyable novel. If you are considering a career in IT or digital, it is essential reading. See especially Chapter 30 for an interesting discussion of manufacturing lessons in an IT context <a href="#Kim2013">[Kim2013]</a>.</p>
+<p>Between 2005 and 2012, I was a lead enterprise architect at Wells Fargo Bank, primarily concerned with IT delivery capabilities such as portfolio and service management. One day around 2007, I arrived at my office to find an envelope from my friend Gene Kim, then CTO of Tripwire. Gene and I had been corresponding for some years on high-performing IT, IT process improvement, and related topics. In the envelope was a copy of a book called <em>The Goal</em>, by Eli Goldratt. I was a little mystified, but after reading the book I began to understand.</p>
+</div>
+<div class="paragraph">
+<p>Gene saw the potential of the Theory of Constraints in understanding certain aspects of information technology management, and used it as a template to write another remarkable and influential book, <em>The Phoenix Project</em> <a href="#Kim2013">[Kim2013]</a>. Rather than a manufacturing plant, the Phoenix Project centers on the struggles of the IT team at a medium-sized automotive parts manufacturer and retailer. From a state of chaos, uncontrolled work in process and resource constraints, the team applies Lean, Agile, and DevOps techniques to great effect. In my view, <em>The Phoenix Project</em> is one of the most important works in the history of IT and digital management, and is also an enjoyable novel. I am honored to have been one of the original reviewers. If you are considering a career in IT or digital, it is essential reading. See especially Chapter 30 for an interesting discussion of manufacturing lessons in an IT context.</p>
 </div>
 </div>
 </div>
@@ -7724,7 +7629,7 @@ Queuing theory is an important branch of mathematics used extensively in computi
 <a id="lean"></a></p>
 </div>
 <div class="sect4">
-<h5 id="_lean_origins">Lean origins</h5>
+<h5 id="_kanban_and_its_lean_origins">Kanban and its Lean origins</h5>
 <div class="paragraph">
 <p>To understand Kanban let&#8217;s discuss Lean briefly.</p>
 </div>
@@ -7732,7 +7637,7 @@ Queuing theory is an important branch of mathematics used extensively in computi
 <div class="content">
 <img src="images/2.05-Ohno.jpg" alt="Ohno" width="200">
 </div>
-<div class="title">Figure 46. Lean pioneer Taichi Ohno <sup class="footnote">[<a id="_footnoteref_27" class="footnote" href="#_footnote_27" title="View footnote.">27</a>]</sup></div>
+<div class="title">Figure 44. Lean pioneer Taichi Ohno <sup class="footnote">[<a id="_footnoteref_27" class="footnote" href="#_footnote_27" title="View footnote.">27</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>We&#8217;ve had passing mention of Lean already in this book. But what is Lean?</p>
@@ -7789,8 +7694,79 @@ Lean is important. Regardless of your intended career path, it is advisable to r
 <div class="paragraph">
 <p>You may have a white board covered with sticky notes, but if they are stacked on top of each other with no concern for worker availability, you are not doing Kanban. You are accepting too much work in process and you are likely to encounter a "high-queue state" in which work becomes slower and slower to get done.</p>
 </div>
+</div>
+<div class="sect4">
+<h5 id="_queues_and_limiting_work_in_process">Queues and limiting work in process</h5>
+<div class="quoteblock">
+<blockquote>
+Queues matter because they are economically important, they are poorly managed, and they have the potential to be much better managed. Queues profoundly affect the economic of product development. They cause valuable work products to sit idle, waiting to access busy resources. This idle time increases inventory, which is the root cause of many other economic problems&#8230;&#8203;queues hurt cycle time, quality, and
+efficiency.
+</blockquote>
+<div class="attribution">
+&#8212; Don Reinertsen<br>
+<cite>Principles of Product Development Flow</cite>
+</div>
+</div>
+<div id="queuing" class="imageblock" style="float: right">
+<div class="content">
+<img src="images/2.05-queue.jpg" alt="alt text" width="300" height="200">
+</div>
+<div class="title">Figure 45. A queue <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup></div>
+</div>
 <div class="paragraph">
-<p>There are deeper philosophical and cultural qualities to Kanban beyond workflow and capacity. Anderson and his colleagues continue to evolve Kanban into a more ambitious framework. Mike Burrows <a href="#Burrows2014">[Burrows2014]</a> identifies the following key principles</p>
+<p>Even at this stage of our evolution, with just one co-located collaborative team, it’s important to consider work in progress and how to limit it. One topic we will emphasize throughout the rest of this book is <em>queuing</em>. What is a queue? A queue, intuitively, is a collection of tasks to be done, being serviced by some worker or resource in some sequence.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+Queuing theory is an important branch of mathematics used extensively in computing, operations research, networking, and other fields. It&#8217;s a topic getting much attention of late in the Agile and related movements, especially as it relates to development team productivity.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Lean manufacturing has been an important movement throughout the 20th century, and one of its central principles is to limit work in process. Work in process is obvious on a shop floor, because physical raw materials (inventory) are quite visible.</p>
+</div>
+<div id="wip" class="imageblock" style="float: left">
+<div class="content">
+<img src="images/2.05-wip.jpg" alt="alt text" width="300" height="200">
+</div>
+<div class="title">Figure 46. Physical Work in Process <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup></div>
+</div>
+<div class="paragraph">
+<p>Don Reinertsen, quoted above, developed the insight that product design and development had an <strong>invisible</strong> inventory of "Work in Process" that he called Design in Process (DIP). Just as managing physical work in process on the factory floor is key to a factory&#8217;s success, so correctly understanding and managing design in process is essential to all kinds of research and development organizations&#8201;&#8212;&#8201;<strong>including digital product development.</strong> In fact, because digital systems are largely invisible even when finished, understanding their work in process is even more challenging.</p>
+</div>
+<div class="paragraph">
+<p>It is easy and tempting for a product development team to accumulate excessive amounts of work in process. And, to some degree, having a rich backlog of ideas is an asset. But, just as some inventory (e.g. groceries) is perishable, so are design ideas. They have a limited time in which they might be relevant to a customer or a market. Therefore, accumulating too many of them at any point in time can be wasteful.</p>
+</div>
+<div class="paragraph">
+<p>What does this have to do with queuing? Design in process is one form of queue seen in the digital organization. Other forms include unplanned work (incidents and defects), implementation work, and many other concepts we&#8217;ll discuss in this chapter.</p>
+</div>
+<div class="paragraph">
+<p>Regardless of whether it is a "Requirement," a "User Story," an "Epic," "Defect,", "Issue," or "Service Request," you should remember it&#8217;s <strong>all just work.</strong> It needs to be logged, prioritized, assigned, and tracked to completion. Queues are the fundamental concept for doing this, and it&#8217;s critical that digital management specialists understand this.</p>
+</div>
+<div class="paragraph">
+<p>We will revisit the topic of queuing in Chapter 9. For now, some rules of thumb:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Finish what you start, if you can, before starting anything else. When you work on three things at once, the multi-tasking wastes time and it takes you three times longer to get any one of the things done. (More on <a href="#multi-tasking">multi-tasking</a> in this chapter.)</p>
+</li>
+<li>
+<p>Infinitely long to-do lists (backlog) sap motivation. Consider limiting backlog as well as work in process.</p>
+</li>
+<li>
+<p>Visibility into work in progress is important for the collective mental model of the team.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>There are deeper philosophical and cultural qualities to Kanban beyond workflow and queuing. Anderson and his colleagues continue to evolve Kanban into a more ambitious framework. Mike Burrows <a href="#Burrows2014">[Burrows2014]</a> identifies the following key principles</p>
 </div>
 <div class="ulist">
 <ul>
@@ -28499,7 +28475,7 @@ All web references were archived into the author&#8217;s files on the indicated 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-11-05 18:44:41 CDT
+Last updated 2016-11-05 11:02:22 CDT
 </div>
 </div>
 </body>
