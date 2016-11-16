@@ -665,6 +665,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_kanban_and_its_lean_origins">Kanban and its Lean origins</a></li>
 <li><a href="#_queues_and_limiting_work_in_process">Queues and limiting work in process</a></li>
+<li><a href="#_the_theory_of_constraints">The Theory of Constraints</a></li>
 <li><a href="#_scrum_kanban_or_both">Scrum, Kanban, or both?</a></li>
 </ul>
 </li>
@@ -8057,32 +8058,6 @@ Probably the most important is the shared task reference point. What does this m
 <div class="sect3">
 <h4 id="_learning_from_manufacturing">Learning from manufacturing</h4>
 <div class="paragraph">
-<p>Eliyahu Moshe Goldratt was an Israeli physicist and management consultant, best known for his pioneering work in management theory, including  <em>The Goal</em>, which is a best-selling business novel frequently assigned in MBA programs. It and Goldratt&#8217;s other novels have had a tremendous effect on industrial theory, and now, digital management. One of the best known stories in <em>The Goal</em> centers around a Boy Scout march. Alex, the protagonist struggling to save his manufacturing plant, takes a troop of Scouts on a ten mile hike. The troop has hikers of various speeds, yet the goal is to arrive simultaneously. As Alex tries to keep the Scouts together, he discovers that the slowest, most overweight scout (Herbie) also has packed an unusually heavy backpack. The contents of Herbie&#8217;s pack are redistributed, speeding up both Herbie and the troop.</p>
-</div>
-<div class="paragraph">
-<p>This story summarizes the Goldratt approach: finding the "constraint" to production (his work as a whole is called the Theory of Constraints). In Goldratt&#8217;s view, a system is only as productive as its constraint. At Alex&#8217;s factory, it&#8217;s found that the "constraint" to the overall productivity issues is the newest computer-controlled machine tool&#8201;&#8212;&#8201;one that could (in theory) do the work of several older models but was now jeopardizing the entire plant&#8217;s survival. This novelization parallels in important regards actual Lean case studies on the often-negative impact of such capital-intensive approaches to production.</p>
-</div>
-<div class="paragraph">
-<p>There is a tremendous wealth of material available on Lean history and theory, and the IT student is urged to become familiar with it. Often, IT professionals resist drawing lessons from non-IT fields, because of a perception that these other fields (especially manufacturing) are “deterministic” while IT systems development is too “uncertain.” In reality, manufacturing is less deterministic than IT professionals often perceive, while software development is, at its most uncertain, just another form of <a href="https://en.wikipedia.org/wiki/New_product_development">new product development</a>, and/or <a href="https://en.wikipedia.org/wiki/Research_and_development">research and development</a> and therefore can be managed on that basis. Furthermore, much IT work is not R&amp;D (e.g. infrastructure provisionings), and that kind of work is even more suited for the application of manufacturing insights.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Author&#8217;s note: Gene Kim and The Phoenix Project</div>
-<div class="imageblock" style="float: left">
-<div class="content">
-<img src="images/2.05-GeneKim.jpg" alt="Gene Kim" width="200">
-</div>
-<div class="title">Figure 44. Gene Kim</div>
-</div>
-<div class="paragraph">
-<p>Between 2005 and 2012, I was a lead enterprise architect at Wells Fargo Bank, primarily concerned with IT delivery capabilities such as portfolio and service management. One day around 2007, I arrived at my office to find an envelope from my friend Gene Kim, then CTO of Tripwire. Gene and I had been corresponding for some years on high-performing IT, IT process improvement, and related topics. In the envelope was a copy of a book called <em>The Goal</em>, by Eli Goldratt. I was a little mystified, but after reading the book I began to understand.</p>
-</div>
-<div class="paragraph">
-<p>Gene saw the potential of the Theory of Constraints in understanding certain aspects of information technology management, and used it as a template to write another remarkable and influential book, <em>The Phoenix Project</em> <a href="#Kim2013">[Kim2013]</a>. Rather than a manufacturing plant, the Phoenix Project centers on the struggles of the IT team at a medium-sized automotive parts manufacturer and retailer. From a state of chaos, uncontrolled work in process and resource constraints, the team applies Lean, Agile, and DevOps techniques to great effect. In my view, <em>The Phoenix Project</em> is one of the most important works in the history of IT and digital management, and is also an enjoyable novel. I am honored to have been one of the original reviewers. If you are considering a career in IT or digital, it is essential reading. See especially Chapter 30 for an interesting discussion of manufacturing lessons in an IT context.</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
 <p><a id="2.05.02-kanban"></a>
 <a id="lean"></a></p>
 </div>
@@ -8092,7 +8067,7 @@ Probably the most important is the shared task reference point. What does this m
 <div class="content">
 <img src="images/2.05-Ohno.jpg" alt="Ohno" width="200">
 </div>
-<div class="title">Figure 45. Lean pioneer Taichi Ohno <sup class="footnote">[<a id="_footnoteref_27" class="footnote" href="#_footnote_27" title="View footnote.">27</a>]</sup></div>
+<div class="title">Figure 44. Lean pioneer Taichi Ohno <sup class="footnote">[<a id="_footnoteref_27" class="footnote" href="#_footnote_27" title="View footnote.">27</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>To understand Kanban let&#8217;s discuss Lean briefly. We&#8217;ve had passing mention of Lean already in this book. But what is it?</p>
@@ -8166,7 +8141,7 @@ efficiency.
 <div class="content">
 <img src="images/2.05-queue.jpg" alt="alt text" width="300" height="200">
 </div>
-<div class="title">Figure 46. A queue <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup></div>
+<div class="title">Figure 45. A queue <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Even at this stage of our evolution, with just one co-located collaborative team, it’s important to consider work in progress and how to limit it. One topic we will emphasize throughout the rest of this book is <em>queuing</em>. What is a queue? A queue, intuitively, is a collection of tasks to be done, being serviced by some worker or resource in some sequence.</p>
@@ -8190,7 +8165,7 @@ Queuing theory is an important branch of mathematics used extensively in computi
 <div class="content">
 <img src="images/2.05-wip.jpg" alt="alt text" width="300" height="200">
 </div>
-<div class="title">Figure 47. Physical Work in Process <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup></div>
+<div class="title">Figure 46. Physical Work in Process <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Don Reinertsen, quoted above, developed the insight that product design and development had an <strong>invisible</strong> inventory of "Work in Process" that he called Design in Process (DIP). Just as managing physical work in process on the factory floor is key to a factory&#8217;s success, so correctly understanding and managing design in process is essential to all kinds of research and development organizations&#8201;&#8212;&#8201;<strong>including digital product development.</strong> In fact, because digital systems are largely invisible even when finished, understanding their work in process is even more challenging.</p>
@@ -8256,6 +8231,35 @@ Queuing theory is an important branch of mathematics used extensively in computi
 <p>Improve collaboratively, evolve experimentally (using models and the scientific method).</p>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_the_theory_of_constraints">The Theory of Constraints</h5>
+<div class="paragraph">
+<p>Eliyahu Moshe Goldratt was an Israeli physicist and management consultant, best known for his pioneering work in management theory, including  <em>The Goal</em>, which is a best-selling business novel frequently assigned in MBA programs. It and Goldratt&#8217;s other novels have had a tremendous effect on industrial theory, and now, digital management. One of the best known stories in <em>The Goal</em> centers around a Boy Scout march. Alex, the protagonist struggling to save his manufacturing plant, takes a troop of Scouts on a ten mile hike. The troop has hikers of various speeds, yet the goal is to arrive simultaneously. As Alex tries to keep the Scouts together, he discovers that the slowest, most overweight scout (Herbie) also has packed an unusually heavy backpack. The contents of Herbie&#8217;s pack are redistributed, speeding up both Herbie and the troop.</p>
+</div>
+<div class="paragraph">
+<p>This story summarizes the Goldratt approach: finding the "constraint" to production (his work as a whole is called the Theory of Constraints). In Goldratt&#8217;s view, a system is only as productive as its constraint. At Alex&#8217;s factory, it&#8217;s found that the "constraint" to the overall productivity issues is the newest computer-controlled machine tool&#8201;&#8212;&#8201;one that could (in theory) do the work of several older models but was now jeopardizing the entire plant&#8217;s survival. This novelization parallels in important regards actual Lean case studies on the often-negative impact of such capital-intensive approaches to production.</p>
+</div>
+<div class="paragraph">
+<p>There is a tremendous wealth of material available on Lean history and theory, and the IT student is urged to become familiar with it. Often, IT professionals resist drawing lessons from non-IT fields, because of a perception that these other fields (especially manufacturing) are “deterministic” while IT systems development is too “uncertain.” In reality, manufacturing is less deterministic than IT professionals often perceive, while software development is, at its most uncertain, just another form of <a href="https://en.wikipedia.org/wiki/New_product_development">new product development</a>, and/or <a href="https://en.wikipedia.org/wiki/Research_and_development">research and development</a> and therefore can be managed on that basis. Furthermore, much IT work is not R&amp;D (e.g. infrastructure provisionings), and that kind of work is even more suited for the application of manufacturing insights.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Author&#8217;s note: Gene Kim and The Phoenix Project</div>
+<div class="imageblock" style="float: left">
+<div class="content">
+<img src="images/2.05-GeneKim.jpg" alt="Gene Kim" width="200">
+</div>
+<div class="title">Figure 47. Gene Kim</div>
+</div>
+<div class="paragraph">
+<p>Between 2005 and 2012, I was a lead enterprise architect at Wells Fargo Bank, primarily concerned with IT delivery capabilities such as portfolio and service management. One day around 2007, I arrived at my office to find an envelope from my friend Gene Kim, then CTO of Tripwire. Gene and I had been corresponding for some years on high-performing IT, IT process improvement, and related topics. In the envelope was a copy of a book called <em>The Goal</em>, by Eli Goldratt. I was a little mystified, but after reading the book I began to understand.</p>
+</div>
+<div class="paragraph">
+<p>Gene saw the potential of the Theory of Constraints in understanding certain aspects of information technology management, and used it as a template to write another remarkable and influential book, <em>The Phoenix Project</em> <a href="#Kim2013">[Kim2013]</a>. Rather than a manufacturing plant, the Phoenix Project centers on the struggles of the IT team at a medium-sized automotive parts manufacturer and retailer. From a state of chaos, uncontrolled work in process and resource constraints, the team applies Lean, Agile, and DevOps techniques to great effect. In my view, <em>The Phoenix Project</em> is one of the most important works in the history of IT and digital management, and is also an enjoyable novel. I am honored to have been one of the original reviewers. If you are considering a career in IT or digital, it is essential reading. See especially Chapter 30 for an interesting discussion of manufacturing lessons in an IT context.</p>
+</div>
+</div>
 </div>
 </div>
 <div class="sect4">
