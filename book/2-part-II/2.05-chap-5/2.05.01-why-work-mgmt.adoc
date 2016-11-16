@@ -1,15 +1,11 @@
-==== Why work management?
-
-===== Task management
+==== Task management
 
 [quote, Wikipedia, Task Management]
 Task management is the process of managing a task through its life cycle. It involves planning, testing, tracking and reporting. Task management can help either individuals achieve goals, or groups of individuals collaborate and share knowledge for the accomplishment of collective goals.
 
-Work management may start with verbal requests, emails, even postal mail. The design process may call for a wide variety of deliverables that also drive work activity. As your product matures, the product itself generates both routine and non-routine work. Some of the work depends on other work getting done. Sometimes you do not realize this immediately. All of this work needs to be tracked.
+The product development process drives a wide variety of work activities. As your product matures, you encounter both routine and non-routine work. Some of the work depends on other work getting done. Sometimes you do not realize this immediately. All of this work needs to be tracked.
 
-If you ask your colleague to do one thing, and she doesn’t have anything else to do, it’s likely that the two of you will remember. If you ask her to do four things over a few days, you *might* both still remember. But if you are asking for new things every day, it is likely that some things will get missed.
-
-You each might start keeping your own “to do” list, and this mechanism can handle a dozen or two dozen tasks. Consider an example of three people, each with their own to do list:
+Work management may start with verbal requests, emails, even postal mail. If you ask your colleague to do one thing, and she doesn’t have anything else to do, it’s likely that the two of you will remember. If you ask her to do four things over a few days, you *might* both still remember. But if you are asking for new things every day, it is likely that some things will get missed. You each might start keeping your own “to do” list, and this mechanism can handle a dozen or two dozen tasks. Consider an example of three people, each with their own to do list:
 
 .Work flowing across 3 to-do lists
 image::images/2.05-todos.png[3 lists, 600,,]
@@ -19,20 +15,16 @@ In this situation, each person has their own “mental model” of what needs to
 .Task handoffs present risk footnote:[_Image credit https://www.flickr.com/photos/chrisbrooks/42588998, downloaded 2016-10-07, commercial use permitted_]
 image::images/2.05-handoff.jpg[Handoff,, float="right"]
 
-But what happens when there are three of you? You ask coworker B to do something and in order to complete it she needs something from coworker C, whom you are also asking to complete tasks. As an organization scales, this can easily lead to confusion and "dropped balls."
+But what happens when there are three of you? Mary asks Aparna to do something and in order to complete it she needs something from Joe, whom Mary is also asking to complete other tasks. As an organization scales, this can easily lead to confusion and "dropped balls."
 
 At some point, you need to formalize your model of the work, how it is described, and how it flows. This is such a fundamental problem in human society that many different systems, tools, and processes have been developed over the centuries to address it.
 Probably the most important is the shared task reference point. What does this mean? The “task” is made "real" by associating it with a common, agreed-on artifact.
 
 anchor:representation[]
 
-For example, a “ticket” may be created. Or a “story,” written down on a sticky note. At our current level of understanding, there is little difference between these concepts. The important thing they have in common is an independent existence. That is, Mary, Joe, and Sara might all change jobs, but the artifact persists independently of them.
+For example, a “ticket” may be created, or a "work order". Or a “story,” written down on a sticky note. At our current level of understanding, there is little difference between these concepts. *The important thing they have in common is an independent existence.* That is, Mary, Aparna, and Joe might all change jobs, but the artifact persists independently of them. Notice also that the artifact - the ticket, the post-it note - is *not* the actual task, which is an intangible, consensus concept. It is a _representation_ of this intangible "intent to perform." We will discuss these issues of representation further in Chapter 11.
 
-Notice also that the artifact - the ticket, the post-it note - is *not* the actual task, which is an intangible, consensus concept. It is a _representation_ of this intangible "intent to perform." We will discuss these issues of representation further in Chapter 11.
-
-A complex IT-based system is not needed, if you are all in the same room! (Nor for that matter a complex process framework, such as xref:ITIL[ITIL] or xref:COBIT[COBIT]. There is risk in using such frameworks at this stage of evolution - they add too much overhead for your level of growth.)
-
-It's also still too early for formal project management. The "project team" would be most or all of the organization, so what would be the point? A shared white board in a public location might be all that is needed. This gives the team a “shared mental model” of who is doing what.
+A complex IT-based system is not needed, if you are all in the same room! (Nor for that matter a complex process framework, such as xref:ITIL[ITIL] or xref:COBIT[COBIT]. There is risk in using such frameworks at this stage of evolution - they add too much overhead for your level of growth.) It's also still too early for formal project management. The "project team" would be most or all of the organization, so what would be the point? A shared white board in a public location might be all that is needed. This gives the team a “shared mental model” of who is doing what.
 
 .Common list
 image::images/2.05-commonList.png[common list, 500]
@@ -46,44 +38,6 @@ image::images/2.05-basicKanban.png[basic Kanban, 500]
 
 The board itself might be a white board, or a cork bulletin board with push pins. The notes could be sticky, or index cards. There are automated solutions as well. The tool doesn’t really matter. The important thing is that, at a glance, the entire team can see its flow of work and who is doing what.
 
-This is sometimes called a “Kanban board," although David Anderson (originator of the Kanban software method) himself terms the basic technique a "card wall." Scrum originator Sutherland calls it a "Scrum board." The board at its most basic is not specific to either methodology. The term "Kanban" itself derives from Lean manufacturing principles; we will cover this in depth in the next section.
-
-The basic board is widely used because it is a powerful artifact. Behind its deceptive simplicity is considerable industrial experience and relevant theory from operations management and human factors. However, it has scalability limitations. What if the team is not all in the same room? We will cover this and related issues in Part III.
+This is sometimes called a “Kanban board," although David Anderson (originator of the Kanban software method) himself terms the basic technique a "card wall." The board at its most basic is not specific to either methodology. The term "Kanban" itself derives from Lean manufacturing principles; we will cover this in depth in the next section. The basic board is widely used because it is a powerful artifact. Behind its deceptive simplicity is considerable industrial experience and relevant theory from operations management and human factors. However, it has scalability limitations. What if the team is not all in the same room? We will cover this and related issues in Part III.
 
 anchor:queuing[]
-
-===== Queues and limiting work in process
-[quote, Don Reinertsen, Principles of Product Development Flow]
-Queues matter because they are economically important, they are poorly managed, and they have the potential to be much better man
-aged. Queues profoundly affect the economics of product development. They cause valuable work products to sit idle, waiting to access busy resources. This idle time increases inventory, which is the root cause of many other economic problems...queues hurt cycle time, quality, and
-efficiency.
-
-[[queuing]]
-.A queue footnote:[_Image credit https://www.flickr.com/photos/hktang/4243300265, downloaded 2016-10-07, commercial use permitted_]
-image::images/2.05-queue.jpg[alt text, 300, 200, float="right"]
-
-Even at this stage of our evolution, with just one co-located collaborative team, it’s important to consider work in progress and how to limit it. One topic we will emphasize throughout the rest of this book is _queuing_.
-
-What is a queue? A queue, intuitively, is a collection of tasks to be done, being serviced by some worker or resource in some sequence.
-
-IMPORTANT: Queuing theory is an important branch of mathematics used extensively in computing, operations research, networking, and other fields. It's a topic getting much attention of late in the Agile and related movements, especially as it relates to development team productivity.
-
-Lean manufacturing has been an important movement throughout the 20th century, and one of its central principles is to limit work in process. Work in process is obvious on a shop floor, because physical raw materials (inventory) are quite visible.
-
-[[wip]]
-.Physical Work in Process footnote:[_Image credit https://www.flickr.com/photos/jayburkhalter/6679328027/, downloaded 2016-10-07, commercial use permitted_]
-image::images/2.05-wip.jpg[alt text, 300, 200, float="left"]
-
-Don Reinertsen, quoted above, developed the insight that product design and development had an *invisible* inventory of "Work in Process" that he called Design in Process (DIP). Just as managing physical work in process on the factory floor is key to a factory's success, so correctly understanding and managing design in process is essential to all kinds of research and development organizations -- *including digital product development.* In fact, because digital systems are largely invisible even when finished, understanding their work in process is even more challenging.
-
-It is easy and tempting for a product development team to accumulate excessive amounts of work in process. And, to some degree, having a rich backlog of ideas is an asset. But, just as some inventory (e.g. groceries) is perishable, so are design ideas. They have a limited time in which they might be relevant to a customer or a market. Therefore, accumulating too many of them at any point in time can be wasteful.
-
-What does this have to do with queuing? Design in process is one form of queue seen in the digital organization. Other forms include unplanned work (incidents and defects), implementation work, and many other concepts we'll discuss in this chapter.
-
-Regardless of whether it is a "Requirement," a "User Story," an "Epic," "Defect,", "Issue," or "Service Request," you should remember it's *all just work.* It needs to be logged, prioritized, assigned, and tracked to completion. Queues are the fundamental concept for doing this, and it's critical that digital management specialists understand this.
-
-We will revisit the topic of queuing in Chapter 9. For now, some rules of thumb:
-
-* Finish what you start, if you can, before starting anything else. When you work on three things at once, the multi-tasking wastes time and it takes you three times longer to get any one of the things done. (More on xref:multi-tasking[multi-tasking] in this chapter.)
-* Infinitely long to-do lists (backlog) sap motivation. Consider limiting backlog as well as work in process.
-* Visibility into work in progress is important for the collective mental model of the team.
