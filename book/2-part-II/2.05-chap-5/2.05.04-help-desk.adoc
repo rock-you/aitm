@@ -16,32 +16,24 @@ image::images/2.05-ticket.jpg[old ticket, 250, , float="right"]
 
 In IT-centric domains, tickets are virtual; they are records in databases, not paper. The user is given a ticket "ID" or "number" for tracking (e.g., so they can inquire about the request's status.) The ticket may be "routed" to someone to handle, but again in a virtual world what really happens is that the person it's routed to is directed to look at the record in the database. (In paper based processes, the ticket might well be moved physically to various parties to perform the needed work.)
 
-*** picture of service desk vs operations
-
-In any event, a Service Desk capability needs
+A Service Desk capability needs
 
 * channels for accepting contacts (e.g. telephone, email, chat),
 * staffing appropriate to the volume and nature of those requests,
 * robust workflow capabilities to track their progress, and
 * routing and escalation mechanisms, since clarifying the true nature of contacts and getting them serviced by the most appropriate means are nontrivial challenges.
 
- [more to be written e.g. provide an example of escalation]
+There is extensive material on managing Service Desks; the reader is referred first to the http://www.thinkhdi.com/[Help Desk Institute]. See also https://en.wikipedia.org/wiki/Help_desk.
 
-There is extensive literature on managing Service Desks; the reader is referred first to the Help Desk Institute.
+Work management in practice has divided between development and operations practices and tools. However, DevOps and Kanban are forcing a reconsideration and consolidation. Historically, here are some of the major tools and channels through which tasks and work are managed on both sides:
 
-See also https://en.wikipedia.org/wiki/Help_desk.
-
-Work management in practice has divided between development and operations toolsets. However, DevOps and Kanban are forcing a reconsideration and consolidation. Historically, here are some of the major tools and channels through which tasks and work are managed on both sides:
-
-* Development
-* Operations
-* Requirements log
-* Issue/risk/action item log
-* Defect tracker
-* Agile backlogs (user stories)
-* Service desk ticketing system
-
-Kanban is a special case, as it can mean both a manual as well as an automated system. Obviously, for time and space shifting, we need an automated system.
+[cols="2*", options="header"]
+|====
+|Development      |Operations
+|User story tracking system |Service or help desk ticketing system
+|Issue/risk/action item log |Incident management system
+|Defect tracker|Change management system
+|====
 
 All of these systems have common characteristics. All can (or should) be able to:
 
@@ -59,4 +51,4 @@ More advanced systems may also be able to:
 * Track the referral or escalation trail of the work, if it is routed to various parties
 * Link to communication channels such as conference bridges and paging systems
 
-The first system you may find yourself acquiring along these lines is a help desk system.
+The first automated system (computer-based) you may find yourself acquiring along these lines is a help desk system. You may be a small company, but when you start to build a large customer base, keeping them all happy requires more than a manual, paper-based card wall or Kanban board.
