@@ -680,7 +680,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_cost_of_delay">Cost of Delay</a></li>
 </ul>
 </li>
-<li><a href="#_from_plan_build_run_to_demand_supply_execute">From Plan, Build, Run to Demand, Supply, Execute</a></li>
 <li><a href="#_advanced_topics">Advanced topics</a>
 <ul class="sectlevel4">
 <li><a href="#_essay_kanban_process_and_respect_for_people">Essay: Kanban, process, and respect for people</a></li>
@@ -8259,7 +8258,7 @@ control failure.  These ideas are well known to the Agile community and its auth
 </div>
 <div class="imageblock" style="float: right">
 <div class="content">
-<img src="images/2.05-pyramid.png" alt="pyramid" width="400">
+<img src="images/2.05-pyramid.png" alt="pyramid" width="500">
 </div>
 </div>
 <div class="paragraph">
@@ -8270,7 +8269,7 @@ control failure.  These ideas are well known to the Agile community and its auth
 <strong>must</strong> be reduced in the system, otherwise <a href="#queuing">high-queue</a> states will slow feedback down.</p>
 </div>
 <div class="paragraph">
-<p>But how do we reduce work in process? We have to <em>prioritize</em>. Do we rely on the <a href="#:HIPPO">Highest Paid Person&#8217;s Opinion</a>, or do we try something more rational? This brings us to the critical concept of <em>Cost of Delay</em>.</p>
+<p>But how do we reduce work in process? We have to <em>prioritize</em>. Do we rely on the <a href="#HIPPO">Highest Paid Person&#8217;s Opinion</a>, or do we try something more rational? This brings us to the critical concept of <em>Cost of Delay</em>.</p>
 </div>
 <div class="paragraph">
 <p><a id="cost-of-delay"></a></p>
@@ -8278,272 +8277,78 @@ control failure.  These ideas are well known to the Agile community and its auth
 </div>
 <div class="sect4">
 <h5 id="_cost_of_delay">Cost of Delay</h5>
-<div class="paragraph">
-<p>Don Reinertsen is well known for advocating the concept of "Cost of Delay" in understanding product economics. The term is intuitive; it represents the loss one experiences by delaying the delivery of some value. For example, if a delayed product misses a key trade show, and therefore its opportunity to launch against competitors, the cost of delay might be the entire market.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>see http://blackswanfarming.com/cost-of-delay/</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>[TBW]</pre>
+<div class="quoteblock">
+<blockquote>
+If you measure only one thing, measure Cost of Delay.
+</blockquote>
+<div class="attribution">
+&#8212; Don Reinertsen<br>
+<cite>Principles of Product Development Flow</cite>
 </div>
 </div>
 <div class="paragraph">
-<p><a id="demand-supply-execute"></a></p>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_from_plan_build_run_to_demand_supply_execute">From Plan, Build, Run to Demand, Supply, Execute</h4>
-<div class="paragraph">
-<p>Originally published at <a href="http://www.lean4it.com" class="bare">http://www.lean4it.com</a>.</p>
+<p>Don Reinertsen is well known for advocating the concept of "Cost of Delay" in understanding product economics. The term is intuitive; it represents the loss one experiences by delaying the delivery of some value. For example, if a delayed product misses a key trade show, and therefore its opportunity to launch against competitors, the cost of delay might be the entire market. Understanding Cost of Delay is part of a broader economic emphasis that Reinertsen brings to the general question of product development. He suggests that product developers, in general, do not understand the fundamental economics of their decisions regarding resources and work in progress.</p>
 </div>
 <div class="paragraph">
-<p>Let&#8217;s talk mental models. The biggest one we have in IT.</p>
-</div>
-<div class="paragraph">
-<p>In the broad system of IT management, we often hear of three stages, “Plan/Build/Run.” We make plans for a new IT system, we construct it, and we run it.</p>
-</div>
-<div class="paragraph">
-<p>IT organizations often structure themselves and communicate to a large degree along these lines. I’ve used them myself in any number of writings. However, I have come to question the usefulness of “Plan-Build-Run” (which I’ll abbreviate PBR) as a mental model for understanding and guiding IT management.</p>
-</div>
-<div class="paragraph">
-<p>While it pervades IT management thinking, and can clearly be seen in the structures of frameworks like ITIL and COBIT, PBR is ill suited for the demands of 21st century IT management. I believe it is fundamentally a statement of waterfall thinking.</p>
+<p>To understand Cost of Delay, it is first necessary to think in terms of a market-facing product (such as a smart phone application). Any market facing product can be represented in terms of its lifecycle revenues and profits:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/2.05-PBR1.jpg" alt="2.05 PBR1">
+<img src="images/2.05-lifecycle-table.png" alt="2.05 lifecycle table">
 </div>
-</div>
-<div class="paragraph">
-<p>The major structures of Plan, Build, Run in my experience are framed as discrete, mutually exclusive states, with interfaces (information exchanges and control signalling) in between them. The model reflects IT&#8217;s history of project-centric management, in which large batches of work are moved across those three phases. Since each large batch is fragile and the state transitions are risky and high ceremony, there is also concern for insulating each batch from outside "interference."</p>
-</div>
-<div class="paragraph">
-<p>This results in systems being built in isolation from one another and without openness to feedback from later stages or other batches of work. Thus we also lose opportunities to learn from mistakes, leverage shared services and ensure architectural consistency across the IT estate.</p>
-</div>
-<div class="paragraph">
-<p>Continuous improvement cannot be an afterthought. Yet when PBR is the fundamental model, continuous improvement activities are run as spreadsheet-driven initiatives, poorly resourced and in constant contention with the "real" work of Plan, Build, Run. (The classic example is the massive spreadsheet of Audit findings which becomes a political football in The Phoenix Project. Note that I advocate for a broad definition of continuous improvement.)</p>
-</div>
-<div class="paragraph">
-<p>I&#8217;d suggest these kinds of approaches are essentially "inspecting quality in" and therefore not what Deming would have wanted. ("We cannot rely on mass inspection to improve quality.")</p>
-</div>
-<div class="paragraph">
-<p>Finally, is PBR the reflection of your organization&#8217;s communication structures? Conway&#8217;s Law would suggest that PBR is the reflection of embedded organizational communications structures - dating I would argue from the time of Frederick Taylor and the worst excesses of hierarchical, command and control management philosophy.</p>
-</div>
-<div class="paragraph">
-<p>This is probably the most pernicious consequence - specialists in planning, building, and running, all trying to optimize their worlds, with the "planners" at the top, the "builders" in the middle and the "runners" taking orders at the bottom. The trouble is that this idealized hierarchical model is utterly ineffective.</p>
-</div>
-<div class="paragraph">
-<p>It certainly doesn&#8217;t reflect military principles, often caricatured as "command and control" (see Reinertsen&#8217;s discussion of military doctrine on decentralized control in Principles of Product Development Flow). Effective product and software development has also long eschewed it; much evidence demonstrates the futility of relying on "expert" opinion and planning in truly complex domains. (See this excellent discussion from a venture capitalist at Y-Combinator.)</p>
-</div>
-<div class="paragraph">
-<p>Concepts like Lean Startup experimentation, generalizing specialists, and empowered 2-pizza product teams do not seem to reflect a PBR model. In an Agile world, the work boundaries blur across these phases. Those who plan, also build and run, and the primary planning of worth is planning the next experiment for testing.</p>
-</div>
-<div class="paragraph">
-<p>Some will say this is unfair. One hears various responses:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Iterate (with increasing speed), either the whole cycle or subsets</p>
-</li>
-<li>
-<p>Insert feedback loops.</p>
-</li>
-<li>
-<p>See the stages as overlapping</p>
-</li>
-</ol>
+<div class="title">Figure 53. Product lifecycle economics by year</div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/2.05-PBR2.jpg" alt="2.05 PBR2">
+<img src="images/2.05-lifecycle-graph.png" alt="2.05 lifecycle graph">
 </div>
-</div>
-<div class="paragraph">
-<p>My question is, even with these enhancements, is this mental model the best foundation?</p>
+<div class="title">Figure 54. Product lifecycle economics, charted</div>
 </div>
 <div class="paragraph">
-<p>Let&#8217;s look at the "fast PBR" response a bit more. Agile and Lean Startup arguably would call for many cycles of PBR, with each cycle constituting a test, or a story, or some other small grained delivery. Increasing the speed of this cycle is a widespread theme in discussions of Agile, DevOps, Continuous Delivery, and the rest.</p>
+<p>The numbers above represent a product lifecycle, from R&amp;D through production to retirement. The first year is all cost, as the product is being developed, and net profits are negative. In year 2, a small net profit is shown, but cumulative profit is still negative, as it remains in year 3. Only into year 3 does the product break even, ultimately achieving lifecycle net earnings of 175.</p>
 </div>
 <div class="paragraph">
-<p>Now if you are going to "spin it faster," a circular illustration would seem more appropriate:</p>
+<p>But what if the product&#8217;s introduction into the market is delayed? The consequences can be severe.</p>
+</div>
+<div class="paragraph">
+<p>Simply delaying delivery by a year, all things being equal in our example, will reduce lifeycle profits by 30%:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/2.05-PBR3.png" alt="2.05 PBR3">
+<img src="images/2.05-lifecycle-table2.png" alt="2.05 lifecycle table2">
 </div>
-</div>
-<div class="paragraph">
-<p>But what happens when we spin this fast? Remember your elementary physics of color? It all blends together, just as we see boundaries blurring today between Dev and Ops:</p>
+<div class="title">Figure 55. Product lifecycle, simple delay</div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/2.05-PBR4.png" alt="2.05 PBR4">
+<img src="images/2.05-lifecycle-graph2.png" alt="2.05 lifecycle graph2">
 </div>
-</div>
-<div class="paragraph">
-<p>And when the phases blur, what emerges? That&#8217;s the question&#8230;&#8203;</p>
+<div class="title">Figure 56. Product lifecycle, simple delay, charted</div>
 </div>
 <div class="paragraph">
-<p>Now, I should say&#8230;&#8203; IF YOU ARE LUCKY it all blends together. This assumes that you have somehow overcome the transactional overhead with those state transitions, information exchanges, and organizational handoffs, as you attempt to speed them up.</p>
-</div>
-<div class="paragraph">
-<p>What if a given state change isn&#8217;t needed for a particular cycle? You wind up fighting a system hard-wired to protect the role of each activity (and all their sub-activities). You wind up asking to "tailor" methodologies, to exempt your work from activities that are clearly non-value-add, and so forth.</p>
-</div>
-<div class="paragraph">
-<p>Accelerating PBR isn&#8217;t sufficient; it is still a sequential process with discrete steps and implications of information and control flow between each, reinforcing a dysfunctional division of organizational responsibilities. Can you get up to speed if people are trying to "optimize" the "plan," "build," or "run" phase independently? How can you optimize one third of a wheel?</p>
-</div>
-<div class="paragraph">
-<p>I ask: is PBR how work really gets done? How value gets delivered? If it is how work gets done in your organization, how effective is it? If you are fortunate to be working in an organization using Agile approaches, can you in truth characterize them as simply "fast PBR"? Does this mental model fundamentally inform your daily experience?</p>
-</div>
-<div class="paragraph">
-<p>I think "spin it faster" is an insufficient response. A continuous flow is needed.</p>
+<p>But all things are not equal. What if, in delaying the product for a year, we allow a competitor to gain a superior market position? That could depress our sales and increase our per-unit costs - both bad:</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/2.05-PBR5.jpg" alt="2.05 PBR5">
+<img src="images/2.05-lifecycle-table3.png" alt="2.05 lifecycle table3">
 </div>
-</div>
-<div class="paragraph">
-<p>When the delivery cycle accelerates and the boundaries begin to break down between Plan/Build/Run, what emerges? First, one starts to see that work has common characteristics across Plan, Build, and Run.</p>
-</div>
-<div class="paragraph">
-<p>We might observe that a common workflow or kanban system can be utilized across planning, building, and running activities. We might also notice that smaller teams require people to cover more responsibilities ("generalizing specialists"), especially when the boundaries between planning, building, and running are blurring.</p>
-</div>
-<div class="paragraph">
-<p>We see that distinctions between "incidents," "problems," and "user stories" become increasingly arbitrary when it is the same team that needs to respond to any. Certainly, there are differences between proactive and reactive work, but as forms of demand both compete for the same supply of resources, and when tracked in different systems cause overburden, uncoordinated effort, and bad multi-tasking.</p>
-</div>
-<div class="paragraph">
-<p>We also see that continuous improvement activities (which are kind of a middle ground between proactive and reactive) are "just more demand" and also compete for resources with purely proactive and reactive demand.</p>
-</div>
-<div class="paragraph">
-<p>As we consider all this, the question arises: What, in fact, <strong>is</strong> the IT work, in the general case? The irrevocable meeting of demand with supply, with intent to generate value. Same in IT as in the rest of industry.</p>
-</div>
-<div class="paragraph">
-<p>These are not novel concepts. Supply and demand stem from fundamental economics and operational management. I also want to add Execution, which is a widely accepted industrial term that covers the ideally optimal translation of supply and demand into value, via detailed resource and capacity management, dispatching, process monitoring, and performance analysis.</p>
-</div>
-<div class="paragraph">
-<p>As an aside:  I am not in favor of naive approaches to equating IT delivery with manufacturing. But, as Eric says in The Phoenix Project,</p>
-</div>
-<div class="paragraph">
-<p>“You think IT Operations is rocket-science compared to manufacturing. What absolute baloney&#8230;&#8203;From where I’m sitting, the people in this [manufacturing facility] have been far more creative and courageous than anything I’ve seen come from you IT guys so far.”</p>
-</div>
-<div class="paragraph">
-<p>Demand management starts from the premise that regardless of the size of the implied work, all demand on IT resources should be understood in a unified manner (as popularized in the Phoenix Project). From a new mobile device to the day’s incident reports and change requests, to a strategic initiative implying a $10 million projects, it’s all “just demand.”</p>
-</div>
-<div class="paragraph">
-<p>Different techniques come into play depending on planning horizon, value, scope, risk, and other parameters - more on this to come. Some demand signals contain others, or have complex interdependencies - e.g. an Incident that generates a Change, or a Project that contains multiple Service Requests. But if we understand demand as a unified entity we position ourselves to provide much better service to our stakeholders while at the same time giving our IT staff a saner existence.</p>
-</div>
-<div class="paragraph">
-<p>Supply represents the fundamentals of “atoms, bits, and cells”: hardware, software, and people, under various ownership and sourcing models (e.g. Cloud). The CIO is responsible for increasingly complex IT sourcing and contract management strategies, and understanding one’s baseline supply is key to evaluating new supplier options for technology products and people with the skills to exploit them.</p>
-</div>
-<div class="paragraph">
-<p>Finally, next generation IT execution management starts with demand and supply generally, and looks for optimal (or at least satisfactory) means of delivering value. “Projects” and “tickets” are seen as part of a unified management structure, not as the respective domains of "builders" and "runners." The availability of resources is always considered before releasing work, and ongoing scenario-based forecasting is employed to identify emergent constraints. And time tracking is completely transparent, relying on intelligent automation to determine what people have actually been working on. No Friday afternoon time reconstruction!</p>
-</div>
-<div class="paragraph">
-<p>So, Demand - Supply - Execution. Here is a graphical representation emphasizing the continuous nature of this mental model:</p>
+<div class="title">Figure 57. Product lifecycle, simple delay</div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/2.05-PBR6.jpg" alt="2.05 PBR6">
+<img src="images/2.05-lifecycle-graph3.png" alt="2.05 lifecycle graph3">
 </div>
-</div>
-<div class="paragraph">
-<p>Well established IT process areas such as project, release, incident, change, and so forth are important and will continue, but I think a DSE approach could counteract the tendency to form functional silos around each&#8201;&#8212;&#8201;or around a particular PBR cycle and its inputs and outputs&#8201;&#8212;&#8201;and instead promote a whole-systems approach to IT management.</p>
+<div class="title">Figure 58. Product lifecycle, simple delay, charted</div>
 </div>
 <div class="paragraph">
-<p>To summarize Keynes, “even the most practical man of affairs is usually in the thrall of the ideas of some long-dead economist.” Basic conceptual structures like plan/build/run and demand/supply/execute have consequences. When widely adopted to the point where they are just “common sense,” they define our social relationships, operational thinking, problem solving, and more. And thus, while we may think that “plan/build/run” is some form of IT natural law, it is a human construct that can be adapted or even discarded if we no longer find it useful. I think it&#8217;s time.</p>
+<p>Advanced Cost of Delay analysis argues that different product lifecycles have different characteristics. The following set of charts</p>
 </div>
 <div class="paragraph">
-<p>So, here is my first graphical representation of the Demand/Supply/Execute model for IT service organizations.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/2.05-DSE.png" alt="2.05 DSE">
-</div>
+<p>Inability of PMs to estimate - reinertsen on variability</p>
 </div>
 <div class="paragraph">
-<p>The intent of this model is to provide an alternative to Plan/Build/Run and its sequential, waterfall, and Taylorist connotations. It is also intended to support modern Agile methods and philosophy which emphasize iteration, fast feedback, flow, and especially (per Don Reinertsen) managing queues, limiting Work in Progress and supporting small batch sizes.</p>
+<p>How to measure anything - it is better to reduce uncertainty than obsess over perfection.</p>
 </div>
-<div class="paragraph">
-<p>Bottom to top, this diagram tells a story of demand and supply as they progress through increasingly refined understandings to the very specific execution of work and delivery of value.</p>
-</div>
-<div class="paragraph">
-<p>We have markets and regulations, which define and constrain the potential demand for an IT-centric product. Markets are met with strategies and product offerings, which lead to programs of work, projects, and platform decisions. These in turn lead to identifying user stories, writing software, configuring platforms, and executing changes, service requests and work tasks.</p>
-</div>
-<div class="paragraph">
-<p>This is NOT a methodology. These constructs can be as light or heavyweight as needed and value scenarios can originate at any point; there is no contradiction with Lean Startup and Agile principles of architectural iterations and minimum viable products. The existence of "Project" as a concept in the model does not mean that all work happens via Projects.</p>
-</div>
-<div class="paragraph">
-<p>That finer and finer grained demand stream parallels a finer and finer grained supply stream. Large blocks of capital are translated into strategic technology choices and vendor relationships and investments in skilled people. More detailed budgets and planning culminate ultimately in the availability of people, hardware, and software for given assignments, e.g, an empty slot on a Kanban board.</p>
-</div>
-<div class="paragraph">
-<p>Again, the journey can start anywhere, with a large block of traditionally managed programmatic capital or a small round of seed funding translated directly into a two-pizza team with maximum autonomy.</p>
-</div>
-<div class="paragraph">
-<p>Ultimately the deployed IT service system is available for fulfilling transactional service demand which can be measured in terms of quality, availability and performance. When demand and supply irrevocably combine, that is my definition of execution.</p>
-</div>
-<div class="paragraph">
-<p>I had a number of requirements driving this model.</p>
-</div>
-<div class="paragraph">
-<p>First, it needed to be a graphical representation that could not be read as a sequence. That is the flaw of any model which is too easily reduced to a linear format, such as Plan/Build/Run. Circular models are a popular alternative, but repeating a sequence is not enough.</p>
-</div>
-<div class="paragraph">
-<p>My primary reservation about value networks is their lack of a goal. What is to be done? How do I develop an action plan without some sense of the network’s purpose? (More here.) But the value network critique of naive sequencing is right on.</p>
-</div>
-<div class="paragraph">
-<p>While the names “Plan/Build/Run” and “Demand/Supply/Execute” are similar in format, they are very different structurally. It is not usually possible to fully inventory demand and only THEN turn to considerations of supply. Forecasting is inherent in the relationship between the two, which both must operate continuously and simultaneously.</p>
-</div>
-<div class="paragraph">
-<p>So, if we are trying to shift the IT mental mental models from sequential to network my proposal is that we start with the simplest non-sequential, non-linear concept, a vertex, two simultaneous vectors converging on a point.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/2.05-DSE2.jpg" alt="2.05 DSE2">
-</div>
-</div>
-<div class="paragraph">
-<p>Because the inverted “V” approximates human legs, it reinforces the feeling of simultaneous action. Both legs must exert effort simultaneously.</p>
-</div>
-<div class="paragraph">
-<p>The gap between the legs of the V is filled with the "Fog of Forecasting."</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/2.05-DSE3.png" alt="2.05 DSE3">
-</div>
-</div>
-<div class="paragraph">
-<p>With the lower level, larger grained abstractions it is more difficult to understand demand and supply, especially when product development (e.g. novel software engineering) is involved. As demand and supply converge to the point of execution, a finer and finer grained awareness is created of the impending work and whether it is likely to be successful - that is, if demand will effectively and efficiently be paired with supply. (Notice how the fog lifts as you get closer to actual execution.)</p>
-</div>
-<div class="paragraph">
-<p>We only start to really get a feel for how execution is going to work when we get down to team and individual level assignments across all queues and ultimately actual Kanban slots or their equivalent (e.g. assigned and accepted work orders).</p>
-</div>
-<div class="paragraph">
-<p>Turning to the choices of terms - the words inhabiting each leg (Asset, Release, Strategy, Team, etc):</p>
-</div>
-<div class="paragraph">
-<p>Most of the nouns are things that may be found in various IT management systems (Incidents, Assets, etc), or at least deliverables &amp; leadership conversations (Strategies, Programs). Roughly speaking, they go from larger grained and more abstract at the bottom, to smaller grained and more specific at the top.</p>
-</div>
-<div class="paragraph">
-<p>Governance, Risk and Compliance (GRC) is included – one thing I appreciated about the Phoenix Project is that GRC is seen itself as a form of demand. Laws, regulations, and risks translate into policies, controls, and ultimately audit findings to be remediated, and all of this is also demand.</p>
-</div>
-<div class="paragraph">
-<p>As noted above, there is still a risk that each leg will receive too sequential a reading. A value scenario can start anywhere. There is NO methodology proposed or assumed.  As  elsewhere, the framework simply represents frequently used IT terms, including some of my explorations of service semantics.</p>
-</div>
-<div class="paragraph">
-<p>This picture is not overly concerned with functional boundaries (legal and/or internal). These can appear in many ways. The primary boundary is between the service act vertex (inside-out) and the service outcome vertex (outside-in). But additional org boundaries might be found between demand side and supply side functions (IT Demand Management vs. Asset Management), and/or between different abstraction levels (Project Management vs. Incident Management).</p>
-</div>
-<div class="paragraph">
-<p>Finally, this is an IT-centric representation. The framwork might be more broadly applicable to other domains, but I will leave that to others for now.</p>
-</div>
-<div class="paragraph">
-<p>In closing: I think this mental model is a more accurate reflection of IT practice as it is evolving. It avoids sequential, linear and waterfall thinking as well as command and control Taylorism. It accomodates well known ITSM functional concepts, but aligned along a different fundamental structure, a structure better aligned with economic principles.</p>
 </div>
 </div>
 <div class="sect3">
@@ -8638,18 +8443,33 @@ control failure.  These ideas are well known to the Agile community and its auth
 <p>"Work management" may seem like an oddly general title, but it&#8217;s important to distinguish the fundamental problem from more elaborate constructs such as process and project management. At the end of the day, "it&#8217;s all just work."</p>
 </div>
 <div class="paragraph">
-<p>Understanding work requires understanding tasks and their lifecycle, and the synchronization points necessary to coordinate across them.</p>
+<p>Understanding work requires understanding tasks and their lifecycle, the characteristics of queues and work in progress, and the Cost of Delay.</p>
 </div>
 <div class="sect4">
 <h5 id="_discussion_questions_5">Discussion questions</h5>
-<div class="paragraph">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Where do you see queues in your daily life? Are they frequently in high-queue states? What could be done to improve them?
+.</p>
+</li>
+<li>
 <p>Do you choose Scrum, Kanban, both, or neither?</p>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_research_practice_5">Research &amp; practice</h5>
-<div class="paragraph">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Think of a queue you encounter on a regular basis. How can you understand its cost of delay?</p>
+</li>
+<li>
 <p>Research an automated, online Kanban tool. Compare it to a physical whiteboard. Which do you prefer and why?</p>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect4">
@@ -8672,12 +8492,15 @@ control failure.  These ideas are well known to the Agile community and its auth
 </div>
 <div class="paragraph">
 <p><strong>Articles</strong>
-<a href="https://stormpath.com/blog/so-long-scrum-hello-kanban/">So Long Scrum, Hello Kanban</a></p>
+* <a href="https://stormpath.com/blog/so-long-scrum-hello-kanban/">So Long Scrum, Hello Kanban</a></p>
 </div>
 <div class="ulist">
 <ul>
 <li>
 <p><a href="http://blackswanfarming.com/workshop-quantifying-the-cost-of-delay/">Quantifying the Cost of Delay</a></p>
+</li>
+<li>
+<p><a href="http://blackswanfarming.com/cost-of-delay/" class="bare">http://blackswanfarming.com/cost-of-delay/</a></p>
 </li>
 </ul>
 </div>
@@ -9400,7 +9223,7 @@ Use directory creation example with failure of script b/c not idempotent</pre>
 <div class="content">
 <img src="images/2.06-BlackFriday.jpg" alt="alt text" width="400" height="200">
 </div>
-<div class="title">Figure 53. Black Friday at Macy&#8217;s <sup class="footnote">[<a id="_footnoteref_31" class="footnote" href="#_footnote_31" title="View footnote.">31</a>]</sup></div>
+<div class="title">Figure 59. Black Friday at Macy&#8217;s <sup class="footnote">[<a id="_footnoteref_31" class="footnote" href="#_footnote_31" title="View footnote.">31</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>The classic example of significant capacity utilization is the <a href="https://en.wikipedia.org/wiki/Black_Friday_(shopping)">Black Friday/Cyber Monday</a> experience of retailers. Both physical store and online ecommerce systems are placed under great strain annually around this time, with the year&#8217;s profits potentially on the line.</p>
@@ -11679,7 +11502,7 @@ As with other chapters in the later part of this book, we are going to introduce
 <div class="content">
 <img src="images/3.08-triad-constraints.jpg" alt="Iron triangle" width="400">
 </div>
-<div class="title">Figure 54. Project "Iron Triangle" <sup class="footnote">[<a id="_footnoteref_32" class="footnote" href="#_footnote_32" title="View footnote.">32</a>]</sup></div>
+<div class="title">Figure 60. Project "Iron Triangle" <sup class="footnote">[<a id="_footnoteref_32" class="footnote" href="#_footnote_32" title="View footnote.">32</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>The project management <a href="https://en.wikipedia.org/wiki/Project_management_triangle">Iron Triangle</a> represents the interaction of cost, time, scope, and quality on a project. The idea is that, in general, one or more of these factors may be a constraint. The following sign is often seen in service organizations:</p>
@@ -11688,7 +11511,7 @@ As with other chapters in the later part of this book, we are going to introduce
 <div class="content">
 <img src="images/3.08-good-cheap-fast.jpg" alt="Good-Cheap-Fast" width="400">
 </div>
-<div class="title">Figure 55. Pick any two <sup class="footnote">[<a id="_footnoteref_33" class="footnote" href="#_footnote_33" title="View footnote.">33</a>]</sup></div>
+<div class="title">Figure 61. Pick any two <sup class="footnote">[<a id="_footnoteref_33" class="footnote" href="#_footnote_33" title="View footnote.">33</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>The same applies to project management and reflects well the "iron triangle" of tradeoffs. (Note: we will critique the iron triangle subsquently.)</p>
@@ -12257,7 +12080,7 @@ Production scheduling is a large topic in and of itself. It is part of the domai
 <div class="content">
 <img src="images/3.08-development-iterative.png" alt="Rational Unified Process" width="493">
 </div>
-<div class="title">Figure 56. Rational Unified Process <sup class="footnote">[<a id="_footnoteref_34" class="footnote" href="#_footnote_34" title="View footnote.">34</a>]</sup></div>
+<div class="title">Figure 62. Rational Unified Process <sup class="footnote">[<a id="_footnoteref_34" class="footnote" href="#_footnote_34" title="View footnote.">34</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>One interesting aspect of the diagram is that it shows just how difficult it can be to staff a project. Demand for given functional roles ebbs and flows unpredictably. The project manager is expected to manage the uncertain handoffs between the various functional areas, and anticipate resource requirements stemming from unexpected feedback demands. This is why "T-shaped" professionals (see Chapter 7) are desirable, because they can move from area to area in response to demand.</p>
@@ -14728,6 +14551,16 @@ A holistic product-oriented approach contradicts a convenient over-simplificatio
 <div class="content">
 <pre>===== Beneficial variability
  belongs in Ch 8 investment</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>  Whenever I am told that management makes decisions too
+slowly, I ask to see the specific proposal that went to management.
+Invariably, I discover that the cost and benefit of the decision are
+either unquantified or poorly quantified. In my experience, most
+managers make amazingly fast decisions when they are presented
+with compelling economic arguments. &lt;&lt;Reinertsen2009&gt;&gt; p52</pre>
 </div>
 </div>
 </div>
@@ -18170,7 +18003,7 @@ The COBIT 5 framework makes a clear distinction between governance and managemen
 <div class="content">
 <img src="images/4.10-shopkeeper.jpg" alt="two men in front of a store" width="600">
 </div>
-<div class="title">Figure 57. Someone to "mind the store" <sup class="footnote">[<a id="_footnoteref_35" class="footnote" href="#_footnote_35" title="View footnote.">35</a>]</sup></div>
+<div class="title">Figure 63. Someone to "mind the store" <sup class="footnote">[<a id="_footnoteref_35" class="footnote" href="#_footnote_35" title="View footnote.">35</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Now, you wish to go on an extended vacation - perhaps a cruise around the world, or a trek in the Himalayas. You need someone who can count the cash and deposit it, and place orders with and pay your suppliers. You need to hire a professional manager.</p>
@@ -18346,7 +18179,7 @@ We&#8217;ve encountered systems theory and associated concepts such as <a href="
 <div class="content">
 <img src="images/4.10-centrifugal_governor.png" alt="mechanism" width="300">
 </div>
-<div class="title">Figure 58. Centrifugal governor <sup class="footnote">[<a id="_footnoteref_36" class="footnote" href="#_footnote_36" title="View footnote.">36</a>]</sup></div>
+<div class="title">Figure 64. Centrifugal governor <sup class="footnote">[<a id="_footnoteref_36" class="footnote" href="#_footnote_36" title="View footnote.">36</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>"Governors" have been part of mechanical systems for centuries. These mechanisms have the effect of automatically controlling a system so that it (for example) operates at the desired revolutions per minute. Without governors, steam engines tended to blow up, or go out; applying devices such as the <a href="https://en.wikipedia.org/wiki/Centrifugal_governor">centrifugal governor</a> to regulate them was an important step in the development of steam power. Importantly, such devices operated to control the process from variation on either side, whether too fast or too slow. They did not operate merely as brakes.</p>
@@ -21939,7 +21772,7 @@ No enterprise can be effective without high quality data.
 <div class="content">
 <img src="images/4.11-hashes.png" alt="4.11 hashes">
 </div>
-<div class="title">Figure 59. Hashmarks</div>
+<div class="title">Figure 65. Hashmarks</div>
 </div>
 <div class="paragraph">
 <p>If you are of European descent, you might perceive this as the number twelve, or a count of twelve "somethings." What "somethings"? You don&#8217;t know.</p>
@@ -21948,7 +21781,7 @@ No enterprise can be effective without high quality data.
 <div class="content">
 <img src="images/4.11-appleTrees.jpg" alt="Apple trees" width="300">
 </div>
-<div class="title">Figure 60. How many trees? <sup class="footnote">[<a id="_footnoteref_37" class="footnote" href="#_footnote_37" title="View footnote.">37</a>]</sup></div>
+<div class="title">Figure 66. How many trees? <sup class="footnote">[<a id="_footnoteref_37" class="footnote" href="#_footnote_37" title="View footnote.">37</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Someone might tell you that this is the number of trees on your neighbor&#8217;s farm. That makes all the difference. But wait - you know for a fact that there are many more trees than 12! You inquire further and find out it is actually the number of producing apple trees, a very different concept.</p>
@@ -21988,7 +21821,7 @@ A message to mapmakers: Highways are not painted red, rivers don&#8217;t have co
 <div class="content">
 <img src="images/4.11-cuneiform.jpg" alt="Clay tablet with markings" width="300">
 </div>
-<div class="title">Figure 61. Sumerian cuneiform <sup class="footnote">[<a id="_footnoteref_38" class="footnote" href="#_footnote_38" title="View footnote.">38</a>]</sup></div>
+<div class="title">Figure 67. Sumerian cuneiform <sup class="footnote">[<a id="_footnoteref_38" class="footnote" href="#_footnote_38" title="View footnote.">38</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Humans have been representing information since at least the creation of writing. As early as 3000 BCE, the ancient Sumerians used cuneiform to record&#8201;&#8212;&#8201;among other things&#8201;&#8212;&#8201;how much beer people got. (The more things change, the more they stay the same.)</p>
@@ -22003,7 +21836,7 @@ A message to mapmakers: Highways are not painted red, rivers don&#8217;t have co
 <div class="content">
 <img src="images/4.11-quipu.jpg" alt="knotted cords" width="300">
 </div>
-<div class="title">Figure 62. Inca quipu <sup class="footnote">[<a id="_footnoteref_39" class="footnote" href="#_footnote_39" title="View footnote.">39</a>]</sup></div>
+<div class="title">Figure 68. Inca quipu <sup class="footnote">[<a id="_footnoteref_39" class="footnote" href="#_footnote_39" title="View footnote.">39</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>At around the same time as the Sumerians, the Inca empire in what is now Peru [?] also started to represent information. They used a radically different approach from the Sumerians: carefully knotted ropes:</p>
@@ -22060,7 +21893,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4.11-gasPump.jpg" alt="old gas pump" width="400">
 </div>
-<div class="title">Figure 63. What do they owe you? <sup class="footnote">[<a id="_footnoteref_40" class="footnote" href="#_footnote_40" title="View footnote.">40</a>]</sup></div>
+<div class="title">Figure 69. What do they owe you? <sup class="footnote">[<a id="_footnoteref_40" class="footnote" href="#_footnote_40" title="View footnote.">40</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>As the town grows, and your customers increase, you grow increasingly uncertain as to whether they all are paying you what they owe. You purchase a notebook and a pen (today&#8217;s equivalent of clay tablets or knotted ropes) and start writing down the amounts owed you.</p>
@@ -22143,7 +21976,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4.11-diffEngine.jpg" alt="Complex mechanical calculator" width="400">
 </div>
-<div class="title">Figure 64. Babbage Difference Engine <sup class="footnote">[<a id="_footnoteref_41" class="footnote" href="#_footnote_41" title="View footnote.">41</a>]</sup></div>
+<div class="title">Figure 70. Babbage Difference Engine <sup class="footnote">[<a id="_footnoteref_41" class="footnote" href="#_footnote_41" title="View footnote.">41</a>]</sup></div>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -22195,13 +22028,13 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4.11-punchedCard.jpg" alt="punched data card" width="300">
 </div>
-<div class="title">Figure 65. Punchcard <sup class="footnote">[<a id="_footnoteref_42" class="footnote" href="#_footnote_42" title="View footnote.">42</a>]</sup></div>
+<div class="title">Figure 71. Punchcard <sup class="footnote">[<a id="_footnoteref_42" class="footnote" href="#_footnote_42" title="View footnote.">42</a>]</sup></div>
 </div>
 <div class="imageblock" style="float: right">
 <div class="content">
 <img src="images/4.11-cardSorter.jpg" alt="mechanical card sorting machine" width="400">
 </div>
-<div class="title">Figure 66. Card Sorter <sup class="footnote">[<a id="_footnoteref_43" class="footnote" href="#_footnote_43" title="View footnote.">43</a>]</sup></div>
+<div class="title">Figure 72. Card Sorter <sup class="footnote">[<a id="_footnoteref_43" class="footnote" href="#_footnote_43" title="View footnote.">43</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>During World War II, many business professionals found themselves in the military, and some encountered the new electronic computers being used to calculate artillery trajectories or decrypt enemy messages. Edmund Berkeley, the first secretary of the Association for Computing Machinery, was one such professional who grasped the the potential of the new technology <a href="#Akera2007">[Akera2007]</a>. After the war, Berkeley advocated for the use of these machines to the leadership of the Prudential insurance company, while others did the same in the United Kingdom.</p>
@@ -23240,7 +23073,7 @@ Again, if you or your company are involved in legal issues relating to the above
 <div class="content">
 <img src="images/4.11-reportingOldStyle.png" alt="1900s clerk with adding machine" width="300" height="200">
 </div>
-<div class="title">Figure 67. Reporting and analytics, old style <sup class="footnote">[<a id="_footnoteref_44" class="footnote" href="#_footnote_44" title="View footnote.">44</a>]</sup></div>
+<div class="title">Figure 73. Reporting and analytics, old style <sup class="footnote">[<a id="_footnoteref_44" class="footnote" href="#_footnote_44" title="View footnote.">44</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>We have touched on reporting previously, in our discussion of <a href="#metrics-KPIs">metrics</a>. This is a more detailed examination.</p>
@@ -24318,7 +24151,7 @@ As with other chapters in the later part of this book, we are going to introduce
 <div class="content">
 <img src="images/4.12-architecture.jpg" alt="alt text" width="900">
 </div>
-<div class="title">Figure 68. St. Vitus Cathedral, Prague <sup class="footnote">[<a id="_footnoteref_45" class="footnote" href="#_footnote_45" title="View footnote.">45</a>]</sup></div>
+<div class="title">Figure 74. St. Vitus Cathedral, Prague <sup class="footnote">[<a id="_footnoteref_45" class="footnote" href="#_footnote_45" title="View footnote.">45</a>]</sup></div>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -24463,19 +24296,19 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <div class="content">
 <img src="images/4.12-serengeti.jpg" alt="alt text" width="250" height="200">
 </div>
-<div class="title">Figure 69. The terrain <sup class="footnote">[<a id="_footnoteref_46" class="footnote" href="#_footnote_46" title="View footnote.">46</a>]</sup></div>
+<div class="title">Figure 75. The terrain <sup class="footnote">[<a id="_footnoteref_46" class="footnote" href="#_footnote_46" title="View footnote.">46</a>]</sup></div>
 </div>
 <div class="imageblock" style="float: left">
 <div class="content">
 <img src="images/4.12-surveyor.jpg" alt="alt text" width="200" height="200">
 </div>
-<div class="title">Figure 70. The mapmaker <sup class="footnote">[<a id="_footnoteref_47" class="footnote" href="#_footnote_47" title="View footnote.">47</a>]</sup></div>
+<div class="title">Figure 76. The mapmaker <sup class="footnote">[<a id="_footnoteref_47" class="footnote" href="#_footnote_47" title="View footnote.">47</a>]</sup></div>
 </div>
 <div class="imageblock" style="float: ">
 <div class="content">
 <img src="images/4.12-map.jpg" alt="alt text" width="235" height="200">
 </div>
-<div class="title">Figure 71. The map <sup class="footnote">[<a id="_footnoteref_48" class="footnote" href="#_footnote_48" title="View footnote.">48</a>]</sup></div>
+<div class="title">Figure 77. The map <sup class="footnote">[<a id="_footnoteref_48" class="footnote" href="#_footnote_48" title="View footnote.">48</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Confused? Consider the activity of map-making. In map-making you have:</p>
@@ -24564,7 +24397,7 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <div class="content">
 <img src="images/4.12-moritz.jpg" alt="Moritz" width="300">
 </div>
-<div class="title">Figure 72. Franz Moritz Graf von Lacy <sup class="footnote">[<a id="_footnoteref_49" class="footnote" href="#_footnote_49" title="View footnote.">49</a>]</sup></div>
+<div class="title">Figure 78. Franz Moritz Graf von Lacy <sup class="footnote">[<a id="_footnoteref_49" class="footnote" href="#_footnote_49" title="View footnote.">49</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>In previous ages, nobles would assemble and fight for their King, but their armies were poorly coordinated, and disputes over strategy would often arise. Each noble&#8217;s army would have its own quartermaster, couriers, intelligence, supply chains, and the like. This was both inefficient, and ineffective: overall plans of battle often could not be made or executed, and military operations would be bungled.</p>
@@ -24685,7 +24518,7 @@ The operating model is the necessary level of business process integration and s
 <div class="content">
 <img src="images/4.12-EA-context.png" alt="EA context" width="900">
 </div>
-<div class="title">Figure 73. EA context, based on <a href="#Ross2006">[Ross2006]</a>, fig 1-2, p.10.</div>
+<div class="title">Figure 79. EA context, based on <a href="#Ross2006">[Ross2006]</a>, fig 1-2, p.10.</div>
 </div>
 <div class="paragraph">
 <p>Notice the distinction between Enterprise Architecture as a capability and as an artifact. The <strong>practice</strong> of Enterprise Architecture is not the same as the actual Enterprise Architecture. For the purposes of this textbook, we define enterprise architecture&#8217;s concerns as essentially the enterprise operating model: process, data, organizational capabilities, and systems.</p>
@@ -24717,7 +24550,7 @@ The operating model is the necessary level of business process integration and s
 <div class="content">
 <img src="images/4.12-zachman.png" alt="4.12 zachman">
 </div>
-<div class="title">Figure 74. A variation on the Zachman framework</div>
+<div class="title">Figure 80. A variation on the Zachman framework</div>
 </div>
 <div class="paragraph">
 <p><em>(loosely based on <a href="#Zachman1987">[Zachman1987]</a> and succeeding work.)</em></p>
@@ -24761,7 +24594,7 @@ The operating model is the necessary level of business process integration and s
 <div class="content">
 <img src="images/4.12-BM-OM.png" alt="Business model versus operating model" width="900">
 </div>
-<div class="title">Figure 75. Business model versus operating model</div>
+<div class="title">Figure 81. Business model versus operating model</div>
 </div>
 <div class="paragraph">
 <p>This distinction helps us position the Enterprise Architecture group with respect to key partner organizations:</p>
@@ -24872,7 +24705,7 @@ As a hygiene factor, benefits from EA can be valued in terms of reduction in man
 <div class="content">
 <img src="images/4.12-impact.png" alt="4.12 impact">
 </div>
-<div class="title">Figure 76. Architecture impacts on enterprise value</div>
+<div class="title">Figure 82. Architecture impacts on enterprise value</div>
 </div>
 <div class="paragraph">
 <p>The above diagram suggests a number of specific, measurable outcomes from typical enterprise architecture goals. Without exploring every line of value:</p>
@@ -25203,7 +25036,7 @@ identification and enforcement</p>
 <div class="content">
 <img src="images/4.12-archProgram.png" alt="4.12 archProgram">
 </div>
-<div class="title">Figure 77. Large scale architecture program</div>
+<div class="title">Figure 83. Large scale architecture program</div>
 </div>
 <div class="paragraph">
 <p>The Enterprise Architecture organization might report to a CTO, the Chief of Staff for the Office of the CIO, or the head of Corporate Strategy and Planning. It is a centralized organization with a small staff of domain architects and an Architecture Standards organization that owns two key cross-functional architecture processes.</p>
@@ -25259,7 +25092,7 @@ division is <em>fractal</em> (that is, it reproduces at different scales).</p>
 <div class="content">
 <img src="images/4.12-gudea.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 78. Gudea with blueprint, ~2140 BCE <sup class="footnote">[<a id="_footnoteref_50" class="footnote" href="#_footnote_50" title="View footnote.">50</a>]</sup></div>
+<div class="title">Figure 84. Gudea with blueprint, ~2140 BCE <sup class="footnote">[<a id="_footnoteref_50" class="footnote" href="#_footnote_50" title="View footnote.">50</a>]</sup></div>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -25284,7 +25117,7 @@ The true measure of the value of a model is whether it actually influences behav
 <div class="content">
 <img src="images/4.12-whiteboard.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 79. Whiteboard <sup class="footnote">[<a id="_footnoteref_51" class="footnote" href="#_footnote_51" title="View footnote.">51</a>]</sup></div>
+<div class="title">Figure 85. Whiteboard <sup class="footnote">[<a id="_footnoteref_51" class="footnote" href="#_footnote_51" title="View footnote.">51</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Even in construction and engineering trades that rely on blueprints as a source of truth, keeping them up to date requires considerable discipline and process. In faster-moving digital organizations, visual models are almost always out of date unless they have been specifically refreshed for a purpose, or unless there is a strong formal process in place (and the value of such a process may be difficult to establish). That doesn&#8217;t mean that diagrams will go away. Co-located teams use whiteboards and dry-erase markers and will continue to use them. There are important cognitive and human factors reasons for this that will not go away. Because of these facts, it is useful to understand some of the fundamentals of how humans interpret visual data.</p>
@@ -25307,7 +25140,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4.12-tiger.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 80. Fast recognition means survival <sup class="footnote">[<a id="_footnoteref_52" class="footnote" href="#_footnote_52" title="View footnote.">52</a>]</sup></div>
+<div class="title">Figure 86. Fast recognition means survival <sup class="footnote">[<a id="_footnoteref_52" class="footnote" href="#_footnote_52" title="View footnote.">52</a>]</sup></div>
 </div>
 <div class="ulist">
 <ul>
@@ -25332,7 +25165,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4.12-neumann-flowchart.png" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 81. The first software flowchart <sup class="footnote">[<a id="_footnoteref_53" class="footnote" href="#_footnote_53" title="View footnote.">53</a>]</sup></div>
+<div class="title">Figure 87. The first software flowchart <sup class="footnote">[<a id="_footnoteref_53" class="footnote" href="#_footnote_53" title="View footnote.">53</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Architects and architecture are known for creating diagrams&#8201;&#8212;&#8201;abstract graphical representations of complex systems. The first known instance of applying graphical techniques to a digital problem was in 1947 <a href="#vonNeumann1947">[vonNeumann1947]</a> and visual notations have evolved along with the field of computing ever since. Notable examples include:</p>
@@ -25366,7 +25199,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4.12-flowchart-template.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 82. IBM flowcharting template <sup class="footnote">[<a id="_footnoteref_54" class="footnote" href="#_footnote_54" title="View footnote.">54</a>]</sup></div>
+<div class="title">Figure 88. IBM flowcharting template <sup class="footnote">[<a id="_footnoteref_54" class="footnote" href="#_footnote_54" title="View footnote.">54</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Research at Microsoft suggests that developers use diagrams for four purposes:</p>
@@ -25403,7 +25236,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4.12-sequence-diagram.png" alt="blueprint" width="450" height="200">
 </div>
-<div class="title">Figure 83. UML sequence diagram <sup class="footnote">[<a id="_footnoteref_55" class="footnote" href="#_footnote_55" title="View footnote.">55</a>]</sup></div>
+<div class="title">Figure 89. UML sequence diagram <sup class="footnote">[<a id="_footnoteref_55" class="footnote" href="#_footnote_55" title="View footnote.">55</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>However, if we&#8217;re building systems to be operated and maintained by humans, it would seem that we should support the cognitive and perceptual strengths of humans.  Because diagrams are more readily processed, they are often used to represent high level system interactions - how a given service, product or application is related to peer systems and services. Building such depictions can be helpful to fostering a shared mental model of the overall system objectives and context. The more complex and highly scaled the environment, the more likely one will encounter such artifacts as a means to creating the mental model.</p>
@@ -25467,7 +25300,7 @@ The big picture is part of the standard mindset of EA, which everyone immediatel
 <div class="content">
 <img src="images/4.12-obesity.jpg" alt="blueprint" width="550" height="200">
 </div>
-<div class="title">Figure 84. Complex diagram <sup class="footnote">[<a id="_footnoteref_56" class="footnote" href="#_footnote_56" title="View footnote.">56</a>]</sup></div>
+<div class="title">Figure 90. Complex diagram <sup class="footnote">[<a id="_footnoteref_56" class="footnote" href="#_footnote_56" title="View footnote.">56</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>However, this next diagram is essentially unusable, as visually tracing any given line is too difficult, and it would be easy to mistakenly identify one bubble as dependent on another:</p>
@@ -25476,7 +25309,7 @@ The big picture is part of the standard mindset of EA, which everyone immediatel
 <div class="content">
 <img src="images/4.12-complex-network.jpg" alt="blueprint" width="550" height="200">
 </div>
-<div class="title">Figure 85. Another complex diagram <sup class="footnote">[<a id="_footnoteref_57" class="footnote" href="#_footnote_57" title="View footnote.">57</a>]</sup></div>
+<div class="title">Figure 91. Another complex diagram <sup class="footnote">[<a id="_footnoteref_57" class="footnote" href="#_footnote_57" title="View footnote.">57</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>This may seem like an obvious critique, but architectural diagrams of similar complexity and unusability have too often been produced.</p>
@@ -25489,7 +25322,7 @@ formalisms don&#8217;t give a good sense of scale. For example, suppose you see 
 <div class="content">
 <img src="images/4.12-capabilities.png" alt="capabilities" width="600">
 </div>
-<div class="title">Figure 86. Simple capability map</div>
+<div class="title">Figure 92. Simple capability map</div>
 </div>
 <div class="paragraph">
 <p>Diagrams like this are common, but what does it mean that all the boxes are equally sized? Are there as many lawyers as sales people? Operations staff? It&#8217;s not clear what the advantage is to putting information like this into a graphical form; no interactions are seen and the eight areas could more easily be expressed as a list (or "catalog" in the terms we&#8217;ll introduce below). This brings us to the final problem listed above: visualizations rely on some <a href="#shared-mental-model">common ground</a> understanding. If boxes and lines are used for communication, their meaning should be agreed upon - otherwise, there is risk of mis-understanding, and the diagram may do more harm than good.</p>
@@ -25638,7 +25471,7 @@ Artifacts are generally classified as catalogs (lists of things), matrices (show
 <div class="content">
 <img src="images/4.12-simpleMetamodel.png" alt="metamodel" width="400">
 </div>
-<div class="title">Figure 87. A simple metamodel</div>
+<div class="title">Figure 93. A simple metamodel</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -25842,7 +25675,7 @@ One core question decided by governance is how much autonomy is granted to busin
 <div class="content">
 <img src="images/4.12-A-380.jpg" alt="A-380" width="300" height="200">
 </div>
-<div class="title">Figure 88. Airbus A-380 <sup class="footnote">[<a id="_footnoteref_58" class="footnote" href="#_footnote_58" title="View footnote.">58</a>]</sup></div>
+<div class="title">Figure 94. Airbus A-380 <sup class="footnote">[<a id="_footnoteref_58" class="footnote" href="#_footnote_58" title="View footnote.">58</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>In 2006, Airbus was in the midst of developing the gigantic A-380 aircraft. Because of the scale of the effort, multiple teams of engineers in different countries were working on the effort. As William Ulrich says of the German and French teams, "having failed to coordinate efforts to wire the world&#8217;s largest plane, they were surprised to learn that they had used different approaches to designing the A380&#8217;s wiring system" <a href="#Ulrich2010">[Ulrich2010]</a>, p. 32. This was because the teams were using different software for wiring design of the critical wiring design software <a href="#Clark2006">[Clark2006]</a>. The use of different software to fulfill the capability resulted in a year&#8217;s delay, a $4.5bn order loss to Boeing, and a 26% drop in Airbus stock.</p>
@@ -25898,7 +25731,7 @@ One core question decided by governance is how much autonomy is granted to busin
 <div class="content">
 <img src="images/4.12-archimate.png" alt="archimate" width="500">
 </div>
-<div class="title">Figure 89. Similar to <a href="#Open2012">[Open2012]</a>, section 2.6</div>
+<div class="title">Figure 95. Similar to <a href="#Open2012">[Open2012]</a>, section 2.6</div>
 </div>
 <div class="paragraph">
 <p>As we look at the overall structure of the architecture disciplines, we have three disciplines that correspond to the columns. We&#8217;ll call these "perspectives":</p>
@@ -25980,7 +25813,7 @@ One core question decided by governance is how much autonomy is granted to busin
 <div class="content">
 <img src="images/4.12-flowchart.jpg" alt="flowchart" width="300" height="200">
 </div>
-<div class="title">Figure 90. A flowchart <sup class="footnote">[<a id="_footnoteref_59" class="footnote" href="#_footnote_59" title="View footnote.">59</a>]</sup></div>
+<div class="title">Figure 96. A flowchart <sup class="footnote">[<a id="_footnoteref_59" class="footnote" href="#_footnote_59" title="View footnote.">59</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Process architecture is concerned with why and how activities are performed. It includes the detailed, step by step understanding of activities, in a transparent way. From top to bottom, it includes concepts such as:</p>
@@ -26488,7 +26321,7 @@ Another possible objection against agile methods is that the processes in EA, an
 <div class="content">
 <img src="images/4.12-stopwatch.jpg" alt="alt text" width="300" height="200">
 </div>
-<div class="title">Figure 91. What is your Cost of Delay? <sup class="footnote">[<a id="_footnoteref_60" class="footnote" href="#_footnote_60" title="View footnote.">60</a>]</sup></div>
+<div class="title">Figure 97. What is your Cost of Delay? <sup class="footnote">[<a id="_footnoteref_60" class="footnote" href="#_footnote_60" title="View footnote.">60</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>It is in the "governance and approval" kind of activity that conflict is most likely to emerge. Cadence and synchronization (e.g. processes) with the potential to block teams from pursuing their mission should be very carefully considered. If there is a process or a queue of architecture approvals, it at least should be operated on Cost of Delay of the work it&#8217;s blocking. And more generally, across the organization, the process should be tested against an economic model such as establishing a nominal or <a href="#portfolio-CoD">portfolio-level Cost of Delay</a>. Like other processes, architecture itself can be assessed against such a baseline.</p>
@@ -26536,7 +26369,7 @@ Architectural goals—for example, desired performance, availability, and securi
 <div class="content">
 <img src="images/4.12-strangler-vine.jpg" alt="alt text" width="400" height="200">
 </div>
-<div class="title">Figure 92. Australian strangler vine surrounding tree <sup class="footnote">[<a id="_footnoteref_61" class="footnote" href="#_footnote_61" title="View footnote.">61</a>]</sup></div>
+<div class="title">Figure 98. Australian strangler vine surrounding tree <sup class="footnote">[<a id="_footnoteref_61" class="footnote" href="#_footnote_61" title="View footnote.">61</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Keeping the target operating condition specific is preferable. When architecture scopes problems too broadly, the temptation is to undertake <a href="#large-arch-xform-risk">large and risky transformation programs</a>. As an alternative, Humble and Molesky suggest the "strangler pattern," proposed by Martin Fowler in 2004 <a href="#Fowler2004a">[Fowler2004a]</a>. This pattern uses as a metaphor Australian "strangler" vines that grow around trees until the original tree dies, at which point the strangler vine is now itself a sturdy, rooted structure (see picture).</p>
