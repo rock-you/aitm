@@ -14,7 +14,7 @@ The concepts of queuing and work in process are critical to the rest of this boo
 
 endif::instructor-ed[]
 
-Manufacturing? What do digital professionals have to learn from that? "Our work is not an assembly line!," is one frequently heard response. It is true that we need to be careful in drawing the *right* lessons from manufacturing, but there is a growing consensus on how to do this. Please keep an open mind as you read this chapter. 
+Manufacturing? What do digital professionals have to learn from that? "Our work is not an assembly line!," is one frequently heard response. It is true that we need to be careful in drawing the *right* lessons from manufacturing, but there is a growing consensus on how to do this. Please keep an open mind as you read this chapter.
 
 ===== Kanban and its Lean origins
 
@@ -37,13 +37,13 @@ IMPORTANT: Lean is important. Regardless of your intended career path, it is adv
 
 Kanban is a term originating from Lean and the Toyota Production System. Originally, it signified a “pull” technique in which materials would only be transferred to a given workstation on a definite signal that the workstation required the materials. This was in contrast to “push” approaches where work was allowed to accumulate on the shop floor, on the (now discredited) idea that it was more “efficient” to operate workstations at maximum capacity.
 
-Factories operating on a "push" model found themselves with massive amounts of inventory (work in process) in their facilities. This tied up operating capital and resulted in long delays to shipment, because of the queueing issues. Japanese companies did not have the luxury of large amounts of operating capital, so they started experimenting with "single-piece flow." This led to a number of related innovations, such as the ability to re-configure manufacturing machinery much more quickly than U.S. factories were capable of.
+Factories operating on a "push" model found themselves with massive amounts of inventory (work in process) in their facilities. This tied up operating capital and resulted in long delays to shipment. Japanese companies did not have the luxury of large amounts of operating capital, so they started experimenting with "single-piece flow." This led to a number of related innovations, such as the ability to re-configure manufacturing machinery much more quickly than U.S. factories were capable of.
 
 David J. Anderson was a product manager at Microsoft who was seeking a more effective approach to managing software development. In consultation with Don Reinertsen (introduced in the xref:queuing[previous section]) he applied the original concept of Kanban to his software development activities <<Anderson2010>>.
 
 xref:scrum[Scrum] (covered in the previous chapter) is based on a rhythm with its scheduled sprints, for example every two weeks. In contrast, Kanban is a continuous process with no specified rhythm (also known as _cadence_). Work is “pulled” from backlog into active attention as resources are freed from previous work. This is perhaps the most important aspect of Kanban - the idea that *work is not accepted until there is capacity to perform it.*
 
-You may have a white board covered with sticky notes, but if they are stacked on top of each other with no concern for worker availability, you are not doing Kanban. You are accepting too much work in process and you are likely to encounter a "high-queue state" in which work becomes slower and slower to get done.
+You may have a white board covered with sticky notes, but if they are stacked on top of each other with no concern for worker availability, you are not doing Kanban. You are accepting too much work in process and you are likely to encounter a "high-queue state" in which work becomes slower and slower to get done. (More on xref:queuing[queues] below.)
 
 ===== The Theory of Constraints
 
@@ -75,17 +75,48 @@ Queues matter because they are economically important, they are poorly managed, 
 .A queue footnote:[_Image credit https://www.flickr.com/photos/hktang/4243300265, downloaded 2016-10-07, commercial use permitted_]
 image::images/2.05-queue.jpg[alt text, 300, 200, float="right"]
 
-Even at this stage of our evolution, with just one co-located collaborative team, it’s important to consider work in progress and how to limit it. One topic we will emphasize throughout the rest of this book is _queuing_. What is a queue? A queue, intuitively, is a collection of tasks to be done, being serviced by some worker or resource in some sequence.
+Even at this stage of our evolution, with just one co-located collaborative team, it’s important to consider work in progress and how to limit it. One topic we will emphasize throughout the rest of this book is _queuing_. What is a queue? A queue, intuitively, is a collection of tasks to be done, being serviced by some worker or resource in some sequence, for example:
 
-IMPORTANT: Queuing theory is an important branch of mathematics used extensively in computing, operations research, networking, and other fields. It's a topic getting much attention of late in the Agile and related movements, especially as it relates to development team productivity.
+* feature "stories" being developed by a product team
+* customer requests coming into a service desk
+* requests from a development team to an infrastructure team for services (e.g. network or server configuration, consultations, etc.)
 
-Lean manufacturing has been an important movement throughout the 20th century, and one of its central principles is to limit work in process. Work in process is obvious on a shop floor, because physical raw materials (inventory) are quite visible.
+IMPORTANT: Queuing theory is an important branch of mathematics used extensively in computing, operations research, networking, and other fields. It's a topic getting much attention of late in the Agile and related movements, especially as it relates to digital product team productivity.
+
+The amount of time that any given work item spends in the queue, is proportional to how busy the servicing resource is. The simple formula is
+
+Wait time = (% Busy) * (% Idle)
+
+In other words, if you divide the percentage of busy time for the resource, by its idle time, you see the average wait time. So, if a resource is busy 40% of the days, but idle 60% of the days, the average time you wait for the resource is
+
+0.4/0.6= 0.67 hours (2/3 of a day).
+
+Conversely, if a resource is busy 95% of the time, the average time you'll wait is
+
+0.95/0.5 = 5.67 (19 days!)
+
+If you use a graphing calculator, you see the following:
+
+image::images/2.05-wait-time.png[]
+
+Notice how the wait time approaches infinity as the queue utilization approaches 100%. And yet, full utilization of resources is often sought by managers in the name of "efficiency." These basic principles are discussed by Gene Kim et al in the _Phoenix Project_ <<Kim2013>> in Chapter 23, and more rigorously by Don Reinertsen in _The Principles of Product Development Flow_ <<Reinertsen2009>>, chapter 3. A further complication is when work must pass through multiple queues; wait times for work easily expand to weeks or months. Such scenarios are not hypothetical, they are often seen in the real world and are a fundamental cause of information technology organizations getting a bad name for being slow and unresponsive. Fortunately, digital professionals are gaining insight into these dynamics and (as of 2016) matters are improving across the industry.
+
+Understanding queuing behavior is critical to productivity. Reinertsen suggests that poorly managed queues contribute to:
+
+* Longer cycle time
+* Increased risk
+* More variability
+* More overhead
+* Lower quality
+* Less motivation
+
+These issues were understood by the pioneers of Lean manufacturing, an important movement throughout the 20th century. One of its central principles is to limit work in process. Work in process is obvious on a shop floor, because physical raw materials (inventory) are quite visible.
 
 [[wip]]
 .Physical Work in Process footnote:[_Image credit https://www.flickr.com/photos/jayburkhalter/6679328027/, downloaded 2016-10-07, commercial use permitted_]
 image::images/2.05-wip.jpg[alt text, 300, 200, float="left"]
 
-Don Reinertsen, quoted above, developed the insight that product design and development had an *invisible* inventory of "Work in Process" that he called Design in Process (DIP). Just as managing physical work in process on the factory floor is key to a factory's success, so correctly understanding and managing design in process is essential to all kinds of research and development organizations -- *including digital product development.* In fact, because digital systems are largely invisible even when finished, understanding their work in process is even more challenging.
+Don Reinertsen, quoted above, developed the insight that product design and development had an *invisible* inventory of "Work in Process" that he called Design in Process (DIP). Just as managing physical work in process on the factory floor is key to a factory's success, so correctly understanding and managing design in process is essential to all kinds of research and development organizations -- *including digital product development, e.g. building software(!)* In fact, because digital systems are largely invisible even when finished, understanding their work in process is even more challenging.
 
 It is easy and tempting for a product development team to accumulate excessive amounts of work in process. And, to some degree, having a rich backlog of ideas is an asset. But, just as some inventory (e.g. groceries) is perishable, so are design ideas. They have a limited time in which they might be relevant to a customer or a market. Therefore, accumulating too many of them at any point in time can be wasteful.
 
@@ -94,10 +125,6 @@ What does this have to do with queuing? Design in process is one form of queue s
 Regardless of whether it is a "Requirement," a "User Story," an "Epic," "Defect,", "Issue," or "Service Request," you should remember it's *all just work.* It needs to be logged, prioritized, assigned, and tracked to completion. Queues are the fundamental concept for doing this, and it's critical that digital management specialists understand this.
 
 IMPORTANT: These concepts of work in process and queuing are the basis for much of the rest of this book. Be sure you are completely comfortable with them.
-
-
-
-Classroom discussions and individual research and readings recommending.
 
 We will revisit the topic of queuing in Chapter 9. For now, some rules of thumb:
 
