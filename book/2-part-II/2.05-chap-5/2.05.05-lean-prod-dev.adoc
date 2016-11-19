@@ -17,15 +17,28 @@ endif::collaborator-draft[]
 
 ===== Lean product development
 
-One of the challenges with applying Lean to IT (as noted previously) is that many IT professionals (especially software developers) believe that manufacturing is a "deterministic" field, whose lessons don't apply to developing technical products. "Creating software is like creating art, not being on an assembly line," is one line of argument.
+[quote, Bjarne Stroustrup, C++ inventor]
+The idea of software development as an assembly line manned by semi-skilled interchangeable workers is fundamentally flawed and wasteful <<Stroustrup2010>>.
 
-The root cause of this debate is the distinction between product development and production. It is true that an industrial production line may be repetitive. But how did the production line come to be? It was created as part of a process of product development. *That* is not a repetitive process; it is a highly variable, creative process, and always has been.
+One of the challenges with applying Lean to IT (as noted xref:lean[previously]) is that many IT professionals (especially software developers) believe that manufacturing is a "deterministic" field, whose lessons don't apply to developing technical products. "Creating software is like creating art, not being on an assembly line," is one line of argument.
+
+.Production footnote:[_Image credit https://www.flickr.com/photos/psit/5605605412, downloaded 2016-11-19, commercial use permitted_]
+image::images/2.05-assembly-line.jpg[alt text, 300, 200, float="left"]
+
+
+The root cause of this debate is the distinction between product development and production. It is true that an industrial production line, for example producing forklifts by the thousands, may be repetitive. But how did the production line come to be? How was the forklift invented, or developed? It was created as part of a process of product development. It took mechanical engineering, electrical engineering, chemistry, materials science, and more.  Combining fundamental engineering principles and techniques into a new, marketable product is not a repetitive process; it is a highly variable, creative process, and always has been.
 
 WARNING: Never confuse production with product development. The approaches, measures, and concerns are radically different. This book considers it an "original sin."
 
-One dead end that organizations keeps pursuing is the desire to make research and development (R&D) more "predictable"; that is, to reduce variation and predictably create innovations. This never works well; game-changing innovations are usually complex responses to complex market systems dynamics, including customer psychology, current trends, and many other factors. The process of innovating cannot, by its very nature, be made repeatable.
+.Research and development footnote:[_Image credit https://www.flickr.com/photos/hamptonroadspartnership/5330640858, commercial use permitted_]
+image::images/2.05-r-and-d.png[alt text, 300, 200, float="right"]
 
-In IT, simply developing software for a new problem (or even new software for an old problem) is an R&D problem, not a production line problem. It is iterative, uncertain, and risky, just like other forms of product development. That does not mean it is completely un-manageable, or that its creation is a mysterious, artistic process. It is just a more variable process with a higher chance of failure, with a need to incorporate feedback quickly to reduce the risk of open-loop control failure. These ideas are well known to the Agile community and its authors. However, there is one thought leader who stands out in this field: an ex-Naval officer and former nuclear engineer named Donald Reinertsen.
+One dead end that organizations keeps pursuing is the desire to make _research and development_ (R&D) more "predictable"; that is, to reduce variation and predictably create innovations. This never works well; game-changing innovations are usually complex responses to complex market systems dynamics, including customer psychology, current trends, and many other factors. The process of innovating cannot, by its very nature, be made repeatable.
+
+WARNING: The concept of a repeatable "software process" is at best a risky one, and an idea that has caused much waste in the industry.
+
+In IT, simply developing software for a new problem (or even new software for an old problem) is an R&D problem, not a production line problem. It is iterative, uncertain, and risky, just like other forms of product development. That does not mean it is completely un-manageable, or that its creation is a mysterious, artistic process. It is just a more variable process with a higher chance of failure, and with a need to incorporate feedback quickly to reduce the risk of xref:2.00.1-open-loop[open loop]
+control failure.  These ideas are well known to the Agile community and its authors. However, there is one thought leader who stands out in this field: an ex-Naval officer and former nuclear engineer named Donald Reinertsen.
 
 There are many books on Agile development and management. Consider the following books, all well known and respected in the fields of software development and Agile:
 
@@ -35,9 +48,11 @@ What do they all have in common? They all cite Don Reinertsen:
 
 image::images/2.05-books-dr.png[]
 
-Reinertsen's work dates back to 1991, and (orginally as a co-author with Preston G. Smith) presaged much of the Agile movement <<Smith1991>>. Reinertsen was partnering with David Anderson when Anderson created Kanban. He wrote the introduction to Leffingwell's _Agile Software Requirements_, the initial statement of the Scaled Agile Framework. His influence is pervasive across the Agile community.
+ifdef::collaborator-draft[]
+ #designer input needed
+endif::collaborator-draft[]
 
-His work is deep and based on fundamental mathematical principles such as queueing theory (lightly touched on in _The Phoenix Project_). One way of reading his work is as a series of interdependent principles:
+Reinertsen's work dates back to 1991, and (orginally as a co-author with Preston G. Smith) presaged much of the Agile movement <<Smith1991>>. Reinertsen was partnering with David Anderson when Anderson created Kanban. He wrote the introduction to Leffingwell's _Agile Software Requirements_, the initial statement of the Scaled Agile Framework. His influence is pervasive across the Agile community. His work is deep and based on fundamental mathematical principles such as queueing theory. One way of reading his work is as a series of interdependent principles:
 
 . The flow, or throughput of product innovation is the primary determinant of financial success.
 . Product development is essentially the creation of information.
@@ -50,7 +65,6 @@ His work is deep and based on fundamental mathematical principles such as queuei
 These can be summarized in the following pyramid:
 
 image::images/2.05-pyramid.png[]
-
 
 
 anchor:cost-of-delay[]
