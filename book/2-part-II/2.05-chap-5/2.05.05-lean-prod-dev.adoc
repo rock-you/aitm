@@ -1,6 +1,6 @@
 anchor:2.04.04-lean-product-dev[]
 
-==== Lean, Lean product development, and Don Reinertsen
+==== Lean product development and Don Reinertsen
 
 ifdef::collaborator-draft[]
 
@@ -40,19 +40,22 @@ WARNING: The concept of a repeatable "software process" is at best a risky one, 
 In IT, simply developing software for a new problem (or even new software for an old problem) is an R&D problem, not a production line problem. It is iterative, uncertain, and risky, just like other forms of product development. That does not mean it is completely un-manageable, or that its creation is a mysterious, artistic process. It is just a more variable process with a higher chance of failure, and with a need to incorporate feedback quickly to reduce the risk of xref:2.00.1-open-loop[open loop]
 control failure.  These ideas are well known to the Agile community and its authors. However, there is one thought leader who stands out in this field: an ex-Naval officer and former nuclear engineer named Donald Reinertsen, introduced above in our discussion of anchor:queuing[queuing].
 
-There are many books on Agile development and management. Consider the following books, all well known and respected in the fields of software development and Agile:
+There are many books on Agile development and management. Consider the following books, all well known and influential in the fields of software development and Agile:
 
 ifdef::collaborator-draft[]
  #designer input needed
 endif::collaborator-draft[]
 
-image::images/2.05-books.png[]
+* David Anderson, https://www.goodreads.com/book/show/8086552-kanban[_Kanban: Successful Evolutionary Change for Your Technology Business_]
+* Craig Larman and Bas Vodde, https://www.goodreads.com/book/show/5247677-scaling-lean-agile-development[_Scaling Lean & Agile Development: Thinking and Organizational Tools for Large-Scale Scrum_]
+* Jim Highsmith, https://www.goodreads.com/book/show/338541.Adaptive_Software_Development[_Adaptive Software Development: An Evolutionary Approach to Managing Complex Systems_]
+* Jez Humble, Joanne Molesky and Barry O'Reilly, https://www.goodreads.com/book/show/18167218-lean-enterprise[_Lean Enterprise: How High Performance Organizations Innovate at Scale_]
+* Dean Leffingwell, https://www.goodreads.com/book/show/8997772-agile-software-requirements[_Agile Software Requirements: Lean Requirements Practices for Teams, Programs, and the Enterprise_]
+* Steve McConnell, https://www.goodreads.com/book/show/93892.Rapid_Development[_Rapid Development: Taming Wild Software Schedules_]
+* Roman Pichler,  https://www.goodreads.com/book/show/7950745-agile-product-management-with-scrum[_Agile Product Management with Scrum: Creating Products That Customers Love_] https://www.goodreads.com/book/show/7950745-agile-product-management-with-scrum
+* Mary and Tom Poppendieck, https://www.goodreads.com/book/show/194338.Lean_Software_Development[_Lean Software Development: An Agile Toolkit for Software Development Managers_]
 
-What do they all have in common? They all cite Don Reinertsen:
-
-image::images/2.05-books-dr.png[]
-
-Reinertsen's work dates back to 1991, and (orginally as a co-author with Preston G. Smith) presaged important principles of the Agile movement <<Smith1991>>, from the general perspective of product development. Reinertsen's influence is well documented and notable. He was partnering with David Anderson when Anderson created Kanban. He wrote the introduction to Leffingwell's _Agile Software Requirements_, the initial statement of the Scaled Agile Framework. His influence is pervasive across the Agile community. His work is deep and based on fundamental mathematical principles such as queueing theory. One way of reading his work is as a series of interdependent principles:
+What do they all have in common? They all cite Don Reinertsen. Reinertsen's work dates back to 1991, and (orginally as a co-author with Preston G. Smith) presaged important principles of the Agile movement <<Smith1991>>, from the general perspective of product development. Reinertsen's influence is well documented and notable. He was partnering with David Anderson when Anderson created Kanban. He wrote the introduction to Leffingwell's _Agile Software Requirements_, the initial statement of the Scaled Agile Framework. His influence is pervasive across the Agile community. His work is deep and based on fundamental mathematical principles such as queueing theory. One way of reading his work is as a series of interdependent principles:
 
 . The flow, or throughput of product innovation is the primary driver of financial success. (Notice that innovation must be *accepted by the market* - simply producing new product is not enough.)
 . Product development is essentially the creation of information.
@@ -64,7 +67,7 @@ Reinertsen's work dates back to 1991, and (orginally as a co-author with Preston
 
 These can be summarized in the accompanying pyramid figure.
 
-image::images/2.05-pyramid.png[pyramid, 500,,float="right"]
+image::images/2.05-pyramid.png[pyramid, 400,,float="right"]
 
 ifdef::collaborator-draft[]
  #designer to re-draw
@@ -123,6 +126,8 @@ In this delay curve, while profits and revenues are lost due to late entry, it's
 .Aggravated Cost of Delay
 image::images/2.05-aggroCOD.png[delay curve 2,400,]
 
-In this version, the failure to enter the market in a timely way results in long term loss of market share. We can think of this as the "Amazon Kindle versus Barnes & Noble Nook" profile, as the Nook has not achieved parity, and does not appear likely to.
+In this version, the failure to enter the market in a timely way results in long term loss of market share. We can think of this as the "Amazon Kindle versus Barnes & Noble Nook" profile, as the Nook has not achieved parity, and does not appear likely to. There are other delay curves imaginable, such as delay curves for tightly time limited products (e.g. such as found in the fashion industry) or cost of delay that's only incurred after a specific date (such as in complying with a regulation.)
 
 Reinertsen observes that product managers may think that they intuitively understand Cost of Delay, but when he asks them to estimate the aggregate cost of (for example) delaying their product's delivery by a given period of time, the estimates provided by product team participants *in a position to delay delivery* may vary by up to 50:1. This is powerful evidence that a more quantitative approach is essential, as opposed to relying on "gut feel" or the xref:HIPPO[Highest Paid Person's Opinion].
+
+Finally, Josh Arnold notes that Cost of Delay is much easier to assess on small batches of work. Large projects tend to attract many ideas for features, some of which have stronger economic justifications than others. When all these features are lumped together, it makes understanding Cost of Delay challenging, because it then becomes an average across the various features. But since features, ideally, can be worked on individually, understanding Cost of Delay at that level helps with the prioritization of the work.
