@@ -54,7 +54,7 @@ endif::collaborator-draft[]
 
 Reinertsen's work dates back to 1991, and (orginally as a co-author with Preston G. Smith) presaged much of the Agile movement <<Smith1991>>. Reinertsen was partnering with David Anderson when Anderson created Kanban. He wrote the introduction to Leffingwell's _Agile Software Requirements_, the initial statement of the Scaled Agile Framework. His influence is pervasive across the Agile community. His work is deep and based on fundamental mathematical principles such as queueing theory. One way of reading his work is as a series of interdependent principles:
 
-. The flow, or throughput of product innovation is the primary determinant of financial success.
+. The flow, or throughput of product innovation is the primary driver of financial success. (Notice that innovation must be *accepted by the market* - simply producing new product is not enough.)
 . Product development is essentially the creation of information.
 . The creation of information requires fast http://dm-academy.github.io/aitm/#_a_brief_introduction_to_feedback[feedback]
 . Feedback requires limiting work in process
@@ -62,10 +62,20 @@ Reinertsen's work dates back to 1991, and (orginally as a co-author with Preston
 . Effective, economical prioritization requires understanding the http://www.leadingagile.com/2015/06/an-introduction-to-cost-of-delay/[cost of delay] for individual product features
 . Understanding cost of delay requires smaller batch sizes, consisting of cohesive features, not large projects.
 
-These can be summarized in the following pyramid:
+These can be summarized in the accompanying pyramid figure.
 
-image::images/2.05-pyramid.png[]
+image::images/2.05-pyramid.png[pyramid, 400,,float="right"]
 
+ifdef::collaborator-draft[]
+ #designer to re-draw
+endif::collaborator-draft[]
+
+If a company wishes to produce innovation faster than competitors, it requires fast xref:2.00.01-feedback[feedback] on its experiments (whether traditionally understood, laboratory-based experiments, or market-facing validation as in xref:lean-startup[Lean Startup].)
+
+In order to achieve fast feedback, xref:work-in-process[work in process]
+*must* be reduced in the system, otherwise xref:queuing[high-queue] states will slow feedback down.
+
+But how do we reduce work in process? We have to _prioritize_. Do we rely on the xref:HIPPO[Highest Paid Person's Opinion], or do we try something more rational? This brings us to the critical concept of _Cost of Delay_.
 
 anchor:cost-of-delay[]
 
@@ -76,8 +86,6 @@ Don Reinertsen is well known for advocating the concept of "Cost of Delay" in un
 
  [TBW]
 
-===== Beneficial variability
- belongs in Ch 8 investment
 
 ===== OODA sidebar
 After the Korean War, the US Air Force wished to clarify why its pilots had performed in a superior manner to the opposing pilots who were flying aircraft viewed as more capable.
