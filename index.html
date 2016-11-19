@@ -7603,7 +7603,7 @@ Lean is important. Regardless of your intended career path, it is advisable to r
 <p>Kanban is a term originating from Lean and the Toyota Production System. Originally, it signified a “pull” technique in which materials would only be transferred to a given workstation on a definite signal that the workstation required the materials. This was in contrast to “push” approaches where work was allowed to accumulate on the shop floor, on the (now discredited) idea that it was more “efficient” to operate workstations at maximum capacity.</p>
 </div>
 <div class="paragraph">
-<p>Factories operating on a "push" model found themselves with massive amounts of inventory (work in process) in their facilities. This tied up operating capital and resulted in long delays to shipment, because of the queueing issues. Japanese companies did not have the luxury of large amounts of operating capital, so they started experimenting with "single-piece flow." This led to a number of related innovations, such as the ability to re-configure manufacturing machinery much more quickly than U.S. factories were capable of.</p>
+<p>Factories operating on a "push" model found themselves with massive amounts of inventory (work in process) in their facilities. This tied up operating capital and resulted in long delays to shipment. Japanese companies did not have the luxury of large amounts of operating capital, so they started experimenting with "single-piece flow." This led to a number of related innovations, such as the ability to re-configure manufacturing machinery much more quickly than U.S. factories were capable of.</p>
 </div>
 <div class="paragraph">
 <p>David J. Anderson was a product manager at Microsoft who was seeking a more effective approach to managing software development. In consultation with Don Reinertsen (introduced in the <a href="#queuing">previous section</a>) he applied the original concept of Kanban to his software development activities <a href="#Anderson2010">[Anderson2010]</a>.</p>
@@ -7612,7 +7612,7 @@ Lean is important. Regardless of your intended career path, it is advisable to r
 <p><a href="#scrum">Scrum</a> (covered in the previous chapter) is based on a rhythm with its scheduled sprints, for example every two weeks. In contrast, Kanban is a continuous process with no specified rhythm (also known as <em>cadence</em>). Work is “pulled” from backlog into active attention as resources are freed from previous work. This is perhaps the most important aspect of Kanban - the idea that <strong>work is not accepted until there is capacity to perform it.</strong></p>
 </div>
 <div class="paragraph">
-<p>You may have a white board covered with sticky notes, but if they are stacked on top of each other with no concern for worker availability, you are not doing Kanban. You are accepting too much work in process and you are likely to encounter a "high-queue state" in which work becomes slower and slower to get done.</p>
+<p>You may have a white board covered with sticky notes, but if they are stacked on top of each other with no concern for worker availability, you are not doing Kanban. You are accepting too much work in process and you are likely to encounter a "high-queue state" in which work becomes slower and slower to get done. (More on <a href="#queuing">queues</a> below.)</p>
 </div>
 </div>
 <div class="sect4">
@@ -7666,7 +7666,20 @@ Queues matter because they are economically important, they are poorly managed, 
 <div class="title">Figure 47. A queue <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup></div>
 </div>
 <div class="paragraph">
-<p>Even at this stage of our evolution, with just one co-located collaborative team, it’s important to consider work in progress and how to limit it. One topic we will emphasize throughout the rest of this book is <em>queuing</em>. What is a queue? A queue, intuitively, is a collection of tasks to be done, being serviced by some worker or resource in some sequence.</p>
+<p>Even at this stage of our evolution, with just one co-located collaborative team, it’s important to consider work in progress and how to limit it. One topic we will emphasize throughout the rest of this book is <em>queuing</em>. What is a queue? A queue, intuitively, is a collection of tasks to be done, being serviced by some worker or resource in some sequence, for example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>feature "stories" being developed by a product team</p>
+</li>
+<li>
+<p>customer requests coming into a service desk</p>
+</li>
+<li>
+<p>requests from a development team to an infrastructure team for services (e.g. network or server configuration, consultations, etc.)</p>
+</li>
+</ul>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -7675,13 +7688,67 @@ Queues matter because they are economically important, they are poorly managed, 
 <div class="title">Important</div>
 </td>
 <td class="content">
-Queuing theory is an important branch of mathematics used extensively in computing, operations research, networking, and other fields. It&#8217;s a topic getting much attention of late in the Agile and related movements, especially as it relates to development team productivity.
+Queuing theory is an important branch of mathematics used extensively in computing, operations research, networking, and other fields. It&#8217;s a topic getting much attention of late in the Agile and related movements, especially as it relates to digital product team productivity.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Lean manufacturing has been an important movement throughout the 20th century, and one of its central principles is to limit work in process. Work in process is obvious on a shop floor, because physical raw materials (inventory) are quite visible.</p>
+<p>The amount of time that any given work item spends in the queue, is proportional to how busy the servicing resource is. The simple formula is</p>
+</div>
+<div class="paragraph">
+<p>Wait time = (% Busy) * (% Idle)</p>
+</div>
+<div class="paragraph">
+<p>In other words, if you divide the percentage of busy time for the resource, by its idle time, you see the average wait time. So, if a resource is busy 40% of the days, but idle 60% of the days, the average time you wait for the resource is</p>
+</div>
+<div class="paragraph">
+<p>0.4/0.6= 0.67 hours (2/3 of a day).</p>
+</div>
+<div class="paragraph">
+<p>Conversely, if a resource is busy 95% of the time, the average time you&#8217;ll wait is</p>
+</div>
+<div class="paragraph">
+<p>0.95/0.5 = 5.67 (19 days!)</p>
+</div>
+<div class="paragraph">
+<p>If you use a graphing calculator, you see the following:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/2.05-wait-time.png" alt="2.05 wait time">
+</div>
+</div>
+<div class="paragraph">
+<p>Notice how the wait time approaches infinity as the queue utilization approaches 100%. And yet, full utilization of resources is often sought by managers in the name of "efficiency." These basic principles are discussed by Gene Kim et al in the <em>Phoenix Project</em> <a href="#Kim2013">[Kim2013]</a> in Chapter 23, and more rigorously by Don Reinertsen in <em>The Principles of Product Development Flow</em> <a href="#Reinertsen2009">[Reinertsen2009]</a>, chapter 3. A further complication is when work must pass through multiple queues; wait times for work easily expand to weeks or months. Such scenarios are not hypothetical, they are often seen in the real world and are a fundamental cause of information technology organizations getting a bad name for being slow and unresponsive. Fortunately, digital professionals are gaining insight into these dynamics and (as of 2016) matters are improving across the industry.</p>
+</div>
+<div class="paragraph">
+<p>Understanding queuing behavior is critical to productivity. Reinertsen suggests that poorly managed queues contribute to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Longer cycle time</p>
+</li>
+<li>
+<p>Increased risk</p>
+</li>
+<li>
+<p>More variability</p>
+</li>
+<li>
+<p>More overhead</p>
+</li>
+<li>
+<p>Lower quality</p>
+</li>
+<li>
+<p>Less motivation</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These issues were understood by the pioneers of Lean manufacturing, an important movement throughout the 20th century. One of its central principles is to limit work in process. Work in process is obvious on a shop floor, because physical raw materials (inventory) are quite visible.</p>
 </div>
 <div id="wip" class="imageblock" style="float: left">
 <div class="content">
@@ -7690,7 +7757,7 @@ Queuing theory is an important branch of mathematics used extensively in computi
 <div class="title">Figure 48. Physical Work in Process <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup></div>
 </div>
 <div class="paragraph">
-<p>Don Reinertsen, quoted above, developed the insight that product design and development had an <strong>invisible</strong> inventory of "Work in Process" that he called Design in Process (DIP). Just as managing physical work in process on the factory floor is key to a factory&#8217;s success, so correctly understanding and managing design in process is essential to all kinds of research and development organizations&#8201;&#8212;&#8201;<strong>including digital product development.</strong> In fact, because digital systems are largely invisible even when finished, understanding their work in process is even more challenging.</p>
+<p>Don Reinertsen, quoted above, developed the insight that product design and development had an <strong>invisible</strong> inventory of "Work in Process" that he called Design in Process (DIP). Just as managing physical work in process on the factory floor is key to a factory&#8217;s success, so correctly understanding and managing design in process is essential to all kinds of research and development organizations&#8201;&#8212;&#8201;<strong>including digital product development, e.g. building software(!)</strong> In fact, because digital systems are largely invisible even when finished, understanding their work in process is even more challenging.</p>
 </div>
 <div class="paragraph">
 <p>It is easy and tempting for a product development team to accumulate excessive amounts of work in process. And, to some degree, having a rich backlog of ideas is an asset. But, just as some inventory (e.g. groceries) is perishable, so are design ideas. They have a limited time in which they might be relevant to a customer or a market. Therefore, accumulating too many of them at any point in time can be wasteful.</p>
@@ -7712,9 +7779,6 @@ These concepts of work in process and queuing are the basis for much of the rest
 </td>
 </tr>
 </table>
-</div>
-<div class="paragraph">
-<p>Classroom discussions and individual research and readings recommending.</p>
 </div>
 <div class="paragraph">
 <p>We will revisit the topic of queuing in Chapter 9. For now, some rules of thumb:</p>
@@ -8119,7 +8183,7 @@ The concept of a repeatable "software process" is at best a risky one, and an id
 </div>
 <div class="paragraph">
 <p>In IT, simply developing software for a new problem (or even new software for an old problem) is an R&amp;D problem, not a production line problem. It is iterative, uncertain, and risky, just like other forms of product development. That does not mean it is completely un-manageable, or that its creation is a mysterious, artistic process. It is just a more variable process with a higher chance of failure, and with a need to incorporate feedback quickly to reduce the risk of <a href="#2.00.1-open-loop">open loop</a>
-control failure.  These ideas are well known to the Agile community and its authors. However, there is one thought leader who stands out in this field: an ex-Naval officer and former nuclear engineer named Donald Reinertsen.</p>
+control failure.  These ideas are well known to the Agile community and its authors. However, there is one thought leader who stands out in this field: an ex-Naval officer and former nuclear engineer named Donald Reinertsen, introduced above in our discussion of <a id="queuing"></a>.</p>
 </div>
 <div class="paragraph">
 <p>There are many books on Agile development and management. Consider the following books, all well known and respected in the fields of software development and Agile:</p>
@@ -8138,7 +8202,7 @@ control failure.  These ideas are well known to the Agile community and its auth
 </div>
 </div>
 <div class="paragraph">
-<p>Reinertsen&#8217;s work dates back to 1991, and (orginally as a co-author with Preston G. Smith) presaged much of the Agile movement <a href="#Smith1991">[Smith1991]</a>. Reinertsen was partnering with David Anderson when Anderson created Kanban. He wrote the introduction to Leffingwell&#8217;s <em>Agile Software Requirements</em>, the initial statement of the Scaled Agile Framework. His influence is pervasive across the Agile community. His work is deep and based on fundamental mathematical principles such as queueing theory. One way of reading his work is as a series of interdependent principles:</p>
+<p>Reinertsen&#8217;s work dates back to 1991, and (orginally as a co-author with Preston G. Smith) presaged important principles of the Agile movement <a href="#Smith1991">[Smith1991]</a>, from the general perspective of product development. Reinertsen&#8217;s influence is well documented and notable. He was partnering with David Anderson when Anderson created Kanban. He wrote the introduction to Leffingwell&#8217;s <em>Agile Software Requirements</em>, the initial statement of the Scaled Agile Framework. His influence is pervasive across the Agile community. His work is deep and based on fundamental mathematical principles such as queueing theory. One way of reading his work is as a series of interdependent principles:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
