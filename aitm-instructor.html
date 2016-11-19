@@ -684,7 +684,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_lean_product_development">Lean product development</a></li>
 <li><a href="#_cost_of_delay">Cost of Delay</a></li>
-<li><a href="#_beneficial_variability">Beneficial variability</a></li>
 <li><a href="#_ooda_sidebar">OODA sidebar</a></li>
 </ul>
 </li>
@@ -7138,7 +7137,7 @@ It is humbling to see how bad experts are at estimating the value of features (u
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/2.04-simplePipeline.png" alt="2.04 simplePipeline">
+<img src="images/2.04-simplePipeline.png" alt="pipeline" width="400">
 </div>
 </div>
 <div class="paragraph">
@@ -7146,7 +7145,7 @@ It is humbling to see how bad experts are at estimating the value of features (u
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/2.04-PipelinewProdDisc.png" alt="2.04 PipelinewProdDisc">
+<img src="images/2.04-PipelinewProdDisc.png" alt="pipeline w product discovery" width="400">
 </div>
 </div>
 <div class="paragraph">
@@ -7180,7 +7179,7 @@ It is humbling to see how bad experts are at estimating the value of features (u
 </ul>
 </div>
 <div class="paragraph">
-<p>It is therefore critical to establish a strong practice of data-driven experimentation when forming a product team, and avoid any cultural acceptance of "gut feel" or deferring to HIPPOs. This can be a difficult transition for the company founder, who has until now served as the de facto product manager.</p>
+<p>It is therefore critical to establish a strong practice of data-driven experimentation when forming a product team, and avoid any cultural acceptance of "gut feel" or deferring to HIPPOs. This can be a difficult transition for the company founder, who has until now served as the <em>de facto</em> product manager. We discuss issues of prioritization further in Chapter 5, in the section on <a href="#cost-of-delay">Cost of Delay</a>.</p>
 </div>
 </div>
 <div class="sect4">
@@ -8004,6 +8003,10 @@ Probably the most important is the shared task reference point. What does this m
 <div class="paragraph">
 <p><a id="2.05.02-kanban"></a></p>
 </div>
+<div class="paragraph">
+<div class="title">Instructor&#8217;s note</div>
+<p>The concepts of queuing and work in process are critical to the rest of this book. Recommend classroom exercises and additional reading to ensure that they are well understood by students. The <em>Phoenix Project</em> and <em>The Goal</em> are excellent, entertaining books that use novelization to illustrate these principles.</p>
+</div>
 <div class="sect4">
 <h5 id="_kanban_and_its_lean_origins">Kanban and its Lean origins</h5>
 <div class="imageblock" style="float: right">
@@ -8130,6 +8133,9 @@ Queuing theory is an important branch of mathematics used extensively in computi
 </table>
 </div>
 <div class="paragraph">
+<p><a id="work-in-process"></a></p>
+</div>
+<div class="paragraph">
 <p>Lean manufacturing has been an important movement throughout the 20th century, and one of its central principles is to limit work in process. Work in process is obvious on a shop floor, because physical raw materials (inventory) are quite visible.</p>
 </div>
 <div id="wip" class="imageblock" style="float: left">
@@ -8149,6 +8155,21 @@ Queuing theory is an important branch of mathematics used extensively in computi
 </div>
 <div class="paragraph">
 <p>Regardless of whether it is a "Requirement," a "User Story," an "Epic," "Defect,", "Issue," or "Service Request," you should remember it&#8217;s <strong>all just work.</strong> It needs to be logged, prioritized, assigned, and tracked to completion. Queues are the fundamental concept for doing this, and it&#8217;s critical that digital management specialists understand this.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+These concepts of work in process and queuing are the basis for much of the rest of this book. Be sure you are completely comfortable with them.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Classroom discussions and individual research and readings recommending.</p>
 </div>
 <div class="paragraph">
 <p>We will revisit the topic of queuing in Chapter 9. For now, some rules of thumb:</p>
@@ -8577,7 +8598,7 @@ control failure.  These ideas are well known to the Agile community and its auth
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>The flow, or throughput of product innovation is the primary determinant of financial success.</p>
+<p>The flow, or throughput of product innovation is the primary driver of financial success. (Notice that innovation must be <strong>accepted by the market</strong> - simply producing new product is not enough.)</p>
 </li>
 <li>
 <p>Product development is essentially the creation of information.</p>
@@ -8600,12 +8621,22 @@ control failure.  These ideas are well known to the Agile community and its auth
 </ol>
 </div>
 <div class="paragraph">
-<p>These can be summarized in the following pyramid:</p>
+<p>These can be summarized in the accompanying pyramid figure.</p>
 </div>
-<div class="imageblock">
+<div class="imageblock" style="float: right">
 <div class="content">
-<img src="images/2.05-pyramid.png" alt="2.05 pyramid">
+<img src="images/2.05-pyramid.png" alt="pyramid" width="400">
 </div>
+</div>
+<div class="paragraph">
+<p>If a company wishes to produce innovation faster than competitors, it requires fast <a href="#2.00.01-feedback">feedback</a> on its experiments (whether traditionally understood, laboratory-based experiments, or market-facing validation as in <a href="#lean-startup">Lean Startup</a>.)</p>
+</div>
+<div class="paragraph">
+<p>In order to achieve fast feedback, <a href="#work-in-process">work in process</a>
+<strong>must</strong> be reduced in the system, otherwise <a href="#queuing">high-queue</a> states will slow feedback down.</p>
+</div>
+<div class="paragraph">
+<p>But how do we reduce work in process? We have to <em>prioritize</em>. Do we rely on the <a href="#HIPPO">Highest Paid Person&#8217;s Opinion</a>, or do we try something more rational? This brings us to the critical concept of <em>Cost of Delay</em>.</p>
 </div>
 <div class="paragraph">
 <p><a id="cost-of-delay"></a></p>
@@ -8624,14 +8655,6 @@ control failure.  These ideas are well known to the Agile community and its auth
 <div class="literalblock">
 <div class="content">
 <pre>[TBW]</pre>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_beneficial_variability">Beneficial variability</h5>
-<div class="literalblock">
-<div class="content">
-<pre>belongs in Ch 8 investment</pre>
 </div>
 </div>
 </div>
@@ -15122,6 +15145,12 @@ A holistic product-oriented approach contradicts a convenient over-simplificatio
 <div class="literalblock">
 <div class="content">
 <pre>portfolio-level  xref:portfolio-CoD[Cost of Delay] as essential to defining execution management. &lt;&lt;Reinertsen1997&gt;&gt; pp.35-38.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>===== Beneficial variability
+ belongs in Ch 8 investment</pre>
 </div>
 </div>
 </div>
