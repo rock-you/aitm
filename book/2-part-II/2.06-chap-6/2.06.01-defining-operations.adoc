@@ -5,13 +5,13 @@
 .Network operations center footnote:[_Image credit https://www.flickr.com/photos/cogdog/537486932/, downloaded 2016-11-20, commercial use permitted_]
 image::images/2.06-NOC.jpg[network operations center, 400, 200, float="right"]
 
-What do we mean by operations? Operations management is a broad topic in management theory, with whole programs dedicated to it. Companies frequently hire Chief Operations Officers to run the organization. We started to cover operations management in chapter 5, as we examined the topic of “work management” - in traditional operations management, the question of work and who is doing it is critical. However, for the digital professional, “operations” tends to have a more technical meaning, being focused on the immediate questions of systems integrity, availability and performance, and feedback from the user community (i.e., the service or help desk).
-
-Operations often can mean, “everything but development” in a digital context. When merged with Development into “DevOps,” one gets Product Management. Recall our discussion of xref:design[product design] -- the entire experience is part of the product. This applies to both those consuming it as well as running it.
+What do we mean by operations? Operations management is a broad topic in management theory, with whole programs dedicated to it in both business and engineering schools. Companies frequently hire Chief Operations Officers to run the organization. We started to cover operations management in chapter 5, as we examined the topic of “work management” - in traditional operations management, the question of work and who is doing it is critical. However, for the digital professional, “operations” tends to have a more technical meaning, being focused on the immediate questions of systems integrity, availability and performance, and feedback from the user community (i.e., the service or help desk). Operations often can mean, “everything but development” in a digital context. However, recall our discussion of xref:design[design thinking] -- the entire experience is part of the product. This applies to both those consuming it as well as running it.
 
 IMPORTANT: In a digitally transformed enterprise, Operations is part of the Product.
 
-A duty-oriented, physical presence in the service of executing particular tasks is an unchanging aspect of operational responsibility. The tasks may support broader goals and strategies, and need to be systematically discharged.
+For this chapter we'll use the following definition of operations:
+
+_A duty-oriented, physical presence in the service of executing particular tasks, that support broader organizational goals and strategies, and need to be systematically discharged._
 
 What do we mean by this?
 
@@ -24,7 +24,9 @@ Consider the following various examples of “operations” in an IT context. So
 * Data center staff performing routine work, such as installing hardware, granting access, or running or testing backups. Such routine work may be scheduled, or it may be on request (e.g. ticketed).
 * Security personnel ensuring security protocols are followed, e.g. access controls.
 
-As above, the primary thing that operations does NOT do is develop new systems functionality. However, new functionality usually has operational impacts. In manufacturing and other traditional industries, product development was a minority of work, while operations was where the bulk of work happened. Yet when an operational task involving information becomes well defined and repetitive, it can be automated with a computer. This continuous cycle of innovation and commoditization has driven closer and closer ties between “development” and “operations.” This cycle also has driven confusion around exactly what is meant by “operations.” In many organizations, there is an “Infrastructure and Operations” function. Pay close attention to the naming. A matrix may help, because we have two dimensions to consider here.
+As above, the primary thing that operations does NOT do is develop new systems functionality. Operations is process-driven and systematic, where research and development fails the "systematic" part of the definition (review the definitions in xref:2.04.01-process-project-product[process, product, and project management]). However, new functionality usually has operational impacts. In manufacturing and other traditional industries, product development was a minority of work, while operations was where the bulk of work happened. Yet when an operational task involving information becomes well defined and repetitive, it can be automated with a computer.
+
+The continuous cycle of innovation and commoditization has driven closer and closer ties between “development” and “operations.” This cycle also has driven confusion around exactly what is meant by “operations.” In many organizations, there is an “Infrastructure and Operations” function. Pay close attention to the naming. A matrix may help, because we have two dimensions to consider here.
 
 .Application, infrastructure, development, operations.
 [cols="h,2*", options="header"]
@@ -50,11 +52,31 @@ anchor:ops-day-in-life[]
 
 ===== A day in the life
 
-
 Limoncelli, Strata, and Hogan, in their excellent _Cloud Systems Administration_, emphasize the role of the "oncall" and "onduty" staff in the service of operations <<Limoncelli2014>>. _Oncall_ staff have a primary responsibility of emergency response, and the term oncall refers to their continuous availability, even if they are not otherwise working (e.g., they are expected to pick up phone calls and alerts at home and dial into emergency communications channels). _Onduty_ staff are responsible for responding to non-critical incidents and maintaining current operations.
 
- Emergency vs non-emergency - it's all a matter of expectations
- The classic processes (Incident, Problem, Change) - also Issue, Defect, Request
+What is an emergency? It's all a matter of expectations. If a system is supposed to be available 24 hours a day, 7 days a week, an outage at 3 AM Saturday morning is an emergency. If it is only supposed to be available between Monday through Friday, the outage may not be as critical (although it still needs to be fixed in short order!)
+
+IT systems have always been fragile and prone to malfunction. "Emergency" management is documented as a practice in "data processing" as early as 1971 <<Ditri1971>>, pp. 188-189. By the 1990s, a terminology had been formalized, by vendors such as IBM (in their "Yellow Book" series), the United Kingdom's IT Infrastructure Library (ITIL), and other guidance such as the Harris Kern library (popular in the United States before ITIL gained dominance). These processes included:
+
+* Incident management
+* Problem management
+* Change management
+
+Even as a single-product team, these processes are a useful framework to keep in mind as operational work increases. Here are some simple definitions:
+
+[cols="2*", options="header"]
+|====
+|Process |Definition
+|Incident management | Identify service outages and situations that could potentially lead to them, and restore service and/or mitigate immediate risk.
+|Problem management | Identify the causes of one or more Incidents and remedy them (on a longer-term basis)
+|Change management  | Record and track proposed alterations to critical IT components. Notify potentially affected parties and assess changes for risk; ensure key stakeholders exercise approval rights.
+|====
+
+These processes have a rough sequence to them:
+
+. Identify the issue and restore service by any means necessary. Don't worry about why it happened yet.
+. Once service is restored, investigate why the issue happened and propose longer-term solutions.
+. 
 
 At the end of the day, we need to remember that operational work is just one form of work. In the classic model, developers built systems and "threw them over the wall" to operations. Each side had specialized processes and technology supporting their particular concerns.
 
