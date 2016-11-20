@@ -1,0 +1,111 @@
+anchor:monitoring[]
+
+==== Monitoring
+
+[quote, Wikpedia,https://en.wikipedia.org/wiki/Telemetry]
+Telemetry is an automated communications process by which measurements are made and other data collected at remote or inaccessible points and transmitted to receiving equipment for monitoring. The word is derived from Greek roots: 'tele' = remote, and 'metron' = measure.
+
+Computers run in large data centers, where physical access to them is tightly controlled. Therefore, we need telemetry to manage them. The practice of collecting and initiating responses to telemetry is called monitoring.
+
+===== Monitoring techniques
+[quote, Limoncelli/Chalup/Hogan, The Practice of Cloud System Administration]
+Monitoring is the primary way we gain visibility into the systems we run. It is the process of observing information about the state of things for use in both short-term and long-term decision making.
+
+But how does one “observe” computing infrastructure? Clearly, sitting in the data center (assuming you could get in) and looking at the lights on the faces of servers will not convey much useful information, beyond whether they are off or on. Monitoring tools are the software that watches the software (and systems more broadly).
+
+A variety of techniques are used to monitor computing infrastructure. Typically these involve communication over a network with the device being managed. Often, the network traffic is over the same network carrying the primary traffic of the computers. Sometimes, however, there is a distinct "out of band" network for management traffic. A classic, simple monitoring tool will simply observe a computing node, perhaps by “pinging” it periodically, and will raise an alert if the node does not respond within an expected time frame.
+
+ figure
+
+More broadly, these tools provide a variety of mechanisms for monitoring and controlling operational IT systems; they may monitor:
+
+* processes and their return codes
+* performance metrics (e.g. memory and CPU utilization)
+* events raised through various channels
+* network availability
+* log file contents (searching the files for messages indicating problems)
+* a given component's interactions with other elements in the IT infrastructure
+* and more.
+
+ figure
+
+Some monitoring covers low level system indicators not usually of direct interest to the end user. Other monitoring may attempt to synthetically re-create the user's "moment of truth." Web application response time monitoring, in which synthetic transactions are run as proxies for end user experience, is an example of this. See <<Limoncelli2014>>, chapters 16-17.
+
+ figure
+
+All of this data may then be forwarded to a central console and be integrated, with the objective of supporting the organization’s service level agreements in priority order. Enterprise monitoring tools are notorious for requiring agents (small, continuously-running programs) on servers; while some things can be detected without such agents, having software running on a given computer still provides the richest data. Since licensing is often agent-based, this gets expensive.
+
+NOTE: Monitoring systems are similar to source control systems in that they are a critical point at which xref:commit-as-metadata[metadata] diverges from the actual system under management.
+
+define element manager
+
+
+===== Aggregation and operations centers
+
+It is not possible for a 24 x 7 operations team to access and understand the myriads of element managers and specialized monitoring tools present in the large IT environment. Instead, these teams rely on aggregators of various kinds to provide an integrated view into the complexity. These aggregators may focus on  status events, or specifically on performance aspects related either to the elements or to logical transactions flowing across them. They may incorporate dependencies from configuration management to provide a true “business view” into the event streams. This is directly analogous to the concept of xref:andon[Andon] board from Lean practices, or the idea of “information radiator” from Agile principles.
+
+A monitoring console may present a rich set of information to an operator. Too rich, in fact, as systems become large. For this reason, monitoring tools are often linked directly to ticketing systems; on certain conditions, a ticket is created and assigned to a team or individual.
+
+Enabling a monitoring console to auto-create tickets however, needs to be carefully considered and designed. A notorious scenario is the “ticket storm,” where a monitoring system creates multiple (perhaps thousands) of tickets, all essentially in response to the same condition. Event de-duplication starts to become an essential capability, which leads to distinguishing the monitoring system from the event management system.
+
+===== Understanding business impact
+At the intersection of event aggregation and operations centers is the need to understand business impact. It is not, for example, always obvious what a server is being used for. This may be surprising to new students, and perhaps those with experience in smaller organizations. However, in many large “traditional” IT environments, where the operations team is distant from the development organization, it is not necessarily easy to determine what a given hardware or software resource is doing or why it is there. Clearly, this is unacceptable in terms of security, value management, and any number of other concerns. However, from the start of distributed computing, the question “what is on that server?” has been all too frequent in large IT shops.
+
+In mature organizations, this may be documented in a Configuration Management Database or System (CMDB/CMS). Such a system might start by simply listing the servers and their applications:
+
+[cols="2*", options="header"]
+|====
+| Application |Server
+| Quadrex  |SRV0001
+| PL-Q  |SRV0002
+| Quadrex |DBSRV001
+| TimeTrak |SRV0003
+| HR-Portal |SRV0003
+| _etc_ | _etc_
+|====
+
+(Imagine the above list, 25,000 rows long.)
+
+This is a start, but still doesn't tell us enough. A more elaborate mapping might include business unit and contact:
+
+[cols="4*", options="header"]
+|====
+|Org|Contact |Application |Server
+|Logistics|Mary Smith | Quadrex  |SRV0001
+|Finance |Aparna Chaudry |PL-Q  |SRV0002
+|Logistics |Mary Smith | Quadrex |DBSRV001
+|Human Resources |William Jones |TimeTrak |SRV0003
+|Human Resources |William Jones |HR-Portal |SRV0003
+| _etc_| _etc_|_etc_ | _etc_
+|====
+
+The above lists are very simple examples of what can be extensive record-keeping. But the key user story is implied: if we can't ping SRV0001, we know that the Quadrex application supporting Logistics is at risk, and we should contact Mary Smith ASAP, if she hasn't already contacted us. (Sometimes, the user community calls right away; in other cases, they may not, and proactively contacting them is a positive and important step.)
+
+ impact of virtualization, containers, and serverless
+
+==== Capacity and performance management
+Capacity and performance management are closely related, but not identical terms encountered as IT systems scale up and encounter significant load.
+
+A capacity management system may include large quantities of data harvested from monitoring and event management systems, stored for long periods of time so that history of system utilization is understood and some degree of prediction can be ventured for upcoming utilization.
+
+.Black Friday at Macy's footnote:[_Image credit https://www.flickr.com/photos/diariocriticove/8211477590, downloaded 2016-10-31, commercial use permitted_]
+ image::images/2.06-BlackFriday.jpg[alt text, 400, 200, float="left"]
+
+The classic example of significant capacity utilization is the https://en.wikipedia.org/wiki/Black_Friday_(shopping)[Black Friday/Cyber Monday] experience of retailers. Both physical store and online ecommerce systems are placed under great strain annually around this time, with the year's profits potentially on the line.
+
+===== Performance management
+Performance management focuses on the responsiveness (e.g. speed) of the systems being used. Responsiveness may be related to capacity utilization, but some capacity issues don't immediately affect responsiveness. For example, a disk drive may be approaching full. When it fills, the system will immediately crash, and performance is severely affected. But until then, the system performs fine. The disk needs to be replaced on the basis of capacity reporting, not performance trending. On the other hand, some performance issues are not related to capacity. A mis-configured router might badly affect a web site's performance, but the configuration simply needs to be fixed - there is no need to handle as a capacity-related issue.
+
+===== Analytics
+Capacity analytics at its most advanced is a true Big Data problem domain. At a simpler level, it may consist of monitoring CPU, memory, and storage utilization across a given set of nodes, and raising alerts if certain threshholds are approached.
+
+  [examples]
+
+===== As a source of demand
+So, what do we do when a capacity alert is raised, either through an automated system or through the manual efforts of a capacity analyst?
+
+There are a number of responses that may follow:
+
+* Acquire more capacity
+* Seek to use existing capacity more efficiently
+* Throttle demand somehow
