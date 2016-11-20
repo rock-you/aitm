@@ -5,7 +5,9 @@
 .Network operations center footnote:[_Image credit https://www.flickr.com/photos/cogdog/537486932/, downloaded 2016-11-20, commercial use permitted_]
 image::images/2.06-NOC.jpg[network operations center, 400, 200, float="right"]
 
-What do we mean by operations? Operations management is a broad topic in management theory, with whole programs dedicated to it in both business and engineering schools. Companies frequently hire Chief Operations Officers to run the organization. We started to cover operations management in chapter 5, as we examined the topic of “work management” - in traditional operations management, the question of work and who is doing it is critical. However, for the digital professional, “operations” tends to have a more technical meaning, being focused on the immediate questions of systems integrity, availability and performance, and feedback from the user community (i.e., the service or help desk). Operations often can mean, “everything but development” in a digital context. However, recall our discussion of xref:design[design thinking] -- the entire experience is part of the product. This applies to both those consuming it as well as running it.
+What do we mean by operations? Operations management is a broad topic in management theory, with whole programs dedicated to it in both business and engineering schools. Companies frequently hire Chief Operations Officers to run the organization. We started to cover operations management in chapter 5, as we examined the topic of “work management” - in traditional operations management, the question of work and who is doing it is critical. For the digital professional, “operations” tends to have a more technical meaning than the classic business definition, being focused on the immediate questions of systems integrity, availability and performance, and feedback from the user community (i.e., the service or help desk).
+
+Operations often can mean, “everything but development” in a digital context. In the classic model, developers built systems and "threw them over the wall" to operations. Each side had specialized processes and technology supporting their particular concerns. However, recall our discussion of xref:design[design thinking] -- the entire experience is part of the product. This applies to both those consuming it as well as running it. Companies undergoing digital transformation are experimenting with many different models; as we will see in xref:Section-III-coordination[Part III], up to and including the complete merging of Development and Operations-oriented skills under common product management.
 
 IMPORTANT: In a digitally transformed enterprise, Operations is part of the Product.
 
@@ -56,8 +58,11 @@ Limoncelli, Strata, and Hogan, in their excellent _Cloud Systems Administration_
 
 What is an emergency? It's all a matter of expectations. If a system is supposed to be available 24 hours a day, 7 days a week, an outage at 3 AM Saturday morning is an emergency. If it is only supposed to be available between Monday through Friday, the outage may not be as critical (although it still needs to be fixed in short order!)
 
+anchor:IT-process-emergence[]
+
 IT systems have always been fragile and prone to malfunction. "Emergency" management is documented as a practice in "data processing" as early as 1971 <<Ditri1971>>, pp. 188-189. By the 1990s, a terminology had been formalized, by vendors such as IBM (in their "Yellow Book" series), the United Kingdom's IT Infrastructure Library (ITIL), and other guidance such as the Harris Kern library (popular in the United States before ITIL gained dominance). These processes included:
 
+* Request management
 * Incident management
 * Problem management
 * Change management
@@ -67,6 +72,7 @@ Even as a single-product team, these processes are a useful framework to keep in
 [cols="2*", options="header"]
 |====
 |Process |Definition
+|Request management| Respond to routine requests such as providing systems access.
 |Incident management | Identify service outages and situations that could potentially lead to them, and restore service and/or mitigate immediate risk.
 |Problem management | Identify the causes of one or more Incidents and remedy them (on a longer-term basis)
 |Change management  | Record and track proposed alterations to critical IT components. Notify potentially affected parties and assess changes for risk; ensure key stakeholders exercise approval rights.
@@ -74,10 +80,9 @@ Even as a single-product team, these processes are a useful framework to keep in
 
 These processes have a rough sequence to them:
 
-. Identify the issue and restore service by any means necessary. Don't worry about why it happened yet.
+. Give the user access to the system.
+. If the system is not functioning as expected, identify the issue and restore service by any means necessary. Don't worry about why it happened yet.
 . Once service is restored, investigate why the issue happened and propose longer-term solutions.
-. 
+. Inform affected parties of the proposed changes, collect their feedback and approvals, and track the progress of the proposed change through successful completion.
 
-At the end of the day, we need to remember that operational work is just one form of work. In the classic model, developers built systems and "threw them over the wall" to operations. Each side had specialized processes and technology supporting their particular concerns.
-
-Now, companies undergoing digital transformation are experimenting with many different models; as we will see in Part III, up to and including the complete merging of Development and Operations-oriented skills under common product management.
+At the end of the day, we need to remember that operational work is just one form of work. In a single-team organization, these processes might still be informal and handled through simple xref:task-mgmt[task management] (although user provisioning would need to be automated, if the system  is scaling significantly.) We'll continue on that assumption for the remainder of this chapter, and revisit the idea of defined, repeatable processes as we scale to a "team of teams" in xref:Section-III-coordination[Part III].
