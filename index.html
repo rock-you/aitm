@@ -731,7 +731,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_state_configuration_and_discovery">State, configuration, and discovery</a></li>
 <li><a href="#_drift_management">Drift management</a></li>
 <li><a href="#_discovery">Discovery</a></li>
-<li><a href="#_policy_based_management">Policy-based management</a></li>
 </ul>
 </li>
 <li><a href="#_other_operations_techniques_and_tools">Other operations techniques and tools</a></li>
@@ -4086,10 +4085,21 @@ Implement version control for all production artifacts.
 <div class="sect5">
 <h6 id="_imperative_and_declarative">Imperative and Declarative</h6>
 <div class="paragraph">
-<p>Before we turned to source control, we looked at a <a href="#infra-code-example">simple script</a> that changed the configuration of a computer. It did so in an <em>imperative</em> fashion.</p>
+<p>Before we turned to source control, we looked at a <a href="#infra-code-example">simple script</a> that changed the configuration of a computer. It did so in an <em>imperative</em> fashion. Imperative and declarative are two important terms from computer science.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">A simple example of “declarative” vs “imperative”</div>
+<div class="paragraph">
+<p><strong>Declarative:</strong> Our refrigerator should always have a gallon of milk in it.”</p>
 </div>
 <div class="paragraph">
-<p>Imperative and declarative are two important terms from computer science. In an imperative approach, we tell the computer specifically how we want to accomplish a task, e.g.:</p>
+<p><strong>Imperative:</strong> “Go out the door, take a right, take a left, go into the building with a big ‘SA’ on it, go in to the last aisle, take a left, go to the third case and take the first container on the fourth shelf from the bottom. Give money to the cashier and bring the container back home.”</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>In an imperative approach, we tell the computer specifically how we want to accomplish a task, e.g.:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -4108,13 +4118,7 @@ Implement version control for all production artifacts.
 </ol>
 </div>
 <div class="paragraph">
-<p>And so on. Many traditional programming languages take an imperative approach.</p>
-</div>
-<div class="paragraph">
-<p>By contrast, with a declarative approach, we tell the computer the task we want to accomplish and let the computer figure out the best way to do it. Structured Query Language (SQL) statements are a good example of a declarative approach. We can provide a database system with a set of SQL statements, and the database will generate an execution plan to provide us with the data we are seeking. Functional languages such as Lisp and Erlang are considered declarative.</p>
-</div>
-<div class="paragraph">
-<p>A script such as <a href="#infra-code-example">iac.sh example</a> is executed line by line, i.e., it is imperative. But the state of the art in infrastructure as code is policy-based approaches, in which the object is to define the desired end state of the resource, not the steps needed to get there. Instead of defining a set of steps, a policy-based approach simply defines the proper configuration as a target, saying (in essence) that "this computer should always have a directory structure thus; do what you need to do to make it so and keep it this way":</p>
+<p>And so on. Many traditional programming languages take an imperative approach. A script such as <a href="#infra-code-example">iac.sh example</a> is executed line by line, i.e., it is imperative. In configuring infrastructure, scripting is in general considered “imperative," but state of the art infrastructure automation frameworks are built using a “declarative,” policy-based approach, in which the object is to define the desired end state of the resource, not the steps needed to get there.  With such an approach, instead of defining a set of steps, we simply define the proper configuration as a target, saying (in essence) that "this computer should always have a directory structure thus; do what you need to do to make it so and keep it this way":</p>
 </div>
 <div class="literalblock">
 <div class="content">
@@ -4130,7 +4134,7 @@ Implement version control for all production artifacts.
 </div>
 </div>
 <div class="paragraph">
-<p>More practically, imperative approaches are used to ensure that the proper versions of software are always present on a system, and that configurations such as Internet ports and security settings do not vary from the intended specification.</p>
+<p>More practically, declarative approaches are used to ensure that the proper versions of software are always present on a system, and that configurations such as Internet ports and security settings do not vary from the intended specification.</p>
 </div>
 <div class="paragraph">
 <p>This is a complex topic and there are advantages and disadvantages to each approach. (See "When and Where Order Matters" by Mark Burgess for an advanced discussion <a href="#Burgess2016">[Burgess2016]</a>.) But policy-based approaches seem to have the upper hand for now.</p>
@@ -9310,48 +9314,6 @@ The following are examples of state:</p>
 <p><strong>What is the future of discovery tools?</strong>
 There is some evidence that the increasing automation of IT infrastructure will mitigate management and drift problems. As the software pipeline becomes increasingly automated, tracking software from development through production becomes easier.</p>
 </div>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_policy_based_management">Policy-based management</h5>
-<div class="literalblock">
-<div class="content">
-<pre>[review ch 2 for overlaps]</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Two important concepts have emerged in the past decade: policy-based management and promise theory.</p>
-</div>
-<div class="paragraph">
-<p>In brief, policy-based management and promise theory focus on “what,” not “how.” This may also be described as “declarative,” not “imperative” (see Sidebar).</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>A simple example of “declarative” vs “imperative”</strong></p>
-</div>
-<div class="paragraph">
-<p>Declarative: “Get me a gallon of milk.”</p>
-</div>
-<div class="paragraph">
-<p>Imperative: “Go out the door, take a right, take a left, go into the building with a big ‘SA’ on it, go in to the last aisle, take a left, go to the third case and take the first container on the fourth shelf from the bottom. Give money to the cashier and bring the container back home.”</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>In configuring infrastructure, scripting is in general considered “imperative” while advanced infrastructure automation frameworks are built using a “declarative,” policy-based approach.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>For example, the following shell script and Chef recipe do the same thing:
-create example - can’t find anything decent on web
-Use directory creation example with failure of script b/c not idempotent</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Increasingly, as operational performance is defined in code (the trend to Infrastructure as Code), operational issues are equivalent to development defects.</pre>
 </div>
 </div>
 </div>
@@ -25972,7 +25934,7 @@ Architecture represents the significant design decisions that shape a system, wh
 <p>It failed to realize the emergent issue of too much enterprise work in process, instead championing the proliferation of enterprise processes and their associated queues. Fundamentally, they did not adopt enough of a systems view of IT delivery. Architects' motivation for "efficiency" and interest in capability mapping did not help the cause of cross-functional teams. Instead, functional silos were reinforced as supply-centric "capabilities" and the antipattern of "bringing the team to the work" were promoted as enterprise standard operating procedure - despite the growing evidence of Scrum and Agile success. The iterative, experimental narrative of Lean Startup did not originate from EA.</p>
 </div>
 <div class="paragraph">
-<p>Despite a professed interest in systems theory, architecture has only recently begun to realize the fundamental problems of stage-gated delivery, big bang releases, and so forth. Architecture gap analysis usually assumed that project investment would be used to fill them. Architecture often merited the criticism of "top down planning," which in complex systems domains too often doesn&#8217;t work. Architects too often fall into the trap of the  <a href="#:HIPPO">HiPPO</a> (Highest Paid Person&#8217;s Opinion). A sense of <a href="#lean-startup">Lean Startup</a> experimentation, of placing bets on options and testing hypotheses, is not part of the mainstream enterprise architecture understanding. Instead, the architecture is presented as an established fact, with "governance" to ensure conformity. Hypothetical "synergies" emerging from "common platforms" are often offered as justification for architecture, with little follow up in measuring actual value delivered.</p>
+<p>Despite a professed interest in systems theory, architecture has only recently begun to realize the fundamental problems of stage-gated delivery, big bang releases, and so forth. Architecture gap analysis usually assumed that project investment would be used to fill them. Architecture often merited the criticism of "top down planning," which in complex systems domains too often doesn&#8217;t work. Architects too often fall into the trap of the  <a href="#HIPPO">HiPPO</a> (Highest Paid Person&#8217;s Opinion). A sense of <a href="#lean-startup">Lean Startup</a> experimentation, of placing bets on options and testing hypotheses, is not part of the mainstream enterprise architecture understanding. Instead, the architecture is presented as an established fact, with "governance" to ensure conformity. Hypothetical "synergies" emerging from "common platforms" are often offered as justification for architecture, with little follow up in measuring actual value delivered.</p>
 </div>
 <div class="paragraph">
 <p><a id="large-arch-xform-risk"></a></p>
@@ -26646,6 +26608,11 @@ We previously discussed the Business Analysis Body of Knowledge. Although they h
 <div class="paragraph">
 <p>TLM should route via corp governance &amp; perf mgmt, align w/vendor mgmt&#8230;&#8203; find sources on how these processes work in non IT domains&#8230;&#8203; (have already discussed in book)</p>
 </div>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>refactoring as a panacea - no, it's like stirring wet concrete (Bente? Coplien?)</pre>
 </div>
 </div>
 <div class="literalblock">
