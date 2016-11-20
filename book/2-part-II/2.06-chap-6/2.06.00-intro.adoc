@@ -16,13 +16,13 @@ endif::instructor-ed[]
 
 ==== Introduction
 
-As your product gains more use, you find that running it inevitably becomes a distinct concern from building it. For all their logic, computers are still surprisingly unreliable. Servers running well tested software that remain "up" for weeks all of a sudden hang and have to be rebooted. Sometimes it's clear why (for example, a log filled up that no-one expected) and in other cases there just is no explanation.
+As your product gains more use, you find that running it inevitably becomes a distinct concern from building it. For all their logic, computers are still surprisingly unreliable. Servers running well tested software may remain "up" for weeks, and then all of a sudden hang and have to be rebooted. Sometimes it's clear why (for example, a log file filled up that no-one expected) and in other cases there just is no explanation.
 
-Engineering and operating complex IT-based distributed systems is a significant engineering challenge. Even with infrastructure as code, it is distinct from software development per se. Questions of scalability, performance, caching, load balancing, and so forth usually become apparent first through feedback from the operations team.
+Engineering and operating complex IT-based distributed systems is a significant challenge. Even with xref:infracode[infrastructure as code] and automated xref:continuous-delivery[continuous delivery] pipelines, operations as a class of work is distinct from software development per se. The work is relatively more interrupt-driven, as compared to the "heads-down" focus of developing new features. Questions of scalability, performance, caching, load balancing, and so forth usually become apparent first through feedback from the operations perspective -- whether or not you have a formal operations "team."
 
-****
-Sidebar: Introducing Limoncelli.
-****
+We are still just one team with one product, but as we enter this last chapter of Part II, the assumption is that we have considerable use of our product. With today's technology, correctly deployed and operated, even a small team can support large workloads. This does not come easily, however. Systems must be monitored and specific techniques employed for managing their performance and capacity. We will also revisit the topic of configuration management at a more advanced level.
+
+We discussed the evolution of infrastructure in xref:chapter-2[Chapter 2] and applications development in xref:chapter-3[Chapter 3], and will continue to build on those foundations. The practices of Change, Incident, and Problem management have been employed in the industry for decades and are important foundations for thinking about operations. The concept of Site Reliability Engineering is an important new discipline emerging from the practices of companies such as Google and Facebook. We will examine its principles and practices.
 
 ===== Chapter 6 outline
 
@@ -48,6 +48,3 @@ Sidebar: Introducing Limoncelli.
 * Describe the basics of change and incident management
 * Describe operational feedback into product design & the kinds of concerns it raises
 * Describe impact and dependency analysis and why it is important
-
-
-Increasingly, as operational performance is defined in code (the trend to Infrastructure as Code), operational issues are equivalent to development defects.
