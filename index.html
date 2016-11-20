@@ -706,8 +706,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_defining_operations">Defining operations</a></li>
 <li><a href="#_a_day_in_the_life">A day in the life</a></li>
-<li><a href="#_do_we_need_environments_at_all">Do we need environments at all?</a></li>
-<li><a href="#__development_is_production">“Development is production”</a></li>
 </ul>
 </li>
 <li><a href="#_monitoring">Monitoring</a>
@@ -718,18 +716,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_understanding_business_impact">Understanding business impact</a></li>
 </ul>
 </li>
-<li><a href="#_state_configuration_and_discovery">State, configuration, and discovery</a>
-<ul class="sectlevel4">
-<li><a href="#_drift_management">Drift management</a></li>
-<li><a href="#_discovery">Discovery</a></li>
-<li><a href="#_policy_based_management">Policy-based management</a></li>
-</ul>
-</li>
 <li><a href="#_capacity_and_performance_management">Capacity and performance management</a>
 <ul class="sectlevel4">
 <li><a href="#_performance_management">Performance management</a></li>
 <li><a href="#_analytics">Analytics</a></li>
 <li><a href="#_as_a_source_of_demand">As a source of demand</a></li>
+</ul>
+</li>
+<li><a href="#_configuration_management_round_2">Configuration management round 2</a>
+<ul class="sectlevel4">
+<li><a href="#_environments_and_the_fierce_god_of_production">Environments and the fierce god of "Production"</a></li>
+<li><a href="#_do_we_need_environments_at_all">Do we need environments at all?</a></li>
+<li><a href="#__development_is_production">“Development is production”</a></li>
+<li><a href="#_state_configuration_and_discovery">State, configuration, and discovery</a></li>
+<li><a href="#_drift_management">Drift management</a></li>
+<li><a href="#_discovery">Discovery</a></li>
+<li><a href="#_policy_based_management">Policy-based management</a></li>
 </ul>
 </li>
 <li><a href="#_other_operations_techniques_and_tools">Other operations techniques and tools</a></li>
@@ -8814,143 +8816,6 @@ The classic processes (Incident, Problem, Change) - also Issue, Defect, Request<
 <div class="paragraph">
 <p>Now, companies undergoing digital transformation are experimenting with many different models; as we will see in Part III, up to and including the complete merging of Development and Operations-oriented skills under common product management.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre> move next section elsewhere?
-===== Environments and the fierce god of "Production"</pre>
-</div>
-</div>
-<div class="quoteblock">
-<blockquote>
-“Don’t mess with that server! It’s … Production!!!”
-</blockquote>
-<div class="attribution">
-&#8212; unknown
-</div>
-</div>
-<div class="paragraph">
-<p>“Production” is a term that new IT recruits rapidly learn has forbidding connotations. To be “in production” means that the broader enterprise value stream is directly dependent on that asset. Breakage or mishandling will result in questions and concerns from powerful forces. Be Very Scared.</p>
-</div>
-<div class="paragraph">
-<p>How do things get to be “in production”? What do we mean by that?</p>
-</div>
-<div class="paragraph">
-<p>First, let’s get back to our fundamental principle that there is an IT system delivering some "moment of truth" to someone. This system can be of any scale, but fundamentally we are able to conceive of it having a “state.” (See http::/url[State, Configuration, and Discovery].)</p>
-</div>
-<div class="paragraph">
-<p>When we want to change the behavior of this system, we are cautious. We reproduce the system at varying levels of fidelity and experiment with potential changes. This is called development.</p>
-</div>
-<div class="paragraph">
-<p>When we start to gain confidence in our experiments, we increase the fidelity and also start to communicate more widely that we are contemplating a change to the state of the system. We may increase the fidelity along a set of traditional names: </p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Development</p>
-</li>
-<li>
-<p>Testing</p>
-</li>
-<li>
-<p>QA</p>
-</li>
-<li>
-<p>Integration</p>
-</li>
-<li>
-<p>Performance Testing</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The final state, where value is realized, is “Production.”</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/2.06-environments.png" alt="2.06 environments">
-</div>
-</div>
-<div class="paragraph">
-<p>There is nothing sacred about the environments listed above. You will see many variations, especially at scale.</p>
-</div>
-<div class="paragraph">
-<p>The idea that one sequentially moves (”promotes”) new system functionality through a series of states to gain confidence before finally changing the state of the production system is historically well established. However, the production state is notoriously difficult to reproduce fully, especially in highly distributed environments. While infrastructure as code has simplified the problem, lower environments simply can&#8217;t match production completely in all its complexity, especially interfaced interactions with other systems or when large, expensive pools of capacity are involved.. Therefore there is always risk in changing the state of the production system. Mitigating strategies include:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Extensive automated test harnesses that can quickly determine if system behavior has been unfavorably altered.</p>
-</li>
-<li>
-<p>Elaborating lower environments with strategies such as service virtualization to make them appear more like production.</p>
-</li>
-<li>
-<p>Hardening services against their own failure in production, or the failure of services on which they depend.</p>
-</li>
-<li>
-<p>Reducing the size (and therefore complexity and risk) of changes to production (a key DevOps strategy).</p>
-</li>
-<li>
-<p>Ensuring that changes to the production system can be easily and automatically reversed.</p>
-</li>
-<li>
-<p>Using policy-aware infrastructure management tools.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Another important development in environmental approaches is A/B testing. In this approach, the “production” environment is segregated into two or more discrete states, with different features or behaviors exposed to users in order to assess their reactions (see sidebar).</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_do_we_need_environments_at_all">Do we need environments at all?</h5>
-<div class="paragraph">
-<p>The author has heard it recommended that the term “environment” be eliminated, as it tends to result in turf wars and empire building, and potentially the waste of fixed assets (see chapter 8). Performance environments are particularly in question.</p>
-</div>
-<div class="paragraph">
-<p>Instead, in a dynamic infrastructure environment (private or public), one simply defines the kind of test one wants to perform and provisions that capacity on-demand.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Testing in Production?</strong></p>
-</div>
-<div class="paragraph">
-<p>It used to be that the concept of “testing in production” was frowned upon. Now, with these mitigating strategies, and the recognition that complex systems cannot ever be fully reproduced, there is more tolerance for the idea.</p>
-</div>
-<div class="paragraph">
-<p>But with older systems that may lack automated testing, incremental deployment, or easy rollback, it is strongly recommended to retain existing promotion strategies, as these are battle-tested and known to reduce risk. Often, their cycle time can be decreased.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="__development_is_production">“Development is production”</h5>
-<div class="paragraph">
-<p>On the flip side, development systems must never be treated casually.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The development pipeline itself (Chapter 3, figure X) represents a significant operational commitment.</p>
-</li>
-<li>
-<p>The failure of a source code repository, if not backed up, could wipe out a company (see the Code Spaces sidebar in Chapter 2).</p>
-</li>
-<li>
-<p>The failure of a build server or package repository could be almost as bad.</p>
-</li>
-<li>
-<p>In the digital economy, dozens or hundreds of developers out of work represents a severe operational and financial setback, even if the nominal “production” systems continue to function.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>It’s therefore important to treat “development” platforms with the same care as production systems. This requires nuanced approaches: with infrastructure as code, particular virtual machines or containers may represent experiments, expected to fail often and be quickly rebuilt. No need for burdensome change processes when VM base images and containers are being set up and torn down hundreds of times each day!</p>
-</div>
-<div class="paragraph">
-<p>But the platforms supporting the instantiation and teardown of those VMs are production platforms, supporting the business of new systems development.</p>
-</div>
 <div class="paragraph">
 <p><a id="monitoring"></a></p>
 </div>
@@ -9148,13 +9013,206 @@ Enterprise monitoring tools are notorious for requiring agents (small, continuou
 <div class="paragraph">
 <p>The above lists are very simple examples of what can be extensive record-keeping. But the key user story is implied: if we can&#8217;t ping SRV0001, we know that the Quadrex application supporting Logistics is at risk, and we should contact Mary Smith ASAP, if she hasn&#8217;t already contacted us. (Sometimes, the user community calls right away; in other cases, they may not, and proactively contacting them is a positive and important step.)</p>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_capacity_and_performance_management">Capacity and performance management</h4>
+<div class="paragraph">
+<p>Capacity and performance management are closely related, but not identical terms encountered as IT systems scale up and encounter significant load.</p>
+</div>
+<div class="paragraph">
+<p>A capacity management system may include large quantities of data harvested from monitoring and event management systems, stored for long periods of time so that history of system utilization is understood and some degree of prediction can be ventured for upcoming utilization.</p>
+</div>
+<div class="imageblock" style="float: left">
+<div class="content">
+<img src="images/2.06-BlackFriday.jpg" alt="alt text" width="400" height="200">
+</div>
+<div class="title">Figure 63. Black Friday at Macy&#8217;s <sup class="footnote">[<a id="_footnoteref_32" class="footnote" href="#_footnote_32" title="View footnote.">32</a>]</sup></div>
+</div>
+<div class="paragraph">
+<p>The classic example of significant capacity utilization is the <a href="https://en.wikipedia.org/wiki/Black_Friday_(shopping)">Black Friday/Cyber Monday</a> experience of retailers. Both physical store and online ecommerce systems are placed under great strain annually around this time, with the year&#8217;s profits potentially on the line.</p>
+</div>
+<div class="sect4">
+<h5 id="_performance_management">Performance management</h5>
+<div class="paragraph">
+<p>Performance management focuses on the responsiveness (e.g. speed) of the systems being used. Responsiveness may be related to capacity utilization, but some capacity issues don&#8217;t immediately affect responsiveness. For example, a disk drive may be approaching full. When it fills, the system will immediately crash, and performance is severely affected. But until then, the system performs fine. The disk needs to be replaced on the basis of capacity reporting, not performance trending. On the other hand, some performance issues are not related to capacity. A mis-configured router might badly affect a web site&#8217;s performance, but the configuration simply needs to be fixed - there is no need to handle as a capacity-related issue.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_analytics">Analytics</h5>
+<div class="paragraph">
+<p>Capacity analytics at its most advanced is a true Big Data problem domain. At a simpler level, it may consist of monitoring CPU, memory, and storage utilization across a given set of nodes, and raising alerts if certain threshholds are approached.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[examples]</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_as_a_source_of_demand">As a source of demand</h5>
+<div class="paragraph">
+<p>So, what do we do when a capacity alert is raised, either through an automated system or through the manual efforts of a capacity analyst?</p>
+</div>
+<div class="paragraph">
+<p>There are a number of responses that may follow:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Acquire more capacity</p>
+</li>
+<li>
+<p>Seek to use existing capacity more efficiently</p>
+</li>
+<li>
+<p>Throttle demand somehow</p>
+</li>
+</ul>
+</div>
 <div class="paragraph">
 <p><a id="state-config-discovery"></a></p>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_state_configuration_and_discovery">State, configuration, and discovery</h4>
+<h4 id="_configuration_management_round_2">Configuration management round 2</h4>
+<div class="sect4">
+<h5 id="_environments_and_the_fierce_god_of_production">Environments and the fierce god of "Production"</h5>
+<div class="quoteblock">
+<blockquote>
+“Don’t mess with that server! It’s … Production!!!”
+</blockquote>
+<div class="attribution">
+&#8212; unknown
+</div>
+</div>
+<div class="paragraph">
+<p>“Production” is a term that new IT recruits rapidly learn has forbidding connotations. To be “in production” means that the broader enterprise value stream is directly dependent on that asset. Breakage or mishandling will result in questions and concerns from powerful forces. Be Very Scared.</p>
+</div>
+<div class="paragraph">
+<p>How do things get to be “in production”? What do we mean by that?</p>
+</div>
+<div class="paragraph">
+<p>First, let’s get back to our fundamental principle that there is an IT system delivering some "moment of truth" to someone. This system can be of any scale, but fundamentally we are able to conceive of it having a “state.” (See http::/url[State, Configuration, and Discovery].)</p>
+</div>
+<div class="paragraph">
+<p>When we want to change the behavior of this system, we are cautious. We reproduce the system at varying levels of fidelity and experiment with potential changes. This is called development.</p>
+</div>
+<div class="paragraph">
+<p>When we start to gain confidence in our experiments, we increase the fidelity and also start to communicate more widely that we are contemplating a change to the state of the system. We may increase the fidelity along a set of traditional names: </p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Development</p>
+</li>
+<li>
+<p>Testing</p>
+</li>
+<li>
+<p>QA</p>
+</li>
+<li>
+<p>Integration</p>
+</li>
+<li>
+<p>Performance Testing</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The final state, where value is realized, is “Production.”</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/2.06-environments.png" alt="2.06 environments">
+</div>
+</div>
+<div class="paragraph">
+<p>There is nothing sacred about the environments listed above. You will see many variations, especially at scale.</p>
+</div>
+<div class="paragraph">
+<p>The idea that one sequentially moves (”promotes”) new system functionality through a series of states to gain confidence before finally changing the state of the production system is historically well established. However, the production state is notoriously difficult to reproduce fully, especially in highly distributed environments. While infrastructure as code has simplified the problem, lower environments simply can&#8217;t match production completely in all its complexity, especially interfaced interactions with other systems or when large, expensive pools of capacity are involved.. Therefore there is always risk in changing the state of the production system. Mitigating strategies include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Extensive automated test harnesses that can quickly determine if system behavior has been unfavorably altered.</p>
+</li>
+<li>
+<p>Elaborating lower environments with strategies such as service virtualization to make them appear more like production.</p>
+</li>
+<li>
+<p>Hardening services against their own failure in production, or the failure of services on which they depend.</p>
+</li>
+<li>
+<p>Reducing the size (and therefore complexity and risk) of changes to production (a key DevOps strategy).</p>
+</li>
+<li>
+<p>Ensuring that changes to the production system can be easily and automatically reversed.</p>
+</li>
+<li>
+<p>Using policy-aware infrastructure management tools.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Another important development in environmental approaches is A/B testing. In this approach, the “production” environment is segregated into two or more discrete states, with different features or behaviors exposed to users in order to assess their reactions (see sidebar).</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_do_we_need_environments_at_all">Do we need environments at all?</h5>
+<div class="paragraph">
+<p>The author has heard it recommended that the term “environment” be eliminated, as it tends to result in turf wars and empire building, and potentially the waste of fixed assets (see chapter 8). Performance environments are particularly in question.</p>
+</div>
+<div class="paragraph">
+<p>Instead, in a dynamic infrastructure environment (private or public), one simply defines the kind of test one wants to perform and provisions that capacity on-demand.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>Testing in Production?</strong></p>
+</div>
+<div class="paragraph">
+<p>It used to be that the concept of “testing in production” was frowned upon. Now, with these mitigating strategies, and the recognition that complex systems cannot ever be fully reproduced, there is more tolerance for the idea.</p>
+</div>
+<div class="paragraph">
+<p>But with older systems that may lack automated testing, incremental deployment, or easy rollback, it is strongly recommended to retain existing promotion strategies, as these are battle-tested and known to reduce risk. Often, their cycle time can be decreased.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="__development_is_production">“Development is production”</h5>
+<div class="paragraph">
+<p>On the flip side, development systems must never be treated casually.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The development pipeline itself (Chapter 3, figure X) represents a significant operational commitment.</p>
+</li>
+<li>
+<p>The failure of a source code repository, if not backed up, could wipe out a company (see the Code Spaces sidebar in Chapter 2).</p>
+</li>
+<li>
+<p>The failure of a build server or package repository could be almost as bad.</p>
+</li>
+<li>
+<p>In the digital economy, dozens or hundreds of developers out of work represents a severe operational and financial setback, even if the nominal “production” systems continue to function.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>It’s therefore important to treat “development” platforms with the same care as production systems. This requires nuanced approaches: with infrastructure as code, particular virtual machines or containers may represent experiments, expected to fail often and be quickly rebuilt. No need for burdensome change processes when VM base images and containers are being set up and torn down hundreds of times each day!</p>
+</div>
+<div class="paragraph">
+<p>But the platforms supporting the instantiation and teardown of those VMs are production platforms, supporting the business of new systems development.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_state_configuration_and_discovery">State, configuration, and discovery</h5>
 <div class="paragraph">
 <p><a id="2.06.03-state"></a></p>
 </div>
@@ -9215,6 +9273,7 @@ The following are examples of state:</p>
 </div>
 <div class="paragraph">
 <p>In terms of OODA, determining and tracking the state of a system under investigation is one of the fundamental tools. With current practices, for example, this might mean examining the configuration management/provisioning system to determine how the basic operating system was built.</p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_drift_management">Drift management</h5>
@@ -9294,63 +9353,6 @@ Use directory creation example with failure of script b/c not idempotent</pre>
 <div class="content">
 <pre>Increasingly, as operational performance is defined in code (the trend to Infrastructure as Code), operational issues are equivalent to development defects.</pre>
 </div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_capacity_and_performance_management">Capacity and performance management</h4>
-<div class="paragraph">
-<p>Capacity and performance management are closely related, but not identical terms encountered as IT systems scale up and encounter significant load.</p>
-</div>
-<div class="paragraph">
-<p>A capacity management system may include large quantities of data harvested from monitoring and event management systems, stored for long periods of time so that history of system utilization is understood and some degree of prediction can be ventured for upcoming utilization.</p>
-</div>
-<div class="imageblock" style="float: left">
-<div class="content">
-<img src="images/2.06-BlackFriday.jpg" alt="alt text" width="400" height="200">
-</div>
-<div class="title">Figure 63. Black Friday at Macy&#8217;s <sup class="footnote">[<a id="_footnoteref_32" class="footnote" href="#_footnote_32" title="View footnote.">32</a>]</sup></div>
-</div>
-<div class="paragraph">
-<p>The classic example of significant capacity utilization is the <a href="https://en.wikipedia.org/wiki/Black_Friday_(shopping)">Black Friday/Cyber Monday</a> experience of retailers. Both physical store and online ecommerce systems are placed under great strain annually around this time, with the year&#8217;s profits potentially on the line.</p>
-</div>
-<div class="sect4">
-<h5 id="_performance_management">Performance management</h5>
-<div class="paragraph">
-<p>Performance management focuses on the responsiveness (e.g. speed) of the systems being used. Responsiveness may be related to capacity utilization, but some capacity issues don&#8217;t immediately affect responsiveness. For example, a disk drive may be approaching full. When it fills, the system will immediately crash, and performance is severely affected. But until then, the system performs fine. The disk needs to be replaced on the basis of capacity reporting, not performance trending. On the other hand, some performance issues are not related to capacity. A mis-configured router might badly affect a web site&#8217;s performance, but the configuration simply needs to be fixed - there is no need to handle as a capacity-related issue.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_analytics">Analytics</h5>
-<div class="paragraph">
-<p>Capacity analytics at its most advanced is a true Big Data problem domain. At a simpler level, it may consist of monitoring CPU, memory, and storage utilization across a given set of nodes, and raising alerts if certain threshholds are approached.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>[examples]</pre>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_as_a_source_of_demand">As a source of demand</h5>
-<div class="paragraph">
-<p>So, what do we do when a capacity alert is raised, either through an automated system or through the manual efforts of a capacity analyst?</p>
-</div>
-<div class="paragraph">
-<p>There are a number of responses that may follow:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Acquire more capacity</p>
-</li>
-<li>
-<p>Seek to use existing capacity more efficiently</p>
-</li>
-<li>
-<p>Throttle demand somehow</p>
-</li>
-</ul>
 </div>
 </div>
 </div>
