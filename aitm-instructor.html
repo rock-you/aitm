@@ -7985,6 +7985,9 @@ As two more assistants were added, however, coordination problems did arise. One
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p><a id="task-mgmt"></a></p>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -9178,7 +9181,10 @@ If you measure only one thing, measure Cost of Delay.
 <div class="title">Figure 62. Network operations center <sup class="footnote">[<a id="_footnoteref_31" class="footnote" href="#_footnote_31" title="View footnote.">31</a>]</sup></div>
 </div>
 <div class="paragraph">
-<p>What do we mean by operations? Operations management is a broad topic in management theory, with whole programs dedicated to it in both business and engineering schools. Companies frequently hire Chief Operations Officers to run the organization. We started to cover operations management in chapter 5, as we examined the topic of “work management” - in traditional operations management, the question of work and who is doing it is critical. However, for the digital professional, “operations” tends to have a more technical meaning, being focused on the immediate questions of systems integrity, availability and performance, and feedback from the user community (i.e., the service or help desk). Operations often can mean, “everything but development” in a digital context. However, recall our discussion of <a href="#design">design thinking</a>&#8201;&#8212;&#8201;the entire experience is part of the product. This applies to both those consuming it as well as running it.</p>
+<p>What do we mean by operations? Operations management is a broad topic in management theory, with whole programs dedicated to it in both business and engineering schools. Companies frequently hire Chief Operations Officers to run the organization. We started to cover operations management in chapter 5, as we examined the topic of “work management” - in traditional operations management, the question of work and who is doing it is critical. For the digital professional, “operations” tends to have a more technical meaning than the classic business definition, being focused on the immediate questions of systems integrity, availability and performance, and feedback from the user community (i.e., the service or help desk).</p>
+</div>
+<div class="paragraph">
+<p>Operations often can mean, “everything but development” in a digital context. In the classic model, developers built systems and "threw them over the wall" to operations. Each side had specialized processes and technology supporting their particular concerns. However, recall our discussion of <a href="#design">design thinking</a>&#8201;&#8212;&#8201;the entire experience is part of the product. This applies to both those consuming it as well as running it. Companies undergoing digital transformation are experimenting with many different models; as we will see in <a href="#Section-III-coordination">Part III</a>, up to and including the complete merging of Development and Operations-oriented skills under common product management.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -9288,10 +9294,16 @@ In a digitally transformed enterprise, Operations is part of the Product.
 <p>What is an emergency? It&#8217;s all a matter of expectations. If a system is supposed to be available 24 hours a day, 7 days a week, an outage at 3 AM Saturday morning is an emergency. If it is only supposed to be available between Monday through Friday, the outage may not be as critical (although it still needs to be fixed in short order!)</p>
 </div>
 <div class="paragraph">
+<p><a id="IT-process-emergence"></a></p>
+</div>
+<div class="paragraph">
 <p>IT systems have always been fragile and prone to malfunction. "Emergency" management is documented as a practice in "data processing" as early as 1971 <a href="#Ditri1971">[Ditri1971]</a>, pp. 188-189. By the 1990s, a terminology had been formalized, by vendors such as IBM (in their "Yellow Book" series), the United Kingdom&#8217;s IT Infrastructure Library (ITIL), and other guidance such as the Harris Kern library (popular in the United States before ITIL gained dominance). These processes included:</p>
 </div>
 <div class="ulist">
 <ul>
+<li>
+<p>Request management</p>
+</li>
 <li>
 <p>Incident management</p>
 </li>
@@ -9319,6 +9331,10 @@ In a digitally transformed enterprise, Operations is part of the Product.
 </thead>
 <tbody>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Request management</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Respond to routine requests such as providing systems access.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Incident management</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Identify service outages and situations that could potentially lead to them, and restore service and/or mitigate immediate risk.</p></td>
 </tr>
@@ -9338,19 +9354,21 @@ In a digitally transformed enterprise, Operations is part of the Product.
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Identify the issue and restore service by any means necessary. Don&#8217;t worry about why it happened yet.</p>
+<p>Give the user access to the system.</p>
 </li>
 <li>
-<p>Once service is restored, investigate why the issue happened and propose longer-term solutions.
-.</p>
+<p>If the system is not functioning as expected, identify the issue and restore service by any means necessary. Don&#8217;t worry about why it happened yet.</p>
+</li>
+<li>
+<p>Once service is restored, investigate why the issue happened and propose longer-term solutions.</p>
+</li>
+<li>
+<p>Inform affected parties of the proposed changes, collect their feedback and approvals, and track the progress of the proposed change through successful completion.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>At the end of the day, we need to remember that operational work is just one form of work. In the classic model, developers built systems and "threw them over the wall" to operations. Each side had specialized processes and technology supporting their particular concerns.</p>
-</div>
-<div class="paragraph">
-<p>Now, companies undergoing digital transformation are experimenting with many different models; as we will see in Part III, up to and including the complete merging of Development and Operations-oriented skills under common product management.</p>
+<p>At the end of the day, we need to remember that operational work is just one form of work. In a single-team organization, these processes might still be informal and handled through simple <a href="#task-mgmt">task management</a> (although user provisioning would need to be automated, if the system  is scaling significantly.) We&#8217;ll continue on that assumption for the remainder of this chapter, and revisit the idea of defined, repeatable processes as we scale to a "team of teams" in <a href="#Section-III-coordination">Part III</a>.</p>
 </div>
 <div class="paragraph">
 <p><a id="monitoring"></a></p>
@@ -15427,16 +15445,13 @@ Is a firm a collection of activities or a set of resources and capabilities? Cle
 </div>
 </div>
 <div class="paragraph">
-<p>We have previously discussed product and project management. You may wish to review our summary description of <a href="#2.04.01-process-project-product">process, product, and project management</a>.</p>
+<p>We have previously discussed product and project management, and the beginnings of <a href="#IT-process-emergence">IT process</a>. You may wish to review our summary description of <a href="#2.04.01-process-project-product">process, product, and project management</a>.</p>
 </div>
 <div class="paragraph">
 <p>Process management starts with the fundamental capability for coordinated <a href="#2.05.00-work-management">work management</a>, and refines it much further.</p>
 </div>
 <div class="paragraph">
-<p>In our company, work has been specializing. A simple card-based kanban approach is no longer sufficient. We are finding that some work is repetitive, and we need to remember to do certain things in certain orders.</p>
-</div>
-<div class="paragraph">
-<p>For example, a new Human Resources (HR) manager was hired. The HR manager decided that a sticky note of "hire someone new for us" was not sufficient. As she pointed out to the team, hiring needed to follow a defined sequence of tasks:</p>
+<p>In our company, work has been specializing. A simple card-based kanban approach is no longer sufficient. We are finding that some work is repetitive, and we need to remember to do certain things in certain orders. For example, a new Human Resources (HR) manager was hired. The HR manager decided that a sticky note of "hire someone new for us" was not sufficient. As she pointed out to the team, hiring needed to follow a defined sequence of tasks:</p>
 </div>
 <div class="ulist">
 <ul>
