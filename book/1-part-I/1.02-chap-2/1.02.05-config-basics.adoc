@@ -3,7 +3,11 @@ anchor:version-control[]
 ==== Configuration management: the basics
 Configuration management is a critically important practice in digital systems, and has always been so. How it is performed has evolved over time. At this stage in our journey, we are one or two people in a startup, working with digital artifacts such as our xref:infra-code-example[iac.sh example] discussed in the previous section.
 
-One or two people can achieve an impressive amount with modern digital platforms. But the work is complex. Tracking and controlling your work products as they evolve through change after change is important from day one of your efforts. It's not something you want to put off to "later when I have time." This applies to computer code, configurations, and increasingly even documentation (often written in a lightweight markup language like Markdown or Asciidoc).
+One or two people can achieve an impressive amount with modern digital platforms. But the work is complex. Tracking and controlling your work products as they evolve through change after change is important from day one of your efforts. It's not something you want to put off to "later when I have time." This applies to computer code, configurations, and increasingly even documentation (often written in a lightweight markup language like Markdown or Asciidoc). In terms of infrastructure, configuration management requires two capabilities:
+
+* The ability to back up or archive a system's operational state (in general, not including the data it is processing - that is a different concern). Taking the backup should not require taking the system down.
+* The ability to compare two versions of the system's state and identify differences
+* The ability to restore the system to a previously archived operational state.
 
 In this section, we will discuss the following topics:
 

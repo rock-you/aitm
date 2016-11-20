@@ -22,7 +22,7 @@ What do we mean by this?
 Consider the following various examples of “operations” in an IT context. Some are relevant to a “xref:amazon-productization[two pizza product team]” scenario, some might be more applicable to larger environments:
 
 * Systems operators sitting in 24x7 operations centers, monitoring system status and responding to alerts.
-* Help desk representatives answering phone calls from users requiring support. They may be calling because a system or service they need is malfunctioning. They may also be calling because they do not understand how to use the system for the value experience they have been led to expect from it.
+* Help desk representatives answering phone calls from users requiring support. They may be calling because a system or service they need is malfunctioning. They may also be calling because they do not understand how to use the system for the value experience they have been led to expect from it. Again, this is part of their product experience.
 * Field technicians physically dispatched to a campus or remote site to evaluate and if necessary update or fix IT hardware and/or software (install a new PC, fix a printer, service a cell tower antenna).
 * Developers and engineers serving "on call" on a rotating basis to respond to systems outages referred to them by the operations center.
 * Data center staff performing routine work, such as installing hardware, granting access, or running or testing backups. Such routine work may be scheduled, or it may be on request (e.g. ticketed).
@@ -30,7 +30,7 @@ Consider the following various examples of “operations” in an IT context. So
 
 As above, the primary thing that operations does NOT do is develop new systems functionality. Operations is process-driven and systematic, where research and development fails the "systematic" part of the definition (review the definitions in xref:2.04.01-process-project-product[process, product, and project management]). However, new functionality usually has operational impacts. In manufacturing and other traditional industries, product development was a minority of work, while operations was where the bulk of work happened. Yet when an operational task involving information becomes well defined and repetitive, it can be automated with a computer.
 
-The continuous cycle of innovation and commoditization has driven closer and closer ties between “development” and “operations.” This cycle also has driven confusion around exactly what is meant by “operations.” In many organizations, there is an “Infrastructure and Operations” function. Pay close attention to the naming. A matrix may help, because we have two dimensions to consider here.
+This continuous cycle of innovation and commoditization has driven closer and closer ties between “development” and “operations.” This cycle also has driven confusion around exactly what is meant by “operations.” In many organizations, there is an “Infrastructure and Operations” function. Pay close attention to the naming. A matrix may help, because we have two dimensions to consider here.
 
 .Application, infrastructure, development, operations.
 [cols="h,2*", options="header"]
@@ -55,14 +55,16 @@ Infrastructure services and/or products, as we discussed in Chapter 2, need to b
 anchor:ops-day-in-life[]
 
 ===== A day in the life
+[quote, Limoncelli/Chalup/Hogan]
+Process is what makes it possible for teams to do the right thing, again and again.
 
-Limoncelli, Strata, and Hogan, in their excellent _Cloud Systems Administration_, emphasize the role of the "oncall" and "onduty" staff in the service of operations <<Limoncelli2014>>. _Oncall_ staff have a primary responsibility of emergency response, and the term oncall refers to their continuous availability, even if they are not otherwise working (e.g., they are expected to pick up phone calls and alerts at home and dial into emergency communications channels). _Onduty_ staff are responsible for responding to non-critical incidents and maintaining current operations.
+Limoncelli, Chalup, and Hogan, in their excellent _Cloud Systems Administration_, emphasize the role of the "oncall" and "onduty" staff in the service of operations <<Limoncelli2014>>. _Oncall_ staff have a primary responsibility of emergency response, and the term oncall refers to their continuous availability, even if they are not otherwise working (e.g., they are expected to pick up phone calls and alerts at home and dial into emergency communications channels). _Onduty_ staff are responsible for responding to non-critical incidents and maintaining current operations.
 
 What is an emergency? It's all a matter of expectations. If a system is supposed to be available 24 hours a day, 7 days a week, an outage at 3 AM Saturday morning is an emergency. If it is only supposed to be available between Monday through Friday, the outage may not be as critical (although it still needs to be fixed in short order!)
 
 anchor:IT-process-emergence[]
 
-IT systems have always been fragile and prone to malfunction. "Emergency" management is documented as a practice in "data processing" as early as 1971 <<Ditri1971>>, pp. 188-189. By the 1990s, a terminology had been formalized, by vendors such as IBM (in their "Yellow Book" series), the United Kingdom's IT Infrastructure Library (ITIL), and other guidance such as the Harris Kern library (popular in the United States before ITIL gained dominance). These processes included:
+IT systems have always been fragile and prone to malfunction. "Emergency" management is documented as a practice in "data processing" as early as 1971 (<<Ditri1971>>, pp. 188-189). By the 1990s, a terminology had been formalized, by vendors such as IBM (in their "Yellow Book" series), the United Kingdom's IT Infrastructure Library (ITIL), and other guidance such as the Harris Kern library (popular in the United States before ITIL gained dominance). These processes included:
 
 * Request management
 * Incident management
@@ -84,7 +86,7 @@ These processes have a rough sequence to them:
 
 . Give the user access to the system.
 . If the system is not functioning as expected, identify the issue and restore service by any means necessary. Don't worry about why it happened yet.
-. Once service is restored, investigate why the issue happened and propose longer-term solutions.
+. Once service is restored, investigate why the issue happened (sometimes called a post-mortem) and propose longer-term solutions.
 . Inform affected parties of the proposed changes, collect their feedback and approvals, and track the progress of the proposed change through successful completion.
 
-At the end of the day, we need to remember that operational work is just one form of work. In a single-team organization, these processes might still be informal and handled through simple xref:task-mgmt[task management] (although user provisioning would need to be automated, if the system  is scaling significantly.) We'll continue on that assumption for the remainder of this chapter, and revisit the idea of defined, repeatable processes as we scale to a "team of teams" in xref:Section-III-coordination[Part III].
+At the end of the day, we need to remember that operational work is just one form of work. In a single-team organization, these processes might still be handled through basic xref:task-mgmt[task management] (although user provisioning would need to be automated, if the system  is scaling significantly.) Perhaps the simple task management is supplemented with checklists, as repeatable aspects of the work become more obvious. We'll continue on the assumption of basic task management for the remainder of this chapter, and go deeper into the idea of defined, repeatable processes as we scale to a "team of teams" in xref:Section-III-coordination[Part III].

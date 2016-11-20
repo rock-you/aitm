@@ -29,6 +29,8 @@ More broadly, these tools provide a variety of mechanisms for monitoring and con
 
  figure
 
+ 
+
 Some monitoring covers low level system indicators not usually of direct interest to the end user. Other monitoring may attempt to synthetically re-create the user's "moment of truth." Web application response time monitoring, in which synthetic transactions are run as proxies for end user experience, is an example of this. See <<Limoncelli2014>>, chapters 16-17.
 
  figure
@@ -50,6 +52,8 @@ Enabling a monitoring console to auto-create tickets however, needs to be carefu
 
 ===== Understanding business impact
 At the intersection of event aggregation and operations centers is the need to understand business impact. It is not, for example, always obvious what a server is being used for. This may be surprising to new students, and perhaps those with experience in smaller organizations. However, in many large “traditional” IT environments, where the operations team is distant from the development organization, it is not necessarily easy to determine what a given hardware or software resource is doing or why it is there. Clearly, this is unacceptable in terms of security, value management, and any number of other concerns. However, from the start of distributed computing, the question “what is on that server?” has been all too frequent in large IT shops.
+
+ not sure this is good location - dated material - still relevant in some environments -
 
 In mature organizations, this may be documented in a Configuration Management Database or System (CMDB/CMS). Such a system might start by simply listing the servers and their applications:
 
@@ -106,3 +110,5 @@ There are a number of responses that may follow:
 * Acquire more capacity
 * Seek to use existing capacity more efficiently
 * Throttle demand somehow
+
+ Transition to next chapter - being more pro-active in how the software is designed - feedback loop from ops back to dev starts functioning
