@@ -166,20 +166,23 @@ anchor:policy-config[]
 
 ====== Imperative and Declarative
 
-Before we turned to source control, we looked at a xref:infra-code-example[simple script] that changed the configuration of a computer. It did so in an _imperative_ fashion.
+Before we turned to source control, we looked at a xref:infra-code-example[simple script] that changed the configuration of a computer. It did so in an _imperative_ fashion. Imperative and declarative are two important terms from computer science.
 
-Imperative and declarative are two important terms from computer science. In an imperative approach, we tell the computer specifically how we want to accomplish a task, e.g.:
+.A simple example of “declarative” vs “imperative”
+****
+*Declarative:* Our refrigerator should always have a gallon of milk in it.”
+
+*Imperative:* “Go out the door, take a right, take a left, go into the building with a big ‘SA’ on it, go in to the last aisle, take a left, go to the third case and take the first container on the fourth shelf from the bottom. Give money to the cashier and bring the container back home.”
+****
+
+In an imperative approach, we tell the computer specifically how we want to accomplish a task, e.g.:
 
 . Create a directory
 . Create some files
 . Create another directory
 . Create more files
 
-And so on. Many traditional programming languages take an imperative approach.
-
-By contrast, with a declarative approach, we tell the computer the task we want to accomplish and let the computer figure out the best way to do it. Structured Query Language (SQL) statements are a good example of a declarative approach. We can provide a database system with a set of SQL statements, and the database will generate an execution plan to provide us with the data we are seeking. Functional languages such as Lisp and Erlang are considered declarative.
-
-A script such as xref:infra-code-example[iac.sh example] is executed line by line, i.e., it is imperative. But the state of the art in infrastructure as code is policy-based approaches, in which the object is to define the desired end state of the resource, not the steps needed to get there. Instead of defining a set of steps, a policy-based approach simply defines the proper configuration as a target, saying (in essence) that "this computer should always have a directory structure thus; do what you need to do to make it so and keep it this way":
+And so on. Many traditional programming languages take an imperative approach. A script such as xref:infra-code-example[iac.sh example] is executed line by line, i.e., it is imperative. In configuring infrastructure, scripting is in general considered “imperative," but state of the art infrastructure automation frameworks are built using a “declarative,” policy-based approach, in which the object is to define the desired end state of the resource, not the steps needed to get there.  With such an approach, instead of defining a set of steps, we simply define the proper configuration as a target, saying (in essence) that "this computer should always have a directory structure thus; do what you need to do to make it so and keep it this way":
 
 ....
 .
@@ -193,6 +196,6 @@ A script such as xref:infra-code-example[iac.sh example] is executed line by lin
     └── z
 ....
 
-More practically, imperative approaches are used to ensure that the proper versions of software are always present on a system, and that configurations such as Internet ports and security settings do not vary from the intended specification.
+More practically, declarative approaches are used to ensure that the proper versions of software are always present on a system, and that configurations such as Internet ports and security settings do not vary from the intended specification.
 
 This is a complex topic and there are advantages and disadvantages to each approach. (See "When and Where Order Matters" by Mark Burgess for an advanced discussion <<Burgess2016>>.) But policy-based approaches seem to have the upper hand for now.
