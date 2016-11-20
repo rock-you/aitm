@@ -8705,10 +8705,7 @@ If you measure only one thing, measure Cost of Delay.
 <div class="title">Figure 62. Network operations center <sup class="footnote">[<a id="_footnoteref_31" class="footnote" href="#_footnote_31" title="View footnote.">31</a>]</sup></div>
 </div>
 <div class="paragraph">
-<p>What do we mean by operations? Operations management is a broad topic in management theory, with whole programs dedicated to it. Companies frequently hire Chief Operations Officers to run the organization. We started to cover operations management in chapter 5, as we examined the topic of “work management” - in traditional operations management, the question of work and who is doing it is critical. However, for the digital professional, “operations” tends to have a more technical meaning, being focused on the immediate questions of systems integrity, availability and performance, and feedback from the user community (i.e., the service or help desk).</p>
-</div>
-<div class="paragraph">
-<p>Operations often can mean, “everything but development” in a digital context. When merged with Development into “DevOps,” one gets Product Management. Recall our discussion of <a href="#design">product design</a>&#8201;&#8212;&#8201;the entire experience is part of the product. This applies to both those consuming it as well as running it.</p>
+<p>What do we mean by operations? Operations management is a broad topic in management theory, with whole programs dedicated to it in both business and engineering schools. Companies frequently hire Chief Operations Officers to run the organization. We started to cover operations management in chapter 5, as we examined the topic of “work management” - in traditional operations management, the question of work and who is doing it is critical. However, for the digital professional, “operations” tends to have a more technical meaning, being focused on the immediate questions of systems integrity, availability and performance, and feedback from the user community (i.e., the service or help desk). Operations often can mean, “everything but development” in a digital context. However, recall our discussion of <a href="#design">design thinking</a>&#8201;&#8212;&#8201;the entire experience is part of the product. This applies to both those consuming it as well as running it.</p>
 </div>
 <div class="admonitionblock important">
 <table>
@@ -8723,7 +8720,10 @@ In a digitally transformed enterprise, Operations is part of the Product.
 </table>
 </div>
 <div class="paragraph">
-<p>A duty-oriented, physical presence in the service of executing particular tasks is an unchanging aspect of operational responsibility. The tasks may support broader goals and strategies, and need to be systematically discharged.</p>
+<p>For this chapter we&#8217;ll use the following definition of operations:</p>
+</div>
+<div class="paragraph">
+<p><em>A duty-oriented, physical presence in the service of executing particular tasks, that support broader organizational goals and strategies, and need to be systematically discharged.</em></p>
 </div>
 <div class="paragraph">
 <p>What do we mean by this?</p>
@@ -8754,7 +8754,10 @@ In a digitally transformed enterprise, Operations is part of the Product.
 </ul>
 </div>
 <div class="paragraph">
-<p>As above, the primary thing that operations does NOT do is develop new systems functionality. However, new functionality usually has operational impacts. In manufacturing and other traditional industries, product development was a minority of work, while operations was where the bulk of work happened. Yet when an operational task involving information becomes well defined and repetitive, it can be automated with a computer. This continuous cycle of innovation and commoditization has driven closer and closer ties between “development” and “operations.” This cycle also has driven confusion around exactly what is meant by “operations.” In many organizations, there is an “Infrastructure and Operations” function. Pay close attention to the naming. A matrix may help, because we have two dimensions to consider here.</p>
+<p>As above, the primary thing that operations does NOT do is develop new systems functionality. Operations is process-driven and systematic, where research and development fails the "systematic" part of the definition (review the definitions in <a href="#2.04.01-process-project-product">process, product, and project management</a>). However, new functionality usually has operational impacts. In manufacturing and other traditional industries, product development was a minority of work, while operations was where the bulk of work happened. Yet when an operational task involving information becomes well defined and repetitive, it can be automated with a computer.</p>
+</div>
+<div class="paragraph">
+<p>The continuous cycle of innovation and commoditization has driven closer and closer ties between “development” and “operations.” This cycle also has driven confusion around exactly what is meant by “operations.” In many organizations, there is an “Infrastructure and Operations” function. Pay close attention to the naming. A matrix may help, because we have two dimensions to consider here.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <caption class="title">Table 1. Application, infrastructure, development, operations.</caption>
@@ -8808,11 +8811,67 @@ In a digitally transformed enterprise, Operations is part of the Product.
 <div class="paragraph">
 <p>Limoncelli, Strata, and Hogan, in their excellent <em>Cloud Systems Administration</em>, emphasize the role of the "oncall" and "onduty" staff in the service of operations <a href="#Limoncelli2014">[Limoncelli2014]</a>. <em>Oncall</em> staff have a primary responsibility of emergency response, and the term oncall refers to their continuous availability, even if they are not otherwise working (e.g., they are expected to pick up phone calls and alerts at home and dial into emergency communications channels). <em>Onduty</em> staff are responsible for responding to non-critical incidents and maintaining current operations.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>Emergency vs non-emergency - it's all a matter of expectations
-The classic processes (Incident, Problem, Change) - also Issue, Defect, Request</pre>
+<div class="paragraph">
+<p>What is an emergency? It&#8217;s all a matter of expectations. If a system is supposed to be available 24 hours a day, 7 days a week, an outage at 3 AM Saturday morning is an emergency. If it is only supposed to be available between Monday through Friday, the outage may not be as critical (although it still needs to be fixed in short order!)</p>
 </div>
+<div class="paragraph">
+<p>IT systems have always been fragile and prone to malfunction. "Emergency" management is documented as a practice in "data processing" as early as 1971 <a href="#Ditri1971">[Ditri1971]</a>, pp. 188-189. By the 1990s, a terminology had been formalized, by vendors such as IBM (in their "Yellow Book" series), the United Kingdom&#8217;s IT Infrastructure Library (ITIL), and other guidance such as the Harris Kern library (popular in the United States before ITIL gained dominance). These processes included:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Incident management</p>
+</li>
+<li>
+<p>Problem management</p>
+</li>
+<li>
+<p>Change management</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Even as a single-product team, these processes are a useful framework to keep in mind as operational work increases. Here are some simple definitions:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Process</th>
+<th class="tableblock halign-left valign-top">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Incident management</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identify service outages and situations that could potentially lead to them, and restore service and/or mitigate immediate risk.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Problem management</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identify the causes of one or more Incidents and remedy them (on a longer-term basis)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Change management</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Record and track proposed alterations to critical IT components. Notify potentially affected parties and assess changes for risk; ensure key stakeholders exercise approval rights.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>These processes have a rough sequence to them:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Identify the issue and restore service by any means necessary. Don&#8217;t worry about why it happened yet.</p>
+</li>
+<li>
+<p>Once service is restored, investigate why the issue happened and propose longer-term solutions.
+.</p>
+</li>
+</ol>
 </div>
 <div class="paragraph">
 <p>At the end of the day, we need to remember that operational work is just one form of work. In the classic model, developers built systems and "threw them over the wall" to operations. Each side had specialized processes and technology supporting their particular concerns.</p>
@@ -27292,6 +27351,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 </li>
 <li>
 <p><a id="DHS2006"></a>[DHS2006]: Department of Homeland Security. 2006. “Report No. 2006-03, The Use of Commercial Data.” DHS Data Privacy and Integrity Advisory Committee.</p>
+</li>
+<li>
+<p><a id="Ditri1971"></a>[Ditri1971]: Ditri, A.E., Shaw, J.C. &amp; Atkins, W., 1971. Managing the EDP function, N.Y.: McGraw-Hill.</p>
 </li>
 <li>
 <p><a id="Drucker1963"></a>[Drucker1963]: Drucker, Peter F. 1963. “Managing for Business Effectiveness.” Magazine Article. Harvard Business Review.</p>
