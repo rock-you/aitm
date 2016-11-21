@@ -46,14 +46,18 @@ For further discussion, see <<Limoncelli2014>>, section 1.5.
 
 ===== The AKF scaling cube
 
+.AKF scaling cube footnote:[_Similar to <<Abbott2015>>, p. 376_]
+image::images/2.06-akf.png[alt text, 300, 200, float="left"]
+
 Another powerful tool for thinking about scaling systems is the AKF Scaling Cube. AKF stands for Abbott, Keeven, and Fisher, authors of _The Art of Scalability_ <<Abbott2015>>. The AKF cube is a visual representation of the three basic options for scaling a system:
 
 * Replicate the complete system (x-axis)
 * Split the system functionally into smaller layers or components (y-axis)
 * Split the system's data (z-axis)
 
-.AKF scaling cube footnote:[_Similar to <<Abbott2015>>, p. 376_]
-image::images/2.06-akf.png[alt text, 300, 200, float="left"]
+
+.Point of sale terminals - horizontal scale footnote:[_Image credit https://www.flickr.com/photos/jeepersmedia/14061759587, downloaded 2016-11-21, commercial use permitted_]
+image::images/2.06-POS.jpg[alt text, 400, 200, float="left"]
 
 A *complete system replica* is similar to the Point of Sale terminals in a retailer. Each is a self-contained system with all the data it needs to handle typical transactions. POS terminals do not depend on each other and therefore you can keep increasing the capacity of your store's checkout lines by simply adding more fo them.
 
@@ -70,7 +74,7 @@ image::images/2.06-registration.jpg[alt text, 400, 200, float="right"]
 
 This is a good example of splitting by data. In terms of digital systems, we might split data by region; customers in Minnesota might go to the Kansas City data center, while customers in New Jersey might go to a North Carolina data center. Obviously, the system needs to handle situations where people are traveling or move.
 
-There are many ways to implement and combine the 3 axes of the AKF scaling cube. With further study of scalability, you will encounter discussions of:
+There are many ways to implement and combine the 3 axes of the AKF scaling cube to meet the CAP constraints (consistency, availability, and partition-tolerance). With further study of scalability, you will encounter discussions of:
 
 * Load balancing architectures and algorithms
 * Caching
