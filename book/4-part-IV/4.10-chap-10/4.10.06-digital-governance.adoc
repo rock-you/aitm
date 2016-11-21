@@ -311,28 +311,4 @@ What are the things that may present risks?
 * Vendors
 * Other critical information
 
-anchor:simian-army[]
-
-====== The Netflix Simian Army
-[quote, Izrailevsky and Tseitlin, Netflix Tech Blog]
-...just designing a fault tolerant architecture is not enough. We have to constantly test our ability to actually survive these "once in a blue moon" failures. +
- +
-Imagine getting a flat tire. Even if you have a spare tire in your trunk, do you know if it is inflated? Do you have the tools to change it? And, most importantly, do you remember how to do it right? One way to make sure you can deal with a flat tire on the freeway, in the rain, in the middle of the night is to poke a hole in your tire once a week in your driveway on a Sunday afternoon and go through the drill of replacing it. This is expensive and time-consuming in the real world, but can be (almost) free and automated in the cloud. +
- +
-This was our philosophy when we built Chaos Monkey, a tool that randomly disables our production instances to make sure we can survive this common type of failure without any customer impact. The name comes from the idea of unleashing a wild monkey with a weapon in your data center (or cloud region) to randomly shoot down instances and chew through cables -- all the while we continue serving our customers without interruption. By running Chaos Monkey in the middle of a business day, in a carefully monitored environment with engineers standing by to address any problems, we can still learn the lessons about the weaknesses of our system, and build automatic recovery mechanisms to deal with them.
-
-The Netflix Simian Army is a collection of resiliency tools developed by the online video-streaming service Netflix. It represents a significant advancement in digital risk management, as previous control approaches too often were limited by poor scalability or human failure (e.g. forgetfulness or negligence in following manual process steps).
-
-Chaos Monkey is one of a number of tools developed to continually "harden" the Netflix system, including:
-
-* Latency Monkey -- introduces arbitrary network delays
-* Conformity Monkey -- checks for consistency with architectural standards, and shuts down non-conforming instances
-* Doctor Monkey -- checks for longer-term evidence of instance degradation
-* Janitor Monkey -- checks for and destroys unused running capacity
-* Security Monkey -- an extension of Conformity Monkey, checks for correct security configuration
-* 10-18 Monkey -- checks internationalization
-* Finally, Chaos Gorilla simulates the outage of an entire Amazon availability zone
-
-On the whole, the Simian Army behaves much as antibodies do in an organic system. One notable characteristic is that the monkeys as described do not generate a report (a xref:secondary-artifacts[secondary artifact]) for manual followup. They simply shut down the offending resources.
-
-Such direct action may not be possible in many environments, but represents an ideal to work toward. It keeps the security and risk work "front and center" within the mainstream of the digital pipeline, rather than relegating it to the bothersome "additional work" it can so easily be seen as.
+Finally, the xref:simian-army[Netflix Simian Army] represents a powerful automated approach to exposing risk within the digital product infrastructure. 

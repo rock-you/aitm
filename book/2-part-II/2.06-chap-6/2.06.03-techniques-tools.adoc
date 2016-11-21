@@ -1,24 +1,64 @@
-==== Other operations techniques and tools
+==== Operations practices
 
- [to be written]
+Monitoring communicates the state of the digital systems to the professionals in charge of them. Acting on that telemetry involves additional tools and practices, some of which we'll review in this section.
 
-* Communications channels
-** Conference bridges
-** Instant messaging & chat
-** Email
-** Cell phone
-** Paging
+===== Communication channels
 
-* ChatOps
+When signals emerge from the lower levels of the digital infrastructure, they pass through a variety of layers and cause assorted, related behavior among the responsible digital professionals. The accompanying illustration shows a typical hierarchy, brought into action as an event becomes apparently more significant.
 
-* Record keeping
-** Runbooks/playbooks
-** Running incident logs
+.Layered communications channels
+image::images/2.06-commstack.png[comms channels, 250, float="right"]
 
-* Drills
-** Simian army
+The digital components send events to the monitoring layer, which filters them for significant concerns, for example a xref:custom-monitoring[serious application failure]. The monitoring tool might automatically create a ticket, or perhaps it first provides an alert to the systems operators, who might instant message each other, or perhaps join a chat room.
 
-* Post-mortems
+If the issue can't be resolved operationally before it starts impacting users, an xref:ops-day-in-life[Incident] ticket might be created, which has several effects:
 
+* First, the situation is now a matter of record, and management may start to pay attention
+* Accountability for managing the Incident is defined, and expectations are that responsible parties will start to resolve it.
+* If assistance is needed, the Incident provides a common point of reference (it is a common xref:representation[reference point]), in terms of xref:2.05.00-work-management[Work Management].
 
-80/20 rule for operational feedback into product backlog - prevents queue starvation - Limoncelli2014 2.2.2
+Depending on the seriousness of the Incident, further communications by IM, chat, cell phone, email, and/or conference bridge may continue. Severe incidents in regulated industries may require recording of conference bridges.
+
+anchor:ChatOps[]
+
+.What is ChatOps?
+****
+ChatOps is the tight integration of instant communications with operational execution. As Eric Sigler of PagerDuty describes it, "_While in a chat room, team members type commands that the chat bot is configured to execute through custom scripts and plugins. These can range from code deployments to security event responses to team member notifications. The entire team collaborates in real-time as commands are executed_" <<Sigler2014>>.
+
+Properly configured ChatOps provides a low-friction collaborative environment, enabling a powerful and immediate collective mental model of the situation and what is being done. It also provides a rich audit trail of who did what, when, and who else was involved. Fundamental governance objectives of accountability can be considered fulfilled in this way, on par with paper or digital forms routed for approval (and without their corresponding delays).
+****
+
+anchor:simian-army[]
+
+====== Drills, game days, and Chaos Monkeys
+
+[quote, Izrailevsky and Tseitlin, Netflix Tech Blog]
+...just designing a fault tolerant architecture is not enough. We have to constantly test our ability to actually survive these "once in a blue moon" failures. +
+ +
+Imagine getting a flat tire. Even if you have a spare tire in your trunk, do you know if it is inflated? Do you have the tools to change it? And, most importantly, do you remember how to do it right? One way to make sure you can deal with a flat tire on the freeway, in the rain, in the middle of the night is to poke a hole in your tire once a week in your driveway on a Sunday afternoon and go through the drill of replacing it. This is expensive and time-consuming in the real world, but can be (almost) free and automated in the cloud. +
+ +
+This was our philosophy when we built Chaos Monkey, a tool that randomly disables our production instances to make sure we can survive this common type of failure without any customer impact. The name comes from the idea of unleashing a wild monkey with a weapon in your data center (or cloud region) to randomly shoot down instances and chew through cables -- all the while we continue serving our customers without interruption. By running Chaos Monkey in the middle of a business day, in a carefully monitored environment with engineers standing by to address any problems, we can still learn the lessons about the weaknesses of our system, and build automatic recovery mechanisms to deal with them.
+
+As noted above, it is difficult to fully reproduce complex production infrastructures as "lower" environments. Therefore, it is difficult to have confidence in any given change until it has been run in production.
+
+The need to emulate "real world" conditions is well understood in the military, which relies heavily on drill and exercises to ensure peak operational readiness. Analogous practices are emerging in digital organizations, such as the concept of "Game Days" -- defined periods when operational disruptions are simulated and the responses assessed. A related set of tools is the Netflix Simian Army.
+
+The Netflix Simian Army is a collection of resiliency tools developed by the online video-streaming service Netflix. It represents a significant advancement in digital risk management, as previous control approaches too often were limited by poor scalability or human failure (e.g. forgetfulness or negligence in following manual process steps).
+
+Chaos Monkey is one of a number of tools developed to continually "harden" the Netflix system, including:
+
+* Latency Monkey -- introduces arbitrary network delays
+* Conformity Monkey -- checks for consistency with architectural standards, and shuts down non-conforming instances
+* Doctor Monkey -- checks for longer-term evidence of instance degradation
+* Janitor Monkey -- checks for and destroys unused running capacity
+* Security Monkey -- an extension of Conformity Monkey, checks for correct security configuration
+* 10-18 Monkey -- checks internationalization
+* Finally, Chaos Gorilla simulates the outage of an entire Amazon availability zone
+
+On the whole, the Simian Army behaves much as antibodies do in an organic system. One notable characteristic is that the monkeys as described do not generate a report (a xref:secondary-artifacts[secondary artifact]) for manual followup. They simply shut down the offending resources.
+
+Such direct action may not be possible in many environments, but represents an ideal to work toward. It keeps the security and risk work "front and center" within the mainstream of the digital pipeline, rather than relegating it to the bothersome "additional work" it can so easily be seen as.
+
+===== Post-mortems, blamelessness, and operational demand
+
+Finally,
