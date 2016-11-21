@@ -1,12 +1,50 @@
 
-==== Designing software for operations
+==== Designing for scale
 
 [quote, Limoncelli/Chalup/Hogan]
 Building a scalable system does not happen by accident.
 
-Review Allspaw, Limoncelli, Beyer, read Nygaard & Abbott
+Designing complex systems that can scale effectively and be operated efficiently is a challenging topic. Many insights have been developed by the large-scale public-facing Internet sites, such as Google, Facebook, Netflix, and others. The recommended reading at the end of this chapter provides many references.
 
- [to be written. Reference Nygard's Release IT; SNMP; DMTF. See also http://blog.softwareoperability.com/.]
+A reasonable person might question why systems *design* questions are appearing here in the chapter on operations. We have discussed certain essential factors for system scalability previously: xref:cloud[Cloud], xref:infracode[infrastructure as code], xref:version-control[version control], and xref:continuous-delivery[continuous delivery]. These are all necessary, but not sufficient to scaling digital systems. Once a system starts to encounter real load, further attention must go to how it *runs*, as opposed to what it *does*. It's not easy to know when to focus on scalability. If xref:prod-discovery-techniques[product discovery] is not on target, the system will never get the level of use that requires scalability. Insisting that the digital product have a state of the art scalable design might be wasteful, if the team is still searching for a xref:lean-startup[Minimum Viable Product] (in Lean Startup terms).
+
+So, what often happens is that the system goes through various prototypes until something with market value is found, and at that point, as use starts to scale up, the team scrambles for a more robust approach. Chapter 2  xref:scale-matters[warned of this], and mentioned the https://gist.github.com/jboner/2841832[Latency Numbers]; now would be a good time to review those.
+
+There are dozens of books and articles discussing many aspects of how to scale systems. In this section, we will discuss two important principles (the CAP Principle and the AKF Scaling Cube) and provide a couple of examples for reference. If you are interested in this topic in depth, check out the references in this chapter.
+
+===== The CAP theorem
+
+Scaling digital systems used to imply acquiring faster and more powerful hardware and software. If a 4-core server with 8 gigabytes of RAM isn't enough, get a 32-core server with 256 gB of RAM (and upgrade your database software accordingly, for millions of dollars more). This kind of scaling is termed "vertical" scaling. However, web-scale companies such as Facebook and Google determined that this would not work indefinitely. Infinitely scaling vertically is not physically (or financially) possible. Instead, these companies began to experiment aggressively with using large numbers of inexpensive commodity computers.
+
+The advantage to scaling vertically is that all your data can reside on one server, with fast and reliable access. As soon as you start to split your data across servers, you run into the problems of the CAP principle.
+
+CAP stands for:
+
+* Consistency
+* Availability
+* Partition-tolerance
+
+and the CAP Principle states that it is not possible to build a distributed system that guarantees all three  <<Fox1999>>.
+
+What does this mean? First, let's define our terms:
+
+*Consistency* means that all the servers (or "nodes") in the system see the same data at the same time. If an update is being processed, no node will see it before any other. This is often termed a transactional guarantee, and it is the sort of processing relational databases excel at.
+
+For example, if you change your flight, and your seat opens up, a consistent reservation application will show the free seat simultaneously to anyone who inquires, even if the reservation information is replicated across two or more geographically distant nodes. If the seat is reserved, no node will show it available, even if it takes some time for the information to replicate across the nodes. The system will simply not show anyone any data until it can show everyone the correct data.
+
+*Availability* means what it implies: that the system is available to provide data on request. If we have many nodes with the same data on them, this can improve availability, since if one is down, the user can still reach others.
+
+*Partition-tolerance* is the ability of the distributed system to handle communications outages. If we have two nodes, both expected to have the same data, and the network stops communicating between them, they will not be able to send updates to each other. In that case, there are two choices: either stop providing services to all users of the system (failure of availability) or accept that the data may not be the same across the nodes (failure of consistency).
+
+In the earlier years of computing, the preference was for strong consistency and vendors such as Oracle profited greatly by building database software that could guarantee this, when properly configured. Such systems could be consistent and available, but could not tolerate network outages - if the network was down, the system, or at least a portion of it, would also be down.
+
+Companies such as Google and Facebook took the alternative approach. They said, "We will accept inconsistency in the data so that our systems are always avaialble." Clearly, for a social media site such as Facebook, a posting does not need to be everywhere at once before it can be shown at all. To verify this, simply post to a social media site using your computer. Do you see the post on your phone, or your friend's, as soon as you submit it on your computer? No, although it is fast, you can see some delay. This shows that the site is not strictly consistent; a strictly consistent system would always show  the same data across all the accessing devices.
+
+
+
+===== The AKF scaling cube
+
+ [to be written. Reference Nygard's Release IT; SNMP; DMTF.
 
  broad and fast-moving topic. not possible to go into depth here.
 
@@ -22,23 +60,18 @@ Limoncelli, Thomas A.; Chalup, Strata R.; Hogan, Christina J.. The Practice of C
 
  basic logging - xref to monitoring
 
- basic distributed architecture
+===== Designing for operability
   load balancing & redundancy
   distributed state
   reverse proxy
   CAP & caching
   loose coupling
-  latency numbers
 
 hardware issues - hot swapping etc
 
 text-based configuration as far as possible
 
 graceful start/stop
-
-80/20 rule for operational feedback into product backlog - prevents queue starvation - Limoncelli2014 2.2.2
-
-AKF scaling cube
 
 operational software practices
 
