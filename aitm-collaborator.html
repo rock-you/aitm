@@ -734,12 +734,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_configuration_management_and_operations">Configuration management and operations</a>
 <ul class="sectlevel4">
-<li><a href="#_environments_and_the_fierce_god_of_production">Environments and the fierce god of "Production"</a></li>
-<li><a href="#_do_we_need_environments_at_all">Do we need environments at all?</a></li>
-<li><a href="#__development_is_production">“Development is production”</a></li>
 <li><a href="#_state_configuration_and_discovery">State, configuration, and discovery</a></li>
-<li><a href="#_drift_management">Drift management</a></li>
-<li><a href="#_discovery">Discovery</a></li>
+<li><a href="#_environments_and_the_fierce_god_of_production">Environments and the fierce god of "Production"</a></li>
+<li><a href="#__development_is_production">“Development is production”</a></li>
 </ul>
 </li>
 <li><a href="#_other_operations_techniques_and_tools">Other operations techniques and tools</a></li>
@@ -10508,7 +10505,7 @@ Building a scalable system does not happen by accident.
 </div>
 <div class="sect4">
 <h5 id="_the_akf_scaling_cube">The AKF scaling cube</h5>
-<div class="imageblock" style="float: left">
+<div class="imageblock" style="float: right">
 <div class="content">
 <img src="images/2.06-akf.png" alt="alt text" width="300" height="200">
 </div>
@@ -10596,148 +10593,9 @@ Building a scalable system does not happen by accident.
 </div>
 <div class="sect3">
 <h4 id="_configuration_management_and_operations">Configuration management and operations</h4>
-<div class="sect4">
-<h5 id="_environments_and_the_fierce_god_of_production">Environments and the fierce god of "Production"</h5>
-<div class="quoteblock">
-<blockquote>
-“Don’t mess with that server! It’s … Production!!!”
-</blockquote>
-<div class="attribution">
-&#8212; unknown
-</div>
-</div>
-<div class="paragraph">
-<p>“Production” is a term that new IT recruits rapidly learn has forbidding connotations. To be “in production” means that the broader enterprise value stream is directly dependent on that asset. Breakage or mishandling will result in questions and concerns from powerful forces. Be Very Scared.</p>
-</div>
-<div class="paragraph">
-<p>How do things get to be “in production”? What do we mean by that?</p>
-</div>
-<div class="paragraph">
-<p>First, let’s get back to our fundamental principle that there is an IT system delivering some "moment of truth" to someone. This system can be of any scale, but fundamentally we are able to conceive of it having a “state.” (See http::/url[State, Configuration, and Discovery].)</p>
-</div>
-<div class="paragraph">
-<p>When we want to change the behavior of this system, we are cautious. We reproduce the system at varying levels of fidelity and experiment with potential changes. This is called development.</p>
-</div>
-<div class="paragraph">
-<p>When we start to gain confidence in our experiments, we increase the fidelity and also start to communicate more widely that we are contemplating a change to the state of the system. We may increase the fidelity along a set of traditional names: </p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Development</p>
-</li>
-<li>
-<p>Testing</p>
-</li>
-<li>
-<p>QA</p>
-</li>
-<li>
-<p>Integration</p>
-</li>
-<li>
-<p>Performance Testing</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The final state, where value is realized, is “Production.”</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/2.06-environments.png" alt="2.06 environments">
-</div>
-</div>
-<div class="paragraph">
-<p>There is nothing sacred about the environments listed above. You will see many variations, especially at scale.</p>
-</div>
-<div class="paragraph">
-<p>The idea that one sequentially moves (”promotes”) new system functionality through a series of states to gain confidence before finally changing the state of the production system is historically well established. However, the production state is notoriously difficult to reproduce fully, especially in highly distributed environments. While infrastructure as code has simplified the problem, lower environments simply can&#8217;t match production completely in all its complexity, especially interfaced interactions with other systems or when large, expensive pools of capacity are involved.. Therefore there is always risk in changing the state of the production system. Mitigating strategies include:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Extensive automated test harnesses that can quickly determine if system behavior has been unfavorably altered.</p>
-</li>
-<li>
-<p>Elaborating lower environments with strategies such as service virtualization to make them appear more like production.</p>
-</li>
-<li>
-<p>Hardening services against their own failure in production, or the failure of services on which they depend.</p>
-</li>
-<li>
-<p>Reducing the size (and therefore complexity and risk) of changes to production (a key DevOps strategy).</p>
-</li>
-<li>
-<p>Ensuring that changes to the production system can be easily and automatically reversed.</p>
-</li>
-<li>
-<p>Using policy-aware infrastructure management tools.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Another important development in environmental approaches is A/B testing. In this approach, the “production” environment is segregated into two or more discrete states, with different features or behaviors exposed to users in order to assess their reactions (see sidebar).</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_do_we_need_environments_at_all">Do we need environments at all?</h5>
-<div class="paragraph">
-<p>The author has heard it recommended that the term “environment” be eliminated, as it tends to result in turf wars and empire building, and potentially the waste of fixed assets (see chapter 8). Performance environments are particularly in question.</p>
-</div>
-<div class="paragraph">
-<p>Instead, in a dynamic infrastructure environment (private or public), one simply defines the kind of test one wants to perform and provisions that capacity on-demand.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Testing in Production?</strong></p>
-</div>
-<div class="paragraph">
-<p>It used to be that the concept of “testing in production” was frowned upon. Now, with these mitigating strategies, and the recognition that complex systems cannot ever be fully reproduced, there is more tolerance for the idea.</p>
-</div>
-<div class="paragraph">
-<p>But with older systems that may lack automated testing, incremental deployment, or easy rollback, it is strongly recommended to retain existing promotion strategies, as these are battle-tested and known to reduce risk. Often, their cycle time can be decreased.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="__development_is_production">“Development is production”</h5>
-<div class="paragraph">
-<p>On the flip side, development systems must never be treated casually.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The development pipeline itself (Chapter 3, figure X) represents a significant operational commitment.</p>
-</li>
-<li>
-<p>The failure of a source code repository, if not backed up, could wipe out a company (see the Code Spaces sidebar in Chapter 2).</p>
-</li>
-<li>
-<p>The failure of a build server or package repository could be almost as bad.</p>
-</li>
-<li>
-<p>In the digital economy, dozens or hundreds of developers out of work represents a severe operational and financial setback, even if the nominal “production” systems continue to function.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>It’s therefore important to treat “development” platforms with the same care as production systems. This requires nuanced approaches: with infrastructure as code, particular virtual machines or containers may represent experiments, expected to fail often and be quickly rebuilt. No need for burdensome change processes when VM base images and containers are being set up and torn down hundreds of times each day!</p>
-</div>
-<div class="paragraph">
-<p>But the platforms supporting the instantiation and teardown of those VMs are production platforms, supporting the business of new systems development.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>feature toggles</pre>
-</div>
-</div>
 <div class="paragraph">
 <p><a id="state-config-discovery"></a>
 <a id="2.06.03-state"></a></p>
-</div>
 </div>
 <div class="sect4">
 <h5 id="_state_configuration_and_discovery">State, configuration, and discovery</h5>
@@ -10794,48 +10652,134 @@ The following are examples of state:</p>
 <p>It is therefore not possible to make blanket statements like “we need to manage state.” Computing devices go through myriads of state changes with every cycle of their internal clock. (Analog and quantum computing are out of scope for this book.)</p>
 </div>
 <div class="paragraph">
-<p>The primary question in managing state is “what matters”? What aspects of the system need to persist, in a reliable and reproducible manner?</p>
-</div>
-<div class="paragraph">
-<p>In terms of OODA, determining and tracking the state of a system under investigation is one of the fundamental tools. With current practices, for example, this might mean examining the configuration management/provisioning system to determine how the basic operating system was built.</p>
+<p>The primary question in managing state is “what matters”? What aspects of the system need to persist, in a reliable and reproducible manner? <a href="#policy-config">Policy-aware</a> tools are used extensively to ensure that the system maintains its configuration, and that new functionality is constructed (to the greatest degree possible) using consistent configurations throughout the digital pipeline.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_drift_management">Drift management</h5>
+<h5 id="_environments_and_the_fierce_god_of_production">Environments and the fierce god of "Production"</h5>
+<div class="quoteblock">
+<blockquote>
+“Don’t mess with that server! It’s … Production!!!”
+</blockquote>
+<div class="attribution">
+&#8212; unknown
+</div>
+</div>
 <div class="paragraph">
-<p>Three flavors of drift:</p>
+<p>“Production” is a term that new IT recruits rapidly learn has forbidding connotations. To be “in production” means that the broader enterprise value stream is directly dependent on that asset. Breakage or mishandling will result in questions and concerns from powerful forces. Be Very Scared.</p>
+</div>
+<div class="paragraph">
+<p>How do things get to be “in production”? What do we mean by that?</p>
+</div>
+<div class="paragraph">
+<p>First, let’s get back to our fundamental principle that there is an IT system delivering some "moment of truth" to someone. This system can be of any scale, but as above we are able to conceive of it having a <a href="#state-config-discovery">“state.”</a> When we want to change the behavior of this system, we are cautious. We reproduce the system at varying levels of fidelity (building "lower" environments with <a href="#infracode">Infrastructure as Code</a> techniques) and experiment with potential state changes. This is called development. When we start to gain confidence in our experiments, we increase the fidelity and also start to communicate more widely that we are contemplating a change to the state of the system. We may increase the fidelity along a set of traditional names:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Drift from standard</p>
+<p>Development</p>
 </li>
 <li>
-<p>Drift from baseline</p>
+<p>Testing</p>
 </li>
 <li>
-<p>Drift from policy</p>
-<div class="literalblock">
-<div class="content">
-<pre>foreward ref to SecOps</pre>
-</div>
-</div>
+<p>QA</p>
+</li>
+<li>
+<p>Integration</p>
+</li>
+<li>
+<p>Performance Testing</p>
 </li>
 </ul>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_discovery">Discovery</h5>
 <div class="paragraph">
-<p>Closely related to monitoring is the concept of discovery. While monitoring focuses on the activity of a given system, discovery is focused on state. Answering this question has resulted in a significant market for so-called “discovery” tools, which seek to profile the server and understand its installed software, processing patterns and communications with an objective of assigning it to some management construct, such as a high level IT application or service.</p>
+<p>The final state, where value is realized, is “Production.” Moving functionality in smaller and smaller batches, with increasing degrees of automation, is called <a href="#continuous-delivery">continuous delivery</a>.</p>
+</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img src="images/2.06-environments.png" alt="environments" width="640">
+</div>
+</div>
+<div class="paragraph">
+<p>There is nothing sacred about the environments listed above. You will see many variations, especially at scale.</p>
+</div>
+<div class="paragraph">
+<p>The idea that one sequentially moves (”promotes”) new system functionality through a series of states to gain confidence before finally changing the state of the production system is historically well established. However, the production state is notoriously difficult to reproduce fully, especially in highly distributed environments. While infrastructure as code has simplified the problem, lower environments simply can&#8217;t match production completely in all its complexity, especially interfaced interactions with other systems or when large, expensive pools of capacity are involved. Therefore <strong>there is always risk in changing the state of the production system.</strong> Mitigating strategies include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Extensive automated test harnesses that can quickly determine if system behavior has been unfavorably altered.</p>
+</li>
+<li>
+<p>Ensuring that changes to the production system can be easily and automatically reversed. For example, code may be deployed but not enabled until a "feature toggle" is set. This allows quick shutdown of that code if issues are seen.</p>
+</li>
+<li>
+<p>Increasing the fidelity of lower environments with strategies such as service virtualization to make them behave more like production.</p>
+</li>
+<li>
+<p>Hardening services against their own failure in production, or the failure of services on which they depend.</p>
+</li>
+<li>
+<p>Reducing the size (and therefore complexity and risk) of changes to production (a key DevOps strategy). Variations here include:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Small functional changes ("one line of code")</p>
+</li>
+<li>
+<p>Small operational changes (deploying a change to just one node out of 100, and watching it, before deploying to the other 99 nodes.)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Using policy-aware infrastructure management tools.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Another important development in environmental approaches is A/B testing. In this approach, the “production” environment is segregated into two or more discrete states, with different features or behaviors exposed to users in order to assess their reactions. Netflix uses this as a key tool for <a href="#prod-discovery-techniques">product discovery</a>, testing the user reaction to different user interface techniques for example.</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
+<div class="title">Do we need environments at all?</div>
 <div class="paragraph">
-<p><strong>What is the future of discovery tools?</strong>
-There is some evidence that the increasing automation of IT infrastructure will mitigate management and drift problems. As the software pipeline becomes increasingly automated, tracking software from development through production becomes easier.</p>
+<p>I have heard it recommended that the term “environment” be eliminated, as it tends to result in turf wars and empire building, and potentially the waste of fixed assets. Performance environments (that can emulate production at scale) are particularly in question.</p>
+</div>
+<div class="paragraph">
+<p>Instead, in a dynamic infrastructure environment (private or public), one simply defines the kind of test one wants to perform and provisions that capacity on-demand.</p>
 </div>
 </div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="__development_is_production">“Development is production”</h5>
+<div class="paragraph">
+<p>It used to be that the concept of “testing in production” was frowned upon. Now, with these mitigating strategies, and the recognition that complex systems cannot ever be fully reproduced, there is more tolerance for the idea. But with older systems that may lack automated testing, incremental deployment, or easy rollback, it is strongly recommended to retain existing promotion strategies, as these are battle-tested and known to reduce risk. Often, their cycle time can be decreased.</p>
+</div>
+<div class="paragraph">
+<p>On the flip side, development systems must never be treated casually.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <a href="#pipeline">development pipeline</a> itself represents a significant operational commitment.</p>
+</li>
+<li>
+<p>The failure of a source code repository, if not backed up, could wipe out a company (see <a href="#Marks2014">[Marks2014]</a>).</p>
+</li>
+<li>
+<p>The failure of a build server or package repository could be almost as bad.</p>
+</li>
+<li>
+<p>In the digital economy, dozens or hundreds of developers out of work represents a severe operational and financial setback, even if the “production” systems continue to function.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>It’s therefore important to treat “development” platforms with the same care as production systems. This requires nuanced approaches: with infrastructure as code, particular virtual machines or containers may represent experiments, expected to fail often and be quickly rebuilt. No need for burdensome change processes when virtual machine base images and containers are being set up and torn down hundreds of times each day! However, the platforms supporting the instantiation and teardown of those VMs are production platforms, supporting the business of new systems development.</p>
 </div>
 </div>
 </div>
