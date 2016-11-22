@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.4">
+<meta name="generator" content="Asciidoctor 1.5.5">
 <meta name="author" content="Charles T. Betz">
 <title>The digital professional: from startup to enterprise  (Instructor&#8217;s Edition)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -18,7 +18,6 @@ audio:not([controls]){display:none;height:0}
 [hidden],template{display:none}
 script{display:none!important}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
-body{margin:0}
 a{background:transparent}
 a:focus{outline:thin dotted}
 a:active,a:hover{outline:0}
@@ -53,7 +52,7 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -65,7 +64,6 @@ img{-ms-interpolation-mode:bicubic}
 .text-center{text-align:center!important}
 .text-justify{text-align:justify!important}
 .hide{display:none}
-body{-webkit-font-smoothing:antialiased}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
@@ -120,13 +118,16 @@ table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
 table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
-body{tab-size:4}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
 .clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
 .clearfix:after,.float-group:after{clear:both}
-*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+*:not(pre)>code.nobreak{word-wrap:normal}
+*:not(pre)>code.nowrap{white-space:nowrap}
 pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
+em em{font-style:normal}
+strong strong{font-weight:400}
 .keyseq{color:rgba(51,51,51,.8)}
 kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
@@ -9838,7 +9839,51 @@ This was our philosophy when we built Chaos Monkey, a tool that randomly disable
 <div class="sect4">
 <h5 id="_post_mortems_blamelessness_and_operational_demand">Post-mortems, blamelessness, and operational demand</h5>
 <div class="paragraph">
-<p>We have discussed <a href="#psych-safety">psychological safety</a> previously. Psychological safety takes on an additional and even more serious aspect when we consider major systems outages, many of which are caused by human error. There has been a long history of</p>
+<p>We briefly mentioned <a href="#IT-process-emergence">Problem Management</a> as a common operational process. After an Incident is resolved and services are restored,</p>
+</div>
+<div class="paragraph">
+<p>We have discussed <a href="#psych-safety">psychological safety</a> previously. Psychological safety takes on an additional and even more serious aspect when we consider major systems outages, many of which are caused by human error. There has been a long history of management seeking individuals to "hold accountable" when complex systems fail. This is an unfortunate approach, as complex systems are always prone to failure. Cultures that seek to blame do not promote a sense of psychological safety.</p>
+</div>
+<div class="paragraph">
+<p>The definition of "counterfactual" is important. A "counterfactual" is seen in statements of the form, "If only Joe had not re-indexed the database, then the outage would not have happened." It may be true that if Joe had not done so, the outcome would have been different. But there might be other such counterfactuals. They are not helpful in developing a continual improvement response. The primary concern in assessing such a failure is, how was Joe put in a position to fail? Put differently, how is it that the system was designed to be vulnerable to such behavior on Joe&#8217;s part? How could it be designed differently, and in a less sensitive way?</p>
+</div>
+<div class="paragraph">
+<p>This is, in fact, how aviation has become so safe. Investigators with the unhappy job of examining large scale airplane crashes have developed a systematic, clinical, and rational approach for doing so. They learned that if the people they were questioning perceived a desire on their part to blame, the information they provided was less reliable. (This of course is obvious to any parent of a 4 year old.)</p>
+</div>
+<div class="paragraph">
+<p>John Allspaw, CTO of Etsy, has pioneered the application of modern safety and incident investigation practices in digital contexts, and notably has been an evangelist for the work of human factors expert and psychologist Sidney Dekker. Dekker summarizes attitudes towards human error as falling into either the Old or New Views. He summarizes the old view as the Bad Apple theory:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Complex systems would be fine, were it not for the erratic behavior of some unreliable people (Bad Apples) in it</em>;</p>
+</li>
+<li>
+<p><em>Human errors cause accidents: humans are the dominant contributor to more than two thirds of them;</em></p>
+</li>
+<li>
+<p><em>Failures come as unpleasant surprises. They are unexpected and do not belong in the system. Failures are introduced to the system only through the inherent unreliability of people.</em></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Dekker contrasts this with the New View:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Human error is not a cause of failure. Human error is the effect, or symptom, of deeper trouble.</em></p>
+</li>
+<li>
+<p><em>Human error is not random. It is systematically connected to features of people&#8217;s tools, tasks and operating environment.</em></p>
+</li>
+<li>
+<p><em>Human error is not the conclusion of an investigation. It is the starting point.</em> <a href="#Dekker2006">[Dekker2006]</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Dekker&#8217;s principles are an excellent starting point for developing a culture that supports blameless investigations into incidents. We will talk more systematically of culture in Chapter 7.</p>
 </div>
 </div>
 </div>
@@ -16018,6 +16063,13 @@ Problem</pre>
 </div>
 <div class="sect3">
 <h4 id="_process_basics">Process basics</h4>
+<div class="paragraph">
+<p>one of the principal purposes of processes—to manage work without
+needing a manager and to reduce the cost and increase the value of outcomes of
+repetitive tasks. Good processes supplement management, augment its reach, and
+ensure consistency of quality outcomes.
+Abbott, the art of scalability</p>
+</div>
 <div class="sect4">
 <h5 id="_bpm_fundamentals">BPM fundamentals</h5>
 <div class="paragraph">
@@ -28094,6 +28146,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 <p><a id="Davenport2007"></a>[Davenport2007]: Davenport, Thomas H, and Jeanne G Harris. 2007. Competing on Analytics : The New Science of Winning. Boston, Mass.: Harvard Business School ; London : McGraw-Hill [distributor]. Table of contents only <a href="http://www.loc.gov/catdir/toc/ecip073/2006035422.html" class="bare">http://www.loc.gov/catdir/toc/ecip073/2006035422.html</a>.</p>
 </li>
 <li>
+<p><a id="Dekker2006"></a>[Dekker2006]: Dekker, S. (2006). The Field Guide to Understanding Human Error. book, Burlington, VT: Ashgate Publishing Limited.</p>
+</li>
+<li>
 <p><a id="delaMaza2016"></a>[delaMaza2016]: de la Maza, Michael, and David Benz. 2016. Why Agile Works: The Values Behind the Results. C4Media - InfoQ.com. <a href="http://www.infoq.com/resource/minibooks/why-agile-works" class="bare">http://www.infoq.com/resource/minibooks/why-agile-works</a>. Accessed 2016-10-11.</p>
 </li>
 <li>
@@ -28939,7 +28994,7 @@ All web references were archived into the author&#8217;s files on the indicated 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-11-21 10:11:27 CST
+Last updated 2016-11-20 18:20:01 CST
 </div>
 </div>
 </body>
