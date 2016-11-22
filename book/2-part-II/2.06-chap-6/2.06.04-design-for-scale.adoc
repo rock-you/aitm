@@ -12,7 +12,10 @@ So, what often happens is that the system goes through various prototypes until 
 
 There are dozens of books and articles discussing many aspects of how to scale systems. In this section, we will discuss two important principles (the CAP Principle and the AKF Scaling Cube) and provide a couple of examples for reference. If you are interested in this topic in depth, check out the references in this chapter.
 
-===== The CAP theorem
+===== The CAP principle
+
+.CAP principle
+image::images/2.06-CAP-triangle.png[alt text, 300, 200, float="right"]
 
 Scaling digital systems used to imply acquiring faster and more powerful hardware and software. If a 4-core server with 8 gigabytes of RAM isn't enough, get a 32-core server with 256 gB of RAM (and upgrade your database software accordingly, for millions of dollars more). This kind of scaling is termed "vertical" scaling. However, web-scale companies such as Facebook and Google determined that this would not work indefinitely. Infinitely scaling vertically is not physically (or financially) possible. Instead, these companies began to experiment aggressively with using large numbers of inexpensive commodity computers.
 
