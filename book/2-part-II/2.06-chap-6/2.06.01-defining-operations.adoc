@@ -15,15 +15,21 @@ IMPORTANT: In a digitally transformed enterprise, Operations is part of the Prod
 
 Since we have a somewhat broader point of view covering all of digital management, for this chapter we'll use the following definition of operations:
 
- insert dual-axis view
+_Operations is the direct support of the digital value experience._
 
-_A duty-oriented, physical presence in the service of executing particular tasks, that support broader organizational goals and strategies, and need to be systematically discharged._
+What do we mean by this? In terms of our 2-axis value chain, operations supports the day to day delivery of the digital "moment of truth":
 
-What do we mean by this?
+.Operations supports the digital moment of truth
+image::images/2.06-2-axis-ops.png[2 axis value chain, 400,,float="right"]
 
 Consider the following various examples of “operations” in an IT context. Some are relevant to a “xref:amazon-productization[two pizza product team]” scenario, some might be more applicable to larger environments:
 
 * Systems operators sitting in 24x7 operations centers, monitoring system status and responding to alerts.
+
+
+.Call center operators footnote:[_Image credit https://www.flickr.com/photos/iloasiapacific/8391859530, downloaded 2016-11-21, commercial use permitted_]
+image::images/2.06-call-ctr.jpg[alt text, 350, 200, float="right"]
+
 * Help desk representatives answering phone calls from users requiring support. They may be calling because a system or service they need is malfunctioning. They may also be calling because they do not understand how to use the system for the value experience they have been led to expect from it. Again, this is part of their product experience.
 * Field technicians physically dispatched to a campus or remote site to evaluate and if necessary update or fix IT hardware and/or software (install a new PC, fix a printer, service a cell tower antenna).
 * Developers and engineers serving "on call" on a rotating basis to respond to systems outages referred to them by the operations center.
@@ -62,7 +68,7 @@ Process is what makes it possible for teams to do the right thing, again and aga
 
 Limoncelli, Chalup, and Hogan, in their excellent _Cloud Systems Administration_, emphasize the role of the "oncall" and "onduty" staff in the service of operations <<Limoncelli2014>>. _Oncall_ staff have a primary responsibility of emergency response, and the term oncall refers to their continuous availability, even if they are not otherwise working (e.g., they are expected to pick up phone calls and alerts at home and dial into emergency communications channels). _Onduty_ staff are responsible for responding to non-critical incidents and maintaining current operations.
 
-What is an emergency? It's all a matter of expectations. If a system is supposed to be available 24 hours a day, 7 days a week, an outage at 3 AM Saturday morning is an emergency. If it is only supposed to be available between Monday through Friday, the outage may not be as critical (although it still needs to be fixed in short order!)
+What is an emergency? It's all a matter of expectations. If a system (by SLA) is supposed to be available 24 hours a day, 7 days a week, an outage at 3 AM Saturday morning is an emergency. If it is only supposed to be available between Monday through Friday, the outage may not be as critical (although it still needs to be fixed in short order, otherwise there will soon be an SLA breach!)
 
 anchor:IT-process-emergence[]
 
@@ -92,3 +98,15 @@ These processes have a rough sequence to them:
 . Inform affected parties of the proposed changes, collect their feedback and approvals, and track the progress of the proposed change through successful completion.
 
 At the end of the day, we need to remember that operational work is just one form of work. In a single-team organization, these processes might still be handled through basic xref:task-mgmt[task management] (although user provisioning would need to be automated, if the system  is scaling significantly.) Perhaps the simple task management is supplemented with checklists, as repeatable aspects of the work become more obvious. We'll continue on the assumption of basic task management for the remainder of this chapter, and go deeper into the idea of defined, repeatable processes as we scale to a "team of teams" in xref:Section-III-coordination[Part III].
+
+===== The concept of "service level"
+
+A digital system is either available and providing a service, or it isn't. The concept of "service level" was mentioned above by Limoncelli. A level of service is typically defined in terms of criteria such as:
+
+* What % of time will the service be available?
+* If the service suffers an outage, how long until it will be restored?
+* How fast will the service respond to requests?
+
+A service level agreement is a form of contract between the service consumer and service provider, stating the above criteria in terms of a business agreement. When a service's performance does not meet the agreement, this is sometimes called a "breach" and the service provider may have to pay a penalty (e.g., the customer gets a 5% discount on that month's services.) If the service provider exceeds the SLA, perhaps a credit will be issued.
+
+SLAs drive much operational behavior. They help prioritize Incidents and Problems, and the risk of proposed Changes are  understood in terms of the SLAs.
