@@ -61,4 +61,24 @@ Such direct action may not be possible in many environments, but represents an i
 
 ===== Post-mortems, blamelessness, and operational demand
 
-We have discussed xref:psych-safety[psychological safety] previously. Psychological safety takes on an additional and even more serious aspect when we consider major systems outages, many of which are caused by human error. There has been a long history of
+We briefly mentioned xref:IT-process-emergence[Problem Management] as a common operational process. After an Incident is resolved and services are restored,
+
+We have discussed xref:psych-safety[psychological safety] previously. Psychological safety takes on an additional and even more serious aspect when we consider major systems outages, many of which are caused by human error. There has been a long history of management seeking individuals to "hold accountable" when complex systems fail. This is an unfortunate approach, as complex systems are always prone to failure. Cultures that seek to blame do not promote a sense of psychological safety.
+
+The definition of "counterfactual" is important. A "counterfactual" is seen in statements of the form, "If only Joe had not re-indexed the database, then the outage would not have happened." It may be true that if Joe had not done so, the outcome would have been different. But there might be other such counterfactuals. They are not helpful in developing a continual improvement response. The primary concern in assessing such a failure is, how was Joe put in a position to fail? Put differently, how is it that the system was designed to be vulnerable to such behavior on Joe's part? How could it be designed differently, and in a less sensitive way?
+
+This is, in fact, how aviation has become so safe. Investigators with the unhappy job of examining large scale airplane crashes have developed a systematic, clinical, and rational approach for doing so. They learned that if the people they were questioning perceived a desire on their part to blame, the information they provided was less reliable. (This of course is obvious to any parent of a 4 year old.)
+
+John Allspaw, CTO of Etsy, has pioneered the application of modern safety and incident investigation practices in digital contexts, and notably has been an evangelist for the work of human factors expert and psychologist Sidney Dekker. Dekker summarizes attitudes towards human error as falling into either the Old or New Views. He summarizes the old view as the Bad Apple theory:
+
+* _Complex systems would be fine, were it not for the erratic behavior of some unreliable people (Bad Apples) in it_;
+* _Human errors cause accidents: humans are the dominant contributor to more than two thirds of them;_
+* _Failures come as unpleasant surprises. They are unexpected and do not belong in the system. Failures are introduced to the system only through the inherent unreliability of people._
+
+Dekker contrasts this with the New View:
+
+* _Human error is not a cause of failure. Human error is the effect, or symptom, of deeper trouble._
+* _Human error is not random. It is systematically connected to features of people's tools, tasks and operating environment._
+* _Human error is not the conclusion of an investigation. It is the starting point._ <<Dekker2006>>
+
+Dekker's principles are an excellent starting point for developing a culture that supports blameless investigations into incidents. We will talk more systematically of culture in Chapter 7. 
