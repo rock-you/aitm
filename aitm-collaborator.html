@@ -4169,6 +4169,9 @@ Traditional managed services are sometimes called "your mess for less." With Clo
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p><a id="containers"></a></p>
+</div>
 <div class="imageblock" style="float: right">
 <div class="content">
 <img src="images/1.02-containers.png" alt="containers" width="250">
@@ -10443,7 +10446,7 @@ Monitoring systems are similar to source control systems in that they are a crit
 <p>The above lists are very simple examples of what can be extensive record-keeping. But the key user story is implied: if we can&#8217;t ping SRV0001, we know that the Quadrex application supporting Logistics is at risk, and we should contact Mary Smith ASAP, if she hasn&#8217;t already contacted us. (Sometimes, the user community calls right away; in other cases, they may not, and proactively contacting them is a positive and important step.)</p>
 </div>
 <div class="paragraph">
-<p>The above approach is relevant to older models still reliant on servers (whether physical or virtual) as primary units of processing. The trend to containers and serverless computing is challenging these traditional practices, and what will replace them is currently unclear.</p>
+<p>The above approach is relevant to older models still reliant on servers (whether physical or virtual) as primary units of processing. The trend to <a href="#containers">containers and serverless</a> computing is challenging these traditional practices, and what will replace them is currently unclear.</p>
 </div>
 </div>
 <div class="sect4">
@@ -10550,8 +10553,6 @@ Monitoring systems are similar to source control systems in that they are a crit
 <div class="quoteblock">
 <blockquote>
 &#8230;&#8203;just designing a fault tolerant architecture is not enough. We have to constantly test our ability to actually survive these "once in a blue moon" failures.<br>
-<br>
-Imagine getting a flat tire. Even if you have a spare tire in your trunk, do you know if it is inflated? Do you have the tools to change it? And, most importantly, do you remember how to do it right? One way to make sure you can deal with a flat tire on the freeway, in the rain, in the middle of the night is to poke a hole in your tire once a week in your driveway on a Sunday afternoon and go through the drill of replacing it. This is expensive and time-consuming in the real world, but can be (almost) free and automated in the cloud.<br>
 <br>
 This was our philosophy when we built Chaos Monkey, a tool that randomly disables our production instances to make sure we can survive this common type of failure without any customer impact. The name comes from the idea of unleashing a wild monkey with a weapon in your data center (or cloud region) to randomly shoot down instances and chew through cables&#8201;&#8212;&#8201;all the while we continue serving our customers without interruption. By running Chaos Monkey in the middle of a business day, in a carefully monitored environment with engineers standing by to address any problems, we can still learn the lessons about the weaknesses of our system, and build automatic recovery mechanisms to deal with them.
 </blockquote>
