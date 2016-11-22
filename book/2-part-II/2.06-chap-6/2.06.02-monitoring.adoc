@@ -8,8 +8,9 @@ Telemetry is an automated communications process by which measurements are made 
 Computers run in large data centers, where physical access to them is tightly controlled. Therefore, we need telemetry to manage them. The practice of collecting and initiating responses to telemetry is called monitoring.
 
 ===== Monitoring techniques
-[quote, Limoncelli/Chalup/Hogan, The Practice of Cloud System Administration]
-Monitoring is the primary way we gain visibility into the systems we run. It is the process of observing information about the state of things for use in both short-term and long-term decision making.
+Limoncelli et al define monitoring this way:
+
+_Monitoring is the primary way we gain visibility into the systems we run. It is the process of observing information about the state of things for use in both short-term and long-term decision making_ <<Limoncelli2014>>.
 
 .Simple monitoring
 image::images/2.06-monitoring-1.png[application server and monitor, 400,,float="left"]
@@ -61,11 +62,15 @@ into the log, the monitoring tool can be configured to recognize the severity of
 
 ===== Aggregation and operations centers
 
+.Aggregated monitoring
+image::images/2.06-monitoring-5.png[aggregation,300,,float="right"]
+
 It is not possible for a 24 x 7 operations team to access and understand the myriads of element managers and specialized monitoring tools present in the large IT environment. Instead, these teams rely on aggregators of various kinds to provide an integrated view into the complexity. These aggregators may focus on  status events, or specifically on performance aspects related either to the elements or to logical transactions flowing across them. They may incorporate dependencies from configuration management to provide a true “business view” into the event streams. This is directly analogous to the concept of xref:andon[Andon] board from Lean practices, or the idea of “information radiator” from Agile principles.
 
-A monitoring console may present a rich set of information to an operator. Too rich, in fact, as systems become large. For this reason, monitoring tools are often linked directly to ticketing systems; on certain conditions, a ticket (e.g. an xref:IT-process-emergence[Incident]) is created and assigned to a team or individual.
+A monitoring console may present a rich and detailed set of information to an operator. Too detailed, in fact, as systems become large. Raw event streams must be filtered for specific events or patterns of concern. Event de-duplication starts to become an essential capability, which leads to distinguishing the monitoring system from the event management system. Also, for this reason, monitoring tools are often linked directly to ticketing systems; on certain conditions, a xref:ticketing[ticket]
+ (e.g. an xref:IT-process-emergence[Incident]) is created and assigned to a team or individual.
 
-Enabling a monitoring console to auto-create tickets however, needs to be carefully considered and designed. A notorious scenario is the “ticket storm,” where a monitoring system creates multiple (perhaps thousands) of tickets, all essentially in response to the same condition. Event de-duplication starts to become an essential capability, which leads to distinguishing the monitoring system from the event management system.
+Enabling a monitoring console to auto-create tickets however, needs to be carefully considered and designed. A notorious scenario is the “ticket storm,” where a monitoring system creates multiple (perhaps thousands) of tickets, all essentially in response to the same condition.
 
 ===== Understanding business impact
 
@@ -115,7 +120,7 @@ The classic example of significant capacity utilization is the https://en.wikipe
 
 Performance management focuses on the responsiveness (e.g. speed) of the systems being used. Responsiveness may be related to capacity utilization, but some capacity issues don't immediately affect responsiveness. For example, a disk drive may be approaching full. When it fills, the system will immediately crash, and performance is severely affected. But until then, the system performs fine. The disk needs to be replaced on the basis of capacity reporting, not performance trending. On the other hand, some performance issues are not related to capacity. A mis-configured router might badly affect a web site's performance, but the configuration simply needs to be fixed - there is no need to handle as a capacity-related issue.
 
-Capacity analytics at its most advanced is a true Big Data problem domain. At a simpler level, it may consist of monitoring CPU, memory, and storage utilization across a given set of nodes, and raising alerts if certain threshholds are approached.
+At a simpler level, capacity and performance management may consist of monitoring CPU, memory, and storage utilization across a given set of nodes, and raising alerts if certain threshholds are approached. Capacity analytics at its most advanced is a true Big Data problem domain.
 
 So, what do we do when a capacity alert is raised, either through an automated system or through the manual efforts of a capacity analyst? There are a number of responses that may follow:
 
@@ -123,4 +128,4 @@ So, what do we do when a capacity alert is raised, either through an automated s
 * Seek to use existing capacity more efficiently
 * Throttle demand somehow
 
-As your organization scales up and you find yourself responding more frequently to the kinds of operational issues described in this section, you might start asking yourself whether you can be more pro-active. What steps can you take when developing or enhancing your systems, so that operational issues are minimized? You want systems that are stable, easily upgraded, and that can scale quickly on demand. Fortunately, there is a rich body of experience on how to build such systems, which we will discuss in the next section.
+As your organization scales up and you find yourself responding more frequently to the kinds of operational issues described in this section, you might start asking yourself whether you can be more pro-active. What steps can you take when developing or enhancing your systems, so that operational issues are minimized? You want systems that are stable, easily upgraded, and that can scale quickly on demand. Fortunately, there is a rich body of experience on how to build such systems, which we will discuss in a subsequent section.
