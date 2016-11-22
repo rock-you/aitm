@@ -756,6 +756,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_research_practice_6">Research &amp; practice</a></li>
 <li><a href="#_further_reading_6">Further reading</a></li>
 <li><a href="#_articles_posts">Articles/posts</a></li>
+<li><a href="#_videos">Videos</a></li>
 </ul>
 </li>
 </ul>
@@ -5959,6 +5960,9 @@ Breaking a system apart by "layer" (e.g. front end versus data access) does not 
 <li>
 <p><a href="http://bitquabit.com/post/unorthodocs-abandon-your-dvcs-and-return-to-sanity/">Abandon your DVCS and Return to Sanity</a></p>
 </li>
+<li>
+<p>Marcel Birkner <a href="https://blog.codecentric.de/en/2015/10/continuous-integration-platform-using-docker-container-jenkins-sonarqube-nexus-gitlab/">Continuous Integration Platform using Docker Container: Jenkins, SonarQube, Nexus, GitLab</a></p>
+</li>
 </ul>
 </div>
 </div>
@@ -10321,7 +10325,40 @@ The following are examples of state:</p>
 <h4 id="_advanced_topics_in_operations">Advanced topics in operations</h4>
 <div class="sect4">
 <h5 id="_site_reliability_engineering_at_google">Site reliability engineering at Google</h5>
-
+<div class="quoteblock">
+<blockquote>
+SRE is what happens when you ask a software engineer to design an operations team.
+</blockquote>
+<div class="attribution">
+&#8212; Benjamin Treynor Sloss<br>
+<cite>in Beyer/Site Reliability Engineering</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>Site reliability engineering is a new term for operations-centric work, originating from Google and other large digital organizations. It is clearly an operational discipline; the SRE team is responsible for the "availability, latency, performance, efficiency, change management, monitoring, emergency response, and capacity planning of their service" <a href="#Beyer2016">[Beyer2016]</a>, p.7.</p>
+</div>
+<div class="paragraph">
+<p>Google site reliability engineers have strong technical backgrounds, frequently computer science, which is atypical for operations staff in the traditional IT industry. SREs are strongly incented to automate as much as possible, avoiding "toil" (i.e., repetitive, non-value-add tasks.) In other words, as Benjamin Sloss says, "we want systems that are automatic, not just automated" <a href="#Beyer2016">[Beyer2016]</a>.</p>
+</div>
+<div class="paragraph">
+<p>Google has pioneered a number of innovative practices with its SRE team, including:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>a 50% cap on aggregate "ops" work - the other 50% is supposed to be spent on development</p>
+</li>
+<li>
+<p>the concept of an "error budget" as a control mechanism - teams are incented not for "zero downtime" but rather to take the risk and spend the error budget</p>
+</li>
+<li>
+<p>"Release Engineer" as a specific job title for those focused on building and maintaining the delivery <a href="#pipeline">pipeline</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The 2016 book <a href="https://www.goodreads.com/book/show/27968891-site-reliability-engineering"><em>Site Reliability Engineering: How Google Runs Production Systems</em></a> is highly recommended.</p>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -10337,10 +10374,16 @@ The following are examples of state:</p>
 <div class="ulist">
 <ul>
 <li>
+<p>What experiences have you had where operational execution made the difference (either good or bad?) E.g. systems down, bad customer service? Good service?</p>
+</li>
+<li>
 <p>Have you or anyone you&#8217;ve known worked in a call center or operations center? What was it like?</p>
 </li>
 <li>
 <p>Do you prefer interrupt-driven or focused development work?</p>
+</li>
+<li>
+<p>Read <a href="http://perfcap.blogspot.com/2012/03/ops-devops-and-noops-at-netflix.html">Ops, DevOps and PaaS (NoOps) at Netflix</a> and <a href="https://gist.github.com/jallspaw/2140086">Allspaw&#8217;s response</a>. Discuss as a team.</p>
 </li>
 </ul>
 </div>
@@ -10353,6 +10396,12 @@ The following are examples of state:</p>
 <p>Stand up two VMs, one with a web server, the other with Nagios or another open-source monitoring tool. Experiment with using Nagios to monitor various aspects of the web server.</p>
 </li>
 <li>
+<p>Define customer application-level monitoring and test that it operates</p>
+</li>
+<li>
+<p>Integrate a monitoring system such as Nagios with an IT service management tool such as iTOP, so that certain events auto-create Incident tickets.</p>
+</li>
+<li>
 <p>In a team kanban setting, experiment with both user stories and operations requests coming into the same board or product team. What issues arise? How can you best handle the diversity of work? What if there were 10 times as much, what would you do?</p>
 </li>
 </ul>
@@ -10363,49 +10412,72 @@ The following are examples of state:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Thomas A. Limoncelli, Strata R. Chalup, Christina J. Hogan, <a href="http://www.goodreads.com/book/show/23131211-the-practice-of-cloud-system-administration">The Practice of Cloud System Administration: Designing and Operating Large Distributed Systems, Volume 2</a></p>
+<p>Martin Abbott and Michael Fisher, <a href="https://www.goodreads.com/book/show/7282390-the-art-of-scalability"><em>The Art of Scalability: Scalable Web Architecture, Processes, and Organizations for the Modern Enterprise</em></a></p>
 </li>
 <li>
-<p>John Allspaw, <a href="http://www.goodreads.com/book/show/8571725-web-operations">Web Operations: Keeping the Data On Time</a></p>
+<p>John Allspaw, <a href="http://www.goodreads.com/book/show/8571725-web-operations"><em>Web Operations: Keeping the Data On Time</em></a></p>
 </li>
 <li>
-<p>Sidney Dekker, <a href="https://www.goodreads.com/book/show/376964.Field_Guide_to_Understanding_Human_Error">Field Guide to Understanding Human Error</a></p>
+<p>Betsy Beyer et al, <a href="https://www.goodreads.com/book/show/27968891-site-reliability-engineering"><em>Site Reliability Engineering: How Google Runs Production Systems</em></a></p>
 </li>
 <li>
-<p>Sidney Dekker, <a href="https://www.goodreads.com/book/show/10258783-drift-into-failure">Drift into Failure</a></p>
+<p>Sidney Dekker, <a href="https://www.goodreads.com/book/show/376964.Field_Guide_to_Understanding_Human_Error"><em>Field Guide to Understanding Human Error</em></a></p>
+</li>
+<li>
+<p>Sidney Dekker, <a href="https://www.goodreads.com/book/show/10258783-drift-into-failure"><em>Drift into Failure</em></a></p>
+</li>
+<li>
+<p>Thomas A. Limoncelli, Strata R. Chalup, Christina J. Hogan, <a href="http://www.goodreads.com/book/show/23131211-the-practice-of-cloud-system-administration"><em>The Practice of Cloud System Administration: Designing and Operating Large Distributed Systems, Volume 2</em></a></p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>Review Allspaw, Limoncelli, Beyer, read Nygaard &amp; Abbott</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_articles_posts">Articles/posts</h5>
-<div class="paragraph">
-<p><a href="https://aws.amazon.com/message/5467D2/?utm_content=buffer72a89&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer">AWS DynamoDB Fall 2015 outage</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Amazon,  <a href="https://aws.amazon.com/message/5467D2/?utm_content=buffer72a89&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer">AWS DynamoDB Fall 2015 outage</a></p>
+</li>
+<li>
+<p>TechIronic,  <a href="http://techironic.com/post/129767406981/the-truth-behind-building-multiple-environments-to">The truth behind building multiple environments to run your services</a></p>
+</li>
+<li>
+<p>Yury Izrailevsky, Ariel Tseitlin, <a href="http://techblog.netflix.com/2011/07/netflix-simian-army.html">The Netflix Simian Army</a></p>
+</li>
+<li>
+<p>Josh Evans,  <a href="http://www.slideshare.net/JoshEvans2/beyond-devops-how-netflix-bridges-the-gap">Beyond DevOps - How Netflix Bridges the Gap</a></p>
+</li>
+<li>
+<p>Adrian Cockroft: <a href="http://perfcap.blogspot.com/2012/03/ops-devops-and-noops-at-netflix.html">Ops, DevOps and PaaS (NoOps) at Netflix</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://gist.github.com/jallspaw/2140086">John Allspaw&#8217;s response</a></p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
-<p><a href="http://techironic.com/post/129767406981/the-truth-behind-building-multiple-environments-to">The truth behind building multiple environments to run your services</a></p>
+</li>
+<li>
+<p>Gunawi et al, <a href="https://newtraell.cs.uchicago.edu/research/publications/techreports/TR-2016-03">Why Does the Cloud Stop Computing? Lessons from Hundreds of Service Outages</a></p>
+</li>
+<li>
+<p>John Allspaw,  <a href="http://www.kitchensoap.com/2013/09/30/learning-from-failure-at-etsy/">Learning from Failure at Etsy</a></p>
+</li>
+<li>
+<p>John Allspaw, <a href="http://www.kitchensoap.com/2013/10/29/counterfactuals-knight-capital/">Counterfactual Thinking, Rules, and The Knight Capital Accident</a></p>
+</li>
+</ul>
 </div>
-<div class="paragraph">
-<p><a href="http://csel.eng.ohio-state.edu/woods/design/concepts/nav_problems.pdf">Orienting in Virtual Perceptual Fields</a></p>
 </div>
-<div class="paragraph">
-<p><a href="http://www.allofe.com/gen/corp_generated_bin/documents/basic_module/designing1.pdf">http://www.allofe.com/gen/corp_generated_bin/documents/basic_module/designing1.pdf</a></p>
-</div>
-<div class="paragraph">
-<p><a href="http://techblog.netflix.com/2011/07/netflix-simian-army.html">The Netflix Simian Army</a></p>
-</div>
-<div class="paragraph">
-<p><a href="http://www.slideshare.net/JoshEvans2/beyond-devops-how-netflix-bridges-the-gap">Beyond DevOps - How Netflix Bridges the Gap</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://blog.codecentric.de/en/2015/10/continuous-integration-platform-using-docker-container-jenkins-sonarqube-nexus-gitlab/">Continuous Integration Platform using Docker Container: Jenkins, SonarQube, Nexus, GitLab</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://www.heavybit.com/library/video/hiring-a-tech-ops-team/">Hiring a Tech Ops Team</a>
- work into chapter</p>
+<div class="sect4">
+<h5 id="_videos">Videos</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>Charity Majors,  <a href="https://www.heavybit.com/library/video/hiring-a-tech-ops-team/">Hiring a Tech Ops Team</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -28088,6 +28160,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 </li>
 <li>
 <p><a id="Betz2015"></a>[Betz2015]: Betz, C.T. (2015), "Calavera project", Github, <a href="https://github.com/CharlesTBetz/Calavera" class="bare">https://github.com/CharlesTBetz/Calavera</a></p>
+</li>
+<li>
+<p><a id="Beyer2016"></a>[Beyer2016]: Beyer, B., Jones, C., Petoff, J., &amp; Murphy, N. R. (2016). Site Reliability Engineering: How Google Runs Production Systems. Sebastopol, CA, CA: O’Reilly Media, Inc.</p>
 </li>
 <li>
 <p><a id="Bias2012"></a>[Bias2012]: Bias, R. (2012, February 14). Architectures for open and scalable clouds. Retrieved November 10, 2016, from <a href="http://www.slideshare.net/randybias/architectures-for-open-and-scalable-clouds" class="bare">http://www.slideshare.net/randybias/architectures-for-open-and-scalable-clouds</a></p>
