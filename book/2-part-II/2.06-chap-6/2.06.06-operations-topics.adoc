@@ -1,44 +1,25 @@
 ==== Advanced topics in operations
 
 ===== Site reliability engineering at Google
+[quote, Benjamin Treynor Sloss, in Beyer/Site Reliability Engineering]
+SRE is what happens when you ask a software engineer to design an operations team.
 
+
+Site reliability engineering is a new term for operations-centric work, originating from Google and other large digital organizations. It is clearly an operational discipline; the SRE team is responsible for the "availability, latency, performance, efficiency, change management, monitoring, emergency response, and capacity planning of their service" <<Beyer2016>>, p.7.
+
+Google site reliability engineers have strong technical backgrounds, frequently computer science, which is atypical for operations staff in the traditional IT industry. SREs are strongly incented to automate as much as possible, avoiding "toil" (i.e., repetitive, non-value-add tasks.) In other words, as Benjamin Sloss says, "we want systems that are automatic, not just automated" <<Beyer2016>>.
+
+Google has pioneered a number of innovative practices with its SRE team, including:
+
+* a 50% cap on aggregate "ops" work - the other 50% is supposed to be spent on development
+* the concept of an "error budget" as a control mechanism - teams are incented not for "zero downtime" but rather to take the risk and spend the error budget
+* "Release Engineer" as a specific job title for those focused on building and maintaining the delivery xref:pipeline[pipeline].
+
+The 2016 book https://www.goodreads.com/book/show/27968891-site-reliability-engineering[_Site Reliability Engineering: How Google Runs Production Systems_] is highly recommended.
 
 ifdef::collaborator-draft[]
 
-SRE
-
- A critique of the "NoOps" idea
-
- Human in the loop problem
-
- The feedback loop from ops to dev
-
-
- Classes of work
-
- A deeper look at measurement
-
- Deeper theory
-....
-  * States and sense-making and risk management around state transitions
-  (Systems that are too big, complex, and fluid to be considered as having a “state”??)
-  * Complexity & uncertainty
-  * Promise theory?
-  * Burgess measuring system normality paper
-....
-
- http://perfcap.blogspot.com/2012/03/ops-devops-and-noops-at-netflix.html
- https://gist.github.com/jallspaw/2140086
-
- https://newtraell.cs.uchicago.edu/research/publications/techreports/TR-2016-03
- http://www.kitchensoap.com/2013/09/30/learning-from-failure-at-etsy/
- http://www.kitchensoap.com/2013/10/29/counterfactuals-knight-capital/
-
-https://www.flickr.com/photos/highwaysagency/5997004439
-
-_Photo credit https://www.flickr.com/photos/nasamarshall/15330580364, non-commercial_
-
- See also http://blog.softwareoperability.com/.]
+ Collaborative: as with other chapters, the topics section is mostly incomplete, and will be elaborated in future drafts.
 
  ===== Designing for operability
  [quote, Limoncelli/Chalup/Hogan]
@@ -56,6 +37,23 @@ _Photo credit https://www.flickr.com/photos/nasamarshall/15330580364, non-commer
  logging
  crashes & panics
 
+ A critique of the "NoOps" idea
+
+ Human in the loop problem
+
+ Classes of work
+
+ A deeper look at measurement
+
+ Deeper theory
+
+  * States and sense-making and risk management around state transitions
+  (Systems that are too big, complex, and fluid to be considered as having a “state”??)
+  * Complexity & uncertainty
+  * Promise theory?
+  * Burgess measuring system normality paper
+
+ nice non-commercial NASA photo: https://www.flickr.com/photos/nasamarshall/15330580364, non-commercial_
 
 
 endif::collaborator-draft[]
