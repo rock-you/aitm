@@ -6,7 +6,7 @@ Building a scalable system does not happen by accident.
 
 Designing complex systems that can scale effectively and be operated efficiently is a challenging topic. Many insights have been developed by the large-scale public-facing Internet sites, such as Google, Facebook, Netflix, and others. The recommended reading at the end of this chapter provides many references.
 
-A reasonable person might question why systems *design* questions are appearing here in the chapter on operations. We have discussed certain essential factors for system scalability previously: xref:cloud[Cloud], xref:infracode[infrastructure as code], xref:version-control[version control], and xref:continuous-delivery[continuous delivery]. These are all necessary, but not sufficient to scaling digital systems. Once a system starts to encounter real load, further attention must go to how it *runs*, as opposed to what it *does*. It's not easy to know when to focus on scalability. If xref:prod-discovery-techniques[product discovery] is not on target, the system will never get the level of use that requires scalability. Insisting that the digital product have a state of the art scalable design might be wasteful, if the team is still searching for a xref:lean-startup[Minimum Viable Product] (in Lean Startup terms). Of course, if you are doing systems engineering and  xref:flower-and-cog[building a "cog," not growing a "flower,"] you may need to be thinking about these factors earlier. 
+A reasonable person might question why systems *design* questions are appearing here in the chapter on operations. We have discussed certain essential factors for system scalability previously: xref:cloud[Cloud], xref:infracode[infrastructure as code], xref:version-control[version control], and xref:continuous-delivery[continuous delivery]. These are all necessary, but not sufficient to scaling digital systems. Once a system starts to encounter real load, further attention must go to how it *runs*, as opposed to what it *does*. It's not easy to know when to focus on scalability. If xref:prod-discovery-techniques[product discovery] is not on target, the system will never get the level of use that requires scalability. Insisting that the digital product have a state of the art scalable design might be wasteful, if the team is still searching for a xref:lean-startup[Minimum Viable Product] (in Lean Startup terms). Of course, if you are doing systems engineering and  xref:flower-and-cog[building a "cog," not growing a "flower,"] you may need to be thinking about these factors earlier.
 
 So, what often happens is that the system goes through various prototypes until something with market value is found, and at that point, as use starts to scale up, the team scrambles for a more robust approach. Chapter 2  xref:scale-matters[warned of this], and mentioned the https://gist.github.com/jboner/2841832[Latency Numbers]; now would be a good time to review those.
 
@@ -19,7 +19,13 @@ image::images/2.06-CAP-triangle.png[alt text, 300, 200, float="right"]
 
 Scaling digital systems used to imply acquiring faster and more powerful hardware and software. If a 4-core server with 8 gigabytes of RAM isn't enough, get a 32-core server with 256 gB of RAM (and upgrade your database software accordingly, for millions of dollars more). This kind of scaling is termed "vertical" scaling. However, web-scale companies such as Facebook and Google determined that this would not work indefinitely. Infinitely scaling vertically is not physically (or financially) possible. Instead, these companies began to experiment aggressively with using large numbers of inexpensive commodity computers.
 
-The advantage to scaling vertically is that all your data can reside on one server, with fast and reliable access. As soon as you start to split your data across servers, you run into the problems of the CAP principle.
+
+ifdef::collaborator-draft[]
+ easy illustration here of scaling approaches
+endif::collaborator-draft[]
+
+
+The advantage to scaling vertically is that all your data can reside on one server, with fast and reliable access. As soon as you start to split your data across servers, you run into the practical implications of the CAP principle.
 
 CAP stands for:
 
@@ -27,9 +33,7 @@ CAP stands for:
 * Availability
 * Partition-tolerance
 
-and the CAP Principle states that it is not possible to build a distributed system that guarantees all three  <<Fox1999>>.
-
-What does this mean? First, let's define our terms:
+and the CAP Principle states that it is not possible to build a distributed system that guarantees all three  <<Fox1999>>. What does this mean? First, let's define our terms:
 
 *Consistency* means that all the servers (or "nodes") in the system see the same data at the same time. If an update is being processed, no node will see it before any other. This is often termed a transactional guarantee, and it is the sort of processing relational databases excel at.
 
