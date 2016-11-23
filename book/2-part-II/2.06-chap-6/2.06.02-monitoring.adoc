@@ -109,6 +109,20 @@ The above lists are very simple examples of what can be extensive record-keeping
 The above approach is relevant to older models still reliant on servers (whether physical or virtual) as primary units of processing. The trend to xref:containers[containers and serverless] computing is challenging these traditional practices, and what will replace them is currently unclear.
 
 ===== Capacity and performance management
+_"The tank can't handle that much pressure."_
+
+_"Where'd you get that idea?"_
+
+_"What do you mean, where did I get that idea? It's in the impulse engine specifications."_
+
+_"Regulations 42/15: 'Pressure Variances in IRC Tank Storage'?"_
+
+_"Yeah."_
+
+_"Forget it. I wrote it...A good engineer is always a wee bit conservative, at least on paper."_
+
+Conversation between Geordi LaForge and Montgomery Scott, _Star Trek: The Next Generation_, "Relics"
+
 Capacity and performance management are closely related, but not identical terms encountered as IT systems scale up and encounter significant load.
 
 A capacity management system may include large quantities of data harvested from monitoring and event management systems, stored for long periods of time so that history of system utilization is understood and some degree of prediction can be ventured for upcoming utilization.
@@ -120,7 +134,8 @@ The classic example of significant capacity utilization is the https://en.wikipe
 
 Performance management focuses on the responsiveness (e.g. speed) of the systems being used. Responsiveness may be related to capacity utilization, but some capacity issues don't immediately affect responsiveness. For example, a disk drive may be approaching full. When it fills, the system will immediately crash, and performance is severely affected. But until then, the system performs fine. The disk needs to be replaced on the basis of capacity reporting, not performance trending. On the other hand, some performance issues are not related to capacity. A mis-configured router might badly affect a web site's performance, but the configuration simply needs to be fixed - there is no need to handle as a capacity-related issue.
 
-At a simpler level, capacity and performance management may consist of monitoring CPU, memory, and storage utilization across a given set of nodes, and raising alerts if certain threshholds are approached. Capacity analytics at its most advanced is a true Big Data problem domain.
+At a simpler level, capacity and performance management may consist of monitoring CPU, memory, and storage utilization across a given set of nodes, and raising alerts if certain thresholds are approached. For example, if a critical server is frequently approaching 50% CPU utilization (leaving 50% "headroom"), engineers might identify that another server should be added. Abbot and Fisher suggest, "As a general rule of thumb, we like to start at 50% as the ideal usage percentage
+and work up from there as the arguments dictate" <<Abbott2015>>, p 204.
 
 So, what do we do when a capacity alert is raised, either through an automated system or through the manual efforts of a capacity analyst? There are a number of responses that may follow:
 
@@ -128,4 +143,4 @@ So, what do we do when a capacity alert is raised, either through an automated s
 * Seek to use existing capacity more efficiently
 * Throttle demand somehow
 
-As your organization scales up and you find yourself responding more frequently to the kinds of operational issues described in this section, you might start asking yourself whether you can be more pro-active. What steps can you take when developing or enhancing your systems, so that operational issues are minimized? You want systems that are stable, easily upgraded, and that can scale quickly on demand. Fortunately, there is a rich body of experience on how to build such systems, which we will discuss in a subsequent section.
+Capacity analytics at its most advanced (i.e. across hundreds or thousands of servers and services) is a true Big Data problem domain, and starts to overlap with IT asset management, capital planning, and budgeting in significant ways. As your organization scales up and you find yourself responding more frequently to the kinds of operational issues described in this section, you might start asking yourself whether you can be more pro-active. What steps can you take when developing or enhancing your systems, so that operational issues are minimized? You want systems that are stable, easily upgraded, and that can scale quickly on demand. Fortunately, there is a rich body of experience on how to build such systems, which we will discuss in a subsequent section.
