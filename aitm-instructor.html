@@ -786,6 +786,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_norms_and_standards">Norms and standards</a></li>
 <li><a href="#_hard_v_soft_teams">Hard v soft teams</a></li>
 <li><a href="#_how_large_shd_teams_be">how large shd teams be</a></li>
+<li><a href="#_splitting_teams">splitting teams</a></li>
+<li><a href="#_redefining_ownership">redefining ownership</a></li>
 </ul>
 </li>
 <li><a href="#_organizational_transition_and_the_spotify_model">Organizational transition and the Spotify model</a></li>
@@ -803,6 +805,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_motivation">Motivation</a></li>
 <li><a href="#_schneider_matrix_and_the_failure_of_control_culture">Schneider matrix, and the failure of control culture</a></li>
 <li><a href="#_toyota_kata">Toyota Kata</a></li>
+<li><a href="#_leadership">Leadership</a></li>
 </ul>
 </li>
 <li><a href="#_it_human_resource_management">IT human resource management</a>
@@ -873,12 +876,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_topics_in_it_project_management_and_related_fields">Topics in IT project management and related fields</a>
 <ul class="sectlevel4">
-<li><a href="#_the_agile_project_frameworks">The Agile project frameworks</a></li>
 <li><a href="#_the_two_dimensions_of_demand_management">The two dimensions of demand management</a></li>
-<li><a href="#_controversies_in_pm_history">Controversies in PM history</a></li>
-<li><a href="#_project_management_antipatterns">Project management antipatterns</a></li>
-<li><a href="#_scrum_of_scrums_and_its_critiques">Scrum of scrums and its critiques</a></li>
-<li><a href="#_notes_2nd_draft_followup">Notes/2nd draft followup</a></li>
 </ul>
 </li>
 <li><a href="#_conclusion_7">Conclusion</a>
@@ -9838,6 +9836,27 @@ Monitoring systems are similar to source control systems in that they are a crit
 <div class="sect4">
 <h5 id="_capacity_and_performance_management">Capacity and performance management</h5>
 <div class="paragraph">
+<p><em>"The tank can&#8217;t handle that much pressure."</em></p>
+</div>
+<div class="paragraph">
+<p><em>"Where&#8217;d you get that idea?"</em></p>
+</div>
+<div class="paragraph">
+<p><em>"What do you mean, where did I get that idea? It&#8217;s in the impulse engine specifications."</em></p>
+</div>
+<div class="paragraph">
+<p><em>"Regulations 42/15: 'Pressure Variances in IRC Tank Storage'?"</em></p>
+</div>
+<div class="paragraph">
+<p><em>"Yeah."</em></p>
+</div>
+<div class="paragraph">
+<p><em>"Forget it. I wrote it&#8230;&#8203;A good engineer is always a wee bit conservative, at least on paper."</em></p>
+</div>
+<div class="paragraph">
+<p>Conversation between Geordi LaForge and Montgomery Scott, <em>Star Trek: The Next Generation</em>, "Relics"</p>
+</div>
+<div class="paragraph">
 <p>Capacity and performance management are closely related, but not identical terms encountered as IT systems scale up and encounter significant load.</p>
 </div>
 <div class="paragraph">
@@ -9856,7 +9875,8 @@ Monitoring systems are similar to source control systems in that they are a crit
 <p>Performance management focuses on the responsiveness (e.g. speed) of the systems being used. Responsiveness may be related to capacity utilization, but some capacity issues don&#8217;t immediately affect responsiveness. For example, a disk drive may be approaching full. When it fills, the system will immediately crash, and performance is severely affected. But until then, the system performs fine. The disk needs to be replaced on the basis of capacity reporting, not performance trending. On the other hand, some performance issues are not related to capacity. A mis-configured router might badly affect a web site&#8217;s performance, but the configuration simply needs to be fixed - there is no need to handle as a capacity-related issue.</p>
 </div>
 <div class="paragraph">
-<p>At a simpler level, capacity and performance management may consist of monitoring CPU, memory, and storage utilization across a given set of nodes, and raising alerts if certain threshholds are approached. Capacity analytics at its most advanced is a true Big Data problem domain.</p>
+<p>At a simpler level, capacity and performance management may consist of monitoring CPU, memory, and storage utilization across a given set of nodes, and raising alerts if certain thresholds are approached. For example, if a critical server is frequently approaching 50% CPU utilization (leaving 50% "headroom"), engineers might identify that another server should be added. Abbot and Fisher suggest, "As a general rule of thumb, we like to start at 50% as the ideal usage percentage
+and work up from there as the arguments dictate" <a href="#Abbott2015">[Abbott2015]</a>, p 204.</p>
 </div>
 <div class="paragraph">
 <p>So, what do we do when a capacity alert is raised, either through an automated system or through the manual efforts of a capacity analyst? There are a number of responses that may follow:</p>
@@ -9875,7 +9895,7 @@ Monitoring systems are similar to source control systems in that they are a crit
 </ul>
 </div>
 <div class="paragraph">
-<p>As your organization scales up and you find yourself responding more frequently to the kinds of operational issues described in this section, you might start asking yourself whether you can be more pro-active. What steps can you take when developing or enhancing your systems, so that operational issues are minimized? You want systems that are stable, easily upgraded, and that can scale quickly on demand. Fortunately, there is a rich body of experience on how to build such systems, which we will discuss in a subsequent section.</p>
+<p>Capacity analytics at its most advanced (i.e. across hundreds or thousands of servers and services) is a true Big Data problem domain, and starts to overlap with IT asset management, capital planning, and budgeting in significant ways. As your organization scales up and you find yourself responding more frequently to the kinds of operational issues described in this section, you might start asking yourself whether you can be more pro-active. What steps can you take when developing or enhancing your systems, so that operational issues are minimized? You want systems that are stable, easily upgraded, and that can scale quickly on demand. Fortunately, there is a rich body of experience on how to build such systems, which we will discuss in a subsequent section.</p>
 </div>
 </div>
 </div>
@@ -10815,12 +10835,18 @@ For a lot of your employees, growing out of this phase will be a welcome develop
 <h5 id="_roles_and_responsibilities">Roles and responsibilities</h5>
 <div class="quoteblock">
 <blockquote>
-Some of the most important factors that organizational structure can affect are com
-munication, efficiency, standards, quality, and ownership.
+Some of the most important factors that organizational structure can affect are communication, efficiency, standards, quality, and ownership.
 </blockquote>
 <div class="attribution">
 &#8212; abbott
 </div>
+</div>
+<div class="paragraph">
+<p>There are two basic models for technology organizations: the IT organization model and the product organization model&#8230;&#8203;The difference in mindset, organization, metrics, and approach between the IT and product models is vast.<a href="#Abbott2015">[Abbott2015]</a> p 122.</p>
+</div>
+<div class="paragraph">
+<p>Corporate technology governance tends to significantly slow time to market for critical projects&#8230;&#8203;IT mindsets are great for internal tech
+nology development, but disastrous for external product development. p 124</p>
 </div>
 <div class="paragraph">
 <p>RACI</p>
@@ -10847,6 +10873,38 @@ nally to perform their responsibilities. (abbott p 45)</p>
 <div class="sect4">
 <h5 id="_how_large_shd_teams_be">how large shd teams be</h5>
 
+</div>
+<div class="sect4">
+<h5 id="_splitting_teams">splitting teams</h5>
+<div class="paragraph">
+<p>inevitable</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>failure domains (abbott p 49)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>architects need to be able to reason about and lead conversation about such matters</p>
+</div>
+<div class="paragraph">
+<p>retain impact mapping - impact mapping re-visited for internal purposes - build on previous impact map?</p>
+</div>
+<div class="paragraph">
+<p>intuit: Intuit&#8217;s epiphany that it was building software but
+selling services led to a reorganization that moved the internal corporate technology
+teams under the purview of the CTO. Furthermore, infrastructure individual con
+tributors, such as storage engineers and database administrators, were divided up
+and allocated to become part of the product teams with which they worked. Abbot2015 p 103</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_redefining_ownership">redefining ownership</h5>
+<div class="paragraph">
+<p>everyone can work on everything - changing Rs into Is.</p>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -11469,7 +11527,7 @@ The traditional approach is that we have work and we bring "the right people" to
 <div class="title">Note</div>
 </td>
 <td class="content">
-The following discussion and accompanying set of diagrams is derived from Preston Smith and Don Reinertsen&#8217;s thought regarding this problem in  <em>Developing Products in Half the Time</em> <a href="#Smith1998">[Smith1998]</a> and <em>Managing the Design Factory.</em> <a href="#Reinertsen1997">[Reinertsen1997]</a>. Similar themes are found in the <em>Guide to the Project Management Body of Knowledge</em> (<a href="#PMI2013">[PMI2013]</a>).
+The following discussion and accompanying set of diagrams is derived from Preston Smith and Don Reinertsen&#8217;s thought regarding this problem in  <em>Developing Products in Half the Time</em> <a href="#Smith1998">[Smith1998]</a> and <em>Managing the Design Factory.</em> <a href="#Reinertsen1997">[Reinertsen1997]</a>. Similar themes are found in the <em>Guide to the Project Management Body of Knowledge</em> (<a href="#PMI2013">[PMI2013]</a>) and <em>The Art of Scalability</em> <a href="#Abbott2015">[Abbott2015]</a>.
 </td>
 </tr>
 </table>
@@ -11842,8 +11900,57 @@ Six years ago I began the research that led to [Toyota Kata] thinking, like just
 </div>
 </div>
 </div>
+</div>
+<div class="sect4">
+<h5 id="_leadership">Leadership</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>setting the example, leading without ego, driving hard to
+accomplish the mission while being mindful and compassionate about the needs
+of the organization, timely decision making, team empowerment, and shareholder
+alignment. abbotp78</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>transactional vs transformational (Abbott)</p>
+</div>
 <div class="sect5">
 <h6 id="_notes">Notes</h6>
+<div class="literalblock">
+<div class="content">
+<pre>conflict: cognitive &amp; affective (as discussed by Abbott)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>organizational boundaries, across which collaboration
+must happen, increase affective conflict (abbott 65)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> the more organizational bound
+aries that a team must cross to coordinate with others for the accomplishment of
+a goal, the less innovation that the team will demonstrate</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>survival strategies may consti
+tute a homo homini lupo^ situation in which outsiders are distrusted as hostile com
+petitors for scarce resources. Distrust toward outsiders, forces individuals into rigid
+in-group discipline.^ This sort of emotional aloofness and distrust of outsiders has
+been observed in many groups.^ abbott p 65</p>
+</div>
+<div class="paragraph">
+<p>figure 3.5 p 66 - excellent - re-draw &amp; use&#8230;&#8203;</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>evidence for diversity as higher performing</pre>
+</div>
+</div>
 <div class="literalblock">
 <div class="content">
 <pre>Liker quadrant from Toyota Way (cited by Cohn)
@@ -12308,207 +12415,16 @@ on my team</p>
 <pre>incorporate Carol Dweck</pre>
 </div>
 </div>
+<div class="literalblock">
+<div class="content">
+<pre>Abbott 4-box p 110, performance/behavior</pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_topics_in_organization_and_culture">Topics in organization and culture</h4>
-<div class="literalblock">
-<div class="content">
-<pre>The mainstreaming of IT into the business</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>"Rogue" IT</p>
-</div>
-<div class="paragraph">
-<p>Convergence diagram.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>ad-hoc &amp; governance structures, committees</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> Communities of practice
-originated by Wenger, McDermott, and Snyder2002.</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Types of COPs</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Feature vs Component at scale</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>We have previously discussed <a href="#2.04.02-features-v-components">feature vs component teams</a>. As a reminder, features are functional aspects of software (things people find directly valuable) while components are how software is organized (e.g. shared services and platforms such as data management).</p>
-</div>
-<div class="paragraph">
-<p>As an organization grows, we see both the feature and component sides scale. Feature teams start to diverge into multiple products, while component teams continue to grow in the guise of shared services and platforms. Their concerns continue to differentiate and communication friction may start to emerge between the teams. How an organization handles this is critical.
- (forward ref to chap 9 shared svcs, Part IV lifecycles)</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> Adam Smith and Frederick Taylor
-- Taylor &amp; cultural antipatterns (including the 'you just don't get X' antipattern)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Bi-modal IT, a critique</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>[to be written]</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>reference <a href="http://www.computerweekly.com/feature/How-CIOs-can-ramp-up-their-IT-clock-speed-as-pressure-grows">How CIOs can raise their 'IT clock speed' as pressure to innovate grows</a></p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> Solving for decisionmaking &amp; governance
-No choice but to allocate fine-grained decision rights between product lines &amp; guilds. See Reinertsen/Smith.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Org change management -
-ProSci/ADKAR, Lean Change Mgmt</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>the limits to "you build it, you run it" - employees are not owners...</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>culture leads, compliance lags</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>The problem of epistemic closure</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> additional material
-Toyota Way quadrant as cited in &lt;&lt;Cohn2010&gt;&gt; p145</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>IT and learning (Langer)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>The business within a business paradigm has failed</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Microservices.... important - how multiple services interact.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>The rise of coaching</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>incentives - making across the board incentives work, Knez 2002, harvard biz review</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Etsy : designated vs dedicated - Kevin M discussion - mentioned there was talk @ DevOpsDays MSP 2015</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Training Within Industry</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Github abandoning flat structure http://www.bloomberg.com/news/articles/2016-09-06/why-github-finally-abandoned-its-bossless-workplace</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Connor:Discussing Design: Improving Communication and Collaboration through Critique</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Second draft</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>include http://www.slideshare.net/meetfelipe/slides-agile2016-stop-using-agile-with-waterfall-goals-goal-agility-with-okr
-https://www.amazon.com/dp/1119252393/ref=cm_sw_r_tw_awdo_x_YQKZxb3GM0P4P</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>think more about whether OKR belongs Part II or III</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>allspaw on joint activity. requires common ground of understanding and a compact of joint action http://paperswelove.org/2016/video/john-allspaw-common-ground/?utm_content=buffer893c4&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Abbot p 12:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>How easily can I add or remove people to/from this organization? Do I need to add them in groups, or can I add individual people?</p>
-</li>
-<li>
-<p>Does the organizational structure help or hinder the development of metrics that will help measure productivity?</p>
-</li>
-<li>
-<p>Does the organizational structure allow teams to own goals and feel empowered and capable of meeting them?</p>
-</li>
-<li>
-<p>Which types of conflict will arise, and will that conflict help or hinder the mis sion of the organization?</p>
-</li>
-<li>
-<p>How does this organizational structure help or hinder innovation within my company?</p>
-</li>
-<li>
-<p>Does this organizational structure help or hinder the time to market for my products?</p>
-</li>
-<li>
-<p>How does this organizational structure increase or decrease the cost per unit of value created?</p>
-</li>
-<li>
-<p>Does work flow easily through the organization, or is it easily contained within a portion of the organization?</p>
-</li>
-</ul>
-</div>
-<div class="quoteblock">
-<blockquote>
-Roughly speaking those who work in connection with the [Automated Computing Engine] will be divided into its masters and its servants. Its masters will plan out instruction tables for it, thinking up deeper and deeper ways of using it. Its servants will feed it with cards as it calls for them. They will put right any parts that go wrong. They will assemble data that it requires. In fact the servants will take the place of limbs&#8230;&#8203;<br>
-<br>
-As time goes on the calculator itself will take over the functions both of masters and of servants. The servants will be replaced by mechanical and electrical limbs and sense organs… The masters are liable to get replaced because as soon as any technique becomes at all stereotyped it becomes possible to devise a set of instruction tables which will enable the electronic computer to do it for itself…”
-</blockquote>
-<div class="attribution">
-&#8212; Alan Turing<br>
-<cite>Lecture on the Automated Computing Engine -- 1947</cite>
-</div>
-</div>
+
 </div>
 <div class="sect3">
 <h4 id="_conclusion_6">Conclusion</h4>
@@ -15473,66 +15389,6 @@ The iconic entrepreneur asking for one more round</pre>
 </div>
 <div class="sect3">
 <h4 id="_topics_in_it_project_management_and_related_fields">Topics in IT project management and related fields</h4>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>Collaborative</strong></p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Status: Like most topics sections, this one is in need of work, being deferred to 2nd draft for cleanup &amp; completion.</pre>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/dm-academy/aitm/blob/master/collaborator-instructions.adoc" target="_blank">Collaborator instructions</a></p>
-</li>
-<li>
-<p>Raise an <a href="https://github.com/dm-academy/aitm/issues" target="_blank">issue</a> to comment</p>
-</li>
-<li>
-<p><a href="https://github.com/dm-academy/aitm/tree/master/book" target="_blank">Github source files</a></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><em>Please remember that the intended audience of this one or two semester survey text is incoming students at a Masters' level in Information Technology, Information Systems, and Software Engineering programs. The most useful feedback comes from the perspective of, "what do you think today&#8217;s students need to learn, given the last 20 years' developments with Agile, Lean IT, DevOps, web- and cloud-scale IT, digital transformation, and related themes?"</em></p>
-</div>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Investment management?</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><a id="Agile-frameworks"></a></p>
-</div>
-<div class="sect4">
-<h5 id="_the_agile_project_frameworks">The Agile project frameworks</h5>
-<div class="paragraph">
-<p>As of this writing, a number of frameworks have been developed at the intersection of Agile and project management. Notable examples include:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The Scaled Agile Framework (<a href="http://www.scaledagileframework.com/" class="bare">http://www.scaledagileframework.com/</a>)</p>
-</li>
-<li>
-<p>Disciplined Agile Delivery (<a href="http://www.disciplinedagiledelivery.com/" class="bare">http://www.disciplinedagiledelivery.com/</a>)</p>
-<div class="literalblock">
-<div class="content">
-<pre>expand with contributed descriptions</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Other Agile authors are skeptical of the need for such material <a href="#Schwaber2013">[Schwaber2013]</a>.</p>
-</div>
-</div>
 <div class="sect4">
 <h5 id="_the_two_dimensions_of_demand_management">The two dimensions of demand management</h5>
 <div class="paragraph">
@@ -15616,181 +15472,6 @@ The iconic entrepreneur asking for one more round</pre>
 </div>
 <div class="paragraph">
 <p>The final point of this diagram: you only have so much capacity to execute the work it implies. If you have a disaster, it may impact your ability to deliver user stories, changes, or even meet transactional demand. Trade-offs must be considered.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_controversies_in_pm_history">Controversies in PM history</h5>
-<div class="paragraph">
-<p>PERT chart history, Mcnamara, etc</p>
-</div>
-<div class="paragraph">
-<p><a id="3.08.03-NoEstimates"></a></p>
-</div>
-<div class="sect5">
-<h6 id="_the_estimation_controversy">The estimation controversy</h6>
-<div class="paragraph">
-<p><a href="http://synerzip.com/must-see-agile-tv/to-estimate-or-no-estimates-that-is-the-question/" class="bare">http://synerzip.com/must-see-agile-tv/to-estimate-or-no-estimates-that-is-the-question/</a>
-<a href="http://www.jrothman.com/mpd/project-management/2016/06/the-case-for-and-against-estimates-part-1/" class="bare">http://www.jrothman.com/mpd/project-management/2016/06/the-case-for-and-against-estimates-part-1/</a>
-<a href="http://www.jrothman.com/mpd/project-management/2016/06/the-case-for-and-against-estimates-part-2/" class="bare">http://www.jrothman.com/mpd/project-management/2016/06/the-case-for-and-against-estimates-part-2/</a></p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_earned_value_management">Earned value management</h6>
-<div class="paragraph">
-<p>EVM could be described as a "model" used for understanding the
-execution of software projects. It includes mathematical formulae
-which are intended to provide insights into project dynamics. However
-as will be discussed, the model does not take into consideration
-feedback. It is an Open-Loop system model. Kennaley p44</p>
-</div>
-<div class="paragraph">
-<p>or translating EVM directly to the balance sheet (EVM always being a fiction and less and less useful in a digitally transforming world)</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_the_systems_problem">The systems problem</h6>
-<div class="quoteblock">
-<blockquote>
-When risk and uncertainty are present with ongoing demand, like in the case of architectural changes and related high-stake decisions, batching demand into a project for governance reasons makes sense&#8230;&#8203;
-</blockquote>
-<div class="attribution">
-&#8212; Mark Kennaley<br>
-<cite>SDLC 3.0</cite>
-</div>
-</div>
-<div class="paragraph">
-<p>Kennaley, above, provides some reasoning for project management. Ironically, he uses the term "batch," which is often a concept unfavorably viewed in Agile and Lean circles.</p>
-</div>
-<div class="paragraph">
-<p>Not all problems respond to iteration. Sometimes, deeper analysis is necessary. When a system presents multiple constraints that need to be solved simultaneously, the only way to do this with confidence may be as a "batch" of thought and analysis. If one needs to balance several competing objectives, one may need to know how a given course of action will affect all of them before embarking. Solving for one constraint (even iteratively), and embarking on a plan of action, may result in not meeting the other constraints, and having to throw the whole solution away.</p>
-</div>
-<div class="paragraph">
-<p>Dogmatic approaches to solving this are unhelpful.  Multi-constraint optimization is a known hard problem in systems engineering and cannot be wished away through merely invoking the word "Agile."</p>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_project_management_antipatterns">Project management antipatterns</h5>
-<div class="ulist">
-<ul>
-<li>
-<p>Impersonal requirements (but see Alleman)</p>
-</li>
-<li>
-<p>"nothing is real unless it&#8217;s a project"</p>
-</li>
-<li>
-<p>"Water-scrum-fall"</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>When taken to an extreme, the PMO becomes the arbiter of ALL IT investments in some organizations. Support and operational activities are chartered as long-running "projects" and staff time is billed through them (more on this in the section on Resource Management.) Essentially, this is how a program or product management approach emerges from taking the project management paradigm to an ultimate conclusion.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_scrum_of_scrums_and_its_critiques">Scrum of scrums and its critiques</h5>
-<div class="literalblock">
-<div class="content">
-<pre>identical to a chapter-based grassroots organization
-trouble is that emergent problems at each level start to distract &amp; take over by the time you are to level 3, how do you maintain "credibility" at the base ... old trade union problem ... the quest for "authenticity" and grassroots suspicion of "egghead" systems thinkers</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The concept of "scrum of scrums" may make intuitive sense, but starts to run into issues of power, hierarchy, authority, accountability, and so forth. It is mostly presented as a bottom-up structure, and there is an implication that the representatives are also practitioners. (There is a strong narrative of authenticity in the Agile community. The lack of respect for "non-coders" is pronounced.) But what happens when overriding systems concerns need to be communicated downwards in the face of team resistance? What of the "scrum of scrums" representative who is perceived (rightly or wrongly) as not advocating reliably for the team? What of the team who rotates their delegate out of well-intentioned motives related to individual empowerment, but resulting in ineffective representation?</p>
-</div>
-<div class="paragraph">
-<p>In these questions we see the overlap of Agile with seemingly distant fields such as political science, organizational leadership, and the like. These are old problems with no "solutions" - only satificing techniques.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_notes_2nd_draft_followup">Notes/2nd draft followup</h5>
-<div class="paragraph">
-<p>From project to product/service: do current service portfolio techniques have a robust time/risk dimension, like PPM? (Galleman twitter discussion 7/4)</p>
-</div>
-<div class="paragraph">
-<p>Project v program: Program: This term can describe two different situations. First, a program can be a set of goals that gives rise to specific projects, but, unlike a project, a program can never be completely accomplished. For example, a health-awareness program can never completely achieve its goal (the public will never be totally aware of all health issues as a result of a health-awareness program), but one or more projects may accomplish specific results related to the program’s goal (such as a workshop on minimizing the risk of heart disease). Second, a program sometimes refers to a group of specified projects that achieve a common goal.</p>
-</div>
-<div class="paragraph">
-<p>Portny, Stanley E. (2013-04-09). Project Management For Dummies (Kindle Locations 678-683). Wiley. Kindle Edition.</p>
-</div>
-<div class="paragraph">
-<p>Tengshe, Ash, and Scott Noble. 2007. Establishing the agile PMO: Managing variability
-across projects and portfolios. In Proceedings of the Agile 2007 Conference, ed.Jutta Eckstein, Frank Maurer, Rachel Davies, Grigori Melnik, and Gary Pollice, 188-193. IEEE Computer Society.</p>
-</div>
-<div class="paragraph">
-<p>Tengshe and Noble established the agile project management office at Capital One Auto Finance.This paper describes their experience doing so and provides good advice for transitioning a PMO from traditional to agile. (cited in <a href="#Cohn2010">[Cohn2010]</a>)</p>
-</div>
-<div class="paragraph">
-<p><a href="http://www.disciplinedagiledelivery.com/agility-at-scale/geographically-distributed-agile-teams/" class="bare">http://www.disciplinedagiledelivery.com/agility-at-scale/geographically-distributed-agile-teams/</a></p>
-</div>
-<div class="paragraph">
-<p>Investment scorecarding pseudoscience - hubbard (example in Bente p91)</p>
-</div>
-<div class="paragraph">
-<p>The concept of last responsible moment
-Systems and automation
-Skills management-10x controversy
-Processes within projects-risk, action, issue, etc</p>
-</div>
-<div class="paragraph">
-<p>idea: interview St. Thomas IT staff on moving to Office 365 (resource angle).
-The modern product manager: a purple squirrel? <a href="#Cohn2010">[Cohn2010]</a>pp130-132</p>
-</div>
-<div class="paragraph">
-<p>Centers of Excellence as resource governors&#8230;&#8203; Allocating limited resources (money, people, etc.) across all their
-possible use is an important function of CoEs. They should ensure organizations invest in the most valuable projects and create economies of scale for their
-service offering. In addition, coordination across other corporate interests is needed to enable the CoE to deliver value (from  Trebec_ITAMFromTheTrenches.pdf)</p>
-</div>
-<div class="paragraph">
-<p>How does the COE know how to prioritize?</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>https://beta-get.aptage.com/wp-content/uploads/2016/04/The-Aptage-Release-Planner-V3.pdf
-http://blackswanfarming.com/fund-the-teams-not-the-project/</pre>
-</div>
-</div>
-<div class="quoteblock">
-<blockquote>
-A holistic product-oriented approach contradicts a convenient over-simplification of IT delivery where everything is treated as a project. Such an approach is not Lean, in that treating all demand (coarse/strategic demand the same as fine-grained IT demand) amounts to batching, which creates inventory, waiting and potentially over-processing types of waste.
-</blockquote>
-<div class="attribution">
-&#8212; Mark Kennaley<br>
-<cite>SDLC 3.0</cite>
-</div>
-</div>
-<div class="paragraph">
-<p>When this chapter is refactored to Investment, forward refs to Chapter 12 Portfolio Mgmt.</p>
-</div>
-<div class="paragraph">
-<p><a id="portfolio-CoD"></a></p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>===== Portfolio Cost of Delay</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>portfolio-level  xref:portfolio-CoD[Cost of Delay] as essential to defining execution management. &lt;&lt;Reinertsen1997&gt;&gt; pp.35-38.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>===== Beneficial variability
- belongs in Ch 8 investment</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>  Whenever I am told that management makes decisions too
-slowly, I ask to see the specific proposal that went to management.
-Invariably, I discover that the cost and benefit of the decision are
-either unquantified or poorly quantified. In my experience, most
-managers make amazingly fast decisions when they are presented
-with compelling economic arguments. &lt;&lt;Reinertsen2009&gt;&gt; p52</pre>
-</div>
 </div>
 </div>
 </div>
