@@ -9618,6 +9618,9 @@ Building a scalable system does not happen by accident.
 <div class="paragraph">
 <p>There are dozens of books and articles discussing many aspects of how to scale systems. In this section, we will discuss two important principles (the CAP Principle and the AKF Scaling Cube). If you are interested in this topic in depth, check out the references in this chapter.</p>
 </div>
+<div class="paragraph">
+<p><a id="CAP-theorem"></a></p>
+</div>
 <div class="sect4">
 <h5 id="_the_cap_principle">The CAP principle</h5>
 <div class="imageblock" style="float: right">
@@ -9649,7 +9652,7 @@ Building a scalable system does not happen by accident.
 </ul>
 </div>
 <div class="paragraph">
-<p>and the CAP Principle states that it is not possible to build a distributed system that guarantees all three  <a href="#Fox1999">[Fox1999]</a>. What does this mean? First, let&#8217;s define our terms:</p>
+<p>and the CAP Principle (or Theorem) states that it is not possible to build a distributed system that guarantees all three  <a href="#Fox1999">[Fox1999]</a>. What does this mean? First, let&#8217;s define our terms:</p>
 </div>
 <div class="paragraph">
 <p><strong>Consistency</strong> means that all the servers (or "nodes") in the system see the same data at the same time. If an update is being processed, no node will see it before any other. This is often termed a transactional guarantee, and it is the sort of processing relational databases excel at.</p>

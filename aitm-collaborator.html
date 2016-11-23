@@ -4888,17 +4888,6 @@ Prep chap 6</pre>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>===== Web-scale IT</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This section as of fall 2015 is yet to be written. Will summarize key insights from the site reliability community, including Allspaw and Limoncelli.</p>
-</div>
-<div class="paragraph">
-<p><a id="CAP-theorem"></a></p>
-</div>
-<div class="literalblock">
-<div class="content">
 <pre>===== additional material</pre>
 </div>
 </div>
@@ -10849,6 +10838,9 @@ Building a scalable system does not happen by accident.
 <div class="paragraph">
 <p>There are dozens of books and articles discussing many aspects of how to scale systems. In this section, we will discuss two important principles (the CAP Principle and the AKF Scaling Cube). If you are interested in this topic in depth, check out the references in this chapter.</p>
 </div>
+<div class="paragraph">
+<p><a id="CAP-theorem"></a></p>
+</div>
 <div class="sect4">
 <h5 id="_the_cap_principle">The CAP principle</h5>
 <div class="imageblock" style="float: right">
@@ -10885,7 +10877,7 @@ Building a scalable system does not happen by accident.
 </ul>
 </div>
 <div class="paragraph">
-<p>and the CAP Principle states that it is not possible to build a distributed system that guarantees all three  <a href="#Fox1999">[Fox1999]</a>. What does this mean? First, let&#8217;s define our terms:</p>
+<p>and the CAP Principle (or Theorem) states that it is not possible to build a distributed system that guarantees all three  <a href="#Fox1999">[Fox1999]</a>. What does this mean? First, let&#8217;s define our terms:</p>
 </div>
 <div class="paragraph">
 <p><strong>Consistency</strong> means that all the servers (or "nodes") in the system see the same data at the same time. If an update is being processed, no node will see it before any other. This is often termed a transactional guarantee, and it is the sort of processing relational databases excel at.</p>
@@ -10997,6 +10989,41 @@ Building a scalable system does not happen by accident.
 </div>
 <div class="paragraph">
 <p>and much more. For further information, see <a href="#Abbot2015">[Abbot2015]</a> and <a href="#Limoncelli2014">[Limoncelli2014]</a>.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>work in process</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre> ===== Principles and techniques for scaling
+ [quote, Abbott and Fisher, The Art of Scalability]
+There may be no other principle as important to scaling a product as the ensuring that one can always scale horizontally (or out, rather
+than up).</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>A &amp; F:</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>N + 1
+Design for rollback
+Design to be disabled
+Design to be monitored (discussed previously)
+Live-live
+Tech lifecycle mgmt (forward ref)
+Asynch &amp; stateless
+scaleout
+buy not build when non-core
+use commodity hw
+small batches
+fault isolation
+automate everything</pre>
+</div>
 </div>
 </div>
 </div>
@@ -16722,6 +16749,9 @@ The iconic entrepreneur asking for one more round</pre>
 <p>The final point of this diagram: you only have so much capacity to execute the work it implies. If you have a disaster, it may impact your ability to deliver user stories, changes, or even meet transactional demand. Trade-offs must be considered.</p>
 </div>
 <div class="paragraph">
+<p>impact mapping again, at a portfolio level.cost of delay revisited&#8230;&#8203; !</p>
+</div>
+<div class="paragraph">
 <p><a id="Agile-frameworks"></a></p>
 </div>
 </div>
@@ -16921,6 +16951,22 @@ Invariably, I discover that the cost and benefit of the decision are
 either unquantified or poorly quantified. In my experience, most
 managers make amazingly fast decisions when they are presented
 with compelling economic arguments. &lt;&lt;Reinertsen2009&gt;&gt; p52</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>JADs, ARBs, technical spikes as key part of investment process... when does investment end and execution begin... it's somewhat arbitrary</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>JAD for features that "some other team would notice." &lt;&lt;Abbott2015&gt;&gt; p 237
+ARB for things "everyone else would notice"</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>synch points on a cadence</pre>
 </div>
 </div>
 </div>
