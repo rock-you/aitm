@@ -773,7 +773,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_chapter_7_learning_objectives">Chapter 7 learning objectives</a></li>
 </ul>
 </li>
-<li><a href="#_why_organization_matters">Why organization matters</a></li>
+<li><a href="#_why_organization_matters">Why organization matters</a>
+<ul class="sectlevel4">
+<li><a href="#_roles_and_responsibilities">Roles and responsibilities</a></li>
+<li><a href="#_norms_and_standards">Norms and standards</a></li>
+<li><a href="#_hard_v_soft_teams">Hard v soft teams</a></li>
+<li><a href="#_how_large_shd_teams_be">how large shd teams be</a></li>
+</ul>
+</li>
 <li><a href="#_organizational_transition_and_the_spotify_model">Organizational transition and the Spotify model</a></li>
 <li><a href="#_organizational_theory">Organizational theory</a></li>
 <li><a href="#_product_and_function">Product and function</a>
@@ -1866,6 +1873,18 @@ The digital realm is infusing the physical realm, like tea in hot water.
 </div>
 <div class="paragraph">
 <p>The role of information technology seems critical to society and the economy, but there are various points of view. Nicholas Carr, in his controversial <em>Harvard Business Review</em> article "IT Doesn&#8217;t Matter," recognized that IT was becoming commoditized in an important sense <a href="#Carr2003">[Carr2003]</a>. As Cloud providers started to offer utility-style computing, the choice of particular vendors of computers was no longer strategic. Looking to history, Carr argued that just as businesses no longer have “Vice Presidents for Electricity,” so businesses no longer need Chief Information Officers or dedicated IT departments.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+A "commodity" product is one that is offered from a variety of suppliers, with little or no difference between their offerings. Commodity products tend to compete on price, not on differences in features. Wheat is a commodity. Sports cars are not. "Commoditization" is the process by which products that used to compete by being different, increasingly compete on price.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Carr has insight&#8201;&#8212;&#8201;there is no question IT is becoming pervasive&#8201;&#8212;&#8201;but he ultimately reflects a narrow view of what “IT” is. If “IT” were merely computation at the lowest level&#8201;&#8212;&#8201;just shuffling bits of information around, doing a little math&#8201;&#8212;&#8201;then perhaps it could be embedded throughout a business like electricity.</p>
@@ -3797,7 +3816,7 @@ The state of the art in infrastructure configuration is not to use shell scripts
 <p>Configuration management is a critically important practice in digital systems, and has always been so. How it is performed has evolved over time. At this stage in our journey, we are one or two people in a startup, working with digital artifacts such as our <a href="#infra-code-example">iac.sh example</a> discussed in the previous section.</p>
 </div>
 <div class="paragraph">
-<p>One or two people can achieve an impressive amount with modern digital platforms. But the work is complex. Tracking and controlling your work products as they evolve through change after change is important from day one of your efforts. It&#8217;s not something you want to put off to "later when I have time." This applies to computer code, configurations, and increasingly even documentation (often written in a lightweight markup language like Markdown or Asciidoc). In terms of infrastructure, configuration management requires two capabilities:</p>
+<p>One or two people can achieve an impressive amount with modern digital platforms. But the work is complex. Tracking and controlling your work products as they evolve through change after change is important from day one of your efforts. It&#8217;s not something you want to put off to "later when I have time." This applies to computer code, configurations, and increasingly even documentation (often written in a lightweight markup language like Markdown or Asciidoc). In terms of infrastructure, configuration management requires three capabilities:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -4121,7 +4140,7 @@ Implement version control for all production artifacts.
 <div class="content">
 <div class="title">A simple example of “declarative” vs “imperative”</div>
 <div class="paragraph">
-<p><strong>Declarative:</strong> Our refrigerator should always have a gallon of milk in it.”</p>
+<p><strong>Declarative:</strong> "Our refrigerator should always have a gallon of milk in it.”</p>
 </div>
 <div class="paragraph">
 <p><strong>Imperative:</strong> “Go out the door, take a right, take a left, go into the building with a big ‘SA’ on it, go in to the last aisle, take a left, go to the third case and take the first container on the fourth shelf from the bottom. Give money to the cashier and bring the container back home.”</p>
@@ -9591,7 +9610,7 @@ Building a scalable system does not happen by accident.
 <p>Scaling digital systems used to imply acquiring faster and more powerful hardware and software. If a 4-core server with 8 gigabytes of RAM isn&#8217;t enough, get a 32-core server with 256 gB of RAM (and upgrade your database software accordingly, for millions of dollars more). This kind of scaling is termed "vertical" scaling. However, web-scale companies such as Facebook and Google determined that this would not work indefinitely. Infinitely scaling vertically is not physically (or financially) possible. Instead, these companies began to experiment aggressively with using large numbers of inexpensive commodity computers.</p>
 </div>
 <div class="paragraph">
-<p>The advantage to scaling vertically is that all your data can reside on one server, with fast and reliable access. As soon as you start to split your data across servers, you run into the problems of the CAP principle.</p>
+<p>The advantage to scaling vertically is that all your data can reside on one server, with fast and reliable access. As soon as you start to split your data across servers, you run into the practical implications of the CAP principle.</p>
 </div>
 <div class="paragraph">
 <p>CAP stands for:</p>
@@ -9610,10 +9629,7 @@ Building a scalable system does not happen by accident.
 </ul>
 </div>
 <div class="paragraph">
-<p>and the CAP Principle states that it is not possible to build a distributed system that guarantees all three  <a href="#Fox1999">[Fox1999]</a>.</p>
-</div>
-<div class="paragraph">
-<p>What does this mean? First, let&#8217;s define our terms:</p>
+<p>and the CAP Principle states that it is not possible to build a distributed system that guarantees all three  <a href="#Fox1999">[Fox1999]</a>. What does this mean? First, let&#8217;s define our terms:</p>
 </div>
 <div class="paragraph">
 <p><strong>Consistency</strong> means that all the servers (or "nodes") in the system see the same data at the same time. If an update is being processed, no node will see it before any other. This is often termed a transactional guarantee, and it is the sort of processing relational databases excel at.</p>
@@ -10286,7 +10302,17 @@ For a lot of your employees, growing out of this phase will be a welcome develop
 <p>How are you going to organize? More importantly, how are you going to think about organizing? This is a hard question. It’s important to get organization right, and the question never goes away. There is a lot of theory, history, and advice available on to how to organize your company.</p>
 </div>
 <div class="paragraph">
-<p>This is not a general business school textbook, or even  a textbook on startups and entrepreneurship. However, in the current environment, it is essential for technologists, no matter how specialized, to understand the general context they are operating in. In one chapter, we cannot cover much, but there’s an increasing consensus that the choice of organizational form has a fundamental impact on the success of IT-based product delivery.</p>
+<p>This is not a general business school textbook, or even  a textbook on startups and entrepreneurship. However, in the current environment, it is essential for the digital professional, no matter how specialized, to understand the general context they are operating in. In one chapter, we cannot cover much, but there’s an increasing consensus that the choice of organizational form has a fundamental impact on the success of IT-based product delivery.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Sense of ownership is at risk of fading as the org fragments and the artifacts grow</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>The team remains the highest-value logical unit &amp; must be protected - we didn't talk about pigs / chickens previously</pre>
+</div>
 </div>
 <div class="paragraph">
 <p>In keeping with our <a href="#0.01-emergence">evolutionary approach</a>, let’s assume you’ve been fairly ad-hoc in your organizational structure up to now, doing your best to avoid specialization. Perhaps you’ve even been working as a collective. Nevertheless, you’ve needed a variety of skills to get this far in your journey: you are certainly not all Java programmers!</p>
@@ -10314,6 +10340,43 @@ For a lot of your employees, growing out of this phase will be a welcome develop
 </div>
 <div class="paragraph">
 <p>As noted at the  <a href="#1.01.02-IT-as-function-2">outset</a>, IT has certain unchanging aspects regardless of whether is a separate or embedded organization. However, the purpose of this chapter is to help you think carefully about this very question.</p>
+</div>
+<div class="sect4">
+<h5 id="_roles_and_responsibilities">Roles and responsibilities</h5>
+<div class="quoteblock">
+<blockquote>
+Some of the most important factors that organizational structure can affect are com
+munication, efficiency, standards, quality, and ownership.
+</blockquote>
+<div class="attribution">
+&#8212; abbott
+</div>
+</div>
+<div class="paragraph">
+<p>RACI</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_norms_and_standards">Norms and standards</h5>
+<div class="paragraph">
+<p>importance of -
+increase effectiveness and efficiency</p>
+</div>
+<div class="paragraph">
+<p>xref to architecture</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_hard_v_soft_teams">Hard v soft teams</h5>
+<div class="paragraph">
+<p>Long-tenured and highly experi
+enced teams require less overhead from management and less communication inter
+nally to perform their responsibilities. (abbott p 45)</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_how_large_shd_teams_be">how large shd teams be</h5>
+
 </div>
 </div>
 <div class="sect3">
