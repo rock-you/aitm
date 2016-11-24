@@ -49,6 +49,12 @@ anchor:custom-monitoring[]
 
 ===== Designing operations into products
 
+[quote, Abbott and Fisher, The Art of Scalability]
+Just as Agile software development methods attempt to solve the problem associated
+with not knowing all of your requirements before you develop a piece of software,
+so must we have an agile and evolutionary development mindset for our monitor
+ing platforms and systems.
+
 Monitoring tools, out of the box, can provide ongoing visibility to well understood aspects of the digital product: the performance of infrastructure, the capacity utilized, and well understood, common failure modes (such as a network link being down.) However, the digital product or application also needs to provide its own specific telemetry in various ways. This can be done through logging to output files, or in some cases through raising alerts via the network.
 
 .Custom software requires custom monitoring
@@ -59,6 +65,8 @@ A typical way to enable custom monitoring is to first use a standard logging lib
  APP-ERR-SEV1-946: Unresolvable database consistency issues detected, terminating application.
 
 into the log, the monitoring tool can be configured to recognize the severity of the message and immediately raise an alert.
+
+Finally, as the quote at the beginning of this section suggests, it is critical that the monitoring discipline be based on continuous improvement. Keeping monitoring techniques current with your operational challenges is a never-ending task. Approaches that worked well yesterday, today generate too many false positives, and your operations team is now overloaded with all the noise. Ongoing questioning and improvement of your approaches is essential to keeping your monitoring system optimized for managing business impact as efficiently and effectively as possible. 
 
 ===== Aggregation and operations centers
 

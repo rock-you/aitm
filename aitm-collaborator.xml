@@ -1,0 +1,1215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<?asciidoc-toc?>
+
+<book lang="en">
+<bookinfo>
+    <title>The digital professional: from startup to enterprise (Collaborative Draft)</title>
+    <author>
+        <firstname>Charles</firstname>
+        <othername>T.</othername>
+        <surname>Betz</surname>
+    </author>
+    <authorinitials>CTB</authorinitials>
+</bookinfo>
+<preface>
+<title></title>
+<informalfigure>
+<mediaobject>
+  <imageobject>
+  <imagedata fileref="images/emergence.png"/>
+  </imageobject>
+  <textobject><phrase>emergence</phrase></textobject>
+</mediaobject>
+</informalfigure>
+<warning><simpara>This is the messy collaborative draft. It&#8217;s full of notes and half-baked stuff. If you&#8217;re not interested in this book&#8217;s development, you should read (as appropriate) either:<?asciidoc-br?>
+<?asciidoc-br?>
+the <ulink url="http://dm-academy.github.io/aitm/aitm-instructor.html">Instructor&#8217;s Edition</ulink><?asciidoc-br?>
+<?asciidoc-br?>
+the <ulink url="http://dm-academy.github.io/aitm/index.html">Student Edition</ulink></simpara></warning>
+</preface>
+<chapter id="Praise">
+<title>Praise for this book</title>
+<simpara><emphasis>Agile IT Management is a perfect fit for my Management Information Systems class to introduce students to the fast-paced world of IT Infrastructure that they will be dealing with shortly upon graduation.  This book uses multiple perspectives (Founder, Team Leader, VP, C-level executive) to demonstrate to the student not only how a business grows, but how they need to continually grow their skill set.  The use of hands-on exercises encouraged by the format of this book complements my teaching style that allows students to learn by doing, failing and doing again.  An additional benefit is that this book begins with a focus on the startup mentality which I will use in my Business Innovation class.</emphasis></simpara>
+<simpara><emphasis>Prof. Pat Paulson, Winona State University</emphasis></simpara>
+</chapter>
+<chapter id="Copyright">
+<title>Copyright</title>
+<simpara>The digital professional: From startup to enterprise</simpara>
+<simpara>Published by Digital Management Academy, LLC<?asciidoc-br?>
+14 Sidney Place<?asciidoc-br?>
+Minneapolis, MN  55414</simpara>
+<simpara>Copyright © 2016 by Charles T. Betz</simpara>
+<simpara>All rights reserved, for information about permission to reproduce selections from this book, write to Permissions, Digital Management Academy LLC,
+14 Sidney Place, Minneapolis, MN  55414</simpara>
+<simpara>First Edition</simpara>
+<simpara>Produced in the United States of America</simpara>
+<simpara>Cover illustration by Go To Media, LLC</simpara>
+<simpara>ISBN: 978-0-9981346-0-4</simpara>
+<simpara>Publisher&#8217;s note to readers:
+Although the author and publisher have made every effort to ensure that the information in this book was correct at press time, the author and publisher do not assume and hereby disclaim any liability to any party for any loss, damage, or disruption caused by errors or omissions, whether such errors or omissions result from negligence, accident, or any other cause.</simpara>
+<simpara>For information about special discounts for bulk purchases or for information on booking authors for an event, please visit www.dm-academy.com.</simpara>
+</chapter>
+<dedication id="Dedication">
+<title>Dedication</title>
+<simpara><emphasis>To my students</emphasis></simpara>
+</dedication>
+<preface id="Preface">
+<title>Preface</title>
+<simpara>In 2013, I was approached by Dr. Bhabani Misra, the head of the Graduate Programs in Software at the University of St. Thomas in St. Paul. Dr. Misra asked me to teach an "IT Infrastructure" course (SEIS660), focusing on the Information Technology Infrastructure Library, or ITIL.</simpara>
+<simpara>The first semester of the class was well received enough for me to be invited back. However, there were complaints from the students that it was too "theoretical." I was attempting to teach using an enterprise architecture style, with lots of abstractions, that just was not engaging students effectively.</simpara>
+<simpara>I also had a team project approach that immediately started the students out as the IT leadership team of a large corporation. This generated feedback that the students wanted something more practical; they were not going to be immediately hired as senior executives!</simpara>
+<simpara>I took this feedback seriously. I especially gave thought to a practical aspect, and so started to develop a lab component. This was and is popular with the students. I also started to think about different approaches for structuring the class that would make more sense for a survey class with a wide spectrum of experience.</simpara>
+<simpara>For three semesters I assigned my first book (<emphasis>Architecture and Patterns for IT: Service Management, Resource Planning, and Governance</emphasis>) as a required text for the class. However, I did not write this as a textbook and its limitations became clearer and clearer. It has a strongly architectural approach, approaching the IT management problem as a series of <ulink url="https://en.wikipedia.org/wiki/4%2B1_architectural_view_model">views on a model</ulink>. I do not recommend this as a pedagogical approach for a survey class.</simpara>
+<simpara>I approached my publisher with the idea of a 3rd edition that would pivot the existing material towards being something more useful in class. They agreed to this and I started the rewrite.</simpara>
+<simpara>However, by the time I was halfway done with the first draft, I had a completely new book. Material from the previous work simply did not fit the emergence model used to structure the narrative.</simpara>
+<simpara>A number of factors converged at this point:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+My view that the "medium is the message" and this extends to choice of authoring approach, intellectual property, DRM, and publisher
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Contacts with local and international faculty and thought leaders, and a desire to openly collaborate with them on making the book as good as possible
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+A desire to freely share at least a rough version of the book, both for marketing purposes and in the interests of giving back to the global IT community
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+A desire to be able to rapidly update the book with as little friction as possible
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+A practical realization that the book might get more uptake globally if available at least in some form as free and open source IP
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+The fact I had already started to <ulink url="https://github.com/StThomas-SEIS660">publish my labs on Github</ulink>, and had in fact had developed a workable continuous delivery ("DevOps") toolchain (the <ulink url="https://github.com/CharlesTBetz/Calavera">Calavera project</ulink>, which has attracted collaborators from the US, Spain, and Israel).
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Many have assisted with this work:</simpara>
+<simpara>Thanks to Dr. Bhabani Misra for asking me to teach at the University of St. Thomas and providing direction at key points.</simpara>
+<simpara>Thanks to Stephen Fralippolippi and Roger K. Williams for being the first Github contributors.</simpara>
+<simpara>Thanks to Jason Baker for text and technical collaboration.</simpara>
+<simpara>Thanks to Mark Kennaley for guidance on open versus closed loop thinking.</simpara>
+<simpara>Thanks to Glen Alleman for guidance on modern project management practices.</simpara>
+<simpara>Thanks to Jeff Sussna for ongoing inspiration, Twitter feedback, discussion question ideas, and sourced quotes.</simpara>
+<simpara>Thanks to Nicole Forsgren for links to articles on performance management.</simpara>
+<simpara>Thanks to Evan Leybourn for detailed commentary on project management/Chapter 8.</simpara>
+<simpara>Thanks to Chris Little and Jabe Bloom for quote provenance.</simpara>
+<simpara>Thanks to Lorin Hochstein for references.</simpara>
+<simpara>Thanks to Gene Kim for ongoing mentoring and advice on writing and publishing, and unwavering support and confidence in my efforts.</simpara>
+<simpara>Thanks to the Go to Marketing team (Will Goddard, Terry Brown, Francisco Piniero) for design assistance and invaluable partnership.</simpara>
+<simpara>Thanks to Professor Pat Paulson for being the first adopter of the textbook, and thanks to his students for invaluable criticism and feedback.</simpara>
+</preface>
+<chapter id="Instructor-intro">
+<title>Introduction to the Instructor&#8217;s Edition</title>
+<simpara>Welcome to Agile IT Management: From Startup to Enterprise. So, what exactly IS this textbook, anyhow?</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+It is the first general, survey-level text on IT management with a specific Agile, Lean IT, and DevOps orientation.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+It has a unique and innovative narrative structure based on the concept of organizational evolution and scaling.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+It both covers and is written using Agile, Lean, and continuous delivery techniques.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Because it is written with continuous integration and print on demand techniques, it can be continually updated to reflect current industry trends.
+</simpara>
+</listitem>
+</itemizedlist>
+<section id="_the_it_industry_and_the_rise_of_digital">
+<title>The IT industry, and the rise of digital</title>
+<blockquote>
+<attribution>
+Darrell Rigby et al
+<citetitle>Harvard Business Review</citetitle>
+</attribution>
+<simpara>Now agile methodologies—which involve new values, principles, practices, and benefits and are a radical alternative to command-and-control-style management—are spreading across a broad range of industries and functions and even into the C-suite.</simpara>
+</blockquote>
+<simpara>As an instructor, I ask you to consider these two industry reports:</simpara>
+<simpara>In September 2015, Minneapolis-based Target Corporation laid off 275 workers with IT skillsets such as business analysis and project management, while simultaneously hiring workers with newer “Agile” skills. As quoted by a local news site, Target stated:</simpara>
+<sidebar>
+<simpara>“As a part of our transition to an Agile technology development and support model, we conducted a comprehensive review of our current structure and capabilities… we are eliminating approximately 275 positions and closing an additional 35 open positions. The majority of the impact was across our technology teams and was primarily focused on areas such business analysis and project management.” <xref linkend="KARE2015"/></simpara>
+</sidebar>
+<simpara><anchor id="fowler-quote" xreflabel="[fowler-quote]"/></simpara>
+<simpara>Jim Fowler, Chief Information Officer at General Electric, says:</simpara>
+<sidebar>
+<simpara>“When I am in business meetings, I hear people talk about digital as a function or a role. It is not. Digital is a capability that needs to exist in every job. Twenty years ago, we broke ecommerce out into its own organization, and today ecommerce is just a part of the way we work. That&#8217;s where digital and IT are headed; IT will be no longer be a distinct function, it will just be the way we work. …</simpara>
+<simpara>[W]e&#8217;ve moved to a flatter organizational model with "teams of teams" who are focused on outcomes. These are colocated groups of people who own a small, minimal viable product deliverable that they can produce in 90 days. The team focuses on one piece of work that they will own through its complete lifecycle…in [the “back office”] model, the CIO controls infrastructure, the network, storage, and makes the PCs run. The CIOs who choose to play that role will not be relevant for long…” <xref linkend="Heller2016"/></simpara>
+</sidebar>
+<simpara>Modern Information Systems texts, especially at the undergraduate, survey level, take an "outside-in" approach to the course material, seeking to orient <emphasis role="strong">all</emphasis> students (whether IT/MIS specialists or not) as to the role and function of information systems and their possibilities and value in the modern enterprise. This book, by contrast, is an "inside-out" book, intended to prepare the student for a career in digital industry. “Industry” is broadly defined as both those industries that offer digital products <emphasis>per se</emphasis>, as well as industries that rely on digital technology instrumentally for delivering all kinds of products. A central theme of the book is that “IT,” considered as a component, represents an increasing proportion of ALL industrial products (both consumer and business facing). This is known as "digital transformation."</simpara>
+<simpara>Current MIS survey texts have some common characteristics:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+They tend to focus on the largest organizations, and their applications of computing. This can lead to puzzling topic choices; for example, in one text, one of the first sections is dedicated to the problem of enterprise IT asset management - a narrow topic for the earlier sections of a survey course, and increasingly irrelevant in the age of Cloud.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Their learning progression (structure and narrative) is often arbitrary, e.g., covering "databases," "networking," "ERP systems," "security," and so forth in various orderings.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+They do not (and this is a primary failing) cover Agile and its associated digital ecosystem at all well. Brief mentions of Agile may appear in sections on project management, but in general there is a lack of awareness of the fundamental characteristics of digital transformation, and the critical role of Agile and related methods to accelerating digital transformation.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Their coverage of Cloud infrastructure also tends to be limited, even with new editions coming out every year.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Finally, current texts often uncritically accept and cite "best practice" IT frameworks such as CMMI, ITIL, PMBOK, and COBIT. New digital organizations do not, in general, use such guidance and the industry at this writing is rife with controversy as to the value and future of these frameworks. This book provides a clear and objective overview of these critical issues.
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>IT, or the digital function, has had a history of being under-managed and poorly understood relative to peer functions in the enterprise. It struggles with a reputation for expensive inflexibility and Dilbert-esque dysfunction. The DevOps and Agile movements promise transformation, but are encountering an entrenched legacy of:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+enterprise architecture,
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+program and project management,
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+business process management,
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+IT service management practices, and
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+IT governance concerns
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Understanding and engaging with the challenges of this legacy are an ongoing theme throughout this introductory text. Some of the more radical voices in the Agile movement sometimes give the impression that the legacy can be simply swept away. The following cautionary message from Mike Burrows shows that, in terms of core Agile philosophy, this would be ill-advised:</simpara>
+<simpara><emphasis>“…some will tell you that when things are this bad, you throw it all away and start again. It&#8217;s ironic: The same people who would champion incremental and evolutionary approaches to product development seem only too eager to recommend disruptive and revolutionary changes in people-based systems – in which the outcomes are so much less certain.”</emphasis> <xref linkend="Burrows2014"/>, Kindle Locations 827-829.</simpara>
+<simpara>IT management at scale within an organization is a complex system. The IT workforce and its ongoing development (through education and training) is another complex system orders of magnitude larger. Complex systems do not respond well to dramatic perturbations. They are best changed incrementally, with careful monitoring of the consequences of each small change. (This is part of the systems theory foundation underlying the Agile movement.) This is why the book, especially in the later chapters, starts with relatively straightforward and uncritical presentations of the following topics:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+Investment, sourcing, and people
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Project and process management
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Governance, risk, security, and compliance
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Enterprise information management
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Enterprise architecture and portfolio management
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>While these practices, and their associated approaches and policies, have caused friction with digital and Agile practitioners, they all have their reasons for existing. The goal of this book is to understand their interaction with the new digital approaches, but in order to do this we must first understand them on their own terms. It does no good to develop a critique based on misconceptions or exaggerations about what (for example) "process management" or "governance" is all about. Instead, we try to break these large and sometimes controversial topics down into smaller, more specific topics - "lowest common denominators," perhaps:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+Work and effort
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Ordering of tasks
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Task dependencies
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Planned versus unplanned work
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Estimation versus commitment
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Value stream versus skill alignment
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Repeatability
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Defined versus empirical process control
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Synchronization and cadence
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Resource demand
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Shared mental models
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Mission objectives versus perimeter defense
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Technical debt
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Risk
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>and so forth. By examining IT management in these more neutral, specific terms, we can develop a responsible critique of current industry "best practices" in content and form that will benefit students as they go out on their careers.</simpara>
+<simpara><anchor id="0.01-emergence" xreflabel="[0.01-emergence]"/></simpara>
+</section>
+<section id="_a_process_of_emergence">
+<title>A process of emergence</title>
+<blockquote>
+<attribution>
+Steve Blank
+<citetitle>The Four Steps to Epiphany</citetitle>
+</attribution>
+<simpara>Joseph Campbell popularized the notion of an archetypal journey that recurs in the mythologies and religions of cultures around the world. From Moses and the burning bush to Luke Skywalker meeting Obi wan Kenobi, the journey always begins with a hero who hears a calling to a quest&#8230;<?asciidoc-br?>
+<?asciidoc-br?>
+The hero’s journey is an apt way to think of startups. All new companies and new products begin with an almost mythological vision— a hope of what could be, with a goal few others can see&#8230; <?asciidoc-br?>
+<?asciidoc-br?>
+Most entrepreneurs feel their journey is unique. Yet what Campbell perceived about the mythological hero’s journey is true of startups as well: However dissimilar the stories may be in detail, their outline is always the same.</simpara>
+</blockquote>
+<blockquote>
+<attribution>
+John Gall
+<citetitle>The Systems Bible</citetitle>
+</attribution>
+<simpara>A complex system that works is invariably found to have evolved from a simple system that worked. A complex system designed from scratch never works and cannot be patched up to make it work. You have to start over, beginning with a working simple system.</simpara>
+</blockquote>
+<simpara>One of the most important and distinguishing features of this book is its "emergence model." In keeping with the entrepreneurial spirit of works like Ries' <ulink url="http://www.amazon.com/dp/0307887898/"><emphasis>The Lean Startup</emphasis>,</ulink> the book adopts a progressive, evolutionary approach. The student&#8217;s journey through it reflects a process of emergence. Such processes are often associated with founding and scaling a startup. There are many helpful books on this topic, such as:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+<ulink url="http://www.amazon.com/Nail-then-Scale-Entrepreneurs-Breakthrough/dp/0983723605"><emphasis>Nail it then scale it</emphasis></ulink> by Furr and Ahlstrom
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+<ulink url="http://www.amazon.com/Scaling-Up-Companies-Rockefeller-Habits-ebook/dp/B00O5RR7QO/"><emphasis>Scaling Up</emphasis></ulink> by Harnish
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+<ulink url="http://www.amazon.com/Startup-CEO-Scaling-Business-Website/dp/1118548361"><emphasis>Startup CEO</emphasis></ulink> by Blumberg
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+<ulink url="http://www.amazon.com/The-Lean-Startup-Entrepreneurs-Continuous/dp/0307887898/ref=pd_bxgy_14_img_y"><emphasis>The Lean Startup</emphasis></ulink> by Ries
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>The emergence model and overall book structure is discussed in depth in the main introduction. Here for the instructor are some notes on the thought process. I have spent considerable time thinking (agonizing) about the correct ordering of the chapters within these sections. This is possibly the tenth or twelfth version of the chapter ordering. This is an area where I want critical review, but also have strong opinions.</simpara>
+<simpara>There is benefit to restricting the chapters to 12, as a typical semester runs 14 weeks and the book then fits quite nicely, with one chapter per class and allowing for an introductory session and final exam. (Trying to modfiy the semester system is out of scope for this project.) Of course, a two-semester series, with 2 weeks per chapter, would also work well; each half of the book is also a logical unit.</simpara>
+<simpara>The governing thought experiment is, "what would I turn my attention to next as my IT-based concerns scale up?" For example, I think work management (implying rudimentary workflow, e.g. Kanban) correctly comes before formalized project and/or process management, which in turn tend to emergence before enterprise governance practices (e.g. formalized risk management).</simpara>
+<simpara>Note that this would be a testable and falsifiable hypothesis, if empirical research were done to inventory and characterize organization scaling patterns. If we found (for example) that a majority of organizations formalize governance, risk, security and compliance practices before formalizing project management, that would indicate that those chapters should be re-ordered. In my experience, small/medium businesses may have some formal IT project management capability but governance, risk, and compliance  are still tacit, not formalized. This does not mean that GRC is not a concern, but they have not yet instituted formal policy management, internal audit, or controls.</simpara>
+<simpara>The presence of Product Management at an early stage is intended to provoke. Product management is poorly addressed in most current CSci/MIS/IT education, as well as the reigning industry standards. Yet formalizing it is one of the earliest concerns for a startup, and the imperatives of the product vision drive all that comes after. Evidence to this effect is seen (as of 2015) at the University of California at Berkeley I-School, which has replaced its Project Management course with <ulink url="http://www.ischool.berkeley.edu/courses/i290m-lapm">Lean/Agile Product Management</ulink>, taught currently by the esteemed Jez Humble, author of <emphasis>Continuous Delivery</emphasis>.</simpara>
+<simpara>Also, you may notice that <emphasis role="strong">the chapter titles don&#8217;t necessarily reflect "Agile" terminology</emphasis>. This is also deliberate, as students are going into a diverse world of much long-established IT. Furthermore, putting "Agile" as a qualifier on each chapter seems gratuitous (e.g. "Agile Operations Management" instead of just "Operations Management.") The first word of the book&#8217;s title is "Agile." That declares the orientation, and the proof will be in the reading. My intent is to involve experienced Agile practitioners in contributing to the sections most relevant to them, and I anticipate a high quality end result that is recognizably supportive of the Agile movement&#8217;s goals and ambitions.</simpara>
+<simpara>The book however is not a complete dismissal of older models of IT delivery. Wherever possible, Agile is presented as an evolutionary step relative to what has gone before. The specifics of "what&#8217;s different" are identified, in the interest of de-mystifying what can be a fraught and quasi-religious topic. In the words of Don Reinertsen, you can have "faith based Agile or science based Agile." This book is strictly interested in the latter. Pointers to relevant theory are included, although this is NOT a theoretical text. That may come later.</simpara>
+<simpara><emphasis role="strong">This emergence model can also be understood as an individual&#8217;s progression within a larger enterprise.</emphasis> Even if one starts from Day 1 at a Fortune 100 corporation, I believe the progression of one&#8217;s understanding still progresses through individual, to team, to "team of teams," to enterprise. Of course, one may cease evolving one&#8217;s understanding at any of these stages, with corresponding implications for one&#8217;s career.</simpara>
+<simpara>Some of you may be familiar with the idea of a Minimum Viable Product, Minimum Marketable Release, or similar. In these terms, it is important to understand that each <emphasis role="strong">section</emphasis> of the book represents an MVP, but not each chapter. One can&#8217;t begin to deliver IT value without the components discussed in each of Chapters 1-3. The chapters of each section tend to be interdependent, in other words.</simpara>
+<simpara>Each chapter flows in a roughly "top-down" fashion:</simpara>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>
+"Business" concerns (value, motivation)
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+"Process" concerns (execution, flow)
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Lean, Agile, and DevOps perspectives as appropriate
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+"System" concerns (information &amp; automation)
+</simpara>
+</listitem>
+</orderedlist>
+<simpara>This book does not cover specific technologies in any depth. Many examples are used, but carefully framed to not require previous expertise. This is about broader, longer-lifecycle trends.</simpara>
+</section>
+<section id="_labs">
+<title>Labs</title>
+<simpara>With three chapters in each section, the book can be covered in one intense semester at a chapter a week, although expanding it to a two-semester treatment would allow for more in-depth coverage and increased lab exposure.</simpara>
+<simpara>I give great credit to both my first cohort of students and Dr. Bhabani Misra for challenging me to add a practical component to the course. This required new thinking on my part. How to demonstrate IT management at scale in a lab setting? I have learned that a hands on component is critical, as IT management discussions can be  abstract and meaningless to many students. (”Incidents are different from Problems!”)</simpara>
+<simpara>Ten years ago, the best that would have been possible would be paper case studies, perhaps augmented with spreadsheets. But new options are now available. The power of modern computers (even lightweight laptops) coupled with the widespread availability of open source software, makes it is now possible to expose students to industrial computing in a meaningful, experiential way.</simpara>
+<simpara>I have found great utility in the use of lightweight virtualization technologies such as Vagrant, Virtualbox and Docker.  I recommend this approach wholeheartedly. I am always interested in hearing from other instructors who are working from the same approach. At this writing I maintain my labs publicly on Github.  My syllabus and lab structure is under continual improvement. This is my current aspirational plan.</simpara>
+<informaltable
+frame="all"
+rowsep="1" colsep="1"
+>
+<tgroup cols="5">
+<colspec colname="col_1" colwidth="20*"/>
+<colspec colname="col_2" colwidth="20*"/>
+<colspec colname="col_3" colwidth="20*"/>
+<colspec colname="col_4" colwidth="20*"/>
+<colspec colname="col_5" colwidth="20*"/>
+<thead>
+<row>
+<entry align="left" valign="top">Lecture</entry>
+<entry align="left" valign="top">Topic</entry>
+<entry align="left" valign="top">Business lab </entry>
+<entry align="left" valign="top">Technical lab </entry>
+<entry align="left" valign="top">Team size</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara>Course introduction</simpara></entry>
+<entry align="left" valign="top"><simpara>Structure, approach</simpara></entry>
+<entry align="left" valign="top"><simpara>None</simpara></entry>
+<entry align="left" valign="top"><simpara>SSH &amp; workstation setup</simpara></entry>
+<entry align="left" valign="top"><simpara>Individual</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top" namest="col_1" nameend="col_5"><simpara>Part I: FOUNDER</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Chapter 1</simpara></entry>
+<entry align="left" valign="top"><simpara>IT value</simpara></entry>
+<entry align="left" valign="top"><simpara>Defining an IT product - review SaaS examples</simpara></entry>
+<entry align="left" valign="top"><simpara>Linux command line</simpara></entry>
+<entry align="left" valign="top"><simpara>2</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Chapter 2</simpara></entry>
+<entry align="left" valign="top"><simpara>IT Infrastructure</simpara></entry>
+<entry align="left" valign="top"><simpara>Reviewing current IaaS offerings</simpara></entry>
+<entry align="left" valign="top"><simpara>Cloud and infrastructure as code - configuring a Vagrant machine manually &amp; w/script that is checked into Github &amp; modified</simpara></entry>
+<entry align="left" valign="top"><simpara>2</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Chapter 3</simpara></entry>
+<entry align="left" valign="top"><simpara>Applications</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>Continuous delivery pipeline</simpara></entry>
+<entry align="left" valign="top"><simpara>2</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top" namest="col_1" nameend="col_5"><simpara>Part II: TEAM</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Chapter 4</simpara></entry>
+<entry align="left" valign="top"><simpara>Product management</simpara></entry>
+<entry align="left" valign="top"><simpara>User stories. Fail fast/risk mgmt</simpara></entry>
+<entry align="left" valign="top"><simpara>Behavior-driven development</simpara></entry>
+<entry align="left" valign="top"><simpara>6-8</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Chapter 5</simpara></entry>
+<entry align="left" valign="top"><simpara>Work management</simpara></entry>
+<entry align="center" valign="top" namest="col_3" nameend="col_4"><simpara>Scrum, ticketing and kanban</simpara></entry>
+<entry align="left" valign="top"><simpara>6-8</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Chapter 6</simpara></entry>
+<entry align="left" valign="top"><simpara>Operations management</simpara></entry>
+<entry align="left" valign="top"><simpara>Service definition</simpara></entry>
+<entry align="left" valign="top"><simpara>Monitoring (Calavera + Nagios)</simpara></entry>
+<entry align="left" valign="top"><simpara>6-8</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top" namest="col_1" nameend="col_5"><simpara>Part III: TEAM OF TEAMS</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Chapter 7</simpara></entry>
+<entry align="left" valign="top"><simpara>Organizational structure</simpara></entry>
+<entry align="left" valign="top"><simpara>Organizational forms &amp; communication channels (paper exercise?)</simpara></entry>
+<entry align="left" valign="top"><simpara>Continue Nagios</simpara></entry>
+<entry align="left" valign="top"><simpara>&gt;11 (full class)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Chapter 8</simpara></entry>
+<entry align="left" valign="top"><simpara>Project &amp; resource management</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>Open-source project tool</simpara></entry>
+<entry align="left" valign="top"><simpara>&gt;11 (full class)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Chapter 9</simpara></entry>
+<entry align="left" valign="top"><simpara>Process management</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>Open-source ITSM suite</simpara></entry>
+<entry align="left" valign="top"><simpara>&gt;11 (full class)</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top" namest="col_1" nameend="col_5"><simpara>Part IV: ENTERPRISE</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Chapter 10</simpara></entry>
+<entry align="left" valign="top"><simpara>Security, governance, risk, and compliance</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>Scanning VMs for vulnerabities with Lynis</simpara></entry>
+<entry align="left" valign="top"><simpara>5</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Chapter 11</simpara></entry>
+<entry align="left" valign="top"><simpara>Enterprise Information Management</simpara></entry>
+<entry align="left" valign="top"><simpara>Data and records management exercises</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>5</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Chapter 12</simpara></entry>
+<entry align="left" valign="top"><simpara>Architecture and portfolio</simpara></entry>
+<entry align="left" valign="top"><simpara>Portfolio investment simulation exercise</simpara></entry>
+<entry align="left" valign="top"><simpara></simpara></entry>
+<entry align="left" valign="top"><simpara>5</simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+<simpara>I use a central server in teaching my classes, but even that is not necessary. This class can be taught with a zero computing budget, assuming that each team of students at least has access to a modern laptop and a fast Internet connection. As of this writing, I am using free and open source versions of Chef, Jenkins, iTOP, jUnit, Ant, and other tools (see github for the current approach).</simpara>
+<simpara>Some may question the inclusion of command-line experience, but without some common technical platform it is hard to provide a meaningful “hands-on” experience in the first half of the course. I structure my class on the assumption that the students are at least willing to learn computing techniques, with no prerequisites beyond that. Not even a programming language is required; the Java currently used as a sample is minimal.</simpara>
+<simpara>Truly beginning students will have to work at the Linux tutorials, but all they need master is basic command line navigation, and I have found this possible with a diverse student body, some with no previous direct experience. The labs for the second half of the course use games, experiential paper-based classroom exercises, GUI-based software, databases, and office productivity tools.</simpara>
+</section>
+</chapter>
+<chapter id="Introduction">
+<title>Introduction</title>
+<section id="_for_the_student">
+<title>For the student</title>
+<simpara>This is a "survey" text intended for the advanced undergraduate or graduate student interested in the general field of applied IT management. It is grounded in basic computing fundamentals, but does not require any particular technical skills to understand. You do not need to have taken any courses in networking, security, or particular programming languages to read this book.</simpara>
+<simpara>However, you will be presented with material on such topics, including fragments of programming languages and pseudocode, and need to be willing to invest the time and effort to understand.</simpara>
+<simpara>This book makes frequent reference to digital startups - early stage companies bringing new  products to market that are primarily delivered as some form of computer-based service. Whether or not you intend to pursue such endeavors, the startup journey is a powerful one for your learning. Large information technology organizations in enterprises sometimes gain a reputation for losing sight of business value. IT seems to be acquired and operated for its own sake. Statements like "we need to align IT with the business!" are too often heard.</simpara>
+<simpara>A digital startup exposes with great clarity the linkage between "IT" and "the business." The success or failure of the company itself depends on the adept and responsive creation and deployment of the software-based systems. Market revenues arrive, or do not, based on digital product strategy and the priorities chosen. Features the market doesn&#8217;t need? You won&#8217;t have the money to stay in business. Great features, but your product is unstable and unreliable? Your customers will go to the competition.</simpara>
+<literallayout class="monospaced">Valleys of Death graphic</literallayout>
+<simpara>The lessons that digital entrepreneurs have learned through this trial by fire shed great light on IT&#8217;s value to the business. Thinking about a startup allows us to consider the most fundamental principles as a sort of microcosm, a small laboratory model of the same problems that the largest enterprises face.</simpara>
+<simpara>However, this is not a textbook (or course) on entrepreneurship. It remains IT-centric. <emphasis role="strong">And, the book is also intended to be relevant to students entering directly into large, established enterprises.</emphasis> In fact, it prepares the student for working in all stages of growth because it progresses through these four contexts:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+Individual (founder)
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Team
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Small company (team of teams)
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Enterprise
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Whether in a startup, or on a journey within a larger, established organization, you will (hopefully) become aware as you progress through a broadening context:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+Other team members
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Customers
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Suppliers
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Sponsors
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Necessary non-IT capabilities (finance, legal, HR, sales, marketing, etc)
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Channel partners
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Senior executives and funders
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Auditors and regulators
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Part of maturing in one&#8217;s career is understanding how all these relationships figure into your own overall system of value delivery. This will be a lifelong journey for the student; the author&#8217;s intent is to provide some useful tools.</simpara>
+</section>
+<section id="_assumptions_of_the_reader">
+<title>Assumptions of the reader</title>
+<itemizedlist>
+<listitem>
+<simpara>
+This book is written at the advanced undergraduate/graduate student level. It is currently available only in English.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+There is no assumption of deep IT experience, but there is an assumption that the person interacts with computers in some capacity and has basic technical literacy. They should for example understand the concept of an "operating system." An A+ certification, or an intro to programming class for example, would more than adequately prepare someone for this book.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+A person completely unfamiliar with computing will need to supplement their reading as suggested throughout the text. There is a wealth of free and accurate information on IT fundamentals (e.g. compute, storage, networking, programming, etc) and this book seeks more to curate than replicate.
+</simpara>
+</listitem>
+</itemizedlist>
+</section>
+<section id="_this_book_8217_s_structure">
+<title>This book&#8217;s structure</title>
+<simpara>Here is a conceptual illustration of an IT management progression (read bottom to top):</simpara>
+<figure><title>IT management evolutionary model (read bottom to top)</title>
+<mediaobject>
+  <imageobject>
+  <imagedata fileref="images/ITProgression.png"/>
+  </imageobject>
+  <textobject><phrase>images/ITProgression.png</phrase></textobject>
+</mediaobject>
+</figure>
+<simpara>Elaborating the above outline into chapters, we have:</simpara>
+<orderedlist numeration="upperroman">
+<listitem>
+<simpara>
+<emphasis role="strong">Founder</emphasis>
+</simpara>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>
+<emphasis>IT value</emphasis>. Why do we need computers? What can they do for us?
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+<emphasis>IT infrastructure</emphasis> We want to build something. We have to choose a platform first.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+<emphasis>IT applications</emphasis> Let&#8217;s start building something of use to someone.
+</simpara>
+</listitem>
+</orderedlist>
+</listitem>
+<listitem>
+<simpara>
+<emphasis role="strong">Team</emphasis>
+</simpara>
+<orderedlist numeration="arabic"><?dbfo start="4"?><?dbhtml start="4"?>
+<listitem>
+<simpara>
+<emphasis>Product management</emphasis> What exactly is it we are building? What is the process of discovering our customer&#8217;s needs and quickly testing how to meet them? How do we better define the product vision, and the way of working towards it, for a bigger team?
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+<emphasis>Work management</emphasis> How do we keep track of what we are doing, and communicate our progress and needs at the simplest level?
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+<emphasis>Operations management</emphasis> How do we sustain this surprisingly fragile digital service, in its ongoing delivery of value?
+</simpara>
+</listitem>
+</orderedlist>
+</listitem>
+</orderedlist>
+<simpara><emphasis>The boundary between the "team" and the "team of teams" is a challenging area, and industry responses remain incomplete and evolving. Hence the notation "THE SCALING PROBLEM" on the diagram.</emphasis></simpara>
+<orderedlist numeration="upperroman"><?dbfo start="3"?><?dbhtml start="3"?>
+<listitem>
+<simpara>
+<emphasis role="strong">Team of Teams</emphasis>
+</simpara>
+<orderedlist numeration="arabic"><?dbfo start="7"?><?dbhtml start="7"?>
+<listitem>
+<simpara>
+<emphasis>Organization and culture</emphasis> We&#8217;re getting big. How do we deal with this? How are we structured? Why this way and not that? How can we benefit from increasing maturity and specialization, while still maintaining a responsive product? What are the unwritten values and rules in our company?
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+<emphasis>Investment, sourcing, and people</emphasis> Work is becoming larger and more complex. How can we  track and execute larger segments of it, and coordinate across multiple teams?
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+<emphasis>Execution management</emphasis> We have a structure. Work needs to flow across it. Product and project teams increasingly demand predictable, consistent delivery of internal services, and synchronization points such as enterprise releases are increasingly critical signals.
+</simpara>
+</listitem>
+</orderedlist>
+</listitem>
+<listitem>
+<simpara>
+<emphasis role="strong">Enterprise</emphasis>
+</simpara>
+<orderedlist numeration="arabic"><?dbfo start="10"?><?dbhtml start="10"?>
+<listitem>
+<simpara>
+<emphasis>Governance, risk, security, and compliance</emphasis> We need to cope with external forces (regulators, vendor partners, security adversaries, auditors) increasingly defining our options.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+<emphasis>Enterprise information management</emphasis> We&#8217;ve been concerned with data, information, and knowledge since the earliest days of our journey. But at this scale, we have to formalize our approaches and understandings; without that, we will never capture the full value available with modern analytics and Big Data. Compliance issues are also compelling us to formalize here.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+<emphasis>Architecture and portfolio</emphasis> We need to understand the big picture of interacting lifecycles, reduce technical debt and redundancy, accelerate development through establishing platforms, and obtain better economies of scale. We need to define our investment strategy based on a sound understanding of both business needs and technology limitations.
+</simpara>
+</listitem>
+</orderedlist>
+</listitem>
+<listitem>
+<simpara>
+<emphasis role="strong">Appendices</emphasis>
+</simpara>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>
+<emphasis>A review of IT frameworks and standards</emphasis>
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+<emphasis>Architectural depictions</emphasis>
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+<emphasis>Towards a theory of IT management</emphasis>
+</simpara>
+</listitem>
+</orderedlist>
+</listitem>
+</orderedlist>
+<simpara>The intent is that the more complex, "enterprise"-scale concerns at the end of the book are presented as part of a logical progression.</simpara>
+<simpara><anchor id="formalization" xreflabel="[formalization]"/></simpara>
+</section>
+<section id="_emergence_means_formalization">
+<title>Emergence means formalization</title>
+<simpara>The emergence model seeks to define a likely order in which concerns are <emphasis role="strong">formalized</emphasis>. Any concern may of course arise at any time: the startup founder certainly is concerned with security!</simpara>
+<simpara>Formalization means at least one or more of the following:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+Dedicated resources
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Dedicated organization
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Defined policies and processes
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Automated tooling
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>In the author&#8217;s experience, for example, startups avoid formalized process and project management. To the extent the concerns exist, they are <emphasis>tacit</emphasis> (understood or implied; suggested; implicit). Certainly, a small startup does not invest in an enterprise-class service desk tool supporting a full array of IT management processes, or a full-blown Project Management Office with its own Vice President and associated portfolio automation. Simple work management, with a manual or automated Kanban board, is likely their choice for work management.</simpara>
+<simpara>But by the time they are a team of teams, specialization has emerged and more robust processes and tools are required. The danger of course is that the formalization effort may be driven by its own logic, and start to lose track of the all-critical business context.</simpara>
+<simpara>By careful examining these stages of maturation, and the industry responses to them, it is the author&#8217;s hope that the student will have effective tools to critically engage with the problem of scaling the digital organization.</simpara>
+</section>
+</chapter>
+<chapter id="Part-I-intro">
+<title>Part I: Founder</title>
+<simpara><anchor id="Sec-I" xreflabel="[Sec-I]"/>
+This is the introduction to Part I.</simpara>
+<simpara>In this section, we  explore the fundamentals of information technology delivery.</simpara>
+<simpara><emphasis role="strong">Scenario</emphasis></simpara>
+<simpara>You are working in a startup, alone or with one or two partners. You are always in the same room, easily able to carry on a running conversation about your efforts and progress. You have no time or resources to spend on anything except keeping your new system alive and running.</simpara>
+<simpara><emphasis role="strong">Chapter 1: IT Value</emphasis></simpara>
+<simpara>Chapter 1 introduces you to the fundamental concepts of IT value that serve as a basis for the rest of the course. Why do people want computing (IT) services? What are the general outlines of their structure? How do they come into being? How are they changed over time?</simpara>
+<simpara>All of this is essential to understand for your scenario; you need to understand what computers can do and how they are generally used, if you are going to create a product based on them.</simpara>
+<simpara>This chapter also covers the basics of how you&#8217;ll approach building a product. It&#8217;s assumed you won&#8217;t develop an intricate, long-range plan but rather will be experimenting with various ideas and looking for "fast feedback" on their success or failure.</simpara>
+<simpara><emphasis role="strong">Chapter 2: IT Infrastructure</emphasis></simpara>
+<simpara>In this chapter, you have a general idea for a product and are ready to start building it. But not so fast&#8230; you need to decide some fundamentals first. How will your new product run? What will you use to build it?</simpara>
+<simpara>It&#8217;s not possible to begin construction until you decide on your tools. This chapter will provide you an overview of computing infrastructure including Cloud hosting and various approaches to system configuration.</simpara>
+<simpara>This chapter also presents an overview of source control, as even your infrastructure depends on it in the new world of "infrastructure as code."</simpara>
+<simpara><emphasis role="strong">Chapter 3: Application delivery</emphasis></simpara>
+<simpara>Finally, you&#8217;re ready to start building something. While this is not a book on software development or programming languages, it&#8217;s important to understand some basics and at least see them in action.</simpara>
+<simpara>This is also the "DevOps" chapter; it&#8217;s not just about writing code, but about the entire end to end system that gets the code you are writing from your workstation, into collaborative environments, and finally to a state where it can be accessed by end users. From source repository to build manager to package repository to production, we&#8217;ll cover a basic toolchain that will help you understand modern industrial practices.</simpara>
+<simpara><emphasis role="strong">This section&#8217;s lab approach</emphasis></simpara>
+<simpara>While this is not a book about any particular computing language or platform, we need to describe some technical fundamentals. We’ll do so in as neutral a manner as possible. However, this books’ accompanying labs are based on <ulink url="http://www.ubuntu.com/">Ubuntu Linux</ulink> and <ulink url="https://git-scm.com/">git</ulink>, the distributed version control system created by Linus Torvalds to facilitate Linux development.</simpara>
+<section id="Intro-Chap-1">
+<title>Chapter 1. IT Value</title>
+<section id="_introduction">
+<title>Introduction</title>
+<simpara><emphasis>Collaboration notes</emphasis></simpara>
+<simpara><emphasis>I am concerned that the discussion of Carr &amp; related topics is a bit advanced for introductory students. Or perhaps the flow is off. Thoughts appreciated.</emphasis></simpara>
+<simpara><emphasis>-ctb</emphasis></simpara>
+<simpara>As noted at the outset, you are a small core of a startup. You are building a product of which IT is a significant part (otherwise why are you reading this book/in this class?) Your motivations are entrepreneurial; you want to create a successful business. You might be housed within a larger enterprise, but the thought experiment here is that you have substantial autonomy to order your efforts.</simpara>
+<simpara>You want to do something that has a unique IT component. Regardless of your business, you will need accounting and legal services at a minimum, and very quickly payroll and HR, and so forth. Those things can (and should) be purchased as commodity services, if you are a small entrepreneur (I am not aware of any convincing arguments to the contrary, unless you are absolutely on the smallest of shoestring budgets and can work 100 hour weeks). Your unique value proposition will be expressed to some degree in unique IT software. While this software may be based on well understood products, the configuration and logic you construct will be all your own. Because of this, you are now a producer (or soon to be) of IT services.</simpara>
+<simpara>Before we can talk about building and managing information technology (IT), we need to understand what it is and why people want it. We&#8217;ll start this chapter by looking at an IT value experience that may seem very familiar. Then we&#8217;ll dig further into concepts like the "IT stack" and the "IT service" and how they change over time.</simpara>
+<section id="_chapter_outline">
+<title>Chapter outline:</title>
+<itemizedlist>
+<listitem>
+<simpara>
+An IT value experience
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+What is "information technology"?
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+The IT "service" and the IT "stack"
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+The IT service
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+IT changing over time
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+The digital context
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Conclusion
+</simpara>
+</listitem>
+</itemizedlist>
+</section>
+<section id="_learning_objectives_for_this_chapter">
+<title>Learning objectives for this chapter:</title>
+<itemizedlist>
+<listitem>
+<simpara>
+Explain "IT value" in everyday terms
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Distinguish between IT service and IT system
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Discuss how IT services change over time
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Describe various ways of understanding the context in which digital systems are developed and digital value is delivered.
+</simpara>
+</listitem>
+</itemizedlist>
+</section>
+</section>
+<section id="what-is-IT-value">
+<title>What is IT value?</title>
+<simpara><anchor id="what-is-IT-value" xreflabel="[what-is-IT-value]"/></simpara>
+<section id="_an_it_value_scenario">
+<title>An IT value scenario</title>
+<figure><title>Dinner out tonight? <footnote><simpara><emphasis>Image credit <ulink url="https://www.flickr.com/photos/garryknight/700317885/">https://www.flickr.com/photos/garryknight/700317885/</ulink>, downloaded 2016-09-14, commercial use permitted</emphasis></simpara></footnote></title>
+<mediaobject>
+  <imageobject>
+  <imagedata fileref="images/1.01c-women.jpg"/>
+  </imageobject>
+  <textobject><phrase>women w/cell phones</phrase></textobject>
+</mediaobject>
+</figure>
+<simpara>Consider the following scenario:</simpara>
+<simpara>A woman is wondering if she can afford to dine out that evening.</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+She uses her mobile device to access her banking information and determines that in fact she does have enough money to do so.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+She also uses her mobile device to make a reservation and contact some friends to join her.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Finally, she uses social navigation software to avoid heavy traffic, arriving at the restaurant in time for an enjoyable evening with her friends.
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Information technology pervaded this experience. The origins, layers and complex connections of the distributed systems involved are awe-inspiring to consider.</simpara>
+<sidebar>
+<important><simpara><emphasis role="strong">Don&#8217;t worry about the technological terms for now</emphasis></simpara></important>
+<simpara>This is an introductory text. You may see terms below that are unfamiliar (Model-View-Controller, IP, packet switching). If you are reading this online, you can follow the links, but it&#8217;s not required.</simpara>
+<simpara>As you progress in your career, you will always be encountering new terminology. Part of what you need to learn is when it&#8217;s important to dig into it, and when you can let it pass for a time.</simpara>
+<simpara>You should be able to understand the gist presented below that these are complex systems based on a wide variety of technologies, some of them old, some new.</simpara>
+</sidebar>
+<simpara>The screen on her cell phone represents information accessed and presented via a <ulink url="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">Model-View-Controller framework</ulink>, implemented in the latest version of <ulink url="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Javascript</ulink>, running on an <ulink url="https://en.wikipedia.org/wiki/Interpreter_(computing)">interpreter</ulink> that would have taxed a <ulink url="https://en.wikipedia.org/wiki/Mainframe_computer">mainframe</ulink> thirty years ago. The communication with her bank’s central systems is supported by <ulink url="https://en.wikipedia.org/wiki/LTE_(telecommunication)">4G LTE</ulink> data which in turn relies on the high-volume <ulink url="https://en.wikipedia.org/wiki/Internet_Protocol">IP backbone</ulink> networks operated by the <ulink url="http://searchnetworking.techtarget.com/definition/telecom-carrier">telecommunications carriers</ulink>, based on research into <ulink url="https://en.wikipedia.org/wiki/Packet_switching">packet switching</ulink> now approaching 50 years old.</simpara>
+<simpara>The application operating on the cell phone interacts with core banking systems via sophisticated and highly secure <ulink url="https://en.wikipedia.org/wiki/Middleware">middleware</ulink>, crossing multiple <ulink url="https://en.wikipedia.org/wiki/Computer_network">network</ulink> control points. This middleware talks in turn to the customer demand deposit system that still runs on the mainframe.</simpara>
+<simpara>The mainframe is now running the latest version of <ulink url="https://en.wikipedia.org/wiki/Z/OS">IBM’s zOS</ulink> <ulink url="https://en.wikipedia.org/wiki/Operating_system">operating system</ulink> (a direct descendant of <ulink url="https://en.wikipedia.org/wiki/OS/360_and_successors#MVT">OS/360</ulink>, one of the most  significant operating systems in the <ulink url="https://en.wikipedia.org/wiki/History_of_computing">history of computing</ulink>). The "customer demand deposit" banking application running on the mainframe is still based on code written in the lowest level <ulink url="https://en.wikipedia.org/wiki/Assembly_language">assembler</ulink>. Some of the comments in this code date back to the 1970s. It has been tuned and optimized over the decades into a system of remarkable speed and efficiency. Although replatforming it is periodically discussed, the cost/benefit ratio for such a project has to date not been favorable.</simpara>
+<simpara>The reservation system looks similar on the mobile device, but the network routes it to a large <ulink url="https://en.wikipedia.org/wiki/Cloud_computing">Cloud</ulink> data center hosting the reservation system. The back end application here is very different from the banking system; the <ulink url="https://en.wikipedia.org/wiki/Programming_language">programming languages</ulink> are newer, the <ulink url="https://en.wikipedia.org/wiki/Database">database</ulink> is structured very differently, and the operating system is <ulink url="https://www.linux.com/">Linux</ulink>.</simpara>
+<simpara>Finally, the navigation software looks much like the reservation system, as it too is based on the Cloud. However, the system is much more active, as it is continually processing inputs from millions of drivers in thousands of cities, and updating traffic maps for those drivers in real time so that they can choose the most optimal route to their destinations (e.g., dinner). The capabilities of this system are comparable to an air traffic control system, and yet it is available as a free download for our IT user.</simpara>
+<figure><title>Digital made this gathering easier <footnote><simpara><emphasis>Image credit <ulink url="https://pixabay.com/en/friends-celebration-dinner-table-581753/">https://pixabay.com/en/friends-celebration-dinner-table-581753/</ulink>, downloaded 2016-09-14, commercial use permitted</emphasis></simpara></footnote></title>
+<mediaobject>
+  <imageobject>
+  <imagedata fileref="images/1.01-friends.jpg"/>
+  </imageobject>
+  <textobject><phrase>party</phrase></textobject>
+</mediaobject>
+</figure>
+<simpara>The resulting value is clear:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+In an earlier era, our user might have stayed in, for fear of bouncing a check, or might have gone out and dined beyond her means.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+The phone line at the restaurant might have been busy, so she might have risked showing up with no reservation.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Before texting and social media, she might not have been able to reach her friends as easily.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Without the traffic application she might have run into a huge midtown traffic jam and been half an hour late.
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Clearly, information technology added value to her life and helped maximize her experiences of social enjoyment.</simpara>
+</section>
+<section id="_various_forms_of_it_value">
+<title>Various forms of IT value</title>
+<simpara>As we have seen, there are many ways in which digital systems deliver value. Some systems serve as the modern equivalent of file cabinets: massive and secure storage for financial transactions, insurance records, medical records, and the like. Other systems enable the transmission of information around the globe, whether as emails, web pages, voice calls, video on demand, or data to be displayed in a smart phone application ("app"). Some of these systems support engaged online communities and social interactions, with conversations, media sharing, and even massive online gaming ecosystems. Yet other systems enable penetrating analysis and insight, by examining the volumes of data contained in the first two kinds of systems for patterns and trends. Sophisticated statistical techniques and cutting edge approaches like neural network-based machine learning increase the insights our digital systems are capable of, at a seemingly exponential rate.</simpara>
+<simpara>Digital technology generates value in both direct and indirect ways. People have long consumed (and paid for) communication services, such as telephone services. Broadcast entertainment was a different proposition, however. The "consumer" - the person with the radio or television - was not the "customer" - the person paying for the programming to go out over the airwaves. New business models sprung up to support the new media, through the sale of advertising air time. In other words, the value proposition was indirect, or at least took multiple parties to achieve: the listener, the broadcaster, and the advertiser. Finally, some of the best known uses of digital technology were and are very indirect - the above-mentioned banks and insurance agencies using the earliest computers to automate the work of thousands of typists and file clerks.</simpara>
+<simpara>From these early business models have evolved and blossomed myriads of creative applications of digital technology, for the benefit of human beings in their ongoing pursuit of happiness and security. We see the applications mentioned at the outset: online banking, messaging, restaurant reservation, and traffic systems. Beyond that we see the use of digital technology in nearly every aspect of life. (And I say "nearly" only because I am a cautious person.)</simpara>
+<simpara>Digital and information technology pervades all of the major industry verticals (manufacturing, agriculture, finance, retail, healthcare, transportation, services, and so on) and common industry functions (supply chain, human resources, corporate finance, and even IT itself).</simpara>
+<simpara>Digital systems and technologies also are critical components of larger scale industrial, military, and aerospace systems. For better or worse, general purpose computers are increasingly found controlling safety-critical infrastructure, and serving as an intermediating layer between human actions and machine response. Robotic systems are based on software, and the Internet of Things ultimately will span billions of sensors and controllers in interconnected webs monitoring and adjusting all forms of complex operations across the planet.</simpara>
+</section>
+</section>
+<section id="what-is-IT">
+<title>Defining Information Technology</title>
+<simpara><anchor id="what-is-IT" xreflabel="[what-is-IT]"/></simpara>
+<section id="_what_is_it_anyways">
+<title>What is IT, anyways?</title>
+<simpara>We’ve started this book in the previous section by providing an example of digital or IT value, without much discussion of how it is delivered. This is deliberate. But what is IT (Information Technology), anyways?</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+The computers? The networks?
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+The people who run them?
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+That organization under a Chief Information Officer that loves to say “no” and is always slow and expensive?
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>None of these are how this book defines “IT.” Although this is not a technical book on computer science or software engineering, the intent is that it reflects and is compatible with foundational principles.</simpara>
+<simpara>“Information technology” is ultimately based on the work of <ulink url="https://en.wikipedia.org/wiki/Claude_Shannon">Claude Shannon</ulink>, <ulink url="https://en.wikipedia.org/wiki/Alan_Turing">Alan Turing</ulink>, <ulink url="https://en.wikipedia.org/wiki/Alonzo_Church">Alonzo Church</ulink>, <ulink url="https://en.wikipedia.org/wiki/John_von_Neumann">John von Neumann</ulink>, and the other pioneers who defined the central problems of <ulink url="https://en.wikipedia.org/wiki/Information_theory">information theory</ulink>, <ulink url="https://en.wikipedia.org/wiki/Digital_electronics">digital logic</ulink>,  <ulink url="https://en.wikipedia.org/wiki/Computability">computability</ulink>, and <ulink url="https://en.wikipedia.org/wiki/Computer_architecture">computer architecture</ulink>.</simpara>
+<simpara><anchor id="1.01.02-IT-as-function-2" xreflabel="[1.01.02-IT-as-function-2]"/></simpara>
+<simpara>Additionally, as an organizational function, information technology also draws on organizational theory, systems theory, human factors and psychology, and more recent concepts such as design thinking, among many other areas.</simpara>
+<simpara>Discussions of “information technology” become contentious because some think of the traditional organization, while others think of the general problem area. IT has a long history as a corporate function, a single hierarchy under a powerful Chief Information Officer. This model has had its dysfunctions, including a longstanding reputation for being slow and expensive. Often, when one encounters the term “IT,” the author using the term is referring to this organizational tradition.</simpara>
+<simpara><emphasis role="strong">We are less interested in the future of IT as a distinct organizational structure. There are many different models, from fully centralized to fully embedded.</emphasis> Organizational structure will be discussed in Chapter 7.</simpara>
+<simpara>For this book, we define “Information technology” in terms of its historic origins. We look to IT’s common origins in automating the laborious and error prone processes of computation, through the application of digital logic technologies based on information transmission.</simpara>
+<simpara>Regardless of organizational form or delivery methods, IT is defined by these origins. And there are notable common threads throughout this problem domain: the fragility and complexity of these systems, the need for layered abstractions in their management, and more.</simpara>
+<simpara>It does not matter if the application developers ultimately report up through the CIO, the CMO, the CFO, or the COO. Their daily experience remains largely the same. The dynamics of their management remain the same. Executives who seek to take control of IT so they can “remove that old bureaucracy” are well advised to be cautious; the bureaucracy emerged for a reason. More on this in subsequent chapters.</simpara>
+<simpara><anchor id="digital-transformation" xreflabel="[digital-transformation]"/></simpara>
+</section>
+<section id="_it_and_digital_transformation">
+<title>IT and digital transformation</title>
+<blockquote>
+<attribution>
+Nicholas Carr
+</attribution>
+<simpara>IT doesn&#8217;t matter.</simpara>
+</blockquote>
+<blockquote>
+<attribution>
+Mark Andreessen
+</attribution>
+<simpara>Software is eating the world.</simpara>
+</blockquote>
+<blockquote>
+<attribution>
+Jeff Sussna
+<citetitle>Designing Delivery</citetitle>
+</attribution>
+<simpara>The digital realm is infusing the physical realm, like tea in hot water.</simpara>
+</blockquote>
+<simpara>IT increasingly permeates business operations and social interactions. The breadth and depth of IT support for virtually all domains of society continues to expand. Lately, this is known as digital transformation.</simpara>
+<simpara>The role of information technology seems critical to society and the economy, but there are various points of view. Nicholas Carr, in his controversial <emphasis>Harvard Business Review</emphasis> article "IT Doesn&#8217;t Matter," recognized that IT was becoming commoditized in an important sense <xref linkend="Carr2003"/>. As Cloud providers started to offer utility-style computing, the choice of particular vendors of computers was no longer strategic. Looking to history, Carr argued that just as businesses no longer have “Vice Presidents for Electricity,” so businesses no longer need Chief Information Officers or dedicated IT departments.</simpara>
+<note><simpara>A "commodity" product is one that is offered from a variety of suppliers, with little or no difference between their offerings. Commodity products tend to compete on price, not on differences in features. Wheat is a commodity. Sports cars are not. "Commoditization" is the process by which products that used to compete by being different, increasingly compete on price.</simpara></note>
+<simpara>Carr has insight&#8201;&#8212;&#8201;there is no question IT is becoming pervasive&#8201;&#8212;&#8201;but he ultimately reflects a narrow view of what “IT” is. If “IT” were merely computation at the lowest level&#8201;&#8212;&#8201;just shuffling bits of information around, doing a little math&#8201;&#8212;&#8201;then perhaps it could be embedded throughout a business like electricity.</simpara>
+<simpara>But IT has emergent aspects that are not comparable to electrical power. As it pervades all dimensions of business operations, it brings its concerns with it: complexity, fragility, and the skills required to cope with them.</simpara>
+<simpara>One watt of electrical power is like any other watt of electrical power, and can usefully be seen as a commodity. We can use it to run toasters, hair dryers, or industrial paint mixers, and there is little concern (beyond supply and demand management) that the consumption of power by the paint mixer will affect the toaster.  It&#8217;s also true that one cycle of computing, in a certain sense, is like any other cycle. But information technology systems interact with each other in surprising and unpredictable ways, orders of magnitude more complex than electrical power grids. (This is not to imply the modern electrical grid is a simple system!)</simpara>
+<simpara>IT also radically transforms industries: from retail to transportation to manufacturing to genetics. Applied software-centric IT is unleashing remarkable economic disruption.</simpara>
+<simpara>A lawyer may depend on a cell phone, and (in keeping with Carr) beyond its provision as a commodity service, needs little else to deliver the legal strategies a firm needs. A graphic designer may use computerized graphic tools, but these have become relatively standardized and commoditized in the past twenty years, and probably are not a source of competitive advantage in the quest for new marketing clients.</simpara>
+<simpara>On the other hand, consider a text analytic algorithm that replaces thousands of paralegals, resulting in order-of-magnitude more accurate legal research in a fraction of cost and time. This <emphasis role="strong">is</emphasis> strategic and disruptive to the legal community. A superior supply chain algorithm, and the ability to improve it on an ongoing basis, may indeed elevate a logistics firm’s performance above competitors. In cases like these&#8201;&#8212;&#8201;and they seem to be increasing&#8201;&#8212;&#8201;IT matters very much.</simpara>
+<simpara>In the digitally transforming economy, traditional “back office” IT organizations find themselves called on to envision, develop, and support market-facing applications of IT. And what starts with one market-facing use case can quickly expand into entire portfolios.  It is such cases that are of particular concern in this book.</simpara>
+<simpara>Ultimately, it is possible that IT is the <emphasis role="strong">most</emphasis> strategic capability an organization can invest in. As the editor in chief of <emphasis>IEEE Software</emphasis> notes <xref linkend="Spinellis2015"/>,</simpara>
+<blockquote>
+<attribution>
+Diomidis Spinellis
+<citetitle>IEEE Software</citetitle>
+</attribution>
+<simpara>other industries are also producing what’s in effect software (executable knowledge) but not treating it as such . . . Although many industries have developed their own highly effective processes over the years, software engineering maintains an essential advantage. It has developed methods and tools that let even small teams manage extremely high complexity . . . This advantage is important because the complexity in non-software activities is also increasing inexorably . . . [T]he time has come to transform our world… by giving back to science and technology the knowledge software engineering has produced.</simpara>
+</blockquote>
+<simpara>This ability to manage complexity, to turn tacit into explicit and formalize the previously unstructured, is an essential aspect of digital transformation.</simpara>
+</section>
+<section id="_defining_it">
+<title>Defining "IT"</title>
+<simpara>So, how do we define an IT problem, as opposed to other kinds of business problems? An IT problem is any problem where you are primarily constrained by your capability and understanding of IT.</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+If you need computer scientists or engineers who understand the fundamentals of information theory and computer science, you are doing IT.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+If you need people who understand when your information-centric problems might need to be referred to such theorists and engineers, you are likely doing IT.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+If you need people who are skilled in building upon those fundamentals, and operating technical platforms derived from them (such as programming languages, general purpose computers, and network routers), you are doing IT.
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Regardless of whether IT is housed under a traditional CIO, an operations capability, a Chief Marketing Officer, or a “line of business”, when it is critical to operations certain concerns inevitably follow:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+Requirements (i.e. your intent for IT)
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Sourcing and provisioning
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+IT-centric product design and construction
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Configuration and change management
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Support
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Improvement
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Executives who take control of information technology in hopes of making it more "agile" are often surprised to find that these concerns were not mere bureaucracy, but instead had well grounded origins in past failures. Ignoring these lessons is perilous.</simpara>
+<simpara>And yet, the traditional, process-heavy IT organization does seem dysfunctional from a business point of view: a central theme of this book.
+￼</simpara>
+</section>
+</section>
+<section id="_it_services_systems_and_applications">
+<title>IT services, systems, and applications</title>
+<section id="_inside_an_it_service">
+<title>Inside an IT service</title>
+<figure><title>The basis of IT value <footnote><simpara><emphasis>Image credit <ulink url="https://www.flickr.com/photos/iicd/5348620457/">https://www.flickr.com/photos/iicd/5348620457/</ulink>, downloaded 2016-11-07, commercial use permitted</emphasis></simpara></footnote></title>
+<mediaobject>
+  <imageobject>
+  <imagedata fileref="images/1.01-ITValue.png"/>
+  </imageobject>
+  <textobject><phrase>woman at computer</phrase></textobject>
+</mediaobject>
+</figure>
+<simpara>Let&#8217;s examine our diner&#8217;s value experience in more detail, without getting unnecessarily technical, and clarify some definitions along the way.  The first idea we need to cover is the "moment of truth." In terms of information technnology, this English-language cliché represents the user&#8217;s experience of value.</simpara>
+<simpara>Not sure that "moment of truth" is quite appropriate - original definition could be interpreted as something relatively infrequent in the customer journey&#8230; perhaps "experience?"</simpara>
+<simpara>In the example, our friend seeking a relaxing night out had several moments of truth:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+Consulting her bank balance, and subsequent financial transactions also reflecting what was stated to her
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Making a reservation and having it honored on arrival at the restaurant
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Arriving on time to the restaurant, courtesy of the traffic application
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+And most importantly, having a relaxed and refreshing time with her friends.
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Each of these individual value experiences was co-created by our friend&#8217;s desire for value, and the response of a set of IT resources.</simpara>
+<important><simpara>The "moment of truth" represents the user&#8217;s experience of value, from a product, good, or service.</simpara></important>
+<simpara>In order to view her balance, our user is probably using an application downloaded from a "store" of applications made available to her device. On her device, this "app" is part of an intricate set of components performing functions such as:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+accepting "input" (user intent) through a screen or voice input
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+processing that input through software and acting on her desire to see her bank balance
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+connecting to the phone network
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+securely connecting over the phone network to the Internet and then to the bank
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+identifying the user to the bank&#8217;s systems
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+requesting the necessary information (in this case, an account balance)
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+receiving that information and converting it to a form that can be represented on a screeen
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+finally, displaying the information on the screen
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>The application, or "app," downloaded to the phone plays a primary role, but is enabled by:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+the phone&#8217;s operating system and associated services
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+the phone&#8217;s hardware
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+the telecommunications infrastructure (cell phone towers, long distance fiber optic cables, switching offices, and much more)
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Of course, without the banking systems on the other end, there is no bank balance to transmit. These systems are similar, but on a much larger scale than our friend&#8217;s device:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+Internet and middleware services to receive the request from the international network
+</simpara>
+</listitem>
