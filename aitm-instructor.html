@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.4">
+<meta name="generator" content="Asciidoctor 1.5.5">
 <meta name="author" content="Charles T. Betz">
 <title>The digital professional: from startup to enterprise  (Instructor&#8217;s Edition)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -18,7 +18,6 @@ audio:not([controls]){display:none;height:0}
 [hidden],template{display:none}
 script{display:none!important}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
-body{margin:0}
 a{background:transparent}
 a:focus{outline:thin dotted}
 a:active,a:hover{outline:0}
@@ -53,7 +52,7 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -65,7 +64,6 @@ img{-ms-interpolation-mode:bicubic}
 .text-center{text-align:center!important}
 .text-justify{text-align:justify!important}
 .hide{display:none}
-body{-webkit-font-smoothing:antialiased}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
@@ -120,13 +118,16 @@ table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
 table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
-body{tab-size:4}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
 .clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
 .clearfix:after,.float-group:after{clear:both}
-*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+*:not(pre)>code.nobreak{word-wrap:normal}
+*:not(pre)>code.nowrap{white-space:nowrap}
 pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
+em em{font-style:normal}
+strong strong{font-weight:400}
 .keyseq{color:rgba(51,51,51,.8)}
 kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
@@ -1125,11 +1126,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_governmental_frameworks">Governmental frameworks</a></li>
 </ul>
 </li>
-<li><a href="#_topics_2">Topics</a>
-<ul class="sectlevel4">
-<li><a href="#_architecture_queues_and_cost_of_delay">Architecture, queues, and Cost of Delay</a></li>
-</ul>
-</li>
+<li><a href="#_topics_2">Topics</a></li>
 <li><a href="#_conclusion_11">Conclusion</a>
 <ul class="sectlevel4">
 <li><a href="#_discussion_questions_12">Discussion questions</a></li>
@@ -11385,6 +11382,15 @@ Even where they are not part of a value stream, activity-oriented teams tend to 
 <cite>Agile IT Organization Design</cite>
 </div>
 </div>
+<div class="quoteblock">
+<blockquote>
+When teams are aligned by services, are autonomous, and are cross-functionally composed, there is a significant decrease in affective conflict. When team members are aligned by shared goals and no longer need to argue about who is responsible or who should perform certain tasks, the team wins or loses together. Everyone on the team is responsible for ensuring the service provided meets the business goals.
+</blockquote>
+<div class="attribution">
+&#8212; Abbot & Fisher<br>
+<cite>The Art of Scalability</cite>
+</div>
+</div>
 <div class="paragraph">
 <p>By this time, you probably detect that there is a fundamental tension between functional specialization and end to end value delivery. This tension is the topic of endless research, articles, books, and commentary in the mainstream business press and more specialized channels. The tension may go by different names:</p>
 </div>
@@ -14357,6 +14363,18 @@ cloud computing has some fundamental characteristics that distinguish it from tr
 <p><a href="http://jpmorgenthal.com/2016/08/24/a-reality-check-on-everyones-moving-everything-to-the-cloud/" class="bare">http://jpmorgenthal.com/2016/08/24/a-reality-check-on-everyones-moving-everything-to-the-cloud/</a></p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>benefits to Cloud: cost, speed, flexibility
+disadvantages: security, portability, control, performance, cost
+Abbott2015</p>
+</div>
+<div class="paragraph">
+<p>Large, rap
+idly growing companies can usually realize greater margins by using wholly owned
+equipment than they can by operating in the cloud. This difference arises because
+laaS operators, while being able to purchase and manage their equipment costeffectively,
+are still looking to make a profit on their services. abbot2015 p474</p>
 </div>
 </div>
 <div class="sect4">
@@ -24320,6 +24338,11 @@ As proposed by analyst Doug Laney in 2001 <a href="#Laney2001">[Laney2001]</a>, 
 </div>
 <div class="sect4">
 <h5 id="_managing_the_information_of_digital_delivery">Managing the information of digital delivery</h5>
+<div class="literalblock">
+<div class="content">
+<pre>redundant w/chap 6</pre>
+</div>
+</div>
 <div class="paragraph">
 <p>In terms of our previous data warehousing architecture, the digital pipeline can be seen as related to four areas:</p>
 </div>
@@ -24458,6 +24481,26 @@ McGilvary (based on English) pp 23-24 - perhaps into 4.11.03.</pre>
 </div>
 <div class="literalblock">
 <div class="content">
+<pre>===== Data and capacity
+[quote, Abbott &amp; Fisher, The Art of Scalability]
+In our experience, most companies simply do not pay attention to the deteriorating value of data and the increasing cost of maintaining increasing amounts of data over time.</pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Options value</p>
+</li>
+<li>
+<p>Strategic value</p>
+</li>
+<li>
+<p>Cost justification</p>
+</li>
+<li>
+<p>Transform/reduce</p>
+<div class="literalblock">
+<div class="content">
 <pre>Schema.org &amp; phonetics transcription from CACM 02-2106</pre>
 </div>
 </div>
@@ -24465,6 +24508,9 @@ McGilvary (based on English) pp 23-24 - perhaps into 4.11.03.</pre>
 <div class="content">
 <pre>Some database professionals still don’t like virtualization, that is, making them run Oracle RDBMS or Microsoft SQL Server on top of virtual servers, instead of directly on the host operating system. “The database IS virtualization” they will say.</pre>
 </div>
+</div>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -27411,215 +27457,7 @@ We previously discussed the Business Analysis Body of Knowledge. Although they h
 </div>
 <div class="sect3">
 <h4 id="_topics_2">Topics</h4>
-<div class="paragraph">
-<p><a id="TLM-CoD-worked"></a></p>
-</div>
-<div class="sect4">
-<h5 id="_architecture_queues_and_cost_of_delay">Architecture, queues, and Cost of Delay</h5>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>The following is an exploration of using Cost of Delay and impact mapping</p>
-</div>
-<div class="paragraph">
-<p>worked TLM example</p>
-</div>
-<div class="paragraph">
-<p>TLM should route via corp governance &amp; perf mgmt, align w/vendor mgmt&#8230;&#8203; find sources on how these processes work in non IT domains&#8230;&#8203; (have already discussed in book)</p>
-</div>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>refactoring as a panacea - no, it's like stirring wet concrete (Bente? Coplien?)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>===== digital strategy</pre>
-</div>
-</div>
-<div class="paragraph">
-<p><a id="complex-systems"></a>
- ===== complex systems</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Describe Snowden&#8217;s Cynefin and its major elements</p>
-</li>
-<li>
-<p>complexity (w/r/t Burgess)</p>
-</li>
-<li>
-<p>stability, state, etc (Burgess)</p>
-</li>
-<li>
-<p>complex system failures (Allspaw sidebar?)</p>
-</li>
-<li>
-<p>antifragility</p>
-</li>
-<li>
-<p>Cynefin</p>
-</li>
-<li>
-<p>self-steering, autopoeisis</p>
-</li>
-<li>
-<p>post-industrial</p>
-<div class="literalblock">
-<div class="content">
-<pre>is EA using the right tools? systems theory, semantics vs dynamics.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> ====== EA as systems thinking
-hard to argue with but evidence is limited</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>Sidebar: Introducing Burgess.</p>
-</div>
-</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>Sidebar: Introducing Snowden &amp; Taleb.</p>
-</div>
-</div>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>Sidebar: IT analytics experts
-Magennis, Cantor, etc</p>
-</div>
-</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Postscript: Thought experiment on complete mainstreaming of IT</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>arch formalisms weak on dynamics - semantics vs dynamics problem semantics gravitate to first order predicate logic, binary thinking continuous math&#8230;&#8203; required&#8230;&#8203; how to measure anything. systems thinking.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>===== EA and design thinking</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre> Design thinking is encroaching on architecture. Enterprise design?
-_the sheer absurdity of undertaking something so ambitious, on the one hand, and, foolhardy, on the other, as any kind of intentional design of so complex and poorly (and even mis-) understood an entity as an organization in a context of rapid change._ &lt;&lt;Malan2010&gt;&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>===== metamodels</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>===== tech platform as compensation</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Note that we compensate developers with money AND experience. Developer pressure to use a new technology should be seen in part as a demand for increased compensation. developers seeking experience, it is in part how they are compensated. this leads to conflicts over choice of tools. (good blog as well). rational framework for deciding. might go to chapter 8, resource mgmt. intersection between that &amp; tech lifecycle is key.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>===== SAFE and architecture
-Review SAFE on architecture, also Reinertsen</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>===== Sol Arch for EA</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>===== misc
-"Architecture of software is a collection of design decisions that are expensive to change." &lt;&lt;Ran2001&gt;&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>[quote, Ruth Malan]
-For enduring competitive advantage, the organization needs to seek leverage across its products and/or services and to create strategic capabilities that are hard to imitate because they rely on a mix of process, technology, skills, resources, facilities, culture, and even history &lt;&lt;Malan2005&gt;&gt;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>https://structurizr.com/help/about</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>All arch is design not all design is arch (Booch)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>====== NOTES</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Cathedral / bazaar</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Bente's four perspectives &amp; eight caricatures</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>[quote, Bente et al]
-With regard to the nature of complex systems, it is not advisable to search for the "optimal enterprise architecture." Optimality is always relative to an environment, and the frame conditions are likely to change. Hence it is better to accept certain ugly spots of the IT landscape and strengthen the viability of the whole, which means developing and using capabilities such as being able to learn, solve problems, adapt, or absorb disruptions.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>critical importance of not confusing solutions with EA. Scale matters.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>from bente: Anti-patterns in EA and architecture in general can be found, for instance, in Kruchten (2008), Mar and Spacey (2011), Ambler, Nalbone. and Vizdos (2005), and Coplien and Harrison (2005).</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>https://philippe.kruchten.com/2011/02/13/the-elephants-in-the-agile-room/</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>http://www.mckinsey.com/business-functions/organization/our-insights/to-centralize-or-not-to-centralize?platform=hootsuite</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>review "a day in the life of an enterprise architect &amp; Integration of EA &amp; App Portfolio" walker, Comparison of top 4 EA methods, Sessions</pre>
-</div>
-</div>
-</div>
+
 </div>
 <div class="sect3">
 <h4 id="_conclusion_11">Conclusion</h4>
@@ -28961,7 +28799,7 @@ All web references were archived into the author&#8217;s files on the indicated 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-11-21 10:11:27 CST
+Last updated 2016-11-20 18:20:01 CST
 </div>
 </div>
 </body>
