@@ -8168,44 +8168,6 @@ Design thinking is essentially a human-centered innovation process that emphasiz
 <div class="paragraph">
 <p>If we subscribe to design thinking and take a whole-systems view, designing for ease of operations is also part of the design process. We will discuss this further in Chapter 6. Developing documentation of the product&#8217;s characteristics, from the perspective of those who will run it on a day to day basis, is also an aspect of product delivery.</p>
 </div>
-<div class="paragraph">
-<p><a id="feature-v-component"></a></p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_features_vs_components">Features vs. components</h6>
-<div class="paragraph">
-<p><a id="2.04.02-features-v-components"></a>
-As your product evolves, you may see an increasing differentiation of concerns, between features and components.</p>
-</div>
-<div class="paragraph">
-<p>Features are <strong>what</strong> your product <strong>does</strong>. They are what the customers perceive as valuable. “Scope as viewed by the customer” as <a href="#Kennaley2010">[Kennaley2010]</a> says (p. 169). They may be <a href="#flower-and-cog">"flowers"</a>&#8201;&#8212;&#8201;defined by the value they provide externally, and encouraged to evolve with some freedom.</p>
-</div>
-<div class="paragraph">
-<p>Components are <strong>how</strong> your product is <strong>built</strong>, such as database vs. Web components. In other words, they are a form of infrastructure (but infrastructure you may need to build yourself, rather than just spin up in the Cloud). They are more likely to be <a href="#flower-and-cog">"cogs"</a> -  more constrained and engineered to specifications.</p>
-</div>
-<div class="paragraph">
-<p>Feature teams are dedicated to a clearly defined functional scope, while component teams are defined by their technology platform. Component teams may become shared services, which need to be carefully understood and managed (more on this in Section 3).</p>
-</div>
-<div class="paragraph">
-<p>It may be easy to say that features are more important than components, but this can easily be carried too far. Do you want each feature team choosing its own database? Not recommended. Allowing feature teams to define their own technical direction can result in brittle, fragmented architectures, technical debt, and rework.</p>
-</div>
-<div class="paragraph">
-<p>Software product management needs to be a careful balance between these two perspectives. Some <a href="http://blog.octo.com/en/feature-team-beyond-the-buzzword/">recommend</a> a ratio of:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>70-80% Feature teams to</p>
-</li>
-<li>
-<p>20-30% Component teams</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>We will be revisiting this more systematically in Part III.</p>
-</div>
 </div>
 </div>
 </div>
@@ -20628,7 +20590,48 @@ Part III, like the other parts, needs to be understood as a unified whole. In re
 <p><em>Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization&#8217;s communication structure</em> <a href="#Conway1968">[Conway1968]</a>.</p>
 </div>
 <div class="paragraph">
-<p>What does this mean? If we establish two teams, each team will build a piece of functionality (a feature or component). They will think in terms of "our stuff" and "their stuff" and the interactions (or <em>interface</em>) between the two. Perhaps this seems obvious, but as you scale up it&#8217;s critical to keep in mind. In particular, as you segment your organization along the <a href="#AKF-cube">AKF z-axis</a>,</p>
+<p>What does this mean? If we establish two teams, each team will build a piece of functionality (a feature or component). They will think in terms of "our stuff" and "their stuff" and the interactions (or <em>interface</em>) between the two. Perhaps this seems obvious, but as you scale up it&#8217;s critical to keep in mind. In particular, as you segment your organization along the <a href="#AKF-cube">AKF z-axis</a>, you will need to keep in mind the difference between <a href="#feature-v-component">features and components.</a> You are on a path to have dozens or hundreds of such teams. The decisions you make today on how to divide functionality and work will determine your operating model far into the future.</p>
+</div>
+<div class="paragraph">
+<p>The most important choice at this point is between segmenting along feature lines, versus segmenting along component lines. What do we mean by this?</p>
+</div>
+<div class="paragraph">
+<p><a id="2.04.02-features-v-components"></a>
+<a id="feature-v-component"></a></p>
+</div>
+<div class="sect5">
+<h6 id="_features_vs_components">Features vs. components</h6>
+<div class="paragraph">
+<p>Features are <strong>what</strong> your product <strong>does</strong>. They are what the customers perceive as valuable. “Scope as viewed by the customer” as <a href="#Kennaley2010">[Kennaley2010]</a> says (p. 169). They may be "<a href="#flower-and-cog">flowers</a>"&#8201;&#8212;&#8201;defined by the value they provide externally, and encouraged to evolve with some freedom.</p>
+</div>
+<div class="paragraph">
+<p>Components are <strong>how</strong> your product is <strong>built</strong>, such as database vs. Web components. In other words, they are a form of infrastructure (but infrastructure you may need to build yourself, rather than just spin up in the Cloud). They are more likely to be "<a href="#flower-and-cog">cogs</a>" -  more constrained and engineered to specifications.</p>
+</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img src="images/3_07-feature-v-component.png" alt="feature component matrix" width="400">
+</div>
+<div class="title">Figure 84. Features versus components</div>
+</div>
+<div class="paragraph">
+<p>Feature teams are dedicated to a clearly defined functional scope, while component teams are defined by their technology platform. Component teams may become shared services, which need to be carefully understood and managed (more on this to come).</p>
+</div>
+<div class="paragraph">
+<p>It may be easy to say that features are more important than components, but this can easily be carried too far. Do you want each feature team choosing its own database? Not recommended. Allowing feature teams to define their own technical direction can result in brittle, fragmented architectures, technical debt, and rework.</p>
+</div>
+<div class="paragraph">
+<p>Software product management needs to be a careful balance between these two perspectives. Some <a href="http://blog.octo.com/en/feature-team-beyond-the-buzzword/">recommend</a> a ratio of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>70-80% Feature teams to</p>
+</li>
+<li>
+<p>20-30% Component teams</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -21218,7 +21221,7 @@ The COBIT 5 framework makes a clear distinction between governance and managemen
 <div class="content">
 <img src="images/4.10-shopkeeper.jpg" alt="two men in front of a store" width="600">
 </div>
-<div class="title">Figure 84. Someone to "mind the store" <sup class="footnote">[<a id="_footnoteref_41" class="footnote" href="#_footnote_41" title="View footnote.">41</a>]</sup></div>
+<div class="title">Figure 85. Someone to "mind the store" <sup class="footnote">[<a id="_footnoteref_41" class="footnote" href="#_footnote_41" title="View footnote.">41</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Now, you wish to go on an extended vacation - perhaps a cruise around the world, or a trek in the Himalayas. You need someone who can count the cash and deposit it, and place orders with and pay your suppliers. You need to hire a professional manager.</p>
@@ -21394,7 +21397,7 @@ We&#8217;ve encountered systems theory and associated concepts such as <a href="
 <div class="content">
 <img src="images/4.10-centrifugal_governor.png" alt="mechanism" width="300">
 </div>
-<div class="title">Figure 85. Centrifugal governor <sup class="footnote">[<a id="_footnoteref_42" class="footnote" href="#_footnote_42" title="View footnote.">42</a>]</sup></div>
+<div class="title">Figure 86. Centrifugal governor <sup class="footnote">[<a id="_footnoteref_42" class="footnote" href="#_footnote_42" title="View footnote.">42</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>"Governors" have been part of mechanical systems for centuries. These mechanisms have the effect of automatically controlling a system so that it (for example) operates at the desired revolutions per minute. Without governors, steam engines tended to blow up, or go out; applying devices such as the <a href="https://en.wikipedia.org/wiki/Centrifugal_governor">centrifugal governor</a> to regulate them was an important step in the development of steam power. Importantly, such devices operated to control the process from variation on either side, whether too fast or too slow. They did not operate merely as brakes.</p>
@@ -24993,7 +24996,7 @@ No enterprise can be effective without high quality data.
 <div class="content">
 <img src="images/4.11-hashes.png" alt="4.11 hashes">
 </div>
-<div class="title">Figure 86. Hashmarks</div>
+<div class="title">Figure 87. Hashmarks</div>
 </div>
 <div class="paragraph">
 <p>If you are of European descent, you might perceive this as the number twelve, or a count of twelve "somethings." What "somethings"? You don&#8217;t know.</p>
@@ -25002,7 +25005,7 @@ No enterprise can be effective without high quality data.
 <div class="content">
 <img src="images/4.11-appleTrees.jpg" alt="Apple trees" width="300">
 </div>
-<div class="title">Figure 87. How many trees? <sup class="footnote">[<a id="_footnoteref_43" class="footnote" href="#_footnote_43" title="View footnote.">43</a>]</sup></div>
+<div class="title">Figure 88. How many trees? <sup class="footnote">[<a id="_footnoteref_43" class="footnote" href="#_footnote_43" title="View footnote.">43</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Someone might tell you that this is the number of trees on your neighbor&#8217;s farm. That makes all the difference. But wait - you know for a fact that there are many more trees than 12! You inquire further and find out it is actually the number of producing apple trees, a very different concept.</p>
@@ -25042,7 +25045,7 @@ A message to mapmakers: Highways are not painted red, rivers don&#8217;t have co
 <div class="content">
 <img src="images/4.11-cuneiform.jpg" alt="Clay tablet with markings" width="300">
 </div>
-<div class="title">Figure 88. Sumerian cuneiform <sup class="footnote">[<a id="_footnoteref_44" class="footnote" href="#_footnote_44" title="View footnote.">44</a>]</sup></div>
+<div class="title">Figure 89. Sumerian cuneiform <sup class="footnote">[<a id="_footnoteref_44" class="footnote" href="#_footnote_44" title="View footnote.">44</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Humans have been representing information since at least the creation of writing. As early as 3000 BCE, the ancient Sumerians used cuneiform to record&#8201;&#8212;&#8201;among other things&#8201;&#8212;&#8201;how much beer people got. (The more things change, the more they stay the same.)</p>
@@ -25057,7 +25060,7 @@ A message to mapmakers: Highways are not painted red, rivers don&#8217;t have co
 <div class="content">
 <img src="images/4.11-quipu.jpg" alt="knotted cords" width="300">
 </div>
-<div class="title">Figure 89. Inca quipu <sup class="footnote">[<a id="_footnoteref_45" class="footnote" href="#_footnote_45" title="View footnote.">45</a>]</sup></div>
+<div class="title">Figure 90. Inca quipu <sup class="footnote">[<a id="_footnoteref_45" class="footnote" href="#_footnote_45" title="View footnote.">45</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>At around the same time as the Sumerians, the Inca empire in what is now Peru [?] also started to represent information. They used a radically different approach from the Sumerians: carefully knotted ropes:</p>
@@ -25114,7 +25117,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4.11-gasPump.jpg" alt="old gas pump" width="400">
 </div>
-<div class="title">Figure 90. What do they owe you? <sup class="footnote">[<a id="_footnoteref_46" class="footnote" href="#_footnote_46" title="View footnote.">46</a>]</sup></div>
+<div class="title">Figure 91. What do they owe you? <sup class="footnote">[<a id="_footnoteref_46" class="footnote" href="#_footnote_46" title="View footnote.">46</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>As the town grows, and your customers increase, you grow increasingly uncertain as to whether they all are paying you what they owe. You purchase a notebook and a pen (today&#8217;s equivalent of clay tablets or knotted ropes) and start writing down the amounts owed you.</p>
@@ -25197,7 +25200,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4.11-diffEngine.jpg" alt="Complex mechanical calculator" width="400">
 </div>
-<div class="title">Figure 91. Babbage Difference Engine <sup class="footnote">[<a id="_footnoteref_47" class="footnote" href="#_footnote_47" title="View footnote.">47</a>]</sup></div>
+<div class="title">Figure 92. Babbage Difference Engine <sup class="footnote">[<a id="_footnoteref_47" class="footnote" href="#_footnote_47" title="View footnote.">47</a>]</sup></div>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -25249,13 +25252,13 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4.11-punchedCard.jpg" alt="punched data card" width="300">
 </div>
-<div class="title">Figure 92. Punchcard <sup class="footnote">[<a id="_footnoteref_48" class="footnote" href="#_footnote_48" title="View footnote.">48</a>]</sup></div>
+<div class="title">Figure 93. Punchcard <sup class="footnote">[<a id="_footnoteref_48" class="footnote" href="#_footnote_48" title="View footnote.">48</a>]</sup></div>
 </div>
 <div class="imageblock" style="float: right">
 <div class="content">
 <img src="images/4.11-cardSorter.jpg" alt="mechanical card sorting machine" width="400">
 </div>
-<div class="title">Figure 93. Card Sorter <sup class="footnote">[<a id="_footnoteref_49" class="footnote" href="#_footnote_49" title="View footnote.">49</a>]</sup></div>
+<div class="title">Figure 94. Card Sorter <sup class="footnote">[<a id="_footnoteref_49" class="footnote" href="#_footnote_49" title="View footnote.">49</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>During World War II, many business professionals found themselves in the military, and some encountered the new electronic computers being used to calculate artillery trajectories or decrypt enemy messages. Edmund Berkeley, the first secretary of the Association for Computing Machinery, was one such professional who grasped the the potential of the new technology <a href="#Akera2007">[Akera2007]</a>. After the war, Berkeley advocated for the use of these machines to the leadership of the Prudential insurance company, while others did the same in the United Kingdom.</p>
@@ -26304,7 +26307,7 @@ Again, if you or your company are involved in legal issues relating to the above
 <div class="content">
 <img src="images/4.11-reportingOldStyle.png" alt="1900s clerk with adding machine" width="300" height="200">
 </div>
-<div class="title">Figure 94. Reporting and analytics, old style <sup class="footnote">[<a id="_footnoteref_50" class="footnote" href="#_footnote_50" title="View footnote.">50</a>]</sup></div>
+<div class="title">Figure 95. Reporting and analytics, old style <sup class="footnote">[<a id="_footnoteref_50" class="footnote" href="#_footnote_50" title="View footnote.">50</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>We have touched on reporting previously, in our discussion of <a href="#metrics-KPIs">metrics</a>. This is a more detailed examination.</p>
@@ -27443,7 +27446,7 @@ As with other chapters in the later part of this book, we are going to introduce
 <div class="content">
 <img src="images/4.12-architecture.jpg" alt="alt text" width="900">
 </div>
-<div class="title">Figure 95. St. Vitus Cathedral, Prague <sup class="footnote">[<a id="_footnoteref_51" class="footnote" href="#_footnote_51" title="View footnote.">51</a>]</sup></div>
+<div class="title">Figure 96. St. Vitus Cathedral, Prague <sup class="footnote">[<a id="_footnoteref_51" class="footnote" href="#_footnote_51" title="View footnote.">51</a>]</sup></div>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -27588,19 +27591,19 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <div class="content">
 <img src="images/4.12-serengeti.jpg" alt="alt text" width="250" height="200">
 </div>
-<div class="title">Figure 96. The terrain <sup class="footnote">[<a id="_footnoteref_52" class="footnote" href="#_footnote_52" title="View footnote.">52</a>]</sup></div>
+<div class="title">Figure 97. The terrain <sup class="footnote">[<a id="_footnoteref_52" class="footnote" href="#_footnote_52" title="View footnote.">52</a>]</sup></div>
 </div>
 <div class="imageblock" style="float: left">
 <div class="content">
 <img src="images/4.12-surveyor.jpg" alt="alt text" width="200" height="200">
 </div>
-<div class="title">Figure 97. The mapmaker <sup class="footnote">[<a id="_footnoteref_53" class="footnote" href="#_footnote_53" title="View footnote.">53</a>]</sup></div>
+<div class="title">Figure 98. The mapmaker <sup class="footnote">[<a id="_footnoteref_53" class="footnote" href="#_footnote_53" title="View footnote.">53</a>]</sup></div>
 </div>
 <div class="imageblock" style="float: ">
 <div class="content">
 <img src="images/4.12-map.jpg" alt="alt text" width="235" height="200">
 </div>
-<div class="title">Figure 98. The map <sup class="footnote">[<a id="_footnoteref_54" class="footnote" href="#_footnote_54" title="View footnote.">54</a>]</sup></div>
+<div class="title">Figure 99. The map <sup class="footnote">[<a id="_footnoteref_54" class="footnote" href="#_footnote_54" title="View footnote.">54</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Confused? Consider the activity of map-making. In map-making you have:</p>
@@ -27689,7 +27692,7 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <div class="content">
 <img src="images/4.12-moritz.jpg" alt="Moritz" width="300">
 </div>
-<div class="title">Figure 99. Franz Moritz Graf von Lacy <sup class="footnote">[<a id="_footnoteref_55" class="footnote" href="#_footnote_55" title="View footnote.">55</a>]</sup></div>
+<div class="title">Figure 100. Franz Moritz Graf von Lacy <sup class="footnote">[<a id="_footnoteref_55" class="footnote" href="#_footnote_55" title="View footnote.">55</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>In previous ages, nobles would assemble and fight for their King, but their armies were poorly coordinated, and disputes over strategy would often arise. Each noble&#8217;s army would have its own quartermaster, couriers, intelligence, supply chains, and the like. This was both inefficient, and ineffective: overall plans of battle often could not be made or executed, and military operations would be bungled.</p>
@@ -27810,7 +27813,7 @@ The operating model is the necessary level of business process integration and s
 <div class="content">
 <img src="images/4.12-EA-context.png" alt="EA context" width="900">
 </div>
-<div class="title">Figure 100. EA context, based on <a href="#Ross2006">[Ross2006]</a>, fig 1-2, p.10.</div>
+<div class="title">Figure 101. EA context, based on <a href="#Ross2006">[Ross2006]</a>, fig 1-2, p.10.</div>
 </div>
 <div class="paragraph">
 <p>Notice the distinction between Enterprise Architecture as a capability and as an artifact. The <strong>practice</strong> of Enterprise Architecture is not the same as the actual Enterprise Architecture. For the purposes of this textbook, we define enterprise architecture&#8217;s concerns as essentially the enterprise operating model: process, data, organizational capabilities, and systems.</p>
@@ -27842,7 +27845,7 @@ The operating model is the necessary level of business process integration and s
 <div class="content">
 <img src="images/4.12-zachman.png" alt="4.12 zachman">
 </div>
-<div class="title">Figure 101. A variation on the Zachman framework</div>
+<div class="title">Figure 102. A variation on the Zachman framework</div>
 </div>
 <div class="paragraph">
 <p><em>(loosely based on <a href="#Zachman1987">[Zachman1987]</a> and succeeding work.)</em></p>
@@ -27886,7 +27889,7 @@ The operating model is the necessary level of business process integration and s
 <div class="content">
 <img src="images/4.12-BM-OM.png" alt="Business model versus operating model" width="900">
 </div>
-<div class="title">Figure 102. Business model versus operating model</div>
+<div class="title">Figure 103. Business model versus operating model</div>
 </div>
 <div class="paragraph">
 <p>This distinction helps us position the Enterprise Architecture group with respect to key partner organizations:</p>
@@ -27997,7 +28000,7 @@ As a hygiene factor, benefits from EA can be valued in terms of reduction in man
 <div class="content">
 <img src="images/4.12-impact.png" alt="4.12 impact">
 </div>
-<div class="title">Figure 103. Architecture impacts on enterprise value</div>
+<div class="title">Figure 104. Architecture impacts on enterprise value</div>
 </div>
 <div class="paragraph">
 <p>The above diagram suggests a number of specific, measurable outcomes from typical enterprise architecture goals. Without exploring every line of value:</p>
@@ -28328,7 +28331,7 @@ identification and enforcement</p>
 <div class="content">
 <img src="images/4.12-archProgram.png" alt="4.12 archProgram">
 </div>
-<div class="title">Figure 104. Large scale architecture program</div>
+<div class="title">Figure 105. Large scale architecture program</div>
 </div>
 <div class="paragraph">
 <p>The Enterprise Architecture organization might report to a CTO, the Chief of Staff for the Office of the CIO, or the head of Corporate Strategy and Planning. It is a centralized organization with a small staff of domain architects and an Architecture Standards organization that owns two key cross-functional architecture processes.</p>
@@ -28384,7 +28387,7 @@ division is <em>fractal</em> (that is, it reproduces at different scales).</p>
 <div class="content">
 <img src="images/4.12-gudea.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 105. Gudea with blueprint, ~2140 BCE <sup class="footnote">[<a id="_footnoteref_56" class="footnote" href="#_footnote_56" title="View footnote.">56</a>]</sup></div>
+<div class="title">Figure 106. Gudea with blueprint, ~2140 BCE <sup class="footnote">[<a id="_footnoteref_56" class="footnote" href="#_footnote_56" title="View footnote.">56</a>]</sup></div>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -28409,7 +28412,7 @@ The true measure of the value of a model is whether it actually influences behav
 <div class="content">
 <img src="images/4.12-whiteboard.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 106. Whiteboard <sup class="footnote">[<a id="_footnoteref_57" class="footnote" href="#_footnote_57" title="View footnote.">57</a>]</sup></div>
+<div class="title">Figure 107. Whiteboard <sup class="footnote">[<a id="_footnoteref_57" class="footnote" href="#_footnote_57" title="View footnote.">57</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Even in construction and engineering trades that rely on blueprints as a source of truth, keeping them up to date requires considerable discipline and process. In faster-moving digital organizations, visual models are almost always out of date unless they have been specifically refreshed for a purpose, or unless there is a strong formal process in place (and the value of such a process may be difficult to establish). That doesn&#8217;t mean that diagrams will go away. Co-located teams use whiteboards and dry-erase markers and will continue to use them. There are important cognitive and human factors reasons for this that will not go away. Because of these facts, it is useful to understand some of the fundamentals of how humans interpret visual data.</p>
@@ -28432,7 +28435,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4.12-tiger.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 107. Fast recognition means survival <sup class="footnote">[<a id="_footnoteref_58" class="footnote" href="#_footnote_58" title="View footnote.">58</a>]</sup></div>
+<div class="title">Figure 108. Fast recognition means survival <sup class="footnote">[<a id="_footnoteref_58" class="footnote" href="#_footnote_58" title="View footnote.">58</a>]</sup></div>
 </div>
 <div class="ulist">
 <ul>
@@ -28457,7 +28460,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4.12-neumann-flowchart.png" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 108. The first software flowchart <sup class="footnote">[<a id="_footnoteref_59" class="footnote" href="#_footnote_59" title="View footnote.">59</a>]</sup></div>
+<div class="title">Figure 109. The first software flowchart <sup class="footnote">[<a id="_footnoteref_59" class="footnote" href="#_footnote_59" title="View footnote.">59</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Architects and architecture are known for creating diagrams&#8201;&#8212;&#8201;abstract graphical representations of complex systems. The first known instance of applying graphical techniques to a digital problem was in 1947 <a href="#vonNeumann1947">[vonNeumann1947]</a> and visual notations have evolved along with the field of computing ever since. Notable examples include:</p>
@@ -28491,7 +28494,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4.12-flowchart-template.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 109. IBM flowcharting template <sup class="footnote">[<a id="_footnoteref_60" class="footnote" href="#_footnote_60" title="View footnote.">60</a>]</sup></div>
+<div class="title">Figure 110. IBM flowcharting template <sup class="footnote">[<a id="_footnoteref_60" class="footnote" href="#_footnote_60" title="View footnote.">60</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Research at Microsoft suggests that developers use diagrams for four purposes:</p>
@@ -28528,7 +28531,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4.12-sequence-diagram.png" alt="blueprint" width="450" height="200">
 </div>
-<div class="title">Figure 110. UML sequence diagram <sup class="footnote">[<a id="_footnoteref_61" class="footnote" href="#_footnote_61" title="View footnote.">61</a>]</sup></div>
+<div class="title">Figure 111. UML sequence diagram <sup class="footnote">[<a id="_footnoteref_61" class="footnote" href="#_footnote_61" title="View footnote.">61</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>However, if we&#8217;re building systems to be operated and maintained by humans, it would seem that we should support the cognitive and perceptual strengths of humans.  Because diagrams are more readily processed, they are often used to represent high level system interactions - how a given service, product or application is related to peer systems and services. Building such depictions can be helpful to fostering a shared mental model of the overall system objectives and context. The more complex and highly scaled the environment, the more likely one will encounter such artifacts as a means to creating the mental model.</p>
@@ -28592,7 +28595,7 @@ The big picture is part of the standard mindset of EA, which everyone immediatel
 <div class="content">
 <img src="images/4.12-obesity.jpg" alt="blueprint" width="550" height="200">
 </div>
-<div class="title">Figure 111. Complex diagram <sup class="footnote">[<a id="_footnoteref_62" class="footnote" href="#_footnote_62" title="View footnote.">62</a>]</sup></div>
+<div class="title">Figure 112. Complex diagram <sup class="footnote">[<a id="_footnoteref_62" class="footnote" href="#_footnote_62" title="View footnote.">62</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>However, this next diagram is essentially unusable, as visually tracing any given line is too difficult, and it would be easy to mistakenly identify one bubble as dependent on another:</p>
@@ -28601,7 +28604,7 @@ The big picture is part of the standard mindset of EA, which everyone immediatel
 <div class="content">
 <img src="images/4.12-complex-network.jpg" alt="blueprint" width="550" height="200">
 </div>
-<div class="title">Figure 112. Another complex diagram <sup class="footnote">[<a id="_footnoteref_63" class="footnote" href="#_footnote_63" title="View footnote.">63</a>]</sup></div>
+<div class="title">Figure 113. Another complex diagram <sup class="footnote">[<a id="_footnoteref_63" class="footnote" href="#_footnote_63" title="View footnote.">63</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>This may seem like an obvious critique, but architectural diagrams of similar complexity and unusability have too often been produced.</p>
@@ -28614,7 +28617,7 @@ formalisms don&#8217;t give a good sense of scale. For example, suppose you see 
 <div class="content">
 <img src="images/4.12-capabilities.png" alt="capabilities" width="600">
 </div>
-<div class="title">Figure 113. Simple capability map</div>
+<div class="title">Figure 114. Simple capability map</div>
 </div>
 <div class="paragraph">
 <p>Diagrams like this are common, but what does it mean that all the boxes are equally sized? Are there as many lawyers as sales people? Operations staff? It&#8217;s not clear what the advantage is to putting information like this into a graphical form; no interactions are seen and the eight areas could more easily be expressed as a list (or "catalog" in the terms we&#8217;ll introduce below). This brings us to the final problem listed above: visualizations rely on some <a href="#shared-mental-model">common ground</a> understanding. If boxes and lines are used for communication, their meaning should be agreed upon - otherwise, there is risk of mis-understanding, and the diagram may do more harm than good.</p>
@@ -28763,7 +28766,7 @@ Artifacts are generally classified as catalogs (lists of things), matrices (show
 <div class="content">
 <img src="images/4.12-simpleMetamodel.png" alt="metamodel" width="400">
 </div>
-<div class="title">Figure 114. A simple metamodel</div>
+<div class="title">Figure 115. A simple metamodel</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -28967,7 +28970,7 @@ One core question decided by governance is how much autonomy is granted to busin
 <div class="content">
 <img src="images/4.12-A-380.jpg" alt="A-380" width="300" height="200">
 </div>
-<div class="title">Figure 115. Airbus A-380 <sup class="footnote">[<a id="_footnoteref_64" class="footnote" href="#_footnote_64" title="View footnote.">64</a>]</sup></div>
+<div class="title">Figure 116. Airbus A-380 <sup class="footnote">[<a id="_footnoteref_64" class="footnote" href="#_footnote_64" title="View footnote.">64</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>In 2006, Airbus was in the midst of developing the gigantic A-380 aircraft. Because of the scale of the effort, multiple teams of engineers in different countries were working on the effort. As William Ulrich says of the German and French teams, "having failed to coordinate efforts to wire the world&#8217;s largest plane, they were surprised to learn that they had used different approaches to designing the A380&#8217;s wiring system" <a href="#Ulrich2010">[Ulrich2010]</a>, p. 32. This was because the teams were using different software for wiring design of the critical wiring design software <a href="#Clark2006">[Clark2006]</a>. The use of different software to fulfill the capability resulted in a year&#8217;s delay, a $4.5bn order loss to Boeing, and a 26% drop in Airbus stock.</p>
@@ -29023,7 +29026,7 @@ One core question decided by governance is how much autonomy is granted to busin
 <div class="content">
 <img src="images/4.12-archimate.png" alt="archimate" width="500">
 </div>
-<div class="title">Figure 116. Similar to <a href="#Open2012">[Open2012]</a>, section 2.6</div>
+<div class="title">Figure 117. Similar to <a href="#Open2012">[Open2012]</a>, section 2.6</div>
 </div>
 <div class="paragraph">
 <p>As we look at the overall structure of the architecture disciplines, we have three disciplines that correspond to the columns. We&#8217;ll call these "perspectives":</p>
@@ -29105,7 +29108,7 @@ One core question decided by governance is how much autonomy is granted to busin
 <div class="content">
 <img src="images/4.12-flowchart.jpg" alt="flowchart" width="300" height="200">
 </div>
-<div class="title">Figure 117. A flowchart <sup class="footnote">[<a id="_footnoteref_65" class="footnote" href="#_footnote_65" title="View footnote.">65</a>]</sup></div>
+<div class="title">Figure 118. A flowchart <sup class="footnote">[<a id="_footnoteref_65" class="footnote" href="#_footnote_65" title="View footnote.">65</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Process architecture is concerned with why and how activities are performed. It includes the detailed, step by step understanding of activities, in a transparent way. From top to bottom, it includes concepts such as:</p>
@@ -29613,7 +29616,7 @@ Another possible objection against agile methods is that the processes in EA, an
 <div class="content">
 <img src="images/4.12-stopwatch.jpg" alt="alt text" width="300" height="200">
 </div>
-<div class="title">Figure 118. What is your Cost of Delay? <sup class="footnote">[<a id="_footnoteref_66" class="footnote" href="#_footnote_66" title="View footnote.">66</a>]</sup></div>
+<div class="title">Figure 119. What is your Cost of Delay? <sup class="footnote">[<a id="_footnoteref_66" class="footnote" href="#_footnote_66" title="View footnote.">66</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>It is in the "governance and approval" kind of activity that conflict is most likely to emerge. Cadence and synchronization (e.g. processes) with the potential to block teams from pursuing their mission should be very carefully considered. If there is a process or a queue of architecture approvals, it at least should be operated on Cost of Delay of the work it&#8217;s blocking. And more generally, across the organization, the process should be tested against an economic model such as establishing a nominal or <a href="#portfolio-CoD">portfolio-level Cost of Delay</a>. Like other processes, architecture itself can be assessed against such a baseline.</p>
@@ -29661,7 +29664,7 @@ Architectural goals—for example, desired performance, availability, and securi
 <div class="content">
 <img src="images/4.12-strangler-vine.jpg" alt="alt text" width="400" height="200">
 </div>
-<div class="title">Figure 119. Australian strangler vine surrounding tree <sup class="footnote">[<a id="_footnoteref_67" class="footnote" href="#_footnote_67" title="View footnote.">67</a>]</sup></div>
+<div class="title">Figure 120. Australian strangler vine surrounding tree <sup class="footnote">[<a id="_footnoteref_67" class="footnote" href="#_footnote_67" title="View footnote.">67</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Keeping the target operating condition specific is preferable. When architecture scopes problems too broadly, the temptation is to undertake <a href="#large-arch-xform-risk">large and risky transformation programs</a>. As an alternative, Humble and Molesky suggest the "strangler pattern," proposed by Martin Fowler in 2004 <a href="#Fowler2004a">[Fowler2004a]</a>. This pattern uses as a metaphor Australian "strangler" vines that grow around trees until the original tree dies, at which point the strangler vine is now itself a sturdy, rooted structure (see picture).</p>
