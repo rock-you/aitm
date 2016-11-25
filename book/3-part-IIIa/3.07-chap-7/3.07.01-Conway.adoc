@@ -6,7 +6,7 @@ This chapter is titled "Conway's law." So who was Conway and why is his law so i
 
 _Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization's communication structure_ <<Conway1968>>.
 
-What does this mean? If we establish two teams, each team will build a piece of functionality (a feature or component). They will think in terms of "our stuff" and "their stuff" and the interactions (or _interface_) between the two. Perhaps this seems obvious, but as you scale up it's critical to keep in mind. In particular, as you segment your organization along the xref:AKF-cube[AKF z-axis], you will need to keep in mind the difference between xref:feature-v-component[features and components.] You are on a path to have dozens or hundreds of such teams. The decisions you make today on how to divide functionality and work will determine your operating model far into the future.
+What does this mean? If we establish two teams, each team will build a piece of functionality (a feature or component). They will think in terms of "our stuff" and "their stuff" and the interactions (or _interface_) between the two. Perhaps this seems obvious, but as you scale up it's critical to keep in mind. In particular, as you segment your organization along the xref:AKF-cube[AKF z-axis], you will need to keep in mind the difference between features and components. You are on a path to have dozens or hundreds of such teams. The decisions you make today on how to divide functionality and work will determine your operating model far into the future.
 
 The most important choice at this point is between segmenting along feature lines, versus segmenting along component lines. What do we mean by this?
 
@@ -22,7 +22,7 @@ Components are *how* your product is *built*, such as database vs. Web component
 .Features versus components
 image::images/3_07-feature-v-component.png[feature component matrix,400,,float="right"]
 
-Feature teams are dedicated to a clearly defined functional scope, while component teams are defined by their technology platform. Component teams may become shared services, which need to be carefully understood and managed (more on this to come). It may be easy to say that features are more important than components, but this can easily be carried too far. Do you want each feature team choosing its own database? Not recommended. Allowing feature teams to define their own technical direction can result in brittle, fragmented architectures, technical debt, and rework.
+Feature teams are dedicated to a clearly defined functional scope, while component teams are defined by their technology platform. Component teams may become shared services, which need to be carefully understood and managed (more on this to come). It may be easy to say that features are more important than components, but this can easily be carried too far. Do you want each feature team choosing its own database? This might not be the best idea. Allowing feature teams to define their own technical direction can result in brittle, fragmented architectures, technical debt, and rework.
 
 Software product management needs to be a careful balance between these two perspectives. The Scaled Agile Framework suggests that components are relatively
 
