@@ -27,7 +27,7 @@ cd ../aitm-pages   # ugly & brittle.
 git pull # pull down previous html. never gets edited by hand.
 
 cp -R ../aitm/images .
-cp ../aitm*.html .
+cp ../aitm/*.html .
 
 git add . -A && git commit -m "commit"
 git push origin gh-pages
