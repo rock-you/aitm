@@ -26,8 +26,8 @@ mv aitm-student.html index.html  # hack, I should figure out the CLI parm for th
 cd ../aitm-pages   # ugly & brittle.
 git pull # pull down previous html. never gets edited by hand.
 
-cp -R images ../aitm-pages/
-cp *.html ../aitm-pages/
+cp -R ../aitm/images .
+cp ../aitm*.html .
 
 git add . -A && git commit -m "commit"
 git push origin gh-pages
