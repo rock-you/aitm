@@ -29,7 +29,6 @@ git pull # pull down previous html. never gets edited by hand.
 cp -R images ../aitm-pages/
 cp *.html ../aitm-pages/
 
-
 git add . -A && git commit -m "commit"
 git push origin gh-pages
 cd ../aitm
