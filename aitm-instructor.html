@@ -7085,10 +7085,7 @@ It is humbling to see how bad experts are at estimating the value of features (u
 <div class="title">Figure 41. Beware of the HIPPO approach to product discovery <sup class="footnote">[<a id="_footnoteref_23" class="footnote" href="#_footnote_23" title="View footnote.">23</a>]</sup></div>
 </div>
 <div class="paragraph">
-<p>The problem with relying on "gut feel" or personal opinions is that people&#8201;&#8212;&#8201;regardless of experience or seniority&#8201;&#8212;&#8201;perform poorly in assessing the likely outcome of their product ideas.</p>
-</div>
-<div class="paragraph">
-<p>Some well known research on this topic was conducted by Microsoft&#8217;s Ronny Kohavi. In this research, Kohavi and team determiend that "only about 1/3 of ideas improve the metrics they were designed to improve." <a href="#Kohavi2009">[Kohavi2009]</a> As background, the same report cites that:</p>
+<p>The problem with relying on "gut feel" or personal opinions is that people&#8201;&#8212;&#8201;regardless of experience or seniority&#8201;&#8212;&#8201;perform poorly in assessing the likely outcome of their product ideas. Some well known research on this topic was conducted by Microsoft&#8217;s Ronny Kohavi. In this research, Kohavi and team determined that "only about 1/3 of ideas improve the metrics they were designed to improve." <a href="#Kohavi2009">[Kohavi2009]</a> As background, the same report cites that:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -7100,21 +7097,46 @@ It is humbling to see how bad experts are at estimating the value of features (u
 </li>
 </ul>
 </div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Amazon Shopping Cart Recommendations</div>
+<div class="paragraph">
+<p>A well known story of the power of experimentation is told by Greg Linden, who was a product developer for early versions of the Amazon shopping cart. Linden had an idea of making recommendations to people based on what was already in their shopping cart. (While this is common across e-commerce sites now, at one point it was a new idea.) While grocery stores "recommnend" impulse purchases (candy, gum) in the checkout lane, an ecommerce provider can recommend anything in the store, so the idea is even more powerful. Linden developed a prototype, and while it got some favorable reactions, one senior vice president was against it&#8201;&#8212;&#8201;his view was that it might distract people and lead them to abandon the cart.</p>
+</div>
+<div class="paragraph">
+<p>As Linden says, "I was forbidden to work on this any further." But he went ahead and prepared the feature anyways. The SVP was furious, but Amazon already had a data-driven culture and even senior executives couldn&#8217;t block tests. The feature was then pushed out to a small set of Amazon customers.  In this way, they could compare the behavior of customers who did receive shopping cart recommendations to those who didn&#8217;t (otherwise known as a controlled experiment.) The results were dramatic - the feature outperformed the control of not having it by such a large margin that, as Linden says, "not having it live was costing Amazon a notable chunk of change."</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s unknown what happened to the SVP. Challenging senior executives can be bad for your career, but if you find yourself in a place run by HiPPOs who don&#8217;t want to experiment, you might want to consider how long that organization will be in business.
+<a href="#Linden2006">[Linden2006]</a></p>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>It is therefore critical to establish a strong practice of data-driven experimentation when forming a product team, and avoid any cultural acceptance of "gut feel" or deferring to HIPPOs. This can be a difficult transition for the company founder, who has until now served as the <em>de facto</em> product manager. We discuss issues of prioritization further in Chapter 5, in the section on <a href="#cost-of-delay">Cost of Delay</a>.</p>
+</div>
+<div class="paragraph">
+<p><a id="beneficial-variability"></a></p>
+</div>
+<div class="paragraph">
+<p>Finally, Don Reinertsen (who we will read more about in the next chapter) emphasizes that such experimentation is inherently <em>variable</em>. We can&#8217;t develop experiments with any sort of expectation that they will always succeed. We might run 50 experiments, and only have 2 succeed. But if the cost of each experiment is $10,000, and the two that succeeded earned us $1 million each, we gained:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>$ 2,000,000
+$ - 480,000
+-----------
+$ 1,520,000</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Not a bad return on investment! (See <a href="#Reinertsen2009">[Reinertsen2009]</a>, Chapter 4, for a detailed, mathematical discussion, based on options and information theory.)</p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_product_discovery_techniques">Product discovery techniques</h5>
 <div class="paragraph">
-<p>There are a wide variety of techniques and even "schools" of product discovery and design; we will consider a few representatives in this chapter section.</p>
-</div>
-<div class="paragraph">
-<p>Of course, when you first started your journey in Chapter 1, you might also have used some of these techniques. But now that you are a team, you are formalizing and relying on these techniques.</p>
-</div>
-<div class="paragraph">
-<p>These techniques are not mutually exclusive; they may be complementary.
-But at the more detailed, digital product level, how do we develop hypotheses for testing, in terms of our products/services? We briefly mentioned User Story Mapping in our discussion of <a href="#system-intent">system intent.</a> But that is only one of many techniques. Other tools include:</p>
+<p>There are a wide variety of techniques and even "schools" of product discovery and design; we will consider a few representatives in this chapter section. Of course, when you first started your journey in Chapter 1, you might also have used some of these techniques. But now that you are a team, you are formalizing and relying on these techniques. These techniques are not mutually exclusive; they may be complementary. But at the more detailed, digital product level, how do we develop hypotheses for testing, in terms of our products/services? We briefly mentioned User Story Mapping in our discussion of <a href="#system-intent">system intent.</a> But that is only one of many techniques. Other tools include:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -8577,7 +8599,7 @@ The concept of a repeatable "software process" is at best a risky one, and an id
 </div>
 <div class="paragraph">
 <p>In IT, simply developing software for a new problem (or even new software for an old problem) is an R&amp;D problem, not a production line problem. It is iterative, uncertain, and risky, just like other forms of product development. That does not mean it is completely un-manageable, or that its creation is a mysterious, artistic process. It is just a more variable process with a higher chance of failure, and with a need to incorporate feedback quickly to reduce the risk of <a href="#2.00.1-open-loop">open loop</a>
-control failure.  These ideas are well known to the Agile community and its authors. However, there is one thought leader who stands out in this field: an ex-Naval officer and former nuclear engineer named Donald Reinertsen, introduced above in our discussion of <a id="queuing"></a>.</p>
+control failure.  These ideas are well known to the Agile community and its authors. However, there is one thought leader who stands out in this field: an ex-Naval officer and former nuclear engineer named Donald Reinertsen, introduced above in our discussions <a href="#beneficial-variability">beneficial variability in product discovery</a> and <a id="queuing"></a>.</p>
 </div>
 <div class="paragraph">
 <p>There are many books on Agile development and management. Consider the following books, all well known and influential in the fields of software development and Agile:</p>
