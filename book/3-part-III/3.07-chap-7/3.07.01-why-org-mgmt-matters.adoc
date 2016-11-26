@@ -53,9 +53,9 @@ One of the first companies to try a completely different approach was Intuit. As
 .New IT organization
 image::images/3_07-neworg.png[org chart,600]
 
-The consequences of this transition in organizational style are still being felt and debated. Sriram Narayan, in his book _Agile Organization Design_ (<<Narayam2015>>), points out that "IT work is labor-intensive and highly specialized," and therefore managing IT talent is a particular organizational capability it may not make sense to distribute. Furthermore, he observes that IT work is performed on medium to long time scales, and  "IT culture" differs from "business culture." But Abbott and Fisher in _The Art of Scalability_ argue that "...The difference in mindset, organization, metrics, and approach between the IT and product models is vast. Corporate technology governance tends to significantly slow time to market for critical projects...IT mindsets are great for internal technology development, but disastrous for external product development."" <<Abbott2015>> pp 122-124
+(Attentive readers will ask, "What happened to the PMO? and what about security?" There are various answers to these questions, which we will continue to explore in Part III.)
 
-Attentive readers will ask, "What happened to the PMO? and what about security?" There are various answers to these questions, which we will continue to explore in Part III.
+The consequences of this transition in organizational style are still being felt and debated. Sriram Narayan, in his book _Agile Organization Design_ (<<Narayam2015>>), points out that "IT work is labor-intensive and highly specialized," and therefore managing IT talent is a particular organizational capability it may not make sense to distribute. Furthermore, he observes that IT work is performed on medium to long time scales, and  "IT culture" differs from "business culture." However, Abbott and Fisher in _The Art of Scalability_ argue that "...The difference in mindset, organization, metrics, and approach between the IT and product models is vast. Corporate technology governance tends to significantly slow time to market for critical projects...IT mindsets are great for internal technology development, but disastrous for external product development."" <<Abbott2015>> pp 122-124
 
 anchor:2.04.02-features-v-components[]
 anchor:feature-v-component[]
@@ -86,55 +86,6 @@ So who was Conway and why is his law so important as we move to a team of teams?
 _Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization's communication structure_ <<Conway1968>>.
 
 What does this mean? If we establish two teams, each team will build a piece of functionality (a feature or component). They will think in terms of "our stuff" and "their stuff" and the interactions (or _interface_) between the two. Perhaps this seems obvious, but as you scale up it's critical to keep in mind. In particular, as you segment your organization along the xref:AKF-cube[AKF z-axis], you will need to keep in mind the difference between features and components. You are on a path to have dozens or hundreds of such teams. The decisions you make today on how to divide functionality and work will determine your operating model far into the future.
+
+Ultimately, Conway's law tells us that to design a product is also to design an organization, and vice versa. Important for designers and architects to remember.
 ****
-
-===== Defining the organization
-
-There are many permutations and variations on traditional functional organizing versus product-oriented organizing, and features versus components. How does one begin to decide these questions?
-
-====== Splitting teams
-inevitable
-
-* failure domains (abbott p 49)
-
-architects need to be able to reason about and lead conversation about such matters
-
-retain impact mapping - impact mapping re-visited for internal purposes - build on previous impact map?
-
-
-
-
-====== Hard v soft teams
-Long-tenured and highly experi
-enced teams require less overhead from management and less communication inter
-nally to perform their responsibilities. (abbott p 45)
-
-====== Team size
-
-====== Norms and standards
-
-importance of -
-increase effectiveness and efficiency
-
-xref to architecture
-
-
-===== Team relationship to artifacts
- (move to coordination chapter??)
-everyone can work on everything - changing Rs into Is.
-
-we didn't talk about pigs / chickens previously
-
-....
-This is all off base ... need to start with product teams... also, R&D vs back office IT...
-
-Perhaps the first question you need to ask is to what extent you wish to centralize your digital organization. This is a significant one. The current trend is towards decentralizing IT, but there are good reasons to maintain IT as a separate organizational entity. (The last may be debatable in the long run, in the digitally transforming world.)
-
-****
-*Centralized versus decentralized IT*
-
-What do we mean by "centralized" versus "decentralized," anyways? There are many models for structuring IT, but at one end of the spectrum is when everyone doing anything significant with configuring computers, developing software, or supporting IT networking reports up through a powerful Chief Information Officer, who may report to the CEO, COO, CFO, or other senior executive.
-
-By contrast, in a "decentralized" model, computing is procured and managed by diverse managers in other functional units. So, the Human Resource VP might have an IT manager, the Marketing director would have one, and so on. The IT managers might know each other but they report to different managers and may have a very limited ability to share resources and learnings.
-****
-....
