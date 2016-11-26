@@ -35,7 +35,7 @@ More broadly, these tools provide a variety of mechanisms for monitoring and con
 .User experience monitoring
 image::images/2.06-monitoring-3.png[application server and monitor, 350,,float="left"]
 
-Some monitoring covers low level system indicators not usually of direct interest to the end user. Other monitoring may attempt to synthetically re-create the user's "moment of truth." Web application response time monitoring, in which synthetic transactions are run as proxies for end user experience, is an example of this. See <<Limoncelli2014>>, chapters 16-17.
+Some monitoring covers low level system indicators not usually of direct interest to the end user. Other monitorines for end user experience, is an example of this. See <<Limoncelli2014>>, chapters 16-17.
 
 All of this data may then be forwarded to a central console and be integrated, with the objective of supporting the organization’s service level agreements in priority order. Enterprise monitoring tools are notorious for requiring agents (small, continuously-running programs) on servers; while some things can be detected without such agents, having software running on a given computer still provides the richest data. Since licensing is often agent-based, this gets expensive.
 
@@ -66,7 +66,7 @@ A typical way to enable custom monitoring is to first use a standard logging lib
 
 into the log, the monitoring tool can be configured to recognize the severity of the message and immediately raise an alert.
 
-Finally, as the quote at the beginning of this section suggests, it is critical that the monitoring discipline be based on continuous improvement. Keeping monitoring techniques current with your operational challenges is a never-ending task. Approaches that worked well yesterday, today generate too many false positives, and your operations team is now overloaded with all the noise. Ongoing questioning and improvement of your approaches is essential to keeping your monitoring system optimized for managing business impact as efficiently and effectively as possible. 
+Finally, as the quote at the beginning of this section suggests, it is critical that the monitoring discipline be based on continuous improvement. Keeping monitoring techniques current with your operational challenges is a never-ending task. Approaches that worked well yesterday, today generate too many false positives, and your operations team is now overloaded with all the noise. Ongoing questioning and improvement of your approaches is essential to keeping your monitoring system optimized for managing business impact as efficiently and effectively as possible.
 
 ===== Aggregation and operations centers
 
@@ -117,6 +117,9 @@ The above lists are very simple examples of what can be extensive record-keeping
 The above approach is relevant to older models still reliant on servers (whether physical or virtual) as primary units of processing. The trend to xref:containers[containers and serverless] computing is challenging these traditional practices, and what will replace them is currently unclear.
 
 ===== Capacity and performance management
+
+.Capacity management on Star Trek
+****
 _"The tank can't handle that much pressure."_
 
 _"Where'd you get that idea?"_
@@ -130,6 +133,7 @@ _"Yeah."_
 _"Forget it. I wrote it...A good engineer is always a wee bit conservative, at least on paper."_
 
 Conversation between Geordi LaForge and Montgomery Scott, _Star Trek: The Next Generation_, "Relics"
+****
 
 Capacity and performance management are closely related, but not identical terms encountered as IT systems scale up and encounter significant load.
 
