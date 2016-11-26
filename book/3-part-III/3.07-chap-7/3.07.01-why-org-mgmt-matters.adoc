@@ -8,57 +8,51 @@ In the early stages, you have to hire generalists who are both willing and able 
  +
 For a lot of your employees, growing out of this phase will be a welcome development: programmers don’t want to be in accounting meetings, and salespeople don’t want to sit in a dark, quiet room with the engineers. People have talents and skills they want to develop, and a healthy degree of specialization allows them to do that.
 
-So, you are getting bigger now.
+[quote, Abbot and Fisher, The Art of Scalability]
+Some of the most important factors that organizational structure can affect are communication, efficiency, standards, quality, and ownership.
 
-Even as a cohesive, single team you had increasing complexity of support services. You needed legal and accounting advice to get the startup going. When you started hiring people, you needed HR and payroll. You also are buying things and paying bills, and you’ve got sales people and marketing people and you need to support your customers and collect money they have promised to pay. At some point you need an internal person whose daily job is money (they’ll become the CFO someday).
+So, you are getting bigger now, and are no longer one single team. As the quote from Matt Blumberg's Scaling Up indicates, you are becoming more specialized.
 
-How are you going to organize? More importantly, how are you going to think about organizing? This is a hard question. It’s important to get organization right, and the question never goes away. There is a lot of theory, history, and advice available on to how to organize your company.
+How are you going to organize? More importantly, how are you going to think about organizing? This is a hard question. It’s important to get organization right, and the question never goes away. There is a lot of theory, history, and advice available on to how to organize your company. Even as a cohesive, single team you had specialized support services. You needed legal and accounting advice to get the startup going. When you started hiring people, you needed HR and payroll. You also are buying things and paying bills, so you need bookkeeping, and you’ve got sales people and marketing people and you need to support your customers and collect money they have promised to pay. At some point you need an internal person whose daily job is money (they’ll become the CFO someday).
 
-This is not a general business school textbook, or even  a textbook on startups and entrepreneurship. However, in the current environment, it is essential for the digital professional, no matter how specialized, to understand the general context they are operating in. In one chapter, we cannot cover much, but there’s an increasing consensus that the choice of organizational form has a fundamental impact on the success of IT-based product delivery.
-
- Sense of ownership is at risk of fading as the org fragments and the artifacts grow
-
- The team remains the highest-value logical unit & must be protected - we didn't talk about pigs / chickens previously
+As you grow and split into teams, the overall sense of mission you felt as a single team is at risk of fading. How can you keep your "eyes on the prize" when there are mulitple teams, who all see the world slightly differently? It's critical, as you start to explore various coordination mechanisms, to remember that the team remains the highest-value logical unit, and must be protected. As we discussed in xref:the-product-team[Chapter 4], product value is created by co-located, cross-functional, highly collaborative teams.
 
 In keeping with our xref:0.01-emergence[evolutionary approach], let’s assume you’ve been fairly ad-hoc in your organizational structure up to now, doing your best to avoid specialization. Perhaps you’ve even been working as a collective. Nevertheless, you’ve needed a variety of skills to get this far in your journey: you are certainly not all Java programmers!
 
- This is all off base ... need to start with product teams... also, R&D vs back office IT...
-
-Perhaps the first question you need to ask is to what extent you wish to centralize your digital organization. This is a significant one. The current trend is towards decentralizing IT, but there are good reasons to maintain IT as a separate organizational entity. Sriram Narayan, in his book _Agile Organization Design_ (<<Narayam2015>>), points out that "IT work is labor-intensive and highly specialized," and therefore sourcing IT talent is a particular organizational capability it may not make sense to distribute. Furthermore, he observes that IT work is performed on medium to long time scales, and  "IT culture" differs from "business culture." (The last may be debatable in the long run, in the digitally transforming world.)
-
-****
-*Centralized versus decentralized IT*
-
-What do we mean by "centralized" versus "decentralized," anyways? There are many models for structuring IT, but at one end of the spectrum is when everyone doing anything significant with configuring computers, developing software, or supporting IT networking reports up through a powerful Chief Information Officer, who may report to the CEO, COO, CFO, or other senior executive.
-
-By contrast, in a "decentralized" model, computing is procured and managed by diverse managers in other functional units. So, the Human Resource VP might have an IT manager, the Marketing director would have one, and so on. The IT managers might know each other but they report to different managers and may have a very limited ability to share resources and learnings.
-****
-
-As noted at the  xref:1.01.02-IT-as-function-2[outset], IT has certain unchanging aspects regardless of whether is a separate or embedded organization. However, the purpose of this chapter is to help you think carefully about this very question.
-
-===== Roles and responsibilities
-[quote, abbott]
-Some of the most important factors that organizational structure can affect are communication, efficiency, standards, quality, and ownership.
-
-There are two basic models for technology organizations: the IT organization model and the product organization model...The difference in mindset, organization, metrics, and approach between the IT and product models is vast.<<Abbott2015>> p 122.
-
-Corporate technology governance tends to significantly slow time to market for critical projects...IT mindsets are great for internal technology development, but disastrous for external product development. p 124
-
-RACI
-
-
-This chapter is titled "Conway's law." So who was Conway and why is his law so important as we move to a team of teams? Melvin Conway is a computer programmer who worked on early compilers and programming languages. In 1967 he proposed the thesis that:
+===== Conway's law
+This section is titled "Conway's law." So who was Conway and why is his law so important as we move to a team of teams? Melvin Conway is a computer programmer who worked on early compilers and programming languages. In 1967 he proposed the thesis that:
 
 _Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization's communication structure_ <<Conway1968>>.
 
 What does this mean? If we establish two teams, each team will build a piece of functionality (a feature or component). They will think in terms of "our stuff" and "their stuff" and the interactions (or _interface_) between the two. Perhaps this seems obvious, but as you scale up it's critical to keep in mind. In particular, as you segment your organization along the xref:AKF-cube[AKF z-axis], you will need to keep in mind the difference between features and components. You are on a path to have dozens or hundreds of such teams. The decisions you make today on how to divide functionality and work will determine your operating model far into the future.
 
-The most important choice at this point is between segmenting along feature lines, versus segmenting along component lines. What do we mean by this?
+There are two major themes current in discussions of digital and IT organization:
+
+* The product organization versus the "IT" organization
+* Organizing teams by features versus components
+
+====== Product organization versus "IT" organization
+
+There are two major models that digital professionals may encounter in their career:
+
+* The traditional centralized back-office "IT" organization
+* Digital technology as a component of market-facing product management
+
+The traditional IT organization started decades ago, with "back-office" goals like replacing file clerks and filing cabinets with faster and more accurate computers. (We will go into further detail in anchor:paper-to-digital[Chapter 11].) At that time, computers were not particularly flexible or reliable, business did not move as fast, and there was a lot of value to be gained in relatively simple efforts like converting massive paper filing systems into digital systems. As these kinds of efforts grew and became critical operational dependencies for companies, the role of Chief Information Officer was created, to head up increasingly large organizations of application developers, infrastructure engineers, and operations staff. 
+
+The business objectives for such organizations centered on stability and efficiency. Replacing 300 file clerks with a system that wound up costing *more* was obviously not a good business outcome! On the other hand, it was generally accepted that designing and implementing these systems would take some time. They were complex and many times the problem had never been solved before. New systems might take years -- including delays -- to come online, and while executives might be unhappy, oftentimes the competition wasn't doing much better.
+
+The culture and practices of the modern IT organization became more established, and while it retained a reputation for being slow, expensive, and inflexible, no-one seemed to have any better ideas. It didn't hurt that the end customer wasn't interested in computers.
+
+Then along came Apple, Microsoft, and the dot-com boom. Suddenly everyone had personal computers at home, and was on the Internet. Buying things!
+
+Sriram Narayan, in his book _Agile Organization Design_ (<<Narayam2015>>), points out that "IT work is labor-intensive and highly specialized," and therefore sourcing IT talent is a particular organizational capability it may not make sense to distribute. Furthermore, he observes that IT work is performed on medium to long time scales, and  "IT culture" differs from "business culture." But Abbott and Fisher in _The Art of Scalability_ argue that "...The difference in mindset, organization, metrics, and approach between the IT and product models is vast. Corporate technology governance tends to significantly slow time to market for critical projects...IT mindsets are great for internal technology development, but disastrous for external product development."" <<Abbott2015>> pp 122-124
 
 anchor:2.04.02-features-v-components[]
 anchor:feature-v-component[]
 
-====== Features vs. components
+====== Features versus components
+The most important choice at this point is between segmenting along feature lines, versus segmenting along component lines. What do we mean by this?
 
 Features are *what* your product *does*. They are what the customers perceive as valuable. “Scope as viewed by the customer” as <<Kennaley2010>> says (p. 169). They may be "xref:flower-and-cog[flowers]" -- defined by the value they provide externally, and encouraged to evolve with some freedom.
 
@@ -76,22 +70,10 @@ Software product management needs to be a careful balance between these two pers
 
 than features. SAFE also recommends a ratio of roughly 20-25% component teams to 75%-80% feature teams <<SAFE2016>>.
 
-===== Norms and standards
 
-importance of -
-increase effectiveness and efficiency
+===== Defining team structures
 
-xref to architecture
-
-===== Hard v soft teams
-Long-tenured and highly experi
-enced teams require less overhead from management and less communication inter
-nally to perform their responsibilities. (abbott p 45)
-
-===== how large shd teams be
-
-
-===== splitting teams
+====== splitting teams
 inevitable
 
 * failure domains (abbott p 49)
@@ -106,5 +88,38 @@ teams under the purview of the CTO. Furthermore, infrastructure individual con
 tributors, such as storage engineers and database administrators, were divided up
 and allocated to become part of the product teams with which they worked. Abbot2015 p 103
 
-===== redefining ownership
+
+====== Hard v soft teams
+Long-tenured and highly experi
+enced teams require less overhead from management and less communication inter
+nally to perform their responsibilities. (abbott p 45)
+
+====== Team size
+
+====== Norms and standards
+
+importance of -
+increase effectiveness and efficiency
+
+xref to architecture
+
+
+===== Team relationship to artifacts
+ (move to coordination chapter??)
 everyone can work on everything - changing Rs into Is.
+
+we didn't talk about pigs / chickens previously
+
+....
+This is all off base ... need to start with product teams... also, R&D vs back office IT...
+
+Perhaps the first question you need to ask is to what extent you wish to centralize your digital organization. This is a significant one. The current trend is towards decentralizing IT, but there are good reasons to maintain IT as a separate organizational entity. (The last may be debatable in the long run, in the digitally transforming world.)
+
+****
+*Centralized versus decentralized IT*
+
+What do we mean by "centralized" versus "decentralized," anyways? There are many models for structuring IT, but at one end of the spectrum is when everyone doing anything significant with configuring computers, developing software, or supporting IT networking reports up through a powerful Chief Information Officer, who may report to the CEO, COO, CFO, or other senior executive.
+
+By contrast, in a "decentralized" model, computing is procured and managed by diverse managers in other functional units. So, the Human Resource VP might have an IT manager, the Marketing director would have one, and so on. The IT managers might know each other but they report to different managers and may have a very limited ability to share resources and learnings.
+****
+....
