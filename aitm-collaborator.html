@@ -777,7 +777,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_why_organization_matters">Why organization matters</a>
 <ul class="sectlevel4">
-<li><a href="#_conway_s_law">Conway&#8217;s law</a></li>
+<li><a href="#_product_organization_versus_it_organization">Product organization versus "IT" organization</a></li>
+<li><a href="#_features_versus_components">Features versus components</a></li>
 <li><a href="#_defining_team_structures">Defining team structures</a></li>
 <li><a href="#_team_relationship_to_artifacts">Team relationship to artifacts</a></li>
 </ul>
@@ -11757,17 +11758,6 @@ Some of the most important factors that organizational structure can affect are 
 <div class="paragraph">
 <p>In keeping with our <a href="#0.01-emergence">evolutionary approach</a>, let’s assume you’ve been fairly ad-hoc in your organizational structure up to now, doing your best to avoid specialization. Perhaps you’ve even been working as a collective. Nevertheless, you’ve needed a variety of skills to get this far in your journey: you are certainly not all Java programmers!</p>
 </div>
-<div class="sect4">
-<h5 id="_conway_s_law">Conway&#8217;s law</h5>
-<div class="paragraph">
-<p>This section is titled "Conway&#8217;s law." So who was Conway and why is his law so important as we move to a team of teams? Melvin Conway is a computer programmer who worked on early compilers and programming languages. In 1967 he proposed the thesis that:</p>
-</div>
-<div class="paragraph">
-<p><em>Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization&#8217;s communication structure</em> <a href="#Conway1968">[Conway1968]</a>.</p>
-</div>
-<div class="paragraph">
-<p>What does this mean? If we establish two teams, each team will build a piece of functionality (a feature or component). They will think in terms of "our stuff" and "their stuff" and the interactions (or <em>interface</em>) between the two. Perhaps this seems obvious, but as you scale up it&#8217;s critical to keep in mind. In particular, as you segment your organization along the <a href="#AKF-cube">AKF z-axis</a>, you will need to keep in mind the difference between features and components. You are on a path to have dozens or hundreds of such teams. The decisions you make today on how to divide functionality and work will determine your operating model far into the future.</p>
-</div>
 <div class="paragraph">
 <p>There are two major themes current in discussions of digital and IT organization:</p>
 </div>
@@ -11781,8 +11771,8 @@ Some of the most important factors that organizational structure can affect are 
 </li>
 </ul>
 </div>
-<div class="sect5">
-<h6 id="_product_organization_versus_it_organization">Product organization versus "IT" organization</h6>
+<div class="sect4">
+<h5 id="_product_organization_versus_it_organization">Product organization versus "IT" organization</h5>
 <div class="paragraph">
 <p>There are two major models that digital professionals may encounter in their career:</p>
 </div>
@@ -11800,24 +11790,24 @@ Some of the most important factors that organizational structure can affect are 
 <p>The traditional IT organization started decades ago, with "back-office" goals like replacing file clerks and filing cabinets with faster and more accurate computers. (We will go into further detail in <a id="paper-to-digital"></a>.) At that time, computers were not particularly flexible or reliable, business did not move as fast, and there was a lot of value to be gained in relatively simple efforts like converting massive paper filing systems into digital systems. As these kinds of efforts grew and became critical operational dependencies for companies, the role of Chief Information Officer was created, to head up increasingly large organizations of application developers, infrastructure engineers, and operations staff.</p>
 </div>
 <div class="paragraph">
-<p>The business objectives for such organizations centered on stability and efficiency. Replacing 300 file clerks with a system that wound up costing <strong>more</strong> was obviously not a good business outcome! On the other hand, it was generally accepted that designing and implementing these systems would take some time. They were complex and many times the problem had never been solved before. New systems might take years&#8201;&#8212;&#8201;including delays&#8201;&#8212;&#8201;to come online, and while executives might be unhappy, oftentimes the competition wasn&#8217;t doing much better.</p>
+<p>The business objectives for such organizations centered on stability and efficiency. Replacing 300 file clerks with a system that wound up costing <strong>more</strong> was obviously not a good business outcome! On the other hand, it was generally accepted that designing and implementing these systems would take some time. They were complex and many times the problem had never been solved before. New systems might take years&#8201;&#8212;&#8201;including delays&#8201;&#8212;&#8201;to come online, and while executives might be unhappy, oftentimes the competition wasn&#8217;t doing much better. CIOs were conditioned to be risk-averse; if systems were running, changing them was scrutinized with great care and rarely rushed.</p>
 </div>
 <div class="paragraph">
 <p>The culture and practices of the modern IT organization became more established, and while it retained a reputation for being slow, expensive, and inflexible, no-one seemed to have any better ideas. It didn&#8217;t hurt that the end customer wasn&#8217;t interested in computers.</p>
 </div>
 <div class="paragraph">
-<p>Then along came Apple, Microsoft, and the dot-com boom. Suddenly everyone had personal computers at home, and was on the Internet. Buying things!</p>
+<p>Then along came Apple, Microsoft, and the dot-com boom. Suddenly everyone had personal computers at home, and was on the Internet. Buying things! Computers continued to become more reliable and powerful as well. Companies realized that their back-office IT organizations were not able to move fast enough to keep up with the new e-commerce challenge, and in many cases organized their Internet team <strong>outside</strong> of the CIO&#8217;s control (which sometimes made the traditional IT organization very unhappy). Silicon valley startups such as Google and Facebook in general did not even have a separate "CIO" organization, because (and this is a critical point) <strong>the digital systems <em>were</em> the product.</strong> Going to market against tough competitors (Alta Vista and Yahoo against Google, Friendster and MySpace against Facebook) wasn&#8217;t a question of maximizing efficiency. It was about product innovation and effectiveness, and taking appropriate risks in the quest for these rapidly growing new markets.</p>
 </div>
 <div class="paragraph">
-<p>Sriram Narayan, in his book <em>Agile Organization Design</em> (<a href="#Narayam2015">[Narayam2015]</a>), points out that "IT work is labor-intensive and highly specialized," and therefore sourcing IT talent is a particular organizational capability it may not make sense to distribute. Furthermore, he observes that IT work is performed on medium to long time scales, and  "IT culture" differs from "business culture." But Abbott and Fisher in <em>The Art of Scalability</em> argue that "&#8230;&#8203;The difference in mindset, organization, metrics, and approach between the IT and product models is vast. Corporate technology governance tends to significantly slow time to market for critical projects&#8230;&#8203;IT mindsets are great for internal technology development, but disastrous for external product development."" <a href="#Abbott2015">[Abbott2015]</a> pp 122-124</p>
+<p>The consequences are still being felt and debated. Sriram Narayan, in his book <em>Agile Organization Design</em> (<a href="#Narayam2015">[Narayam2015]</a>), points out that "IT work is labor-intensive and highly specialized," and therefore managing IT talent is a particular organizational capability it may not make sense to distribute. Furthermore, he observes that IT work is performed on medium to long time scales, and  "IT culture" differs from "business culture." But Abbott and Fisher in <em>The Art of Scalability</em> argue that "&#8230;&#8203;The difference in mindset, organization, metrics, and approach between the IT and product models is vast. Corporate technology governance tends to significantly slow time to market for critical projects&#8230;&#8203;IT mindsets are great for internal technology development, but disastrous for external product development."" <a href="#Abbott2015">[Abbott2015]</a> pp 122-124</p>
 </div>
 <div class="paragraph">
 <p><a id="2.04.02-features-v-components"></a>
 <a id="feature-v-component"></a></p>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_features_versus_components">Features versus components</h6>
+<div class="sect4">
+<h5 id="_features_versus_components">Features versus components</h5>
 <div class="paragraph">
 <p>The most important choice at this point is between segmenting along feature lines, versus segmenting along component lines. What do we mean by this?</p>
 </div>
@@ -11851,6 +11841,19 @@ Some of the most important factors that organizational structure can affect are 
 </div>
 <div class="paragraph">
 <p>than features. SAFE also recommends a ratio of roughly 20-25% component teams to 75%-80% feature teams <a href="#SAFE2016">[SAFE2016]</a>.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Conway&#8217;s law</div>
+<div class="paragraph">
+<p>So who was Conway and why is his law so important as we move to a team of teams? Melvin Conway is a computer programmer who worked on early compilers and programming languages. In 1967 he proposed the thesis that:</p>
+</div>
+<div class="paragraph">
+<p><em>Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization&#8217;s communication structure</em> <a href="#Conway1968">[Conway1968]</a>.</p>
+</div>
+<div class="paragraph">
+<p>What does this mean? If we establish two teams, each team will build a piece of functionality (a feature or component). They will think in terms of "our stuff" and "their stuff" and the interactions (or <em>interface</em>) between the two. Perhaps this seems obvious, but as you scale up it&#8217;s critical to keep in mind. In particular, as you segment your organization along the <a href="#AKF-cube">AKF z-axis</a>, you will need to keep in mind the difference between features and components. You are on a path to have dozens or hundreds of such teams. The decisions you make today on how to divide functionality and work will determine your operating model far into the future.</p>
+</div>
 </div>
 </div>
 </div>
