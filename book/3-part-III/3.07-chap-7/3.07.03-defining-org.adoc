@@ -1,44 +1,49 @@
 ==== Defining the organization
 
-[quote, Joseph Flahiff]
-The traditional approach is that we have work and we bring "the right people" to the work. To be nimble -- to have organizational agility -- we have to have great teams of people and bring the work to the team.
+There are many different ways we can apply these ideas of traditional functional organizing versus product-oriented organizing, and features versus components. How does one begin to decide these questions? As a digital professional in a scaling organization, you need to be able to lead these conversations.
 
-There are many different ways we can apply these ideas of traditional functional organizing versus product-oriented organizing, and features versus components. How does one begin to decide these questions?
+.Pigs versus chickens in Scrum
+****
+A well known theme from Scrum is the idea of "pigs versus chickens." It comes from a (not very funny) joke:
+
+_A chicken says to a pig, "Hey pig, let's start a restaurant."_
+
+_Pig: "I'm not sure, what would we call it?"_
+
+_Chicken: "How about, 'Ham and Eggs'?"_
+
+_Pig: "No thanks, I'd be committed, but you'd only be involved."_
+
+Regardless of the humor, there's an important point here: there is a difference with teams that are fully committed, fully accountable for delivering value. When work is xref:org-continuum[flowing across functional areas], each area is just "involved" and only the project manager may be "committed" (if he or she even is). When we flip the organization to a value-centric model, commitment increases.
+
+We discuss this here in the team of teams section, as the assumption in Part I and Part II is that everyone was committed because it was a small, single-team organization.
+****
 
 ===== Splitting teams
+The first question is, given a group of people that needs to be divided into two teams, how do you think about this? Abbott and Fisher (<<Abbott2015>>, p. 49) suggest various principles in separating out teams:
 
-fault isolation terms
-* swim lane  / pod
-* shard/sliver
-* pool
+* Shared nothing
+* Segregate the money maker
+* Segregate incidents
 
-principles:
+*Shared nothing* usually applies to feature teams, and implies that they manage all the resources they need to deliver, both in terms of technical infrastructure as well as people. In a shared-nothing infrastructure, the team is entirely empowered to deliver its value, and also entirely accountable for doing so. In Scrum terms, they are all "pigs" -- they are all committed to the work. It's important to retain line of sight to some overall value; one useful test for whether a team concept makes sense might be to apply an xref:impact-mapping[impact map] and ask whether you have good line of sight to value for this team.
 
-* shared nothing
-* no blocking across lanes
-* tx w/in swim lanes
+*Segregate the money maker* means dedicate resources to specific value flows. If you know your xref:prod-discovery-techniques[product recommendation engine] generated significant value when it was deployed, give it its own team.
 
-* segregate money maker
-* segregate incidents
-* "natural" boundaries (e.g. customers)
+*Segregate incidents* approaches the problem in fault isolation terms: what is the best way to separate the effort so that one team is not affected by another's failure? Notice that in terms of xref:feature-v-component[features versus components], emphasizing failure isolation tends to favor features -- one component may affect multiple features.
 
-The fundamental questions of the Y-axis split - where architecture emerges (!!  insight)
-
-inevitable
-
-* failure domains (abbott p 49)
-
-architects need to be able to reason about and lead conversation about such matters
-
-retain impact mapping - impact mapping re-visited for internal purposes - build on previous impact map?
-
+The xref:AKF-cube[AKF scaling cube] z-axis may also provide a basis for separating teams by customer segment.
 
 ===== Hard v soft teams
-Long-tenured and highly experienced teams require less overhead from management and less communication internally to perform their responsibilities. (abbott p 45)
+[quote, Joseph Flahiff]
+The traditional approach is that we have work and we bring "the right people" to the work. To be nimble -- to have organizational agility -- we have to have great teams of people and bring the work to the team <<Flahiff2016>>.
 
+The practice in project-centric organizations has been temporary teams, that are created and broken down on an annual or more frequent basis. People "rolled on" and "rolled off" of projects regularly in 
 
 ===== Norms and standards
 
 importance of -
 increase effectiveness and efficiency
 xref to architecture
+
+segue to culture
