@@ -10728,7 +10728,7 @@ Part III, like the other parts, needs to be understood as a unified whole. In re
 <div class="sect3">
 <h4 id="_introduction_7">Introduction</h4>
 <div class="paragraph">
-<p>In the last section, we introduced the <a href="#AKF-cube">AKF scaling cube</a>, and we now start the second half of the book based on a related thought experiment. As your team-based company grew, you reached a crisis point in scaling your digital product. Your single team could no longer cope as one unit with the increasing complexity and operational demands. In AKF cube terms, you are scaling along the z-axis, the hardest but in some ways the most important dimension to know how to scale along.</p>
+<p>In the last section, we introduced the <a href="#AKF-cube">AKF scaling cube</a>, and we now start the second half of the book based on a related thought experiment. As your team-based company grew, you reached a crisis point in scaling your digital product. Your single team could no longer cope as one unit with the increasing complexity and operational demands. In AKF cube terms, you are scaling along the y-axis, the hardest but in some ways the most important dimension to know how to scale along.</p>
 </div>
 <div class="paragraph">
 <p>You are going through a critical phase, the "team of teams" transition. You have increasingly specialized people delivering an increasingly complex product, or perhaps even several distinct products. Deep-skilled employees are great, but you&#8217;ve noticed they tend to lose the big picture. You are in constant discussions around the tension between functional depth versus product delivery.</p>
@@ -10751,9 +10751,6 @@ Part III, like the other parts, needs to be understood as a unified whole. In re
 </li>
 <li>
 <p>A simple organizational transformation</p>
-</li>
-<li>
-<p>A look at some of Mintzberg&#8217;s ideas on organization</p>
 </li>
 <li>
 <p>A deeper look at product versus function</p>
@@ -10930,7 +10927,7 @@ Some of the most important factors that organizational structure can affect are 
 <div class="title">Figure 83. Features versus components</div>
 </div>
 <div class="paragraph">
-<p>Feature teams are dedicated to a clearly defined functional scope, while component teams are defined by their technology platform. Component teams may become shared services, which need to be carefully understood and managed (more on this to come). It may be easy to say that features are more important than components, but this can easily be carried too far. Do you want each feature team choosing its own database? This might not be the best idea. Allowing feature teams to define their own technical direction can result in brittle, fragmented architectures, technical debt, and rework.</p>
+<p>Feature teams are dedicated to a clearly defined functional scope, while component teams are defined by their technology platform. Component teams may become shared services, which need to be carefully understood and managed (more on this to come). A component&#8217;s failure may affect multiple feature teams, which makes them more risky. However, it may be easy to say that features are more important than components, but this can easily be carried too far. Do you want each feature team choosing its own database? This might not be the best idea. Allowing feature teams to define their own technical direction can result in brittle, fragmented architectures, technical debt, and rework.</p>
 </div>
 <div class="paragraph">
 <p>Software product management needs to be a careful balance between these two perspectives. The Scaled Agile Framework suggests that components are relatively</p>
@@ -11088,6 +11085,9 @@ Even in this simplest model, feedback is important. Much of the evolution of 20t
 <div class="paragraph">
 <p>Go back and review: the waterfall model falls into the "original sin" of IT management, <a href="#2.04.04-lean-product-dev">confusing production with product development</a>. As a repeatable production model, it may work, assuming that there is little or no information left to generate regarding the production process (an increasingly questionable assumption in and of itself). But when applied to product development, where the <strong>primary goal</strong> is the experiment-driven generation of information, the model is inappropriate and has led to innumerable failures. This includes software development, and even implementing purchased packages in complex environments.</p>
 </div>
+<div class="paragraph">
+<p><a id="org-continuum"></a></p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_the_continuum_of_organizational_forms">The continuum of organizational forms</h5>
@@ -11171,74 +11171,78 @@ The following discussion and accompanying set of diagrams is derived from Presto
 </div>
 <div class="sect3">
 <h4 id="_defining_the_organization">Defining the organization</h4>
+<div class="paragraph">
+<p>There are many different ways we can apply these ideas of traditional functional organizing versus product-oriented organizing, and features versus components. How does one begin to decide these questions? As a digital professional in a scaling organization, you need to be able to lead these conversations.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Pigs versus chickens in Scrum</div>
+<div class="paragraph">
+<p>A well known theme from Scrum is the idea of "pigs versus chickens." It comes from a (not very funny) joke:</p>
+</div>
+<div class="paragraph">
+<p><em>A chicken says to a pig, "Hey pig, let&#8217;s start a restaurant."</em></p>
+</div>
+<div class="paragraph">
+<p><em>Pig: "I&#8217;m not sure, what would we call it?"</em></p>
+</div>
+<div class="paragraph">
+<p><em>Chicken: "How about, 'Ham and Eggs'?"</em></p>
+</div>
+<div class="paragraph">
+<p><em>Pig: "No thanks, I&#8217;d be committed, but you&#8217;d only be involved."</em></p>
+</div>
+<div class="paragraph">
+<p>Regardless of the humor, there&#8217;s an important point here: there is a difference with teams that are fully committed, fully accountable for delivering value. When work is <a href="#org-continuum">flowing across functional areas</a>, each area is just "involved" and only the project manager may be "committed" (if he or she even is). When we flip the organization to a value-centric model, commitment increases.</p>
+</div>
+<div class="paragraph">
+<p>We discuss this here in the team of teams section, as the assumption in Part I and Part II is that everyone was committed because it was a small, single-team organization.</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_splitting_teams">Splitting teams</h5>
+<div class="paragraph">
+<p>The first question is, given a group of people that needs to be divided into two teams, how do you think about this? Abbott and Fisher (<a href="#Abbott2015">[Abbott2015]</a>, p. 49) suggest various principles in separating out teams:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Shared nothing</p>
+</li>
+<li>
+<p>Segregate the money maker</p>
+</li>
+<li>
+<p>Segregate incidents</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Shared nothing</strong> usually applies to feature teams, and implies that they manage all the resources they need to deliver, both in terms of technical infrastructure as well as people. In a shared-nothing infrastructure, the team is entirely empowered to deliver its value, and also entirely accountable for doing so. In Scrum terms, they are all "pigs"&#8201;&#8212;&#8201;they are all committed to the work. It&#8217;s important to retain line of sight to some overall value; one useful test for whether a team concept makes sense might be to apply an <a href="#impact-mapping">impact map</a> and ask whether you have good line of sight to value for this team.</p>
+</div>
+<div class="paragraph">
+<p><strong>Segregate the money maker</strong> means dedicate resources to specific value flows. If you know your <a href="#prod-discovery-techniques">product recommendation engine</a> generated significant value when it was deployed, give it its own team.</p>
+</div>
+<div class="paragraph">
+<p><strong>Segregate incidents</strong> approaches the problem in fault isolation terms: what is the best way to separate the effort so that one team is not affected by another&#8217;s failure? Notice that in terms of <a href="#feature-v-component">features versus components</a>, emphasizing failure isolation tends to favor features&#8201;&#8212;&#8201;one component may affect multiple features.</p>
+</div>
+<div class="paragraph">
+<p>The <a href="#AKF-cube">AKF scaling cube</a> z-axis may also provide a basis for separating teams by customer segment.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_hard_v_soft_teams">Hard v soft teams</h5>
 <div class="quoteblock">
 <blockquote>
-The traditional approach is that we have work and we bring "the right people" to the work. To be nimble&#8201;&#8212;&#8201;to have organizational agility&#8201;&#8212;&#8201;we have to have great teams of people and bring the work to the team.
+The traditional approach is that we have work and we bring "the right people" to the work. To be nimble&#8201;&#8212;&#8201;to have organizational agility&#8201;&#8212;&#8201;we have to have great teams of people and bring the work to the team <a href="#Flahiff2016">[Flahiff2016]</a>.
 </blockquote>
 <div class="attribution">
 &#8212; Joseph Flahiff
 </div>
 </div>
 <div class="paragraph">
-<p>There are many different ways we can apply these ideas of traditional functional organizing versus product-oriented organizing, and features versus components. How does one begin to decide these questions?</p>
-</div>
-<div class="sect4">
-<h5 id="_splitting_teams">Splitting teams</h5>
-<div class="paragraph">
-<p>fault isolation terms
-* swim lane  / pod
-* shard/sliver
-* pool</p>
-</div>
-<div class="paragraph">
-<p>principles:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>shared nothing</p>
-</li>
-<li>
-<p>no blocking across lanes</p>
-</li>
-<li>
-<p>tx w/in swim lanes</p>
-</li>
-<li>
-<p>segregate money maker</p>
-</li>
-<li>
-<p>segregate incidents</p>
-</li>
-<li>
-<p>"natural" boundaries (e.g. customers)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The fundamental questions of the Y-axis split - where architecture emerges (!!  insight)</p>
-</div>
-<div class="paragraph">
-<p>inevitable</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>failure domains (abbott p 49)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>architects need to be able to reason about and lead conversation about such matters</p>
-</div>
-<div class="paragraph">
-<p>retain impact mapping - impact mapping re-visited for internal purposes - build on previous impact map?</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_hard_v_soft_teams">Hard v soft teams</h5>
-<div class="paragraph">
-<p>Long-tenured and highly experienced teams require less overhead from management and less communication internally to perform their responsibilities. (abbott p 45)</p>
+<p>The practice in project-centric organizations has been temporary teams, that are created and broken down on an annual or more frequent basis. People "rolled on" and "rolled off" of projects regularly in</p>
 </div>
 </div>
 <div class="sect4">
@@ -11247,6 +11251,9 @@ The traditional approach is that we have work and we bring "the right people" to
 <p>importance of -
 increase effectiveness and efficiency
 xref to architecture</p>
+</div>
+<div class="paragraph">
+<p>segue to culture</p>
 </div>
 <div class="paragraph">
 <p><a id="culture"></a></p>
