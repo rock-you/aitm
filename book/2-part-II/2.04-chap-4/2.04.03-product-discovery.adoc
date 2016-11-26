@@ -40,23 +40,37 @@ The most important foundation for your newly formalized product discovery capabi
 .Beware of the HIPPO approach to product discovery footnote:[_Image credit https://www.flickr.com/photos/puliarfanita/6002022840, downloaded 2016-09-22, commercial use permitted_]
 image::images/2.04-hippo.jpg[hippopotamus, 450,, float="left"]
 
-The problem with relying on "gut feel" or personal opinions is that people -- regardless of experience or seniority -- perform poorly in assessing the likely outcome of their product ideas.
-
-Some well known research on this topic was conducted by Microsoft's Ronny Kohavi. In this research, Kohavi and team determiend that "only about 1/3 of ideas improve the metrics they were designed to improve." <<Kohavi2009>> As background, the same report cites that:
+The problem with relying on "gut feel" or personal opinions is that people -- regardless of experience or seniority -- perform poorly in assessing the likely outcome of their product ideas. Some well known research on this topic was conducted by Microsoft's Ronny Kohavi. In this research, Kohavi and team determined that "only about 1/3 of ideas improve the metrics they were designed to improve." <<Kohavi2009>> As background, the same report cites that:
 
 * "Netflix considers 90% of what they try to be wrong"
 * "75 percent of important business decisions and business improvement ideas either have no impact on performance or actually hurt performance" according to Qualpro (a consultancy specializing in controlled experiments)
 
+.Amazon Shopping Cart Recommendations
+****
+A well known story of the power of experimentation is told by Greg Linden, who was a product developer for early versions of the Amazon shopping cart. Linden had an idea of making recommendations to people based on what was already in their shopping cart. (While this is common across e-commerce sites now, at one point it was a new idea.) While grocery stores "recommnend" impulse purchases (candy, gum) in the checkout lane, an ecommerce provider can recommend anything in the store, so the idea is even more powerful. Linden developed a prototype, and while it got some favorable reactions, one senior vice president was against it -- his view was that it might distract people and lead them to abandon the cart.
+
+As Linden says, "I was forbidden to work on this any further." But he went ahead and prepared the feature anyways. The SVP was furious, but Amazon already had a data-driven culture and even senior executives couldn't block tests. The feature was then pushed out to a small set of Amazon customers.  In this way, they could compare the behavior of customers who did receive shopping cart recommendations to those who didn't (otherwise known as a controlled experiment.) The results were dramatic - the feature outperformed the control of not having it by such a large margin that, as Linden says, "not having it live was costing Amazon a notable chunk of change."
+
+It's unknown what happened to the SVP. Challenging senior executives can be bad for your career, but if you find yourself in a place run by HiPPOs who don't want to experiment, you might want to consider how long that organization will be in business.
+<<Linden2006>>
+****
+
 It is therefore critical to establish a strong practice of data-driven experimentation when forming a product team, and avoid any cultural acceptance of "gut feel" or deferring to HIPPOs. This can be a difficult transition for the company founder, who has until now served as the _de facto_ product manager. We discuss issues of prioritization further in Chapter 5, in the section on xref:cost-of-delay[Cost of Delay].
+
+anchor:beneficial-variability[]
+
+Finally, Don Reinertsen (who we will read more about in the next chapter) emphasizes that such experimentation is inherently _variable_. We can't develop experiments with any sort of expectation that they will always succeed. We might run 50 experiments, and only have 2 succeed. But if the cost of each experiment is $10,000, and the two that succeeded earned us $1 million each, we gained:
+
+ $ 2,000,000
+ $ - 480,000
+ -----------
+ $ 1,520,000
+
+Not a bad return on investment! (See <<Reinertsen2009>>, Chapter 4, for a detailed, mathematical discussion, based on options and information theory.)
 
 ===== Product discovery techniques
 
-There are a wide variety of techniques and even "schools" of product discovery and design; we will consider a few representatives in this chapter section.
-
-Of course, when you first started your journey in Chapter 1, you might also have used some of these techniques. But now that you are a team, you are formalizing and relying on these techniques.
-
-These techniques are not mutually exclusive; they may be complementary.
-But at the more detailed, digital product level, how do we develop hypotheses for testing, in terms of our products/services? We briefly mentioned User Story Mapping in our discussion of xref:system-intent[system intent.] But that is only one of many techniques. Other tools include:
+There are a wide variety of techniques and even "schools" of product discovery and design; we will consider a few representatives in this chapter section. Of course, when you first started your journey in Chapter 1, you might also have used some of these techniques. But now that you are a team, you are formalizing and relying on these techniques. These techniques are not mutually exclusive; they may be complementary. But at the more detailed, digital product level, how do we develop hypotheses for testing, in terms of our products/services? We briefly mentioned User Story Mapping in our discussion of xref:system-intent[system intent.] But that is only one of many techniques. Other tools include:
 
 * "Jobs to be done" analysis
 * Impact mapping
