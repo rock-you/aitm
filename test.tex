@@ -480,6 +480,418 @@ Before we can talk about building and managing information technology (IT), we n
 \item{} Describe various ways of understanding the context in which digital systems are developed and digital value is delivered.
  
 \end{itemize}
+   
+\subsection{What is IT value?}
+\label{_what_is_it_value}\hyperlabel{_what_is_it_value}%
+  
+\label{what-is-IT-value}\hyperlabel{what-is-IT-value}
+ 
+\subsubsection{An IT value scenario}
+\label{_an_it_value_scenario}\hyperlabel{_an_it_value_scenario}%
+  \begin{figure}[H]
+
+\begin{center}
+\imgexists{images/1_01c-women.jpg}{{\imgevalsize{images/1_01c-women.jpg}{\includegraphics[width=450pt,]{images/1_01c-women.jpg}}}}{women w/cell phones}
+\end{center}
+\caption[{Dinner out tonight? }]{Dinner out tonight? \footnotemark{}}
+\end{figure}
+ 
+Consider the following scenario:
+ 
+A woman is wondering if she can afford to dine out that evening.
+ \begin{itemize}
+
+\item{} She uses her mobile device to access her banking information and determines that in fact she does have enough money to do so.
+ 
+
+\item{} She also uses her mobile device to make a reservation and contact some friends to join her.
+ 
+
+\item{} Finally, she uses social navigation software to avoid heavy traffic, arriving at the restaurant in time for an enjoyable evening with her friends.
+ 
+\end{itemize}
+ 
+Information technology pervaded this experience. The origins, layers and complex connections of the distributed systems involved are awe-{}inspiring to consider.
+ 
+
+\begin{sidebar}
+\begin{DBKadmonition}{warning}{Important}
+ 
+\textbf{Don't worry about the technological terms for now}
+ \end{DBKadmonition}
+
+This is an introductory text. You may see terms below that are unfamiliar (Model-{}View-{}Controller, IP, packet switching). If you are reading this online, you can follow the links, but it's not required.
+
+As you progress in your career, you will always be encountering new terminology. Part of what you need to learn is when it's important to dig into it, and when you can let it pass for a time.
+
+You should be able to understand the gist presented below that these are complex systems based on a wide variety of technologies, some of them old, some new.
+\end{sidebar}
+ 
+The screen on her cell phone represents information accessed and presented via a \href{https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller}{Model-{}View-{}Controller framework}, implemented in the latest version of \href{https://developer.mozilla.org/en-US/docs/Web/JavaScript}{Javascript}, running on an \href{https://en.wikipedia.org/wiki/Interpreter_(computing)}{interpreter} that would have taxed a \href{https://en.wikipedia.org/wiki/Mainframe_computer}{mainframe} thirty years ago. The communication with her bank's central systems is supported by \href{https://en.wikipedia.org/wiki/LTE_(telecommunication)}{4G LTE} data which in turn relies on the high-{}volume \href{https://en.wikipedia.org/wiki/Internet_Protocol}{IP backbone} networks operated by the \href{http://searchnetworking.techtarget.com/definition/telecom-carrier}{telecommunications carriers}, based on research into \href{https://en.wikipedia.org/wiki/Packet_switching}{packet switching} now approaching 50 years old.
+ 
+The application operating on the cell phone interacts with core banking systems via sophisticated and highly secure \href{https://en.wikipedia.org/wiki/Middleware}{middleware}, crossing multiple \href{https://en.wikipedia.org/wiki/Computer_network}{network} control points. This middleware talks in turn to the customer demand deposit system that still runs on the mainframe.
+ 
+The mainframe is now running the latest version of \href{https://en.wikipedia.org/wiki/Z/OS}{IBM's zOS} \href{https://en.wikipedia.org/wiki/Operating_system}{operating system} (a direct descendant of \href{https://en.wikipedia.org/wiki/OS/360_and_successors#MVT}{OS/\-360}, one of the most  significant operating systems in the \href{https://en.wikipedia.org/wiki/History_of_computing}{history of computing}). The "customer demand deposit" banking application running on the mainframe is still based on code written in the lowest level \href{https://en.wikipedia.org/wiki/Assembly_language}{assembler}. Some of the comments in this code date back to the 1970s. It has been tuned and optimized over the decades into a system of remarkable speed and efficiency. Although replatforming it is periodically discussed, the cost/benefit ratio for such a project has to date not been favorable.
+ 
+The reservation system looks similar on the mobile device, but the network routes it to a large \href{https://en.wikipedia.org/wiki/Cloud_computing}{Cloud} data center hosting the reservation system. The back end application here is very different from the banking system; the \href{https://en.wikipedia.org/wiki/Programming_language}{programming languages} are newer, the \href{https://en.wikipedia.org/wiki/Database}{database} is structured very differently, and the operating system is \href{https://www.linux.com/}{Linux}.
+ 
+Finally, the navigation software looks much like the reservation system, as it too is based on the Cloud. However, the system is much more active, as it is continually processing inputs from millions of drivers in thousands of cities, and updating traffic maps for those drivers in real time so that they can choose the most optimal route to their destinations (e.g., dinner). The capabilities of this system are comparable to an air traffic control system, and yet it is available as a free download for our IT user.
+ \begin{figure}[H]
+
+\begin{center}
+\imgexists{images/1_01-friends.jpg}{{\imgevalsize{images/1_01-friends.jpg}{\includegraphics[width=450pt,]{images/1_01-friends.jpg}}}}{party}
+\end{center}
+\caption[{Digital made this gathering easier }]{Digital made this gathering easier \footnotemark{}}
+\end{figure}
+ 
+The resulting value is clear:
+ \begin{itemize}
+
+\item{} In an earlier era, our user might have stayed in, for fear of bouncing a check, or might have gone out and dined beyond her means.
+ 
+
+\item{} The phone line at the restaurant might have been busy, so she might have risked showing up with no reservation.
+ 
+
+\item{} Before texting and social media, she might not have been able to reach her friends as easily.
+ 
+
+\item{} Without the traffic application she might have run into a huge midtown traffic jam and been half an hour late.
+ 
+\end{itemize}
+ 
+Clearly, information technology added value to her life and helped maximize her experiences of social enjoyment.
+  
+\subsubsection{Various forms of IT value}
+\label{_various_forms_of_it_value}\hyperlabel{_various_forms_of_it_value}%
+  
+As we have seen, there are many ways in which digital systems deliver value. Some systems serve as the modern equivalent of file cabinets: massive and secure storage for financial transactions, insurance records, medical records, and the like. Other systems enable the transmission of information around the globe, whether as emails, web pages, voice calls, video on demand, or data to be displayed in a smart phone application ("app"). Some of these systems support engaged online communities and social interactions, with conversations, media sharing, and even massive online gaming ecosystems. Yet other systems enable penetrating analysis and insight, by examining the volumes of data contained in the first two kinds of systems for patterns and trends. Sophisticated statistical techniques and cutting edge approaches like neural network-{}based machine learning increase the insights our digital systems are capable of, at a seemingly exponential rate.
+ 
+Digital technology generates value in both direct and indirect ways. People have long consumed (and paid for) communication services, such as telephone services. Broadcast entertainment was a different proposition, however. The "consumer" -{} the person with the radio or television -{} was not the "customer" -{} the person paying for the programming to go out over the airwaves. New business models sprung up to support the new media, through the sale of advertising air time. In other words, the value proposition was indirect, or at least took multiple parties to achieve: the listener, the broadcaster, and the advertiser. Finally, some of the best known uses of digital technology were and are very indirect -{} the above-{}mentioned banks and insurance agencies using the earliest computers to automate the work of thousands of typists and file clerks.
+ 
+From these early business models have evolved and blossomed myriads of creative applications of digital technology, for the benefit of human beings in their ongoing pursuit of happiness and security. We see the applications mentioned at the outset: online banking, messaging, restaurant reservation, and traffic systems. Beyond that we see the use of digital technology in nearly every aspect of life. (And I say "nearly" only because I am a cautious person.)
+ 
+Digital and information technology pervades all of the major industry verticals (manufacturing, agriculture, finance, retail, healthcare, transportation, services, and so on) and common industry functions (supply chain, human resources, corporate finance, and even IT itself).
+ 
+Digital systems and technologies also are critical components of larger scale industrial, military, and aerospace systems. For better or worse, general purpose computers are increasingly found controlling safety-{}critical infrastructure, and serving as an intermediating layer between human actions and machine response. Robotic systems are based on software, and the Internet of Things ultimately will span billions of sensors and controllers in interconnected webs monitoring and adjusting all forms of complex operations across the planet.
+   
+\subsection{Defining Information Technology}
+\label{_defining_information_technology}\hyperlabel{_defining_information_technology}%
+  
+\label{what-is-IT}\hyperlabel{what-is-IT}
+ 
+\subsubsection{What is IT, anyways?}
+\label{_what_is_it_anyways}\hyperlabel{_what_is_it_anyways}%
+  
+We've started this book in the previous section by providing an example of digital or IT value, without much discussion of how it is delivered. This is deliberate. But what is IT (Information Technology), anyways?
+ \begin{itemize}
+
+\item{} The computers? The networks?
+ 
+
+\item{} The people who run them?
+ 
+
+\item{} That organization under a Chief Information Officer that loves to say \textquotedblleft{}no\textquotedblright{} and is always slow and expensive?
+ 
+\end{itemize}
+ 
+None of these are how this book defines \textquotedblleft{}IT.\textquotedblright{} Although this is not a technical book on computer science or software engineering, the intent is that it reflects and is compatible with foundational principles.
+ 
+\textquotedblleft{}Information technology\textquotedblright{} is ultimately based on the work of \href{https://en.wikipedia.org/wiki/Claude_Shannon}{Claude Shannon}, \href{https://en.wikipedia.org/wiki/Alan_Turing}{Alan Turing}, \href{https://en.wikipedia.org/wiki/Alonzo_Church}{Alonzo Church}, \href{https://en.wikipedia.org/wiki/John_von_Neumann}{John von Neumann}, and the other pioneers who defined the central problems of \href{https://en.wikipedia.org/wiki/Information_theory}{information theory}, \href{https://en.wikipedia.org/wiki/Digital_electronics}{digital logic},  \href{https://en.wikipedia.org/wiki/Computability}{computability}, and \href{https://en.wikipedia.org/wiki/Computer_architecture}{computer architecture}.
+ 
+\label{IT-as-function}\hyperlabel{IT-as-function}
+ 
+Additionally, as an organizational function, information technology also draws on organizational theory, systems theory, human factors and psychology, and more recent concepts such as design thinking, among many other areas.
+ 
+Discussions of \textquotedblleft{}information technology\textquotedblright{} become contentious because some think of the traditional organization, while others think of the general problem area. IT has a long history as a corporate function, a single hierarchy under a powerful Chief Information Officer. This model has had its dysfunctions, including a longstanding reputation for being slow and expensive. Often, when one encounters the term \textquotedblleft{}IT,\textquotedblright{} the author using the term is referring to this organizational tradition.
+ 
+\textbf{We are less interested in the future of IT as a distinct organizational structure. There are many different models, from fully centralized to fully embedded.} Organizational structure will be discussed in Chapter 7.
+ 
+For this book, we define \textquotedblleft{}Information technology\textquotedblright{} in terms of its historic origins. We look to IT's common origins in automating the laborious and error prone processes of computation, through the application of digital logic technologies based on information transmission.
+ 
+Regardless of organizational form or delivery methods, IT is defined by these origins. And there are notable common threads throughout this problem domain: the fragility and complexity of these systems, the need for layered abstractions in their management, and more.
+ 
+It does not matter if the application developers ultimately report up through the CIO, the CMO, the CFO, or the COO. Their daily experience remains largely the same. The dynamics of their management remain the same. Executives who seek to take control of IT so they can \textquotedblleft{}remove that old bureaucracy\textquotedblright{} are well advised to be cautious; the bureaucracy emerged for a reason. More on this in subsequent chapters.
+ 
+\label{digital-transformation}\hyperlabel{digital-transformation}
+  
+\subsubsection{IT and digital transformation}
+\label{_it_and_digital_transformation}\hyperlabel{_it_and_digital_transformation}%
+  \begin{quote}
+
+IT doesn't matter.
+
+\hspace*\fill--- Nicholas Carr
+\end{quote}
+ \begin{quote}
+
+Software is eating the world.
+
+\hspace*\fill--- Mark Andreessen
+\end{quote}
+ \begin{quote}
+
+The digital realm is infusing the physical realm, like tea in hot water.
+
+\hspace*\fill--- Jeff Sussna
+\emph{Designing Delivery} \end{quote}
+ 
+IT increasingly permeates business operations and social interactions. The breadth and depth of IT support for virtually all domains of society continues to expand. Lately, this is known as digital transformation.
+ 
+The role of information technology seems critical to society and the economy, but there are various points of view. Nicholas Carr, in his controversial \emph{Harvard Business Review} article "IT Doesn't Matter," recognized that IT was becoming commoditized in an important sense \hyperlink{Carr2003}{[Carr2003]}. As Cloud providers started to offer utility-{}style computing, the choice of particular vendors of computers was no longer strategic. Looking to history, Carr argued that just as businesses no longer have \textquotedblleft{}Vice Presidents for Electricity,\textquotedblright{} so businesses no longer need Chief Information Officers or dedicated IT departments.
+ \begin{DBKadmonition}{}{Note}
+ 
+A "commodity" product is one that is offered from a variety of suppliers, with little or no difference between their offerings. Commodity products tend to compete on price, not on differences in features. Wheat is a commodity. Sports cars are not. "Commoditization" is the process by which products that used to compete by being different, increasingly compete on price.
+ \end{DBKadmonition}
+ 
+Carr has insight\hspace{0.167em}\textemdash{}\hspace{0.167em}there is no question IT is becoming pervasive\hspace{0.167em}\textemdash{}\hspace{0.167em}but he ultimately reflects a narrow view of what \textquotedblleft{}IT\textquotedblright{} is. If \textquotedblleft{}IT\textquotedblright{} were merely computation at the lowest level\hspace{0.167em}\textemdash{}\hspace{0.167em}just shuffling bits of information around, doing a little math\hspace{0.167em}\textemdash{}\hspace{0.167em}then perhaps it could be embedded throughout a business like electricity.
+ 
+But IT has emergent aspects that are not comparable to electrical power. As it pervades all dimensions of business operations, it brings its concerns with it: complexity, fragility, and the skills required to cope with them.
+ 
+One watt of electrical power is like any other watt of electrical power, and can usefully be seen as a commodity. We can use it to run toasters, hair dryers, or industrial paint mixers, and there is little concern (beyond supply and demand management) that the consumption of power by the paint mixer will affect the toaster.  It's also true that one cycle of computing, in a certain sense, is like any other cycle. But information technology systems interact with each other in surprising and unpredictable ways, orders of magnitude more complex than electrical power grids. (This is not to imply the modern electrical grid is a simple system!)
+ 
+IT also radically transforms industries: from retail to transportation to manufacturing to genetics. Applied software-{}centric IT is unleashing remarkable economic disruption.
+ 
+A lawyer may depend on a cell phone, and (in keeping with Carr) beyond its provision as a commodity service, needs little else to deliver the legal strategies a firm needs. A graphic designer may use computerized graphic tools, but these have become relatively standardized and commoditized in the past twenty years, and probably are not a source of competitive advantage in the quest for new marketing clients.
+ 
+On the other hand, consider a text analytic algorithm that replaces thousands of paralegals, resulting in order-{}of-{}magnitude more accurate legal research in a fraction of cost and time. This \textbf{is} strategic and disruptive to the legal community. A superior supply chain algorithm, and the ability to improve it on an ongoing basis, may indeed elevate a logistics firm's performance above competitors. In cases like these\hspace{0.167em}\textemdash{}\hspace{0.167em}and they seem to be increasing\hspace{0.167em}\textemdash{}\hspace{0.167em}IT matters very much.
+ 
+In the digitally transforming economy, traditional \textquotedblleft{}back office\textquotedblright{} IT organizations find themselves called on to envision, develop, and support market-{}facing applications of IT. And what starts with one market-{}facing use case can quickly expand into entire portfolios.  It is such cases that are of particular concern in this book.
+ 
+Ultimately, it is possible that IT is the \textbf{most} strategic capability an organization can invest in. As the editor in chief of \emph{IEEE Software} notes \hyperlink{Spinellis2015}{[Spinellis2015]},
+ \begin{quote}
+
+other industries are also producing what's in effect software (executable knowledge) but not treating it as such . . . Although many industries have developed their own highly effective processes over the years, software engineering maintains an essential advantage. It has developed methods and tools that let even small teams manage extremely high complexity . . . This advantage is important because the complexity in non-{}software activities is also increasing inexorably . . . [T]he time has come to transform our world\ldots{} by giving back to science and technology the knowledge software engineering has produced.
+
+\hspace*\fill--- Diomidis Spinellis
+\emph{IEEE Software} \end{quote}
+ 
+This ability to manage complexity, to turn tacit into explicit and formalize the previously unstructured, is an essential aspect of digital transformation.
+  
+\subsubsection{Defining "IT"}
+\label{_defining_it}\hyperlabel{_defining_it}%
+  
+So, how do we define an IT problem, as opposed to other kinds of business problems? An IT problem is any problem where you are primarily constrained by your capability and understanding of IT.
+ \begin{itemize}
+
+\item{} If you need computer scientists or engineers who understand the fundamentals of information theory and computer science, you are doing IT.
+ 
+
+\item{} If you need people who understand when your information-{}centric problems might need to be referred to such theorists and engineers, you are likely doing IT.
+ 
+
+\item{} If you need people who are skilled in building upon those fundamentals, and operating technical platforms derived from them (such as programming languages, general purpose computers, and network routers), you are doing IT.
+ 
+\end{itemize}
+ 
+Regardless of whether IT is housed under a traditional CIO, an operations capability, a Chief Marketing Officer, or a \textquotedblleft{}line of business\textquotedblright{}, when it is critical to operations certain concerns inevitably follow:
+ \begin{itemize}
+
+\item{} Requirements (i.e. your intent for IT)
+ 
+
+\item{} Sourcing and provisioning
+ 
+
+\item{} IT-{}centric product design and construction
+ 
+
+\item{} Configuration and change management
+ 
+
+\item{} Support
+ 
+
+\item{} Improvement
+ 
+\end{itemize}
+ 
+Executives who take control of information technology in hopes of making it more "agile" are often surprised to find that these concerns were not mere bureaucracy, but instead had well grounded origins in past failures. Ignoring these lessons is perilous.
+ 
+And yet, the traditional, process-{}heavy IT organization does seem dysfunctional from a business point of view: a central theme of this book.
+   
+\subsection{IT services, systems, and applications}
+\label{_it_services_systems_and_applications}\hyperlabel{_it_services_systems_and_applications}%
+  
+\subsubsection{Inside an IT service}
+\label{_inside_an_it_service}\hyperlabel{_inside_an_it_service}%
+  \begin{figure}[H]
+
+\begin{center}
+\imgexists{images/1.01-ITValue.png}{{\imgevalsize{images/1.01-ITValue.png}{\includegraphics[width=400pt,]{images/1.01-ITValue.png}}}}{woman at computer}
+\end{center}
+\caption[{The basis of IT value }]{The basis of IT value \footnotemark{}}
+\end{figure}
+ 
+Let's examine our diner's value experience in more detail, without getting unnecessarily technical, and clarify some definitions along the way.  The first idea we need to cover is the "moment of truth." In terms of information technnology, this English-{}language cliché represents the user's experience of value.
+ 
+In the example, our friend seeking a relaxing night out had several moments of truth:
+ \begin{itemize}
+
+\item{} Consulting her bank balance, and subsequent financial transactions also reflecting what was stated to her
+ 
+
+\item{} Making a reservation and having it honored on arrival at the restaurant
+ 
+
+\item{} Arriving on time to the restaurant, courtesy of the traffic application
+ 
+
+\item{} And most importantly, having a relaxed and refreshing time with her friends.
+ 
+\end{itemize}
+ 
+Each of these individual value experiences was co-{}created by our friend's desire for value, and the response of a set of IT resources.
+ \begin{DBKadmonition}{warning}{Important}
+ 
+The "moment of truth" represents the user's experience of value, from a product, good, or service.
+ \end{DBKadmonition}
+ 
+In order to view her balance, our user is probably using an application downloaded from a "store" of applications made available to her device. On her device, this "app" is part of an intricate set of components performing functions such as:
+ \begin{itemize}
+
+\item{} accepting "input" (user intent) through a screen or voice input
+ 
+
+\item{} processing that input through software and acting on her desire to see her bank balance
+ 
+
+\item{} connecting to the phone network
+ 
+
+\item{} securely connecting over the phone network to the Internet and then to the bank
+ 
+
+\item{} identifying the user to the bank's systems
+ 
+
+\item{} requesting the necessary information (in this case, an account balance)
+ 
+
+\item{} receiving that information and converting it to a form that can be represented on a screeen
+ 
+
+\item{} finally, displaying the information on the screen
+ 
+\end{itemize}
+ 
+The application, or "app," downloaded to the phone plays a primary role, but is enabled by:
+ \begin{itemize}
+
+\item{} the phone's operating system and associated services
+ 
+
+\item{} the phone's hardware
+ 
+
+\item{} the telecommunications infrastructure (cell phone towers, long distance fiber optic cables, switching offices, and much more)
+ 
+\end{itemize}
+ 
+Of course, without the banking systems on the other end, there is no bank balance to transmit. These systems are similar, but on a much larger scale than our friend's device:
+ \begin{itemize}
+
+\item{} Internet and middleware services to receive the request from the international network
+ 
+
+\item{} Application services to validate the user's identity and route the request to the appropriate handling service
+ 
+
+\item{} Data services to store the user's banking information (account identity and transactions) along with millions of other customers
+ 
+
+\item{} Many additional services to detect fraud and security attacks, report on utilization, identify any errors in the systems, and much more.
+ 
+
+\item{} Physical data centers full of computers and associated hardware including massive power and cooling infrastructure, and protected by security systems and personnel.
+ 
+\end{itemize}
+ 
+\begin{center}
+ 
+\noindent\begin{minipage}[c]{\linewidth}
+\begin{center}
+\imgexists{images/1.01-ITStack.png}{{\imgevalsize{images/1.01-ITStack.png}{\includegraphics[width=\imgwidth,height=\imgheight,keepaspectratio=true]{images/1.01-ITStack.png}}}}{1.01 ITStack}\end{center}
+\end{minipage}
+
+ 
+\end{center}
+ 
+Consider: what does all this mean to our user? Does she care about cell phone towers, or middleware, or triply-{}redundant industrial-{}strength Power Distribution Units? Usually, not in the least.
+ 
+Therefore, as we study this world, we need to maintain awareness of her perspective. Our friend is seeking some value that IT uniquely can enable, but does not want to consider all the complexity that goes into it. She just wants to go out with friends. The moment of truth depends on the service; the service may contain great complexity, but part of its success lies in shielding the user from that complexity.
+ 
+\begin{center}
+ 
+\noindent\begin{minipage}[c]{\linewidth}
+\begin{center}
+\imgexists{images/1.01-ITStack2.png}{{\imgevalsize{images/1.01-ITStack2.png}{\includegraphics[width=\imgwidth,height=\imgheight,keepaspectratio=true]{images/1.01-ITStack2.png}}}}{1.01 ITStack2}\end{center}
+\end{minipage}
+
+ 
+\end{center}
+ \begin{DBKadmonition}{warning}{Important}
+ 
+Always remember the user's experience. Information technology has a well deserved reputation for being too complicated for end users\textemdash{}\hspace{0em}for example, trying to do something that should be simple, and finding oneself in a technical conversation about network settings.
+ \end{DBKadmonition}
+  
+\subsubsection{What versus how}
+\label{_what_versus_how}\hyperlabel{_what_versus_how}%
+  
+This fundamental tension between \textbf{what} a system is supposed to do, versus \textbf{how} it does it, pervades IT management and will likely define your career. "Don't trouble me with the details, just give me the results" is the overall theme, and we encounter this reaction to complexity in many aspects of life.
+ 
+Terminology is important. We need to have a more precise way of describing the information technology, beyond just saying there is "lots" of it. A variety of terms are used in this text:
+ \begin{itemize}
+
+\item{} IT service
+ 
+
+\item{} Application
+ 
+
+\item{} IT system
+ 
+
+\item{} IT infrastructure
+ 
+\end{itemize}
+ 
+We also see discussion of components, resources, subsystems, assets, and many more terms.
+ \begin{DBKadmonition}{warning}{Warning}
+ 
+There are many debates around these definitions. Sometimes these debates are helpful in clarifying the terminology you want to use on your team. But sometimes the debates don't add any value. Beware of anyone who claims there is a "best practice" here.
+ \end{DBKadmonition}
+ 
+In general, in this book, we will use the following definitions:
+ \begin{itemize}
+
+\item{} An IT service is defined primarily in terms of WHAT not HOW
+ 
+
+\item{} Defining an IT system may include a discussion of both WHAT it does and HOW it does it
+ 
+
+\item{} An "application" usually means some IT service or system for end users who are not primarily concerned with IT other than wanting to get something done with it (e.g. go out to dinner)
+ 
+
+\item{} "Infrastructure" usually means some IT service or system that primarily supports OTHER IT services or systems (e.g. a network "service" is not usually useful to end users without additional application services.)
+ 
+\end{itemize}
+ 
+Finally, the concept of the "IT stack" is important. Notice how the different technology layers appear "stacked." Layered approaches to understanding IT are common; see Further Reading for useful references.
+ 
+
+\begin{sidebar}
+\textbf{Author's note: Service versus product}
+
+
+For the purposes of this book, "IT services" are equivalent to "products." You may in other contexts hear phrases like "products \textbf{versus} services" which imply that they are distinct. Usually, when products are contrasted with services, people are equating products with goods: a jar of peanut butter is a "product," while a haircut is a service.
+
+However, when I worked at AT\&T, the internal term for offerings like broadband networking access was not "service," but "product." Services, in this sense, \textbf{are} products.
+
+In this book, we see products and services as roughly equivalent, but the two terms have some different connotations. Products usually imply an external market, where services can be either internal or external facing. While we certainly talk about "product marketing", the term "service marketing" is rarely seen. Furthermore,  some organizations such as Target have recently re-{}conceptualized internal services organizations as "product teams."
+\end{sidebar}
     
 \section{References}
 \label{References}\hyperlabel{References}%
@@ -552,7 +964,7 @@ All web references were archived into the author's files on the indicated access
 \item{} \label{Bell2010}\hyperlabel{Bell2010}[Bell2010]: Bell, S. C. \& Orzen, M. A. (2010), \emph{Lean IT}, CRC Press, Boca Raton, Florida
  
 
-\item{} \label{Bell2013}\hyperlabel{Bell2013}[Bell2013]: Bell, Steve et al. 2013. \emph{Run Grow Transform\&\#x202f;: Integrating Business and Lean IT}. Boca Raton, FL: CRC Press.
+\item{} \label{Bell2013}\hyperlabel{Bell2013}[Bell2013]: Bell, Steve et al. 2013. \emph{Run Grow Transform: Integrating Business and Lean IT}. Boca Raton, FL: CRC Press.
  
 
 \item{} \label{Bente2012}\hyperlabel{Bente2012}[Bente2012]: Bente, Stefan, Uwe Bombosch, and Shailendra Langade. 2012. Collaborative Enterprise Architecture: Enriching EA with Lean, Agile, and Enterprise 2.0 Practices. Waltham, MA: Morgan Kaufman -{} Elsevier.
@@ -591,7 +1003,7 @@ All web references were archived into the author's files on the indicated access
 \item{} \label{BPTrends2013}\hyperlabel{BPTrends2013}[BPTrends2013]: BPTrends. 2013. \textquotedblleft{}Scope Diagram (or Input-{}Guides-{}Outputs-{}Enablers \textendash{} IGOE Diagram).\textquotedblright{} BPTrends. \href{http://www.bptrends.com/resources/glossary/scope-diagram-or-input-guides-outputs-enablers-igoe-diagram/}{http://www.bptrends.com/\-resources/\-glossary/\-scope-{}diagram-{}or-{}input-{}guides-{}outputs-{}enablers-{}igoe-{}diagram/\-}.
  
 
-\item{} \label{Brooks1995}\hyperlabel{Brooks1995}[Brooks1995]: Brooks, Frederick P. 1995. \emph{The Mythical Man-{}Month\&\#x202f;: Essays on Software Engineering.} 25th Anniversary edition. Reading, Mass.: Addison-{}Wesley Pub. Co.
+\item{} \label{Brooks1995}\hyperlabel{Brooks1995}[Brooks1995]: Brooks, Frederick P. 1995. \emph{The Mythical Man-{}Month: Essays on Software Engineering.} 25th Anniversary edition. Reading, Mass.: Addison-{}Wesley Pub. Co.
  
 
 \item{} \label{Bossavit2015}\hyperlabel{Bossavit2015}[Bossavit2015]:	Bossavit, L., 2015. \emph{The Leprechauns of Software Engineering: How folklore turns into fact and what to do about it} 2015. Available from: \href{https://leanpub.com/leprechauns}{https://leanpub.com/\-leprechauns}.
@@ -1257,22 +1669,10 @@ All web references were archived into the author's files on the indicated access
 \item{} \label{Sussna2015}\hyperlabel{Sussna2015}[Sussna2015]: 	Sussna, Jeff. 2015. Designing Delivery: Rethinking IT in the Digital Service Economy. O'Relly Publications.
  
 
-\item{} \label{Treacy1997}\hyperlabel{Treacy1997}[Treacy1997]: Treacy, Michael, and Fred Wiersema. 1997. The Discipline of Market Leaders: Choose Your Customers, Narrow Your Focus, Dominate Your Market. New York, N.Y.: Basic Books -{} Perseus Books Group.
- 
-
-\item{} \label{TSO2011a}\hyperlabel{TSO2011a}[TSO2011a]: 	The Stationery Office. 2011. Information Technology Infrastructure Library ITIL Service Strategy: 2011 Edition. Norwich, U.K: The Stationery Office.
- 
-
-\item{} \label{TSO2011b}\hyperlabel{TSO2011b}[TSO2011b]: 	The Stationery Office. 2011. Information Technology Infrastructure Library ITIL Service Design: 2011 Edition. Norwich, U.K: The Stationery Office.
- 
-
-\item{} \label{TSO2011c}\hyperlabel{TSO2011c}[TSO2011c]: 	The Stationery Office. 2011. Information Technology Infrastructure Library ITIL Service Transition: 2011 Edition. Norwich, U.K: The Stationery Office.
- 
-
 \item{} \label{Sutherland2014}\hyperlabel{Sutherland2014}[Sutherland2014]: Sutherland, J.V., 2014. \emph{Scrum: the art of doing twice the work in half the time}. Crown Business. First Edition. ed. viii, 248 pages.
  
 
-\item{} \label{Sutton2014}\hyperlabel{Sutton2014}[Sutton2014]: Sutton, Robert I.;, and Huggy Rao. 2014. \emph{Scaling up Excellence\&\#x202f;: Getting to More without Settling for Less}. Crown Business/Random House.
+\item{} \label{Sutton2014}\hyperlabel{Sutton2014}[Sutton2014]: Sutton, Robert I.;, and Huggy Rao. 2014. \emph{Scaling up Excellence: Getting to More without Settling for Less}. Crown Business/Random House.
  
 
 \item{} \label{Thompson2014}\hyperlabel{Thompson2014}[Thompson2014]: Thompson, L. (2014), "Hitchhikers Guide to OpenStack Toolchains", \href{https://www.openstack.org/assets/presentation-media/Hitchhikers-Guide-to-OpenStack-Toolchains.pdf}{https://www.openstack.org/\-assets/\-presentation-{}media/\-Hitchhikers-{}Guide-{}to-{}OpenStack-{}Toolchains.pdf}
@@ -1285,6 +1685,18 @@ All web references were archived into the author's files on the indicated access
  
 
 \item{} \label{Traynor2016}\hyperlabel{Traynor2016}[Traynor2016]: Traynor, Des. 2016. \textquotedblleft{}Focus on the Job, Not the Customer.\textquotedblright{} Inside Intercom. \href{https://blog.intercom.com/when-personas-fail-you/}{https://blog.intercom.com/\-when-{}personas-{}fail-{}you/\-}. Accessed 2016-{}09-{}18
+ 
+
+\item{} \label{Treacy1997}\hyperlabel{Treacy1997}[Treacy1997]: Treacy, Michael, and Fred Wiersema. 1997. The Discipline of Market Leaders: Choose Your Customers, Narrow Your Focus, Dominate Your Market. New York, N.Y.: Basic Books -{} Perseus Books Group.
+ 
+
+\item{} \label{TSO2011a}\hyperlabel{TSO2011a}[TSO2011a]: 	The Stationery Office. 2011. Information Technology Infrastructure Library ITIL Service Strategy: 2011 Edition. Norwich, U.K: The Stationery Office.
+ 
+
+\item{} \label{TSO2011b}\hyperlabel{TSO2011b}[TSO2011b]: 	The Stationery Office. 2011. Information Technology Infrastructure Library ITIL Service Design: 2011 Edition. Norwich, U.K: The Stationery Office.
+ 
+
+\item{} \label{TSO2011c}\hyperlabel{TSO2011c}[TSO2011c]: 	The Stationery Office. 2011. Information Technology Infrastructure Library ITIL Service Transition: 2011 Edition. Norwich, U.K: The Stationery Office.
  
 
 \item{} \label{Tufte2001}\hyperlabel{Tufte2001}[Tufte2001]: Tufte, E. R. (2001). The Visual Display of Quantitative Information. The Visual Display of Quantitative Information (Vol. 4).
