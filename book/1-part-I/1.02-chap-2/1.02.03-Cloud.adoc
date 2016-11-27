@@ -22,14 +22,14 @@ anchor:virtualization[]
 ===== Virtualization
 
 .Laptop computer footnote:[_Image credit https://www.flickr.com/photos/125417539@N06/14657459654/, downloaded 2016-11-07, commercial use permitted_]
-image::images/1.02-laptop.jpg[laptop, 300, 200, float="left"]
+image::images/1_02-laptop.jpg[laptop, 300, 200, float="left"]
 
 https://en.wikipedia.org/wiki/Virtualization[Virtualization], for the purposes of this section, starts with the idea of a computer within a computer. (It has applicability to storage and networking as well but we will skip that for now.) In order to understand this, we need to understand a little bit about operating systems and how they relate to the physical computer.
 
 Assume a simple, physical computer such as a laptop. When the laptop is first turned on, the operating system (OS) loads; the OS is itself software, but is able to directly control the computer's physical resources: its central processing unit (CPU), memory, screen, and any interfaces such as WiFi, USB, and Bluetooth. The operating system (in a traditional approach) then is used to run "applications" such as Web browsers, media players, word processors, spreadsheets, and the like. Many such programs can also be run as applications within the browser, but the browser still needs to be run as an application.
 
 .Virtualization is computers within a computer
-image::images/1.02-virt.png[little computers inside big one, 400,,float="right"]
+image::images/1_02-virt.png[little computers inside big one, 400,,float="right"]
 
 In the simplest form of virtualization, a specialized application known as a _hypervisor_ is loaded like any other application. The purpose of this hypervisor is to emulate the hardware computer in software. Once the hypervisor is running, it can emulate any number of "virtual" computers, each of which can have its own operating system. The hypervisor mediates the https://en.wikipedia.org/wiki/Virtual_machine["virtual machine"] (VM) access to the actual, physical hardware of the laptop; the VM can take input from the USB port, and output to the Bluetooth interface, just like the master OS that launched when the laptop was turned on.
 
@@ -44,7 +44,7 @@ _Paravirtualization_, e.g. containers, is another form of virtualization found i
 However, while hypervisors can support a diverse array of virtual machines with different operating systems on a single computing node, guest environments in a paravirtualized system generally share a single OS.
 
 .Virtualization types
-image::images/1.02-virtualization-types.png[]
+image::images/1_02-virtualization-types.png[]
 
 NOTE: Virtualization was predicted in the earliest theories that led to the development of computers. Turing and Church realized that any general purpose computer could emulate any other. Virtual systems have existed in some form since https://en.wikipedia.org/wiki/Timeline_of_virtualization_development[at latest 1967] - only 20 years after the first fully functional computers. +
  +
@@ -54,13 +54,13 @@ And yes, you can run computers within computers within computers with virtualiza
 
 Virtualization attracted business attention as a means to consolidate computing workloads. For years, companies would purchase servers to run applications of various sizes, and in many cases the computers were badly underutilized. Because of configuration issues (legitimate) and an overabundance of caution (questionable), average utilization in a pre-virtualization data center might average 10-20%. (That's 90% of the computer's capacity being wasted.)
 
-image::images/1.02-physUtil.png[underutilization, 640, ,]
+image::images/1_02-physUtil.png[underutilization, 640, ,]
 
 The above figure is a simplification. Computing and storage infrastructure supporting each application stack in the business were sized to support each workload. For example, a payroll server might run on a different infrastructure configuration than a data warehouse server. Large enterprises needed to support hundreds of different infrastructure configurations, increasing maintenance and support costs.
 
 The adoption of virtualization allowed businesses to compress multiple application workloads onto a smaller number of physical servers:
 
-image::images/1.02-virtUtil.png[efficient util, 320,,float="left" ]
+image::images/1_02-virtUtil.png[efficient util, 320,,float="left" ]
 
 NOTE: For illustration only. A utilization of 62.5% might actually be a bit too high for comfort, depending on the variability and criticality of the workloads.
 
@@ -75,7 +75,7 @@ Companies have always sought alternatives to owning their own computers.  is a l
 As computers became cheaper, companies increasingly acquired their own data centers, investing large amounts of capital in high-technology spaces with extensive power and cooling infrastructure. This was the trend through the late 1980s to about 2010, when Cloud computing started to provide a realistic alternative with true "pay as you go" pricing, analogous to electric metering.
 
 .Cloud computing started here
-image::images/1.02-parkhill.png[book, 300,, float="right"]
+image::images/1_02-parkhill.png[book, 300,, float="right"]
 
 The idea of running IT completely as a utility service goes back at least to 1965 and the publication of _The Challenge of the Computer Utility_, by Douglas Parkhill. While the conceptual idea of Cloud and utility computing was foreseeable fifty years ago, it took many years of hard-won IT evolution to support the vision. Reliable hardware of exponentially increasing performance, robust open-source software, Internet backbones of massive speed and capacity, and many other factors converged towards this end.
 
@@ -112,7 +112,7 @@ NOTE: Traditional managed services are sometimes called "your mess for less." Wi
 
 anchor:containers[]
 
-image::images/1.02-containers.png[containers, 250, , float="right"]
+image::images/1_02-containers.png[containers, 250, , float="right"]
 
 ===== Containers and looking ahead
 
