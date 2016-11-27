@@ -14,7 +14,7 @@ By this time, you probably detect that there is a fundamental tension between fu
 * Value stream versus activity
 * Process versus silo
 
-As we saw xref:2.04.01-process-project-product[previously], there are three major concepts used to achieve end to end flow across functional specialties:
+As we saw xref:2_04.01-process-project-product[previously], there are three major concepts used to achieve end to end flow across functional specialties:
 
 * Process
 * Project
@@ -27,27 +27,27 @@ NOTE: We will go into detail on project management in chapter 8 and process mana
 For example, some manufacturing can be represented as a very simple, sequential process model:
 
 .Simple sequential manufacturing
-image::images/3.07-naive-mfg.png[manufacturing sequence,500]
+image::images/3_07-naive-mfg.png[manufacturing sequence,500]
 
 The product is already defined and the need to generate information (i.e. through feedback) is at an absolute minimum. Functional areas can continually increase their efficiency and economies of scale through deep specialization.
 
-For example, in a traditional IT organization, the Java developers might be in a separate team from the HTML, CSS and Javascript specialists. The database administrators might have their own team, and also the architects, business analysts, and quality assurance groups. Each group develops a strong professional identity as the custodians of "best practices" in their area. They may also develop a strong set of criteria for when they will accept work, which tends to slow down anchor:2.04.04-lean-product-dev[product discovery].
+For example, in a traditional IT organization, the Java developers might be in a separate team from the HTML, CSS and Javascript specialists. The database administrators might have their own team, and also the architects, business analysts, and quality assurance groups. Each group develops a strong professional identity as the custodians of "best practices" in their area. They may also develop a strong set of criteria for when they will accept work, which tends to slow down anchor:2_04.04-lean-product-dev[product discovery].
 
-NOTE: Even in this simplest model, feedback is important. Much of the evolution of 20th century manufacturing has been in challenging this naive, open-loop model. (Remember our brief discussion of xref:2.00.1-open-loop[open-loop]?)
+NOTE: Even in this simplest model, feedback is important. Much of the evolution of 20th century manufacturing has been in challenging this naive, open-loop model. (Remember our brief discussion of xref:2_00.1-open-loop[open-loop]?)
 
-The original, xref:2.00.1-open-loop[open-loop] waterfall model of IT systems implementation was arguably based on just such a naive concept:
+The original, xref:2_00.1-open-loop[open-loop] waterfall model of IT systems implementation was arguably based on just such a naive concept:
 
 .Waterfall
-image::images/3.07-waterfall.png[waterfall,500]
+image::images/3_07-waterfall.png[waterfall,500]
 
-(Review xref:1.03.02-Agile-history[chapter 3] on waterfall development and Agile history.)
+(Review xref:1_03.02-Agile-history[chapter 3] on waterfall development and Agile history.)
 
 There are two primary disadvantages to the model of projects flowing in a waterfall sequence across functional areas:
 
 * It discourages closed-loop feedback
 * There is transactional friction at each handoff
 
-Go back and review: the waterfall model falls into the "original sin" of IT management, xref:2.04.04-lean-product-dev[confusing production with product development]. As a repeatable production model, it may work, assuming that there is little or no information left to generate regarding the production process (an increasingly questionable assumption in and of itself). But when applied to product development, where the *primary goal* is the experiment-driven generation of information, the model is inappropriate and has led to innumerable failures. This includes software development, and even implementing purchased packages in complex environments.
+Go back and review: the waterfall model falls into the "original sin" of IT management, xref:2_04.04-lean-product-dev[confusing production with product development]. As a repeatable production model, it may work, assuming that there is little or no information left to generate regarding the production process (an increasingly questionable assumption in and of itself). But when applied to product development, where the *primary goal* is the experiment-driven generation of information, the model is inappropriate and has led to innumerable failures. This includes software development, and even implementing purchased packages in complex environments.
 
 anchor:org-continuum[]
 
@@ -58,7 +58,7 @@ NOTE: The following discussion and accompanying set of diagrams is derived from 
 There is a spectrum of alternatives in structuring organizations for flow across functional concerns. First, a lightweight "matrix" project structure may be implemented, in which the project manager has limited power to influence the activity-based work, where people sit, etc.
 
 .Lightweight project management across functions
-image::images/3.07-lightweight-pm.png[matrix figure, 700,]
+image::images/3_07-lightweight-pm.png[matrix figure, 700,]
 
 Work flows across the functions, perhaps called "centers of excellence," and there may be contention for resources within each center. Often, simple "first in, first out" xref:queuing[queuing] approaches are used to manage the xref:ticketing[ticketed] work, rather than more sophisticated approaches such as xref:cost-of-delay[Cost of Delay]. It is the above model that Reinertsen was thinking of when he said: "The danger in using specialists lies in their low involvement in individual projects and the multitude of tasks competing for their time."
 
@@ -67,19 +67,19 @@ anchor:heavyweight-pm[]
 Second, a heavyweight project structure may specify much more, including dedicated time assignment, modes of work, standards, etc. The vertical functional manager may be little more than a resource manager, but does still have reporting authority over the team member and crucially still writes their annual performance evaluation (if the organization still uses those.) This has been the most frequent operating model in the xref:trad-cio-org[traditional CIO organization].
 
 .Heavyweight project management across functions
-image::images/3.07-heavy-pm.png[matrix figure, 700,]
+image::images/3_07-heavy-pm.png[matrix figure, 700,]
 
 If even more focus is needed -- the now-minimized influence of the functional areas is still deemed too strong --  the organization may move to completely product-based reporting. With this, the team member reports to the product owner. There may still be communities of interest (Spotify guilds and tribes are good examples) and there still may be standards for technical choices:
 
 .Product team, virtual functions
-image::images/3.07-product-mgmt.png[matrix figure, 700,]
+image::images/3_07-product-mgmt.png[matrix figure, 700,]
 
 anchor:skunkworks[]
 
 Finally, in the skunkworks model, all functional influence is deliberately blocked, as distracting or destructive to the product team's success:
 
 .Skunkworks model
-image::images/3.07-skunk.png[matrix figure, 700,]
+image::images/3_07-skunk.png[matrix figure, 700,]
 
 The product team has complete autonomy, and can move at great speed. It is also free to:
 
@@ -91,4 +91,4 @@ Early e-commerce sites were often set up as skunkworks to keep the interference 
 
 Because of these issues, Don Reinertsen (<<Reinertsen1997>>) observes that "Companies that experiment with autonomous teams learn their lessons, and conclude that the disadvantages are significant. Then they try to combine the advantages of the functional form with those of the autonomous team."
 
-The Agile movement is an important correction to dominant IT management approaches employing xref:2.00.1-open-loop[open-loop] delivery across centralized functional centers of excellence. However, the ultimate extreme of the skunkworks approach cannot be the basis for organization across the enterprise. While xref:product-v-function[functionally specialized organizations] have their challenges, they do promote understanding and common standards for technical areas. In a product-centric organization, communities of interest or practice are important counterbalances.  We will examine the various adaptations and approaches for balancing the two organizational extremes further in Chapter 9 (Execution Management).
+The Agile movement is an important correction to dominant IT management approaches employing xref:2_00.1-open-loop[open-loop] delivery across centralized functional centers of excellence. However, the ultimate extreme of the skunkworks approach cannot be the basis for organization across the enterprise. While xref:product-v-function[functionally specialized organizations] have their challenges, they do promote understanding and common standards for technical areas. In a product-centric organization, communities of interest or practice are important counterbalances.  We will examine the various adaptations and approaches for balancing the two organizational extremes further in Chapter 9 (Execution Management).

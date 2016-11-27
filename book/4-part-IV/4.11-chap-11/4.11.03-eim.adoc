@@ -23,11 +23,11 @@ anchor:system-of-record[]
 
 In the last section, we analyzed a business problem as a data model and created a simple database. Notice that if data is NOT in a table in the database, the database doesn't know about it. Therefore, if there is data held in other parts of the company, it must be loaded into the database before it can be combined with that database's other data. This can also apply to data held by Cloud providers.
 
-Let's go back to our xref:0.01-emergence[emergence model]. Think about moving from one database, to two.
+Let's go back to our xref:0_01-emergence[emergence model]. Think about moving from one database, to two.
 
 In the example below, the Customer Relationship Management (CRM) system is in the cloud, and data is also being imported from the product database:
 
-image:images/4.11-integrations.png[]
+image:images/4_11-integrations.png[]
 
 The process of identifying such remote data and loading it into a database to enable work to be done is known as "integration" and is a complex domain <<Hohpe2003>>.  There are many ways data can be integrated, and industry views of what is "good practice" have changed over the years.
 
@@ -46,15 +46,15 @@ The "system of record" concept is widely used in data management, records manage
 
 It is important to realize that the designation "system of record" is a ROLE that a given database (or system) plays with respect to SOME DATA. The "Sales" database above might be the system of record for invoices, but is not the system of record for products or customers:
 
-image::images/4.11-SORs.png[]
+image::images/4_11-SORs.png[]
 
 The system of record (aka SOR) is often the system of origin - the system where the data is first captured - but not always. In retail, sales transactions are not considered authoritative until they pass through sales audit, and so the system of record for a transaction is not the cash register (which has a database in it):
 
-image::images/4.11-salesFlow.png[]
+image::images/4_11-salesFlow.png[]
 
 Systems of record logically would be the first place to pull data from, but sometimes due to performance or security concerns data may be replicated into an alternate source better suited for distributing the data. A good example of this is an HR system that feeds the corporate directory; the HR system (e.g. Oracle HR, or Workday) is the actual system of record for employee names and identifiers, but most people and other systems in the company will pull the data from the directory (e.g. Microsoft Exchange):
 
-image::images/4.11-HRData.png[]
+image::images/4_11-HRData.png[]
 
 anchor:reference-data[]
 
