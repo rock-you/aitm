@@ -164,7 +164,7 @@ image::images/1_02-configMgmt.png[]
 
 ====== Deployment basics
 
-Resources in version control in general are not yet active in any value-adding sense. In order for them to deliver experiences, they must be combined with computing resources: servers (physical or virtual), storage, nettworking, and the rest, whether owned by the organization or leased as xref:Cloud[Cloud services]. The process of doing so is called deployment. Version control manages the state of the artifacts; deployment management (as another configuration management practice) manages the *combination of those artifacts with the needed resources for value delivery*.
+Resources in version control in general are not yet active in any value-adding sense. In order for them to deliver experiences, they must be combined with computing resources: servers (physical or virtual), storage, nettworking, and the rest, whether owned by the organization or leased as xref:cloud[Cloud services]. The process of doing so is called deployment. Version control manages the state of the artifacts; deployment management (as another configuration management practice) manages the *combination of those artifacts with the needed resources for value delivery*.
 
 anchor:policy-config[]
 
@@ -186,19 +186,7 @@ In an imperative approach, we tell the computer specifically how we want to acco
 . Create another directory
 . Create more files
 
-And so on. Many traditional programming languages take an imperative approach. A script such as xref:infra-code-example[iac.sh example] is executed line by line, i.e., it is imperative. In configuring infrastructure, scripting is in general considered “imperative," but state of the art infrastructure automation frameworks are built using a “declarative,” policy-based approach, in which the object is to define the desired end state of the resource, not the steps needed to get there.  With such an approach, instead of defining a set of steps, we simply define the proper configuration as a target, saying (in essence) that "this computer should always have a directory structure thus; do what you need to do to make it so and keep it this way":
-
-....
-.
-├── bar
-│   ├── a
-│   ├── b
-│   └── c
-└── foo
-    ├── x
-    ├── y
-    └── z
-....
+And so on. Many traditional programming languages take an imperative approach. A script such as xref:infra-code-example[iac.sh example] is executed line by line, i.e., it is imperative. In configuring infrastructure, scripting is in general considered “imperative," but state of the art infrastructure automation frameworks are built using a “declarative,” policy-based approach, in which the object is to define the desired end state of the resource, not the steps needed to get there.  With such an approach, instead of defining a set of steps, we simply define the proper configuration as a target, saying (in essence) that "this computer should always have a directory structure thus; do what you need to do to make it so and keep it this way."
 
 More practically, declarative approaches are used to ensure that the proper versions of software are always present on a system, and that configurations such as Internet ports and security settings do not vary from the intended specification.
 

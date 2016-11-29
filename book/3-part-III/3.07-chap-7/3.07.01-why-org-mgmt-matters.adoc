@@ -19,7 +19,7 @@ image::images/3_07-org-chart-whiteboard.jpg[org chart, 400, 200, float="right"]
 
 How are you going to organize? More importantly, how are you going to think about organizing? This is a hard question. It’s important to get organization right, and the question never goes away. As you grow and split into teams, the overall sense of mission you felt as a single team is at risk of fading. How can you keep your "eyes on the prize" when there are mulitple teams, who all see the world slightly differently? It's critical, as you start to explore various coordination mechanisms, to remember that the team remains the highest-value logical unit, and must be protected. As we discussed in xref:the-product-team[Chapter 4], product value is created by co-located, cross-functional, highly collaborative teams.
 
-In keeping with our xref:0_01-emergence[evolutionary approach], let’s assume you’ve been fairly ad-hoc in your organizational structure up to now, doing your best to avoid specialization. Perhaps you’ve even been working as a collective. Nevertheless, you’ve needed a variety of skills to get this far in your journey: you are certainly not all Java programmers!
+In keeping with our xref:emergence-model[evolutionary approach], let’s assume you’ve been fairly ad-hoc in your organizational structure up to now, doing your best to avoid specialization. Perhaps you’ve even been working as a collective. Nevertheless, you’ve needed a variety of skills to get this far in your journey: you are certainly not all Java programmers!
 
 There is a lot of theory, history, and advice available on to how to organize your company. We'll start with two major themes in current discussions of digital and IT organization:
 
@@ -27,6 +27,13 @@ There is a lot of theory, history, and advice available on to how to organize yo
 * Organizing teams by features versus components
 
 ===== Product organization versus "IT" organization
+
+anchor:fowler-quote[]
+
+[quote, Jim Fowler, General Electri  Chief Information Officer]
+“When I am in business meetings, I hear people talk about digital as a function or a role. It is not. Digital is a capability that needs to exist in every job. Twenty years ago, we broke ecommerce out into its own organization, and today ecommerce is just a part of the way we work. That's where digital and IT are headed; IT will be no longer be a distinct function, it will just be the way we work. … +
+ +
+[W]e've moved to a flatter organizational model with "teams of teams" who are focused on outcomes. These are colocated groups of people who own a small, minimal viable product deliverable that they can produce in 90 days. The team focuses on one piece of work that they will own through its complete lifecycle…in [the “back office”] model, the CIO controls infrastructure, the network, storage, and makes the PCs run. The CIOs who choose to play that role will not be relevant for long…” <<Heller2016>>
 
 There are two major models that digital professionals may encounter in their career:
 
@@ -54,11 +61,11 @@ Let's go back to our example of the traditional CIO organization. A typical stru
 .Classic IT organization
 image::images/3_07-classic-org.png[org chart,600]
 
-(We had some related discussion in xref:i+o-matrix[Chapter 4].) Such a structure was perceived to be "efficient" because all the server engineers would be in one organization, while all the Java developers would be in another, and their utilization could be managed for efficiency. It was also believed that organizing into "centers of excellence" (sometimes called _organizing by function_) would make the practices of each center more and more effective, and therefore more valuable to the organization as a whole.
+(We had some related discussion in xref:i-o-matrix[Chapter 4].) Such a structure was perceived to be "efficient" because all the server engineers would be in one organization, while all the Java developers would be in another, and their utilization could be managed for efficiency. It was also believed that organizing into "centers of excellence" (sometimes called _organizing by function_) would make the practices of each center more and more effective, and therefore more valuable to the organization as a whole.
 
 However, the new digital organizations perceived that there was too much friction between the different functions on the organization chart. Skepticism also started to emerge that "centers of excellence" were living up to their promise. Instead, what was too often seen was the emergence of an "us versus them" mentality, as developers argued with server and network engineers.
 
-One of the first companies to try a completely different approach was Intuit. As Intuit started selling its products increasingly as services, it re-organized to divide infrastructure individual contributors, e.g. storage engineers and database administrators, to become part of the product teams with which they worked <<Abbot2015>>, p 103.
+One of the first companies to try a completely different approach was Intuit. As Intuit started selling its products increasingly as services, it re-organized to divide infrastructure individual contributors, e.g. storage engineers and database administrators, to become part of the product teams with which they worked <<Abbott2015>>, p 103.
 
 anchor:spotify-model[Spotify model]
 
@@ -71,7 +78,6 @@ This model is also called the "Spotify model." The dotted line boxes (Developers
 
 The consequences of this transition in organizational style are still being felt and debated. Sriram Narayan, in his book _Agile Organization Design_ (<<Narayam2015>>), points out that "IT work is labor-intensive and highly specialized," and therefore managing IT talent is a particular organizational capability it may not make sense to distribute. Furthermore, he observes that IT work is performed on medium to long time scales, and  "IT culture" differs from "business culture." However, Abbott and Fisher in _The Art of Scalability_ argue that "...The difference in mindset, organization, metrics, and approach between the IT and product models is vast. Corporate technology governance tends to significantly slow time to market for critical projects...IT mindsets are great for internal technology development, but disastrous for external product development."" <<Abbott2015>> pp 122-124
 
-anchor:2_04.02-features-v-components[]
 anchor:feature-v-component[]
 
 ===== Features versus components
