@@ -1,10 +1,7 @@
 
 ==== Towards process management
 
-
-===== From work to process management
-
-So, the kanban board has started to elaborate. We're seeing more and more work that needs to follow a sequence, or checklist... Wait, didn't we see that in the chapter on Project Management?
+The kanban board has started to get complicated. We're seeing more and more work that needs to follow a sequence, or checklist, for the sake of consistency.
 
 Process management is when we need to start managing
 
@@ -15,30 +12,22 @@ Process management is when we need to start managing
 * perhaps using common methods to define them,
 * and even common tooling to support multiple processes.
 
-Project management and process management interact in 2 primary ways:
-
-* Projects often are used to create and deploy processes. A large system implementation (e.g. of a Enterprise Resource Planning module such as Human Resource Management) will often be responsible for process implementation including training.
-* As environments mature, product and/or project teams require process support.
-
-As Richardson notes in _Project Management Theory and Practice_, "there are many organizational processes that are needed to optimally support a successful project." <<Richardson2010>> For example, the project may require predictable contractor hiring, or infrastructure provisioning, or security reviews. The same is true for product teams that may not be using a "project" concept to manage their work. To the extent these are managed as repeatable, optimized processes, risk is reduced.
-
-
 Sometimes, the process simply becomes too complex for humans to follow. Multi-page process models are rarely consulted, even if the team affected developed them. This is especially true when there are many optional or conditional steps in the process.
 
-There are two related lines of response to this:
+Before we get into full blown process management, let's look at two at two simpler responses:
 
 * Case Management
 * The Checklist Manifesto
 
 anchor:case-mgmt[]
 
-====== Case Management
+===== Case Management
 
 NOTE: Do not confuse "Case" here with Computer Assisted Software Engineering.
 
 Case management is a concept used in medicine, law, and social services. Case management can be thought of as a high-level process supporting the skilled knowledge worker applying their professional expertise.
 
-image::images/3_09-casemgmt.png[]
+image::images/2_05-casemgmt.png[]
 
 To quote the Workflow Management Coalition:
 ****
@@ -51,11 +40,15 @@ To quote the Workflow Management Coalition:
 <<WFMC2010>>, via <<England2013>>
 ****
 
-Noted IT consultant and author Rob England contrasts "case management" with "standard process" in his book  _Plus! The Standard+Case Approach: See Service Response in a New Light_. Some processes are repeatable and can be precisely standardized, but it is critical for anyone working in complex environments to understand the limits of standard process.
+Noted IT consultant and author Rob England contrasts "case management" with "standard process" in his book  _Plus! The Standard+Case Approach: See Service Response in a New Light_ <<England2013>>. Some processes are repeatable and can be precisely standardized, but it is critical for anyone working in complex environments to understand the limits of standard process.
 
 anchor:checklist-manifesto[]
 
-====== The Checklist Manifesto
+===== The Checklist Manifesto
+
+.A Boeing 747 checklist footnote:[_Image credit https://www.flickr.com/photos/clemensv/7292988394, downloaded 2016-11-29, commercial use permitted_]
+image::images/2_05-747-checklist.jpg[checklist, 400, 200, float="right"]
+
 The Checklist Manifesto is the name of a notable book by author/surgeon Atul Gawande <<Gawande2010>>. The title can be misleading; the book in no way suggests that all work can be reduced to repeatable checklists. Instead, it is another in depth examination of the  relationship between standardization and complexity. Like case management, it addresses the problem of complex activities requiring professional judgement.
 
 Unlike case management, it explores more time-limited and often urgent activities such as flight operations, large scale construction, and surgery. These activities, as a whole, cannot be reduced to one master process; there is too much variation and complexity.
@@ -64,4 +57,4 @@ However, within the overall bounds of flight operations, or construction, or sur
 
 There are similarities and differences between core BPM approaches and checklists. Often, business process management is employed to describe processes that are automated and whose progress is tracked in a database. Checklists, on the other hand, may be more manual, intended for use in a closely collaborative environment (such as a an aircraft cockpit or operating room), and may represent a briefer period of time.
 
-Finally, in chapter 8, we discussed the concept of the xref:submittal-schedule[submittal schedule], which Gawande encountered in his discussions with the construction industry. In this approach, the actual, trackable task is that *two or more parties consult with each other.* This technique is also applicable in a BPM and Case Management sense.
+We will revisit Gawande's work in Chapter 9 with the coordination technique of the xref:submittal-schedule[submittal schedule].
