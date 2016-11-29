@@ -11,7 +11,7 @@ On further investigation, it became clear that the natives were seeking more “
 
 In 1974, the noted physicist Richard Feynman gave a speech at Caltech in which he coined the immortal phrase “cargo cult science.” His intent was to caution against activities which appear to follow the external form of science, but lack the essential understanding at its core. Similar analogies are seen in business and IT management, as organizations adopt tools and techniques because they have seen others do so, without having fundamental clarity about the problems they are trying to solve and how a given technique might specifically help.
 
-As with many stories of this kind, there are questions around the accuracy of the original accounts and Western interpretations and mythmaking around what was seen. However there is no question that the phenomena were observed, and that “cargo cult thinking” is a useful cautionary metaphor. 
+As with many stories of this kind, there are questions around the accuracy of the original accounts and Western interpretations and mythmaking around what was seen. However there is no question that the phenomena were observed, and that “cargo cult thinking” is a useful cautionary metaphor.
 
 
 ===== The idea of PMDB and PIs
@@ -69,6 +69,66 @@ I realize the red flags that come up with any suggestion of a centralized system
 
 Thoughts?
 ****
+
+===== Scheduling and execution
+
+To understand how project management works across a functionally organized system, consider the internals of each functional area:
+
+image::images/3_09-mfg-w-resource.png[]
+
+Each combination of worker and equipment can be considered a workstation in this simplified model. If there is concern for flow across the functional areas, one technique used in manufacturing is that of expediting. An individual in the role of  "expeditor" tracks the process across the work stations and ensures that any friction or blockages are overcome so that the entire process completes and value is delivered. This can be seen as a preliminary form of project management.
+
+As the production line evolves, scheduling may be used as well: the assignment of work to each workstation (combination of worker and equipment) may have its timing and duration specified in advance. While this is not an optimal approach according to Lean philosophy (which emphasizes "pull" techniques), https://en.wikipedia.org/wiki/Scheduling_(production_processes)[production scheduling] is widely used in manufacturing.
+
+NOTE: Production scheduling is a large topic in and of itself. It is part of the domain of interest of the professional organization, The American Production and Inventory Control Society (APICS).
+
+IT systems development, when crossing functions, is rarely if ever considered as a simple end to end process that can run itself, with only a lightweight expeditor. Instead, since there is substantially increased complexity, a project paradigm is used across the functions. The project manager plays the role of expanded expeditor:
+
+image::images/3_09-sw-w-resource.png[]
+
+The above diagram, which you should study carefully, is a more detailed representation of the classic "waterfall" project. It still bears strong similarities to the idealized manufacturing model presented just previously. In particular, notice that the default model is that *the need for the resource is tightly bounded by the calendar*. In the above model, the following resource requirements are apparent:
+
+. One Requirements analyst is needed between times A and B (e.g, from May 1 through 15).
+. One Architect is needed between times B and C (e.g., from May 16 through 31)
+. One Developer is needed between times C and D (e.g., from June 1 through 15)
+. One Release Engineer is needed between times D and E (e.g., from June 15 through 30)
+
+*This is a deliberately unworkable model for illustration.* (But the author can attest it has been tried...) Sometimes, the terms "mechanistic," "deterministic," or "linear" are used to describe waterfall project methods. This shows them at their extreme, insofar as they are essentially translations of a manufacturing model.
+
+The basic problem: if the Developer is released from the project on June 15, and issues were to arise on June 20 with the release, flow would be interrupted and the system would not be delivered successfully.
+
+Because of this, the project may retain some residual claim on all the engaged resources, but their utilization may be low or zero at certain points.
+
+If we re-imagine the diagram with the different functional areas along the horizontal, we start to develop an understanding of the interrelatedness of product development. The following is one representation of the Rational Unified Process, an early depiction of this interrelatedness:
+
+.Rational Unified Process footnote:[_Image credit By Dutchguilder - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=37249677, downloaded 2016-10-31, fair use]
+image::images/3_08-development-iterative.png[Rational Unified Process, 493,,float="right"]
+
+One interesting aspect of the diagram is that it shows just how difficult it can be to staff a project. Demand for given functional roles ebbs and flows unpredictably. The project manager is expected to manage the uncertain handoffs between the various functional areas, and anticipate resource requirements stemming from unexpected feedback demands. This is why "T-shaped" professionals (see Chapter 7) are desirable, because they can move from area to area in response to demand.
+
+Ultimately, the reason classical production scheduling is inappropriate for delivering new IT functionality is that there is simply too much variability in xref:product-mgmt[product development] . (Again see Chapter 4 for further discussion of this.) However, this does not change the fact that some level of planning and estimation is needed. To what extent this more variable IT work can be quantitatively managed is an active area of discussion in the software, Agile, and related communities.
+
+====== Critical chain
+
+Goldratt in the above-cited book Critical Chain develops a sophisticated critique of project estimation and the dysfunctions it promotes.
+
+In a project requiring contributions from multiple skilled resources, a common practice is to ask each person, "how long will this take you?" The project manager then works the resulting estimates into the overall project plan.
+
+The problem with this is that most people will estimate their time conservatively; they will forecast a longer duration than they actually require. When all these "padded" estimates are added together, the project may be unacceptably long. The agreed work will tend to expand to fill the time available (Parkinson's Law). Furthermore, most people will wait until the end of their window to perform their task - a person who asks for 3 weeks to perform one week of work will often not start until week 3. (Otherwise known as Student Syndrome.)
+
+One of the reasons that people estimate conservatively is that project managers tend to be quite concerned if committed tasks are not performed on time. Failure to make the "deliverable" by the committed date may result in negative feedback to the employee's manager and resulting poor performance reviews.
+
+Coupled with the above-cited drive to multi-tasking, these factors result in poor project performance, despite the array of modern project management techniques.
+
+Goldratt suggested an alternate approach, in which the idea of "critical path" is enhanced with resource awareness. That is to say, the issue of timing and dependencies (itself a complex problem) is further enriched with the availability of resources to perform the work. (In general, the availability of assigned project resources is assumed, but this is not a wise assumption in project-centric environments.)
+
+Estimation is handled more probabilistically, and the "critical chain" is *the combination of the critical path plus the resource assigned to complete the most critical task.* The theory is that a person performing such a task must be protected from distraction, and in fact project managers must expand their tools to effectively forecast and plan the critical chain.
+
+This leads to some complex math, in particular a known problem called the Resource-Constrained Scheduling Problem. (e.g. http://www.iste.co.uk/data/doc_dtalmanhopmh.pdf) The fact that this problem is so notoriously difficult is indicative of the need for adaptive approaches; ultimately, rigorous analytic methods fail to cope with the complexity of such problems.
+
+Craig Larman, in Scaling Lean and Agile Development, is sympathetic to the overall insights and goals of Critical Chain. However, with respect the full blown analytical approach it implies, he states
+
+"We have seen two very large official "project management TOC" adoption attempts (and heard of one more) in companies developing software-intensive embedded systems... The practice was clearly heavy, not agile, and not lean. In all three cases, the approach was eventually found cumbersome and not very effective, and was dropped." <<Larman2009>>
 
 ifdef::collaborator-draft[]
 

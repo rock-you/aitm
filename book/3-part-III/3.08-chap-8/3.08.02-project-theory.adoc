@@ -61,8 +61,6 @@ PMBOK remains extensive and complex when considered as a whole. This is necessar
 
 However, in Agile domains that seek to be more adaptive to changing business dynamics, full use of the PMBOK framework may be unnecessary and wasteful. The accepted response is to "tailor" the guidance, omitting those plans and deliverables that are not needed.
 
-For example, PMBOK calls for a "stakeholder management plan" to be produced as part of the Project Stakeholder Management knowledge area and the Planning process group. The author has rarely seen this deliverable formally produced, in years of enterprise experience. However, for certain (larger) projects it may make sense.
-
 IMPORTANT: Part of the problem with extensive frameworks such as PMBOK is that knowing how and when to tailor them is hard-won knowledge that is not part of the usual formalized training. And yet, without some idea of "what matters" in applying the framework, there is great risk of wasted effort. The Agile movement in some ways is a reaction to the waste that can result from overly detailed frameworks.
 
 ===== The challenges of scope management
@@ -81,13 +79,11 @@ In the  xref:lean-startup[Lean Startup] world, products may pivot and pivot agai
 
 On the other hand, remember our xref:emergence-model[emergence model]. The simple organizational change from one to multiple products may provoke certain concerns and a new kind of contention for resources. People are inherently competitive and also have a sense of fairness. A new product team that seems to be unaccountable for results, consuming "more than its share" of budget while failing to meet the original vision for their existence, will cause conflict and concern among organizational leadership.
 
-It is in the tension between product autonomy and accountability that we see project management techniques such as the work breakdown structure and project change control employed.
-
-We saw a Work Breakdown Structure in the previous section, with our discussion of a holiday party. More formally, the work breakdown structure is defined by the Project Management Body of Knowledge as
+It is in the tension between product autonomy and accountability that we see project management techniques such as the work breakdown structure and project change control employed. We saw a Work Breakdown Structure in the previous section, with our discussion of a holiday party. More formally, the work breakdown structure is defined by the Project Management Body of Knowledge as
 
 _...a hierarchical decomposition of the total scope of work to be carried out by the project team to accomplish the project objectives and create the required deliverables. The WBS organizes and defines the total scope of the project, and represents the work specified in the current approved project_ <<PMI2013>>.
 
-<<Portny2013>> recommends "Subdivide your WBS component into additional deliverables if you think either of the following situations applies: The component will take much longer than two calendar weeks to complete. The component will require much more than 80 person-hours to complete.''
+<<Portny2013>> recommends "Subdivide your WBS component into additional deliverables if you think either of the following situations applies: The component will take much longer than two calendar weeks to complete. The component will require much more than 80 person-hours to complete."
 
 This may seem reasonable, but in iterative product development, it can be difficult to "decompose" a problem in the way project management seems to require. Or to estimate in the way Portny suggests. This can lead to two problems.
 
@@ -95,153 +91,27 @@ First, the WBS may be created at a seemingly appropriate level of detail, but si
 
 Second, we may see the creation of project plans that are too high level, omitting information that is in fact known at the time - for example, external deadlines or resource constraints. This happens because the team develops a cultural attitude that is averse to all planning and estimation.
 
-===== Task ordering, dependencies, and critical path
-The specific ordering of tasks is also important. As we saw in the holiday party example, sometimes one cannot complete a task without first completing something else - e.g., you cannot buy groceries until you decide on the menu. Or install software before the server is configured. But many other tasks might be performed in any order.
-
-Sometimes, the tasks are constrained by the availability of someone to work on them. This is the situation we have in simple Kanban, where a backlog of tasks is worked primarily according to the availability of someone to work on them.
-
-There are other approaches to scheduling tasks. <<Portny2013>> suggests the following approach types:
-
-* Basic
-* Procedural
-* Legal/regulatory
-* Optimization-based
-* Arbitrary (no reason for precedence chosen, but once resources are planned, hard to change)
-
-When tasks are ordered, and their time to complete estimated, an analysis known as *critical path* is possible.
-
-PMBOK <<PMI2013>> defines the critical path as "The sequence of activities that represents the longest path through a project, which determines the shortest possible duration."
-
-Consider our holiday party plan again:
-
-image::images/3_08-ms-proj-3.png[]
-
-In the above example, we have two major work areas: clean the house and prepare a menu. Note however that there are no dependencies between:
-
-* vacuum living room
-* clean kitchen
-* clean dining table
-* vacuum dining room
-
-Really, they can be done in any order.
-
-On the other hand, there is a clear set of dependencies between:
-
-. Choose menu
-. Get groceries
-. Fix food
-
-This means that the sub-activity "Food for party" is the critical path. If the menu is not determined on time, the grocery run can't happen, and the food will be fixed late or not at all.
-
 anchor:loose-coupling-project[]
 
 ====== Loose coupling to the project plan rescue?
 
 While this book does not go into systems architectural styles in depth, a project with a large number of dependencies may be an indication that the system or product being constructed also has significant interdependencies.
 
-Successful systems designers for years have relied on concepts such as encapsulation, abstraction, and loose coupling to minimize the dependencies between components of complex systems, so that their design, construction, and operation can be managed with some degree of independence. These ideas are core to the software engineering literature.
+Successful systems designers for years have relied on concepts such as encapsulation, abstraction, and loose coupling to minimize the dependencies between components of complex systems, so that their design, construction, and operation can be managed with some degree of independence. These ideas are core to the software engineering literature. Recent expressions of these core ideas are Services-Oriented Architecture and microservices.
 
-Recent expressions of these core ideas are Services-Oriented Architecture and microservices.
+Systems that do not adopt such approaches are often termed "monolithic" and have a well deserved reputation for being problematic to build and operate. Many large software failures stem from such approaches. If you have a project plan with excessive dependencies, the question at least should be asked: does my massive, tightly-coupled project plan indicate I am building a monolithic, tightly-coupled system that will not be flexible or responsive to change?
 
-Systems that do not adopt such approaches are often termed "monolithic" and have a well deserved reputation for being problematic to build and operate. Many large software failures stem from such approaches. (cites)
-
-The system development efforts that gave rise to Critical Path Analysis (in particular the Polaris submarine) were very different from modern digital product development. A submarine is a relatively closed system with many constraints. They are changed only through the most formal of processes. (Even so, military systems seek loose coupling wherever possible.) Modern digital systems, while presenting their own challenges, do not operate under such constraints.
-
-If you have a project plan with excessive dependencies, the question at least should be asked: does my massive, tightly-coupled project plan indicate I am building a monolithic, tightly-coupled system that will not be flexible or responsive to change?
-
-Again, many digital companies build tremendously robust integrated services from the combination of many quasi-independent "product" teams, each serving a particular function.
-
-The book https://www.goodreads.com/book/show/753804.Small_Pieces_Loosely_Joined[Small Pieces Loosely Joined: A Unified Theory Of The Web] is a good discussion of these ideas.
-
-However, when a particular organizational objective requires changes to more than one such "product," the need for cross-team coordination emerges. Someone needs to own this larger objective, even if its actual implementation is carried out across multiple distinct teams.
-
-In this discussion we see the emergence of enterprise architecture, which will be discussed in depth in Chapter 12.
-
+Again, many digital companies build tremendously robust integrated services from the combination of many quasi-independent "product" teams, each serving a particular function. However, when a particular organizational objective requires changes to more than one such "product," the need for cross-team coordination emerges. Someone needs to own this larger objective, even if its actual implementation is carried out across multiple distinct teams. We will discuss this further in Chapter 9.
 
 ====== Risk management
 Project management is where we see the first formalization of risk management (which will be more extensively covered in Chapter 10). Briefly, risk is classically defined as the probability of an adverse event times its cost. Project managers are alert to risks to their timelines, resource estimates, and deliverables.
 
 Risks may be formally identified in project management tooling. They may be accepted, avoided, transferred, or mitigated. Unmanaged risks to a project may result in the project as a whole reporting an unfavorable status.
 
-===== Scheduling and execution
- not sure about this section. Sets up the Critical Chain discussion. Also helpful to Chapter 9.
+===== Project assignment
 
-To understand how project management works across a functionally organized system, consider the internals of each functional area:
+Enterprise IT organizations have evolved to use a mix of project management, processes, and ad-hoc work routing to achieve their results. Often, resources (people) are assigned to multiple projects, a practice sometimes called "fractional allocation."
 
-image::images/3_08-mfg-w-resource.png[]
+In fractional allocation, a database administrator will work 25% on one project, 25% on another, and still be expected to work 50% on ongoing production support. This may appear to work mathematically, but practically it is an ineffective practice. Both Gene Kim in The Phoenix Project <<Kim2013>> and Eli Goldratt in Critical Chain <<Goldratt1997>> present dramatized accounts of the overburden and gridlock that can result from such approaches.
 
-Each combination of worker and equipment can be considered a workstation in this simplified model.
-
-If there is concern for flow across the functional areas, one technique used in manufacturing is that of expediting. An individual in the role of  "expeditor" tracks the process across the work stations and ensures that any friction or blockages are overcome so that the entire process completes and value is delivered. This can be seen as a preliminary form of project management.
-
-As the production line evolves, scheduling may be used as well: the assignment of work to each workstation (combination of worker and equipment) may have its timing and duration specified in advance. While this is not an optimal approach according to Lean philosophy (which emphasizes "pull" techniques), https://en.wikipedia.org/wiki/Scheduling_(production_processes)[production scheduling] is widely used in manufacturing.
-
-NOTE: Production scheduling is a large topic in and of itself. It is part of the domain of interest of the professional organization, The American Production and Inventory Control Society (APICS).
-
-IT systems development, when crossing functions, is rarely if ever considered as a simple end to end process that can run itself, with only a lightweight expeditor. Instead, since there is substantially increased complexity, a project paradigm is used across the functions. The project manager plays the role of expanded expeditor:
-
-image::images/3_08-sw-w-resource.png[]
-
-The above diagram, which you should study carefully, is a more detailed representation of the classic "waterfall" project. It still bears strong similarities to the idealized manufacturing model presented just previously. In particular, notice that the default model is that *the need for the resource is tightly bounded by the calendar*. In the above model, the following resource requirements are apparent:
-
-. One Requirements analyst is needed between times A and B (e.g, from May 1 through 15).
-. One Architect is needed between times B and C (e.g., from May 16 through 31)
-. One Developer is needed between times C and D (e.g., from June 1 through 15)
-. One Release Engineer is needed between times D and E (e.g., from June 15 through 30)
-
-*This is a deliberately unworkable model for illustration.* (But the author can attest it has been tried...) Sometimes, the terms "mechanistic," "deterministic," or "linear" are used to describe waterfall project methods. This shows them at their extreme, insofar as they are essentially translations of a manufacturing model.
-
-The basic problem: if the Developer is released from the project on June 15, and issues were to arise on June 20 with the release, flow would be interrupted and the system would not be delivered successfully.
-
-Because of this, the project may retain some residual claim on all the engaged resources, but their utilization may be low or zero at certain points.
-
-If we re-imagine the diagram with the different functional areas along the horizontal, we start to develop an understanding of the interrelatedness of product development. The following is one representation of the Rational Unified Process, an early depiction of this interrelatedness:
-
-.Rational Unified Process footnote:[_Image credit By Dutchguilder - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=37249677, downloaded 2016-10-31, fair use]
-image::images/3_08-development-iterative.png[Rational Unified Process, 493,,float="right"]
-
-One interesting aspect of the diagram is that it shows just how difficult it can be to staff a project. Demand for given functional roles ebbs and flows unpredictably. The project manager is expected to manage the uncertain handoffs between the various functional areas, and anticipate resource requirements stemming from unexpected feedback demands. This is why "T-shaped" professionals (see Chapter 7) are desirable, because they can move from area to area in response to demand.
-
-Ultimately, the reason classical production scheduling is inappropriate for delivering new IT functionality is that there is simply too much variability in xref:product-mgmt[product development] . (Again see Chapter 4 for further discussion of this.) However, this does not change the fact that some level of planning and estimation is needed. To what extent this more variable IT work can be quantitatively managed is an active area of discussion in the software, Agile, and related communities.
-
- Effort vs. duration
-
- Production spectrum illustration? (diagonal)
-
-===== Projects and their resources
-
-NOTE: The use of the term "resources" to refer to the people working on a project is often criticized as insensitive and inappropriate. However, it is standard terminology which this book therefore needs to reflect, as an introductory survey text. You are encouraged to NOT use this terminology as you progress in your career.
-
-Modern enterprise IT organizations use a mix of project management, processes, and ad-hoc work routing to achieve their results. Often, resources (people) are assigned to multiple projects, a practice sometimes called "fractional allocation."
-
-In fractional allocation, a database administrator will work 25% on one project, 25% on another, and still be expected to work 50% on ongoing production support.
-
-This may appear to work mathematically, but practically it is an ineffective practice. Both Gene Kim in The Phoenix Project <<Kim2013>> and Eli Goldratt in Critical Chain <<Goldratt1997>> present dramatized accounts of the overburden and gridlock that can result from such approaches.
-
-Human beings are notably bad at multi-tasking, and the mental "context-switching" required to move from one task to another is wasteful and ultimately not scalable. A human being fractionally allocated to more and more projects will get less and less done in total, as the transactional friction of task switching increases.
-
-More on this in the following section on resource management.
-
- there have got to be good cites on this
-
-====== Critical chain
-
-Goldratt in the above-cited book Critical Chain develops a sophisticated critique of project estimation and the dysfunctions it promotes.
-
-In a project requiring contributions from multiple skilled resources, a common practice is to ask each person, "how long will this take you?" The project manager then works the resulting estimates into the overall project plan.
-
-The problem with this is that most people will estimate their time conservatively; they will forecast a longer duration than they actually require. When all these "padded" estimates are added together, the project may be unacceptably long. The agreed work will tend to expand to fill the time available (Parkinson's Law). Furthermore, most people will wait until the end of their window to perform their task - a person who asks for 3 weeks to perform one week of work will often not start until week 3. (Otherwise known as Student Syndrome.)
-
-One of the reasons that people estimate conservatively is that project managers tend to be quite concerned if committed tasks are not performed on time. Failure to make the "deliverable" by the committed date may result in negative feedback to the employee's manager and resulting poor performance reviews.
-
-Coupled with the above-cited drive to multi-tasking, these factors result in poor project performance, despite the array of modern project management techniques.
-
-Goldratt suggested an alternate approach, in which the idea of "critical path" is enhanced with resource awareness. That is to say, the issue of timing and dependencies (itself a complex problem) is further enriched with the availability of resources to perform the work. (In general, the availability of assigned project resources is assumed, but this is not a wise assumption in project-centric environments.)
-
-Estimation is handled more probabilistically, and the "critical chain" is *the combination of the critical path plus the resource assigned to complete the most critical task.* The theory is that a person performing such a task must be protected from distraction, and in fact project managers must expand their tools to effectively forecast and plan the critical chain.
-
-This leads to some complex math, in particular a known problem called the Resource-Constrained Scheduling Problem. (e.g. http://www.iste.co.uk/data/doc_dtalmanhopmh.pdf) The fact that this problem is so notoriously difficult is indicative of the need for adaptive approaches; ultimately, rigorous analytic methods fail to cope with the complexity of such problems.
-
-Craig Larman, in Scaling Lean and Agile Development, is sympathetic to the overall insights and goals of Critical Chain. However, with respect the full blown analytical approach it implies, he states
-
-"We have seen two very large official "project management TOC" adoption attempts (and heard of one more) in companies developing software-intensive embedded systems... The practice was clearly heavy, not agile, and not lean. In all three cases, the approach was eventually found cumbersome and not very effective, and was dropped." <<Larman2009>>
+As previously discussed, human beings are notably bad at xref:multi-tasking[multi-tasking], and the mental "context-switching" required to move from one task to another is wasteful and ultimately not scalable. A human being fractionally allocated to more and more projects will get less and less done in total, as the transactional friction of task switching increases.
