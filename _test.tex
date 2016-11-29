@@ -32,7 +32,7 @@
 
 \def\DBKsubtitle{from startup to enterprise (Student Edition)}
 
-\renewcommand{\DBKdate}{2016-{}11-{}26}
+\renewcommand{\DBKdate}{2016-{}11-{}28}
 
 
 
@@ -60,327 +60,6 @@ pdfauthor={Charles T. Betz}}
 \listoffigures
 \mainmatter
 
-% ------- 
-% Chapter 
-% ------- 
-
-\chapter{Praise for this book}
-\label{Praise}\hyperlabel{Praise}%
-  
-\emph{Agile IT Management is a perfect fit for my Management Information Systems class to introduce students to the fast-{}paced world of IT Infrastructure that they will be dealing with shortly upon graduation.  This book uses multiple perspectives (Founder, Team Leader, VP, C-{}level executive) to demonstrate to the student not only how a business grows, but how they need to continually grow their skill set.  The use of hands-{}on exercises encouraged by the format of this book complements my teaching style that allows students to learn by doing, failing and doing again.  An additional benefit is that this book begins with a focus on the startup mentality which I will use in my Business Innovation class.}
- 
-\emph{Prof. Pat Paulson, Winona State University}
- 
-% ------- 
-% Chapter 
-% ------- 
-
-\chapter{Copyright}
-\label{Copyright}\hyperlabel{Copyright}%
-  
-The digital professional: From startup to enterprise
- 
-Published by Digital Management Academy, LLC 14 Sidney Place Minneapolis, MN  55414
- 
-Copyright © 2016 by Charles T. Betz
- 
-All rights reserved, for information about permission to reproduce selections from this book, write to Permissions, Digital Management Academy LLC,
-14 Sidney Place, Minneapolis, MN  55414
- 
-First Edition
- 
-Produced in the United States of America
- 
-Cover illustration by Go To Media, LLC
- 
-ISBN: 978-{}0-{}9981346-{}0-{}4
- 
-Publisher's note to readers:
-Although the author and publisher have made every effort to ensure that the information in this book was correct at press time, the author and publisher do not assume and hereby disclaim any liability to any party for any loss, damage, or disruption caused by errors or omissions, whether such errors or omissions result from negligence, accident, or any other cause.
- 
-For information about special discounts for bulk purchases or for information on booking authors for an event, please visit www.dm-{}academy.com.
- 
-% ------- 
-% Chapter 
-% ------- 
-
-\chapter{Dedication}
-\label{Dedication}\hyperlabel{Dedication}%
-  
-\emph{To my students}
- 
-% ------- 
-% Chapter 
-% ------- 
-
-\chapter{Preface}
-\label{Preface}\hyperlabel{Preface}%
-  
-In 2013, I was approached by Dr. Bhabani Misra, the head of the Graduate Programs in Software at the University of St. Thomas in St. Paul. Dr. Misra asked me to teach an "IT Infrastructure" course (SEIS660), focusing on the Information Technology Infrastructure Library, or ITIL.
- 
-The first semester of the class was well received enough for me to be invited back. However, there were complaints from the students that it was too "theoretical." I was attempting to teach using an enterprise architecture style, with lots of abstractions, that just was not engaging students effectively.
- 
-I also had a team project approach that immediately started the students out as the IT leadership team of a large corporation. This generated feedback that the students wanted something more practical; they were not going to be immediately hired as senior executives!
- 
-I took this feedback seriously. I especially gave thought to a practical aspect, and so started to develop a lab component. This was and is popular with the students. I also started to think about different approaches for structuring the class that would make more sense for a survey class with a wide spectrum of experience.
- 
-For three semesters I assigned my first book (\emph{Architecture and Patterns for IT: Service Management, Resource Planning, and Governance}) as a required text for the class. However, I did not write this as a textbook and its limitations became clearer and clearer. It has a strongly architectural approach, approaching the IT management problem as a series of \href{https://en.wikipedia.org/wiki/4%2B1_architectural_view_model}{views on a model}. I do not recommend this as a pedagogical approach for a survey class.
- 
-I approached my publisher with the idea of a 3rd edition that would pivot the existing material towards being something more useful in class. They agreed to this and I started the rewrite.
- 
-However, by the time I was halfway done with the first draft, I had a completely new book. Material from the previous work simply did not fit the emergence model used to structure the narrative.
- 
-A number of factors converged at this point:
- \begin{itemize}
-
-\item{} My view that the "medium is the message" and this extends to choice of authoring approach, intellectual property, DRM, and publisher
- 
-
-\item{} Contacts with local and international faculty and thought leaders, and a desire to openly collaborate with them on making the book as good as possible
- 
-
-\item{} A desire to freely share at least a rough version of the book, both for marketing purposes and in the interests of giving back to the global IT community
- 
-
-\item{} A desire to be able to rapidly update the book with as little friction as possible
- 
-
-\item{} A practical realization that the book might get more uptake globally if available at least in some form as free and open source IP
- 
-
-\item{} The fact I had already started to \href{https://github.com/StThomas-SEIS660}{publish my labs on Github}, and had in fact had developed a workable continuous delivery ("DevOps") toolchain (the \href{https://github.com/CharlesTBetz/Calavera}{Calavera project}, which has attracted collaborators from the US, Spain, and Israel).
- 
-\end{itemize}
- 
-Many have assisted with this work:
- 
-Thanks to Dr. Bhabani Misra for asking me to teach at the University of St. Thomas and providing direction at key points.
- 
-Thanks to Stephen Fralippolippi and Roger K. Williams for being the first Github contributors.
- 
-Thanks to Jason Baker for text and technical collaboration.
- 
-Thanks to Mark Kennaley for guidance on open versus closed loop thinking.
- 
-Thanks to Glen Alleman for guidance on modern project management practices.
- 
-Thanks to Jeff Sussna for ongoing inspiration, Twitter feedback, discussion question ideas, and sourced quotes.
- 
-Thanks to Nicole Forsgren for links to articles on performance management.
- 
-Thanks to Evan Leybourn for detailed commentary on project management/Chapter 8.
- 
-Thanks to Chris Little and Jabe Bloom for quote provenance.
- 
-Thanks to Lorin Hochstein for references.
- 
-Thanks to Gene Kim for ongoing mentoring and advice on writing and publishing, and unwavering support and confidence in my efforts.
- 
-Thanks to the Go to Marketing team (Will Goddard, Terry Brown, Francisco Piniero) for design assistance and invaluable partnership.
- 
-Thanks to Professor Pat Paulson for being the first adopter of the textbook, and thanks to his students for invaluable criticism and feedback.
- 
-% ------- 
-% Chapter 
-% ------- 
-
-\chapter{Introduction}
-\label{Introduction}\hyperlabel{Introduction}%
-  
-\section{For the student}
-\label{_for_the_student}\hyperlabel{_for_the_student}%
-  
-This is a "survey" text intended for the advanced undergraduate or graduate student interested in the general field of applied IT management. It is grounded in basic computing fundamentals, but does not require any particular technical skills to understand. You do not need to have taken any courses in networking, security, or particular programming languages to read this book.
- 
-However, you will be presented with material on such topics, including fragments of programming languages and pseudocode, and need to be willing to invest the time and effort to understand.
- 
-This book makes frequent reference to digital startups -{} early stage companies bringing new  products to market that are primarily delivered as some form of computer-{}based service. Whether or not you intend to pursue such endeavors, the startup journey is a powerful one for your learning. Large information technology organizations in enterprises sometimes gain a reputation for losing sight of business value. IT seems to be acquired and operated for its own sake. Statements like "we need to align IT with the business!" are too often heard.
- 
-A digital startup exposes with great clarity the linkage between "IT" and "the business." The success or failure of the company itself depends on the adept and responsive creation and deployment of the software-{}based systems. Market revenues arrive, or do not, based on digital product strategy and the priorities chosen. Features the market doesn't need? You won't have the money to stay in business. Great features, but your product is unstable and unreliable? Your customers will go to the competition.
- 
-The lessons that digital entrepreneurs have learned through this trial by fire shed great light on IT's value to the business. Thinking about a startup allows us to consider the most fundamental principles as a sort of microcosm, a small laboratory model of the same problems that the largest enterprises face.
- 
-However, this is not a textbook (or course) on entrepreneurship. It remains IT-{}centric. \textbf{And, the book is also intended to be relevant to students entering directly into large, established enterprises.} In fact, it prepares the student for working in all stages of growth because it progresses through these four contexts:
- \begin{itemize}
-
-\item{} Individual (founder)
- 
-
-\item{} Team
- 
-
-\item{} Small company (team of teams)
- 
-
-\item{} Enterprise
- 
-\end{itemize}
- 
-Whether in a startup, or on a journey within a larger, established organization, you will (hopefully) become aware as you progress through a broadening context:
- \begin{itemize}
-
-\item{} Other team members
- 
-
-\item{} Customers
- 
-
-\item{} Suppliers
- 
-
-\item{} Sponsors
- 
-
-\item{} Necessary non-{}IT capabilities (finance, legal, HR, sales, marketing, etc)
- 
-
-\item{} Channel partners
- 
-
-\item{} Senior executives and funders
- 
-
-\item{} Auditors and regulators
- 
-\end{itemize}
- 
-Part of maturing in one's career is understanding how all these relationships figure into your own overall system of value delivery. This will be a lifelong journey for the student; the author's intent is to provide some useful tools.
-  
-\section{Assumptions of the reader}
-\label{_assumptions_of_the_reader}\hyperlabel{_assumptions_of_the_reader}%
-  \begin{itemize}
-
-\item{} This book is written at the advanced undergraduate/graduate student level. It is currently available only in English.
- 
-
-\item{} There is no assumption of deep IT experience, but there is an assumption that the person interacts with computers in some capacity and has basic technical literacy. They should for example understand the concept of an "operating system." An A+ certification, or an intro to programming class for example, would more than adequately prepare someone for this book.
- 
-
-\item{} A person completely unfamiliar with computing will need to supplement their reading as suggested throughout the text. There is a wealth of free and accurate information on IT fundamentals (e.g. compute, storage, networking, programming, etc) and this book seeks more to curate than replicate.
- 
-\end{itemize}
-  
-\section{This book's structure}
-\label{_this_book_s_structure}\hyperlabel{_this_book_s_structure}%
-  
-Here is a conceptual illustration of an IT management progression (read bottom to top):
- \begin{figure}[H]
-
-\begin{center}
-\imgexists{images/ITProgression.png}{{\imgevalsize{images/ITProgression.png}{\includegraphics[width=\imgwidth,height=\imgheight,keepaspectratio=true]{images/ITProgression.png}}}}{ITProgression}
-\end{center}
-\caption{IT management evolutionary model (read bottom to top)}
-\end{figure}
- 
-Elaborating the above outline into chapters, we have:
- \begin{enumerate}[label=\Roman*.]
-
-\item{} \textbf{Founder}
- \begin{enumerate}[label=\arabic*.]
-
-\item{} \emph{IT value}. Why do we need computers? What can they do for us?
- 
-
-\item{} \emph{IT infrastructure} We want to build something. We have to choose a platform first.
- 
-
-\item{} \emph{IT applications} Let's start building something of use to someone.
- 
-\end{enumerate}
- 
-
-\item{} \textbf{Team}
- \begin{enumerate}[label=\arabic*.]
-
-\item{} \emph{Product management} What exactly is it we are building? What is the process of discovering our customer's needs and quickly testing how to meet them? How do we better define the product vision, and the way of working towards it, for a bigger team?
- 
-
-\item{} \emph{Work management} How do we keep track of what we are doing, and communicate our progress and needs at the simplest level?
- 
-
-\item{} \emph{Operations management} How do we sustain this surprisingly fragile digital service, in its ongoing delivery of value?
- 
-\end{enumerate}
- 
-\end{enumerate}
- 
-\emph{The boundary between the "team" and the "team of teams" is a challenging area, and industry responses remain incomplete and evolving. Hence the notation "THE SCALING PROBLEM" on the diagram.}
- \begin{enumerate}[label=\Roman*.]
-
-\item{} \textbf{Team of Teams}
- \begin{enumerate}[label=\arabic*.]
-
-\item{} \emph{Organization and culture} We're getting big. How do we deal with this? How are we structured? Why this way and not that? How can we benefit from increasing maturity and specialization, while still maintaining a responsive product? What are the unwritten values and rules in our company?
- 
-
-\item{} \emph{Investment, sourcing, and people} Work is becoming larger and more complex. How can we  track and execute larger segments of it, and coordinate across multiple teams?
- 
-
-\item{} \emph{Execution management} We have a structure. Work needs to flow across it. Product and project teams increasingly demand predictable, consistent delivery of internal services, and synchronization points such as enterprise releases are increasingly critical signals.
- 
-\end{enumerate}
- 
-
-\item{} \textbf{Enterprise}
- \begin{enumerate}[label=\arabic*.]
-
-\item{} \emph{Governance, risk, security, and compliance} We need to cope with external forces (regulators, vendor partners, security adversaries, auditors) increasingly defining our options.
- 
-
-\item{} \emph{Enterprise information management} We've been concerned with data, information, and knowledge since the earliest days of our journey. But at this scale, we have to formalize our approaches and understandings; without that, we will never capture the full value available with modern analytics and Big Data. Compliance issues are also compelling us to formalize here.
- 
-
-\item{} \emph{Architecture and portfolio} We need to understand the big picture of interacting lifecycles, reduce technical debt and redundancy, accelerate development through establishing platforms, and obtain better economies of scale. We need to define our investment strategy based on a sound understanding of both business needs and technology limitations.
- 
-\end{enumerate}
- 
-
-\item{} \textbf{Appendices}
- \begin{enumerate}[label=\arabic*.]
-
-\item{} \emph{A review of IT frameworks and standards}
- 
-
-\item{} \emph{Architectural depictions}
- 
-
-\item{} \emph{Towards a theory of IT management}
- 
-\end{enumerate}
- 
-\end{enumerate}
- 
-The intent is that the more complex, "enterprise"-{}scale concerns at the end of the book are presented as part of a logical progression.
- 
-\label{formalization}\hyperlabel{formalization}
-  
-\section{Emergence means formalization}
-\label{_emergence_means_formalization}\hyperlabel{_emergence_means_formalization}%
-  
-The emergence model seeks to define a likely order in which concerns are \textbf{formalized}. Any concern may of course arise at any time: the startup founder certainly is concerned with security!
- 
-Formalization means at least one or more of the following:
- \begin{itemize}
-
-\item{} Dedicated resources
- 
-
-\item{} Dedicated organization
- 
-
-\item{} Defined policies and processes
- 
-
-\item{} Automated tooling
- 
-\end{itemize}
- 
-In the author's experience, for example, startups avoid formalized process and project management. To the extent the concerns exist, they are \emph{tacit} (understood or implied; suggested; implicit). Certainly, a small startup does not invest in an enterprise-{}class service desk tool supporting a full array of IT management processes, or a full-{}blown Project Management Office with its own Vice President and associated portfolio automation. Simple work management, with a manual or automated Kanban board, is likely their choice for work management.
- 
-But by the time they are a team of teams, specialization has emerged and more robust processes and tools are required. The danger of course is that the formalization effort may be driven by its own logic, and start to lose track of the all-{}critical business context.
- 
-By careful examining these stages of maturation, and the industry responses to them, it is the author's hope that the student will have effective tools to critically engage with the problem of scaling the digital organization.
-  
 % ------- 
 % Chapter 
 % ------- 
@@ -719,7 +398,9 @@ And yet, the traditional, process-{}heavy IT organization does seem dysfunctiona
   \begin{figure}[H]
 
 \begin{center}
-\imgexists{images/1.01-ITValue.png}{{\imgevalsize{images/1.01-ITValue.png}{\includegraphics[width=400pt,]{images/1.01-ITValue.png}}}}{woman at computer}
+\imgexists{images/1_01-ITValue.png}{{\begin{minipage}[c]{0.75\linewidth}
+\imgevalsize{images/1_01-ITValue.png}{\includegraphics[height=400pt]{images/1_01-ITValue.png}}\end{minipage}
+}}{woman at computer}
 \end{center}
 \caption[{The basis of IT value }]{The basis of IT value \footnotemark{}}
 \end{figure}
@@ -812,7 +493,7 @@ Of course, without the banking systems on the other end, there is no bank balanc
  
 \noindent\begin{minipage}[c]{\linewidth}
 \begin{center}
-\imgexists{images/1.01-ITStack.png}{{\imgevalsize{images/1.01-ITStack.png}{\includegraphics[width=\imgwidth,height=\imgheight,keepaspectratio=true]{images/1.01-ITStack.png}}}}{1.01 ITStack}\end{center}
+\imgexists{images/1_01-ITStack.png}{{\imgevalsize{images/1_01-ITStack.png}{\includegraphics[width=\imgwidth,height=\imgheight,keepaspectratio=true]{images/1_01-ITStack.png}}}}{1 01 ITStack}\end{center}
 \end{minipage}
 
  
@@ -826,7 +507,7 @@ Therefore, as we study this world, we need to maintain awareness of her perspect
  
 \noindent\begin{minipage}[c]{\linewidth}
 \begin{center}
-\imgexists{images/1.01-ITStack2.png}{{\imgevalsize{images/1.01-ITStack2.png}{\includegraphics[width=\imgwidth,height=\imgheight,keepaspectratio=true]{images/1.01-ITStack2.png}}}}{1.01 ITStack2}\end{center}
+\imgexists{images/1_01-ITStack2.png}{{\imgevalsize{images/1_01-ITStack2.png}{\includegraphics[width=\imgwidth,height=\imgheight,keepaspectratio=true]{images/1_01-ITStack2.png}}}}{1 01 ITStack2}\end{center}
 \end{minipage}
 
  
@@ -902,6 +583,9 @@ All web references were archived into the author's files on the indicated access
  \begin{itemize}
 
 \item{} \label{Abbott2015}\hyperlabel{Abbott2015}[Abbott2015]: Abbott, Martin L.; Fisher, M.T., 2015. The Art of Scalability: Scalable Web Architecture, Processes, and Organizations for the Modern Enterprise (2nd Edition), Old Tappan, NJ, NJ: Pearson Education, Inc.
+ 
+
+\item{} \label{Abrashoff2012}\hyperlabel{Abrashoff2012}[Abrashoff2012]: Abrashoff, D.M., It's Your Ship: Management Techniques from the Best Damn Ship in the Navy 10th Anniv., Grand Central Publishing.
  
 
 \item{} \label{Accounting2016}\hyperlabel{Accounting2016}[Accounting2016]: Accounting Coach. 2016. \textquotedblleft{}What Is Cost Accounting?\textquotedblright{} \href{http://www.accountingcoach.com/blog/what-is-cost-accounting}{http://www.accountingcoach.com/\-blog/\-what-{}is-{}cost-{}accounting} (May 7, 2016).
@@ -1067,6 +751,9 @@ All web references were archived into the author's files on the indicated access
  
 
 \item{} \label{Chacon2009}\hyperlabel{Chacon2009}[Chacon2009]: Chacon, S. \& Straub, B. (2009). Pro Git. Berkeley, CA. New York, Apress.
+ 
+
+\item{} \label{Cherry2016}\hyperlabel{Cherry2016}[Cherry2016]: Cherry, K., 2016. Multitasking: Bad for Your Productivity and Brain Health. verywell.com. Available at: \href{https://www.verywell.com/multitasking-2795003}{https://www.verywell.com/\-multitasking-{}2795003} [Accessed November 28, 2016].
  
 
 \item{} \label{Cherubini2007}\hyperlabel{Cherubini2007}[Cherubini2007]: Cherubini, M., Venolia, G., Deline, R., \& Ko, A. J. (2007). Let ' s Go to the Whiteboard: How and Why Software Developers Use Drawings. CHI 2007 Proceedings, 557\textendash{}566. \href{http://doi.org/10.1145/1240624.1240714}{http://doi.org/\-10.1145/\-1240624.1240714}. \href{https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/p557-cherubini.pdf}{https://www.microsoft.com/\-en-{}us/\-research/\-wp-{}content/\-uploads/\-2016/\-02/\-p557-{}cherubini.pdf}, accessed 2016-{}10-{}17.
@@ -1438,7 +1125,13 @@ All web references were archived into the author's files on the indicated access
 \item{} \label{Malan2010}\hyperlabel{Malan2010}[Malan2010]: Malan, Ruth, and Dana Bredemeyer. 2010. \textquotedblleft{}The Art of Change: Fractal and Emergent.\textquotedblright{} Cutter Consortium Enterprise Architecture Advisory Service Executive Report 13 (5).
  
 
+\item{} \label{Management2016}\hyperlabel{Management2016}[Management2016]: Management Study Guide, 2016. Types of Teams -{} Permanent Teams, Temporary Teams, Task Force, Virtual Teams etc. Available at: \href{http://www.managementstudyguide.com/types-of-teams.htm}{http://www.managementstudyguide.com/\-types-{}of-{}teams.htm} [Accessed November 28, 2016].
+ 
+
 \item{} \label{Marks2014}\hyperlabel{Marks2014}[Marks2014]: Marks, Howard. 2014. \textquotedblleft{}Code Spaces: A Lesson In Cloud Backup.\textquotedblright{} Network Computing. \href{http://www.networkcomputing.com/cloud-infrastructure/code-spaces-lesson-cloud-backup/314805651}{http://www.networkcomputing.com/\-cloud-{}infrastructure/\-code-{}spaces-{}lesson-{}cloud-{}backup/\-314805651}. Accessed 2016-{}09-{}28.
+ 
+
+\item{} \label{Marquet2013}\hyperlabel{Marquet2013}[Marquet2013]: Marquet, D.L., 2013. Turn the Ship Around!: A True Story of Turning Followers into Leaders: L. David Marquet, Stephen R. Covey: 8601411904479: Amazon.com: Books, Portfolio.
  
 
 \item{} \label{McAdam2003}\hyperlabel{McAdam2003}[McAdam2003]: McAdam, John. 2003. \textquotedblleft{}Information Technology Measurements.\textquotedblright{} In \emph{Chargeback and IT Cost Accounting}, ed. Terence A Quinlan. Santa Barbara, CA: IT Financial Management Association, 90\textendash{}91.
@@ -1573,6 +1266,9 @@ All web references were archived into the author's files on the indicated access
 \item{} \label{Rigby2016}\hyperlabel{Rigby2016}[Rigby2016]: Rigby, Darrell K., Jeff Sutherland, and Hirotaka Takeuchi. 2016. \textquotedblleft{}Embracing Agile.\textquotedblright{} Harvard Business Review, no. May. \href{https://hbr.org/2016/05/embracing-agile}{https://hbr.org/\-2016/\-05/\-embracing-{}agile}.
  
 
+\item{} \label{Rock2016}\hyperlabel{Rock2016}[Rock2016]: Rock, David; Grant, H., 2016. Why Diverse Teams Are Smarter. Harvard Business Review. Available at: \href{https://hbr.org/2016/11/why-diverse-teams-are-smarter}{https://hbr.org/\-2016/\-11/\-why-{}diverse-{}teams-{}are-{}smarter} [Accessed November 28, 2016].
+ 
+
 \item{} \label{Rogers2003}\hyperlabel{Rogers2003}[Rogers2003]: Rogers, Everett. 2003. Diffusion of Innovations. 5th ed. New York, N.Y.: Free Press -{} Simon \& Schuster, Inc.
  
 
@@ -1604,6 +1300,9 @@ All web references were archived into the author's files on the indicated access
  
 
 \item{} \label{Schlarman2008}\hyperlabel{Schlarman2008}[Schlarman2008]: Schlarman, Steve. 2016. \textquotedblleft{}Developing Effective Policy, Procedure, and Standards.\textquotedblright{} Www.disaster-{}Resource.com. Accessed June 30 2016. \href{http://www.disaster-resource.com/articles/07p_106.shtml}{http://www.disaster-{}resource.com/\-articles/\-07p\_106.shtml}.
+ 
+
+\item{} \label{Schneider1999}\hyperlabel{Schneider1999}[Schneider1999]: Schneider, W.E., 1999. The reengineering alternative : a plan for making your current culture work, McGraw-{}Hill.
  
 
 \item{} \label{Schwaber2002}\hyperlabel{Schwaber2002}[Schwaber2002]: Schwaber, Ken. 2002. Agile Software Development with Scrum. Upper Saddle River, N.J.: Prentice Hall.

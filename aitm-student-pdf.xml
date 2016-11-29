@@ -1313,7 +1313,7 @@ Eric Ries
 <section xml:id="_what_is_infrastructure">
 <title>What is Infrastructure?</title>
 <simpara>Infrastructure is a tricky word. Google defines it thus:</simpara>
-<simpara>￼<emphasis>The basic physical and organizational structures and facilities (e.g., buildings, roads, and power supplies) needed for the operation of a society or enterprise.</emphasis></simpara>
+<simpara><emphasis>The basic physical and organizational structures and facilities (e.g., buildings, roads, and power supplies) needed for the operation of a society or enterprise.</emphasis></simpara>
 <simpara>In general, it connotes the stuff behind the scenes, the things you need but don’t want to spend a lot of time thinking about. We will spend a lot of time examining what we mean by “infrastructure” in this book, as it is fundamental to understanding the “business of IT.” This book defines “IT infrastructure” recursively as “the set of IT concerns that are of particular interest to IT.”</simpara>
 <itemizedlist>
 <listitem>
@@ -2047,16 +2047,7 @@ Puppet Labs 2015 State of DevOps report
 <simpara>Create more files</simpara>
 </listitem>
 </orderedlist>
-<simpara>And so on. Many traditional programming languages take an imperative approach. A script such as <link linkend="infra-code-example">iac.sh example</link> is executed line by line, i.e., it is imperative. In configuring infrastructure, scripting is in general considered “imperative," but state of the art infrastructure automation frameworks are built using a “declarative,” policy-based approach, in which the object is to define the desired end state of the resource, not the steps needed to get there.  With such an approach, instead of defining a set of steps, we simply define the proper configuration as a target, saying (in essence) that "this computer should always have a directory structure thus; do what you need to do to make it so and keep it this way":</simpara>
-<literallayout class="monospaced">.
-├── bar
-│   ├── a
-│   ├── b
-│   └── c
-└── foo
-    ├── x
-    ├── y
-    └── z</literallayout>
+<simpara>And so on. Many traditional programming languages take an imperative approach. A script such as <link linkend="infra-code-example">iac.sh example</link> is executed line by line, i.e., it is imperative. In configuring infrastructure, scripting is in general considered “imperative," but state of the art infrastructure automation frameworks are built using a “declarative,” policy-based approach, in which the object is to define the desired end state of the resource, not the steps needed to get there.  With such an approach, instead of defining a set of steps, we simply define the proper configuration as a target, saying (in essence) that "this computer should always have a directory structure thus; do what you need to do to make it so and keep it this way."</simpara>
 <simpara>More practically, declarative approaches are used to ensure that the proper versions of software are always present on a system, and that configurations such as Internet ports and security settings do not vary from the intended specification.</simpara>
 <simpara>This is a complex topic and there are advantages and disadvantages to each approach. (See "When and Where Order Matters" by Mark Burgess for an advanced discussion <xref linkend="Burgess2016"/>.) But policy-based approaches seem to have the upper hand for now.</simpara>
 </section>
@@ -6067,9 +6058,8 @@ Wikipedia
 <simpara>In computer science and automata theory, the state of a digital logic circuit or computer program is a technical term for all the stored information, at a given instant in time, to which the circuit or program has access.[1] The output of a digital circuit or computer program at any time is completely determined by its current inputs and its state.</simpara>
 </blockquote>
 <simpara>In all of IT (whether “infrastructure” or “applications” there is a particular concern with managing state. IT systems are remarkably fragile. One incorrect bit of information - a “0” instead of a “1” - can completely alter a system’s behavior, to the detriment of business operations depending on it.</simpara>
-<simpara>Therefore, any development of information technology - starting with the initial definition of the computing platform - depends on robust management of state.
-￼
-The following are examples of state:</simpara>
+<simpara>Therefore, any development of information technology - starting with the initial definition of the computing platform - depends on robust management of state.</simpara>
+<simpara>The following are examples of state:</simpara>
 <itemizedlist>
 <listitem>
 <simpara>The name of a particular server</simpara>
@@ -7039,7 +7029,7 @@ Sean Landis
 <simpara>Are you adding people because of a perceived need for specialist skills? While this will always be a reason for new hires, many argue in favor of "T-shaped" people - people who are deep in one skill, and broad in others. Hiring new staff has an impact on culture - is it better to train from within, or source externally?</simpara>
 <simpara>Second, how are you hiring staff? In a traditional, functionally specialized model, someone in a Human Resources organization acts as an intermediary between the hiring manager, and the job applicant (sometimes with a recruiter also in the mix between the company and the applicant). Detailed job descriptions are developed, and applicants not explicitly matching the selection criteria (e.g. in their resume) are not invited for an interview.</simpara>
 <simpara>Such practices do not necessarily result in good outcomes. Applicants routinely tailor resumes to the job description. In some cases they have been known to copy the job description into invisible sections of their resume, so that they are guaranteed a "match" if automated resume-scanning software is used.</simpara>
-<simpara>A compelling case study of the limitations of traditional HR-driven hiring is discussed by Robert Sutton and Huggy Rao in <emphasis>Scaling up Excellence : Getting to More without Settling for Less</emphasis><xref linkend="Sutton2014"/>. The authors describe the company Lotus Software, one of the pioneers of early desktop computing.</simpara>
+<simpara>A compelling case study of the limitations of traditional HR-driven hiring is discussed by Robert Sutton and Huggy Rao in <emphasis>Scaling up Excellence: Getting to More without Settling for Less</emphasis><xref linkend="Sutton2014"/>. The authors describe the company Lotus Software, one of the pioneers of early desktop computing.</simpara>
 <simpara><emphasis>With [company founder] Kapor’s permission, [head of organizational development] Klein pulled together the résumés of the first forty Lotus employees&#8230;&#8203;[and] submitted all forty résumés to the Lotus human resources department. Not one of the forty applicants, including Kapor, was invited for a job interview. The founders had built a world that rejected people like them.</emphasis></simpara>
 <simpara>Sean Landis, author of <emphasis>Agile Hiring</emphasis> <xref linkend="Landis2011"/>, believes that</simpara>
 <simpara>"accepted hiring wisdom is not very effective when applied to software professionals." He further states that:</simpara>
@@ -8055,7 +8045,7 @@ Charles G. Cobb
 <simpara>Given the above trends, under what circumstances does formalized project management make economic sense?</simpara>
 </listitem>
 <listitem>
-<simpara>Assuming that formalized project management is employed, how does one continue to support objectives such as fast feedback and adaptability?</simpara>
+<simpara>Assuming that formalized project management is employed, how does one continue to support objectives such as fast feedback and adaptability?</simpara>
 </listitem>
 </itemizedlist>
 <section xml:id="_scaling_one_product">
@@ -15589,7 +15579,7 @@ Bente et al
 Elihu Root
 <citetitle>1903 congressional testimony on US army re-organization (condensed)</citetitle>
 </attribution>
-<simpara>... the organization is weak at the top because there is no coordination of the exercise of powers provided for in the system. That coordination can be done only by a body organized for that purpose and having no other duties to perform; and in all the armies of the civilized world that duty is performed by a General Staff. They are called this because their duties are staff duties pertaining to the general conduct of affairs, and not merely to the work [of specific departments].</simpara>
+<simpara>... the organization is weak at the top because there is no coordination of the exercise of powers provided for in the system. That coordination can be done only by a body organized for that purpose and having no other duties to perform; and in all the armies of the civilized world that duty is performed by a General Staff. They are called this because their duties are staff duties pertaining to the general conduct of affairs, and not merely to the work [of specific departments].</simpara>
 </blockquote>
 <simpara>We saw in <link linkend="gov-chap">Chapter 10</link> how governance <link linkend="gov-shop-example">emerges</link>, as a <link linkend="gov-as-env-resp">response</link> to scale and growth, and the concerns for <link linkend="risk-management">risk</link> and <link linkend="assurance">assurance</link> in the face of increasing pressures of the external environment.</simpara>
 <simpara>Architecture has a comparable emergence story, but for somewhat different reasons. Consider the quote from Elihu Root, above. Root was tasked with re-organizing the US Army at the turn of the 20th century. There had been some embarrassing failures of coordination and organization, and it was clear that something was missing in the US military: a centralized coordination function responsible for planning and logistics.</simpara>
@@ -16554,7 +16544,7 @@ Bente et al
 <title>Architecture domains</title>
 <simpara>In the last section, we discussed what architects <emphasis role="strong">do</emphasis>. The focus was primarily architects in a "team of teams" environment, not strictly at the level of a single product team. However, while this chapter has a strong Enterprise Architecture orientation, it is also about the practice of "architecture" more generally. In this chapter, we will break down the different practices of architecture and their relationships.</simpara>
 <simpara>We have seen the <link linkend="Zachman">Zachman Framework</link> previously. The higher levels are considered "business" or "operating model" concerns, while the lower levels are more technical. In discussing the various domains of architecture, however, a simpler structure is useful. The numerous columns in the Zachman framework don&#8217;t necessarily translate to specific architecture domains (for example, there are many data architects representing  the "what" column, but not many who specialize strictly in questions of timing&#8201;&#8212;&#8201;the "when" column.) Similarly, we can simplify the number of rows by consolidating them into three.</simpara>
-<simpara>ArchimateⓇ is a modeling language and standard of The Open Group, which we will discuss more later in the chapter. It uses a framework that can be viewed as a simplification of the Zachman model:</simpara>
+<simpara>Archimate is a modeling language and standard of The Open Group, which we will discuss more later in the chapter. It uses a framework that can be viewed as a simplification of the Zachman model:</simpara>
 <figure>
 <title>Similar to <xref linkend="Open2012"/>, section 2.6</title>
 <mediaobject>
