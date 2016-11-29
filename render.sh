@@ -29,8 +29,9 @@ yes|cp -P book/*/*/images/*.jpg images/
 
 #yes|cp  book/*/images/* images  # why book/**/ doesn't work?
 
-asciidoctor aitm-student.adoc
-asciidoctor aitm-instructor.adoc
+#freezing these 2 until end of year
+#asciidoctor aitm-student.adoc
+#asciidoctor aitm-instructor.adoc
 asciidoctor aitm-collaborator.adoc
 
 # asciidoctor-pdf -a allow-uri-read aitm-collaborator-pdf.adoc  #need to fix URI-based figures
