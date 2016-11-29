@@ -2981,7 +2981,7 @@ The goal of a startup is to figure out the right thing to build— the thing cus
 <p>Infrastructure is a tricky word. Google defines it thus:</p>
 </div>
 <div class="paragraph">
-<p>￼<em>The basic physical and organizational structures and facilities (e.g., buildings, roads, and power supplies) needed for the operation of a society or enterprise.</em></p>
+<p><em>The basic physical and organizational structures and facilities (e.g., buildings, roads, and power supplies) needed for the operation of a society or enterprise.</em></p>
 </div>
 <div class="paragraph">
 <p>In general, it connotes the stuff behind the scenes, the things you need but don’t want to spend a lot of time thinking about. We will spend a lot of time examining what we mean by “infrastructure” in this book, as it is fundamental to understanding the “business of IT.” This book defines “IT infrastructure” recursively as “the set of IT concerns that are of particular interest to IT.”</p>
@@ -4158,20 +4158,7 @@ Implement version control for all production artifacts.
 </ol>
 </div>
 <div class="paragraph">
-<p>And so on. Many traditional programming languages take an imperative approach. A script such as <a href="#infra-code-example">iac.sh example</a> is executed line by line, i.e., it is imperative. In configuring infrastructure, scripting is in general considered “imperative," but state of the art infrastructure automation frameworks are built using a “declarative,” policy-based approach, in which the object is to define the desired end state of the resource, not the steps needed to get there.  With such an approach, instead of defining a set of steps, we simply define the proper configuration as a target, saying (in essence) that "this computer should always have a directory structure thus; do what you need to do to make it so and keep it this way":</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>.
-├── bar
-│   ├── a
-│   ├── b
-│   └── c
-└── foo
-    ├── x
-    ├── y
-    └── z</pre>
-</div>
+<p>And so on. Many traditional programming languages take an imperative approach. A script such as <a href="#infra-code-example">iac.sh example</a> is executed line by line, i.e., it is imperative. In configuring infrastructure, scripting is in general considered “imperative," but state of the art infrastructure automation frameworks are built using a “declarative,” policy-based approach, in which the object is to define the desired end state of the resource, not the steps needed to get there.  With such an approach, instead of defining a set of steps, we simply define the proper configuration as a target, saying (in essence) that "this computer should always have a directory structure thus; do what you need to do to make it so and keep it this way."</p>
 </div>
 <div class="paragraph">
 <p>More practically, declarative approaches are used to ensure that the proper versions of software are always present on a system, and that configurations such as Internet ports and security settings do not vary from the intended specification.</p>
@@ -9809,9 +9796,10 @@ In computer science and automata theory, the state of a digital logic circuit or
 <p>In all of IT (whether “infrastructure” or “applications” there is a particular concern with managing state. IT systems are remarkably fragile. One incorrect bit of information - a “0” instead of a “1” - can completely alter a system’s behavior, to the detriment of business operations depending on it.</p>
 </div>
 <div class="paragraph">
-<p>Therefore, any development of information technology - starting with the initial definition of the computing platform - depends on robust management of state.
-￼
-The following are examples of state:</p>
+<p>Therefore, any development of information technology - starting with the initial definition of the computing platform - depends on robust management of state.</p>
+</div>
+<div class="paragraph">
+<p>The following are examples of state:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -11180,7 +11168,7 @@ hiring is one of the most important things a software organization does. Every g
 <p>Such practices do not necessarily result in good outcomes. Applicants routinely tailor resumes to the job description. In some cases they have been known to copy the job description into invisible sections of their resume, so that they are guaranteed a "match" if automated resume-scanning software is used.</p>
 </div>
 <div class="paragraph">
-<p>A compelling case study of the limitations of traditional HR-driven hiring is discussed by Robert Sutton and Huggy Rao in <em>Scaling up Excellence : Getting to More without Settling for Less</em><a href="#Sutton2014">[Sutton2014]</a>. The authors describe the company Lotus Software, one of the pioneers of early desktop computing.</p>
+<p>A compelling case study of the limitations of traditional HR-driven hiring is discussed by Robert Sutton and Huggy Rao in <em>Scaling up Excellence: Getting to More without Settling for Less</em><a href="#Sutton2014">[Sutton2014]</a>. The authors describe the company Lotus Software, one of the pioneers of early desktop computing.</p>
 </div>
 <div class="paragraph">
 <p><em>With [company founder] Kapor’s permission, [head of organizational development] Klein pulled together the résumés of the first forty Lotus employees&#8230;&#8203;[and] submitted all forty résumés to the Lotus human resources department. Not one of the forty applicants, including Kapor, was invited for a job interview. The founders had built a world that rejected people like them.</em></p>
@@ -12710,7 +12698,7 @@ Agile is having a profound impact on the project management profession and will 
 <p>Given the above trends, under what circumstances does formalized project management make economic sense?</p>
 </li>
 <li>
-<p>Assuming that formalized project management is employed, how does one continue to support objectives such as fast feedback and adaptability?</p>
+<p>Assuming that formalized project management is employed, how does one continue to support objectives such as fast feedback and adaptability?</p>
 </li>
 </ul>
 </div>
@@ -24036,7 +24024,7 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <h6 id="_architecture_as_staff_function">Architecture as staff function</h6>
 <div class="quoteblock">
 <blockquote>
-... the organization is weak at the top because there is no coordination of the exercise of powers provided for in the system. That coordination can be done only by a body organized for that purpose and having no other duties to perform; and in all the armies of the civilized world that duty is performed by a General Staff. They are called this because their duties are staff duties pertaining to the general conduct of affairs, and not merely to the work [of specific departments].
+... the organization is weak at the top because there is no coordination of the exercise of powers provided for in the system. That coordination can be done only by a body organized for that purpose and having no other duties to perform; and in all the armies of the civilized world that duty is performed by a General Staff. They are called this because their duties are staff duties pertaining to the general conduct of affairs, and not merely to the work [of specific departments].
 </blockquote>
 <div class="attribution">
 &#8212; Elihu Root<br>
@@ -25384,7 +25372,7 @@ One core question decided by governance is how much autonomy is granted to busin
 <p>We have seen the <a href="#Zachman">Zachman Framework</a> previously. The higher levels are considered "business" or "operating model" concerns, while the lower levels are more technical. In discussing the various domains of architecture, however, a simpler structure is useful. The numerous columns in the Zachman framework don&#8217;t necessarily translate to specific architecture domains (for example, there are many data architects representing  the "what" column, but not many who specialize strictly in questions of timing&#8201;&#8212;&#8201;the "when" column.) Similarly, we can simplify the number of rows by consolidating them into three.</p>
 </div>
 <div class="paragraph">
-<p>ArchimateⓇ is a modeling language and standard of The Open Group, which we will discuss more later in the chapter. It uses a framework that can be viewed as a simplification of the Zachman model:</p>
+<p>Archimate is a modeling language and standard of The Open Group, which we will discuss more later in the chapter. It uses a framework that can be viewed as a simplification of the Zachman model:</p>
 </div>
 <div class="imageblock">
 <div class="content">
