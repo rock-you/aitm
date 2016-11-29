@@ -825,9 +825,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_the_project_management_body_of_knowledge">The Project Management Body of Knowledge</a></li>
 <li><a href="#_the_challenges_of_scope_management">The challenges of scope management</a></li>
-<li><a href="#_task_ordering_dependencies_and_critical_path">Task ordering, dependencies, and critical path</a></li>
-<li><a href="#_scheduling_and_execution">Scheduling and execution</a></li>
-<li><a href="#_projects_and_their_resources">Projects and their resources</a></li>
+<li><a href="#_project_assignment">Project assignment</a></li>
 </ul>
 </li>
 <li><a href="#_agile_and_project_investments">Agile and project investments</a></li>
@@ -919,6 +917,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_cargo_cult_thinking">Cargo cult thinking</a></li>
 <li><a href="#_the_idea_of_pmdb_and_pis">The idea of PMDB and PIs</a></li>
+<li><a href="#_scheduling_and_execution">Scheduling and execution</a></li>
 </ul>
 </li>
 <li><a href="#_conclusion_8">Conclusion</a>
@@ -10368,6 +10367,18 @@ coordination (n.)  co-ordination, c. 1600, "orderly combination," from French co
 <div class="paragraph">
 <p>In order to keep growing, you have to divide your organization. You now have a portfolio of features, and/or products, and each one is an investment. You need a strategy for choosing among your options, and planning&#8201;&#8212;&#8201;at least at a high level&#8201;&#8212;&#8201;in terms of costs and benefits. Some of you may be using project management to help manage your investments. Your vendor relationships continue to expand; they are another form of strategic investment, and you need to deepen your understanding of things like Cloud contracts and software licensing.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+In terms of classic project methodology, this chapter includes project initiating and planning. Execution, monitoring, and control are covered in Chapter 9.
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p><strong>Chapter 9: Execution and process</strong></p>
 </div>
@@ -12120,6 +12131,47 @@ As with other chapters in the later part of this book, we are going to introduce
 </ul>
 </div>
 <div class="paragraph">
+<p>PMBOK <a href="#PMI2013">[PMI2013]</a> defines the critical path as "The sequence of activities that represents the longest path through a project, which determines the shortest possible duration." In the above example, we have two major work areas: clean the house and prepare a menu. Note however that there are no dependencies between:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>vacuum living room</p>
+</li>
+<li>
+<p>clean kitchen</p>
+</li>
+<li>
+<p>clean dining table</p>
+</li>
+<li>
+<p>vacuum dining room</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Really, they can be done in any order.</p>
+</div>
+<div class="paragraph">
+<p>On the other hand, there is a clear set of dependencies between:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Choose menu</p>
+</li>
+<li>
+<p>Get groceries</p>
+</li>
+<li>
+<p>Fix food</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>This means that the sub-activity "Food for party" is the critical path. If the menu is not determined on time, the grocery run can&#8217;t happen, and the food will be fixed late or not at all.</p>
+</div>
+<div class="paragraph">
 <p>A project manager is responsible for all of this and more. A critical concept is that of "deliverable." In this example, the deliverable is the outcome of each task:</p>
 </div>
 <div class="ulist">
@@ -12323,7 +12375,7 @@ RFI stands for <a href="https://en.wikipedia.org/wiki/Request_for_information">R
 <p>Because capacity is available on demand, new systems do not need to be nearly as precisely "sized," which meant that implementation could commence without as much up front analysis. Simpler architectures suffice until real load is proven. It might then be a scramble to refactor software to take advantage of new capacity, but the overall economic effect is positive, as over-engineering and over-capacity are increasingly avoided.</p>
 </div>
 <div class="paragraph">
-<p>So, IT moves in two directions - its most forward-looking elements align to the enterprise product management roadmap, while its remaining capabilities may deliver value as a "service broker." (More on this in the section on <a href="#it-sourcing">IT sourcing</a>)</p>
+<p>So, IT moves in two directions - its most forward-looking elements align to the enterprise product management roadmap, while its remaining capabilities may deliver value as a "service broker." (More on this in the section on <a href="#it-sourcing">IT sourcing</a>.)</p>
 </div>
 <div class="paragraph">
 <p>We shall now return to the question of project management in this new world.</p>
@@ -12468,9 +12520,6 @@ RFI stands for <a href="https://en.wikipedia.org/wiki/Request_for_information">R
 <div class="paragraph">
 <p>However, in Agile domains that seek to be more adaptive to changing business dynamics, full use of the PMBOK framework may be unnecessary and wasteful. The accepted response is to "tailor" the guidance, omitting those plans and deliverables that are not needed.</p>
 </div>
-<div class="paragraph">
-<p>For example, PMBOK calls for a "stakeholder management plan" to be produced as part of the Project Stakeholder Management knowledge area and the Planning process group. The author has rarely seen this deliverable formally produced, in years of enterprise experience. However, for certain (larger) projects it may make sense.</p>
-</div>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -12509,16 +12558,13 @@ Part of the problem with extensive frameworks such as PMBOK is that knowing how 
 <p>On the other hand, remember our <a href="#emergence-model">emergence model</a>. The simple organizational change from one to multiple products may provoke certain concerns and a new kind of contention for resources. People are inherently competitive and also have a sense of fairness. A new product team that seems to be unaccountable for results, consuming "more than its share" of budget while failing to meet the original vision for their existence, will cause conflict and concern among organizational leadership.</p>
 </div>
 <div class="paragraph">
-<p>It is in the tension between product autonomy and accountability that we see project management techniques such as the work breakdown structure and project change control employed.</p>
-</div>
-<div class="paragraph">
-<p>We saw a Work Breakdown Structure in the previous section, with our discussion of a holiday party. More formally, the work breakdown structure is defined by the Project Management Body of Knowledge as</p>
+<p>It is in the tension between product autonomy and accountability that we see project management techniques such as the work breakdown structure and project change control employed. We saw a Work Breakdown Structure in the previous section, with our discussion of a holiday party. More formally, the work breakdown structure is defined by the Project Management Body of Knowledge as</p>
 </div>
 <div class="paragraph">
 <p><em>&#8230;&#8203;a hierarchical decomposition of the total scope of work to be carried out by the project team to accomplish the project objectives and create the required deliverables. The WBS organizes and defines the total scope of the project, and represents the work specified in the current approved project</em> <a href="#PMI2013">[PMI2013]</a>.</p>
 </div>
 <div class="paragraph">
-<p><a href="#Portny2013">[Portny2013]</a> recommends "Subdivide your WBS component into additional deliverables if you think either of the following situations applies: The component will take much longer than two calendar weeks to complete. The component will require much more than 80 person-hours to complete.''</p>
+<p><a href="#Portny2013">[Portny2013]</a> recommends "Subdivide your WBS component into additional deliverables if you think either of the following situations applies: The component will take much longer than two calendar weeks to complete. The component will require much more than 80 person-hours to complete."</p>
 </div>
 <div class="paragraph">
 <p>This may seem reasonable, but in iterative product development, it can be difficult to "decompose" a problem in the way project management seems to require. Or to estimate in the way Portny suggests. This can lead to two problems.</p>
@@ -12529,92 +12575,6 @@ Part of the problem with extensive frameworks such as PMBOK is that knowing how 
 <div class="paragraph">
 <p>Second, we may see the creation of project plans that are too high level, omitting information that is in fact known at the time - for example, external deadlines or resource constraints. This happens because the team develops a cultural attitude that is averse to all planning and estimation.</p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_task_ordering_dependencies_and_critical_path">Task ordering, dependencies, and critical path</h5>
-<div class="paragraph">
-<p>The specific ordering of tasks is also important. As we saw in the holiday party example, sometimes one cannot complete a task without first completing something else - e.g., you cannot buy groceries until you decide on the menu. Or install software before the server is configured. But many other tasks might be performed in any order.</p>
-</div>
-<div class="paragraph">
-<p>Sometimes, the tasks are constrained by the availability of someone to work on them. This is the situation we have in simple Kanban, where a backlog of tasks is worked primarily according to the availability of someone to work on them.</p>
-</div>
-<div class="paragraph">
-<p>There are other approaches to scheduling tasks. <a href="#Portny2013">[Portny2013]</a> suggests the following approach types:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Basic</p>
-</li>
-<li>
-<p>Procedural</p>
-</li>
-<li>
-<p>Legal/regulatory</p>
-</li>
-<li>
-<p>Optimization-based</p>
-</li>
-<li>
-<p>Arbitrary (no reason for precedence chosen, but once resources are planned, hard to change)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>When tasks are ordered, and their time to complete estimated, an analysis known as <strong>critical path</strong> is possible.</p>
-</div>
-<div class="paragraph">
-<p>PMBOK <a href="#PMI2013">[PMI2013]</a> defines the critical path as "The sequence of activities that represents the longest path through a project, which determines the shortest possible duration."</p>
-</div>
-<div class="paragraph">
-<p>Consider our holiday party plan again:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/3_08-ms-proj-3.png" alt="3 08 ms proj 3">
-</div>
-</div>
-<div class="paragraph">
-<p>In the above example, we have two major work areas: clean the house and prepare a menu. Note however that there are no dependencies between:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>vacuum living room</p>
-</li>
-<li>
-<p>clean kitchen</p>
-</li>
-<li>
-<p>clean dining table</p>
-</li>
-<li>
-<p>vacuum dining room</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Really, they can be done in any order.</p>
-</div>
-<div class="paragraph">
-<p>On the other hand, there is a clear set of dependencies between:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Choose menu</p>
-</li>
-<li>
-<p>Get groceries</p>
-</li>
-<li>
-<p>Fix food</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>This means that the sub-activity "Food for party" is the critical path. If the menu is not determined on time, the grocery run can&#8217;t happen, and the food will be fixed late or not at all.</p>
-</div>
 <div class="paragraph">
 <p><a id="loose-coupling-project"></a></p>
 </div>
@@ -12624,31 +12584,13 @@ Part of the problem with extensive frameworks such as PMBOK is that knowing how 
 <p>While this book does not go into systems architectural styles in depth, a project with a large number of dependencies may be an indication that the system or product being constructed also has significant interdependencies.</p>
 </div>
 <div class="paragraph">
-<p>Successful systems designers for years have relied on concepts such as encapsulation, abstraction, and loose coupling to minimize the dependencies between components of complex systems, so that their design, construction, and operation can be managed with some degree of independence. These ideas are core to the software engineering literature.</p>
+<p>Successful systems designers for years have relied on concepts such as encapsulation, abstraction, and loose coupling to minimize the dependencies between components of complex systems, so that their design, construction, and operation can be managed with some degree of independence. These ideas are core to the software engineering literature. Recent expressions of these core ideas are Services-Oriented Architecture and microservices.</p>
 </div>
 <div class="paragraph">
-<p>Recent expressions of these core ideas are Services-Oriented Architecture and microservices.</p>
+<p>Systems that do not adopt such approaches are often termed "monolithic" and have a well deserved reputation for being problematic to build and operate. Many large software failures stem from such approaches. If you have a project plan with excessive dependencies, the question at least should be asked: does my massive, tightly-coupled project plan indicate I am building a monolithic, tightly-coupled system that will not be flexible or responsive to change?</p>
 </div>
 <div class="paragraph">
-<p>Systems that do not adopt such approaches are often termed "monolithic" and have a well deserved reputation for being problematic to build and operate. Many large software failures stem from such approaches. (cites)</p>
-</div>
-<div class="paragraph">
-<p>The system development efforts that gave rise to Critical Path Analysis (in particular the Polaris submarine) were very different from modern digital product development. A submarine is a relatively closed system with many constraints. They are changed only through the most formal of processes. (Even so, military systems seek loose coupling wherever possible.) Modern digital systems, while presenting their own challenges, do not operate under such constraints.</p>
-</div>
-<div class="paragraph">
-<p>If you have a project plan with excessive dependencies, the question at least should be asked: does my massive, tightly-coupled project plan indicate I am building a monolithic, tightly-coupled system that will not be flexible or responsive to change?</p>
-</div>
-<div class="paragraph">
-<p>Again, many digital companies build tremendously robust integrated services from the combination of many quasi-independent "product" teams, each serving a particular function.</p>
-</div>
-<div class="paragraph">
-<p>The book <a href="https://www.goodreads.com/book/show/753804.Small_Pieces_Loosely_Joined">Small Pieces Loosely Joined: A Unified Theory Of The Web</a> is a good discussion of these ideas.</p>
-</div>
-<div class="paragraph">
-<p>However, when a particular organizational objective requires changes to more than one such "product," the need for cross-team coordination emerges. Someone needs to own this larger objective, even if its actual implementation is carried out across multiple distinct teams.</p>
-</div>
-<div class="paragraph">
-<p>In this discussion we see the emergence of enterprise architecture, which will be discussed in depth in Chapter 12.</p>
+<p>Again, many digital companies build tremendously robust integrated services from the combination of many quasi-independent "product" teams, each serving a particular function. However, when a particular organizational objective requires changes to more than one such "product," the need for cross-team coordination emerges. Someone needs to own this larger objective, even if its actual implementation is carried out across multiple distinct teams. We will discuss this further in Chapter 9.</p>
 </div>
 </div>
 <div class="sect5">
@@ -12662,169 +12604,15 @@ Part of the problem with extensive frameworks such as PMBOK is that knowing how 
 </div>
 </div>
 <div class="sect4">
-<h5 id="_scheduling_and_execution">Scheduling and execution</h5>
-<div class="literalblock">
-<div class="content">
-<pre>not sure about this section. Sets up the Critical Chain discussion. Also helpful to Chapter 9.</pre>
-</div>
+<h5 id="_project_assignment">Project assignment</h5>
+<div class="paragraph">
+<p>Enterprise IT organizations have evolved to use a mix of project management, processes, and ad-hoc work routing to achieve their results. Often, resources (people) are assigned to multiple projects, a practice sometimes called "fractional allocation."</p>
 </div>
 <div class="paragraph">
-<p>To understand how project management works across a functionally organized system, consider the internals of each functional area:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/3_08-mfg-w-resource.png" alt="3 08 mfg w resource">
-</div>
+<p>In fractional allocation, a database administrator will work 25% on one project, 25% on another, and still be expected to work 50% on ongoing production support. This may appear to work mathematically, but practically it is an ineffective practice. Both Gene Kim in The Phoenix Project <a href="#Kim2013">[Kim2013]</a> and Eli Goldratt in Critical Chain <a href="#Goldratt1997">[Goldratt1997]</a> present dramatized accounts of the overburden and gridlock that can result from such approaches.</p>
 </div>
 <div class="paragraph">
-<p>Each combination of worker and equipment can be considered a workstation in this simplified model.</p>
-</div>
-<div class="paragraph">
-<p>If there is concern for flow across the functional areas, one technique used in manufacturing is that of expediting. An individual in the role of  "expeditor" tracks the process across the work stations and ensures that any friction or blockages are overcome so that the entire process completes and value is delivered. This can be seen as a preliminary form of project management.</p>
-</div>
-<div class="paragraph">
-<p>As the production line evolves, scheduling may be used as well: the assignment of work to each workstation (combination of worker and equipment) may have its timing and duration specified in advance. While this is not an optimal approach according to Lean philosophy (which emphasizes "pull" techniques), <a href="https://en.wikipedia.org/wiki/Scheduling_(production_processes)">production scheduling</a> is widely used in manufacturing.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-Production scheduling is a large topic in and of itself. It is part of the domain of interest of the professional organization, The American Production and Inventory Control Society (APICS).
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>IT systems development, when crossing functions, is rarely if ever considered as a simple end to end process that can run itself, with only a lightweight expeditor. Instead, since there is substantially increased complexity, a project paradigm is used across the functions. The project manager plays the role of expanded expeditor:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/3_08-sw-w-resource.png" alt="3 08 sw w resource">
-</div>
-</div>
-<div class="paragraph">
-<p>The above diagram, which you should study carefully, is a more detailed representation of the classic "waterfall" project. It still bears strong similarities to the idealized manufacturing model presented just previously. In particular, notice that the default model is that <strong>the need for the resource is tightly bounded by the calendar</strong>. In the above model, the following resource requirements are apparent:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>One Requirements analyst is needed between times A and B (e.g, from May 1 through 15).</p>
-</li>
-<li>
-<p>One Architect is needed between times B and C (e.g., from May 16 through 31)</p>
-</li>
-<li>
-<p>One Developer is needed between times C and D (e.g., from June 1 through 15)</p>
-</li>
-<li>
-<p>One Release Engineer is needed between times D and E (e.g., from June 15 through 30)</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><strong>This is a deliberately unworkable model for illustration.</strong> (But the author can attest it has been tried&#8230;&#8203;) Sometimes, the terms "mechanistic," "deterministic," or "linear" are used to describe waterfall project methods. This shows them at their extreme, insofar as they are essentially translations of a manufacturing model.</p>
-</div>
-<div class="paragraph">
-<p>The basic problem: if the Developer is released from the project on June 15, and issues were to arise on June 20 with the release, flow would be interrupted and the system would not be delivered successfully.</p>
-</div>
-<div class="paragraph">
-<p>Because of this, the project may retain some residual claim on all the engaged resources, but their utilization may be low or zero at certain points.</p>
-</div>
-<div class="paragraph">
-<p>If we re-imagine the diagram with the different functional areas along the horizontal, we start to develop an understanding of the interrelatedness of product development. The following is one representation of the Rational Unified Process, an early depiction of this interrelatedness:</p>
-</div>
-<div class="imageblock" style="float: right">
-<div class="content">
-<img src="images/3_08-development-iterative.png" alt="Rational Unified Process" width="493">
-</div>
-<div class="title">Figure 102. Rational Unified Process <sup class="footnote">[<a id="_footnoteref_49" class="footnote" href="#_footnote_49" title="View footnote.">49</a>]</sup></div>
-</div>
-<div class="paragraph">
-<p>One interesting aspect of the diagram is that it shows just how difficult it can be to staff a project. Demand for given functional roles ebbs and flows unpredictably. The project manager is expected to manage the uncertain handoffs between the various functional areas, and anticipate resource requirements stemming from unexpected feedback demands. This is why "T-shaped" professionals (see Chapter 7) are desirable, because they can move from area to area in response to demand.</p>
-</div>
-<div class="paragraph">
-<p>Ultimately, the reason classical production scheduling is inappropriate for delivering new IT functionality is that there is simply too much variability in <a href="#product-mgmt">product development</a> . (Again see Chapter 4 for further discussion of this.) However, this does not change the fact that some level of planning and estimation is needed. To what extent this more variable IT work can be quantitatively managed is an active area of discussion in the software, Agile, and related communities.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Effort vs. duration</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Production spectrum illustration? (diagonal)</pre>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_projects_and_their_resources">Projects and their resources</h5>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-The use of the term "resources" to refer to the people working on a project is often criticized as insensitive and inappropriate. However, it is standard terminology which this book therefore needs to reflect, as an introductory survey text. You are encouraged to NOT use this terminology as you progress in your career.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Modern enterprise IT organizations use a mix of project management, processes, and ad-hoc work routing to achieve their results. Often, resources (people) are assigned to multiple projects, a practice sometimes called "fractional allocation."</p>
-</div>
-<div class="paragraph">
-<p>In fractional allocation, a database administrator will work 25% on one project, 25% on another, and still be expected to work 50% on ongoing production support.</p>
-</div>
-<div class="paragraph">
-<p>This may appear to work mathematically, but practically it is an ineffective practice. Both Gene Kim in The Phoenix Project <a href="#Kim2013">[Kim2013]</a> and Eli Goldratt in Critical Chain <a href="#Goldratt1997">[Goldratt1997]</a> present dramatized accounts of the overburden and gridlock that can result from such approaches.</p>
-</div>
-<div class="paragraph">
-<p>Human beings are notably bad at multi-tasking, and the mental "context-switching" required to move from one task to another is wasteful and ultimately not scalable. A human being fractionally allocated to more and more projects will get less and less done in total, as the transactional friction of task switching increases.</p>
-</div>
-<div class="paragraph">
-<p>More on this in the following section on resource management.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>there have got to be good cites on this</pre>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_critical_chain">Critical chain</h6>
-<div class="paragraph">
-<p>Goldratt in the above-cited book Critical Chain develops a sophisticated critique of project estimation and the dysfunctions it promotes.</p>
-</div>
-<div class="paragraph">
-<p>In a project requiring contributions from multiple skilled resources, a common practice is to ask each person, "how long will this take you?" The project manager then works the resulting estimates into the overall project plan.</p>
-</div>
-<div class="paragraph">
-<p>The problem with this is that most people will estimate their time conservatively; they will forecast a longer duration than they actually require. When all these "padded" estimates are added together, the project may be unacceptably long. The agreed work will tend to expand to fill the time available (Parkinson&#8217;s Law). Furthermore, most people will wait until the end of their window to perform their task - a person who asks for 3 weeks to perform one week of work will often not start until week 3. (Otherwise known as Student Syndrome.)</p>
-</div>
-<div class="paragraph">
-<p>One of the reasons that people estimate conservatively is that project managers tend to be quite concerned if committed tasks are not performed on time. Failure to make the "deliverable" by the committed date may result in negative feedback to the employee&#8217;s manager and resulting poor performance reviews.</p>
-</div>
-<div class="paragraph">
-<p>Coupled with the above-cited drive to multi-tasking, these factors result in poor project performance, despite the array of modern project management techniques.</p>
-</div>
-<div class="paragraph">
-<p>Goldratt suggested an alternate approach, in which the idea of "critical path" is enhanced with resource awareness. That is to say, the issue of timing and dependencies (itself a complex problem) is further enriched with the availability of resources to perform the work. (In general, the availability of assigned project resources is assumed, but this is not a wise assumption in project-centric environments.)</p>
-</div>
-<div class="paragraph">
-<p>Estimation is handled more probabilistically, and the "critical chain" is <strong>the combination of the critical path plus the resource assigned to complete the most critical task.</strong> The theory is that a person performing such a task must be protected from distraction, and in fact project managers must expand their tools to effectively forecast and plan the critical chain.</p>
-</div>
-<div class="paragraph">
-<p>This leads to some complex math, in particular a known problem called the Resource-Constrained Scheduling Problem. (e.g. <a href="http://www.iste.co.uk/data/doc_dtalmanhopmh.pdf" class="bare">http://www.iste.co.uk/data/doc_dtalmanhopmh.pdf</a>) The fact that this problem is so notoriously difficult is indicative of the need for adaptive approaches; ultimately, rigorous analytic methods fail to cope with the complexity of such problems.</p>
-</div>
-<div class="paragraph">
-<p>Craig Larman, in Scaling Lean and Agile Development, is sympathetic to the overall insights and goals of Critical Chain. However, with respect the full blown analytical approach it implies, he states</p>
-</div>
-<div class="paragraph">
-<p>"We have seen two very large official "project management TOC" adoption attempts (and heard of one more) in companies developing software-intensive embedded systems&#8230;&#8203; The practice was clearly heavy, not agile, and not lean. In all three cases, the approach was eventually found cumbersome and not very effective, and was dropped." <a href="#Larman2009">[Larman2009]</a></p>
-</div>
+<p>As previously discussed, human beings are notably bad at <a href="#multi-tasking">multi-tasking</a>, and the mental "context-switching" required to move from one task to another is wasteful and ultimately not scalable. A human being fractionally allocated to more and more projects will get less and less done in total, as the transactional friction of task switching increases.</p>
 </div>
 </div>
 </div>
@@ -14152,6 +13940,13 @@ The iconic entrepreneur asking for one more round</pre>
 <li>
 <p>Gary L. Richardson,  <a href="http://www.goodreads.com/book/show/8085475-project-management-theory-and-practice">Project Management Theory And Practice</a></p>
 </li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://www.goodreads.com/book/show/753804.Small_Pieces_Loosely_Joined">Small Pieces Loosely Joined: A Unified Theory Of The Web</a></p>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p>Brooks, Mythical Man-Month</p>
 </li>
@@ -17178,6 +16973,119 @@ I have seen various attempts and interest along these lines, but always company 
 <div class="paragraph">
 <p>Thoughts?</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_scheduling_and_execution">Scheduling and execution</h5>
+<div class="paragraph">
+<p>To understand how project management works across a functionally organized system, consider the internals of each functional area:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3_09-mfg-w-resource.png" alt="3 09 mfg w resource">
+</div>
+</div>
+<div class="paragraph">
+<p>Each combination of worker and equipment can be considered a workstation in this simplified model. If there is concern for flow across the functional areas, one technique used in manufacturing is that of expediting. An individual in the role of  "expeditor" tracks the process across the work stations and ensures that any friction or blockages are overcome so that the entire process completes and value is delivered. This can be seen as a preliminary form of project management.</p>
+</div>
+<div class="paragraph">
+<p>As the production line evolves, scheduling may be used as well: the assignment of work to each workstation (combination of worker and equipment) may have its timing and duration specified in advance. While this is not an optimal approach according to Lean philosophy (which emphasizes "pull" techniques), <a href="https://en.wikipedia.org/wiki/Scheduling_(production_processes)">production scheduling</a> is widely used in manufacturing.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Production scheduling is a large topic in and of itself. It is part of the domain of interest of the professional organization, The American Production and Inventory Control Society (APICS).
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>IT systems development, when crossing functions, is rarely if ever considered as a simple end to end process that can run itself, with only a lightweight expeditor. Instead, since there is substantially increased complexity, a project paradigm is used across the functions. The project manager plays the role of expanded expeditor:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3_09-sw-w-resource.png" alt="3 09 sw w resource">
+</div>
+</div>
+<div class="paragraph">
+<p>The above diagram, which you should study carefully, is a more detailed representation of the classic "waterfall" project. It still bears strong similarities to the idealized manufacturing model presented just previously. In particular, notice that the default model is that <strong>the need for the resource is tightly bounded by the calendar</strong>. In the above model, the following resource requirements are apparent:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>One Requirements analyst is needed between times A and B (e.g, from May 1 through 15).</p>
+</li>
+<li>
+<p>One Architect is needed between times B and C (e.g., from May 16 through 31)</p>
+</li>
+<li>
+<p>One Developer is needed between times C and D (e.g., from June 1 through 15)</p>
+</li>
+<li>
+<p>One Release Engineer is needed between times D and E (e.g., from June 15 through 30)</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>This is a deliberately unworkable model for illustration.</strong> (But the author can attest it has been tried&#8230;&#8203;) Sometimes, the terms "mechanistic," "deterministic," or "linear" are used to describe waterfall project methods. This shows them at their extreme, insofar as they are essentially translations of a manufacturing model.</p>
+</div>
+<div class="paragraph">
+<p>The basic problem: if the Developer is released from the project on June 15, and issues were to arise on June 20 with the release, flow would be interrupted and the system would not be delivered successfully.</p>
+</div>
+<div class="paragraph">
+<p>Because of this, the project may retain some residual claim on all the engaged resources, but their utilization may be low or zero at certain points.</p>
+</div>
+<div class="paragraph">
+<p>If we re-imagine the diagram with the different functional areas along the horizontal, we start to develop an understanding of the interrelatedness of product development. The following is one representation of the Rational Unified Process, an early depiction of this interrelatedness:</p>
+</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img src="images/3_08-development-iterative.png" alt="Rational Unified Process" width="493">
+</div>
+<div class="title">Figure 102. Rational Unified Process <sup class="footnote">[<a id="_footnoteref_49" class="footnote" href="#_footnote_49" title="View footnote.">49</a>]</sup></div>
+</div>
+<div class="paragraph">
+<p>One interesting aspect of the diagram is that it shows just how difficult it can be to staff a project. Demand for given functional roles ebbs and flows unpredictably. The project manager is expected to manage the uncertain handoffs between the various functional areas, and anticipate resource requirements stemming from unexpected feedback demands. This is why "T-shaped" professionals (see Chapter 7) are desirable, because they can move from area to area in response to demand.</p>
+</div>
+<div class="paragraph">
+<p>Ultimately, the reason classical production scheduling is inappropriate for delivering new IT functionality is that there is simply too much variability in <a href="#product-mgmt">product development</a> . (Again see Chapter 4 for further discussion of this.) However, this does not change the fact that some level of planning and estimation is needed. To what extent this more variable IT work can be quantitatively managed is an active area of discussion in the software, Agile, and related communities.</p>
+</div>
+<div class="sect5">
+<h6 id="_critical_chain">Critical chain</h6>
+<div class="paragraph">
+<p>Goldratt in the above-cited book Critical Chain develops a sophisticated critique of project estimation and the dysfunctions it promotes.</p>
+</div>
+<div class="paragraph">
+<p>In a project requiring contributions from multiple skilled resources, a common practice is to ask each person, "how long will this take you?" The project manager then works the resulting estimates into the overall project plan.</p>
+</div>
+<div class="paragraph">
+<p>The problem with this is that most people will estimate their time conservatively; they will forecast a longer duration than they actually require. When all these "padded" estimates are added together, the project may be unacceptably long. The agreed work will tend to expand to fill the time available (Parkinson&#8217;s Law). Furthermore, most people will wait until the end of their window to perform their task - a person who asks for 3 weeks to perform one week of work will often not start until week 3. (Otherwise known as Student Syndrome.)</p>
+</div>
+<div class="paragraph">
+<p>One of the reasons that people estimate conservatively is that project managers tend to be quite concerned if committed tasks are not performed on time. Failure to make the "deliverable" by the committed date may result in negative feedback to the employee&#8217;s manager and resulting poor performance reviews.</p>
+</div>
+<div class="paragraph">
+<p>Coupled with the above-cited drive to multi-tasking, these factors result in poor project performance, despite the array of modern project management techniques.</p>
+</div>
+<div class="paragraph">
+<p>Goldratt suggested an alternate approach, in which the idea of "critical path" is enhanced with resource awareness. That is to say, the issue of timing and dependencies (itself a complex problem) is further enriched with the availability of resources to perform the work. (In general, the availability of assigned project resources is assumed, but this is not a wise assumption in project-centric environments.)</p>
+</div>
+<div class="paragraph">
+<p>Estimation is handled more probabilistically, and the "critical chain" is <strong>the combination of the critical path plus the resource assigned to complete the most critical task.</strong> The theory is that a person performing such a task must be protected from distraction, and in fact project managers must expand their tools to effectively forecast and plan the critical chain.</p>
+</div>
+<div class="paragraph">
+<p>This leads to some complex math, in particular a known problem called the Resource-Constrained Scheduling Problem. (e.g. <a href="http://www.iste.co.uk/data/doc_dtalmanhopmh.pdf" class="bare">http://www.iste.co.uk/data/doc_dtalmanhopmh.pdf</a>) The fact that this problem is so notoriously difficult is indicative of the need for adaptive approaches; ultimately, rigorous analytic methods fail to cope with the complexity of such problems.</p>
+</div>
+<div class="paragraph">
+<p>Craig Larman, in Scaling Lean and Agile Development, is sympathetic to the overall insights and goals of Critical Chain. However, with respect the full blown analytical approach it implies, he states</p>
+</div>
+<div class="paragraph">
+<p>"We have seen two very large official "project management TOC" adoption attempts (and heard of one more) in companies developing software-intensive embedded systems&#8230;&#8203; The practice was clearly heavy, not agile, and not lean. In all three cases, the approach was eventually found cumbersome and not very effective, and was dropped." <a href="#Larman2009">[Larman2009]</a></p>
 </div>
 </div>
 </div>
