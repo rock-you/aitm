@@ -163,6 +163,7 @@ Although the author and publisher have made every effort to ensure that the info
 <simpara>A person completely unfamiliar with computing will need to supplement their reading as suggested throughout the text. There is a wealth of free and accurate information on IT fundamentals (e.g. compute, storage, networking, programming, etc) and this book seeks more to curate than replicate.</simpara>
 </listitem>
 </itemizedlist>
+<simpara><anchor xml:id="emergence-model" xreflabel="[emergence-model]"/></simpara>
 </section>
 <section xml:id="_this_book_s_structure">
 <title>This book&#8217;s structure</title>
@@ -4859,8 +4860,8 @@ As a “service desk,” it may expand its purview to accepting provisioning or 
 </section>
 <section xml:id="_lean_product_development_and_don_reinertsen">
 <title>Lean product development and Don Reinertsen</title>
-<section xml:id="_lean_product_development">
-<title>Lean product development</title>
+<section xml:id="_product_development_versus_production">
+<title>Product development versus production</title>
 <blockquote>
 <attribution>
 Bjarne Stroustrup
@@ -6577,7 +6578,7 @@ Jim Fowler
 </figure>
 <simpara>(We had some related discussion in <link linkend="i-o-matrix">Chapter 4</link>.) Such a structure was perceived to be "efficient" because all the server engineers would be in one organization, while all the Java developers would be in another, and their utilization could be managed for efficiency. It was also believed that organizing into "centers of excellence" (sometimes called <emphasis>organizing by function</emphasis>) would make the practices of each center more and more effective, and therefore more valuable to the organization as a whole.</simpara>
 <simpara>However, the new digital organizations perceived that there was too much friction between the different functions on the organization chart. Skepticism also started to emerge that "centers of excellence" were living up to their promise. Instead, what was too often seen was the emergence of an "us versus them" mentality, as developers argued with server and network engineers.</simpara>
-<simpara>One of the first companies to try a completely different approach was Intuit. As Intuit started selling its products increasingly as services, it re-organized to divide infrastructure individual contributors, e.g. storage engineers and database administrators, to become part of the product teams with which they worked <xref linkend="Abbot2015"/>, p 103.</simpara>
+<simpara>One of the first companies to try a completely different approach was Intuit. As Intuit started selling its products increasingly as services, it re-organized to divide infrastructure individual contributors, e.g. storage engineers and database administrators, to become part of the product teams with which they worked <xref linkend="Abbott2015"/>, p 103.</simpara>
 <simpara><anchor xml:id="spotify-model" xreflabel="Spotify model"/></simpara>
 <figure>
 <title>New IT organization</title>
@@ -6684,7 +6685,7 @@ Abbot and Fisher
 </mediaobject>
 </figure>
 <simpara>The product is already defined and the need to generate information (i.e. through feedback) is at an absolute minimum. Functional areas can continually increase their efficiency and economies of scale through deep specialization.</simpara>
-<simpara>Similarly, in a traditional IT organization, the Java developers might be in a separate team from the HTML, CSS and Javascript specialists. The database administrators might have their own team, and also the architects, business analysts, and quality assurance groups. Each group develops a strong professional identity as the custodians of "best practices" in their area. They may also develop a strong set of criteria for when they will accept work, which tends to slow down <anchor xml:id="lean-product-dev" xreflabel="product discovery"/>.</simpara>
+<simpara>Similarly, in a traditional IT organization, the Java developers might be in a separate team from the HTML, CSS and Javascript specialists. The database administrators might have their own team, and also the architects, business analysts, and quality assurance groups. Each group develops a strong professional identity as the custodians of "best practices" in their area. They may also develop a strong set of criteria for when they will accept work, which tends to slow down <link linkend="lean-product-dev">product discovery</link>.</simpara>
 <note>
 <simpara>Even in this simplest model, feedback is important. Much of the evolution of 20th century manufacturing has been in challenging this naive, open-loop model. (Remember our brief discussion of <link linkend="open-loop">open-loop</link>?)</simpara>
 </note>
@@ -7660,7 +7661,7 @@ Project Management Body of Knowledge
 <simpara>Dependencies. You may have had a concept of one task or story blocking another, and perhaps you used a whiteboard to outline more complex sequences of work, but project management  has an explicit concept of dependencies in the tasks, and powerful tools to manage them. This is essential in the most ambitious and complex product efforts.</simpara>
 </listitem>
 <listitem>
-<simpara>Project management also has more robust tools for managing people&#8217;s time and effort, especially as they translate to project funding. While this may be a contentious aspect of project management (see later in this chapter on the <link linkend="NoEstimates">No Estimates</link> controversy), it remains a critical part of management practice in both IT and non-IT domains.</simpara>
+<simpara>Project management also has more robust tools for managing people&#8217;s time and effort, especially as they translate to project funding. While estimation can be a contentious aspect of project management, it remains a critical part of management practice in both IT and non-IT domains.</simpara>
 </listitem>
 </itemizedlist>
 <simpara>At the end of the day, people expect to be paid for their time, and investors expect to be compensated through the delivery of results. Investment capital only lasts as a function of an organization&#8217;s "burn rate;" the rate at which the money is consumed for salaries and expenses. Some forecasting of status (whether that of a project, organization, product, program, or what have you) is therefore an essential and unavoidable obligation of management, unless funding is unlimited (a rare situation to say the least.)</simpara>
@@ -7852,7 +7853,7 @@ Project Management Body of Knowledge
 <simpara><xref linkend="Portny2013"/> recommends "Subdivide your WBS component into additional deliverables if you think either of the following situations applies: The component will take much longer than two calendar weeks to complete. The component will require much more than 80 person-hours to complete.''</simpara>
 <simpara>This may seem reasonable, but in iterative product development, it can be difficult to "decompose" a problem in the way project management seems to require. Or to estimate in the way Portny suggests. This can lead to two problems.</simpara>
 <simpara>First, the WBS may be created at a seemingly appropriate level of detail, but since it is created before key information is generated, it is inevitably wrong and needing ongoing correction. If the project management approach requires a high-effort "project change management" process, much waste may result as "approvals" are sought for each  <link linkend="feedback">feedback</link> cycle. This may result in increasing disregard by the development team for the project manager and his/her plan, and corresponding cultural risks of disengagement and lowering of trust on all sides.</simpara>
-<simpara>Second, we may see the creation of project plans that are too high level, omitting information that is in fact known at the time - for example, external deadlines or resource constraints. This happens because the team develops a cultural attitude that is averse to all planning and estimation. (See the discussion on <link linkend="NoEstimates">No Estimates</link>.)</simpara>
+<simpara>Second, we may see the creation of project plans that are too high level, omitting information that is in fact known at the time - for example, external deadlines or resource constraints. This happens because the team develops a cultural attitude that is averse to all planning and estimation.</simpara>
 </section>
 <section xml:id="_task_ordering_dependencies_and_critical_path">
 <title>Task ordering, dependencies, and critical path</title>
@@ -8975,7 +8976,7 @@ Comella-Dorda et al
 <simpara>It is arguable that the venture-funded model has created different attitudes and expectations towards governance in West Coast "unicorn" culture. However, it would be dangerous to assume that this model is universally applicable. A firm is more than a collection of independent sub-organizations; this is an important line of thought in management theory, starting with Coase&#8217;s "The Nature of the Firm" <xref linkend="Coase1937"/>.</simpara>
 <literallayout class="monospaced">cite Anderson's relevant work</literallayout>
 </section>
-<section xml:id="_lean_product_development_2">
+<section xml:id="_lean_product_development">
 <title>Lean Product Development</title>
 <blockquote>
 <attribution>
@@ -10925,6 +10926,15 @@ Womack and Jones
 </section>
 <section xml:id="_topics_in_process_management">
 <title>Topics in process management</title>
+<simpara><anchor xml:id="cargo-cult" xreflabel="[cargo-cult]"/></simpara>
+<section xml:id="_cargo_cult_thinking">
+<title>Cargo cult thinking</title>
+<simpara>Processes and practices are always at risk of being used without full understanding. This is called <link xl:href="https://en.wikipedia.org/wiki/Cargo_cult">cargo cult</link> thinking. What is a cargo cult?</simpara>
+<simpara>During World War II, South Pacific native peoples had been exposed abruptly to modern technological society with the Japanese and US occupations of their islands. Occupying forces would often provide food, tobacco, and luxuries to the natives to ease relations. After the war, various tribes were observed creating simulated airports and airplanes, and engaging in various rituals that superficially looked like air traffic signaling and other operations associated with a military air base.</simpara>
+<simpara>On further investigation, it became clear that the natives were seeking more “cargo” and had developed a magical understanding of how goods would be delivered. By imitating the form of what they had seen, they hoped to recreate it.</simpara>
+<simpara>In 1974, the noted physicist Richard Feynman gave a speech at Caltech in which he coined the immortal phrase “cargo cult science.” His intent was to caution against activities which appear to follow the external form of science, but lack the essential understanding at its core. Similar analogies are seen in business and IT management, as organizations adopt tools and techniques because they have seen others do so, without having fundamental clarity about the problems they are trying to solve and how a given technique might specifically help.</simpara>
+<simpara>As with many stories of this kind, there are questions around the accuracy of the original accounts and Western interpretations and mythmaking around what was seen. However there is no question that the phenomena were observed, and that “cargo cult thinking” is a useful cautionary metaphor.</simpara>
+</section>
 <section xml:id="_the_idea_of_pmdb_and_pis">
 <title>The idea of PMDB and PIs</title>
 <sidebar>
@@ -12349,7 +12359,7 @@ Russian proverb
 <simpara>Technologists, especially those with a background in networking, may have heard of the concept of "out of band control." With out of band management or control of IT resources, the channel over which management commands travel is distinct from the channel over which the system provides its services.</simpara>
 <simpara>This channel separation is done to increase security, confidence, and reliability, and is analogous to assurance.</simpara>
 </sidebar>
-<simpara><anchor xml:id="3-party-model" xreflabel="[3-party-model]"/></simpara>
+<simpara><anchor xml:id="three-party-model" xreflabel="[three-party-model]"/></simpara>
 <section xml:id="_three_party_foundation">
 <title>Three party foundation</title>
 <blockquote>
@@ -12460,7 +12470,7 @@ Max Ehrmann
 </listitem>
 </itemizedlist>
 <simpara>Some of these activities may be managed primarily internally, but even in the case of internally-managed activities, there is usually some sense of governance, some desire for objectivity.</simpara>
-<simpara>From a purist perspective, internally directed assurance is a contradiction in terms. There is a conflict of interest in that in terms of the <link linkend="3-party-model">three-party model</link> above, the accountable party is the practitioner.</simpara>
+<simpara>From a purist perspective, internally directed assurance is a contradiction in terms. There is a conflict of interest in that in terms of the <link linkend="three-party-model">three-party model</link> above, the accountable party is the practitioner.</simpara>
 <simpara>However, it may well be less expensive for an organization to fund and sustain internal assurance capabilities and get much of the same benefits as from external parties. This requires sufficient organizational safeguards be instituted. Internal auditors typically report directly to the Board-level audit committee, and generally are not seen as having a conflict of interest.</simpara>
 <simpara>In another example, an internal compliance function might report to the corporate general counsel (chief lawyer), and not to any executive whose performance is judged based on their organization&#8217;s compliance&#8201;&#8212;&#8201;this would be a conflict of interest. However, because the internal compliance function is ultimately under the CEO, their concerns can be overruled.</simpara>
 <simpara>The various ways that internal and external assurance arrangements can work, and can go wrong, is a long history. If you are interested in the topic, review the histories of Enron, Worldcom, the 2008 mortgage crisis, and other such failures.</simpara>
@@ -12540,7 +12550,7 @@ James DeLuccia
 <simpara>Tier IV: Fault Tolerance</simpara>
 </listitem>
 </itemizedlist>
-<simpara>Uptime Institute certification is a generic form of assurance in terms of the <link linkend="3-party-model">3-party model</link>; the data center operator must work with the Uptime Institute who provides an independent opinion based on their criteria as to the data center&#8217;s tier (and therefore effecctiveness).</simpara>
+<simpara>Uptime Institute certification is a generic form of assurance in terms of the <link linkend="three-party-model">3-party model</link>; the data center operator must work with the Uptime Institute who provides an independent opinion based on their criteria as to the data center&#8217;s tier (and therefore effecctiveness).</simpara>
 <simpara>The SOC 3 report is considered an "assurance" standard as well. However, as mentioned above, this is the kind of "assurance" done in general by licensed auditors, and which might casually be called an "audit" by the participants. A qualified professional, again in the 3-party model, examines the data center in terms of the SSAE 16 reporting standard.</simpara>
 <simpara>Your internal risk management organization might look to both Uptime Institute and SOC 3 certification as indicators that your Cloud provider risk is mitigated. (More on this in chapter section on Risk Management.)</simpara>
 <simpara><emphasis role="strong">Example 2: Internal process assessment</emphasis></simpara>
@@ -12582,7 +12592,7 @@ James DeLuccia
 <simpara><emphasis role="strong">Example 3: Competitive benchmarking</emphasis></simpara>
 <simpara>Finally, you may wonder, "how does my digital operation compare to other companies?" Now, it is difficult to go to a competitor and ask this. It&#8217;s also not especially practical to go and find some non-competing company in a different industry you don&#8217;t understand well. An entire industry has emerged to assist with this question.</simpara>
 <simpara>We talked about the role of <link linkend="industry-analysts">industry analysts</link> in chapter 8. Benchmarking firms play a similar role, and in fact some analyst firms provide benchmarking services.</simpara>
-<simpara>There are a variety of ways benchmarking is conducted, but it is similar to assurance in that it often follows the <link linkend="3-party-model">3-party model</link>. Some stakeholder directs an accountable party to be benchmarked within some defined scope. For example, the number of staff required to managed a given quantity of servers (aka admin:server) has been a popular benchmark. (Note that with cloud, virtualization, and containers, the usefulness of this metric is increasingly in question.)</simpara>
+<simpara>There are a variety of ways benchmarking is conducted, but it is similar to assurance in that it often follows the <link linkend="three-party-model">3-party model</link>. Some stakeholder directs an accountable party to be benchmarked within some defined scope. For example, the number of staff required to managed a given quantity of servers (aka admin:server) has been a popular benchmark. (Note that with cloud, virtualization, and containers, the usefulness of this metric is increasingly in question.)</simpara>
 <simpara>An independent authority is retained. The benchmarker collects, or has collected, information on similar operations; for example, they may have collected data from 50 organizations of similar size on admin:server ratios. This data is aggregated and/or anonymized so that competitive concerns are reduced. Wells Fargo will not be told "JP Morgan Chase has an overall ratio of 1:300;" they will be told "Average for financial services is 1:250."</simpara>
 <simpara>In terms of formal assurance principles, the benchmark data becomes the assessment criteria. A single engagement might consider dozens of different metrics, and where simple quantitative ratios do not apply, the benchmarker may have a continuously maintained library of case studies for more qualitative analysis. This starts to shade into the kind of work also performed by industry analysts. As the work becomes more qualitative, it also becomes more advisory, and less about "assurance" per se.</simpara>
 <simpara><anchor xml:id="audit" xreflabel="[audit]"/></simpara>
@@ -12645,7 +12655,7 @@ enterprise or entity and to review and independently report the results of that 
 </section>
 <section xml:id="_audit_practices">
 <title>Audit practices</title>
-<simpara>As with other forms of assurance, audit follows the <link linkend="3-party-model">3-party model</link>. There is a stakeholder, an accountable party, and an independent practitioner. The typical internal audit lifecycle consists of (derived from <xref linkend="ISACA2013a"/>):</simpara>
+<simpara>As with other forms of assurance, audit follows the <link linkend="three-party-model">3-party model</link>. There is a stakeholder, an accountable party, and an independent practitioner. The typical internal audit lifecycle consists of (derived from <xref linkend="ISACA2013a"/>):</simpara>
 <itemizedlist>
 <listitem>
 <simpara>Planning/scoping</simpara>
@@ -13083,8 +13093,7 @@ Business or IT governance constructs and processes that do not support new techn
 </blockquote>
 <simpara>As with other chapters, we have presented the material defining this chapter&#8217;s topic "on its own terms." Certainly, there is little chance that the core principles of governance will cease to have importance, even in the new digital economy.</simpara>
 <simpara>However, as Ambler and Gorans note above, the legacy of IT governance is wide, deep, and often wasteful. Approaches based on mis-applied <link linkend="taylorism">Taylorism</link> and misguided, CMM-inspired <link linkend="problem-statisical-process">statistical process control</link> have resulted in the creation of ineffective, large-scale <link linkend="what-is-IT">IT bureaucracies</link> whose sole mission seems to be the creation and exchange of non-value-add <link linkend="secondary-artifacts">secondary artifacts</link>, while lacking any clear concept of an <link linkend="lack-execution-model">execution model</link>.</simpara>
-<simpara>What is to be done? Governance will not disappear any time soon. Simply arguing against governance (ala <link linkend="NoEstimates">NoEstimates</link>) is unlikely to succeed.</simpara>
-<simpara>Instead, this book argues the most effective answer lies in a re-examination of the true concerns of governance:</simpara>
+<simpara>What is to be done? Governance will not disappear any time soon. Simply arguing against governance is unlikely to succeed. Instead, this book argues the most effective answer lies in a re-examination of the true concerns of governance:</simpara>
 <itemizedlist>
 <listitem>
 <simpara>sustaining innovation and effective value delivery</simpara>
@@ -14999,10 +15008,6 @@ Puppet Labs/DevOps Research and Assessment
 <simpara>Taking data from production systems as a basis for testing is also frequently done. However, such data must be sanitized&#8201;&#8212;&#8201;sensitive information such as social security number must be removed. This can be done automatically, but then such automation must itself be developed and maintained, and the extensive production data set may (in effect) be driving a large amount of non-value-add testing.</simpara>
 <simpara>In general, test data management techniques will vary greatly by application and problem domain. The primary recommendation here is to invest in solving the problem, understanding that up-front investments in automation will pay off. The high-performing product team will have to solve the "how" of doing it appropriately for their particular situation.</simpara>
 </section>
-<section xml:id="_non_invasive_data_governance_seiner">
-<title>Non-invasive data governance (Seiner?)</title>
-
-</section>
 </section>
 </section>
 <section xml:id="_information_management_topics">
@@ -15157,35 +15162,6 @@ As proposed by analyst Doug Laney in 2001 <xref linkend="Laney2001"/>, its most 
 <note>
 <simpara>We will examine a full "business of IT/digital delivery pipeline" architecture in the next chapter.</simpara>
 </note>
-</section>
-<section xml:id="_additional_topics">
-<title>Additional topics</title>
-<literallayout class="monospaced">===== Data science
-===== Semantic Web &amp; ontologies
-===== ERP systems (special section??)
-===== Business rules management
-===== Knowledge mgmt
-===== Information lifecycle (POSMAD)
-McGilvary (based on English) pp 23-24 - perhaps into 4.11.03.</literallayout>
-<literallayout class="monospaced">===== Data and capacity
-[quote, Abbott &amp; Fisher, The Art of Scalability]
-In our experience, most companies simply do not pay attention to the deteriorating value of data and the increasing cost of maintaining increasing amounts of data over time.</literallayout>
-<itemizedlist>
-<listitem>
-<simpara>Options value</simpara>
-</listitem>
-<listitem>
-<simpara>Strategic value</simpara>
-</listitem>
-<listitem>
-<simpara>Cost justification</simpara>
-</listitem>
-<listitem>
-<simpara>Transform/reduce</simpara>
-<literallayout class="monospaced">Schema.org &amp; phonetics transcription from CACM 02-2106</literallayout>
-<literallayout class="monospaced">Some database professionals still don’t like virtualization, that is, making them run Oracle RDBMS or Microsoft SQL Server on top of virtual servers, instead of directly on the host operating system. “The database IS virtualization” they will say.</literallayout>
-</listitem>
-</itemizedlist>
 </section>
 </section>
 <section xml:id="_conclusion_10">
