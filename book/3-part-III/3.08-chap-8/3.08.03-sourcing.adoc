@@ -1,5 +1,4 @@
 anchor:sourcing[]
-anchor:it-sourcing[]
 
 ==== IT sourcing and contract management
 
@@ -21,12 +20,12 @@ Practically speaking, these inputs are handled by two different functions:
 * People (in particular, full time employees) are handled by a Human Resources function.
 * Hardware, software, and services are handled by a Procurement function. Other terms associated with this are Vendor Management, Contract Management, and Supplier Management. We will not attempt to clarify or rationalize these areas in this section.
 
-We will defer the question of people and their skills and knowledge to the next section.
+We discussed hiring and managing digital specialists in the xref:resource-mgmt[previous chapter].
 
 ===== Basic concerns
 
+.Case study: Choosing a telecommunications provider
 ****
-*Case study: Choosing a telecommunications provider*
 
 When Company X was a startup, its telecommunications needs were limited, as were its options. The founder had one choice for Internet access, the local cable company. Even when the company moved to a larger space, as a single team startup, its options were limited.
 
@@ -62,9 +61,9 @@ A startup may be inattentive to the full implications of its contracts for vario
 * The founder understands, but feels they have little to lose (for example, they have incorporated as a limited liability company, meaning the founder's personal assets are not at risk)
 * The service is perceived to be so broadly used that an agreement with it must be safe (if 50 other startups are using a well known Cloud provider and prospering, why would a startup founder spend precious time and money on overly detailed scrutiny of its agreements?)
 
-All of these assumptions bear some risk -- and many startups have been burned on such matters -- but there are many other, perhaps more pressing risks for the founder and startup. See the case study on the xref:nine-figure-true-up[9 figure true-up] for a grim scenario.
+All of these assumptions bear some risk -- and many startups have been burned on such matters -- but there are many other, perhaps more pressing risks for the founder and startup.
 
-However, by the time the company has scaled to the team of teams level, contract management is almost certainly a concern of the Chief Financial Officer. The company has more resources ("deeper pockets") and so lawsuits start to become a concern. The complexity of the company's services may require more specialized terms and conditions. Standard "boilerplate" contracts thus are replaced by individualized agreements. Concerns over intellectual property, the ability to terminate agreements, liability for damages, and other topics require increased negotiation and counterproposing contractual language.
+However, by the time the company has scaled to the team of teams level, contract management is almost certainly a concern of the Chief Financial Officer. The company has more resources ("deeper pockets") and so lawsuits start to become a concern. The complexity of the company's services may require more specialized terms and conditions. Standard "boilerplate" contracts thus are replaced by individualized agreements. Concerns over intellectual property, the ability to terminate agreements, liability for damages, and other topics require increased negotiation and counterproposing contractual language. See the case study on the xref:nine-figure-true-up[9 figure true-up] for a grim scenario.
 
 At this point, the company may have hired its own legal professional; certainly, legal fees are going up, whether as services from external law firms or internal staff.
 
@@ -76,23 +75,59 @@ In larger organizations, where a vendor might hold multiple contracts, a concept
 [quote, Millard et al, Cloud Computing Law]
 cloud computing has some fundamental characteristics that distinguish it from traditional outsourcing...many cloud services are merely passive providers of computing resources, utilized by users to perform their own processing.
 
-The first significant vendor relationship the startup may engage with is for  xref:cloud[Cloud] services.
+The first significant vendor relationship the startup may engage with is for  xref:cloud[Cloud] services. The decision whether, and how much, to leverage Cloud computing remains (as of 2016) a topic of much industry discussion. JP Morgenthal reports on a 2016 discussion with industry analysts that identified the following pros and cons  <<Morgenthal2016>>:
 
-* http://jpmorgenthal.com/2016/08/24/a-reality-check-on-everyones-moving-everything-to-the-cloud/
+[cols="2*", options="header"]
+|====
+|Pro|Con
+|Operational costs
 
- benefits to Cloud: cost, speed, flexibility
- disadvantages: security, portability, control, performance, cost - eg noisy neighbor
-Abbott2015
+Poor availability of skilled workforce for implemeting internal Cloud
 
- Large, rapidly growing companies can usually realize greater margins by using wholly owned equipment than they can by operating in the cloud. This difference arises because laaS operators, while being able to purchase and manage their equipment costeffectively, are still looking to make a profit on their services. abbot2015 p474
+Better capital management (i.e. through expensed Cloud services)
 
- controlling Cloud usage - don't leave the lights on -
+Difficulty in providing elastic scalability
+
+Agility (faster provisioning of commercial Cloud instances)
+
+Building and operating data centers is expensive
+
+Limiting innovation (e.g. web-scale applications may require current cloud infrastructure)
+
+Private clouds are poor imitation of public cloud experience
+
+Poor capacity management / resource utilization
+
+|Data Gravity (scale of data to voluminous to easily migrate the apps and data to the cloud)
+
+Security (perception Cloud is not as secure)
+
+Emerging scalable solutions for private clouds
+
+Lack of equivalent SaaS offerings for applications being run in-house
+
+Significant integration requirements between in house apps and new ones deployed to Cloud
+
+Lack of ability to support migration to cloud
+
+Vendor licensing (see xref:nine-figure-true-up[9 figure true-up])
+
+Network latency (slow response of Cloud-deployed apps)
+
+Poor transparency of Cloud infrastructure
+
+Risk of Cloud platform lock-in
+
+|====
+
+Cloud can reduce costs when deployed in a sophisticated way; if a company has purchased more capacity than it needs, Cloud can be more economical (review the section on xref:virtualization-econ[virtualization economics]). However, ultimately as Abbott and Fisher point out,
+
+_Large, rapidly growing companies can usually realize greater margins by using wholly owned equipment than they can by operating in the cloud. This difference arises because laaS operators, while being able to purchase and manage their equipment costeffectively, are still looking to make a profit on their services_ <<Abbot2015>>, p474.
+
+Minimally, Cloud services need to be controlled for consumption. Cloud providers will happily allow virtual machines to run indefinitely, and charge for them. An ecosystem of Cloud brokers and value-add resellers is emerging to assist organizations with optimizing their Cloud dollars.
 
 ===== Software licensing
 
-ifdef::collaborator-draft[]
- background on proprietary s/w & emergence of FOSS (see Davis)
-endif::collaborator-draft[]
 
 As software and digital services are increasingly used by firms large and small, the contractual rights of usage become more and more critical.
 
@@ -119,10 +154,10 @@ This is not an isolated instance. Major software vendors have earned billions in
 
 ****
 
-Software licensing is a subset of Software Asset Management, which is itself a subset of IT Asset Management, discussed in more depth in the material on xref:chap-process-mgmt[process management] and xref:IT-lifecycles[IT lifecycles].
+Software licensing is a subset of Software Asset Management, which is itself a subset of IT Asset Management, discussed in more depth in the material on xref:chap-process-mgmt[process management] and xref:IT-lifecycles[IT lifecycles]. Software asset management in many cases relies on the integrity of a digital organization's xref:package-mgmt[package management]; the package manager should represent a definitive inventory of all the software in use in the organization.
 
- FOSS licensing... risks etc ... solicit contribution
- Bente mentions Linux and Hibernate issues that almost killed them - was Linux part of SCO thing? Cross-reference to risk mgmt section, also bring in package mgmt. You have been doing it, right???  FOSS as IT performance factor, see Forsgren/Humble https://www.youtube.com/watch?v=cJVUtbSmXaM
+Free and open source software (sometimes abbreviated FOSS) has become an increasingly prevalent and critical component of digital products. While technically "free," the licensing of such softare can present risks. In some cases, open course products have unclear licensing that puts them at risk of legal conflicts which may impact users of the technology <<Loftus2006>>. In other cases, the open source license may discourage commercial or proprietary use; for example, the Gnu Public License (GPL) requirement for disclosing derivative works causes concern among enterprises <<Yegulalp2014>>.   
+
 
 anchor:industry-analysts[]
 
