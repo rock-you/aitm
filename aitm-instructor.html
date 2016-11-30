@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.4">
+<meta name="generator" content="Asciidoctor 1.5.5">
 <meta name="author" content="Charles T. Betz">
 <title>The digital professional: from startup to enterprise  (Instructor&#8217;s Edition)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -18,7 +18,6 @@ audio:not([controls]){display:none;height:0}
 [hidden],template{display:none}
 script{display:none!important}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
-body{margin:0}
 a{background:transparent}
 a:focus{outline:thin dotted}
 a:active,a:hover{outline:0}
@@ -53,7 +52,7 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -65,7 +64,6 @@ img{-ms-interpolation-mode:bicubic}
 .text-center{text-align:center!important}
 .text-justify{text-align:justify!important}
 .hide{display:none}
-body{-webkit-font-smoothing:antialiased}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
@@ -120,13 +118,16 @@ table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
 table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
-body{tab-size:4}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
 .clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
 .clearfix:after,.float-group:after{clear:both}
-*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+*:not(pre)>code.nobreak{word-wrap:normal}
+*:not(pre)>code.nowrap{white-space:nowrap}
 pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
+em em{font-style:normal}
+strong strong{font-weight:400}
 .keyseq{color:rgba(51,51,51,.8)}
 kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
@@ -3870,6 +3871,9 @@ And yes, you can run computers within computers within computers with virtualiza
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p><a id="virtualization-econ"></a></p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_why_is_virtualization_important">Why is virtualization important?</h5>
@@ -4218,7 +4222,7 @@ The state of the art in infrastructure configuration is not to use shell scripts
 <p>As people started to work more and more with virtualization, they realized it was easier to rebuild virtual servers from scratch, rather than trying to fix them. Automated configuration management tools helped by promoting a consistent process for rebuilding. Randy Bias, noting this, put forth the provocative idea that "servers are cattle, not pets" <a href="#Bias2012">[Bias2012]</a>. That is, when a pet is sick, one takes it to the vet, but a sick cow might simply  be taken out and shot.</p>
 </div>
 <div class="paragraph">
-<p>I prefer the saying that "servers are fleet vehicles, not collectible cars" as it seems less cruel, and Bias overlooked the fact that large animal veterinarians are routinely employed in the cattle industry.</p>
+<p>I prefer the saying that "servers are fleet vehicles, not collectible cars" as it seems less cruel, and the cattle metaphor overlooks the fact that large animal veterinarians are routinely employed in the cattle industry.</p>
 </div>
 <div class="imageblock" style="float: left">
 <div class="content">
@@ -5225,7 +5229,7 @@ its behavior accordingly.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>While "DevOps" can be hard to define, the fundamental goal of moving smaller changes more quickly through the pipeline is a common theme. Other guiding principles include, "If it hurts, do it more frequently." (This is in part a response to the poor practice, or <em>antipattern</em>, of deferring integration testing and deployment until those tasks are so big as to be unmanageable.) There is a great deal written on the topic of DevOps currently; the Humble/Farley book is recommended  as an introduction. Let’s go into a little detail on some essential Agile/DevOps practices.</p>
+<p>"DevOps" is a broad term, encompassing product management, team behaviors, and culture. At an execution level, the fundamental goal of moving smaller changes more quickly through the pipeline is a common theme. Other guiding principles include, "If it hurts, do it more frequently." (This is in part a response to the poor practice, or <em>antipattern</em>, of deferring integration testing and deployment until those tasks are so big as to be unmanageable.) There is a great deal written on the topic of DevOps currently; the Humble/Farley book is recommended  as an introduction. Let’s go into a little detail on some essential Agile/DevOps practices.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -5315,7 +5319,7 @@ Development tools such as text editors and integrated development environments (
 </ol>
 </div>
 <div class="paragraph">
-<p>Let&#8217;s go into more detail on the major phases.</p>
+<p>We will discuss DevOps in terms of team behaviors and culture further in Chapter 7. For now, we stay closer to the tactical concerns of continuous delivery. Let&#8217;s go into more detail on the major phases.</p>
 </div>
 <div class="paragraph">
 <p><a id="system-intent"></a></p>
@@ -11765,6 +11769,14 @@ What is culture in this context? It is not so much about an informal dress code,
 <div class="paragraph">
 <p>The State of DevOps research has demonstrated a correlation between generative cultures and digital business effectiveness <a href="#Puppet2015">[Puppet2015]</a>, <a href="#Forsgren2016">[Forsgren2016]</a>. Notice also the relationship to <a href="#blameless-postmortems">blameless postmortems</a> discussed in Chapter 6.</p>
 </div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">State of DevOps survey research</div>
+<div class="paragraph">
+<p>DevOps is a broad term, first introduced in <a href="#continuous-delivery">Chapter 3</a>.</p>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p><a id="Toyota-Kata"></a></p>
 </div>
@@ -11821,8 +11833,7 @@ Six years ago I began the research that led to [Toyota Kata] thinking, like just
 <p>This is not something that can be formalized into a simple checklist or process; it requires many guided examples and applications before the approach becomes ingrained in the upcoming manager.</p>
 </div>
 <div class="paragraph">
-<p><a id="resource-mgmt"></a>
-<a id="_it_resource_management"></a></p>
+<p><a id="resource-mgmt"></a></p>
 </div>
 </div>
 </div>
@@ -12863,7 +12874,7 @@ RFI stands for <a href="https://en.wikipedia.org/wiki/Request_for_information">R
 <p>Because capacity is available on demand, new systems do not need to be nearly as precisely "sized," which meant that implementation could commence without as much up front analysis. Simpler architectures suffice until real load is proven. It might then be a scramble to refactor software to take advantage of new capacity, but the overall economic effect is positive, as over-engineering and over-capacity are increasingly avoided.</p>
 </div>
 <div class="paragraph">
-<p>So, IT moves in two directions - its most forward-looking elements align to the enterprise product management roadmap, while its remaining capabilities may deliver value as a "service broker." (More on this in the section on <a href="#it-sourcing">IT sourcing</a>.)</p>
+<p>So, IT moves in two directions - its most forward-looking elements align to the enterprise product management roadmap, while its remaining capabilities may deliver value as a "service broker." (More on this in the section on <a href="#sourcing">IT sourcing</a>.)</p>
 </div>
 <div class="paragraph">
 <p>We shall now return to the question of project management in this new world.</p>
@@ -13103,8 +13114,7 @@ Part of the problem with extensive frameworks such as PMBOK is that knowing how 
 <p>As previously discussed, human beings are notably bad at <a href="#multi-tasking">multi-tasking</a>, and the mental "context-switching" required to move from one task to another is wasteful and ultimately not scalable. A human being fractionally allocated to more and more projects will get less and less done in total, as the transactional friction of task switching increases.</p>
 </div>
 <div class="paragraph">
-<p><a id="sourcing"></a>
-<a id="it-sourcing"></a></p>
+<p><a id="sourcing"></a></p>
 </div>
 </div>
 </div>
@@ -13146,15 +13156,13 @@ Part of the problem with extensive frameworks such as PMBOK is that knowing how 
 </ul>
 </div>
 <div class="paragraph">
-<p>We will defer the question of people and their skills and knowledge to the next section.</p>
+<p>We discussed hiring and managing digital specialists in the <a href="#resource-mgmt">previous chapter</a>.</p>
 </div>
 <div class="sect4">
 <h5 id="_basic_concerns_2">Basic concerns</h5>
 <div class="sidebarblock">
 <div class="content">
-<div class="paragraph">
-<p><strong>Case study: Choosing a telecommunications provider</strong></p>
-</div>
+<div class="title">Case study: Choosing a telecommunications provider</div>
 <div class="paragraph">
 <p>When Company X was a startup, its telecommunications needs were limited, as were its options. The founder had one choice for Internet access, the local cable company. Even when the company moved to a larger space, as a single team startup, its options were limited.</p>
 </div>
@@ -13231,10 +13239,10 @@ Part of the problem with extensive frameworks such as PMBOK is that knowing how 
 </ul>
 </div>
 <div class="paragraph">
-<p>All of these assumptions bear some risk&#8201;&#8212;&#8201;and many startups have been burned on such matters&#8201;&#8212;&#8201;but there are many other, perhaps more pressing risks for the founder and startup. See the case study on the <a href="#nine-figure-true-up">9 figure true-up</a> for a grim scenario.</p>
+<p>All of these assumptions bear some risk&#8201;&#8212;&#8201;and many startups have been burned on such matters&#8201;&#8212;&#8201;but there are many other, perhaps more pressing risks for the founder and startup.</p>
 </div>
 <div class="paragraph">
-<p>However, by the time the company has scaled to the team of teams level, contract management is almost certainly a concern of the Chief Financial Officer. The company has more resources ("deeper pockets") and so lawsuits start to become a concern. The complexity of the company&#8217;s services may require more specialized terms and conditions. Standard "boilerplate" contracts thus are replaced by individualized agreements. Concerns over intellectual property, the ability to terminate agreements, liability for damages, and other topics require increased negotiation and counterproposing contractual language.</p>
+<p>However, by the time the company has scaled to the team of teams level, contract management is almost certainly a concern of the Chief Financial Officer. The company has more resources ("deeper pockets") and so lawsuits start to become a concern. The complexity of the company&#8217;s services may require more specialized terms and conditions. Standard "boilerplate" contracts thus are replaced by individualized agreements. Concerns over intellectual property, the ability to terminate agreements, liability for damages, and other topics require increased negotiation and counterproposing contractual language. See the case study on the <a href="#nine-figure-true-up">9 figure true-up</a> for a grim scenario.</p>
 </div>
 <div class="paragraph">
 <p>At this point, the company may have hired its own legal professional; certainly, legal fees are going up, whether as services from external law firms or internal staff.</p>
@@ -13258,31 +13266,51 @@ cloud computing has some fundamental characteristics that distinguish it from tr
 </div>
 </div>
 <div class="paragraph">
-<p>The first significant vendor relationship the startup may engage with is for  <a href="#cloud">Cloud</a> services.</p>
+<p>The first significant vendor relationship the startup may engage with is for  <a href="#cloud">Cloud</a> services. The decision whether, and how much, to leverage Cloud computing remains (as of 2016) a topic of much industry discussion. JP Morgenthal reports on a 2016 discussion with industry analysts that identified the following pros and cons  <a href="#Morgenthal2016">[Morgenthal2016]</a>:</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="http://jpmorgenthal.com/2016/08/24/a-reality-check-on-everyones-moving-everything-to-the-cloud/" class="bare">http://jpmorgenthal.com/2016/08/24/a-reality-check-on-everyones-moving-everything-to-the-cloud/</a></p>
-<div class="literalblock">
-<div class="content">
-<pre> benefits to Cloud: cost, speed, flexibility
- disadvantages: security, portability, control, performance, cost - eg noisy neighbor
-Abbott2015</pre>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Pro</th>
+<th class="tableblock halign-left valign-top">Con</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Operational costs
+</p><p class="tableblock">Poor availability of skilled workforce for implemeting internal Cloud
+</p><p class="tableblock">Better capital management (i.e. through expensed Cloud services)
+</p><p class="tableblock">Difficulty in providing elastic scalability
+</p><p class="tableblock">Agility (faster provisioning of commercial Cloud instances)
+</p><p class="tableblock">Building and operating data centers is expensive
+</p><p class="tableblock">Limiting innovation (e.g. web-scale applications may require current cloud infrastructure)
+</p><p class="tableblock">Private clouds are poor imitation of public cloud experience
+</p><p class="tableblock">Poor capacity management / resource utilization</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Data Gravity (scale of data to voluminous to easily migrate the apps and data to the cloud)
+</p><p class="tableblock">Security (perception Cloud is not as secure)
+</p><p class="tableblock">Emerging scalable solutions for private clouds
+</p><p class="tableblock">Lack of equivalent SaaS offerings for applications being run in-house
+</p><p class="tableblock">Significant integration requirements between in house apps and new ones deployed to Cloud
+</p><p class="tableblock">Lack of ability to support migration to cloud
+</p><p class="tableblock">Vendor licensing (see <a href="#nine-figure-true-up">9 figure true-up</a>)
+</p><p class="tableblock">Network latency (slow response of Cloud-deployed apps)
+</p><p class="tableblock">Poor transparency of Cloud infrastructure
+</p><p class="tableblock">Risk of Cloud platform lock-in</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Cloud can reduce costs when deployed in a sophisticated way; if a company has purchased more capacity than it needs, Cloud can be more economical (review the section on <a href="#virtualization-econ">virtualization economics</a>). However, ultimately as Abbott and Fisher point out,</p>
 </div>
+<div class="paragraph">
+<p><em>Large, rapidly growing companies can usually realize greater margins by using wholly owned equipment than they can by operating in the cloud. This difference arises because laaS operators, while being able to purchase and manage their equipment costeffectively, are still looking to make a profit on their services</em> <a href="#Abbot2015">[Abbot2015]</a>, p474.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>Large, rapidly growing companies can usually realize greater margins by using wholly owned equipment than they can by operating in the cloud. This difference arises because laaS operators, while being able to purchase and manage their equipment costeffectively, are still looking to make a profit on their services. abbot2015 p474</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>controlling Cloud usage - don't leave the lights on -</pre>
-</div>
-</div>
-</li>
-</ul>
+<div class="paragraph">
+<p>Minimally, Cloud services need to be controlled for consumption. Cloud providers will happily allow virtual machines to run indefinitely, and charge for them. An ecosystem of Cloud brokers and value-add resellers is emerging to assist organizations with optimizing their Cloud dollars.</p>
 </div>
 </div>
 <div class="sect4">
@@ -13326,13 +13354,10 @@ A large enterprise had a long relationship with a major software vendor, who pro
 </div>
 </div>
 <div class="paragraph">
-<p>Software licensing is a subset of Software Asset Management, which is itself a subset of IT Asset Management, discussed in more depth in the material on <a href="#chap-process-mgmt">process management</a> and <a href="#IT-lifecycles">IT lifecycles</a>.</p>
+<p>Software licensing is a subset of Software Asset Management, which is itself a subset of IT Asset Management, discussed in more depth in the material on <a href="#chap-process-mgmt">process management</a> and <a href="#IT-lifecycles">IT lifecycles</a>. Software asset management in many cases relies on the integrity of a digital organization&#8217;s <a href="#package-mgmt">package management</a>; the package manager should represent a definitive inventory of all the software in use in the organization.</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>FOSS licensing... risks etc ... solicit contribution
-Bente mentions Linux and Hibernate issues that almost killed them - was Linux part of SCO thing? Cross-reference to risk mgmt section, also bring in package mgmt. You have been doing it, right???  FOSS as IT performance factor, see Forsgren/Humble https://www.youtube.com/watch?v=cJVUtbSmXaM</pre>
-</div>
+<div class="paragraph">
+<p>Free and open source software (sometimes abbreviated FOSS) has become an increasingly prevalent and critical component of digital products. While technically "free," the licensing of such softare can present risks. In some cases, open course products have unclear licensing that puts them at risk of legal conflicts which may impact users of the technology <a href="#Loftus2006">[Loftus2006]</a>. In other cases, the open source license may discourage commercial or proprietary use; for example, the Gnu Public License (GPL) requirement for disclosing derivative works causes concern among enterprises <a href="#Yegulalp2014">[Yegulalp2014]</a>.</p>
 </div>
 <div class="paragraph">
 <p><a id="industry-analysts"></a></p>
@@ -24204,7 +24229,7 @@ Computer architecture, like other architecture, is the art of determining the ne
 <p>Investment of time and resources towards digital objectives (e.g. through <a href="#project-mgmt">project management</a>),</p>
 </li>
 <li>
-<p>Acquisition of technologies and external services (i.e. <a href="#it-sourcing">sourcing</a>),</p>
+<p>Acquisition of technologies and external services (i.e. <a href="#sourcing">sourcing</a>),</p>
 </li>
 <li>
 <p><a href="#resource-mgmt">Hiring of employees</a>,</p>
@@ -24718,7 +24743,7 @@ As a hygiene factor, benefits from EA can be valued in terms of reduction in man
 <div class="ulist">
 <ul>
 <li>
-<p>A reduced technology portfolio can and should result in improved <a href="#it-sourcing">sourcing</a>, improved support, improved security, reduced IT staffing spend, and potentially reduced development time. For example, vendors may offer more favorable terms when their products are preferred standards throughout an organization. A smaller product portfolio is easier to  <a href="#sourcing-and-security">secure</a>.</p>
+<p>A reduced technology portfolio can and should result in improved <a href="#sourcing">sourcing</a>, improved support, improved security, reduced IT staffing spend, and potentially reduced development time. For example, vendors may offer more favorable terms when their products are preferred standards throughout an organization. A smaller product portfolio is easier to  <a href="#sourcing-and-security">secure</a>.</p>
 </li>
 <li>
 <p>Better understanding of the current estate should reduce investigation times and outages, and reduce the risk of regulatory violations. For example, if regulators require evidence that employee medical <a href="#records-mgmt">records</a> have not been removed from the country, architecture&#8217;s curating of that information will expedite <a href="#compliance">compliance</a> response.</p>
@@ -27597,6 +27622,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 <p><a id="Loeliger2009"></a>[Loeliger2009]: Loeliger, J. (2009). <em>Version control with Git</em>. Beijing ; Sebastopol, CA, O&#8217;Reilly.</p>
 </li>
 <li>
+<p><a id="Loftus2006"></a>[Loftus2006]: Loftus, J. (2006). Open source IP case puts spotlight on patents. Retrieved November 30, 2016, from <a href="http://searchenterpriselinux.techtarget.com/news/1198160/Open-source-IP-case-puts-spotlight-on-patents" class="bare">http://searchenterpriselinux.techtarget.com/news/1198160/Open-source-IP-case-puts-spotlight-on-patents</a></p>
+</li>
+<li>
 <p><a id="Lucas2014"></a>[Lucas2014]:Lucas, S. (2014). Nordstrom’s awesome employee handbook is a myth. Retrieved June 29, 2016, from <a href="http://www.cbsnews.com/news/nordstroms-awesome-employee-handbook-is-a-myth/" class="bare">http://www.cbsnews.com/news/nordstroms-awesome-employee-handbook-is-a-myth/</a></p>
 </li>
 <li>
@@ -27643,6 +27671,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 </li>
 <li>
 <p><a id="Moore2014"></a>[Moore2014]: Moore, Geoffrey. 2014. Crossing the Chasm: Marketing and Selling Disruptive Products to Mainstream Customers. 3rd ed. New York, N.Y.: HarperCollins Publishers, Inc.</p>
+</li>
+<li>
+<p><a id="Morgenthal2016"></a>[Morgenthal2016]: Morgenthal, J. (2016). A Reality Check on “Everyone’s Moving Everything To The Cloud” | The Tech Evangelist. Retrieved November 30, 2016, from <a href="http://jpmorgenthal.com/2016/08/24/a-reality-check-on-everyones-moving-everything-to-the-cloud/" class="bare">http://jpmorgenthal.com/2016/08/24/a-reality-check-on-everyones-moving-everything-to-the-cloud/</a></p>
 </li>
 <li>
 <p><a id="Morris2016"></a>[Morris2016]: Morris, Kief. 2016. Infrastructure as Code: Managing Servers in the Cloud. Sebastopol, CA, CA: O’Reilly Media, Inc.</p>
@@ -27927,6 +27958,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 <p><a id="Womack1990"></a>[Womack1990]: Womack, J. P.; Jones, D. T. &amp; Roos, D. (1990), <em>The machine that changed the world : based on the Massachusetts Institute of Technology 5-million dollar 5-year study on the future of the automobile</em>, Rawson Associates, New York</p>
 </li>
 <li>
+<p><a id="Yegulalp2014"></a>[Yegulalp2014]: Yegulalp, S. (2014). Why GPL still gives enterprises the jitters | InfoWorld. Retrieved November 30, 2016, from <a href="http://www.infoworld.com/article/2608340/open-source-software/why-gpl-still-gives-enterprises-the-jitters.html" class="bare">http://www.infoworld.com/article/2608340/open-source-software/why-gpl-still-gives-enterprises-the-jitters.html</a></p>
+</li>
+<li>
 <p><a id="Zachman1987"></a>[Zachman1987]: Zachman, John. 1987. “Zachman Framework.” IBM Systems Journal 26 (3): 276–92.</p>
 </li>
 </ul>
@@ -28196,7 +28230,7 @@ All web references were archived into the author&#8217;s files on the indicated 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-11-21 10:11:27 CST
+Last updated 2016-11-20 18:20:01 CST
 </div>
 </div>
 </body>
