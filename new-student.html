@@ -1441,13 +1441,13 @@ Although the author and publisher have made every effort to ensure that the info
 <div class="olist arabic">
 <ol class="arabic" start="7">
 <li>
-<p><em>Organization and culture</em> We&#8217;re getting big. How do we deal with this? How are we structured? Why this way and not that? How can we benefit from increasing maturity and specialization, while still maintaining a responsive product? What are the unwritten values and rules in our company?</p>
+<p><em>Culture and organization</em> We&#8217;re getting big. How do we deal with this?  What are the unwritten values and norms in our company? How are we structured, and why that way? How can we benefit from increasing maturity and specialization, while still maintaining a responsive product? How do we hire great people and get the most out of them?</p>
 </li>
 <li>
-<p><em>Investment, sourcing, and people</em> Work is becoming larger and more complex. How can we  track and execute larger segments of it, and coordinate across multiple teams?</p>
+<p><em>Investment</em> Culture and organization is our strategic platform. How do we choose what to do with it? We make investments in various products, programs, and/or projects, and we are now big enough that we have portfolios of these.  How do we decide?  How do we choose and work with our suppliers? How do we manage the finances?</p>
 </li>
 <li>
-<p><em>Execution management</em> We have a structure. Work needs to flow across it. Product and project teams increasingly demand predictable, consistent delivery of internal services, and synchronization points such as enterprise releases are increasingly critical signals.</p>
+<p><em>Execution</em> Teams deliver results, but sometimes they need to coordinate. Work needs to flow, often repeatably, across the services they offer. Product and project teams demand predictable, consistent delivery of internal services, and synchronization points such as enterprise releases are increasingly critical signals.</p>
 </li>
 </ol>
 </div>
@@ -1457,13 +1457,13 @@ Although the author and publisher have made every effort to ensure that the info
 <div class="olist arabic">
 <ol class="arabic" start="10">
 <li>
-<p><em>Governance, risk, security, and compliance</em> We need to cope with external forces (regulators, vendor partners, security adversaries, auditors) increasingly defining our options.</p>
+<p><em>Governance, risk, security, and compliance</em> We need to cope with structural and external forces (investors, directors, regulators, vendor partners, security adversaries, auditors) to whom we are ultimately accountable, or who are otherwise defining our options. What are their motivations? How do we understand and control risk? How are we assured that our strategy, tactics, and operations are reasonable, sound, and thorough? And how do we protect ourself from adversaries?</p>
 </li>
 <li>
 <p><em>Enterprise information management</em> We&#8217;ve been concerned with data, information, and knowledge since the earliest days of our journey. But at this scale, we have to formalize our approaches and understandings; without that, we will never capture the full value available with modern analytics and Big Data. Compliance issues are also compelling us to formalize here.</p>
 </li>
 <li>
-<p><em>Architecture and portfolio</em> We need to understand the big picture of interacting lifecycles, reduce technical debt and redundancy, accelerate development through establishing platforms, and obtain better economies of scale. We need to define our investment strategy based on a sound understanding of both business needs and technology limitations.</p>
+<p><em>Architecture and portfolio</em> We need to understand the big picture of interacting lifecycles, reduce technical debt and redundancy, accelerate development through establishing platforms, and obtain better economies of scale. We do so in part through applying techniques such as visualization, standardization, and  portfolio management. We need to define our investment strategy based on a sound understanding of both business needs and technology limitations.</p>
 </li>
 </ol>
 </div>
@@ -1521,10 +1521,7 @@ Although the author and publisher have made every effort to ensure that the info
 <p>In the author&#8217;s experience, for example, startups avoid formalized process and project management. To the extent the concerns exist, they are <em>tacit</em> (understood or implied; suggested; implicit). Certainly, a small startup does not invest in an enterprise-class service desk tool supporting a full array of IT management processes, or a full-blown Project Management Office with its own Vice President and associated portfolio automation. Simple work management, with a manual or automated Kanban board, is likely their choice for work management.</p>
 </div>
 <div class="paragraph">
-<p>But by the time they are a team of teams, specialization has emerged and more robust processes and tools are required. The danger of course is that the formalization effort may be driven by its own logic, and start to lose track of the all-critical business context.</p>
-</div>
-<div class="paragraph">
-<p>By careful examining these stages of maturation, and the industry responses to them, it is the author&#8217;s hope that the student will have effective tools to critically engage with the problem of scaling the digital organization.</p>
+<p>But by the time they are a team of teams, specialization has emerged and more robust processes and tools are required. The danger of course is that the formalization effort may be driven by its own logic, and start to lose track of the all-critical business context. By careful examining these stages of maturation, and the industry responses to them, it is the author&#8217;s hope that the student will have effective tools to critically engage with the problem of scaling the digital organization.</p>
 </div>
 </div>
 </div>
@@ -3404,20 +3401,28 @@ You can experiment with a hypervisor by downloading <a href="https://www.virtual
 </tr>
 </table>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="images/1_02-virtualization-types.png" alt="1 02 virtualization types">
+</div>
+<div class="title">Figure 20. Virtualization types</div>
+</div>
 <div class="paragraph">
 <p>There are two different kinds of hypervisors. The example we just discussed was an example of a Type 2 hypervisor, which runs on top of a host operating system. In a Type 1 hypervisor, a master host OS is not used; the hypervisor runs on the "bare metal" of the computer and in turn "hosts" multiple VMs.</p>
+</div>
+<div class="paragraph">
+<p><a id="containers"></a></p>
+</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img src="images/1_02-containers.png" alt="containers" width="250">
+</div>
 </div>
 <div class="paragraph">
 <p><em>Paravirtualization</em>, e.g. containers, is another form of virtualization found in the marketplace. In a paravirtualized environment, a core operating system is able to abstract hardware resources for multiple virtual guest environments without having to virtualize hardware for each guest. The benefit of this type of virtualization is increased input/output (I/O) efficiency and performance for each of the guest environments.</p>
 </div>
 <div class="paragraph">
 <p>However, while hypervisors can support a diverse array of virtual machines with different operating systems on a single computing node, guest environments in a paravirtualized system generally share a single OS.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/1_02-virtualization-types.png" alt="1 02 virtualization types">
-</div>
-<div class="title">Figure 20. Virtualization types</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3444,7 +3449,7 @@ And yes, you can run computers within computers within computers with virtualiza
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/1_02-physUtil.png" alt="underutilization" width="640">
+<img src="images/1_02-physUtil.png" alt="underutilization" width="800">
 </div>
 </div>
 <div class="paragraph">
@@ -3455,7 +3460,7 @@ And yes, you can run computers within computers within computers with virtualiza
 </div>
 <div class="imageblock" style="float: left">
 <div class="content">
-<img src="images/1_02-virtUtil.png" alt="efficient util" width="320">
+<img src="images/1_02-virtUtil.png" alt="efficient util" width="400">
 </div>
 </div>
 <div class="admonitionblock note">
@@ -3566,14 +3571,6 @@ Traditional managed services are sometimes called "your mess for less." With Clo
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p><a id="containers"></a></p>
-</div>
-<div class="imageblock" style="float: right">
-<div class="content">
-<img src="images/1_02-containers.png" alt="containers" width="250">
-</div>
-</div>
 </div>
 <div class="sect4">
 <h5 id="_containers_and_looking_ahead">Containers and looking ahead</h5>
@@ -3583,7 +3580,7 @@ Traditional managed services are sometimes called "your mess for less." With Clo
 <div class="ulist">
 <ul>
 <li>
-<p>Container technologies such as <a href="http://www.zdnet.com/article/what-is-docker-and-why-is-it-so-darn-popular/">Docker</a></p>
+<p>The combination of Cloud computing with paravirtualization, including technologies such as <a href="http://www.zdnet.com/article/what-is-docker-and-why-is-it-so-darn-popular/">Docker</a></p>
 <div class="ulist">
 <ul>
 <li>
@@ -10388,6 +10385,9 @@ coordination (n.)  co-ordination, c. 1600, "orderly combination," from French co
 <div class="paragraph">
 <p>Welcome to the coordination problem. We need to understand where these ideas came from, how they relate to each other, and how they are evolving in a digitally transforming world.</p>
 </div>
+<div class="paragraph">
+<p>This chapter proceeds in a logical order, from the longest-timeframe, most strategic, hardest things to change up through the tactical level of investment and the operational level of execution.</p>
+</div>
 <div class="sidebarblock">
 <div class="content">
 <div class="title">Team of teams</div>
@@ -11252,13 +11252,13 @@ What is culture in this context? It is not so much about an informal dress code,
 <div class="content">
 <div class="title">Is the military "command and control"?</div>
 <div class="paragraph">
-<p>Military commanders realized as long ago as the Napoleonic wars that denying soldiers and commanders autonomy in the field was a good way to lose battles. Even in peacetime operatons, forward-thinking military commanders continue to focus on "what, now how."</p>
+<p>Military commanders realized as long ago as the Napoleonic wars that denying soldiers and commanders autonomy in the field was a good way to lose battles. Even in peacetime operations, forward-thinking military commanders continue to focus on "what, now how."</p>
 </div>
 <div class="paragraph">
 <p>In <em>Turn the Ship Around: A True Story of Turning Followers Into Leaders</em>, Captain L. David Marquette discusses moving from a command-driven to an outcome-driven model and the beneficial results it had on the <em>USS Santa Fe</em> <a href="#Marquet2013">[Marquet2013]</a>. Similar themes appear in Captain D. Michael Abrashoff&#8217;s <em>It&#8217;s Your Ship: Management Techniques from the Best Damn Ship in the Navy</em> <a href="#Abrashoff2012">[Abrashoff2012]</a>.</p>
 </div>
 <div class="paragraph">
-<p>Neither of these accounts is surprising, when one considers the more sophisticated aspects of military doctrine. Don Reinertsen provides a rigorous overview in chapter 9 of <em>Principles of Product Development Flow</em>. In this discussion, he notes that the military has been experimenting with centralized vs. decentralized control for centuries. Modern warfighting relies on autonomous, self-directed teams that may be out of touch with central command and required to improvise effectively to achieve the mission.  Therefore, military orders are incomplete without a statement of "commander&#8217;s intent" - the ultimate outcome of the mission. <a href="#Reinertsen2009">[Reinertsen2009]</a>, pp. 243-265.</p>
+<p>Neither of these accounts is surprising, when one considers the more sophisticated aspects of military doctrine. Don Reinertsen provides a rigorous overview in chapter 9 of <em>Principles of Product Development Flow</em>. In this discussion, he notes that the military has been experimenting with centralized vs. decentralized control for centuries. Modern warfighting relies on autonomous, self-directed teams that may be out of touch with central command and required to improvise effectively to achieve the mission.  Therefore, military orders are incomplete without a statement of "commander&#8217;s intent" - the ultimate outcome of the mission. <a href="#Reinertsen2009">[Reinertsen2009]</a>, pp. 243-265. Military leaders are concerned with pathological "toxic command" which is just as destructive in the military as anywhere else <a href="#Vergun2015">[Vergun2015]</a>.</p>
 </div>
 </div>
 </div>
@@ -27788,7 +27788,7 @@ All web references were archived into the author&#8217;s files on the indicated 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-12-02 11:12:33 CST
+Last updated 2016-12-02 09:12:33 PST
 </div>
 </div>
 </body>
