@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.5">
+<meta name="generator" content="Asciidoctor 1.5.4">
 <meta name="author" content="Charles T. Betz">
 <title>The digital professional: from startup to enterprise  (Instructor&#8217;s Edition)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -18,6 +18,7 @@ audio:not([controls]){display:none;height:0}
 [hidden],template{display:none}
 script{display:none!important}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{margin:0}
 a{background:transparent}
 a:focus{outline:thin dotted}
 a:active,a:hover{outline:0}
@@ -52,7 +53,7 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -64,6 +65,7 @@ img{-ms-interpolation-mode:bicubic}
 .text-center{text-align:center!important}
 .text-justify{text-align:justify!important}
 .hide{display:none}
+body{-webkit-font-smoothing:antialiased}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
@@ -118,16 +120,13 @@ table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
 table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+body{tab-size:4}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
 .clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
 .clearfix:after,.float-group:after{clear:both}
-*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
-*:not(pre)>code.nobreak{word-wrap:normal}
-*:not(pre)>code.nowrap{white-space:nowrap}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
 pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
-em em{font-style:normal}
-strong strong{font-weight:400}
 .keyseq{color:rgba(51,51,51,.8)}
 kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
@@ -1100,7 +1099,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_towards_reconciliation">Towards reconciliation</a></li>
 </ul>
 </li>
-<li><a href="#_portfolio_management">Portfolio management</a>
+<li><a href="#_portfolio_analysis">Portfolio analysis</a>
 <ul class="sectlevel4">
 <li><a href="#_application_value_analysis">Application value analysis</a></li>
 <li><a href="#_application_rationalization_2">Application rationalization</a></li>
@@ -1129,9 +1128,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#Appendices">Appendices &amp; back matter</a>
 <ul class="sectlevel2">
-<li><a href="#_current_agile_texts">Current Agile texts</a></li>
 <li><a href="#_the_major_frameworks">The major frameworks</a></li>
 <li><a href="#_towards_a_theory_of_it_management">Towards a theory of IT management</a></li>
+<li><a href="#_current_agile_texts">Current Agile texts</a></li>
 <li><a href="#References">References</a></li>
 <li><a href="#_colophon">Colophon</a></li>
 </ul>
@@ -11019,7 +11018,7 @@ Part III, like the other parts, needs to be understood as a unified whole. In re
 <div class="ulist">
 <ul>
 <li>
-<p>Product management can and does take place without projects or defined processes. Detailed, repeatable processes are not, in fact, how product discovery takes place - a mistake the digital industry has fallen into over and over again.</p>
+<p>Investments are made in products first, which may or may not need projects and/or processes. Rigorous planned projects or detailed, repeatable processes are not, in fact, how product discovery takes place - a mistake the digital industry has fallen into over and over again.</p>
 </li>
 <li>
 <p>Project management also may take place without processes, as it may be based on one-time "deliverables" that are not repeatedly produced.</p>
@@ -11045,13 +11044,10 @@ Part III, like the other parts, needs to be understood as a unified whole. In re
 <p>In the last section, we introduced the <a href="#AKF-cube">AKF scaling cube</a>, and we now start the second half of the book based on a related thought experiment. As your team-based company grew, you reached a crisis point in scaling your digital product. Your single team could no longer cope as one unit with the increasing complexity and operational demands. In AKF cube terms, you are scaling along the y-axis, the hardest but in some ways the most important dimension to know how to scale along.</p>
 </div>
 <div class="paragraph">
-<p>You are going through a critical phase, the "team of teams" transition. You have increasingly specialized people delivering an increasingly complex product, or perhaps even several distinct products. Deep-skilled employees are great, but you&#8217;ve noticed they tend to lose the big picture. You are in constant discussions around the tension between functional depth versus product delivery.</p>
+<p>You are going through a critical phase, the "team of teams" transition. You have increasingly specialized people delivering an increasingly complex product, or perhaps even several distinct products. Deep-skilled employees are great, but you&#8217;ve noticed they tend to lose the big picture. You are in constant discussions around the tension between functional depth versus product delivery. And when you go from one team to multiple, the topic of organization must be formalized.</p>
 </div>
 <div class="paragraph">
-<p>You often think about how your company should be structured. There is no shortage of opinions there either. From functional centers of excellence to cross-functional product teams, and from strictly hierarchical models to radical models like holacracy, there seems to be an infinite variety of choices.</p>
-</div>
-<div class="paragraph">
-<p>Many of your employees and consultants emphasize the role of culture, but what do they mean? Is there such a thing as a "good" culture? How is one culture better than another? How can you retain that startup feel you had previously, with things getting this big? You&#8217;ve always known intuitively that great hires are the basis for your company&#8217;s success, but now you need to think more systematically about hiring.</p>
+<p>You often think about how your company should be structured. There is no shortage of opinions there either. From functional centers of excellence to cross-functional product teams, and from strictly hierarchical models to radical models like holacracy, there seems to be an infinite variety of choices. Many of your employees and consultants emphasize the role of culture, but what do they mean? Is there such a thing as a "good" culture? How is one culture better than another? How can you retain that startup feel you had previously, with things getting this big? You&#8217;ve always known intuitively that great hires are the basis for your company&#8217;s success, but now you need to think more systematically about hiring.</p>
 </div>
 <div class="paragraph">
 <p>Ultimately, as you move into leadership, you realize that your concern for organization and culture is all about creating the conditions for success. You can&#8217;t drive success as an individual any more; that is increasingly for others to do. All you can do is set the stage for their efforts, provide overall direction and vision, and let your teams do what they do best.</p>
@@ -12383,44 +12379,26 @@ on my team</p>
 <h3 id="_chapter_8_investments_and_projects">Chapter 8: Investments and projects</h3>
 <div class="sect3">
 <h4 id="_introduction_8">Introduction</h4>
-<div class="quoteblock">
-<blockquote>
-A project is a temporary endeavor undertaken to create a unique product, service, or result.
-</blockquote>
-<div class="attribution">
-&#8212; Project Management Body of Knowledge<br>
-<cite>version 5</cite>
-</div>
-</div>
 <div class="paragraph">
 <p>At its most fundamental, your decision to break your organization into multiple teams is an investment decision. You are going to devote some of your resources to one team, and some to another team, and there will be additional spending still held at a corporate level. If the results meet your expectations, you will then likely proceed with further investments managed by the same or similar organization structure.</p>
 </div>
 <div class="paragraph">
-<p>How do you understand and manage these separate streams of investment? What is your approach for structuring them? How do you ensure that they are returning your desired results? People are competitive. Your multiple teams will start to contend for investment. This is unavoidable. They will want their activities adequately supported, and their understanding of "adequate" may be different from yours&#8212;&#8203;and each other&#8217;s. They will also be watching that the other teams don&#8217;t get "more than their share" and are using their share effectively. You start to see that the teams need to be constantly reminded of the big picture, in order to keep their discussions and occasional disagreements constructive. (You&#8217;ve also got a cross-team coordination problem, which we&#8217;ll discuss in the next chapter.)</p>
+<p>How do you decide on and manage these separate streams of investment? What is your approach for structuring them? How do you ensure that they are returning your desired results? People are competitive. Your multiple teams will start to contend for investment. This is unavoidable. They will want their activities adequately supported, and their understanding of "adequate" may be different from yours&#8212;&#8203;and each other&#8217;s. They will also be watching that the other teams don&#8217;t get "more than their share" and are using their share effectively. You start to see that the teams need to be constantly reminded of the big picture, in order to keep their discussions and occasional disagreements constructive. (You&#8217;ve also got a cross-team coordination problem, which we&#8217;ll discuss in the next chapter.)</p>
 </div>
 <div class="paragraph">
-<p>In the project management literature and tradition, much focus is given to the <strong>execution</strong> aspect of project management&#8201;&#8212;&#8201;its ability to manage complex, interdependent work across resource limitations. However, we are also interested in the <strong>structural role</strong> of project management. Project management may be institutionalized through establishing an organizational function known as the Project Management Office (PMO), which may use a concept of project portfolio as a means of constraining and managing the organization&#8217;s multiple priorities. What is the relationship of the traditional PMO to the new, product-centric, digital world?</p>
+<p>Project management is often seen as necessary for financial planning, especially regarding the efforts most critical to the business. The very concept of having a vision becomes problematic without some ability to plan.  You now have a dedicated CFO and you are increasingly subject to standard accounting and budgeting rules. But annual budgeting seems to be opposed to how you have chosen to run your company to date. What alternatives are there? You begin to see that your approach to financial management affects every aspect of your company, including your product team effectiveness.</p>
 </div>
 <div class="paragraph">
-<p>We might restate the quote leading this chapter as <strong>the execution of a given scope of work within constraints of time and budget</strong>. But questions arise. We are already executing work, without this concept of "project." We have discussed <a href="#scrum">Scrum</a> in Chapter 4, <a href="#kanban">Kanban</a> in Chapter 5, and various organizational levels and delivery models in <a href="#scaling-org">the introduction to Part III</a>.</p>
+<p>As we have seen in our discussions of  <a href="#product-mgmt">Product Management</a>, in implementing <strong>truly new products,</strong> (including digital products) estimating time and budget is challenging because <strong>the necessary information is not available</strong>. In fact, creating it - which (per <a href="#lean-product-dev">Lean Product Development</a>) requires tight feedback loops - is the actual work of the "project." Therefore, in the new Agile world, there is some uncertainty as to the role of and even need for traditional project management. This chapter will examine some of the reasons for project management&#8217;s persistence and how it is adapting to the new product-centric reality.</p>
 </div>
 <div class="paragraph">
-<p>And what is this idea of "scope"? How would we know it in advance, so that the "constraints of time and budget" are reasonable?</p>
+<p>In the project management literature and tradition, much focus is given to the <strong>execution</strong> aspect of project management&#8201;&#8212;&#8201;its ability to manage complex, interdependent work across resource limitations. However, execution is discussed in Chapter 9. In Chapter 8, we are interested in the <strong>structural role</strong> of project management as a way of managing investments. Project management may be institutionalized through establishing an organizational function known as the Project Management Office (PMO), which may use a concept of project portfolio as a means of constraining and managing the organization&#8217;s multiple priorities. What is the relationship of the traditional PMO to the new, product-centric, digital world?</p>
 </div>
 <div class="paragraph">
-<p>As we have seen in our discussions of  <a href="#product-mgmt">Product Management</a>, in implementing <strong>truly new products,</strong> (including digital products) estimating time and budget is challenging because <strong>the necessary information is not available</strong>. In fact, creating it - which (per <a href="#lean-product-dev">Lean Product Development</a>) requires tight feedback loops - is the actual work of the "project." Therefore, in the new Agile world, there is some uncertainty as to the role of and even need for traditional project management. (Cobb, in <em>The Project Manager&#8217;s Guide to Mastering Agile,</em> gives a thorough examinination of these issues <a href="#Cobb2015">[Cobb2015]</a> .)</p>
+<p>Project management is often defined as <strong>the execution of a given scope of work within constraints of time and budget</strong>. But questions arise. We are already executing work, without this concept of "project." We have discussed <a href="#scrum">Scrum</a> in Chapter 4, <a href="#kanban">Kanban</a> in Chapter 5, and various organizational levels and delivery models in <a href="#scaling-org">the introduction to Part III</a>. What is this idea of "scope"? How would we know it in advance, so that the "constraints of time and budget" are reasonable?</p>
 </div>
 <div class="paragraph">
-<p>At a practical level, project managers remain important roles and (sometimes re-labled Scrum masters) are employed in both traditional and new digital companies as overall orchestrators of complex initiatives. This chapter will examine some of the reasons for project management&#8217;s persistence and how it is adapting to the new product-centric reality.</p>
-</div>
-<div class="paragraph">
-<p>Financial planning and resource management have not gone away, and without project management financial planning meets challenges, especially regarding the efforts most critical to the business. The very concept of having a vision becomes problematic without some ability to plan. And the role of external vendors expands to a point require much more formalized approaches. Because of these dependencies, this chapter also covers IT financial management, sourcing, and human resource management at an introductory level.</p>
-</div>
-<div class="paragraph">
-<p>You begin also to see your vendor relationships (e.g. your Cloud providers) as a form of investment. As your use of their products deepens, it becomes more difficult to switch from them, and so you spend more time evaluating before committing. Open source changes the software vendor relationship to some degree, but it&#8217;s still a portfolio of commitments and relationships requiring management.</p>
-</div>
-<div class="paragraph">
-<p>Finally, you now have a dedicated CFO and you are increasingly subject to standard accounting and budgeting rules. But annual budgeting seems to be opposed to how you have chosen to run your company to date. What alternatives are there? You begin to see that your approach to financial management affects every aspect of your company, including your product team effectiveness.</p>
+<p>You begin also to see your vendor relationships (e.g. your Cloud providers) as a form of investment. As your use of their products deepens, it becomes more difficult to switch from them, and so you spend more time evaluating before committing. You establish a more formalized approach. Open source changes the software vendor relationship to some degree, but it&#8217;s still a portfolio of commitments and relationships requiring management.</p>
 </div>
 <div class="sect4">
 <h5 id="_chapter_8_outline">Chapter 8 outline</h5>
@@ -14623,6 +14601,9 @@ As with other chapters in the later part of this book, we are going to introduce
 </div>
 <div class="paragraph">
 <p>However, process can cause problems. Processes imply <a href="#queuing">queues</a>, and in digital and other product development-based organizations, this means invisible work in process. For every employee you hire who expects you to have processes, another will have bad process experiences at previous employers. Nevertheless, process remains an important tool in your toolkit for organization design.</p>
+</div>
+<div class="paragraph">
+<p>At an execution level, project managers retain important roles and (sometimes re-labled Scrum masters or release managers) are employed in both traditional and new digital companies as overall orchestrators of complex initiatives.</p>
 </div>
 <div class="paragraph">
 <p>Process is a broad concept used throughout business operations. <strong>The coverage here is primarily about process as applied to the digital organization.</strong> There is a bit of a recursive paradox here; in part, we are talking about the <strong>process by which business processes are analyzed and automated</strong>. By definition, this overall "process" (you could call it a <strong>meta</strong>-process) cannot be made too prescriptive or predictable.</p>
@@ -26588,7 +26569,7 @@ Architectural goals—for example, desired performance, availability, and securi
 </div>
 </div>
 <div class="sect3">
-<h4 id="_portfolio_management">Portfolio management</h4>
+<h4 id="_portfolio_analysis">Portfolio analysis</h4>
 <div class="quoteblock">
 <blockquote>
 …every product and every activity of a business begins to obsolesce as soon as it is started. Every product, every operation, and every activity in a business should be put on trial for its life every two or three years.<br>
@@ -27078,32 +27059,6 @@ We previously discussed the Business Analysis Body of Knowledge. Although they h
 </ul>
 </div>
 <div class="sect2">
-<h3 id="_current_agile_texts">Current Agile texts</h3>
-<div class="paragraph">
-<p>There are hundreds of books on Agile. In this Part I will seek to credit specifically collegiate texts that may also be of interest.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Ashmore, Sondra and Kristin Runyan, <a href="http://www.goodreads.com/book/show/18349912-introduction-to-agile-methods"><em>Introduction to Agile Methods</em></a></p>
-</li>
-<li>
-<p>Cobb, Charles G. <a href="http://www.goodreads.com/book/show/24844947-the-project-manager-s-guide-to-mastering-agile"><em>The Project MANAGER&#8217;S GUIDE TO MASTERING AGILE: Principles and Practices for an Adaptive Approach</em></a></p>
-</li>
-<li>
-<p>Limoncelli, Thomas A., Strata R. Chalup, Christina J. Hogan <a href="http://www.goodreads.com/book/show/23131211-the-practice-of-cloud-system-administration"><em>The Practice of Cloud System Administration: Designing and Operating Large Distributed Systems, Volume 2</em></a></p>
-<div class="ulist">
-<ul>
-<li>
-<p>While not an academic text per se, does have user questions and exercises at end of chapters; I currently use as supplementary text and am scoping this one to complement it</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
 <h3 id="_the_major_frameworks">The major frameworks</h3>
 <div class="paragraph">
 <p>Concept introduced in Part III, reprinted summary here</p>
@@ -27144,6 +27099,32 @@ We previously discussed the Business Analysis Body of Knowledge. Although they h
 </div>
 <div class="paragraph">
 <p>What we can and cannot learn from simulations (AB Murray)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_current_agile_texts">Current Agile texts</h3>
+<div class="paragraph">
+<p>There are hundreds of books on Agile. In this part I will seek to credit specifically collegiate texts that may also be of interest.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ashmore, Sondra and Kristin Runyan, <a href="http://www.goodreads.com/book/show/18349912-introduction-to-agile-methods"><em>Introduction to Agile Methods</em></a></p>
+</li>
+<li>
+<p>Cobb, Charles G. <a href="http://www.goodreads.com/book/show/24844947-the-project-manager-s-guide-to-mastering-agile"><em>The Project MANAGER&#8217;S GUIDE TO MASTERING AGILE: Principles and Practices for an Adaptive Approach</em></a></p>
+</li>
+<li>
+<p>Limoncelli, Thomas A., Strata R. Chalup, Christina J. Hogan <a href="http://www.goodreads.com/book/show/23131211-the-practice-of-cloud-system-administration"><em>The Practice of Cloud System Administration: Designing and Operating Large Distributed Systems, Volume 2</em></a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>While not an academic text per se, does have user questions and exercises at end of chapters; I currently use as supplementary text and am scoping this one to complement it</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect2">
@@ -28314,7 +28295,7 @@ All web references were archived into the author&#8217;s files on the indicated 
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-11-20 18:20:01 CST
+Last updated 2016-11-21 10:11:27 CST
 </div>
 </div>
 </body>
