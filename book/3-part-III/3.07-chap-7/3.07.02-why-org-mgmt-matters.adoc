@@ -1,7 +1,7 @@
 
 anchor:organization[]
 
-==== Why organization matters
+==== Traditional "IT" organization versus product organization
 
 [quote, Matt Blumberg, Scaling Up]
 In the early stages, you have to hire generalists who are both willing and able to take on dozens of tasks at once. Your developers will have to speak with potential customers; your accountants will have to give advice on product direction; and the born salesman on your team will need to put the phone down a few hours a day and set up a new employee’s computer. This is the exciting, four-people-and-an-idea stage popularly associated with startups— but it doesn’t last very long. +
@@ -18,14 +18,7 @@ image::images/3_07-org-chart-whiteboard.jpg[org chart, 400, 200, float="right"]
 
 How are you going to organize? More importantly, how are you going to think about organizing? This is a hard question. It’s important to get organization right, and the question never goes away. As you grow and split into teams, the overall sense of mission you felt as a single team is at risk of fading. How can you keep your "eyes on the prize" when there are mulitple teams, who all see the world slightly differently? It's critical, as you start to explore various coordination mechanisms, to remember that the team remains the highest-value logical unit, and must be protected. As we discussed in xref:the-product-team[Chapter 4], product value is created by co-located, cross-functional, highly collaborative teams.
 
-In keeping with our xref:emergence-model[evolutionary approach], let’s assume you’ve been fairly ad-hoc in your organizational structure up to now, doing your best to avoid specialization. Perhaps you’ve even been working as a collective. Nevertheless, you’ve needed a variety of skills to get this far in your journey: you are certainly not all Java programmers!
-
-There is a lot of theory, history, and advice available on to how to organize your company. We'll start with two major themes in current discussions of digital and IT organization:
-
-* The product organization versus the "IT" organization
-* Organizing teams by features versus components
-
-===== Product organization versus "IT" organization
+In keeping with our xref:emergence-model[evolutionary approach], let’s assume you’ve been fairly ad-hoc in your organizational structure up to now, doing your best to avoid specialization. Perhaps you’ve even been working as a collective. Nevertheless, you’ve needed a variety of skills to get this far in your journey: you are certainly not all Java programmers! A critical decision you will have to make: do you want a traditional "IT vs Business" structure, or a product-based organization?
 
 anchor:fowler-quote[]
 
@@ -60,9 +53,7 @@ Let's go back to our example of the traditional CIO organization. A typical stru
 .Classic IT organization
 image::images/3_07-classic-org.png[org chart,600]
 
-(We had some related discussion in xref:i-o-matrix[Chapter 4].) Such a structure was perceived to be "efficient" because all the server engineers would be in one organization, while all the Java developers would be in another, and their utilization could be managed for efficiency. It was also believed that organizing into "centers of excellence" (sometimes called _organizing by function_) would make the practices of each center more and more effective, and therefore more valuable to the organization as a whole.
-
-However, the new digital organizations perceived that there was too much friction between the different functions on the organization chart. Skepticism also started to emerge that "centers of excellence" were living up to their promise. Instead, what was too often seen was the emergence of an "us versus them" mentality, as developers argued with server and network engineers.
+(We had some related discussion in xref:i-o-matrix[Chapter 4].) Such a structure was perceived to be "efficient" because all the server engineers would be in one organization, while all the Java developers would be in another, and their utilization could be managed for efficiency. Overall, having all the "IT" people together was also considered efficient, and the general idea was that "the business" (Sales, Marketing, Operations, and back-office functions like Finance and HR) would define their xref:system-intent["requirements"] and the IT organization would deliver systems in response. It was believed that organizing into "centers of excellence" (sometimes called _organizing by function_) would make the practices of each center more and more effective, and therefore more valuable to the organization as a whole. However, the new digital organizations perceived that there was too much friction between the different functions on the organization chart. Skepticism also started to emerge that "centers of excellence" were living up to their promise. Instead, what was too often seen was the emergence of an "us versus them" mentality, as developers argued with server and network engineers.
 
 One of the first companies to try a completely different approach was Intuit. As Intuit started selling its products increasingly as services, it re-organized to divide infrastructure individual contributors, e.g. storage engineers and database administrators, to become part of the product teams with which they worked <<Abbott2015>>, p 103.
 
@@ -71,32 +62,11 @@ anchor:spotify-model[Spotify model]
 .New IT organization
 image::images/3_07-neworg.png[org chart,600]
 
-This model is also called the "Spotify model." The dotted line boxes (Developers, Quality Assurance, Engineering) are no longer dedicated "centers of excellence" with executives leading them. Instead, they are lighter-weight "communities of interest" organized into chapters and guilds. The cross-functional product teams are the primary way work is organized and understood, and the communities of interest play a supporting role. (See <<Kniberg2012>> for an influential account of how Spotify organizes along product lines.)
+This model is also called the "Spotify model." The dotted line boxes (Developers, Quality Assurance, Engineering) are no longer dedicated "centers of excellence" with executives leading them. Instead, they are lighter-weight "communities of interest" organized into chapters and guilds. The cross-functional product teams are the primary way work is organized and understood, and the communities of interest play a supporting role. Henrik Kniberg provided one of the first descriptions of how Spotify organizes along product lines  <<Kniberg2012>>. (Attentive readers will ask, "What happened to the PMO? and what about security?" There are various answers to these questions, which we will continue to explore in Part III.)
 
-(Attentive readers will ask, "What happened to the PMO? and what about security?" There are various answers to these questions, which we will continue to explore in Part III.)
-
-The consequences of this transition in organizational style are still being felt and debated. Sriram Narayan, in his book _Agile Organization Design_ (<<Narayam2015>>), points out that "IT work is labor-intensive and highly specialized," and therefore managing IT talent is a particular organizational capability it may not make sense to distribute. Furthermore, he observes that IT work is performed on medium to long time scales, and  "IT culture" differs from "business culture." However, Abbott and Fisher in _The Art of Scalability_ argue that "...The difference in mindset, organization, metrics, and approach between the IT and product models is vast. Corporate technology governance tends to significantly slow time to market for critical projects...IT mindsets are great for internal technology development, but disastrous for external product development."" <<Abbott2015>> pp 122-124
+The consequences of this transition in organizational style are still being felt and debated. Sriram Narayan, in his book _Agile Organization Design_ (<<Narayam2015>>), points out that "IT work is labor-intensive and highly specialized," and therefore managing IT talent is a particular organizational capability it may not make sense to distribute. Furthermore, he observes that IT work is performed on medium to long time scales, and  "IT culture" differs from "business culture." However, Abbott and Fisher in _The Art of Scalability_ argue that "...The difference in mindset, organization, metrics, and approach between the IT and product models is vast. Corporate technology governance tends to significantly slow time to market for critical projects...IT mindsets are great for internal technology development, but disastrous for external product development" <<Abbott2015>> pp 122-124. Hybrid models exist, with "product" teams reporting up under "business" executives, and the CIO still controlling the delivery staff who may be co-located with those teams. We'll discuss the alternative models in more detail below.
 
 anchor:feature-v-component[]
-
-===== Features versus components
-At a lower level, the discussion revolves around segmenting along feature lines, versus segmenting along component lines. What do we mean by this?
-
-Features are *what* your product *does*. They are what the customers perceive as valuable. “Scope as viewed by the customer” as <<Kennaley2010>> says (p. 169). They may be "xref:flower-and-cog[flowers]" -- defined by the value they provide externally, and encouraged to evolve with some freedom. You may be investing in new features using xref:lean-startup[Lean Startup], the xref:DIBB[Spotify DIBB model] or some other hypothesis-driven approach.
-
-Components are *how* your product is *built*, such as database vs. Web components. In other words, they are a form of infrastructure (but infrastructure you may need to build yourself, rather than just spin up in the Cloud). They are more likely to be "xref:flower-and-cog[cogs]" -  more constrained and engineered to specifications.
-
-.Features versus components
-image::images/3_07-feature-v-component.png[feature component matrix,400,,float="right"]
-
-Feature teams are dedicated to a clearly defined functional scope, while component teams are defined by their technology platform. Component teams may become shared services, which need to be carefully understood and managed (more on this to come). A component's failure may affect multiple feature teams, which makes them more risky. However, it may be easy to say that features are more important than components, but this can easily be carried too far. Do you want each feature team choosing its own database? This might not be the best idea. Allowing feature teams to define their own technical direction can result in brittle, fragmented architectures, technical debt, and rework.
-
-Software product management needs to be a careful balance between these two perspectives. The Scaled Agile Framework suggests that components are relatively
-
-* more technically focused
-* more generally re-usable
-
-than features. SAFE also recommends a ratio of roughly 20-25% component teams to 75%-80% feature teams <<SAFE2016>>.
 
 .Conway's law
 ****

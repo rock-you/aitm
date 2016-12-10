@@ -1,4 +1,24 @@
 
+
+===== Feature versus component teams
+If you choose to organize around products, the discussion revolves around segmenting along feature lines, versus segmenting along component lines. What do we mean by this?
+
+Features are *what* your product *does*. They are what the customers perceive as valuable. “Scope as viewed by the customer” as <<Kennaley2010>> says (p. 169). They may be "xref:flower-and-cog[flowers]" -- defined by the value they provide externally, and encouraged to evolve with some freedom. You may be investing in new features using xref:lean-startup[Lean Startup], the xref:DIBB[Spotify DIBB model] or some other hypothesis-driven approach.
+
+Components are *how* your product is *built*, such as database vs. Web components. In other words, they are a form of infrastructure (but infrastructure you may need to build yourself, rather than just spin up in the Cloud). They are more likely to be "xref:flower-and-cog[cogs]" -  more constrained and engineered to specifications.
+
+.Features versus components
+image::images/3_07-feature-v-component.png[feature component matrix,400,,float="right"]
+
+Feature teams are dedicated to a clearly defined functional scope, while component teams are defined by their technology platform. Component teams may become shared services, which need to be carefully understood and managed (more on this to come). A component's failure may affect multiple feature teams, which makes them more risky. However, it may be easy to say that features are more important than components, but this can easily be carried too far. Do you want each feature team choosing its own database? This might not be the best idea. Allowing feature teams to define their own technical direction can result in brittle, fragmented architectures, technical debt, and rework.
+
+Software product management needs to be a careful balance between these two perspectives. The Scaled Agile Framework suggests that components are relatively
+
+* more technically focused
+* more generally re-usable
+
+than features. SAFE also recommends a ratio of roughly 20-25% component teams to 75%-80% feature teams <<SAFE2016>>.
+
 anchor:project-mgmt[]
 
 
