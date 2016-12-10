@@ -790,12 +790,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_toyota_kata">Toyota Kata</a></li>
 </ul>
 </li>
-<li><a href="#_why_organization_matters">Why organization matters</a>
-<ul class="sectlevel4">
-<li><a href="#_product_organization_versus_it_organization">Product organization versus "IT" organization</a></li>
-<li><a href="#_features_versus_components">Features versus components</a></li>
-</ul>
-</li>
+<li><a href="#_traditional_it_organization_versus_product_organization">Traditional "IT" organization versus product organization</a></li>
 <li><a href="#_defining_the_organization">Defining the organization</a></li>
 <li><a href="#_product_and_function">Product and function</a>
 <ul class="sectlevel4">
@@ -827,6 +822,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_chapter_8_outline">Chapter 8 outline</a></li>
 <li><a href="#_chapter_8_learning_objectives">Chapter 8 learning objectives</a></li>
+<li><a href="#_feature_versus_component_teams">Feature versus component teams</a></li>
 </ul>
 </li>
 <li><a href="#_what_is_a_project">What is a project?</a>
@@ -12452,7 +12448,7 @@ Because power is about the regulation of behavior, it has very little effect on 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_why_organization_matters">Why organization matters</h4>
+<h4 id="_traditional_it_organization_versus_product_organization">Traditional "IT" organization versus product organization</h4>
 <div class="quoteblock">
 <blockquote>
 In the early stages, you have to hire generalists who are both willing and able to take on dozens of tasks at once. Your developers will have to speak with potential customers; your accountants will have to give advice on product direction; and the born salesman on your team will need to put the phone down a few hours a day and set up a new employee’s computer. This is the exciting, four-people-and-an-idea stage popularly associated with startups— but it doesn’t last very long.<br>
@@ -12486,23 +12482,8 @@ Some of the most important factors that organizational structure can affect are 
 <p>How are you going to organize? More importantly, how are you going to think about organizing? This is a hard question. It’s important to get organization right, and the question never goes away. As you grow and split into teams, the overall sense of mission you felt as a single team is at risk of fading. How can you keep your "eyes on the prize" when there are mulitple teams, who all see the world slightly differently? It&#8217;s critical, as you start to explore various coordination mechanisms, to remember that the team remains the highest-value logical unit, and must be protected. As we discussed in <a href="#the-product-team">Chapter 4</a>, product value is created by co-located, cross-functional, highly collaborative teams.</p>
 </div>
 <div class="paragraph">
-<p>In keeping with our <a href="#emergence-model">evolutionary approach</a>, let’s assume you’ve been fairly ad-hoc in your organizational structure up to now, doing your best to avoid specialization. Perhaps you’ve even been working as a collective. Nevertheless, you’ve needed a variety of skills to get this far in your journey: you are certainly not all Java programmers!</p>
+<p>In keeping with our <a href="#emergence-model">evolutionary approach</a>, let’s assume you’ve been fairly ad-hoc in your organizational structure up to now, doing your best to avoid specialization. Perhaps you’ve even been working as a collective. Nevertheless, you’ve needed a variety of skills to get this far in your journey: you are certainly not all Java programmers! A critical decision you will have to make: do you want a traditional "IT vs Business" structure, or a product-based organization?</p>
 </div>
-<div class="paragraph">
-<p>There is a lot of theory, history, and advice available on to how to organize your company. We&#8217;ll start with two major themes in current discussions of digital and IT organization:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The product organization versus the "IT" organization</p>
-</li>
-<li>
-<p>Organizing teams by features versus components</p>
-</li>
-</ul>
-</div>
-<div class="sect4">
-<h5 id="_product_organization_versus_it_organization">Product organization versus "IT" organization</h5>
 <div class="paragraph">
 <p><a id="fowler-quote"></a></p>
 </div>
@@ -12567,10 +12548,7 @@ Some of the most important factors that organizational structure can affect are 
 <div class="title">Figure 91. Classic IT organization</div>
 </div>
 <div class="paragraph">
-<p>(We had some related discussion in <a href="#i-o-matrix">Chapter 4</a>.) Such a structure was perceived to be "efficient" because all the server engineers would be in one organization, while all the Java developers would be in another, and their utilization could be managed for efficiency. It was also believed that organizing into "centers of excellence" (sometimes called <em>organizing by function</em>) would make the practices of each center more and more effective, and therefore more valuable to the organization as a whole.</p>
-</div>
-<div class="paragraph">
-<p>However, the new digital organizations perceived that there was too much friction between the different functions on the organization chart. Skepticism also started to emerge that "centers of excellence" were living up to their promise. Instead, what was too often seen was the emergence of an "us versus them" mentality, as developers argued with server and network engineers.</p>
+<p>(We had some related discussion in <a href="#i-o-matrix">Chapter 4</a>.) Such a structure was perceived to be "efficient" because all the server engineers would be in one organization, while all the Java developers would be in another, and their utilization could be managed for efficiency. Overall, having all the "IT" people together was also considered efficient, and the general idea was that "the business" (Sales, Marketing, Operations, and back-office functions like Finance and HR) would define their <a href="#system-intent">"requirements"</a> and the IT organization would deliver systems in response. It was believed that organizing into "centers of excellence" (sometimes called <em>organizing by function</em>) would make the practices of each center more and more effective, and therefore more valuable to the organization as a whole. However, the new digital organizations perceived that there was too much friction between the different functions on the organization chart. Skepticism also started to emerge that "centers of excellence" were living up to their promise. Instead, what was too often seen was the emergence of an "us versus them" mentality, as developers argued with server and network engineers.</p>
 </div>
 <div class="paragraph">
 <p>One of the first companies to try a completely different approach was Intuit. As Intuit started selling its products increasingly as services, it re-organized to divide infrastructure individual contributors, e.g. storage engineers and database administrators, to become part of the product teams with which they worked <a href="#Abbott2015">[Abbott2015]</a>, p 103.</p>
@@ -12585,53 +12563,13 @@ Some of the most important factors that organizational structure can affect are 
 <div class="title">Figure 92. New IT organization</div>
 </div>
 <div class="paragraph">
-<p>This model is also called the "Spotify model." The dotted line boxes (Developers, Quality Assurance, Engineering) are no longer dedicated "centers of excellence" with executives leading them. Instead, they are lighter-weight "communities of interest" organized into chapters and guilds. The cross-functional product teams are the primary way work is organized and understood, and the communities of interest play a supporting role. (See <a href="#Kniberg2012">[Kniberg2012]</a> for an influential account of how Spotify organizes along product lines.)</p>
+<p>This model is also called the "Spotify model." The dotted line boxes (Developers, Quality Assurance, Engineering) are no longer dedicated "centers of excellence" with executives leading them. Instead, they are lighter-weight "communities of interest" organized into chapters and guilds. The cross-functional product teams are the primary way work is organized and understood, and the communities of interest play a supporting role. Henrik Kniberg provided one of the first descriptions of how Spotify organizes along product lines  <a href="#Kniberg2012">[Kniberg2012]</a>. (Attentive readers will ask, "What happened to the PMO? and what about security?" There are various answers to these questions, which we will continue to explore in Part III.)</p>
 </div>
 <div class="paragraph">
-<p>(Attentive readers will ask, "What happened to the PMO? and what about security?" There are various answers to these questions, which we will continue to explore in Part III.)</p>
-</div>
-<div class="paragraph">
-<p>The consequences of this transition in organizational style are still being felt and debated. Sriram Narayan, in his book <em>Agile Organization Design</em> (<a href="#Narayam2015">[Narayam2015]</a>), points out that "IT work is labor-intensive and highly specialized," and therefore managing IT talent is a particular organizational capability it may not make sense to distribute. Furthermore, he observes that IT work is performed on medium to long time scales, and  "IT culture" differs from "business culture." However, Abbott and Fisher in <em>The Art of Scalability</em> argue that "&#8230;&#8203;The difference in mindset, organization, metrics, and approach between the IT and product models is vast. Corporate technology governance tends to significantly slow time to market for critical projects&#8230;&#8203;IT mindsets are great for internal technology development, but disastrous for external product development."" <a href="#Abbott2015">[Abbott2015]</a> pp 122-124</p>
+<p>The consequences of this transition in organizational style are still being felt and debated. Sriram Narayan, in his book <em>Agile Organization Design</em> (<a href="#Narayam2015">[Narayam2015]</a>), points out that "IT work is labor-intensive and highly specialized," and therefore managing IT talent is a particular organizational capability it may not make sense to distribute. Furthermore, he observes that IT work is performed on medium to long time scales, and  "IT culture" differs from "business culture." However, Abbott and Fisher in <em>The Art of Scalability</em> argue that "&#8230;&#8203;The difference in mindset, organization, metrics, and approach between the IT and product models is vast. Corporate technology governance tends to significantly slow time to market for critical projects&#8230;&#8203;IT mindsets are great for internal technology development, but disastrous for external product development" <a href="#Abbott2015">[Abbott2015]</a> pp 122-124. Hybrid models exist, with "product" teams reporting up under "business" executives, and the CIO still controlling the delivery staff who may be co-located with those teams. We&#8217;ll discuss the alternative models in more detail below.</p>
 </div>
 <div class="paragraph">
 <p><a id="feature-v-component"></a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_features_versus_components">Features versus components</h5>
-<div class="paragraph">
-<p>At a lower level, the discussion revolves around segmenting along feature lines, versus segmenting along component lines. What do we mean by this?</p>
-</div>
-<div class="paragraph">
-<p>Features are <strong>what</strong> your product <strong>does</strong>. They are what the customers perceive as valuable. “Scope as viewed by the customer” as <a href="#Kennaley2010">[Kennaley2010]</a> says (p. 169). They may be "<a href="#flower-and-cog">flowers</a>"&#8201;&#8212;&#8201;defined by the value they provide externally, and encouraged to evolve with some freedom. You may be investing in new features using <a href="#lean-startup">Lean Startup</a>, the <a href="#DIBB">Spotify DIBB model</a> or some other hypothesis-driven approach.</p>
-</div>
-<div class="paragraph">
-<p>Components are <strong>how</strong> your product is <strong>built</strong>, such as database vs. Web components. In other words, they are a form of infrastructure (but infrastructure you may need to build yourself, rather than just spin up in the Cloud). They are more likely to be "<a href="#flower-and-cog">cogs</a>" -  more constrained and engineered to specifications.</p>
-</div>
-<div class="imageblock" style="float: right">
-<div class="content">
-<img src="images/3_07-feature-v-component.png" alt="feature component matrix" width="400">
-</div>
-<div class="title">Figure 93. Features versus components</div>
-</div>
-<div class="paragraph">
-<p>Feature teams are dedicated to a clearly defined functional scope, while component teams are defined by their technology platform. Component teams may become shared services, which need to be carefully understood and managed (more on this to come). A component&#8217;s failure may affect multiple feature teams, which makes them more risky. However, it may be easy to say that features are more important than components, but this can easily be carried too far. Do you want each feature team choosing its own database? This might not be the best idea. Allowing feature teams to define their own technical direction can result in brittle, fragmented architectures, technical debt, and rework.</p>
-</div>
-<div class="paragraph">
-<p>Software product management needs to be a careful balance between these two perspectives. The Scaled Agile Framework suggests that components are relatively</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>more technically focused</p>
-</li>
-<li>
-<p>more generally re-usable</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>than features. SAFE also recommends a ratio of roughly 20-25% component teams to 75%-80% feature teams <a href="#SAFE2016">[SAFE2016]</a>.</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -12651,14 +12589,13 @@ Some of the most important factors that organizational structure can affect are 
 </div>
 </div>
 </div>
-</div>
 <div class="sect3">
 <h4 id="_defining_the_organization">Defining the organization</h4>
 <div class="imageblock" style="float: right">
 <div class="content">
 <img src="images/3_07-juggling.jpg" alt="juggling" width="250" height="200">
 </div>
-<div class="title">Figure 94. Multi-tasking destroys productivity <sup class="footnote">[<a id="_footnoteref_45" class="footnote" href="#_footnote_45" title="View footnote.">45</a>]</sup></div>
+<div class="title">Figure 93. Multi-tasking destroys productivity <sup class="footnote">[<a id="_footnoteref_45" class="footnote" href="#_footnote_45" title="View footnote.">45</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>There are many different ways we can apply these ideas of traditional functional organizing versus product-oriented organizing, and features versus components. How does one begin to decide these questions? As a digital professional in a scaling organization, you need to be able to lead these conversations. The cross-functional, diverse, collaborative team is a key unit of value in the digital enterprise, and its performance needs to be nurtured and protected.</p>
@@ -12826,7 +12763,7 @@ We will go into detail on project management in chapter 8 and process management
 <div class="content">
 <img src="images/3_07-naive-mfg.png" alt="manufacturing sequence" width="500">
 </div>
-<div class="title">Figure 95. Simple sequential manufacturing</div>
+<div class="title">Figure 94. Simple sequential manufacturing</div>
 </div>
 <div class="paragraph">
 <p>The product is already defined and the need to generate information (i.e. through feedback) is at an absolute minimum.
@@ -12839,7 +12776,7 @@ NOTE: Even in this simplest model, feedback is important. Much of the evolution 
 <div class="content">
 <img src="images/3_07-waterfall.png" alt="waterfall" width="500">
 </div>
-<div class="title">Figure 96. Waterfall</div>
+<div class="title">Figure 95. Waterfall</div>
 </div>
 <div class="paragraph">
 <p>(Review <a href="#Agile-history">chapter 3</a> on waterfall development and Agile history.)</p>
@@ -12896,7 +12833,7 @@ The following discussion and accompanying set of diagrams is derived from Presto
 <div class="content">
 <img src="images/3_07-lightweight-pm.png" alt="matrix figure" width="800">
 </div>
-<div class="title">Figure 97. Lightweight project management across functions</div>
+<div class="title">Figure 96. Lightweight project management across functions</div>
 </div>
 <div class="paragraph">
 <p>Work flows across the functions, perhaps called "centers of excellence," and there may be contention for resources within each center. Often, simple "first in, first out" <a href="#queuing">queuing</a> approaches are used to manage the <a href="#ticketing">ticketed</a> work, rather than more sophisticated approaches such as <a href="#cost-of-delay">Cost of Delay</a>. It is the above model that Reinertsen was thinking of when he said: "The danger in using specialists lies in their low involvement in individual projects and the multitude of tasks competing for their time." Traditional <a href="#i-o-matrix">Infrastructure and Operations</a> organizations, when they implemented defined service catalogs, can be seen as attempting this model. (More on this in Chapter 9&#8217;s discussion of ITIL and <a href="#shared-services">shared services</a>.)</p>
@@ -12911,7 +12848,7 @@ The following discussion and accompanying set of diagrams is derived from Presto
 <div class="content">
 <img src="images/3_07-heavy-pm.png" alt="matrix figure" width="800">
 </div>
-<div class="title">Figure 98. Heavyweight project management across functions</div>
+<div class="title">Figure 97. Heavyweight project management across functions</div>
 </div>
 <div class="paragraph">
 <p>If even more focus is needed&#8201;&#8212;&#8201;the now-minimized influence of the functional areas is still deemed too strong&#8201;&#8212;&#8201; the organization may move to completely product-based reporting. With this, the team member reports to the product owner. There may still be communities of interest (Spotify guilds and tribes are good examples) and there still may be standards for technical choices:</p>
@@ -12920,7 +12857,7 @@ The following discussion and accompanying set of diagrams is derived from Presto
 <div class="content">
 <img src="images/3_07-product-mgmt.png" alt="matrix figure" width="800">
 </div>
-<div class="title">Figure 99. Product team, virtual functions</div>
+<div class="title">Figure 98. Product team, virtual functions</div>
 </div>
 <div class="paragraph">
 <p><a id="skunkworks"></a></p>
@@ -12932,7 +12869,7 @@ The following discussion and accompanying set of diagrams is derived from Presto
 <div class="content">
 <img src="images/3_07-skunk.png" alt="matrix figure" width="800">
 </div>
-<div class="title">Figure 100. Skunkworks model</div>
+<div class="title">Figure 99. Skunkworks model</div>
 </div>
 <div class="paragraph">
 <p>The product team has complete autonomy, and can move at great speed. It is also free to:</p>
@@ -13073,7 +13010,7 @@ Requiring senior technical talent to interview candidates may result in improved
 <div class="content">
 <img src="images/3_07-punch-clock.jpg" alt="punch clock and cards" width="500" height="200">
 </div>
-<div class="title">Figure 101. Time clock and punch cards <sup class="footnote">[<a id="_footnoteref_46" class="footnote" href="#_footnote_46" title="View footnote.">46</a>]</sup></div>
+<div class="title">Figure 100. Time clock and punch cards <sup class="footnote">[<a id="_footnoteref_46" class="footnote" href="#_footnote_46" title="View footnote.">46</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>When a new hire enters your organization, they enter a complex system that will structure and direct their daily activities through a myriad of means. The various means that direct their action include:</p>
@@ -13726,6 +13663,44 @@ As time goes on the calculator itself will take over the functions both of maste
 </div>
 <div class="sect4">
 <h5 id="_chapter_8_learning_objectives">Chapter 8 learning objectives</h5>
+
+</div>
+<div class="sect4">
+<h5 id="_feature_versus_component_teams">Feature versus component teams</h5>
+<div class="paragraph">
+<p>If you choose to organize around products, the discussion revolves around segmenting along feature lines, versus segmenting along component lines. What do we mean by this?</p>
+</div>
+<div class="paragraph">
+<p>Features are <strong>what</strong> your product <strong>does</strong>. They are what the customers perceive as valuable. “Scope as viewed by the customer” as <a href="#Kennaley2010">[Kennaley2010]</a> says (p. 169). They may be "<a href="#flower-and-cog">flowers</a>"&#8201;&#8212;&#8201;defined by the value they provide externally, and encouraged to evolve with some freedom. You may be investing in new features using <a href="#lean-startup">Lean Startup</a>, the <a href="#DIBB">Spotify DIBB model</a> or some other hypothesis-driven approach.</p>
+</div>
+<div class="paragraph">
+<p>Components are <strong>how</strong> your product is <strong>built</strong>, such as database vs. Web components. In other words, they are a form of infrastructure (but infrastructure you may need to build yourself, rather than just spin up in the Cloud). They are more likely to be "<a href="#flower-and-cog">cogs</a>" -  more constrained and engineered to specifications.</p>
+</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img src="images/3_07-feature-v-component.png" alt="feature component matrix" width="400">
+</div>
+<div class="title">Figure 101. Features versus components</div>
+</div>
+<div class="paragraph">
+<p>Feature teams are dedicated to a clearly defined functional scope, while component teams are defined by their technology platform. Component teams may become shared services, which need to be carefully understood and managed (more on this to come). A component&#8217;s failure may affect multiple feature teams, which makes them more risky. However, it may be easy to say that features are more important than components, but this can easily be carried too far. Do you want each feature team choosing its own database? This might not be the best idea. Allowing feature teams to define their own technical direction can result in brittle, fragmented architectures, technical debt, and rework.</p>
+</div>
+<div class="paragraph">
+<p>Software product management needs to be a careful balance between these two perspectives. The Scaled Agile Framework suggests that components are relatively</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>more technically focused</p>
+</li>
+<li>
+<p>more generally re-usable</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>than features. SAFE also recommends a ratio of roughly 20-25% component teams to 75%-80% feature teams <a href="#SAFE2016">[SAFE2016]</a>.</p>
+</div>
 <div class="paragraph">
 <p><a id="project-mgmt"></a></p>
 </div>
