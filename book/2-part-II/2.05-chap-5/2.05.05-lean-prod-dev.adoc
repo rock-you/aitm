@@ -36,10 +36,10 @@ There are many books on Agile development and management. Consider the following
 * Jez Humble, Joanne Molesky and Barry O'Reilly, https://www.goodreads.com/book/show/18167218-lean-enterprise[_Lean Enterprise: How High Performance Organizations Innovate at Scale_]
 * Dean Leffingwell, https://www.goodreads.com/book/show/8997772-agile-software-requirements[_Agile Software Requirements: Lean Requirements Practices for Teams, Programs, and the Enterprise_]
 * Steve McConnell, https://www.goodreads.com/book/show/93892.Rapid_Development[_Rapid Development: Taming Wild Software Schedules_]
-* Roman Pichler,  https://www.goodreads.com/book/show/7950745-agile-product-management-with-scrum[_Agile Product Management with Scrum: Creating Products That Customers Love_] https://www.goodreads.com/book/show/7950745-agile-product-management-with-scrum
+* Roman Pichler,  https://www.goodreads.com/book/show/7950745-agile-product-management-with-scrum[_Agile Product Management with Scrum: Creating Products That Customers Love_]
 * Mary and Tom Poppendieck, https://www.goodreads.com/book/show/194338.Lean_Software_Development[_Lean Software Development: An Agile Toolkit for Software Development Managers_]
 
-What do they all have in common? They all cite Don Reinertsen. Reinertsen's work dates back to 1991, and (orginally as a co-author with Preston G. Smith) presaged important principles of the Agile movement <<Smith1991>>, from the general perspective of product development. Reinertsen's influence is well documented and notable. He was partnering with David Anderson when Anderson created Kanban. He wrote the introduction to Leffingwell's _Agile Software Requirements_, the initial statement of the Scaled Agile Framework. His influence is pervasive across the Agile community. His work is deep and based on fundamental mathematical principles such as queueing theory. One way of reading his work is as a series of interdependent principles:
+What do they all have in common? They all cite Don Reinertsen. Reinertsen's work dates back to 1991, and (orginally as a co-author with Preston G. Smith) presaged important principles of the Agile movement <<Smith1991>>, from the general perspective of product development. Reinertsen's influence is well documented and notable. He was partnering with David Anderson when Anderson created the "software Kanban" approach. He wrote the introduction to Leffingwell's _Agile Software Requirements_, the initial statement of the Scaled Agile Framework. His influence is pervasive across the Agile community. His work is deep and based on fundamental mathematical principles such as queueing theory. One way of reading his work is as a series of interdependent principles:
 
 . The flow, or throughput of product innovation is the primary driver of financial success. (Notice that innovation must be *accepted by the market* - simply producing new product is not enough.)
 . Product development is essentially the creation of information.
@@ -53,9 +53,7 @@ These can be summarized in the accompanying pyramid figure.
 
 image::images/2_05-pyramid3.png[pyramid, 400,,float="right"]
 
-If a company wishes to produce innovation faster than competitors, it requires fast xref:feedback[feedback] on its experiments (whether traditionally understood, laboratory-based experiments, or market-facing validation as in xref:lean-startup[Lean Startup].)
-
-In order to achieve fast feedback, xref:work-in-process[work in process]
+If a company wishes to produce innovation faster than competitors, it requires fast xref:feedback[feedback] on its experiments (whether traditionally understood, laboratory-based experiments, or market-facing validation as in xref:lean-startup[Lean Startup].) In order to achieve fast feedback, xref:work-in-process[work in process]
 *must* be reduced in the system, otherwise xref:queuing[high-queue] states will slow feedback down.
 
 But how do we reduce work in process? We have to _prioritize_. Do we rely on the xref:HIPPO[Highest Paid Person's Opinion], or do we try something more rational? This brings us to the critical concept of _Cost of Delay_.
@@ -76,9 +74,7 @@ image::images/2_05-lifecycle-table.png[]
 .Product lifecycle economics, charted
 image::images/2_05-lifecycle-graph.png[]
 
-The numbers above represent a product lifecycle, from R&D through production to retirement. The first year is all cost, as the product is being developed, and net profits are negative. In year 2, a small net profit is shown, but cumulative profit is still negative, as it remains in year 3. Only into year 3 does the product break even, ultimately achieving lifecycle net earnings of 175.
-
-But what if the product's introduction into the market is delayed? The consequences can be severe.
+The numbers above represent a product lifecycle, from R&D through production to retirement. The first year is all cost, as the product is being developed, and net profits are negative. In year 2, a small net profit is shown, but cumulative profit is still negative, as it remains in year 3. Only into year 3 does the product break even, ultimately achieving lifecycle net earnings of 175. But what if the product's introduction into the market is delayed? The consequences can be severe.
 
 Simply delaying delivery by a year, all things being equal in our example, will reduce lifeycle profits by 30%:
 
@@ -111,3 +107,25 @@ In this version, the failure to enter the market in a timely way results in long
 Reinertsen observes that product managers may think that they intuitively understand Cost of Delay, but when he asks them to estimate the aggregate cost of (for example) delaying their product's delivery by a given period of time, the estimates provided by product team participants *in a position to delay delivery* may vary by up to 50:1. This is powerful evidence that a more quantitative approach is essential, as opposed to relying on "gut feel" or the xref:HIPPO[Highest Paid Person's Opinion].
 
 Finally, Josh Arnold notes that Cost of Delay is much easier to assess on small batches of work. Large projects tend to attract many ideas for features, some of which have stronger economic justifications than others. When all these features are lumped together, it makes understanding Cost of Delay challenging, because it then becomes an average across the various features. But since features, ideally, can be worked on individually, understanding Cost of Delay at that level helps with the prioritization of the work.
+
+===== Roadmap and backlog, revisited
+
+We've previously mentioned the xref:scrum[product backlog] and  xref:product-roadmapping[product roadmapping]. Let's examine this concept further, and in particular how xref:cost-of-delay[Cost of Delay] can help. Both Mike Cohn and Roman Pichler use the DEEP acronym to describe backlog qualities (<<Cohn2010>> p. 243, <<Pichler2010>> p. 48):
+
+* Detailed appropriately
+* Estimated
+* Emergent (feedback such as new or changed stories are readily accepted)
+* Prioritized
+
+The backlog should receive ongoing "grooming" to support these qualities, which means several things:
+
+* Addition of new items
+* Re-prioritization of items
+* Elaboration (decomposition, estimation and refinement)
+
+.Backlog granularity & priority footnote:[similar to <<Pichler2010>>, p.48.]
+image::images/2_05-backlog.png[backlog, 250, ,float="right"]
+
+When "detailed appropriately," items in the backlog are not all the same scale. Scrum and Agile thinkers generally agree on the core concept of "story," but stories vary in size, with the largest stories often termed "epics." The backlog is ordered in terms of priority (what will be done next) but, critically, it is also understood that the lower-priority items in general can be larger grained. In other words, if we visualize the backlog as a stack, with the highest priority on the top, the size of the stories increases as we go down.
+
+A high quality DEEP backlog combined with Cost of Delay is the foundation of digital product development. It's essential to have an economic basis for making the prioritization decision. Clarifying the economic basis is a critical function of the xref:product-roadmapping[product roadmap]. Through understanding the economics of product availability to the market or internal users, Cost of Delay can drive backlog prioritization.
