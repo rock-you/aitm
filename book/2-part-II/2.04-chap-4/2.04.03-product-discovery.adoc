@@ -87,7 +87,7 @@ Not a bad return on investment! (See <<Reinertsen2009>>, Chapter 4, for a detail
 
 ===== Product discovery techniques
 
-There are a wide variety of techniques and even "schools" of product discovery and design; we will consider a few representatives in this chapter section. Of course, when you first started your journey in Chapter 1, you might also have used some of these techniques. But now that you are a team, you are formalizing and relying on these techniques. These techniques are not mutually exclusive; they may be complementary. But at the more detailed, digital product level, how do we develop hypotheses for testing, in terms of our products/services? We briefly mentioned User Story Mapping in our discussion of xref:system-intent[system intent.] But that is only one of many techniques. Other tools include:
+There are a wide variety of techniques and even "schools" of product discovery and design; we will consider a few representatives in this chapter section. Of course, when you first started your journey in Chapter 1, you might also have used some of these techniques. But now that you are a team, you are formalizing and relying on these techniques. These techniques are not mutually exclusive; they may be complementary. But at the more detailed, digital product level, how do we develop hypotheses for testing, in terms of our products/services? We briefly mentioned User Story Mapping in our discussion of xref:system-intent[system intent.] In product discovery terms, User Story Mapping is a form of persona analysis. But that is only one of many techniques. Roman Pichler mentions "Vision Box and Trade Journal Review" and the "Kano Model" (<<Pichler2010>>, p. 39). Here, let's discuss:
 
 * "Jobs to be done" analysis
 * Impact mapping
@@ -158,150 +158,24 @@ BABOK is centrally concerned with the concept of requirements, and classifies th
 * Business requirements
 * Stakeholder requirements
 * Solution requirements
-** functional requirements
-** non-functional requirements
+** Functional requirements
+** Non-functional requirements
 * Transition requirements
 
 BABOK also provides a framework for understanding and managing the work of business analysts; in general it assumes that a BA capability will be established and that maturing such a capability is a desirable thing. This may run counter to the Scrum ideal of cross-functional, multi-skilled teams. Also as noted xref:system-intent[above], the term "requirements" has fallen out of favor with some Agile thought leaders.
 
-anchor:discovery-v-design[]
+===== Product roadmapping
 
-===== Discovery and design
+.Planning fallacy
+image::images/2_04-plan-driven.png[planning,200,,float="right"]
 
-Some of the most contentious discussions related to IT management and Agile come at the intersection of software and systems engineering, especially when large investments are at stake. We call this the "discovery versus design" problem.
+Creating effective plans in complex situations is hard. Planning a new product is one of the most challenging endeavors, one in which failure is common. The historically failed approach ("planning fallacy") is to develop overly detailed (sometimes called "rigorous") plans and then assume that achieving them is simply a matter of "correct execution."
 
-Frequent criticisms of Lean Startup and its related digital practices are:
+Contrast the planning fallacy with xref:lean-startup[Lean Startup], which emphasizes ongoing confirmation of product direction through experimentation. In complex efforts, ongoing validation of assumptions and direction is essential, which is why overly plan-driven approaches are falling out of favor. However, some understanding of time frames and mapping goals against the calendar is still important. Exactly how much effort to devote to such forecasting remains a controversial topic with digital product management professionals, one we will return to throughout this book. Minimally, a high level product roadmap is usually called for: without at least this, it may be difficult to secure the needed investment to start product work. Roman Pichler recommends the product roadmap contain:
 
- * They are relevant only for non-critical Internet-based products (e.g. Facebook and Netflix)
- * Some IT products must fit much tighter specifications and do not have the freedom to "pivot" (e.g. control software written for aerospace & defense systems)
+* Major versions
+* Their projected launch dates
+* Target customers and needs
+* Top three to five features for each version (<<Pichler2010>>, p. 41.)
 
-anchor:flower-and-cog[]
-
-.Parable: The Flower and the Cog
-****
-
-*THUNK!*
-
-_Hello. Where did you come from?_
-
-*I fell. From that machine.*
-
-_Machine?_
-
-*Yes, that big loud thing that just passed by. And is now stopped over there.*
-
-_Why is it stopped?_
-
-*Because I am no longer with it. The machine needs me to function. I am called a "cog." Where did you come from?*
-
-_I am a flower. I grew from a seed._
-
-*You ... grew?*
-
-_Yes._
-
-*You mean, no-one planned or designed you?*
-
-_Not that I know of. What does it mean to be "designed" or "planned"?_
-
-*I am part of a greater whole. The need for me was understood when that greater whole was conceived. I was designed to fit a very particular place. +
-  +
-They had to try making me out of different metals, and different ways to make me. This took some time and effort -- longer than was planned, in fact. But it was always understood that there would need to be a cog in a certain place in the machine.*
-
-_Interesting. So you will never be more than you are?_
-
-*No. I will always be a cog. They might make a different machine, with different cogs, but they will not be me. Are you part of a machine?*
-
-_No. I grew here because it suited me. I have continued to grow for a couple years. Eventually I may grow 20 feet tall, if the conditions remain good. I can adapt to other plants, and find my way around them to the sunlight and the water I need. Or I may stay smaller, if I can't get the sunlight I need. Or I may die._
-
-*Aren't you part of a system that defines your purpose?*
-
-_I don't know. Sometimes I think I am a system myself, made up of my roots, stem, leaves, and flower. There are insects living on me who rely on me for food and shelter.  And I have the freedom to grow into one of the largest trees in this area.  That is worth it to me._
-
-*Interesting. Well, it is good you are growing where you are, and not twenty feet further in that direction.*
-
-_Why?_
-
-*Because when they find me, or replace me and fix the machine, it will continue to clear all the land over there.*
-
-_Oh._
-
-VOICES: "Hey Joe, here's that gear the tractor must have thrown."
-
-"Good, grab it and I'll see if I can't get it back in place at least temporarily until we can figure out why it happened."
-
-*Bye.*
-
-_Goodbye. Nice talking to you. Good luck._
-
-*Thanks. You too.*
-
-****
-
-The above parable is meant to illustrate two very different product development worlds. Some product development is constrained by the overall system it takes place within. Other product development has more freedom to grow in different directions -- to "discover" the customer.
-
-The cog represents the world of classic systems engineering -- a larger objective frames the effort, and the component occupies a certain defined place within it. And yet, it may still be challenging to design and build the component, which can be understood as a product in and of itself. Fast feedback is still required for the design and development process, even when the product is only a small component with a very specific set of requirements.
-
-The flower represents the market-facing digital product that may "pivot," grow and adapt according to conditions. It also is constrained, by available space and energy, but within certain boundaries has greater adaptability.
-
-Neither is better than the other, but they do require different approaches. In general, we are coming from a world that saw digital systems strictly as cogs, and moving towards a world in which digital systems are more flexible, dynamic, and adaptable.
-
-And, when digital components have very well understood requirements, usually we purchase them from specialist providers (increasingly "as a service"). This results in increasing attention to the "flowers" of digital product design, as acquiring the "cogs" is relatively straightforward (more on this in the chapter 8 section on sourcing.).
-
-anchor:design[]
-
-===== Design
-
-
-image::images/2_04-design2.jpg[Design sign,500,,]
-footnote:[_Image credit https://www.flickr.com/photos/djs1021/101948321/, downloaded 2016-09-19, commercial use permitted_]
-
-[quote, Herbert Simon]
-Everyone designs who devises courses of action aimed at changing existing situations into preferred ones <<Simon1988>>.
-
-[quote, unknown]
-The art of making useful things beautiful and beautiful things useful.
-
-Once we have discovered at least a direction for the product's value proposition, and have started to understand the functions it must perform, we begin the activity of design.
-
-Design, like most other topics in this survey text, is a broad and complex area with varying definitions and schools of thought. The Herbert Simon quote at the beginning of this Part Is frequently cited.
-
-Design is an ongoing theme throughout the humanities, encountered in architecture (the non-IT variety), art, graphics, fashion, and commerce. It can be narrowly focused, such as the question of what color scheme to use on an app or web page. Or it can be much more expansive, as suggested by the field of design thinking. We'll start from the expansive vision and drill down into a few interesting topics.
-
-anchor:design-thinking[]
-
-====== Design thinking
-[quote, Thomas Lockwood, Design Thinking]
-Design thinking is essentially a human-centered innovation process that emphasizes observation, collaboration, fast learning, visualization of ideas, rapid concept prototyping, and concurrent business analysis, which ultimately influences innovation and business strategy. <<Lockwood2009>>
-
-Design thinking is a recent trend with various definitions, but in general combines a design sensibility with problem solving at significant scale. It usually is understood to include a significant component of systems thinking. As Tom Fisher, author of _Designing Our Way to a Better World_ <<Fisher2016>>, notes:
-
-_We've been doing a lot of work in this area of “design thinking,” which takes the thought process and the methods that have been developed for millennia around the design of physical things — products, buildings, cities — and applies that to the so-called invisible world of design, which is all of the systems and organizations that are designed, but we don’t think of them as being designed. And we’re seeing a lot of these systems not working very well._<<Peck2016>>
-
-Design thinking is the logical evolution of disciplines such as user interface design, when such designs encounter constraints and issues beyond their usual span of concern. Although it has been influential on Lean UX and related works, it is not an explicitly digital discipline.
-
-There are many design failures in digital product delivery. What is often overlooked is that the entire customer experience of the product is a form of design.
-
-Consider for example Apple Computer. Their products are admired worldwide and cited as examples of "good design." Often, however, this is only understood in terms of the physical product, for example an iPhone or a MacBook Air. But there is more to the experience. Suppose you have technical difficulties with your iPhone, or you just want to get more value out of it. Apple created its popular Genius Bar support service, where you can get support and instruction in using the technology.
-
-.Apple Genius Bar footnote:[_Image credit https://www.flickr.com/photos/dong/2691594470/, downloaded 2016-09-19, commercial use permitted_]
-image::images/2_04-geniusBar.jpg[Genius Bar, 400,,float="right"]
-
-Notice that the product you are using is no longer just the phone, or computer. *It is the combination of the device PLUS your support experience*. This is essential to understanding the modern practices of design thinking and Lean UX. As Jeff Sussna, author of _Designing Delivery_, notes, "In order to provide high-quality, digitally infused service, the entire delivery organization must function as an integrated whole." <<Sussna2015>>, p. 18.
-
-====== Hypothesis testing
-The concept of hypothesis testing is key to product discovery and design. The power of scalable Cloud architectures and fast Continuous Delivery pipelines has made it possible to test product hypotheses against real-world customers at scale and in real time. Companies like Netflix and Facebook have pioneered techniques like "canary deployments" and "A/B testing."
-
-In these approaches, two different feature approaches are tried out simultaneously and the business results are measured. For example, are customers more likely to click on a green button or a yellow one? Testing such questions in the era of packaged software would have required lab-based usability engineering approaches, which risked being invalid because of their small sample size. Testing against larger numbers is possible, now that software is increasingly delivered as a service.
-
-====== Usability and interaction
-At a lower level than the holistic concerns of design thinking, we have practices such as usability engineering. These take many forms. There are any number of systematic and well-researched approaches to
-
-* usability, interaction design (<<Cooper2009>>, <<Isaacs2002>>, <<Tidwell2006>>, <<Bank2016>>)
-* visualization (<<Card1999>>, <<Tufte2001>>)
-
-and related topics.
-
-All such approaches, however, should be used in the overall Lean Startup/Lean UX framework of hypothesis generation and testing.
-
-If we subscribe to design thinking and take a whole-systems view, designing for ease of operations is also part of the design process. We will discuss this further in Chapter 6. Developing documentation of the product's characteristics, from the perspective of those who will run it on a day to day basis, is also an aspect of product delivery.
+More detailed understanding is left to the product backlog, which is subject to ongoing "grooming" (re-evaluation in light of xref:feedback[feedback]).
