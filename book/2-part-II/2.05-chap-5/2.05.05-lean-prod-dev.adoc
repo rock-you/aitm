@@ -26,7 +26,7 @@ One dead end that organizations keeps pursuing is the desire to make _research a
 WARNING: The concept of a repeatable "software process" is at best a risky one, and an idea that has caused much waste in the industry.
 
 In IT, simply developing software for a new problem (or even new software for an old problem) is an R&D problem, not a production line problem. It is iterative, uncertain, and risky, just like other forms of product development. That does not mean it is completely un-manageable, or that its creation is a mysterious, artistic process. It is just a more variable process with a higher chance of failure, and with a need to incorporate feedback quickly to reduce the risk of xref:open-loop[open loop]
-control failure.  These ideas are well known to the Agile community and its authors. However, there is one thought leader who stands out in this field: an ex-Naval officer and former nuclear engineer named Donald Reinertsen, introduced above in our discussions xref:beneficial-variability[beneficial variability in product discovery] and xref:queuing[queuing].
+control failure.  These ideas are well known to the Agile community and its authors. However, there is one thought leader who stands out in this field: an ex-Naval officer and nuclear engineer named Donald Reinertsen, introduced above in our discussions xref:beneficial-variability[beneficial variability in product discovery] and xref:queuing[queuing].
 
 There are many books on Agile development and management. Consider the following books, all well known and influential in the fields of software development and Agile:
 
@@ -108,7 +108,7 @@ Reinertsen observes that product managers may think that they intuitively unders
 
 Finally, Josh Arnold notes that Cost of Delay is much easier to assess on small batches of work. Large projects tend to attract many ideas for features, some of which have stronger economic justifications than others. When all these features are lumped together, it makes understanding Cost of Delay challenging, because it then becomes an average across the various features. But since features, ideally, can be worked on individually, understanding Cost of Delay at that level helps with the prioritization of the work.
 
-===== Roadmap and backlog, revisited
+===== Roadmap, backlog, and estimation
 
 We've previously mentioned the xref:scrum[product backlog] and  xref:product-roadmapping[product roadmapping]. Let's examine this concept further, and in particular how xref:cost-of-delay[Cost of Delay] can help. Both Mike Cohn and Roman Pichler use the DEEP acronym to describe backlog qualities (<<Cohn2010>> p. 243, <<Pichler2010>> p. 48):
 
@@ -126,6 +126,10 @@ The backlog should receive ongoing "grooming" to support these qualities, which 
 .Backlog granularity & priority footnote:[similar to <<Pichler2010>>, p.48.]
 image::images/2_05-backlog.png[backlog, 250, ,float="right"]
 
-When "detailed appropriately," items in the backlog are not all the same scale. Scrum and Agile thinkers generally agree on the core concept of "story," but stories vary in size, with the largest stories often termed "epics." The backlog is ordered in terms of priority (what will be done next) but, critically, it is also understood that the lower-priority items in general can be larger grained. In other words, if we visualize the backlog as a stack, with the highest priority on the top, the size of the stories increases as we go down.
+When "detailed appropriately," items in the backlog are not all the same scale. Scrum and Agile thinkers generally agree on the core concept of "story," but stories vary in size, with the largest stories often termed "epics." The backlog is ordered in terms of priority (what will be done next) but, critically, it is also understood that the lower-priority items in general can be larger grained. In other words, if we visualize the backlog as a stack, with the highest priority on the top, the size of the stories increases as we go down. (Reinertsen terms this _progressive specification_; see <<Reinertsen1997>>, pp. 176-177 for a detailed discussion.)
 
 A high quality DEEP backlog combined with Cost of Delay is the foundation of digital product development. It's essential to have an economic basis for making the prioritization decision. Clarifying the economic basis is a critical function of the xref:product-roadmapping[product roadmap]. Through understanding the economics of product availability to the market or internal users, Cost of Delay can drive backlog prioritization.
+
+Estimating user stories is a standard practice in Scrum and Agile methods more generally. Agile approaches are wary of false precision and accept the fact that estimation is an uncertain practice at best. However, without some overall estimate or roadmap for when a product might be ready for use, it is unlikely that the investment will be made to create it.
+
+At a more detailed level, it is common practice for product teams to estimate detailed stories using "points." Points are a
