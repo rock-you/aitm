@@ -680,7 +680,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_product_development_versus_production">Product development versus production</a></li>
 <li><a href="#_cost_of_delay">Cost of Delay</a></li>
-<li><a href="#_roadmap_and_backlog_revisited">Roadmap and backlog, revisited</a></li>
+<li><a href="#_roadmap_backlog_and_estimation">Roadmap, backlog, and estimation</a></li>
 </ul>
 </li>
 <li><a href="#_towards_process_management">Towards process management</a>
@@ -7081,6 +7081,15 @@ stakeholders</em>.</p>
 </div>
 <div class="sect4">
 <h5 id="_product_roadmapping">Product roadmapping</h5>
+<div class="quoteblock">
+<blockquote>
+Some companies may notice that every specification they have ever prepared in the history of their company has had to change during product development, but they attribute this to human error and lack of discipline. They deeply believe that they can produce a good specification if only they try hard enough. You may recognize this as the classic thinking of an <a href="#open-loop">open loop</a> control system&#8230;&#8203;
+</blockquote>
+<div class="attribution">
+&#8212; Don Reinertsen<br>
+<cite>Managing the Design Factory</cite>
+</div>
+</div>
 <div class="imageblock" style="float: right">
 <div class="content">
 <img src="images/2_04-plan-driven.png" alt="planning" width="200">
@@ -7088,7 +7097,7 @@ stakeholders</em>.</p>
 <div class="title">Figure 43. Planning fallacy</div>
 </div>
 <div class="paragraph">
-<p>Creating effective plans in complex situations is hard. Planning a new product is one of the most challenging endeavors, one in which failure is common. The historically failed approach ("planning fallacy") is to develop overly detailed (sometimes called "rigorous") plans and then assume that achieving them is simply a matter of "correct execution."</p>
+<p>Creating effective plans in complex situations is hard. Planning a new product is one of the most challenging endeavors, one in which failure is common. As the Don Reinertsen quote above reflects, the historically failed approach (call it the "planning fallacy") is to develop overly detailed (sometimes called "rigorous") plans and then assume that achieving them is simply a matter of "correct execution."</p>
 </div>
 <div class="paragraph">
 <p>Contrast the planning fallacy with <a href="#lean-startup">Lean Startup</a>, which emphasizes ongoing confirmation of product direction through experimentation. In complex efforts, ongoing validation of assumptions and direction is essential, which is why overly plan-driven approaches are falling out of favor. However, some understanding of time frames and mapping goals against the calendar is still important. Exactly how much effort to devote to such forecasting remains a controversial topic with digital product management professionals, one we will return to throughout this book. Minimally, a high level product roadmap is usually called for: without at least this, it may be difficult to secure the needed investment to start product work. Roman Pichler recommends the product roadmap contain:</p>
@@ -8400,7 +8409,7 @@ The concept of a repeatable "software process" is at best a risky one, and an id
 </div>
 <div class="paragraph">
 <p>In IT, simply developing software for a new problem (or even new software for an old problem) is an R&amp;D problem, not a production line problem. It is iterative, uncertain, and risky, just like other forms of product development. That does not mean it is completely un-manageable, or that its creation is a mysterious, artistic process. It is just a more variable process with a higher chance of failure, and with a need to incorporate feedback quickly to reduce the risk of <a href="#open-loop">open loop</a>
-control failure.  These ideas are well known to the Agile community and its authors. However, there is one thought leader who stands out in this field: an ex-Naval officer and former nuclear engineer named Donald Reinertsen, introduced above in our discussions <a href="#beneficial-variability">beneficial variability in product discovery</a> and <a href="#queuing">queuing</a>.</p>
+control failure.  These ideas are well known to the Agile community and its authors. However, there is one thought leader who stands out in this field: an ex-Naval officer and nuclear engineer named Donald Reinertsen, introduced above in our discussions <a href="#beneficial-variability">beneficial variability in product discovery</a> and <a href="#queuing">queuing</a>.</p>
 </div>
 <div class="paragraph">
 <p>There are many books on Agile development and management. Consider the following books, all well known and influential in the fields of software development and Agile:</p>
@@ -8571,7 +8580,7 @@ If you measure only one thing, measure Cost of Delay.
 </div>
 </div>
 <div class="sect4">
-<h5 id="_roadmap_and_backlog_revisited">Roadmap and backlog, revisited</h5>
+<h5 id="_roadmap_backlog_and_estimation">Roadmap, backlog, and estimation</h5>
 <div class="paragraph">
 <p>We&#8217;ve previously mentioned the <a href="#scrum">product backlog</a> and  <a href="#product-roadmapping">product roadmapping</a>. Let&#8217;s examine this concept further, and in particular how <a href="#cost-of-delay">Cost of Delay</a> can help. Both Mike Cohn and Roman Pichler use the DEEP acronym to describe backlog qualities (<a href="#Cohn2010">[Cohn2010]</a> p. 243, <a href="#Pichler2010">[Pichler2010]</a> p. 48):</p>
 </div>
@@ -8614,10 +8623,16 @@ If you measure only one thing, measure Cost of Delay.
 <div class="title">Figure 66. Backlog granularity &amp; priority <sup class="footnote">[<a id="_footnoteref_32" class="footnote" href="#_footnote_32" title="View footnote.">32</a>]</sup></div>
 </div>
 <div class="paragraph">
-<p>When "detailed appropriately," items in the backlog are not all the same scale. Scrum and Agile thinkers generally agree on the core concept of "story," but stories vary in size, with the largest stories often termed "epics." The backlog is ordered in terms of priority (what will be done next) but, critically, it is also understood that the lower-priority items in general can be larger grained. In other words, if we visualize the backlog as a stack, with the highest priority on the top, the size of the stories increases as we go down.</p>
+<p>When "detailed appropriately," items in the backlog are not all the same scale. Scrum and Agile thinkers generally agree on the core concept of "story," but stories vary in size, with the largest stories often termed "epics." The backlog is ordered in terms of priority (what will be done next) but, critically, it is also understood that the lower-priority items in general can be larger grained. In other words, if we visualize the backlog as a stack, with the highest priority on the top, the size of the stories increases as we go down. (Reinertsen terms this <em>progressive specification</em>; see <a href="#Reinertsen1997">[Reinertsen1997]</a>, pp. 176-177 for a detailed discussion.)</p>
 </div>
 <div class="paragraph">
 <p>A high quality DEEP backlog combined with Cost of Delay is the foundation of digital product development. It&#8217;s essential to have an economic basis for making the prioritization decision. Clarifying the economic basis is a critical function of the <a href="#product-roadmapping">product roadmap</a>. Through understanding the economics of product availability to the market or internal users, Cost of Delay can drive backlog prioritization.</p>
+</div>
+<div class="paragraph">
+<p>Estimating user stories is a standard practice in Scrum and Agile methods more generally. Agile approaches are wary of false precision and accept the fact that estimation is an uncertain practice at best. However, without some overall estimate or roadmap for when a product might be ready for use, it is unlikely that the investment will be made to create it.</p>
+</div>
+<div class="paragraph">
+<p>At a more detailed level, it is common practice for product teams to estimate detailed stories using "points." Points are a</p>
 </div>
 </div>
 </div>
