@@ -1,3 +1,275 @@
 === The major frameworks
 
 Concept introduced in Part III, reprinted summary here
+
+
+===== An overview of the major frameworks
+
+Many frameworks have emerged in the IT space, with broader and narrower domains of concern. Some are owned by non-profit standards bodies; others are commercial. We will focus on five in this book. In roughly chronological order, they are:
+
+* CMMI (Capability Maturity Model-Integrated)
+* ITIL (originally the Information Technology Infrastructure Library)
+* PMBOK (The Project Management Body of Knowledge)
+* COBIT (aka Control Objectives for Information Technology)
+* TOGAF (The Open Group Architecture Framework)
+
+A 6th framework, IT4IT, will be discussed in Chapter 12.
+
+anchor:CMMI[CMMI]
+
+====== CMMI
+The Capability Maturity Model was originally published by Watts Humphrey in 1989 in the book _Managing the Software Process_ <<Humphrey1989>>.
+
+The CMM was later taken on by the Software Engineering Institute at Carnegie-Mellon University, and is now managed by the CMMI Institute, which was acquired in 2016 by  ISACA.
+
+The CMM has had considerable influence on software development and IT management more generally. It popularized the idea that process management tends to evolve in the same way across organizations, following a "staged" model:
+
+Stage 1: Initial
+
+Stage 2: Repeatable
+
+Stage 3: Defined
+
+Stage 4: Managed
+
+Stage 5: Optimizing
+
+(These are Humphrey's original levels. There are some differences with the current CMMI, but the concept is the same.)
+
+These ideas can be seen reflected in later guidance such as COBIT and ITIL.
+
+Within this overall framework of maturation, CMMI currently calls for 22 process areas:
+
+* Causal Analysis and Resolution (CAR)
+* Configuration Management (CM)
+* Decision Analysis and Resolution (DAR)
+* Integrated Project Management (IPM)
+* Measurement and Analysis (MA)
+* Organizational Process Definition (OPD)
+* Organizational Process Focus (OPF)
+* Organizational Performance Management (OPM)
+* Organizational Process Performance (OPP)
+* Organizational Training (OT)
+* Product Integration (PI)
+* Project Monitoring and Control (PMC)
+* Project Planning (PP)
+* Process and Product Quality Assurance (PPQA)
+* Quantitative Project Management (QPM)
+* Requirements Development (RD)
+* Requirements Management (REQM)
+* Risk Management (RSKM)
+* Supplier Agreement Management (SAM)
+* Technical Solution (TS)
+* Validation (VAL)
+* Verification (VER)
+
+CMMI for a time was a critical requirement for obtaining US Government contracts, especially from the Department of Defense. As a result, outsourcing firms devoted significant effort and resources to becoming "Level 5" certified.
+
+
+anchor:ITIL[ITIL]
+
+====== ITIL
+About the same time as the CMM's initial creation and transition to the Software Engineering Institute, the Central Computer and Telecommunications Agency of the United Kingdom recognized that IT practices were becoming fragmented. In response, a multi-volume set of guidance known as the IT Infrastructure Library was created. A 2nd edition consolidated and updated this guidance, and achieved worldwide acceptance as a de facto standard for IT management. The term "service" was inserted, i.e. "IT Service Management" but the distinction between the ITSM term and simple "IT Management" has always been somewhat unclear.
+
+Due to the particular structure of UK government publications, ITIL has never covered project management or the SDLC per se, or analysis, architecture and design.
+
+ITIL is currently published via the Axelos commercial joint venture between the UK government and Capita Group. It is now in its 4th major edition (2011). While often considered an “operational” framework, ITIL spans the lifecycle of IT services and systems; the current volumes reflect a lifecycle:
+
+* Service Strategy
+* Service Design
+* Service Transition
+* Service Operations
+* Continual Service Improvement
+
+Within these volumes, ITIL defines a number of activities, functions, and what it calls processes (more on this below). These definitions have helped stabilize industry practice and provided a basis for industry training and certification of individuals.
+
+ITIL's processes include:
+
+[cols="2,6", options="header"]
+|====
+|ITIL Stage|Processes
+|Service Strategy
+|Strategy Management for IT Services +
+Service Portfolio Management +
+Demand Management +
+Financial Management for IT Services +
+Business Relationships Management +
+|Service Design
+|Design Coordination +
+Service Catalogue Management +
+Service Level Management +
+Risk Management +
+Capacity Management +
+Availability Management +
+IT Service Continuity Management +
+Information Security Management +
+Compliance Management +
+Architecture Management +
+Supplier Management +
+|Service Transition
+|Change Management
+Change Evaluation +
+Project Management (Transition Planning and Support) +
+Application Development +
+Release and Deployment Management +
+Service Validation and Testing +
+Service Asset and Configuration Management +
+Knowledge Management +
+|Service Operation
+|Event Management +
+Incident Management +
+Request Fulfillment +
+Access Management +
+Problem Management +
+IT Operations Control +
+Facilities Management +
+Application Management +
+Technical Management +
+|Continual Service Improvement
+|Service Review +
+Process Evaluation +
+Definition of CSI Initiatives +
+Monitoring of CSI Initiatives +
+|====
+
+anchor:PMBOK[]
+
+====== PMBOK
+The Project Management Body of Knowledge is a publication of the Project Management Institute. It represents the codification of formal project management knowledge. There is a comparable Axelos publication, Prince2, not covered here.
+
+PMI describes itself as:
+
+_the world's leading not-for-profit professional membership association for the project, program and portfolio management profession. Founded in 1969, PMI delivers value for more than 2.9 million professionals working in nearly every country in the world through global advocacy, collaboration, education and research. PMI advances careers, improves organizational success and further matures the profession of project management through its globally recognized standards, certifications, resources, tools, academic research, publications, professional development courses, and networking opportunities_ (from http://www.pmi.org/About-Us.aspx[www.pmi.org]).
+
+The Project Management Body of Knowledge is articulated in a publication, _A Guide to the Project Management Body of Knowlege._ While this may seem to imply that the PMBOK and its guide are two different things, they are not -- it is one publication.
+
+The PMBOK, as of the latest edition, consists of:
+
+* 47 Project Management "processes," grouped into
+* 5 Project Management process "groups" and
+* 10 Project Management "knowledge areas"
+
+The groups are the easiest to start with. They are:
+
+* Initiating
+* Planning
+* Executing
+* Monitoring and Controlling
+* Closing
+
+The PMBOK is clear that the "Process Groups are not project phases. In fact, it is possible that all Process Groups could be conducted within a phase." <<PMI2013>>, A1.3.
+
+The Knowledge Areas are a different dimension, and consist of:
+
+* Project Integration Management
+* Project Scope Management
+* Project Time Management
+* Project Cost Management
+* Project Quality Management
+* Project Human Resource Management
+* Project Communication Management
+* Project Risk Management
+* Project Procurement Management
+* Project Stakeholder Management
+
+Finally, the 47 project management "processes" include topics such as (selected items):
+
+* Develop Project Charter
+* Develop Project Management Plan
+* Direct and Manage Project Work
+* Perform Integrated Change Control
+
+Each process is categorized by one Process Group and one Knowledge Area, resulting in a matrix. A full matrix is not presented here due to copyright concerns, but one can be seen http://www.focus-on-training.co.uk/blog/pmbok-process-groups-knowledge-areas[here].
+
+anchor:COBIT[COBIT]
+
+====== COBIT
+COBIT (originally the Control Objectives for Information Technology) is a set of guidance from ISACA (originally the IS Audit and Control Association). It has a broader scope than ITIL, as it includes architecture and project management. Where ITIL contains lengthy and detailed narrative, COBIT is more terse and structured.
+
+We will discuss the concepts of IT governance and controls in the next section, and therefore at this point in the reading are not completely ready to evaluate COBIT in terms of its initial objectives. (In COBIT terms, processes are just one of various "xref:enablers[enablers]" that can serve as controls for enterprise risk.) However, COBIT is widely used as a reference for understanding IT organizational processes and activities, and is discussed in that sense in this chapter.
+
+The following processes are suggested by COBIT for IT management and goverance. (_Governance_, the "EDM" processes, is very clearly distinguished from _management_ in COBIT. We will discuss this in Chapter 10.)
+
+As COBIT notes, "The proposed process model is a complete, comprehensive model, but it is not the only possible process model. Each enterprise must define its own process set, taking into account its specific situation." <<ISACA2012a>>, p.32.
+
+COBIT is strongly supportive of the standard CMMI/ISO/IEC 15504 process maturity progression and therefore is subject to the previous criticisms regarding the suitability of this approach for digital management, especially research and development processes and other less repeatable activities.
+
+[cols="2,6", options="header"]
+|====
+|CObIT Domain|Process
+|Evaluate, Direct and Monitor (EDM) [*Governance* processes]
+|EDM01 Ensure Governance Framework Setting and Maintenance +
+EDM02	Ensure Benefits Delivery +
+EDM03	Ensure Risk Optimisation +
+EDM04	Ensure Resource Optimisation +
+EDM05	Ensure Stakeholder Transparency +
+|Align, Plan and Organize (APO)
+|APO01	Manage the IT Management Framework +
+APO02	Manage Strategy +
+APO03	Manage Entreprise Architecture +
+APO04	Manage Innovation +
+APO05	Manage Portfolio +
+APO06	Manage Budget and Costs +
+APO07	Manage Human Relations +
+APO08	Manage Relationships +
+APO09	Manage Service Agreements +
+APO10	Manage Suppliers +
+APO11	Manage Quality +
+APO12	Manage Risk +
+APO13	Manage Security +
+|Build, Acquire and Implement (BAI)
+|BAI01	Manage Programs and Projects +
+BAI02	Manage Requirements Definition +
+BAI03	Manage Solutions Identification and Build +
+BAI04	Manage Availability and Capacity +
+BAI05	Manage Organisational Change Enablement +
+BAI06	Manage Changes +
+BAI07	Manage Changes Acceptance and Transitioning +
+BAI08	Manage Knowledge +
+BAI09	Manage Assets +
+BAI10	Manage Configuration +
+|Deliver, Service and Support (DSS)
+|DSS01	Manage Operations +
+DSS02	Manage Service Requests and Incidents +
+DSS03	Manage Problems +
+DSS04	Manage Continuity +
+DSS05	Manage Security Services +
+DSS06	Manage Business Process Controls +
+|Monitor, Evaluate and Assess (MEA)
+|MEA01	Monitor, Evaluate and Assess Performance and Conformance +
+MEA02	Monitor, Evaluate and Asses the System of Internal Control +
+MEA03	Evaluate and Assess Compliance with External Requirements +
+|====
+
+Each process is further elaborated into practices. For example, the process APO08 (Manage Relationships) has the following management practices:
+
+* APO08_01 Understand business expectations.
+* APO08_02 Identify opportunities, risk and constraints for IT to enhance the business.
+* APO08_03 Manage the business relationship.
+* APO08_04 Co-ordinate and communicate.
+* APO08_05 Provide input to the continual improvement of services.
+
+Inputs and outputs are documented at the management practice level.
+
+COBIT can be freely accessed through www.isaca.org.
+
+anchor:TOGAF[TOGAF]
+
+====== TOGAF
+The Open Group Architecture Framework, is a framework and method for IT and enterprise architecture practices. TOGAF advocates an "Architecture Development Method" consisting of:
+
+* Architecture Vision
+* Business Architecture
+* Information Systems Architectures
+* Technology Architecture
+* Opportunities and Solutions
+* Migration Planning
+* Implementation, Governance
+* Architecture Change Management
+
+TOGAF can be freely accessed through www.opengroup.org.
+
+We will discuss architecture and TOGAF more in Chapter 12.
+
+====== Other frameworks
+Many other frameworks exist, under varying governance models from open to proprietary. An up to date list is maintained by Van Haren Publishing in their publication Global Standards and Publications (Van Haren Publishing, 2016). There are Agile frameworks such as the Scaled Agile Framework, although at this writing these are mostly proprietary. Finally, there is a broad ecosystem of vendor-specific certifications as well, to educate practitioners in the specifics of various commercial products.
