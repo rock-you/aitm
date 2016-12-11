@@ -888,6 +888,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_the_future_of_project_management">The future of project management</a></li>
 </ul>
 </li>
+<li><a href="#_why_process_management">Why process management?</a>
+<ul class="sectlevel4">
+<li><a href="#_process_and_project">Process and project</a></li>
+<li><a href="#_process_and_organization">Process and organization</a></li>
+<li><a href="#_measuring_process">Measuring process</a></li>
+</ul>
+</li>
 <li><a href="#_coordination">Coordination</a></li>
 <li><a href="#_process_control_and_continuous_improvement">Process control and continuous improvement</a>
 <ul class="sectlevel4">
@@ -905,7 +912,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_observations_on_the_frameworks">Observations on the frameworks</a></li>
 </ul>
 </li>
-<li><a href="#_why_process_management">Why process management?</a>
+<li><a href="#_why_process_management_2">Why process management?</a>
 <ul class="sectlevel4">
 <li><a href="#_lean_agile_and_it_process_management">Lean, Agile, and IT process management</a></li>
 <li><a href="#_process_conception">Process conception</a></li>
@@ -1118,8 +1125,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#Appendices">Appendices &amp; back matter</a>
 <ul class="sectlevel2">
 <li><a href="#_the_major_frameworks">The major frameworks</a>
-<ul class="sectlevel4">
-<li><a href="#_an_overview_of_the_major_frameworks">An overview of the major frameworks</a></li>
+<ul class="sectlevel3">
+<li><a href="#_cmmi">CMMI</a></li>
+<li><a href="#_itil">ITIL</a></li>
+<li><a href="#_pmbok">PMBOK</a></li>
+<li><a href="#_cobit">COBIT</a></li>
+<li><a href="#_togaf_2">TOGAF</a></li>
+<li><a href="#_other_frameworks">Other frameworks</a></li>
 </ul>
 </li>
 <li><a href="#_appendix_project_management">Appendix: Project management</a>
@@ -14724,8 +14736,245 @@ Humble toyota quote</pre>
 <pre>2nd draft incorporate http://blackswanfarming.com/fund-the-teams-not-the-project/</pre>
 </div>
 </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_why_process_management">Why process management?</h4>
+<div class="quoteblock">
+<blockquote>
+Is a firm a collection of activities or a set of resources and capabilities? Clearly, a firm is both. But activities are what firms do, and they define the resources and capabilities that are relevant.
+</blockquote>
+<div class="attribution">
+&#8212; Michael Porter<br>
+<cite>Competitive Advantage</cite>
+</div>
+</div>
 <div class="paragraph">
-<p>Unresolved directive in _core.adoc - include::book/3-part-III/3.09-chap-9/3.09.02-execution.adoc[]</p>
+<p>We have previously discussed product and project management, and the beginnings of <a href="#IT-process-emergence">IT process</a>. You may wish to review our summary description of <a href="#process-project-product">process, product, and project management</a>.</p>
+</div>
+<div class="paragraph">
+<p>Process management starts with the fundamental capability for coordinated <a href="#work-management">work management</a>, and refines it much further.</p>
+</div>
+<div class="paragraph">
+<p>In our company, work has been specializing. A simple card-based kanban approach is no longer sufficient. We are finding that some work is repetitive, and we need to remember to do certain things in certain orders. For example, a new Human Resources (HR) manager was hired. The HR manager decided that a sticky note of "hire someone new for us" was not sufficient. As she pointed out to the team, hiring needed to follow a defined sequence of tasks:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Establishing the need and purpose for the position</p>
+</li>
+<li>
+<p>Soliciting candidates</p>
+</li>
+<li>
+<p>Filtering the candidates</p>
+</li>
+<li>
+<p>Selecting a final choice</p>
+</li>
+<li>
+<p>Registering that new employee in the payroll system</p>
+</li>
+<li>
+<p>Getting the new employee set up with benefits providers (insurance, retirement, etc)</p>
+</li>
+<li>
+<p>Getting the new employee working space, equipment, and access to systems</p>
+</li>
+<li>
+<p>Training the new employee in organizational policies, as well as any position-specific orientation</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The sales, marketing, and finance teams have similarly been developing ordered lists of tasks that are consistently executed as end to end sequences. And even in the core digital development and operations teams, they are finding that some tasks are repetitive and need documentation so they are performed consistently.</p>
+</div>
+<div class="paragraph">
+<p>More broadly, your entire digital product pipeline is sometimes called a "process." From initial feature idea through production, you seek a consistent means for identifying and implementing valuable functionality. Sometimes this work requires intensive, iterative collaboration and is unpredictable (e.g. developing a user interface); sometimes, the work is more repeatable (e.g. packaging and releasing tested functionality).</p>
+</div>
+<div class="paragraph">
+<p>However, some team members are cautious of the word "process". The term "process police" comes up in an unhappy way.</p>
+</div>
+<div class="paragraph">
+<p>"Are we going to have auditors tracking whether we filled out all our forms correctly?," one asks.</p>
+</div>
+<div class="paragraph">
+<p>"We used to get these consultants in at my old company and they would leave piles of 3 ring binders on the shelf that no one ever looked at," another person says.</p>
+</div>
+<div class="paragraph">
+<p>"I can&#8217;t write code according to someone&#8217;s recipe!," a third says with some passion, and to general agreement from the developers in the room.</p>
+</div>
+<div class="paragraph">
+<p>The irony is that digital products are based on process automation. The idea that certain tasks can be done repeatably and at scale through digitization is fundamental to all use of computers. The digital service <strong>is</strong> fundamentally an automated process, one that can be intricate and complicated. That&#8217;s what computers do. But process management also spans human activities, and that&#8217;s where things get more complex.</p>
+</div>
+<div class="paragraph">
+<p>We discussed task ordering in Chapter 8. However, projects are not usually seen as repeatable.</p>
+</div>
+<div class="paragraph">
+<p>It all starts with just "work." The following diagram might help:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3_09-wrk-prj-proc.png" alt="3 09 wrk prj proc">
+</div>
+</div>
+<div class="paragraph">
+<p>Project management adds concerns of task ordering and resource management, for projects typically executed on a one-time basis.</p>
+</div>
+<div class="paragraph">
+<p>Process management is also concerned with ordering, but less so with the resource load (more on this below), and instead is concerned with repeatability and ongoing improvement.</p>
+</div>
+<div class="sect4">
+<h5 id="_process_and_project">Process and project</h5>
+<div class="paragraph">
+<p>Project management and process management interact in 2 primary ways:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Projects often are used to create and deploy processes. A large system implementation (e.g. of a Enterprise Resource Planning module such as Human Resource Management) will often be responsible for process implementation including training.</p>
+</li>
+<li>
+<p>As environments mature, product and/or project teams require process support.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>As Richardson notes in <em>Project Management Theory and Practice</em>, "there are many organizational processes that are needed to optimally support a successful project." <a href="#Richardson2010">[Richardson2010]</a> For example, the project may require predictable contractor hiring, or infrastructure provisioning, or security reviews. The same is true for product teams that may not be using a "project" concept to manage their work. To the extent these are managed as repeatable, optimized processes, risk is reduced.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_process_and_organization">Process and organization</h5>
+<div class="paragraph">
+<p>Processes are much more than repeatable activities. Many leading thinkers (such as Michael Porter, quoted at the start of this chapter section) see organizations primarily as sets of interacting processes, supporting fundamental end to end value chains or value streams. We will talk more about this in the next chapter section.</p>
+</div>
+<div class="paragraph">
+<p>The concept of process is often contrasted with that of function or organization. We have seen in previous chapters how product development and project management must drive results across organizational boundaries. Process management has a similar challenge; its goal is to drive <strong>repeatable</strong> results across organizational boundaries.</p>
+</div>
+<div class="paragraph">
+<p>As we know from our discussion of <a href="#product-mgmt">Product Management</a>, developing new products is not a particularly repeatable process. The Agile movement in some ways arose in opposition to attempts to apply process concepts of "repeatability" to developing software. These concerns remain.</p>
+</div>
+<div class="paragraph">
+<p>However, this book is not only about digital R&amp;D processes. It is also about a spectrum of operations and effort that spans from the unique to the highly repeatable. There is an interesting middle ground, of processes that are at least semi-repeatable. Examples often found in the large digital organization include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Assessing, approving, and completing changes</p>
+</li>
+<li>
+<p>End user equipment provisioning</p>
+</li>
+<li>
+<p>Resolving incidents and answering user inquiries</p>
+</li>
+<li>
+<p>Troubleshooting problems</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>And many others. We will talk about a wide variety of such processes in the chapter section on process frameworks.</p>
+</div>
+<div class="paragraph">
+<p>It is important to realize, however, that just as the traditional IT project is under pressure, there are similar challenges for the traditional IT process. Continuous deployment techniques are eroding the need for formal change management. Consumerization is challenging traditional internal IT provisioning practices. And self-service help desks are eliminating some traditional support activities.</p>
+</div>
+<div class="paragraph">
+<p>Nevertheless, any rumors of an "end to process" are probably greatly exaggerated. There will likely always be complex combinations of automated, semi-automated, and manual activity in digital organizations. Some of this activity will be repeatable enough that the "process" construct will be applied to it. Measurability remains a concern; the Lean philosophy underpinning much Agile thought emphasizes this.</p>
+</div>
+<div class="paragraph">
+<p>It is therefore useful to understand more fundamentally what processes are, how they operate, and how they are managed and improved.</p>
+</div>
+<div class="sect5">
+<h6 id="_process_as_skill">Process as skill</h6>
+<div class="paragraph">
+<p>As we discussed at the beginning of this chapter, sometimes new employees come in expecting that you are following certain processes. This is in part because "process" experience can be an important part of an employee&#8217;s career background. A skilled HR manager may consider their experience with large-scale enterprise hiring processes to be a major part of their qualifications for a position in your company.</p>
+</div>
+<div class="paragraph">
+<p>This applies to both "business" and "IT" processes. In fact, in the digital world, there is no real difference. Digital processes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Initiate new systems, from idea to construction</p>
+</li>
+<li>
+<p>Publicize and grant access to the new systems</p>
+</li>
+<li>
+<p>Capture revenue from the systems</p>
+</li>
+<li>
+<p>Support people in their interactions with the systems</p>
+</li>
+<li>
+<p>Fix the systems when they break</p>
+</li>
+<li>
+<p>Improve the systems based on stakeholder feedback</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>It&#8217;s not clear which of these are "IT" versus "business" processes. But they are definitely processes. Some of them are more predictable, some less so, but they all represent some form of ordered work that is repeatable to some degree. And to some extent, you are seeking people with experience defined at least in part by their exposure to processes.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+In Chapter 10, we will discuss IT governance in depth. The concept of "control" is critical to IT governance, and processes often play an important role in terms of control.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_measuring_process">Measuring process</h5>
+<div class="paragraph">
+<p>One of the most important reasons for repeatable processes is so that they can be measured and understood. Repeatable processes are measured in terms of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Speed</p>
+</li>
+<li>
+<p>Effort</p>
+</li>
+<li>
+<p>Quality</p>
+</li>
+<li>
+<p>Variation</p>
+</li>
+<li>
+<p>Outcomes</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>at the most general level, and of course all of those measurements must be defined much more specifically depending on the process.</p>
+</div>
+<div class="paragraph">
+<p>Measurement is an essential aspect of process management, but must be carefully designed. Measuring process can have unforeseen results. Process participants will behave according to how the process is measured. If a help desk operator is measured and rated on how many calls they process an hour, the quality of those interactions may suffer. It is critical that any process "key performance indicator" be understood in terms of the highest possible business objectives. Is the objective truly to process as many calls as possible? Or is it to satisfy the customer so they need not turn to other channels to get their answers? (More on measurement in the chapter section on <a href="#continuous-improvement">Continuous Improvement</a>.)</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>===== The core IT service management processes
+Change
+Service Request
+Incident
+Problem</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>There are many more hypothetical... discussed subsequently</pre>
+</div>
 </div>
 </div>
 </div>
@@ -15402,7 +15651,7 @@ We move away from heavily documented handoffs to a process that creates only the
 </div>
 </div>
 <div class="sect3">
-<h4 id="_why_process_management">Why process management?</h4>
+<h4 id="_why_process_management_2">Why process management?</h4>
 <div class="sect4">
 <h5 id="_lean_agile_and_it_process_management">Lean, Agile, and IT process management</h5>
 <div class="quoteblock">
@@ -25378,11 +25627,6 @@ We previously discussed the Business Analysis Body of Knowledge. Although they h
 <div class="sect2">
 <h3 id="_the_major_frameworks">The major frameworks</h3>
 <div class="paragraph">
-<p>Concept introduced in Part III, reprinted summary here</p>
-</div>
-<div class="sect4">
-<h5 id="_an_overview_of_the_major_frameworks">An overview of the major frameworks</h5>
-<div class="paragraph">
 <p>Many frameworks have emerged in the IT space, with broader and narrower domains of concern. Some are owned by non-profit standards bodies; others are commercial. We will focus on five in this book. In roughly chronological order, they are:</p>
 </div>
 <div class="ulist">
@@ -25410,8 +25654,8 @@ We previously discussed the Business Analysis Body of Knowledge. Although they h
 <div class="paragraph">
 <p><a id="CMMI"></a></p>
 </div>
-<div class="sect5">
-<h6 id="_cmmi">CMMI</h6>
+<div class="sect3">
+<h4 id="_cmmi">CMMI</h4>
 <div class="paragraph">
 <p>The Capability Maturity Model was originally published by Watts Humphrey in 1989 in the book <em>Managing the Software Process</em> <a href="#Humphrey1989">[Humphrey1989]</a>.</p>
 </div>
@@ -25522,8 +25766,8 @@ We previously discussed the Business Analysis Body of Knowledge. Although they h
 <p><a id="ITIL"></a></p>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_itil">ITIL</h6>
+<div class="sect3">
+<h4 id="_itil">ITIL</h4>
 <div class="paragraph">
 <p>About the same time as the CMM&#8217;s initial creation and transition to the Software Engineering Institute, the Central Computer and Telecommunications Agency of the United Kingdom recognized that IT practices were becoming fragmented. In response, a multi-volume set of guidance known as the IT Infrastructure Library was created. A 2nd edition consolidated and updated this guidance, and achieved worldwide acceptance as a de facto standard for IT management. The term "service" was inserted, i.e. "IT Service Management" but the distinction between the ITSM term and simple "IT Management" has always been somewhat unclear.</p>
 </div>
@@ -25628,8 +25872,8 @@ Monitoring of CSI Initiatives<br></p></td>
 <p><a id="PMBOK"></a></p>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_pmbok">PMBOK</h6>
+<div class="sect3">
+<h4 id="_pmbok">PMBOK</h4>
 <div class="paragraph">
 <p>The Project Management Body of Knowledge is a publication of the Project Management Institute. It represents the codification of formal project management knowledge. There is a comparable Axelos publication, Prince2, not covered here.</p>
 </div>
@@ -25746,8 +25990,8 @@ Monitoring of CSI Initiatives<br></p></td>
 <p><a id="COBIT"></a></p>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_cobit">COBIT</h6>
+<div class="sect3">
+<h4 id="_cobit">COBIT</h4>
 <div class="paragraph">
 <p>COBIT (originally the Control Objectives for Information Technology) is a set of guidance from ISACA (originally the IS Audit and Control Association). It has a broader scope than ITIL, as it includes architecture and project management. Where ITIL contains lengthy and detailed narrative, COBIT is more terse and structured.</p>
 </div>
@@ -25861,8 +26105,8 @@ MEA03	Evaluate and Assess Compliance with External Requirements<br></p></td>
 <p><a id="TOGAF"></a></p>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_togaf_2">TOGAF</h6>
+<div class="sect3">
+<h4 id="_togaf_2">TOGAF</h4>
 <div class="paragraph">
 <p>The Open Group Architecture Framework, is a framework and method for IT and enterprise architecture practices. TOGAF advocates an "Architecture Development Method" consisting of:</p>
 </div>
@@ -25901,14 +26145,13 @@ MEA03	Evaluate and Assess Compliance with External Requirements<br></p></td>
 <p>We will discuss architecture and TOGAF more in Chapter 12.</p>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_other_frameworks">Other frameworks</h6>
+<div class="sect3">
+<h4 id="_other_frameworks">Other frameworks</h4>
 <div class="paragraph">
 <p>Many other frameworks exist, under varying governance models from open to proprietary. An up to date list is maintained by Van Haren Publishing in their publication Global Standards and Publications (Van Haren Publishing, 2016). There are Agile frameworks such as the Scaled Agile Framework, although at this writing these are mostly proprietary. Finally, there is a broad ecosystem of vendor-specific certifications as well, to educate practitioners in the specifics of various commercial products.</p>
 </div>
 <div class="paragraph">
 <p><a id="project-mgmt"></a></p>
-</div>
 </div>
 </div>
 </div>
