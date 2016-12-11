@@ -822,20 +822,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_chapter_8_outline">Chapter 8 outline</a></li>
 <li><a href="#_chapter_8_learning_objectives">Chapter 8 learning objectives</a></li>
-<li><a href="#_feature_versus_component_teams">Feature versus component teams</a></li>
-</ul>
-</li>
-<li><a href="#_what_is_a_project">What is a project?</a>
-<ul class="sectlevel4">
 <li><a href="#_why_project_management">Why project management?</a></li>
 <li><a href="#_how_is_a_project_different_from_simple_work_management">How is a project different from simple "work management"?</a></li>
 <li><a href="#_the_iron_triangle">The "iron triangle"</a></li>
 <li><a href="#_a_traditional_information_technology_project">A traditional information technology project</a></li>
 </ul>
 </li>
-<li><a href="#_pmbok_and_project_practices">PMBOK and project practices</a>
+<li><a href="#_project_practices">Project practices</a>
 <ul class="sectlevel4">
-<li><a href="#_the_project_management_body_of_knowledge">The Project Management Body of Knowledge</a></li>
 <li><a href="#_scope_management">Scope management</a></li>
 <li><a href="#_project_assignment">Project assignment</a></li>
 </ul>
@@ -869,7 +863,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#_chapter_9_execution_and_process">Chapter 9: Execution and process</a>
+<li><a href="#_chapter_9_coordination_and_execution">Chapter 9: Coordination and execution</a>
 <ul class="sectlevel3">
 <li><a href="#_introduction_9">Introduction</a>
 <ul class="sectlevel4">
@@ -8775,7 +8769,7 @@ If you measure only one thing, measure Cost of Delay.
 <p>A high quality DEEP backlog combined with Cost of Delay is the foundation of digital product development. It&#8217;s essential to have an economic basis for making the prioritization decision. Clarifying the economic basis is a critical function of the <a href="#product-roadmapping">product roadmap</a>. Through understanding the economics of product availability to the market or internal users, Cost of Delay can drive backlog prioritization.</p>
 </div>
 <div class="paragraph">
-<p>Estimating user stories is a standard practice in Scrum and Agile methods more generally. Agile approaches are wary of false precision and accept the fact that estimation is an uncertain practice at best. However, without some overall estimate or roadmap for when a product might be ready for use, it is unlikely that the investment will be made to create it.</p>
+<p>Estimating user stories is a standard practice in Scrum and Agile methods more generally. Agile approaches are wary of false precision and accept the fact that estimation is an uncertain practice at best. However, without some overall estimate or roadmap for when a product might be ready for use, it is unlikely that the investment will be made to create it. It is difficult to establish the economic value of developing a product feature at a particular time, if you have no idea of the cost and/or effort involved to bring it to market.</p>
 </div>
 <div class="paragraph">
 <p>At a more detailed level, it is common practice for product teams to estimate detailed stories using "points." Points are a relative form of estimation, valid within the boundary of one team. Story point estimating strives to avoid false precision, often restricting the team&#8217;s estimate of the effort to a modified Fibonacci sequence, or even T-shirt or dog sizes:</p>
@@ -10758,6 +10752,21 @@ here&#8217;s a general warning: Avoid large projects. Start small and quickly de
 </li>
 <li>
 <p>To support a process requires portfolio investment and organizational structure, but no project may ever be involved. Whether a product is implied by the existence of a process is an interesting question we will think about.</p>
+<div class="literalblock">
+<div class="content">
+<pre>what is the relationship of the discovery process to the investment process to org</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>data, insight, belief, bet - as a loop
+strengthened hypothesis leads to establishing org
+minimal friction to spin teams up/down (Abbott mentioned i think)
+even when you can easily form teams - this is a big deal
+represents what might become a long term high value investment
+NOT a VM to be torn down and spun up repeatedly</pre>
+</div>
+</div>
 </li>
 </ul>
 </div>
@@ -12119,221 +12128,6 @@ on my team</p>
 
 </div>
 <div class="sect4">
-<h5 id="_feature_versus_component_teams">Feature versus component teams</h5>
-<div class="paragraph">
-<p>If you choose to organize around products, the discussion revolves around segmenting along feature lines, versus segmenting along component lines. What do we mean by this?</p>
-</div>
-<div class="paragraph">
-<p>Features are <strong>what</strong> your product <strong>does</strong>. They are what the customers perceive as valuable. “Scope as viewed by the customer” as <a href="#Kennaley2010">[Kennaley2010]</a> says (p. 169). They may be "<a href="#flower-and-cog">flowers</a>"&#8201;&#8212;&#8201;defined by the value they provide externally, and encouraged to evolve with some freedom. You may be investing in new features using <a href="#lean-startup">Lean Startup</a>, the <a href="#DIBB">Spotify DIBB model</a> or some other hypothesis-driven approach.</p>
-</div>
-<div class="paragraph">
-<p>Components are <strong>how</strong> your product is <strong>built</strong>, such as database vs. Web components. In other words, they are a form of infrastructure (but infrastructure you may need to build yourself, rather than just spin up in the Cloud). They are more likely to be "<a href="#flower-and-cog">cogs</a>" -  more constrained and engineered to specifications.</p>
-</div>
-<div class="imageblock" style="float: right">
-<div class="content">
-<img src="images/3_07-feature-v-component.png" alt="feature component matrix" width="400">
-</div>
-<div class="title">Figure 105. Features versus components</div>
-</div>
-<div class="paragraph">
-<p>Feature teams are dedicated to a clearly defined functional scope, while component teams are defined by their technology platform. Component teams may become shared services, which need to be carefully understood and managed (more on this to come). A component&#8217;s failure may affect multiple feature teams, which makes them more risky. However, it may be easy to say that features are more important than components, but this can easily be carried too far. Do you want each feature team choosing its own database? This might not be the best idea. Allowing feature teams to define their own technical direction can result in brittle, fragmented architectures, technical debt, and rework.</p>
-</div>
-<div class="paragraph">
-<p>Software product management needs to be a careful balance between these two perspectives. The Scaled Agile Framework suggests that components are relatively</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>more technically focused</p>
-</li>
-<li>
-<p>more generally re-usable</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>than features. SAFE also recommends a ratio of roughly 20-25% component teams to 75%-80% feature teams <a href="#SAFE2016">[SAFE2016]</a>.</p>
-</div>
-<div class="paragraph">
-<p><a id="project-mgmt"></a></p>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_what_is_a_project">What is a project?</h4>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Important</div>
-</td>
-<td class="content">
-As with other chapters in the later part of this book, we are going to introduce Project Mangement "on its own terms." We will then add additional context and critique in subsequent sections.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>We are already doing work, using Scrum and Kanban for the most part. But there is interest in more formalized, traditional project management, so some of you go to training and learn the following basics.</p>
-</div>
-<div class="paragraph">
-<p>Let&#8217;s start with the most fundamental aspects of a project. You can start your understanding of a project by first thinking of a "to-do" list. However, rather than a miscellaneous list of errands, a project is a to-do list that is aimed at delivering some overall end result, with certain resources and within a time frame. So, in terms of your daily life, a random list of to-dos isn&#8217;t a project, but if you are organizing your annual holiday party, that certainly would qualify as a project.</p>
-</div>
-<div class="paragraph">
-<p>We could start with the following list:</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 100%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Choose menu</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Clean house before party</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Get groceries</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Fix food</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Decorate house</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Send invitations</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Choose date</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Clean up after party</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>One of the important characteristics of a project is that it is temporary. This project ends when we clean up after the party. Project management, however, takes things much further. There are a number of ways that the list above can be refined using project management techniques.</p>
-</div>
-<div class="paragraph">
-<p>First, we should probably organize the list a little better. And the task "clean house" - do we understand precisely what we mean by that? Maybe we should break this down into sub-tasks.  Also, you may notice that there are "dependencies." For example, we can&#8217;t send out invitations before we choose the date, nor can we fix the party food before we get groceries, which in turn depends on setting the menu.</p>
-</div>
-<div class="paragraph">
-<p>Let&#8217;s break out a tool. Introducing Microsoft Project:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/3_08-ms-proj-1.png" alt="3 08 ms proj 1">
-</div>
-</div>
-<div class="paragraph">
-<p>We put our list in it. Then, we set up some sub-tasks and document the dependencies. Notice the bold headings:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Clean house before party</strong></p>
-</li>
-<li>
-<p><strong>Food for party</strong></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>and how they have indented "sub-tasks" underneath them.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/3_08-ms-proj-3.png" alt="3 08 ms proj 3">
-</div>
-</div>
-<div class="paragraph">
-<p>These are all the things that need to be completed, for the overall major task to be considered complete. For example, we can&#8217;t call the house clean if the dining room isn&#8217;t vacuumed. Also notice that, to the right, we see certain tasks are linked by thin black arrows. We are not going to decorate the house until all the cleaning is done, and we need to get the food prepared before we have the party. As mentioned above, these are called dependencies.</p>
-</div>
-<div class="paragraph">
-<p>This is just the tip of the iceberg.  Much more  can be tracked in a formal project management approach, such as:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Cost of people&#8217;s time - forecast and actual</p>
-</li>
-<li>
-<p>% complete of a given task</p>
-</li>
-<li>
-<p>Which sequence of tasks is the "critical path" - the sequence that must be done in order, that will take the longest time</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>PMBOK <a href="#PMI2013">[PMI2013]</a> defines the critical path as "The sequence of activities that represents the longest path through a project, which determines the shortest possible duration." In the above example, we have two major work areas: clean the house and prepare a menu. Note however that there are no dependencies between:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>vacuum living room</p>
-</li>
-<li>
-<p>clean kitchen</p>
-</li>
-<li>
-<p>clean dining table</p>
-</li>
-<li>
-<p>vacuum dining room</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Really, they can be done in any order.</p>
-</div>
-<div class="paragraph">
-<p>On the other hand, there is a clear set of dependencies between:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Choose menu</p>
-</li>
-<li>
-<p>Get groceries</p>
-</li>
-<li>
-<p>Fix food</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>This means that the sub-activity "Food for party" is the critical path. If the menu is not determined on time, the grocery run can&#8217;t happen, and the food will be fixed late or not at all.</p>
-</div>
-<div class="paragraph">
-<p>A project manager is responsible for all of this and more. A critical concept is that of "deliverable." In this example, the deliverable is the outcome of each task:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>invitations sent by 11/30 by CB</p>
-</li>
-<li>
-<p>menu decided by 12/17 by all</p>
-</li>
-<li>
-<p>house cleaned by 12/18 by all</p>
-</li>
-<li>
-<p>food prepared for guests by 12/18 by CB</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Notice that deliverables are defined by "what," "who,"  <strong>and</strong> "when.""</p>
-</div>
-<div class="paragraph">
-<p>While it is the responsibility of each contributor to the project to "meet" their deliverables, the project manager checks in regularly with each of them as to whether they will in fact be able to do this. In larger, more complex projects, the project manager updates the project plan with the effort expended to date, and the estimated time to completion. Individual status reports are assembled ("rolled up") into an overall picture of project status, reported to executives with a high level assessment of whether the project is likely to meet its objectives of cost, scope, quality, and schedule.</p>
-</div>
-<div class="sect4">
 <h5 id="_why_project_management">Why project management?</h5>
 <div class="quoteblock">
 <blockquote>
@@ -12388,7 +12182,7 @@ An ongoing work effort is generally a repetitive process that follows an organiz
 <div class="content">
 <img src="images/3_08-triad-constraints.jpg" alt="Iron triangle" width="300">
 </div>
-<div class="title">Figure 106. Project "Iron Triangle" <sup class="footnote">[<a id="_footnoteref_51" class="footnote" href="#_footnote_51" title="View footnote.">51</a>]</sup></div>
+<div class="title">Figure 105. Project "Iron Triangle" <sup class="footnote">[<a id="_footnoteref_51" class="footnote" href="#_footnote_51" title="View footnote.">51</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>The project management <a href="https://en.wikipedia.org/wiki/Project_management_triangle">Iron Triangle</a> represents the interaction of cost, time, scope, and quality on a project. The idea is that, in general, one or more of these factors may be a constraint. The following sign is often seen in service organizations:</p>
@@ -12397,7 +12191,7 @@ An ongoing work effort is generally a repetitive process that follows an organiz
 <div class="content">
 <img src="images/3_08-good-cheap-fast.jpg" alt="Good-Cheap-Fast" width="400">
 </div>
-<div class="title">Figure 107. Pick any two <sup class="footnote">[<a id="_footnoteref_52" class="footnote" href="#_footnote_52" title="View footnote.">52</a>]</sup></div>
+<div class="title">Figure 106. Pick any two <sup class="footnote">[<a id="_footnoteref_52" class="footnote" href="#_footnote_52" title="View footnote.">52</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>The same applies to project management and reflects well the "iron triangle" of tradeoffs. (Note: we will critique the iron triangle subsquently.)</p>
@@ -12506,7 +12300,7 @@ RFI stands for <a href="https://en.wikipedia.org/wiki/Request_for_information">R
 </div>
 </div>
 <div class="sect3">
-<h4 id="_pmbok_and_project_practices">PMBOK and project practices</h4>
+<h4 id="_project_practices">Project practices</h4>
 <div class="paragraph">
 <p>The previous chapter discussed some typical applications of project management, starting with very simple examples and moving into more complex topics, concluding with a discussion of the evolution of IT delivery in the modern enterprises. We return to the specific topic project management with a deeper examination.</p>
 </div>
@@ -12518,120 +12312,6 @@ RFI stands for <a href="https://en.wikipedia.org/wiki/Request_for_information">R
 </div>
 <div class="paragraph">
 <p>We will compare project execution to more general problems of scheduling and execution, and finally we will take a brief look at Eli Goldratt&#8217;s Critical Chain.</p>
-</div>
-<div class="paragraph">
-<p><a id="PMBOK"></a></p>
-</div>
-<div class="sect4">
-<h5 id="_the_project_management_body_of_knowledge">The Project Management Body of Knowledge</h5>
-<div class="paragraph">
-<p>The Project Management Body of Knowledge is sustained by the Project Management Institute. PMI describes itself as:</p>
-</div>
-<div class="paragraph">
-<p><em>the world&#8217;s leading not-for-profit professional membership association for the project, program and portfolio management profession. Founded in 1969, PMI delivers value for more than 2.9 million professionals working in nearly every country in the world through global advocacy, collaboration, education and research. PMI advances careers, improves organizational success and further matures the profession of project management through its globally recognized standards, certifications, resources, tools, academic research, publications, professional development courses, and networking opportunities</em> (from <a href="http://www.pmi.org/About-Us.aspx">www.pmi.org</a>).</p>
-</div>
-<div class="paragraph">
-<p>The Project Management Body of Knowledge is articulated in a publication, <em>A Guide to the Project Management Body of Knowlege.</em> While this may seem to imply that the PMBOK and its guide are two different things, they are not&#8201;&#8212;&#8201;it is one publication.</p>
-</div>
-<div class="paragraph">
-<p>The PMBOK, as of the latest edition, consists of:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>47 Project Management "processes," grouped into</p>
-</li>
-<li>
-<p>5 Project Management process "groups" and</p>
-</li>
-<li>
-<p>10 Project Management "knowledge areas"</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The groups are the easiest to start with. They are:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Initiating</p>
-</li>
-<li>
-<p>Planning</p>
-</li>
-<li>
-<p>Executing</p>
-</li>
-<li>
-<p>Monitoring and Controlling</p>
-</li>
-<li>
-<p>Closing</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The PMBOK is clear that the "Process Groups are not project phases. In fact, it is possible that all Process Groups could be conducted within a phase." <a href="#PMI2013">[PMI2013]</a>, A1.3.</p>
-</div>
-<div class="paragraph">
-<p>The Knowledge Areas are a different dimension, and consist of:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Project Integration Management</p>
-</li>
-<li>
-<p>Project Scope Management</p>
-</li>
-<li>
-<p>Project Time Management</p>
-</li>
-<li>
-<p>Project Cost Management</p>
-</li>
-<li>
-<p>Project Quality Management</p>
-</li>
-<li>
-<p>Project Human Resource Management</p>
-</li>
-<li>
-<p>Project Communication Management</p>
-</li>
-<li>
-<p>Project Risk Management</p>
-</li>
-<li>
-<p>Project Procurement Management</p>
-</li>
-<li>
-<p>Project Stakeholder Management</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Finally, the 47 project management "processes" include topics such as (selected items):</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Develop Project Charter</p>
-</li>
-<li>
-<p>Develop Project Management Plan</p>
-</li>
-<li>
-<p>Direct and Manage Project Work</p>
-</li>
-<li>
-<p>Perform Integrated Change Control</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Each process is categorized by one Process Group and one Knowledge Area, resulting in a matrix. A full matrix is not presented here due to copyright concerns, but one can be seen <a href="http://www.focus-on-training.co.uk/blog/pmbok-process-groups-knowledge-areas">here</a>.</p>
 </div>
 <div class="paragraph">
 <p>PMBOK details are easily obtained on the web, and will not be repeated here. It&#8217;s clear that the Agile critiques of waterfall project management have been taken seriously by the PMBOK thought leaders. There is now a PMI Agile certification and much explicit recognition of the need for iterative and incremental approaches to project work.</p>
@@ -12653,7 +12333,6 @@ Part of the problem with extensive frameworks such as PMBOK is that knowing how 
 </td>
 </tr>
 </table>
-</div>
 </div>
 <div class="sect4">
 <h5 id="_scope_management">Scope management</h5>
@@ -12735,6 +12414,9 @@ Part of the problem with extensive frameworks such as PMBOK is that knowing how 
 </div>
 <div class="paragraph">
 <p>As previously discussed, human beings are notably bad at <a href="#multi-tasking">multi-tasking</a>, and the mental "context-switching" required to move from one task to another is wasteful and ultimately not scalable. A human being fractionally allocated to more and more projects will get less and less done in total, as the transactional friction of task switching increases.</p>
+</div>
+<div class="paragraph">
+<p>Unresolved directive in _core.adoc - include::book/3-part-III/3.08-chap-8/3.08.02-project-theory.adoc[]</p>
 </div>
 <div class="paragraph">
 <p><a id="sourcing"></a></p>
@@ -14091,7 +13773,7 @@ Coordinate cross-company interactions through “market-like” forces.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_chapter_9_execution_and_process">Chapter 9: Execution and process</h3>
+<h3 id="_chapter_9_coordination_and_execution">Chapter 9: Coordination and execution</h3>
 <div class="literalblock">
 <div class="content">
 <pre>chapter is in transition to new outline, project management's coordination and execution aspects will move here.</pre>
@@ -16207,7 +15889,7 @@ Monitoring of CSI Initiatives<br></p></td>
 <div class="sect5">
 <h6 id="_pmbok">PMBOK</h6>
 <div class="paragraph">
-<p>The Project Management Body of Knowledge is a publication of the Project Management Institute. It represents the codification of formal project management knowledge. There is a comparable Axelos publication, Prince2, not covered here. PMBOK was covered in <a href="#PMBOK">Chapter 8</a>.</p>
+<p>The Project Management Body of Knowledge is a publication of the Project Management Institute. It represents the codification of formal project management knowledge. There is a comparable Axelos publication, Prince2, not covered here. PMBOK was covered in <a href="#_pmbok">Chapter 8</a>.</p>
 </div>
 <div class="paragraph">
 <p><a id="COBIT"></a></p>
@@ -17156,7 +16838,7 @@ Production scheduling is a large topic in and of itself. It is part of the domai
 <div class="content">
 <img src="images/3_08-development-iterative.png" alt="Rational Unified Process" width="493">
 </div>
-<div class="title">Figure 108. Rational Unified Process <sup class="footnote">[<a id="_footnoteref_53" class="footnote" href="#_footnote_53" title="View footnote.">53</a>]</sup></div>
+<div class="title">Figure 107. Rational Unified Process <sup class="footnote">[<a id="_footnoteref_53" class="footnote" href="#_footnote_53" title="View footnote.">53</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>One interesting aspect of the diagram is that it shows just how difficult it can be to staff a project. Demand for given functional roles ebbs and flows unpredictably. The project manager is expected to manage the uncertain handoffs between the various functional areas, and anticipate resource requirements stemming from unexpected feedback demands. This is why "T-shaped" professionals (see Chapter 7) are desirable, because they can move from area to area in response to demand.</p>
@@ -17731,7 +17413,7 @@ The COBIT 5 framework makes a clear distinction between governance and managemen
 <div class="content">
 <img src="images/4_10-shopkeeper.jpg" alt="two men in front of a store" width="600">
 </div>
-<div class="title">Figure 109. Someone to "mind the store" <sup class="footnote">[<a id="_footnoteref_54" class="footnote" href="#_footnote_54" title="View footnote.">54</a>]</sup></div>
+<div class="title">Figure 108. Someone to "mind the store" <sup class="footnote">[<a id="_footnoteref_54" class="footnote" href="#_footnote_54" title="View footnote.">54</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Now, you wish to go on an extended vacation - perhaps a cruise around the world, or a trek in the Himalayas. You need someone who can count the cash and deposit it, and place orders with and pay your suppliers. You need to hire a professional manager.</p>
@@ -17907,7 +17589,7 @@ We&#8217;ve encountered systems theory and associated concepts such as <a href="
 <div class="content">
 <img src="images/4_10-centrifugal_governor.png" alt="mechanism" width="300">
 </div>
-<div class="title">Figure 110. Centrifugal governor <sup class="footnote">[<a id="_footnoteref_55" class="footnote" href="#_footnote_55" title="View footnote.">55</a>]</sup></div>
+<div class="title">Figure 109. Centrifugal governor <sup class="footnote">[<a id="_footnoteref_55" class="footnote" href="#_footnote_55" title="View footnote.">55</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>"Governors" have been part of mechanical systems for centuries. These mechanisms have the effect of automatically controlling a system so that it (for example) operates at the desired revolutions per minute. Without governors, steam engines tended to blow up, or go out; applying devices such as the <a href="https://en.wikipedia.org/wiki/Centrifugal_governor">centrifugal governor</a> to regulate them was an important step in the development of steam power. Importantly, such devices operated to control the process from variation on either side, whether too fast or too slow. They did not operate merely as brakes.</p>
@@ -18270,7 +17952,7 @@ Enablers are factors that, individually and collectively, influence whether some
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Principles, Policies, and Frameworks</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Principles &amp; policies covered in this chapter. Frameworks covered in Chapter 8 (<a href="#PMBOK">PMBOK</a>), Chapter 9 (<a href="#CMMI">CMMI</a>, <a href="#ITIL">ITIL</a>, <a href="#COBIT">COBIT</a>, <a href="#TOGAF">TOGAF</a>), Chapter 11 (<a href="#DMBOK">DMBOK</a>), Chapter 12 (<a href="#deeper-TOGAF">further TOGAF</a>).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Principles &amp; policies covered in this chapter. Frameworks covered in Chapter 8 (<a href="#_pmbok">PMBOK</a>), Chapter 9 (<a href="#CMMI">CMMI</a>, <a href="#ITIL">ITIL</a>, <a href="#COBIT">COBIT</a>, <a href="#TOGAF">TOGAF</a>), Chapter 11 (<a href="#DMBOK">DMBOK</a>), Chapter 12 (<a href="#deeper-TOGAF">further TOGAF</a>).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Processes</p></td>
@@ -21449,7 +21131,7 @@ No enterprise can be effective without high quality data.
 <div class="content">
 <img src="images/4_11-hashes.png" alt="4 11 hashes">
 </div>
-<div class="title">Figure 111. Hashmarks</div>
+<div class="title">Figure 110. Hashmarks</div>
 </div>
 <div class="paragraph">
 <p>If you are of European descent, you might perceive this as the number twelve, or a count of twelve "somethings." What "somethings"? You don&#8217;t know.</p>
@@ -21458,7 +21140,7 @@ No enterprise can be effective without high quality data.
 <div class="content">
 <img src="images/4_11-appleTrees.jpg" alt="Apple trees" width="300">
 </div>
-<div class="title">Figure 112. How many trees? <sup class="footnote">[<a id="_footnoteref_56" class="footnote" href="#_footnote_56" title="View footnote.">56</a>]</sup></div>
+<div class="title">Figure 111. How many trees? <sup class="footnote">[<a id="_footnoteref_56" class="footnote" href="#_footnote_56" title="View footnote.">56</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Someone might tell you that this is the number of trees on your neighbor&#8217;s farm. That makes all the difference. But wait - you know for a fact that there are many more trees than 12! You inquire further and find out it is actually the number of producing apple trees, a very different concept.</p>
@@ -21498,7 +21180,7 @@ A message to mapmakers: Highways are not painted red, rivers don&#8217;t have co
 <div class="content">
 <img src="images/4_11-cuneiform.jpg" alt="Clay tablet with markings" width="300">
 </div>
-<div class="title">Figure 113. Sumerian cuneiform <sup class="footnote">[<a id="_footnoteref_57" class="footnote" href="#_footnote_57" title="View footnote.">57</a>]</sup></div>
+<div class="title">Figure 112. Sumerian cuneiform <sup class="footnote">[<a id="_footnoteref_57" class="footnote" href="#_footnote_57" title="View footnote.">57</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Humans have been representing information since at least the creation of writing. As early as 3000 BCE, the ancient Sumerians used cuneiform to record&#8201;&#8212;&#8201;among other things&#8201;&#8212;&#8201;how much beer people got. (The more things change, the more they stay the same.)</p>
@@ -21513,7 +21195,7 @@ A message to mapmakers: Highways are not painted red, rivers don&#8217;t have co
 <div class="content">
 <img src="images/4_11-quipu.jpg" alt="knotted cords" width="300">
 </div>
-<div class="title">Figure 114. Inca quipu <sup class="footnote">[<a id="_footnoteref_58" class="footnote" href="#_footnote_58" title="View footnote.">58</a>]</sup></div>
+<div class="title">Figure 113. Inca quipu <sup class="footnote">[<a id="_footnoteref_58" class="footnote" href="#_footnote_58" title="View footnote.">58</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>At around the same time as the Sumerians, the Inca empire in what is now Peru [?] also started to represent information. They used a radically different approach from the Sumerians: carefully knotted ropes:</p>
@@ -21570,7 +21252,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4_11-gasPump.jpg" alt="old gas pump" width="400">
 </div>
-<div class="title">Figure 115. What do they owe you? <sup class="footnote">[<a id="_footnoteref_59" class="footnote" href="#_footnote_59" title="View footnote.">59</a>]</sup></div>
+<div class="title">Figure 114. What do they owe you? <sup class="footnote">[<a id="_footnoteref_59" class="footnote" href="#_footnote_59" title="View footnote.">59</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>As the town grows, and your customers increase, you grow increasingly uncertain as to whether they all are paying you what they owe. You purchase a notebook and a pen (today&#8217;s equivalent of clay tablets or knotted ropes) and start writing down the amounts owed you.</p>
@@ -21625,7 +21307,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4_11-female-computers.jpg" alt="alt text" width="400" height="200">
 </div>
-<div class="title">Figure 116. Early "computers" (people not machines) <sup class="footnote">[<a id="_footnoteref_60" class="footnote" href="#_footnote_60" title="View footnote.">60</a>]</sup></div>
+<div class="title">Figure 115. Early "computers" (people not machines) <sup class="footnote">[<a id="_footnoteref_60" class="footnote" href="#_footnote_60" title="View footnote.">60</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>As technology progressed through the late 19th and early 20th centuries, applied mathematics became increasingly important in a wide variety of areas such as:</p>
@@ -21659,7 +21341,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4_11-diffEngine.jpg" alt="Complex mechanical calculator" width="400">
 </div>
-<div class="title">Figure 117. Babbage Difference Engine <sup class="footnote">[<a id="_footnoteref_61" class="footnote" href="#_footnote_61" title="View footnote.">61</a>]</sup></div>
+<div class="title">Figure 116. Babbage Difference Engine <sup class="footnote">[<a id="_footnoteref_61" class="footnote" href="#_footnote_61" title="View footnote.">61</a>]</sup></div>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -21705,7 +21387,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4_11-punchedCard.jpg" alt="punched data card" width="300">
 </div>
-<div class="title">Figure 118. Punchcard <sup class="footnote">[<a id="_footnoteref_62" class="footnote" href="#_footnote_62" title="View footnote.">62</a>]</sup></div>
+<div class="title">Figure 117. Punchcard <sup class="footnote">[<a id="_footnoteref_62" class="footnote" href="#_footnote_62" title="View footnote.">62</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>The business world was also attentive to the development of computers. Punched cards had been used for storing data for decades preceding the invention of automated computers. Record keeping at scale has always been challenging - the number of Sumerian clay tablets still in existence testifies to that! Industrial-era banks, insurers, and counting-houses managed massive repositories of paper journals and files, at great cost. A new form of professional, the "white collar worker" emerged.</p>
@@ -21717,7 +21399,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4_11-cardSorter.jpg" alt="mechanical card sorting machine" width="400">
 </div>
-<div class="title">Figure 119. Card Sorter <sup class="footnote">[<a id="_footnoteref_63" class="footnote" href="#_footnote_63" title="View footnote.">63</a>]</sup></div>
+<div class="title">Figure 118. Card Sorter <sup class="footnote">[<a id="_footnoteref_63" class="footnote" href="#_footnote_63" title="View footnote.">63</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>During World War II, many business professionals found themselves in the military, and some encountered the new electronic computers being used to calculate artillery trajectories or decrypt enemy messages. Edmund Berkeley, the first secretary of the Association for Computing Machinery, was one such professional who grasped the the potential of the new technology <a href="#Akera2007">[Akera2007]</a>. After the war, Berkeley advocated for the use of these machines to the leadership of the Prudential insurance company, while others did the same in the United Kingdom.</p>
@@ -22756,7 +22438,7 @@ Again, if you or your company are involved in legal issues relating to the above
 <div class="content">
 <img src="images/4_11-reportingOldStyle.png" alt="1900s clerk with adding machine" width="300" height="200">
 </div>
-<div class="title">Figure 120. Reporting and analytics, old style <sup class="footnote">[<a id="_footnoteref_64" class="footnote" href="#_footnote_64" title="View footnote.">64</a>]</sup></div>
+<div class="title">Figure 119. Reporting and analytics, old style <sup class="footnote">[<a id="_footnoteref_64" class="footnote" href="#_footnote_64" title="View footnote.">64</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>We have touched on reporting previously, in our discussion of <a href="#metrics-KPIs">metrics</a>. This is a more detailed examination.</p>
@@ -23811,7 +23493,7 @@ As with other chapters in the later part of this book, we are going to introduce
 <div class="content">
 <img src="images/4_12-architecture.jpg" alt="alt text" width="900">
 </div>
-<div class="title">Figure 121. St. Vitus Cathedral, Prague <sup class="footnote">[<a id="_footnoteref_65" class="footnote" href="#_footnote_65" title="View footnote.">65</a>]</sup></div>
+<div class="title">Figure 120. St. Vitus Cathedral, Prague <sup class="footnote">[<a id="_footnoteref_65" class="footnote" href="#_footnote_65" title="View footnote.">65</a>]</sup></div>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -23956,19 +23638,19 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <div class="content">
 <img src="images/4_12-serengeti.jpg" alt="alt text" width="250" height="200">
 </div>
-<div class="title">Figure 122. The terrain <sup class="footnote">[<a id="_footnoteref_66" class="footnote" href="#_footnote_66" title="View footnote.">66</a>]</sup></div>
+<div class="title">Figure 121. The terrain <sup class="footnote">[<a id="_footnoteref_66" class="footnote" href="#_footnote_66" title="View footnote.">66</a>]</sup></div>
 </div>
 <div class="imageblock" style="float: left">
 <div class="content">
 <img src="images/4_12-surveyor.jpg" alt="alt text" width="200" height="200">
 </div>
-<div class="title">Figure 123. The mapmaker <sup class="footnote">[<a id="_footnoteref_67" class="footnote" href="#_footnote_67" title="View footnote.">67</a>]</sup></div>
+<div class="title">Figure 122. The mapmaker <sup class="footnote">[<a id="_footnoteref_67" class="footnote" href="#_footnote_67" title="View footnote.">67</a>]</sup></div>
 </div>
 <div class="imageblock" style="float: ">
 <div class="content">
 <img src="images/4_12-map.jpg" alt="alt text" width="235" height="200">
 </div>
-<div class="title">Figure 124. The map <sup class="footnote">[<a id="_footnoteref_68" class="footnote" href="#_footnote_68" title="View footnote.">68</a>]</sup></div>
+<div class="title">Figure 123. The map <sup class="footnote">[<a id="_footnoteref_68" class="footnote" href="#_footnote_68" title="View footnote.">68</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Confused? Consider the activity of map-making. In map-making you have:</p>
@@ -24057,7 +23739,7 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <div class="content">
 <img src="images/4_12-moritz.jpg" alt="Moritz" width="300">
 </div>
-<div class="title">Figure 125. Franz Moritz Graf von Lacy <sup class="footnote">[<a id="_footnoteref_69" class="footnote" href="#_footnote_69" title="View footnote.">69</a>]</sup></div>
+<div class="title">Figure 124. Franz Moritz Graf von Lacy <sup class="footnote">[<a id="_footnoteref_69" class="footnote" href="#_footnote_69" title="View footnote.">69</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>In previous ages, nobles would assemble and fight for their King, but their armies were poorly coordinated, and disputes over strategy would often arise. Each noble&#8217;s army would have its own quartermaster, couriers, intelligence, supply chains, and the like. This was both inefficient, and ineffective: overall plans of battle often could not be made or executed, and military operations would be bungled.</p>
@@ -24178,7 +23860,7 @@ The operating model is the necessary level of business process integration and s
 <div class="content">
 <img src="images/4_12-EA-context.png" alt="EA context" width="900">
 </div>
-<div class="title">Figure 126. EA context, based on <a href="#Ross2006">[Ross2006]</a>, fig 1-2, p.10.</div>
+<div class="title">Figure 125. EA context, based on <a href="#Ross2006">[Ross2006]</a>, fig 1-2, p.10.</div>
 </div>
 <div class="paragraph">
 <p>Notice the distinction between Enterprise Architecture as a capability and as an artifact. The <strong>practice</strong> of Enterprise Architecture is not the same as the actual Enterprise Architecture. For the purposes of this textbook, we define enterprise architecture&#8217;s concerns as essentially the enterprise operating model: process, data, organizational capabilities, and systems.</p>
@@ -24210,7 +23892,7 @@ The operating model is the necessary level of business process integration and s
 <div class="content">
 <img src="images/4_12-zachman.png" alt="4 12 zachman">
 </div>
-<div class="title">Figure 127. A variation on the Zachman framework</div>
+<div class="title">Figure 126. A variation on the Zachman framework</div>
 </div>
 <div class="paragraph">
 <p><em>(loosely based on <a href="#Zachman1987">[Zachman1987]</a> and succeeding work.)</em></p>
@@ -24254,7 +23936,7 @@ The operating model is the necessary level of business process integration and s
 <div class="content">
 <img src="images/4_12-BM-OM.png" alt="Business model versus operating model" width="900">
 </div>
-<div class="title">Figure 128. Business model versus operating model</div>
+<div class="title">Figure 127. Business model versus operating model</div>
 </div>
 <div class="paragraph">
 <p>This distinction helps us position the Enterprise Architecture group with respect to key partner organizations:</p>
@@ -24365,7 +24047,7 @@ As a hygiene factor, benefits from EA can be valued in terms of reduction in man
 <div class="content">
 <img src="images/4_12-impact.png" alt="4 12 impact">
 </div>
-<div class="title">Figure 129. Architecture impacts on enterprise value</div>
+<div class="title">Figure 128. Architecture impacts on enterprise value</div>
 </div>
 <div class="paragraph">
 <p>The above diagram suggests a number of specific, measurable outcomes from typical enterprise architecture goals. Without exploring every line of value:</p>
@@ -24696,7 +24378,7 @@ identification and enforcement</p>
 <div class="content">
 <img src="images/4_12-archProgram.png" alt="4 12 archProgram">
 </div>
-<div class="title">Figure 130. Large scale architecture program</div>
+<div class="title">Figure 129. Large scale architecture program</div>
 </div>
 <div class="paragraph">
 <p>The Enterprise Architecture organization might report to a CTO, the Chief of Staff for the Office of the CIO, or the head of Corporate Strategy and Planning. It is a centralized organization with a small staff of domain architects and an Architecture Standards organization that owns two key cross-functional architecture processes.</p>
@@ -24752,7 +24434,7 @@ division is <em>fractal</em> (that is, it reproduces at different scales).</p>
 <div class="content">
 <img src="images/4_12-gudea.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 131. Gudea with blueprint, ~2140 BCE <sup class="footnote">[<a id="_footnoteref_70" class="footnote" href="#_footnote_70" title="View footnote.">70</a>]</sup></div>
+<div class="title">Figure 130. Gudea with blueprint, ~2140 BCE <sup class="footnote">[<a id="_footnoteref_70" class="footnote" href="#_footnote_70" title="View footnote.">70</a>]</sup></div>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -24777,7 +24459,7 @@ The true measure of the value of a model is whether it actually influences behav
 <div class="content">
 <img src="images/4_12-whiteboard.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 132. Whiteboard <sup class="footnote">[<a id="_footnoteref_71" class="footnote" href="#_footnote_71" title="View footnote.">71</a>]</sup></div>
+<div class="title">Figure 131. Whiteboard <sup class="footnote">[<a id="_footnoteref_71" class="footnote" href="#_footnote_71" title="View footnote.">71</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Even in construction and engineering trades that rely on blueprints as a source of truth, keeping them up to date requires considerable discipline and process. In faster-moving digital organizations, visual models are almost always out of date unless they have been specifically refreshed for a purpose, or unless there is a strong formal process in place (and the value of such a process may be difficult to establish). That doesn&#8217;t mean that diagrams will go away. Co-located teams use whiteboards and dry-erase markers and will continue to use them. There are important cognitive and human factors reasons for this that will not go away. Because of these facts, it is useful to understand some of the fundamentals of how humans interpret visual data.</p>
@@ -24800,7 +24482,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4_12-tiger.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 133. Fast recognition means survival <sup class="footnote">[<a id="_footnoteref_72" class="footnote" href="#_footnote_72" title="View footnote.">72</a>]</sup></div>
+<div class="title">Figure 132. Fast recognition means survival <sup class="footnote">[<a id="_footnoteref_72" class="footnote" href="#_footnote_72" title="View footnote.">72</a>]</sup></div>
 </div>
 <div class="ulist">
 <ul>
@@ -24825,7 +24507,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4_12-neumann-flowchart.png" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 134. The first software flowchart <sup class="footnote">[<a id="_footnoteref_73" class="footnote" href="#_footnote_73" title="View footnote.">73</a>]</sup></div>
+<div class="title">Figure 133. The first software flowchart <sup class="footnote">[<a id="_footnoteref_73" class="footnote" href="#_footnote_73" title="View footnote.">73</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Architects and architecture are known for creating diagrams&#8201;&#8212;&#8201;abstract graphical representations of complex systems. The first known instance of applying graphical techniques to a digital problem was in 1947 <a href="#vonNeumann1947">[vonNeumann1947]</a> and visual notations have evolved along with the field of computing ever since. Notable examples include:</p>
@@ -24859,7 +24541,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4_12-flowchart-template.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 135. IBM flowcharting template <sup class="footnote">[<a id="_footnoteref_74" class="footnote" href="#_footnote_74" title="View footnote.">74</a>]</sup></div>
+<div class="title">Figure 134. IBM flowcharting template <sup class="footnote">[<a id="_footnoteref_74" class="footnote" href="#_footnote_74" title="View footnote.">74</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Research at Microsoft suggests that developers use diagrams for four purposes:</p>
@@ -24896,7 +24578,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4_12-sequence-diagram.png" alt="blueprint" width="450" height="200">
 </div>
-<div class="title">Figure 136. UML sequence diagram <sup class="footnote">[<a id="_footnoteref_75" class="footnote" href="#_footnote_75" title="View footnote.">75</a>]</sup></div>
+<div class="title">Figure 135. UML sequence diagram <sup class="footnote">[<a id="_footnoteref_75" class="footnote" href="#_footnote_75" title="View footnote.">75</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>However, if we&#8217;re building systems to be operated and maintained by humans, it would seem that we should support the cognitive and perceptual strengths of humans.  Because diagrams are more readily processed, they are often used to represent high level system interactions - how a given service, product or application is related to peer systems and services. Building such depictions can be helpful to fostering a shared mental model of the overall system objectives and context. The more complex and highly scaled the environment, the more likely one will encounter such artifacts as a means to creating the mental model.</p>
@@ -24960,7 +24642,7 @@ The big picture is part of the standard mindset of EA, which everyone immediatel
 <div class="content">
 <img src="images/4_12-obesity.jpg" alt="blueprint" width="550" height="200">
 </div>
-<div class="title">Figure 137. Complex diagram <sup class="footnote">[<a id="_footnoteref_76" class="footnote" href="#_footnote_76" title="View footnote.">76</a>]</sup></div>
+<div class="title">Figure 136. Complex diagram <sup class="footnote">[<a id="_footnoteref_76" class="footnote" href="#_footnote_76" title="View footnote.">76</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>However, this next diagram is essentially unusable, as visually tracing any given line is too difficult, and it would be easy to mistakenly identify one bubble as dependent on another:</p>
@@ -24969,7 +24651,7 @@ The big picture is part of the standard mindset of EA, which everyone immediatel
 <div class="content">
 <img src="images/4_12-complex-network.jpg" alt="blueprint" width="550" height="200">
 </div>
-<div class="title">Figure 138. Another complex diagram <sup class="footnote">[<a id="_footnoteref_77" class="footnote" href="#_footnote_77" title="View footnote.">77</a>]</sup></div>
+<div class="title">Figure 137. Another complex diagram <sup class="footnote">[<a id="_footnoteref_77" class="footnote" href="#_footnote_77" title="View footnote.">77</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>This may seem like an obvious critique, but architectural diagrams of similar complexity and unusability have too often been produced. Another issue with some diagrams is that they do not give a good sense of perspective or scale. This is sometimes seen in the business architecture practice of "capability mapping." For example, suppose you see this diagram:</p>
@@ -24978,7 +24660,7 @@ The big picture is part of the standard mindset of EA, which everyone immediatel
 <div class="content">
 <img src="images/4_12-capabilities.png" alt="capabilities" width="600">
 </div>
-<div class="title">Figure 139. Simple capability map</div>
+<div class="title">Figure 138. Simple capability map</div>
 </div>
 <div class="paragraph">
 <p>Diagrams like this are common, but what does it mean that all the boxes are equally sized? Are there as many lawyers as sales people? Operations staff? It&#8217;s not clear what the advantage is to putting information like this into a graphical form; no interactions are seen and the eight areas could more easily be expressed as a list (or "catalog" in the terms we&#8217;ll introduce below). This brings us to the final problem listed above: visualizations rely on some <a href="#shared-mental-model">common ground</a> understanding. If boxes and lines are used for communication, their meaning should be agreed upon - otherwise, there is risk of mis-understanding, and the diagram may do more harm than good.</p>
@@ -25127,7 +24809,7 @@ Artifacts are generally classified as catalogs (lists of things), matrices (show
 <div class="content">
 <img src="images/4_12-simpleMetamodel.png" alt="metamodel" width="400">
 </div>
-<div class="title">Figure 140. A simple metamodel</div>
+<div class="title">Figure 139. A simple metamodel</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -25334,7 +25016,7 @@ One core question decided by governance is how much autonomy is granted to busin
 <div class="content">
 <img src="images/4_12-A-380.jpg" alt="A-380" width="300" height="200">
 </div>
-<div class="title">Figure 141. Airbus A-380 <sup class="footnote">[<a id="_footnoteref_78" class="footnote" href="#_footnote_78" title="View footnote.">78</a>]</sup></div>
+<div class="title">Figure 140. Airbus A-380 <sup class="footnote">[<a id="_footnoteref_78" class="footnote" href="#_footnote_78" title="View footnote.">78</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>In 2006, Airbus was in the midst of developing the gigantic A-380 aircraft. Because of the scale of the effort, multiple teams of engineers in different countries were working on the effort. As William Ulrich says of the German and French teams, "having failed to coordinate efforts to wire the world&#8217;s largest plane, they were surprised to learn that they had used different approaches to designing the A380&#8217;s wiring system" <a href="#Ulrich2010">[Ulrich2010]</a>, p. 32. This was because the teams were using different software for wiring design of the critical wiring design software <a href="#Clark2006">[Clark2006]</a>. The use of different software to fulfill the capability resulted in a year&#8217;s delay, a $4.5bn order loss to Boeing, and a 26% drop in Airbus stock.</p>
@@ -25390,7 +25072,7 @@ One core question decided by governance is how much autonomy is granted to busin
 <div class="content">
 <img src="images/4_12-archimate.png" alt="archimate" width="500">
 </div>
-<div class="title">Figure 142. Similar to <a href="#Open2012">[Open2012]</a>, section 2.6</div>
+<div class="title">Figure 141. Similar to <a href="#Open2012">[Open2012]</a>, section 2.6</div>
 </div>
 <div class="paragraph">
 <p>As we look at the overall structure of the architecture disciplines, we have three disciplines that correspond to the columns. We&#8217;ll call these "perspectives":</p>
@@ -25472,7 +25154,7 @@ One core question decided by governance is how much autonomy is granted to busin
 <div class="content">
 <img src="images/4_12-flowchart.jpg" alt="flowchart" width="300" height="200">
 </div>
-<div class="title">Figure 143. A flowchart <sup class="footnote">[<a id="_footnoteref_79" class="footnote" href="#_footnote_79" title="View footnote.">79</a>]</sup></div>
+<div class="title">Figure 142. A flowchart <sup class="footnote">[<a id="_footnoteref_79" class="footnote" href="#_footnote_79" title="View footnote.">79</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Process architecture is concerned with why and how activities are performed. It includes the detailed, step by step understanding of activities, in a transparent way. From top to bottom, it includes concepts such as:</p>
@@ -25980,7 +25662,7 @@ Another possible objection against agile methods is that the processes in EA, an
 <div class="content">
 <img src="images/4_12-stopwatch.jpg" alt="alt text" width="300" height="200">
 </div>
-<div class="title">Figure 144. What is your Cost of Delay? <sup class="footnote">[<a id="_footnoteref_80" class="footnote" href="#_footnote_80" title="View footnote.">80</a>]</sup></div>
+<div class="title">Figure 143. What is your Cost of Delay? <sup class="footnote">[<a id="_footnoteref_80" class="footnote" href="#_footnote_80" title="View footnote.">80</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>It is in the "governance and approval" kind of activity that conflict is most likely to emerge. Cadence and synchronization (e.g. processes) with the potential to block teams from pursuing their mission should be very carefully considered. If there is a process or a queue of architecture approvals, it at least should be operated on Cost of Delay of the work it&#8217;s blocking. And more generally, across the organization, the process should be tested against an economic model such as establishing a nominal or <a href="#portfolio-CoD">portfolio-level Cost of Delay</a>. Like other processes, architecture itself can be assessed against such a baseline.</p>
@@ -26028,7 +25710,7 @@ Architectural goals—for example, desired performance, availability, and securi
 <div class="content">
 <img src="images/4_12-strangler-vine.jpg" alt="alt text" width="400" height="200">
 </div>
-<div class="title">Figure 145. Australian strangler vine surrounding tree <sup class="footnote">[<a id="_footnoteref_81" class="footnote" href="#_footnote_81" title="View footnote.">81</a>]</sup></div>
+<div class="title">Figure 144. Australian strangler vine surrounding tree <sup class="footnote">[<a id="_footnoteref_81" class="footnote" href="#_footnote_81" title="View footnote.">81</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Keeping the target operating condition specific is preferable. When architecture scopes problems too broadly, the temptation is to undertake <a href="#large-arch-xform-risk">large and risky transformation programs</a>. As an alternative, Humble and Molesky suggest the "strangler pattern," proposed by Martin Fowler in 2004 <a href="#Fowler2004a">[Fowler2004a]</a>. This pattern uses as a metaphor Australian "strangler" vines that grow around trees until the original tree dies, at which point the strangler vine is now itself a sturdy, rooted structure (see picture).</p>
