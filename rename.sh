@@ -4,6 +4,8 @@ rename -v -n 's/(\d)\.(\d\d)/$1_$2/' *g
 
 rename -v -n 's/3_09(.*)/5_04$1/' *.png
 
+rename -v  's/3\.09(.*)/3\.07$1/' *.adoc
+
 
 
 

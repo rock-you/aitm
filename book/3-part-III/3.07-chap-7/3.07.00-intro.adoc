@@ -1,43 +1,90 @@
-anchor:chap-org-culture[]
+anchor:chap-process-mgmt[]
 
-=== Chapter 7: Culture and Organization
+=== Chapter 9: Coordination and execution
+
+ chapter is in transition to new outline, project management's coordination and execution aspects will move here.
+
+ifdef::collaborator-draft[]
+
+****
+*Collaborative*
+
+ Status: These three chapter sections are in first draft as of 4 June 2016:
+
+http://dm-academy.github.io/aitm/aitm-collaborator.html#_chapter_9_process_management[Introduction]
+
+http://dm-academy.github.io/aitm/aitm-collaborator.html#_why_process_management[Why Process Management?]
+
+http://dm-academy.github.io/aitm/aitm-collaborator.html#_process_management_practices[Process Management Practices]
+
+include::../../../collab-links.adoc[]
+
+****
+
+endif::collaborator-draft[]
 
 ==== Introduction
 
-In the last section, we introduced the xref:AKF-cube[AKF scaling cube], and we now start the second half of the book based on a related thought experiment. As your team-based company grew, you reached a crisis point in scaling your digital product. Your single team could no longer cope as one unit with the increasing complexity and operational demands. In AKF cube terms, you are scaling along the y-axis, the hardest but in some ways the most important dimension to know how to scale along.
+You're hiring more specialized people with specialized backgrounds. Many of them enter your organization and immediately ask process questions:
 
-You are going through a critical phase, the "team of teams" transition. You have increasingly specialized people delivering an increasingly complex product, or perhaps even several distinct products. Deep-skilled employees are great, but you've noticed they tend to lose the big picture. You are in constant discussions around the tension between functional depth versus product delivery. And when you go from one team to multiple, the topic of organization must be formalized.
+* What's your Change process?
+* What's your Problem process?
+* What's your Portfolio process?
 
-You often think about how your company should be structured. There is no shortage of opinions there either. From functional centers of excellence to cross-functional product teams, and from strictly hierarchical models to radical models like holacracy, there seems to be an infinite variety of choices. Many of your employees and consultants emphasize the role of culture, but what do they mean? Is there such a thing as a "good" culture? How is one culture better than another? How can you retain that startup feel you had previously, with things getting this big? You've always known intuitively that great hires are the basis for your company's success, but now you need to think more systematically about hiring.
+You've not had these conversations before. What do they mean by these different "processes?"
 
-Ultimately, as you move into leadership, you realize that your concern for organization and culture is all about creating the conditions for success. You can't drive success as an individual any more; that is increasingly for others to do. All you can do is set the stage for their efforts, provide overall direction and vision, and let your teams do what they do best.
+They seem to have some expectation from their previous employment, and if you say "we don't have one" they tend to be confused. You're becoming concerned that your company may be running some risk, although you also are wary that "process" might mean slowing things down, and you can't afford that.
 
-This chapter proceeds in a logical order, from the longest-timeframe, most strategic, hardest things to change up through the tactical level of investment and the operational level of execution.
+IMPORTANT: As with other chapters in the later part of this book, we are going to introduce Process Mangement "on its own terms." We will then add additional context and critique in subsequent sections.
 
+What is "process?"
 
-===== Outline
-* Why culture matters
-** Motivation
-** Schneider and Westrum
-** Toyota Kata
-* Why organization matters
-** Product organization versus "IT" organization
-** Features versus components
-* Defining the organization
-* Product and function
-** Waterfall and functional organization
-** The continuum of organizational forms
-* IT human resource management
-** Basic concerns
-** Hiring
-** Allocation and tracking people’s time
-** Accountability and performance
+http://www.dictionary.com/browse/process[Dictionary.com] defines it as "a systematic series of actions directed to some end . . . a continuous action, operation, or series of changes taking place in a definite manner."
 
-===== Learning objectives
+We've discussed xref:work-management[work management], which is an important precursor of process management. Work management is less formalized; a wide variety of activities are handled through flexible xref:kanban[Kanban]-style boards or "card walls" based on the simplest "process" of:
 
-* Identify and describe the factors driving an organization's differentiation into a multiple-team structure
-* Identify and describe the organizational challenges and issues that result when a multiple-team structure is instituted
-* Distinguish between functional versus product organizations
-* Compare and contrast various organizational forms
-* Discuss various concepts and aspects of culture in digital organizations
-* Describe basic issues in digital hiring and human resource management
+* To do
+* Doing
+* Done
+
+However, the simple card wall/Kanban board can easily become much more complex, with the addition of swimlanes and additional columns, including holding areas for blocked work:
+
+image::images/3_09-complexKanban.png[]
+ to be redrawn
+
+And when tasks become more routine and specialized, formal process management starts to emerge.
+
+Processes are how we ensure consistency, repeatability, and quality. You get expected treatment at banks, coffee shops, and dentists because they follow processes. IT systems often enable processes – a mortgage origination system is based on IT software that enforces a consistent process. IT management itself follows certain processes, for all the same reasons as above.
+
+Process, in terms of "business process," has been a topic of study and professional development for many years. Pioneering Business Process Management (BPM) authors such as Michael Hammer <<Hammer1993>> and Geary Rummler <<Rummler1995>> have had an immense impact on business operations. Toyota considers a clear process vision, or "target condition," to be the most fundamental objective in improving operations (<<Rother2010>>, chapters 5-6).  Designing processes, improving them, and using them to improve overall performance is an ongoing activity in most, if not all organizations.
+
+However, process can cause problems. Processes imply xref:queuing[queues], and in digital and other product development-based organizations, this means invisible work in process. For every employee you hire who expects you to have processes, another will have bad process experiences at previous employers. Nevertheless, process remains an important tool in your toolkit for organization design.
+
+At an execution level, project managers retain important roles and (sometimes re-labled Scrum masters or release managers) are employed in both traditional and new digital companies as overall orchestrators of complex initiatives.
+
+Process is a broad concept used throughout business operations. *The coverage here is primarily about process as applied to the digital organization.* There is a bit of a recursive paradox here; in part, we are talking about the *process by which business processes are analyzed and automated*. By definition, this overall "process" (you could call it a *meta*-process) cannot be made too prescriptive or predictable.
+
+We also introduce process in terms of our xref:emergence-model[emergence model], and therefore focus on the concerns and dynamics that may cause you to notice the concept, and your need for it.
+
+There is a rich body of industry practice we will draw on in our discussion. Business process management for the purposes of the digital organization is just one more form of business process management.
+
+===== Chapter 9 overview
+
+In this section, we will cover:
+
+* Why process management matters, and is not likely to go away
+* The basics of process description and modeling
+* Some background and history of continuous improvement and process control
+* The major IT-related process frameworks
+* Emerging approaches for digital process management.
+
+This remains a textbook primarily aimed at digital product management (from concept to operations), and this chapter is primarily about business process *in that context.* However, one of the problems with process management in IT and digital management is that it has not been well aligned to the broader topic of business process management in general. Therefore, this chapter starts with discussion of BPM fundamentals, and then covers IT process management in that light.
+
+===== Chapter 9 learning objectives
+
+* Identify differences between process and project management
+* Describe a business process and how it crosses functions
+* Demonstrate familiarity with basic principles of process modeling
+* Understand the difference between defined and empirically controlled processes, and why this is important for digital product management
+* Identify the problems of process proliferation with respect to execution and demand
+* Describe the origins, purpose, and scope of IT industry frameworks
