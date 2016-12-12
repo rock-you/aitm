@@ -1,5 +1,94 @@
 
-===== A deeper look at processes and functions
+anchor:process-modeling[]
+
+===== A deeper look at process modeling
+Process management is grounded in business fundamentals. Businesses convert inputs (capital, materials, staff talent) into valuable outputs and generate valuable surplus (margin) for shareholders and other stakeholders.
+
+This act of *conversion* is a *process*. The overall process has been described by Michael Porter as a "value chain."
+
+anchor:value-chain[]
+
+image::images/3_09-valCh.png[]
+_Value Chain similar to <<Porter1998>>._
+
+Note the progression along the bottom: first, raw materials are acquired, then manufactured, then distributed at which point they are marketed and sold, and ultimately serviced. Porter termed this set of activities "Primary." The upper half represents what Porter termed "support." Supporting activities represent necessary, but not value adding, functions.
+
+There are many criticisms of the Porter value chain. Without research and development, there is no product, so why is it considered a support activity (and confusingly named just "Technology Development")? Surely, marketing and sales help drive demand for the product, especially with manufacturing lead times shrinking, so why do they appear so late in the game? Overall, the model represents a manufacturing-centric world where customers were happy to buy what was on offer. However, this does not change the fact that most value has some rough ordering to it (it is difficult to sell and service a product before you invent and produce it), and the idea that some activities are primary while others are supporting also is useful.
+
+The value chain as a whole is high level. We can think of a large company in these terms, but we cannot easily manage it this way. Value chains therefore are the ultimate "process" but in order for process to have value, we need to take it down a level or two.
+
+In order to do this, we should clarify some terms.
+
+anchor:process-function[]
+
+===== Process and related terms
+
+The following terms often appear in discussions of process:
+
+* Function
+* Capability
+* Practice
+
+We will use the following definitions:
+
+anchor:process-def[]
+A *process* is an ordered, countable set of activities; an event-driven, value-adding sequence that can be measured and improved. The following terms often are used to describe processes or their components:
+
+* Value chain
+* Value stream
+* Business process
+* Workflow
+* Procedure
+* Task
+* Step
+
+Processes *cross* functions.
+
+Visually, processes are often represented with chevrons, like Porter's original value chain:
+
+image::images/3_09-chevrons.png[]
+
+There is no industry standard that definitely lists the concepts above in terms of granularity. Is a "task" larger or smaller than a "procedure?" We will not discuss these much. However, between the high level concept of "value chain" and the concepts of "process" and "activity," is the concept of "*value stream*."  This is a key concept from the Lean community, and is a relatively higher-level concept (a value chain decomposes into value streams, according to some.)
+
+An example of a value stream could be the complete manufacturing and sales process for one product family. Because they are more specific, value streams are more measurable and countable. Optimizing them in terms of eliminating wasted time, effort and inventory is an objective of Lean thinking. See _Learning to See_ by Rother and Shook <<Rother2003>>.
+
+*Functions* are unordered, steady state domains of activity. An organizational chart often can be based on various functions. Functions also often imply hierarchy. They are more difficult to measure or improve; usually, improving a function means improving some process it owns or performs.
+
+Functions, especially when they are closely aligned to an organizational structure, may be represented as a hierarchy:
+
+image::images/3_09-hier.png[]
+
+They may also be represented as nested shapes:
+
+image::images/3_09-hier-nested.png[]
+
+However - and this is an important point - functions do *not* necessarily need to reflect the organizational chart. Often, they are used as a "logical" construct, to help with organizational design.
+
+What do we mean by this?
+
+Suppose two companies merge. They may leave their organizational charts untouched for a time, because they do not know what parts of each company should merge together. They have two sets of developers, two sets of sales staff, and so on. They do not feel that either company's organizational structure is a good basis for the new, larger company.
+
+To solve this, they might create a logical functional hierarchy, with no-one's name on any part. Where their actual organization structure (temporarily) has duplication, the logical hierarchy does not. They then start to populate it with individuals and teams from the previous companies and in this way develop a new organizational structure.
+
+image::images/3_09-hier2.png[]
+
+This kind of thinking can help the organization evolve over time. If different teams find themselves performing similar activities, a functional analysis might indicate a new organizational structure.
+
+Finally, the following two terms are also unordered, but have different connotations from function:
+
+* Capability
+* Service (sometimes)
+
+A *capability* is a generic term for a capacity or potential.
+
+A *service* is a transactional act of value, simultaneously produced and delivered (more on this later).
+
+Finally, the concept of *practice* is the least formalized of the concepts. It represents a loose, conceptual area that may represent a community of common interest (for example, a Java community of practice). It's not usually measured or tracked for improvement. Some topics may start as a practice and formalize into a function, for example Capacity management.
+
+Review the section on the xref:spotify-model[Spotify model]. How does it relate to the discussion here?
+
+We say that an IT management capability may be implemented by a process, function, or practice.
+
 Processes cross functions in a repeatable way. You may have deep organizational functions such as
 
 * Human Resource Management
@@ -24,7 +113,7 @@ This is a deliberately older, traditional workflow. Modern organizations may acc
 . All employees use common "hoteling" space, so the major Facilities concern is whether the space can accommodate the peak # of employees seen (e.g. at 10 AM on a Wednesday)
 . Equipment is either BYOD (Bring Your Own Device) or is ordered from an authorized vendor and drop-shipped directly to the employee
 . In either case, security must establish some control over the devices, so that organizational data remains secure. There are various approaches for this, even for devices owned by the employee.
-. Networking in modern organizations is almost all wireless, but the employee still requires the appropriate credentials, likely provided by security. As with facilities, Networking's concerns now move to questions of capacity and availability of the overall infrastructure.
+. Networking in modern organizations is almost all wireless, but the employee still requires the appropriate credentials, likely provided by security. As with facilities, networking's concerns now move to questions of capacity and availability of the overall infrastructure.
 
 Notice however that even in the modern scenario, we have an end to end, repeatable value flow that crosses distinct domains of concern. The employee is not productive until all these steps are taken. Since the employee starts drawing payroll on hire, there is a substantial cost of delay for this entire process. A week's unproductive time could amount to $10,000 or more, wasted.
 
@@ -78,11 +167,7 @@ There are many references on these in the concluding chapter section. We will on
 * Swimlanes
 
 ====== IGOE (Input/Guide/Output/Enabler)
-A useful framewor for thinking about activities represented as icons is the IGOE approach <<BPTrends2013>>.
-
- insert Process Renewal Group cite
-
-IGOE stands for:
+A useful framework for thinking about activities represented as icons is the IGOE approach, originated by the Process Renewal Group <<Burlton2001>>. IGOE stands for:
 
 * Inputs
 * Guides
@@ -107,9 +192,7 @@ image::images/5_04-IGOE2.png[]
 
 However, there is not a clear sense of the events, since the primary objects are still the functions. There also is the temptation to insert extraneous information, as indicated in the line between Facilities Management and IT Asset Management labeled "Provides space for ??".
 
-It is true that Facilities Management does provide space for the IT Asset Management Team (in fact, all of these functions provide services to each other), but to draw this would result in a "spaghetti" diagram with several dozen lines and not much explanatory power.
-
-Purely functional modeling of this nature is therefore limited in usefulness, although it can be a good place to start.
+It is true that Facilities Management does provide space for the IT Asset Management Team (in fact, all of these functions provide services to each other), but to draw this would result in a "spaghetti" diagram with several dozen lines and not much explanatory power. Purely functional modeling of this nature is therefore limited in usefulness, although it can be a good place to start.
 
 ====== Ordering, synchronization, and conditionality
 Activities in process modeling, by contrast, emphasize active verbs:
