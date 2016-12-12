@@ -682,6 +682,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_time_and_space_shifting">Time and space shifting</a></li>
 </ul>
 </li>
+<li><a href="#_lean_product_development_and_don_reinertsen">Lean product development and Don Reinertsen</a>
+<ul class="sectlevel4">
+<li><a href="#_product_development_versus_production">Product development versus production</a></li>
+<li><a href="#_cost_of_delay">Cost of Delay</a></li>
+<li><a href="#_roadmap_backlog_and_estimation">Roadmap, backlog, and estimation</a></li>
+</ul>
+</li>
 <li><a href="#_the_service_desk_and_related_tools">The service desk and related tools</a></li>
 <li><a href="#_towards_process_management">Towards process management</a>
 <ul class="sectlevel4">
@@ -693,13 +700,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_bpm_fundamentals">BPM fundamentals</a></li>
 <li><a href="#_process_and_related_terms">Process and related terms</a></li>
-</ul>
-</li>
-<li><a href="#_lean_product_development_and_don_reinertsen">Lean product development and Don Reinertsen</a>
-<ul class="sectlevel4">
-<li><a href="#_product_development_versus_production">Product development versus production</a></li>
-<li><a href="#_cost_of_delay">Cost of Delay</a></li>
-<li><a href="#_roadmap_backlog_and_estimation">Roadmap, backlog, and estimation</a></li>
 </ul>
 </li>
 <li><a href="#_advanced_topics">Advanced topics</a></li>
@@ -8678,6 +8678,362 @@ Stopping the machine when there is trouble forces awareness on everyone. When th
 <p>But not all work requires the same degree of collaboration. While we are still not ready for full scale process management, at this point in our evolution we likely will encounter increasing needs to track customer or user service interations, which can become quite numerous even for small, single-team organizations. Such work is often more more individualized and routine.  This brings us to the topic of the Help or Service Desk.</p>
 </div>
 <div class="paragraph">
+<p><a id="lean-product-dev"></a></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_lean_product_development_and_don_reinertsen">Lean product development and Don Reinertsen</h4>
+<div class="sect4">
+<h5 id="_product_development_versus_production">Product development versus production</h5>
+<div class="quoteblock">
+<blockquote>
+The idea of software development as an assembly line manned by semi-skilled interchangeable workers is fundamentally flawed and wasteful <a href="#Stroustrup2010">[Stroustrup2010]</a>.
+</blockquote>
+<div class="attribution">
+&#8212; Bjarne Stroustrup<br>
+<cite>C++ inventor</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>One of the challenges with applying Lean to IT (as noted <a href="#lean">previously</a>) is that many IT professionals (especially software developers) believe that manufacturing is a "deterministic" field, whose lessons don&#8217;t apply to developing technical products. "Creating software is like creating art, not being on an assembly line," is one line of argument.</p>
+</div>
+<div class="imageblock" style="float: left">
+<div class="content">
+<img src="images/2_05-assembly-line.jpg" alt="alt text" width="300" height="200">
+</div>
+<div class="title">Figure 54. Production <sup class="footnote">[<a id="_footnoteref_30" class="footnote" href="#_footnote_30" title="View footnote.">30</a>]</sup></div>
+</div>
+<div class="paragraph">
+<p>The root cause of this debate is the distinction between product development and production. It is true that an industrial production line, for example producing forklifts by the thousands, may be repetitive. But how did the production line come to be? How was the forklift invented, or developed? It was created as part of a process of product development. It took mechanical engineering, electrical engineering, chemistry, materials science, and more.  Combining fundamental engineering principles and techniques into a new, marketable product is not a repetitive process; it is a highly variable, creative process, and always has been.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+Never confuse production with product development. The approaches, measures, and concerns are radically different. This book considers it an "original sin."
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img src="images/2_05-r-and-d.png" alt="alt text" width="300" height="200">
+</div>
+<div class="title">Figure 55. Research and development <sup class="footnote">[<a id="_footnoteref_31" class="footnote" href="#_footnote_31" title="View footnote.">31</a>]</sup></div>
+</div>
+<div class="paragraph">
+<p>One dead end that organizations keeps pursuing is the desire to make <em>research and development</em> (R&amp;D) more "predictable"; that is, to reduce variation and predictably create innovations. This never works well; game-changing innovations are usually complex responses to complex market systems dynamics, including customer psychology, current trends, and many other factors. The process of innovating cannot, by its very nature, be made repeatable.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+The concept of a repeatable "software process" is at best a risky one, and an idea that has caused much waste in the industry.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In IT, simply developing software for a new problem (or even new software for an old problem) is an R&amp;D problem, not a production line problem. It is iterative, uncertain, and risky, just like other forms of product development. That does not mean it is completely un-manageable, or that its creation is a mysterious, artistic process. It is just a more variable process with a higher chance of failure, and with a need to incorporate feedback quickly to reduce the risk of <a href="#open-loop">open loop</a>
+control failure.  These ideas are well known to the Agile community and its authors. However, there is one thought leader who stands out in this field: an ex-Naval officer and nuclear engineer named Donald Reinertsen, introduced above in our discussions <a href="#beneficial-variability">beneficial variability in product discovery</a> and <a href="#queuing">queuing</a>.</p>
+</div>
+<div class="paragraph">
+<p>There are many books on Agile development and management. Consider the following books, all well known and influential in the fields of software development and Agile:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>David Anderson, <a href="https://www.goodreads.com/book/show/8086552-kanban"><em>Kanban: Successful Evolutionary Change for Your Technology Business</em></a></p>
+</li>
+<li>
+<p>Craig Larman and Bas Vodde, <a href="https://www.goodreads.com/book/show/5247677-scaling-lean-agile-development"><em>Scaling Lean &amp; Agile Development: Thinking and Organizational Tools for Large-Scale Scrum</em></a></p>
+</li>
+<li>
+<p>Jim Highsmith, <a href="https://www.goodreads.com/book/show/338541.Adaptive_Software_Development"><em>Adaptive Software Development: An Evolutionary Approach to Managing Complex Systems</em></a></p>
+</li>
+<li>
+<p>Jez Humble, Joanne Molesky and Barry O&#8217;Reilly, <a href="https://www.goodreads.com/book/show/18167218-lean-enterprise"><em>Lean Enterprise: How High Performance Organizations Innovate at Scale</em></a></p>
+</li>
+<li>
+<p>Dean Leffingwell, <a href="https://www.goodreads.com/book/show/8997772-agile-software-requirements"><em>Agile Software Requirements: Lean Requirements Practices for Teams, Programs, and the Enterprise</em></a></p>
+</li>
+<li>
+<p>Steve McConnell, <a href="https://www.goodreads.com/book/show/93892.Rapid_Development"><em>Rapid Development: Taming Wild Software Schedules</em></a></p>
+</li>
+<li>
+<p>Roman Pichler,  <a href="https://www.goodreads.com/book/show/7950745-agile-product-management-with-scrum"><em>Agile Product Management with Scrum: Creating Products That Customers Love</em></a></p>
+</li>
+<li>
+<p>Mary and Tom Poppendieck, <a href="https://www.goodreads.com/book/show/194338.Lean_Software_Development"><em>Lean Software Development: An Agile Toolkit for Software Development Managers</em></a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>What do they all have in common? They all cite Don Reinertsen. Reinertsen&#8217;s work dates back to 1991, and (orginally as a co-author with Preston G. Smith) presaged important principles of the Agile movement <a href="#Smith1991">[Smith1991]</a>, from the general perspective of product development. Reinertsen&#8217;s influence is well documented and notable. He was partnering with David Anderson when Anderson created the "software Kanban" approach. He wrote the introduction to Leffingwell&#8217;s <em>Agile Software Requirements</em>, the initial statement of the Scaled Agile Framework. His influence is pervasive across the Agile community. His work is deep and based on fundamental mathematical principles such as queueing theory. One way of reading his work is as a series of interdependent principles:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The flow, or throughput of product innovation is the primary driver of financial success. (Notice that innovation must be <strong>accepted by the market</strong> - simply producing new product is not enough.)</p>
+</li>
+<li>
+<p>Product development is essentially the creation of information.</p>
+</li>
+<li>
+<p>The creation of information requires fast <a href="http://dm-academy.github.io/aitm/#_a_brief_introduction_to_feedback">feedback</a></p>
+</li>
+<li>
+<p>Feedback requires limiting work in process</p>
+</li>
+<li>
+<p>Limiting work in process in product design contexts requires rigorous prioritization capabilities</p>
+</li>
+<li>
+<p>Effective, economical prioritization requires understanding the <a href="http://www.leadingagile.com/2015/06/an-introduction-to-cost-of-delay/">cost of delay</a> for individual product features</p>
+</li>
+<li>
+<p>Understanding cost of delay requires smaller batch sizes, consisting of cohesive features, not large projects.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>These can be summarized in the accompanying pyramid figure.</p>
+</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img src="images/2_05-pyramid3.png" alt="pyramid" width="400">
+</div>
+<div class="title">Figure 56. Lean product hierarchy of concerns</div>
+</div>
+<div class="paragraph">
+<p>If a company wishes to produce innovation faster than competitors, it requires fast <a href="#feedback">feedback</a> on its experiments (whether traditionally understood, laboratory-based experiments, or market-facing validation as in <a href="#lean-startup">Lean Startup</a>.) In order to achieve fast feedback, <a href="#work-in-process">work in process</a>
+<strong>must</strong> be reduced in the system, otherwise <a href="#queuing">high-queue</a> states will slow feedback down.</p>
+</div>
+<div class="paragraph">
+<p>But how do we reduce work in process? We have to <em>prioritize</em>. Do we rely on the <a href="#HIPPO">Highest Paid Person&#8217;s Opinion</a>, or do we try something more rational? This brings us to the critical concept of <em>Cost of Delay</em>.</p>
+</div>
+<div class="paragraph">
+<p><a id="cost-of-delay"></a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_cost_of_delay">Cost of Delay</h5>
+<div class="quoteblock">
+<blockquote>
+If you measure only one thing, measure Cost of Delay.
+</blockquote>
+<div class="attribution">
+&#8212; Don Reinertsen<br>
+<cite>Principles of Product Development Flow</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>Don Reinertsen is well known for advocating the concept of "Cost of Delay" in understanding product economics. The term is intuitive; it represents the loss one experiences by delaying the delivery of some value. For example, if a delayed product misses a key trade show, and therefore its opportunity to launch against competitors, the cost of delay might be the entire market. Understanding Cost of Delay is part of a broader economic emphasis that Reinertsen brings to the general question of product development. He suggests that product developers, in general, do not understand the fundamental economics of their decisions regarding resources and work in progress.</p>
+</div>
+<div class="paragraph">
+<p>To understand Cost of Delay, it is first necessary to think in terms of a market-facing product (such as a smart phone application). Any market facing product can be represented in terms of its lifecycle revenues and profits:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/2_05-lifecycle-table.png" alt="2 05 lifecycle table">
+</div>
+<div class="title">Figure 57. Product lifecycle economics by year</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/2_05-lifecycle-graph.png" alt="2 05 lifecycle graph">
+</div>
+<div class="title">Figure 58. Product lifecycle economics, charted</div>
+</div>
+<div class="paragraph">
+<p>The numbers above represent a product lifecycle, from R&amp;D through production to retirement. The first year is all cost, as the product is being developed, and net profits are negative. In year 2, a small net profit is shown, but cumulative profit is still negative, as it remains in year 3. Only into year 3 does the product break even, ultimately achieving lifecycle net earnings of 175. But what if the product&#8217;s introduction into the market is delayed? The consequences can be severe.</p>
+</div>
+<div class="paragraph">
+<p>Simply delaying delivery by a year, all things being equal in our example, will reduce lifeycle profits by 30%:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/2_05-lifecycle-table2.png" alt="2 05 lifecycle table2">
+</div>
+<div class="title">Figure 59. Product lifecycle, simple delay</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/2_05-lifecycle-graph2.png" alt="2 05 lifecycle graph2">
+</div>
+<div class="title">Figure 60. Product lifecycle, simple delay, charted</div>
+</div>
+<div class="paragraph">
+<p>But all things are not equal. What if, in delaying the product for a year, we allow a competitor to gain a superior market position? That could depress our sales and increase our per-unit costs - both bad:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/2_05-lifecycle-table3.png" alt="2 05 lifecycle table3">
+</div>
+<div class="title">Figure 61. Product lifecycle, aggravated delay</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/2_05-lifecycle-graph3.png" alt="2 05 lifecycle graph3">
+</div>
+<div class="title">Figure 62. Product lifecycle, aggravated delay, charted</div>
+</div>
+<div class="paragraph">
+<p>Advanced Cost of Delay analysis argues that different product lifecycles have different characteristics. Josh Arnold of Black Swan Farming has visualized these as a set of profiles <a href="#Arnold2013">[Arnold2013]</a>. The simple delay profile appears like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/2_05-simpleCOD.png" alt="delay curve 1" width="400">
+</div>
+<div class="title">Figure 63. Simple Cost of Delay <sup class="footnote">[<a id="_footnoteref_32" class="footnote" href="#_footnote_32" title="View footnote.">32</a>]</sup></div>
+</div>
+<div class="paragraph">
+<p>In this delay curve, while profits and revenues are lost due to late entry, it&#8217;s assumed that the product will still enjoy its expected market share. We can think of this as the "iPhone versus Android" profile, as Android was later but still achieved market parity. The aggravated cost of delay profile, however, looks like this:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/2_05-aggroCOD.png" alt="delay curve 2" width="400">
+</div>
+<div class="title">Figure 64. Aggravated Cost of Delay <sup class="footnote">[<a id="_footnoteref_33" class="footnote" href="#_footnote_33" title="View footnote.">33</a>]</sup></div>
+</div>
+<div class="paragraph">
+<p>In this version, the failure to enter the market in a timely way results in long term loss of market share. We can think of this as the "Amazon Kindle versus Barnes &amp; Noble Nook" profile, as the Nook has not achieved parity, and does not appear likely to. There are other delay curves imaginable, such as delay curves for tightly time limited products (e.g. such as found in the fashion industry) or cost of delay that&#8217;s only incurred after a specific date (such as in complying with a regulation.)</p>
+</div>
+<div class="paragraph">
+<p>Reinertsen observes that product managers may think that they intuitively understand Cost of Delay, but when he asks them to estimate the aggregate cost of (for example) delaying their product&#8217;s delivery by a given period of time, the estimates provided by product team participants <strong>in a position to delay delivery</strong> may vary by up to 50:1. This is powerful evidence that a more quantitative approach is essential, as opposed to relying on "gut feel" or the <a href="#HIPPO">Highest Paid Person&#8217;s Opinion</a>.</p>
+</div>
+<div class="paragraph">
+<p>Finally, Josh Arnold notes that Cost of Delay is much easier to assess on small batches of work. Large projects tend to attract many ideas for features, some of which have stronger economic justifications than others. When all these features are lumped together, it makes understanding Cost of Delay challenging, because it then becomes an average across the various features. But since features, ideally, can be worked on individually, understanding Cost of Delay at that level helps with the prioritization of the work.</p>
+</div>
+<div class="paragraph">
+<p><a id="roadmap-backlog-estimation"></a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_roadmap_backlog_and_estimation">Roadmap, backlog, and estimation</h5>
+<div class="paragraph">
+<p>We&#8217;ve previously mentioned the <a href="#scrum">product backlog</a> and  <a href="#product-roadmapping">product roadmapping</a>. Let&#8217;s examine this concept further, and in particular how <a href="#cost-of-delay">Cost of Delay</a> can help. Both Mike Cohn and Roman Pichler use the DEEP acronym to describe backlog qualities (<a href="#Cohn2010">[Cohn2010]</a> p. 243, <a href="#Pichler2010">[Pichler2010]</a> p. 48):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Detailed appropriately</p>
+</li>
+<li>
+<p>Estimated</p>
+</li>
+<li>
+<p>Emergent (feedback such as new or changed stories are readily accepted)</p>
+</li>
+<li>
+<p>Prioritized</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The backlog should receive ongoing "grooming" to support these qualities, which means several things:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Addition of new items</p>
+</li>
+<li>
+<p>Re-prioritization of items</p>
+</li>
+<li>
+<p>Elaboration (decomposition, estimation and refinement)</p>
+</li>
+</ul>
+</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img src="images/2_05-backlog.png" alt="backlog" width="250">
+</div>
+<div class="title">Figure 65. Backlog granularity &amp; priority <sup class="footnote">[<a id="_footnoteref_34" class="footnote" href="#_footnote_34" title="View footnote.">34</a>]</sup></div>
+</div>
+<div class="paragraph">
+<p>When "detailed appropriately," items in the backlog are not all the same scale. Scrum and Agile thinkers generally agree on the core concept of "story," but stories vary in size, with the largest stories often termed "epics." The backlog is ordered in terms of priority (what will be done next) but, critically, it is also understood that the lower-priority items in general can be larger grained. In other words, if we visualize the backlog as a stack, with the highest priority on the top, the size of the stories increases as we go down. (Reinertsen terms this <em>progressive specification</em>; see <a href="#Reinertsen1997">[Reinertsen1997]</a>, pp. 176-177 for a detailed discussion.)</p>
+</div>
+<div class="paragraph">
+<p>A high quality DEEP backlog combined with Cost of Delay is the foundation of digital product development. It&#8217;s essential to have an economic basis for making the prioritization decision. Clarifying the economic basis is a critical function of the <a href="#product-roadmapping">product roadmap</a>. Through understanding the economics of product availability to the market or internal users, Cost of Delay can drive backlog prioritization.</p>
+</div>
+<div class="paragraph">
+<p>Estimating user stories is a standard practice in Scrum and Agile methods more generally. Agile approaches are wary of false precision and accept the fact that estimation is an uncertain practice at best. However, without some overall estimate or roadmap for when a product might be ready for use, it is unlikely that the investment will be made to create it. It is difficult to establish the economic value of developing a product feature at a particular time, if you have no idea of the cost and/or effort involved to bring it to market.</p>
+</div>
+<div class="paragraph">
+<p>At a more detailed level, it is common practice for product teams to estimate detailed stories using "points." Points are a relative form of estimation, valid within the boundary of one team. Story point estimating strives to avoid false precision, often restricting the team&#8217;s estimate of the effort to a modified Fibonacci sequence, or even T-shirt or dog sizes:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Story point</th>
+<th class="tableblock halign-left valign-top">T-shirt</th>
+<th class="tableblock halign-left valign-top">Dog</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XXS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Chihauha</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dachshund</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">S</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Terrier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">M</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Border collie</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bulldog</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Labrador retriever</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XXL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mastiff</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XXXL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Great Dane</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>(similar to <a href="#Cohn2006">[Cohn2006]</a>, p. 37)</p>
+</div>
+<div class="paragraph">
+<p>Through estimation of story points, we can understand the team&#8217;s velocity. Estimating velocity is key to planning, which we&#8217;ll discuss further in Chapter 8.</p>
+</div>
+<div class="paragraph">
 <p><a id="ticketing"></a></p>
 </div>
 </div>
@@ -8691,7 +9047,7 @@ Stopping the machine when there is trouble forces awareness on everyone. When th
 <div class="content">
 <img src="images/1_01-ITStates.png" alt="1 01 ITStates">
 </div>
-<div class="title">Figure 54. IT service lifecycle</div>
+<div class="title">Figure 66. IT service lifecycle</div>
 </div>
 <div class="paragraph">
 <p>The service desk is an interrupt-driven, task-oriented capability. It serves as a first point of contact for IT services that require some human support or intervention. As such its role can become broad, from provisioning access to assisting users in navigation &amp; usage, to serving as an alert channel for outage reporting. The service desk ideally answers each user&#8217;s request immediately, requiring no followup. If followup is required, a "ticket" is "issued."</p>
@@ -8707,7 +9063,7 @@ As a “service desk,” it may expand its purview to accepting provisioning or 
 <div class="content">
 <img src="images/2_05-ticket.jpg" alt="old ticket" width="250">
 </div>
-<div class="title">Figure 55. A "ticket" from early industry</div>
+<div class="title">Figure 67. A "ticket" from early industry</div>
 </div>
 <div class="paragraph">
 <p>In IT-centric domains, tickets are virtual; they are records in databases, not paper. The user is given a ticket "ID" or "number" for tracking (e.g., so they can inquire about the request&#8217;s status.) The ticket may be "routed" to someone to handle, but again in a virtual world what really happens is that the person it&#8217;s routed to is directed to look at the record in the database. (In paper based processes, the ticket might well be moved physically to various parties to perform the needed work.)</p>
@@ -8866,7 +9222,7 @@ As a “service desk,” it may expand its purview to accepting provisioning or 
 <div class="content">
 <img src="images/2_05-747-checklist.jpg" alt="checklist" width="400" height="200">
 </div>
-<div class="title">Figure 56. A Boeing 747 checklist <sup class="footnote">[<a id="_footnoteref_30" class="footnote" href="#_footnote_30" title="View footnote.">30</a>]</sup></div>
+<div class="title">Figure 68. A Boeing 747 checklist <sup class="footnote">[<a id="_footnoteref_35" class="footnote" href="#_footnote_35" title="View footnote.">35</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>The Checklist Manifesto is the name of a notable book by author/surgeon Atul Gawande <a href="#Gawande2010">[Gawande2010]</a>. The title can be misleading; the book in no way suggests that all work can be reduced to repeatable checklists. Instead, it is another in depth examination of the  relationship between standardization and complexity. Like case management, it addresses the problem of complex activities requiring professional judgement.</p>
@@ -9151,362 +9507,6 @@ A <strong>process</strong> is an ordered, countable set of activities; an event-
 </div>
 <div class="paragraph">
 <p>We say that an IT management capability may be implemented by a process, function, or practice.</p>
-</div>
-<div class="paragraph">
-<p><a id="lean-product-dev"></a></p>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_lean_product_development_and_don_reinertsen">Lean product development and Don Reinertsen</h4>
-<div class="sect4">
-<h5 id="_product_development_versus_production">Product development versus production</h5>
-<div class="quoteblock">
-<blockquote>
-The idea of software development as an assembly line manned by semi-skilled interchangeable workers is fundamentally flawed and wasteful <a href="#Stroustrup2010">[Stroustrup2010]</a>.
-</blockquote>
-<div class="attribution">
-&#8212; Bjarne Stroustrup<br>
-<cite>C++ inventor</cite>
-</div>
-</div>
-<div class="paragraph">
-<p>One of the challenges with applying Lean to IT (as noted <a href="#lean">previously</a>) is that many IT professionals (especially software developers) believe that manufacturing is a "deterministic" field, whose lessons don&#8217;t apply to developing technical products. "Creating software is like creating art, not being on an assembly line," is one line of argument.</p>
-</div>
-<div class="imageblock" style="float: left">
-<div class="content">
-<img src="images/2_05-assembly-line.jpg" alt="alt text" width="300" height="200">
-</div>
-<div class="title">Figure 57. Production <sup class="footnote">[<a id="_footnoteref_31" class="footnote" href="#_footnote_31" title="View footnote.">31</a>]</sup></div>
-</div>
-<div class="paragraph">
-<p>The root cause of this debate is the distinction between product development and production. It is true that an industrial production line, for example producing forklifts by the thousands, may be repetitive. But how did the production line come to be? How was the forklift invented, or developed? It was created as part of a process of product development. It took mechanical engineering, electrical engineering, chemistry, materials science, and more.  Combining fundamental engineering principles and techniques into a new, marketable product is not a repetitive process; it is a highly variable, creative process, and always has been.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Warning</div>
-</td>
-<td class="content">
-Never confuse production with product development. The approaches, measures, and concerns are radically different. This book considers it an "original sin."
-</td>
-</tr>
-</table>
-</div>
-<div class="imageblock" style="float: right">
-<div class="content">
-<img src="images/2_05-r-and-d.png" alt="alt text" width="300" height="200">
-</div>
-<div class="title">Figure 58. Research and development <sup class="footnote">[<a id="_footnoteref_32" class="footnote" href="#_footnote_32" title="View footnote.">32</a>]</sup></div>
-</div>
-<div class="paragraph">
-<p>One dead end that organizations keeps pursuing is the desire to make <em>research and development</em> (R&amp;D) more "predictable"; that is, to reduce variation and predictably create innovations. This never works well; game-changing innovations are usually complex responses to complex market systems dynamics, including customer psychology, current trends, and many other factors. The process of innovating cannot, by its very nature, be made repeatable.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Warning</div>
-</td>
-<td class="content">
-The concept of a repeatable "software process" is at best a risky one, and an idea that has caused much waste in the industry.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>In IT, simply developing software for a new problem (or even new software for an old problem) is an R&amp;D problem, not a production line problem. It is iterative, uncertain, and risky, just like other forms of product development. That does not mean it is completely un-manageable, or that its creation is a mysterious, artistic process. It is just a more variable process with a higher chance of failure, and with a need to incorporate feedback quickly to reduce the risk of <a href="#open-loop">open loop</a>
-control failure.  These ideas are well known to the Agile community and its authors. However, there is one thought leader who stands out in this field: an ex-Naval officer and nuclear engineer named Donald Reinertsen, introduced above in our discussions <a href="#beneficial-variability">beneficial variability in product discovery</a> and <a href="#queuing">queuing</a>.</p>
-</div>
-<div class="paragraph">
-<p>There are many books on Agile development and management. Consider the following books, all well known and influential in the fields of software development and Agile:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>David Anderson, <a href="https://www.goodreads.com/book/show/8086552-kanban"><em>Kanban: Successful Evolutionary Change for Your Technology Business</em></a></p>
-</li>
-<li>
-<p>Craig Larman and Bas Vodde, <a href="https://www.goodreads.com/book/show/5247677-scaling-lean-agile-development"><em>Scaling Lean &amp; Agile Development: Thinking and Organizational Tools for Large-Scale Scrum</em></a></p>
-</li>
-<li>
-<p>Jim Highsmith, <a href="https://www.goodreads.com/book/show/338541.Adaptive_Software_Development"><em>Adaptive Software Development: An Evolutionary Approach to Managing Complex Systems</em></a></p>
-</li>
-<li>
-<p>Jez Humble, Joanne Molesky and Barry O&#8217;Reilly, <a href="https://www.goodreads.com/book/show/18167218-lean-enterprise"><em>Lean Enterprise: How High Performance Organizations Innovate at Scale</em></a></p>
-</li>
-<li>
-<p>Dean Leffingwell, <a href="https://www.goodreads.com/book/show/8997772-agile-software-requirements"><em>Agile Software Requirements: Lean Requirements Practices for Teams, Programs, and the Enterprise</em></a></p>
-</li>
-<li>
-<p>Steve McConnell, <a href="https://www.goodreads.com/book/show/93892.Rapid_Development"><em>Rapid Development: Taming Wild Software Schedules</em></a></p>
-</li>
-<li>
-<p>Roman Pichler,  <a href="https://www.goodreads.com/book/show/7950745-agile-product-management-with-scrum"><em>Agile Product Management with Scrum: Creating Products That Customers Love</em></a></p>
-</li>
-<li>
-<p>Mary and Tom Poppendieck, <a href="https://www.goodreads.com/book/show/194338.Lean_Software_Development"><em>Lean Software Development: An Agile Toolkit for Software Development Managers</em></a></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>What do they all have in common? They all cite Don Reinertsen. Reinertsen&#8217;s work dates back to 1991, and (orginally as a co-author with Preston G. Smith) presaged important principles of the Agile movement <a href="#Smith1991">[Smith1991]</a>, from the general perspective of product development. Reinertsen&#8217;s influence is well documented and notable. He was partnering with David Anderson when Anderson created the "software Kanban" approach. He wrote the introduction to Leffingwell&#8217;s <em>Agile Software Requirements</em>, the initial statement of the Scaled Agile Framework. His influence is pervasive across the Agile community. His work is deep and based on fundamental mathematical principles such as queueing theory. One way of reading his work is as a series of interdependent principles:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>The flow, or throughput of product innovation is the primary driver of financial success. (Notice that innovation must be <strong>accepted by the market</strong> - simply producing new product is not enough.)</p>
-</li>
-<li>
-<p>Product development is essentially the creation of information.</p>
-</li>
-<li>
-<p>The creation of information requires fast <a href="http://dm-academy.github.io/aitm/#_a_brief_introduction_to_feedback">feedback</a></p>
-</li>
-<li>
-<p>Feedback requires limiting work in process</p>
-</li>
-<li>
-<p>Limiting work in process in product design contexts requires rigorous prioritization capabilities</p>
-</li>
-<li>
-<p>Effective, economical prioritization requires understanding the <a href="http://www.leadingagile.com/2015/06/an-introduction-to-cost-of-delay/">cost of delay</a> for individual product features</p>
-</li>
-<li>
-<p>Understanding cost of delay requires smaller batch sizes, consisting of cohesive features, not large projects.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>These can be summarized in the accompanying pyramid figure.</p>
-</div>
-<div class="imageblock" style="float: right">
-<div class="content">
-<img src="images/2_05-pyramid3.png" alt="pyramid" width="400">
-</div>
-<div class="title">Figure 59. Lean product hierarchy of concerns</div>
-</div>
-<div class="paragraph">
-<p>If a company wishes to produce innovation faster than competitors, it requires fast <a href="#feedback">feedback</a> on its experiments (whether traditionally understood, laboratory-based experiments, or market-facing validation as in <a href="#lean-startup">Lean Startup</a>.) In order to achieve fast feedback, <a href="#work-in-process">work in process</a>
-<strong>must</strong> be reduced in the system, otherwise <a href="#queuing">high-queue</a> states will slow feedback down.</p>
-</div>
-<div class="paragraph">
-<p>But how do we reduce work in process? We have to <em>prioritize</em>. Do we rely on the <a href="#HIPPO">Highest Paid Person&#8217;s Opinion</a>, or do we try something more rational? This brings us to the critical concept of <em>Cost of Delay</em>.</p>
-</div>
-<div class="paragraph">
-<p><a id="cost-of-delay"></a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_cost_of_delay">Cost of Delay</h5>
-<div class="quoteblock">
-<blockquote>
-If you measure only one thing, measure Cost of Delay.
-</blockquote>
-<div class="attribution">
-&#8212; Don Reinertsen<br>
-<cite>Principles of Product Development Flow</cite>
-</div>
-</div>
-<div class="paragraph">
-<p>Don Reinertsen is well known for advocating the concept of "Cost of Delay" in understanding product economics. The term is intuitive; it represents the loss one experiences by delaying the delivery of some value. For example, if a delayed product misses a key trade show, and therefore its opportunity to launch against competitors, the cost of delay might be the entire market. Understanding Cost of Delay is part of a broader economic emphasis that Reinertsen brings to the general question of product development. He suggests that product developers, in general, do not understand the fundamental economics of their decisions regarding resources and work in progress.</p>
-</div>
-<div class="paragraph">
-<p>To understand Cost of Delay, it is first necessary to think in terms of a market-facing product (such as a smart phone application). Any market facing product can be represented in terms of its lifecycle revenues and profits:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/2_05-lifecycle-table.png" alt="2 05 lifecycle table">
-</div>
-<div class="title">Figure 60. Product lifecycle economics by year</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/2_05-lifecycle-graph.png" alt="2 05 lifecycle graph">
-</div>
-<div class="title">Figure 61. Product lifecycle economics, charted</div>
-</div>
-<div class="paragraph">
-<p>The numbers above represent a product lifecycle, from R&amp;D through production to retirement. The first year is all cost, as the product is being developed, and net profits are negative. In year 2, a small net profit is shown, but cumulative profit is still negative, as it remains in year 3. Only into year 3 does the product break even, ultimately achieving lifecycle net earnings of 175. But what if the product&#8217;s introduction into the market is delayed? The consequences can be severe.</p>
-</div>
-<div class="paragraph">
-<p>Simply delaying delivery by a year, all things being equal in our example, will reduce lifeycle profits by 30%:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/2_05-lifecycle-table2.png" alt="2 05 lifecycle table2">
-</div>
-<div class="title">Figure 62. Product lifecycle, simple delay</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/2_05-lifecycle-graph2.png" alt="2 05 lifecycle graph2">
-</div>
-<div class="title">Figure 63. Product lifecycle, simple delay, charted</div>
-</div>
-<div class="paragraph">
-<p>But all things are not equal. What if, in delaying the product for a year, we allow a competitor to gain a superior market position? That could depress our sales and increase our per-unit costs - both bad:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/2_05-lifecycle-table3.png" alt="2 05 lifecycle table3">
-</div>
-<div class="title">Figure 64. Product lifecycle, aggravated delay</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/2_05-lifecycle-graph3.png" alt="2 05 lifecycle graph3">
-</div>
-<div class="title">Figure 65. Product lifecycle, aggravated delay, charted</div>
-</div>
-<div class="paragraph">
-<p>Advanced Cost of Delay analysis argues that different product lifecycles have different characteristics. Josh Arnold of Black Swan Farming has visualized these as a set of profiles <a href="#Arnold2013">[Arnold2013]</a>. The simple delay profile appears like this:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/2_05-simpleCOD.png" alt="delay curve 1" width="400">
-</div>
-<div class="title">Figure 66. Simple Cost of Delay <sup class="footnote">[<a id="_footnoteref_33" class="footnote" href="#_footnote_33" title="View footnote.">33</a>]</sup></div>
-</div>
-<div class="paragraph">
-<p>In this delay curve, while profits and revenues are lost due to late entry, it&#8217;s assumed that the product will still enjoy its expected market share. We can think of this as the "iPhone versus Android" profile, as Android was later but still achieved market parity. The aggravated cost of delay profile, however, looks like this:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/2_05-aggroCOD.png" alt="delay curve 2" width="400">
-</div>
-<div class="title">Figure 67. Aggravated Cost of Delay <sup class="footnote">[<a id="_footnoteref_34" class="footnote" href="#_footnote_34" title="View footnote.">34</a>]</sup></div>
-</div>
-<div class="paragraph">
-<p>In this version, the failure to enter the market in a timely way results in long term loss of market share. We can think of this as the "Amazon Kindle versus Barnes &amp; Noble Nook" profile, as the Nook has not achieved parity, and does not appear likely to. There are other delay curves imaginable, such as delay curves for tightly time limited products (e.g. such as found in the fashion industry) or cost of delay that&#8217;s only incurred after a specific date (such as in complying with a regulation.)</p>
-</div>
-<div class="paragraph">
-<p>Reinertsen observes that product managers may think that they intuitively understand Cost of Delay, but when he asks them to estimate the aggregate cost of (for example) delaying their product&#8217;s delivery by a given period of time, the estimates provided by product team participants <strong>in a position to delay delivery</strong> may vary by up to 50:1. This is powerful evidence that a more quantitative approach is essential, as opposed to relying on "gut feel" or the <a href="#HIPPO">Highest Paid Person&#8217;s Opinion</a>.</p>
-</div>
-<div class="paragraph">
-<p>Finally, Josh Arnold notes that Cost of Delay is much easier to assess on small batches of work. Large projects tend to attract many ideas for features, some of which have stronger economic justifications than others. When all these features are lumped together, it makes understanding Cost of Delay challenging, because it then becomes an average across the various features. But since features, ideally, can be worked on individually, understanding Cost of Delay at that level helps with the prioritization of the work.</p>
-</div>
-<div class="paragraph">
-<p><a id="roadmap-backlog-estimation"></a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_roadmap_backlog_and_estimation">Roadmap, backlog, and estimation</h5>
-<div class="paragraph">
-<p>We&#8217;ve previously mentioned the <a href="#scrum">product backlog</a> and  <a href="#product-roadmapping">product roadmapping</a>. Let&#8217;s examine this concept further, and in particular how <a href="#cost-of-delay">Cost of Delay</a> can help. Both Mike Cohn and Roman Pichler use the DEEP acronym to describe backlog qualities (<a href="#Cohn2010">[Cohn2010]</a> p. 243, <a href="#Pichler2010">[Pichler2010]</a> p. 48):</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Detailed appropriately</p>
-</li>
-<li>
-<p>Estimated</p>
-</li>
-<li>
-<p>Emergent (feedback such as new or changed stories are readily accepted)</p>
-</li>
-<li>
-<p>Prioritized</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The backlog should receive ongoing "grooming" to support these qualities, which means several things:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Addition of new items</p>
-</li>
-<li>
-<p>Re-prioritization of items</p>
-</li>
-<li>
-<p>Elaboration (decomposition, estimation and refinement)</p>
-</li>
-</ul>
-</div>
-<div class="imageblock" style="float: right">
-<div class="content">
-<img src="images/2_05-backlog.png" alt="backlog" width="250">
-</div>
-<div class="title">Figure 68. Backlog granularity &amp; priority <sup class="footnote">[<a id="_footnoteref_35" class="footnote" href="#_footnote_35" title="View footnote.">35</a>]</sup></div>
-</div>
-<div class="paragraph">
-<p>When "detailed appropriately," items in the backlog are not all the same scale. Scrum and Agile thinkers generally agree on the core concept of "story," but stories vary in size, with the largest stories often termed "epics." The backlog is ordered in terms of priority (what will be done next) but, critically, it is also understood that the lower-priority items in general can be larger grained. In other words, if we visualize the backlog as a stack, with the highest priority on the top, the size of the stories increases as we go down. (Reinertsen terms this <em>progressive specification</em>; see <a href="#Reinertsen1997">[Reinertsen1997]</a>, pp. 176-177 for a detailed discussion.)</p>
-</div>
-<div class="paragraph">
-<p>A high quality DEEP backlog combined with Cost of Delay is the foundation of digital product development. It&#8217;s essential to have an economic basis for making the prioritization decision. Clarifying the economic basis is a critical function of the <a href="#product-roadmapping">product roadmap</a>. Through understanding the economics of product availability to the market or internal users, Cost of Delay can drive backlog prioritization.</p>
-</div>
-<div class="paragraph">
-<p>Estimating user stories is a standard practice in Scrum and Agile methods more generally. Agile approaches are wary of false precision and accept the fact that estimation is an uncertain practice at best. However, without some overall estimate or roadmap for when a product might be ready for use, it is unlikely that the investment will be made to create it. It is difficult to establish the economic value of developing a product feature at a particular time, if you have no idea of the cost and/or effort involved to bring it to market.</p>
-</div>
-<div class="paragraph">
-<p>At a more detailed level, it is common practice for product teams to estimate detailed stories using "points." Points are a relative form of estimation, valid within the boundary of one team. Story point estimating strives to avoid false precision, often restricting the team&#8217;s estimate of the effort to a modified Fibonacci sequence, or even T-shirt or dog sizes:</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Story point</th>
-<th class="tableblock halign-left valign-top">T-shirt</th>
-<th class="tableblock halign-left valign-top">Dog</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">XXS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Chihauha</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">XS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dachshund</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">S</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Terrier</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">M</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Border collie</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">L</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bulldog</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">XL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Labrador retriever</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">XXL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mastiff</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">40</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">XXXL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Great Dane</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>(similar to <a href="#Cohn2006">[Cohn2006]</a>, p. 37)</p>
-</div>
-<div class="paragraph">
-<p>Through estimation of story points, we can understand the team&#8217;s velocity. Estimating velocity is key to planning, which we&#8217;ll discuss further in Chapter 8.</p>
 </div>
 </div>
 </div>
@@ -13732,7 +13732,7 @@ I have seen various attempts and interest along these lines, but always company 
 <p>People have often said to me, "Isn&#8217;t the CMDB the basis of ERP for IT"?</p>
 </div>
 <div class="paragraph">
-<p>My view is no, no more than the Bill of Materials is the basis for manufacturing ERP. The core of ERP systems is more about process and execution, and that is what we are missing in large scale IT management. We&#8217;ve spent years struggling with the data-centric orientation the CMDB discussion gave us, while shortchanging the process and execution side of the work.</p>
+<p>My view is no, no more than the Bill of Materials is the basis for manufacturing ERP. The core of ERP systems is about process and execution, and that is what we are missing in large scale IT management. We&#8217;ve spent years struggling with the data-centric orientation the CMDB discussion gave us, while shortchanging the process and execution side of the work.</p>
 </div>
 <div class="paragraph">
 <p>I realize the red flags that come up with any suggestion of a centralized system, which is why I am more in favor of seeing the PI concept as a logical interface. If all Process Items had some degree of overarching consistency, they could be exchanged and federated as part of execution activities, without requiring a monolithic centralized data store.</p>
@@ -13750,7 +13750,7 @@ I have seen various attempts and interest along these lines, but always company 
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/3_09-mfg-w-resource.png" alt="3 09 mfg w resource">
+<img src="images/3_07-mfg-w-resource.png" alt="3 07 mfg w resource">
 </div>
 </div>
 <div class="paragraph">
@@ -13776,7 +13776,7 @@ Production scheduling is a large topic in and of itself. It is part of the domai
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/3_09-sw-w-resource.png" alt="3 09 sw w resource">
+<img src="images/3_07-sw-w-resource.png" alt="3 07 sw w resource">
 </div>
 </div>
 <div class="paragraph">
@@ -13812,7 +13812,7 @@ Production scheduling is a large topic in and of itself. It is part of the domai
 </div>
 <div class="imageblock" style="float: right">
 <div class="content">
-<img src="images/3_08-development-iterative.png" alt="Rational Unified Process" width="493">
+<img src="images/3_07-development-iterative.png" alt="Rational Unified Process" width="493">
 </div>
 <div class="title">Figure 89. Rational Unified Process <sup class="footnote">[<a id="_footnoteref_45" class="footnote" href="#_footnote_45" title="View footnote.">45</a>]</sup></div>
 </div>
@@ -27981,22 +27981,22 @@ Cost of Delay</pre>
 <a href="#_footnoteref_29">29</a>. <em>Image credit <a href="https://www.flickr.com/photos/visualpunch/9668342772/" class="bare">https://www.flickr.com/photos/visualpunch/9668342772/</a>, downloaded 2016-11-17, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_30">
-<a href="#_footnoteref_30">30</a>. <em>Image credit <a href="https://www.flickr.com/photos/clemensv/7292988394" class="bare">https://www.flickr.com/photos/clemensv/7292988394</a>, downloaded 2016-11-29, commercial use permitted</em>
+<a href="#_footnoteref_30">30</a>. <em>Image credit <a href="https://www.flickr.com/photos/psit/5605605412" class="bare">https://www.flickr.com/photos/psit/5605605412</a>, downloaded 2016-11-19, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_31">
-<a href="#_footnoteref_31">31</a>. <em>Image credit <a href="https://www.flickr.com/photos/psit/5605605412" class="bare">https://www.flickr.com/photos/psit/5605605412</a>, downloaded 2016-11-19, commercial use permitted</em>
+<a href="#_footnoteref_31">31</a>. <em>Image credit <a href="https://www.flickr.com/photos/hamptonroadspartnership/5330640858" class="bare">https://www.flickr.com/photos/hamptonroadspartnership/5330640858</a>, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_32">
-<a href="#_footnoteref_32">32</a>. <em>Image credit <a href="https://www.flickr.com/photos/hamptonroadspartnership/5330640858" class="bare">https://www.flickr.com/photos/hamptonroadspartnership/5330640858</a>, commercial use permitted</em>
+<a href="#_footnoteref_32">32</a>. similar to <a href="#Arnold2013">[Arnold2013]</a>
 </div>
 <div class="footnote" id="_footnote_33">
 <a href="#_footnoteref_33">33</a>. similar to <a href="#Arnold2013">[Arnold2013]</a>
 </div>
 <div class="footnote" id="_footnote_34">
-<a href="#_footnoteref_34">34</a>. similar to <a href="#Arnold2013">[Arnold2013]</a>
+<a href="#_footnoteref_34">34</a>. similar to <a href="#Pichler2010">[Pichler2010]</a>, p.48.
 </div>
 <div class="footnote" id="_footnote_35">
-<a href="#_footnoteref_35">35</a>. similar to <a href="#Pichler2010">[Pichler2010]</a>, p.48.
+<a href="#_footnoteref_35">35</a>. <em>Image credit <a href="https://www.flickr.com/photos/clemensv/7292988394" class="bare">https://www.flickr.com/photos/clemensv/7292988394</a>, downloaded 2016-11-29, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_36">
 <a href="#_footnoteref_36">36</a>. <em>Image credit <a href="https://www.flickr.com/photos/atosorigin/12516008214/" class="bare">https://www.flickr.com/photos/atosorigin/12516008214/</a>, downloaded 2016-11-28, commercial use permitted</em>
