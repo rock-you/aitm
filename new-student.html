@@ -767,6 +767,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_special_section_scaling_the_organization_and_its_work">Special section: Scaling the organization and its work</a>
 <ul class="sectlevel3">
 <li><a href="#_a_three_dimensional_model">A three dimensional model</a></li>
+<li><a href="#_the_two_dimensions_of_demand_management">The two dimensions of demand management</a></li>
 <li><a href="#_part_iii_chapter_structure">Part III chapter structure</a></li>
 <li><a href="#_the_delivery_models">The delivery models</a></li>
 </ul>
@@ -10655,7 +10656,10 @@ here&#8217;s a general warning: Avoid large projects. Start small and quickly de
 <p>Furthermore, as an organization scales, there is an increasing span in your time horizon and the scope of work you are considering and executing. From the immediate, "hand-to-mouth" days of your startup, you now must take concern for longer and longer time frames: contracts, regulations, and your company&#8217;s strategy as it grows all demand this.</p>
 </div>
 <div class="paragraph">
-<p>Finally, the very terminology you use to describe your work becomes more diverse, reflecting in some ways the broader time horizons you are concerned with. Requests, changes, incidents, work orders, releases, stories, epics, problems, major incidents, refreshes, programs, strategies&#8230;&#8203; there is a continuum of how you think about your organization&#8217;s work efforts. Mostly, the range of work seems tied to how much planning time you have, but there are exceptions: disasters take a lot of work, but you don&#8217;t get much advance warning!</p>
+<p>Finally, the very terminology you use to describe your work becomes more diverse, reflecting in some ways the broader time horizons you are concerned with. Requests, changes, incidents, work orders, releases, stories, epics, problems, major incidents, refreshes, programs, strategies&#8230;&#8203; there is a continuum of how you think about your organization&#8217;s work efforts. Mostly, the range of work seems tied to how much planning time you have, but there are exceptions: disasters take a lot of work, but you don&#8217;t get much advance warning! So size of work is independent of planning horizon.</p>
+</div>
+<div class="paragraph">
+<p>The predictability of the work is also independent. You might have a program to upgrade the memory on 80,000 identical Point of Sale terminals across 2,000 retail stores. It&#8217;s going to take a lot of work; you&#8217;ll be "rolling trucks" in all 50 states! But you are sure that you can estimate this work with a high degree of accuracy; it has high predictability. On the other hand, creating a completely new Point of Sale system for your stores is an unpredictable effort. Your original estimate for this large program might be off by orders of magnitude. Its predictability is low.</p>
 </div>
 <div class="imageblock" style="float: right">
 <div class="content">
@@ -10684,6 +10688,91 @@ here&#8217;s a general warning: Avoid large projects. Start small and quickly de
 </div>
 </div>
 <div class="sect3">
+<h4 id="_the_two_dimensions_of_demand_management">The two dimensions of demand management</h4>
+<div class="paragraph">
+<p>Project management is our first major specialization of <a href="#work-management">Chapter 5</a>'s general concept of "work management." (We will turn to process management in the next chapter.) In the interest of keeping project management firmly in context, consider the following two-dimensional analysis:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/3_00-2d-demand.png" alt="3 00 2d demand">
+</div>
+</div>
+<div class="paragraph">
+<p>You should spend some time considering the graphic, which provides a unique way of understanding the work you are now experiencing as a "team of teams" or "manager of managers" in an IT-dependent environment of increasing size and complexity.</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;ve come a long ways from the last section&#8217;s insistence that "it&#8217;s all just work." But there still is an essential truth there. Regardless of the abstract label we put on a given activity, it represents some set of tasks or objectives that real people are going to take time to perform, and expect to be compensated for. Retaining a clear realization of this is essential to maintaining truly business-aligned IT management.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s consider the various forms that demand may take. While this may not be project management per se, it&#8217;s essential to putting project management in a broader context. Understanding these demand forms will also help you develop a deeper understanding of an <strong>architecture of IT management</strong>, a topic the author has explored in other works <a href="#Betz2011">[Betz2011]</a>.</p>
+</div>
+<div class="paragraph">
+<p>The diagram has two dimensions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Planning</p>
+</li>
+<li>
+<p>Granularity</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The bubbles represent a "space" where one is likely to find that kind of work. As indicated by the central diagonal, it reflects an assumption that larger amounts of work are more likely to be planned further in advance. However, this is not always true. A large, unwelcome amount of required work that shows up with no planning is probably a disaster. Desired work (in the form of aggregate transactional demand) may also spike unexpectedly.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>[The following table is work in process, currently with just a few examples filled in]</pre>
+</div>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type of work</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Core transactional demand</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This is the demand on the fully automated IT system for a given moment of truth: a banking account lookup, a streaming movie, a Human Resources record update</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Routine service requests and incidents</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Service requests are predefined, process-driven work items, rarely requiring creative thought or analysis. Incidents span a spectrum, but some are simpler and more routine than others, especially those stemming from user misunderstanding or error.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Changes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Changes represent modifications of established IT functionality or <a href="#state-config-discovery">state</a>. They represent some definite risk to one or more IT services, which is why they are planned on a longer lead time. However, they ideally remain relatively granular, which helps reduce their risk.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Routine releases, stories, reports</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Releases and (in the Agile world) stories represent larger increments of functionality</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Services and Projects</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A Project is a large, planned amount of work with a defined end date. It might create a Service, which also represents a commitment to a large, ongoing amount of work, perhaps comparable in scope to the Project.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Severe incidents</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Severe incidents by definition are not planned. But they represent a significant amount of work to overcome.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Some forms of work may lead to other forms of work. For example, Projects may manifest as Stories, Releases, and Changes. This complicates the diagram a bit; we don&#8217;t want to "double-count" work effort. But not all Releases derive from Projects, and not all Project work (especially in complex environments) can be cleanly reduced to a set of smaller tasks.</p>
+</div>
+<div class="paragraph">
+<p>The final point of this diagram: you only have so much capacity to execute the work it implies. If you have a disaster, it may impact your ability to deliver user stories, changes, or even meet transactional demand. Trade-offs must be considered.</p>
+</div>
+</div>
+<div class="sect3">
 <h4 id="_part_iii_chapter_structure">Part III chapter structure</h4>
 <div class="paragraph">
 <p>In thinking about how organizations develop as they scale, it is helpful to consider various time frames:</p>
@@ -10691,16 +10780,16 @@ here&#8217;s a general warning: Avoid large projects. Start small and quickly de
 <div class="ulist">
 <ul>
 <li>
-<p>Ongoing execution is the actual day to day work, however conceived. It can include defined process activities, project deliverables, the flow of new product functionality, or ongoing improvement and governance.</p>
+<p>Ongoing execution is the actual day to day work, however conceived. It can include defined process activities, project deliverables, the flow of new product functionality, or ongoing improvement and governance. Ongoing execution is the "moment of truth" where estimate becomes actual and supply meets demand.</p>
 </li>
 <li>
 <p>Investment decisions are required to charter new products, even in those companies that may be moving away from a traditional project cycle. Investments are usually understood in terms of budget planning, which traditionally has driven the project funding cycle. They represent some statement of intent for a larger scope of work to be performed and/or sustained, based on the organizational platform, which should be able to support multiple investments.</p>
 </li>
 <li>
-<p>Organizational changes may take years, and require considerable effort and thought if they are to succeed. One does not change organizational structures lightly or (hopefully) frequently.</p>
+<p>Organizational changes may take years, and require considerable effort and thought if they are to succeed. One does not change organizational structures lightly or (hopefully) frequently.  Employee tenure is in general even longer.</p>
 </li>
 <li>
-<p>Culture takes longest and is most difficult to change. Both culture and organization have self-reinforcing feedback loops which add complexity to any deliberate attempts to transform them.</p>
+<p>Culture takes longest and is most difficult to change; it easily outlasts both organizational forms and even individual employees coming and going. Both culture and organization have self-reinforcing <a href="#feedback">feedback</a> loops which add complexity to any deliberate attempts to transform them.</p>
 </li>
 </ul>
 </div>
