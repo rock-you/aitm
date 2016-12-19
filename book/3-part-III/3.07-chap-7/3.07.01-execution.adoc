@@ -1,32 +1,10 @@
 
 ==== Executing work
- https://github.com/FocusedObjective/FocusedObjective.Resources/blob/master/Canvas%20and%20Forms/Dependencies.pdf
-[quote, Stanley Portny, Project Management for Dummies 4th ed.]
-Projects of all types and sizes are now *the* way that organizations accomplish their work [emphasis added].
 
-[quote, Sriram Narayan, "Scaling Agile: Problems and Solutions"]
-...the project as a vehicle of IT execution has by and large, failed to live up to its promise of predictable delivery.
 
-[quote, Roman Pichler, "Agile Product Management with Scrum"]
-Project management responsibilities are no longer exercised by one person. They are split across the members of the Scrum team instead.
 
-[quote, Charles G. Cobb, The Project Manager's Guide to Mastering Agile: Principles and Practices for an Adaptive Approach]
-Agile is having a profound impact on the project management profession and will cause us to fundamentally rethink many of the well-established notions of what a project manager is...
-
- 1 execution in context - feedback loops between levels - differing cadences (Anderson cadences)
 
  defining execution
-
-As the above quotes indicate, there are diverse opinions on the role and importance of traditional project management in the enterprise. Clearly it is under pressure from the Agile movement. Project management professionals are advised to not deny or diminish this fact. One of the primary criticisms of project management as a paradigm is that it promotes large "batches" of work. It is possible for a modern, IT-centric organization to make considerable progress on the basis of xref:product-mgmt[product management] plus simple xref:work-management[work management], without the overhead of the formalized project lifecycle suggested by PMBOK.
-
-Cloud is having impacts on traditional project management as well. As noted in the section on the xref:trad-IT-decline[decline of traditional IT], projects were often used to install vendor-delivered commodity software, such as for payroll or employee expense. Increasingly, that kind of functionality is delivered by online service providers, leaving "traditional" internal IT with considerably reduced responsibilities.
-
-Some of the IT capability may remain in the guise of an internal "service broker," to assist with the sourcing and procurement of online services. The remainder moves into digital product management, as the only need for internal IT is in the area of revenue-generating, market-facing strategic digital product.
-
-So, this section will examine the following questions:
-
-* Given the above trends, under what circumstances does formalized project management make economic sense?
-* Assuming that formalized project management is employed, how does one continue to support objectives such as fast feedback and adaptability?
 
 ===== Scaling one product
 [quote, Mike Cohn, Succeeding with Agile]
@@ -45,6 +23,9 @@ image::images/3_08-multi-feature.png[]
 The decision process by which the features are identified is still informal (we will not formalize this until Chapter 12.) However, the term "architecture" is likely emerging through these discussions.
 
 As noted in the discussion of xref:loose-coupling-project[loose coupling and project management], some needs for coordination may be mitigated through the design of the product itself. If the features and components have well defined protocols for their interaction and clear contracts for matters like performance, development on each team can move forward with some autonomy.
+
+https://github.com/FocusedObjective/FocusedObjective.Resources/blob/master/Canvas%20and%20Forms/Dependencies.pdf
+
 
 anchor:google-chubby[]
 
@@ -108,26 +89,8 @@ Beecause resources are always limited, it is critical that the demands of each p
 Fairness is deeply wired into the human brain [cites], and the creation of a new product (and associated team) provokes new dynamics in the growing company.
 
 
-====== Why project management?
 
-Project management provides tools addressing these issues, which is why it is widely used.
 
-However, there are a number of issues in doing so.
-
-* Projects are by definition temporary, while products may last as long as there is market demand.
-* Project management methodology, with its emphasis on predictability, scope management, and change control often conflicts with the product management objective of discovering information (see the discussion of xref:lean-product-dev[Lean Product Development].)
-** But not all product management activities involve the creation of new information!
-
-Scope, execution, limited resources, and dependencies exist throughout digital business. A product manager with no understanding of these issues, or tools to deal with them, will likely fail.
-
-Product managers should therefore be familiar with the basic concepts of project management. The project paradigm has a benefit in its explicit limitation of time and money, and the sense of urgency this creates. However, the way in which project management is implemented, the degree of formality, will vary according to need.
-
-So, what of project management in this new world? A project manager may still be required, to facilitate discussions, record decisions, and keep the team on track to its stated direction and commitments. Regardless of whether the team considers itself "Agile," people are sometimes bad at taking notes or being consistent in their usage of tools such as Kanban boards and standups.
-
-It is also useful to have a third party who is knowledgeable about the product, yet has some emotional distance from its success. This can be a difficult balance to strike, but the existence of the role of Scrum coach is indicative of its importance.
-
-====== Governing outsourced work
-A third major reason for the continued use of project management and its techniques is governing work that has been outsourced to third parties. This is covered in detail in the section on xref:sourcing[sourcing].
 
 ===== Organizational tools and techniques
 Our previous discussion of xref:work-management[work management]was a simple, idealized flow of uniform demand (new product functionality, issues, etc). Tasks in general did not have dependencies, or dependencies were handled through ad-hoc coordination. We also in general assumed that resources (people) were available to perform the tasks; resource contention, while it certainly may have come up, was again handled through ad-hoc means.
@@ -203,6 +166,8 @@ A variety of liaison and coordination approaches are suggested by Mike Cohn (<<C
 * Communities of practice
 * Scrum of scrums
 
+ 1 execution in context - feedback loops between levels - differing cadences (Anderson cadences)
+
  Refactor this. Include submittal schedules in list. Find out Cohn's original sources. Other techniques?
 
 *Shared team members* are suggested when two teams have a persistent interface requiring focus and ownership. When a product has multiple interfaces that emerge as a problem requiring focus, an *integration team* may be called for. *Communities of practice* were introduced in Chapter 7 as we discussed the xref:spotify-model[Spotify model]. Considered here, they may also play a coordination role as well as a practice development/maturity role.
@@ -226,23 +191,3 @@ To meet these goals, we
 * plan so that we understand dependencies (e.g. when one team *must* complete a task before another team can start theirs)
 
 The above discussion is by no means exhaustive. A wealth of additional techniques is to be found in <<Larman2009>> and <<Cohn2010>>. New techniques are continually emerging from the front lines of the digital industry; the interested student should consider attending industry conferences such as those offered by the Agile Alliance.
-
-====== The end of the "iron triangle?"
- cite Edwards & others - focus on throughput moves the needle on other metrics - but not the reverse.
- Humble toyota quote
-
-===== The future of project management
-
-Recall our three "Ps":
-
-* Product
-* Project
-* Process
-
-Taken together, the three represent a coherent set of concerns for value delivery in various forms. But in isolation, any one of them ultimately is limited. This is a particular challenge for project management, whose practitioners may identify deeply with their chosen field of expertise.
-
-Clearly, formalized project management is under pressure. Its methods are perceived by the Agile community as overly heavyweight; its practitioners are criticized for focusing too much on success in terms of cost and schedule performance and not enough on business outcomes. Because projects are by definition temporary, project managers have little incentive to care about xref:technical-debt-1[technical debt] or operational consequences. Hence the rise of the product manager.
-
-However, a product manager who does not understand the fundamentals of project execution will not succeed. As we have seen, modern products, especially in organizations scaling up, have dependencies and coordination needs, and to meet those needs, project management tools will continue to provide value.
-
- 2nd draft incorporate http://blackswanfarming.com/fund-the-teams-not-the-project/
