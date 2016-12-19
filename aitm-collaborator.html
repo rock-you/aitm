@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.5">
+<meta name="generator" content="Asciidoctor 1.5.4">
 <meta name="author" content="Charles T. Betz">
 <title>The digital professional: from startup to enterprise (Collaborative Draft)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -18,6 +18,7 @@ audio:not([controls]){display:none;height:0}
 [hidden],template{display:none}
 script{display:none!important}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{margin:0}
 a{background:transparent}
 a:focus{outline:thin dotted}
 a:active,a:hover{outline:0}
@@ -52,7 +53,7 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -64,6 +65,7 @@ img{-ms-interpolation-mode:bicubic}
 .text-center{text-align:center!important}
 .text-justify{text-align:justify!important}
 .hide{display:none}
+body{-webkit-font-smoothing:antialiased}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
@@ -118,16 +120,13 @@ table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
 table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+body{tab-size:4}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
 .clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
 .clearfix:after,.float-group:after{clear:both}
-*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
-*:not(pre)>code.nobreak{word-wrap:normal}
-*:not(pre)>code.nowrap{white-space:nowrap}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
 pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
-em em{font-style:normal}
-strong strong{font-weight:400}
 .keyseq{color:rgba(51,51,51,.8)}
 kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
@@ -798,7 +797,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_scaling_one_product">Scaling one product</a></li>
 <li><a href="#_scaling_to_more_than_one_product">Scaling to more than one product</a></li>
 <li><a href="#_organizational_tools_and_techniques">Organizational tools and techniques</a></li>
-<li><a href="#_the_future_of_project_management">The future of project management</a></li>
 </ul>
 </li>
 <li><a href="#_the_problem_of_variation">The problem of variation</a>
@@ -809,7 +807,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="#_coordination">Coordination</a>
-<ul class="sectlevel4">
+<ul class="sectlevel5">
+<li><a href="#_why_project_management">Why project management?</a></li>
 <li><a href="#_cost_accounting_and_chargeback">Cost accounting and chargeback</a></li>
 <li><a href="#_internal_market_economics">Internal market economics</a></li>
 </ul>
@@ -889,6 +888,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_the_iron_triangle">The "iron triangle"</a></li>
 <li><a href="#_a_traditional_information_technology_project">A traditional information technology project</a></li>
 <li><a href="#_project_practices">Project practices</a></li>
+<li><a href="#_the_future_of_project_management">The future of project management</a></li>
 </ul>
 </li>
 <li><a href="#_topics_in_it_project_management_and_related_fields">Topics in IT project management and related fields</a>
@@ -12343,76 +12343,8 @@ here&#8217;s a general warning: Avoid large projects. Start small and quickly de
 <h4 id="_executing_work">Executing work</h4>
 <div class="literalblock">
 <div class="content">
-<pre>https://github.com/FocusedObjective/FocusedObjective.Resources/blob/master/Canvas%20and%20Forms/Dependencies.pdf</pre>
-</div>
-</div>
-<div class="quoteblock">
-<blockquote>
-Projects of all types and sizes are now <strong>the</strong> way that organizations accomplish their work [emphasis added].
-</blockquote>
-<div class="attribution">
-&#8212; Stanley Portny<br>
-<cite>Project Management for Dummies 4th ed.</cite>
-</div>
-</div>
-<div class="quoteblock">
-<blockquote>
-&#8230;&#8203;the project as a vehicle of IT execution has by and large, failed to live up to its promise of predictable delivery.
-</blockquote>
-<div class="attribution">
-&#8212; Sriram Narayan<br>
-<cite>Scaling Agile: Problems and Solutions</cite>
-</div>
-</div>
-<div class="quoteblock">
-<blockquote>
-Project management responsibilities are no longer exercised by one person. They are split across the members of the Scrum team instead.
-</blockquote>
-<div class="attribution">
-&#8212; Roman Pichler<br>
-<cite>Agile Product Management with Scrum</cite>
-</div>
-</div>
-<div class="quoteblock">
-<blockquote>
-Agile is having a profound impact on the project management profession and will cause us to fundamentally rethink many of the well-established notions of what a project manager is&#8230;&#8203;
-</blockquote>
-<div class="attribution">
-&#8212; Charles G. Cobb<br>
-<cite>The Project Manager's Guide to Mastering Agile: Principles and Practices for an Adaptive Approach</cite>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>1 execution in context - feedback loops between levels - differing cadences (Anderson cadences)</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
 <pre>defining execution</pre>
 </div>
-</div>
-<div class="paragraph">
-<p>As the above quotes indicate, there are diverse opinions on the role and importance of traditional project management in the enterprise. Clearly it is under pressure from the Agile movement. Project management professionals are advised to not deny or diminish this fact. One of the primary criticisms of project management as a paradigm is that it promotes large "batches" of work. It is possible for a modern, IT-centric organization to make considerable progress on the basis of <a href="#product-mgmt">product management</a> plus simple <a href="#work-management">work management</a>, without the overhead of the formalized project lifecycle suggested by PMBOK.</p>
-</div>
-<div class="paragraph">
-<p>Cloud is having impacts on traditional project management as well. As noted in the section on the <a href="#trad-IT-decline">decline of traditional IT</a>, projects were often used to install vendor-delivered commodity software, such as for payroll or employee expense. Increasingly, that kind of functionality is delivered by online service providers, leaving "traditional" internal IT with considerably reduced responsibilities.</p>
-</div>
-<div class="paragraph">
-<p>Some of the IT capability may remain in the guise of an internal "service broker," to assist with the sourcing and procurement of online services. The remainder moves into digital product management, as the only need for internal IT is in the area of revenue-generating, market-facing strategic digital product.</p>
-</div>
-<div class="paragraph">
-<p>So, this section will examine the following questions:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Given the above trends, under what circumstances does formalized project management make economic sense?</p>
-</li>
-<li>
-<p>Assuming that formalized project management is employed, how does one continue to support objectives such as fast feedback and adaptability?</p>
-</li>
-</ul>
 </div>
 <div class="sect4">
 <h5 id="_scaling_one_product">Scaling one product</h5>
@@ -12456,6 +12388,9 @@ What’s typically underestimated is the complexity and indivisibility of many l
 </div>
 <div class="paragraph">
 <p>As noted in the discussion of <a href="#loose-coupling-project">loose coupling and project management</a>, some needs for coordination may be mitigated through the design of the product itself. If the features and components have well defined protocols for their interaction and clear contracts for matters like performance, development on each team can move forward with some autonomy.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/FocusedObjective/FocusedObjective.Resources/blob/master/Canvas%20and%20Forms/Dependencies.pdf" class="bare">https://github.com/FocusedObjective/FocusedObjective.Resources/blob/master/Canvas%20and%20Forms/Dependencies.pdf</a></p>
 </div>
 <div class="paragraph">
 <p><a id="google-chubby"></a></p>
@@ -12577,50 +12512,6 @@ Directors should monitor the progress of approved IT proposals to ensure that th
 </div>
 <div class="paragraph">
 <p>Fairness is deeply wired into the human brain [cites], and the creation of a new product (and associated team) provokes new dynamics in the growing company.</p>
-</div>
-<div class="sect5">
-<h6 id="_why_project_management">Why project management?</h6>
-<div class="paragraph">
-<p>Project management provides tools addressing these issues, which is why it is widely used.</p>
-</div>
-<div class="paragraph">
-<p>However, there are a number of issues in doing so.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Projects are by definition temporary, while products may last as long as there is market demand.</p>
-</li>
-<li>
-<p>Project management methodology, with its emphasis on predictability, scope management, and change control often conflicts with the product management objective of discovering information (see the discussion of <a href="#lean-product-dev">Lean Product Development</a>.)</p>
-<div class="ulist">
-<ul>
-<li>
-<p>But not all product management activities involve the creation of new information!</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Scope, execution, limited resources, and dependencies exist throughout digital business. A product manager with no understanding of these issues, or tools to deal with them, will likely fail.</p>
-</div>
-<div class="paragraph">
-<p>Product managers should therefore be familiar with the basic concepts of project management. The project paradigm has a benefit in its explicit limitation of time and money, and the sense of urgency this creates. However, the way in which project management is implemented, the degree of formality, will vary according to need.</p>
-</div>
-<div class="paragraph">
-<p>So, what of project management in this new world? A project manager may still be required, to facilitate discussions, record decisions, and keep the team on track to its stated direction and commitments. Regardless of whether the team considers itself "Agile," people are sometimes bad at taking notes or being consistent in their usage of tools such as Kanban boards and standups.</p>
-</div>
-<div class="paragraph">
-<p>It is also useful to have a third party who is knowledgeable about the product, yet has some emotional distance from its success. This can be a difficult balance to strike, but the existence of the role of Scrum coach is indicative of its importance.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_governing_outsourced_work">Governing outsourced work</h6>
-<div class="paragraph">
-<p>A third major reason for the continued use of project management and its techniques is governing work that has been outsourced to third parties. This is covered in detail in the section on <a href="#sourcing">sourcing</a>.</p>
-</div>
 </div>
 </div>
 <div class="sect4">
@@ -12793,6 +12684,11 @@ The philosophy is that you push the power of decision making out to the peripher
 <p>Scrum of scrums</p>
 <div class="literalblock">
 <div class="content">
+<pre>1 execution in context - feedback loops between levels - differing cadences (Anderson cadences)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
 <pre>Refactor this. Include submittal schedules in list. Find out Cohn's original sources. Other techniques?</pre>
 </div>
 </div>
@@ -12843,48 +12739,6 @@ Another perspective on this is found in The Checklist Manifesto <a href="#Gawand
 </div>
 <div class="paragraph">
 <p>The above discussion is by no means exhaustive. A wealth of additional techniques is to be found in <a href="#Larman2009">[Larman2009]</a> and <a href="#Cohn2010">[Cohn2010]</a>. New techniques are continually emerging from the front lines of the digital industry; the interested student should consider attending industry conferences such as those offered by the Agile Alliance.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_the_end_of_the_iron_triangle">The end of the "iron triangle?"</h6>
-<div class="literalblock">
-<div class="content">
-<pre>cite Edwards &amp; others - focus on throughput moves the needle on other metrics - but not the reverse.
-Humble toyota quote</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_the_future_of_project_management">The future of project management</h5>
-<div class="paragraph">
-<p>Recall our three "Ps":</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Product</p>
-</li>
-<li>
-<p>Project</p>
-</li>
-<li>
-<p>Process</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Taken together, the three represent a coherent set of concerns for value delivery in various forms. But in isolation, any one of them ultimately is limited. This is a particular challenge for project management, whose practitioners may identify deeply with their chosen field of expertise.</p>
-</div>
-<div class="paragraph">
-<p>Clearly, formalized project management is under pressure. Its methods are perceived by the Agile community as overly heavyweight; its practitioners are criticized for focusing too much on success in terms of cost and schedule performance and not enough on business outcomes. Because projects are by definition temporary, project managers have little incentive to care about <a href="#technical-debt-1">technical debt</a> or operational consequences. Hence the rise of the product manager.</p>
-</div>
-<div class="paragraph">
-<p>However, a product manager who does not understand the fundamentals of project execution will not succeed. As we have seen, modern products, especially in organizations scaling up, have dependencies and coordination needs, and to meet those needs, project management tools will continue to provide value.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>2nd draft incorporate http://blackswanfarming.com/fund-the-teams-not-the-project/</pre>
 </div>
 </div>
 </div>
@@ -13193,6 +13047,44 @@ global CoD - process eval</p>
 </div>
 <div class="paragraph">
 <p>At an execution level, project managers retain important roles and (sometimes re-labled Scrum masters or release managers) are employed in both traditional and new digital companies as overall orchestrators of complex initiatives.</p>
+</div>
+<div class="sect5">
+<h6 id="_why_project_management">Why project management?</h6>
+<div class="paragraph">
+<p>Project management provides tools addressing these issues, which is why it is widely used.</p>
+</div>
+<div class="paragraph">
+<p>However, there are a number of issues in doing so.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Projects are by definition temporary, while products may last as long as there is market demand.</p>
+</li>
+<li>
+<p>Project management methodology, with its emphasis on predictability, scope management, and change control often conflicts with the product management objective of discovering information (see the discussion of <a href="#lean-product-dev">Lean Product Development</a>.)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>But not all product management activities involve the creation of new information!</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Scope, execution, limited resources, and dependencies exist throughout digital business. A product manager with no understanding of these issues, or tools to deal with them, will likely fail.</p>
+</div>
+<div class="paragraph">
+<p>Product managers should therefore be familiar with the basic concepts of project management. The project paradigm has a benefit in its explicit limitation of time and money, and the sense of urgency this creates. However, the way in which project management is implemented, the degree of formality, will vary according to need.</p>
+</div>
+<div class="paragraph">
+<p>So, what of project management in this new world? A project manager may still be required, to facilitate discussions, record decisions, and keep the team on track to its stated direction and commitments. Regardless of whether the team considers itself "Agile," people are sometimes bad at taking notes or being consistent in their usage of tools such as Kanban boards and standups.</p>
+</div>
+<div class="paragraph">
+<p>It is also useful to have a third party who is knowledgeable about the product, yet has some emotional distance from its success. This can be a difficult balance to strike, but the existence of the role of Scrum coach is indicative of its importance.</p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_cost_accounting_and_chargeback">Cost accounting and chargeback</h5>
@@ -16585,6 +16477,42 @@ An ongoing work effort is generally a repetitive process that follows an organiz
 <cite>version 5</cite>
 </div>
 </div>
+<div class="quoteblock">
+<blockquote>
+Projects of all types and sizes are now <strong>the</strong> way that organizations accomplish their work [emphasis added].
+</blockquote>
+<div class="attribution">
+&#8212; Stanley Portny<br>
+<cite>Project Management for Dummies 4th ed.</cite>
+</div>
+</div>
+<div class="quoteblock">
+<blockquote>
+&#8230;&#8203;the project as a vehicle of IT execution has by and large, failed to live up to its promise of predictable delivery.
+</blockquote>
+<div class="attribution">
+&#8212; Sriram Narayan<br>
+<cite>Scaling Agile: Problems and Solutions</cite>
+</div>
+</div>
+<div class="quoteblock">
+<blockquote>
+Project management responsibilities are no longer exercised by one person. They are split across the members of the Scrum team instead.
+</blockquote>
+<div class="attribution">
+&#8212; Roman Pichler<br>
+<cite>Agile Product Management with Scrum</cite>
+</div>
+</div>
+<div class="quoteblock">
+<blockquote>
+Agile is having a profound impact on the project management profession and will cause us to fundamentally rethink many of the well-established notions of what a project manager is&#8230;&#8203;
+</blockquote>
+<div class="attribution">
+&#8212; Charles G. Cobb<br>
+<cite>The Project Manager's Guide to Mastering Agile: Principles and Practices for an Adaptive Approach</cite>
+</div>
+</div>
 <div class="paragraph">
 <p>In our <a href="#emergence-model">emergence model</a>, we always seek to make clear <strong>why</strong> we need a new concept or practice. It is not sufficient to say, "we need project management because companies of our size use it." Many authoritative books on Agile software development assume that some form of project management is going to be used. Other authors question the need for it, or at least raise various cautions.</p>
 </div>
@@ -16593,6 +16521,28 @@ An ongoing work effort is generally a repetitive process that follows an organiz
 </div>
 <div class="paragraph">
 <p>We&#8217;ve already touched on why project management is used: it is a means of understanding and building a shared mental model of a given scope of work. In particular, planning the necessary tasks gives a basis for estimating the time and cost of the work as a whole. Even though industry practices are changing, this remains a critical concern for the digital professional.</p>
+</div>
+<div class="paragraph">
+<p>As the above quotes indicate, there are diverse opinions on the role and importance of traditional project management in the enterprise. Clearly it is under pressure from the Agile movement. Project management professionals are advised to not deny or diminish this fact. One of the primary criticisms of project management as a paradigm is that it promotes large "batches" of work. It is possible for a modern, IT-centric organization to make considerable progress on the basis of <a href="#product-mgmt">product management</a> plus simple <a href="#work-management">work management</a>, without the overhead of the formalized project lifecycle suggested by PMBOK.</p>
+</div>
+<div class="paragraph">
+<p>Cloud is having impacts on traditional project management as well. As noted in the section on the <a href="#trad-IT-decline">decline of traditional IT</a>, projects were often used to install vendor-delivered commodity software, such as for payroll or employee expense. Increasingly, that kind of functionality is delivered by online service providers, leaving "traditional" internal IT with considerably reduced responsibilities.</p>
+</div>
+<div class="paragraph">
+<p>Some of the IT capability may remain in the guise of an internal "service broker," to assist with the sourcing and procurement of online services. The remainder moves into digital product management, as the only need for internal IT is in the area of revenue-generating, market-facing strategic digital product.</p>
+</div>
+<div class="paragraph">
+<p>So, this section will examine the following questions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Given the above trends, under what circumstances does formalized project management make economic sense?</p>
+</li>
+<li>
+<p>Assuming that formalized project management is employed, how does one continue to support objectives such as fast feedback and adaptability?</p>
+</li>
+</ul>
 </div>
 <div class="sect4">
 <h5 id="_how_is_a_project_different_from_simple_work_management">How is a project different from simple "work management"?</h5>
@@ -16859,6 +16809,54 @@ Part of the problem with extensive frameworks such as PMBOK is that knowing how 
 </div>
 <div class="paragraph">
 <p>As previously discussed, human beings are notably bad at <a href="#multi-tasking">multi-tasking</a>, and the mental "context-switching" required to move from one task to another is wasteful and ultimately not scalable. A human being fractionally allocated to more and more projects will get less and less done in total, as the transactional friction of task switching increases.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_governing_outsourced_work">Governing outsourced work</h6>
+<div class="paragraph">
+<p>A third major reason for the continued use of project management and its techniques is governing work that has been outsourced to third parties. This is covered in detail in the section on <a href="#sourcing">sourcing</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_the_future_of_project_management">The future of project management</h5>
+<div class="paragraph">
+<p>Recall our three "Ps":</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Product</p>
+</li>
+<li>
+<p>Project</p>
+</li>
+<li>
+<p>Process</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Taken together, the three represent a coherent set of concerns for value delivery in various forms. But in isolation, any one of them ultimately is limited. This is a particular challenge for project management, whose practitioners may identify deeply with their chosen field of expertise.</p>
+</div>
+<div class="paragraph">
+<p>Clearly, formalized project management is under pressure. Its methods are perceived by the Agile community as overly heavyweight; its practitioners are criticized for focusing too much on success in terms of cost and schedule performance and not enough on business outcomes. Because projects are by definition temporary, project managers have little incentive to care about <a href="#technical-debt-1">technical debt</a> or operational consequences. Hence the rise of the product manager.</p>
+</div>
+<div class="paragraph">
+<p>However, a product manager who does not understand the fundamentals of project execution will not succeed. As we have seen, modern products, especially in organizations scaling up, have dependencies and coordination needs, and to meet those needs, project management tools will continue to provide value.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>2nd draft incorporate http://blackswanfarming.com/fund-the-teams-not-the-project/</pre>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_the_end_of_the_iron_triangle">The end of the "iron triangle?"</h6>
+<div class="literalblock">
+<div class="content">
+<pre>cite Edwards &amp; others - focus on throughput moves the needle on other metrics - but not the reverse.
+Humble toyota quote</pre>
+</div>
 </div>
 </div>
 </div>
@@ -31269,7 +31267,7 @@ Cost of Delay</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-12-02 11:18:40 CST
+Last updated 2016-12-03 06:28:54 CST
 </div>
 </div>
 </body>
