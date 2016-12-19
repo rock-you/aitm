@@ -52,6 +52,32 @@ The final point of this diagram: you only have so much capacity to execute the w
 
 ==== Adding a third dimension
 
+
+.Snowden's Cynefin framework
+****
+This third dimension of variability is challenging to understand and touches on our earlier discussion of xref:systems-thinking[systems thinking]. A helpful framework to understand it is the Cynefin framework, by Dave Snowden and Cynthia Kurtz <<Kurtz2003>>. Cynefin proposes that there are five major domains useful in understanding situations:
+
+* Simple/Obvious
+* Complicated
+* Complex
+* Chaotic
+* Disorder
+
+The *simple or obvious* domain is straightforward, repeatable, and cause and effect are known. The concept of "best practice" applies. The mode of action is to sense, categorize, and respond.
+
+.Cynefin thinking framework footnote:[similar to <<Kurtz2003>> and extensive related work by Dave Snowden.]
+image::images/3_01-cynefin.png[cynefin,300,,float="left"]
+
+The *complicated* domain requires analysis and expertise; there may be several right or at least serviceable answers. Rational thought is possible and cause and effect relationships may be more challenging to understand, but still are applicable. Mode of action is to sense, analyze, and respond.
+
+The *complex* domain is that of systems thinking. Cause and effect are apparent only in hindsight. Interdependencies complicate action. Reinforcing loops can quickly accelerate, making linear assumptions hazardous, or conversely, counterbalancing loops kick in and prevent desired changes from happening. Mode of action is to probe, sense, and respond ("probe" being to make a small change.) Much of modern product development and DevOps thinking is optimized for this domain, because simple and rational approaches have so frequently failed.
+
+In the *chaotic* domain, cause and effect are not apparent even in hindsight. The situation is completely unpredictable, and action is essential - better to act in any direction than be paralyzed. The mode of action is to act, sense, and respond.
+
+Finally, *disorder* is considered to be the domain you're in when you have not figured out which of the other four applies.
+
+****
+
 The two dimension model above does not describe how uncertain work is, however. The predictability of the work is also independent. You might have two projects, both taking the same effort. One of them you were able to predict easily, while the other one was not predictable - more precisely, your expected time, effort and cost was a long way off from what you wound up spending. (Usually in an unfavorable direction.)
 
 .Part II: increasing certainty footnote:[Similar to figure from <<Cantor2016>>.]
@@ -70,7 +96,13 @@ anchor:betz-org-scale-cube[]
 .Betz organization scaling cube footnote:[Author's note: I believe this to be original; it is being published here for the first time.]
 image::images/3_01-newCube.png[3d cube, 500,,float="right"]
 
-Therefore, there are three dimensions we'll consider throughout Part III:
+
+In terms of the xref:betz-org-scale-cube[Betz organizational scaling cube], the z-zxis of variability can be seen as a progression along the first four Cynefin domains (see sidebar).
+
+.Variability as Cynefin domains
+image::images/3_01-variability-cynefin.png[variability vector, 300,,float="right"]
+
+To recap, there are three dimensions we'll consider throughout Part III:
 
 * Size of work
 * Time horizon
