@@ -64,6 +64,8 @@ Finally, the very terminology you use to describe your work becomes more diverse
 
 The predictability of the work is also independent. You might have a program to upgrade the memory on 80,000 identical Point of Sale terminals across 2,000 retail stores. It's going to take a lot of work; you'll be "rolling trucks" in all 50 states! But you are sure that you can estimate this work with a high degree of accuracy; it has high predictability. On the other hand, creating a completely new Point of Sale system for your stores is an unpredictable effort. Your original estimate for this large program might be off by orders of magnitude. Its predictability is low.
 
+anchor:betz-org-scale-cube[]
+
 .Betz organization scaling cube footnote:[Author's note: I believe this to be original; it is being published here for the first time.]
 image::images/3_01-newCube.png[3d cube, 500,,float="right"]
 
@@ -74,6 +76,25 @@ Therefore, there are three dimensions we'll consider throughout Part III:
 * Predictability
 
 The accompanying cube shows these dimensions visually. It will be applied to examples in subsequent sections.
+
+==== Demand, supply, and execution
+
+Finally, in order to understand the concept of execution, we need to think about supply versus demand. Think about the kinds of demand described above. Each form of demand implies some kind of supply to meet it. For example, the demand that an automated transaction be executed requires the supply of appropriate computing capacity at the necessary place and time. The demand that a new story be supported as part of a software product feature requires the supply of a software development team's time and attention. And a major product or project requires the supply perhaps of many teams as well as other resources (hardware and software assets, for example).
+
+In the xref:betz-org-scale-cube[Betz organization scaling cube], work and execution converges to the origin at front lower left. An alternate view that helps us describe the chapter structure is with the convergence point at the top of a pyramid. This rotated approach is compatible with the xref:dual-axis-vc[dual-axis value chain].
+
+.Demand-supply-execute model
+image::images/3_01-DSE.png[dse model, 800,]
+
+Bottom to top, this diagram tells a story of demand and supply as they progress through increasingly refined understandings to the very specific execution of work and delivery of value.
+
+We have markets and regulations, which define and constrain the potential demand for the digital product. Markets are met with strategies and product offerings, which lead to programs of work, projects, and platform decisions. These in turn lead to identifying user stories, writing software, configuring platforms, and executing changes, service requests and work tasks.
+
+That finer and finer grained demand stream converges with a finer and finer grained supply stream. Large blocks of capital are translated into strategic technology choices and vendor relationships, organizational structures and investments in skilled people. More detailed budgets and planning culminate ultimately in the availability of people, hardware, and software for given assignments, e.g, an empty slot on a Kanban board.
+
+The journey can start anywhere, with a large block of traditionally managed programmatic capital or a small round of seed funding translated directly into a two-pizza team with maximum autonomy, which then grows and leads to  larger investments.
+
+Ultimately the deployed IT service system is available for fulfilling transactional service demand which can be measured in terms of quality, availability and performance. Execution, in this model, is defined as the irrevocable combination of demand with supply.
 
 ==== Part III chapter structure
 The chapter structure of Part III can be visualized thus:
@@ -120,7 +141,7 @@ image::images/3_01-layers.png[matrix, 600,,align="left"]
 The relationships between the timeframes and delivery models are complex:
 
 * Investments are made in products first, which may or may not need projects and/or processes. Rigorous planned projects or detailed, repeatable processes are not, in fact, how product discovery takes place - a mistake the digital industry has fallen into over and over again.
-* Products are best thought of in terms of discovery and empirical hypothesis-testing. If the hypothesis fails, the investment should be cancelled. This is not how projects typically have been managed.
+* Products are best thought of in terms of discovery and empirical hypothesis-testing. If the hypothesis fails, the investment should be cancelled. So, the "product" concept is both shorter and longer lived than the average project, which is typically understood on an annual cycle. 
 * Project management also may take place without processes, as it may be based on one-time "deliverables" that are not repeatedly produced.
 * To support a process requires portfolio investment and organizational structure, but no project may ever be involved. Whether a product is implied by the existence of a process is an interesting question we will think about.
 
