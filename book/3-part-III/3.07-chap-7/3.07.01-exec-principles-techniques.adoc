@@ -15,14 +15,12 @@ What’s typically underestimated is the complexity and indivisibility of many l
 
 We will discuss team structure in more detail in Chapter 9. For now, understand that as a consequence of scaling, we are introducing multiple teams as our product scales up:
 
-image::images/3_08-multi-feature.png[]
+.Multiple feature teams, one product
+image::images/3_08-multi-feature.png[multi-feature, 350,,float="left"]
 
 The decision process by which the features are identified is still informal (we will not formalize this until Chapter 12.) However, the term "architecture" is likely emerging through these discussions.
 
 As noted in the discussion of xref:loose-coupling-project[loose coupling and project management], some needs for coordination may be mitigated through the design of the product itself. If the features and components have well defined protocols for their interaction and clear contracts for matters like performance, development on each team can move forward with some autonomy.
-
-https://github.com/FocusedObjective/FocusedObjective.Resources/blob/master/Canvas%20and%20Forms/Dependencies.pdf
-
 
 anchor:google-chubby[]
 
@@ -47,9 +45,10 @@ In terms of this chapter's topic, this means that someone on the product team ne
 In short, even the most sophisticated microservice environments may require some level of  human coordination across the teams. Project management provides a framework for doing this and encourages the development of appropriate skills.
 ****
 
-But at scale, complexity is inevitable. What happens when a given business objective requires coordinated effort across multiple teams? For example, an online ecommerce site might find itself overwhelmed by business success. Upgrading the site to accommodate the new demand might require distinct development work to be performed by most or all of the teams:
+.Coordinated initiative across timeframes
+image::images/3_08-multi-feature-coord.png[coordination, 420,,float="right"]
 
-image::images/3_08-multi-feature-coord.png[]
+But at scale, complexity is inevitable. What happens when a given business objective requires coordinated effort across multiple teams? For example, an online ecommerce site might find itself overwhelmed by business success. Upgrading the site to accommodate the new demand might require distinct development work to be performed by most or all of the teams:
 
 As the quote from Gary Hamel above indicates, a central point of coordination and accountability is advisable, otherwise the objective is at risk. (It becomes "someone else's problem.")
 
@@ -59,31 +58,23 @@ anchor:multi-product-scaling[]
 [quote, ISO 38500:2008]
 Directors should monitor the progress of approved IT proposals to ensure that they are achieving objectives in required timeframes using allocated resources.
 
- disclaimer: the "fairness" driver is hypothetical
+In keeping with the xref:emergence-model[emergence model] thought experiment, another key state transition is from one product to multiple products. This kind of scaling is distinct from scaling one product through subdividing it into multiple features.
 
-In keeping with the xref:emergence-model[emergence model] thought experiment, another key state transition is from one product to multiple products.
+.One company, one product
+image::images/3_08-one-product.png[one product,400,,float="right"]
 
-This is substantially distinct from scaling one product through subdividing it into multiple features.
+.One company, multiple products
+image::images/3_08-multi-product.png[multi product,400,,float="right"]
 
-Consider our hypothetical startup company:
+Consider our hypothetical startup company. When everyone on the team is supporting one product and dedicated to its success, there is less sense of contention with "others" in the organization. This changes dramatically with the addition of a second product. Establishment of a second team with different incentives raises issues. Concerns for fair allocation and a sense of internal competition naturally arise out of this diversification. Fairness is deeply wired into the human and animal brains, and the creation of a new product (and associated team) provokes new dynamics in the growing company.
 
-image::images/3_08-one-product.png[]
-
-Establishment of a second product team raises issues:
-
-image::images/3_08-multi-product.png[]
-
-When everyone on the team is supporting one product and dedicated to its success, there is less sense of contention with "others" in the organization. This changes dramatically with the addition of a second product. Concerns for fair allocation and a sense of internal competition naturally arise out of this diversification.
-
-Beecause resources are always limited, it is critical that the demands of each product be managed using objective criteria, requiring formalization.  This was a different problem when you were a tight-knit startup; you were constrained, but everyone knew they were "in it together." Now you need some ground rules to support your increasingly diverse activities. This leads to new concerns:
+Because resources are always limited, it is critical that the demands of each product be managed using objective criteria, requiring formalization.  This was a different problem when you were a tight-knit startup; you were constrained, but everyone knew they were "in it together." Now you need some ground rules to support your increasingly diverse activities. This leads to new concerns:
 
 * Managing scope and preventing unintended creep or drift from the product's original charter
 * Managing contention for enterprise resources
 * Execution to timeframes (e.g. the critical trade show)
 * Coordinating dependencies (e.g. achieving larger, cross-product goals)
 * Accountability for results
-
-Fairness is deeply wired into the human brain [cites], and the creation of a new product (and associated team) provokes new dynamics in the growing company.
 
 ===== A deeper look at dependencies
 
