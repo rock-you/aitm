@@ -107,35 +107,67 @@ To understand dependencies, Strode et al. propose the following framework <<Stro
 |Technical|a technical aspect of development affects progress, such as when one software component must interact with another software component
 |====
 
-We can see examples of these dependencies throughout digital products. In the next section, we will talk about We fix them with the following...
+We can see examples of these dependencies throughout digital products. In the next section, we will talk about coordination techniques to manage across dependencies.
 
 ===== Organizational tools and techniques
 
 [quote, Mark Kennaley, SDLC 3.0]
 Where leveraging yellow stickies or index cards makes sense in conjunction with practices like big visible charts and co-location, such formats become ridiculous for a large constituency of challenging projects . . . When faced with these challenges, rather than proclaim that Agile won't work or doesn't scale, the preferable approach is to understand and acknowledge the nature of collaboration, the nature of distributed workflow, and the complexity of modern product development.
 
-bring in strode and refactor entire thing
+Our previous discussion of xref:work-management[work management]was a simple, idealized flow of uniform demand (new product functionality, issues, etc). Tasks in general did not have dependencies, or dependencies were handled through ad-hoc coordination within the team. We also in general assumed that resources (people) were available to perform the tasks; resource contention, while it certainly may have come up, was again handled through ad-hoc means. However, as we scale, simple xref:kanban[Kanban] and visual xref:andon[Andon] is no longer sufficient, given the nature of the coordination we now require. We need a more diverse and comprehensive set of techniques.
 
-Our previous discussion of xref:work-management[work management]was a simple, idealized flow of uniform demand (new product functionality, issues, etc). Tasks in general did not have dependencies, or dependencies were handled through ad-hoc coordination. We also in general assumed that resources (people) were available to perform the tasks; resource contention, while it certainly may have come up, was again handled through ad-hoc means.
+As we scale up, we see that dependencies and resource management have become defining concerns. However, we retain our xref:lean-product-dev[Lean product development] concerns for fast feedback and adaptability, as well as a critical approach to the idea that complex initiatives can be precisely defined and simply executed through xref:open-loop[open loop] approaches. In this section, we will discuss some of the organizational responses (techniques and tools) that have emerged as proven responses to these emergent issues.
 
-As we progress on our journey and continue to scale up, we see that dependencies and resource management have become defining concerns, and the concept of "project management" is a primary response. However, we retain our concern for fast feedback and adaptability, as well as a critical approach to the idea that complex initiatives can be precisely defined and simply executed through xref:open-loop[open loop] approaches.
+IMPORTANT: The discussion of particular techniques is always hazardous. People will tend to latch on to a promising approach without full understanding. As noted by Craig Larman (<<Larman2009>>, p.44), the risk is one of xref:cargo-cult[cargo cult] process adoption. In Chapter 9 we will discuss the Mike Rother book xref:Toyota-Kata[Toyota Kata]. Toyota does not implement any procedural change without fully understanding the "target operating condition" -- the nature of the work and the desired changes to it.
 
-Above, we've discussed a few aspects of the coordination problem including the emergent issues when needed capabilities span feature teams, and when new product lines are introduced. In this section, we will discuss some of the organizational responses (techniques and tools) that have emerged as proven responses to these emergent issues.
+anchor:cargo-cult[]
 
-The general problem is, "how do I facilitate the adaptive generation of information under conditions of time and space shifting." That is to say:
+.Sidebar: Cargo cult thinking
+****
+Processes and practices are always at risk of being used without full understanding. This is sometimes called https://en.wikipedia.org/wiki/Cargo_cult[cargo cult] thinking. What is a cargo cult?
 
-* digital product development (as all R&D) is essentially xref:lean-product-dev[information generation]
-* as it scales up, we encounter emergent coordination needs
-* that present rapidly increasing combinatoric complexity
-* that may be exacerbated by time and space shifting
+During World War II, South Pacific native peoples had been exposed abruptly to modern technological society with the Japanese and US occupations of their islands. Occupying forces would often provide food, tobacco, and luxuries to the natives to ease relations. After the war, various tribes were observed creating simulated airports and airplanes, and engaging in various rituals that superficially looked like air traffic signaling and other operations associated with a military air base.
 
-We have seen earlier versions of this problem in our discussions of work management. However, simple Kanban and visual Andon is no longer sufficient, given the nature of the coordination we now require. We need a more diverse and comprehensive set of techniques.
+On further investigation, it became clear that the natives were seeking more “cargo” and had developed a magical understanding of how goods would be delivered. By imitating the form of what they had seen, they hoped to recreate it.
 
-IMPORTANT: The discussion of particular techniques is always hazardous. People will tend to latch on to a promising approach without fully discussing the "target operating condition." Review the discussion of xref:Toyota-Kata[Toyota Kata]. As noted by <<Larman2009>> (p.44), the risk is one of xref:cargo-cult[cargo cult] process adoption.
+In 1974, the noted physicist Richard Feynman gave a speech at Caltech in which he coined the immortal phrase “cargo cult science” <<Feynman1974>>. His intent was to caution against activities which appear to follow the external form of science, but lack the essential understanding at its core. Similar analogies are seen in business and IT management, as organizations adopt tools and techniques because they have seen others do so, without having fundamental clarity about the problems they are trying to solve and how a given technique might specifically help.
 
-The primary objective remains one of "coordination" (as suggested by the overall name of this section, xref:Part-III-coordination[Coordination].)
+As with many stories of this kind, there are questions around the accuracy of the original anthropological accounts and Western interpretations and mythmaking around what was seen. However there is no question that “cargo cult thinking” is a useful cautionary metaphor.
+****
 
-Here are a few techniques suggested by various Agile authors (primarily <<Cohn2010>>)
+Strode 
+
+.Coordination taxonomy footnote:[adapted from <<Strode2012>>]
+[cols="4*", options="header"]
+|====
+|Strategy|Component|Definition|Examples
+.2+|*Synchronization*
+|Synchronization activity|Activities performed by all team members simultaneously that promote a common understanding of the task, process, and or expertise of other team members
+|Daily Scrum stand-up
+|Synchronisation artifact|An artifact generated during synchronisation activities.
+The nature of the artefact may be visible to the whole team at a glance or largely invisible but available. An artefact can be physical or virtual, temporary or permanent
+|Kanban board, posted system diagram
+.3+|*Structure*
+|Proximity|This is the physical closeness of individual team members. Adjacent desks provide the highest level of proximity
+|Co-located team
+|Availability|Team members are continually present and able to respond to requests for assistance or information
+|Common schedule (minimal time-shifting)
+|Substitutability|Team members are able to perform the work of another to maintain time schedules
+|"T-shaped professionals"
+.3+|*Boundary spanning*
+|Boundary spanning activity|Activities (team or individual) performed to elicit assistance or information from some unit or organisation external to the project
+|Scrum of scrums, submittal schedule-driven meetings
+|Boundary spanning artefact|An artefact produced to enable coordination beyond the
+team and project boundaries. The nature of the artefact may be visible to the whole team at a glance or largely invisible but available. An artefact can be physical or virtual, temporary or permanent
+|Ticketed request to external team
+|Coordinator role|A role taken by a project team member specifically to
+support interaction with people who are not part of the
+project team but who provide resources or information to
+the project
+|Scrum Product Owner
+|====
+
+Mintzberg coordination approaches
 
 ====== Co-location
 
