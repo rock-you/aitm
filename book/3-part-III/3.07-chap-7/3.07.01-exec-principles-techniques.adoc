@@ -135,47 +135,36 @@ In 1974, the noted physicist Richard Feynman gave a speech at Caltech in which h
 As with many stories of this kind, there are questions around the accuracy of the original anthropological accounts and Western interpretations and mythmaking around what was seen. However there is no question that “cargo cult thinking” is a useful cautionary metaphor.
 ****
 
-Strode 
+Strode et al provide a useful framework for understanding coordination mechanisms.
 
 .Coordination taxonomy footnote:[adapted from <<Strode2012>>]
-[cols="4*", options="header"]
+[cols="3*", options="header"]
 |====
-|Strategy|Component|Definition|Examples
+|Strategy|Component|Definition
+.3+|*Structure*
+|Proximity|Physical closeness of individual team members.
+|Availability|Team members are continually present and able to respond to requests for assistance or information
+|Substitutability|Team members are able to perform the work of another to maintain time schedules
+
 .2+|*Synchronization*
 |Synchronization activity|Activities performed by all team members simultaneously that promote a common understanding of the task, process, and or expertise of other team members
-|Daily Scrum stand-up
-|Synchronisation artifact|An artifact generated during synchronisation activities.
-The nature of the artefact may be visible to the whole team at a glance or largely invisible but available. An artefact can be physical or virtual, temporary or permanent
-|Kanban board, posted system diagram
-.3+|*Structure*
-|Proximity|This is the physical closeness of individual team members. Adjacent desks provide the highest level of proximity
-|Co-located team
-|Availability|Team members are continually present and able to respond to requests for assistance or information
-|Common schedule (minimal time-shifting)
-|Substitutability|Team members are able to perform the work of another to maintain time schedules
-|"T-shaped professionals"
+|Synchronization artifact|An artifact generated during synchronization activities.
+
+
 .3+|*Boundary spanning*
-|Boundary spanning activity|Activities (team or individual) performed to elicit assistance or information from some unit or organisation external to the project
-|Scrum of scrums, submittal schedule-driven meetings
-|Boundary spanning artefact|An artefact produced to enable coordination beyond the
-team and project boundaries. The nature of the artefact may be visible to the whole team at a glance or largely invisible but available. An artefact can be physical or virtual, temporary or permanent
-|Ticketed request to external team
-|Coordinator role|A role taken by a project team member specifically to
-support interaction with people who are not part of the
-project team but who provide resources or information to
+|Boundary spanning activity|Activities (team or individual) performed to elicit assistance or information from some unit or organization external to the project
+|Boundary spanning artifact|An artifact produced to enable coordination beyond the
+team and project boundaries.
+|Coordinator role|A role taken by a project team member specifically to support interaction with people who are not part of the project team but who provide resources or information to
 the project
-|Scrum Product Owner
 |====
 
-Mintzberg coordination approaches
+The following sections expand these strategies with examples.
 
-====== Co-location
+====== Structure
+*Proximity.* Don Reinertsen (<<Reinertsen2009>>, p. 230), proposes "The Principle of Colocation" which asserts that "Colocation improves almost all aspects of communication." In order to scale this, one logically needs what Mike Cohn (<<Cohn2010>>, p. 346) calls "The Big Room."
 
-Don Reinertsen (<<Reinertsen2009>>, p. 230), proposes "The Principle of Colocation" which asserts that "Colocation improves almost all aspects of communication." In order to scale this, one logically needs what Mike Cohn (<<Cohn2010>>, p. 346) calls "The Big Room."
-
-In terms of communications, this has significant organizational advantages. Communications are as simple as walking over to another person's desk, or just shouting out over the room. It is also easy to synchronize the entire room, through calling for everyone's attention.
-
-However, there are limits to scaling the "Big Room" approach:
+In terms of communications, this has significant organizational advantages. Communications are as simple as walking over to another person's desk, or just shouting out over the room. It is also easy to synchronize the entire room, through calling for everyone's attention. However, there are limits to scaling the "Big Room" approach:
 
 * Contention for key individual's attention
 * "All hands" calls for attention that actually interest only a subset of the room
@@ -187,7 +176,8 @@ The tension between team coordination and individual focus will likely continue.
 
  [recent popular press about problems of open space working, and responsive facilities with various workspace types available on reservation]
 
-====== Synchronization points
+====== Synchronization
+
 If the team cannot work all the time in one room, then perhaps they can at least be gathered periodically. There is a broad spectrum of synchronization approaches:
 
 * Daily standups
@@ -200,41 +190,33 @@ If the team cannot work all the time in one room, then perhaps they can at least
 
 All of them are essentially similar in approach and assumption: build a shared understanding of the work, objectives, or mission among smaller or larger sections of the organization, through limited-time face to face interaction, often on a defined time interval.
 
- Meetings bloody meetings
+ sidebar: Unmeetings/unconferences/Open space
 
- Sidebar: Practical collaboration at scale (Chapter 7??)
- Unmeetings/unconferences/Open space
+ 1 execution in context - feedback loops between levels - differing cadences (Anderson cadences)
 
+anchor:boundary-spanning[]
 
- reconsider relationship w/next section - isn't this a specific instance of a coordination structure
-
-anchor:coord-struct[]
-
-====== Liaison and coordination structures
+====== Boundary spanning
 [quote, Atul Gawande, The Checklist Manifesto]
 The philosophy is that you push the power of decision making out to the periphery and away from the center. You give people the room to adopt, based on their experiences and expertise. All you ask is that they talk to one another and take responsibility. That is what works.
 
-A variety of liaison and coordination approaches are suggested by Mike Cohn (<<Cohn2010>>, Chapter 17, "Scaling Scrum") including:
+A variety of boundary-spanning liaison and coordination approaches are suggested by various authors like Mike Cohn, Atul Gawande, and Dean Leffingwell, including:
 
 * Shared team members
 * Integration teams
 * Communities of practice
 * Scrum of scrums
+* Submittal schedules
+* Release trains
 
- 1 execution in context - feedback loops between levels - differing cadences (Anderson cadences)
+*Shared team members* are suggested when two teams have a persistent interface requiring focus and ownership. When a product has multiple interfaces that emerge as a problem requiring focus, an *integration team* may be called for. *Communities of practice* will be introduced in Chapter 9 when we discuss the xref:spotify-model[Spotify model]. Considered here, they may also play a coordination role as well as a practice development/maturity role.
 
- Refactor this. Include submittal schedules in list. Find out Cohn's original sources. Other techniques?
-
-*Shared team members* are suggested when two teams have a persistent interface requiring focus and ownership. When a product has multiple interfaces that emerge as a problem requiring focus, an *integration team* may be called for. *Communities of practice* were introduced in Chapter 7 as we discussed the xref:spotify-model[Spotify model]. Considered here, they may also play a coordination role as well as a practice development/maturity role.
-
-Finally, the idea of a "scrum of scrums" is essentially a representative or delegated model, in which each individual Scrum team sends one individual to a periodic coordination meeting where matters of cross-team concern can be discussed and decisions taken.
+Finally, the idea of a "scrum of scrums" is essentially a representative or delegated model, in which each individual Scrum team sends one individual to a periodic coordination meeting where matters of cross-team concern can be discussed and decisions taken. (<<Cohn2010>>, Chapter 17)
 
 <<Cohn2010>> (p342) cautions: "A scrum of scrums meeting will feel nothing like a daily scrum despite the similarities in names. The daily scrum is a synchronization meeting: individual team members come together to communicate about their work and synchronize their efforts.The scrum of scrums, on the other hand, is a problem-solving meeting and will not have the same quick, get-in-get-out tone of a daily scrum."
 
 anchor:submittal-schedule[]
 Another perspective on this is found in The Checklist Manifesto <<Gawande2010>>. Some work, while detailed, can be planned to a high degree of detail (i.e. the "checklists" of the title). However, emergent complexity requires different approach - no checklist can anticipate all eventualities. To handle all the emergent complexity, the coordination focus must shift to structuring the right communications. In examining modern construction industry techniques, Gawande noted the concept of the "submittal schedule," which "didn't specify construction tasks; it specified _communication_ tasks" (p. 65, emphasis supplied).
-
-
 
 The above discussion is by no means exhaustive. A wealth of additional techniques is to be found in <<Larman2009>> and <<Cohn2010>>. New techniques are continually emerging from the front lines of the digital industry; the interested student should consider attending industry conferences such as those offered by the Agile Alliance.
 
@@ -257,6 +239,8 @@ global CoD - process eval
 ** the cost accounting problem
 
 At an execution level, project managers retain important roles and (sometimes re-labled Scrum masters or release managers) are employed in both traditional and new digital companies as overall orchestrators of complex initiatives.
+
+Mintzberg coordination approaches - chapter 9
 
 ===== Coordination quality criteria
 
