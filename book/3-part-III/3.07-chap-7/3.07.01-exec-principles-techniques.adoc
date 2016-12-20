@@ -4,9 +4,12 @@
 [quote, Online Etymology Dictionary]
 coordination (n.)  co-ordination, c. 1600, "orderly combination," from French coordination (14c.) or directly from Late Latin coordinationem (nominative coordinatio), noun of action from past participle stem of Latin coordinare "to set in order, arrange," from com- "together" (see com-) + ordinatio "arrangement," from ordo "row, rank, series, arrangement" (see order (n.)). Meaning "action of setting in order" is from 1640s; that of "harmonious adjustment or action," especially of muscles and bodily movements, is from 1855.
 
+
+===== Examples
 We've xref:demand-supply-execute[defined execution] as the point at which supply and demand are combined, and of course we've been executing since the start of our journey. Now, however, we are executing in a more complex environment; we have started to scale along the xref:AKF-cube[AKF scaling cube] y-axis, and we have either multiple teams working on one product, and/or multiple products. Execution becomes more than just "pull another story off the Kanban board." We need coordination. Let's start with a couple of examples.
 
-===== Example: Scaling one product
+
+====== Scaling one product
 [quote, Mike Cohn, Succeeding with Agile]
 Good team structure can go a long way toward reducing dependencies but will not eliminate them.
 
@@ -56,7 +59,7 @@ In short, even the most sophisticated microservice environments may require some
 
 anchor:multi-product-scaling[]
 
-===== Example: Scaling to more than one product
+====== Scaling to more than one product
 [quote, ISO 38500:2008]
 Directors should monitor the progress of approved IT proposals to ensure that they are achieving objectives in required timeframes using allocated resources.
 
@@ -84,11 +87,9 @@ We will return to the investment and organizational aspects of multi-team and mu
 [quote, Malone & Crowston]
 ...coordination can be seen as the process of managing dependencies among activities.
 
-What is a "dependency"? We need to think carefully about this. By the definition above (from <<Malone1994>>), without dependencies, we do not need coordination.
+What is a "dependency"? We need to think carefully about this. By the definition above (from <<Malone1994>>), without dependencies, we do not need coordination. Diane Strode and her associates (<<Strode2012>>) have described a comprehensive framework for thinking about dependencies and coordination, including a dependency taxonomy, an inventory of coordination strategies, and an examination of coordination effectiveness criteria.
 
-Diane Strode and her associates (<<Strode2012>>) have described a comprehensive framework for thinking about dependencies and coordination, including a dependency taxonomy, an inventory of coordination strategies, and an examination of coordination effectiveness criteria.
-
-In terms of dependencies, Strode et al. propose the following framework <<Strode2012a>>:
+To understand dependencies, Strode et al. propose the following framework <<Strode2012a>>:
 
 .Dependency taxonomy footnote:[adapted from <<Strode2012a>>]
 [cols="3*", options="header"]
@@ -107,11 +108,16 @@ In terms of dependencies, Strode et al. propose the following framework <<Strode
 |Technical|a technical aspect of development affects progress, such as when one software component must interact with another software component
 |====
 
+We can see examples of these dependencies throughout digital products....
+
+We fix them with the following...
 
 ===== Organizational tools and techniques
 
 [quote, Mark Kennaley, SDLC 3.0]
 Where leveraging yellow stickies or index cards makes sense in conjunction with practices like big visible charts and co-location, such formats become ridiculous for a large constituency of challenging projects . . . When faced with these challenges, rather than proclaim that Agile won't work or doesn't scale, the preferable approach is to understand and acknowledge the nature of collaboration, the nature of distributed workflow, and the complexity of modern product development.
+
+bring in strode and refactor entire thing
 
 Our previous discussion of xref:work-management[work management]was a simple, idealized flow of uniform demand (new product functionality, issues, etc). Tasks in general did not have dependencies, or dependencies were handled through ad-hoc coordination. We also in general assumed that resources (people) were available to perform the tasks; resource contention, while it certainly may have come up, was again handled through ad-hoc means.
 
@@ -199,16 +205,7 @@ Finally, the idea of a "scrum of scrums" is essentially a representative or dele
 anchor:submittal-schedule[]
 Another perspective on this is found in The Checklist Manifesto <<Gawande2010>>. Some work, while detailed, can be planned to a high degree of detail (i.e. the "checklists" of the title). However, emergent complexity requires different approach - no checklist can anticipate all eventualities. To handle all the emergent complexity, the coordination focus must shift to structuring the right communications. In examining modern construction industry techniques, Gawande noted the concept of the "submittal schedule," which "didn't specify construction tasks; it specified _communication_ tasks" (p. 65, emphasis supplied).
 
-====== Planning techniques
-Techniques of co-location, synchronization, and liaison all support to varying degrees a concept of planning. Fundamentally, we plan so that the work progresses effectively and efficiently. We seek to optimize the following contradictory goals:
 
-* Delivering results quickly
-* Minimizing the waste of un-utilized resources
-
-To meet these goals, we
-
-* estimate so that we have some understanding of our resource needs
-* plan so that we understand dependencies (e.g. when one team *must* complete a task before another team can start theirs)
 
 The above discussion is by no means exhaustive. A wealth of additional techniques is to be found in <<Larman2009>> and <<Cohn2010>>. New techniques are continually emerging from the front lines of the digital industry; the interested student should consider attending industry conferences such as those offered by the Agile Alliance.
 
@@ -231,3 +228,7 @@ global CoD - process eval
 ** the cost accounting problem
 
 At an execution level, project managers retain important roles and (sometimes re-labled Scrum masters or release managers) are employed in both traditional and new digital companies as overall orchestrators of complex initiatives.
+
+===== Coordination quality criteria
+
+Strode again - what does good look like
