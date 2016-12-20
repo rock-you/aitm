@@ -788,7 +788,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_chapter_learning_objectives">Chapter learning objectives</a></li>
 </ul>
 </li>
-<li><a href="#_defining_execution">Defining execution</a>
+<li><a href="#_defining_coordination">Defining coordination</a>
 <ul class="sectlevel4">
 <li><a href="#_example_scaling_one_product">Example: Scaling one product</a></li>
 <li><a href="#_example_scaling_to_more_than_one_product">Example: Scaling to more than one product</a></li>
@@ -10546,14 +10546,6 @@ SRE is what happens when you ask a software engineer to design an operations tea
 <div class="sect1">
 <h2 id="_part_iii_team_of_teams">Part III: Team of Teams</h2>
 <div class="sectionbody">
-<div class="quoteblock">
-<blockquote>
-coordination (n.)  co-ordination, c. 1600, "orderly combination," from French coordination (14c.) or directly from Late Latin coordinationem (nominative coordinatio), noun of action from past participle stem of Latin coordinare "to set in order, arrange," from com- "together" (see com-) + ordinatio "arrangement," from ordo "row, rank, series, arrangement" (see order (n.)). Meaning "action of setting in order" is from 1640s; that of "harmonious adjustment or action," especially of muscles and bodily movements, is from 1855.
-</blockquote>
-<div class="attribution">
-&#8212; Online Etymology Dictionary
-</div>
-</div>
 <div class="imageblock" style="float: right">
 <div class="content">
 <img src="images/3_00-team-of-teams.jpg" alt="Large meeting" width="500" height="200">
@@ -10894,6 +10886,14 @@ here&#8217;s a general warning: Avoid large projects. Start small and quickly de
 </div>
 <div class="sect3">
 <h4 id="_demand_supply_and_execution">Demand, supply, and execution</h4>
+<div class="quoteblock">
+<blockquote>
+execution (n.) 14c., "a carrying out, a putting into effect; enforcement; performance (of a law, statute, etc.), the carrying out (of a plan, etc.)," from Anglo-French execucioun (late 13c.), Old French execucion "a carrying out" (of an order, etc.), from Latin executionem (nominative executio) "an accomplishing," noun of action from past participle stem of exequi/exsequi "to follow out" (see execute).
+</blockquote>
+<div class="attribution">
+&#8212; Online Etymology Dictionary
+</div>
+</div>
 <div class="paragraph">
 <p>In order to understand the concept of execution, we need to think about supply versus demand. Think about the kinds of demand described above. Each form of demand implies some kind of supply to meet it. For example, the demand that an automated transaction be executed requires the supply of appropriate computing capacity at the necessary place and time. The demand that a new story be supported as part of a software product feature requires the supply of a software development team&#8217;s time and attention. And a major product or project requires the supply perhaps of many teams as well as other resources (hardware and software assets, for example).</p>
 </div>
@@ -11157,17 +11157,17 @@ Agile software development methods were particularly designed to deal with chang
 </div>
 </div>
 <div class="sect3">
-<h4 id="_defining_execution">Defining execution</h4>
+<h4 id="_defining_coordination">Defining coordination</h4>
 <div class="quoteblock">
 <blockquote>
-execution (n.) 14c., "a carrying out, a putting into effect; enforcement; performance (of a law, statute, etc.), the carrying out (of a plan, etc.)," from Anglo-French execucioun (late 13c.), Old French execucion "a carrying out" (of an order, etc.), from Latin executionem (nominative executio) "an accomplishing," noun of action from past participle stem of exequi/exsequi "to follow out" (see execute).
+coordination (n.)  co-ordination, c. 1600, "orderly combination," from French coordination (14c.) or directly from Late Latin coordinationem (nominative coordinatio), noun of action from past participle stem of Latin coordinare "to set in order, arrange," from com- "together" (see com-) + ordinatio "arrangement," from ordo "row, rank, series, arrangement" (see order (n.)). Meaning "action of setting in order" is from 1640s; that of "harmonious adjustment or action," especially of muscles and bodily movements, is from 1855.
 </blockquote>
 <div class="attribution">
 &#8212; Online Etymology Dictionary
 </div>
 </div>
 <div class="paragraph">
-<p>We&#8217;ve <a href="#demand-supply-execute">defined execution</a> as the point at which supply and demand are combined, and of course we&#8217;ve been executing since the start of our journey. Now, however, we are executing in a more complex environment; we have started to scale along the <a href="#AKF-cube">AKF scaling cube</a> y-axis, and we have either multiple teams working on one product, and/or multiple products. Execution becomes more than just "pull another story off the Kanban board." Let&#8217;s start with a couple of examples.</p>
+<p>We&#8217;ve <a href="#demand-supply-execute">defined execution</a> as the point at which supply and demand are combined, and of course we&#8217;ve been executing since the start of our journey. Now, however, we are executing in a more complex environment; we have started to scale along the <a href="#AKF-cube">AKF scaling cube</a> y-axis, and we have either multiple teams working on one product, and/or multiple products. Execution becomes more than just "pull another story off the Kanban board." We need coordination. Let&#8217;s start with a couple of examples.</p>
 </div>
 <div class="sect4">
 <h5 id="_example_scaling_one_product">Example: Scaling one product</h5>
@@ -11319,20 +11319,78 @@ Directors should monitor the progress of approved IT proposals to ensure that th
 <h5 id="_a_deeper_look_at_dependencies">A deeper look at dependencies</h5>
 <div class="quoteblock">
 <blockquote>
-coordination can be seen as the process of managing dependencies among activities.
+&#8230;&#8203;coordination can be seen as the process of managing dependencies among activities.
 </blockquote>
 <div class="attribution">
 &#8212; Malone & Crowston
 </div>
 </div>
 <div class="paragraph">
-<p>What is a "dependency"? We need to think carefully about this. It&#8217;s intuitive that</p>
+<p>What is a "dependency"? We need to think carefully about this. By the definition above (from <a href="#Malone1994">[Malone1994]</a>), without dependencies, we do not need coordination.</p>
 </div>
 <div class="paragraph">
-<p>Dependency taxonomy
-Coordination strategy (similar to delivery model)
-Coordination effectiveness (success criteria)</p>
+<p>Diane Strode and her associates (<a href="#Strode2012">[Strode2012]</a>) have described a comprehensive framework for thinking about dependencies and coordination, including a dependency taxonomy, an inventory of coordination strategies, and an examination of coordination effectiveness criteria.</p>
 </div>
+<div class="paragraph">
+<p>In terms of dependencies, Strode et al. propose the following framework <a href="#Strode2012a">[Strode2012a]</a>:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 2. Dependency taxonomy <sup class="footnote">[<a id="_footnoteref_50" class="footnote" href="#_footnote_50" title="View footnote.">50</a>]</sup></caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Dependency</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Knowledge.</strong> A knowledge dependency occurs when a form of information is required in order for a project to progress.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">domain knowledge or a requirement is not known and must be located or identified</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Expertise</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">technical or task information is known only by a particular person or group</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Task allocation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">who is doing what, and when, is not known</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Historical</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">knowledge about past decisions is needed</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Task.</strong> A task dependency occurs when a task must be completed before another task can proceed and this affects project progress.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Activity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">an activity cannot proceed until another activity is complete</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Business process</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">an existing business process causes activities to be carried out in a certain order</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Resource.</strong> A resource dependency occurs when an object is required for a project to progress.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Entity</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a resource (person, place or thing) is not available</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Technical</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a technical aspect of development affects progress, such as when one software component must interact with another software component</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect4">
 <h5 id="_organizational_tools_and_techniques">Organizational tools and techniques</h5>
@@ -13083,7 +13141,7 @@ Production scheduling is a large topic in and of itself. It is part of the domai
 <div class="content">
 <img src="images/3_07-development-iterative.png" alt="Rational Unified Process" width="493">
 </div>
-<div class="title">Figure 102. Rational Unified Process <sup class="footnote">[<a id="_footnoteref_50" class="footnote" href="#_footnote_50" title="View footnote.">50</a>]</sup></div>
+<div class="title">Figure 102. Rational Unified Process <sup class="footnote">[<a id="_footnoteref_51" class="footnote" href="#_footnote_51" title="View footnote.">51</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>One interesting aspect of the diagram is that it shows just how difficult it can be to staff a project. Demand for given functional roles ebbs and flows unpredictably. The project manager is expected to manage the uncertain handoffs between the various functional areas, and anticipate resource requirements stemming from unexpected feedback demands. This is why "T-shaped" professionals (see Chapter 7) are desirable, because they can move from area to area in response to demand.</p>
@@ -14472,7 +14530,7 @@ Agile is having a profound impact on the project management profession and will 
 <div class="content">
 <img src="images/3_08-triad-constraints.jpg" alt="Iron triangle" width="300">
 </div>
-<div class="title">Figure 104. Project "Iron Triangle" <sup class="footnote">[<a id="_footnoteref_51" class="footnote" href="#_footnote_51" title="View footnote.">51</a>]</sup></div>
+<div class="title">Figure 104. Project "Iron Triangle" <sup class="footnote">[<a id="_footnoteref_52" class="footnote" href="#_footnote_52" title="View footnote.">52</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>The project management <a href="https://en.wikipedia.org/wiki/Project_management_triangle">Iron Triangle</a> represents the interaction of cost, time, scope, and quality on a project. The idea is that, in general, one or more of these factors may be a constraint. The following sign is often seen in service organizations:</p>
@@ -14481,7 +14539,7 @@ Agile is having a profound impact on the project management profession and will 
 <div class="content">
 <img src="images/3_08-good-cheap-fast.jpg" alt="Good-Cheap-Fast" width="400">
 </div>
-<div class="title">Figure 105. Pick any two <sup class="footnote">[<a id="_footnoteref_52" class="footnote" href="#_footnote_52" title="View footnote.">52</a>]</sup></div>
+<div class="title">Figure 105. Pick any two <sup class="footnote">[<a id="_footnoteref_53" class="footnote" href="#_footnote_53" title="View footnote.">53</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>The same applies to project management and reflects well the "iron triangle" of tradeoffs. (Note: we will critique the iron triangle subsquently.)</p>
@@ -15332,7 +15390,7 @@ Some of the most important factors that organizational structure can affect are 
 <div class="content">
 <img src="images/3_07-org-chart-whiteboard.jpg" alt="org chart" width="400" height="200">
 </div>
-<div class="title">Figure 108. Organization chart in progress <sup class="footnote">[<a id="_footnoteref_53" class="footnote" href="#_footnote_53" title="View footnote.">53</a>]</sup></div>
+<div class="title">Figure 108. Organization chart in progress <sup class="footnote">[<a id="_footnoteref_54" class="footnote" href="#_footnote_54" title="View footnote.">54</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>How are you going to organize? More importantly, how are you going to think about organizing? This is a hard question. It’s important to get organization right, and the question never goes away. As you grow and split into teams, the overall sense of mission you felt as a single team is at risk of fading. How can you keep your "eyes on the prize" when there are mulitple teams, who all see the world slightly differently? It&#8217;s critical, as you start to explore various coordination mechanisms, to remember that the team remains the highest-value logical unit, and must be protected. As we discussed in <a href="#the-product-team">Chapter 4</a>, product value is created by co-located, cross-functional, highly collaborative teams.</p>
@@ -15371,7 +15429,7 @@ Some of the most important factors that organizational structure can affect are 
 <div class="content">
 <img src="images/3_07-file-cabinets.jpg" alt="filing cabinets" width="300" height="200">
 </div>
-<div class="title">Figure 109. Paper filing system <sup class="footnote">[<a id="_footnoteref_54" class="footnote" href="#_footnote_54" title="View footnote.">54</a>]</sup></div>
+<div class="title">Figure 109. Paper filing system <sup class="footnote">[<a id="_footnoteref_55" class="footnote" href="#_footnote_55" title="View footnote.">55</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>The traditional IT organization started decades ago, with "back-office" goals like replacing file clerks and filing cabinets with faster and more accurate computers. (We will go into further detail in <a href="#paper-to-digital">Chapter 11</a>.) At that time, computers were not flexible or reliable, business did not move as fast, and there was a lot of value to be gained in relatively simple efforts like converting massive paper filing systems into digital systems. As these kinds of efforts grew and became critical operational dependencies for companies, the role of Chief Information Officer was created, to head up increasingly large organizations of application developers, infrastructure engineers, and operations staff.</p>
@@ -15386,7 +15444,7 @@ Some of the most important factors that organizational structure can affect are 
 <div class="content">
 <img src="images/3_07-early-Amazon.jpg" alt="early Amazon appearance" width="400" height="200">
 </div>
-<div class="title">Figure 110. Amazon early version <sup class="footnote">[<a id="_footnoteref_55" class="footnote" href="#_footnote_55" title="View footnote.">55</a>]</sup></div>
+<div class="title">Figure 110. Amazon early version <sup class="footnote">[<a id="_footnoteref_56" class="footnote" href="#_footnote_56" title="View footnote.">56</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Then along came Apple, Microsoft, and the dot-com boom. Suddenly everyone had personal computers at home, and was on the Internet. Buying things! Computers continued to become more reliable and powerful as well. Companies realized that their back-office IT organizations were not able to move fast enough to keep up with the new e-commerce challenge, and in many cases organized their Internet team <strong>outside</strong> of the CIO&#8217;s control (which sometimes made the traditional IT organization very unhappy). Silicon valley startups such as Google and Facebook in general did not even have a separate "CIO" organization, because for them (and this is a critical point)  <strong>the digital systems <em>were</em> the product.</strong> Going to market against tough competitors (Alta Vista and Yahoo against Google, Friendster and MySpace against Facebook) wasn&#8217;t a question of maximizing efficiency. It was about product innovation and effectiveness, and taking appropriate risks in the quest for these rapidly growing new markets.</p>
@@ -15770,7 +15828,7 @@ The following discussion and accompanying set of diagrams is derived from Presto
 <div class="content">
 <img src="images/3_07-SoS-POs.png" alt="hierarchy" width="500">
 </div>
-<div class="title">Figure 119. Product owner hierarchy <sup class="footnote">[<a id="_footnoteref_56" class="footnote" href="#_footnote_56" title="View footnote.">56</a>]</sup></div>
+<div class="title">Figure 119. Product owner hierarchy <sup class="footnote">[<a id="_footnoteref_57" class="footnote" href="#_footnote_57" title="View footnote.">57</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Let&#8217;s accept Scrum and the <a href="#amazon-productization">2-pizza team</a> as our organizing approach. A large scale Scrum effort is based on multiple small teams (i.e. representing <a href="#AKF-cube">AKF scaling cube partitions</a>). If we want to minimize <a href="#multi-tasking">multi-tasking and context-switching</a>, we need to ask "how many product teams can a given product owner handle?" In <em>Agile Product Management with Scrum</em>, Roman Pichler says, "My experience suggests that a product owner usually cannot look after more than two teams in a sustainable manner" (<a href="#Pichler2010">[Pichler2010]</a>, p. 12). Scrum authors therefore suggest that larger scale products be managed as aggregates of smaller teams. We&#8217;ll discuss how the product structure is defined in Chapter 8.</p>
@@ -15886,7 +15944,7 @@ Requiring senior technical talent to interview candidates may result in improved
 <div class="content">
 <img src="images/3_07-punch-clock.jpg" alt="punch clock and cards" width="500" height="200">
 </div>
-<div class="title">Figure 120. Time clock and punch cards <sup class="footnote">[<a id="_footnoteref_57" class="footnote" href="#_footnote_57" title="View footnote.">57</a>]</sup></div>
+<div class="title">Figure 120. Time clock and punch cards <sup class="footnote">[<a id="_footnoteref_58" class="footnote" href="#_footnote_58" title="View footnote.">58</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>When a new hire enters your organization, they enter a complex system that will structure and direct their daily activities through a myriad of means. The various means that direct their action include:</p>
@@ -16655,7 +16713,7 @@ The COBIT 5 framework makes a clear distinction between governance and managemen
 <div class="content">
 <img src="images/4_10-shopkeeper.jpg" alt="two men in front of a store" width="600">
 </div>
-<div class="title">Figure 121. Someone to "mind the store" <sup class="footnote">[<a id="_footnoteref_58" class="footnote" href="#_footnote_58" title="View footnote.">58</a>]</sup></div>
+<div class="title">Figure 121. Someone to "mind the store" <sup class="footnote">[<a id="_footnoteref_59" class="footnote" href="#_footnote_59" title="View footnote.">59</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Now, you wish to go on an extended vacation - perhaps a cruise around the world, or a trek in the Himalayas. You need someone who can count the cash and deposit it, and place orders with and pay your suppliers. You need to hire a professional manager.</p>
@@ -16831,7 +16889,7 @@ We&#8217;ve encountered systems theory and associated concepts such as <a href="
 <div class="content">
 <img src="images/4_10-centrifugal_governor.png" alt="mechanism" width="300">
 </div>
-<div class="title">Figure 122. Centrifugal governor <sup class="footnote">[<a id="_footnoteref_59" class="footnote" href="#_footnote_59" title="View footnote.">59</a>]</sup></div>
+<div class="title">Figure 122. Centrifugal governor <sup class="footnote">[<a id="_footnoteref_60" class="footnote" href="#_footnote_60" title="View footnote.">60</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>"Governors" have been part of mechanical systems for centuries. These mechanisms have the effect of automatically controlling a system so that it (for example) operates at the desired revolutions per minute. Without governors, steam engines tended to blow up, or go out; applying devices such as the <a href="https://en.wikipedia.org/wiki/Centrifugal_governor">centrifugal governor</a> to regulate them was an important step in the development of steam power. Importantly, such devices operated to control the process from variation on either side, whether too fast or too slow. They did not operate merely as brakes.</p>
@@ -20370,7 +20428,7 @@ No enterprise can be effective without high quality data.
 <div class="content">
 <img src="images/4_11-appleTrees.jpg" alt="Apple trees" width="300">
 </div>
-<div class="title">Figure 124. How many trees? <sup class="footnote">[<a id="_footnoteref_60" class="footnote" href="#_footnote_60" title="View footnote.">60</a>]</sup></div>
+<div class="title">Figure 124. How many trees? <sup class="footnote">[<a id="_footnoteref_61" class="footnote" href="#_footnote_61" title="View footnote.">61</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Someone might tell you that this is the number of trees on your neighbor&#8217;s farm. That makes all the difference. But wait - you know for a fact that there are many more trees than 12! You inquire further and find out it is actually the number of producing apple trees, a very different concept.</p>
@@ -20410,7 +20468,7 @@ A message to mapmakers: Highways are not painted red, rivers don&#8217;t have co
 <div class="content">
 <img src="images/4_11-cuneiform.jpg" alt="Clay tablet with markings" width="300">
 </div>
-<div class="title">Figure 125. Sumerian cuneiform <sup class="footnote">[<a id="_footnoteref_61" class="footnote" href="#_footnote_61" title="View footnote.">61</a>]</sup></div>
+<div class="title">Figure 125. Sumerian cuneiform <sup class="footnote">[<a id="_footnoteref_62" class="footnote" href="#_footnote_62" title="View footnote.">62</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Humans have been representing information since at least the creation of writing. As early as 3000 BCE, the ancient Sumerians used cuneiform to record&#8201;&#8212;&#8201;among other things&#8201;&#8212;&#8201;how much beer people got. (The more things change, the more they stay the same.)</p>
@@ -20425,7 +20483,7 @@ A message to mapmakers: Highways are not painted red, rivers don&#8217;t have co
 <div class="content">
 <img src="images/4_11-quipu.jpg" alt="knotted cords" width="300">
 </div>
-<div class="title">Figure 126. Inca quipu <sup class="footnote">[<a id="_footnoteref_62" class="footnote" href="#_footnote_62" title="View footnote.">62</a>]</sup></div>
+<div class="title">Figure 126. Inca quipu <sup class="footnote">[<a id="_footnoteref_63" class="footnote" href="#_footnote_63" title="View footnote.">63</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>At around the same time as the Sumerians, the Inca empire in what is now Peru [?] also started to represent information. They used a radically different approach from the Sumerians: carefully knotted ropes:</p>
@@ -20482,7 +20540,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4_11-gasPump.jpg" alt="old gas pump" width="400">
 </div>
-<div class="title">Figure 127. What do they owe you? <sup class="footnote">[<a id="_footnoteref_63" class="footnote" href="#_footnote_63" title="View footnote.">63</a>]</sup></div>
+<div class="title">Figure 127. What do they owe you? <sup class="footnote">[<a id="_footnoteref_64" class="footnote" href="#_footnote_64" title="View footnote.">64</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>As the town grows, and your customers increase, you grow increasingly uncertain as to whether they all are paying you what they owe. You purchase a notebook and a pen (today&#8217;s equivalent of clay tablets or knotted ropes) and start writing down the amounts owed you.</p>
@@ -20537,7 +20595,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4_11-female-computers.jpg" alt="alt text" width="400" height="200">
 </div>
-<div class="title">Figure 128. Early "computers" (people not machines) <sup class="footnote">[<a id="_footnoteref_64" class="footnote" href="#_footnote_64" title="View footnote.">64</a>]</sup></div>
+<div class="title">Figure 128. Early "computers" (people not machines) <sup class="footnote">[<a id="_footnoteref_65" class="footnote" href="#_footnote_65" title="View footnote.">65</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>As technology progressed through the late 19th and early 20th centuries, applied mathematics became increasingly important in a wide variety of areas such as:</p>
@@ -20571,7 +20629,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4_11-diffEngine.jpg" alt="Complex mechanical calculator" width="400">
 </div>
-<div class="title">Figure 129. Babbage Difference Engine <sup class="footnote">[<a id="_footnoteref_65" class="footnote" href="#_footnote_65" title="View footnote.">65</a>]</sup></div>
+<div class="title">Figure 129. Babbage Difference Engine <sup class="footnote">[<a id="_footnoteref_66" class="footnote" href="#_footnote_66" title="View footnote.">66</a>]</sup></div>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -20617,7 +20675,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4_11-punchedCard.jpg" alt="punched data card" width="300">
 </div>
-<div class="title">Figure 130. Punchcard <sup class="footnote">[<a id="_footnoteref_66" class="footnote" href="#_footnote_66" title="View footnote.">66</a>]</sup></div>
+<div class="title">Figure 130. Punchcard <sup class="footnote">[<a id="_footnoteref_67" class="footnote" href="#_footnote_67" title="View footnote.">67</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>The business world was also attentive to the development of computers. Punched cards had been used for storing data for decades preceding the invention of automated computers. Record keeping at scale has always been challenging - the number of Sumerian clay tablets still in existence testifies to that! Industrial-era banks, insurers, and counting-houses managed massive repositories of paper journals and files, at great cost. A new form of professional, the "white collar worker" emerged.</p>
@@ -20629,7 +20687,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4_11-cardSorter.jpg" alt="mechanical card sorting machine" width="400">
 </div>
-<div class="title">Figure 131. Card Sorter <sup class="footnote">[<a id="_footnoteref_67" class="footnote" href="#_footnote_67" title="View footnote.">67</a>]</sup></div>
+<div class="title">Figure 131. Card Sorter <sup class="footnote">[<a id="_footnoteref_68" class="footnote" href="#_footnote_68" title="View footnote.">68</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>During World War II, many business professionals found themselves in the military, and some encountered the new electronic computers being used to calculate artillery trajectories or decrypt enemy messages. Edmund Berkeley, the first secretary of the Association for Computing Machinery, was one such professional who grasped the the potential of the new technology <a href="#Akera2007">[Akera2007]</a>. After the war, Berkeley advocated for the use of these machines to the leadership of the Prudential insurance company, while others did the same in the United Kingdom.</p>
@@ -21656,7 +21714,7 @@ Again, if you or your company are involved in legal issues relating to the above
 <div class="content">
 <img src="images/4_11-reportingOldStyle.png" alt="1900s clerk with adding machine" width="300" height="200">
 </div>
-<div class="title">Figure 132. Reporting and analytics, old style <sup class="footnote">[<a id="_footnoteref_68" class="footnote" href="#_footnote_68" title="View footnote.">68</a>]</sup></div>
+<div class="title">Figure 132. Reporting and analytics, old style <sup class="footnote">[<a id="_footnoteref_69" class="footnote" href="#_footnote_69" title="View footnote.">69</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>We have touched on reporting previously, in our discussion of <a href="#metrics-KPIs">metrics</a>. This is a more detailed examination.</p>
@@ -22711,7 +22769,7 @@ As with other chapters in the later part of this book, we are going to introduce
 <div class="content">
 <img src="images/4_12-architecture.jpg" alt="alt text" width="900">
 </div>
-<div class="title">Figure 133. St. Vitus Cathedral, Prague <sup class="footnote">[<a id="_footnoteref_69" class="footnote" href="#_footnote_69" title="View footnote.">69</a>]</sup></div>
+<div class="title">Figure 133. St. Vitus Cathedral, Prague <sup class="footnote">[<a id="_footnoteref_70" class="footnote" href="#_footnote_70" title="View footnote.">70</a>]</sup></div>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -22856,19 +22914,19 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <div class="content">
 <img src="images/4_12-serengeti.jpg" alt="alt text" width="250" height="200">
 </div>
-<div class="title">Figure 134. The terrain <sup class="footnote">[<a id="_footnoteref_70" class="footnote" href="#_footnote_70" title="View footnote.">70</a>]</sup></div>
+<div class="title">Figure 134. The terrain <sup class="footnote">[<a id="_footnoteref_71" class="footnote" href="#_footnote_71" title="View footnote.">71</a>]</sup></div>
 </div>
 <div class="imageblock" style="float: left">
 <div class="content">
 <img src="images/4_12-surveyor.jpg" alt="alt text" width="200" height="200">
 </div>
-<div class="title">Figure 135. The mapmaker <sup class="footnote">[<a id="_footnoteref_71" class="footnote" href="#_footnote_71" title="View footnote.">71</a>]</sup></div>
+<div class="title">Figure 135. The mapmaker <sup class="footnote">[<a id="_footnoteref_72" class="footnote" href="#_footnote_72" title="View footnote.">72</a>]</sup></div>
 </div>
 <div class="imageblock" style="float: ">
 <div class="content">
 <img src="images/4_12-map.jpg" alt="alt text" width="235" height="200">
 </div>
-<div class="title">Figure 136. The map <sup class="footnote">[<a id="_footnoteref_72" class="footnote" href="#_footnote_72" title="View footnote.">72</a>]</sup></div>
+<div class="title">Figure 136. The map <sup class="footnote">[<a id="_footnoteref_73" class="footnote" href="#_footnote_73" title="View footnote.">73</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Confused? Consider the activity of map-making. In map-making you have:</p>
@@ -22957,7 +23015,7 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <div class="content">
 <img src="images/4_12-moritz.jpg" alt="Moritz" width="300">
 </div>
-<div class="title">Figure 137. Franz Moritz Graf von Lacy <sup class="footnote">[<a id="_footnoteref_73" class="footnote" href="#_footnote_73" title="View footnote.">73</a>]</sup></div>
+<div class="title">Figure 137. Franz Moritz Graf von Lacy <sup class="footnote">[<a id="_footnoteref_74" class="footnote" href="#_footnote_74" title="View footnote.">74</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>In previous ages, nobles would assemble and fight for their King, but their armies were poorly coordinated, and disputes over strategy would often arise. Each noble&#8217;s army would have its own quartermaster, couriers, intelligence, supply chains, and the like. This was both inefficient, and ineffective: overall plans of battle often could not be made or executed, and military operations would be bungled.</p>
@@ -23652,7 +23710,7 @@ division is <em>fractal</em> (that is, it reproduces at different scales).</p>
 <div class="content">
 <img src="images/4_12-gudea.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 143. Gudea with blueprint, ~2140 BCE <sup class="footnote">[<a id="_footnoteref_74" class="footnote" href="#_footnote_74" title="View footnote.">74</a>]</sup></div>
+<div class="title">Figure 143. Gudea with blueprint, ~2140 BCE <sup class="footnote">[<a id="_footnoteref_75" class="footnote" href="#_footnote_75" title="View footnote.">75</a>]</sup></div>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -23677,7 +23735,7 @@ The true measure of the value of a model is whether it actually influences behav
 <div class="content">
 <img src="images/4_12-whiteboard.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 144. Whiteboard <sup class="footnote">[<a id="_footnoteref_75" class="footnote" href="#_footnote_75" title="View footnote.">75</a>]</sup></div>
+<div class="title">Figure 144. Whiteboard <sup class="footnote">[<a id="_footnoteref_76" class="footnote" href="#_footnote_76" title="View footnote.">76</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Even in construction and engineering trades that rely on blueprints as a source of truth, keeping them up to date requires considerable discipline and process. In faster-moving digital organizations, visual models are almost always out of date unless they have been specifically refreshed for a purpose, or unless there is a strong formal process in place (and the value of such a process may be difficult to establish). That doesn&#8217;t mean that diagrams will go away. Co-located teams use whiteboards and dry-erase markers and will continue to use them. There are important cognitive and human factors reasons for this that will not go away. Because of these facts, it is useful to understand some of the fundamentals of how humans interpret visual data.</p>
@@ -23700,7 +23758,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4_12-tiger.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 145. Fast recognition means survival <sup class="footnote">[<a id="_footnoteref_76" class="footnote" href="#_footnote_76" title="View footnote.">76</a>]</sup></div>
+<div class="title">Figure 145. Fast recognition means survival <sup class="footnote">[<a id="_footnoteref_77" class="footnote" href="#_footnote_77" title="View footnote.">77</a>]</sup></div>
 </div>
 <div class="ulist">
 <ul>
@@ -23725,7 +23783,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4_12-neumann-flowchart.png" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 146. The first software flowchart <sup class="footnote">[<a id="_footnoteref_77" class="footnote" href="#_footnote_77" title="View footnote.">77</a>]</sup></div>
+<div class="title">Figure 146. The first software flowchart <sup class="footnote">[<a id="_footnoteref_78" class="footnote" href="#_footnote_78" title="View footnote.">78</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Architects and architecture are known for creating diagrams&#8201;&#8212;&#8201;abstract graphical representations of complex systems. The first known instance of applying graphical techniques to a digital problem was in 1947 <a href="#vonNeumann1947">[vonNeumann1947]</a> and visual notations have evolved along with the field of computing ever since. Notable examples include:</p>
@@ -23759,7 +23817,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4_12-flowchart-template.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 147. IBM flowcharting template <sup class="footnote">[<a id="_footnoteref_78" class="footnote" href="#_footnote_78" title="View footnote.">78</a>]</sup></div>
+<div class="title">Figure 147. IBM flowcharting template <sup class="footnote">[<a id="_footnoteref_79" class="footnote" href="#_footnote_79" title="View footnote.">79</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Research at Microsoft suggests that developers use diagrams for four purposes:</p>
@@ -23796,7 +23854,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4_12-sequence-diagram.png" alt="blueprint" width="450" height="200">
 </div>
-<div class="title">Figure 148. UML sequence diagram <sup class="footnote">[<a id="_footnoteref_79" class="footnote" href="#_footnote_79" title="View footnote.">79</a>]</sup></div>
+<div class="title">Figure 148. UML sequence diagram <sup class="footnote">[<a id="_footnoteref_80" class="footnote" href="#_footnote_80" title="View footnote.">80</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>However, if we&#8217;re building systems to be operated and maintained by humans, it would seem that we should support the cognitive and perceptual strengths of humans.  Because diagrams are more readily processed, they are often used to represent high level system interactions - how a given service, product or application is related to peer systems and services. Building such depictions can be helpful to fostering a shared mental model of the overall system objectives and context. The more complex and highly scaled the environment, the more likely one will encounter such artifacts as a means to creating the mental model.</p>
@@ -23860,7 +23918,7 @@ The big picture is part of the standard mindset of EA, which everyone immediatel
 <div class="content">
 <img src="images/4_12-obesity.jpg" alt="blueprint" width="550" height="200">
 </div>
-<div class="title">Figure 149. Complex diagram <sup class="footnote">[<a id="_footnoteref_80" class="footnote" href="#_footnote_80" title="View footnote.">80</a>]</sup></div>
+<div class="title">Figure 149. Complex diagram <sup class="footnote">[<a id="_footnoteref_81" class="footnote" href="#_footnote_81" title="View footnote.">81</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>However, this next diagram is essentially unusable, as visually tracing any given line is too difficult, and it would be easy to mistakenly identify one bubble as dependent on another:</p>
@@ -23869,7 +23927,7 @@ The big picture is part of the standard mindset of EA, which everyone immediatel
 <div class="content">
 <img src="images/4_12-complex-network.jpg" alt="blueprint" width="550" height="200">
 </div>
-<div class="title">Figure 150. Another complex diagram <sup class="footnote">[<a id="_footnoteref_81" class="footnote" href="#_footnote_81" title="View footnote.">81</a>]</sup></div>
+<div class="title">Figure 150. Another complex diagram <sup class="footnote">[<a id="_footnoteref_82" class="footnote" href="#_footnote_82" title="View footnote.">82</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>This may seem like an obvious critique, but architectural diagrams of similar complexity and unusability have too often been produced. Another issue with some diagrams is that they do not give a good sense of perspective or scale. This is sometimes seen in the business architecture practice of "capability mapping." For example, suppose you see this diagram:</p>
@@ -24234,7 +24292,7 @@ One core question decided by governance is how much autonomy is granted to busin
 <div class="content">
 <img src="images/4_12-A-380.jpg" alt="A-380" width="300" height="200">
 </div>
-<div class="title">Figure 153. Airbus A-380 <sup class="footnote">[<a id="_footnoteref_82" class="footnote" href="#_footnote_82" title="View footnote.">82</a>]</sup></div>
+<div class="title">Figure 153. Airbus A-380 <sup class="footnote">[<a id="_footnoteref_83" class="footnote" href="#_footnote_83" title="View footnote.">83</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>In 2006, Airbus was in the midst of developing the gigantic A-380 aircraft. Because of the scale of the effort, multiple teams of engineers in different countries were working on the effort. As William Ulrich says of the German and French teams, "having failed to coordinate efforts to wire the world&#8217;s largest plane, they were surprised to learn that they had used different approaches to designing the A380&#8217;s wiring system" <a href="#Ulrich2010">[Ulrich2010]</a>, p. 32. This was because the teams were using different software for wiring design of the critical wiring design software <a href="#Clark2006">[Clark2006]</a>. The use of different software to fulfill the capability resulted in a year&#8217;s delay, a $4.5bn order loss to Boeing, and a 26% drop in Airbus stock.</p>
@@ -24372,7 +24430,7 @@ One core question decided by governance is how much autonomy is granted to busin
 <div class="content">
 <img src="images/4_12-flowchart.jpg" alt="flowchart" width="300" height="200">
 </div>
-<div class="title">Figure 155. A flowchart <sup class="footnote">[<a id="_footnoteref_83" class="footnote" href="#_footnote_83" title="View footnote.">83</a>]</sup></div>
+<div class="title">Figure 155. A flowchart <sup class="footnote">[<a id="_footnoteref_84" class="footnote" href="#_footnote_84" title="View footnote.">84</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Process architecture is concerned with why and how activities are performed. It includes the detailed, step by step understanding of activities, in a transparent way. From top to bottom, it includes concepts such as:</p>
@@ -24880,7 +24938,7 @@ Another possible objection against agile methods is that the processes in EA, an
 <div class="content">
 <img src="images/4_12-stopwatch.jpg" alt="alt text" width="300" height="200">
 </div>
-<div class="title">Figure 156. What is your Cost of Delay? <sup class="footnote">[<a id="_footnoteref_84" class="footnote" href="#_footnote_84" title="View footnote.">84</a>]</sup></div>
+<div class="title">Figure 156. What is your Cost of Delay? <sup class="footnote">[<a id="_footnoteref_85" class="footnote" href="#_footnote_85" title="View footnote.">85</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>It is in the "governance and approval" kind of activity that conflict is most likely to emerge. Cadence and synchronization (e.g. processes) with the potential to block teams from pursuing their mission should be very carefully considered. If there is a process or a queue of architecture approvals, it at least should be operated on Cost of Delay of the work it&#8217;s blocking. And more generally, across the organization, the process should be tested against an economic model such as establishing a nominal or <a href="#portfolio-CoD">portfolio-level Cost of Delay</a>. Like other processes, architecture itself can be assessed against such a baseline.</p>
@@ -24928,7 +24986,7 @@ Architectural goals—for example, desired performance, availability, and securi
 <div class="content">
 <img src="images/4_12-strangler-vine.jpg" alt="alt text" width="400" height="200">
 </div>
-<div class="title">Figure 157. Australian strangler vine surrounding tree <sup class="footnote">[<a id="_footnoteref_85" class="footnote" href="#_footnote_85" title="View footnote.">85</a>]</sup></div>
+<div class="title">Figure 157. Australian strangler vine surrounding tree <sup class="footnote">[<a id="_footnoteref_86" class="footnote" href="#_footnote_86" title="View footnote.">86</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Keeping the target operating condition specific is preferable. When architecture scopes problems too broadly, the temptation is to undertake <a href="#large-arch-xform-risk">large and risky transformation programs</a>. As an alternative, Humble and Molesky suggest the "strangler pattern," proposed by Martin Fowler in 2004 <a href="#Fowler2004a">[Fowler2004a]</a>. This pattern uses as a metaphor Australian "strangler" vines that grow around trees until the original tree dies, at which point the strangler vine is now itself a sturdy, rooted structure (see picture).</p>
@@ -27645,6 +27703,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 <p><a id="Strode2012"></a>[Strode2012]: Strode, D.E. et al., 2012. Coordination in co-located agile software development projects. The Journal of Systems and Software, 85, pp.1222–1238. Available at: <a href="http://www.elsevier.com/copyright" class="bare">http://www.elsevier.com/copyright</a> [Accessed December 19, 2016].</p>
 </li>
 <li>
+<p><a id="Strode2012a"></a>[Strode2012a]: Strode, D. E., &amp; Huff, S. L. (2012). A Taxonomy of Dependencies in Agile Software Development. In 23rd Australasian Conference on Information Systems.</p>
+</li>
+<li>
 <p><a id="Spinellis2015"></a>[Spinellis2015]: Spinellis, D. (2015). "Extending Our Field&#8217;s Reach." <em>IEEE Software:</em> 4-6. December 2015.</p>
 </li>
 <li>
@@ -27930,112 +27991,115 @@ Cost of Delay</pre>
 <a href="#_footnoteref_49">49</a>. Author&#8217;s note: I believe this to be original; it is being published here for the first time.
 </div>
 <div class="footnote" id="_footnote_50">
-<a href="#_footnoteref_50">50</a>. _Image credit By Dutchguilder - Own work, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=37249677" class="bare">https://commons.wikimedia.org/w/index.php?curid=37249677</a>, downloaded 2016-10-31, fair use
+<a href="#_footnoteref_50">50</a>. adapted from <a href="#Strode2012a">[Strode2012a]</a>
 </div>
 <div class="footnote" id="_footnote_51">
-<a href="#_footnoteref_51">51</a>. _Image credit <a href="https://commons.wikimedia.org/w/index.php?curid=4282986" class="bare">https://commons.wikimedia.org/w/index.php?curid=4282986</a>, "By I, John Manuel Kennedy T., CC BY-SA 3.0," downloaded 2016-10-31, fair use
+<a href="#_footnoteref_51">51</a>. _Image credit By Dutchguilder - Own work, Public Domain, <a href="https://commons.wikimedia.org/w/index.php?curid=37249677" class="bare">https://commons.wikimedia.org/w/index.php?curid=37249677</a>, downloaded 2016-10-31, fair use
 </div>
 <div class="footnote" id="_footnote_52">
-<a href="#_footnoteref_52">52</a>. _Image credit <a href="https://www.flickr.com/photos/centralasian/4534292595" class="bare">https://www.flickr.com/photos/centralasian/4534292595</a>, downloaded 2016-10-31, commercial use permitted
+<a href="#_footnoteref_52">52</a>. _Image credit <a href="https://commons.wikimedia.org/w/index.php?curid=4282986" class="bare">https://commons.wikimedia.org/w/index.php?curid=4282986</a>, "By I, John Manuel Kennedy T., CC BY-SA 3.0," downloaded 2016-10-31, fair use
 </div>
 <div class="footnote" id="_footnote_53">
-<a href="#_footnoteref_53">53</a>. <em>Image credit <a href="https://www.flickr.com/photos/simonov/15484240880" class="bare">https://www.flickr.com/photos/simonov/15484240880</a>, downloaded 2016-11-28, commercial use permitted</em>
+<a href="#_footnoteref_53">53</a>. _Image credit <a href="https://www.flickr.com/photos/centralasian/4534292595" class="bare">https://www.flickr.com/photos/centralasian/4534292595</a>, downloaded 2016-10-31, commercial use permitted
 </div>
 <div class="footnote" id="_footnote_54">
-<a href="#_footnoteref_54">54</a>. <em>Image credit <a href="https://www.flickr.com/photos/mcfarlandmo/3274597033/" class="bare">https://www.flickr.com/photos/mcfarlandmo/3274597033/</a>, downloaded 2016-11-28, commercial use permitted</em>
+<a href="#_footnoteref_54">54</a>. <em>Image credit <a href="https://www.flickr.com/photos/simonov/15484240880" class="bare">https://www.flickr.com/photos/simonov/15484240880</a>, downloaded 2016-11-28, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_55">
-<a href="#_footnoteref_55">55</a>. <em>Image credit <a href="https://www.flickr.com/photos/mikekp/28169317621/" class="bare">https://www.flickr.com/photos/mikekp/28169317621/</a>, downloaded 2016-11-28, commercial use permitted</em>
+<a href="#_footnoteref_55">55</a>. <em>Image credit <a href="https://www.flickr.com/photos/mcfarlandmo/3274597033/" class="bare">https://www.flickr.com/photos/mcfarlandmo/3274597033/</a>, downloaded 2016-11-28, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_56">
-<a href="#_footnoteref_56">56</a>. Similar to <a href="#Pichler2010">[Pichler2010]</a>, p. 12; <a href="#Schwaber2007">[Schwaber2007]</a>, pp. 70-73.
+<a href="#_footnoteref_56">56</a>. <em>Image credit <a href="https://www.flickr.com/photos/mikekp/28169317621/" class="bare">https://www.flickr.com/photos/mikekp/28169317621/</a>, downloaded 2016-11-28, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_57">
-<a href="#_footnoteref_57">57</a>. <em>Image credit <a href="https://www.flickr.com/photos/mwichary/2251322099" class="bare">https://www.flickr.com/photos/mwichary/2251322099</a>, downloaded 2016-11-28, commercial use permitted</em>
+<a href="#_footnoteref_57">57</a>. Similar to <a href="#Pichler2010">[Pichler2010]</a>, p. 12; <a href="#Schwaber2007">[Schwaber2007]</a>, pp. 70-73.
 </div>
 <div class="footnote" id="_footnote_58">
-<a href="#_footnoteref_58">58</a>. <em>image credit <a href="https://www.flickr.com/photos/garryknight/11240024613" class="bare">https://www.flickr.com/photos/garryknight/11240024613</a>, commercial use permitted.</em>
+<a href="#_footnoteref_58">58</a>. <em>Image credit <a href="https://www.flickr.com/photos/mwichary/2251322099" class="bare">https://www.flickr.com/photos/mwichary/2251322099</a>, downloaded 2016-11-28, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_59">
-<a href="#_footnoteref_59">59</a>. Public domain image via Wikipedia
+<a href="#_footnoteref_59">59</a>. <em>image credit <a href="https://www.flickr.com/photos/garryknight/11240024613" class="bare">https://www.flickr.com/photos/garryknight/11240024613</a>, commercial use permitted.</em>
 </div>
 <div class="footnote" id="_footnote_60">
-<a href="#_footnoteref_60">60</a>. <em>Image credit <a href="https://www.flickr.com/photos/bgreenlee/1389858104/" class="bare">https://www.flickr.com/photos/bgreenlee/1389858104/</a>, commercial use permitted</em>
+<a href="#_footnoteref_60">60</a>. Public domain image via Wikipedia
 </div>
 <div class="footnote" id="_footnote_61">
-<a href="#_footnoteref_61">61</a>. <em>Image credit <a href="https://www.flickr.com/photos/auxesis/3920533954" class="bare">https://www.flickr.com/photos/auxesis/3920533954</a>, commercial use permitted</em>
+<a href="#_footnoteref_61">61</a>. <em>Image credit <a href="https://www.flickr.com/photos/bgreenlee/1389858104/" class="bare">https://www.flickr.com/photos/bgreenlee/1389858104/</a>, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_62">
-<a href="#_footnoteref_62">62</a>. <em>Image credit <a href="https://www.flickr.com/photos/136041510@N05/24338977000" class="bare">https://www.flickr.com/photos/136041510@N05/24338977000</a>, commercial use permitted</em>
+<a href="#_footnoteref_62">62</a>. <em>Image credit <a href="https://www.flickr.com/photos/auxesis/3920533954" class="bare">https://www.flickr.com/photos/auxesis/3920533954</a>, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_63">
-<a href="#_footnoteref_63">63</a>. <em>Image credit <a href="https://www.flickr.com/photos/stevensnodgrass/6625148339" class="bare">https://www.flickr.com/photos/stevensnodgrass/6625148339</a>, commercial use permitted</em>
+<a href="#_footnoteref_63">63</a>. <em>Image credit <a href="https://www.flickr.com/photos/136041510@N05/24338977000" class="bare">https://www.flickr.com/photos/136041510@N05/24338977000</a>, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_64">
-<a href="#_footnoteref_64">64</a>. <em>Image credit <a href="https://www.flickr.com/photos/george_eastman_house/3334094680" class="bare">https://www.flickr.com/photos/george_eastman_house/3334094680</a>, downloaded 2016-11-27, no known restrictions</em>
+<a href="#_footnoteref_64">64</a>. <em>Image credit <a href="https://www.flickr.com/photos/stevensnodgrass/6625148339" class="bare">https://www.flickr.com/photos/stevensnodgrass/6625148339</a>, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_65">
-<a href="#_footnoteref_65">65</a>. <em>Image credit <a href="https://www.flickr.com/photos/tolomea/4847227935" class="bare">https://www.flickr.com/photos/tolomea/4847227935</a>, commercial use permitted</em>
+<a href="#_footnoteref_65">65</a>. <em>Image credit <a href="https://www.flickr.com/photos/george_eastman_house/3334094680" class="bare">https://www.flickr.com/photos/george_eastman_house/3334094680</a>, downloaded 2016-11-27, no known restrictions</em>
 </div>
 <div class="footnote" id="_footnote_66">
-<a href="#_footnoteref_66">66</a>. <em>Image credit <a href="https://www.flickr.com/photos/129953653@N05/16540457804" class="bare">https://www.flickr.com/photos/129953653@N05/16540457804</a>, commercial use permitted</em>
+<a href="#_footnoteref_66">66</a>. <em>Image credit <a href="https://www.flickr.com/photos/tolomea/4847227935" class="bare">https://www.flickr.com/photos/tolomea/4847227935</a>, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_67">
-<a href="#_footnoteref_67">67</a>. <em>Image credit <a href="https://www.flickr.com/photos/pargon/2444932424" class="bare">https://www.flickr.com/photos/pargon/2444932424</a>, commercial use permitted</em>
+<a href="#_footnoteref_67">67</a>. <em>Image credit <a href="https://www.flickr.com/photos/129953653@N05/16540457804" class="bare">https://www.flickr.com/photos/129953653@N05/16540457804</a>, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_68">
-<a href="#_footnoteref_68">68</a>. <em>Image credit <a href="https://www.flickr.com/photos/seattlemunicipalarchives/3347281230" class="bare">https://www.flickr.com/photos/seattlemunicipalarchives/3347281230</a>, commercial use permitted</em>
+<a href="#_footnoteref_68">68</a>. <em>Image credit <a href="https://www.flickr.com/photos/pargon/2444932424" class="bare">https://www.flickr.com/photos/pargon/2444932424</a>, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_69">
-<a href="#_footnoteref_69">69</a>. <em>Image credit <a href="https://www.flickr.com/photos/aigle_dore/6365091333" class="bare">https://www.flickr.com/photos/aigle_dore/6365091333</a>, downloaded 2016-10-25, image copyrights Moyan Brenn, commercial use permitted</em>
+<a href="#_footnoteref_69">69</a>. <em>Image credit <a href="https://www.flickr.com/photos/seattlemunicipalarchives/3347281230" class="bare">https://www.flickr.com/photos/seattlemunicipalarchives/3347281230</a>, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_70">
-<a href="#_footnoteref_70">70</a>. <em>Image credit <a href="https://www.flickr.com/photos/endogamia/3979040177" class="bare">https://www.flickr.com/photos/endogamia/3979040177</a>, downloaded 2016-10-16, commercial use permitted</em>
+<a href="#_footnoteref_70">70</a>. <em>Image credit <a href="https://www.flickr.com/photos/aigle_dore/6365091333" class="bare">https://www.flickr.com/photos/aigle_dore/6365091333</a>, downloaded 2016-10-25, image copyrights Moyan Brenn, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_71">
-<a href="#_footnoteref_71">71</a>. <em>Image credit <a href="https://www.flickr.com/photos/perspective/8474999166" class="bare">https://www.flickr.com/photos/perspective/8474999166</a>, downloaded 2016-10-16, commercial use permitted</em>
+<a href="#_footnoteref_71">71</a>. <em>Image credit <a href="https://www.flickr.com/photos/endogamia/3979040177" class="bare">https://www.flickr.com/photos/endogamia/3979040177</a>, downloaded 2016-10-16, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_72">
-<a href="#_footnoteref_72">72</a>. <em>Image credit <a href="https://www.flickr.com/photos/martye_green/2354576085" class="bare">https://www.flickr.com/photos/martye_green/2354576085</a>, downloaded 2016-10-16, commercial use permitted</em>
+<a href="#_footnoteref_72">72</a>. <em>Image credit <a href="https://www.flickr.com/photos/perspective/8474999166" class="bare">https://www.flickr.com/photos/perspective/8474999166</a>, downloaded 2016-10-16, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_73">
-<a href="#_footnoteref_73">73</a>. Image credit <a href="https://en.wikipedia.org/wiki/Franz_Moritz_von_Lacy#/media/File:Count_Franz_Moritz_von_Lacy_(oil_on_canvas_portrait_HGM).jpg" class="bare">https://en.wikipedia.org/wiki/Franz_Moritz_von_Lacy#/media/File:Count_Franz_Moritz_von_Lacy_(oil_on_canvas_portrait_HGM).jpg</a>, downloaded 2016-10-04, labeled as public domain by Wikipedia
+<a href="#_footnoteref_73">73</a>. <em>Image credit <a href="https://www.flickr.com/photos/martye_green/2354576085" class="bare">https://www.flickr.com/photos/martye_green/2354576085</a>, downloaded 2016-10-16, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_74">
-<a href="#_footnoteref_74">74</a>. <em>Image <a href="https://www.flickr.com/photos/daryl_mitchell/16189447931" class="bare">https://www.flickr.com/photos/daryl_mitchell/16189447931</a>, downloaded 2016-10-10, commercial use permitted</em>
+<a href="#_footnoteref_74">74</a>. Image credit <a href="https://en.wikipedia.org/wiki/Franz_Moritz_von_Lacy#/media/File:Count_Franz_Moritz_von_Lacy_(oil_on_canvas_portrait_HGM).jpg" class="bare">https://en.wikipedia.org/wiki/Franz_Moritz_von_Lacy#/media/File:Count_Franz_Moritz_von_Lacy_(oil_on_canvas_portrait_HGM).jpg</a>, downloaded 2016-10-04, labeled as public domain by Wikipedia
 </div>
 <div class="footnote" id="_footnote_75">
-<a href="#_footnoteref_75">75</a>. <em>Image <a href="https://www.flickr.com/photos/simonov/15484240880" class="bare">https://www.flickr.com/photos/simonov/15484240880</a>, downloaded 2016-10-10, commercial use permitted</em>
+<a href="#_footnoteref_75">75</a>. <em>Image <a href="https://www.flickr.com/photos/daryl_mitchell/16189447931" class="bare">https://www.flickr.com/photos/daryl_mitchell/16189447931</a>, downloaded 2016-10-10, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_76">
-<a href="#_footnoteref_76">76</a>. <em>Image <a href="https://www.flickr.com/photos/samiksha/2436037856" class="bare">https://www.flickr.com/photos/samiksha/2436037856</a>, downloaded 2016-10-10, commercial use permitted</em>
+<a href="#_footnoteref_76">76</a>. <em>Image <a href="https://www.flickr.com/photos/simonov/15484240880" class="bare">https://www.flickr.com/photos/simonov/15484240880</a>, downloaded 2016-10-10, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_77">
-<a href="#_footnoteref_77">77</a>. <em><a href="#vonNeumann1947">[vonNeumann1947]</a>, figure 7.9, public domain assumed</em>
+<a href="#_footnoteref_77">77</a>. <em>Image <a href="https://www.flickr.com/photos/samiksha/2436037856" class="bare">https://www.flickr.com/photos/samiksha/2436037856</a>, downloaded 2016-10-10, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_78">
-<a href="#_footnoteref_78">78</a>. <em>Image <a href="https://www.flickr.com/photos/mwichary/3249179483" class="bare">https://www.flickr.com/photos/mwichary/3249179483</a>, , downloaded 2016-10-10, commercial use permitted</em>
+<a href="#_footnoteref_78">78</a>. <em><a href="#vonNeumann1947">[vonNeumann1947]</a>, figure 7.9, public domain assumed</em>
 </div>
 <div class="footnote" id="_footnote_79">
-<a href="#_footnoteref_79">79</a>. <em>Image <a href="https://www.flickr.com/photos/raphaelstolt/514643232" class="bare">https://www.flickr.com/photos/raphaelstolt/514643232</a>, , downloaded 2016-10-10, commercial use permitted</em>
+<a href="#_footnoteref_79">79</a>. <em>Image <a href="https://www.flickr.com/photos/mwichary/3249179483" class="bare">https://www.flickr.com/photos/mwichary/3249179483</a>, , downloaded 2016-10-10, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_80">
-<a href="#_footnoteref_80">80</a>. <em>Image <a href="https://www.flickr.com/photos/pushandplay/2968259379" class="bare">https://www.flickr.com/photos/pushandplay/2968259379</a>, downloaded 2016-10-10, commercial use permitted</em>
+<a href="#_footnoteref_80">80</a>. <em>Image <a href="https://www.flickr.com/photos/raphaelstolt/514643232" class="bare">https://www.flickr.com/photos/raphaelstolt/514643232</a>, , downloaded 2016-10-10, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_81">
-<a href="#_footnoteref_81">81</a>. <em>Image <a href="https://www.flickr.com/photos/taedc/9614791576" class="bare">https://www.flickr.com/photos/taedc/9614791576</a>, downloaded 2016-10-10, commercial use permitted</em>
+<a href="#_footnoteref_81">81</a>. <em>Image <a href="https://www.flickr.com/photos/pushandplay/2968259379" class="bare">https://www.flickr.com/photos/pushandplay/2968259379</a>, downloaded 2016-10-10, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_82">
-<a href="#_footnoteref_82">82</a>. <em>Image credit <a href="https://www.flickr.com/photos/44400809@N07/4081438180" class="bare">https://www.flickr.com/photos/44400809@N07/4081438180</a>, downloaded 2016-10-11, commercial use permitted</em>
+<a href="#_footnoteref_82">82</a>. <em>Image <a href="https://www.flickr.com/photos/taedc/9614791576" class="bare">https://www.flickr.com/photos/taedc/9614791576</a>, downloaded 2016-10-10, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_83">
-<a href="#_footnoteref_83">83</a>. <em>Image credit <a href="https://www.flickr.com/photos/lespetitescases/16715406524" class="bare">https://www.flickr.com/photos/lespetitescases/16715406524</a>, downloaded 2016-10-16, commercial use permitted</em>
+<a href="#_footnoteref_83">83</a>. <em>Image credit <a href="https://www.flickr.com/photos/44400809@N07/4081438180" class="bare">https://www.flickr.com/photos/44400809@N07/4081438180</a>, downloaded 2016-10-11, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_84">
-<a href="#_footnoteref_84">84</a>. <em>Image credit <a href="https://www.flickr.com/photos/julianlim/4598412264" class="bare">https://www.flickr.com/photos/julianlim/4598412264</a>, downloaded 2016-10-25, commercial use permitted</em>
+<a href="#_footnoteref_84">84</a>. <em>Image credit <a href="https://www.flickr.com/photos/lespetitescases/16715406524" class="bare">https://www.flickr.com/photos/lespetitescases/16715406524</a>, downloaded 2016-10-16, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_85">
-<a href="#_footnoteref_85">85</a>. <em>Image credit <a href="https://www.flickr.com/photos/cynren/16011788979" class="bare">https://www.flickr.com/photos/cynren/16011788979</a>, downloaded 2016-10-23, commercial use permitted</em>
+<a href="#_footnoteref_85">85</a>. <em>Image credit <a href="https://www.flickr.com/photos/julianlim/4598412264" class="bare">https://www.flickr.com/photos/julianlim/4598412264</a>, downloaded 2016-10-25, commercial use permitted</em>
+</div>
+<div class="footnote" id="_footnote_86">
+<a href="#_footnoteref_86">86</a>. <em>Image credit <a href="https://www.flickr.com/photos/cynren/16011788979" class="bare">https://www.flickr.com/photos/cynren/16011788979</a>, downloaded 2016-10-23, commercial use permitted</em>
 </div>
 </div>
 <div id="footer">
