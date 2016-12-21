@@ -37,15 +37,11 @@ The release train is a useful concept for coordinating large, multi-team efforts
 
 ===== Project management as coordination
 
-NOTE: We'll talk about project management as an investment strategy in the next chapter. In this chapter, we look at it as a coordination strategy.
+NOTE: We'll talk about project management as an investment strategy in the next chapter. In this chapter, we look at it as a coordination strategy. If you are completely unfamiliar with project management, see the xref:project-mgmt[brief discussion in the appendix] and the xref:PMBOK[PMBOK summary].
 
-Project management adds concerns of task ordering and resource management, for projects typically executed on a one-time basis.
+Project management adds concerns of task ordering and resource management, for projects typically executed on a one-time basis. At an execution level, project managers retain important roles and (sometimes re-labeled Scrum masters or release managers) are employed in both traditional and new digital companies as overall orchestrators of complex initiatives.
 
-At an execution level, project managers retain important roles and (sometimes re-labeled Scrum masters or release managers) are employed in both traditional and new digital companies as overall orchestrators of complex initiatives.
-
-Project management provides tools addressing these issues, which is why it is widely used.
-
-However, there are a number of issues in doing so.
+Project management provides tools addressing these issues, which is why it is widely used. However, there are a number of issues in doing so.
 
 * Projects are by definition temporary, while products may last as long as there is market demand.
 * Project management methodology, with its emphasis on predictability, scope management, and change control often conflicts with the product management objective of discovering information (see the discussion of xref:lean-product-dev[Lean Product Development].)
@@ -59,24 +55,6 @@ So, what of project management in this new world? A project manager may still be
 
 It is also useful to have a third party who is knowledgeable about the product, yet has some emotional distance from its success. This can be a difficult balance to strike, but the existence of the role of Scrum coach is indicative of its importance.
 
-anchor:google-chubby[]
-
-****
-*The reality of microservices and loose coupling: the case of Chubby at Google*
-
-The Agile manifesto idea that architecture can "emerge" without explicit coordination (e.g. across a set of smaller grained services ("microservices") is attractive. Coordinating designs across products, services, features and/or components is expensive and ideally products should be able to evolve independently.
-
-Mike Burrows of Google provides a detailed description of the Chubby lock service <<Burrows2006>>, which is a prototypical example of a broadly-available internal service usable by a wide variety of other products.
-
-The purpose of a lock service is to "allow its clients to synchronize their activities and to agree on basic information about their environment." Chubby was built from the start with objectives of reliability, availability to a "moderately large set of clients," and ease of understanding. Burrows notes that even with such a cohesive and well-designed internal service, they still encounter coordination problems requiring human intervention. Such problems include:
-
-* Use ("abuse") in unintended ways by clients
-* Invalid assumptions by clients regarding Chubby's availability
-
-Because of this, the Chubby team (at least at the time writing of the case study) instituted a review process when new clients wished to start using the lock manager. In terms of this chapter's topic, this means that someone on the product team needed to coordinate the discussions with the Chubby team and ensure that any concerns were resolved. This might conceivably have involved multiple iterations and reviews of designs describing intended use.
-
-In short, even the most sophisticated microservice environments may have a dependency on human coordination across the teams.
-****
 
 ===== Process management as coordination
 
