@@ -36,7 +36,7 @@ As the quote from Gary Hamel above indicates, a central point of coordination an
 [quote, Malone & Crowston]
 ...coordination can be seen as the process of managing dependencies among activities.
 
-What is a "dependency"? We need to think carefully about this. By the important definition above (from <<Malone1994>>), without dependencies, we do not need coordination. Diane Strode and her associates (<<Strode2012>>) have described a comprehensive framework for thinking about dependencies and coordination, including a dependency taxonomy, an inventory of coordination strategies, and an examination of coordination effectiveness criteria.
+What is a "dependency"? We need to think carefully about this. According to the well-accepted definition above (from <<Malone1994>>), without dependencies, we do not need coordination. Diane Strode and her associates (<<Strode2012>>) have described a comprehensive framework for thinking about dependencies and coordination, including a dependency taxonomy, an inventory of coordination strategies, and an examination of coordination effectiveness criteria.
 
 To understand dependencies, Strode et al. propose the following framework <<Strode2012a>>:
 
@@ -45,16 +45,16 @@ To understand dependencies, Strode et al. propose the following framework <<Stro
 |====
 |Type|Dependency|Description
 .4+|*Knowledge.* A knowledge dependency occurs when a form of information is required in order for progress.
-|Requirement|domain knowledge or a requirement is not known and must be located or identified
-|Expertise|technical or task information is known only by a particular person or group
-|Task allocation|who is doing what, and when, is not known
-|Historical|knowledge about past decisions is needed
+|Requirement|Domain knowledge or a requirement is not known and must be located or identified.
+|Expertise|Technical or task information is known only by a particular person or group.
+|Task allocation|Who is doing what, and when, is not known.
+|Historical|Knowledge about past decisions is needed.
 .2+|*Task.* A task dependency occurs when a task must be completed before another task can proceed.
-|Activity|an activity cannot proceed until another activity is complete
-|Business process|an existing business process causes activities to be carried out in a certain order
+|Activity|An activity cannot proceed until another activity is complete.
+|Business process|An existing business process causes activities to be carried out in a certain order.
 .2+|*Resource.* A resource dependency occurs when an object is required for progress.
-|Entity|a resource (person, place or thing) is not available
-|Technical|a technical aspect of development affects progress, such as when one software component must interact with another software component
+|Entity|A resource (person, place or thing) is not available.
+|Technical|A technical aspect of development affects progress, such as when one software component must interact with another software component.
 |====
 
 We can see examples of these dependencies throughout digital products. In the next section, we will talk about coordination techniques to manage across dependencies.
@@ -113,7 +113,7 @@ NOTE: We introduced the idea of _artifact_ in Chapter 5. For our purposes here, 
 The following sections expand the three strategies (structure, synchronization, boundary spanning) with examples.
 
 ====== Structure
-*Proximity.* Don Reinertsen (<<Reinertsen2009>> p. 230) proposes "The Principle of Colocation" which asserts that "Colocation improves almost all aspects of communication." In order to scale this beyond one team, one logically needs what Mike Cohn (<<Cohn2010>>, p. 346) calls "The Big Room."
+Don Reinertsen (<<Reinertsen2009>> p. 230) proposes "The Principle of Colocation" which asserts that "Colocation improves almost all aspects of communication." In order to scale this beyond one team, one logically needs what Mike Cohn (<<Cohn2010>>, p. 346) calls "The Big Room."
 
 In terms of communications, this has significant organizational advantages. Communications are as simple as walking over to another person's desk, or just shouting out over the room. It is also easy to synchronize the entire room, through calling for everyone's attention. However, there are limits to scaling the "Big Room" approach:
 
@@ -157,14 +157,14 @@ A variety of boundary-spanning liaison and coordination structures are suggested
 
 *Shared team members* are suggested when two teams have a persistent interface requiring focus and ownership. When a product has multiple interfaces that emerge as a problem requiring focus, an *integration team* may be called for. *Communities of practice* will be introduced in Chapter 9 when we discuss the xref:spotify-model[Spotify model]. Considered here, they may also play a coordination role as well as a practice development/maturity role.
 
-Finally, the idea of a "scrum of scrums" is essentially a representative or delegated model, in which each individual Scrum team sends one individual to a periodic coordination meeting where matters of cross-team concern can be discussed and decisions taken. (<<Cohn2010>>, Chapter 17)
+Finally, the idea of a *Scrum of Scrums* is essentially a representative or delegated model, in which each individual Scrum team sends one individual to a periodic coordination meeting where matters of cross-team concern can be discussed and decisions taken. (<<Cohn2010>>, Chapter 17)
 
 <<Cohn2010>> (p342) cautions: "A scrum of scrums meeting will feel nothing like a daily scrum despite the similarities in names. The daily scrum is a synchronization meeting: individual team members come together to communicate about their work and synchronize their efforts.The scrum of scrums, on the other hand, is a problem-solving meeting and will not have the same quick, get-in-get-out tone of a daily scrum."
 
 anchor:submittal-schedule[]
-Another perspective on this is found in The Checklist Manifesto <<Gawande2010>>. Some work, while detailed, can be planned to a high degree of detail (i.e. the "checklists" of the title). However, emergent complexity requires different approach - no checklist can anticipate all eventualities. To handle all the emergent complexity, the coordination focus must shift to structuring the right communications. In examining modern construction industry techniques, Gawande noted the concept of the "submittal schedule," which "didn't specify construction tasks; it specified _communication_ tasks" (p. 65, emphasis supplied). With the submittal schedule, the project manager tracks that the right people are talking to each other to resolve problems - a key change in focus from activity-centric approaches.
+Another technique mentioned in The Checklist Manifesto <<Gawande2010>> is the *submittal schedule*. Some work, while detailed, can be planned to a high degree of detail (i.e. the "checklists" of the title). However, emergent complexity requires different approach - no checklist can anticipate all eventualities. To handle all the emergent complexity, the coordination focus must shift to structuring the right communications. In examining modern construction industry techniques, Gawande noted the concept of the "submittal schedule," which "didn't specify construction tasks; it specified _communication_ tasks" (p. 65, emphasis supplied). With the submittal schedule, the project manager tracks that the right people are talking to each other to resolve problems - a key change in focus from activity-centric approaches.
 
-The above discussion is by no means exhaustive. A wealth of additional techniques is to be found in <<Larman2009>> and <<Cohn2010>>. New techniques are continually emerging from the front lines of the digital industry; the interested student should consider attending industry conferences such as those offered by the Agile Alliance.
+The above discussion is by no means exhaustive. A wealth of additional techniques relevant for digital professionals is to be found in <<Larman2009>> and <<Cohn2010>>. New techniques are continually emerging from the front lines of the digital industry; the interested student should consider attending industry conferences such as those offered by the Agile Alliance.
 
 The above approaches imply synchronized meetings and face to face interactions. When the boundary-spanning approach is based on artifacts (often a requirement for larger, decentralized enterprises), we move into the realms of process and project management. Approaches based on routing artifacts into xref:queues[queues] often receive criticism for introducing too much latency into the product development process. When artifacts are routed via work  orders and tickets for action by independent teams, prioritization may be arbitray (not based on business value, e.g. xref:cost-of-delay[Cost of Delay]), and sometimes the work must flow through multiple queues in an uncoordinated way, as we warned in Chapter 5. Such approaches can add dangerous latency to high-value processes. We will look in more detail at process management in a future section.
 

@@ -1,8 +1,11 @@
 ==== Coordination, execution, and the delivery models
 
 As we scale up... cube
+Scaling out the z-axis of the coord cube - multiple teams.. esp. when not co-located
 
+danger zone
 
+supply chain thinking
 
 *** Trad PM
 *** clinical terminology (Reinertsen)
@@ -12,98 +15,24 @@ As we scale up... cube
 *** RACI
 *** risk
 
-shared resources and services
+* product management (=release)
 
-global CoD - process eval
+* project management
+Project management adds concerns of task ordering and resource management, for projects typically executed on a one-time basis.
 
 At an execution level, project managers retain important roles and (sometimes re-labeled Scrum masters or release managers) are employed in both traditional and new digital companies as overall orchestrators of complex initiatives.
 
-Scaling out the z-axis of the coord cube - multiple teams.. esp. when not co-located
+* process management
+Process management is also concerned with ordering, but less so with the resource load (more on this below), and instead is concerned with repeatability and ongoing improvement.
 
-danger zone
+shared resources and services
+global CoD - process eval
 
-supply chain thinking
-
-
-
+project-process, project-product, product-process
 
 It all starts with just "work." The following diagram might help:
 
 image::images/3_09-wrk-prj-proc.png[]
-
-Project management adds concerns of task ordering and resource management, for projects typically executed on a one-time basis.
-
-Process management is also concerned with ordering, but less so with the resource load (more on this below), and instead is concerned with repeatability and ongoing improvement.
-
-===== Process and project
-
-Project management and process management interact in 2 primary ways:
-
-* Projects often are used to create and deploy processes. A large system implementation (e.g. of a Enterprise Resource Planning module such as Human Resource Management) will often be responsible for process implementation including training.
-* As environments mature, product and/or project teams require process support.
-
-As Richardson notes in _Project Management Theory and Practice_, "there are many organizational processes that are needed to optimally support a successful project." <<Richardson2010>> For example, the project may require predictable contractor hiring, or infrastructure provisioning, or security reviews. The same is true for product teams that may not be using a "project" concept to manage their work. To the extent these are managed as repeatable, optimized processes, risk is reduced.
-
-
-===== Process and organization
-Processes are much more than repeatable activities. Many leading thinkers (such as Michael Porter, quoted at the start of this chapter section) see organizations primarily as sets of interacting processes, supporting fundamental end to end value chains or value streams. We will talk more about this in the next chapter section.
-
-The concept of process is often contrasted with that of function or organization. We have seen in previous chapters how product development and project management must drive results across organizational boundaries. Process management has a similar challenge; its goal is to drive *repeatable* results across organizational boundaries.
-
-As we know from our discussion of xref:product-mgmt[Product Management], developing new products is not a particularly repeatable process. The Agile movement in some ways arose in opposition to attempts to apply process concepts of "repeatability" to developing software. These concerns remain.
-
-However, this book is not only about digital R&D processes. It is also about a spectrum of operations and effort that spans from the unique to the highly repeatable. There is an interesting middle ground, of processes that are at least semi-repeatable. Examples often found in the large digital organization include:
-
-* Assessing, approving, and completing changes
-* End user equipment provisioning
-* Resolving incidents and answering user inquiries
-* Troubleshooting problems
-
-And many others. We will talk about a wide variety of such processes in the chapter section on process frameworks.
-
-It is important to realize, however, that just as the traditional IT project is under pressure, there are similar challenges for the traditional IT process. Continuous deployment techniques are eroding the need for formal change management. Consumerization is challenging traditional internal IT provisioning practices. And self-service help desks are eliminating some traditional support activities.
-
-Nevertheless, any rumors of an "end to process" are probably greatly exaggerated. There will likely always be complex combinations of automated, semi-automated, and manual activity in digital organizations. Some of this activity will be repeatable enough that the "process" construct will be applied to it. Measurability remains a concern; the Lean philosophy underpinning much Agile thought emphasizes this.
-
-It is therefore useful to understand more fundamentally what processes are, how they operate, and how they are managed and improved.
-
-====== Process as skill
-As we discussed at the beginning of this chapter, sometimes new employees come in expecting that you are following certain processes. This is in part because "process" experience can be an important part of an employee's career background. A skilled HR manager may consider their experience with large-scale enterprise hiring processes to be a major part of their qualifications for a position in your company.
-
-This applies to both "business" and "IT" processes. In fact, in the digital world, there is no real difference. Digital processes:
-
-* Initiate new systems, from idea to construction
-* Publicize and grant access to the new systems
-* Capture revenue from the systems
-* Support people in their interactions with the systems
-* Fix the systems when they break
-* Improve the systems based on stakeholder feedback
-
-It's not clear which of these are "IT" versus "business" processes. But they are definitely processes. Some of them are more predictable, some less so, but they all represent some form of ordered work that is repeatable to some degree. And to some extent, you are seeking people with experience defined at least in part by their exposure to processes.
-
-NOTE: In Chapter 10, we will discuss IT governance in depth. The concept of "control" is critical to IT governance, and processes often play an important role in terms of control.
-
-===== Measuring process
-One of the most important reasons for repeatable processes is so that they can be measured and understood. Repeatable processes are measured in terms of:
-
-* Speed
-* Effort
-* Quality
-* Variation
-* Outcomes
-
-at the most general level, and of course all of those measurements must be defined much more specifically depending on the process.
-
-Measurement is an essential aspect of process management, but must be carefully designed. Measuring process can have unforeseen results. Process participants will behave according to how the process is measured. If a help desk operator is measured and rated on how many calls they process an hour, the quality of those interactions may suffer. It is critical that any process "key performance indicator" be understood in terms of the highest possible business objectives. Is the objective truly to process as many calls as possible? Or is it to satisfy the customer so they need not turn to other channels to get their answers? (More on measurement in the chapter section on xref:continuous-improvement[Continuous Improvement].)
-
- ===== The core IT service management processes
- Change
- Service Request
- Incident
- Problem
-
- There are many more hypothetical... discussed subsequently
-
 
 ===== Project management as coordination
 
@@ -123,7 +52,6 @@ So, what of project management in this new world? A project manager may still be
 
 It is also useful to have a third party who is knowledgeable about the product, yet has some emotional distance from its success. This can be a difficult balance to strike, but the existence of the role of Scrum coach is indicative of its importance.
 
-
 anchor:google-chubby[]
 
 ****
@@ -142,3 +70,31 @@ Because of this, the Chubby team (at least at the time writing of the case study
 
 In short, even the most sophisticated microservice environments may have a dependency on human coordination across the teams.
 ****
+
+===== Process and project
+
+Project management and process management interact in 2 primary ways:
+
+* Projects often are used to create and deploy processes. A large system implementation (e.g. of a Enterprise Resource Planning module such as Human Resource Management) will often be responsible for process implementation including training.
+* As environments mature, product and/or project teams require process support.
+
+As Richardson notes in _Project Management Theory and Practice_, "there are many organizational processes that are needed to optimally support a successful project." <<Richardson2010>> For example, the project may require predictable contractor hiring, or infrastructure provisioning, or security reviews. The same is true for product teams that may not be using a "project" concept to manage their work. To the extent these are managed as repeatable, optimized processes, risk is reduced.
+
+===== Process as coordination
+
+Processes are much more than repeatable activities. Many leading thinkers (such as Michael Porter, quoted at the start of this chapter section) see organizations primarily as sets of interacting processes, supporting fundamental end to end value chains or value streams. We will talk more about this in the next chapter section.
+
+The concept of process is often contrasted with that of function or organization. We have seen in previous chapters how product development and project management must drive results across organizational boundaries. Process management has a similar challenge; its goal is to drive *repeatable* results across organizational boundaries. As we know from our discussion of xref:product-mgmt[Product Management], developing new products is not a particularly repeatable process. The Agile movement in some ways arose in opposition to attempts to apply process concepts of "repeatability" to developing software. These concerns remain. However, this book is not only about digital R&D processes. It is also about a spectrum of operations and effort that spans from the unique to the highly repeatable. There is an interesting middle ground, of processes that are at least semi-repeatable. Examples often found in the large digital organization include:
+
+* Assessing, approving, and completing changes
+* End user equipment provisioning
+* Resolving incidents and answering user inquiries
+* Troubleshooting problems
+
+And many others. We will talk about a wide variety of such processes in the chapter section on process frameworks.
+
+Just as the traditional IT project is under pressure, there are similar challenges for the traditional IT process. Continuous deployment techniques are eroding the need for formal change management. Consumerization is challenging traditional internal IT provisioning practices. And self-service help desks are eliminating some traditional support activities. Nevertheless, any rumors of an "end to process" are probably greatly exaggerated. There will likely always be complex combinations of automated, semi-automated, and manual activity in digital organizations. Some of this activity will be repeatable enough that the "process" construct will be applied to it. Measurability remains a concern; the Lean philosophy underpinning much Agile thought emphasizes this.
+
+It is therefore useful to understand more fundamentally what processes are, how they operate, and how they are managed and improved.
+
+NOTE: In Chapter 10, we will discuss IT governance in depth. The concept of "control" is critical to IT governance, and processes often play an important role in terms of control.
