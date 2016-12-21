@@ -144,6 +144,7 @@ The following descriptions of the layers are typical:
 
 A simple conceptual model might look like this:
 
+.Conceptual data model
 image::images/4_11-conceptual.png[]
 
 The above model might be a fragment from a sales system. It shows that their are four major _entities_:
@@ -155,12 +156,14 @@ The above model might be a fragment from a sales system. It shows that their are
 
 This might be elaborated into a logical model:
 
+.Logical data model
 image::images/4_11-logical.png[]
 
 The logical model includes _attributes_ (Customer First Name). The line between them has particular "adornments" representing a well known data modeling notation called "crow's foot." In this case, the notation is stipulating that one customer may have zero to many invoices, but any invoice must have one and only one customer. Notice also that the entity and attribute names are human-readable.
 
 Then, the logical model might be transformed into physical:
 
+.Physical data model
 image::images/4_11-physical.png[]
 
 The names are no longer human-readable in full, nor do they have spaces. Common data types such as "name" and "date" have been replaced with brief codes ("N" and "DT"). In this form, the physical data model can be (in theory) translated to data definition language that can result in the creation of the necessary database tables.
@@ -181,10 +184,12 @@ IMPORTANT: Notice that this database would only work for regions where customers
 
 The Oracle software is installed on some node or machine, and receives the statement. The database adds the table suggested:
 
+.Database creates table
 image:images/4_11-1stTable.png[]
 
 Further tables can easily be added in the same manner:
 
+.Multiple tables in database
 image:images/4_11-multiTbl.png[]
 
 What is a database in this sense? The important point is that it is a common query space - you can ask for data from either the CUST or INVOICE table, or ask the database to "join" them so you can see data from both. (This is how, for example, we would report on sales by customer.)
