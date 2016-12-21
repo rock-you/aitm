@@ -47,6 +47,7 @@ There are two different kinds of hypervisors. The example we just discussed was 
 
 anchor:containers[]
 
+.Containers
 image::images/1_02-containers.png[containers, 250, , float="right"]
 
 _Paravirtualization_, e.g. containers, is another form of virtualization found in the marketplace. In a paravirtualized environment, a core operating system is able to abstract hardware resources for multiple virtual guest environments without having to virtualize hardware for each guest. The benefit of this type of virtualization is increased input/output (I/O) efficiency and performance for each of the guest environments.
@@ -63,12 +64,14 @@ anchor:virtualization-econ[]
 
 Virtualization attracted business attention as a means to consolidate computing workloads. For years, companies would purchase servers to run applications of various sizes, and in many cases the computers were badly underutilized. Because of configuration issues (legitimate) and an overabundance of caution (questionable), average utilization in a pre-virtualization data center might average 10-20%. (That's 90% of the computer's capacity being wasted.)
 
+.Inefficient utilization
 image::images/1_02-physUtil.png[underutilization, 800, ,]
 
 The above figure is a simplification. Computing and storage infrastructure supporting each application stack in the business were sized to support each workload. For example, a payroll server might run on a different infrastructure configuration than a data warehouse server. Large enterprises needed to support hundreds of different infrastructure configurations, increasing maintenance and support costs.
 
 The adoption of virtualization allowed businesses to compress multiple application workloads onto a smaller number of physical servers:
 
+.Efficiency through virtualization
 image::images/1_02-virtUtil.png[efficient util, 400,,float="left" ]
 
 NOTE: For illustration only. A utilization of 62.5% might actually be a bit too high for comfort, depending on the variability and criticality of the workloads.
