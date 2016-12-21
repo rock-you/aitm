@@ -1,5 +1,22 @@
 ==== Coordination, execution, and the delivery models
 
+
+*** Trad PM
+*** clinical terminology (Reinertsen)
+*** protecting team (pigs & chickens)
+*** release train??
+*** Flow & variability
+*** RACI
+*** risk
+
+shared resources and services
+
+global CoD - process eval
+
+At an execution level, project managers retain important roles and (sometimes re-labeled Scrum masters or release managers) are employed in both traditional and new digital companies as overall orchestrators of complex initiatives.
+
+
+
 It all starts with just "work." The following diagram might help:
 
 image::images/3_09-wrk-prj-proc.png[]
@@ -95,3 +112,23 @@ Product managers should therefore be familiar with the basic concepts of project
 So, what of project management in this new world? A project manager may still be required, to facilitate discussions, record decisions, and keep the team on track to its stated direction and commitments. Regardless of whether the team considers itself "Agile," people are sometimes bad at taking notes or being consistent in their usage of tools such as Kanban boards and standups.
 
 It is also useful to have a third party who is knowledgeable about the product, yet has some emotional distance from its success. This can be a difficult balance to strike, but the existence of the role of Scrum coach is indicative of its importance.
+
+
+anchor:google-chubby[]
+
+****
+*The reality of microservices and loose coupling: the case of Chubby at Google*
+
+The Agile manifesto idea that architecture can "emerge" without explicit coordination (e.g. across a set of smaller grained services ("microservices") is attractive. Coordinating designs across products, services, features and/or components is expensive and ideally products should be able to evolve independently.
+
+Mike Burrows of Google provides a detailed description of the Chubby lock service <<Burrows2006>>, which is a prototypical example of a broadly-available internal service usable by a wide variety of other products.
+
+The purpose of a lock service is to "allow its clients to synchronize their activities and to agree on basic information about their environment." Chubby was built from the start with objectives of reliability, availability to a "moderately large set of clients," and ease of understanding. Burrows notes that even with such a cohesive and well-designed internal service, they still encounter coordination problems requiring human intervention. Such problems include:
+
+* Use ("abuse") in unintended ways by clients
+* Invalid assumptions by clients regarding Chubby's availability
+
+Because of this, the Chubby team (at least at the time writing of the case study) instituted a review process when new clients wished to start using the lock manager. In terms of this chapter's topic, this means that someone on the product team needed to coordinate the discussions with the Chubby team and ensure that any concerns were resolved. This might conceivably have involved multiple iterations and reviews of designs describing intended use.
+
+In short, even the most sophisticated microservice environments may have a dependency on human coordination across the teams.
+****
