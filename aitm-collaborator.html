@@ -1165,11 +1165,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_appendix_project_management">Appendix: Project management</a>
 <ul class="sectlevel3">
-<li><a href="#_project_basics">Project basics</a>
-<ul class="sectlevel4">
-<li><a href="#_a_deeper_look_at_process_modeling">A deeper look at process modeling</a></li>
+<li><a href="#_project_basics">Project basics</a></li>
+</ul>
+</li>
+<li><a href="#_appendix_process_modeling">Appendix: Process modeling</a>
+<ul class="sectlevel3">
 <li><a href="#_process_and_related_terms">Process and related terms</a></li>
-<li><a href="#_process_modeling">Process modeling</a></li>
+<li><a href="#_process_modeling">Process modeling</a>
+<ul class="sectlevel4">
+<li><a href="#_igoe_input_guide_output_enabler">IGOE (Input/Guide/Output/Enabler)</a></li>
+<li><a href="#_ordering_synchronization_and_conditionality">Ordering, synchronization, and conditionality</a></li>
+<li><a href="#_swimlanes">Swimlanes</a></li>
+<li><a href="#_a_final_caution_on_technique">A final caution on technique</a></li>
 </ul>
 </li>
 </ul>
@@ -29443,8 +29450,10 @@ As with other chapters in the later part of this book, we are going to introduce
 <div class="paragraph">
 <p><a id="process-modeling"></a></p>
 </div>
-<div class="sect4">
-<h5 id="_a_deeper_look_at_process_modeling">A deeper look at process modeling</h5>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_appendix_process_modeling">Appendix: Process modeling</h3>
 <div class="paragraph">
 <p>Process management is grounded in business fundamentals. Businesses convert inputs (capital, materials, staff talent) into valuable outputs and generate valuable surplus (margin) for shareholders and other stakeholders.</p>
 </div>
@@ -29454,13 +29463,11 @@ As with other chapters in the later part of this book, we are going to introduce
 <div class="paragraph">
 <p><a id="value-chain"></a></p>
 </div>
-<div class="imageblock">
+<div class="imageblock" style="float: right">
 <div class="content">
-<img src="images/3_09-valCh.png" alt="3 09 valCh">
+<img src="images/3_09-valCh.png" alt="value chain" width="500">
 </div>
-</div>
-<div class="paragraph">
-<p><em>Value Chain similar to <a href="#Porter1998">[Porter1998]</a>.</em></p>
+<div class="title">Figure 179. Value chain <sup class="footnote">[<a id="_footnoteref_88" class="footnote" href="#_footnote_88" title="View footnote.">88</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Note the progression along the bottom: first, raw materials are acquired, then manufactured, then distributed at which point they are marketed and sold, and ultimately serviced. Porter termed this set of activities "Primary." The upper half represents what Porter termed "support." Supporting activities represent necessary, but not value adding, functions.</p>
@@ -29477,9 +29484,8 @@ As with other chapters in the later part of this book, we are going to introduce
 <div class="paragraph">
 <p><a id="process-function"></a></p>
 </div>
-</div>
-<div class="sect4">
-<h5 id="_process_and_related_terms">Process and related terms</h5>
+<div class="sect3">
+<h4 id="_process_and_related_terms">Process and related terms</h4>
 <div class="paragraph">
 <p>The following terms often appear in discussions of process:</p>
 </div>
@@ -29538,6 +29544,7 @@ A <strong>process</strong> is an ordered, countable set of activities; an event-
 <div class="content">
 <img src="images/3_09-chevrons.png" alt="3 09 chevrons">
 </div>
+<div class="title">Figure 180. Chevrons</div>
 </div>
 <div class="paragraph">
 <p>There is no industry standard that definitely lists the concepts above in terms of granularity. Is a "task" larger or smaller than a "procedure?" We will not discuss these much. However, between the high level concept of "value chain" and the concepts of "process" and "activity," is the concept of "<strong>value stream</strong>."  This is a key concept from the Lean community, and is a relatively higher-level concept (a value chain decomposes into value streams, according to some.)</p>
@@ -29555,6 +29562,7 @@ A <strong>process</strong> is an ordered, countable set of activities; an event-
 <div class="content">
 <img src="images/3_09-hier.png" alt="3 09 hier">
 </div>
+<div class="title">Figure 181. Functional hierarchy</div>
 </div>
 <div class="paragraph">
 <p>They may also be represented as nested shapes:</p>
@@ -29563,6 +29571,7 @@ A <strong>process</strong> is an ordered, countable set of activities; an event-
 <div class="content">
 <img src="images/3_09-hier-nested.png" alt="3 09 hier nested">
 </div>
+<div class="title">Figure 182. Nested functions</div>
 </div>
 <div class="paragraph">
 <p>However - and this is an important point - functions do <strong>not</strong> necessarily need to reflect the organizational chart. Often, they are used as a "logical" construct, to help with organizational design.</p>
@@ -29580,6 +29589,7 @@ A <strong>process</strong> is an ordered, countable set of activities; an event-
 <div class="content">
 <img src="images/3_09-hier2.png" alt="3 09 hier2">
 </div>
+<div class="title">Figure 183. Merging organizations</div>
 </div>
 <div class="paragraph">
 <p>This kind of thinking can help the organization evolve over time. If different teams find themselves performing similar activities, a functional analysis might indicate a new organizational structure.</p>
@@ -29641,6 +29651,7 @@ A <strong>process</strong> is an ordered, countable set of activities; an event-
 <div class="content">
 <img src="images/5_04-ProcXFunc.png" alt="5 04 ProcXFunc">
 </div>
+<div class="title">Figure 184. Process crossing functions</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -29693,6 +29704,7 @@ A <strong>process</strong> is an ordered, countable set of activities; an event-
 <div class="content">
 <img src="images/5_04-PXFNamed.png" alt="5 04 PXFNamed">
 </div>
+<div class="title">Figure 185. Silos, white space, and cross-functional process</div>
 </div>
 <div class="paragraph">
 <p>You may notice that the cross functional process is named with an active verb, "Onboard." This is in contrast to the functional silos, which end in "management." This is deliberate and a well-established BPM best practice. "Onboard employee" is event-driven and countable; it has a clear beginning and end and therefore can be measured in various ways. "Human Resource Management", on the other hand, has no beginning or end; it is a steady-state set of organizational concerns and resources.</p>
@@ -29716,13 +29728,14 @@ The idea that processes are active and countable, while functions are passive an
 <div class="content">
 <img src="images/5_04-ProcContext.png" alt="5 04 ProcContext">
 </div>
+<div class="title">Figure 186. Process context</div>
 </div>
 <div class="paragraph">
 <p>There is a rich variety of ways to think about enterprises and their operations at the largest scale. We will return to the question of process context and value chain in the chapter section on process frameworks. For now, we will move to a more detailed level of process modeling, now that we have introduced certain key concepts.</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_process_modeling">Process modeling</h5>
+<div class="sect3">
+<h4 id="_process_modeling">Process modeling</h4>
 <div class="paragraph">
 <p>If you page back through this book, you will see many graphics: some are pictures from real life, while others are conceptual. The practice of communicating concepts through graphical forms has a long history and great breadth of application. If you have access to the Microsoft product Visio, you can get a sense of this through looking at the various templates and solutions:</p>
 </div>
@@ -29730,6 +29743,7 @@ The idea that processes are active and countable, while functions are passive an
 <div class="content">
 <img src="images/5_04-visio.png" alt="5 04 visio">
 </div>
+<div class="title">Figure 187. Process modeling templates</div>
 </div>
 <div class="paragraph">
 <p>The idea that a box can represent an activity or objective, and can be linked in sequence to other boxes though lines, has been around since at least the 1920s. Many different visual languages have been developed over the years for various purposes. Some are highly formalized, others less so. The following definitions may help:</p>
@@ -29797,8 +29811,8 @@ The idea that processes are active and countable, while functions are passive an
 </li>
 </ul>
 </div>
-<div class="sect5">
-<h6 id="_igoe_input_guide_output_enabler">IGOE (Input/Guide/Output/Enabler)</h6>
+<div class="sect4">
+<h5 id="_igoe_input_guide_output_enabler">IGOE (Input/Guide/Output/Enabler)</h5>
 <div class="paragraph">
 <p>A useful framework for thinking about activities represented as icons is the IGOE approach, originated by the Process Renewal Group <a href="#Burlton2001">[Burlton2001]</a>. IGOE stands for:</p>
 </div>
@@ -29822,6 +29836,7 @@ The idea that processes are active and countable, while functions are passive an
 <div class="content">
 <img src="images/5_04-IGOE.png" alt="5 04 IGOE">
 </div>
+<div class="title">Figure 188. IGOE approach</div>
 </div>
 <div class="paragraph">
 <p><strong>Inputs</strong> include the information or event stimulus that initiates the activity. They also include resources that will be consumed in the course of the activity.</p>
@@ -29845,6 +29860,7 @@ The idea that processes are active and countable, while functions are passive an
 <div class="content">
 <img src="images/5_04-IGOE2.png" alt="5 04 IGOE2">
 </div>
+<div class="title">Figure 189. Functional relationships</div>
 </div>
 <div class="paragraph">
 <p>However, there is not a clear sense of the events, since the primary objects are still the functions. There also is the temptation to insert extraneous information, as indicated in the line between Facilities Management and IT Asset Management labeled "Provides space for ??".</p>
@@ -29853,8 +29869,8 @@ The idea that processes are active and countable, while functions are passive an
 <p>It is true that Facilities Management does provide space for the IT Asset Management Team (in fact, all of these functions provide services to each other), but to draw this would result in a "spaghetti" diagram with several dozen lines and not much explanatory power. Purely functional modeling of this nature is therefore limited in usefulness, although it can be a good place to start.</p>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_ordering_synchronization_and_conditionality">Ordering, synchronization, and conditionality</h6>
+<div class="sect4">
+<h5 id="_ordering_synchronization_and_conditionality">Ordering, synchronization, and conditionality</h5>
 <div class="paragraph">
 <p>Activities in process modeling, by contrast, emphasize active verbs:</p>
 </div>
@@ -29884,6 +29900,7 @@ The idea that processes are active and countable, while functions are passive an
 <div class="content">
 <img src="images/5_04-ordering1.png" alt="5 04 ordering1">
 </div>
+<div class="title">Figure 190. Basic ordering</div>
 </div>
 <div class="paragraph">
 <p>Notice these activities align to the overall cross-functional flow we discussed above:</p>
@@ -29892,6 +29909,7 @@ The idea that processes are active and countable, while functions are passive an
 <div class="content">
 <img src="images/5_04-ordering2.png" alt="5 04 ordering2">
 </div>
+<div class="title">Figure 191. Ordered process across silos</div>
 </div>
 <div class="paragraph">
 <p>However, we encounter a complication. In order to describe this process accurately, we should note that some people do not have space assigned, if they are primarily telecommuting and/or working in "hoteling" space. We want to show a decision point, which in many notations is represented by a diamond.</p>
@@ -29900,6 +29918,7 @@ The idea that processes are active and countable, while functions are passive an
 <div class="content">
 <img src="images/5_04-ordering4.png" alt="5 04 ordering4">
 </div>
+<div class="title">Figure 192. Decision point</div>
 </div>
 <div class="paragraph">
 <p>Finally, this ordering is taking too long, because people are waiting for space to be assigned before doing anything else. This is a well understood problem; processes can branch and run in parallel (you may well be writing code that works this way; human processes also do this). In UML, the term is "fork" for when processes diverge to run in parallel, and "join" when they must again synchronize for the next activity to continue:</p>
@@ -29908,13 +29927,14 @@ The idea that processes are active and countable, while functions are passive an
 <div class="content">
 <img src="images/5_04-ordering3.png" alt="5 04 ordering3">
 </div>
+<div class="title">Figure 193. Forking and joining</div>
 </div>
 <div class="paragraph">
 <p>In the above diagram, we see that 3 activities (including the decision point) can commence independently when the employee is hired, but network access requires that the employee have both an entry in the enterprise directory, as well as their hardware supplied. The entire process is complete when their space, equipment, and access needs have been met.</p>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_swimlanes">Swimlanes</h6>
+<div class="sect4">
+<h5 id="_swimlanes">Swimlanes</h5>
 <div class="paragraph">
 <p>We made much of the fact that processes cross functions, and yet with our final diagram we have lost our view of this fact. We can re-introduce the functional boundaries through the use of swimlanes (pioneered by Rummler in <a href="#Rummler1995">[Rummler1995]</a>):</p>
 </div>
@@ -29922,6 +29942,7 @@ The idea that processes are active and countable, while functions are passive an
 <div class="content">
 <img src="images/5_04-swimlanes.png" alt="5 04 swimlanes">
 </div>
+<div class="title">Figure 194. Complex flow across swimlanes</div>
 </div>
 <div class="paragraph">
 <p>Adding the swimlanes helps us understand the cross-functional handoffs, and also where certain activities will remain within the scope of one function. Another interesting, finer point is the question of the synch points. Observe the synch point in the Network Management swimlane. Its presence implies that the Network Management function must confirm that the employee has equipment and a directory in the enterprise directory.</p>
@@ -29930,8 +29951,8 @@ The idea that processes are active and countable, while functions are passive an
 <p>You may notice that this diagram has been "rotated." The diagram was becoming too long if drawn left to right. UML Activity Diagrams frequently use a top-to-bottom approach. The meaning of the diagram is not changed.</p>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_a_final_caution_on_technique">A final caution on technique</h6>
+<div class="sect4">
+<h5 id="_a_final_caution_on_technique">A final caution on technique</h5>
 <div class="paragraph">
 <p>The techniques briefly discussed here can be applied and combined in many different ways, and result in models of large scope and complexity. However there are crucial limitations to visual representations of complexity.</p>
 </div>
@@ -29940,7 +29961,6 @@ The idea that processes are active and countable, while functions are passive an
 </div>
 <div class="paragraph">
 <p>With the above discussion, we have covered in a summary form the basics of business process modeling. In the next section on Agile and process management, we will discuss various process pitfalls and appropriate Agile and Lean responses.</p>
-</div>
 </div>
 </div>
 </div>
@@ -31253,6 +31273,9 @@ Cost of Delay</pre>
 </div>
 <div class="footnote" id="_footnote_87">
 <a href="#_footnoteref_87">87</a>. <em>Image credit <a href="https://www.flickr.com/photos/cynren/16011788979" class="bare">https://www.flickr.com/photos/cynren/16011788979</a>, downloaded 2016-10-23, commercial use permitted</em>
+</div>
+<div class="footnote" id="_footnote_88">
+<a href="#_footnoteref_88">88</a>. Similar to <a href="#Porter1998">[Porter1998]</a>
 </div>
 </div>
 <div id="footer">
