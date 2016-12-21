@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.5">
+<meta name="generator" content="Asciidoctor 1.5.4">
 <meta name="author" content="Charles T. Betz">
 <title>The digital professional: from startup to enterprise  (Student Edition)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -18,6 +18,7 @@ audio:not([controls]){display:none;height:0}
 [hidden],template{display:none}
 script{display:none!important}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{margin:0}
 a{background:transparent}
 a:focus{outline:thin dotted}
 a:active,a:hover{outline:0}
@@ -52,7 +53,7 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -64,6 +65,7 @@ img{-ms-interpolation-mode:bicubic}
 .text-center{text-align:center!important}
 .text-justify{text-align:justify!important}
 .hide{display:none}
+body{-webkit-font-smoothing:antialiased}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
@@ -118,16 +120,13 @@ table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
 table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+body{tab-size:4}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
 .clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
 .clearfix:after,.float-group:after{clear:both}
-*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
-*:not(pre)>code.nobreak{word-wrap:normal}
-*:not(pre)>code.nowrap{white-space:nowrap}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
 pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
-em em{font-style:normal}
-strong strong{font-weight:400}
 .keyseq{color:rgba(51,51,51,.8)}
 kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
@@ -852,6 +851,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_planning_and_estimating">Planning and estimating</a>
 <ul class="sectlevel4">
+<li><a href="#_scaling_to_more_than_one_product">Scaling to more than one product</a></li>
 <li><a href="#_planning_techniques">Planning techniques</a></li>
 </ul>
 </li>
@@ -6329,7 +6329,7 @@ As a field, product management has a professional association, the <a href="http
 <div class="sect4">
 <h5 id="_productization_as_a_strategy_at_amazon">Productization as a strategy at Amazon</h5>
 <div class="paragraph">
-<p>Amazon (the online bookseller) is an important influence in the modern trend towards product-centric IT management. First, the founder Jeff Bezos mandated that all software development should be <a href="http://apievangelist.com/2012/01/12/the-secret-to-amazons-success-internal-apis/">service-oriented</a>, and assume that the functionality being built might at some point be offered to external customers <a href="#Lane2012">[Lane2012]</a>.</p>
+<p>Amazon (the online bookseller) is an important influence in the modern trend towards product-centric IT management. First, the founder Jeff Bezos mandated that all software development should be <a href="http://apievangelist.com/2012/01/12/the-secret-to-amazons-success-internal-apis/">service-oriented</a>. That means that some form of standard API (Application Programming Interface) was required for all application to communicate with each other. (By some accounts, Bezos threatened to fire anyone who did not do this <a href="#Lane2012">[Lane2012]</a>.) Second, all teams are to assume that the functionality being built might at some point be offered to external customers <a href="#Lane2012">[Lane2012]</a>.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -8873,13 +8873,10 @@ For a manufacturer, reducing variability always improves manufacturing economics
 <div class="title">Figure 71. A Boeing 747 checklist <sup class="footnote">[<a id="_footnoteref_37" class="footnote" href="#_footnote_37" title="View footnote.">37</a>]</sup></div>
 </div>
 <div class="paragraph">
-<p>The Checklist Manifesto is the name of a notable book by author/surgeon Atul Gawande <a href="#Gawande2010">[Gawande2010]</a>. The title can be misleading; the book in no way suggests that all work can be reduced to repeatable checklists. Instead, it is another in depth examination of the  relationship between standardization and complexity. Like case management, it addresses the problem of complex activities requiring professional judgement.</p>
+<p>The Checklist Manifesto is the name of a notable book by author/surgeon Atul Gawande <a href="#Gawande2010">[Gawande2010]</a>. The title can be misleading; the book in no way suggests that all work can be reduced to repeatable checklists. Instead, it is an in depth examination of the  relationship between standardization and complexity. Like case management, it addresses the problem of complex activities requiring professional judgement.</p>
 </div>
 <div class="paragraph">
-<p>Unlike case management (discussed below), it explores more time-limited and often urgent activities such as flight operations, large scale construction, and surgery. These activities, as a whole, cannot be reduced to one master process; there is too much variation and complexity.</p>
-</div>
-<div class="paragraph">
-<p>However, within the overall bounds of flight operations, or construction, or surgery, there are critical sequences of events that MUST be executed, often in a specific order. Gawande discusses the airline industry as a key exemplar of this. Instead of one "master checklist" there are specific, clear, brief checklists for a wide variety of scenarios, such as a cargo hold door becoming unlatched.</p>
+<p>Unlike case management (discussed below), it explores more time-limited and often urgent activities such as flight operations, large scale construction, and surgery. These activities, as a whole, cannot be reduced to one master process; there is too much variation and complexity. However, within the overall bounds of flight operations, or construction, or surgery, there are critical sequences of events that MUST be executed, often in a specific order. Gawande discusses the airline industry as a key exemplar of this. Instead of one "master checklist" there are specific, clear, brief checklists for a wide variety of scenarios, such as a cargo hold door becoming unlatched.</p>
 </div>
 <div class="paragraph">
 <p>There are similarities and differences between core BPM approaches and checklists. Often, business process management is employed to describe processes that are automated and whose progress is tracked in a database. Checklists, on the other hand, may be more manual, intended for use in a closely collaborative environment (such as a an aircraft cockpit or operating room), and may represent a briefer period of time.</p>
@@ -8912,6 +8909,7 @@ Do not confuse "Case" here with Computer Assisted Software Engineering.
 <div class="content">
 <img src="images/2_05-casemgmt.png" alt="2 05 casemgmt">
 </div>
+<div class="title">Figure 72. Process management versus case management</div>
 </div>
 <div class="paragraph">
 <p>To quote the Workflow Management Coalition:</p>
@@ -9073,7 +9071,7 @@ Do not confuse "Case" here with Computer Assisted Software Engineering.
 <div class="content">
 <img src="images/2_06-operations-atos.jpg" alt="Operations center" width="640">
 </div>
-<div class="title">Figure 72. Olympic operations center <sup class="footnote">[<a id="_footnoteref_38" class="footnote" href="#_footnote_38" title="View footnote.">38</a>]</sup></div>
+<div class="title">Figure 73. Olympic operations center <sup class="footnote">[<a id="_footnoteref_38" class="footnote" href="#_footnote_38" title="View footnote.">38</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>As your product gains more use, you find that running it inevitably becomes a distinct concern from building it. For all their logic, computers are still surprisingly unreliable. Servers running well tested software may remain "up" for weeks, and then all of a sudden hang and have to be rebooted. Sometimes it&#8217;s clear why (for example, a log file filled up that no-one expected) and in other cases there just is no explanation.</p>
@@ -9221,7 +9219,7 @@ Do not confuse "Case" here with Computer Assisted Software Engineering.
 <div class="content">
 <img src="images/2_06-NOC.jpg" alt="network operations center" width="400" height="200">
 </div>
-<div class="title">Figure 73. Network operations center <sup class="footnote">[<a id="_footnoteref_39" class="footnote" href="#_footnote_39" title="View footnote.">39</a>]</sup></div>
+<div class="title">Figure 74. Network operations center <sup class="footnote">[<a id="_footnoteref_39" class="footnote" href="#_footnote_39" title="View footnote.">39</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>What do we mean by operations? Operations management is a broad topic in management theory, with whole programs dedicated to it in both business and engineering schools. Companies frequently hire Chief Operations Officers to run the organization. We started to cover operations management in chapter 5, as we examined the topic of “work management” - in traditional operations management, the question of work and who is doing it is critical. For the digital professional, “operations” tends to have a more technical meaning than the classic business definition, being focused on the immediate questions of systems integrity, availability and performance, and feedback from the user community (i.e., the service or help desk). We see such a definition from Limoncelli et al:</p>
@@ -9248,7 +9246,7 @@ In a digitally transformed enterprise, Operations is part of the Product.
 <div class="content">
 <img src="images/2_06-2-axis-ops.png" alt="2 axis value chain" width="400">
 </div>
-<div class="title">Figure 74. Operations supports the digital moment of truth</div>
+<div class="title">Figure 75. Operations supports the digital moment of truth</div>
 </div>
 <div class="paragraph">
 <p>Since we have a somewhat broader point of view covering all of digital management, for this chapter we&#8217;ll use the following definition of operations:</p>
@@ -9273,7 +9271,7 @@ In a digitally transformed enterprise, Operations is part of the Product.
 <div class="content">
 <img src="images/2_06-call-ctr.jpg" alt="alt text" width="350" height="200">
 </div>
-<div class="title">Figure 75. Call center operators <sup class="footnote">[<a id="_footnoteref_40" class="footnote" href="#_footnote_40" title="View footnote.">40</a>]</sup></div>
+<div class="title">Figure 76. Call center operators <sup class="footnote">[<a id="_footnoteref_40" class="footnote" href="#_footnote_40" title="View footnote.">40</a>]</sup></div>
 </div>
 <div class="ulist">
 <ul>
@@ -9292,7 +9290,7 @@ In a digitally transformed enterprise, Operations is part of the Product.
 <div class="content">
 <img src="images/2_06-field-tech-sm.jpg" alt="alt text" width="250" height="200">
 </div>
-<div class="title">Figure 76. Field technician <sup class="footnote">[<a id="_footnoteref_41" class="footnote" href="#_footnote_41" title="View footnote.">41</a>]</sup></div>
+<div class="title">Figure 77. Field technician <sup class="footnote">[<a id="_footnoteref_41" class="footnote" href="#_footnote_41" title="View footnote.">41</a>]</sup></div>
 </div>
 <div class="ulist">
 <ul>
@@ -9509,7 +9507,7 @@ Telemetry is an automated communications process by which measurements are made 
 <div class="content">
 <img src="images/2_06-monitoring-1.png" alt="application server and monitor" width="400">
 </div>
-<div class="title">Figure 77. Simple monitoring</div>
+<div class="title">Figure 78. Simple monitoring</div>
 </div>
 <div class="paragraph">
 <p>But how does one “observe” computing infrastructure? Clearly, sitting in the data center (assuming you could get in) and looking at the lights on the faces of servers will not convey much useful information, beyond whether they are off or on. Monitoring tools are the software that watches the software (and systems more broadly).</p>
@@ -9521,7 +9519,7 @@ Telemetry is an automated communications process by which measurements are made 
 <div class="content">
 <img src="images/2_06-monitoring-2.png" alt="application server and monitor" width="500">
 </div>
-<div class="title">Figure 78. Extended monitoring</div>
+<div class="title">Figure 79. Extended monitoring</div>
 </div>
 <div class="paragraph">
 <p>More broadly, these tools provide a variety of mechanisms for monitoring and controlling operational IT systems; they may monitor:</p>
@@ -9555,7 +9553,7 @@ Telemetry is an automated communications process by which measurements are made 
 <div class="content">
 <img src="images/2_06-monitoring-3.png" alt="application server and monitor" width="350">
 </div>
-<div class="title">Figure 79. User experience monitoring</div>
+<div class="title">Figure 80. User experience monitoring</div>
 </div>
 <div class="paragraph">
 <p>Some monitoring covers low level system indicators not usually of direct interest to the end user. Other simulates end user experience; service level agreements are often defined in terms of the response time as experienced by the end user. See <a href="#Limoncelli2014">[Limoncelli2014]</a>, chapters 16-17.</p>
@@ -9579,7 +9577,7 @@ Monitoring systems are similar to source control systems in that they are a crit
 <div class="content">
 <img src="images/2_06-config-mon.png" alt="relationship illustration" width="500">
 </div>
-<div class="title">Figure 80. Configuration, monitoring, and element managers</div>
+<div class="title">Figure 81. Configuration, monitoring, and element managers</div>
 </div>
 <div class="paragraph">
 <p>Related to monitoring tools is the concept of an element manager. Element managers are low-level tools for managing various classes of digital or IT infrastructure. For example, Cisco provides software for managing network infrastructure, and EMC provides software for managing its storage arrays. Microsoft provides a variety of tools for managing various Windows components. Notice that such tools often play a dual role, in that they can both change the infrastructure configuration as well as report on its status. Many however are reliant on graphical user interfaces, which are falling out of favor as a basis for configuring infrastructure.</p>
@@ -9609,7 +9607,7 @@ ing platforms and systems.
 <div class="content">
 <img src="images/2_06-monitoring-4.png" alt="custom monitoring" width="500">
 </div>
-<div class="title">Figure 81. Custom software requires custom monitoring</div>
+<div class="title">Figure 82. Custom software requires custom monitoring</div>
 </div>
 <div class="paragraph">
 <p>A typical way to enable custom monitoring is to first use a standard logging library as part of the software development process. The logging library provides a consistent interface for the developer to create informational and error messages. Often, multiple "levels" of logging are seen, some more verbose than others. The monitoring tool is then configured to scan the logs for certain information. For example, if the application writes:</p>
@@ -9632,7 +9630,7 @@ ing platforms and systems.
 <div class="content">
 <img src="images/2_06-monitoring-5.png" alt="aggregation" width="300">
 </div>
-<div class="title">Figure 82. Aggregated monitoring</div>
+<div class="title">Figure 83. Aggregated monitoring</div>
 </div>
 <div class="paragraph">
 <p>It is not possible for a 24 x 7 operations team to access and understand the myriads of element managers and specialized monitoring tools present in the large IT environment. Instead, these teams rely on aggregators of various kinds to provide an integrated view into the complexity. These aggregators may focus on  status events, or specifically on performance aspects related either to the elements or to logical transactions flowing across them. They may incorporate dependencies from configuration management to provide a true “business view” into the event streams. This is directly analogous to the concept of <a href="#andon">Andon</a> board from Lean practices, or the idea of “information radiator” from Agile principles.</p>
@@ -9799,7 +9797,7 @@ ing platforms and systems.
 <div class="content">
 <img src="images/2_06-BlackFriday.jpg" alt="alt text" width="400" height="200">
 </div>
-<div class="title">Figure 83. Black Friday at Macy&#8217;s <sup class="footnote">[<a id="_footnoteref_42" class="footnote" href="#_footnote_42" title="View footnote.">42</a>]</sup></div>
+<div class="title">Figure 84. Black Friday at Macy&#8217;s <sup class="footnote">[<a id="_footnoteref_42" class="footnote" href="#_footnote_42" title="View footnote.">42</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>The classic example of significant capacity utilization is the <a href="https://en.wikipedia.org/wiki/Black_Friday_(shopping)">Black Friday/Cyber Monday</a> experience of retailers. Both physical store and online ecommerce systems are placed under great strain annually around this time, with the year&#8217;s profits potentially on the line.</p>
@@ -9846,7 +9844,7 @@ and work up from there as the arguments dictate" <a href="#Abbott2015">[Abbott20
 <div class="content">
 <img src="images/2_06-commstack.png" alt="comms channels" width="300">
 </div>
-<div class="title">Figure 84. Layered communications channels</div>
+<div class="title">Figure 85. Layered communications channels</div>
 </div>
 <div class="paragraph">
 <p>The digital components send events to the monitoring layer, which filters them for significant concerns, for example a <a href="#custom-monitoring">serious application failure</a>. The monitoring tool might automatically create a ticket, or perhaps it first provides an alert to the systems operators, who might instant message each other, or perhaps join a chat room.</p>
@@ -10042,7 +10040,7 @@ Unfortunately, because of misinformation and hype, many people believe that the 
 <div class="content">
 <img src="images/2_06-CAP-triangle.png" alt="alt text" width="300" height="200">
 </div>
-<div class="title">Figure 85. CAP principle</div>
+<div class="title">Figure 86. CAP principle</div>
 </div>
 <div class="paragraph">
 <p>Scaling digital systems used to imply acquiring faster and more powerful hardware and software. If a 4-core server with 8 gigabytes of RAM isn&#8217;t enough, get a 32-core server with 256 gB of RAM (and upgrade your database software accordingly, for millions of dollars more). This kind of scaling is termed "vertical" scaling. However, web-scale companies such as Facebook and Google determined that this would not work indefinitely. Infinitely scaling vertically is not physically (or financially) possible. Instead, these companies began to experiment aggressively with using large numbers of inexpensive commodity computers.</p>
@@ -10103,7 +10101,7 @@ Unfortunately, because of misinformation and hype, many people believe that the 
 <div class="content">
 <img src="images/2_06-akf.png" alt="alt text" width="400" height="200">
 </div>
-<div class="title">Figure 86. AKF scaling cube <sup class="footnote">[<a id="_footnoteref_43" class="footnote" href="#_footnote_43" title="View footnote.">43</a>]</sup></div>
+<div class="title">Figure 87. AKF scaling cube <sup class="footnote">[<a id="_footnoteref_43" class="footnote" href="#_footnote_43" title="View footnote.">43</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Another powerful tool for thinking about scaling systems is the AKF Scaling Cube. AKF stands for Abbott, Keeven, and Fisher, authors of <em>The Art of Scalability</em> <a href="#Abbott2015">[Abbott2015]</a>. The AKF cube is a visual representation of the three basic options for scaling a system:</p>
@@ -10125,7 +10123,7 @@ Unfortunately, because of misinformation and hype, many people believe that the 
 <div class="content">
 <img src="images/2_06-POS.jpg" alt="alt text" width="400" height="200">
 </div>
-<div class="title">Figure 87. Point of sale terminals - horizontal scale <sup class="footnote">[<a id="_footnoteref_44" class="footnote" href="#_footnote_44" title="View footnote.">44</a>]</sup></div>
+<div class="title">Figure 88. Point of sale terminals - horizontal scale <sup class="footnote">[<a id="_footnoteref_44" class="footnote" href="#_footnote_44" title="View footnote.">44</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>A <strong>complete system replica</strong> is similar to the Point of Sale terminals in a retailer. Each is a self-contained system with all the data it needs to handle typical transactions. POS terminals do not depend on each other and therefore you can keep increasing the capacity of your store&#8217;s checkout lines by simply adding more fo them.</p>
@@ -10137,7 +10135,7 @@ Unfortunately, because of misinformation and hype, many people believe that the 
 <div class="content">
 <img src="images/2_06-registration.jpg" alt="alt text" width="450" height="200">
 </div>
-<div class="title">Figure 88. Partitioning by data range at a conference <sup class="footnote">[<a id="_footnoteref_45" class="footnote" href="#_footnote_45" title="View footnote.">45</a>]</sup></div>
+<div class="title">Figure 89. Partitioning by data range at a conference <sup class="footnote">[<a id="_footnoteref_45" class="footnote" href="#_footnote_45" title="View footnote.">45</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p><strong>Data splitting</strong> is the concept of "partitioning" from the CAP discussion, above. Have you ever checked into a large event, and the first thing you see is check-in stations divided by alphabet range? For example:</p>
@@ -10294,7 +10292,7 @@ In computer science and automata theory, the state of a digital logic circuit or
 <div class="content">
 <img src="images/2_06-environments.png" alt="environments" width="720">
 </div>
-<div class="title">Figure 89. Example environment pipeline</div>
+<div class="title">Figure 90. Example environment pipeline</div>
 </div>
 <div class="paragraph">
 <p>There is nothing sacred about the environments listed above. You will see many variations, especially at scale.</p>
@@ -10563,7 +10561,7 @@ SRE is what happens when you ask a software engineer to design an operations tea
 <div class="content">
 <img src="images/3_00-team-of-teams.jpg" alt="Large meeting" width="500" height="200">
 </div>
-<div class="title">Figure 90. All hands meeting at NASA Goddard <sup class="footnote">[<a id="_footnoteref_46" class="footnote" href="#_footnote_46" title="View footnote.">46</a>]</sup></div>
+<div class="title">Figure 91. All hands meeting at NASA Goddard <sup class="footnote">[<a id="_footnoteref_46" class="footnote" href="#_footnote_46" title="View footnote.">46</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p><strong>Scenario</strong></p>
@@ -10782,13 +10780,56 @@ here&#8217;s a general warning: Avoid large projects. Start small and quickly de
 <div class="content">
 <img src="images/3_00-PartIIOverview.png" alt="risk curve" width="400">
 </div>
-<div class="title">Figure 91. Part II: increasing certainty <sup class="footnote">[<a id="_footnoteref_47" class="footnote" href="#_footnote_47" title="View footnote.">47</a>]</sup></div>
+<div class="title">Figure 92. Part II: increasing certainty (credit to Cantor) <sup class="footnote">[<a id="_footnoteref_47" class="footnote" href="#_footnote_47" title="View footnote.">47</a>]</sup></div>
 </div>
 <div class="paragraph">
-<p>The two dimension model above does not describe how uncertain work is, however. The predictability of the work is also independent. You might have two projects, both taking the same effort. One of them you were able to predict easily, while the other one was not predictable - more precisely, your expected time, effort and cost was a long way off from what you wound up spending. (Usually in an unfavorable direction.)</p>
+<p>The two dimensional model above does not describe how uncertain work is, however. The predictability of the work is also independent. You might have two projects, both taking the same effort. One of them you were able to predict easily, while the other one was not predictable - more precisely, your expected time, effort and cost was a long way off from what you wound up spending. (Usually in an unfavorable direction.)</p>
 </div>
 <div class="paragraph">
 <p>Part II (Chapters 4-6, which we just finished) can be viewed as a logical progression from the uncertainty of developing a novel product, to the day to day work of building its features, to its predictable operation. The "predictability curve" illustrated in the associated figure increases as the digital product stabilizes and moves to a fully operational state.</p>
+</div>
+<div class="paragraph">
+<p>This question of predictability, of <strong>the degree to which actuals track estimates</strong> and can be known in advance, will be an ongoing theme throughout Part III. As we scale up, our organization takes on more and more work of all kinds, from highly uncertain to very predictable. Understanding the differences in this "portfolio" of work is essential to managing it correctly. There has always been an element of risk; as a startup, your success was not guaranteed! You now find that you are managing different classes of risk simultaneously, and "one size fits all" approaches do not work.</p>
+</div>
+<div class="paragraph">
+<p>You might have a program to upgrade the memory on 80,000 identical Point of Sale terminals across 2,000 retail stores. It&#8217;s going to take a lot of work; you&#8217;ll be "rolling trucks" in all 50 states! But you are sure that you can estimate this work with a high degree of accuracy; it has high predictability. In Cynefin terms, it&#8217;s an obvious problem. On the other hand, creating a completely new Point of Sale system for your stores is an unpredictable effort. Your original estimate for this large program might be off by orders of magnitude. Its predictability is low. It&#8217;s a complex problem.</p>
+</div>
+<div class="paragraph">
+<p>Or perhaps you are writing reports using a well understood database and reporting tool. This work will be likely more predictable work&#8201;&#8212;&#8201;even if complicated in the Cynefin sense&#8201;&#8212;&#8201;as compared to developing the first few stories on a completely new architecture. This is true even if the estimated size of the work is the same for both the reports and the new stories. As a dimension, variability is <strong>independent of the size of the work</strong> (although the two may be correlated).</p>
+</div>
+<div class="paragraph">
+<p><a id="betz-org-scale-cube"></a></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_the_betz_organizational_scaling_cube">The Betz organizational scaling cube</h4>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img src="images/3_01-newCube.png" alt="3d cube" width="500">
+</div>
+<div class="title">Figure 93. Betz organization scaling cube <sup class="footnote">[<a id="_footnoteref_48" class="footnote" href="#_footnote_48" title="View footnote.">48</a>]</sup></div>
+</div>
+<div class="paragraph">
+<p>When we combine the three dimensions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Size of work;</p>
+</li>
+<li>
+<p>Time horizon; and</p>
+</li>
+<li>
+<p>Predictability</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>we get the Betz organizational scaling cube. It shows the three dimensions we&#8217;ll consider throughout Part III. The accompanying cube shows these dimensions visually. It will be applied to examples in subsequent sections. The three dimensions represent a space to understand work, resource, and planning as we scale the organization.</p>
+</div>
+<div class="paragraph">
+<p>The z-axis of variability can be seen as a progression along the first four <a href="#cynefin">Cynefin</a> domains (see sidebar). At the origin at lower left, we have predictable, small-grained work occurring in short "planning" horizons (e.g. automated transactions running on computers.) As we scale out to larger domains of work, longer time frames, and greater variability in planning, we encounter the problems of growth, coordination, strategy, and the fundamental uncertainties of operating in a chaotic, competitive world.</p>
 </div>
 <div class="paragraph">
 <p><a id="cynefin"></a></p>
@@ -10796,6 +10837,12 @@ here&#8217;s a general warning: Avoid large projects. Start small and quickly de
 <div class="sidebarblock">
 <div class="content">
 <div class="title">Snowden&#8217;s Cynefin framework</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img src="images/3_01-cynefin.png" alt="cynefin" width="300">
+</div>
+<div class="title">Figure 94. Cynefin thinking framework <sup class="footnote">[<a id="_footnoteref_49" class="footnote" href="#_footnote_49" title="View footnote.">49</a>]</sup></div>
+</div>
 <div class="paragraph">
 <p>This third dimension of variability is challenging to understand and touches on our earlier discussion of <a href="#systems-thinking">systems thinking</a>. A helpful framework to understand it is the Cynefin framework, by Dave Snowden and Cynthia Kurtz <a href="#Kurtz2003">[Kurtz2003]</a>. Cynefin proposes that there are five major domains useful in understanding situations:</p>
 </div>
@@ -10821,11 +10868,11 @@ here&#8217;s a general warning: Avoid large projects. Start small and quickly de
 <div class="paragraph">
 <p>The <strong>simple or obvious</strong> domain is straightforward, repeatable, and cause and effect are known. The concept of "best practice" applies. The mode of action is to sense, categorize, and respond.</p>
 </div>
-<div class="imageblock" style="float: left">
+<div class="imageblock" style="float: right">
 <div class="content">
-<img src="images/3_01-cynefin.png" alt="cynefin" width="300">
+<img src="images/3_01-variability-cynefin.png" alt="variability vector" width="260">
 </div>
-<div class="title">Figure 92. Cynefin thinking framework <sup class="footnote">[<a id="_footnoteref_48" class="footnote" href="#_footnote_48" title="View footnote.">48</a>]</sup></div>
+<div class="title">Figure 95. Variability as Cynefin domains</div>
 </div>
 <div class="paragraph">
 <p>The <strong>complicated</strong> domain requires analysis and expertise; there may be several right or at least serviceable answers. Rational thought is possible and cause and effect relationships may be more challenging to understand, but still are applicable. Mode of action is to sense, analyze, and respond.</p>
@@ -10840,55 +10887,6 @@ here&#8217;s a general warning: Avoid large projects. Start small and quickly de
 <p>Finally, <strong>disorder</strong> is considered to be the domain you&#8217;re in when you have not figured out which of the other four applies.</p>
 </div>
 </div>
-</div>
-<div class="paragraph">
-<p>This question of predictability, of <strong>the degree to which actuals track estimates</strong> and can be known in advance, will be an ongoing theme throughout Part III. As we scale up, our organization takes on more and more work of all kinds, from highly uncertain to very predictable. Understanding the differences in this "portfolio" of work is essential to managing it correctly. There has always been an element of risk; as a startup, your success was not guaranteed! You now find that you are managing different classes of risk simultaneously, and "one size fits all" approaches do not work.</p>
-</div>
-<div class="paragraph">
-<p>You might have a program to upgrade the memory on 80,000 identical Point of Sale terminals across 2,000 retail stores. It&#8217;s going to take a lot of work; you&#8217;ll be "rolling trucks" in all 50 states! But you are sure that you can estimate this work with a high degree of accuracy; it has high predictability. In Cynefin terms, it&#8217;s an obvious problem. On the other hand, creating a completely new Point of Sale system for your stores is an unpredictable effort. Your original estimate for this large program might be off by orders of magnitude. Its predictability is low. It&#8217;s a complex problem.</p>
-</div>
-<div class="paragraph">
-<p>Or perhaps you are writing reports using a well understood database and reporting tool. This work will be likely more predictable work&#8201;&#8212;&#8201;even if complicated in the Cynefin sense&#8201;&#8212;&#8201;as compared to developing the first few stories on a completely new architecture. This is true even if the estimated size of the work is the same for both the reports and the new stories. As a dimension, variability is <strong>independent of the size of the work</strong> (although the two may be correlated).</p>
-</div>
-<div class="paragraph">
-<p><a id="betz-org-scale-cube"></a></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_the_betz_organizational_scaling_cube">The Betz organizational scaling cube</h4>
-<div class="imageblock" style="float: right">
-<div class="content">
-<img src="images/3_01-newCube.png" alt="3d cube" width="500">
-</div>
-<div class="title">Figure 93. Betz organization scaling cube <sup class="footnote">[<a id="_footnoteref_49" class="footnote" href="#_footnote_49" title="View footnote.">49</a>]</sup></div>
-</div>
-<div class="paragraph">
-<p>When we combine the three dimensions:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Size of work;</p>
-</li>
-<li>
-<p>Time horizon; and</p>
-</li>
-<li>
-<p>Predictability</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>we get the Betz organizational scaling cube. It shows the three dimensions we&#8217;ll consider throughout Part III. The accompanying cube shows these dimensions visually. It will be applied to examples in subsequent sections. The three dimensions represent a space to understand work, resource, and planning as we scale the organization.</p>
-</div>
-<div class="paragraph">
-<p>The z-axis of variability can be seen as a progression along the first four <a href="#cynefin">Cynefin</a> domains (see sidebar). At the origin at lower left, we have predictable, small-grained work occurring in short "planning" horizons (e.g. automated transactions running on computers.) As we scale out to larger domains of work, longer time frames, and greater variability in planning, we encounter the problems of growth, coordination, strategy, and the fundamental uncertainties of operating in a chaotic, competitive world.</p>
-</div>
-<div class="imageblock" style="float: right">
-<div class="content">
-<img src="images/3_01-variability-cynefin.png" alt="variability vector" width="260">
-</div>
-<div class="title">Figure 94. Variability as Cynefin domains</div>
 </div>
 <div class="paragraph">
 <p><a id="demand-supply-execute"></a></p>
@@ -10914,7 +10912,7 @@ execution (n.) 14c., "a carrying out, a putting into effect; enforcement; perfor
 <div class="content">
 <img src="images/3_01-DSE.png" alt="dse model" width="800">
 </div>
-<div class="title">Figure 95. Demand-supply-execute model</div>
+<div class="title">Figure 96. Demand-supply-execute model</div>
 </div>
 <div class="paragraph">
 <p>Bottom to top, this diagram tells a story of demand and supply as they progress through increasingly refined understandings to the specific execution of work and delivery of value.</p>
@@ -10941,7 +10939,7 @@ execution (n.) 14c., "a carrying out, a putting into effect; enforcement; perfor
 <div class="content">
 <img src="images/3_01-chapStruc.png" alt="pyramid" width="420">
 </div>
-<div class="title">Figure 96. Part III Chapter structure</div>
+<div class="title">Figure 97. Part III Chapter structure</div>
 </div>
 <div class="paragraph">
 <p>In thinking about how organizations develop as they scale, it is helpful to consider various time frames:</p>
@@ -11024,7 +11022,7 @@ execution (n.) 14c., "a carrying out, a putting into effect; enforcement; perfor
 <div class="content">
 <img src="images/3_01-layers.png" alt="matrix" width="600">
 </div>
-<div class="title">Figure 97. Time frame matrixed to delivery</div>
+<div class="title">Figure 98. Time frame matrixed to delivery</div>
 </div>
 <div class="paragraph">
 <p>The relationships between the timeframes and delivery models are complex:</p>
@@ -11202,124 +11200,31 @@ What’s typically underestimated is the complexity and indivisibility of many l
 </div>
 </div>
 <div class="paragraph">
-<p>We will discuss team structure in more detail in Chapter 9. For now, understand that as a consequence of scaling, we are introducing multiple teams as our product scales up:</p>
+<p>As a consequence of scaling, we are introducing multiple teams as our product scales up:</p>
 </div>
 <div class="imageblock" style="float: left">
 <div class="content">
 <img src="images/3_08-multi-feature.png" alt="multi-feature" width="350">
 </div>
-<div class="title">Figure 98. Multiple feature teams, one product</div>
+<div class="title">Figure 99. Multiple feature teams, one product</div>
 </div>
 <div class="paragraph">
-<p>We may be using various techniques such as the AKF scaling cube to identify the features. The term "architecture" is likely emerging through these discussions.</p>
+<p>We may be using various techniques such as the AKF scaling cube to identify the features. The term "architecture" is likely emerging through these discussions. (We will discuss organizational structure directly in Chapter 9.)</p>
 </div>
 <div class="paragraph">
-<p>As noted in the discussion of <a href="#loose-coupling-project">loose coupling and project management</a>, some needs for coordination may be mitigated through the design of the product itself. If the features and components have well defined protocols for their interaction and clear contracts for matters like performance, development on each team can move forward with some autonomy.</p>
+<p>As noted in the discussion of <a href="#amazon-productization">Amazon&#8217;s product strategy</a>, some needs for coordination may be mitigated through the design of the product itself. This is why APIs and microseervices are popular architecture styles. If the features and components have well defined protocols for their interaction and clear contracts for matters like performance, development on each team can move forward with some autonomy.</p>
 </div>
 <div class="imageblock" style="float: right">
 <div class="content">
 <img src="images/3_08-multi-feature-coord.png" alt="coordination" width="420">
 </div>
-<div class="title">Figure 99. Coordinated initiative across timeframes</div>
+<div class="title">Figure 100. Coordinated initiative across timeframes</div>
 </div>
 <div class="paragraph">
 <p>But at scale, complexity is inevitable. What happens when a given business objective requires coordinated effort across multiple teams? For example, an online e-commerce site might find itself overwhelmed by business success. Upgrading the site to accommodate the new demand might require distinct development work to be performed by multiple teams.</p>
 </div>
 <div class="paragraph">
-<p>As the quote from Gary Hamel above indicates, a central point of coordination and accountability is advisable, otherwise the objective is at risk. (It becomes "someone else&#8217;s problem.")</p>
-</div>
-<div class="paragraph">
-<p><a id="google-chubby"></a></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p><strong>The reality of microservices and loose coupling: the case of Chubby at Google</strong></p>
-</div>
-<div class="paragraph">
-<p>The idea that architecture can "emerge" across a set of smaller grained services ("microservices"), without explicit coordination, is attractive. Coordinating designs across products is expensive and ideally products should be able to evolve independently.</p>
-</div>
-<div class="paragraph">
-<p>Mike Burrows of Google provides a detailed description of the Chubby lock service <a href="#Burrows2006">[Burrows2006]</a>, which is a prototypical example of a broadly-available internal service usable by a wide variety of other products.</p>
-</div>
-<div class="paragraph">
-<p>The purpose of a lock service is to "allow its clients to synchronize their activities and to agree on basic information about their environment." Chubby was built from the start with objectives of reliability, availability to a "moderately large set of clients," and ease of understanding.</p>
-</div>
-<div class="paragraph">
-<p>Burrows notes that even with such a cohesive and well-designed internal service, they still encounter coordination problems requiring human intervention. Such problems include:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Use ("abuse") in unintended ways by clients</p>
-</li>
-<li>
-<p>Invalid assumptions by clients regarding Chubby&#8217;s availability</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Because of this, the Chubby team (at least at the time writing of the case study) instituted a review process when new clients wished to start using the lock manager.</p>
-</div>
-<div class="paragraph">
-<p>In terms of this chapter&#8217;s topic, this means that someone on the product team needed to coordinate the discussions with the Chubby team and ensure that any concerns were resolved. This might conceivably have involved multiple iterations and reviews of designs describing intended use.</p>
-</div>
-<div class="paragraph">
-<p>In short, even the most sophisticated microservice environments may have a dependency on human coordination across the teams.</p>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p><a id="multi-product-scaling"></a></p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_scaling_to_more_than_one_product">Scaling to more than one product</h6>
-<div class="paragraph">
-<p>Another kind of state transition is from one product to multiple products. This kind of scaling is distinct from scaling one product through subdividing it into multiple features.</p>
-</div>
-<div class="imageblock" style="float: right">
-<div class="content">
-<img src="images/3_08-one-product.png" alt="one product" width="400">
-</div>
-<div class="title">Figure 100. One company, one product</div>
-</div>
-<div class="imageblock" style="float: right">
-<div class="content">
-<img src="images/3_08-multi-product.png" alt="multi product" width="400">
-</div>
-<div class="title">Figure 101. One company, multiple products</div>
-</div>
-<div class="paragraph">
-<p>Consider our hypothetical startup company. At first, everyone on the team is supporting one product and dedicated to its success. There is no sense of contention with "others" in the organization. This changes with the addition of a second product team with different incentives. Concerns for fair allocation and a sense of internal competition naturally arise out of this diversification. Fairness is deeply wired into human (and animal) brains, and the creation of a new product (and associated team) provokes new dynamics in the growing company.</p>
-</div>
-<div class="paragraph">
-<p>Because resources are always limited, it is critical that the demands of each product be managed using objective criteria, requiring formalization.  This was a different problem when you were a tight-knit startup; you were constrained, but everyone knew they were "in it together." Now you need some ground rules to support your increasingly diverse activities. This leads to new concerns:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Managing scope and preventing unintended creep or drift from the product&#8217;s original charter</p>
-</li>
-<li>
-<p>Managing contention for enterprise resources</p>
-</li>
-<li>
-<p>Execution to timeframes (e.g. the critical trade show)</p>
-</li>
-<li>
-<p>Coordinating dependencies (e.g. achieving larger, cross-product goals)</p>
-</li>
-<li>
-<p>Maintaining good relationships when a team&#8217;s success depends on another team&#8217;s commitment.</p>
-</li>
-<li>
-<p>Accountability for results</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>We will return to the investment and organizational aspects of multi-team and multi-product scaling in Chapters 8 and 9. For now, we will focus on dependencies and operational coordination.</p>
+<p>As the quote from Gary Hamel above indicates, a central point of coordination and accountability is advisable, otherwise the objective is at risk. (It becomes "someone else&#8217;s problem.") We will return to the investment and organizational aspects of multi-team and multi-product scaling in Chapters 8 and 9. For now, we will focus on dependencies and operational coordination.</p>
 </div>
 </div>
 </div>
@@ -11504,13 +11409,25 @@ the project</p></td>
 </tr>
 </tbody>
 </table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+We introduced the idea of <em>artifact</em> in Chapter 5. For our purposes here, an artifact is a <a href="#representation">representation</a> of some idea, activity, status, task, request, or system. Artifacts can represent or describe other artifacts. Artifacts are frequently used as the basis of communication.
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>The following sections expand the three strategies (structure, synchronization, boundary spanning) with examples.</p>
 </div>
 <div class="sect5">
 <h6 id="_structure">Structure</h6>
 <div class="paragraph">
-<p><strong>Proximity.</strong> Don Reinertsen (<a href="#Reinertsen2009">[Reinertsen2009]</a>, p. 230), proposes "The Principle of Colocation" which asserts that "Colocation improves almost all aspects of communication." In order to scale this, one logically needs what Mike Cohn (<a href="#Cohn2010">[Cohn2010]</a>, p. 346) calls "The Big Room."</p>
+<p><strong>Proximity.</strong> Don Reinertsen (<a href="#Reinertsen2009">[Reinertsen2009]</a> p. 230) proposes "The Principle of Colocation" which asserts that "Colocation improves almost all aspects of communication." In order to scale this beyond one team, one logically needs what Mike Cohn (<a href="#Cohn2010">[Cohn2010]</a>, p. 346) calls "The Big Room."</p>
 </div>
 <div class="paragraph">
 <p>In terms of communications, this has significant organizational advantages. Communications are as simple as walking over to another person&#8217;s desk, or just shouting out over the room. It is also easy to synchronize the entire room, through calling for everyone&#8217;s attention. However, there are limits to scaling the "Big Room" approach:</p>
@@ -11543,10 +11460,10 @@ the project</p></td>
 <div class="ulist">
 <ul>
 <li>
-<p>Ad-hoc chats (in person or virtual)</p>
+<p>Ad-hoc <a href="#ChatOps">chats</a> (in person or virtual)</p>
 </li>
 <li>
-<p>Daily standups</p>
+<p>Daily standups (e.g. from <a href="#_scrum">Scrum</a>)</p>
 </li>
 <li>
 <p>Weekly status meetings</p>
@@ -11555,7 +11472,7 @@ the project</p></td>
 <p>Coordination meetings (e.g. Scrum of Scrums, see below)</p>
 </li>
 <li>
-<p>Release kickoffs</p>
+<p><a href="#release-mgmt">Release</a> kickoffs</p>
 </li>
 <li>
 <p>Quarterly "all-hands" meetings</p>
@@ -11572,17 +11489,7 @@ the project</p></td>
 <p>All of them are essentially similar in approach and assumption: build a shared understanding of the work, objectives, or mission among smaller or larger sections of the organization, through limited-time face to face interaction, often on a defined time interval.</p>
 </div>
 <div class="paragraph">
-<p><strong>Cadenced approaches.</strong> When a synchronization activity occurs on a timed interval, this can be called a <a href="#cadence">cadence</a>. Sometimes, cadences are layered; for example, a daily standup, a weekly review, and a monthly Scrum of Scrums. Reinertsen calls this harmonic cadencing (<a href="#Reinertsen2009">[Reinertsen2009]</a> pp. 190-191).</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>sidebar: Unmeetings/unconferences/Open space</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>1 execution in context - feedback loops between levels - differing cadences (Anderson cadences)</pre>
-</div>
+<p><strong>Cadenced approaches.</strong> When a synchronization activity occurs on a timed interval, this can be called a <a href="#cadence">cadence</a>. Sometimes, cadences are layered; for example, a daily standup, a weekly review, and a monthly Scrum of Scrums. Reinertsen calls this harmonic cadencing (<a href="#Reinertsen2009">[Reinertsen2009]</a> pp. 190-191). Harmonic cadencing has been used in financial management for a long time (monthly, quarterly, and annual financial reporting).</p>
 </div>
 <div class="paragraph">
 <p><a id="boundary-spanning"></a></p>
@@ -11638,45 +11545,7 @@ Another perspective on this is found in The Checklist Manifesto <a href="#Gawand
 <p>The above discussion is by no means exhaustive. A wealth of additional techniques is to be found in <a href="#Larman2009">[Larman2009]</a> and <a href="#Cohn2010">[Cohn2010]</a>. New techniques are continually emerging from the front lines of the digital industry; the interested student should consider attending industry conferences such as those offered by the Agile Alliance.</p>
 </div>
 <div class="paragraph">
-<p>The above approaches imply synchronized meetings and face to face interactions. When the boundary-spanning approach is based on artifacts (often a requirement for larger, decentralized enterprises), we move into the realms of process and project management. Artifact-centric approaches often receive criticism for introducing too much latency into the product development process; they often imply <a href="#queues">queues</a>, and sometimes flow through multiple queues in an uncoordinated way, as we warned in Chapter 5.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Trad PM</p>
-</li>
-<li>
-<p>clinical terminology (Reinertsen)</p>
-</li>
-<li>
-<p>protecting team (pigs &amp; chickens)</p>
-</li>
-<li>
-<p>release train??</p>
-</li>
-<li>
-<p>Flow &amp; variability</p>
-</li>
-<li>
-<p>chatops / common ground</p>
-</li>
-<li>
-<p>RACI</p>
-</li>
-<li>
-<p>risk</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>shared resources and services
-global CoD - process eval</p>
-</div>
-<div class="paragraph">
-<p>At an execution level, project managers retain important roles and (sometimes re-labeled Scrum masters or release managers) are employed in both traditional and new digital companies as overall orchestrators of complex initiatives.</p>
-</div>
-<div class="paragraph">
-<p>Mintzberg coordination approaches - chapter 9</p>
+<p>The above approaches imply synchronized meetings and face to face interactions. When the boundary-spanning approach is based on artifacts (often a requirement for larger, decentralized enterprises), we move into the realms of process and project management. Approaches based on routing artifacts into <a href="#queues">queues</a> often receive criticism for introducing too much latency into the product development process. When artifacts are routed via work  orders and tickets for action by independent teams, prioritization may be arbitray (not based on business value, e.g. <a href="#cost-of-delay">Cost of Delay</a>), and sometimes the work must flow through multiple queues in an uncoordinated way, as we warned in Chapter 5. Such approaches can add dangerous latency to high-value processes. We will look in more detail at process management in a future section.</p>
 </div>
 </div>
 </div>
@@ -11695,6 +11564,40 @@ global CoD - process eval</p>
 </div>
 <div class="sect3">
 <h4 id="_coordination_execution_and_the_delivery_models">Coordination, execution, and the delivery models</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Trad PM</p>
+</li>
+<li>
+<p>clinical terminology (Reinertsen)</p>
+</li>
+<li>
+<p>protecting team (pigs &amp; chickens)</p>
+</li>
+<li>
+<p>release train??</p>
+</li>
+<li>
+<p>Flow &amp; variability</p>
+</li>
+<li>
+<p>RACI</p>
+</li>
+<li>
+<p>risk</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>shared resources and services</p>
+</div>
+<div class="paragraph">
+<p>global CoD - process eval</p>
+</div>
+<div class="paragraph">
+<p>At an execution level, project managers retain important roles and (sometimes re-labeled Scrum masters or release managers) are employed in both traditional and new digital companies as overall orchestrators of complex initiatives.</p>
+</div>
 <div class="paragraph">
 <p>It all starts with just "work." The following diagram might help:</p>
 </div>
@@ -11898,6 +11801,41 @@ Problem</pre>
 </div>
 <div class="paragraph">
 <p>It is also useful to have a third party who is knowledgeable about the product, yet has some emotional distance from its success. This can be a difficult balance to strike, but the existence of the role of Scrum coach is indicative of its importance.</p>
+</div>
+<div class="paragraph">
+<p><a id="google-chubby"></a></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>The reality of microservices and loose coupling: the case of Chubby at Google</strong></p>
+</div>
+<div class="paragraph">
+<p>The Agile manifesto idea that architecture can "emerge" without explicit coordination (e.g. across a set of smaller grained services ("microservices") is attractive. Coordinating designs across products, services, features and/or components is expensive and ideally products should be able to evolve independently.</p>
+</div>
+<div class="paragraph">
+<p>Mike Burrows of Google provides a detailed description of the Chubby lock service <a href="#Burrows2006">[Burrows2006]</a>, which is a prototypical example of a broadly-available internal service usable by a wide variety of other products.</p>
+</div>
+<div class="paragraph">
+<p>The purpose of a lock service is to "allow its clients to synchronize their activities and to agree on basic information about their environment." Chubby was built from the start with objectives of reliability, availability to a "moderately large set of clients," and ease of understanding. Burrows notes that even with such a cohesive and well-designed internal service, they still encounter coordination problems requiring human intervention. Such problems include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use ("abuse") in unintended ways by clients</p>
+</li>
+<li>
+<p>Invalid assumptions by clients regarding Chubby&#8217;s availability</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Because of this, the Chubby team (at least at the time writing of the case study) instituted a review process when new clients wished to start using the lock manager. In terms of this chapter&#8217;s topic, this means that someone on the product team needed to coordinate the discussions with the Chubby team and ensure that any concerns were resolved. This might conceivably have involved multiple iterations and reviews of designs describing intended use.</p>
+</div>
+<div class="paragraph">
+<p>In short, even the most sophisticated microservice environments may have a dependency on human coordination across the teams.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -13138,7 +13076,7 @@ Production scheduling is a large topic in and of itself. It is part of the domai
 <div class="content">
 <img src="images/3_07-development-iterative.png" alt="Rational Unified Process" width="493">
 </div>
-<div class="title">Figure 102. Rational Unified Process <sup class="footnote">[<a id="_footnoteref_52" class="footnote" href="#_footnote_52" title="View footnote.">52</a>]</sup></div>
+<div class="title">Figure 101. Rational Unified Process <sup class="footnote">[<a id="_footnoteref_52" class="footnote" href="#_footnote_52" title="View footnote.">52</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>One interesting aspect of the diagram is that it shows just how difficult it can be to staff a project. Demand for given functional roles ebbs and flows unpredictably. The project manager is expected to manage the uncertain handoffs between the various functional areas, and anticipate resource requirements stemming from unexpected feedback demands. This is why "T-shaped" professionals (see Chapter 7) are desirable, because they can move from area to area in response to demand.</p>
@@ -13360,6 +13298,55 @@ Production scheduling is a large topic in and of itself. It is part of the domai
 </div>
 <div class="sect3">
 <h4 id="_planning_and_estimating">Planning and estimating</h4>
+<div class="paragraph">
+<p><a id="multi-product-scaling"></a></p>
+</div>
+<div class="sect4">
+<h5 id="_scaling_to_more_than_one_product">Scaling to more than one product</h5>
+<div class="paragraph">
+<p>Another kind of state transition is from one product to multiple products. This kind of scaling is distinct from scaling one product through subdividing it into multiple features.</p>
+</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img src="images/3_08-one-product.png" alt="one product" width="400">
+</div>
+<div class="title">Figure 102. One company, one product</div>
+</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img src="images/3_08-multi-product.png" alt="multi product" width="400">
+</div>
+<div class="title">Figure 103. One company, multiple products</div>
+</div>
+<div class="paragraph">
+<p>Consider our hypothetical startup company. At first, everyone on the team is supporting one product and dedicated to its success. There is no sense of contention with "others" in the organization. This changes with the addition of a second product team with different incentives. Concerns for fair allocation and a sense of internal competition naturally arise out of this diversification. Fairness is deeply wired into human (and animal) brains, and the creation of a new product (and associated team) provokes new dynamics in the growing company.</p>
+</div>
+<div class="paragraph">
+<p>Because resources are always limited, it is critical that the demands of each product be managed using objective criteria, requiring formalization.  This was a different problem when you were a tight-knit startup; you were constrained, but everyone knew they were "in it together." Now you need some ground rules to support your increasingly diverse activities. This leads to new concerns:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Managing scope and preventing unintended creep or drift from the product&#8217;s original charter</p>
+</li>
+<li>
+<p>Managing contention for enterprise resources</p>
+</li>
+<li>
+<p>Execution to timeframes (e.g. the critical trade show)</p>
+</li>
+<li>
+<p>Coordinating dependencies (e.g. achieving larger, cross-product goals)</p>
+</li>
+<li>
+<p>Maintaining good relationships when a team&#8217;s success depends on another team&#8217;s commitment.</p>
+</li>
+<li>
+<p>Accountability for results</p>
+</li>
+</ul>
+</div>
+</div>
 <div class="sect4">
 <h5 id="_planning_techniques">Planning techniques</h5>
 <div class="paragraph">
@@ -13426,7 +13413,7 @@ Directors should monitor the progress of approved IT proposals to ensure that th
 <div class="content">
 <img src="images/3_07-feature-v-component.png" alt="feature component matrix" width="400">
 </div>
-<div class="title">Figure 103. Features versus components</div>
+<div class="title">Figure 104. Features versus components</div>
 </div>
 <div class="paragraph">
 <p>Feature teams are dedicated to a clearly defined functional scope, while component teams are defined by their technology platform. Component teams may become shared services, which need to be carefully understood and managed (more on this to come). A component&#8217;s failure may affect multiple feature teams, which makes them more risky. However, it may be easy to say that features are more important than components, but this can easily be carried too far. Do you want each feature team choosing its own database? This might not be the best idea. Allowing feature teams to define their own technical direction can result in brittle, fragmented architectures, technical debt, and rework.</p>
@@ -14560,7 +14547,7 @@ Agile is having a profound impact on the project management profession and will 
 <div class="content">
 <img src="images/3_08-triad-constraints.jpg" alt="Iron triangle" width="300">
 </div>
-<div class="title">Figure 104. Project "Iron Triangle" <sup class="footnote">[<a id="_footnoteref_53" class="footnote" href="#_footnote_53" title="View footnote.">53</a>]</sup></div>
+<div class="title">Figure 105. Project "Iron Triangle" <sup class="footnote">[<a id="_footnoteref_53" class="footnote" href="#_footnote_53" title="View footnote.">53</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>The project management <a href="https://en.wikipedia.org/wiki/Project_management_triangle">Iron Triangle</a> represents the interaction of cost, time, scope, and quality on a project. The idea is that, in general, one or more of these factors may be a constraint. The following sign is often seen in service organizations:</p>
@@ -14569,7 +14556,7 @@ Agile is having a profound impact on the project management profession and will 
 <div class="content">
 <img src="images/3_08-good-cheap-fast.jpg" alt="Good-Cheap-Fast" width="400">
 </div>
-<div class="title">Figure 105. Pick any two <sup class="footnote">[<a id="_footnoteref_54" class="footnote" href="#_footnote_54" title="View footnote.">54</a>]</sup></div>
+<div class="title">Figure 106. Pick any two <sup class="footnote">[<a id="_footnoteref_54" class="footnote" href="#_footnote_54" title="View footnote.">54</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>The same applies to project management and reflects well the "iron triangle" of tradeoffs. (Note: we will critique the iron triangle subsquently.)</p>
@@ -14760,7 +14747,7 @@ Part of the problem with extensive frameworks such as PMBOK is that knowing how 
 <div class="sect5">
 <h6 id="_loose_coupling_to_the_project_plan_rescue">Loose coupling to the project plan rescue?</h6>
 <div class="paragraph">
-<p>While this book does not go into systems architectural styles in depth, a project with a large number of dependencies may be an indication that the system or product being constructed also has significant interdependencies.</p>
+<p>While this book does not go into systems architectural styles in depth, a project with a large number of dependencies may be an indication that the system or product being constructed also has significant interdependencies. Recall <a href="#amazon-productization">Amazon&#8217;s product strategy</a>  including its API mandate.</p>
 </div>
 <div class="paragraph">
 <p>Successful systems designers for years have relied on concepts such as encapsulation, abstraction, and loose coupling to minimize the dependencies between components of complex systems, so that their design, construction, and operation can be managed with some degree of independence. These ideas are core to the software engineering literature. Recent expressions of these core ideas are Services-Oriented Architecture and microservices.</p>
@@ -14769,7 +14756,7 @@ Part of the problem with extensive frameworks such as PMBOK is that knowing how 
 <p>Systems that do not adopt such approaches are often termed "monolithic" and have a well deserved reputation for being problematic to build and operate. Many large software failures stem from such approaches. If you have a project plan with excessive dependencies, the question at least should be asked: does my massive, tightly-coupled project plan indicate I am building a monolithic, tightly-coupled system that will not be flexible or responsive to change?</p>
 </div>
 <div class="paragraph">
-<p>Again, many digital companies build tremendously robust integrated services from the combination of many quasi-independent "product" teams, each serving a particular function. However, when a particular organizational objective requires changes to more than one such "product," the need for cross-team coordination emerges. Someone needs to own this larger objective, even if its actual implementation is carried out across multiple distinct teams. We will discuss this further in Chapter 9.</p>
+<p>Again, many digital companies build tremendously robust integrated services from the combination of many quasi-independent, microservice-based "product" teams, each serving a particular function. However, when a particular organizational objective requires changes to more than one such "product," the need for cross-team coordination emerges. Someone needs to own this larger objective, even if its actual implementation is carried out across multiple distinct teams. We will discuss this further in Chapter 9.</p>
 </div>
 </div>
 <div class="sect5">
@@ -15231,7 +15218,7 @@ What is culture in this context? It is not so much about an informal dress code,
 <div class="content">
 <img src="images/3_07-Schneider-matrix.png" alt="matrix" width="600">
 </div>
-<div class="title">Figure 106. Schneider matrix (based on <a href="#Schneider1999">[Schneider1999]</a>)</div>
+<div class="title">Figure 107. Schneider matrix (based on <a href="#Schneider1999">[Schneider1999]</a>)</div>
 </div>
 <div class="paragraph">
 <p>Two dimensions are proposed:</p>
@@ -15362,7 +15349,7 @@ Six years ago I began the research that led to [Toyota Kata] thinking, like just
 <div class="content">
 <img src="images/3_07-toyota-kata.png" alt="toyota kata" width="250">
 </div>
-<div class="title">Figure 107. Toyota kata, similar to <a href="#Rother2010">[Rother2010]</a></div>
+<div class="title">Figure 108. Toyota kata, similar to <a href="#Rother2010">[Rother2010]</a></div>
 </div>
 <div class="paragraph">
 <p>According to Mike Rother in <em>Toyota Kata</em> <a href="#Rother2010">[Rother2010]</a>,  underlying Toyota&#8217;s particular tools and techniques are two powerful practices:</p>
@@ -15420,7 +15407,7 @@ Some of the most important factors that organizational structure can affect are 
 <div class="content">
 <img src="images/3_07-org-chart-whiteboard.jpg" alt="org chart" width="400" height="200">
 </div>
-<div class="title">Figure 108. Organization chart in progress <sup class="footnote">[<a id="_footnoteref_55" class="footnote" href="#_footnote_55" title="View footnote.">55</a>]</sup></div>
+<div class="title">Figure 109. Organization chart in progress <sup class="footnote">[<a id="_footnoteref_55" class="footnote" href="#_footnote_55" title="View footnote.">55</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>How are you going to organize? More importantly, how are you going to think about organizing? This is a hard question. It’s important to get organization right, and the question never goes away. As you grow and split into teams, the overall sense of mission you felt as a single team is at risk of fading. How can you keep your "eyes on the prize" when there are mulitple teams, who all see the world slightly differently? It&#8217;s critical, as you start to explore various coordination mechanisms, to remember that the team remains the highest-value logical unit, and must be protected. As we discussed in <a href="#the-product-team">Chapter 4</a>, product value is created by co-located, cross-functional, highly collaborative teams.</p>
@@ -15459,7 +15446,7 @@ Some of the most important factors that organizational structure can affect are 
 <div class="content">
 <img src="images/3_07-file-cabinets.jpg" alt="filing cabinets" width="300" height="200">
 </div>
-<div class="title">Figure 109. Paper filing system <sup class="footnote">[<a id="_footnoteref_56" class="footnote" href="#_footnote_56" title="View footnote.">56</a>]</sup></div>
+<div class="title">Figure 110. Paper filing system <sup class="footnote">[<a id="_footnoteref_56" class="footnote" href="#_footnote_56" title="View footnote.">56</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>The traditional IT organization started decades ago, with "back-office" goals like replacing file clerks and filing cabinets with faster and more accurate computers. (We will go into further detail in <a href="#paper-to-digital">Chapter 11</a>.) At that time, computers were not flexible or reliable, business did not move as fast, and there was a lot of value to be gained in relatively simple efforts like converting massive paper filing systems into digital systems. As these kinds of efforts grew and became critical operational dependencies for companies, the role of Chief Information Officer was created, to head up increasingly large organizations of application developers, infrastructure engineers, and operations staff.</p>
@@ -15474,7 +15461,7 @@ Some of the most important factors that organizational structure can affect are 
 <div class="content">
 <img src="images/3_07-early-Amazon.jpg" alt="early Amazon appearance" width="400" height="200">
 </div>
-<div class="title">Figure 110. Amazon early version <sup class="footnote">[<a id="_footnoteref_57" class="footnote" href="#_footnote_57" title="View footnote.">57</a>]</sup></div>
+<div class="title">Figure 111. Amazon early version <sup class="footnote">[<a id="_footnoteref_57" class="footnote" href="#_footnote_57" title="View footnote.">57</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Then along came Apple, Microsoft, and the dot-com boom. Suddenly everyone had personal computers at home, and was on the Internet. Buying things! Computers continued to become more reliable and powerful as well. Companies realized that their back-office IT organizations were not able to move fast enough to keep up with the new e-commerce challenge, and in many cases organized their Internet team <strong>outside</strong> of the CIO&#8217;s control (which sometimes made the traditional IT organization very unhappy). Silicon valley startups such as Google and Facebook in general did not even have a separate "CIO" organization, because for them (and this is a critical point)  <strong>the digital systems <em>were</em> the product.</strong> Going to market against tough competitors (Alta Vista and Yahoo against Google, Friendster and MySpace against Facebook) wasn&#8217;t a question of maximizing efficiency. It was about product innovation and effectiveness, and taking appropriate risks in the quest for these rapidly growing new markets.</p>
@@ -15489,7 +15476,7 @@ Some of the most important factors that organizational structure can affect are 
 <div class="content">
 <img src="images/3_07-classic-org.png" alt="org chart" width="600">
 </div>
-<div class="title">Figure 111. Classic IT organization</div>
+<div class="title">Figure 112. Classic IT organization</div>
 </div>
 <div class="paragraph">
 <p>(We had some related discussion in <a href="#i-o-matrix">Chapter 6</a>.) Such a structure was perceived to be "efficient" because all the server engineers would be in one organization, while all the Java developers would be in another, and their utilization could be managed for efficiency. Overall, having all the "IT" people together was also considered efficient, and the general idea was that "the business" (Sales, Marketing, Operations, and back-office functions like Finance and HR) would define their <a href="#system-intent">"requirements"</a> and the IT organization would deliver systems in response. It was believed that organizing into "centers of excellence" (sometimes called <em>organizing by function</em>) would make the practices of each center more and more effective, and therefore more valuable to the organization as a whole. However, the new digital organizations perceived that there was too much friction between the different functions on the organization chart. Skepticism also started to emerge that "centers of excellence" were living up to their promise. Instead, what was too often seen was the emergence of an "us versus them" mentality, as developers argued with server and network engineers.</p>
@@ -15504,7 +15491,7 @@ Some of the most important factors that organizational structure can affect are 
 <div class="content">
 <img src="images/3_07-neworg.png" alt="org chart" width="600">
 </div>
-<div class="title">Figure 112. New IT organization</div>
+<div class="title">Figure 113. New IT organization</div>
 </div>
 <div class="paragraph">
 <p>This model is also called the "Spotify model." The dotted line boxes (Developers, Quality Assurance, Engineering) are no longer dedicated "centers of excellence" with executives leading them. Instead, they are lighter-weight "communities of interest" organized into chapters and guilds. The cross-functional product teams are the primary way work is organized and understood, and the communities of interest play a supporting role. Henrik Kniberg provided one of the first descriptions of how Spotify organizes along product lines  <a href="#Kniberg2012">[Kniberg2012]</a>. (Attentive readers will ask, "What happened to the PMO? and what about security?" There are various answers to these questions, which we will continue to explore in Part III.)</p>
@@ -15705,7 +15692,7 @@ We will go into detail on project management in chapter 8 and process management
 <div class="content">
 <img src="images/3_07-naive-mfg.png" alt="manufacturing sequence" width="500">
 </div>
-<div class="title">Figure 113. Simple sequential manufacturing</div>
+<div class="title">Figure 114. Simple sequential manufacturing</div>
 </div>
 <div class="paragraph">
 <p>The product is already defined and the need to generate information (i.e. through <a href="#feedback">feedback</a>) is at an absolute minimum.
@@ -15715,7 +15702,7 @@ NOTE: Even in this simplest model, feedback is important. Much of the evolution 
 <div class="content">
 <img src="images/3_07-waterfall.png" alt="waterfall" width="500">
 </div>
-<div class="title">Figure 114. Waterfall</div>
+<div class="title">Figure 115. Waterfall</div>
 </div>
 <div class="paragraph">
 <p>(Review <a href="#Agile-history">chapter 3</a> on waterfall development and Agile history.) Functional, or <em>practice</em>, areas can continually increase their efficiency and economies of scale through deep specialization.</p>
@@ -15769,7 +15756,7 @@ The following discussion and accompanying set of diagrams is derived from Presto
 <div class="content">
 <img src="images/3_07-lightweight-pm.png" alt="matrix figure" width="800">
 </div>
-<div class="title">Figure 115. Lightweight project management across functions</div>
+<div class="title">Figure 116. Lightweight project management across functions</div>
 </div>
 <div class="paragraph">
 <p>Work flows across the functions, perhaps called "centers of excellence," and there may be contention for resources within each center. Often, simple "first in, first out" <a href="#queuing">queuing</a> approaches are used to manage the <a href="#ticketing">ticketed</a> work, rather than more sophisticated approaches such as <a href="#cost-of-delay">Cost of Delay</a>. It is the above model that Reinertsen was thinking of when he said: "The danger in using specialists lies in their low involvement in individual projects and the multitude of tasks competing for their time." Traditional <a href="#i-o-matrix">Infrastructure and Operations</a> organizations, when they implemented defined service catalogs, can be seen as attempting this model. (More on this in Chapter 9&#8217;s discussion of ITIL and <a href="#shared-services">shared services</a>.)</p>
@@ -15784,7 +15771,7 @@ The following discussion and accompanying set of diagrams is derived from Presto
 <div class="content">
 <img src="images/3_07-heavy-pm.png" alt="matrix figure" width="800">
 </div>
-<div class="title">Figure 116. Heavyweight project management across functions</div>
+<div class="title">Figure 117. Heavyweight project management across functions</div>
 </div>
 <div class="paragraph">
 <p>If even more focus is needed&#8201;&#8212;&#8201;the now-minimized influence of the functional areas is still deemed too strong&#8201;&#8212;&#8201; the organization may move to completely product-based reporting. With this, the team member reports to the product owner. There may still be communities of interest (Spotify guilds and tribes are good examples) and there still may be standards for technical choices:</p>
@@ -15793,7 +15780,7 @@ The following discussion and accompanying set of diagrams is derived from Presto
 <div class="content">
 <img src="images/3_07-product-mgmt.png" alt="matrix figure" width="800">
 </div>
-<div class="title">Figure 117. Product team, virtual functions</div>
+<div class="title">Figure 118. Product team, virtual functions</div>
 </div>
 <div class="paragraph">
 <p><a id="skunkworks"></a></p>
@@ -15805,7 +15792,7 @@ The following discussion and accompanying set of diagrams is derived from Presto
 <div class="content">
 <img src="images/3_07-skunk.png" alt="matrix figure" width="800">
 </div>
-<div class="title">Figure 118. Skunkworks model</div>
+<div class="title">Figure 119. Skunkworks model</div>
 </div>
 <div class="paragraph">
 <p>The product team has complete autonomy, and can move at great speed. It is also free to:</p>
@@ -15858,7 +15845,7 @@ The following discussion and accompanying set of diagrams is derived from Presto
 <div class="content">
 <img src="images/3_07-SoS-POs.png" alt="hierarchy" width="500">
 </div>
-<div class="title">Figure 119. Product owner hierarchy <sup class="footnote">[<a id="_footnoteref_58" class="footnote" href="#_footnote_58" title="View footnote.">58</a>]</sup></div>
+<div class="title">Figure 120. Product owner hierarchy <sup class="footnote">[<a id="_footnoteref_58" class="footnote" href="#_footnote_58" title="View footnote.">58</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Let&#8217;s accept Scrum and the <a href="#amazon-productization">2-pizza team</a> as our organizing approach. A large scale Scrum effort is based on multiple small teams (i.e. representing <a href="#AKF-cube">AKF scaling cube partitions</a>). If we want to minimize <a href="#multi-tasking">multi-tasking and context-switching</a>, we need to ask "how many product teams can a given product owner handle?" In <em>Agile Product Management with Scrum</em>, Roman Pichler says, "My experience suggests that a product owner usually cannot look after more than two teams in a sustainable manner" (<a href="#Pichler2010">[Pichler2010]</a>, p. 12). Scrum authors therefore suggest that larger scale products be managed as aggregates of smaller teams. We&#8217;ll discuss how the product structure is defined in Chapter 8.</p>
@@ -15974,7 +15961,7 @@ Requiring senior technical talent to interview candidates may result in improved
 <div class="content">
 <img src="images/3_07-punch-clock.jpg" alt="punch clock and cards" width="500" height="200">
 </div>
-<div class="title">Figure 120. Time clock and punch cards <sup class="footnote">[<a id="_footnoteref_59" class="footnote" href="#_footnote_59" title="View footnote.">59</a>]</sup></div>
+<div class="title">Figure 121. Time clock and punch cards <sup class="footnote">[<a id="_footnoteref_59" class="footnote" href="#_footnote_59" title="View footnote.">59</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>When a new hire enters your organization, they enter a complex system that will structure and direct their daily activities through a myriad of means. The various means that direct their action include:</p>
@@ -16743,7 +16730,7 @@ The COBIT 5 framework makes a clear distinction between governance and managemen
 <div class="content">
 <img src="images/4_10-shopkeeper.jpg" alt="two men in front of a store" width="600">
 </div>
-<div class="title">Figure 121. Someone to "mind the store" <sup class="footnote">[<a id="_footnoteref_60" class="footnote" href="#_footnote_60" title="View footnote.">60</a>]</sup></div>
+<div class="title">Figure 122. Someone to "mind the store" <sup class="footnote">[<a id="_footnoteref_60" class="footnote" href="#_footnote_60" title="View footnote.">60</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Now, you wish to go on an extended vacation - perhaps a cruise around the world, or a trek in the Himalayas. You need someone who can count the cash and deposit it, and place orders with and pay your suppliers. You need to hire a professional manager.</p>
@@ -16919,7 +16906,7 @@ We&#8217;ve encountered systems theory and associated concepts such as <a href="
 <div class="content">
 <img src="images/4_10-centrifugal_governor.png" alt="mechanism" width="300">
 </div>
-<div class="title">Figure 122. Centrifugal governor <sup class="footnote">[<a id="_footnoteref_61" class="footnote" href="#_footnote_61" title="View footnote.">61</a>]</sup></div>
+<div class="title">Figure 123. Centrifugal governor <sup class="footnote">[<a id="_footnoteref_61" class="footnote" href="#_footnote_61" title="View footnote.">61</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>"Governors" have been part of mechanical systems for centuries. These mechanisms have the effect of automatically controlling a system so that it (for example) operates at the desired revolutions per minute. Without governors, steam engines tended to blow up, or go out; applying devices such as the <a href="https://en.wikipedia.org/wiki/Centrifugal_governor">centrifugal governor</a> to regulate them was an important step in the development of steam power. Importantly, such devices operated to control the process from variation on either side, whether too fast or too slow. They did not operate merely as brakes.</p>
@@ -20449,7 +20436,7 @@ No enterprise can be effective without high quality data.
 <div class="content">
 <img src="images/4_11-hashes.png" alt="4 11 hashes">
 </div>
-<div class="title">Figure 123. Hashmarks</div>
+<div class="title">Figure 124. Hashmarks</div>
 </div>
 <div class="paragraph">
 <p>If you are of European descent, you might perceive this as the number twelve, or a count of twelve "somethings." What "somethings"? You don&#8217;t know.</p>
@@ -20458,7 +20445,7 @@ No enterprise can be effective without high quality data.
 <div class="content">
 <img src="images/4_11-appleTrees.jpg" alt="Apple trees" width="300">
 </div>
-<div class="title">Figure 124. How many trees? <sup class="footnote">[<a id="_footnoteref_62" class="footnote" href="#_footnote_62" title="View footnote.">62</a>]</sup></div>
+<div class="title">Figure 125. How many trees? <sup class="footnote">[<a id="_footnoteref_62" class="footnote" href="#_footnote_62" title="View footnote.">62</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Someone might tell you that this is the number of trees on your neighbor&#8217;s farm. That makes all the difference. But wait - you know for a fact that there are many more trees than 12! You inquire further and find out it is actually the number of producing apple trees, a very different concept.</p>
@@ -20498,7 +20485,7 @@ A message to mapmakers: Highways are not painted red, rivers don&#8217;t have co
 <div class="content">
 <img src="images/4_11-cuneiform.jpg" alt="Clay tablet with markings" width="300">
 </div>
-<div class="title">Figure 125. Sumerian cuneiform <sup class="footnote">[<a id="_footnoteref_63" class="footnote" href="#_footnote_63" title="View footnote.">63</a>]</sup></div>
+<div class="title">Figure 126. Sumerian cuneiform <sup class="footnote">[<a id="_footnoteref_63" class="footnote" href="#_footnote_63" title="View footnote.">63</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Humans have been representing information since at least the creation of writing. As early as 3000 BCE, the ancient Sumerians used cuneiform to record&#8201;&#8212;&#8201;among other things&#8201;&#8212;&#8201;how much beer people got. (The more things change, the more they stay the same.)</p>
@@ -20513,7 +20500,7 @@ A message to mapmakers: Highways are not painted red, rivers don&#8217;t have co
 <div class="content">
 <img src="images/4_11-quipu.jpg" alt="knotted cords" width="300">
 </div>
-<div class="title">Figure 126. Inca quipu <sup class="footnote">[<a id="_footnoteref_64" class="footnote" href="#_footnote_64" title="View footnote.">64</a>]</sup></div>
+<div class="title">Figure 127. Inca quipu <sup class="footnote">[<a id="_footnoteref_64" class="footnote" href="#_footnote_64" title="View footnote.">64</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>At around the same time as the Sumerians, the Inca empire in what is now Peru [?] also started to represent information. They used a radically different approach from the Sumerians: carefully knotted ropes:</p>
@@ -20570,7 +20557,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4_11-gasPump.jpg" alt="old gas pump" width="400">
 </div>
-<div class="title">Figure 127. What do they owe you? <sup class="footnote">[<a id="_footnoteref_65" class="footnote" href="#_footnote_65" title="View footnote.">65</a>]</sup></div>
+<div class="title">Figure 128. What do they owe you? <sup class="footnote">[<a id="_footnoteref_65" class="footnote" href="#_footnote_65" title="View footnote.">65</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>As the town grows, and your customers increase, you grow increasingly uncertain as to whether they all are paying you what they owe. You purchase a notebook and a pen (today&#8217;s equivalent of clay tablets or knotted ropes) and start writing down the amounts owed you.</p>
@@ -20625,7 +20612,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4_11-female-computers.jpg" alt="alt text" width="400" height="200">
 </div>
-<div class="title">Figure 128. Early "computers" (people not machines) <sup class="footnote">[<a id="_footnoteref_66" class="footnote" href="#_footnote_66" title="View footnote.">66</a>]</sup></div>
+<div class="title">Figure 129. Early "computers" (people not machines) <sup class="footnote">[<a id="_footnoteref_66" class="footnote" href="#_footnote_66" title="View footnote.">66</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>As technology progressed through the late 19th and early 20th centuries, applied mathematics became increasingly important in a wide variety of areas such as:</p>
@@ -20659,7 +20646,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4_11-diffEngine.jpg" alt="Complex mechanical calculator" width="400">
 </div>
-<div class="title">Figure 129. Babbage Difference Engine <sup class="footnote">[<a id="_footnoteref_67" class="footnote" href="#_footnote_67" title="View footnote.">67</a>]</sup></div>
+<div class="title">Figure 130. Babbage Difference Engine <sup class="footnote">[<a id="_footnoteref_67" class="footnote" href="#_footnote_67" title="View footnote.">67</a>]</sup></div>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -20705,7 +20692,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4_11-punchedCard.jpg" alt="punched data card" width="300">
 </div>
-<div class="title">Figure 130. Punchcard <sup class="footnote">[<a id="_footnoteref_68" class="footnote" href="#_footnote_68" title="View footnote.">68</a>]</sup></div>
+<div class="title">Figure 131. Punchcard <sup class="footnote">[<a id="_footnoteref_68" class="footnote" href="#_footnote_68" title="View footnote.">68</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>The business world was also attentive to the development of computers. Punched cards had been used for storing data for decades preceding the invention of automated computers. Record keeping at scale has always been challenging - the number of Sumerian clay tablets still in existence testifies to that! Industrial-era banks, insurers, and counting-houses managed massive repositories of paper journals and files, at great cost. A new form of professional, the "white collar worker" emerged.</p>
@@ -20717,7 +20704,7 @@ Measurement: A quantitatively expressed reduction of uncertainty based on one or
 <div class="content">
 <img src="images/4_11-cardSorter.jpg" alt="mechanical card sorting machine" width="400">
 </div>
-<div class="title">Figure 131. Card Sorter <sup class="footnote">[<a id="_footnoteref_69" class="footnote" href="#_footnote_69" title="View footnote.">69</a>]</sup></div>
+<div class="title">Figure 132. Card Sorter <sup class="footnote">[<a id="_footnoteref_69" class="footnote" href="#_footnote_69" title="View footnote.">69</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>During World War II, many business professionals found themselves in the military, and some encountered the new electronic computers being used to calculate artillery trajectories or decrypt enemy messages. Edmund Berkeley, the first secretary of the Association for Computing Machinery, was one such professional who grasped the the potential of the new technology <a href="#Akera2007">[Akera2007]</a>. After the war, Berkeley advocated for the use of these machines to the leadership of the Prudential insurance company, while others did the same in the United Kingdom.</p>
@@ -21744,7 +21731,7 @@ Again, if you or your company are involved in legal issues relating to the above
 <div class="content">
 <img src="images/4_11-reportingOldStyle.png" alt="1900s clerk with adding machine" width="300" height="200">
 </div>
-<div class="title">Figure 132. Reporting and analytics, old style <sup class="footnote">[<a id="_footnoteref_70" class="footnote" href="#_footnote_70" title="View footnote.">70</a>]</sup></div>
+<div class="title">Figure 133. Reporting and analytics, old style <sup class="footnote">[<a id="_footnoteref_70" class="footnote" href="#_footnote_70" title="View footnote.">70</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>We have touched on reporting previously, in our discussion of <a href="#metrics-KPIs">metrics</a>. This is a more detailed examination.</p>
@@ -22799,7 +22786,7 @@ As with other chapters in the later part of this book, we are going to introduce
 <div class="content">
 <img src="images/4_12-architecture.jpg" alt="alt text" width="900">
 </div>
-<div class="title">Figure 133. St. Vitus Cathedral, Prague <sup class="footnote">[<a id="_footnoteref_71" class="footnote" href="#_footnote_71" title="View footnote.">71</a>]</sup></div>
+<div class="title">Figure 134. St. Vitus Cathedral, Prague <sup class="footnote">[<a id="_footnoteref_71" class="footnote" href="#_footnote_71" title="View footnote.">71</a>]</sup></div>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -22944,19 +22931,19 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <div class="content">
 <img src="images/4_12-serengeti.jpg" alt="alt text" width="250" height="200">
 </div>
-<div class="title">Figure 134. The terrain <sup class="footnote">[<a id="_footnoteref_72" class="footnote" href="#_footnote_72" title="View footnote.">72</a>]</sup></div>
+<div class="title">Figure 135. The terrain <sup class="footnote">[<a id="_footnoteref_72" class="footnote" href="#_footnote_72" title="View footnote.">72</a>]</sup></div>
 </div>
 <div class="imageblock" style="float: left">
 <div class="content">
 <img src="images/4_12-surveyor.jpg" alt="alt text" width="200" height="200">
 </div>
-<div class="title">Figure 135. The mapmaker <sup class="footnote">[<a id="_footnoteref_73" class="footnote" href="#_footnote_73" title="View footnote.">73</a>]</sup></div>
+<div class="title">Figure 136. The mapmaker <sup class="footnote">[<a id="_footnoteref_73" class="footnote" href="#_footnote_73" title="View footnote.">73</a>]</sup></div>
 </div>
 <div class="imageblock" style="float: ">
 <div class="content">
 <img src="images/4_12-map.jpg" alt="alt text" width="235" height="200">
 </div>
-<div class="title">Figure 136. The map <sup class="footnote">[<a id="_footnoteref_74" class="footnote" href="#_footnote_74" title="View footnote.">74</a>]</sup></div>
+<div class="title">Figure 137. The map <sup class="footnote">[<a id="_footnoteref_74" class="footnote" href="#_footnote_74" title="View footnote.">74</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Confused? Consider the activity of map-making. In map-making you have:</p>
@@ -23045,7 +23032,7 @@ Enterprise architecture (EA) is the representation of the structure and behavior
 <div class="content">
 <img src="images/4_12-moritz.jpg" alt="Moritz" width="300">
 </div>
-<div class="title">Figure 137. Franz Moritz Graf von Lacy <sup class="footnote">[<a id="_footnoteref_75" class="footnote" href="#_footnote_75" title="View footnote.">75</a>]</sup></div>
+<div class="title">Figure 138. Franz Moritz Graf von Lacy <sup class="footnote">[<a id="_footnoteref_75" class="footnote" href="#_footnote_75" title="View footnote.">75</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>In previous ages, nobles would assemble and fight for their King, but their armies were poorly coordinated, and disputes over strategy would often arise. Each noble&#8217;s army would have its own quartermaster, couriers, intelligence, supply chains, and the like. This was both inefficient, and ineffective: overall plans of battle often could not be made or executed, and military operations would be bungled.</p>
@@ -23166,7 +23153,7 @@ The operating model is the necessary level of business process integration and s
 <div class="content">
 <img src="images/4_12-EA-context.png" alt="EA context" width="900">
 </div>
-<div class="title">Figure 138. EA context, based on <a href="#Ross2006">[Ross2006]</a>, fig 1-2, p.10.</div>
+<div class="title">Figure 139. EA context, based on <a href="#Ross2006">[Ross2006]</a>, fig 1-2, p.10.</div>
 </div>
 <div class="paragraph">
 <p>Notice the distinction between Enterprise Architecture as a capability and as an artifact. The <strong>practice</strong> of Enterprise Architecture is not the same as the actual Enterprise Architecture. For the purposes of this textbook, we define enterprise architecture&#8217;s concerns as essentially the enterprise operating model: process, data, organizational capabilities, and systems.</p>
@@ -23198,7 +23185,7 @@ The operating model is the necessary level of business process integration and s
 <div class="content">
 <img src="images/4_12-zachman.png" alt="4 12 zachman">
 </div>
-<div class="title">Figure 139. A variation on the Zachman framework</div>
+<div class="title">Figure 140. A variation on the Zachman framework</div>
 </div>
 <div class="paragraph">
 <p><em>(loosely based on <a href="#Zachman1987">[Zachman1987]</a> and succeeding work.)</em></p>
@@ -23242,7 +23229,7 @@ The operating model is the necessary level of business process integration and s
 <div class="content">
 <img src="images/4_12-BM-OM.png" alt="Business model versus operating model" width="900">
 </div>
-<div class="title">Figure 140. Business model versus operating model</div>
+<div class="title">Figure 141. Business model versus operating model</div>
 </div>
 <div class="paragraph">
 <p>This distinction helps us position the Enterprise Architecture group with respect to key partner organizations:</p>
@@ -23353,7 +23340,7 @@ As a hygiene factor, benefits from EA can be valued in terms of reduction in man
 <div class="content">
 <img src="images/4_12-impact.png" alt="4 12 impact">
 </div>
-<div class="title">Figure 141. Architecture impacts on enterprise value</div>
+<div class="title">Figure 142. Architecture impacts on enterprise value</div>
 </div>
 <div class="paragraph">
 <p>The above diagram suggests a number of specific, measurable outcomes from typical enterprise architecture goals. Without exploring every line of value:</p>
@@ -23684,7 +23671,7 @@ identification and enforcement</p>
 <div class="content">
 <img src="images/4_12-archProgram.png" alt="4 12 archProgram">
 </div>
-<div class="title">Figure 142. Large scale architecture program</div>
+<div class="title">Figure 143. Large scale architecture program</div>
 </div>
 <div class="paragraph">
 <p>The Enterprise Architecture organization might report to a CTO, the Chief of Staff for the Office of the CIO, or the head of Corporate Strategy and Planning. It is a centralized organization with a small staff of domain architects and an Architecture Standards organization that owns two key cross-functional architecture processes.</p>
@@ -23740,7 +23727,7 @@ division is <em>fractal</em> (that is, it reproduces at different scales).</p>
 <div class="content">
 <img src="images/4_12-gudea.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 143. Gudea with blueprint, ~2140 BCE <sup class="footnote">[<a id="_footnoteref_76" class="footnote" href="#_footnote_76" title="View footnote.">76</a>]</sup></div>
+<div class="title">Figure 144. Gudea with blueprint, ~2140 BCE <sup class="footnote">[<a id="_footnoteref_76" class="footnote" href="#_footnote_76" title="View footnote.">76</a>]</sup></div>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -23765,7 +23752,7 @@ The true measure of the value of a model is whether it actually influences behav
 <div class="content">
 <img src="images/4_12-whiteboard.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 144. Whiteboard <sup class="footnote">[<a id="_footnoteref_77" class="footnote" href="#_footnote_77" title="View footnote.">77</a>]</sup></div>
+<div class="title">Figure 145. Whiteboard <sup class="footnote">[<a id="_footnoteref_77" class="footnote" href="#_footnote_77" title="View footnote.">77</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Even in construction and engineering trades that rely on blueprints as a source of truth, keeping them up to date requires considerable discipline and process. In faster-moving digital organizations, visual models are almost always out of date unless they have been specifically refreshed for a purpose, or unless there is a strong formal process in place (and the value of such a process may be difficult to establish). That doesn&#8217;t mean that diagrams will go away. Co-located teams use whiteboards and dry-erase markers and will continue to use them. There are important cognitive and human factors reasons for this that will not go away. Because of these facts, it is useful to understand some of the fundamentals of how humans interpret visual data.</p>
@@ -23788,7 +23775,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4_12-tiger.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 145. Fast recognition means survival <sup class="footnote">[<a id="_footnoteref_78" class="footnote" href="#_footnote_78" title="View footnote.">78</a>]</sup></div>
+<div class="title">Figure 146. Fast recognition means survival <sup class="footnote">[<a id="_footnoteref_78" class="footnote" href="#_footnote_78" title="View footnote.">78</a>]</sup></div>
 </div>
 <div class="ulist">
 <ul>
@@ -23813,7 +23800,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4_12-neumann-flowchart.png" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 146. The first software flowchart <sup class="footnote">[<a id="_footnoteref_79" class="footnote" href="#_footnote_79" title="View footnote.">79</a>]</sup></div>
+<div class="title">Figure 147. The first software flowchart <sup class="footnote">[<a id="_footnoteref_79" class="footnote" href="#_footnote_79" title="View footnote.">79</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Architects and architecture are known for creating diagrams&#8201;&#8212;&#8201;abstract graphical representations of complex systems. The first known instance of applying graphical techniques to a digital problem was in 1947 <a href="#vonNeumann1947">[vonNeumann1947]</a> and visual notations have evolved along with the field of computing ever since. Notable examples include:</p>
@@ -23847,7 +23834,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4_12-flowchart-template.jpg" alt="blueprint" width="350" height="200">
 </div>
-<div class="title">Figure 147. IBM flowcharting template <sup class="footnote">[<a id="_footnoteref_80" class="footnote" href="#_footnote_80" title="View footnote.">80</a>]</sup></div>
+<div class="title">Figure 148. IBM flowcharting template <sup class="footnote">[<a id="_footnoteref_80" class="footnote" href="#_footnote_80" title="View footnote.">80</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Research at Microsoft suggests that developers use diagrams for four purposes:</p>
@@ -23884,7 +23871,7 @@ Visual representations are effective because they tap into the capabilities of t
 <div class="content">
 <img src="images/4_12-sequence-diagram.png" alt="blueprint" width="450" height="200">
 </div>
-<div class="title">Figure 148. UML sequence diagram <sup class="footnote">[<a id="_footnoteref_81" class="footnote" href="#_footnote_81" title="View footnote.">81</a>]</sup></div>
+<div class="title">Figure 149. UML sequence diagram <sup class="footnote">[<a id="_footnoteref_81" class="footnote" href="#_footnote_81" title="View footnote.">81</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>However, if we&#8217;re building systems to be operated and maintained by humans, it would seem that we should support the cognitive and perceptual strengths of humans.  Because diagrams are more readily processed, they are often used to represent high level system interactions - how a given service, product or application is related to peer systems and services. Building such depictions can be helpful to fostering a shared mental model of the overall system objectives and context. The more complex and highly scaled the environment, the more likely one will encounter such artifacts as a means to creating the mental model.</p>
@@ -23948,7 +23935,7 @@ The big picture is part of the standard mindset of EA, which everyone immediatel
 <div class="content">
 <img src="images/4_12-obesity.jpg" alt="blueprint" width="550" height="200">
 </div>
-<div class="title">Figure 149. Complex diagram <sup class="footnote">[<a id="_footnoteref_82" class="footnote" href="#_footnote_82" title="View footnote.">82</a>]</sup></div>
+<div class="title">Figure 150. Complex diagram <sup class="footnote">[<a id="_footnoteref_82" class="footnote" href="#_footnote_82" title="View footnote.">82</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>However, this next diagram is essentially unusable, as visually tracing any given line is too difficult, and it would be easy to mistakenly identify one bubble as dependent on another:</p>
@@ -23957,7 +23944,7 @@ The big picture is part of the standard mindset of EA, which everyone immediatel
 <div class="content">
 <img src="images/4_12-complex-network.jpg" alt="blueprint" width="550" height="200">
 </div>
-<div class="title">Figure 150. Another complex diagram <sup class="footnote">[<a id="_footnoteref_83" class="footnote" href="#_footnote_83" title="View footnote.">83</a>]</sup></div>
+<div class="title">Figure 151. Another complex diagram <sup class="footnote">[<a id="_footnoteref_83" class="footnote" href="#_footnote_83" title="View footnote.">83</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>This may seem like an obvious critique, but architectural diagrams of similar complexity and unusability have too often been produced. Another issue with some diagrams is that they do not give a good sense of perspective or scale. This is sometimes seen in the business architecture practice of "capability mapping." For example, suppose you see this diagram:</p>
@@ -23966,7 +23953,7 @@ The big picture is part of the standard mindset of EA, which everyone immediatel
 <div class="content">
 <img src="images/4_12-capabilities.png" alt="capabilities" width="600">
 </div>
-<div class="title">Figure 151. Simple capability map</div>
+<div class="title">Figure 152. Simple capability map</div>
 </div>
 <div class="paragraph">
 <p>Diagrams like this are common, but what does it mean that all the boxes are equally sized? Are there as many lawyers as sales people? Operations staff? It&#8217;s not clear what the advantage is to putting information like this into a graphical form; no interactions are seen and the eight areas could more easily be expressed as a list (or "catalog" in the terms we&#8217;ll introduce below). This brings us to the final problem listed above: visualizations rely on some <a href="#shared-mental-model">common ground</a> understanding. If boxes and lines are used for communication, their meaning should be agreed upon - otherwise, there is risk of mis-understanding, and the diagram may do more harm than good.</p>
@@ -24115,7 +24102,7 @@ Artifacts are generally classified as catalogs (lists of things), matrices (show
 <div class="content">
 <img src="images/4_12-simpleMetamodel.png" alt="metamodel" width="400">
 </div>
-<div class="title">Figure 152. A simple metamodel</div>
+<div class="title">Figure 153. A simple metamodel</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -24322,7 +24309,7 @@ One core question decided by governance is how much autonomy is granted to busin
 <div class="content">
 <img src="images/4_12-A-380.jpg" alt="A-380" width="300" height="200">
 </div>
-<div class="title">Figure 153. Airbus A-380 <sup class="footnote">[<a id="_footnoteref_84" class="footnote" href="#_footnote_84" title="View footnote.">84</a>]</sup></div>
+<div class="title">Figure 154. Airbus A-380 <sup class="footnote">[<a id="_footnoteref_84" class="footnote" href="#_footnote_84" title="View footnote.">84</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>In 2006, Airbus was in the midst of developing the gigantic A-380 aircraft. Because of the scale of the effort, multiple teams of engineers in different countries were working on the effort. As William Ulrich says of the German and French teams, "having failed to coordinate efforts to wire the world&#8217;s largest plane, they were surprised to learn that they had used different approaches to designing the A380&#8217;s wiring system" <a href="#Ulrich2010">[Ulrich2010]</a>, p. 32. This was because the teams were using different software for wiring design of the critical wiring design software <a href="#Clark2006">[Clark2006]</a>. The use of different software to fulfill the capability resulted in a year&#8217;s delay, a $4.5bn order loss to Boeing, and a 26% drop in Airbus stock.</p>
@@ -24378,7 +24365,7 @@ One core question decided by governance is how much autonomy is granted to busin
 <div class="content">
 <img src="images/4_12-archimate.png" alt="archimate" width="500">
 </div>
-<div class="title">Figure 154. Similar to <a href="#Open2012">[Open2012]</a>, section 2.6</div>
+<div class="title">Figure 155. Similar to <a href="#Open2012">[Open2012]</a>, section 2.6</div>
 </div>
 <div class="paragraph">
 <p>As we look at the overall structure of the architecture disciplines, we have three disciplines that correspond to the columns. We&#8217;ll call these "perspectives":</p>
@@ -24460,7 +24447,7 @@ One core question decided by governance is how much autonomy is granted to busin
 <div class="content">
 <img src="images/4_12-flowchart.jpg" alt="flowchart" width="300" height="200">
 </div>
-<div class="title">Figure 155. A flowchart <sup class="footnote">[<a id="_footnoteref_85" class="footnote" href="#_footnote_85" title="View footnote.">85</a>]</sup></div>
+<div class="title">Figure 156. A flowchart <sup class="footnote">[<a id="_footnoteref_85" class="footnote" href="#_footnote_85" title="View footnote.">85</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Process architecture is concerned with why and how activities are performed. It includes the detailed, step by step understanding of activities, in a transparent way. From top to bottom, it includes concepts such as:</p>
@@ -24968,7 +24955,7 @@ Another possible objection against agile methods is that the processes in EA, an
 <div class="content">
 <img src="images/4_12-stopwatch.jpg" alt="alt text" width="300" height="200">
 </div>
-<div class="title">Figure 156. What is your Cost of Delay? <sup class="footnote">[<a id="_footnoteref_86" class="footnote" href="#_footnote_86" title="View footnote.">86</a>]</sup></div>
+<div class="title">Figure 157. What is your Cost of Delay? <sup class="footnote">[<a id="_footnoteref_86" class="footnote" href="#_footnote_86" title="View footnote.">86</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>It is in the "governance and approval" kind of activity that conflict is most likely to emerge. Cadence and synchronization (e.g. processes) with the potential to block teams from pursuing their mission should be very carefully considered. If there is a process or a queue of architecture approvals, it at least should be operated on Cost of Delay of the work it&#8217;s blocking. And more generally, across the organization, the process should be tested against an economic model such as establishing a nominal or <a href="#portfolio-CoD">portfolio-level Cost of Delay</a>. Like other processes, architecture itself can be assessed against such a baseline.</p>
@@ -25016,7 +25003,7 @@ Architectural goals—for example, desired performance, availability, and securi
 <div class="content">
 <img src="images/4_12-strangler-vine.jpg" alt="alt text" width="400" height="200">
 </div>
-<div class="title">Figure 157. Australian strangler vine surrounding tree <sup class="footnote">[<a id="_footnoteref_87" class="footnote" href="#_footnote_87" title="View footnote.">87</a>]</sup></div>
+<div class="title">Figure 158. Australian strangler vine surrounding tree <sup class="footnote">[<a id="_footnoteref_87" class="footnote" href="#_footnote_87" title="View footnote.">87</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Keeping the target operating condition specific is preferable. When architecture scopes problems too broadly, the temptation is to undertake <a href="#large-arch-xform-risk">large and risky transformation programs</a>. As an alternative, Humble and Molesky suggest the "strangler pattern," proposed by Martin Fowler in 2004 <a href="#Fowler2004a">[Fowler2004a]</a>. This pattern uses as a metaphor Australian "strangler" vines that grow around trees until the original tree dies, at which point the strangler vine is now itself a sturdy, rooted structure (see picture).</p>
@@ -28021,10 +28008,10 @@ Cost of Delay</pre>
 <a href="#_footnoteref_47">47</a>. Similar to figure from <a href="#Cantor2016">[Cantor2016]</a>.
 </div>
 <div class="footnote" id="_footnote_48">
-<a href="#_footnoteref_48">48</a>. similar to <a href="#Kurtz2003">[Kurtz2003]</a> and extensive related work by Dave Snowden.
+<a href="#_footnoteref_48">48</a>. Author&#8217;s note: I believe this to be original; it is being published here for the first time.
 </div>
 <div class="footnote" id="_footnote_49">
-<a href="#_footnoteref_49">49</a>. Author&#8217;s note: I believe this to be original; it is being published here for the first time.
+<a href="#_footnoteref_49">49</a>. similar to <a href="#Kurtz2003">[Kurtz2003]</a> and extensive related work by Dave Snowden.
 </div>
 <div class="footnote" id="_footnote_50">
 <a href="#_footnoteref_50">50</a>. adapted from <a href="#Strode2012a">[Strode2012a]</a>
@@ -28143,7 +28130,7 @@ Cost of Delay</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-12-02 11:12:33 CST
+Last updated 2016-11-21 10:11:27 CST
 </div>
 </div>
 </body>
