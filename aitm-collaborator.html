@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.4">
+<meta name="generator" content="Asciidoctor 1.5.5">
 <meta name="author" content="Charles T. Betz">
 <title>The digital professional: from startup to enterprise (Collaborative Draft)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -18,7 +18,6 @@ audio:not([controls]){display:none;height:0}
 [hidden],template{display:none}
 script{display:none!important}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
-body{margin:0}
 a{background:transparent}
 a:focus{outline:thin dotted}
 a:active,a:hover{outline:0}
@@ -53,7 +52,7 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -65,7 +64,6 @@ img{-ms-interpolation-mode:bicubic}
 .text-center{text-align:center!important}
 .text-justify{text-align:justify!important}
 .hide{display:none}
-body{-webkit-font-smoothing:antialiased}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
@@ -120,13 +118,16 @@ table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
 table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
-body{tab-size:4}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
 .clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
 .clearfix:after,.float-group:after{clear:both}
-*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+*:not(pre)>code.nobreak{word-wrap:normal}
+*:not(pre)>code.nowrap{white-space:nowrap}
 pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
+em em{font-style:normal}
+strong strong{font-weight:400}
 .keyseq{color:rgba(51,51,51,.8)}
 kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
@@ -7101,7 +7102,7 @@ As a field, product management has a professional association, the <a href="http
 <p>They have an important commonality: <strong>all of them are concepts for driving results across organizations.</strong></p>
 </div>
 <div class="paragraph">
-<p>Here are some of the key differences between process, project and product management in the context of digital services and systems:</p>
+<p>The Appendices have brief discussions of <a href="#project-mgmt">project management</a> and <a href="#process-modeling">process modeling</a>. Here are some of the key differences between process, project and product management in the context of digital services and systems:</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <caption class="title">Table 4. Process, project, and product management</caption>
@@ -12633,6 +12634,9 @@ What’s typically underestimated is the complexity and indivisibility of many l
 <p>What is a "dependency"? We need to think carefully about this. According to the well-accepted definition above (from <a href="#Malone1994">[Malone1994]</a>), without dependencies, we do not need coordination. Diane Strode and her associates (<a href="#Strode2012">[Strode2012]</a>) have described a comprehensive framework for thinking about dependencies and coordination, including a dependency taxonomy, an inventory of coordination strategies, and an examination of coordination effectiveness criteria.</p>
 </div>
 <div class="paragraph">
+<p><a id="strode-dependency-taxonomy"></a></p>
+</div>
+<div class="paragraph">
 <p>To understand dependencies, Strode et al. propose the following framework <a href="#Strode2012a">[Strode2012a]</a>:</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
@@ -13135,13 +13139,35 @@ Recommend you review the definitions of the "<a href="#process-project-product">
 <div class="title">Note</div>
 </td>
 <td class="content">
-We&#8217;ll talk about project management as an investment strategy in the next chapter. In this chapter, we look at it as a coordination strategy. If you are completely unfamiliar with project management, see the <a href="#project-mgmt">brief discussion in the appendix</a> and the <a href="#PMBOK">PMBOK summary</a>.
+We&#8217;ll talk about project management as an investment strategy in the next chapter. In this chapter, we look at it as a coordination strategy. If you are completely unfamiliar with project management, see the <a href="#project-mgmt">brief introduction in the appendix</a> and the <a href="#PMBOK">PMBOK summary</a>.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Project management adds concerns of task ordering and resource management, for efforts typically executed on a one-time basis. Project management groups together a number of helpful coordination tools which is why it is widely used. However, there are a number of issues in doing so.</p>
+<p>Project management adds concerns of task ordering and resource management, for efforts typically executed on a one-time basis. Project management groups together a number of helpful coordination tools which is why it is widely used. These tools include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Sequencing tasks</p>
+</li>
+<li>
+<p>Managing task dependencies</p>
+</li>
+<li>
+<p>Managing resource dependencies of tasks</p>
+</li>
+<li>
+<p>Managing overall risk of interrelated tasks</p>
+</li>
+<li>
+<p>Planning complex activity flows to complete at a given time</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>However, project management also has a number of issues:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -13150,21 +13176,14 @@ We&#8217;ll talk about project management as an investment strategy in the next 
 </li>
 <li>
 <p>Project management methodology, with its emphasis on predictability, scope management, and change control often conflicts with the product management objective of discovering information (see the discussion of <a href="#lean-product-dev">Lean Product Development</a>.)</p>
-<div class="ulist">
-<ul>
-<li>
-<p>But not all large management activities involve the creation of new information! (Consider the previous example of upgrading the RAM in 80,000 POS terminals in 2000 stores.)</p>
-</li>
-</ul>
-</div>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Scope, execution, limited resources, and dependencies exist throughout digital business. A product manager with no understanding of these issues, or tools to deal with them, will likely fail.</p>
+<p>(But not all large management activities involve the creation of new information! Consider the previous example of upgrading the RAM in 80,000 POS terminals in 2000 stores.)</p>
 </div>
 <div class="paragraph">
-<p>Product managers should therefore be familiar with the basic concepts of project management. The project paradigm has a benefit in its explicit limitation of time and money, and the sense of urgency this creates. However, the way in which project management is implemented, the degree of formality, will vary according to need.</p>
+<p>The project paradigm has a benefit in its explicit limitation of time and money, and the sense of urgency this creates. In general, scope, execution, limited resources, deadlines, and dependencies exist throughout digital business. A product manager with no understanding of these issues, or tools to deal with them, will likely fail. Product managers should therefore be familiar with the basic concepts of project management. However, the way in which project management is implemented, the degree of formality, will vary according to need.</p>
 </div>
 <div class="paragraph">
 <p>A project manager may still be required, to facilitate discussions, record decisions, and keep the team on track to its stated direction and commitments. Regardless of whether the team considers itself "Agile," people are sometimes bad at taking notes or being consistent in their usage of tools such as Kanban boards and standups.</p>
@@ -13175,6 +13194,21 @@ We&#8217;ll talk about project management as an investment strategy in the next 
 </div>
 <div class="sect4">
 <h5 id="_process_management_as_coordination">Process management as coordination</h5>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+If you are completely unfamiliar with business processes, see the <a href="#process-modeling">overview in the appendix</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>As we saw in the <a href="#strode-dependency-taxonomy">Strode dependency taxonomy</a>, waiting on a business process is a form of dependency. But business processes are more than just dependency sources and obstacles; <em>they themselves are a form of coordination</em>. In Strode&#8217;s terms, they are a <a href="#coord-tools">boundary spanning activity</a>. It is ironic that</p>
+</div>
 <div class="paragraph">
 <p>Process management is also concerned with ordering, but less so with the resource load (more on this below), and instead is concerned with repeatability and ongoing improvement.</p>
 </div>
@@ -29731,18 +29765,6 @@ MEA03	Evaluate and Assess Compliance with External Requirements<br></p></td>
 </div>
 <div class="sect3">
 <h4 id="_project_basics">Project basics</h4>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Important</div>
-</td>
-<td class="content">
-As with other chapters in the later part of this book, we are going to introduce Project Mangement "on its own terms." We will then add additional context and critique in subsequent sections.
-</td>
-</tr>
-</table>
-</div>
 <div class="paragraph">
 <p>We are already doing work, using Scrum and Kanban for the most part. But there is interest in more formalized, traditional project management, so some of you go to training and learn the following basics.</p>
 </div>
@@ -31765,7 +31787,7 @@ Cost of Delay</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-12-03 06:28:54 CST
+Last updated 2016-12-02 11:18:40 CST
 </div>
 </div>
 </body>
