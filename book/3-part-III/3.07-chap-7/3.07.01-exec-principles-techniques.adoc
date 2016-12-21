@@ -54,7 +54,7 @@ Because of this, the Chubby team (at least at the time writing of the case study
 
 In terms of this chapter's topic, this means that someone on the product team needed to coordinate the discussions with the Chubby team and ensure that any concerns were resolved. This might conceivably have involved multiple iterations and reviews of designs describing intended use.
 
-In short, even the most sophisticated microservice environments may require some level of  human coordination across the teams. Project management provides a framework for doing this and encourages the development of appropriate skills.
+In short, even the most sophisticated microservice environments may have a dependency on human coordination across the teams.
 ****
 
 anchor:multi-product-scaling[]
@@ -135,7 +135,7 @@ In 1974, the noted physicist Richard Feynman gave a speech at Caltech in which h
 As with many stories of this kind, there are questions around the accuracy of the original anthropological accounts and Western interpretations and mythmaking around what was seen. However there is no question that “cargo cult thinking” is a useful cautionary metaphor.
 ****
 
-Strode et al provide a useful framework for understanding coordination mechanisms.
+Strode et al provide a useful framework for understanding coordination mechanisms, excerpted and summarized into the following table:
 
 .Coordination taxonomy footnote:[adapted from <<Strode2012>>]
 [cols="3*", options="header"]
@@ -150,7 +150,6 @@ Strode et al provide a useful framework for understanding coordination mechanism
 |Synchronization activity|Activities performed by all team members simultaneously that promote a common understanding of the task, process, and or expertise of other team members
 |Synchronization artifact|An artifact generated during synchronization activities.
 
-
 .3+|*Boundary spanning*
 |Boundary spanning activity|Activities (team or individual) performed to elicit assistance or information from some unit or organization external to the project
 |Boundary spanning artifact|An artifact produced to enable coordination beyond the
@@ -159,7 +158,7 @@ team and project boundaries.
 the project
 |====
 
-The following sections expand these strategies with examples.
+The following sections expand the three strategies (structure, synchronization, boundary spanning) with examples.
 
 ====== Structure
 *Proximity.* Don Reinertsen (<<Reinertsen2009>>, p. 230), proposes "The Principle of Colocation" which asserts that "Colocation improves almost all aspects of communication." In order to scale this, one logically needs what Mike Cohn (<<Cohn2010>>, p. 346) calls "The Big Room."
@@ -172,8 +171,6 @@ In terms of communications, this has significant organizational advantages. Comm
 * Distracting individuals from intellectually demanding work requiring concentration, driving xref:multi-tasking[multi-tasking and context-switching], and ultimately interfering with their personal sense of flow - a destructive outcome. (See <<Csikszentmihalyi1990>> for more on flow as a valuable psychological state.)
 
 The tension between team coordination and individual focus will likely continue. It is an ongoing topic in facilities design.
-
-Team members also can be "available" to each other
 
 ====== Synchronization
 
@@ -221,7 +218,7 @@ Another perspective on this is found in The Checklist Manifesto <<Gawande2010>>.
 
 The above discussion is by no means exhaustive. A wealth of additional techniques is to be found in <<Larman2009>> and <<Cohn2010>>. New techniques are continually emerging from the front lines of the digital industry; the interested student should consider attending industry conferences such as those offered by the Agile Alliance.
 
-The above approaches imply synchronized meetings and face to face interactions. When the boundary-spanning approach is based on artifacts, we move into the realms of process and project management. Artifact-centric approaches often receive criticism for introducing too much latency into the product development process; they often imply xref:queues[queues], and sometimes flow through multiple queues in an uncoordinated way, as we warned in Chapter 5.
+The above approaches imply synchronized meetings and face to face interactions. When the boundary-spanning approach is based on artifacts (often a requirement for larger, decentralized enterprises), we move into the realms of process and project management. Artifact-centric approaches often receive criticism for introducing too much latency into the product development process; they often imply xref:queues[queues], and sometimes flow through multiple queues in an uncoordinated way, as we warned in Chapter 5.
 
 *** Trad PM
 *** clinical terminology (Reinertsen)
@@ -235,10 +232,6 @@ The above approaches imply synchronized meetings and face to face interactions. 
 
 shared resources and services
 global CoD - process eval
-
-
-** internal market econ
-** the cost accounting problem
 
 At an execution level, project managers retain important roles and (sometimes re-labeled Scrum masters or release managers) are employed in both traditional and new digital companies as overall orchestrators of complex initiatives.
 

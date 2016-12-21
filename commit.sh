@@ -19,7 +19,7 @@ git add . -A && git commit -m "commit"
 git push origin master
 
 mv aitm-student.html index.html
-#mv aitm-student.html new-student.html  # hack, I should figure out the CLI parm for the rake command
+# mv aitm-student.html new-student.html  # hack, I should figure out the CLI parm for the rake command
 
 
 # copy html & images to github pages
