@@ -139,6 +139,8 @@ For further information and the current state of industry practice on these ques
 Another technique that is changing the data management landscape is the concept of append-only. Traditional databases *change* values; for example, if you change "1004 Oak Av." to "2010 Elm St." in an address field, the old value is (in general) *gone*, unless you have specifically engineered the system to preserve it.
 
 A common approach is the idea of "audited" or "effective-dated" fields, which have existed for decades. In an effective-dated approach, the "change" to the address actually looks like this in the database:
+
+.Effective dating
 [cols="3*", options="header"]
 |====
 |Street address|From|To
@@ -151,6 +153,7 @@ In this approach, data accumulates and is not deleted. (Capacity problems can of
 
 This is a powerful technique, especially as storage costs go down. It can be combined with the data lake to create systems of great flexibility. But there are no silver bullets. Suppose that a distributed system has sacrificed consistency for availability and partition-tolerance (see xref:CAP-theorem[CAP theorem]). In that case, the system may wind up with data such as:
 
+.Effective dating ambiguity
 [cols="3*", options="header"]
 |====
 |Street address|From|To
