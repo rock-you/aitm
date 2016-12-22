@@ -819,21 +819,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_process_conception">Process conception</a></li>
 <li><a href="#_process_execution">Process execution</a></li>
 <li><a href="#_measuring_process">Measuring process</a></li>
+<li><a href="#_process_improvement">Process improvement</a></li>
 </ul>
 </li>
 <li><a href="#_process_control_and_continuous_improvement">Process control and continuous improvement</a>
 <ul class="sectlevel4">
-<li><a href="#_process_improvement">Process improvement</a></li>
 <li><a href="#_history_of_continuous_improvement">History of continuous improvement</a></li>
 <li><a href="#_frederick_taylor_and_efficiency">Frederick Taylor and efficiency</a></li>
 <li><a href="#_w_e_deming_and_variation">W.E. Deming and variation</a></li>
 <li><a href="#_lean_product_development_and_cost_of_delay">Lean Product Development and cost of delay</a></li>
 <li><a href="#_scrum_and_empirical_process_control">Scrum and empirical process control</a></li>
-<li><a href="#_metrics_measurements_and_kpis">Metrics, measurements, and KPIs</a></li>
 </ul>
 </li>
 <li><a href="#_topics_in_coordination_and_execution">Topics in coordination and execution</a>
-<ul class="sectlevel5">
+<ul class="sectlevel4">
 <li><a href="#_critical_chain">Critical chain</a></li>
 </ul>
 </li>
@@ -13181,7 +13180,7 @@ We&#8217;ll talk about project management as an investment strategy in the next 
 <div class="sect4">
 <h5 id="_process_management_as_coordination">Process management as coordination</h5>
 <div class="paragraph">
-<p>We discussed the <a href="#process-mgmt-emerges">emergence of process management</a> in Chapter 5, and you should also review the <a href="#process-modeling">overview in the appendix</a>.</p>
+<p>We discussed the <a href="#process-mgmt-emerges">emergence of process management</a> in Chapter 5, including the basic processes of Change, Incident, Problem, and Request management, and you should also review the <a href="#process-modeling">overview in the appendix</a>.</p>
 </div>
 <div class="paragraph">
 <p>As we saw in the <a href="#strode-dependency-taxonomy">Strode dependency taxonomy</a>, waiting on a business process is a form of dependency. But business processes are more than just dependency sources and obstacles; <em>they themselves are a form of coordination</em>. In Strode&#8217;s terms, they are a <a href="#coord-tools">boundary spanning activity</a>. It is ironic that a coordination tool itself might be seen as a dependency and blockage to work; this shows at least the risk of assuming that all problems can or should be solved by tightly-specified business processes!</p>
@@ -13209,11 +13208,7 @@ We&#8217;ll talk about project management as an investment strategy in the next 
 <p>And many others. We will discuss variety of such processes, and the pros and cons of formalizing them, in the Chapter 9 section on industry frameworks. In Chapter 10, we will discuss IT governance in depth. The concept of "control" is critical to IT governance, and processes often play an important role in terms of control.</p>
 </div>
 <div class="paragraph">
-<p>Just as the traditional IT project is under pressure, there are similar challenges for the traditional IT process. <a href="#continuous-delivery">DevOps and continuous delivery</a>
-are eroding the need for formal change management. Consumerization is challenging traditional internal IT provisioning practices. And self-service help desks are eliminating some traditional support activities. Nevertheless, any rumors of an "end to process" are probably greatly exaggerated. Measurability remains a concern; the Lean philosophy underpinning much Agile thought emphasizes measurement. There will likely always be complex combinations of automated, semi-automated, and manual activity in digital organizations. Some of this activity will be repeatable enough that the "process" construct will be applied to it.</p>
-</div>
-<div class="paragraph">
-<p>We&#8217;ll discuss process management in further depth in this chapter.</p>
+<p>Just as the traditional IT project is under pressure, there are similar challenges for the traditional IT process. <a href="#continuous-delivery">DevOps and continuous delivery</a> are eroding the need for formal change management. Consumerization is challenging traditional internal IT provisioning practices. And self-service help desks are eliminating some traditional support activities. Nevertheless, any rumors of an "end to process" are probably greatly exaggerated. Measurability remains a concern; the Lean philosophy underpinning much Agile thought emphasizes measurement. There will likely always be complex combinations of automated, semi-automated, and manual activity in digital organizations. Some of this activity will be repeatable enough that the "process" construct will be applied to it.</p>
 </div>
 </div>
 <div class="sect4">
@@ -13578,6 +13573,9 @@ Within the boundaries of each process, improvements were implemented that made w
 <div class="paragraph">
 <p>In general, the idea is that we can understand digital processes not through painful manual status updates, but rather through their digital exhaust - the data byproducts of people performing the value-add day to day work, at speed and with flow instead of constant delays for approvals and status updates.</p>
 </div>
+<div class="paragraph">
+<p><a id="metrics-KPIs"></a></p>
+</div>
 </div>
 </div>
 <div class="sect4">
@@ -13605,10 +13603,126 @@ Within the boundaries of each process, improvements were implemented that made w
 </ul>
 </div>
 <div class="paragraph">
-<p>at the most general level, and of course all of those measurements must be defined much more specifically depending on the process.</p>
+<p>at the most general level, and of course all of those measurements must be defined much more specifically depending on the process. Operations (often in the form of business processes) generate data, and data can be aggregated and reported on. Such reporting serves as a form of feedback for management, and even governance. Examples of metrics might include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Quarterly sales as a dollar amount</p>
+</li>
+<li>
+<p>Percentage of time a service or system is available</p>
+</li>
+<li>
+<p>Number of successful releases or pushes of code (new functionality)</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Measurement is an essential aspect of process management, but must be carefully designed. Measuring process can have unforeseen results. Process participants will behave according to how the process is measured. If a help desk operator is measured and rated on how many calls they process an hour, the quality of those interactions may suffer. It is critical that any process "key performance indicator" be understood in terms of the highest possible business objectives. Is the objective truly to process as many calls as possible? Or is it to satisfy the customer so they need not turn to other channels to get their answers? (More on measurement in the chapter section on <a href="#continuous-improvement">Continuous Improvement</a>.)</p>
+<p>Measurement is an essential aspect of process management, but must be carefully designed. Measuring process can have unforeseen results. Process participants will behave according to how the process is measured. If a help desk operator is measured and rated on how many calls they process an hour, the quality of those interactions may suffer. It is critical that any process "key performance indicator" be understood in terms of the highest possible business objectives. Is the objective truly to process as many calls as possible? Or is it to satisfy the customer so they need not turn to other channels to get their answers?</p>
+</div>
+<div class="paragraph">
+<p>A variety of terms and practices exist in process metrics and measurement, such as:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The Balanced Scorecard</p>
+</li>
+<li>
+<p>The concept of a metrics hierarchy</p>
+</li>
+<li>
+<p>Leading versus lagging indicators</p>
+</li>
+</ul>
+</div>
+<div class="sect5">
+<h6 id="_balanced_scorecard">Balanced Scorecard</h6>
+<div class="paragraph">
+<p>The balanced score card is a commonly-seen approach for measuring and managing organizations. First proposed by Kaplan and Norton <a href="#Kaplan1992">[Kaplan1992]</a> in the Harvard Business Review, the Balanced Scorecard groups metrics into the following subject areas:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Financial</p>
+</li>
+<li>
+<p>Customer</p>
+</li>
+<li>
+<p>Internal business processes</p>
+</li>
+<li>
+<p>Learning and growth</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_metrics_hierarchy">Metrics Hierarchy</h6>
+<div class="paragraph">
+<p>Metrics can be seen as "lower" versus "higher" level. For example, the metrics from a particular product might be aggregated with the metrics from all products, to provide an overall metric of product success.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_leading_lagging_indicators">Leading &amp; Lagging Indicators</h6>
+<div class="paragraph">
+<p>Metrics can indicate past performance (lagging), or predict future performance (leading).</p>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_process_improvement">Process improvement</h5>
+<div class="quoteblock">
+<blockquote>
+There tended to be no big picture waiting to be revealed . . . there was only process kaizen . . . focused on isolated individual steps. . . . We coined the term “kamikaze kaizen” . . . to describe the likely result: lots of commotion, many isolated victories . . . [and] loss of the war when no sustainable benefits reached the customer or the bottom line.
+</blockquote>
+<div class="attribution">
+&#8212; Womack and Jones<br>
+<cite>Lean Thinking</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>Once processes are measured, the natural desire is to use the measurements to improve them. But dysfunction and antipatterns exist here:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Not basing process improvement in an empirical understanding of the situation</p>
+</li>
+<li>
+<p>Process improvement activities that do not involve those affected</p>
+</li>
+<li>
+<p>Not treating process activities as demand in and of themselves</p>
+</li>
+<li>
+<p>Uncoordinated improvement activities, far from the bottom line</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The solutions are to be found largely within Lean theory.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Understand the facts of the process; do not pretend to understand based on remote reports. "Go and see," in other words.</p>
+</li>
+<li>
+<p>Respect people, and understand that best understanding of the situation is held by those closest to it.</p>
+</li>
+<li>
+<p>Make time and resources available for improvement activities. For example, assign them a Problem ticket and ensure there are resources specifically tasked with working it, who are given relief from other duties.</p>
+</li>
+<li>
+<p>Periodically review improvement activities as part of the overall portfolio. You are placing "bets" on them just as with new features. Do they merit your investment?</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the next section, we&#8217;ll look at some of the history and theory behind continuous improvement.</p>
 </div>
 <div class="paragraph">
 <p><a id="continuous-improvement"></a></p>
@@ -13625,6 +13739,18 @@ a process can still be controlled even if it can&#8217;t be defined.
 &#8212; Martin Fowler<br>
 <cite>preface to Agile Software Development with Scrum</cite>
 </div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+This is more advanced historical and theoretical material.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Process management, like project management, is a discipline unto itself and one of the most powerful tools in your toolbox. You start to realize there is a process by which  process itself is managed - the process of continuous improvement.  You remain concerned that work continues to flow well, that you don&#8217;t take on too much work in process, and that people are not overloaded and multi-tasking.</p>
@@ -13676,72 +13802,10 @@ There is a debate over whether to use the term "continuous" or "continual" impro
 <p>This breadth of usage requires us to be specific in any discussion of the word "process." In particular, we need to be careful in understanding the concepts of efficiency, variation, and effectiveness. These concepts lie at the heart of understanding process control and improvement and how to correctly apply it in the digital economy.</p>
 </div>
 <div class="paragraph">
-<p>Companies institute processes because it has been long understood that repetitive activities can be optimized when they are better understood, and if they are optimized, they are more likely to be economical and even profitable.</p>
-</div>
-<div class="paragraph">
-<p>We have emphasized throughout this book that the process by which complex systems are created is not repetitive. Such creation is a process of <strong>product development</strong>, not <strong>production.</strong> And yet, the entire digital organization covers a broad spectrum of process possibilities, from the repetitive to the unique. You need to be able to identify what kind of process you are dealing with, and to choose the right techniques to manage it. (For example, the employee provisioning process flow shown in <a href="#process-modeling">the appendix</a> is simple and prescriptive. Measuring its efficiency and variability would be possible, and perhaps useful.)</p>
+<p>Companies institute processes because it has been long understood that repetitive activities can be optimized when they are better understood, and if they are optimized, they are more likely to be economical and even profitable. We have emphasized throughout this book that the process by which complex systems are created is not repetitive. Such creation is a process of <strong>product development</strong>, not <strong>production.</strong> And yet, the entire digital organization covers a broad spectrum of process possibilities, from the repetitive to the unique. You need to be able to identify what kind of process you are dealing with, and to choose the right techniques to manage it. (For example, the employee provisioning process flow shown in <a href="#process-modeling">the appendix</a> is simple and prescriptive. Measuring its efficiency and variability would be possible, and perhaps useful.)</p>
 </div>
 <div class="paragraph">
 <p>There are many aspects of continuous improvement we won&#8217;t cover in this brief section. Some of them (systems thinking, culture, and others) are covered elsewhere in this book. This book is based in part on Lean and Agile premises, and continuous improvement is one of the major influences on Lean and Agile, so in some ways we come full circle. Here, we are focusing on continuous improvement in the context of processes and process improvement. We&#8217;ll therefore scope this to a few concerns: efficiency, variation, effectiveness, and process control.</p>
-</div>
-<div class="sect4">
-<h5 id="_process_improvement">Process improvement</h5>
-<div class="quoteblock">
-<blockquote>
-There tended to be no big picture waiting to be revealed . . . there was only process kaizen . . . focused on isolated individual steps. . . . We coined the term “kamikaze kaizen” . . . to describe the likely result: lots of commotion, many isolated victories . . . [and] loss of the war when no sustainable benefits reached the customer or the bottom line.
-</blockquote>
-<div class="attribution">
-&#8212; Womack and Jones<br>
-<cite>Lean Thinking</cite>
-</div>
-</div>
-<div class="paragraph">
-<p>Finally, what is there to say about process improvement from an Agile and Lean perspective? Since these movements are founded on improvement cycles, fast feedback, and self-organization, it might seem redundant to have a section on Agile Process Improvement.</p>
-</div>
-<div class="paragraph">
-<p>But dysfunction and antipatterns exist here:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Not basing process improvement in an empirical understanding of the situation</p>
-</li>
-<li>
-<p>Process improvement activities that do not involve those affected</p>
-</li>
-<li>
-<p>Not treating process activities as demand in and of themselves</p>
-</li>
-<li>
-<p>Uncoordinated improvement activities, far from the bottom line</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The solutions are to be found largely within Lean theory.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Understand the facts of the process; do not pretend to understand based on remote reports. "Go and see," in other words.</p>
-</li>
-<li>
-<p>Respect people, and understand that best understanding of the situation is held by those closest to it.</p>
-</li>
-<li>
-<p>Make time and resources available for improvement activities. For example, assign them a Problem ticket and ensure there are resources specifically tasked with working it, who are given relief from other duties.</p>
-</li>
-<li>
-<p>Periodically review improvement activities as part of the overall portfolio. You are placing "bets" on them just as with new features. Do they merit your investment?</p>
-<div class="literalblock">
-<div class="content">
-<pre>Change mgmt @ the single team vs multi team
-global CoD - process eval</pre>
-</div>
-</div>
-</li>
-</ul>
-</div>
 </div>
 <div class="sect4">
 <h5 id="_history_of_continuous_improvement">History of continuous improvement</h5>
@@ -13875,13 +13939,13 @@ the purpose of controlling the process must be to influence economic outcomes. T
 <p>Discussions of efficiency usually focus on productivity given a certain set of inputs. Time can be one of those inputs. Everything else being equal, a company that can produce the pizza cutters more quickly is also viewed as more efficient. Customers may pay a premium for early delivery, and may penalize late delivery; such charges typically would be some percentage (say plus or minus 20%) of the final price of the finished goods.</p>
 </div>
 <div class="paragraph">
-<p>However, the question of time becomes a game-changer in the "process" of new product development. As we have discussed previously: Starting with a series of influential articles starting in the early 1980s, Don Reinertsen developed the idea of "cost of delay" for product development (<a href="#Reinertsen1997">[Reinertsen1997]</a>).</p>
+<p>However, the question of time becomes a game-changer in the "process" of new product development. As we have discussed previously, starting with a series of influential articles in the early 1980s, Don Reinertsen developed the idea of <a href="#cost-of-delay">Cost of Delay</a> for product development (<a href="#Reinertsen1997">[Reinertsen1997]</a>).</p>
 </div>
 <div class="paragraph">
-<p>Where the cost of a delayed product shipment might be some percentage, the cost of delay for a delayed product could be much more substantial. For example, if a new product launch misses a key trade show where competitors will be presenting similar innovations, the cost to the company might be millions of dollars of lost revenue - many times the product development investment. (Perhaps even orders of magnitude larger.)</p>
+<p>Where the cost of a delayed product shipment might be some percentage, the cost of delay for a delayed product could be much more substantial. For example, if a new product launch misses a key trade show where competitors will be presenting similar innovations, the cost to the company might be millions of dollars of lost revenue, or more - many times the product development investment.</p>
 </div>
 <div class="paragraph">
-<p>This is not really a question of "efficiency;" of comparing inputs to outputs and looking for a few percentage points improvement. It is more a matter of effectiveness; of the company&#8217;s ability to execute on complex knowledge work.</p>
+<p>This is <strong>not</strong> a question of "efficiency;" of comparing inputs to outputs and looking for a few percentage points improvement. It is more a matter of effectiveness; of the company&#8217;s ability to execute on complex knowledge work.</p>
 </div>
 <div class="paragraph">
 <p><a id="empirical-process-control"></a></p>
@@ -13923,94 +13987,14 @@ The defined and empirical models of process control are concepts from formal <a 
 <p><em>During my visit to DuPont . . . I realized why [software development] was in such trouble and had such a poor reputation. We were wasting our time trying to control our work by thinking we had an assembly line when the only proper control was frequent and first-hand inspection, followed by immediate adjustments.</em> <a href="#Schwaber2002">[Schwaber2002]</a>, p. 25.</p>
 </div>
 <div class="paragraph">
-<p>There&#8217;s little question the idea of statistical process control for product development has been superseded by Scrum and Lean Product Development. However, this is not only a textbook on product development. It covers all of traditional IT management, in its new guise of the digitally transformed organization. Agile, per se, is primarily about product (software) development, but one thing the frameworks make clear is that development is only part of digital management.</p>
-</div>
-<div class="paragraph">
-<p><a id="metrics-KPIs"></a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_metrics_measurements_and_kpis">Metrics, measurements, and KPIs</h5>
-<div class="literalblock">
-<div class="content">
-<pre>needs work</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>We&#8217;ve deferred discussion of metrics and KPIs until now, due to the risk of their mis-application.</p>
-</div>
-<div class="paragraph">
-<p>Operations (often in the form of business processes) generate data, and data can be aggregated and reported on. Examples of metrics might include:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Quarterly sales as a dollar amount</p>
-</li>
-<li>
-<p>Percentage of time a service or system is available</p>
-</li>
-<li>
-<p>Number of successful releases or pushes of code (new functionality)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Such reporting serves as a form of feedback for management, and even governance. A variety of terms and practices exist, such as:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The Balanced Scorecard</p>
-</li>
-<li>
-<p>The concept of a metrics hierarchy</p>
-</li>
-<li>
-<p>Leading versus lagging indicators</p>
-</li>
-</ul>
-</div>
-<div class="sect5">
-<h6 id="_balanced_scorecard">Balanced Scorecard</h6>
-<div class="paragraph">
-<p>The balanced score card is a commonly-seen approach for measuring and managing organizations. First proposed by Kaplan and Norton <a href="#Kaplan1992">[Kaplan1992]</a> in the Harvard Business Review, the Balanced Scorecard groups metrics into the following subject areas:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Financial</p>
-</li>
-<li>
-<p>Customer</p>
-</li>
-<li>
-<p>Internal business processes</p>
-</li>
-<li>
-<p>Learning and growth</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_metrics_hierarchy">Metrics Hierarchy</h6>
-<div class="paragraph">
-<p>Metrics can be seen as "lower" versus "higher" level. For example, the metrics from a particular product might be aggregated with the metrics from all products, to provide an overall metric of product success.</p>
-</div>
-</div>
-<div class="sect5">
-<h6 id="_leading_lagging_indicators">Leading &amp; Lagging Indicators</h6>
-<div class="paragraph">
-<p>Metrics can indicate past performance (lagging), or predict future performance (leading).</p>
-</div>
+<p>There&#8217;s little question the idea of statistical process control for digital product development is thoroughly discredited. However, this is not only a textbook on digital product development. It covers all of traditional IT management, in its new guise of the digitally transformed organization. Development is only part of digital management.</p>
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_topics_in_coordination_and_execution">Topics in coordination and execution</h4>
-<div class="sect5">
-<h6 id="_critical_chain">Critical chain</h6>
+<div class="sect4">
+<h5 id="_critical_chain">Critical chain</h5>
 <div class="paragraph">
 <p>Goldratt in the above-cited book Critical Chain develops a sophisticated critique of project estimation and the dysfunctions it promotes.</p>
 </div>
