@@ -813,7 +813,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_a_deeper_examination_of_process_management">A deeper examination of process management</a>
 <ul class="sectlevel4">
-<li><a href="#_lean_agile_and_it_process_management">Lean, Agile, and IT process management</a></li>
 <li><a href="#_process_conception">Process conception</a></li>
 <li><a href="#_process_execution">Process execution</a></li>
 <li><a href="#_measuring_process">Measuring process</a></li>
@@ -832,7 +831,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_topics_in_coordination_and_execution">Topics in coordination and execution</a>
 <ul class="sectlevel4">
-<li><a href="#_the_idea_of_pmdb_and_pis">The idea of PMDB and PIs</a></li>
 <li><a href="#_scheduling_and_execution">Scheduling and execution</a></li>
 </ul>
 </li>
@@ -12422,14 +12420,44 @@ Is a firm a collection of activities or a set of resources and capabilities? Cle
 <cite>Competitive Advantage</cite>
 </div>
 </div>
+<div class="quoteblock">
+<blockquote>
+Individuals and interactions over processes and tools.
+</blockquote>
+<div class="attribution">
+&#8212; Manifesto for Agile Software Development
+</div>
+</div>
 <div class="paragraph">
-<p>We have previously discussed product and project management, and the beginnings of <a href="#IT-process-emergence">IT process</a>. You may wish to review our summary description of <a href="#process-project-product">process, product, and project management</a>.</p>
+<p><a href="http://www.dictionary.com/browse/process">Dictionary.com</a> defines process as "a systematic series of actions directed to some end . . . a continuous action, operation, or series of changes taking place in a definite manner." We saw the concept of "process" start to <a href="#process-mgmt-emerges">emerge in Chapter 5</a>, as work become more specialized and repeatable and our card walls got more complicated.</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;ve discussed <a href="#work-management">work management</a>, which is an important precursor of process management. Work management is less formalized; a wide variety of activities are handled through flexible <a href="#kanban">Kanban</a>-style boards or "card walls" based on the simplest "process" of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>To do</p>
+</li>
+<li>
+<p>Doing</p>
+</li>
+<li>
+<p>Done</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>However, the simple card wall/Kanban board can easily become much more complex, with the addition of swimlanes and additional columns, including holding areas for blocked work. When tasks become more routine, repeatable, and specialized, formal process management starts to emerge.</p>
+</div>
+<div class="paragraph">
+<p>Process, in terms of "business process," has been a topic of study and professional development for many years. Pioneering Business Process Management (BPM) authors such as Michael Hammer <a href="#Hammer1993">[Hammer1993]</a> and Geary Rummler <a href="#Rummler1995">[Rummler1995]</a> have had an immense impact on business operations. Toyota considers a clear process vision, or "target condition," to be the most fundamental objective in improving operations (<a href="#Rother2010">[Rother2010]</a>, chapters 5-6).  Designing processes, improving them, and using them to improve overall performance is an ongoing activity in most, if not all organizations.</p>
 </div>
 <div class="paragraph">
 <p>Process management starts with the fundamental capability for coordinated <a href="#work-management">work management</a>, and refines it much further.</p>
 </div>
 <div class="paragraph">
-<p>In our company, work has been specializing. A simple card-based kanban approach is no longer sufficient. We are finding that some work is repetitive, and we need to remember to do certain things in certain orders. For example, a new Human Resources (HR) manager was hired. The HR manager decided that a sticky note of "hire someone new for us" was not sufficient. As she pointed out to the team, hiring needed to follow a defined sequence of tasks:</p>
+<p>In your company, work has been specializing. A simple card-based kanban approach is no longer sufficient. You are finding that some work is repetitive, and you need to remember to do certain things in certain orders. For example, a new Human Resources (HR) manager was hired. The HR manager decided that a sticky note of "hire someone new for us" was not sufficient. As she pointed out to the team, hiring needed to follow a defined sequence of tasks:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -12460,10 +12488,29 @@ Is a firm a collection of activities or a set of resources and capabilities? Cle
 </ul>
 </div>
 <div class="paragraph">
-<p>The sales, marketing, and finance teams have similarly been developing ordered lists of tasks that are consistently executed as end to end sequences. And even in the core digital development and operations teams, they are finding that some tasks are repetitive and need documentation so they are performed consistently.</p>
+<p>The sales, marketing, and finance teams have similarly been developing ordered lists of tasks that are consistently executed as end to end sequences. And even in the core digital development and operations teams, they are finding that <a href="#IT-process-emergence">some tasks are repetitive</a> and need documentation so they are performed consistently.</p>
 </div>
 <div class="paragraph">
-<p>More broadly, your entire digital product pipeline is sometimes called a "process." From initial feature idea through production, you seek a consistent means for identifying and implementing valuable functionality. Sometimes this work requires intensive, iterative collaboration and is unpredictable (e.g. developing a user interface); sometimes, the work is more repeatable (e.g. packaging and releasing tested functionality).</p>
+<p>Your entire digital product pipeline is sometimes called a "process." From initial feature idea through production, you seek a consistent means for identifying and implementing valuable functionality. Sometimes this work requires intensive, iterative collaboration and is unpredictable (e.g. developing a user interface); sometimes, the work is more repeatable (e.g. packaging and releasing tested functionality).</p>
+</div>
+<div class="paragraph">
+<p>You&#8217;re hiring more specialized people with specialized backgrounds. Many of them enter your organization and immediately ask process questions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>What&#8217;s your Security process?</p>
+</li>
+<li>
+<p>What&#8217;s your Architecture process?</p>
+</li>
+<li>
+<p>What&#8217;s your Portfolio process?</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You&#8217;ve not had these conversations before. What do they mean by these different "processes?" They seem to have some expectation from their previous employment, and if you say "we don&#8217;t have one" they tend to be confused. You&#8217;re becoming concerned that your company may be running some risk, although you also are wary that "process" might mean slowing things down, and you can&#8217;t afford that.</p>
 </div>
 <div class="paragraph">
 <p>However, some team members are cautious of the word "process". The term "process police" comes up in an unhappy way.</p>
@@ -12480,66 +12527,8 @@ Is a firm a collection of activities or a set of resources and capabilities? Cle
 <div class="paragraph">
 <p>The irony is that digital products are based on process automation. The idea that certain tasks can be done repeatably and at scale through digitization is fundamental to all use of computers. The digital service <strong>is</strong> fundamentally an automated process, one that can be intricate and complicated. That&#8217;s what computers do. But process management also spans human activities, and that&#8217;s where things get more complex.</p>
 </div>
-<div class="sect4">
-<h5 id="_lean_agile_and_it_process_management">Lean, Agile, and IT process management</h5>
-<div class="paragraph">
-<p>You&#8217;re hiring more specialized people with specialized backgrounds. Many of them enter your organization and immediately ask process questions:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>What&#8217;s your Change process?</p>
-</li>
-<li>
-<p>What&#8217;s your Problem process?</p>
-</li>
-<li>
-<p>What&#8217;s your Portfolio process?</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>You&#8217;ve not had these conversations before. What do they mean by these different "processes?" They seem to have some expectation from their previous employment, and if you say "we don&#8217;t have one" they tend to be confused. You&#8217;re becoming concerned that your company may be running some risk, although you also are wary that "process" might mean slowing things down, and you can&#8217;t afford that.</p>
-</div>
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Important</div>
-</td>
-<td class="content">
-As with other chapters in the later part of this book, we are going to introduce Process Management "on its own terms." We will then add additional context and critique in subsequent sections.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p><a href="http://www.dictionary.com/browse/process">Dictionary.com</a> defines process as "a systematic series of actions directed to some end . . . a continuous action, operation, or series of changes taking place in a definite manner." We saw the concept of "process" start to <a href="#process-mgmt-emerges">emerge in Chapter 5</a>, as work become more specialized and repeatable and our card walls got more complicated.</p>
-</div>
-<div class="paragraph">
-<p>We&#8217;ve discussed <a href="#work-management">work management</a>, which is an important precursor of process management. Work management is less formalized; a wide variety of activities are handled through flexible <a href="#kanban">Kanban</a>-style boards or "card walls" based on the simplest "process" of:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>To do</p>
-</li>
-<li>
-<p>Doing</p>
-</li>
-<li>
-<p>Done</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>However, the simple card wall/Kanban board can easily become much more complex, with the addition of swimlanes and additional columns, including holding areas for blocked work. When tasks become more routine, repeatable, and specialized, formal process management starts to emerge.</p>
-</div>
 <div class="paragraph">
 <p>Processes are how we ensure consistency, repeatability, and quality. You get expected treatment at banks, coffee shops, and dentists because they follow processes. IT systems often enable processes – a mortgage origination system is based on IT software that enforces a consistent process. IT management itself follows certain processes, for all the same reasons as above.</p>
-</div>
-<div class="paragraph">
-<p>Process, in terms of "business process," has been a topic of study and professional development for many years. Pioneering Business Process Management (BPM) authors such as Michael Hammer <a href="#Hammer1993">[Hammer1993]</a> and Geary Rummler <a href="#Rummler1995">[Rummler1995]</a> have had an immense impact on business operations. Toyota considers a clear process vision, or "target condition," to be the most fundamental objective in improving operations (<a href="#Rother2010">[Rother2010]</a>, chapters 5-6).  Designing processes, improving them, and using them to improve overall performance is an ongoing activity in most, if not all organizations.</p>
 </div>
 <div class="paragraph">
 <p>However, process can cause problems. Processes imply <a href="#queuing">queues</a>, and in digital and other product development-based organizations, this means invisible work in process. For every employee you hire who expects you to have processes, another will have bad process experiences at previous employers. Nevertheless, process remains an important tool in your toolkit for organization design.</p>
@@ -12548,24 +12537,10 @@ As with other chapters in the later part of this book, we are going to introduce
 <p>Process is a broad concept used throughout business operations. <strong>The coverage here is primarily about process as applied to the digital organization.</strong> There is a bit of a recursive paradox here; in part, we are talking about the <strong>process by which business processes are analyzed and automated</strong>. By definition, this overall "process" (you could call it a <strong>meta</strong>-process) cannot be made too prescriptive or predictable.</p>
 </div>
 <div class="paragraph">
-<p>We also introduce process in terms of our <a href="#emergence-model">emergence model</a>, and therefore focus on the concerns and dynamics that may cause you to notice the concept, and your need for it.</p>
-</div>
-<div class="paragraph">
 <p>There is a rich body of industry practice we will draw on in our discussion. Business process management for the purposes of the digital organization is just one more form of business process management.</p>
-</div>
-<div class="quoteblock">
-<blockquote>
-Individuals and interactions over processes and tools.
-</blockquote>
-<div class="attribution">
-&#8212; Manifesto for Agile Software Development
-</div>
 </div>
 <div class="paragraph">
 <p>Like project management, the practice of process management is under scrutiny in the new Lean and Agile-influenced digital world.</p>
-</div>
-<div class="paragraph">
-<p>There&#8217;s little question the idea of statistical process control for product development has been superseded by Scrum and Lean Product Development. However, this is not only a textbook on product development. It covers all of traditional IT management, in its new guise of the digitally transformed organization. Agile, per se, is primarily about product (software) development, but one thing the frameworks make clear is that development is only part of digital management.</p>
 </div>
 <div class="paragraph">
 <p>Clearly, the concept of "process" is important and will persist through digital transformation. It seems we need a more robust set of tools to discuss it. Process control theory may offer some. At a more pragmatic level, this chapter will break the problem into a lifecycle of:</p>
@@ -12588,7 +12563,6 @@ Individuals and interactions over processes and tools.
 </div>
 <div class="paragraph">
 <p>Although we don&#8217;t preface these topics with "Agile" or "Lean," bringing those and related perspectives to these ideas is the intent of this chapter.</p>
-</div>
 </div>
 <div class="sect4">
 <h5 id="_process_conception">Process conception</h5>
@@ -12623,7 +12597,7 @@ Individuals and interactions over processes and tools.
 <p>"I don&#8217;t write code on an assembly line!"</p>
 </div>
 <div class="paragraph">
-<p>Such reactions are commonplace in social media, but we need a more objective and rational approach to understand the pros and cons of processes. Don Reinertsen uses a number of neutral concepts towards this end (<a href="#Reinertsen2009">[Reinertsen2009]</a>, chapters 3, 6 and 7):</p>
+<p>Such reactions are commonplace in social media, but we need a more objective and rational approach to understand the pros and cons of processes. We have seen a number of neutral concepts towards this end from authors such as Don Reinertsen and Diane Strode:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -12645,7 +12619,7 @@ Individuals and interactions over processes and tools.
 </ul>
 </div>
 <div class="paragraph">
-<p>Many of the issues with process comes from a failure to correctly understand and analyze the organization needs in objective terms such as these. This is the focus of <a href="#Toyota-Kata">Toyota Kata</a>. A process is a technique, a tool, and no technique should be implemented without a thorough understanding of the business context. Nor should any technique be implemented without rigorous, disciplined follow-up as to its real effects, both direct and indirect.</p>
+<p>Many of the issues with process comes from a failure to correctly understand and analyze the organization needs in objective terms such as these. We&#8217;ll think about this more in the Chapter 9 discussion of <a href="#Toyota-Kata">Toyota Kata</a>. A process is a technique, a tool, and no technique should be implemented without a thorough understanding of the business context. Nor should any technique be implemented without rigorous, disciplined follow-up as to its real effects, both direct and indirect.</p>
 </div>
 <div class="paragraph">
 <p>A skeptical and self-critical, "go and see" approach is therefore essential. Too often, processes are instituted in reaction to the last data point, imposed top down, and rarely evaluated for effectiveness. Allowing affected parties to lead a process re-design is a core Lean principle (kaizen).</p>
@@ -12666,13 +12640,8 @@ Within the boundaries of each process, improvements were implemented that made w
 <cite>Workflow Modeling</cite>
 </div>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>obtain permission</pre>
-</div>
-</div>
 <div class="paragraph">
-<p>The above quote well illustrates the dangers of combining local optimization and  process management. Many current authors speak highly of self-organizing teams, but self-organizing teams may seek to optimize locally. Process management was originally intended to overcome this problem, but modeling techniques can be applied at various levels, including within specific departments. This is where enterprise business architecture can assist, by identifying these longer, end to end flows of value and highlighting the handoff areas, so that the process benefits the larger objective.</p>
+<p>The above quote (from <a href="#Sharp2009">[Sharp2009]</a>) well illustrates the dangers of combining local optimization and  process management. Many current authors speak highly of self-organizing teams, but self-organizing teams may seek to optimize locally. Process management was originally intended to overcome this problem, but modeling techniques can be applied at various levels, including within specific departments. This is where enterprise business architecture can assist, by identifying these longer, end to end flows of value and highlighting the handoff areas, so that the process benefits the larger objective.</p>
 </div>
 </div>
 <div class="sect5">
@@ -13159,6 +13128,9 @@ The defined and empirical models of process control are concepts from formal <a 
 <p><em>During my visit to DuPont . . . I realized why [software development] was in such trouble and had such a poor reputation. We were wasting our time trying to control our work by thinking we had an assembly line when the only proper control was frequent and first-hand inspection, followed by immediate adjustments.</em> <a href="#Schwaber2002">[Schwaber2002]</a>, p. 25.</p>
 </div>
 <div class="paragraph">
+<p>There&#8217;s little question the idea of statistical process control for product development has been superseded by Scrum and Lean Product Development. However, this is not only a textbook on product development. It covers all of traditional IT management, in its new guise of the digitally transformed organization. Agile, per se, is primarily about product (software) development, but one thing the frameworks make clear is that development is only part of digital management.</p>
+</div>
+<div class="paragraph">
 <p><a id="metrics-KPIs"></a></p>
 </div>
 </div>
@@ -13244,93 +13216,7 @@ The defined and empirical models of process control are concepts from formal <a 
 <h4 id="_topics_in_coordination_and_execution">Topics in coordination and execution</h4>
 <div class="sidebarblock">
 <div class="content">
-<div class="title">Essay: Kanban, process, and respect for people</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Processes cross functions.</p>
-</li>
-<li>
-<p>Processes (e.g. Quote to Cash, Idea to Production) are what actually deliver value.</p>
-</li>
-<li>
-<p>We need both process and function; we can’t organize solely around either.</p>
-</li>
-<li>
-<p>Therefore, get used to matrix management.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The above statements are the management dogma I grew up with. Considered to be innovative at the time, originated by the likes of Michael Hammer and (more rigorously) Geary Rummler. (See Paul Harmon&#8217;s <a href="http://www.bptrends.com/publicationfiles/advisor20081209.pdf">excellent obituary of Geary Rummler</a>.)</p>
-</div>
-<div class="paragraph">
-<p>But consider a day in the life in the modern large organization: dozens or hundreds of cross functional processes that have become a daily barrage of work on the people housed in the functional areas. Driven by back end automation, front ended by automated (or even manual) email notifications, these required activities include:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>service requests,</p>
-</li>
-<li>
-<p>compliance certifications,</p>
-</li>
-<li>
-<p>asset validations,</p>
-</li>
-<li>
-<p>provisioning requests,</p>
-</li>
-<li>
-<p>capacity assessments,</p>
-</li>
-<li>
-<p>change approvals,</p>
-</li>
-<li>
-<p>training obligations,</p>
-</li>
-<li>
-<p>performance assessments,</p>
-</li>
-<li>
-<p>audit responses,</p>
-</li>
-<li>
-<p>expense reporting,</p>
-</li>
-<li>
-<p>travel approvals,</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>and more - infinitely more. This is the modern, “process"-centric enterprise.</p>
-</div>
-<div class="paragraph">
-<p>True, any one of these processes is (often) a relatively small burden to perform. Taken together, however, it’s the nightmare of <a href="http://www.waywordradio.org/adminisdribble_1/">Adminisdribble</a>: The daily death by a thousand cuts of required, cross-functional process.</p>
-</div>
-<div class="paragraph">
-<p>Continual context switching. End to end flow in concept across functions, but little experienced by the multitasking individual. Invisible, unmanaged demand. A thousand channels for flow, but no throughput, because of gridlock.</p>
-</div>
-<div class="paragraph">
-<p>What drives this? The combination of permanent downsizing, continually increasing governance &amp; compliance burdens, and the assumption that the enterprise can always tolerate another process. Overall organizational capacity is rarely considered, especially for “supporting" processes. And there is no appreciation for the emergent behavior when these myriads of processes interact in unexpected ways.</p>
-</div>
-<div class="paragraph">
-<p>This is why kanban is so radical. Within a limited scope, it is starting to challenge the IT management dogma at least. User stories, incidents, defects, service requests, changes… they are all “just work.” Just another sticky note on the board. Someone has to perform the work; someone has to allocate time and attention to it. A simple but utterly profound change in orientation. Kanban is the labor movement of the 21st century.</p>
-</div>
-<div class="paragraph">
-<p>It seems to me that true “respect for people” (as advocated by Lean) of course must start with the recognition that work takes people’s time. I think the modern, process centric enterprise has lost sight of that reality. Is Kanban the answer?</p>
-</div>
-<div class="paragraph">
-<p><em>originally posted at <a href="http://www.lean4it.com/2014/08/kanban-vs-process.html" class="bare">http://www.lean4it.com/2014/08/kanban-vs-process.html</a></em></p>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_the_idea_of_pmdb_and_pis">The idea of PMDB and PIs</h5>
-<div class="sidebarblock">
-<div class="content">
+<div class="title">Essay: The idea of PMDB and PIs</div>
 <div class="paragraph">
 <p>Originally published at <a href="http://www.lean4it.com/2014/06/in-search-of-the-pcmdb-and-pcis.html" class="bare">http://www.lean4it.com/2014/06/in-search-of-the-pcmdb-and-pcis.html</a>.</p>
 </div>
@@ -13422,7 +13308,6 @@ I have seen various attempts and interest along these lines, but always company 
 </div>
 <div class="paragraph">
 <p>Thoughts?</p>
-</div>
 </div>
 </div>
 </div>
