@@ -15,7 +15,6 @@ One of the challenges with applying Lean to IT (as noted xref:lean[previously]) 
 .Production footnote:[_Image credit https://www.flickr.com/photos/psit/5605605412, downloaded 2016-11-19, commercial use permitted_]
 image::images/2_05-assembly-line.jpg[alt text, 300, 200, float="left"]
 
-
 The root cause of this debate is the distinction between product development and production. It is true that an industrial production line, for example producing forklifts by the thousands, may be repetitive. But how did the production line come to be? How was the forklift invented, or developed? It was created as part of a process of product development. It took mechanical engineering, electrical engineering, chemistry, materials science, and more.  Combining fundamental engineering principles and techniques into a new, marketable product is not a repetitive process; it is a highly variable, creative process, and always has been.
 
 WARNING: Never confuse production with product development. The approaches, measures, and concerns are radically different. This book considers it an "original sin."
@@ -111,50 +110,4 @@ Reinertsen observes that product managers may think that they intuitively unders
 
 Finally, Josh Arnold notes that Cost of Delay is much easier to assess on small batches of work. Large projects tend to attract many ideas for features, some of which have stronger economic justifications than others. When all these features are lumped together, it makes understanding Cost of Delay challenging, because it then becomes an average across the various features. But since features, ideally, can be worked on individually, understanding Cost of Delay at that level helps with the prioritization of the work.
 
-anchor:roadmap-backlog-estimation[]
-
-===== Roadmap, backlog, and estimation
-
-We've previously mentioned the xref:scrum[product backlog] and  xref:product-roadmapping[product roadmapping]. Let's examine this concept further, and in particular how xref:cost-of-delay[Cost of Delay] can help. Both Mike Cohn and Roman Pichler use the DEEP acronym to describe backlog qualities (<<Cohn2010>> p. 243, <<Pichler2010>> p. 48):
-
-* Detailed appropriately
-* Estimated
-* Emergent (feedback such as new or changed stories are readily accepted)
-* Prioritized
-
-The backlog should receive ongoing "grooming" to support these qualities, which means several things:
-
-* Addition of new items
-* Re-prioritization of items
-* Elaboration (decomposition, estimation and refinement)
-
-.Backlog granularity & priority footnote:[similar to <<Pichler2010>>, p.48.]
-image::images/2_05-backlog.png[backlog, 250, ,float="right"]
-
-When "detailed appropriately," items in the backlog are not all the same scale. Scrum and Agile thinkers generally agree on the core concept of "story," but stories vary in size, with the largest stories often termed "epics." The backlog is ordered in terms of priority (what will be done next) but, critically, it is also understood that the lower-priority items in general can be larger grained. In other words, if we visualize the backlog as a stack, with the highest priority on the top, the size of the stories increases as we go down. (Reinertsen terms this _progressive specification_; see <<Reinertsen1997>>, pp. 176-177 for a detailed discussion.)
-
-A high quality DEEP backlog combined with Cost of Delay is the foundation of digital product development. It's essential to have an economic basis for making the prioritization decision. Clarifying the economic basis is a critical function of the xref:product-roadmapping[product roadmap]. Through understanding the economics of product availability to the market or internal users, Cost of Delay can drive backlog prioritization.
-
-Estimating user stories is a standard practice in Scrum and Agile methods more generally. Agile approaches are wary of false precision and accept the fact that estimation is an uncertain practice at best. However, without some overall estimate or roadmap for when a product might be ready for use, it is unlikely that the investment will be made to create it. It is difficult to establish the economic value of developing a product feature at a particular time, if you have no idea of the cost and/or effort involved to bring it to market.
-
-At a more detailed level, it is common practice for product teams to estimate detailed stories using "points." Points are a relative form of estimation, valid within the boundary of one team. Story point estimating strives to avoid false precision, often restricting the team's estimate of the effort to a modified Fibonacci sequence, or even T-shirt or dog sizes:
-
-.Agile estimating scales
-[cols="3*", options="header"]
-|====
-|Story point|T-shirt|Dog
-|1|XXS|Chihauha
-|2|XS|Dachshund
-|3|S|Terrier
-|5|M|Border collie
-|8|L|Bulldog
-|13|XL|Labrador retriever
-|20|XXL|Mastiff
-|40|XXXL|Great Dane
-|====
-
-(similar to <<Cohn2006>>, p. 37)
-
-Through estimation of story points, we can understand the team's velocity. Estimating velocity is key to planning, which we'll discuss further in Chapter 8. Finally, in all discussions of prioritization, it's advisable to remember these words from Don Reinertsen:
-
-_companies often create complex prioritization algorithms that produce precise priorities based on very imprecise input data. I prefer the simple approach. To select between two almost equivalent choices creates great difficulty and little payoff. Instead, we should try to prevent the big, stupid mistakes. This does not require precision_ (<<Reinertsen2009>> p 192).
+The combination of xref:product-roadmapping[product roadmapping], a high quality xref:scrum[DEEP backlog], and Cost of Delay is a solid foundation for digital product development. It's essential to have an economic basis for making the prioritization decision. Clarifying the economic basis is a critical function of the xref:product-roadmapping[product roadmap]. Through estimation of story points, we can understand the team's velocity. Estimating velocity is key to planning, which we'll discuss further in Chapter 8. Through understanding the economics of product availability to the market or internal users, Cost of Delay can drive backlog prioritization.
