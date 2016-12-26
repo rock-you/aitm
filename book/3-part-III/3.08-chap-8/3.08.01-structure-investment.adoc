@@ -10,78 +10,75 @@ NOTE: The first comparison of IT investments to a portfolio was in 1974, by Rich
 
 Whatever the xref:digital-context[context for your digital products] (external or internal), they are intended to provide value to your organization and ultimately your end customer. Each of them in a sense is a "bet" on how to realize this value (review the xref:DIBB[Spotify DIBB model]), and represents in some sense a form of xref:prod-discovery[product discovery].
 
-As you strengthen a hypothesis in a given product or feature structure, you increasingly xref:formalization[formalize] it: a clear product vision supported by dedicated resources.
+As you strengthen a hypothesis in a given product or feature structure, you increasingly xref:formalization[formalize] it: a clear product vision supported by dedicated resources. We'll discuss the IT portfolio concept further in xref:portfolio-management[Chapter 12]. In your earliest stages of differentiating your portfolio, you may first think about features versus components.
 
-
-
-We'll discuss the IT portfolio concept further in Chapter 12.
+anchor:feature-v-component[]
 
 ===== Features versus components
-If you choose to organize around products, the discussion revolves around segmenting along feature lines, versus segmenting along component lines. What do we mean by this?
+As you consider your options for partitioning your product, in terms of the xref:AKF-cube[AKF scaling cube], a useful and widely-adopted distinction is that between "features" and "components."
 
-Features are *what* your product *does*. They are what the customers perceive as valuable. “Scope as viewed by the customer” as <<Kennaley2010>> says (p. 169). They may be "xref:flower-and-cog[flowers]" -- defined by the value they provide externally, and encouraged to evolve with some freedom. You may be investing in new features using xref:lean-startup[Lean Startup], the xref:DIBB[Spotify DIBB model] or some other hypothesis-driven approach.
+Features are *what* your product *does*. They are what the customers perceive as valuable. “Scope as viewed by the customer” according to Mark Kennaley (<<Kennaley2010>> p. 169). They may be "xref:flower-and-cog[flowers]" -- defined by the value they provide externally, and encouraged to evolve with some freedom. You may be investing in new features using xref:lean-startup[Lean Startup], the xref:DIBB[Spotify DIBB model] or some other hypothesis-driven approach.
 
-Components are *how* your product is *built*, such as database vs. Web components. In other words, they are a form of infrastructure (but infrastructure you may need to build yourself, rather than just spin up in the Cloud). They are more likely to be "xref:flower-and-cog[cogs]" -  more constrained and engineered to specifications.
+Components are *how* your product is *built*, such as database and Web components. In other words, they are a form of infrastructure (but infrastructure you may need to build yourself, rather than just spin up in the Cloud). They are more likely to be "xref:flower-and-cog[cogs]" -  more constrained and engineered to specifications. Mike Cohn defines a component team as "a team that develops software to be delivered to another team on the project rather than directly to users" (<<Cohn2010>>, p.183).
 
 .Features versus components
 image::images/3_07-feature-v-component.png[feature component matrix,400,,float="right"]
 
-Feature teams are dedicated to a clearly defined functional scope, while component teams are defined by their technology platform. Component teams may become shared services, which need to be carefully understood and managed (more on this to come). A component's failure may affect multiple feature teams, which makes them more risky. However, it may be easy to say that features are more important than components, but this can easily be carried too far. Do you want each feature team choosing its own database? This might not be the best idea. Allowing feature teams to define their own technical direction can result in brittle, fragmented architectures, technical debt, and rework.
+Feature teams are dedicated to a clearly defined functional scope (such as "item search" or "customer account lookup"), while component teams are defined by their technology platform (such as "database" or "rich client"). Component teams may become shared services, which need to be carefully understood and managed (more on this to come). A component's failure may affect multiple feature teams, which makes them more risky.
 
-Software product management needs to be a careful balance between these two perspectives. The Scaled Agile Framework suggests that components are relatively
+It may be easy to say that features are more important than components, but this can be carried too far. Do you want each feature team choosing its own database product? This might not be the best idea; you'll have to hire specialists for each database product chosen. Allowing feature teams to define their own technical direction can result in brittle, fragmented architectures, technical debt, and rework. Software product management needs to be a careful balance between these two perspectives. The Scaled Agile Framework suggests that components are relatively
 
 * more technically focused
 * more generally re-usable
 
 than features. SAFE also recommends a ratio of roughly 20-25% component teams to 75%-80% feature teams <<SAFE2016>>.
 
-** products/features/components fractal, not well defined.
+Mike Cohn suggests the following advantages for feature teams (<<Cohn2010>>, pp.183-184):
 
-shared services
+* They are better able  to evaluate the impact of design decisions
+* They reduce hand-off waste (a coordination problem)
+* They present less schedule risk
+* They maintain focus on delivering outcomes
 
-** how function *becomes* product - my little data standards self-service example...
+He also suggests  (<<Cohn2010>>, pp.186-187) that component teams are justified when:
 
-data, insight, belief, bet - as a loop
-strengthened hypothesis leads to establishing org
+* Their work will be used by multiple teams
+* They reduce the sharing of specialists across teams
+* The risk of multiple approaches outweighs the disadvantages of a component team
 
+Ultimately, the distinction between "feature versus component" is similar to the xref:what-is-IT-infrastructure[distinction between "application" and "infrastructure"]. Features deliver outcomes to people whose primary interests are *not* defined by digital or IT. Components deliver outcomes to people whose primary interests *are* defined by digital or IT.
 
-anchor:shared-services[]
+anchor:multi-product-scaling[]
 
-===== Components and shared services
+===== Epics and new products
 
- Lifecycle: collaboration, internal commoditization, external commoditization
- Effectiveness, efficiency, governance
+In the xref:chap-coordination[last chapter], we talked of one product with multiple feature and/or component teams. Features and components as we are discussing them here are large enough to require separate teams (with new xref:defining-coord[coordination requirements]). At an even larger scale, we have new product ideas, perhaps first seen as xref:roadmap-backlog-estimation[epics in a product backlog].
 
- Examples of shared services for digital teams - layered nature
+.One company, one product
+image::images/3_08-one-product.png[one product,400,,float="right"]
 
+Eventually, larger and more ambitious initiatives lead to a key organizaitonal state transition: from one product to multiple products. Consider our hypothetical startup company. At first, everyone on the team is supporting one product and dedicated to its success. There is little sense of contention with "others" in the organization. This changes with the addition of a second product team with different incentives. Concerns for fair allocation and a sense of internal competition naturally arise out of this diversification. Fairness is deeply wired into human (and animal) brains, and the creation of a new product (and associated team) provokes new dynamics in the growing company.
 
- Service catalog: act, offering, system
+.One company, multiple products
+image::images/3_08-multi-product.png[multi product,400,,float="right"]
 
- Infrastructure vs business
+Because resources are always limited, it is critical that the demands of each product be managed using objective criteria, requiring formalization.  This was a different problem when you were a tight-knit startup; you were constrained, but everyone knew they were "in it together." Now you need some ground rules to support your increasingly diverse activities. This leads to new concerns:
 
- Benchmarkable
+* Managing scope and preventing unintended creep or drift from the product's original charter
+* Managing contention for enterprise or shared resources
+* Execution to timeframes (e.g. the critical trade show)
+* Coordinating dependencies (e.g. achieving larger, cross-product goals)
+* Maintaining good relationships when a team's success depends on another team's commitment.
+* Accountability for results
 
- Deeper discussion of virtual server provisioning as example (backref to ch2, forward to ch10)
+Structurally, we might decide to separate a portfolio backlog from the product backlog. What does this mean?
 
-example of service-ized process dysfunction
+* The portfolio backlog is the list of potential new products that the organization might invest in
+* Each product team still has its own backlog of stories (or other xref:representation[representations] of their work)
 
-Adapting a services model to improve flow
+The decision to invest in a new product should not be taken lightly. When the decision is made, the actual process is as we xref:product-mgmt-chap[covered in Chapter 4]: ideally, a closed-loop, iterative process of xref:prod-discovery-techniques[discovering] a product that is
+xref:vuf[valuable, usable, and feasible].
 
-(Notice that the services a functional area provides can be viewed as a form of product in and of themselves.)
+There is one crucial difference: the investment decision is formal, and internal. While we started our company with an understanding of our xref:digital-context[investment context], we looked primarily to market feedback and grew incrementally from a small scale. (Perhaps there was venture funding involved, but this book doesn't go into that.)
 
-Degree of automation
-perils of "take a number" service-ization
-
-* SLAs and the service catalog
-** Service-izing functions: pros and cons
-
-Scenario: repetitive yet error prone work
-team to team interactions that become "servicized"
-
- Implication in various IT governance texts that the shared services team is accountable for optimal use of the shared resource. A very dangerous guideline when multiplied by numerous  COEs/SSs.
-
- critical importance of self-service
-
- forward/backward ref to functional orgs
-
-===== New products and epics
+Now, we may have a set of competing ideas that we are thinking about placing bets on. In order to make a rational decision, we need to understand the costs and benefits of the proposed initiatives. This is difficult to do precisely, but how can we rationally choose otherwise? We have to make some assumptions, and  estimate the likely benefits and the effort it might take to realize them.
