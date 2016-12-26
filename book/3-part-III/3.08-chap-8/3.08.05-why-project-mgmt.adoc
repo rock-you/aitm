@@ -34,33 +34,6 @@ So, this section will examine the following questions:
 * Assuming that formalized project management is employed, how does one continue to support objectives such as fast feedback and adaptability?
 
 
-===== How is a project different from simple "work management"?
-
-In xref:work-management[Chapter 5], we covered a simple concept of "work management" that deliberately did not differentiate product, project, and/or process-based work. As was noted at the time, for smaller organizations, most or all of the organization would be the "project team," so what would be the point?
-
-The project is starting off as a list of tasks, that is essentially identical to a product backlog. Even in Kanban, we know who is doing what, so what is the difference? Here are key points:
-
-* The project is explicitly time-bound. As a whole, it is lengthier and more flexible than the repetitive, time-boxed sprints of Scrum, but more fixed than the ongoing flow of Kanban.
-
-* Dependencies. You may have had a concept of one task or story blocking another, and perhaps you used a whiteboard to outline more complex sequences of work, but project management  has an explicit concept of dependencies in the tasks, and powerful tools to manage them. This is essential in the most ambitious and complex product efforts.
-
-* Project management also has more robust tools for managing people's time and effort, especially as they translate to project funding. While estimation and ongoing re-planning of spending can be a contentious aspect of project management, it remains a critical part of management practice in both IT and non-IT domains.
-
-At the end of the day, people expect to be paid for their time, and investors expect to be compensated through the delivery of results. Investment capital only lasts as a function of an organization's "burn rate;" the rate at which the money is consumed for salaries and expenses. Some forecasting of status (whether that of a project, organization, product, program, or what have you) is therefore an essential and unavoidable obligation of management, unless funding is unlimited (a rare situation to say the least.)
-
-Project accounting, at scale, is a deep area with considerable research and theory behind it. In particular, the concept of Earned Value Management is widely used to quantify the performance of a project portfolio.
-
-===== The "iron triangle"
-
-.Project "Iron Triangle" footnote:[_Image credit https://commons.wikimedia.org/w/index.php?curid=4282986, "By I, John Manuel Kennedy T., CC BY-SA 3.0," downloaded 2016-10-31, fair use]
-image::images/3_08-triad-constraints.jpg[Iron triangle, 300, , float="left"]
-
-The project management https://en.wikipedia.org/wiki/Project_management_triangle["Iron Triangle"] represents the interaction of cost, time, scope, and quality on a project. The idea is that, in general, one or more of these factors may be a constraint. The following sign is often seen in service organizations:
-
-.Pick any two footnote:[_Image credit https://www.flickr.com/photos/centralasian/4534292595, downloaded 2016-10-31, commercial use permitted]
-image::images/3_08-good-cheap-fast.jpg[Good-Cheap-Fast, 400, , float="right"]
-
-The same applies to project management and reflects well the "iron triangle" of tradeoffs. (Note: we will critique the iron triangle subsquently.)
 
 ===== A traditional information technology project
 So, what does all this have to do with information technology? As we have discussed in previous chapters, project management is one of the main tools used to deliver value across specialized skill-based teams, especially in traditional IT organizations.
@@ -110,6 +83,39 @@ Because capacity is available on demand, new systems do not need to be nearly as
 
 We shall now return to the question of project management in this new world.
 
+
+===== How is a project different from simple "work management"?
+
+In xref:work-management[Chapter 5], we covered a simple concept of "work management" that deliberately did not differentiate product, project, and/or process-based work. As was noted at the time, for smaller organizations, most or all of the organization would be the "project team," so what would be the point?
+
+The project is starting off as a list of tasks, that is essentially identical to a product backlog. Even in Kanban, we know who is doing what, so what is the difference? Here are key points:
+
+* The project is explicitly time-bound. As a whole, it is lengthier and more flexible than the repetitive, time-boxed sprints of Scrum, but more fixed than the ongoing flow of Kanban.
+
+* Dependencies. You may have had a concept of one task or story blocking another, and perhaps you used a whiteboard to outline more complex sequences of work, but project management  has an explicit concept of dependencies in the tasks, and powerful tools to manage them. This is essential in the most ambitious and complex product efforts.
+
+* Project management also has more robust tools for managing people's time and effort, especially as they translate to project funding. While estimation and ongoing re-planning of spending can be a contentious aspect of project management, it remains a critical part of management practice in both IT and non-IT domains.
+
+At the end of the day, people expect to be paid for their time, and investors expect to be compensated through the delivery of results. Investment capital only lasts as a function of an organization's "burn rate;" the rate at which the money is consumed for salaries and expenses. Some forecasting of status (whether that of a project, organization, product, program, or what have you) is therefore an essential and unavoidable obligation of management, unless funding is unlimited (a rare situation to say the least.)
+
+Project accounting, at scale, is a deep area with considerable research and theory behind it. In particular, the concept of Earned Value Management is widely used to quantify the performance of a project portfolio.
+
+===== The "iron triangle"
+
+.Project "Iron Triangle" footnote:[_Image credit https://commons.wikimedia.org/w/index.php?curid=4282986, "By I, John Manuel Kennedy T., CC BY-SA 3.0," downloaded 2016-10-31, fair use]
+image::images/3_08-triad-constraints.jpg[Iron triangle, 300, , float="left"]
+
+The project management https://en.wikipedia.org/wiki/Project_management_triangle["Iron Triangle"] represents the interaction of cost, time, scope, and quality on a project. The idea is that, in general, one or more of these factors may be a constraint. The following sign is often seen in service organizations:
+
+.Pick any two footnote:[_Image credit https://www.flickr.com/photos/centralasian/4534292595, downloaded 2016-10-31, commercial use permitted]
+image::images/3_08-good-cheap-fast.jpg[Good-Cheap-Fast, 400, , float="right"]
+
+The same applies to project management and reflects well the "iron triangle" of tradeoffs.
+
+  the end of the "iron triangle?"
+ cite Edwards & others - focus on throughput moves the needle on other metrics - but not the reverse.
+ Humble toyota quote
+
 ===== Project practices
 
 Project management (NOT restricted to IT) is a defined area of study, theory, and professional practice. This section provides a (necessarily brief) overview of these topics.
@@ -154,17 +160,6 @@ First, the WBS may be created at a seemingly appropriate level of detail, but si
 
 Second, we may see the creation of project plans that are too high level, omitting information that is in fact known at the time - for example, external deadlines or resource constraints. This happens because the team develops a cultural attitude that is averse to all planning and estimation.
 
-anchor:loose-coupling-project[]
-
-====== Loose coupling to the project plan rescue?
-
-While this book does not go into systems architectural styles in depth, a project with a large number of dependencies may be an indication that the system or product being constructed also has significant interdependencies. Recall xref:amazon-productization[Amazon's product strategy]  including its API mandate.
-
-Successful systems designers for years have relied on concepts such as encapsulation, abstraction, and loose coupling to minimize the dependencies between components of complex systems, so that their design, construction, and operation can be managed with some degree of independence. These ideas are core to the software engineering literature. Recent expressions of these core ideas are Services-Oriented Architecture and microservices.
-
-Systems that do not adopt such approaches are often termed "monolithic" and have a well deserved reputation for being problematic to build and operate. Many large software failures stem from such approaches. If you have a project plan with excessive dependencies, the question at least should be asked: does my massive, tightly-coupled project plan indicate I am building a monolithic, tightly-coupled system that will not be flexible or responsive to change?
-
-Again, many digital companies build tremendously robust integrated services from the combination of many quasi-independent, microservice-based "product" teams, each serving a particular function. However, when a particular organizational objective requires changes to more than one such "product," the need for cross-team coordination emerges. Someone needs to own this larger objective, even if its actual implementation is carried out across multiple distinct teams. We will discuss this further in Chapter 9.
 
 ====== Risk management
 Project management is where we see the first formalization of risk management (which will be more extensively covered in Chapter 10). Briefly, risk is classically defined as the probability of an adverse event times its cost. Project managers are alert to risks to their timelines, resource estimates, and deliverables.
@@ -182,6 +177,7 @@ As previously discussed, human beings are notably bad at xref:multi-tasking[mult
 ====== Governing outsourced work
 A third major reason for the continued use of project management and its techniques is governing work that has been outsourced to third parties. This is covered in detail in the section on xref:sourcing[sourcing].
 
+====== Project as execution, revisited
 
 ===== The future of project management
 
@@ -199,6 +195,14 @@ However, a product manager who does not understand the fundamentals of project e
 
  2nd draft incorporate http://blackswanfarming.com/fund-the-teams-not-the-project/
 
-====== The end of the "iron triangle?"
- cite Edwards & others - focus on throughput moves the needle on other metrics - but not the reverse.
- Humble toyota quote
+anchor:loose-coupling-project[]
+
+====== Loose coupling to the project plan rescue?
+
+While this book does not go into systems architectural styles in depth, a project with a large number of dependencies may be an indication that the system or product being constructed also has significant interdependencies. Recall xref:amazon-productization[Amazon's product strategy] including its API mandate.
+
+Successful systems designers for years have relied on concepts such as encapsulation, abstraction, and loose coupling to minimize the dependencies between components of complex systems, so that their design, construction, and operation can be managed with some degree of independence. These ideas are core to the software engineering literature. Recent expressions of these core ideas are Services-Oriented Architecture and microservices.
+
+Systems that do not adopt such approaches are often termed "monolithic" and have a well deserved reputation for being problematic to build and operate. Many large software failures stem from such approaches. If you have a project plan with excessive dependencies, the question at least should be asked: does my massive, tightly-coupled project plan indicate I am building a monolithic, tightly-coupled system that will not be flexible or responsive to change?
+
+Again, many digital companies build tremendously robust integrated services from the combination of many quasi-independent, microservice-based "product" teams, each serving a particular function. However, when a particular organizational objective requires changes to more than one such "product," the need for cross-team coordination emerges. Someone needs to own this larger objective, even if its actual implementation is carried out across multiple distinct teams. We will discuss this further in Chapter 9.
