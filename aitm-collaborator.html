@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.5">
+<meta name="generator" content="Asciidoctor 1.5.4">
 <meta name="author" content="Charles T. Betz">
 <title>The digital professional: from startup to enterprise (Collaborative Draft)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -18,6 +18,7 @@ audio:not([controls]){display:none;height:0}
 [hidden],template{display:none}
 script{display:none!important}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{margin:0}
 a{background:transparent}
 a:focus{outline:thin dotted}
 a:active,a:hover{outline:0}
@@ -52,7 +53,7 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -64,6 +65,7 @@ img{-ms-interpolation-mode:bicubic}
 .text-center{text-align:center!important}
 .text-justify{text-align:justify!important}
 .hide{display:none}
+body{-webkit-font-smoothing:antialiased}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
@@ -118,16 +120,13 @@ table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
 table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+body{tab-size:4}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
 .clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
 .clearfix:after,.float-group:after{clear:both}
-*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
-*:not(pre)>code.nobreak{word-wrap:normal}
-*:not(pre)>code.nowrap{white-space:nowrap}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
 pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
-em em{font-style:normal}
-strong strong{font-weight:400}
 .keyseq{color:rgba(51,51,51,.8)}
 kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
@@ -14926,30 +14925,17 @@ Projecting expected benefits is challenging. One of the most useful references f
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>Estimating across multiple teams is difficult without a common scale, and Cohn proposes an approach for determining this in terms of team velocity. He also suggests that in larger projects, some details will require more advance planning (it is easy to see APIs as being one example), and some team members' time should be devoted to planning for the next release. Finally, where dependencies exist, buffers should be used&#8201;&#8212;&#8201;that is, if Team A needs something from Team B by May 1, Team B should plan on delivering it by April 15.</p>
+</div>
 </div>
 <div class="sect5">
 <h6 id="_risk_management">Risk management</h6>
-<div class="ulist">
-<ul>
-<li>
-<p>identify and analyze contingencies that may affect outcomes</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Finally, risk and contingency planning is essential. In developing any plan, Abbott and Fisher recommend the "5-95 rule": 5% of the time on building a good plan, and 95% of the time planning for contingencies (<a href="#Abbott2015">[Abbott2015]</a> p. 105).  We&#8217;ll discuss risk management in detail in Chapter 10.</p>
 </div>
 <div class="paragraph">
-<p>Finally, contingency planning is essential. In developing any plan, Abbott and Fisher recommend the "5-95 rule": 5% of the time on building a good plan, and 95% of the time planning for contingencies (<a href="#Abbott2015">[Abbott2015]</a> p. 105).  We&#8217;ll discuss risk management in detail in Chapter 10.</p>
-</div>
-<div class="paragraph">
-<p>ROAM? didn&#8217;t like demand fragmentation&#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<p>Monte Carlo - uncertainty</p>
-</div>
-<div class="paragraph">
-<p>Project has the deepest tools, and whether or not you use a formal project structure, you will find yourself in this thought process as you scale.</p>
-</div>
-<div class="paragraph">
-<p>the choice of financial management practice can profoundly impact&#8230;&#8203; (next section lead in) &#8230;&#8203; also sourcing&#8230;&#8203;</p>
+<p>Many of the techniques suggested here are familiar to formal project management. Project management has the deepest tools, and whether or not you use a formal project structure, you will find yourself facing similar thought processes as you scale.</p>
 </div>
 <div class="paragraph">
 <p><a id="financial-mgmt"></a></p>
@@ -31769,7 +31755,7 @@ Cost of Delay</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-12-02 11:18:40 CST
+Last updated 2016-12-03 06:28:54 CST
 </div>
 </div>
 </body>
