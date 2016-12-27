@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.4">
+<meta name="generator" content="Asciidoctor 1.5.5">
 <meta name="author" content="Charles T. Betz">
 <title>The digital professional: from startup to enterprise  (Instructor&#8217;s Edition)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -18,7 +18,6 @@ audio:not([controls]){display:none;height:0}
 [hidden],template{display:none}
 script{display:none!important}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
-body{margin:0}
 a{background:transparent}
 a:focus{outline:thin dotted}
 a:active,a:hover{outline:0}
@@ -53,7 +52,7 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -65,7 +64,6 @@ img{-ms-interpolation-mode:bicubic}
 .text-center{text-align:center!important}
 .text-justify{text-align:justify!important}
 .hide{display:none}
-body{-webkit-font-smoothing:antialiased}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
@@ -120,13 +118,16 @@ table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
 table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
-body{tab-size:4}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
 .clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
 .clearfix:after,.float-group:after{clear:both}
-*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+*:not(pre)>code.nobreak{word-wrap:normal}
+*:not(pre)>code.nowrap{white-space:nowrap}
 pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
+em em{font-style:normal}
+strong strong{font-weight:400}
 .keyseq{color:rgba(51,51,51,.8)}
 kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
@@ -640,8 +641,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel4">
 <li><a href="#_formalizing_product_discovery">Formalizing product discovery</a></li>
 <li><a href="#_product_discovery_techniques">Product discovery techniques</a></li>
-<li><a href="#_product_roadmapping">Product roadmapping</a></li>
-<li><a href="#_backlog_estimation_and_prioritization">Backlog, estimation, and prioritization</a></li>
 </ul>
 </li>
 <li><a href="#_product_design">Product design</a>
@@ -650,6 +649,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_hypothesis_testing">Hypothesis testing</a></li>
 <li><a href="#_usability_and_interaction">Usability and interaction</a></li>
 <li><a href="#_product_discovery_versus_design">Product discovery versus design</a></li>
+</ul>
+</li>
+<li><a href="#_product_planning">Product planning</a>
+<ul class="sectlevel4">
+<li><a href="#_product_roadmapping_and_release_planning">Product roadmapping and release planning</a></li>
+<li><a href="#_backlog_estimation_and_prioritization">Backlog, estimation, and prioritization</a></li>
 </ul>
 </li>
 <li><a href="#_conclusion_3">Conclusion</a>
@@ -850,7 +855,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_epics_and_new_products">Epics and new products</a></li>
 </ul>
 </li>
-<li><a href="#_planning_and_estimating">Planning and estimating</a>
+<li><a href="#_larger_scale_planning_and_estimating">Larger scale planning and estimating</a>
 <ul class="sectlevel4">
 <li><a href="#_why_plan">Why plan?</a></li>
 <li><a href="#_planning_larger_efforts">Planning larger efforts</a></li>
@@ -976,7 +981,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_standards_frameworks_methods_and_the_innovation_cycle">Standards, frameworks, methods, and the innovation cycle</a></li>
 </ul>
 </li>
-<li><a href="#_risk_management_2">Risk management</a>
+<li><a href="#_risk_management_3">Risk management</a>
 <ul class="sectlevel4">
 <li><a href="#_risk_management_fundamentals">Risk management fundamentals</a></li>
 <li><a href="#_compliance">Compliance</a></li>
@@ -7658,213 +7663,8 @@ stakeholders</em>.</p>
 <p>BABOK also provides a framework for understanding and managing the work of business analysts; in general it assumes that a BA capability will be established and that maturing such a capability is a desirable thing. This may run counter to the Scrum ideal of cross-functional, multi-skilled teams. Also as noted <a href="#system-intent">above</a>, the term "requirements" has fallen out of favor with some Agile thought leaders.</p>
 </div>
 <div class="paragraph">
-<p><a id="product-roadmapping"></a></p>
-</div>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_product_roadmapping">Product roadmapping</h5>
-<div class="quoteblock">
-<blockquote>
-Some companies may notice that every specification they have ever prepared in the history of their company has had to change during product development, but they attribute this to human error and lack of discipline. They deeply believe that they can produce a good specification if only they try hard enough. You may recognize this as the classic thinking of an <a href="#open-loop">open loop</a> control system&#8230;&#8203;
-</blockquote>
-<div class="attribution">
-&#8212; Don Reinertsen<br>
-<cite>Managing the Design Factory</cite>
-</div>
-</div>
-<div class="imageblock" style="float: right">
-<div class="content">
-<img src="images/2_04-plan-driven.png" alt="planning" width="200">
-</div>
-<div class="title">Figure 61. Planning fallacy</div>
-</div>
-<div class="paragraph">
-<p>Creating effective plans in complex situations is hard. Planning a new product is one of the most challenging endeavors, one in which failure is common. As the Don Reinertsen quote above reflects, the historically failed approach (call it the "planning fallacy") is to develop overly detailed (sometimes called "rigorous") plans and then assume that achieving them is simply a matter of "correct execution."</p>
-</div>
-<div class="paragraph">
-<p>Contrast the planning fallacy with <a href="#lean-startup">Lean Startup</a>, which emphasizes ongoing confirmation of product direction through experimentation. In complex efforts, ongoing validation of assumptions and direction is essential, which is why overly plan-driven approaches are falling out of favor. However, some understanding of time frames and mapping goals against the calendar is still important. Exactly how much effort to devote to such forecasting remains a controversial topic with digital product management professionals, one we will return to throughout this book. Minimally, a high level product roadmap is usually called for: without at least this, it may be difficult to secure the needed investment to start product work. Roman Pichler recommends the product roadmap contain:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Major versions</p>
-</li>
-<li>
-<p>Their projected launch dates</p>
-</li>
-<li>
-<p>Target customers and needs</p>
-</li>
-<li>
-<p>Top three to five features for each version (<a href="#Pichler2010">[Pichler2010]</a>, p. 41.)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>More detailed understanding is left to the <a href="#scrum">product backlog</a>, which is subject to ongoing "grooming" (re-evaluation in light of <a href="#feedback">feedback</a>).</p>
-</div>
-<div class="paragraph">
-<p><a id="backlog-estimation-prioritization"></a></p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_backlog_estimation_and_prioritization">Backlog, estimation, and prioritization</h5>
-<div class="quoteblock">
-<blockquote>
-Estimate size, derive duration <a href="#Cohn2006">[Cohn2006]</a> p. xxvii.
-</blockquote>
-<div class="attribution">
-&#8212; Mike Cohn<br>
-<cite>Agile Estimating and Planning</cite>
-</div>
-</div>
-<div class="quoteblock">
-<blockquote>
-<em>companies often create complex prioritization algorithms that produce precise priorities based on very imprecise input data. I prefer the simple approach. To select between two almost equivalent choices creates great difficulty and little payoff. Instead, we should try to prevent the big, stupid mistakes. This does not require precision</em> (<a href="#Reinertsen2009">[Reinertsen2009]</a> p 192).
-</blockquote>
-<div class="attribution">
-&#8212; Don Reinertsen<br>
-<cite>Principles of Product Development Flow</cite>
-</div>
-</div>
-<div class="paragraph">
-<p>The product discovery and roadmapping activity ultimately generates a more detailed view or list of the work to be done. As we previously mentioned, in <a href="#_scrum">Scrum</a> (and other Agile methods) this is often termed a backlog. Both Mike Cohn and Roman Pichler use the DEEP acronym to describe backlog qualities (<a href="#Cohn2010">[Cohn2010]</a> p. 243, <a href="#Pichler2010">[Pichler2010]</a> p. 48):</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Detailed appropriately</p>
-</li>
-<li>
-<p>Estimated</p>
-</li>
-<li>
-<p>Emergent (feedback such as new or changed stories are readily accepted)</p>
-</li>
-<li>
-<p>Prioritized</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The backlog should receive ongoing "grooming" to support these qualities, which means several things:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Addition of new items</p>
-</li>
-<li>
-<p>Re-prioritization of items</p>
-</li>
-<li>
-<p>Elaboration (decomposition, estimation and refinement)</p>
-</li>
-</ul>
-</div>
-<div class="imageblock" style="float: right">
-<div class="content">
-<img src="images/2_05-backlog.png" alt="backlog" width="250">
-</div>
-<div class="title">Figure 62. Backlog granularity &amp; priority <sup class="footnote">[<a id="_footnoteref_26" class="footnote" href="#_footnote_26" title="View footnote.">26</a>]</sup></div>
-</div>
-<div class="paragraph">
-<p>When "detailed appropriately," items in the backlog are not all the same scale. Scrum and Agile thinkers generally agree on the core concept of "story," but stories vary in size, with the largest stories often termed "epics." The backlog is ordered in terms of priority (what will be done next) but, critically, it is also understood that the lower-priority items in general can be larger grained. In other words, if we visualize the backlog as a stack, with the highest priority on the top, the size of the stories increases as we go down. (Reinertsen terms this <em>progressive specification</em>; see <a href="#Reinertsen1997">[Reinertsen1997]</a>, pp. 176-177 for a detailed discussion.)</p>
-</div>
-<div class="paragraph">
-<p>Estimating user stories is a standard practice in Scrum and Agile methods more generally. Agile approaches are wary of false precision and accept the fact that estimation is an uncertain practice at best. However, without some overall estimate or roadmap for when a product might be ready for use, it is unlikely that the investment will be made to create it. It is difficult to establish the economic value of developing a product feature at a particular time, if you have no idea of the cost and/or effort involved to bring it to market.</p>
-</div>
-<div class="paragraph">
-<p>At a more detailed level, it is common practice for product teams to estimate detailed stories using "points." Points are a relative form of estimation, valid within the boundary of one team. Story point estimating strives to avoid false precision, often restricting the team&#8217;s estimate of the effort to a modified Fibonacci sequence, or even T-shirt or dog sizes:</p>
-</div>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 6. Agile estimating scales</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Story point</th>
-<th class="tableblock halign-left valign-top">T-shirt</th>
-<th class="tableblock halign-left valign-top">Dog</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">XXS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Chihauha</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">XS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Dachshund</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">S</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Terrier</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">M</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Border collie</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">L</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bulldog</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">XL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Labrador retriever</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">XXL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mastiff</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">40</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">XXXL</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Great Dane</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>(similar to <a href="#Cohn2006">[Cohn2006]</a>, p. 37)</p>
-</div>
-<div class="paragraph">
-<p>Mike Cohn emphasizes that estimates are best done by the teams performing the work ()<a href="#Cohn2006">[Cohn2006]</a> p.51). We&#8217;ll discuss the mechanics of maintaining backlogs in <a href="#work-management">Chapter 5, Work Management</a>.</p>
-</div>
-<div class="paragraph">
-<p>Backlogs require prioritization. In order to prioritize, we must have some kind of common understanding of what we are prioritizing <strong>for</strong>. Mike Cohn, in <em>Agile Estimating and Planning</em>, proposes that there are four major factors in understanding product value:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The financial value of having the features</p>
-</li>
-<li>
-<p>The cost of developing and supporting the features</p>
-</li>
-<li>
-<p>The value of the learning created by developing the features</p>
-</li>
-<li>
-<p>The amount of risk reduced by developing the features <a href="#Cohn2006">[Cohn2006]</a>, p80.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>In Chapter 5 we will discuss additional tools for managing and prioritizing work, and we will return to the topic of estimation in Chapter 8.</p>
-</div>
-<div class="paragraph">
 <p><a id="design"></a></p>
+</div>
 </div>
 </div>
 </div>
@@ -7876,7 +7676,7 @@ Estimate size, derive duration <a href="#Cohn2006">[Cohn2006]</a> p. xxvii.
 </div>
 </div>
 <div class="paragraph">
-<p><sup class="footnote">[<a id="_footnoteref_27" class="footnote" href="#_footnote_27" title="View footnote.">27</a>]</sup></p>
+<p><sup class="footnote">[<a id="_footnoteref_26" class="footnote" href="#_footnote_26" title="View footnote.">26</a>]</sup></p>
 </div>
 <div class="quoteblock">
 <blockquote>
@@ -7933,7 +7733,7 @@ Design thinking is essentially a human-centered innovation process that emphasiz
 <div class="content">
 <img src="images/2_04-geniusBar.jpg" alt="Genius Bar" width="400">
 </div>
-<div class="title">Figure 63. Apple Genius Bar <sup class="footnote">[<a id="_footnoteref_28" class="footnote" href="#_footnote_28" title="View footnote.">28</a>]</sup></div>
+<div class="title">Figure 61. Apple Genius Bar <sup class="footnote">[<a id="_footnoteref_27" class="footnote" href="#_footnote_27" title="View footnote.">27</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Notice that the product you are using is no longer just the phone, or computer. <strong>It is the combination of the device PLUS your support experience</strong>. This is essential to understanding the modern practices of design thinking and Lean UX. As Jeff Sussna, author of <em>Designing Delivery</em>, notes, "In order to provide high-quality, digitally infused service, the entire delivery organization must function as an integrated whole." <a href="#Sussna2015">[Sussna2015]</a>, p. 18.</p>
@@ -8099,6 +7899,237 @@ They had to try making me out of different metals, and different ways to make me
 </div>
 <div class="paragraph">
 <p>And, when digital components have very well understood requirements, usually we purchase them from specialist providers (increasingly "as a service"). This results in increasing attention to the "flowers" of digital product design, as acquiring the "cogs" is relatively straightforward (more on this in the chapter 8 section on sourcing.).</p>
+</div>
+<div class="paragraph">
+<p><a id="product-roadmapping"></a></p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_product_planning">Product planning</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Business drivers</p>
+<div class="ulist">
+<ul>
+<li>
+<p>biz plan &amp; revenue</p>
+</li>
+<li>
+<p>road map/release plan (deeper)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="sect4">
+<h5 id="_product_roadmapping_and_release_planning">Product roadmapping and release planning</h5>
+<div class="quoteblock">
+<blockquote>
+Some companies may notice that every specification they have ever prepared in the history of their company has had to change during product development, but they attribute this to human error and lack of discipline. They deeply believe that they can produce a good specification if only they try hard enough. You may recognize this as the classic thinking of an <a href="#open-loop">open loop</a> control system&#8230;&#8203;
+</blockquote>
+<div class="attribution">
+&#8212; Don Reinertsen<br>
+<cite>Managing the Design Factory</cite>
+</div>
+</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img src="images/2_04-plan-driven.png" alt="planning" width="200">
+</div>
+<div class="title">Figure 62. Planning fallacy</div>
+</div>
+<div class="paragraph">
+<p>Creating effective plans in complex situations is hard. Planning a new product is one of the most challenging endeavors, one in which failure is common. As the Don Reinertsen quote above reflects, the historically failed approach (call it the "planning fallacy") is to develop overly detailed (sometimes called "rigorous") plans and then assume that achieving them is simply a matter of "correct execution."</p>
+</div>
+<div class="paragraph">
+<p>Contrast the planning fallacy with <a href="#lean-startup">Lean Startup</a>, which emphasizes ongoing confirmation of product direction through experimentation. In complex efforts, ongoing validation of assumptions and direction is essential, which is why overly plan-driven approaches are falling out of favor. However, some understanding of time frames and mapping goals against the calendar is still important. Exactly how much effort to devote to such forecasting remains a controversial topic with digital product management professionals, one we will return to throughout this book.</p>
+</div>
+<div class="paragraph">
+<p>Minimally, a high level product roadmap is usually called for: without at least this, it may be difficult to secure the needed investment to start product work. Roman Pichler recommends the product roadmap contain:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Major versions</p>
+</li>
+<li>
+<p>Their projected launch dates</p>
+</li>
+<li>
+<p>Target customers and needs</p>
+</li>
+<li>
+<p>Top three to five features for each version (<a href="#Pichler2010">[Pichler2010]</a>, p. 41.)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>More detailed understanding is left to the <a href="#scrum">product backlog</a>, which is subject to ongoing "grooming" (re-evaluation in light of <a href="#feedback">feedback</a>).</p>
+</div>
+<div class="paragraph">
+<p>progressive refinement &amp; replanning</p>
+</div>
+<div class="paragraph">
+<p><a id="backlog-estimation-prioritization"></a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_backlog_estimation_and_prioritization">Backlog, estimation, and prioritization</h5>
+<div class="quoteblock">
+<blockquote>
+Estimate size, derive duration <a href="#Cohn2006">[Cohn2006]</a> p. xxvii.
+</blockquote>
+<div class="attribution">
+&#8212; Mike Cohn<br>
+<cite>Agile Estimating and Planning</cite>
+</div>
+</div>
+<div class="quoteblock">
+<blockquote>
+<em>companies often create complex prioritization algorithms that produce precise priorities based on very imprecise input data. I prefer the simple approach. To select between two almost equivalent choices creates great difficulty and little payoff. Instead, we should try to prevent the big, stupid mistakes. This does not require precision</em> (<a href="#Reinertsen2009">[Reinertsen2009]</a> p 192).
+</blockquote>
+<div class="attribution">
+&#8212; Don Reinertsen<br>
+<cite>Principles of Product Development Flow</cite>
+</div>
+</div>
+<div class="paragraph">
+<p>The product discovery and roadmapping activity ultimately generates a more detailed view or list of the work to be done. As we previously mentioned, in <a href="#_scrum">Scrum</a> (and other Agile methods) this is often termed a backlog. Both Mike Cohn and Roman Pichler use the DEEP acronym to describe backlog qualities (<a href="#Cohn2010">[Cohn2010]</a> p. 243, <a href="#Pichler2010">[Pichler2010]</a> p. 48):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Detailed appropriately</p>
+</li>
+<li>
+<p>Estimated</p>
+</li>
+<li>
+<p>Emergent (feedback such as new or changed stories are readily accepted)</p>
+</li>
+<li>
+<p>Prioritized</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The backlog should receive ongoing "grooming" to support these qualities, which means several things:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Addition of new items</p>
+</li>
+<li>
+<p>Re-prioritization of items</p>
+</li>
+<li>
+<p>Elaboration (decomposition, estimation and refinement)</p>
+</li>
+</ul>
+</div>
+<div class="imageblock" style="float: right">
+<div class="content">
+<img src="images/2_05-backlog.png" alt="backlog" width="250">
+</div>
+<div class="title">Figure 63. Backlog granularity &amp; priority <sup class="footnote">[<a id="_footnoteref_28" class="footnote" href="#_footnote_28" title="View footnote.">28</a>]</sup></div>
+</div>
+<div class="paragraph">
+<p>When "detailed appropriately," items in the backlog are not all the same scale. Scrum and Agile thinkers generally agree on the core concept of "story," but stories vary in size, with the largest stories often termed "epics." The backlog is ordered in terms of priority (what will be done next) but, critically, it is also understood that the lower-priority items in general can be larger grained. In other words, if we visualize the backlog as a stack, with the highest priority on the top, the size of the stories increases as we go down. (Reinertsen terms this <em>progressive specification</em>; see <a href="#Reinertsen1997">[Reinertsen1997]</a>, pp. 176-177 for a detailed discussion.)</p>
+</div>
+<div class="paragraph">
+<p>Estimating user stories is a standard practice in Scrum and Agile methods more generally. Agile approaches are wary of false precision and accept the fact that estimation is an uncertain practice at best. However, without some overall estimate or roadmap for when a product might be ready for use, it is unlikely that the investment will be made to create it. It is difficult to establish the economic value of developing a product feature at a particular time, if you have no idea of the cost and/or effort involved to bring it to market.</p>
+</div>
+<div class="paragraph">
+<p>At a more detailed level, it is common practice for product teams to estimate detailed stories using "points." Points are a relative form of estimation, valid within the boundary of one team. Story point estimating strives to avoid false precision, often restricting the team&#8217;s estimate of the effort to a modified Fibonacci sequence, or even T-shirt or dog sizes:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 6. Agile estimating scales</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Story point</th>
+<th class="tableblock halign-left valign-top">T-shirt</th>
+<th class="tableblock halign-left valign-top">Dog</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XXS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Chihauha</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dachshund</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">S</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Terrier</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">M</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Border collie</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bulldog</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Labrador retriever</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XXL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mastiff</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">40</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">XXXL</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Great Dane</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>(similar to <a href="#Cohn2006">[Cohn2006]</a>, p. 37)</p>
+</div>
+<div class="paragraph">
+<p>Mike Cohn emphasizes that estimates are best done by the teams performing the work ()<a href="#Cohn2006">[Cohn2006]</a> p.51). We&#8217;ll discuss the mechanics of maintaining backlogs in <a href="#work-management">Chapter 5, Work Management</a>.</p>
+</div>
+<div class="paragraph">
+<p>Backlogs require prioritization. In order to prioritize, we must have some kind of common understanding of what we are prioritizing <strong>for</strong>. Mike Cohn, in <em>Agile Estimating and Planning</em>, proposes that there are four major factors in understanding product value:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The financial value of having the features</p>
+</li>
+<li>
+<p>The cost of developing and supporting the features</p>
+</li>
+<li>
+<p>The value of the learning created by developing the features</p>
+</li>
+<li>
+<p>The amount of risk reduced by developing the features <a href="#Cohn2006">[Cohn2006]</a>, p80.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In Chapter 5 we will discuss additional tools for managing and prioritizing work, and we will return to the topic of estimation in Chapter 8.</p>
 </div>
 </div>
 </div>
@@ -13740,7 +13771,7 @@ The first comparison of IT investments to a portfolio was in 1974, by Richard No
 </div>
 </div>
 <div class="sect3">
-<h4 id="_planning_and_estimating">Planning and estimating</h4>
+<h4 id="_larger_scale_planning_and_estimating">Larger scale planning and estimating</h4>
 <div class="sect4">
 <h5 id="_why_plan">Why plan?</h5>
 <div class="paragraph">
@@ -13792,9 +13823,6 @@ The first comparison of IT investments to a portfolio was in 1974, by Richard No
 <li>
 <p>plan so that we understand dependencies (e.g. when one team <strong>must</strong> complete a task before another team can start theirs)</p>
 </li>
-<li>
-<p>identify and analyze contingencies that may affect outcomes</p>
-</li>
 </ul>
 </div>
 <div class="admonitionblock note">
@@ -13815,9 +13843,6 @@ Projecting expected benefits is challenging. One of the most useful references f
 <div class="paragraph">
 <p>We discussed various <a href="#coord-tools">boundary-spanning</a> tools and techniques in Chapter 8. Developing plans for understanding dependencies is one of the best known such techniques. An example of such a planning dependency would be that the database product should be chosen and configured before any schema development takes place (this might be a <a href="#feature-v-component">component team working with a feature team</a>).</p>
 </div>
-<div class="paragraph">
-<p>Finally, contingency planning is essential. In developing any plan, Abbott and Fisher recommend the "5-95 rule": 5% of the time on building a good plan, and 95% of the time planning for contingencies (<a href="#Abbott2015">[Abbott2015]</a> p. 105).  We&#8217;ll discuss risk management in detail in Chapter 10.</p>
-</div>
 </div>
 <div class="sect4">
 <h5 id="_planning_larger_efforts">Planning larger efforts</h5>
@@ -13834,72 +13859,76 @@ Projecting expected benefits is challenging. One of the most useful references f
 <p>Planning and managing larger efforts</p>
 </div>
 <div class="paragraph">
-<p>Agile and adaptive techniques can be used to plan larger, multi-team programs. Joanna Rothman, in <em>Agile and Lean Program Management: Scaling Collaboration Across the Organization</em>, describes program fundamentals, including:</p>
+<p>Agile and adaptive techniques can be used to plan larger, multi-team programs. Again, we have covered many fundamentals of product vision, estimation, and work management in earlier chapters. Here, we are interested in the concerns that emerge at larger scale, which we can class generally into:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Program charter</p>
+<p>Accountability</p>
 </li>
 <li>
-<p>Roadmap</p>
+<p>Coordination</p>
 </li>
 <li>
-<p>Continuous planning</p>
-</li>
-<li>
-<p>Creating an environment of delivery</p>
-</li>
-<li>
-<p>Business drivers</p>
-<div class="ulist">
-<ul>
-<li>
-<p>biz plan &amp; revenue</p>
-</li>
-<li>
-<p>road map/release plan (deeper)</p>
-</li>
-<li>
-<p><strong>risk</strong> contingency planning&#8201;&#8212;&#8201;Planning under variability</p>
+<p>Risk management</p>
 </li>
 </ul>
 </div>
+<div class="sect5">
+<h6 id="_accountability">Accountability</h6>
+<div class="paragraph">
+<p>With larger blocks of funding comes higher visibility and inquiries as to progress. At a program level, differentiating between estimates and commitments becomes even more essential.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_coordination">Coordination</h6>
+<div class="paragraph">
+<p>Mike Cohn (<a href="#Cohn2006">[Cohn2006]</a>) suggests that larger efforts specifically can benefit from the following coordination techniques:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Estimation baseline (velocity)</p>
+</li>
+<li>
+<p>Key details sooner</p>
+</li>
+<li>
+<p>Lookahead planning</p>
+</li>
+<li>
+<p>Feeding buffers</p>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_risk_management">Risk management</h6>
+<div class="ulist">
+<ul>
+<li>
+<p>identify and analyze contingencies that may affect outcomes</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Finally, contingency planning is essential. In developing any plan, Abbott and Fisher recommend the "5-95 rule": 5% of the time on building a good plan, and 95% of the time planning for contingencies (<a href="#Abbott2015">[Abbott2015]</a> p. 105).  We&#8217;ll discuss risk management in detail in Chapter 10.</p>
 </div>
 <div class="paragraph">
 <p>ROAM? didn&#8217;t like demand fragmentation&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
-<p>techniques</p>
-</div>
-<div class="paragraph">
-<p>progressive refinement &amp; replanning</p>
-</div>
-<div class="paragraph">
 <p>Monte Carlo - uncertainty</p>
-</div>
-<div class="paragraph">
-<p>Buffering</p>
-</div>
-<div class="paragraph">
-<p>outputs</p>
-</div>
-<div class="paragraph">
-<p>what about project level control/monitoring? hard to close the plan/monitor loop when we haven&#8217;t planned yet&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
 <p>Project has the deepest tools, and whether or not you use a formal project structure, you will find yourself in this thought process as you scale.</p>
 </div>
 <div class="paragraph">
-<p>the choice of financial management practice can profoundly impact&#8230;&#8203; (next section lead in)</p>
-</div>
-<div class="paragraph">
-<p>combining agile and "non-agile" teams - plan-centricity can be a mask for poor demand management &amp; multi-tasking</p>
+<p>the choice of financial management practice can profoundly impact&#8230;&#8203; (next section lead in) &#8230;&#8203; also sourcing&#8230;&#8203;</p>
 </div>
 <div class="paragraph">
 <p><a id="financial-mgmt"></a></p>
+</div>
 </div>
 </div>
 </div>
@@ -15115,10 +15144,10 @@ Agile is having a profound impact on the project management profession and will 
 <p>Project management, like many other areas of IT practice, is undergoing considerable transformation in response to the Agile transition. However, it will likely remain an important tool for value delivery at various scales.</p>
 </div>
 <div class="paragraph">
-<p>We&#8217;ve already touched on why project management is used: it is a means of understanding and building a shared mental model of a given scope of work. In particular, planning the necessary tasks gives a basis for estimating the time and cost of the work as a whole. Even though industry practices are changing, this remains a critical concern for the digital professional.</p>
+<p>Fundamentally, project management is a means of understanding and building a shared mental model of a given scope of work. In particular, planning the necessary tasks gives a basis for estimating the time and cost of the work as a whole, and therefore understanding its value. Even though industry practices are changing, value remains a critical concern for the digital professional.</p>
 </div>
 <div class="paragraph">
-<p>As the above quotes indicate, there are diverse opinions on the role and importance of traditional project management in the enterprise. Clearly it is under pressure from the Agile movement. Project management professionals are advised to not deny or diminish this fact. One of the primary criticisms of project management as a paradigm is that it promotes large "batches" of work. It is possible for a modern, IT-centric organization to make considerable progress on the basis of <a href="#product-mgmt">product management</a> plus simple <a href="#work-management">work management</a>, without the overhead of the formalized project lifecycle suggested by PMBOK.</p>
+<p>As the above quotes indicate, there are diverse opinions on the role and importance of traditional project management in the enterprise. Clearly it is under pressure from the Agile movement. Project management professionals are advised to not deny or diminish this fact. One of the primary criticisms of project management as a paradigm is that it promotes large "batches" of work. It is possible for a modern, IT-centric organization to make considerable progress on the basis of <a href="#product-mgmt">product management</a> plus simple, continuous <a href="#work-management">work management</a>, without the overhead of the formalized project lifecycle suggested by PMBOK.</p>
 </div>
 <div class="paragraph">
 <p><a href="#Cloud">Cloud computing</a> is having impacts on traditional project management as well. As we will see in the section on the <a href="#trad-IT-decline">decline of traditional IT</a>, projects were often used to install vendor-delivered commodity software, such as for payroll or employee expense. Increasingly, that kind of functionality is delivered by online service providers, leaving "traditional" internal IT with considerably reduced responsibilities.</p>
@@ -15372,7 +15401,7 @@ Part of the problem with extensive frameworks such as PMBOK is that knowing how 
 </div>
 </div>
 <div class="sect5">
-<h6 id="_risk_management">Risk management</h6>
+<h6 id="_risk_management_2">Risk management</h6>
 <div class="paragraph">
 <p>Project management is where we see the first formalization of risk management (which will be more extensively covered in Chapter 10). Briefly, risk is classically defined as the probability of an adverse event times its cost. Project managers are alert to risks to their timelines, resource estimates, and deliverables.</p>
 </div>
@@ -18864,7 +18893,7 @@ There is little industry consensus on some of these definitional issues and the 
 </div>
 </div>
 <div class="sect3">
-<h4 id="_risk_management_2">Risk management</h4>
+<h4 id="_risk_management_3">Risk management</h4>
 <div class="sect4">
 <h5 id="_risk_management_fundamentals">Risk management fundamentals</h5>
 <div class="quoteblock">
@@ -28845,6 +28874,9 @@ All web references were archived into the author&#8217;s files on the indicated 
 <p><a id="Rothman2011"></a>[Rothman2011]: Rothman, J., 2011. Not Ready for Agile? Start Your Journey with Release Trains. Stickyminds.com. Available at: <a href="https://www.stickyminds.com/article/not-ready-agile-start-your-journey-release-trains?page=0%2C0" class="bare">https://www.stickyminds.com/article/not-ready-agile-start-your-journey-release-trains?page=0%2C0</a> [Accessed December 21, 2016].</p>
 </li>
 <li>
+<p><a id="Rothman2016"></a>[Rothman2016]: Rothman, J. (2016). Agile and Lean Program Management: Scaling Collaboration Across the Organization. Practical Ink.</p>
+</li>
+<li>
 <p><a id="Royce1970"></a>[Royce1970]: Royce, W. "Managing the Development of Large Software Systems."" in Proc. IEEE WESCON. 1970. Los Angeles: IEEE.</p>
 </li>
 <li>
@@ -29145,13 +29177,13 @@ Cost of Delay</pre>
 <a href="#_footnoteref_25">25</a>. summarized from <a href="#Pichler2010">[Pichler2010]</a>, p. xxi
 </div>
 <div class="footnote" id="_footnote_26">
-<a href="#_footnoteref_26">26</a>. similar to <a href="#Pichler2010">[Pichler2010]</a>, p.48.
+<a href="#_footnoteref_26">26</a>. <em>Image credit <a href="https://www.flickr.com/photos/djs1021/101948321/" class="bare">https://www.flickr.com/photos/djs1021/101948321/</a>, downloaded 2016-09-19, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_27">
-<a href="#_footnoteref_27">27</a>. <em>Image credit <a href="https://www.flickr.com/photos/djs1021/101948321/" class="bare">https://www.flickr.com/photos/djs1021/101948321/</a>, downloaded 2016-09-19, commercial use permitted</em>
+<a href="#_footnoteref_27">27</a>. <em>Image credit <a href="https://www.flickr.com/photos/dong/2691594470/" class="bare">https://www.flickr.com/photos/dong/2691594470/</a>, downloaded 2016-09-19, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_28">
-<a href="#_footnoteref_28">28</a>. <em>Image credit <a href="https://www.flickr.com/photos/dong/2691594470/" class="bare">https://www.flickr.com/photos/dong/2691594470/</a>, downloaded 2016-09-19, commercial use permitted</em>
+<a href="#_footnoteref_28">28</a>. similar to <a href="#Pichler2010">[Pichler2010]</a>, p.48.
 </div>
 <div class="footnote" id="_footnote_29">
 <a href="#_footnoteref_29">29</a>. <em>Image credit <a href="https://www.flickr.com/photos/chrisbrooks/42588998" class="bare">https://www.flickr.com/photos/chrisbrooks/42588998</a>, downloaded 2016-10-07, commercial use permitted</em>
@@ -29366,7 +29398,7 @@ Cost of Delay</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-11-21 10:11:27 CST
+Last updated 2016-11-20 18:20:01 CST
 </div>
 </div>
 </body>
