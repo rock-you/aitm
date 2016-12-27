@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.5">
+<meta name="generator" content="Asciidoctor 1.5.4">
 <meta name="author" content="Charles T. Betz">
 <title>The digital professional: from startup to enterprise  (Student Edition)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -18,6 +18,7 @@ audio:not([controls]){display:none;height:0}
 [hidden],template{display:none}
 script{display:none!important}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body{margin:0}
 a{background:transparent}
 a:focus{outline:thin dotted}
 a:active,a:hover{outline:0}
@@ -52,7 +53,7 @@ textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
 *,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -64,6 +65,7 @@ img{-ms-interpolation-mode:bicubic}
 .text-center{text-align:center!important}
 .text-justify{text-align:justify!important}
 .hide{display:none}
+body{-webkit-font-smoothing:antialiased}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
@@ -118,16 +120,13 @@ table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
 table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
 table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+body{tab-size:4}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
 .clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
 .clearfix:after,.float-group:after{clear:both}
-*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
-*:not(pre)>code.nobreak{word-wrap:normal}
-*:not(pre)>code.nowrap{white-space:nowrap}
+*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
 pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
-em em{font-style:normal}
-strong strong{font-weight:400}
 .keyseq{color:rgba(51,51,51,.8)}
 kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
@@ -847,7 +846,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_planning_and_estimating">Planning and estimating</a>
 <ul class="sectlevel4">
 <li><a href="#_why_plan">Why plan?</a></li>
-<li><a href="#_techniques">Techniques</a></li>
+<li><a href="#_planning_larger_efforts">Planning larger efforts</a></li>
 </ul>
 </li>
 <li><a href="#_it_financial_management">IT financial management</a>
@@ -7253,11 +7252,20 @@ Some companies may notice that every specification they have ever prepared in th
 <p>More detailed understanding is left to the <a href="#scrum">product backlog</a>, which is subject to ongoing "grooming" (re-evaluation in light of <a href="#feedback">feedback</a>).</p>
 </div>
 <div class="paragraph">
-<p><a id="roadmap-backlog-estimation"></a></p>
+<p><a id="backlog-estimation-prioritization"></a></p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_backlog_estimation_and_prioritization">Backlog, estimation, and prioritization</h5>
+<div class="quoteblock">
+<blockquote>
+Estimate size, derive duration <a href="#Cohn2006">[Cohn2006]</a> p. xxvii.
+</blockquote>
+<div class="attribution">
+&#8212; Mike Cohn<br>
+<cite>Agile Estimating and Planning</cite>
+</div>
+</div>
 <div class="quoteblock">
 <blockquote>
 <em>companies often create complex prioritization algorithms that produce precise priorities based on very imprecise input data. I prefer the simple approach. To select between two almost equivalent choices creates great difficulty and little payoff. Instead, we should try to prevent the big, stupid mistakes. This does not require precision</em> (<a href="#Reinertsen2009">[Reinertsen2009]</a> p 192).
@@ -7378,7 +7386,7 @@ Some companies may notice that every specification they have ever prepared in th
 <p>(similar to <a href="#Cohn2006">[Cohn2006]</a>, p. 37)</p>
 </div>
 <div class="paragraph">
-<p>We&#8217;ll discuss the mechanics of maintaining backlogs in <a href="#work-management">Chapter 5, Work Management</a>.</p>
+<p>Mike Cohn emphasizes that estimates are best done by the teams performing the work ()<a href="#Cohn2006">[Cohn2006]</a> p.51). We&#8217;ll discuss the mechanics of maintaining backlogs in <a href="#work-management">Chapter 5, Work Management</a>.</p>
 </div>
 <div class="paragraph">
 <p>Backlogs require prioritization. In order to prioritize, we must have some kind of common understanding of what we are prioritizing <strong>for</strong>. Mike Cohn, in <em>Agile Estimating and Planning</em>, proposes that there are four major factors in understanding product value:</p>
@@ -7398,6 +7406,9 @@ Some companies may notice that every specification they have ever prepared in th
 <p>The amount of risk reduced by developing the features <a href="#Cohn2006">[Cohn2006]</a>, p80.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>In Chapter 5 we will discuss additional tools for managing and prioritizing work, and we will return to the topic of estimation in Chapter 8.</p>
 </div>
 <div class="paragraph">
 <p><a id="design"></a></p>
@@ -13019,22 +13030,22 @@ The history of Scrum is relevant, in particular <a href="#Schwaber2002">[Schwabe
 <p>People are competitive. Your multiple teams will start to contend for investment. This is unavoidable. They will want their activities adequately supported, and their understanding of "adequate" may be different from yours&#8212;&#8203;and each other&#8217;s. They will  be watching that the other teams don&#8217;t get "more than their share" and are using their share effectively. You start to see that the teams need to be constantly reminded of the big picture, in order to keep their discussions and occasional disagreements constructive.</p>
 </div>
 <div class="paragraph">
-<p>Project management is often seen as necessary for financial planning, especially regarding the efforts most critical to the business. The reason it is seen as essential is because of the desire to coordinate, manage, and plan. Having a vision isn&#8217;t worth much without some ability to forecast how long it will take and what it will cost.</p>
+<p>Project management is often seen as necessary for financial planning, especially regarding the efforts most critical to the business. The reason it is seen as essential is because of the desire to coordinate, manage, and plan. Having a vision isn&#8217;t worth much without some ability to forecast how long it will take and what it will cost, and to monitor progress against the forecast in an ongoing way.</p>
 </div>
 <div class="paragraph">
 <p>You now have a dedicated CFO and you are increasingly subject to standard accounting and budgeting rules. But annual budgeting seems to be opposed to how you have chosen to run your company to date. What alternatives are there? You begin to see that your approach to financial management affects every aspect of your company, including your product team effectiveness.</p>
 </div>
 <div class="paragraph">
-<p>As we have seen in our discussions of  <a href="#product-mgmt">Product Management</a>, in implementing <strong>truly new products,</strong> (including digital products) estimating time and budget is challenging because <strong>the necessary information is not available</strong>. In fact, creating information&#8201;&#8212;&#8201;which (per <a href="#lean-product-dev">Lean Product Development</a>) requires tight feedback loops&#8201;&#8212;&#8201;is the actual work of the "project." Therefore, in the new Agile world, there is some uncertainty as to the role of and even need for traditional project management. This chapter will examine some of the reasons for project management&#8217;s persistence and how it is adapting to the new product-centric reality.</p>
-</div>
-<div class="paragraph">
-<p>In the project management literature and tradition, much focus is given to the <strong>execution</strong> aspect of project management&#8201;&#8212;&#8201;its ability to manage complex, interdependent work across resource limitations. However, we discussed project management and execution in <a href="#project-mgmt-coordination">Chapter 7</a>. In Chapter 8, we are interested in the <strong>structural role</strong> of project management as a way of managing investments. Project management may be institutionalized through establishing an organizational function known as the Project Management Office (PMO), which may use a concept of project portfolio as a means of constraining and managing the organization&#8217;s multiple priorities. What is the relationship of the traditional PMO to the new, product-centric, digital world?</p>
+<p>You begin also to see your vendor relationships (e.g. your Cloud providers) as a form of investment. As your use of their products deepens, it becomes more difficult to switch from them, and so you spend more time evaluating before committing. You establish a more formalized approach. Open source changes the software vendor relationship to some degree, but it&#8217;s still a portfolio of commitments and relationships requiring management.</p>
 </div>
 <div class="paragraph">
 <p>Project management is often defined as <strong>the execution of a given scope of work within constraints of time and budget</strong>. But questions arise. We are already executing work, without this concept of "project." We have discussed <a href="#scrum">Scrum</a> in Chapter 4, <a href="#kanban">Kanban</a> in Chapter 5, and various organizational levels and delivery models in <a href="#scaling-org">the introduction to Part III</a>. Here we will examine this idea of "scope" in more detail. How would we know it in advance, so that the "constraints of time and budget" are reasonable?</p>
 </div>
 <div class="paragraph">
-<p>You begin also to see your vendor relationships (e.g. your Cloud providers) as a form of investment. As your use of their products deepens, it becomes more difficult to switch from them, and so you spend more time evaluating before committing. You establish a more formalized approach. Open source changes the software vendor relationship to some degree, but it&#8217;s still a portfolio of commitments and relationships requiring management.</p>
+<p>As we have seen in our discussions of  <a href="#product-mgmt">Product Management</a>, in implementing <strong>truly new products,</strong> (including digital products) estimating time and budget is challenging because <strong>the necessary information is not available</strong>. In fact, creating information&#8201;&#8212;&#8201;which (per <a href="#lean-product-dev">Lean Product Development</a>) requires tight feedback loops&#8201;&#8212;&#8201;is the actual work of the "project." Therefore, in the new Agile world, there is some uncertainty as to the role of and even need for traditional project management. This chapter will examine some of the reasons for project management&#8217;s persistence and how it is adapting to the new product-centric reality.</p>
+</div>
+<div class="paragraph">
+<p>In the project management literature and tradition, much focus is given to the <strong>execution</strong> aspect of project management&#8201;&#8212;&#8201;its ability to manage complex, interdependent work across resource limitations. We discussed project management and execution in <a href="#project-mgmt-coordination">Chapter 7</a>. In Chapter 8, we are interested in the <strong>structural role</strong> of project management as a way of managing investments. Project management may be institutionalized through establishing an organizational function known as the Project Management Office (PMO), which may use a concept of project portfolio as a means of constraining and managing the organization&#8217;s multiple priorities. What is the relationship of the traditional PMO to the new, product-centric, digital world?</p>
 </div>
 <div class="sect4">
 <h5 id="_chapter_8_outline">Chapter 8 outline</h5>
@@ -13067,7 +13078,7 @@ Directors should monitor the progress of approved IT proposals to ensure that th
 <div class="title">Note</div>
 </td>
 <td class="content">
-The first comparison of IT investments to a portfolio was in 1974, by Richard Nolan <a href="#Nolan1974">[Nolan1974]</a>.
+The first comparison of IT investments to a portfolio was in 1974, by Richard Nolan in <em>Managing the Data Resource Function</em> <a href="#Nolan1974">[Nolan1974]</a>.
 </td>
 </tr>
 </table>
@@ -13162,7 +13173,7 @@ The first comparison of IT investments to a portfolio was in 1974, by Richard No
 <div class="sect4">
 <h5 id="_epics_and_new_products">Epics and new products</h5>
 <div class="paragraph">
-<p>In the <a href="#defining-coord">last chapter</a>, we talked of one product with multiple feature and/or component teams. Features and components as we are discussing them here are large enough to require separate teams (with new <a href="#coord-tools">coordination requirements</a>). At an even larger scale, we have new product ideas, perhaps first seen as <a href="#roadmap-backlog-estimation">epics in a product backlog</a>.</p>
+<p>In the <a href="#defining-coord">last chapter</a>, we talked of one product with multiple feature and/or component teams. Features and components as we are discussing them here are large enough to require separate teams (with new <a href="#coord-tools">coordination requirements</a>). At an even larger scale, we have new product ideas, perhaps first seen as <a href="#backlog-estimation-prioritization">epics in a product backlog</a>.</p>
 </div>
 <div class="imageblock" style="float: right">
 <div class="content">
@@ -13218,7 +13229,7 @@ The first comparison of IT investments to a portfolio was in 1974, by Richard No
 </ul>
 </div>
 <div class="paragraph">
-<p>The <a href="#roadmap-backlog-estimation">DEEP backlog</a> we discussed in Chapter 5 gets split accordingly:</p>
+<p>The <a href="#backlog-estimation-prioritization">DEEP backlog</a> we discussed in Chapter 5 gets split accordingly:</p>
 </div>
 <div class="imageblock" style="float: right">
 <div class="content">
@@ -13256,13 +13267,13 @@ The first comparison of IT investments to a portfolio was in 1974, by Richard No
 </ul>
 </div>
 <div class="paragraph">
-<p>We&#8217;ve discussed investment decision making in terms of the overall <a href="#digital-context">business context</a>, in terms of the <a href="#product-roadmapping">product roadmap</a>, the  <a href="#roadmap-backlog-estimation">product backlog</a>, and in terms of <a href="#lean-product-dev">Lean Product Development</a> and <a href="#cost-of-delay">Cost of Delay</a>. As we think about making large scale digital investments, all of these practices come together to support our decision making process. Estimating the likely time and cost of one or more larger scale digital product investments is not rocket science; doing so is based on the same techniques we have used at the single-team, single-product level.</p>
+<p>We&#8217;ve discussed investment decision making in terms of the overall <a href="#digital-context">business context</a>, in terms of the <a href="#product-roadmapping">product roadmap</a>, the  <a href="#backlog-estimation-prioritization">product backlog</a>, and in terms of <a href="#lean-product-dev">Lean Product Development</a> and <a href="#cost-of-delay">Cost of Delay</a>. As we think about making larger scale, multi-team digital investments, all of these practices come together to support our decision making process. Estimating the likely time and cost of one or more larger scale digital product investments is not rocket science; doing so is based on the same techniques we have used at the single-team, single-product level.</p>
 </div>
 <div class="paragraph">
 <p>With increasing scope of work and increasing time horizon tends to come increasing uncertainty. We know that we will use fast feedback and ongoing hypothesis-driven development to control for this uncertainty. But at some point, we either make a decision to invest in a given feature or product, and starting the hypothesis testing cycle&#8201;&#8212;&#8201;or we don&#8217;t.</p>
 </div>
 <div class="paragraph">
-<p>Once we have made this decision, there are various techniques we can use to prioritize the work so that the most significant risks and hypotheses are addressed soonest. But in any case, when large blocks of funding are at issue, there will be some expectation of monitoring and communication. In order to monitor, we have to have some kind of baseline expectation to monitor against. Longer-horizon artifacts such as the product roadmap and release plan are usually the basis for monitoring and reporting on product or initiative progress.</p>
+<p>Once we have made this decision, there are various techniques we can use to <a href="#backlog-estimation-prioritization">prioritize</a> the work so that the most significant risks and hypotheses are addressed soonest. But in any case, when large blocks of funding are at issue, there will be some expectation of monitoring and communication. In order to monitor, we have to have some kind of baseline expectation to monitor against. Longer-horizon artifacts such as the product roadmap and release plan are usually the basis for monitoring and reporting on product or initiative progress.</p>
 </div>
 <div class="paragraph">
 <p>In planning and execution, we seek to optimize the following contradictory goals:</p>
@@ -13296,24 +13307,30 @@ The first comparison of IT investments to a portfolio was in 1974, by Richard No
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>Projecting expected benefits is challenging. One of the most useful references for such questions is the book <em>How to Measure Anything: Finding the Value of Intangibles in Business</em> by Doug Hubbard <a href="#Hubbard2010">[Hubbard2010]</a>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Projecting expected benefits is challenging. One of the most useful references for such questions is the book <em>How to Measure Anything: Finding the Value of Intangibles in Business</em> by Doug Hubbard <a href="#Hubbard2010">[Hubbard2010]</a>.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
-<p>Estimation sometimes causes controversy. When a team is asked for a projected delivery date, the temptation for management is to "hold them accountable" for that date and penalize them for not delivering value by then. But product discovery is inherently uncertain, and therefore such penalties can seem arbitrary.  Experiments show that when animals are penalized unpredictably, they fall into a condition known as "learned helplessness," which (according to Wikipedia) is</p>
+<p>Estimation sometimes causes controversy. When a team is asked for a projected delivery date, the temptation for management is to "hold them accountable" for that date and penalize them for not delivering value by then. But product discovery is inherently uncertain, and therefore such penalties can seem arbitrary. Experiments show that when animals are penalized unpredictably, they fall into a condition known as "learned helplessness," in which they stop trying to avoid the penalties &lt;&lt;Wikipedia2016a&gt;.</p>
 </div>
 <div class="paragraph">
-<p><em>behavior typical of a human or non-human animal and occurs where an animal endures repeatedly painful or otherwise aversive stimuli in which it is unable to escape or avoid. After such experience, the organism often fails to learn or accept "escape" or "avoidance" in new situations where such behavior would likely be effective. In other words, the organism learned that it is helpless&#8230;&#8203; and has accepted that it has lost control, and thus gives up trying. Such an organism is said to have acquired learned helplessness. <a href="#Wikipedia2016a">[Wikipedia2016a]</a></em></p>
+<p>We discussed various <a href="#coord-tools">boundary-spanning</a> tools and techniques in Chapter 8. Developing plans for understanding dependencies is one of the best known such techniques. An example of such a planning dependency would be that the database product should be chosen and configured before any schema development takes place (this might be a <a href="#feature-v-component">component team working with a feature team</a>).</p>
 </div>
 <div class="paragraph">
-<p>When planning, we need to avoid:</p>
-</div>
-<div class="paragraph">
-<p>planning dysfunctions</p>
+<p>Finally, contingency planning is essential. In developing any plan, Abbott and Fisher recommend the "5-95 rule": 5% of the time on building a good plan, and 95% of the time planning for contingencies (<a href="#Abbott2015">[Abbott2015]</a> p. 105).  We&#8217;ll discuss risk management in detail in Chapter 10.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_techniques">Techniques</h5>
+<h5 id="_planning_larger_efforts">Planning larger efforts</h5>
 <div class="quoteblock">
 <blockquote>
 &#8230;&#8203;many large projects need to announce and commit to deadlines many months in advance, and many large projects do have interteam dependencies&#8230;&#8203;
@@ -13324,10 +13341,25 @@ The first comparison of IT investments to a portfolio was in 1974, by Richard No
 </div>
 </div>
 <div class="paragraph">
-<p>inputs</p>
+<p>Planning and managing larger efforts</p>
+</div>
+<div class="paragraph">
+<p>Agile and adaptive techniques can be used to plan larger, multi-team programs. Joanna Rothman, in <em>Agile and Lean Program Management: Scaling Collaboration Across the Organization</em>, describes program fundamentals, including:</p>
 </div>
 <div class="ulist">
 <ul>
+<li>
+<p>Program charter</p>
+</li>
+<li>
+<p>Roadmap</p>
+</li>
+<li>
+<p>Continuous planning</p>
+</li>
+<li>
+<p>Creating an environment of delivery</p>
+</li>
 <li>
 <p>Business drivers</p>
 <div class="ulist">
@@ -13339,8 +13371,7 @@ The first comparison of IT investments to a portfolio was in 1974, by Richard No
 <p>road map/release plan (deeper)</p>
 </li>
 <li>
-<p><strong>risk</strong> contingency planning&#8201;&#8212;&#8201;Planning under variability
-AKF 5%-95% rule for planning &amp; execution - goes to the top of this chapter - Abbott2015 p 105, spend 5% plnning and 95% considering contingencies&#8212;&#8203;forward ref to risk mgmt</p>
+<p><strong>risk</strong> contingency planning&#8201;&#8212;&#8201;Planning under variability</p>
 </li>
 </ul>
 </div>
@@ -13348,7 +13379,13 @@ AKF 5%-95% rule for planning &amp; execution - goes to the top of this chapter -
 </ul>
 </div>
 <div class="paragraph">
+<p>ROAM? didn&#8217;t like demand fragmentation&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
 <p>techniques</p>
+</div>
+<div class="paragraph">
+<p>progressive refinement &amp; replanning</p>
 </div>
 <div class="paragraph">
 <p>Monte Carlo - uncertainty</p>
@@ -13367,6 +13404,9 @@ AKF 5%-95% rule for planning &amp; execution - goes to the top of this chapter -
 </div>
 <div class="paragraph">
 <p>the choice of financial management practice can profoundly impact&#8230;&#8203; (next section lead in)</p>
+</div>
+<div class="paragraph">
+<p>combining agile and "non-agile" teams - plan-centricity can be a mask for poor demand management &amp; multi-tasking</p>
 </div>
 <div class="paragraph">
 <p><a id="financial-mgmt"></a></p>
@@ -15044,7 +15084,7 @@ Part of the problem with extensive frameworks such as PMBOK is that knowing how 
 </div>
 </li>
 <li>
-<p>Develop a project plan that you think is an appropriate use of project management, i.e. the objectives are reasonably well known.</p>
+<p>Develop a feature or release plan for your product, using the Abbott 5-95 rule.</p>
 </li>
 <li>
 <p>Compare and contrast this <a href="https://www.mountaingoatsoftware.com/articles/the-need-for-agile-project-management">Cohn article</a> in favor of project management, with these skeptical articles by <a href="https://www.thoughtworks.com/insights/blog/scaling-agile-problems-and-solutions">Narayam</a> and <a href="https://www.thoughtworks.com/insights/blog/project-vs-product">Memon</a>.</p>
@@ -28826,7 +28866,7 @@ Cost of Delay</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-12-02 11:12:33 CST
+Last updated 2016-11-21 10:11:27 CST
 </div>
 </div>
 </body>
