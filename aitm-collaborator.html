@@ -922,7 +922,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_waterfall_and_functional_organization">Waterfall and functional organization</a></li>
 <li><a href="#_the_continuum_of_organizational_forms">The continuum of organizational forms</a></li>
 <li><a href="#_scaling_the_product_organization">Scaling the product organization</a></li>
-<li><a href="#_from_components_to_shared_services">From components to shared services</a></li>
+<li><a href="#_from_functions_to_components_to_shared_services">From functions to components to shared services</a></li>
 </ul>
 </li>
 <li><a href="#_it_human_resource_management">IT human resource management</a>
@@ -17802,7 +17802,7 @@ The following discussion and accompanying set of diagrams is derived from Presto
 </div>
 </div>
 <div class="sect4">
-<h5 id="_from_components_to_shared_services">From components to shared services</h5>
+<h5 id="_from_functions_to_components_to_shared_services">From functions to components to shared services</h5>
 <div class="paragraph">
 <p>We have previously discussed <a href="#feature-v-component">feature vs component teams</a>. As a reminder, features are functional aspects of software (things people find directly valuable) while components are how software is organized (e.g. shared services and platforms such as data management).</p>
 </div>
@@ -17810,75 +17810,36 @@ The following discussion and accompanying set of diagrams is derived from Presto
 <p>As an organization grows, we see both the feature and component sides scale. Feature teams start to diverge into multiple products, while component teams continue to grow in the guise of shared services and platforms. Their concerns continue to differentiate and communication friction may start to emerge between the teams. How an organization handles this is critical.</p>
 </div>
 <div class="paragraph">
-<p>In a world of digital products delivered as services, both feature and component teams may be the recipients of ongoing investment. One reason for component teams is the increasing depth of specialization seen in the evolving digital organization. As systems scale up, deeper and deeper skills are called for:</p>
+<p>In a world of digital products delivered as services, both feature and component teams may be the recipients of ongoing investment. An ongoing objection in discussions of Agile is, "We can&#8217;t put a specialist on every team!" This objection reflects the increasing depth of specialization seen in the evolving digital organization. Ultimately, it seems there are two alternatives to handling deep functional specialization in the modern digital organization:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Network engineers with advanced understandings of routing and security</p>
+<p>Split it across teams</p>
 </li>
 <li>
-<p>Database engineers with advanced skills in performance tuning and indexing</p>
-</li>
-<li>
-<p>Application architects with advanced skills in caching architectures</p>
+<p>Turn it into an internal product</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>An ongoing objection in discussions of Agile is, "We can&#8217;t put a specialist on every team!"</p>
+<p>We&#8217;ve discussed the first option above (split the specialty across teams). But for the second option consider for example the traditional role of server engineer (a common infrastructure function). Such engineers historically have had a consultative, order-taking relationship to application teams:</p>
 </div>
-<div class="paragraph">
-<p>Lifecycle: collaboration, internal commoditization, external commoditization
- Effectiveness, efficiency, governance -Benchmarkable</p>
-</div>
-<div class="paragraph">
-<p>Examples of shared services for digital teams - layered nature</p>
-</div>
-<div class="paragraph">
-<p>Service catalog: act, offering, system</p>
-</div>
-<div class="paragraph">
-<p>Deeper discussion of virtual server provisioning as example (backref to ch2, forward to ch10)</p>
-</div>
-<div class="paragraph">
-<p>example of service-ized process dysfunction</p>
-</div>
-<div class="paragraph">
-<p>Adapting a services model to improve flow</p>
-</div>
-<div class="paragraph">
-<p>(Notice that the services a functional area provides can be viewed as a form of product in and of themselves.)</p>
-</div>
-<div class="paragraph">
-<p>Degree of automation
-perils of "take a number" service-ization</p>
-</div>
-<div class="ulist">
-<ul>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>SLAs and the service catalog</p>
-<div class="ulist">
-<ul>
+<p>An application team would identify a need for computing capacity ("we need four servers")</p>
+</li>
 <li>
-<p>Service-izing functions: pros and cons</p>
+<p>The infrastructure engineers would get involved and provide recommendations on make, model, and capacity</p>
 </li>
-</ul>
-</div>
+<li>
+<p>Physical servers would be acquired, perhaps after some debate and further approval cycles</p>
 </li>
-</ul>
+</ol>
 </div>
 <div class="paragraph">
-<p>Scenario: repetitive yet error prone work <strong>* how function *becomes</strong> product - my little data standards self-service example&#8230;&#8203; team to team interactions that become "servicized" &#8230;&#8203;critical importance of self-service</p>
-</div>
-<div class="paragraph">
-<p>Implication in various IT governance texts that the shared services team is accountable for optimal use of the shared resource. A very dangerous guideline when multiplied by numerous  COEs/SSs.</p>
-</div>
-<div class="paragraph">
-<p>forward/backward ref to functional orgs</p>
-</div>
-<div class="paragraph">
-<p>Feature vs Component at scale</p>
+<p>Such processes might take months to complete, and often caused dissatisfaction. With the rise of Cloud technologies, however, we see the transition from a consultative, order-taking model to an automated, always-on, self-service model. Infrastructure organizations move their activities from consulting on particular applications, to designing and sustaining the shared, self-service platform. At that point, are they a function or a product?</p>
 </div>
 <div class="paragraph">
 <p><a id="resource-mgmt"></a></p>
@@ -19069,6 +19030,11 @@ We move away from heavily documented handoffs to a process that creates only the
 </div>
 <div class="paragraph">
 <p>2nd ed ideas</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Implication in various IT governance texts that the shared services team is accountable for optimal use of the shared resource. A very dangerous guideline when multiplied by numerous  COEs/SSs. Consumer is accountable for what they consume.</pre>
+</div>
 </div>
 <div class="literalblock">
 <div class="content">
