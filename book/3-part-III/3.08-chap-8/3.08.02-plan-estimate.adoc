@@ -7,11 +7,11 @@ Fundamentally, we plan for two reasons:
 * To decide whether to make an investment
 * To ensure the investment's effort progresses effectively and efficiently.
 
-We've discussed investment decision making in terms of the overall xref:digital-context[business context], in terms of the xref:product-roadmapping[product roadmap], the  xref:roadmap-backlog-estimation[product backlog], and in terms of xref:lean-product-dev[Lean Product Development] and xref:cost-of-delay[Cost of Delay]. As we think about making large scale digital investments, all of these practices come together to support our decision making process. Estimating the likely time and cost of one or more larger scale digital product investments is not rocket science; doing so is based on the same techniques we have used at the single-team, single-product level.
+We've discussed investment decision making in terms of the overall xref:digital-context[business context], in terms of the xref:product-roadmapping[product roadmap], the  xref:backlog-estimation-prioritization[product backlog], and in terms of xref:lean-product-dev[Lean Product Development] and xref:cost-of-delay[Cost of Delay]. As we think about making larger scale, multi-team digital investments, all of these practices come together to support our decision making process. Estimating the likely time and cost of one or more larger scale digital product investments is not rocket science; doing so is based on the same techniques we have used at the single-team, single-product level.
 
 With increasing scope of work and increasing time horizon tends to come increasing uncertainty. We know that we will use fast feedback and ongoing hypothesis-driven development to control for this uncertainty. But at some point, we either make a decision to invest in a given feature or product, and starting the hypothesis testing cycle -- or we don't.
 
-Once we have made this decision, there are various techniques we can use to prioritize the work so that the most significant risks and hypotheses are addressed soonest. But in any case, when large blocks of funding are at issue, there will be some expectation of monitoring and communication. In order to monitor, we have to have some kind of baseline expectation to monitor against. Longer-horizon artifacts such as the product roadmap and release plan are usually the basis for monitoring and reporting on product or initiative progress.
+Once we have made this decision, there are various techniques we can use to xref:backlog-estimation-prioritization[prioritize] the work so that the most significant risks and hypotheses are addressed soonest. But in any case, when large blocks of funding are at issue, there will be some expectation of monitoring and communication. In order to monitor, we have to have some kind of baseline expectation to monitor against. Longer-horizon artifacts such as the product roadmap and release plan are usually the basis for monitoring and reporting on product or initiative progress.
 
 In planning and execution, we seek to optimize the following contradictory goals:
 
@@ -26,31 +26,37 @@ To meet these value goals, we need to:
 * plan so that we understand dependencies (e.g. when one team *must* complete a task before another team can start theirs)
 * identify and analyze contingencies that may affect outcomes
 
-Projecting expected benefits is challenging. One of the most useful references for such questions is the book _How to Measure Anything: Finding the Value of Intangibles in Business_ by Doug Hubbard <<Hubbard2010>>. 
+NOTE: Projecting expected benefits is challenging. One of the most useful references for such questions is the book _How to Measure Anything: Finding the Value of Intangibles in Business_ by Doug Hubbard <<Hubbard2010>>.
 
-Estimation sometimes causes controversy. When a team is asked for a projected delivery date, the temptation for management is to "hold them accountable" for that date and penalize them for not delivering value by then. But product discovery is inherently uncertain, and therefore such penalties can seem arbitrary.  Experiments show that when animals are penalized unpredictably, they fall into a condition known as "learned helplessness," which (according to Wikipedia) is
+Estimation sometimes causes controversy. When a team is asked for a projected delivery date, the temptation for management is to "hold them accountable" for that date and penalize them for not delivering value by then. But product discovery is inherently uncertain, and therefore such penalties can seem arbitrary. Experiments show that when animals are penalized unpredictably, they fall into a condition known as "learned helplessness," in which they stop trying to avoid the penalties <<Wikipedia2016a>.
 
-_behavior typical of a human or non-human animal and occurs where an animal endures repeatedly painful or otherwise aversive stimuli in which it is unable to escape or avoid. After such experience, the organism often fails to learn or accept "escape" or "avoidance" in new situations where such behavior would likely be effective. In other words, the organism learned that it is helpless... and has accepted that it has lost control, and thus gives up trying. Such an organism is said to have acquired learned helplessness. <<Wikipedia2016a>>_
+We discussed various xref:coord-tools[boundary-spanning] tools and techniques in Chapter 8. Developing plans for understanding dependencies is one of the best known such techniques. An example of such a planning dependency would be that the database product should be chosen and configured before any schema development takes place (this might be a xref:feature-v-component[component team working with a feature team]).
 
+Finally, contingency planning is essential. In developing any plan, Abbott and Fisher recommend the "5-95 rule": 5% of the time on building a good plan, and 95% of the time planning for contingencies (<<Abbott2015>> p. 105).  We'll discuss risk management in detail in Chapter 10.
 
-
-When planning, we need to avoid:
-
-planning dysfunctions
-
-===== Techniques
+===== Planning larger efforts
 [quote, Mike Cohn, Agile Estimating and Planning]
 ...many large projects need to announce and commit to deadlines many months in advance, and many large projects do have interteam dependencies...
 
-inputs
+Planning and managing larger efforts
+
+Agile and adaptive techniques can be used to plan larger, multi-team programs. Joanna Rothman, in _Agile and Lean Program Management: Scaling Collaboration Across the Organization_, describes program fundamentals, including:
+
+* Program charter
+* Roadmap
+* Continuous planning
+* Creating an environment of delivery
 
 * Business drivers
 ** biz plan & revenue
 ** road map/release plan (deeper)
 ** *risk* contingency planning -- Planning under variability
- AKF 5%-95% rule for planning & execution - goes to the top of this chapter - Abbott2015 p 105, spend 5% plnning and 95% considering contingencies--forward ref to risk mgmt
+
+ROAM? didn't like demand fragmentation...
 
 techniques
+
+progressive refinement & replanning
 
 Monte Carlo - uncertainty
 
@@ -62,5 +68,6 @@ what about project level control/monitoring? hard to close the plan/monitor loop
 
 Project has the deepest tools, and whether or not you use a formal project structure, you will find yourself in this thought process as you scale.
 
-
 the choice of financial management practice can profoundly impact... (next section lead in)
+
+combining agile and "non-agile" teams - plan-centricity can be a mask for poor demand management & multi-tasking
