@@ -1836,6 +1836,9 @@ not a reference... some topics are split... it's a hero's journey</pre>
 <div class="paragraph">
 <p>Part of maturing in one’s career is understanding how all these relationships figure into your own overall system of value delivery. This will be a lifelong journey for the student; the author’s intent is to provide some useful tools.</p>
 </div>
+<div class="paragraph">
+<p><a id="reader-assumptions"></a></p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_assumptions_about_the_reader">Assumptions about the reader</h3>
@@ -3327,7 +3330,7 @@ The goal of a startup is to figure out the right thing to build— the thing cus
 <p>Configuring your base platform is one of the most important capabilities you will need to develop. You&#8217;ll never stop doing it. The basis of modern configuration management is <a href="https://en.wikipedia.org/wiki/Version_control">version control</a>, which we cover here.</p>
 </div>
 <div class="paragraph">
-<p>This is one of the more technical chapters. Supplementary reading may be required for those completely unfamiliar with computing. See <a href="#_assumptions_of_the_reader">Assumptions of the Reader</a> for notes on the book&#8217;s approach.</p>
+<p>This is one of the more technical chapters. Supplementary reading may be required for those completely unfamiliar with computing. See <a href="#reader-assumptions">Assumptions of the Reader</a> for notes on the book&#8217;s approach.</p>
 </div>
 <div class="sect4">
 <h5 id="_chapter_summary">Chapter summary</h5>
@@ -7294,11 +7297,6 @@ Boundaries are provided by the product owner and often come in the form of const
 </div>
 <div class="paragraph">
 <p>In the next chapter, we will consider the challenge of product discovery&#8201;&#8212;&#8201;at a product level, what practices do we follow to generate the creative insights that will result in customer value?</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>more on self-organization</pre>
-</div>
 </div>
 <div class="paragraph">
 <p><a id="prod-discovery"></a></p>
@@ -12184,7 +12182,7 @@ Another technique mentioned in The Checklist Manifesto <a href="#Gawande2010">[G
 <p>The above discussion is by no means exhaustive. A wealth of additional techniques relevant for digital professionals is to be found in <a href="#Larman2009">[Larman2009]</a> and <a href="#Cohn2010">[Cohn2010]</a>. New techniques are continually emerging from the front lines of the digital industry; the interested student should consider attending industry conferences such as those offered by the Agile Alliance.</p>
 </div>
 <div class="paragraph">
-<p>In general, the above approaches imply synchronized meetings and face to face interactions. When the boundary-spanning approach is based on artifacts (often a requirement for larger, decentralized enterprises), we move into the realms of process and project management. Approaches based on routing artifacts into <a href="#queues">queues</a> often receive criticism for introducing too much latency into the product development process. When artifacts are routed via work  orders and tickets for action by independent teams, prioritization may be arbitray (not based on business value, e.g. <a href="#cost-of-delay">Cost of Delay</a>), and sometimes the work must flow through multiple queues in an uncoordinated way, as we warned in Chapter 5. Such approaches can add dangerous latency to high-value processes. We will look in more detail at process management in a future section.</p>
+<p>In general, the above approaches imply synchronized meetings and face to face interactions. When the boundary-spanning approach is based on artifacts (often a requirement for larger, decentralized enterprises), we move into the realms of process and project management. Approaches based on routing artifacts into <a href="#queuing">queues</a> often receive criticism for introducing too much latency into the product development process. When artifacts are routed via work  orders and tickets for action by independent teams, prioritization may be arbitray (not based on business value, e.g. <a href="#cost-of-delay">Cost of Delay</a>), and sometimes the work must flow through multiple queues in an uncoordinated way, as we warned in Chapter 5. Such approaches can add dangerous latency to high-value processes. We will look in more detail at process management in a future section.</p>
 </div>
 <div class="paragraph">
 <p><a id="google-chubby"></a></p>
@@ -12768,7 +12766,7 @@ Individuals and interactions over processes and tools.
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#queues">Queues</a></p>
+<p><a href="#queuing">Queues</a></p>
 </li>
 <li>
 <p><a href="#strode-dependency-taxonomy">Dependencies</a></p>
@@ -12777,7 +12775,7 @@ Individuals and interactions over processes and tools.
 <p><a href="#coord-tools">Coordination</a></p>
 </li>
 <li>
-<p><a href="#queues">Queues</a></p>
+<p><a href="#queuing">Queues</a></p>
 </li>
 <li>
 <p><a href="#synchronization">Cadence and Synchronization</a></p>
@@ -14545,7 +14543,7 @@ cloud computing has some fundamental characteristics that distinguish it from tr
 <p>Cloud can reduce costs when deployed in a sophisticated way; if a company has purchased more capacity than it needs, Cloud can be more economical (review the section on <a href="#virtualization-econ">virtualization economics</a>). However, ultimately as Abbott and Fisher point out,</p>
 </div>
 <div class="paragraph">
-<p><em>Large, rapidly growing companies can usually realize greater margins by using wholly owned equipment than they can by operating in the cloud. This difference arises because laaS operators, while being able to purchase and manage their equipment costeffectively, are still looking to make a profit on their services</em> <a href="#Abbot2015">[Abbot2015]</a>, p474.</p>
+<p><em>Large, rapidly growing companies can usually realize greater margins by using wholly owned equipment than they can by operating in the cloud. This difference arises because laaS operators, while being able to purchase and manage their equipment costeffectively, are still looking to make a profit on their services</em> <a href="#Abbott2015">[Abbott2015]</a>, p474.</p>
 </div>
 <div class="paragraph">
 <p>Minimally, Cloud services need to be controlled for consumption. Cloud providers will happily allow virtual machines to run indefinitely, and charge for them. An ecosystem of Cloud brokers and value-add resellers is emerging to assist organizations with optimizing their Cloud dollars.</p>
@@ -15201,7 +15199,7 @@ Agile is having a profound impact on the project management profession and will 
 <p>As the above quotes indicate, there are diverse opinions on the role and importance of traditional project management in the enterprise. Clearly it is under pressure from the Agile movement. Project management professionals are advised to not deny or diminish this fact. One of the primary criticisms of project management as a paradigm is that it promotes large "batches" of work. It is possible for a modern, IT-centric organization to make considerable progress on the basis of <a href="#product-mgmt">product management</a> plus simple, continuous <a href="#work-management">work management</a>, without the overhead of the formalized project lifecycle suggested by PMBOK.</p>
 </div>
 <div class="paragraph">
-<p><a href="#Cloud">Cloud computing</a> is having impacts on traditional project management as well. As we will see in the section on the <a href="#trad-IT-decline">decline of traditional IT</a>, projects were often used to install vendor-delivered commodity software, such as for payroll or employee expense. Increasingly, that kind of functionality is delivered by online service providers, leaving "traditional" internal IT with considerably reduced responsibilities.</p>
+<p><a href="#cloud">Cloud computing</a> is having impacts on traditional project management as well. As we will see in the section on the <a href="#trad-IT-decline">decline of traditional IT</a>, projects were often used to install vendor-delivered commodity software, such as for payroll or employee expense. Increasingly, that kind of functionality is delivered by online service providers, leaving "traditional" internal IT with considerably reduced responsibilities.</p>
 </div>
 <div class="paragraph">
 <p>Some of the IT capability may remain in the guise of an internal "service broker," to assist with the sourcing and procurement of online services. The remainder moves into digital product management, as the only need for internal IT is in the area of revenue-generating, market-facing strategic digital product.</p>
@@ -17619,7 +17617,7 @@ Part IV, like the other parts, needs to be understood as a unified whole. In rea
 <p>An <strong>Infrastructure Service</strong> is, by contrast and as <a href="#what-is-IT-infrastructure">previously discussed</a>, a digital or IT service primarily of interest to other digital or IT services/products. Its lifecycle is similar to that of the application service, except that the user is some other IT service. An example would be a Storage Area Network system managed as a service, or the integrated networking system required for connectivity in a data center. Platform and Infrastructure as a Service is also tracked here.</p>
 </div>
 <div class="paragraph">
-<p>Note that in terms of our <a id="shared-services"></a>, the above lifecycle concepts are service <strong>systems</strong>. The lifecycle of service offerings is a business lifecycle having more to do with go to market strategy on the part of the firm. We covered this to some extent in Chapter 4 and will revisit it in Chapter 12.</p>
+<p>Note that in terms of our <a href="#shared-services">service definition discussion</a>, the above lifecycle concepts are service <strong>systems</strong>. The lifecycle of service offerings is a business lifecycle having more to do with go to market strategy on the part of the firm. We covered this to some extent in Chapter 4 and will revisit it in Chapter 12.</p>
 </div>
 <div class="paragraph">
 <p>An <strong>Asset</strong> is a valuable, tangible investment of organizational resources that is tracked against loss or misuse, and optimized for value over time. It can sit unused and still have some value. Examples would include a physical server or other device, or a commercial software license. Whether assets can be virtual is a subject of debate and specific to the organization&#8217;s management objectives (Given the licensing implications of virtual servers, treating them as assets is not uncommon.)</p>
@@ -18912,11 +18910,6 @@ Risk is defined as the possibility that an event will occur and adversely affect
 </div>
 <div class="paragraph">
 <p>"Loss," however, can also equate to "failure to achieve anticipated gains." This form of risk applies (for example) to product and project investments.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>add risk v uncertainty Hubbard</pre>
-</div>
 </div>
 </div>
 </div>
@@ -20891,12 +20884,12 @@ Poorly governed and managed information and technology will destroy value or fai
 </div>
 </div>
 <div class="sect5">
-<h6 id="_sourcing_and_siam_risk">Sourcing and SIAM risk</h6>
+<h6 id="_sourcing_risk">Sourcing risk</h6>
 <div class="paragraph">
 <p>We have already covered contracting in terms of software and Cloud. But in terms of the emergence model, it is typical that companies enter into contracts before having a fully mature sourcing and contract management capability with input from the governance, risk, and compliance perspective.</p>
 </div>
 <div class="paragraph">
-<p>We&#8217;ve touched on the issues of <a href="#cloud-due-diligence">Cloud due diligence</a> and <a href="#sourcing-and-security">sourcing and security</a> in this chapter, and <a href="#SIAM">supplier integration and management</a> in chapter 8. The 2e2 case discussed is interesting; it seems that due diligence had actually been performed. Additional controls could have made a key difference, in particular <a href="#business-continuity">business continuity planning</a>.</p>
+<p>We&#8217;ve touched on the issues of <a href="#cloud-due-diligence">Cloud due diligence</a> and <a href="#sourcing-and-security">sourcing and security</a> in this chapter. The 2e2 case discussed is interesting; it seems that due diligence had actually been performed. Additional controls could have made a key difference, in particular <a href="#business-continuity">business continuity planning</a>.</p>
 </div>
 <div class="paragraph">
 <p>There are a wide variety of supplier-side risks that must be managed in Cloud contracts:</p>
@@ -28149,9 +28142,6 @@ All web references were archived into the author&#8217;s files on the indicated 
 </li>
 <li>
 <p><a id="Buckingham2015"></a>[Buckingham2015]: Buckingham, Marcus, and Ashley Goodall. 2015. “Reinventing Performance Management.” Harvard Business Review 93(4): 40–50. <a href="https://hbr.org/2015/04/reinventing-performance-management" class="bare">https://hbr.org/2015/04/reinventing-performance-management</a>.</p>
-</li>
-<li>
-<p><a id="Burlton2001"></a>[Burlton2001]: Burlton, Roger. 2001. <em>Business Process Management: Profiting from Process</em>. Indianapolis, Indiana: SAMS.</p>
 </li>
 <li>
 <p><a id="Burgess2015"></a>[Burgess2015]: Burgess, Mark. 2015. <em>Thinking in Promises</em>. Sebastopol, CA: O’Reilly Media.</p>
