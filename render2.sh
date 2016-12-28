@@ -9,9 +9,18 @@ asciidoctor-pdf aitm-instructor-pdf.adoc
 
 asciidoctor -b docbook aitm-instructor-pdf.adoc
 
+# converts to latex only - essential for errors of kind Missing character &#x202f; - that
+# is an error seen only in the tex file.
+
+dblatex -t tex aitm-instructor-pdf.xml
+
 # converts to pdf via latex
 dblatex aitm-instructor-pdf.xml
+# results are crap - no wrapping, graphics mis-sized.
 
+# so, what to do now...
+# end game: a presentable PDF on LeanPub
+# need a narrower layout
+# wrapped graphics
 
-# converst to latex only
-dblatex -t tex aitm-instructor-pdf.xml
+# OK< let's try publican - no Latex involved. 
