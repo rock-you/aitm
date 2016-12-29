@@ -5,6 +5,9 @@
 %% document.language en
 %%</params>
 \documentclass{report}
+\usepackage{ifthen}
+\newboolean{DBKIsBook}
+\setboolean{DBKIsBook}{true}
 \IfFileExists{ifxetex.sty}{%
     \usepackage{ifxetex}%
   }{%
@@ -39,7 +42,7 @@
 \title{Agile IT Management}
 \author{Charles T. Betz}
 \hypersetup{%
-pdfcreator={DBLaTeX-0.3.7},%
+pdfcreator={DBLaTeX-0.3.7-1},%
 pdftitle={Agile IT Management},%
 pdfauthor={Charles T. Betz}}
 % ------------------
@@ -68,7 +71,7 @@ pdfauthor={Charles T. Betz}}
 \chapter{Praise for this book}
 \label{Praise}\hyperlabel{Praise}%
   
-\emph{Agile IT Management is a perfect fit for my Management Information Systems class to introduce students to the fast-{}paced world of IT Infrastructure that they will be dealing with shortly upon graduation.  This book uses multiple perspectives (Founder, Team Leader, VP, C-{}level executive) to demonstrate to the student not only how a business grows, but how they need to continually grow their skill set.  The use of hands-{}on exercises encouraged by the format of this book complements my teaching style that allows students to learn by doing, failing and doing again.  An additional benefit is that this book begins with a focus on the startup mentality which I will use in my Business Innovation class.}
+\emph{The Digital Professional is a perfect fit for my Management Information Systems class to introduce students to the fast-{}paced world of IT Infrastructure that they will be dealing with shortly upon graduation.  This book uses multiple perspectives (Founder, Team Leader, VP, C-{}level executive) to demonstrate to the student not only how a business grows, but how they need to continually grow their skill set.  The use of hands-{}on exercises encouraged by the format of this book complements my teaching style that allows students to learn by doing, failing and doing again.  An additional benefit is that this book begins with a focus on the startup mentality which I will use in my Business Innovation class.}
  
 \emph{Prof. Pat Paulson, Winona State University}
  
@@ -83,7 +86,7 @@ The digital professional: From startup to enterprise
  
 Published by Digital Management Academy, LLC 14 Sidney Place Minneapolis, MN  55414
  
-Copyright ï¿½ 2016 by Charles T. Betz
+Copyright © 2016 by Charles T. Betz
  
 All rights reserved, for information about permission to reproduce selections from this book, write to Permissions, Digital Management Academy LLC,
 14 Sidney Place, Minneapolis, MN  55414
@@ -1227,7 +1230,7 @@ And yet, the traditional, process-{}heavy IT organization does seem dysfunctiona
 \caption[{The basis of IT value }]{The basis of IT value \footnotemark{}}
 \end{figure}
  
-Let's examine our diner's value experience in more detail, without getting unnecessarily technical, and clarify some definitions along the way.  The first idea we need to cover is the "moment of truth." In terms of information technnology, this English-{}language clichï¿½ represents the user's experience of value.
+Let's examine our diner's value experience in more detail, without getting unnecessarily technical, and clarify some definitions along the way.  The first idea we need to cover is the "moment of truth." In terms of information technnology, this English-{}language cliché represents the user's experience of value.
  
 In the example, our friend seeking a relaxing night out had several moments of truth:
  \begin{itemize}
@@ -1751,7 +1754,7 @@ Nordstrom Home Depot
 Apple Nike
 %
 }&\multicolumn{1}{p{33.3334\newtblstarfactor}|}{\raggedright%
-Dell Computer Wal-{}Mart
+Dell Technologies Walmart
 %
 }\tabularnewline
 \hline
@@ -2849,7 +2852,7 @@ In software development, version control is the foundation of every other Agile 
 \hspace*\fill--- Andrew Clay Shafer
 \emph{Web Operations:Keeping the Data On Time} \end{quote}
  
-The Agile Alliance indicates \textquotedblleft{}version control\textquotedblright{} as one of the \href{http://guide.agilealliance.org/subway.html}{four foundational areas of Agile}, along with team, iterative development, and incremental development. Why is this? Version control is critical for any kind of system with complex, changing content, especially when many people are working on that content. Version control provides the capability of seeing the exact sequence of a complex system's evolution and isolating any particular moment in its history, or providing detailed analysis on how two versions differ. With version control, we can understand what changed and when, which is essential to coping with complexity.
+The Agile Alliance indicates \textquotedblleft{}version control\textquotedblright{} as one of the \href{https://www.agilealliance.org/agile101/subway-map-to-agile-practices/}{four foundational areas of Agile} \hyperlink{Alliance2016}{[Alliance2016]}, along with team, iterative development, and incremental development. Why is this? Version control is critical for any kind of system with complex, changing content, especially when many people are working on that content. Version control provides the capability of seeing the exact sequence of a complex system's evolution and isolating any particular moment in its history, or providing detailed analysis on how two versions differ. With version control, we can understand what changed and when, which is essential to coping with complexity.
  
 While version control was always deemed important for software artifacts, it has only recently become the preferred paradigm for managing infrastructure state as well.  Because of this, version control is possibly the first IT management system you should acquire and implement (perhaps as a cloud service, such as Github).
  
@@ -6618,7 +6621,7 @@ Andon and information radiators provide important stimulus for product teams, in
   
 As work flows through the system performing it, understanding its status is key to managing it. One of the most important mechanisms for doing this is to simply define what is meant by \textquotedblleft{}done.\textquotedblright{} The Agile Alliance \href{http://guide.agilealliance.org/guide/definition-of-done.html#sthash.6rSCZMyU.dpuf}{states}:
  
-\textquotedblleft{}The team agrees on, and displays prominently somewhere in the team room, a list of criteria which must be met before a product increment, often a user story, is considered "done" \hyperlink{Alliance2016}{[Alliance2016]}. Failure to meet these criteria at the end of a sprint normally implies that the work should not be counted toward that sprint's velocity.\textquotedblright{} There are various patterns for defining "done," for example, Thoughtworks recommends that the business analyst and developer both must agree that some task is complete (it is not up to just one person). Other companies may require peer code reviews \hyperlink{Narayam2015a}{[Narayam2015a]}. The important point is that the team must agree on the criteria.
+\textquotedblleft{}The team agrees on, and displays prominently somewhere in the team room, a list of criteria which must be met before a product increment, often a user story, is considered "done" \hyperlink{Alliance2015a}{[Alliance2015a]}. Failure to meet these criteria at the end of a sprint normally implies that the work should not be counted toward that sprint's velocity.\textquotedblright{} There are various patterns for defining "done," for example, Thoughtworks recommends that the business analyst and developer both must agree that some task is complete (it is not up to just one person). Other companies may require peer code reviews \hyperlink{Narayam2015a}{[Narayam2015a]}. The important point is that the team must agree on the criteria.
  
 This idea of defining \textquotedblleft{}done\textquotedblright{} can be extended by the team to other concepts such as \textquotedblleft{}blocked.\textquotedblright{} The important thing is that this is all part of the team's shared mental model, and is best defined by the team and its customers. (However, governance and consistency concerns may arise if teams are too diverse in such definitions.)
   
@@ -7124,7 +7127,7 @@ Understanding work requires understanding tasks and their lifecycle, the charact
  
 \subsubsection{Discussion questions}
 \label{_discussion_questions_5}\hyperlabel{_discussion_questions_5}%
-  \begin{enumerate}[label=\arabic*.]
+  \begin{itemize}
 
 \item{} When have you been on a team that needed to have a shared mental model? How did you achieve this?
  
@@ -7137,11 +7140,11 @@ Understanding work requires understanding tasks and their lifecycle, the charact
 
 \item{} Do you choose Scrum, Kanban, both, or neither?
  
-\end{enumerate}
+\end{itemize}
   
 \subsubsection{Research \& practice}
 \label{_research_practice_5}\hyperlabel{_research_practice_5}%
-  \begin{enumerate}[label=\arabic*.]
+  \begin{itemize}
 
 \item{} Think of a queue you encounter on a regular basis. How can you understand its cost of delay?
  
@@ -7154,7 +7157,7 @@ Understanding work requires understanding tasks and their lifecycle, the charact
 
 \item{} (Advanced) Read some of Reinertsen's \emph{The Principles of Product Development Flow} and write up or present 2-{}3 key insights you gained.
  
-\end{enumerate}
+\end{itemize}
   
 \subsubsection{Further reading}
 \label{_further_reading_5}\hyperlabel{_further_reading_5}%
@@ -7188,6 +7191,9 @@ Understanding work requires understanding tasks and their lifecycle, the charact
  
 
 \item{} Alex Salazar, \href{https://stormpath.com/blog/so-long-scrum-hello-kanban/}{So Long Scrum, Hello Kanban}
+ 
+
+\item{} Steve Reid et al, \href{https://www.infoq.com/articles/kanban-scaling-agile-ultimate}{Ultimate Kanban: Scaling Agile without Frameworks at Ultimate Software}
  
 \end{itemize}
  
@@ -10407,9 +10413,9 @@ whether a process was within statistical control:
  \begin{figure}[H]
 
 \begin{center}
-\imgexists{images/3_09-controlChart.jpg}{{\imgevalsize{images/3_09-controlChart.jpg}{\includegraphics[width=no known copyright restrictions_,]{images/3_09-controlChart.jpg}}}}{\_image from https://www.flickr.com/photos/internetarchivebookimages/14775750673/}
+\imgexists{images/3_09-controlChart.jpg}{{\imgevalsize{images/3_09-controlChart.jpg}{\includegraphics[width=\imgwidth,height=\imgheight,keepaspectratio=true]{images/3_09-controlChart.jpg}}}}{3 09 controlChart}
 \end{center}
-\caption{Process control chart footnote:[]}
+\caption[{Process control chart }]{Process control chart \footnotemark{}}
 \end{figure}
  
 However, using techniques of this nature makes certain critical assumptions about the nature of the process. Understanding variation and when to manage it requires care. These techniques were defined to understand \textbf{physical} processes that in general follow \href{https://en.wikipedia.org/wiki/Normal_distribution}{normal distributions}.
@@ -10951,7 +10957,7 @@ What accounting should do is produce an unadulterated mirror of the business \te
 \hspace*\fill--- Orest Fiume and Jean Cunningham
 \emph{as quoted by James Huntzinger} \end{quote}
  
-As digital transformation accelerates and companies turn to Agile operating models, criticisms of  traditional approaches to IT finance have increased. Rami Sirkiï¿½ and Maarit Laanti (in a paper used as the basis for the Scaled Agile Framework's financial module) describe the following shortcomings:
+As digital transformation accelerates and companies turn to Agile operating models, criticisms of  traditional approaches to IT finance have increased. Rami Sirkiä and Maarit Laanti (in a paper used as the basis for the Scaled Agile Framework's financial module) describe the following shortcomings:
  \begin{itemize}
 
 \item{} Long planning horizons, detailed cost estimates that must be frequently updated
@@ -11110,19 +11116,15 @@ With a rolling backlog and stable funding that decouples annual allocation from 
 \paragraph{Options as a portfolio strategy}
 \label{_options_as_a_portfolio_strategy}\hyperlabel{_options_as_a_portfolio_strategy}%
   
-In governing for effectiveness and innovation, one technique is that of options. Related to the idea of options is parallel development.
- 
-In investing terms, purchasing an option gives one the right, but not the obligation, to purchase a stock (or other value) for a given price at a given time. Options are an important tool for investors to develop strategies to compensate for market uncertainty.
+In governing for effectiveness and innovation, one technique is that of options. Related to the idea of options is parallel development. In investing terms, purchasing an option gives one the right, but not the obligation, to purchase a stock (or other value) for a given price at a given time. Options are an important tool for investors to develop strategies to compensate for market uncertainty.
  
 What does this have to do with developing digital products?
  
-Product development is so uncertain that sometimes it makes sense to try several approaches at once. This in fact was how the program to develop the first atomic bomb was successfully managed.
- 
-Parallel development is analogous to an options strategy. Small, sustained investments in different development "options" can optimize development payoff in certain situations.
- 
-Taken to a logical conclusion, such an options strategy starts to resemble the portfolio management approaches of venture capitalists. Venture capitalists invest in a broad variety of opportunities, knowing that most in fact will not pan out. See discussion of \hyperlink{internal-venture}{internal venture funding} as a business model.
+Product development is so uncertain that sometimes it makes sense to try several approaches at once. This in fact was how the program to develop the first atomic bomb was successfully managed. Parallel development is analogous to an options strategy. Small, sustained investments in different development "options" can optimize development payoff in certain situations (see \hyperlink{Reinertsen2009}{[Reinertsen2009]}, chapter 4). Taken to a logical conclusion, such an options strategy starts to resemble the portfolio management approaches of venture capitalists. Venture capitalists invest in a broad variety of opportunities, knowing that most in fact will not pan out. See discussion of \hyperlink{internal-venture}{internal venture funding} as a business model.
  
 It is arguable that the venture-{}funded model has created different attitudes and expectations towards governance in West Coast "unicorn" culture. However, it would be dangerous to assume that this model is universally applicable. A firm is more than a collection of independent sub-{}organizations; this is an important line of thought in management theory, starting with Coase's "The Nature of the Firm" \hyperlink{Coase1937}{[Coase1937]}.
+ 
+The idea that "Real Options" were a basis for Agile practices was proposed by Chris Matts \hyperlink{Matts2007}{[Matts2007]}. Investment banker turned Agile coach Franz Ivancsich strongly cautions against taking options theory too far, noting that to price them correctly you have to determine the complete range of potential values for the underlying asset \hyperlink{Ivancsich2013}{[Ivancsich2013]}.
   
 \paragraph{Lean Product Development}
 \label{_lean_product_development}\hyperlabel{_lean_product_development}%
@@ -11133,7 +11135,7 @@ Because we never show it on our balance sheet, we do not think of [Design in Pro
 \hspace*\fill--- Don Reinertsen
 \emph{Managing the Design Factory} \end{quote}
  
-The \hyperlink{lean-product-dev}{Lean Product Development} thought of Don Reinertsen was discussed extensively in Chapter 4. His emphasis on employing an economic framework for decisionmaking is relevant to this discussion as well. In particular, his concept of \hyperlink{cost-of-delay}{Cost of Delay} is poorly addressed in much IT financial planning, with its concerns for full utilization, efficiency, and variance analysis. Other Lean accounting thinkers share this concern, e.g.:
+The \hyperlink{lean-product-dev}{Lean Product Development} thought of Don Reinertsen was discussed extensively in Chapter 5. His emphasis on employing an economic framework for decisionmaking is relevant to this discussion as well. In particular, his concept of \hyperlink{cost-of-delay}{Cost of Delay} is poorly addressed in much IT financial planning, with its concerns for full utilization, efficiency, and variance analysis. Other Lean accounting thinkers share this concern, e.g.:
  
 \emph{the cost-{}management system in a lean environment must be more reflective of the physical operation. It must not be confined to monetary measures but must also include nonfinancial measures, such as quality and throughput times.}\hyperlink{Huntzinger2007}{[Huntzinger2007]}
  
@@ -12969,7 +12971,7 @@ Such practices do not necessarily result in good outcomes. Applicants routinely 
  
 A compelling case study of the limitations of traditional HR-{}driven hiring is discussed by Robert Sutton and Huggy Rao in \emph{Scaling up Excellence: Getting to More without Settling for Less} \hyperlink{Sutton2014}{[Sutton2014]}. The authors describe the company Lotus Software, one of the pioneers of early desktop computing.
  
-\emph{With [company founder] Kapor's permission, [head of organizational development] Klein pulled together the rï¿½sumï¿½s of the first forty Lotus employees\ldots{}\hspace{0em}[and] submitted all forty rï¿½sumï¿½s to the Lotus human resources department. Not one of the forty applicants, including Kapor, was invited for a job interview. The founders had built a world that rejected people like them.}
+\emph{With [company founder] Kapor's permission, [head of organizational development] Klein pulled together the résumés of the first forty Lotus employees\ldots{}\hspace{0em}[and] submitted all forty résumés to the Lotus human resources department. Not one of the forty applicants, including Kapor, was invited for a job interview. The founders had built a world that rejected people like them.}
  
 Sean Landis, author of \emph{Agile Hiring} \hyperlink{Landis2011}{[Landis2011]}, believes that
  
@@ -14244,7 +14246,7 @@ Control activities, according to COSO, are
 
 \textbf{Systems theory, feedback, control, and governance} We've encountered systems theory and associated concepts such as \hyperlink{feedback}{feedback} and \hyperlink{empirical-process-control}{control} throughout this book. The idea of "governance" predates these, but in an interesting way.
 
-The term "governance" originates from the Greek word \ensuremath{\kappa}\ensuremath{\upsilon}\ensuremath{\beta}\ensuremath{\epsilon}\ensuremath{\rho}\ensuremath{\nu}\'{\ensuremath{\alpha}}\ensuremath{\omega} [kubernï¿½o], which means "to steer," as in a ship. Nautical navigation is a process of feedback and correction. The same Greek word is also the basis for the term "cybernetics," another word closely associated with systems and control theory.
+The term "governance" originates from the Greek word \ensuremath{\kappa}\ensuremath{\upsilon}\ensuremath{\beta}\ensuremath{\epsilon}\ensuremath{\rho}\ensuremath{\nu}\'{\ensuremath{\alpha}}\ensuremath{\omega} [kubernáo], which means "to steer," as in a ship. Nautical navigation is a process of feedback and correction. The same Greek word is also the basis for the term "cybernetics," another word closely associated with systems and control theory.
 \begin{figure}[H]
 
 \begin{center}
@@ -15584,7 +15586,7 @@ Your company is considering a major move to Cloud infrastructure for its systems
 But you are aware of some Cloud failures:
  \begin{itemize}
 
-\item{} In 2013, UK Cloud provider 2e2 went bankrupt and customers were given "24 to 48 hours to get \ldots{}\hspace{0em} data and systems out and into a new environment" \hyperlink{duPreez2015}{[duPreez2015]}. Subsequently, the provider demanded nearly ï¿½1 million pounds (roughly \$1.5 million) from its customers in order for their uninterrupted access to services (i.e., their data.) \hyperlink{Venkatraman2013}{[Venkatraman2013]}
+\item{} In 2013, UK Cloud provider 2e2 went bankrupt and customers were given "24 to 48 hours to get \ldots{}\hspace{0em} data and systems out and into a new environment" \hyperlink{duPreez2015}{[duPreez2015]}. Subsequently, the provider demanded nearly £1 million pounds (roughly \$1.5 million) from its customers in order for their uninterrupted access to services (i.e., their data.) \hyperlink{Venkatraman2013}{[Venkatraman2013]}
  
 
 \item{} Also in 2013, Cloud storage provider Nirvanix went bankrupt and its customers also had a limited time to remove their data. MegaCloud went out of business with no warning two months later and all customers lost all data. \hyperlink{Butler2013}{[Butler2013]}, \hyperlink{Butler2014}{[Butler2014]}
@@ -22572,10 +22574,10 @@ All web references were archived into the author's files on the indicated access
 \item{} \label{Alliance2015}\hyperlabel{Alliance2015}[Alliance2015]: Agile Alliance. 2015. \textquotedblleft{}Team Definition.\textquotedblright{} Glossary. \href{https://www.agilealliance.org/glossary/team/}{https://www.agilealliance.org/\-glossary/\-team/\-}. Accessed 2016-{}09-{}21.
  
 
-\item{} \label{Alliance2015a}\hyperlabel{Alliance2015a}[Alliance2015a]: Agile Alliance. 2016. \textquotedblleft{}Definition of Done.\textquotedblright{} Glossary. \href{https://www.agilealliance.org/glossary/definition-of-done/#sthash.6rSCZMyU.dpuf}{https://www.agilealliance.org/\-glossary/\-definition-{}of-{}done/\-\#sthash.6rSCZMyU.dpuf}.
+\item{} \label{Alliance2015a}\hyperlabel{Alliance2015a}[Alliance2015a]: Agile Alliance. 2016. \textquotedblleft{}Definition of Done.\textquotedblright{} Glossary. \href{https://www.agilealliance.org/glossary/definition-of-done/#sthash.6rSCZMyU.dpuf}{https://www.agilealliance.org/\-glossary/\-definition-{}of-{}done/\-\#sthash.6rSCZMyU.dpuf}. [Accessed November 16, 2016].
  
 
-\item{} \label{Alliance2016}\hyperlabel{Alliance2016}[Alliance2016]: Agile Alliance, 2016. Definition of Done. Glossary. Available at: \href{https://www.agilealliance.org/glossary/definition-of-done/#sthash.6rSCZMyU.dpuf}{https://www.agilealliance.org/\-glossary/\-definition-{}of-{}done/\-\#sthash.6rSCZMyU.dpuf} [Accessed November 16, 2016].
+\item{} \label{Alliance2016}\hyperlabel{Alliance2016}[Alliance2016]: Agile Alliance, 2016. Subway Map to Agile Practices. Available at: \href{https://www.agilealliance.org/agile101/subway-map-to-agile-practices/}{https://www.agilealliance.org/\-agile101/\-subway-{}map-{}to-{}agile-{}practices/\-} [Accessed August 11, 2016].
  
 
 \item{} \label{Allspaw2009}\hyperlabel{Allspaw2009}[Allspaw2009]: Allspaw, J. \& Hammond, P. (2009), "10 deploys per day: Dev \& ops cooperation at Flickr",  O'Reilly Publications, \href{http://www.slideshare.net/jallspaw/10-deploys-per-day-dev-and-ops-cooperation-at-flickr}{http://www.slideshare.net/\-jallspaw/\-10-{}deploys-{}per-{}day-{}dev-{}and-{}ops-{}cooperation-{}at-{}flickr}
@@ -22632,7 +22634,7 @@ All web references were archived into the author's files on the indicated access
 \item{} \label{Betz2011a}\hyperlabel{Betz2011a}[Betz2011a]: Betz, C. T. (2011), \emph{Architecture and Patterns for IT: Service and Portfolio Management and Governance (Making Shoes for the Cobbler's Children), 2nd Edition}, Elsevier/Morgan Kaufman, Amsterdam
  
 
-\item{} \label{Betz2011b}\hyperlabel{Betz2011b}[Betz2011b]:Betz, C. (2011). "ITILï¿½, COBITï¿½, and CMMIï¿½: Ongoing Confusion of Process and Function."" BPTrends. Retrieved from \href{http://www.bptrends.com/publicationfiles/10-04-2011-ART-Ongoing}{http://www.bptrends.com/\-publicationfiles/\-10-{}04-{}2011-{}ART-{}Ongoing} Confusion of Process and Function-{}Betz-{}Final.pdf
+\item{} \label{Betz2011b}\hyperlabel{Betz2011b}[Betz2011b]:Betz, C. (2011). "ITIL®, COBIT®, and CMMI®: Ongoing Confusion of Process and Function."" BPTrends. Retrieved from \href{http://www.bptrends.com/publicationfiles/10-04-2011-ART-Ongoing}{http://www.bptrends.com/\-publicationfiles/\-10-{}04-{}2011-{}ART-{}Ongoing} Confusion of Process and Function-{}Betz-{}Final.pdf
  
 
 \item{} \label{Betz2015}\hyperlabel{Betz2015}[Betz2015]: Betz, C.T. (2015), "Calavera project", Github, \href{https://github.com/CharlesTBetz/Calavera}{https://github.com/\-CharlesTBetz/\-Calavera}
@@ -23013,6 +23015,9 @@ All web references were archived into the author's files on the indicated access
 \item{} \label{ISO2011}\hyperlabel{ISO2011}[ISO2011]: ISO/IEC/IEEE. 2011. \textquotedblleft{}ISO/IEC/IEEE 42010:2011 -{} Systems and Software Engineering\hspace{0.167em}\textemdash{}\hspace{0.167em}Architecture Description.\textquotedblright{} Vol. 2011. doi:10.1109/IEEESTD.2011.6129467.
  
 
+\item{} \label{Ivancsich2013}\hyperlabel{Ivancsich2013}[Ivancsich2013]: Ivancsich, F., Kruse, R. \& Sharrock, D., 2013. Why \textquotedblleft{}Real Options\textquotedblright{} is the biggest fail of the Agile Community so far. www.agile42.com. Available at: \href{http://www.agile42.com/en/blog/2013/04/03/real-options-biggest-fail-agile/}{http://www.agile42.com/\-en/\-blog/\-2013/\-04/\-03/\-real-{}options-{}biggest-{}fail-{}agile/\-} [Accessed December 28, 2016].
+ 
+
 \item{} \label{Izrailevsky2011}\hyperlabel{Izrailevsky2011}[Izrailevsky2011]: Izrailevsky, Y., \& Tseitlin, A. (2011). The Netflix Simian Army. Retrieved May 4, 2016, from \href{http://techblog.netflix.com/2011/07/netflix-simian-army.html}{http://techblog.netflix.com/\-2011/\-07/\-netflix-{}simian-{}army.html}
  
 
@@ -23137,6 +23142,9 @@ All web references were archived into the author's files on the indicated access
  
 
 \item{} \label{Marquet2013}\hyperlabel{Marquet2013}[Marquet2013]: Marquet, D.L., 2013. Turn the Ship Around!: A True Story of Turning Followers into Leaders: L. David Marquet, Stephen R. Covey: 8601411904479: Amazon.com: Books, Portfolio.
+ 
+
+\item{} \label{Matts2007}\hyperlabel{Matts2007}[Matts2007]: Matts, C. \& Maassen, O., 2007. \textquotedblleft{}Real Options\textquotedblright{} Underlie Agile Practices. InfoQ. Available at: \href{https://www.infoq.com/articles/real-options-enhance-agility}{https://www.infoq.com/\-articles/\-real-{}options-{}enhance-{}agility} [Accessed December 28, 2016].
  
 
 \item{} \label{McAdam2003}\hyperlabel{McAdam2003}[McAdam2003]: McAdam, John. 2003. \textquotedblleft{}Information Technology Measurements.\textquotedblright{} In \emph{Chargeback and IT Cost Accounting}, ed. Terence A Quinlan. Santa Barbara, CA: IT Financial Management Association, 90\textendash{}91.
@@ -23370,7 +23378,7 @@ All web references were archived into the author's files on the indicated access
 \item{} \label{Silverston2008}\hyperlabel{Silverston2008}[Silverston2008]: Silverston, L. (2008), \emph{The data model resource book Vol 3: Universal patterns for data modeling}, Wiley, Indianapolis, Ind.
  
 
-\item{} \label{Sirkia2013}\hyperlabel{Sirkia2013}[Sirkia2013]: Sirkiï¿½, Rami, and Maarit Laanti. 2013. Lean and Agile Financial Planning. \href{http://www.scaledagileframework.com/original-whitepaper-lean-agile-financial-planning-with-safe/}{http://www.scaledagileframework.com/\-original-{}whitepaper-{}lean-{}agile-{}financial-{}planning-{}with-{}safe/\-}.
+\item{} \label{Sirkia2013}\hyperlabel{Sirkia2013}[Sirkia2013]: Sirkiä, Rami, and Maarit Laanti. 2013. Lean and Agile Financial Planning. \href{http://www.scaledagileframework.com/original-whitepaper-lean-agile-financial-planning-with-safe/}{http://www.scaledagileframework.com/\-original-{}whitepaper-{}lean-{}agile-{}financial-{}planning-{}with-{}safe/\-}.
  
 
 \item{} \label{Simon1988}\hyperlabel{Simon1988}[Simon1988]: Simon, Herbert A. 1988. \textquotedblleft{}The Science of Design: Creating the Artificial.\textquotedblright{} Design Issues 4 (1/2). \href{http://www.jstor.org/stable/1511391}{http://www.jstor.org/\-stable/\-1511391}.
@@ -23448,7 +23456,7 @@ All web references were archived into the author's files on the indicated access
 \item{} \label{Venezia2014}\hyperlabel{Venezia2014}[Venezia2014]: Venezia, Paul. 2014. \textquotedblleft{}Murder in the Amazon Cloud.\textquotedblright{} InfoWorld. \href{http://www.infoworld.com/article/2608076/data-center/murder-in-the-amazon-cloud.html}{http://www.infoworld.com/\-article/\-2608076/\-data-{}center/\-murder-{}in-{}the-{}amazon-{}cloud.html}. Accessed 2016-{}07-{}04
  
 
-\item{} \label{Venkatraman2013}\hyperlabel{Venkatraman2013}[Venkatraman2013]: Venkatraman, Archana. 2013. \textquotedblleft{}2e2 Datacentre Administrators Hold Customers' Data to ï¿½1m Ransom.\textquotedblright{} ComputerWeekly.com. \href{http://www.computerweekly.com/news/2240177744/2e2-datacentre-administrators-hold-customers-data-to-1m-ransom}{http://www.computerweekly.com/\-news/\-2240177744/\-2e2-{}datacentre-{}administrators-{}hold-{}customers-{}data-{}to-{}1m-{}ransom}. Accessed 2016-{}07-{}04
+\item{} \label{Venkatraman2013}\hyperlabel{Venkatraman2013}[Venkatraman2013]: Venkatraman, Archana. 2013. \textquotedblleft{}2e2 Datacentre Administrators Hold Customers' Data to £1m Ransom.\textquotedblright{} ComputerWeekly.com. \href{http://www.computerweekly.com/news/2240177744/2e2-datacentre-administrators-hold-customers-data-to-1m-ransom}{http://www.computerweekly.com/\-news/\-2240177744/\-2e2-{}datacentre-{}administrators-{}hold-{}customers-{}data-{}to-{}1m-{}ransom}. Accessed 2016-{}07-{}04
  
 
 \item{} \label{Vergun2015}\hyperlabel{Vergun2015}[Vergun2015]: Vergun, D. (2015). Toxic leaders decrease Soldiers' effectiveness, experts say. Retrieved July 13, 2016, from \href{https://www.army.mil/article/157327/Toxic_leaders_decrease_Soldiers}{https://www.army.mil/\-article/\-157327/\-Toxic\_leaders\_decrease\_Soldiers}\emph{effectiveness}experts\_say
