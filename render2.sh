@@ -15,6 +15,7 @@ asciidoctor -b docbook aitm-instructor-pdf.adoc
 dblatex -t tex aitm-instructor-pdf.xml
 
 # converts to pdf via latex
+
 dblatex aitm-instructor-pdf.xml
 # results are crap - no wrapping, graphics mis-sized.
 
@@ -22,5 +23,3 @@ dblatex aitm-instructor-pdf.xml
 # end game: a presentable PDF on LeanPub
 # need a narrower layout
 # wrapped graphics
-
-# OK< let's try publican - no Latex involved. 
