@@ -5,7 +5,7 @@
 #asciidoctor-pdf aitm-instructor-pdf.adoc
 # no wrapping, little control
 
-rm *.aux
+rm -f *.idx *.log *.aux *.bbl *.blg *.out *.toc *.lof *.lot *.glo *.cb *.cb2
 
 # experiment 2: asciidoc to docbook xml
 asciidoctor -b docbook aitm-collaborator-pdf.adoc
