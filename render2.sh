@@ -5,6 +5,8 @@
 #asciidoctor-pdf aitm-instructor-pdf.adoc
 # no wrapping, little control
 
+rm *.aux
+
 # experiment 2: asciidoc to docbook xml
 asciidoctor -b docbook aitm-collaborator-pdf.adoc
 
@@ -20,8 +22,10 @@ dblatex -t tex -T simple aitm-collaborator-pdf.xml
 #dblatex aitm-instructor-pdf.xml
 # no wrapping, graphics disregard sizing.
 
+./img.sh aitm-collaborator-pdf.tex
+
 # or tex-pdf only, verbose
-pdflatex aitm-test-pdf.tex
+pdflatex aitm-collaborator-pdf.tex
 
 # search for 700317885 as pic index
 

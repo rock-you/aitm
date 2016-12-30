@@ -31,7 +31,7 @@ While version control was always deemed important for software artifacts, it has
 Version control in recent years increasingly distinguishes between source and package management: the management of binary files, as distinct from human-understandable symbolic files. There is also a need to understand what versions are installed on what computers; this can be termed "deployment management." (With the advent of containers, this is a particularly fast changing area.)
 
 .Types of version control
-image::images/1_02-versionControlTypes.png[]
+image::images/1_02-versionControlTypes.png[Version control types, 300,]
 
 Version control works like an advanced file system with a memory. (Actual file systems that do this are called https://en.wikipedia.org/wiki/Versioning_file_system[_versioning_] file systems.) It can remember all the changes you make to its contents, tell you the differences between any two versions, and also bring back the version you had at any point in time. Version control is important - but how important? Survey research presented in the annual State of DevOps report indicates that version control is one of the most critical practices associated with high performing IT organizations <<Forsgren2016>>. Nicole Forsgren <<Forsgren2016a>>  summarizes the practice of version control as:
 
@@ -114,15 +114,15 @@ If you have access to a Linux computer, try it! (It should also work on recent M
 In comparison, the following are two 10x10 gray-scale bitmap images being edited in the https://www.gimp.org/[Gimp image editor]. They are about as simple as you can get. Notice that they are slightly different:
 
 .Bitmap images
-image::images/1_02-bothPixels.png[grid]
+image::images/1_02-bothPixels.png[grid, 500]
 
 If we save these in the *.png format, we can see they are different sizes (242 k vs 239k). But if we open them in a binary editor it is very difficult to understand how they differ:
 
 .First image binary data
-image::images/1_02-pixelHex1.png[data]
+image::images/1_02-pixelHex1.png[data, 500]
 
 .Second image binary data
-image::images/1_02-pixelHex2.png[data]
+image::images/1_02-pixelHex2.png[data, 500]
 
 Even if we analyzed the differences, we would need to know much about the .png format in order to understand how the two images differ. We can still track both versions these files, of course, with the proper version control. But again, binary data is not ideal for source control tools like git.
 
@@ -160,7 +160,7 @@ anchor:deployment-mgmt[]
 Version control is an important part of the overall concept of configuration management. But configuration management also covers the matter of how artifacts under version control are combined with other IT resources (such as virtual machines) to deliver services. The following illustration is one way to think about the relationships:
 
 .Configuration management and its components
-image::images/1_02-configMgmt.png[]
+image::images/1_02-configMgmt.png[Configuration management types, 500,,]
 
 ====== Deployment basics
 
