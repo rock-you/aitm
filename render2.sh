@@ -6,11 +6,11 @@
 # no wrapping, little control
 
 # experiment 2: asciidoc to docbook xml
-asciidoctor -b docbook aitm-test-pdf.adoc
+asciidoctor -b docbook aitm-collaborator-pdf.adoc
 
 # converts docbook to latex only - essential for errors of kind Missing character &#x202f; - that
 # is an error seen only in the tex file:
-dblatex -t tex -T simple aitm-test-pdf.xml
+dblatex -t tex -T simple aitm-collaborator-pdf.xml
 
 # dblatex -t tex  aitm-test-pdf.xml
 
