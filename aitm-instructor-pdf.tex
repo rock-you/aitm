@@ -5,6 +5,9 @@
 %% document.language en
 %%</params>
 \documentclass{report}
+\usepackage{ifthen}
+\newboolean{DBKIsBook}
+\setboolean{DBKIsBook}{true}
 \IfFileExists{ifxetex.sty}{%
     \usepackage{ifxetex}%
   }{%
@@ -39,7 +42,7 @@
 \title{Agile IT Management}
 \author{Charles T. Betz}
 \hypersetup{%
-pdfcreator={DBLaTeX-0.3.7},%
+pdfcreator={DBLaTeX-0.3.7-1},%
 pdftitle={Agile IT Management},%
 pdfauthor={Charles T. Betz}}
 % ------------------
