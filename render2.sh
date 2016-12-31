@@ -20,12 +20,14 @@ dblatex -t tex aitm-collaborator-pdf.xml
 # dblatex -t tex -T db2latex aitm-test-pdf.xml
 
 # xml-tex-pdf
-#dblatex aitm-instructor-pdf.xml
+#dblatex aitm-collaborator-pdf.xml
 # no wrapping, graphics disregard sizing.
 
 ./img.sh aitm-collaborator-pdf.tex
 
 # or tex-pdf only, verbose
+pdflatex aitm-collaborator-pdf.tex
+
 pdflatex aitm-collaborator-pdf.tex
 
 rm -f *.idx *.log *.aux *.bbl *.blg *.out *.toc *.lof *.lot *.glo *.cb *.cb2
