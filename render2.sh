@@ -12,8 +12,8 @@ asciidoctor -b docbook aitm-collaborator-pdf.adoc
 
 # converts docbook to latex only - essential for errors of kind Missing character &#x202f; - that
 # is an error seen only in the tex file:
-#dblatex -t tex -T simple aitm-collaborator-pdf.xml
-dblatex -t tex aitm-collaborator-pdf.xml
+dblatex -t tex -T simple aitm-collaborator-pdf.xml
+#dblatex -t tex aitm-collaborator-pdf.xml
 
 # dblatex -t tex  aitm-test-pdf.xml
 
