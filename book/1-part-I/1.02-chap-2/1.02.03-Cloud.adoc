@@ -38,17 +38,10 @@ TIP: You can experiment with a hypervisor by downloading https://www.virtualbox.
  +
  You'll probably want at least 4 gb of RAM on your laptop and a gigabyte of free disk space, at the bare minimum.
 
-
 .Virtualization types
-image::images/1_02-virtualization-types.png[Virtualization types, 400]
-
+image::images/1_02-virtualization-types.png[Virtualization types, 800]
 
 There are two different kinds of hypervisors. The example we just discussed was an example of a Type 2 hypervisor, which runs on top of a host operating system. In a Type 1 hypervisor, a master host OS is not used; the hypervisor runs on the "bare metal" of the computer and in turn "hosts" multiple VMs.
-
-anchor:containers[]
-
-.Containers
-image::images/1_02-containers.png[containers, 250, , float="right"]
 
 _Paravirtualization_, e.g. containers, is another form of virtualization found in the marketplace. In a paravirtualized environment, a core operating system is able to abstract hardware resources for multiple virtual guest environments without having to virtualize hardware for each guest. The benefit of this type of virtualization is increased input/output (I/O) efficiency and performance for each of the guest environments.
 
