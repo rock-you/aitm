@@ -48,17 +48,17 @@ The "system of record" concept is widely used in data management, records manage
 It is important to realize that the designation "system of record" is a ROLE that a given database (or system) plays with respect to SOME DATA. The "Sales" database above might be the system of record for invoices, but is not the system of record for products or customers:
 
 .Systems of record
-image::images/4_11-SORs.png[systems of record, 500]
+image::images/4_11-SORs.png[systems of record, 600]
 
 The system of record (aka SOR) is often the system of origin - the system where the data is first captured - but not always. In retail, sales transactions are not considered authoritative until they pass through sales audit, and so the system of record for a transaction is not the cash register (which has a database in it):
 
 .Data flow for sales information
-image::images/4_11-salesFlow.png[sales flow, 500]
+image::images/4_11-salesFlow.png[sales flow, 600]
 
 Systems of record logically would be the first place to pull data from, but sometimes due to performance or security concerns data may be replicated into an alternate source better suited for distributing the data. A good example of this is an HR system that feeds the corporate directory; the HR system (e.g. Oracle HR, or Workday) is the actual system of record for employee names and identifiers, but most people and other systems in the company will pull the data from the directory (e.g. Microsoft Exchange):
 
 .Data flow for HR data
-image::images/4_11-HRData.png[HR data, 400]
+image::images/4_11-HRData.png[HR data, 600]
 
 anchor:reference-data[]
 
