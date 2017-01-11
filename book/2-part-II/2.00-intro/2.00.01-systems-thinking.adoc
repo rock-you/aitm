@@ -56,6 +56,8 @@ endif::aitm-pdf[]
 
 Wikipedia has good articles on https://en.wikipedia.org/wiki/Causal_loop_diagram[Causal Loop Diagramming] and https://en.wikipedia.org/wiki/System_dynamics[Systems Dynamics] (with cool dynamic visuals.) <<Sterman2000>> is the definitive text with applications.
 
+NOTE: Still confused? Think about the last time you saw a "reply-all" email storm. The first accidental mass send generates feedback (emails saying "take me off this list"), which generate more emails ("stop emailing the list") and so on. This does not continue indefinitely; management intervention, common sense and fatigue eventually damp the storm down.
+
 ==== What does systems thinking have to do with IT?
 
 In an engineering sense, positive feedback is often dangerous and a topic of concern. The classic example of bad positive feedback in engineering is the collapse of the Tacoma Narrows bridge, "Galloping Gertie."
@@ -65,7 +67,18 @@ image::images/2_00-bridge.jpg[collapsing bridge, 400, ,float="right"]
 
 As with bridges, at a technical level, reinforcing feedback can be a very bad thing in IT systems. In general, any process that is self-amplified without any balancing feedback will eventually consume all available resources, just like rabbits will eat all the food available to them. So, if you create a process (e.g. write and run a computer program) that recursively spawns itself, it will sooner or later crash the computer as it devours memory and CPU. See http://osr507doc.sco.com/en/HANDBOOK/runaway_proc.html[Runaway processes.]
 
-Balancing feedback, on the other hand, is critical to make sure you are “staying on track.” Engineers use concepts of https://en.wikipedia.org/wiki/Control_theory[control theory], for example https://en.wikipedia.org/wiki/Damping[damping], to keep bridges from falling down. Balancing feedback in a business and IT context takes a wide variety of forms:
+Balancing feedback, on the other hand, is critical to make sure you are “staying on track.” Engineers use concepts of https://en.wikipedia.org/wiki/Control_theory[control theory], for example https://en.wikipedia.org/wiki/Damping[damping], to keep bridges from falling down.
+
+Remember in Chapter 1 we talked of the user's http://dm-academy.github.io/aitm/images/1_01-ITStack2.png[value experience], and also how services http://dm-academy.github.io/aitm/#_the_it_service_lifecycle[evolve over time in a lifecycle]? In terms of the xref:dual-axis-vc[dual-axis value chain], there are two primary digital value experiences:
+
+- The value the user derives from the service (e.g. account lookups, or a flawless navigational experience)
+- The value the investor derives from monetizing the product, or comparable incentives (e.g. nonprofit missions)
+
+Additionally, the product team derives career value. This becomes more of a factor later in the game. We will discuss this further in chapter 7 on organization, and Part IV on architecture lifecycles & technical debt.
+
+The product team receives feedback from both value experiences. The day to day interactions with the service (e.g. help desk and operations) are understood, and (typically on a more intermittent basis) the portfolio investor also feeds back the information to the product team (the boss's boss comes for a visit).
+
+Balancing feedback in a business and IT context takes a wide variety of forms:
 
 * The results of a product test in the marketplace, for example do the users prefer a drop down box or check boxes on a form?
 * The product owner clarifying for developers their user experience vision for the product, based on a demonstration of developer work in process
@@ -77,7 +90,11 @@ In short, we see these two basic kinds of feedback:
 * Positive/Reinforcing, “do more of that”
 * Negative/Balancing, “stop doing that,” “fix that”
 
-NOTE: Still confused? Think about the last time you saw a "reply-all" email storm. The first accidental mass send generates feedback (emails saying "take me off this list"), which generate more emails ("stop emailing the list") and so on. This does not continue indefinitely; management intervention, common sense and fatigue eventually damp the storm down.
+You should consider:
+
+* How you are accepting and executing on feedback signals
+* How the feedback relationship with your investors is evolving, in terms of your product direction
+* How the feedback relationship with your users is evolving, in terms of both operational criteria and product direction
 
 One of the most important concepts related to feedback, one we will keep returning to, is that product value is based on feedback. We've discussed xref:lean-startup[Lean Startup], which represents a feedback loop intended to discover product value. Don Reinertsen, whose work we will discuss in this chapter, has written extensively on the importance of fast feedback to the product discovery process.
 
