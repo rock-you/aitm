@@ -1,0 +1,1394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc maxdepth="4"?>
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>The digital professional</title>
+<subtitle>from startup to enterprise  (Student Edition)</subtitle>
+<date>2017-01-11</date>
+<author>
+<personname>
+<firstname>Charles</firstname>
+<othername>T.</othername>
+<surname>Betz</surname>
+</personname>
+</author>
+<authorinitials>CTB</authorinitials>
+</info>
+<chapter xml:id="Part-I-intro">
+<title>Part I: Founder</title>
+<simpara><anchor xml:id="Sec-I" xreflabel="[Sec-I]"/>
+This is the introduction to part I.</simpara>
+<simpara>In this section, we explore the fundamentals of information technology delivery.</simpara>
+<simpara><emphasis role="strong">Scenario</emphasis></simpara>
+<simpara>You are working in a startup, alone or with one or two partners. You are always in the same room, easily able to carry on a running conversation about your efforts and progress. You have no time or resources to spend on anything except keeping your new system alive and running.</simpara>
+<simpara><emphasis role="strong">Chapter 1: IT Value</emphasis></simpara>
+<simpara>Chapter 1 introduces you to the fundamental concepts of IT value that serve as a basis for the rest of the course. Why do people want computing (IT) services? What are the general outlines of their structure? How do they come into being? How are they changed over time?</simpara>
+<simpara>All of this is essential to understand for your scenario; you need to understand what computers can do and how they are generally used if you are going to create a product based on them.</simpara>
+<simpara>This chapter also covers the basics of how you’ll approach building a product. It’s assumed you won’t develop an intricate, long-range plan but rather will be experimenting with various ideas and looking for fast feedback on their success or failure.</simpara>
+<simpara><emphasis role="strong">Chapter 2: IT Infrastructure</emphasis></simpara>
+<simpara>In this chapter, you have a general idea for a product and are ready to start building it. But not so fast&#8230;&#8203;you need to decide some fundamentals first. How will your new product run? What will you use to build it?</simpara>
+<simpara>It’s not possible to begin construction until you decide on your tools. This chapter will provide you an overview of computing infrastructure including cloud hosting and various approaches to system configuration.</simpara>
+<simpara>This chapter also presents an overview of source control, as even your infrastructure depends on it in the new world of “infrastructure as code.”</simpara>
+<simpara><emphasis role="strong">Chapter 3: Application delivery</emphasis></simpara>
+<simpara>Finally, you’re ready to start building something. While this is not a book on software development or programming languages, it’s important to understand some basics and at least see them in action.</simpara>
+<simpara>This is also the “DevOps” chapter; it’s not just about writing code but about the entire end-to-end system that gets the code you are writing from your workstation, into collaborative environments, and finally to a state where it can be accessed by end users. From source repository to build manager to package repository to production, we’ll cover a basic toolchain that will help you understand modern industrial practices.</simpara>
+<simpara><emphasis role="strong">This section’s lab approach</emphasis></simpara>
+<simpara>While this is not a book about any particular computing language or platform, we need to describe some technical fundamentals. We’ll do so in as neutral a manner as possible. However, this book’s accompanying labs are based on <link xl:href="http://www.ubuntu.com/">Ubuntu Linux</link> and <link xl:href="https://git-scm.com/">git</link>, the distributed version control system created by Linus Torvalds to facilitate Linux development.</simpara>
+<important>
+<simpara>Part II, like the other parts, needs to be understood as a unified whole. In reality, digital entrepreneurs struggle with the issues in all three chapters simultaneously.</simpara>
+</important>
+<section xml:id="Intro-Chap-1">
+<title>Chapter 1: IT Value</title>
+<section xml:id="_introduction">
+<title>Introduction</title>
+<simpara>As noted at the outset, you are a small core of a startup. You are building a product of which IT is a significant part. Your motivations are entrepreneurial; you want to create a successful business. You might be housed within a larger enterprise, but the thought experiment here is that you have substantial autonomy to order your efforts.
+You want to do something that has a unique IT component. Regardless of your business, you will need accounting and legal services at a minimum and, very quickly, payroll and HR and so forth. Those things can (and should) be purchased as commodity services if you are a small entrepreneur (I am not aware of any convincing arguments to the contrary, unless you are absolutely on the smallest of shoestring budgets and can work 100-hour weeks). Your unique value proposition will be expressed to some degree in unique IT software. While this software may be based on well-understood products, the configuration and logic you construct will be all your own. Because of this, you are now a producer (or soon to be) of IT services.</simpara>
+<simpara>Before we can talk about building and managing information technology (IT), we need to understand what it is and why people want it. We’ll start this chapter by looking at an IT value experience that may seem very familiar. Then we’ll dig further into concepts like the IT stack and the IT service and how they change over time.</simpara>
+<section xml:id="_chapter_outline">
+<title>Chapter outline</title>
+<itemizedlist>
+<listitem>
+<simpara>An IT value experience</simpara>
+</listitem>
+<listitem>
+<simpara>What is information technology?</simpara>
+</listitem>
+<listitem>
+<simpara>The IT <emphasis>service</emphasis> and the IT <emphasis>stack</emphasis></simpara>
+</listitem>
+<listitem>
+<simpara>The IT service</simpara>
+</listitem>
+<listitem>
+<simpara>IT changing over time</simpara>
+</listitem>
+<listitem>
+<simpara>The digital context</simpara>
+</listitem>
+<listitem>
+<simpara>Conclusion</simpara>
+</listitem>
+</itemizedlist>
+</section>
+<section xml:id="_learning_objectives_for_this_chapter">
+<title>Learning objectives for this chapter</title>
+<itemizedlist>
+<listitem>
+<simpara>Explain “IT value” in everyday terms</simpara>
+</listitem>
+<listitem>
+<simpara>Distinguish between IT service and IT system</simpara>
+</listitem>
+<listitem>
+<simpara>Discuss how IT services change over time</simpara>
+</listitem>
+<listitem>
+<simpara>Describe various ways of understanding the context in which digital systems are developed and digital value is delivered.</simpara>
+</listitem>
+</itemizedlist>
+</section>
+</section>
+<section xml:id="_what_is_it_value">
+<title>What is IT value?</title>
+<simpara><anchor xml:id="what-is-IT-value" xreflabel="[what-is-IT-value]"/></simpara>
+<section xml:id="_an_it_value_scenario">
+<title>An IT value scenario</title>
+<figure xml:id="women.png-450-r">
+<title>Dinner out tonight? <footnote><simpara><emphasis>Image credit <link xl:href="https://www.flickr.com/photos/garryknight/700317885/">https://www.flickr.com/photos/garryknight/700317885/</link>, downloaded 2016-09-14, commercial use permitted</emphasis></simpara></footnote></title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="images/1_01c-women.png" contentwidth="450"/>
+</imageobject>
+<textobject><phrase>women w/cell phones</phrase></textobject>
+</mediaobject>
+</figure>
+<simpara>Consider the following scenario:</simpara>
+<simpara>A woman is wondering if she can afford to dine out that evening.<footnote><simpara><emphasis>Image credit <link xl:href="https://www.flickr.com/photos/garryknight/700317885/">https://www.flickr.com/photos/garryknight/700317885/</link>, downloaded 2016-09-14, commercial use permitted</emphasis></simpara></footnote></simpara>
+<itemizedlist>
+<listitem>
+<simpara>She uses her mobile device to access her banking information and determines that in fact she does have enough money to do so.</simpara>
+</listitem>
+<listitem>
+<simpara>She also uses her mobile device to make a reservation and contact some friends to join her.</simpara>
+</listitem>
+<listitem>
+<simpara>Finally, she uses social navigation software to avoid heavy traffic, arriving at the restaurant in time for an enjoyable evening with her friends.</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Information technology pervaded this experience. The origins, layers, and complex connections of the distributed systems involved are awe-inspiring to consider.</simpara>
+<important>
+<simpara><emphasis role="strong">Don’t worry about the technological terms for now.</emphasis><?asciidoc-br?>
+<?asciidoc-br?>
+This is an introductory text. You may see terms below that are unfamiliar (model-view-controller, IP, packet switching). If you are reading this online, you can follow the links, but it’s not required. As you progress in your career, you will always be encountering new terminology. Part of what you need to learn is when it’s important to dig into it and when you can let it pass for a time. You should be able to understand the gist presented below that these are complex systems based on a wide variety of technologies, some of them old, some new.</simpara>
+</important>
+<simpara>The screen on her cell phone represents information accessed and presented via a <link xl:href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller">model-view-controller framework</link>, implemented in the latest version of <link xl:href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</link>, running on an <link xl:href="https://en.wikipedia.org/wiki/Interpreter_(computing)">interpreter</link> that would have taxed a <link xl:href="https://en.wikipedia.org/wiki/Mainframe_computer">mainframe</link> thirty years ago. The communication with her bank’s central systems is supported by <link xl:href="https://en.wikipedia.org/wiki/LTE_(telecommunication)">4G LTE</link> data which in turn relies on the high-volume <link xl:href="https://en.wikipedia.org/wiki/Internet_Protocol">IP backbone</link> networks operated by the <link xl:href="http://searchnetworking.techtarget.com/definition/telecom-carrier">telecommunications carriers</link>, based on research into <link xl:href="https://en.wikipedia.org/wiki/Packet_switching">packet switching</link> now approaching fifty years old.
+The application operating on the cell phone interacts with core banking systems via sophisticated and highly secure <link xl:href="https://en.wikipedia.org/wiki/Middleware">middleware</link>, crossing multiple <link xl:href="https://en.wikipedia.org/wiki/Computer_network">network</link> control points. This middleware talks in turn to the customer demand deposit system that still runs on the mainframe.</simpara>
+<simpara>The mainframe is now running the latest version of <link xl:href="https://en.wikipedia.org/wiki/Z/OS">IBM’s z/OS</link> <link xl:href="https://en.wikipedia.org/wiki/Operating_system">operating system</link> (a direct descendant of <link xl:href="https://en.wikipedia.org/wiki/OS/360_and_successors#MVT">OS/360</link>, one of the most significant operating systems in the <link xl:href="https://en.wikipedia.org/wiki/History_of_computing">history of computing</link>). The customer demand deposit banking application running on the mainframe is still based on code written in the lowest level <link xl:href="https://en.wikipedia.org/wiki/Assembly_language">assembler</link>. Some of the comments in this code date back to the 1970s. It has been tuned and optimized over the decades into a system of remarkable speed and efficiency. Although replatforming it is periodically discussed, the cost/benefit ratio for such a project has to date not been favorable.</simpara>
+<simpara>The reservation system looks similar on the mobile device, but the network routes it to a large <link xl:href="https://en.wikipedia.org/wiki/Cloud_computing">cloud</link> data center hosting the reservation system. The back end application here is very different from the banking system; the <link xl:href="https://en.wikipedia.org/wiki/Programming_language">programming languages</link> are newer, the <link xl:href="https://en.wikipedia.org/wiki/Database">database</link> is structured very differently, and the operating system is <link xl:href="https://www.linux.com/">Linux</link>.</simpara>
+<simpara>Finally, the navigation software looks much like the reservation system, as it too is based on the cloud. However, the system is much more active as it is continually processing inputs from millions of drivers in thousands of cities and updating traffic maps for those drivers in real time so that they can choose the most optimal route to their destinations (e.g., dinner). The capabilities of this system are comparable to an air traffic control system, and yet it is available as a free download for our IT user.</simpara>
+<figure>
+<title>Digital made this gathering easier <footnote><simpara><emphasis>Image credit <link xl:href="https://pixabay.com/en/friends-celebration-dinner-table-581753/">https://pixabay.com/en/friends-celebration-dinner-table-581753/</link>, downloaded 2016-09-14, commercial use permitted</emphasis></simpara></footnote></title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="images/1_01-friends.jpg" contentwidth="450"/>
+</imageobject>
+<textobject><phrase>party</phrase></textobject>
+</mediaobject>
+</figure>
+<simpara>The resulting value is clear:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>In an earlier era, our user might have stayed in for fear of bouncing a check, or she might have gone out and dined beyond her means.</simpara>
+</listitem>
+<listitem>
+<simpara>The phone line at the restaurant might have been busy, so she might have risked showing up with no reservation.</simpara>
+</listitem>
+<listitem>
+<simpara>Before texting and social media, she might not have been able to reach her friends as easily.</simpara>
+</listitem>
+<listitem>
+<simpara>Without the traffic application, she might have run into a huge midtown traffic jam and been half an hour late.</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Clearly, information technology added value to her life and helped maximize her experience of social enjoyment.</simpara>
+</section>
+<section xml:id="_various_forms_of_it_value">
+<title>Various forms of IT value</title>
+<simpara>As we have seen, there are many ways in which digital systems deliver value. Some systems serve as the modern equivalent of file cabinets: massive and secure storage for financial transactions, insurance records, medical records, and the like. Other systems enable the transmission of information around the globe, whether as emails, web pages, voice calls, video on demand, or data to be displayed in a smartphone application (app). Some of these systems support engaged online communities and social interactions with conversations, media sharing, and even massive online gaming ecosystems. Yet other systems enable penetrating analysis and insight by examining the volumes of data contained in the first two kinds of systems for patterns and trends. Sophisticated statistical techniques and cutting-edge approaches like neural network-based machine learning increase the insights our digital systems are capable of, at a seemingly exponential rate.</simpara>
+<simpara>Digital technology generates value in both direct and indirect ways. People have long consumed (and paid for) communication services, such as telephone services. Broadcast entertainment was a different proposition, however. The consumer (the person with the radio or television) was not the customer (the person paying for the programming to go out over the airwaves). New business models sprung up to support the new media through the sale of advertising air time. In other words, the value proposition was indirect, or at least took multiple parties to achieve: the listener, the broadcaster, and the advertiser. Finally, some of the best known uses of digital technology were and are very indirect&#8201;&#8212;&#8201;the above-mentioned banks and insurance agencies using the earliest computers to automate the work of thousands of typists and file clerks.
+From these early business models have evolved and blossomed myriads of creative applications of digital technology for the benefit of human beings in their ongoing pursuit of happiness and security. We see the applications mentioned at the outset: online banking, messaging, restaurant reservation, and traffic systems. Beyond that we see the use of digital technology in nearly every aspect of life. (And I say “nearly” only because I am a cautious person.)</simpara>
+<simpara>Digital and information technology pervades all of the major industry verticals (e.g., manufacturing, agriculture, finance, retail, healthcare, transportation, services) and common industry functions (e.g., supply chain, human resources, corporate finance, and even IT itself).</simpara>
+<simpara>Digital systems and technologies also are critical components of larger scale industrial, military, and aerospace systems. For better or worse, general purpose computers are increasingly found controlling safety-critical infrastructure and serving as an intermediating layer between human actions and machine response. Robotic systems are based on software, and the Internet of Things ultimately will span billions of sensors and controllers in interconnected webs monitoring and adjusting all forms of complex operations across the planet.</simpara>
+</section>
+</section>
+<section xml:id="_defining_information_technology">
+<title>Defining Information Technology</title>
+<simpara><anchor xml:id="what-is-IT" xreflabel="[what-is-IT]"/></simpara>
+<section xml:id="_what_is_it_anyways">
+<title>What is IT, anyways?</title>
+<simpara>We’ve started this book in the previous section by providing an example of digital or IT value, without much discussion of how it is delivered. This is deliberate. But what is IT (Information Technology), anyways?</simpara>
+<itemizedlist>
+<listitem>
+<simpara>The computers? The networks?</simpara>
+</listitem>
+<listitem>
+<simpara>The people who run them?</simpara>
+</listitem>
+<listitem>
+<simpara>That organization under a Chief Information Officer that loves to say “no” and is always slow and expensive?</simpara>
+</listitem>
+</itemizedlist>
+<simpara>None of these are how this book defines “IT.” Although this is not a technical book on computer science or software engineering, the intent is that it reflects and is compatible with foundational principles.</simpara>
+<simpara>“Information technology” is ultimately based on the work of <link xl:href="https://en.wikipedia.org/wiki/Claude_Shannon">Claude Shannon</link>, <link xl:href="https://en.wikipedia.org/wiki/Alan_Turing">Alan Turing</link>, <link xl:href="https://en.wikipedia.org/wiki/Alonzo_Church">Alonzo Church</link>, <link xl:href="https://en.wikipedia.org/wiki/John_von_Neumann">John von Neumann</link>, and the other pioneers who defined the central problems of <link xl:href="https://en.wikipedia.org/wiki/Information_theory">information theory</link>, <link xl:href="https://en.wikipedia.org/wiki/Digital_electronics">digital logic</link>,  <link xl:href="https://en.wikipedia.org/wiki/Computability">computability</link>, and <link xl:href="https://en.wikipedia.org/wiki/Computer_architecture">computer architecture</link>.</simpara>
+<simpara><anchor xml:id="IT-as-function" xreflabel="[IT-as-function]"/></simpara>
+<simpara>Additionally, as an organizational function, information technology also draws on organizational theory, systems theory, human factors and psychology, and more recent concepts such as design thinking, among many other areas.</simpara>
+<simpara>Discussions of “information technology” become contentious because some think of the traditional organization, while others think of the general problem area. IT has a long history as a corporate function, a single hierarchy under a powerful Chief Information Officer. This model has had its dysfunctions, including a longstanding reputation for being slow and expensive. Often, when one encounters the term “IT,” the author using the term is referring to this organizational tradition.</simpara>
+<simpara><emphasis role="strong">We are less interested in the future of IT as a distinct organizational structure. There are many different models, from fully centralized to fully embedded.</emphasis> Organizational structure will be discussed in Chapter 7.</simpara>
+<simpara>For this book, we define “Information technology” in terms of its historic origins. We look to IT’s common origins in automating the laborious and error prone processes of computation, through the application of digital logic technologies based on information transmission.</simpara>
+<simpara>Regardless of organizational form or delivery methods, IT is defined by these origins. And there are notable common threads throughout this problem domain: the fragility and complexity of these systems, the need for layered abstractions in their management, and more.</simpara>
+<simpara>It does not matter if the application developers ultimately report up through the CIO, the CMO, the CFO, or the COO. Their daily experience remains largely the same. The dynamics of their management remain the same. Executives who seek to take control of IT so they can “remove that old bureaucracy” are well advised to be cautious; the bureaucracy emerged for a reason. More on this in subsequent chapters.</simpara>
+<simpara><anchor xml:id="digital-transformation" xreflabel="[digital-transformation]"/></simpara>
+</section>
+<section xml:id="_it_and_digital_transformation">
+<title>IT and digital transformation</title>
+<blockquote>
+<attribution>
+Nicholas Carr
+</attribution>
+<simpara>IT doesn&#8217;t matter.</simpara>
+</blockquote>
+<blockquote>
+<attribution>
+Mark Andreessen
+</attribution>
+<simpara>Software is eating the world.</simpara>
+</blockquote>
+<blockquote>
+<attribution>
+Jeff Sussna
+<citetitle>Designing Delivery</citetitle>
+</attribution>
+<simpara>The digital realm is infusing the physical realm, like tea in hot water.</simpara>
+</blockquote>
+<simpara>IT increasingly permeates business operations and social interactions. The breadth and depth of IT support for virtually all domains of society continues to expand. Lately, this is known as digital transformation.</simpara>
+<simpara>The role of information technology seems critical to society and the economy, but there are various points of view. Nicholas Carr, in his controversial <emphasis>Harvard Business Review</emphasis> article "IT Doesn&#8217;t Matter," recognized that IT was becoming commoditized in an important sense <xref linkend="Carr2003"/>. As Cloud providers started to offer utility-style computing, the choice of particular vendors of computers was no longer strategic. Looking to history, Carr argued that just as businesses no longer have “Vice Presidents for Electricity,” so businesses no longer need Chief Information Officers or dedicated IT departments.</simpara>
+<note>
+<simpara>A "commodity" product is one that is offered from a variety of suppliers, with little or no difference between their offerings. Commodity products tend to compete on price, not on differences in features. Wheat is a commodity. Sports cars are not. "Commoditization" is the process by which products that used to compete by being different, increasingly compete on price.</simpara>
+</note>
+<simpara>Carr has insight&#8201;&#8212;&#8201;there is no question IT is becoming pervasive&#8201;&#8212;&#8201;but he ultimately reflects a narrow view of what “IT” is. If “IT” were merely computation at the lowest level&#8201;&#8212;&#8201;just shuffling bits of information around, doing a little math&#8201;&#8212;&#8201;then perhaps it could be embedded throughout a business like electricity.</simpara>
+<simpara>But IT has emergent aspects that are not comparable to electrical power. As it pervades all dimensions of business operations, it brings its concerns with it: complexity, fragility, and the skills required to cope with them.</simpara>
+<simpara>One watt of electrical power is like any other watt of electrical power, and can usefully be seen as a commodity. We can use it to run toasters, hair dryers, or industrial paint mixers, and there is little concern (beyond supply and demand management) that the consumption of power by the paint mixer will affect the toaster.  It&#8217;s also true that one cycle of computing, in a certain sense, is like any other cycle. But information technology systems interact with each other in surprising and unpredictable ways, orders of magnitude more complex than electrical power grids. (This is not to imply the modern electrical grid is a simple system!)</simpara>
+<simpara>IT also radically transforms industries: from retail to transportation to manufacturing to genetics. Applied software-centric IT is unleashing remarkable economic disruption.</simpara>
+<simpara>A lawyer may depend on a cell phone, and (in keeping with Carr) beyond its provision as a commodity service, needs little else to deliver the legal strategies a firm needs. A graphic designer may use computerized graphic tools, but these have become relatively standardized and commoditized in the past twenty years, and probably are not a source of competitive advantage in the quest for new marketing clients.</simpara>
+<simpara>On the other hand, consider a text analytic algorithm that replaces thousands of paralegals, resulting in order-of-magnitude more accurate legal research in a fraction of cost and time. This <emphasis role="strong">is</emphasis> strategic and disruptive to the legal community. A superior supply chain algorithm, and the ability to improve it on an ongoing basis, may indeed elevate a logistics firm’s performance above competitors. In cases like these&#8201;&#8212;&#8201;and they seem to be increasing&#8201;&#8212;&#8201;IT matters very much. The annual State of DevOps research finds that "Firms with high-performing IT organizations were twice as likely to exceed their profitability, market share, and productivity goals." <xref linkend="Puppet2014"/></simpara>
+<simpara>In the digitally transforming economy, traditional “back office” IT organizations find themselves called on to envision, develop, and support market-facing applications of IT. And what starts with one market-facing use case can quickly expand into entire portfolios.  It is such cases that are of particular concern in this book. Ultimately, it is possible that IT is the <emphasis role="strong">most</emphasis> strategic capability an organization can invest in. As the editor in chief of <emphasis>IEEE Software</emphasis> notes <xref linkend="Spinellis2015"/>,</simpara>
+<blockquote>
+<attribution>
+Diomidis Spinellis
+<citetitle>IEEE Software</citetitle>
+</attribution>
+<simpara>other industries are also producing what’s in effect software (executable knowledge) but not treating it as such . . . Although many industries have developed their own highly effective processes over the years, software engineering maintains an essential advantage. It has developed methods and tools that let even small teams manage extremely high complexity . . . This advantage is important because the complexity in non-software activities is also increasing inexorably . . . [T]he time has come to transform our world… by giving back to science and technology the knowledge software engineering has produced.</simpara>
+</blockquote>
+<simpara>This ability to manage complexity, to turn tacit into explicit and formalize the previously unstructured, is an essential aspect of digital transformation.</simpara>
+</section>
+<section xml:id="_defining_it">
+<title>Defining "IT"</title>
+<simpara>So, how do we define an IT problem, as opposed to other kinds of business problems? An IT problem is any problem where you are primarily constrained by your capability and understanding of IT.</simpara>
+<itemizedlist>
+<listitem>
+<simpara>If you need computer scientists or engineers who understand the fundamentals of information theory and computer science, you are doing IT.</simpara>
+</listitem>
+<listitem>
+<simpara>If you need people who understand when your information-centric problems might need to be referred to such theorists and engineers, you are likely doing IT.</simpara>
+</listitem>
+<listitem>
+<simpara>If you need people who are skilled in building upon those fundamentals, and operating technical platforms derived from them (such as programming languages, general purpose computers, and network routers), you are doing IT.</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Regardless of whether IT is housed under a traditional CIO, an operations capability, a Chief Marketing Officer, or a “line of business”, when it is critical to operations certain concerns inevitably follow:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Requirements (i.e. your intent for IT)</simpara>
+</listitem>
+<listitem>
+<simpara>Sourcing and provisioning</simpara>
+</listitem>
+<listitem>
+<simpara>IT-centric product design and construction</simpara>
+</listitem>
+<listitem>
+<simpara>Configuration and change management</simpara>
+</listitem>
+<listitem>
+<simpara>Support</simpara>
+</listitem>
+<listitem>
+<simpara>Improvement</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Executives who take control of information technology in hopes of making it more "agile" are often surprised to find that these concerns were not mere bureaucracy, but instead had well grounded origins in past failures. Ignoring these lessons is perilous.</simpara>
+<simpara>And yet, the traditional, process-heavy IT organization does seem dysfunctional from a business point of view: a central theme of this book.</simpara>
+</section>
+</section>
+<section xml:id="_it_services_systems_and_applications">
+<title>IT services, systems, and applications</title>
+<section xml:id="_inside_an_it_service">
+<title>Inside an IT service</title>
+<figure>
+<title>The basis of IT value <footnote><simpara><emphasis>Image credit <link xl:href="https://www.flickr.com/photos/iicd/5348620457/">https://www.flickr.com/photos/iicd/5348620457/</link>, downloaded 2016-11-07, commercial use permitted</emphasis></simpara></footnote></title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="images/1_01-ITValue.png" contentwidth="600"/>
+</imageobject>
+<textobject><phrase>woman at computer</phrase></textobject>
+</mediaobject>
+</figure>
+<simpara>Let&#8217;s examine our diner&#8217;s value experience in more detail, without getting unnecessarily technical, and clarify some definitions along the way.  The first idea we need to cover is the "moment of truth." In terms of information technnology, this English-language cliché represents the user&#8217;s experience of value.</simpara>
+<simpara>In the example, our friend seeking a relaxing night out had several moments of truth:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Consulting her bank balance, and subsequent financial transactions also reflecting what was stated to her</simpara>
+</listitem>
+<listitem>
+<simpara>Making a reservation and having it honored on arrival at the restaurant</simpara>
+</listitem>
+<listitem>
+<simpara>Arriving on time to the restaurant, courtesy of the traffic application</simpara>
+</listitem>
+<listitem>
+<simpara>And most importantly, having a relaxed and refreshing time with her friends.</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Each of these individual value experiences was co-created by our friend&#8217;s desire for value, and the response of a set of IT resources.</simpara>
+<important>
+<simpara>The "moment of truth" represents the user&#8217;s experience of value, from a product, good, or service.</simpara>
+</important>
+<simpara>In order to view her balance, our user is probably using an application downloaded from a "store" of applications made available to her device. On her device, this "app" is part of an intricate set of components performing functions such as:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>accepting "input" (user intent) through a screen or voice input</simpara>
+</listitem>
+<listitem>
+<simpara>processing that input through software and acting on her desire to see her bank balance</simpara>
+</listitem>
+<listitem>
+<simpara>connecting to the phone network</simpara>
+</listitem>
+<listitem>
+<simpara>securely connecting over the phone network to the Internet and then to the bank</simpara>
+</listitem>
+<listitem>
+<simpara>identifying the user to the bank&#8217;s systems</simpara>
+</listitem>
+<listitem>
+<simpara>requesting the necessary information (in this case, an account balance)</simpara>
+</listitem>
+<listitem>
+<simpara>receiving that information and converting it to a form that can be represented on a screeen</simpara>
+</listitem>
+<listitem>
+<simpara>finally, displaying the information on the screen</simpara>
+</listitem>
+</itemizedlist>
+<simpara>The application, or "app," downloaded to the phone plays a primary role, but is enabled by:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>the phone&#8217;s operating system and associated services</simpara>
+</listitem>
+<listitem>
+<simpara>the phone&#8217;s hardware</simpara>
+</listitem>
+<listitem>
+<simpara>the telecommunications infrastructure (cell phone towers, long distance fiber optic cables, switching offices, and much more)</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Of course, without the banking systems on the other end, there is no bank balance to transmit. These systems are similar, but on a much larger scale than our friend&#8217;s device:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Internet and middleware services to receive the request from the international network</simpara>
+</listitem>
+<listitem>
+<simpara>Application services to validate the user&#8217;s identity and route the request to the appropriate handling service</simpara>
+</listitem>
+<listitem>
+<simpara>Data services to store the user&#8217;s banking information (account identity and transactions) along with millions of other customers</simpara>
+</listitem>
+<listitem>
+<simpara>Many additional services to detect fraud and security attacks, report on utilization, identify any errors in the systems, and much more.</simpara>
+</listitem>
+<listitem>
+<simpara>Physical data centers full of computers and associated hardware including massive power and cooling infrastructure, and protected by security systems and personnel.</simpara>
+</listitem>
+</itemizedlist>
+<figure>
+<title>The immensity of the IT stack</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="images/1_01-ITStack.png" contentwidth="700"/>
+</imageobject>
+<textobject><phrase>technologies</phrase></textobject>
+</mediaobject>
+</figure>
+<simpara>Consider: what does all this mean to our user? Does she care about cell phone towers, or middleware, or triply-redundant industrial-strength Power Distribution Units? Usually, not in the least.</simpara>
+<simpara>Therefore, as we study this world, we need to maintain awareness of her perspective. Our friend is seeking some value that IT uniquely can enable, but does not want to consider all the complexity that goes into it. She just wants to go out with friends. The moment of truth depends on the service; the service may contain great complexity, but part of its success lies in shielding the user from that complexity.</simpara>
+<figure>
+<title>The IT stack supports the moment of truth</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="images/1_01-ITStack2.png" contentwidth="400"/>
+</imageobject>
+<textobject><phrase>ITStack</phrase></textobject>
+</mediaobject>
+</figure>
+<important>
+<simpara>Always remember the user&#8217;s experience. Information technology has a well deserved reputation for being too complicated for end users&#8212;&#8203;for example, trying to do something that should be simple, and finding oneself in a technical conversation about network settings.</simpara>
+</important>
+</section>
+<section xml:id="_what_versus_how">
+<title>What versus how</title>
+<simpara>This fundamental tension between <emphasis role="strong">what</emphasis> a system is supposed to do, versus <emphasis role="strong">how</emphasis> it does it, pervades IT management and will likely define your career. "Don&#8217;t trouble me with the details, just give me the results" is the overall theme, and we encounter this reaction to complexity in many aspects of life.</simpara>
+<simpara>Terminology is important. We need to have a more precise way of describing the information technology, beyond just saying there is "lots" of it. A variety of terms are used in this text:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>IT service</simpara>
+</listitem>
+<listitem>
+<simpara>Application</simpara>
+</listitem>
+<listitem>
+<simpara>IT system</simpara>
+</listitem>
+<listitem>
+<simpara>IT infrastructure</simpara>
+</listitem>
+</itemizedlist>
+<simpara>We also see discussion of components, resources, subsystems, assets, and many more terms.</simpara>
+<warning>
+<simpara>There are many debates around these definitions. Sometimes these debates are helpful in clarifying the terminology you want to use on your team. But sometimes the debates don&#8217;t add any value. Beware of anyone who claims there is a "best practice" here.</simpara>
+</warning>
+<simpara>In general, in this book, we will use the following definitions:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>An IT service is defined primarily in terms of WHAT not HOW</simpara>
+</listitem>
+<listitem>
+<simpara>Defining an IT system may include a discussion of both WHAT it does and HOW it does it</simpara>
+</listitem>
+<listitem>
+<simpara>An "application" usually means some IT service or system for end users who are not primarily concerned with IT other than wanting to get something done with it (e.g. go out to dinner)</simpara>
+</listitem>
+<listitem>
+<simpara>"Infrastructure" usually means some IT service or system that primarily supports OTHER IT services or systems (e.g. a network "service" is not usually useful to end users without additional application services.)</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Finally, the concept of the "IT stack" is important. Notice how the different technology layers appear "stacked." Layered approaches to understanding IT are common; see Further Reading for useful references.</simpara>
+<sidebar>
+<title>Author&#8217;s note: Service versus product</title>
+<simpara>For the purposes of this book, "IT services" are equivalent to "products." You may in other contexts hear phrases like "products <emphasis role="strong">versus</emphasis> services" which imply that they are distinct. Usually, when products are contrasted with services, people are equating products with goods: a jar of peanut butter is a "product," while a haircut is a service.</simpara>
+<simpara>However, when I worked at AT&amp;T, the internal term for offerings like broadband networking access was not "service," but "product." Services, in this sense, <emphasis role="strong">are</emphasis> products.</simpara>
+<simpara>In this book, we see products and services as roughly equivalent, but the two terms have some different connotations. Products usually imply an external market, where services can be either internal or external facing. While we certainly talk about "product marketing", the term "service marketing" is rarely seen. Furthermore,  some organizations such as Target have recently re-conceptualized internal services organizations as "product teams."</simpara>
+</sidebar>
+</section>
+</section>
+</section>
+<section xml:id="References">
+<title>References</title>
+<note>
+<simpara>All web references were archived into the author&#8217;s files on the indicated access date. Please contact the author if a link is broken.</simpara>
+</note>
+<itemizedlist>
+<listitem>
+<simpara><anchor xml:id="Abbott2015" xreflabel="[Abbott2015]"/>[Abbott2015]: Abbott, Martin L.; Fisher, M.T., 2015. The Art of Scalability: Scalable Web Architecture, Processes, and Organizations for the Modern Enterprise (2nd Edition), Old Tappan, NJ, NJ: Pearson Education, Inc.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Abrashoff2012" xreflabel="[Abrashoff2012]"/>[Abrashoff2012]: Abrashoff, D.M., It’s Your Ship: Management Techniques from the Best Damn Ship in the Navy 10th Anniv., Grand Central Publishing.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Accounting2016" xreflabel="[Accounting2016]"/>[Accounting2016]: Accounting Coach. 2016. “What Is Cost Accounting?” <link xl:href="http://www.accountingcoach.com/blog/what-is-cost-accounting">http://www.accountingcoach.com/blog/what-is-cost-accounting</link> (May 7, 2016).</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Adzic2012" xreflabel="[Adzic2012]"/>[Adzic2012]: Adzic, Gojko. 2012. Impact Mapping: Making a Big Impact with Software Products and Projects. Gojko Adzic.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Akera2007" xreflabel="[Akera2007]"/>[Akera2007]: Akera, A., "Edmund Berkeley and the Origins of the ACM." Communications of the ACM, 2007. 50(5): p. 31-35.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Alliance2001" xreflabel="[Alliance2001]"/>[Alliance2001]: Agile Alliance. (2001), "Agile Manifesto and Principles", <link xl:href="http://agilemanifesto.org/principles.html">http://agilemanifesto.org/principles.html</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Alliance2015" xreflabel="[Alliance2015]"/>[Alliance2015]: Agile Alliance. 2015. “Team Definition.” Glossary. <link xl:href="https://www.agilealliance.org/glossary/team/">https://www.agilealliance.org/glossary/team/</link>. Accessed 2016-09-21.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Alliance2015a" xreflabel="[Alliance2015a]"/>[Alliance2015a]: Agile Alliance. 2016. “Definition of Done.” Glossary. <link xl:href="https://www.agilealliance.org/glossary/definition-of-done/#sthash.6rSCZMyU.dpuf">https://www.agilealliance.org/glossary/definition-of-done/#sthash.6rSCZMyU.dpuf</link>. [Accessed November 16, 2016].</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Alliance2016" xreflabel="[Alliance2016]"/>[Alliance2016]: Agile Alliance, 2016. Subway Map to Agile Practices. Available at: <link xl:href="https://www.agilealliance.org/agile101/subway-map-to-agile-practices/">https://www.agilealliance.org/agile101/subway-map-to-agile-practices/</link> [Accessed August 11, 2016].</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Allspaw2009" xreflabel="[Allspaw2009]"/>[Allspaw2009]: Allspaw, J. &amp; Hammond, P. (2009), "10 deploys per day: Dev &amp; ops cooperation at Flickr",  O&#8217;Reilly Publications, <link xl:href="http://www.slideshare.net/jallspaw/10-deploys-per-day-dev-and-ops-cooperation-at-flickr">http://www.slideshare.net/jallspaw/10-deploys-per-day-dev-and-ops-cooperation-at-flickr</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Ambler2005" xreflabel="[Ambler2005]"/>[Ambler2005]: Ambler, S. (2005) "Agile Outsourcing." <emphasis>Dr. Dobb&#8217;s Journal</emphasis>.  Retrieved from <link xl:href="http://www.drdobbs.com/architecture-and-design/agile-outsourcing/184415344">http://www.drdobbs.com/architecture-and-design/agile-outsourcing/184415344</link>. Date Accessed:  3/21/2016.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Ambler2006" xreflabel="[Ambler2006]"/>[Ambler2006]: Ambler, Scott W, and Pramod J Sadalage. 2006. Refactoring Databases : Evolutionary Database Design. Book. Harlow, U.K.: Addison-Wesley. Table of contents <link xl:href="http://www.loc.gov/catdir/toc/ecip063/2005031959.html">http://www.loc.gov/catdir/toc/ecip063/2005031959.html</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Ambler2012" xreflabel="[Ambler2012]"/>[Ambler2012]: Ambler, Scott W, and Mark Lines. 2012. Disciplined Agile Delivery: A Practitioner’s Guide to Agile Software Delivery in the Enterprise. IBM Press.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Anderson2010" xreflabel="[Anderson2010]"/>[Anderson2010]: Anderson, D. J. (2010), <emphasis>Kanban: Successful Evolutionary Change for your Technology Business</emphasis>, Blue Hole Press, Sequim, WA</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Arbogast2012" xreflabel="[Arbogast2012]"/>[Arbogast2012]: Arbogast, T. L., Craig; Vodde, Bas (2012) "Agile Contracts Primer."  Retrieved from <link xl:href="http://www.agilecontracts.com/agile_contracts_primer.pdf">http://www.agilecontracts.com/agile_contracts_primer.pdf</link>. Date Accessed:  March 21, 2016.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Arnold2013" xreflabel="[Arnold2013]"/>[Arnold2013]: Arnold, J., 2013. Tilt the playing field: discover, nurture, and speed up the delivery of value. Available at: <link xl:href="https://liber.io/v/liberioEpub_53aa4d19e3a7e">https://liber.io/v/liberioEpub_53aa4d19e3a7e</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Ashmore2014" xreflabel="[Ashmore2014]"/>[Ashmore2014]: Ashmore, S. and K. Runyan, 2014, <emphasis>Introduction to agile methods</emphasis>. xix, 307 pages.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Bacik2011" xreflabel="[Bacik2011]"/>[Bacik2011]: Bacik, S. (2011). Compliance, audit, risk, security – what’s the difference and why do we need it? Retrieved July 6, 2016, from <link xl:href="http://www.enernex.com/wp-content/uploads/2011/11/Risk-Compliance-Audit-webinar-11.2011.pdf">http://www.enernex.com/wp-content/uploads/2011/11/Risk-Compliance-Audit-webinar-11.2011.pdf</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="BAGuild2016" xreflabel="[BAGuild2016]"/>[BAGuild2016]: Business Architecture Guild. 2016. A Guide to the Business Architecture Body of Knowledge (BIZBOK Guide). Business Architecture Guild.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Bank2016" xreflabel="[Bank2016]"/>[Bank2016]: Bank, C., &amp; Cao, J. (n.d.). The Guide to Usability Testing. uxpin.com. Retrieved from <link xl:href="https://www.uxpin.com/studio/ebooks/guide-to-usability-testing/">https://www.uxpin.com/studio/ebooks/guide-to-usability-testing/</link> (free ebook, accessed 2016-09-22)</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Beck2000" xreflabel="[Beck2000]"/>[Beck2000]: Beck, K., 2000 <emphasis>extreme programming eXplained : embrace change</emphasis>, Reading, MA: Addison-Wesley. xxi, 190 p.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Bell2010" xreflabel="[Bell2010]"/>[Bell2010]: Bell, S. C. &amp; Orzen, M. A. (2010), <emphasis>Lean IT</emphasis>, CRC Press, Boca Raton, Florida</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Bell2013" xreflabel="[Bell2013]"/>[Bell2013]: Bell, Steve et al. 2013. <emphasis>Run Grow Transform: Integrating Business and Lean IT</emphasis>. Boca Raton, FL: CRC Press.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Bente2012" xreflabel="[Bente2012]"/>[Bente2012]: Bente, Stefan, Uwe Bombosch, and Shailendra Langade. 2012. Collaborative Enterprise Architecture: Enriching EA with Lean, Agile, and Enterprise 2.0 Practices. Waltham, MA: Morgan Kaufman - Elsevier.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Bernard2012" xreflabel="[Bernard2012]"/>[Bernard2012]: Bernard, Scott. 2012. An Introduction to Enterprise Architecture. AuthorHouse.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Betz2011" xreflabel="[Betz2011]"/>[Betz2011]: Betz, C. (2011), "Release management integration pattern - seeking devops comments", <link xl:href="http://www.lean4it.com/2011/01/release-management-integration-pattern-seeking-devops-comments.html">http://www.lean4it.com/2011/01/release-management-integration-pattern-seeking-devops-comments.html</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Betz2011a" xreflabel="[Betz2011a]"/>[Betz2011a]: Betz, C. T. (2011), <emphasis>Architecture and Patterns for IT: Service and Portfolio Management and Governance (Making Shoes for the Cobbler&#8217;s Children), 2nd Edition</emphasis>, Elsevier/Morgan Kaufman, Amsterdam</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Betz2011b" xreflabel="[Betz2011b]"/>[Betz2011b]:Betz, C. (2011). "ITIL®, COBIT®, and CMMI®: Ongoing Confusion of Process and Function."" BPTrends. Retrieved from <link xl:href="http://www.bptrends.com/publicationfiles/10-04-2011-ART-Ongoing">http://www.bptrends.com/publicationfiles/10-04-2011-ART-Ongoing</link> Confusion of Process and Function-Betz-Final.pdf</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Betz2015" xreflabel="[Betz2015]"/>[Betz2015]: Betz, C.T. (2015), "Calavera project", Github, <link xl:href="https://github.com/CharlesTBetz/Calavera">https://github.com/CharlesTBetz/Calavera</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Beyer2016" xreflabel="[Beyer2016]"/>[Beyer2016]: Beyer, B., Jones, C., Petoff, J., &amp; Murphy, N. R. (2016). Site Reliability Engineering: How Google Runs Production Systems. Sebastopol, CA, CA: O’Reilly Media, Inc.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Bias2012" xreflabel="[Bias2012]"/>[Bias2012]: Bias, R. (2012, February 14). Architectures for open and scalable clouds. Retrieved November 10, 2016, from <link xl:href="http://www.slideshare.net/randybias/architectures-for-open-and-scalable-clouds">http://www.slideshare.net/randybias/architectures-for-open-and-scalable-clouds</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Binder1997" xreflabel="[Binder1997]"/>[Binder1997]: Binder, R.V. 1997. “Can a Manufacturing Quality Model Work for Software?” IEEE Software 14 (5). IEEE: 101–2, 105. doi:10.1109/52.605937.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Blank2013" xreflabel="[Blank2013]"/>[Blank2013]: Blank, Steve. 2013. The Four Steps to the Epiphany: Successful Strategies for Products That Win. 2nd ed. Steve Blank, publisher.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Bloomberg2014" xreflabel="[Bloomberg2014]"/>[Bloomberg2014]: Bloomberg, Jason. 2014. “Agile Enterprise Architecture Finally Crosses the Chasm.” Forbes. July. <link xl:href="http://www.forbes.com/sites/jasonbloomberg/2014/07/23/agile-enterprise-architecture-finally-crosses-the-chasm/print/">http://www.forbes.com/sites/jasonbloomberg/2014/07/23/agile-enterprise-architecture-finally-crosses-the-chasm/print/</link>. Accessed 2015-11-12.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="BPTrends2013" xreflabel="[BPTrends2013]"/>[BPTrends2013]: BPTrends. 2013. “Scope Diagram (or Input-Guides-Outputs-Enablers – IGOE Diagram).” BPTrends. <link xl:href="http://www.bptrends.com/resources/glossary/scope-diagram-or-input-guides-outputs-enablers-igoe-diagram/">http://www.bptrends.com/resources/glossary/scope-diagram-or-input-guides-outputs-enablers-igoe-diagram/</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Brooks1995" xreflabel="[Brooks1995]"/>[Brooks1995]: Brooks, Frederick P. 1995. <emphasis>The Mythical Man-Month: Essays on Software Engineering.</emphasis> 25th Anniversary edition. Reading, Mass.: Addison-Wesley Pub. Co.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Bossavit2015" xreflabel="[Bossavit2015]"/>[Bossavit2015]:	Bossavit, L., 2015. <emphasis>The Leprechauns of Software Engineering: How folklore turns into fact and what to do about it</emphasis> 2015. Available from: <link xl:href="https://leanpub.com/leprechauns">https://leanpub.com/leprechauns</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Bouwman" xreflabel="[Bouwman]"/>[Bouwman]: Bouwman, J.-J. &amp; Heistek, M. (), "ITIL and DevOps at war in the enterprise,"" <link xl:href="https://www.youtube.com/watch?v=_dDsdbkSgOc">https://www.youtube.com/watch?v=_dDsdbkSgOc</link>, 'DevOpsDays'.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Brooks1975" xreflabel="[Brooks1975]"/>[Brooks1975]: Brooks, F. P. (1975). <emphasis>The mythical man-month: essays on software engineering.</emphasis> Reading, Mass., Addison-Wesley Pub. Co.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Brustein2013" xreflabel="[Brustein2013]"/>[Brustein2013]: Brustein, Joshua. 2013. “Microsoft Kills Its Hated Stack Rankings. Does Anyone Do Employee Reviews Right?” Bloomberg Business Week. <link xl:href="http://www.bloomberg.com/news/articles/2013-11-13/microsoft-kills-its-hated-stack-rankings-dot-does-anyone-do-employee-reviews-right">http://www.bloomberg.com/news/articles/2013-11-13/microsoft-kills-its-hated-stack-rankings-dot-does-anyone-do-employee-reviews-right</link> (March 5, 2016).</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Buchholz1962" xreflabel="[Buchholz1962]"/>[Buchholz1962]: Buchholz, Werner. 1962. Planning a Computer System: Project Stretch. New York: McGraw-Hill Book Company, Inc.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Buckingham2015" xreflabel="[Buckingham2015]"/>[Buckingham2015]: Buckingham, Marcus, and Ashley Goodall. 2015. “Reinventing Performance Management.” Harvard Business Review 93(4): 40–50. <link xl:href="https://hbr.org/2015/04/reinventing-performance-management">https://hbr.org/2015/04/reinventing-performance-management</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Burgess2015" xreflabel="[Burgess2015]"/>[Burgess2015]: Burgess, Mark. 2015. <emphasis>Thinking in Promises</emphasis>. Sebastopol, CA: O’Reilly Media.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Burgess2016" xreflabel="[Burgess2016]"/>[Burgess2016]: Burgess, Mark. Undated. “When and Where Order Matters.” Homepage Mark Burgess. Accessed November 12 2016. <link xl:href="http://markburgess.org/blog_order.html">http://markburgess.org/blog_order.html</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Burlton2001" xreflabel="[Burlton2001]"/>[Burlton2001]: Burlton, R., 2001. Business Process Management: Profiting from Process, Indianapolis, Indiana: SAMS.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Burrows2006" xreflabel="[Burrows2006]"/>[Burrows2006]: Burrows, M. G. I. (2006). "The Chubby lock service for loosely-coupled distributed systems." 7th symposium on Operating systems design and implementation (OSDI '06), USENIX Association Berkeley, CA, USA</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Burrows2014" xreflabel="[Burrows2014]"/>[Burrows2014]: Burrows, Mike. (2014) <emphasis>Kanban from the Inside: Understand the Kanban Method, connect it to what you already know, introduce it with impact</emphasis>. Sequim, WA, Blue Hole Press.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Buschmann1996" xreflabel="[Buschmann1996]"/>[Buschmann1996]: Buschmann, F. (1996), <emphasis>Pattern-oriented software architecture : a system of patterns</emphasis>, Wiley, Chichester ; New York</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Butler2013" xreflabel="[Butler2013]"/>[Butler2013]: Butler, Brandon. 2013. “Free Cloud Storage Service MegaCloud Goes Dark.” Network World. doi:http://www.networkworld.com/article/2171450/cloud-computing/free-cloud-storage-service-megacloud-goes-dark.html. Accessed 2016-07-01.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Butler2014" xreflabel="[Butler2014]"/>[Butler2014]: Butler, Brandon. 2014. “Cloud’s Worst-Case Scenario: What to Do If Your Provider Goes Belly up.” Network World. <link xl:href="http://www.networkworld.com/article/2173255/cloud-computing/cloud-s-worst-case-scenario-what-to-do-if-your-provider-goes-belly-up.html.Accessed">http://www.networkworld.com/article/2173255/cloud-computing/cloud-s-worst-case-scenario-what-to-do-if-your-provider-goes-belly-up.html.Accessed</link> 2016-07-01.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Cadbury1992" xreflabel="[Cadbury1992]"/>[Cadbury1992]: Committee on the Financial Aspects of Corporate Governance. 1992. “Report of the Committee on the Financial Aspects of Corporate Governance (aka Cadbury Report).” London, Gee &amp; Co. Ltd.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Cagan2008" xreflabel="[Cagan2008]"/>[Cagan2008]: Cagan, Marty. 2008. Inspired: How to Create Products Customers Love. SVPG Press. <link xl:href="http://www.amazon.com/Inspired-Create-Products-Customers-Love/dp/0981690408">http://www.amazon.com/Inspired-Create-Products-Customers-Love/dp/0981690408</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Cantor2016" xreflabel="[Cantor2016]"/>[Cantor2016]: Cantor, M., 2016. Agile Management. Cutter IT Journal. Available at: <link xl:href="http://www.murraycantor.com/wp-content/uploads/2016/12/Agile-Management-Part-12-MCFINAL.pdf">http://www.murraycantor.com/wp-content/uploads/2016/12/Agile-Management-Part-12-MCFINAL.pdf</link> [Accessed December 22, 2016].</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Card1999" xreflabel="[Card1999]"/>[Card1999]: Card, S. K., Mackinlay, J. D., &amp; Shneiderman, B. (1999). Readings in Information Visualization: Using Vision to Think. San Diego: Academic Press.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Carr2003" xreflabel="[Carr2003]"/>[Carr2003]: Carr, N. (2003). IT Doesn’t Matter. Harvard Business Review, 5–12.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Carroll2013" xreflabel="[Carroll2013]"/>[Carroll2013]: Carroll, I. (2013), "Various", <link xl:href="http://itopskanban.wordpress.com/before/">http://itopskanban.wordpress.com/before/</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Castaldo2016" xreflabel="[Castaldo2016]"/>[Castaldo2016]: Castaldo, Joe. 2016. “The Last Days of Target: The Untold Tale of Target Canada’s Difficult Birth, Tough Life and Brutal Death.” Canadian Business. <link xl:href="http://www.canadianbusiness.com/the-last-days-of-target-canada/">http://www.canadianbusiness.com/the-last-days-of-target-canada/</link>. Accessed 2016-08-30.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Chacon2009" xreflabel="[Chacon2009]"/>[Chacon2009]: Chacon, S. &amp; Straub, B. (2009). Pro Git. Berkeley, CA. New York, Apress.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Cherry2016" xreflabel="[Cherry2016]"/>[Cherry2016]: Cherry, K., 2016. Multitasking: Bad for Your Productivity and Brain Health. verywell.com. Available at: <link xl:href="https://www.verywell.com/multitasking-2795003">https://www.verywell.com/multitasking-2795003</link> [Accessed November 28, 2016].</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Cherubini2007" xreflabel="[Cherubini2007]"/>[Cherubini2007]: Cherubini, M., Venolia, G., Deline, R., &amp; Ko, A. J. (2007). Let ’ s Go to the Whiteboard: How and Why Software Developers Use Drawings. CHI 2007 Proceedings, 557–566. <link xl:href="http://doi.org/10.1145/1240624.1240714">http://doi.org/10.1145/1240624.1240714</link>. <link xl:href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/p557-cherubini.pdf">https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/p557-cherubini.pdf</link>, accessed 2016-10-17.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Chisholm2001" xreflabel="[Chisholm2001]"/>[Chisholm2001]: Chisholm, M. (2001). Managing Reference Data in Enterprise Databases: Binding Corporate Data to the Wider World. San Diego: Academic Press.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Choi2016" xreflabel="[Choi2016]"/>[Choi2016]: Choi, J., 2016. The Science Behind Why Jeff Bezos’s Two-Pizza Team Rule Works. Available at: <link xl:href="http://blog.idonethis.com/two-pizza-team/">http://blog.idonethis.com/two-pizza-team/</link> [Accessed December 9, 2016].</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Christensen2006" xreflabel="[Christensen2006]"/>[Christensen2006]: Christensen, Clayton, Scott Cook, and Taddy Hall. 2006. “What Customers Want from Your Products.” Working Knowledge (Harvard Business School). <link xl:href="http://hbswk.hbs.edu/item/what-customers-want-from-your-products">http://hbswk.hbs.edu/item/what-customers-want-from-your-products</link>. Accessed 2016-09-18.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Christensen2015" xreflabel="[Christensen2015]"/>[Christensen2015]: Clayton Christensen Institute. 2015. “Jobs to Be Done.” Http://www.christenseninstitute.org/. <link xl:href="http://www.christenseninstitute.org/key-concepts/jobs-to-be-done/">http://www.christenseninstitute.org/key-concepts/jobs-to-be-done/</link>. Accessed 2016-09-18.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Clark2006" xreflabel="[Clark2006]"/>[Clark2006]: Clark, Nicola. 2006. “The Airbus Saga: Crossed Wires and a Multibillion-Euro Delay.” New York Times, December 11. <link xl:href="http://www.nytimes.com/2006/12/11/business/worldbusiness/11iht-airbus.3860198.html">http://www.nytimes.com/2006/12/11/business/worldbusiness/11iht-airbus.3860198.html</link>. Accessed 2016-10-11.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Coase1937" xreflabel="[Coase1937]"/>[Coase1937]: Coase, R. (1937). The nature of the firm. <emphasis>Economica</emphasis>, 4, 386–405.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Cobb2015" xreflabel="[Cobb2015]"/>[Cobb2015]: Cobb, C.G., (2015), <emphasis>The Project MANAGER&#8217;S GUIDE TO MASTERING AGILE: Principles and Practices for an Adaptive Approach</emphasis>, Hoboken, New Jersey: John Wiley &amp; Sons.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Cockburn2007" xreflabel="[Cockburn2007]"/>[Cockburn2007]: Cockburn, Alistair. 2007. Agile Software Development: The Cooperative Game. 2nd ed. Boston, MA: Pearson Education, Inc.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Cohn2006" xreflabel="[Cohn2006]"/>[Cohn2006]: Cohn, M. (2006). Agile estimating and planning. In VTT Symposium (Valtion Teknillinen Tutkimuskeskus) (pp. 37–39). <link xl:href="http://doi.org/none">http://doi.org/none</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Cohn2010" xreflabel="[Cohn2010]"/>[Cohn2010]: Cohn, M., <emphasis>Succeeding with Agile: Software Development Using Scrum</emphasis>, Addison-Wesley: Upper Saddle River, New Jersey.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Comella2016" xreflabel="[Comella2016]"/>[Comella2016]: Comella-Dorda, Santiago, Lohiya, Swati, and Gerard Speksnijder. 2016. “An Operating Model for Company-Wide Agile Development.” McKinsey &amp; Company. <link xl:href="http://www.mckinsey.com/Business-Functions/Business-Technology/Our-Insights/An-operating-model-for-company-wide-agile-development">http://www.mckinsey.com/Business-Functions/Business-Technology/Our-Insights/An-operating-model-for-company-wide-agile-development</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Conway1968" xreflabel="[Conway1968]"/>[Conway1968]: Conway, D.M.E., 1968. How Do Committees Invent? Available at: <link xl:href="http://www.melconway.com/research/committees.html">http://www.melconway.com/research/committees.html</link> [Accessed November 25, 2016].</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Cooper2009" xreflabel="[Cooper2009]"/>[Cooper2009]: Cooper, A., Reimann, R., &amp; Cronin, D. (2009). About Face 3: The Essentials of Interaction Design. online. Retrieved from <link xl:href="http://www.amazon.com/About-Face-Essentials-Interaction-Design-ebook/dp/B008NC0XR2/">http://www.amazon.com/About-Face-Essentials-Interaction-Design-ebook/dp/B008NC0XR2/</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="COSO2013" xreflabel="[COSO2013]"/>[COSO2013]: Committee of Sponsoring Organizations of the Treadway Commission. 2013. “Internal Control — Integrated Framework (Executive Summary).” <link xl:href="http://www.coso.org/documents/990025P_Executive_Summary_final_may20_e.pdf">http://www.coso.org/documents/990025P_Executive_Summary_final_may20_e.pdf</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Csikszentmihalyi1990" xreflabel="[Csikszentmihalyi1990]"/>[Csikszentmihalyi1990]: Csikszentmihalyi, M. (1990). Flow : the psychology of optimal experience. New York, Harper &amp; Row.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Cunningham1992" xreflabel="[Cunningham1992]"/>[Cunningham1992]: Cunningham, Ward. 1992. “Experience Report: The WyCash Portfolio Management System.” OOPSLA ’92. <link xl:href="http://c2.com/doc/oopsla92.html">http://c2.com/doc/oopsla92.html</link>. Accessed 2016-10-6.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="DAMA2009" xreflabel="[DAMA2009]"/>[DAMA2009]: Data Management Association, The. 2009. The DAMA Guide to The Data Management Body of Knowledge (DAMA-DMBOK Guide). Bradley Beach, NJ: Technics Publications, LLC.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Davenport2007" xreflabel="[Davenport2007]"/>[Davenport2007]: Davenport, Thomas H, and Jeanne G Harris. 2007. Competing on Analytics : The New Science of Winning. Boston, Mass.: Harvard Business School ; London : McGraw-Hill [distributor]. Table of contents only <link xl:href="http://www.loc.gov/catdir/toc/ecip073/2006035422.html">http://www.loc.gov/catdir/toc/ecip073/2006035422.html</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Davis2016" xreflabel="[Davis2016]"/>[Davis2016]: Davis, J., &amp; Daniels, K. (2016). Effective DevOps: Building a Culture of Collaboration, Tooling, and Affinity at Scale. Sebastopol, CA, CA: O’Reilly Media, Inc.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Dekker2006" xreflabel="[Dekker2006]"/>[Dekker2006]: Dekker, S. (2006). The Field Guide to Understanding Human Error. book, Burlington, VT: Ashgate Publishing Limited.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="delaMaza2016" xreflabel="[delaMaza2016]"/>[delaMaza2016]: de la Maza, Michael, and David Benz. 2016. Why Agile Works: The Values Behind the Results. C4Media - InfoQ.com. <link xl:href="http://www.infoq.com/resource/minibooks/why-agile-works">http://www.infoq.com/resource/minibooks/why-agile-works</link>. Accessed 2016-10-11.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="DeLuccia2008" xreflabel="[DeLuccia2008]"/>[DeLuccia2008]: DeLuccia, James. 2008. <emphasis>IT COMPLIANCE AND CONTROLS: Best Practices for Implementation</emphasis>. Hoboken, N.J.: John Wiley &amp; Sons, Inc.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="DeLuccia2015" xreflabel="[DeLuccia2015]"/>[DeLuccia2015]: DeLuccia, James, Jeff Gallimore, Gene Kim, and Byron Miller. 2015. “DevOps Audit Defense Toolkit.” <link xl:href="http://itrevolution.com/devops-and-auditors-the-devops-audit-defense-toolkit/">http://itrevolution.com/devops-and-auditors-the-devops-audit-defense-toolkit/</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="DeNicola216" xreflabel="[DeNicola216]"/>[DeNicola216]: De Nicola, Antonio, and Michelle Missikoff. 2016. “A Lightweight Methodology for Rapid Ontology Engineering.” Communications of the ACM2 59 (3): 79–86.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="DHS2006" xreflabel="[DHS2006]"/>[DHS2006]: Department of Homeland Security. 2006. “Report No. 2006-03, The Use of Commercial Data.” DHS Data Privacy and Integrity Advisory Committee.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Ditri1971" xreflabel="[Ditri1971]"/>[Ditri1971]: Ditri, A.E., Shaw, J.C. &amp; Atkins, W., 1971. Managing the EDP function, N.Y.: McGraw-Hill.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Drucker1963" xreflabel="[Drucker1963]"/>[Drucker1963]: Drucker, Peter F. 1963. “Managing for Business Effectiveness.” Magazine Article. Harvard Business Review.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Drucker1993" xreflabel="[Drucker1993]"/>[Drucker1993]: Drucker, Peter F. 1993. <emphasis>Post-Capitalist Society</emphasis>. 1st ed. New York, NY: HarperBusiness.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="duPreez2015" xreflabel="[duPreez2015]"/>[duPreez2015]: du Preez, Derek. 2015. “A CIO’s Worst Nightmare: When Your Cloud Provider Goes Bankrupt.” Diginomica. <link xl:href="http://diginomica.com/2015/01/06/cios-worst-nightmare-cloud-provider-goes-bankrupt/">http://diginomica.com/2015/01/06/cios-worst-nightmare-cloud-provider-goes-bankrupt/</link>. Accessed 2016-07-04.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Duvall2007" xreflabel="[Duvall2007]"/>[Duvall2007]: Duvall, P. M.; Matyas, S. &amp; Glover, A. (2007), <emphasis>Continuous integration : improving software quality and reducing risk</emphasis>, Addison-Wesley, Upper Saddle River, NJ</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Edwards2012" xreflabel="[Edwards2012]"/>[Edwards2012]: Edwards, D. (2012), "Integrating DevOps tools into a Service Delivery Platform", <link xl:href="http://dev2ops.org/2012/07/integrating-devops-tools-into-a-service-delivery-platform-video/">http://dev2ops.org/2012/07/integrating-devops-tools-into-a-service-delivery-platform-video/</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Eisenhardt1989" xreflabel="[Eisenhardt1989]"/>[Eisenhardt1989]: Eisenhardt, Kathleen M. 1989. “Agency Theory: An Assessment and Review.” <emphasis>Academy of Management Review</emphasis> 14 (1): 57–74. <link xl:href="http://www.jstor.org/stable/258191">http://www.jstor.org/stable/258191</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="England2013" xreflabel="[England2013]"/>[England2013]: England, Rob. 2013. <emphasis>Plus! The Standard+Case Approach: See Service Response in a New Light</emphasis>. Mana, New Zealand: Two Hills Ltd.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Evans2004" xreflabel="[Evans2004]"/>[Evans2004]: Evans, Eric. 2004. Domain-Driven Design : Tackling Complexity in the Heart of Software. Book. Boston ; London: Addison-Wesley.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Feynman1974" xreflabel="[Feynman1974]"/>[Feynman1974]: Feynman, R.P., 1974. Cargo Cult Science. Engineering and Science, 33, pp.10–13. Available at: <link xl:href="http://resolver.caltech.edu/CaltechES:37.7.CargoCult">http://resolver.caltech.edu/CaltechES:37.7.CargoCult</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Fisher2016" xreflabel="[Fisher2016]"/>[Fisher2016]: Fisher, T. (2016). Designing Our Way to a Better World. Minneapolis, MN: University of Minnesota Press.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Flahiff2016" xreflabel="[Flahiff2016]"/>[Flahiff2016]: Flahiff, J. (2016). "How organizational agility will save and destroy your company." from <link xl:href="http://searchcio.techtarget.com/tip/How-organizational-agility-will-save-and-destroy-your-company">http://searchcio.techtarget.com/tip/How-organizational-agility-will-save-and-destroy-your-company</link>. Accessed March 19, 2016.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Forsgren2016" xreflabel="[Forsgren2016]"/>[Forsgren2016]: Forsgren, Nicole, Gene Kim, Nigel Kersten, Jez Humble, and Alanna Brown. 2016. “2016 State of DevOps Report.” Puppet Labs.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Forsgren2016a" xreflabel="[Forsgren2016a]"/>[Forsgren2016a]: Forsgren, N. (2016). Continuous Delivery + DevOps = Awesome. Retrieved 2016-11-07 from <link xl:href="http://www.slideshare.net/nicolefv/nf-final-agileindia2016">http://www.slideshare.net/nicolefv/nf-final-agileindia2016</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Fowler1997" xreflabel="[Fowler1997]"/>[Fowler1997]: Fowler, M. (1997), <emphasis>Analysis patterns : reusable object models</emphasis>, Addison Wesley, Menlo Park, Calif.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Fowler2003" xreflabel="[Fowler2003]"/>[Fowler2003]: Fowler, M. (2003), <emphasis>Patterns of enterprise application architecture</emphasis>, Addison-Wesley, Boston</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Fowler2003a" xreflabel="[Fowler2003a]"/>[Fowler2003a]: Fowler. 2003. “Who Needs an Architect?” IEEE Software, no. July/August. <link xl:href="http://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf">http://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Fowler2004" xreflabel="[Fowler2004]"/>[Fowler2004]: Fowler, Martin. 2004. “Is Design Dead?” Martinfowler.com. <link xl:href="http://martinfowler.com/articles/designDead.html">http://martinfowler.com/articles/designDead.html</link>. Accessed 2016-10-10.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Fowler2004a" xreflabel="[Fowler2004a]"/>[Fowler2004a]: Fowler, Martin. 2004. “Bliki: StranglerApplication.” Accessed October 23. <link xl:href="http://martinfowler.com/bliki/StranglerApplication.html">http://martinfowler.com/bliki/StranglerApplication.html</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Fowler2006" xreflabel="[Fowler2006]"/>[Fowler2006]: Fowler, Martin. 2006. “Shu-Ha-Ri.” Martin Fowler’s Bliki. <link xl:href="http://martinfowler.com/bliki/ShuHaRi.html">http://martinfowler.com/bliki/ShuHaRi.html</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Fowler2014" xreflabel="[Fowler2014]"/>[Fowler2014]: Fowler, Martin. 2014. “BoundedContext.” Martin Fowler’s Bliki2. <link xl:href="http://martinfowler.com/bliki/BoundedContext.html">http://martinfowler.com/bliki/BoundedContext.html</link>. Accessed 2016-09-01.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Fox1999" xreflabel="[Fox1999]"/>[Fox1999]: Fox, A., Brewer, E.A. &amp; Fox, A., 1999. Harvest, Yield and Scalable Tolerant Systems, IEEE CS.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Furr2013" xreflabel="[Furr2013]"/>[Furr2013]: Furr, N. A., Ahlstronm, Paul (2013). <emphasis>Nail It then Scale It: The Entrepreneur&#8217;s Guide to Creating and Managing Breakthrough Innovation</emphasis>, NISI Publishing.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Gall2012" xreflabel="[Gall2012]"/>[Gall2012]: Gall, John. 2012. The Systems Bible: The Beginner’s Guide to Systems Large and Small. General Systemantics Pr/Liberty.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Gamma1995" xreflabel="[Gamma1995]"/>[Gamma1995]: Gamma, E. (1995), <emphasis>Design patterns : elements of reusable object-oriented software</emphasis>, Addison-Wesley, Reading, Mass.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Gawande2010" xreflabel="[Gawande2010]"/>[Gawande2010]: Gawande, Atul. 2010. <emphasis>The Checklist Manifesto: How to Get Things Right</emphasis>. New York, N.Y: Picador.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Gillet2014" xreflabel="[Gillet2014]"/>[Gillet2014]:Gillett, R., 2014. Productivity Hack Of The Week: The Two Pizza Approach To Productive Teamwork | Fast Company | Business + Innovation. fastcompany.com. Available at: <link xl:href="https://www.fastcompany.com/3037542/productivity-hack-of-the-week-the-two-pizza-approach-to-productive-teamwork">https://www.fastcompany.com/3037542/productivity-hack-of-the-week-the-two-pizza-approach-to-productive-teamwork</link> [Accessed December 9, 2016].</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Glass1998" xreflabel="[Glass1998]"/>[Glass1998]: Glass, R.L. (1998), <emphasis>Software runaways</emphasis>, Upper Saddle River, NJ: Prentice Hall PTR. xvi, 259.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Glen2003" xreflabel="[Glen2003]"/>[Glen2003]: Glen, P. (2003). Leading Geeks: How to Manag and Lead People who Manage Technology. San Francisco, Jossey-Bass.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Goldratt1997" xreflabel="[Goldratt1997]"/>[Goldratt1997]: Goldratt, E. M. (1997), <emphasis>Critical chain</emphasis>, North River, Great Barrington, Ma.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Goldratt2004" xreflabel="[Goldratt2004]"/>[Goldratt2004]: Goldratt, E. M. &amp; Cox, J. (2004), <emphasis>The goal : a process of ongoing improvement</emphasis>, North River Press, Great Barrington, MA</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="GoldrattUK2016" xreflabel="[GoldrattUK2016]"/>[GoldrattUK2016]: Goldratt-UK (2016). "What is Critical Chain?". Retrieved 2/18/2016, from <link xl:href="http://www.goldratt.co.uk/resources/critical_chain">http://www.goldratt.co.uk/resources/critical_chain</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Goodwin2015" xreflabel="[Goodwin2015]"/>[Goodwin2015]: Goodwin, B. (2015). How CIOs can raise their 'IT clock speed' as pressure to innovate grows. ComputerWeekly.com. <link xl:href="http://www.computerweekly.com/feature/How-CIOs-can-ramp-up-their-IT-clock-speed-as-pressure-grows">http://www.computerweekly.com/feature/How-CIOs-can-ramp-up-their-IT-clock-speed-as-pressure-grows</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Gothelf2013" xreflabel="[Gothelf2013]"/>[Gothelf2013]: Jeff Gothelf, and Josh Seiden. 2013. Lean UX: Applying Lean Principles to Improve User Experience. Sebastopol, CA: O’Reilly Media, Inc.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Griffin2016" xreflabel="[Griffin2016]"/>[Griffin2016]: Griffin, Michael. 2016. How To Write a Policy Manual. www.templatezone.com. Accessed 2016-07-03. <link xl:href="http://www.templatezone.com/download-free-ebook/office-policy-manual-reference-guide.pdf">http://www.templatezone.com/download-free-ebook/office-policy-manual-reference-guide.pdf</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Gruver2013" xreflabel="[Gruver2013]"/>[Gruver2013]:	Gruver, G., M. Young, and P. Fulghum, 2013, <emphasis>A practical approach to large-scale Agile development : how HP transformed laserjet futuresmart firmware</emphasis> xxiv, 183 pages.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Guldentops2011" xreflabel="[Guldentops2011]"/>[Guldentops2011]:	Guldentops, Erik. 2011. “Where Have All the Control Objectives Gone? They Have Picked Them Every One.” ISACA Journal 4. <link xl:href="http://www.isaca.org/Journal/archives/2011/Volume-4/Documents/jpdf11v4-Where-Have-All.pdf">http://www.isaca.org/Journal/archives/2011/Volume-4/Documents/jpdf11v4-Where-Have-All.pdf</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Hammant2013" xreflabel="[Hammant2013]"/>[Hammant2013]:	Hammant, Paul. 2013. “Legacy Application Strangulation : Case Studies.” Paul Hammant’s Blog. <link xl:href="http://paulhammant.com/2013/07/14/legacy-application-strangulation-case-studies/">http://paulhammant.com/2013/07/14/legacy-application-strangulation-case-studies/</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Hammer1993" xreflabel="[Hammer1993]"/>[Hammer1993]: Hammer, Michael, and James Champy. 1993. Reengineering the Corporation : A Manifesto for Business Revolution. Brealey Publishing.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Harmon2003" xreflabel="[Harmon2003]"/>[Harmon2003]: Harmon, Paul. 2003. Business Process Change: A Manager’s Guide to Improving, Redesigning, and Automating Processes. Amsterdam: Elsevier.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Harnish2014" xreflabel="[Harnish2014]"/>[Harnish2014]: Harnish, V., 2014. Scaling Up: How a Few Companies Make It&#8230;&#8203;and Why the Rest Don’t (Rockefeller Habits 2.0) Gazelles.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Harpring2010" xreflabel="[Harpring2010]"/>[Harpring2010]: Harpring, Patricia. 2010. Introduction to Controlled Vocabularies: Terminology for Art, Architecture and Other Cultural Works. Los Angeles, CA: Getty Publications. <link xl:href="http://www.getty.edu/research/publications/electronic_publications/intro_controlled_vocab/index.html">http://www.getty.edu/research/publications/electronic_publications/intro_controlled_vocab/index.html</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Harris2013" xreflabel="[Harris2013]"/>[Harris2013]: Harris, S. (2013). CISSP Exam Guide (6th ed.). New York: McGraw-Hill Education.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Hay1996" xreflabel="[Hay1996]"/>[Hay1996]: Hay, D. C. (1996), <emphasis>Data model patterns : conventions of thought</emphasis>, Dorset House Pub., New York</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Hay2006" xreflabel="[Hay2006]"/>[Hay2006]: Hay, D. C. (2006), <emphasis>Data model patterns : a metadata map</emphasis>, Morgan Kaufmann ; Oxford : Elsevier Science [distributor], San Francisco, Calif.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Heller2016" xreflabel="[Heller2016]"/>[Heller2016]: Heller, Martha. 2016. “GE’s Jim Fowler on the CIO Role in the Digital Industrial Economy.” CIO Magazine Online. <link xl:href="http://www.cio.com/article/3048805/leadership-management/ges-jim-fowler-on-the-cio-role-in-the-digital-industrial-economy.html">http://www.cio.com/article/3048805/leadership-management/ges-jim-fowler-on-the-cio-role-in-the-digital-industrial-economy.html</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Hodges2016" xreflabel="[Hodges2016]"/>[Hodges2016]: Hodges, Matt. n.d. “12 Steps to Creating Landing Pages That Convert.” Inside Intercom. Accessed 2016-09-18.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Hohpe2003" xreflabel="[Hohpe2003]"/>[Hohpe2003]: Hohpe, G. &amp; Woolf, B. (2003), <emphasis>Enterprise integration patterns : designing, building, and deploying messaging solutions</emphasis>, Addison-Wesley, Boston</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Hope2001" xreflabel="[Hope2001]"/>[Hope2001]: Hope, Jeremy, and Robin Fraser. 2001. Beyond Budgeting Questions and Answers. <link xl:href="http://bbrt.org/product/bbrt-qa-white-paper-october-2001/">http://bbrt.org/product/bbrt-qa-white-paper-october-2001/</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Housman2015" xreflabel="[Housman2015]"/>[Housman2015]: Housman, Michael, and Dylan Minor. 2015. “Toxic Workers.” <link xl:href="http://www.hbs.edu/faculty/Publication">http://www.hbs.edu/faculty/Publication</link> Files/16-057_d45c0b4f-fa19-49de-8f1b-4b12fe054fea.pdf.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Hubbard2009" xreflabel="[Hubbard2009]"/>[Hubbard2009]: Hubbard, Douglas W. 2009. <emphasis>The Failure of Risk Management</emphasis>. Hoboken, New Jersey: John Wiley &amp; Sons, Inc.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Hubbard2010" xreflabel="[Hubbard2010]"/>[Hubbard2010]: Hubbard, D. (2010), <emphasis>How to Measure Anything: Finding the Value of Intangibles in Business</emphasis>, 2nd edition, Wiley, Boston</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Humble2011" xreflabel="[Humble2011]"/>[Humble2011]: Humble, J. &amp; Farley, D. (2011), <emphasis>Continuous delivery</emphasis>, Addison-Wesley, Boston</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Humble2013" xreflabel="[Humble2013]"/>[Humble2013]: Humble, Jez, Joanne Molesky, and Barry O’Reilly. 2013. Lean Enterprise. Book. The Lean Series. First edit.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Humphrey1989" xreflabel="[Humphrey1989]"/>[Humphrey1989]: Humphrey, Watts S. 1989. <emphasis>Managing the Software Process.</emphasis> Reading, Mass.: Addison-Wesley.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Huntzinger2007" xreflabel="[Huntzinger2007]"/>[Huntzinger2007]: Huntzinger, James R. 2007. <emphasis>Lean Cost Management: Accounting for Lean by Establishing Flow</emphasis>. Fort Lauderdale, Fl.: J. Ross Publishing.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="IAASB2013" xreflabel="[IAASB2013]"/>[IAASB2013]: International Auditing and Assurance Standards Board (IAASB). 2013. “ISAE 3000 (Revised), Assurance Engagements Other than Audits or Reviews of Historical Financial Information.” <link xl:href="https://www.ifac.org">https://www.ifac.org</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Inmon1992" xreflabel="[Inmon1992]"/>[Inmon1992]: Inmon, William H. 1992. Building the Data Warehouse. Wiley.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="IIBA2015" xreflabel="[IIBA2015]"/>[IIBA2015]: International Institute of Business Analysis (IIBA). 2015. BABOK v3: A Guide to the Business Analysis Body of Knowledge. Toronto, Canada: International Intitute of Business Analysis.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Isaacs2002" xreflabel="[Isaacs2002]"/>[Isaacs2002]: Isaacs, E., &amp; Walendowski, A. (2002). Designing from both sides of the screen: How Designers and Engineers Can Collaborate to Build Cooperative Technology. Indianapolis, Indiana: New Riders Publishing.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="ISACA2012" xreflabel="[ISACA2012]"/>[ISACA2012]: ISACA. 2012. <emphasis>COBIT 5: Enabling Processes.</emphasis></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="ISACA2012a" xreflabel="[ISACA2012a]"/>[ISACA2012a]:ISACA. 2012. <emphasis>COBIT 5: A Business Framework for the Governance and Management of Enterprise IT.</emphasis> Rolling Meadows, IL: ISACA.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="ISACA2012b" xreflabel="[ISACA2012b]"/>[ISACA2012b]:ISACA. (2012). <emphasis>COBIT 5 for Information Security</emphasis>. Rolling Meadows, IL: ISACA.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="ISACA2013" xreflabel="[ISACA2013]"/>[ISACA2013]:ISACA. (2013). <emphasis>COBIT 5 for Risk</emphasis>. (ISACA, Ed.). Rolling Meadows, IL.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="ISACA2013a" xreflabel="[ISACA2013a]"/>[ISACA2013a]:ISACA. (2013). <emphasis>COBIT 5 for Assurance</emphasis>. Rolling Meadows, IL: ISACA.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="ISACA2013b" xreflabel="[ISACA2013b]"/>[ISACA2013b]:ISACA. (2013). <emphasis>COBIT 5 Enabling Information</emphasis>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="ISACA2014" xreflabel="[ISACA2014]"/>[ISACA2014]: ISACA. 2014. ITAF: A Professional Practices Framework for IS Audit/ Assurance, 3rd Edition. Rolling Meadows, IL: ISACA.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="ISO2008" xreflabel="[ISO2008]"/>[ISO2008]: ISO/IEC. 2008. “ISO/IEC 38500 - Corporate Governance of Information Technology.”</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="ISO2009" xreflabel="[ISO2009]"/>[ISO2009]: ISO/IEC. 2009. “ISO 31000:2009 - Risk Management.”</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="ISO2011" xreflabel="[ISO2011]"/>[ISO2011]: ISO/IEC/IEEE. 2011. “ISO/IEC/IEEE 42010:2011 - Systems and Software Engineering&#8201;&#8212;&#8201;Architecture Description.” Vol. 2011. doi:10.1109/IEEESTD.2011.6129467.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Ivancsich2013" xreflabel="[Ivancsich2013]"/>[Ivancsich2013]: Ivancsich, F., Kruse, R. &amp; Sharrock, D., 2013. Why “Real Options” is the biggest fail of the Agile Community so far. www.agile42.com. Available at: <link xl:href="http://www.agile42.com/en/blog/2013/04/03/real-options-biggest-fail-agile/">http://www.agile42.com/en/blog/2013/04/03/real-options-biggest-fail-agile/</link> [Accessed December 28, 2016].</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Izrailevsky2011" xreflabel="[Izrailevsky2011]"/>[Izrailevsky2011]: Izrailevsky, Y., &amp; Tseitlin, A. (2011). The Netflix Simian Army. Retrieved May 4, 2016, from <link xl:href="http://techblog.netflix.com/2011/07/netflix-simian-army.html">http://techblog.netflix.com/2011/07/netflix-simian-army.html</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Kan2003" xreflabel="[Kan2003]"/>[Kan2003]: Kan, Stephen H. 1995. <emphasis>Metrics and Models in Software Quality Engineering</emphasis>. Second Edition. Reading, Mass.: Addison-Wesley.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Kaner1999" xreflabel="[Kaner1999]"/>[Kaner1999]: Kaner, C., Falk, J. L., &amp; Nguyen, H. Q. (1999). Testing computer software (2nd ed.). New York: Wiley.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Kaplan1992" xreflabel="[Kaplan1992]"/>[Kaplan1992]: Kaplan, Robert S., and David P. Norton. 1992. “The Balanced Scorecard - Measure That Drive Performance.” Harvard Business Review, no. January-February: 71–79. doi:00178012.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Keefer2006" xreflabel="[Keefer2006]"/>[Keefer2006]: Keefer, G. "The CMMI Considered Harmful For Quality Improvement And Supplier Selection."" 2006. <link xl:href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.130.4292&amp;rep=rep1&amp;type=pdf">http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.130.4292&amp;rep=rep1&amp;type=pdf</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Kennaley2010" xreflabel="[Kennaley2010]"/>[Kennaley2010]: Kennaley, M., 2010. <emphasis>SDLC 3.0: Beyond a Tacit Understanding of Agile: Towards the Next Generation of Software Engineering</emphasis> Fourth Medium Consulting.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="KARE2015" xreflabel="[KARE2015]"/>[KARE2015]: KARE 11 Staff. 2015. “Target Cuts 275 Positions, Most in Technology.” <link xl:href="http://www.kare11.com/news/target-cuts-275-positions-most-in-technology/105332991">http://www.kare11.com/news/target-cuts-275-positions-most-in-technology/105332991</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Kiley2001" xreflabel="[Kiley2001]"/>[Kiley2001]: Kiley, Kevin. 2001. “The Grand Quartier-General Imperial and the Corps d’Armee: Developments in the Military Art, 1795-1815.” Military Subjects: Organization, Strategy &amp; Tactics. <link xl:href="http://www.napoleon-series.org/military/organization/c_staff1.html">http://www.napoleon-series.org/military/organization/c_staff1.html</link>. Accessed 2016-10-04.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Kim2013" xreflabel="[Kim2013]"/>[Kim2013]: Kim, G.; Behr, K. &amp; Spafford, G. (2013), <emphasis>The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win</emphasis>, IT Revolution Press</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Klein2005" xreflabel="[Klein2005]"/>[Klein2005]: Klein, Gary, Paul J. Feltovich, and David D. Woods. 2005. “Common Ground and Coordination in Joint Activity.” In Organizational Simulation. Hoboken, New Jersey: John Wiley &amp; Sons, Inc. (Pre-press available at <link xl:href="http://jeffreymbradshaw.net/publications/Common_Ground_Single.pdf.">http://jeffreymbradshaw.net/publications/Common_Ground_Single.pdf.</link>)</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Knez2002" xreflabel="[Knez2002]"/>[Knez2002]: Knez, Mark, and Duncan Simester. 2002. “Making Across-the-Board Incentives Work.” Harvard Business Review (Feb 2002).</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Kniberg2011" xreflabel="[Kniberg2011]"/>[Kniberg2011]: Kniberg, H.; Beck, K. &amp; Keppler, K. (2011), <emphasis>Lean from the trenches : managing large-scale projects with Kanban</emphasis>, Pragmatic Bookshelf, Dallas, Tex.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Kniberg2012" xreflabel="[Kniberg2012]"/>[Kniberg2012]: Kniberg, H. &amp; Ivarsson, A., 2012. Scaling Agile @ Spotify with Tribes, Squads, Chapters &amp; Guilds. Available at: <link xl:href="https://dl.dropboxusercontent.com/u/1018963/Articles/SpotifyScaling.pdf">https://dl.dropboxusercontent.com/u/1018963/Articles/SpotifyScaling.pdf</link> [Accessed October 20, 2016].</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Kniberg2013" xreflabel="[Kniberg2013]"/>[Kniberg2013]: Kniberg, Henrik. 2013. “Culture Over Process.” Youtube. <link xl:href="https://www.youtube.com/watch?v=Rb0O0Lgs9zU">https://www.youtube.com/watch?v=Rb0O0Lgs9zU</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Kniberg2016" xreflabel="[Kniberg2016]"/>[Kniberg2016]: Kniberg, H., 2016. Spotify Rhythm – how we get aligned. Available at: <link xl:href="http://blog.crisp.se/2016/06/08/henrikkniberg/spotify-rhythm">http://blog.crisp.se/2016/06/08/henrikkniberg/spotify-rhythm</link> [Accessed August 31, 2016].</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Kohavi2009" xreflabel="[Kohavi2009]"/>[Kohavi2009]: Kohavi, Ronny, Thomas Crook, and Roger Longbotham. 2009. “Online Experimentation At Microsoft.” Online. <link xl:href="http://www.exp-platform.com/Documents/ExPThinkWeek2009Public.pdf">http://www.exp-platform.com/Documents/ExPThinkWeek2009Public.pdf</link>. Accessed 2016-09-22.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Kos2016" xreflabel="[Kos2016]"/>[Kos2016]: Kos, B., 2016. Kanban – Visualize your workflow - AgileLeanLife. agileleanlife.com. Available at: <link xl:href="https://agileleanlife.com/kanban-visualize-workflow/">https://agileleanlife.com/kanban-visualize-workflow/</link> [Accessed December 12, 2016].</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Koskela2002" xreflabel="[Koskela2002]"/>[Koskela2002]: Koskela, L.H., Gregory The underlying theory of project management is obsolete. 2002. <link xl:href="http://www.researchgate.net/publication/3229647_The_Underlying_Theory_of_Project_Management_Is_Obsolete">http://www.researchgate.net/publication/3229647_The_Underlying_Theory_of_Project_Management_Is_Obsolete</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Krafcik1988" xreflabel="[Krafcik1988]"/>[Krafcik1988]:Krafcik, J. (1988),"Triumph of the lean production system",  <emphasis>Sloan Management Review</emphasis>  30(1), 41-52.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Kurtz2003" xreflabel="[Kurtz2003]"/>[Kurtz2003]: Kurtz, C.F. &amp; Snowden, D.J., 2003. The new dynamics of strategy: Sense-making in a complex and complicated world. IBM Systems Journal, 42(3), pp.462–483. Available at: <link xl:href="http://ieeexplore.ieee.org/document/5386804/">http://ieeexplore.ieee.org/document/5386804/</link> [Accessed December 22, 2016].</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Ladas2009" xreflabel="[Ladas2009]"/>[Ladas2009]: Ladas, C. (2009). <emphasis>Scrumban</emphasis>, Modus Cooperandi Press (January 12, 2009).</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Landis2011" xreflabel="[Landis2011]"/>[Landis2011]: Sean Landis. 2011. Agile Hiring. Artima, Inc.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Lane2012" xreflabel="[Lane2012]"/>[Lane2012]: Lane, K., 2012. The Secret to Amazons Success Internal APIs. The API Evangelist. Available at: <link xl:href="http://apievangelist.com/2012/01/12/the-secret-to-amazons-success-internal-apis/">http://apievangelist.com/2012/01/12/the-secret-to-amazons-success-internal-apis/</link> [Accessed December 9, 2016].</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Laney2001" xreflabel="[Laney2001]"/>[Laney2001]: Laney, Douglas. 2001. “3D Data Management: Controlling Data Volume, Velocity, and Variety.” <link xl:href="http://blogs.gartner.com/doug-laney/files/2012/01/ad949-3D-Data-Management-Controlling-Data-Volume-Velocity-and-Variety.pdf">http://blogs.gartner.com/doug-laney/files/2012/01/ad949-3D-Data-Management-Controlling-Data-Volume-Velocity-and-Variety.pdf</link>. Accessed 2016-09-05.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Larman2002" xreflabel="[Larman2002]"/>[Larman2002]: Larman, C. (2002), <emphasis>Applying UML and patterns : an introduction to object-oriented analysis and design and the unified process</emphasis>, Prentice Hall PTR, Upper Saddle River, NJ</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Larman2009" xreflabel="[Larman2009]"/>[Larman2009]: Larman, C. &amp; Bodde, V. (2009), <emphasis>Scaling Lean &amp; Agile Developments: Thinking and Organizational Tools for Large-Scale Scrum</emphasis>, Addison-Wesley, Upper Saddle River, NJ</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Leffingwell2010" xreflabel="[Leffingwell2010]"/>[Leffingwell2010]: Leffingwell, D. (2010), <emphasis>Agile Software Requirements: Lean Requirements Practices for Teams, Programs, and the Enterprise</emphasis>, Pearson Education</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Liker2004" xreflabel="[Liker2004]"/>[Liker2004]: Liker, J. K. (2004), <emphasis>The Toyota way : 14 management principles from the world&#8217;s greatest manufacturer</emphasis>, McGraw-Hill, New York</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Limoncelli2014" xreflabel="[Limoncelli2014]"/>[Limoncelli2014]: Limoncelli, T. A.; Chalup, S. R. &amp; Hogan, C. J. (2014), <emphasis>The Practice of Cloud System Administration: Designing and Operating Large Distributed Systems, Vol. 2</emphasis>,  Pearson Education</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Linden2006" xreflabel="[Linden2006]"/>[Linden2006]: Linden, G., 2006. Early Amazon: Shopping cart recommendations. Geeking with Greg. Available at: <link xl:href="http://glinden.blogspot.com/2006/04/early-amazon-shopping-cart.html">http://glinden.blogspot.com/2006/04/early-amazon-shopping-cart.html</link> [Accessed November 26, 2016].</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Lins2016" xreflabel="[Lins2016]"/>[Lins2016]: Lins, S., Grochol, P., Schneider, S., &amp; Sunyaev, A. (2016). Dynamic Certification of Cloud Services: Trust, but Verify! IEEE Security &amp; Privacy, 14(2), 66–71. <link xl:href="http://doi.org/10.1109/MSP.2016.26">http://doi.org/10.1109/MSP.2016.26</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Lockwood2009" xreflabel="[Lockwood2009]"/>[Lockwood2009]: Lockwood, Thomas. 2009. Design Thinking: Integrating Innovation, Customer Experience, and Brand Value. New York, N.Y.: Allworth Press - Allworth Communications.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Loeliger2009" xreflabel="[Loeliger2009]"/>[Loeliger2009]: Loeliger, J. (2009). <emphasis>Version control with Git</emphasis>. Beijing ; Sebastopol, CA, O&#8217;Reilly.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Loftus2006" xreflabel="[Loftus2006]"/>[Loftus2006]: Loftus, J. (2006). Open source IP case puts spotlight on patents. Retrieved November 30, 2016, from <link xl:href="http://searchenterpriselinux.techtarget.com/news/1198160/Open-source-IP-case-puts-spotlight-on-patents">http://searchenterpriselinux.techtarget.com/news/1198160/Open-source-IP-case-puts-spotlight-on-patents</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Lucas2014" xreflabel="[Lucas2014]"/>[Lucas2014]:Lucas, S. (2014). Nordstrom’s awesome employee handbook is a myth. Retrieved June 29, 2016, from <link xl:href="http://www.cbsnews.com/news/nordstroms-awesome-employee-handbook-is-a-myth/">http://www.cbsnews.com/news/nordstroms-awesome-employee-handbook-is-a-myth/</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Madachy2008" xreflabel="[Madachy2008]"/>[Madachy2008]: Madachy, R. J. (2008). <emphasis>Software process dynamics.</emphasis> Hoboken, NJ Piscataway, NJ, Wiley; IEEE Press.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Malan2005" xreflabel="[Malan2005]"/>[Malan2005]: Malan, Ruth, and Dana Bredemeyer. 2005. “Enterprise Architecture as Strategic Differentiator.” Cutter Consortium Enterprise Architecture Advisory Service Executive Report 8 (6).</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Malan2010" xreflabel="[Malan2010]"/>[Malan2010]: Malan, Ruth, and Dana Bredemeyer. 2010. “The Art of Change: Fractal and Emergent.” Cutter Consortium Enterprise Architecture Advisory Service Executive Report 13 (5).</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Malone1994" xreflabel="[Malone1994]"/>[Malone1994]: Malone, T.W. &amp; Crowston, K., 1994. The Interdisciplinary Study of Coordination. ACM Computing Surveys, 26(1).</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Management2016" xreflabel="[Management2016]"/>[Management2016]: Management Study Guide, 2016. Types of Teams - Permanent Teams, Temporary Teams, Task Force, Virtual Teams etc. Available at: <link xl:href="http://www.managementstudyguide.com/types-of-teams.htm">http://www.managementstudyguide.com/types-of-teams.htm</link> [Accessed November 28, 2016].</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Marks2014" xreflabel="[Marks2014]"/>[Marks2014]: Marks, Howard. 2014. “Code Spaces: A Lesson In Cloud Backup.” Network Computing. <link xl:href="http://www.networkcomputing.com/cloud-infrastructure/code-spaces-lesson-cloud-backup/314805651">http://www.networkcomputing.com/cloud-infrastructure/code-spaces-lesson-cloud-backup/314805651</link>. Accessed 2016-09-28.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Marquet2013" xreflabel="[Marquet2013]"/>[Marquet2013]: Marquet, D.L., 2013. Turn the Ship Around!: A True Story of Turning Followers into Leaders: L. David Marquet, Stephen R. Covey: 8601411904479: Amazon.com: Books, Portfolio.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Matts2007" xreflabel="[Matts2007]"/>[Matts2007]: Matts, C. &amp; Maassen, O., 2007. “Real Options” Underlie Agile Practices. InfoQ. Available at: <link xl:href="https://www.infoq.com/articles/real-options-enhance-agility">https://www.infoq.com/articles/real-options-enhance-agility</link> [Accessed December 28, 2016].</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="McAdam2003" xreflabel="[McAdam2003]"/>[McAdam2003]: McAdam, John. 2003. “Information Technology Measurements.” In <emphasis>Chargeback and IT Cost Accounting</emphasis>, ed. Terence A Quinlan. Santa Barbara, CA: IT Financial Management Association, 90–91.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="McCrory2010" xreflabel="[McCrory2010]"/>[McCrory2010]: McCrory, Dan. 2010. “Data Gravity – in the Clouds.” McCrory’s Blog. <link xl:href="https://blog.mccrory.me/2010/12/07/data-gravity-in-the-clouds/">https://blog.mccrory.me/2010/12/07/data-gravity-in-the-clouds/</link>. Accessed 2016-09-01.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Meyer2013" xreflabel="[Meyer2013]"/>[Meyer2013]: Meyer, N. Dean. 2013. Internal Market Economics: Practical Resource-Governance Processes Based on Principles We All Believe in. Dansbury, CT: NDMA Publishing.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Millotat1992" xreflabel="[Millotat1992]"/>[Millotat1992]: Millotat, Christian. 1992. “Understanding the Prussian-German General Staff System.” Carlisle Barracks, PA. <link xl:href="http://www.dtic.mil/dtic/tr/fulltext/u2/a249255.pdf">http://www.dtic.mil/dtic/tr/fulltext/u2/a249255.pdf</link>. Accessed 2016-10-04,</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Minick2012" xreflabel="[Minick2012]"/>[Minick2012]: Minick, E. (2012), "A DevOps Toolchain: There and back again",  Slideshare.net, <link xl:href="http://www.slideshare.net/Urbancode/building-devops-toolchain">http://www.slideshare.net/Urbancode/building-devops-toolchain</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Mintzberg1983" xreflabel="[Mintzberg1983]"/>[Mintzberg1983]: Mintzberg, H. (1983). <emphasis>Structure in fives : designing effective organizations. Englewood Cliffs, N.J., Prentice-Hall.</emphasis></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Moeller2013" xreflabel="[Moeller2013]"/>[Moeller2013]: Moeller, Robert R. 2013. Executive’s Guide to IT Governance: Improving Systems Processes with Service Management, COBIT, and ITIL. Hoboken, New Jersey: John Wiley &amp; Sons, Inc.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Moody2009" xreflabel="[Moody2009]"/>[Moody2009]: Moody, Dan. 2009. “The ‘Physics’ of Notations: Towards a Scientific Basis for Constructing Visual Notations in Software Engineering.” Journal Article. IEEE Transactions on Software Engineering 35 (5): 756–78.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Moore2014" xreflabel="[Moore2014]"/>[Moore2014]: Moore, Geoffrey. 2014. Crossing the Chasm: Marketing and Selling Disruptive Products to Mainstream Customers. 3rd ed. New York, N.Y.: HarperCollins Publishers, Inc.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Morgenthal2016" xreflabel="[Morgenthal2016]"/>[Morgenthal2016]: Morgenthal, J. (2016). A Reality Check on “Everyone’s Moving Everything To The Cloud” | The Tech Evangelist. Retrieved November 30, 2016, from <link xl:href="http://jpmorgenthal.com/2016/08/24/a-reality-check-on-everyones-moving-everything-to-the-cloud/">http://jpmorgenthal.com/2016/08/24/a-reality-check-on-everyones-moving-everything-to-the-cloud/</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Morris2016" xreflabel="[Morris2016]"/>[Morris2016]: Morris, Kief. 2016. Infrastructure as Code: Managing Servers in the Cloud. Sebastopol, CA, CA: O’Reilly Media, Inc.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Munroe2013" xreflabel="[Munroe2013]"/>[Munroe2013]: Munroe, Randall. 2013. “FedEx Bandwidth.” What If? <link xl:href="http://what-if.xkcd.com/31/">http://what-if.xkcd.com/31/</link>. Accessed 2016-09-01</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Murphy2007" xreflabel="[Murphy2007]"/>[Murphy2007]: Murphy, Jacques. 2007. “Where Should Product Management Report?” Pragmaticmarketing.com. <link xl:href="http://pragmaticmarketing.com/resources/where-should-product-management-report">http://pragmaticmarketing.com/resources/where-should-product-management-report</link>. Accessed 2016-09-14.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Narayam2015" xreflabel="[Narayam2015]"/>[Narayam2015]: Narayam, S. (2015). Agile IT organization design: for digital transformation and continuous delivery, Pearson Education Inc.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Narayam2015a" xreflabel="[Narayam2015a]"/>[Narayam2015a]: Narayam, Sriram. 2015. “Scaling Agile: Problems and Solutions | ThoughtWorks.” Thoughtworks Blogs. <link xl:href="https://www.thoughtworks.com/insights/blog/scaling-agile-problems-and-solutions">https://www.thoughtworks.com/insights/blog/scaling-agile-problems-and-solutions</link>. Accessed 2016-11-16.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="NationalCourt2016" xreflabel="[NationalCourt2016]"/>[NationalCourt2016]: The National Court Rules Committee. 2016. Federal Rules of Civil Procedure. <link xl:href="https://www.federalrulesofcivilprocedure.org/">https://www.federalrulesofcivilprocedure.org/</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="NIST1993" xreflabel="[NIST1993]"/>[NIST1993]: NIST. 1993. “Integration Definition for Function Modeling (IDEF0).” <link xl:href="http://www.idef.com/idefo-function_modeling_method/">http://www.idef.com/idefo-function_modeling_method/</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Nolan1974" xreflabel="[Nolan1974]"/>[Nolan1974]: Nolan, R.L.E., 1974. Managing the Data resource function, New York: West Publishing Co.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Nordstrom2015" xreflabel="[Nordstrom2015]"/>[Nordstrom2015]: Nordstrom, Inc. 2015. “Code of Business Conduct and Ethics.” <link xl:href="http://investor.nordstrom.com/phoenix.zhtml?c=93295&amp;p=irol-govconduct">http://investor.nordstrom.com/phoenix.zhtml?c=93295&amp;p=irol-govconduct</link>. Accessed 2016-06-29.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Nygard2007" xreflabel="[Nygard2007]"/>[Nygard2007]: Nygard, M.T., 2007. <emphasis>Release it! : design and deploy production-ready software.</emphasis> The pragmatic programmers, Raleigh, N.C.: Pragmatic Bookshelf. xvi, 350 p.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="OASIS2013" xreflabel="[OASIS2013]"/>[OASIS2013]: OASIS (2013), "Topology and Orchestration Specification for Cloud Applications Version 1.0 (TOSCA)", <link xl:href="http://docs.oasis-open.org/tosca/TOSCA/v1.0/os/TOSCA-v1.0-os.html">http://docs.oasis-open.org/tosca/TOSCA/v1.0/os/TOSCA-v1.0-os.html</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Ohno1988" xreflabel="[Ohno1988]"/>[Ohno1988]: Ohno, T. (1988), <emphasis>Toyota production system : beyond large-scale production</emphasis>, Productivity Press, Cambridge, Mass.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Olson2013" xreflabel="[Olson2013]"/>[Olson2013]: Olson, Elizabeth. 2013. “Microsoft, GE, and the Futility of Ranking Employees.” Fortune (November 18, 2013). <link xl:href="http://fortune.com/2013/11/18/microsoft-ge-and-the-futility-of-ranking-employees/">http://fortune.com/2013/11/18/microsoft-ge-and-the-futility-of-ranking-employees/</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Opelt2013" xreflabel="[Opelt2013]"/>[Opelt2013]:Opelt, A., B. Gloger, et al. (2013). <emphasis>Agile contracts : creating and managing successful projects with Scrum.</emphasis></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Open2009" xreflabel="[Open2009]"/>[Open2009]: The Open Group. (2015). The Open Group Architectural Framework (TOGAF), Version 9 (Report). Open Group, The. Retrieved from <link xl:href="http://www.opengroup.org/togaf/">http://www.opengroup.org/togaf/</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Open2012" xreflabel="[Open2012]"/>[Open2012]: Open Group, The. 2012. “Archimate 2.1 Specification.” Standard. <link xl:href="http://pubs.opengroup.org/architecture/archimate2-doc/toc.html">http://pubs.opengroup.org/architecture/archimate2-doc/toc.html</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Open2015" xreflabel="[Open2015]"/>[Open2015]: Open Group, The. 2015. “IT4IT Standard.” Open Group, The. <link xl:href="http://www.opengroup.org/it4it/">http://www.opengroup.org/it4it/</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Osterwalder2010" xreflabel="[Osterwalder2010]"/>[Osterwalder2010]: Osterwalder, Alexander, and Yves Pigneur. 2010. <emphasis>Business Model Generation</emphasis>. Wiley, 280. <link xl:href="http://www.businessmodelgeneration.com/canvas">http://www.businessmodelgeneration.com/canvas</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Osterwalder2014" xreflabel="[Osterwalder2014]"/>[Osterwalder2014]: Osterwalder, Alexander, Yves Pigneur, Greg Bernarda, and Alan Smith. 2014. <emphasis>Value Proposition Design</emphasis>. Hoboken, N.J.: John Wiley &amp; Sons, Inc.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Padua2015" xreflabel="[Padua2015]"/>[Padua2015]: Padua, Sydney. 2015. The Thrilling Adventures of Lovelace and Babbage: The (Mostly) True Story of the First Computer. New York: Random House.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Patton2014" xreflabel="[Patton2014]"/>[Patton2014]: Patton, J., 2014. <emphasis>User story mapping : discover the whole story, build the right product.</emphasis> First edition. ed. xliv, 276 pages.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Peck2016" xreflabel="[Peck2016]"/>[Peck2016]: Peck, Claude. 2016. “U Expert Tells How ‘Design Thinking’ Can Solve Society’s Big Problems.” Minnesota Star Tribune, July 16.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Pichler2010" xreflabel="[Pichler2010]"/>[Pichler2010]: Pichler, R., 2010. Agile Product Management with Scrum: Creating Products that Customers Love, Boston, MA: Addison-Wesley - Pearson Education.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="PMI2013" xreflabel="[PMI2013]"/>[PMI2013]: Project Management Institute, 2013. A guide to the project management body of knowledge (PMBOK guide). Fifth edition.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Poppendieck2007" xreflabel="[Poppendieck2007]"/>[Poppendieck2007]: Poppendieck, M. &amp; Poppendieck, T. D. (2007), <emphasis>Implementing lean software development : from concept to cash</emphasis>, Addison-Wesley, London</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Poppendieck2003" xreflabel="[Poppendieck2003]"/>[Poppendieck2003]: Poppendieck, M. &amp; Poppendieck, T. D. (2003), <emphasis>Lean Software Development: An Agile Toolkit</emphasis>, Addison Wesley, Boston</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Porter1998" xreflabel="[Porter1998]"/>[Porter1998]:Porter, Michael E. 1998. <emphasis>Competitive Advantage: Creating and Sustaining Superior Performance : With a New Introduction.</emphasis> 1st Free P. New York: Free Press. <link xl:href="http://www.loc.gov/catdir/bios/simon051/98009581.html">http://www.loc.gov/catdir/bios/simon051/98009581.html</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Portny2013" xreflabel="[Portny2013]"/>[Portny2013]: Portny, S. (2013). Project Management for Dummies. Hoboken, New Jersey, John Wiley &amp; Sons.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Puppet2014" xreflabel="[Puppet2014]"/>[Puppet2014]: Puppet Labs. 2014. “2014 State of DevOps Report.”</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Puppet2015" xreflabel="[Puppet2015]"/>[Puppet2015]: Puppet Labs. 2015. “2015 State of DevOps Report.”</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Quinlan2003" xreflabel="[Quinlan2003]"/>[Quinlan2003]: Quinlan, Terence A. 2003. <emphasis>Chargeback and IT Cost Accounting</emphasis>. ed. Terence A Quinlan. Santa Barbara, CA: IT Financial Management Association.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Racynski2008" xreflabel="[Racynski2008]"/>[Racynski2008]: Raczynski, Bob, and Bill Curtis. 2008. “Software Data Violate SPC’s Underlying Assumptions.” IEEE Software 25 (3): 49–51.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Ran2001" xreflabel="[Ran2001]"/>[Ran2001]: Ran, Alexander. 2001. “Fundamental Concepts for Practical Software Architecture.” In Proceedings of the 8th European Software Engineering Conference Held Jointly with 9th ACM SIGSOFT International Symposium on Foundations of Software Engineering. ACM. doi:10.1145/503209.503269.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Reifer2002" xreflabel="[Reifer2002]"/>[Reifer2002]: Reifer, D.J., 2002. Making the software business case : improvement by the numbers, Boston: Addison Wesley.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Reinertsen1997" xreflabel="[Reinertsen1997]"/>[Reinertsen1997]: Reinertsen, D. G. (1997), <emphasis>Managing the design factory: a product developer&#8217;s toolkit</emphasis>, Free Press, New York ; London</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Reinertsen2009" xreflabel="[Reinertsen2009]"/>[Reinertsen2009]: Reinertsen, D. G. (2009), <emphasis>The principles of product development flow: second generation lean product development</emphasis>, Celeritas, Redondo Beach, Calif.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Richardson2010" xreflabel="[Richardson2010]"/>[Richardson2010]: Richardson, G.L., 2010. Project Management Theory and Practice, Boca Raton: Auerbach Publications, Taylor &amp; Francis Group.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Ries2011" xreflabel="[Ries2011]"/>[Ries2011]: Ries, E. (2011), <emphasis>The lean startup : how today&#8217;s entrepreneurs use continuous innovation to create radically successful businesses</emphasis>, Crown Business, New York</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Rigby2016" xreflabel="[Rigby2016]"/>[Rigby2016]: Rigby, Darrell K., Jeff Sutherland, and Hirotaka Takeuchi. 2016. “Embracing Agile.” Harvard Business Review, no. May. <link xl:href="https://hbr.org/2016/05/embracing-agile">https://hbr.org/2016/05/embracing-agile</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Rock2016" xreflabel="[Rock2016]"/>[Rock2016]: Rock, David; Grant, H., 2016. Why Diverse Teams Are Smarter. Harvard Business Review. Available at: <link xl:href="https://hbr.org/2016/11/why-diverse-teams-are-smarter">https://hbr.org/2016/11/why-diverse-teams-are-smarter</link> [Accessed November 28, 2016].</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Rogers2003" xreflabel="[Rogers2003]"/>[Rogers2003]: Rogers, Everett. 2003. Diffusion of Innovations. 5th ed. New York, N.Y.: Free Press - Simon &amp; Schuster, Inc.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Ross2006" xreflabel="[Ross2006]"/>[Ross2006]: Ross, Jeanne W, Peter Weill, and David Robertson. 2006. Enterprise Architecture as Strategy : Creating a Foundation for Business Execution. Book. Boston, Mass.: Harvard Business School Press. Table of contents <link xl:href="http://www.loc.gov/catdir/toc/ecip0611/2006010226.html">http://www.loc.gov/catdir/toc/ecip0611/2006010226.html</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Root1916" xreflabel="[Root1916]"/>[Root1916]: Root, Elihu. 1916. The Military and Colonial Policy of the United States: Addresses and Reports. Cambridge, Mass.: Harvard University Press. <link xl:href="http://www.shsu.edu/~his_ncp/RootGS.html">http://www.shsu.edu/~his_ncp/RootGS.html</link>. Accessed 2010-10-4.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Rother2003" xreflabel="[Rother2003]"/>[Rother2003]: Rother, Mike, and John Shook. 2003. “Learning to See: Value Stream Mapping to Add Value and Eliminate MUDA [Spiral-Bound].” Lean Enterprise Institute. doi:10.1109/6.490058.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Rother2010" xreflabel="[Rother2010]"/>[Rother2010]: Rother, M. (2010). <emphasis>Toyota kata: managing people for improvement, adaptiveness, and superior results</emphasis>. New York, McGraw Hill.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Rothman2011" xreflabel="[Rothman2011]"/>[Rothman2011]: Rothman, J., 2011. Not Ready for Agile? Start Your Journey with Release Trains. Stickyminds.com. Available at: <link xl:href="https://www.stickyminds.com/article/not-ready-agile-start-your-journey-release-trains?page=0%2C0">https://www.stickyminds.com/article/not-ready-agile-start-your-journey-release-trains?page=0%2C0</link> [Accessed December 21, 2016].</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Rothman2016" xreflabel="[Rothman2016]"/>[Rothman2016]: Rothman, J. (2016). Agile and Lean Program Management: Scaling Collaboration Across the Organization. Practical Ink.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Royce1970" xreflabel="[Royce1970]"/>[Royce1970]: Royce, W. "Managing the Development of Large Software Systems."" in Proc. IEEE WESCON. 1970. Los Angeles: IEEE.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Rozovsky2015" xreflabel="[Rozovsky2015]"/>[Rozovsky2015]: Rozovsky, J. (2015). The five keys to a successful Google team. re:Work. Retrieved from <link xl:href="https://rework.withgoogle.com/blog/five-keys-to-a-successful-google-team/">https://rework.withgoogle.com/blog/five-keys-to-a-successful-google-team/</link>. Accessed 2016-09-21.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Rubin2012" xreflabel="[Rubin2012]"/>[Rubin2012]: Rubin, K.S., 2012. <emphasis>Essential Scrum : a practical guide to the most popular agile process</emphasis>, Upper Saddle River, NJ: Addison-Wesley. xliii, 452 p.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Rummler1995" xreflabel="[Rummler1995]"/>[Rummler1995]: Rummler, Geary A, and Alan P Brache. 1995. <emphasis>Improving Performance: How to Manage the White Space on the Organization Chart.</emphasis> The Jossey-Bass Management Series. 2nd ed. San Francisco, CA: Jossey-Bass. <link xl:href="http://www.loc.gov/catdir/toc/wiley041/94048105.html">http://www.loc.gov/catdir/toc/wiley041/94048105.html</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="SAFE2016" xreflabel="[SAFE2016]"/>[SAFE2016]:Scaled Agile Framework, 2016. Guidance – Features and Components – Scaled Agile Framework. Available at: <link xl:href="http://www.scaledagileframework.com/features-and-components/">http://www.scaledagileframework.com/features-and-components/</link> [Accessed November 26, 2016].</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="SAFE2016a" xreflabel="[SAFE2016a]"/>[SAFE2016a]:Scaled Agile Framework, 2016. Agile Release Train – Scaled Agile Framework. <link xl:href="http://www.scaledagileframework.com/">http://www.scaledagileframework.com/</link>. Available at: <link xl:href="http://www.scaledagileframework.com/agile-release-train/">http://www.scaledagileframework.com/agile-release-train/</link> [Accessed December 21, 2016].</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Schlarman2008" xreflabel="[Schlarman2008]"/>[Schlarman2008]: Schlarman, Steve. 2016. “Developing Effective Policy, Procedure, and Standards.” Www.disaster-Resource.com. Accessed June 30 2016. <link xl:href="http://www.disaster-resource.com/articles/07p_106.shtml">http://www.disaster-resource.com/articles/07p_106.shtml</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Schneider1999" xreflabel="[Schneider1999]"/>[Schneider1999]: Schneider, W.E., 1999. The reengineering alternative : a plan for making your current culture work, McGraw-Hill.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Schwaber2002" xreflabel="[Schwaber2002]"/>[Schwaber2002]: Schwaber, Ken. 2002. Agile Software Development with Scrum. Upper Saddle River, N.J.: Prentice Hall.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Schwaber2007" xreflabel="[Schwaber2007]"/>[Schwaber2007]: Schwaber, Ken. 2007. <emphasis>The Enterprise and Scrum.</emphasis> Redmond, Wash: Microsoft Press.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Schwaber2013" xreflabel="[Schwaber2013]"/>[Schwaber2013]: Schwaber, K. (2013). unSAFE at any speed. URL: <link xl:href="https://kenschwaber.wordpress.com/2013/08/06/unsafe-at-any-speed/">https://kenschwaber.wordpress.com/2013/08/06/unsafe-at-any-speed/</link>. Ken Schwaber&#8217;s Blog: Telling It Like It Is. 2016.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Scotland2010" xreflabel="[Scotland2010]"/>[Scotland2010]: Scotland, K. (2010), "Defining the Last Responsible Moment", <link xl:href="http://availagility.co.uk/2010/04/06/defining-the-last-responsible-moment">http://availagility.co.uk/2010/04/06/defining-the-last-responsible-moment</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Sells1957" xreflabel="[Sells1957]"/>[Sells1957]: Sells, S. B., Fixott., Richard S. (1957 ). "Evaluation of Research on Effects of Visual Training on Visual Functions." <emphasis>Am J Ophthal</emphasis> 44(2): 230-236.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Shannon1949" xreflabel="[Shannon1949]"/>[Shannon1949]:Shannon, Claude Elwood, and Warren Weaver. 1949. The Mathematical Theory of Communication. Urbana,: University of Illinois Press.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Sharp2009" xreflabel="[Sharp2009]"/>[Sharp2009]: Sharp, A. and P. McDermott (2009). <emphasis>Workflow modeling: tools for process improvement and applications development.</emphasis> Second edition. Boston, Artech House.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Shortland2012" xreflabel="[Shortland2012]"/>[Shortland2012]: Shortland, A. &amp; Lei, M. (2012), "Using Rundeck and Chef to build DevOps Toolchains", <link xl:href="http://dev2ops.org/2012/05/using-rundeck-and-chef-to-build-devops-toolchains-at-chefcon/">http://dev2ops.org/2012/05/using-rundeck-and-chef-to-build-devops-toolchains-at-chefcon/</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Sigler2014" xreflabel="[Sigler2014]"/>[Sigler2014]: Sigler, Eric. 2014. “So, What Is ChatOps? And How Do I Get Started?” Pagerduty.Com. <link xl:href="https://www.pagerduty.com/blog/what-is-chatops/">https://www.pagerduty.com/blog/what-is-chatops/</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Silverston2001" xreflabel="[Silverston2001]"/>[Silverston2001]:Silverston, Len. 2001. The Data Model Resource Book Vol 1: A Library of Universal Data Models for All Enterprises. Book. Rev. ed. New York ; Chichester: Wiley.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Silverston2001a" xreflabel="[Silverston2001a]"/>[Silverston2001a]:Silverston, Len. 2001a. The Data Model Resource Book Vol 2: A Library of Universal Data Models by Industry Types. Book. Rev. ed. New York ; Chichester: Wiley.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Silverston2008" xreflabel="[Silverston2008]"/>[Silverston2008]: Silverston, L. (2008), <emphasis>The data model resource book Vol 3: Universal patterns for data modeling</emphasis>, Wiley, Indianapolis, Ind.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Sirkia2013" xreflabel="[Sirkia2013]"/>[Sirkia2013]: Sirkiä, Rami, and Maarit Laanti. 2013. Lean and Agile Financial Planning. <link xl:href="http://www.scaledagileframework.com/original-whitepaper-lean-agile-financial-planning-with-safe/">http://www.scaledagileframework.com/original-whitepaper-lean-agile-financial-planning-with-safe/</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Simon1988" xreflabel="[Simon1988]"/>[Simon1988]: Simon, Herbert A. 1988. “The Science of Design: Creating the Artificial.” Design Issues 4 (1/2). <link xl:href="http://www.jstor.org/stable/1511391">http://www.jstor.org/stable/1511391</link>.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Sims2012" xreflabel="[Sims2012]"/>[Sims2012]: 	Sims, C.J., Hillary Louise, 2012. <emphasis>Scrum: a Breathtakingly Brief and Agile Introduction</emphasis>. Dymaxicon.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Smith1991" xreflabel="[Smith1991]"/>[Smith1991]: Smith, P. G. and D. G. Reinertsen (1991). <emphasis>Developing products in half the time : new rules, new tools</emphasis> New York ; London, Van Nostrand Reinhold.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Smith1998" xreflabel="[Smith1998]"/>[Smith1998]: Smith, P. G. and D. G. Reinertsen (1998). <emphasis>Developing products in half the time : new rules, new tools (2nd edition)</emphasis> New York ; London, Van Nostrand Reinhold.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Strode2012" xreflabel="[Strode2012]"/>[Strode2012]: Strode, D.E. et al., 2012. Coordination in co-located agile software development projects. The Journal of Systems and Software, 85, pp.1222–1238. Available at: <link xl:href="https://pdfs.semanticscholar.org/7cc7/2fdff2c46c94fbfaccedbfb01843c529df84.pdf">https://pdfs.semanticscholar.org/7cc7/2fdff2c46c94fbfaccedbfb01843c529df84.pdf</link> [Accessed December 19, 2016].</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Strode2012a" xreflabel="[Strode2012a]"/>[Strode2012a]: Strode, D. E., &amp; Huff, S. L. (2012). A Taxonomy of Dependencies in Agile Software Development. In 23rd Australasian Conference on Information Systems.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Spinellis2015" xreflabel="[Spinellis2015]"/>[Spinellis2015]: Spinellis, D. (2015). "Extending Our Field&#8217;s Reach." <emphasis>IEEE Software:</emphasis> 4-6. December 2015.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Sterman2000" xreflabel="[Sterman2000]"/>[Sterman2000]: 	Sterman, J., 2000. <emphasis>Business dynamics : systems thinking and modeling for a complex world</emphasis> Boston: Irwin/McGraw-Hill. xxvi, 982 p.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Stroustrup2010" xreflabel="[Stroustrup2010]"/>[Stroustrup2010]: 	Stroustrup, B., 2010. Viewpoint: What should we teach new software developers? Why? Communications of the ACM, 53(1), p.40. Available at: <link xl:href="http://portal.acm.org/citation.cfm?doid=1629175.1629192">http://portal.acm.org/citation.cfm?doid=1629175.1629192</link> [Accessed November 19, 2016].</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Sussna2015" xreflabel="[Sussna2015]"/>[Sussna2015]: 	Sussna, Jeff. 2015. Designing Delivery: Rethinking IT in the Digital Service Economy. O’Relly Publications.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Sutherland2014" xreflabel="[Sutherland2014]"/>[Sutherland2014]: Sutherland, J.V., 2014. <emphasis>Scrum: the art of doing twice the work in half the time</emphasis>. Crown Business. First Edition. ed. viii, 248 pages.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Sutton2014" xreflabel="[Sutton2014]"/>[Sutton2014]: Sutton, Robert I.;, and Huggy Rao. 2014. <emphasis>Scaling up Excellence: Getting to More without Settling for Less</emphasis>. Crown Business/Random House.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Thompson2014" xreflabel="[Thompson2014]"/>[Thompson2014]: Thompson, L. (2014), "Hitchhikers Guide to OpenStack Toolchains", <link xl:href="https://www.openstack.org/assets/presentation-media/Hitchhikers-Guide-to-OpenStack-Toolchains.pdf">https://www.openstack.org/assets/presentation-media/Hitchhikers-Guide-to-OpenStack-Toolchains.pdf</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Tidwell2006" xreflabel="[Tidwell2006]"/>[Tidwell2006]: Tidwell, J. (2006). Designing Interfaces. Sebastopol, CA: O’Reilly Media, Inc.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Tikka2013" xreflabel="[Tikka2013]"/>[Tikka2013]: Tikka, A., 2013. "Coordination Chaos." Slideshare deck. <link xl:href="http://www.slideshare.net/gosei/coordination-chaos?related=1">http://www.slideshare.net/gosei/coordination-chaos?related=1</link> Accessed: 2015.10.25.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Traynor2016" xreflabel="[Traynor2016]"/>[Traynor2016]: Traynor, Des. 2016. “Focus on the Job, Not the Customer.” Inside Intercom. <link xl:href="https://blog.intercom.com/when-personas-fail-you/">https://blog.intercom.com/when-personas-fail-you/</link>. Accessed 2016-09-18</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Treacy1997" xreflabel="[Treacy1997]"/>[Treacy1997]: Treacy, Michael, and Fred Wiersema. 1997. The Discipline of Market Leaders: Choose Your Customers, Narrow Your Focus, Dominate Your Market. New York, N.Y.: Basic Books - Perseus Books Group.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="TSO2011a" xreflabel="[TSO2011a]"/>[TSO2011a]: 	The Stationery Office. 2011. Information Technology Infrastructure Library ITIL Service Strategy: 2011 Edition. Norwich, U.K: The Stationery Office.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="TSO2011b" xreflabel="[TSO2011b]"/>[TSO2011b]: 	The Stationery Office. 2011. Information Technology Infrastructure Library ITIL Service Design: 2011 Edition. Norwich, U.K: The Stationery Office.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="TSO2011c" xreflabel="[TSO2011c]"/>[TSO2011c]: 	The Stationery Office. 2011. Information Technology Infrastructure Library ITIL Service Transition: 2011 Edition. Norwich, U.K: The Stationery Office.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Tufte2001" xreflabel="[Tufte2001]"/>[Tufte2001]: Tufte, E. R. (2001). The Visual Display of Quantitative Information. The Visual Display of Quantitative Information (Vol. 4).</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Ulrich2010" xreflabel="[Ulrich2010]"/>[Ulrich2010]: Ulrich, William, and Neal McWhorter. 2010. Business Architecture: The Art and Practice of Business Transformation. Book. Tampa, Florida: Meghan-Kiffer.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Uptime2014" xreflabel="[Uptime2014]"/>[Uptime2014]: Uptime Institute. 2014. “Explaining the Uptime Institute’s Tier Classification System.” Uptime Institute Journal. <link xl:href="https://journal.uptimeinstitute.com/explaining-uptime-institutes-tier-classification-system/">https://journal.uptimeinstitute.com/explaining-uptime-institutes-tier-classification-system/</link>. Accessed 2016-07-04.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Uptime2016" xreflabel="[Uptime2016]"/>[Uptime2016]: Uptime Institute. 2016. “Tier Certification Tiers Is the Global Language of Data Center Performance Tier Certification Is Worldwide Credibility.” <link xl:href="https://uptimeinstitute.com/uptime_assets/2edec7f3207b2802cf5fad3ad50d85947e69a62ab7d4230c0f7be3ebdbfd3b2c-00006.pdf">https://uptimeinstitute.com/uptime_assets/2edec7f3207b2802cf5fad3ad50d85947e69a62ab7d4230c0f7be3ebdbfd3b2c-00006.pdf</link>. Accessed 2016-07-04.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Venezia2014" xreflabel="[Venezia2014]"/>[Venezia2014]: Venezia, Paul. 2014. “Murder in the Amazon Cloud.” InfoWorld. <link xl:href="http://www.infoworld.com/article/2608076/data-center/murder-in-the-amazon-cloud.html">http://www.infoworld.com/article/2608076/data-center/murder-in-the-amazon-cloud.html</link>. Accessed 2016-07-04</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Venkatraman2013" xreflabel="[Venkatraman2013]"/>[Venkatraman2013]: Venkatraman, Archana. 2013. “2e2 Datacentre Administrators Hold Customers’ Data to £1m Ransom.” ComputerWeekly.com. <link xl:href="http://www.computerweekly.com/news/2240177744/2e2-datacentre-administrators-hold-customers-data-to-1m-ransom">http://www.computerweekly.com/news/2240177744/2e2-datacentre-administrators-hold-customers-data-to-1m-ransom</link>. Accessed 2016-07-04</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Vergun2015" xreflabel="[Vergun2015]"/>[Vergun2015]: Vergun, D. (2015). Toxic leaders decrease Soldiers’ effectiveness, experts say. Retrieved July 13, 2016, from <link xl:href="https://www.army.mil/article/157327/Toxic_leaders_decrease_Soldiers">https://www.army.mil/article/157327/Toxic_leaders_decrease_Soldiers</link><emphasis>effectiveness</emphasis>experts_say</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="vonNeumann1947" xreflabel="[vonNeumann1947]"/>[vonNeumann1947]: von Neumann, John, and Herman H. Goldstine. 1947. “Planning and Coding of Problems for an Electronic Computing Instrument.” Princeton N.J. <link xl:href="https://library.ias.edu/files/pdfs/ecp/planningcodingof0103inst.pdf">https://library.ias.edu/files/pdfs/ecp/planningcodingof0103inst.pdf</link>. Accessed 2016-10-10.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Weick1993" xreflabel="[Weick1993]"/>[Weick1993]: Weick, K. E., &amp; Roberts, K. (1993). Collective Mind in Organizations: Heedful Interrelating on Flight Decks. Administrative Science Quarterly, 38, 357–381.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Weinberg2001" xreflabel="[Weinberg2001]"/>[Weinberg2001]: Weinberg, G. M. (2001). An introduction to general system/ Gerald M. Weinberg (Silver ann). Book, New York: Dorset House.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Westerman2001" xreflabel="[Westerman2001]"/>[Westerman2001]: Westerman, Paul. 2001. Data Warehousing: Using the Wal-Mart Model. San Diego: Academic Press.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="WFMC2010" xreflabel="[WFMC2010]"/>[WFMC2010]: WFMC. 2010. “Adaptive Case Management.”  <link xl:href="http://www.xpdl.org/nugen/p/adaptive-case-management/public.htm">http://www.xpdl.org/nugen/p/adaptive-case-management/public.htm</link>. Accessed 2016-06-04.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Whittaker2012" xreflabel="[Whittaker2012]"/>[Whittaker2012]: Whittaker, J.A., J. Arbon, and J. Carollo, 2012, <emphasis>How Google tests software</emphasis>, Upper Saddle River, NJ: Addison-Wesley. xxvii, 281 p.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Wikipedia2016" xreflabel="[Wikipedia2016]"/>[Wikipedia2016]: Wikipedia. 2016. “Wikipedia: Technical Debt.” <link xl:href="http://en.wikipedia.org/wiki/Technical_debt">http://en.wikipedia.org/wiki/Technical_debt</link>. Accessed 2016-11-13.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Wikipedia2016a" xreflabel="[Wikipedia2016a]"/>[Wikipedia2016a]: Wikipedia. 2016. "Wikipedia:Learned Helplessness." Retrieved December 26, 2016, from <link xl:href="https://en.wikipedia.org/wiki/Learned_helplessness">https://en.wikipedia.org/wiki/Learned_helplessness</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Womack2003" xreflabel="[Womack2003]"/>[Womack2003]: Womack, J. P. &amp; Jones, D. T. (2003), <emphasis>Lean thinking: banish waste and create wealth in your corporation</emphasis>, Free Press, New York</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Womack1990" xreflabel="[Womack1990]"/>[Womack1990]: Womack, J. P.; Jones, D. T. &amp; Roos, D. (1990), <emphasis>The machine that changed the world : based on the Massachusetts Institute of Technology 5-million dollar 5-year study on the future of the automobile</emphasis>, Rawson Associates, New York</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Woolley2015" xreflabel="[Woolley2015]"/>[Woolley2015]: Woolley, A., Malone, T. W., &amp; Chabris, C. F. (2015, January 16). Why Some Teams Are Smarter Than Others. New York Times. Retrieved from <link xl:href="http://www.nytimes.com/2015/01/18/opinion/sunday/why-some-teams-are-smarter-than-others.html?">http://www.nytimes.com/2015/01/18/opinion/sunday/why-some-teams-are-smarter-than-others.html?</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Yegulalp2014" xreflabel="[Yegulalp2014]"/>[Yegulalp2014]: Yegulalp, S. (2014). Why GPL still gives enterprises the jitters | InfoWorld. Retrieved November 30, 2016, from <link xl:href="http://www.infoworld.com/article/2608340/open-source-software/why-gpl-still-gives-enterprises-the-jitters.html">http://www.infoworld.com/article/2608340/open-source-software/why-gpl-still-gives-enterprises-the-jitters.html</link></simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Zachman1987" xreflabel="[Zachman1987]"/>[Zachman1987]: Zachman, John. 1987. “Zachman Framework.” IBM Systems Journal 26 (3): 276–92.</simpara>
+</listitem>
+</itemizedlist>
+</section>
+</chapter>
+</book>
