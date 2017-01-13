@@ -18,7 +18,7 @@
 git add . -A && git commit -m "commit"
 git push origin master
 
-mv aitm-student.html index.html
+mv output/html/aitm-student.html output/html/index.html
 # mv aitm-student.html new-student.html  # hack, I should figure out the CLI parm for the rake command
 
 
@@ -28,8 +28,8 @@ mv aitm-student.html index.html
 cd ../aitm-pages   # ugly & brittle.
 git pull # pull down previous html. never gets edited by hand.
 
-cp -R ../aitm/images .
-cp ../aitm/*.html .
+cp -R ../aitm/output/html/images .
+cp ../aitm/output/html/*.html .
 
 git add . -A && git commit -m "commit"
 git push origin gh-pages

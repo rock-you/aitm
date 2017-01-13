@@ -16,23 +16,24 @@
 #build html
 # bundle exec rake book:build
 
-rm -rf images
-mkdir images
+rm -rf output/html
+mkdir -p output/html/images
 #rewriting rakefile
 
 # section-level images
-yes|cp -P book/*/images/*.png images/
-yes|cp -P book/*/images/*.jpg images/
+yes|cp -P book/*/images/*.png output/html/images/
+yes|cp -P book/*/images/*.jpg output/html/images/
 # chapter-level images
-yes|cp -P book/*/*/images/*.png images/
-yes|cp -P book/*/*/images/*.jpg images/
+yes|cp -P book/*/*/images/*.png output/html/images/
+yes|cp -P book/*/*/images/*.jpg output/html/images/
 
 #yes|cp  book/*/images/* images  # why book/**/ doesn't work?
 
+
 #freezing these 2 until end of year
-asciidoctor aitm-student.adoc
-asciidoctor aitm-instructor.adoc
-asciidoctor aitm-collaborator.adoc
+asciidoctor -D output/html aitm-student.adoc
+asciidoctor -D output/html aitm-instructor.adoc
+asciidoctor -D output/html aitm-collaborator.adoc
 
 # asciidoctor-pdf -a allow-uri-read aitm-collaborator-pdf.adoc  #need to fix URI-based figures
 # asciidoctor-epub3 aitm-student-epub.adoc
