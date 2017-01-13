@@ -1,0 +1,31 @@
+abcghi
+
+% -------
+-|% Chapter
+% -------
+
+\subsection
+
+chapter 1
+
+% -------
+-|% Chapter
+% -------
+
+\subsection
+
+abcghi
+
+\section
+
+chapter 2
+
+% -------
+-|% Chapter
+% -------
+
+abcdefghi
+
+chapter 3
+
+csplit --digits=2  --quiet --prefix=outfile infile "/-|/+1" "{*}"

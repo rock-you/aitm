@@ -1,0 +1,139 @@
+\subsection{Continuous integration}
+\label{_continuous_integration}\hyperlabel{_continuous_integration}%
+  
+\subsubsection{Version control, again: branching and merging}
+\label{_version_control_again_branching_and_merging}\hyperlabel{_version_control_again_branching_and_merging}%
+  \begin{quote}
+
+Oddly enough, it seems that when you run into a painful activity, a good tip is to do it more often.
+
+\hspace*\fill--- Martin Fowler
+\emph{Foreword to Continuous Integration} \end{quote}
+ 
+As systems engineering approaches transform to \hyperlink{cloud}{Cloud} and \hyperlink{infracode}{Infrastructure as Code}, a large and increasing percentage of IT work takes the form of altering text files and tracking their \hyperlink{version-control}{versions}. We have seen this in the previous chapter, with artifacts such as \hyperlink{infra-code-example}{scripts} being created to drive the provisioning and configuring of computing resources. Approaches which encourage ongoing development and evolution are increasingly recognized as less risky, since systems do not respond well to big "batches" of change. An important concept is that of "continuous integration,\textquotedblright{} popularized by Paul Duvall in his book of the same name \hyperlink{Duvall2007}{[Duvall2007]}.
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/1_03-dual-access.png}{{\imgevalsize{images/1_03-dual-access.png}{\includegraphics[width=0.48\textwidth]{images/1_03-dual-access.png}}}}{2 devs 3 files}
+\end{center}
+\caption{Two developers, one file}
+\end{wrapfigure}
+ 
+In order to understand why continuous integration is important, it is necessary to further discuss the concept of source control and how it is employed in real world settings. Imagine Mary have been working for some time with her partner Aparna in their startup (or on a small team) and they have three code modules. Mary is writing the web front end (file A), Aparna is writing the administrative tools and reporting (file C), and they both partner on the data access layer (file B). The conflict of course arises on the file B that they both need to work on.  A and C are mostly independent of each other, but changes to any part of B can have an impact on both their modules.
+ 
+If changes are frequently needed to B, and yet they cannot split it into logically separate modules, they have a problem; they cannot both work on the same file at the same time. They are each concerned that the other does not introduce changes into B that \textquotedblleft{}break\textquotedblright{} the code in their own modules A and C.
+ \begin{DBKadmonition}{}{Note}
+ 
+Breaking a system apart by "layer" (e.g. front end versus data access) does not scale well. Microservices approaches encourage keeping data access and business logic together in functionally cohesive units. More on this in future chapters. But in this example, both developers are on the same small team. It is not always possible (or worth it) to divide work to keep two people from ever needing to change the same thing.
+ \end{DBKadmonition}
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/1_03-dual-vc.png}{{\imgevalsize{images/1_03-dual-vc.png}{\includegraphics[width=0.48\textwidth]{images/1_03-dual-vc.png}}}}{2 devs on same file}
+\end{center}
+\caption{File B being worked on by 2 people}
+\end{wrapfigure}
+ 
+In smaller environments, or under older practices, perhaps there is no conflict, or perhaps they can agree to take turns. But even if they are taking turns, Mary still needs to test her code in A to make sure it's not been broken by changes Aparna made in B. And what if they really both need to work on B at the same time?
+ 
+Now, because they took this book's advice and didn't start developing until they had \hyperlink{version-control}{version control} in place, each of them works on a "local" copy of the file (see illustration "File B being worked on by 2 people").
+ 
+That way, they can move ahead on their local workstations. But when the time comes to combine both of your work, they may find themselves in "merge hell." They may have chosen very different approaches to solving the same problem, and code may need massive revision to settle on one code base. For example, in the accompanying illustration, Mary's changes to B are represented by triangles and Aparna's are represented by circles. They each had a local version on their workstation for far too long, without talking to each other.
+ 
+In the diagrams, we represent the changes graphically; of course, with real code, the different graphics represent different development approaches each person took. For example, Mary had certain needs for how errors were handled, while Aparna had different needs.
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/1_03-merge-hell.png}{{\imgevalsize{images/1_03-merge-hell.png}{\includegraphics[width=0.48\textwidth]{images/1_03-merge-hell.png}}}}{merge hell}
+\end{center}
+\caption{Merge hell}
+\end{wrapfigure}
+ 
+In the diagram "Merge hell," where triangles and circles overlap, Mary and Aparna painstakingly have to go through and put in a consolidated error handling approach, so that the code supports both of their needs. The problem of course is now there are three ways errors are being handled in the code. This is not good, but they did not have time to go back and fix all the cases. This is a classic example of \hyperlink{technical-debt-1}{technical debt}.
+ 
+Suppose instead that they had been checking in every day. They can identify the first collision quickly, and have a conversation about what the best error handling approach is. This saves them \textbf{both} the rework of fixing the collisions, \textbf{and} the technical debt they might have otherwise accepted:
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/1_03-fast-ID.png}{{\imgevalsize{images/1_03-fast-ID.png}{\includegraphics[width=0.48\textwidth]{images/1_03-fast-ID.png}}}}{errors caught quickly}
+\end{center}
+\caption{Catching errors quickly is valuable}
+\end{wrapfigure}
+ 
+These problems have driven the evolution of software configuration management for decades. In previous methods, to develop a new release, the code would be copied into a very long-{}lived "branch" (a version of the code to receive independent enhancement). Ongoing \textquotedblleft{}maintenance\textquotedblright{} fixes of the existing code base would also continue, and the two code bases would inevitably diverge. Switching over to the \textquotedblleft{}new\textquotedblright{} code base might mean that once-{}fixed bugs (bugs that had been addressed by maintenance activities) would show up again, and of course this would not be acceptable. So, when the newer development was complete, it would need to be merged back into the older line of code, and this was rarely if ever easy (again, "merge hell"). In a worst case scenario, the new development might have to be redone.
+ 
+Enter continuous integration. As presented in \hyperlink{Duvall2007}{[Duvall2007]} the key practices (you will notice similarities to the \hyperlink{pipeline}{pipeline discussion}) include:
+ \begin{itemize}
+
+\item{} Developers run private builds including their automated tests before committing to source control
+ 
+
+\item{} Developers check in to source control at least daily (hopefully we have been harping on this enough that you are taking it seriously by now).
+ \begin{itemize}
+
+\item{} Distributed version control systems such as git are especially popular, although older centralized products are \href{http://bitquabit.com/post/unorthodocs-abandon-your-dvcs-and-return-to-sanity/}{starting to adopt some of their functionality}
+ 
+
+\item{} Integration builds happen several times a day or more on a separate, dedicated machine
+ 
+\end{itemize}
+ 
+
+\item{} 100\% of tests must pass for each build. Fixing failed builds is the highest priority.
+ 
+
+\item{} A package or similar executable artifact is produced for functional testing
+ 
+
+\item{} A defined package repository exists as a definitive location for the build output.
+ 
+\end{itemize}
+ 
+These practices are well developed and represent a highly evolved understanding gained through the painful trial and error of many development teams over many years. Rather than locking C so that only one person can work on it at a time, it's been found that the best approach is to allow developers to actually make multiple copies of such a file or file set and work on them simultaneously. Wait, you say. How can that work?
+ 
+This is the principle of continuous integration at work. If the developers are continually pulling each other's work into their own working copies, and continually testing that nothing has broken, then distributed development can take place. So, if you are a developer, the day's work might be as follows:
+ 
+8 AM: check out files from master source repository to a local branch on your workstation. Because files are not committed unless they pass all tests, you know that you are checking out clean code. You pull user story (requirement) that you will now develop.
+ 
+8:30 AM: You define a test and start developing the code to fulfill it.
+ 
+10 AM: You are closing in on wrapping up the first requirement. You check the source repository. Your partner has checked in some new code, so you pull it down to your local repository. You run all the automated tests and nothing breaks, so you're fine.
+ 
+10:30: You complete your first update of the day; it passes all tests on your workstation. You commit it to the master repository. The master repository is continually monitored by the build server, which takes the code you created and deploys it, along with all necessary configurations, to a dedicated build server (which might be just a virtual machine or transient container). All tests pass there (the test you defined as indicating success for the module, as well as a host of older tests that are routinely run whenever the code is updated.
+ 
+11:00: Your partner pulls your changes into their working directory. Unfortunately, some changes you made conflict with some work they are doing. You briefly consult and figure out a mutually acceptable approach.
+ 
+Controlling simultaneous changes to a common file is only one benefit of continuous integration. When software is developed by teams, even if each team has its own artifacts, the system often fails to "come together" for higher-{}order testing to confirm that all the parts are working correctly together. Discrepancies are often found in the interfaces between components; when component A calls component B, it may receive output it did not expect and processing halts. Continuous integration ensures that such issues are caught early.
+  
+\subsubsection{Build choreography}
+\label{_build_choreography}\hyperlabel{_build_choreography}%
+  
+Go back to the \hyperlink{pipeline}{pipeline picture} and consider step 4. While we discussed \hyperlink{version-control}{version control}, \hyperlink{package-mgmt}{package management}, and \hyperlink{deployment-mgmt}{deployment management} in Chapter 2, this is our first encounter with build choreography.
+ 
+DevOps and continuous delivery call for automating everything that can be automated. This goal led to the creation of build choreography managers such as Hudson, Jenkins, Travis CI, and Bamboo. Build managers may control any or all of the following steps:
+ \begin{itemize}
+
+\item{} Detecting changes in version control repositories and building software in response
+ 
+
+\item{} Alternately, building software on a fixed (e.g. nightly) schedule
+ 
+
+\item{} Compiling source code and linking it to libraries
+ 
+
+\item{} Executing automated tests
+ 
+
+\item{} Combining compiled artifacts with other resources into installable packages
+ 
+
+\item{} Registering new and updated packages in the package management repository, for deployment into downstream environments.
+ 
+
+\item{} In some cases, driving deployment into downstream environments, including production. (This can be done directly by the build manager, or through the build manager sending a message to a \hyperlink{deployment-mgmt}{deployment management} tool.)
+ 
+\end{itemize}
+ 
+Build managers play a critical, central role in the modern, automated pipeline and will likely be a center of attention for the new digital professional in their career.
+   

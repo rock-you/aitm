@@ -1,0 +1,100 @@
+\subsection{The two dimensions of demand management}
+\label{_the_two_dimensions_of_demand_management}\hyperlabel{_the_two_dimensions_of_demand_management}%
+  
+To provide a framework for Part III, let's start with this two-{}dimensional analysis:
+ 
+\begin{center}
+ 
+\noindent\begin{minipage}[c]{\linewidth}
+\begin{center}
+\imgexists{images/3_00-2d-demand.png}{{\imgevalsize{images/3_00-2d-demand.png}{\includegraphics[width=0.48\textwidth]{images/3_00-2d-demand.png}}}}{complex 2d figure}\end{center}
+\end{minipage}
+
+ 
+\end{center}
+ 
+You should spend some time reviewing the graphic, which provides a unique way of understanding the work you are now experiencing as a "team of teams" or "manager of managers" in an IT-{}dependent environment of increasing size and complexity. We've come a long ways since our discussion of \hyperlink{work-management}{work management}. By the time we started to \hyperlink{ops-mgmt}{formalize operations}, we saw that work was \hyperlink{IT-process-emergence}{tending to differentiate}. Still, regardless of the label we put on a given activity, it represents some set of tasks or objectives that real people are going to take time to perform, and expect to be compensated for. It is all \hyperlink{demand-mgmt}{demand, requiring management}. Remembering this is essential to digital management.
+ 
+Let's consider the various forms that demand may take. Understanding these demand forms will also help you develop a deeper understanding of an \textbf{architecture of IT management}, a topic I have explored in other works \hyperlink{Betz2011}{[Betz2011]}. The diagram has two dimensions:
+ \begin{itemize}
+
+\item{} Planning
+ 
+
+\item{} Granularity
+ 
+\end{itemize}
+ 
+\textbf{Planning.} As an organization scales, there is an increasing span in your time horizon and the scope of work you are considering and executing. From the immediate, "hand-{}to-{}mouth" days of your startup, you now must take concern for longer and longer time frames: contracts, regulations, and your company's strategy as it grows all demand this.
+ 
+\textbf{Granularity.} The  terminology you use to describe your work also becomes more diverse, reflecting in some ways the broader time horizons you are concerned with. Requests, changes, incidents, work orders, releases, stories, features, problems, major incidents, epics, refreshes, products, programs, strategies\ldots{}\hspace{0em} there is a continuum of how you think about your organization's work efforts. Mostly, the range of work seems tied to how much planning time you have, but there are exceptions: disasters take a lot of work, but you don't get much advance warning! So size of work is independent of planning horizon.
+ 
+The bubbles represent a "space" where one is likely to find that kind of work. As indicated by the central diagonal, it reflects an assumption that larger amounts of work are more likely to be planned further in advance. However, this is not always true. A large, unwelcome amount of required work that shows up with no planning is probably a disaster. Desired work (in the form of aggregate transactional demand) may also spike unexpectedly. Transactional demand considered across a long timeframe is \hyperlink{capacity-mgmt}{capacity management}. The following table lists various examples:
+ \begin{table}[htbp]
+\begin{center}
+\begingroup%
+\setlength{\newtblsparewidth}{\linewidth-2\tabcolsep-2\tabcolsep-2\tabcolsep}%
+\setlength{\newtblstarfactor}{\newtblsparewidth / \real{100}}%
+
+\begin{tabular}{ll}\hline
+\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright\bfseries%
+%
+Type of work%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright\bfseries%
+%
+Description%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Core transactional demand
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+This is the demand on the fully automated IT system for a given moment of truth: a banking account lookup, a streaming movie, a Human Resources record update
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Routine service requests and incidents
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+Service requests are predefined, process-{}driven work items, rarely requiring creative thought or analysis. Incidents span a spectrum, but some are simpler and more routine than others, especially those stemming from user misunderstanding or error.
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Changes
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+Changes represent modifications of established IT functionality or \hyperlink{state-config-discovery}{state}. They represent some definite risk to one or more IT services, which is why they are planned on a longer lead time. However, they ideally remain relatively granular, which helps reduce their risk.
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Routine releases, stories, reports
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+Releases and (in the Agile world) stories represent larger increments of functionality
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Projects
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+A Project is a large, planned amount of work with a defined end date. It might create a Service, which also represents a commitment to a large, ongoing amount of work, perhaps comparable in scope to the Project.
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Major incidents
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+Major incidents by definition are not planned. But they represent a significant amount of work to overcome.
+%
+}\tabularnewline
+\hline
+\end{tabular}\endgroup%
+
+\end{center}
+
+\caption{Work items of varying sizes}
+\end{table}
+ 
+Some forms of work may lead to other forms of work. For example, Projects may manifest as Stories, Releases, and Changes. This complicates the diagram a bit; we don't want to "double-{}count" work effort. But not all Releases derive from Projects, and not all Project work (especially in complex environments) can be cleanly reduced to a set of smaller tasks.
+ 
+The final point of this diagram: you only have so much capacity to execute the work it implies. If you have a disaster, or a series of major incidents, this unplanned work may impact your ability to deliver user stories, changes, or even meet transactional demand. Trade-{}offs must be considered.
+  

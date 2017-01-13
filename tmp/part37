@@ -1,0 +1,105 @@
+\subsection{The DevOps challenge}
+\label{_the_devops_challenge}\hyperlabel{_the_devops_challenge}%
+  
+Consider this inquiry by Mary and Tom Poppendieck (\hyperlink{Poppendieck2007}{[Poppendieck2007]}, p. 92):
+ 
+
+\begin{sidebar}
+
+\textbf{How long would it take your organization to deploy a change that involved one single line of code? Do you deploy changes at this pace on a repeat, reliable basis?}
+\end{sidebar}
+ 
+The implicit goal is that the organization should be able to change one line of code, and in fact might want to do so on an ongoing basis. There is deep Lean/Agile theory behind this goal, theory developed in reaction to the pattern of massive software failures that characterized IT in the first fifty years of its existence. (We'll discuss some of the systems theory, including the concept of feedback, in the introduction to Part II and other aspects of Agile theory, including the ideas of Lean Product Development, in Parts II and III.)
+ 
+Achieving this goal is feasible but requires new approaches. Various practitioners have explored this problem, with great success. Key initial milestones included:
+ \begin{itemize}
+
+\item{} The establishment of \textquotedblleft{}test-{}driven development\textquotedblright{} as a key best practice in creating software \hyperlink{Beck2000}{[Beck2000]}
+ 
+
+\item{} Duvall's book \textquotedblleft{}Continuous Integration\textquotedblright{} \hyperlink{Duvall2007}{[Duvall2007]}
+ 
+
+\item{} Allspaw \& Hammonds's seminal \href{http://www.slideshare.net/jallspaw/10-deploys-per-day-dev-and-ops-cooperation-at-flickr}{\textquotedblleft{}10 Deploys a Day\textquotedblright{}} presentation describing Etsy \hyperlink{Allspaw2009}{[Allspaw2009]}.
+ 
+
+\item{} Humble \& Farley's \textquotedblleft{}Continuous Delivery\textquotedblright{} \hyperlink{Humble2011}{[Humble2011]}.
+ 
+\end{itemize}
+ 
+"DevOps" is a broad term, encompassing product management, team behaviors, and culture. At an execution level, the fundamental goal of moving smaller changes more quickly through the pipeline is a common theme. Other guiding principles include, "If it hurts, do it more frequently." (This is in part a response to the poor practice, or \emph{antipattern}, of deferring integration testing and deployment until those tasks are so big as to be unmanageable.) There is a great deal written on the topic of DevOps currently; the Humble/Farley book is recommended  as an introduction. Let's go into a little detail on some essential Agile/DevOps practices.
+ \begin{itemize}
+
+\item{} Test driven development
+ 
+
+\item{} Ongoing refactoring
+ 
+
+\item{} Continuous integration
+ 
+
+\item{} Continuous deployment
+ 
+\end{itemize}
+ 
+In our scenario approach, at the end of the last chapter, you had determined a set of tools for creating your new IT-{}based product:
+ \begin{itemize}
+
+\item{} Development stack (language, framework, and associated enablers such as database and application server)
+ 
+
+\item{} Cloud provider that supports your stack
+ 
+
+\item{} Version control
+ 
+
+\item{} Deployment capability
+ 
+\end{itemize}
+ 
+You'll be creating text files of some sort, and almost certainly importing various additional libraries, packages, modules, etc, rather than solving problems others have already figured out.
+ \begin{DBKadmonition}{}{Note}
+ 
+Development tools such as text editors and integrated development environments (IDEs) are out of scope for this book, as they are often matters of personal choice and limited to developers' desktops.
+ \end{DBKadmonition}
+ 
+The assumption in this chapter is that you are going to start IMMEDIATELY with a continuous delivery pipeline. \textbf{You want to set this up before developing a single line of code.} This is not something to "get around to later." It's not that difficult (see the online resources for further discussion and pointers to relevant open source projects). What is meant by a continuous delivery pipeline? Here is a simplified, starting overview, based on the \href{https://github.com/dm-academy/Calavera}{Calavera project} developed for the IT Delivery course at the University of St. Thomas:
+ 
+\label{pipeline}\hyperlabel{pipeline}
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/1_03-pipeline.png}{{\imgevalsize{images/1_03-pipeline.png}{\includegraphics[width=0.48\textwidth]{images/1_03-pipeline.png}}}}{pipeline}
+\end{center}
+\caption{A simple continuous delivery toolchain}
+\end{wrapfigure}
+ \begin{enumerate}[label=\arabic*.]
+
+\item{} First, some potential for value is identified. It is refined through product management techniques into a feature -{} some specific set of functionality that when complete will enable the value proposition (i.e. as a \href{http://dm-academy.github.io/aitm/#_it_services_systems_and_applications}{moment of truth}.)
+ 
+
+\item{} The feature is expressed as some set of IT work, today usually in small increments lasting between 1 and 4 weeks (this of course varies). Software development commences, e.g. the creation of Java components by developers who first write tests, and then write code that satisfies the test.
+ 
+
+\item{} The developer is continually testing the software as the build progresses, and keeping a local source control repository up to date with their changes at all times. When she or he reaches a level of satisfaction with the software, it is submitted to a centralized source repository.
+ 
+
+\item{} When the repository detects the new "check-{}in," it contacts the build choreography manager, which launches a dedicated environment to build and test the new code. The environment is likely configured using \href{http://dm-academy.github.io/aitm/#_infrastructure_as_code}{infrastructure as code} techniques; in this way, it can be created automatically and quickly.
+ 
+
+\item{} If the code passes all tests, the compiled and built binary executables may then be "checked in" to a package management repository.
+ 
+
+\item{} From the package repository, the code may then be deployed to various environments, for further testing and ultimately to "production," where it can enable the consumer's value experiences.
+ 
+
+\item{} Finally, the production system is monitored for availability and performance.
+ 
+\end{enumerate}
+ 
+We will discuss DevOps in terms of team behaviors and culture further in Chapter 7. For now, we stay closer to the tactical concerns of continuous delivery. Let's go into more detail on the major phases.
+ 
+\label{system-intent}\hyperlabel{system-intent}
+  

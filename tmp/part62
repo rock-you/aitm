@@ -1,0 +1,98 @@
+\subsection{The shared mental model of the work to be done}
+\label{_the_shared_mental_model_of_the_work_to_be_done}\hyperlabel{_the_shared_mental_model_of_the_work_to_be_done}%
+  \begin{quote}
+
+Joint activity depends on interpredictability of the participants' attitudes and actions. Such interpredictability is based on common ground \textemdash{} pertinent knowledge, beliefs and  assumptions that are shared among the involved parties. \hyperlink{Klein2005}{[Klein2005]}
+
+\hspace*\fill--- Gary Klein et al
+\emph{Common Ground and Coordination in Joint Activity} \end{quote}
+ 
+The above quote reflects one of the most critical foundations of team collaboration: a common ground, a base of "knowledge, beliefs, and assumptions" enabling collaboration and coordination. Common ground is an essential quality of successful teamwork, and we will revisit it throughout the book. There are many ways in which common ground is important, and we will discuss some of the deeper aspects in terms of information in \hyperlink{chap-ent-info-mgmt}{chapter 11}. Whether you choose Scrum, Kanban, or choose not to label your work management at all, the important thing is that you are creating a shared mental model of the work: its envisioned form and content, and your progress towards it.
+ 
+In this section, we'll discuss:
+ \begin{itemize}
+
+\item{} Visualization of work
+ 
+
+\item{} The concept of Andon
+ 
+
+\item{} The definition of done
+ 
+
+\item{} Time and space shifting
+ 
+\end{itemize}
+ 
+Visualization is a good place to introduce the idea of common ground.
+ 
+\subsubsection{Visualization}
+\label{_visualization}\hyperlabel{_visualization}%
+  \begin{quote}
+
+As simple as the whiteboard is, it makes WIP continuously visible, it enforces WIP constraints, it creates synchronized daily interaction, and it promotes interactive problem solving. Furthermore, teams evolve methods of using whiteboards continuously, and they have high ownership in their solution. In theory, all this can be replicated by a computer system. In practice, I have not yet seen an automated system the replicates the simple elegance and flexibility of a manual system.
+
+\hspace*\fill--- Don Reinertsen
+\emph{Principles of Product Development Flow} \end{quote}
+ 
+Why are shared visual representations important? Depending on how you measure, between 40\% to as much as 80\% of the human cortex is devoted to visual processing. Visual processing dominates mental activity, consuming more neurons than the other four senses combined \hyperlink{Sells1957}{[Sells1957]}. Visual representations are powerful communication mechanisms, well suited to our cognitive abilities.
+ 
+This idea of a common ground, a shared visual reference point, informing the mental model of the team, is essential.
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/2_05-kanban-board.jpg}{{\imgevalsize{images/2_05-kanban-board.jpg}{\includegraphics[width=0.48\textwidth]{images/2_05-kanban-board.jpg}}}}{two people card wall}
+\end{center}
+\caption[{Two people and a Kanban board }]{Two people and a Kanban board \footnotemark{}}
+\end{wrapfigure}
+ 
+This is why \hyperlink{card-wall}{card walls} or Kanban boards located in the same room are so prevalent. They communicate and sustain the shared mental model of a human team. A shared card wall, with its two dimensions and tasks on cards or sticky notes, is more informative than a simple to-{}do list (e.g.  in a spreadsheet). The cards occupy two dimensional space and are  moved over time to signify activity, both powerful cues to the human visual processing system.
+ 
+Similarly, monitoring tools for systems operation make use of various visual clues. Large monitors may be displayed prominently on walls, so that everyone can understand operational status. Human visual orientation is also why Enterprise Architecture persists. People will always draw to communicate. (More on \hyperlink{arch-visualization}{visualization and enterprise architecture}in Chapter 12.)
+ 
+Card walls and publicly displayed monitors are both examples of \emph{information radiators}. The information radiator concept derives from the Japanese concept of \emph{Andon}, important in Lean thinking.
+ 
+\label{andon}\hyperlabel{andon}
+  
+\subsubsection{Andon, and the Andon Cord}
+\label{_andon_and_the_andon_cord}\hyperlabel{_andon_and_the_andon_cord}%
+  \begin{quote}
+
+\emph{Andon} is a manufacturing term referring to a system to notify management, maintenance, and other workers of a quality or process problem. The centrepiece is a signboard incorporating signal lights to indicate which workstation has the problem. The alert can be activated manually by a worker using a pullcord or button, or may be activated automatically by the production equipment itself. The system may include a means to stop production so the issue can be corrected. Some modern alert systems incorporate audio alarms, text, or other displays.
+
+\hspace*\fill--- Wikipedia
+\emph{https://en.wikipedia.org/wiki/Andon\_(manufacturing)} \end{quote}
+ 
+The Andon \emph{Cord} (not to be confused with Andon in the general sense) is another well known concept in Lean Manufacturing. It originated with Toyota, where line workers were empowered to stop the production line if any defective materials or assemblies were encountered. Instead of attempting to work with the defective input, the entire line would shut down and all concerned would establish what had happened and how to prevent it. The concept of andon cord concisely summarizes the Lean philosophy of employee responsibility for quality at all levels \hyperlink{Ohno1988}{[Ohno1988]}. Where Andon is a general term for information radiator, the Andon Cord implies a dramatic reponse to the problems of flow -{} all progress is stopped, everywhere along the line, and the entire resources of the production line are marshalled to collaboratively solve the issue so that it does not happen again. As Toyota though leader Taiichi Ohno states:
+ \begin{quote}
+
+Stopping the machine when there is trouble forces awareness on everyone. When the problem is clearly understood, improvement is possible. Expanding this thought, we establish a rule that even in a manually operated production line, the workers themselves should push the stop button to halt production if any abnormality appears.
+
+\hspace*\fill--- Taiichi Ohno
+\end{quote}
+ 
+Andon and information radiators provide important stimulus for product teams, informing priorities and prompting responses. They do not prescribe what is to be done; they simply indicate operational status that may require attention.
+  
+\subsubsection{Definition of done}
+\label{_definition_of_done}\hyperlabel{_definition_of_done}%
+  
+As work flows through the system performing it, understanding its status is key to managing it. One of the most important mechanisms for doing this is to simply define what is meant by \textquotedblleft{}done.\textquotedblright{} The Agile Alliance \href{http://guide.agilealliance.org/guide/definition-of-done.html#sthash.6rSCZMyU.dpuf}{states}:
+ 
+\textquotedblleft{}The team agrees on, and displays prominently somewhere in the team room, a list of criteria which must be met before a product increment, often a user story, is considered "done" \hyperlink{Alliance2015a}{[Alliance2015a]}. Failure to meet these criteria at the end of a sprint normally implies that the work should not be counted toward that sprint's velocity.\textquotedblright{} There are various patterns for defining "done," for example, Thoughtworks recommends that the business analyst and developer both must agree that some task is complete (it is not up to just one person). Other companies may require peer code reviews \hyperlink{Narayam2015a}{[Narayam2015a]}. The important point is that the team must agree on the criteria.
+ 
+This idea of defining \textquotedblleft{}done\textquotedblright{} can be extended by the team to other concepts such as \textquotedblleft{}blocked.\textquotedblright{} The important thing is that this is all part of the team's shared mental model, and is best defined by the team and its customers. (However, governance and consistency concerns may arise if teams are too diverse in such definitions.)
+  
+\subsubsection{Time and space shifting}
+\label{_time_and_space_shifting}\hyperlabel{_time_and_space_shifting}%
+  
+At some point your team will be faced with the problems of time and/or space shifting. People will be on different schedules, or in different locations, or both. There are two things we know about such working relationships. First, they leads to sub-{}optimal team communications and performance. Second, they are inevitable.
+ 
+The need for time and space shifting is one of the major drivers for more formalized IT systems. It is difficult to effectively use a physical Kanban board if people aren't in the office. The outcome of the daily standup needs to be captured for the benefit of those who could not be there.
+ 
+However, acceptance of time and space shifting may lead to more of it, even when it is not absolutely required. A constant pressure and questioning is recommended, given the superior bandwidth of face to face communication in the context of team collaboration.
+ 
+But not all work requires the same degree of collaboration. While we are still not ready for full scale process management, at this point in our evolution we likely will encounter increasing needs to track customer or user service interations, which can become quite numerous even for small, single-{}team organizations. Such work is often more more individualized and routine.  This brings us to the topic of the Help or Service Desk.
+ 
+\label{lean-product-dev}\hyperlabel{lean-product-dev}
+   

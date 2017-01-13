@@ -1,0 +1,224 @@
+\subsection{Product and function}
+\label{_product_and_function}\hyperlabel{_product_and_function}%
+  \begin{quote}
+
+Even where they are not part of a value stream, activity-{}oriented teams tend to standardize their operations over time. Their appetite for offering custom solutions begins to diminish. Complaints begin to surface\textemdash{}\textquotedblleft{}They threw the rule book at us,\textquotedblright{} \textquotedblleft{}What bureaucracy!\textquotedblright{}
+
+\hspace*\fill--- Sriram Narayan
+\emph{Agile IT Organization Design} \end{quote}
+ \begin{quote}
+
+When teams are aligned by services, are autonomous, and are cross-{}functionally composed, there is a significant decrease in affective conflict. When team members are aligned by shared goals and no longer need to argue about who is responsible or who should perform certain tasks, the team wins or loses together. Everyone on the team is responsible for ensuring the service provided meets the business goals.
+
+\hspace*\fill--- Abbot and Fisher
+\emph{The Art of Scalability} \end{quote}
+ 
+By this time, you probably detect that there is a fundamental tension between functional specialization and end to end value delivery. The above two quotes reflect this tension -{} the tendency for specialist teams start to identify with their specialty and not the overall mission. The tension may go by different names:
+ \begin{itemize}
+
+\item{} Product versus function
+ 
+
+\item{} Value stream versus activity
+ 
+
+\item{} Process versus silo
+ 
+\end{itemize}
+ 
+As we saw \hyperlink{process-project-product}{previously}, there are three major concepts used to achieve end to end flow across functional specialties:
+ \begin{itemize}
+
+\item{} Product
+ 
+
+\item{} Project
+ 
+
+\item{} Process
+ 
+\end{itemize}
+ 
+These are not mutually exclusive models, and may interact with each other in complex ways. (See the scaling discussion in the \hyperlink{scaling-org}{Part III introduction}.)
+ \begin{DBKadmonition}{}{Note}
+ 
+We will go into detail on project management in chapter 8 and process management in chapter 9. But first we need to understand how they influence organizational forms.
+ \end{DBKadmonition}
+ 
+\subsubsection{Waterfall and functional organization}
+\label{_waterfall_and_functional_organization}\hyperlabel{_waterfall_and_functional_organization}%
+  
+For example, some manufacturing can be represented as a very simple, sequential process model:
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/3_07-naive-mfg.png}{{\imgevalsize{images/3_07-naive-mfg.png}{\includegraphics[width=0.48\textwidth]{images/3_07-naive-mfg.png}}}}{manufacturing sequence}
+\end{center}
+\caption{Simple sequential manufacturing}
+\end{wrapfigure}
+ 
+The product is already defined and the need to generate information (i.e. through \hyperlink{feedback}{feedback}) is at an absolute minimum.
+NOTE: Even in this simplest model, feedback is important. Much of the evolution of 20th century manufacturing has been in challenging this naive, open-{}loop model. (Remember our brief discussion of \hyperlink{open-loop}{open-{}loop}?) The original, open-{}loop waterfall model of IT systems implementation was arguably based on just such a naive concept:
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/3_07-waterfall.png}{{\imgevalsize{images/3_07-waterfall.png}{\includegraphics[width=0.48\textwidth]{images/3_07-waterfall.png}}}}{waterfall}
+\end{center}
+\caption{Waterfall}
+\end{wrapfigure}
+ 
+(Review \hyperlink{Agile-history}{chapter 3} on waterfall development and Agile history.) Functional, or \emph{practice}, areas can continually increase their efficiency and economies of scale through deep specialization.
+ 
+
+\begin{sidebar}
+\textbf{What is a "practice"?}
+
+
+A "practice" is synonymous with "discipline"\hspace{0.167em}\textemdash{}\hspace{0.167em}it is a set of interrelated precepts, concerns, techniques, often with a distinct professional identity. "Java programming," "security," or "capacity management" are practices. When an organization is closely identified with a practice, it tends to act as a functional silo (more on this to come). For example, in a traditional IT organization, the Java developers might be in a separate team from the HTML, CSS and Javascript specialists. The database administrators might have their own team, and also the architects, business analysts, and quality assurance groups. Each practice or functional group develops a strong professional identity as the custodians of "best practices" in their area. They may also develop a strong set of criteria for when they will accept work, which tends to slow down \hyperlink{lean-product-dev}{product discovery}.
+\end{sidebar}
+ 
+There are two primary disadvantages to the model of projects flowing in a waterfall sequence across functional areas:
+ \begin{itemize}
+
+\item{} It discourages closed-{}loop feedback
+ 
+
+\item{} There is transactional friction at each handoff
+ 
+\end{itemize}
+ 
+Go back and review: the waterfall model falls into the "original sin" of IT management, \hyperlink{lean-product-dev}{confusing production with product development}. As a repeatable production model, it may work, assuming that there is little or no information left to generate regarding the production process (an increasingly questionable assumption in and of itself). But when applied to product development, where the \textbf{primary goal} is the experiment-{}driven generation of information, the model is inappropriate and has led to innumerable failures. This includes software development, and even implementing purchased packages in complex environments.
+ 
+\label{org-continuum}\hyperlabel{org-continuum}
+  
+\subsubsection{The continuum of organizational forms}
+\label{_the_continuum_of_organizational_forms}\hyperlabel{_the_continuum_of_organizational_forms}%
+  \begin{DBKadmonition}{}{Note}
+ 
+The following discussion and accompanying set of diagrams is derived from Preston Smith and Don Reinertsen's thought regarding this problem in  \emph{Developing Products in Half the Time} \hyperlink{Smith1998}{[Smith1998]} and \emph{Managing the Design Factory.} \hyperlink{Reinertsen1997}{[Reinertsen1997]}. Similar discussions are found in the \emph{Guide to the Project Management Body of Knowledge} (\hyperlink{PMI2013}{[PMI2013]}) and Abbott and Fisher's \emph{The Art of Scalability} \hyperlink{Abbott2015}{[Abbott2015]}.
+ \end{DBKadmonition}
+ 
+There is a spectrum of alternatives in structuring organizations for flow across functional concerns. First, a lightweight "matrix" project structure may be implemented, in which the project manager has limited power to influence the activity-{}based work, where people sit, etc.
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/3_07-lightweight-pm.png}{{\imgevalsize{images/3_07-lightweight-pm.png}{\includegraphics[width=0.48\textwidth]{images/3_07-lightweight-pm.png}}}}{matrix figure}
+\end{center}
+\caption{Lightweight project management across functions}
+\end{wrapfigure}
+ 
+Work flows across the functions, perhaps called "centers of excellence," and there may be contention for resources within each center. Often, simple "first in, first out" \hyperlink{queuing}{queuing} approaches are used to manage the \hyperlink{ticketing}{ticketed} work, rather than more sophisticated approaches such as \hyperlink{cost-of-delay}{Cost of Delay}. It is the above model that Reinertsen was thinking of when he said: "The danger in using specialists lies in their low involvement in individual projects and the multitude of tasks competing for their time." Traditional \hyperlink{i-o-matrix}{Infrastructure and Operations} organizations, when they implemented defined service catalogs, can be seen as attempting this model. (More on this in Chapter 9's discussion of ITIL and \hyperlink{shared-services}{shared services}.)
+ 
+\label{heavyweight-pm}\hyperlabel{heavyweight-pm}
+ 
+Second, a heavyweight project structure may specify much more, including dedicated time assignment, modes of work, standards, etc. The vertical functional manager may be little more than a resource manager, but does still have reporting authority over the team member and crucially still writes their annual performance evaluation (if the organization still uses those.) This has been the most frequent operating model in the \hyperlink{trad-cio-org}{traditional CIO organization}.
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/3_07-heavy-pm.png}{{\imgevalsize{images/3_07-heavy-pm.png}{\includegraphics[width=0.48\textwidth]{images/3_07-heavy-pm.png}}}}{matrix figure}
+\end{center}
+\caption{Heavyweight project management across functions}
+\end{wrapfigure}
+ 
+If even more focus is needed\hspace{0.167em}\textemdash{}\hspace{0.167em}the now-{}minimized influence of the functional areas is still deemed too strong\hspace{0.167em}\textemdash{}\hspace{0.167em} the organization may move to completely product-{}based reporting. With this, the team member reports to the product owner. There may still be communities of interest (Spotify guilds and tribes are good examples) and there still may be standards for technical choices:
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/3_07-product-mgmt.png}{{\imgevalsize{images/3_07-product-mgmt.png}{\includegraphics[width=0.48\textwidth]{images/3_07-product-mgmt.png}}}}{matrix figure}
+\end{center}
+\caption{Product team, virtual functions}
+\end{wrapfigure}
+ 
+\label{skunkworks}\hyperlabel{skunkworks}
+ 
+Finally, in the skunkworks model, all functional influence is deliberately blocked, as distracting or destructive to the product team's success:
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/3_07-skunk.png}{{\imgevalsize{images/3_07-skunk.png}{\includegraphics[width=0.48\textwidth]{images/3_07-skunk.png}}}}{matrix figure}
+\end{center}
+\caption{Skunkworks model}
+\end{wrapfigure}
+ 
+The product team has complete autonomy, and can move at great speed. It is also free to:
+ \begin{itemize}
+
+\item{} re-{}invent the wheel, developing new solutions to old and well-{}understood problems
+ 
+
+\item{} bring in new components on a whim (regardless of whether they are truly necessary) adding to sourcing and long-{}term support complexity,
+ 
+
+\item{} ignore safety and security standards, resulting in risk and expensive retrofits.
+ 
+\end{itemize}
+ 
+Early e-{}commerce sites were often set up as skunkworks to keep the interference of the traditional CIO to a minimum, and this was arguably necessary. However, ultimately, skunkworks is not scalable. Research by the Corporate Executive Board suggests that "Once more than about 15\% of projects go through the fast [skunkworks] team, productivity starts to fall away dramatically." It also causes issues with morale, as a two-{}tier organization starts to emerge with elite and non-{}elite segments \hyperlink{Goodwin2015}{[Goodwin2015]}.
+ 
+Because of these issues, Don Reinertsen (\hyperlink{Reinertsen1997}{[Reinertsen1997]}) observes that "Companies that experiment with autonomous teams learn their lessons, and conclude that the disadvantages are significant. Then they try to combine the advantages of the functional form with those of the autonomous team."
+ 
+The Agile movement is an important correction to dominant IT management approaches employing \hyperlink{open-loop}{open-{}loop} delivery across centralized functional centers of excellence. However, the ultimate extreme of the skunkworks approach cannot be the basis for organization across the enterprise. While \hyperlink{product-v-function}{functionally specialized organizations} have their challenges, they do promote understanding and common standards for technical areas. In a product-{}centric organization, communities of interest or practice are important counterbalances.  We will examine the various adaptations and approaches for balancing the two organizational extremes further in Chapter 9 (Execution Management).
+  
+\subsubsection{Scaling the product organization}
+\label{_scaling_the_product_organization}\hyperlabel{_scaling_the_product_organization}%
+  
+The functional organization scales well. Just keep hiring more Java programmers, or DBAs, or security engineers and assign them to \hyperlink{heavyweight-pm}{projects} as needed. Scaling product organizations requires more thought however. The most advanced thinking in this area is found in the work of \hyperlink{scrum}{Scrum} authors such as Ken Schwaber, Mike Cohn, Craig Larman and Roman Pichler.
+ 
+Scrum, as we have discussed, is a strict, prescriptive framework calling for self-{}managing teams with a minimum number of roles:
+ \begin{itemize}
+
+\item{} Product owner
+ 
+
+\item{} Scrum master
+ 
+
+\item{} Team member
+ 
+\end{itemize}
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/3_07-SoS-POs.png}{{\imgevalsize{images/3_07-SoS-POs.png}{\includegraphics[width=0.48\textwidth]{images/3_07-SoS-POs.png}}}}{hierarchy}
+\end{center}
+\caption[{Product owner hierarchy }]{Product owner hierarchy \footnotemark{}}
+\end{wrapfigure}
+ 
+Let's accept Scrum and the \hyperlink{amazon-productization}{2-{}pizza team} as our organizing approach. A large scale Scrum effort is based on multiple small teams (i.e. representing \hyperlink{AKF-cube}{AKF scaling cube partitions}). If we want to minimize \hyperlink{multi-tasking}{multi-{}tasking and context-{}switching}, we need to ask "how many product teams can a given product owner handle?" In \emph{Agile Product Management with Scrum}, Roman Pichler says, "My experience suggests that a product owner usually cannot look after more than two teams in a sustainable manner" (\hyperlink{Pichler2010}{[Pichler2010]}, p. 12). Scrum authors therefore suggest that larger scale products be managed as aggregates of smaller teams. We'll discuss how the product structure is defined in Chapter 8.
+ 
+\label{shared-services}\hyperlabel{shared-services}
+  
+\subsubsection{From functions to components to shared services}
+\label{_from_functions_to_components_to_shared_services}\hyperlabel{_from_functions_to_components_to_shared_services}%
+  
+We have previously discussed \hyperlink{feature-v-component}{feature vs component teams}. As a reminder, features are functional aspects of software (things people find directly valuable) while components are how software is organized (e.g. shared services and platforms such as data management).
+ 
+As an organization grows, we see both the feature and component sides scale. Feature teams start to diverge into multiple products, while component teams continue to grow in the guise of shared services and platforms. Their concerns continue to differentiate and communication friction may start to emerge between the teams. How an organization handles this is critical.
+ 
+In a world of digital products delivered as services, both feature and component teams may be the recipients of ongoing investment. An ongoing objection in discussions of Agile is, "We can't put a specialist on every team!" This objection reflects the increasing depth of specialization seen in the evolving digital organization. Ultimately, it seems there are two alternatives to handling deep functional specialization in the modern digital organization:
+ \begin{itemize}
+
+\item{} Split it across teams
+ 
+
+\item{} Turn it into an internal product
+ 
+\end{itemize}
+ 
+We've discussed the first option above (split the specialty across teams). But for the second option consider for example the traditional role of server engineer (a common infrastructure function). Such engineers historically have had a consultative, order-{}taking relationship to application teams:
+ \begin{enumerate}[label=\arabic*.]
+
+\item{} An application team would identify a need for computing capacity ("we need four servers")
+ 
+
+\item{} The infrastructure engineers would get involved and provide recommendations on make, model, and capacity
+ 
+
+\item{} Physical servers would be acquired, perhaps after some debate and further approval cycles
+ 
+\end{enumerate}
+ 
+Such processes might take months to complete, and often caused dissatisfaction. With the rise of Cloud technologies, however, we see the transition from a consultative, order-{}taking model to an automated, always-{}on, self-{}service model. Infrastructure organizations move their activities from consulting on particular applications, to designing and sustaining the shared, self-{}service platform. At that point, are they a function or a product?
+ 
+\label{resource-mgmt}\hyperlabel{resource-mgmt}
+   

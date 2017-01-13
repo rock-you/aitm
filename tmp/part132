@@ -1,0 +1,222 @@
+\subsection{Information management topics}
+\label{_information_management_topics}\hyperlabel{_information_management_topics}%
+  
+\subsubsection{Social, Mobile, Analytics, and Cloud}
+\label{_social_mobile_analytics_and_cloud}\hyperlabel{_social_mobile_analytics_and_cloud}%
+  
+Discussions of digital transformation often reference the algorithm SMAC:
+ \begin{itemize}
+
+\item{} Social
+ 
+
+\item{} Mobile
+ 
+
+\item{} Analytics
+ 
+
+\item{} Cloud
+ 
+\end{itemize}
+ 
+Others would add the Internet of Things.
+ 
+These are not equivalent terms; in fact, they have certain relationships to each other:
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/4_11-SMAC.png}{{\imgevalsize{images/4_11-SMAC.png}{\includegraphics[width=0.48\textwidth]{images/4_11-SMAC.png}}}}{Social mobile analytics cloud}
+\end{center}
+\caption{Social, mobile, analytics, and Cloud}
+\end{wrapfigure}
+ 
+Social media is generally external to an organization and manifests as a form of \hyperlink{commercial-data}{commercial data}, that provide essential insights into bow a company's products are performing and being received.
+ 
+Mobile (or mobility) has two distinct aspects: mobility as an engagement platform (e.g. for deployment of "apps" as one product form), versus the \hyperlink{commercial-data}{commercial data} available from mobile carriers, notably geolocation data.
+ 
+Internet of Things can be either an internal or external data source, often extremely high volume and velocity, requiring analysis services for sense-{}making and value extraction.
+  
+\subsubsection{Big data}
+\label{_big_data}\hyperlabel{_big_data}%
+  
+The term "Big Data" in general refers to data that exceeds the traditional data management and data warehousing approaches we have discussed above.
+As proposed by analyst Doug Laney in 2001 \hyperlink{Laney2001}{[Laney2001]}, its most well known definition identifies 3 dimensions of scale:
+ \begin{itemize}
+
+\item{} Volume
+ 
+
+\item{} Variety
+ 
+
+\item{} Velocity
+ 
+\end{itemize}
+ 
+High volume data is seen for example in the search history logs of search engines such as Google.
+ 
+High variety data encompasses rich media and unstructured data, such as social media interactions.
+ 
+High velocity data includes telemetry from Internet of Things devices or other sources capable of emitting large volumes of data very quickly.
+ 
+All of these dimensions require increasingly specialized techniques as they scale, and the data management product ecosystem has continued to diversify as a result.
+  
+\subsubsection{Managing the information of digital delivery}
+\label{_managing_the_information_of_digital_delivery}\hyperlabel{_managing_the_information_of_digital_delivery}%
+  
+\begin{lstlisting}[firstnumber=1,backgroundcolor={},basicstyle=\ttfamily,]
+redundant w/chap 6
+\end{lstlisting}
+ 
+In terms of our previous data warehousing architecture, the digital pipeline can be seen as related to four areas:
+ \begin{itemize}
+
+\item{} Product management
+ 
+
+\item{} IT
+ 
+
+\item{} Support
+ 
+
+\item{} Operations
+ 
+\end{itemize}
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/4_11-digitalPipeline.png}{{\imgevalsize{images/4_11-digitalPipeline.png}{\includegraphics[width=0.48\textwidth]{images/4_11-digitalPipeline.png}}}}{digital pipeline}
+\end{center}
+\caption{The data architecture of digital management}
+\end{wrapfigure}
+ 
+Assume the primary product of the organization is an information-{}centric digital service, based ultimately on data. How do you manage data? How do you manage anything? In part, through collecting data about it. Wait -{} "data about data"? There's a word for that: \textbf{metadata}. We'll take some time examining it, and its broader relationships to the digital delivery pipeline.
+ 
+We've talked about \hyperlink{commit-as-metadata}{metadata} previously and you should review that section before continuing. The association of business definitions with particular data structures, is one form of metadata.
+ 
+Data governance, records management, and ongoing support for digital consumers all require some layer of interpretation and context to enrich the raw data resource.
+ 
+Consider the following list:
+ \begin{table}[htbp]
+\begin{center}
+\begingroup%
+\setlength{\newtblsparewidth}{\linewidth-2\tabcolsep-2\tabcolsep-2\tabcolsep}%
+\setlength{\newtblstarfactor}{\newtblsparewidth / \real{100}}%
+
+\begin{tabular}{ll}\hline
+\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright\bfseries%
+%
+Server%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright\bfseries%
+%
+Database%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+SRV001
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+DB0023
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+SRV001
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+DB0045
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+SRV002
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+DB0067
+%
+}\tabularnewline
+\hline
+\end{tabular}\endgroup%
+
+\end{center}
+
+\caption{Servers and databases}
+\end{table}
+ 
+Not very useful, is it? Compare it to:
+ \begin{table}[htbp]
+\begin{center}
+\begingroup%
+\setlength{\newtblsparewidth}{\linewidth-2\tabcolsep-2\tabcolsep-2\tabcolsep-2\tabcolsep-2\tabcolsep}%
+\setlength{\newtblstarfactor}{\newtblsparewidth / \real{100}}%
+
+\begin{tabular}{llll}\hline
+\multicolumn{1}{|p{25\newtblstarfactor}|}{\raggedright\bfseries%
+%
+Server%
+}&\multicolumn{1}{p{25\newtblstarfactor}|}{\raggedright\bfseries%
+%
+Database%
+}&\multicolumn{1}{p{25\newtblstarfactor}|}{\raggedright\bfseries%
+%
+Product%
+}&\multicolumn{1}{p{25\newtblstarfactor}|}{\raggedright\bfseries%
+%
+Regulatory%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\multicolumn{1}{|p{25\newtblstarfactor}|}{\raggedright%
+SRV001
+%
+}&\multicolumn{1}{p{25\newtblstarfactor}|}{\raggedright%
+DB0023
+%
+}&\multicolumn{1}{p{25\newtblstarfactor}|}{\raggedright%
+Online reviews
+%
+}&\multicolumn{1}{p{25\newtblstarfactor}|}{\raggedright%
+Customer privacy
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\multicolumn{1}{|p{25\newtblstarfactor}|}{\raggedright%
+SRV001
+%
+}&\multicolumn{1}{p{25\newtblstarfactor}|}{\raggedright%
+DB0045
+%
+}&\multicolumn{1}{p{25\newtblstarfactor}|}{\raggedright%
+Employee records management
+%
+}&\multicolumn{1}{p{25\newtblstarfactor}|}{\raggedright%
+HIPAA, PII
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\cline{3-3}\cline{4-4}\multicolumn{1}{|p{25\newtblstarfactor}|}{\raggedright%
+SRV002
+%
+}&\multicolumn{1}{p{25\newtblstarfactor}|}{\raggedright%
+DB0067
+%
+}&\multicolumn{1}{p{25\newtblstarfactor}|}{\raggedright%
+Online sales
+%
+}&\multicolumn{1}{p{25\newtblstarfactor}|}{\raggedright%
+PCI, PII
+%
+}\tabularnewline
+\hline
+\end{tabular}\endgroup%
+
+\end{center}
+
+\caption{Servers, databases, product, and governance information}
+\end{table}
+ 
+We could also include definitions of the tables and columns held in each of those databases. But what system would contain such data? There have been a couple primary answers over the years: metadata repositories and configuration management databases.
+ 
+In terms of this book's general definition of \hyperlink{commit-as-metadata}{metadata} as non-{}runtime information related to digital assets, both the metadata repository and the CMDB contain metadata. But they are not the only systems in which data related to digital services is seen. Other systems include monitoring systems, portfolio management systems, risk and policy management systems, and many more. All of these systems themselves can be aggregated into a data warehousing/BI closed-{}loop infrastructure.
+ 
+This means that the digital organization, including organizations transforming from older IT-{}centric models, can apply Big Data, machine learning, text analytics, and the rest of the techniques and practices covered in this chapter.
+ \begin{DBKadmonition}{}{Note}
+ 
+We will examine a full "business of IT/digital delivery pipeline" architecture in the next chapter.
+ \end{DBKadmonition}
+   

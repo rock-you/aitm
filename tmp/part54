@@ -1,0 +1,300 @@
+\subsection{Product discovery}
+\label{_product_discovery}\hyperlabel{_product_discovery}%
+  \begin{quote}
+
+ What is a Product Manager? A Product Manager is the one person in the whole organization who owns the product Requirements effort. Requirements focuses on the WHAT, which means it isn't Development, which focuses on the HOW. And Marketing traditionally talks about the WHAT, but cannot necessarily decide what the WHAT should be. At least not at any useful level of detail. \hyperlink{Murphy2007}{[Murphy2007]}
+
+\hspace*\fill--- Jacques Murphy
+\emph{Pragmatic Marketing} \end{quote}
+ 
+Now that we have discussed the overall concept of product management and why it is important, and how product teams are formed, we can turn more specifically to the topic of product discovery and design. We have previously discussed the overall \hyperlink{digital-context}{digital business context}, as a startup founder might think of the problem. But the process of discovery continues as the product idea is refined, new business problems are identified, and solutions (such as specific feature ideas) are designed and tested for outcomes.
+ \begin{DBKadmonition}{}{Note}
+ 
+In this book, we favor the idea that products are "discovered" as much or more than they are "designed." But you will see both terms used throughout this chapter. See the parable \hyperlink{flower-and-cog}{the Flower and the Cog} for an illustration of the difference.
+ \end{DBKadmonition}
+ 
+The presence of a section entitled "product discovery" in this book is a  departure from other IT management textbooks. "Traditional" models of IT delivery focus on projects and deliverables, concepts we touched on in the  \hyperlink{process-project-product}{last chapter section} but that we will not explore in depth until later in the book. However, the idea of "product discovery" \textbf{within} the large company is receiving more and more attention. Even large companies \hyperlink{fowler-quote}{benefit} when products are developed with tight-{}knit teams using fast feedback.
+ \begin{DBKadmonition}{}{Note}
+ 
+The term "intrapreneurship," credited to Gifford Pinchot, means "entrepreneurship inside a large company."
+ \end{DBKadmonition}
+ 
+For our discussion here, the challenge with the ideas of projects and deliverables is that they represent approaches that are more \hyperlink{open-loop}{open loop}, or at least delayed in \hyperlink{feedback}{feedback}. Design processes do not perform well when feedback is delayed. \hyperlink{system-intent}{System intent}, captured as a user story or requirement, is only an hypothesis until tested via implementation and user confirmation.
+ 
+\label{prod-discovery-techniques}\hyperlabel{prod-discovery-techniques}
+ 
+\subsubsection{Formalizing product discovery}
+\label{_formalizing_product_discovery}\hyperlabel{_formalizing_product_discovery}%
+  \begin{quote}
+
+It is humbling to see how bad experts are at estimating the value of features (us included).
+
+\hspace*\fill--- Ronnie Kohavi
+\emph{Online Experimentation at Microsoft} \end{quote}
+ 
+In Chapter 3, we needed to consider the means for describing  \hyperlink{system-intent}{system intent}. Even as a bare-{}bones startup, some formalization of this starts to emerge, at the very least in the form of test-{}driven development:
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/2_04-simplePipeline.png}{{\imgevalsize{images/2_04-simplePipeline.png}{\includegraphics[width=0.48\textwidth]{images/2_04-simplePipeline.png}}}}{pipeline}
+\end{center}
+\caption{Product discovery tacit}
+\end{wrapfigure}
+ 
+But, the assumption in our emergence model is that more formalized product management emerges with the formation of a team. As a team, we now need to expand "upstream" of the core delivery pipeline, so that we can collaborate and discover more effectively. Notice the grey box in the following:
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/2_04-PipelinewProdDisc.png}{{\imgevalsize{images/2_04-PipelinewProdDisc.png}{\includegraphics[width=0.48\textwidth]{images/2_04-PipelinewProdDisc.png}}}}{pipeline w product discovery}
+\end{center}
+\caption{Product discovery explicit}
+\end{wrapfigure}
+ 
+\label{HIPPO}\hyperlabel{HIPPO}
+ 
+The most important foundation for your newly formalized product discovery capability is that it must be \textbf{empirical and hypothesis-{}driven}. Too often, product strategy is based on the HIPPO: The Highest Paid Person's Opinion.
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/2_04-hippo.jpg}{{\imgevalsize{images/2_04-hippo.jpg}{\includegraphics[width=0.48\textwidth]{images/2_04-hippo.jpg}}}}{hippopotamus}
+\end{center}
+\caption[{Beware of HIPPO-{}based product discovery }]{Beware of HIPPO-{}based product discovery \footnotemark{}}
+\end{wrapfigure}
+ 
+The problem with relying on "gut feel" or personal opinions is that people\hspace{0.167em}\textemdash{}\hspace{0.167em}regardless of experience or seniority\hspace{0.167em}\textemdash{}\hspace{0.167em}perform poorly in assessing the likely outcome of their product ideas. Some well known research on this topic was conducted by Microsoft's Ronny Kohavi. In this research, Kohavi and team determined that "only about 1/3 of ideas improve the metrics they were designed to improve." \hyperlink{Kohavi2009}{[Kohavi2009]} As background, the same report cites that:
+ \begin{itemize}
+
+\item{} "Netflix considers 90\% of what they try to be wrong"
+ 
+
+\item{} "75 percent of important business decisions and business improvement ideas either have no impact on performance or actually hurt performance" according to Qualpro (a consultancy specializing in controlled experiments)
+ 
+\end{itemize}
+ 
+
+\begin{sidebar}
+\textbf{Amazon Shopping Cart Recommendations}
+
+
+A well known story of the power of experimentation is told by Greg Linden, who was a product developer for early versions of the Amazon shopping cart. Linden had an idea of making recommendations to people based on what was already in their shopping cart. (While this is common across e-{}commerce sites now, at one point it was a new idea.) While grocery stores "recommnend" impulse purchases (candy, gum) in the checkout lane, an ecommerce provider can recommend anything in the store, so the idea is even more powerful. Linden developed a prototype, and while it got some favorable reactions, one senior vice president was against it\hspace{0.167em}\textemdash{}\hspace{0.167em}his view was that it might distract people and lead them to abandon the cart.
+
+As Linden says, "I was forbidden to work on this any further." But he went ahead and prepared the feature anyways. The SVP was furious, but Amazon already had a data-{}driven culture and even senior executives couldn't block tests. The feature was then pushed out to a small set of Amazon customers.  In this way, they could compare the behavior of customers who did receive shopping cart recommendations to those who didn't (otherwise known as a controlled experiment.) The results were dramatic -{} the feature outperformed the control of not having it by such a large margin that, as Linden says, "not having it live was costing Amazon a notable chunk of change."
+
+It's unknown what happened to the SVP. Challenging senior executives can be bad for your career, but if you find yourself in a place run by HiPPOs who don't want to experiment, you might want to consider how long that organization will be in business.
+\hyperlink{Linden2006}{[Linden2006]}
+\end{sidebar}
+ 
+It is therefore critical to establish a strong practice of data-{}driven experimentation when forming a product team, and avoid any cultural acceptance of "gut feel" or deferring to HIPPOs. This can be a difficult transition for the company founder, who has until now served as the \emph{de facto} product manager.
+ 
+\label{DIBB}\hyperlabel{DIBB}
+ 
+A useful framework, similar to \hyperlink{lean-startup}{Lean Startup} is proposed by Spotify, in the "DIBB" model:
+ \begin{itemize}
+
+\item{} Data
+ 
+
+\item{} Insight
+ 
+
+\item{} Belief
+ 
+
+\item{} Bet
+ 
+\end{itemize}
+ 
+Data leads to insight, which leads to a hypothesis that can be tested (i.e., "bet" on -{} testing hypotheses is not free). We discuss issues of prioritization further in Chapter 5, in the section on \hyperlink{cost-of-delay}{Cost of Delay}.
+ 
+\label{beneficial-variability}\hyperlabel{beneficial-variability}
+ 
+Don Reinertsen (who we will read more about in the next chapter) emphasizes that such experimentation is inherently \emph{variable}. We can't develop experiments with any sort of expectation that they will always succeed. We might run 50 experiments, and only have 2 succeed. But if the cost of each experiment is \$10,000, and the two that succeeded earned us \$1 million each, we gained:
+ 
+\begin{lstlisting}[firstnumber=1,backgroundcolor={},basicstyle=\ttfamily,]
+$ 2,000,000
+$ - 480,000
+-----------
+$ 1,520,000
+\end{lstlisting}
+ 
+Not a bad return on investment! (See \hyperlink{Reinertsen2009}{[Reinertsen2009]}, Chapter 4, for a detailed, mathematical discussion, based on options and information theory.) Roman Pichler, in \emph{Agile Product Management with Scrum}, describes "old-{}school" versus "new-{}school" product management this way:
+ \begin{table}[htbp]
+\begin{center}
+\begingroup%
+\setlength{\newtblsparewidth}{\linewidth-2\tabcolsep-2\tabcolsep-2\tabcolsep}%
+\setlength{\newtblstarfactor}{\newtblsparewidth / \real{100}}%
+
+\begin{tabular}{ll}\hline
+\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright\bfseries%
+%
+Old school%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright\bfseries%
+%
+New school%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Shared responsibility
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+Single product owner
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Detached project manager
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+PM belongs to Scrum team
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Extensive up-{}front research
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+Minimal up-{}front work to define rough vision
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Requirements frozen early
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+Dynamic backlog
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Late feedback due to lengthy release cycle
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+Early \& frequent releases drive fast feedback, resulting in customer value
+%
+}\tabularnewline
+\hline
+\end{tabular}\endgroup%
+
+\end{center}
+
+\caption[{Old school versus new school product management }]{Old school versus new school product management \footnotemark{}}
+\end{table}
+\addtocounter{footnote}{-1}\stepcounter{footnote}
+\footnotetext{
+summarized from \hyperlink{Pichler2010}{[Pichler2010]}, p. xxi
+}  
+\subsubsection{Product discovery techniques}
+\label{_product_discovery_techniques}\hyperlabel{_product_discovery_techniques}%
+  
+There are a wide variety of techniques and even "schools" of product discovery and design; we will consider a few representatives in this chapter section. Of course, when you first started your journey in Chapter 1, you might also have used some of these techniques. But now that you are a team, you are formalizing and relying on these techniques. These techniques are not mutually exclusive; they may be complementary. But at the more detailed, digital product level, how do we develop hypotheses for testing, in terms of our products/services? We briefly mentioned User Story Mapping in our discussion of \hyperlink{system-intent}{system intent.} In product discovery terms, User Story Mapping is a form of persona analysis. But that is only one of many techniques. Roman Pichler mentions "Vision Box and Trade Journal Review" and the "Kano Model" (\hyperlink{Pichler2010}{[Pichler2010]}, p. 39). Here, let's discuss:
+ \begin{itemize}
+
+\item{} "Jobs to be done" analysis
+ 
+
+\item{} Impact mapping
+ 
+
+\item{} Business analysis \& architecture
+ 
+\end{itemize}
+ 
+\label{jobs-to-be-done}\hyperlabel{jobs-to-be-done}
+ 
+\paragraph{Job to Be Done}
+\label{_job_to_be_done}\hyperlabel{_job_to_be_done}%
+  \begin{quote}
+
+Customers don't want a quarter-{}inch drill. They want a quarter-{}inch hole.
+
+\hspace*\fill--- Theodore Levitt
+\end{quote}
+ \begin{quote}
+
+If I'd asked the customer what they wanted, they would have said "faster horses."
+
+\hspace*\fill--- Henry Ford
+\emph{(apocryphal)} \end{quote}
+ 
+The "Jobs to be Done" framework was created by noted Harvard professor Clayton Christensen, in part as a reaction against conventional \hyperlink{product-mgmt-v-marketing}{marketing} techniques that
+ 
+\emph{"frame customers by attributes\textemdash{}using age ranges, race, marital status, and other categories that ultimately create products and entire categories too focused on what companies want to sell, rather than on what customers actually need."} \hyperlink{Christensen2015}{[Christensen2015]}
+ 
+"Some products are better defined by the job they do than the customers they serve," in other words. \hyperlink{Traynor2016}{[Traynor2016]} This is in contrast to many kinds of business and requirements analysis that focus on identifying different user personas (e.g. 45-{}55 married Black woman with children in the house). Jobs to be Done advocates argue that "The job, not the customer, is the fundamental unit of analysis" and that customer "hire" products to do a certain job. \hyperlink{Christensen2006}{[Christensen2006]}
+ 
+To apply the Job to Be done approach, Des Traynor suggests filling in the blanks in the following \hyperlink{Traynor2016}{[Traynor2016]} :
+ 
+\textbf{Why do people hire your product?}
+ 
+People hire your product to do the job of -{}-{}-{}-{}-{}-{}-{}-{}  every -{}-{}-{}-{}-{}-{}-{}-{}-{}-{} when -{}-{}-{}-{}-{}-{}-{}-{}-{}-{}. The other applicants for this job are -{}-{}-{}-{}-{}-{}-{}-{}, -{}-{}-{}-{}-{}-{}-{}-{}, and -{}-{}-{}-{}-{}-{}-{}-{}, but your product will always get the job because of -{}-{}-{}-{}-{}-{}-{}-{}.
+ 
+Understanding the alternatives people have is key. It's possible that the job can be fulfilled in multiple different ways. For example, people may want certain software run. This job can be undertaken through owning a computer (e.g. having a data center). It can also be managed by hiring someone else's computer (e.g. using a Cloud provider). If one is not attentive and creative in thinking about the diverse ways jobs can be done, one is at risk for disruption.
+ 
+\label{impact-mapping}\hyperlabel{impact-mapping}
+  
+\paragraph{Impact mapping}
+\label{_impact_mapping}\hyperlabel{_impact_mapping}%
+  
+Understanding the relationship of a given feature or component to business objectives is critical. Too often, technologists (e.g software professionals) are accused of wanting "technology for technology's sake."
+ 
+Showing the "line of sight" from technology to a business objective is therefore critical. Ideally, this starts by identifying the business objective. Gojko Adzic's \emph{Impact Mapping: Making a big impact with software products and projects} \hyperlink{Adzic2012}{[Adzic2012]} describes a technique for doing so:
+ 
+\emph{An impact map is a visualisation of scope and underlying assumptions, created collaboratively by senior technical and business people.}
+ 
+Starting with some general goal or hypothesis (e.g. generated through Lean Startup thinking), one builds a "map" of how the goal can be achieved, or hypothesis can be measured. A simple graphical approach can be used:
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/2_04-impactMap.png}{{\imgevalsize{images/2_04-impactMap.png}{\includegraphics[width=0.48\textwidth]{images/2_04-impactMap.png}}}}{impact map}
+\end{center}
+\caption{Impact map}
+\end{wrapfigure}
+ \begin{DBKadmonition}{}{Note}
+ 
+Impact mapping is similar to mind mapping, and some drawing tools such as Microsoft Visio come with "Mind Mapping" templates.
+ \end{DBKadmonition}
+ 
+The most important part of the impact map is to answer the question "Why are we doing this?" The impact map is intended to help keep the team focused on the most important objectives, and avoid less valuable activities and investments.
+ 
+For example, in the above diagram, we see that a bank may have an overall business goal of customer retention. (It is much more expensive to gain a new customer, than to retain an existing one, and retention is a metric carefully measured and tracked at the highest levels of the business.)
+ 
+Through focus groups and surveys, the bank may determine that staying current with online services is important to retaining customers. Some of these services are accessed by home PCs, but increasingly customers want access via mobile devices.
+ 
+These business drivers lead to the decision to invest in online banking applications for both the Apple and Android mobile platforms. This decision in turn will lead to further discovery, analysis, and design of the mobile applications.
+ 
+\label{biz-analysis-ch1}\hyperlabel{biz-analysis-ch1}
+  
+\paragraph{The Business Analysis Body of Knowledge}
+\label{_the_business_analysis_body_of_knowledge}\hyperlabel{_the_business_analysis_body_of_knowledge}%
+  
+One well-{}established method for product discovery is that of business analysis, formalized in the \emph{Business Analysis Body of Knowledge} (BABOK), from the International Institute of Business Analysis \hyperlink{IIBA2015}{[IIBA2015]}
+ 
+The Business Analysis Body of Knowledge (BABOK) defines business analysis as (p. 442):
+ 
+\emph{The practice of enabling change in the context of an enterprise
+by defining needs and recommending solutions that deliver value to
+stakeholders}.
+ 
+BABOK is centrally concerned with the concept of requirements, and classifies them thus:
+ \begin{itemize}
+
+\item{} Business requirements
+ 
+
+\item{} Stakeholder requirements
+ 
+
+\item{} Solution requirements
+ \begin{itemize}
+
+\item{} Functional requirements
+ 
+
+\item{} Non-{}functional requirements
+ 
+\end{itemize}
+ 
+
+\item{} Transition requirements
+ 
+\end{itemize}
+ 
+BABOK also provides a framework for understanding and managing the work of business analysts; in general it assumes that a BA capability will be established and that maturing such a capability is a desirable thing. This may run counter to the Scrum ideal of cross-{}functional, multi-{}skilled teams. Also as noted \hyperlink{system-intent}{above}, the term "requirements" has fallen out of favor with some Agile thought leaders.
+ 
+\label{design}\hyperlabel{design}
+    

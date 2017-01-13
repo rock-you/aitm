@@ -1,0 +1,416 @@
+\subsection{Towards enterprise information management}
+\label{_towards_enterprise_information_management}\hyperlabel{_towards_enterprise_information_management}%
+  
+The previous chapter was necessary, but narrow. From those basic tools of defining controlled vocabularies and mapping them onto computing platforms, has come today's digital economy and its exabytes of data.
+ 
+The relational database as represented in the previous chapter can scale, as a single unit, to surprising volumes and complexity. Perhaps the most sophisticated and large scale examples are seen in Enterprise Resource Planning (more detail on this in the Topics section.) An ERP system can manage the supply chain, financials, human resources, and manufacturing operations for a Fortune 50 corporation, and itself constitute terabytes and tens of thousands of tables.
+ 
+However, ERP vendors do not sell solutions for leading edge digital transformation. They represent the commoditization side of the \hyperlink{innovation-cycle}{Innovation Cycle}. One cannot base a digital go-{}to-{}market strategy on them, as everyone has them.
+ 
+Competing in the market requires systems of greater originality and flexibility, and that usually means some commitment to either developing them with internal staff or partnering closely with someone who has the necessary skills.
+ 
+And as these unique systems scale up, a variety of concerns emerge, requiring specialized perspectives and practices.
+ 
+\subsubsection{Advanced data management}
+\label{_advanced_data_management}\hyperlabel{_advanced_data_management}%
+  
+The previous chapter section gave us the basics of data storage. We turn to some of the emergent practices seen as enterprise information management scales up:
+ \begin{itemize}
+
+\item{} Data integration and the "System of Record"
+ 
+
+\item{} Reference data management
+ 
+
+\item{} Data quality management
+ 
+\end{itemize}
+ 
+\label{system-of-record}\hyperlabel{system-of-record}
+ 
+\paragraph{Data integration and the "System of Record"}
+\label{_data_integration_and_the_system_of_record}\hyperlabel{_data_integration_and_the_system_of_record}%
+  
+In the last section, we analyzed a business problem as a data model and created a simple database. Notice that if data is NOT in a table in the database, the database doesn't know about it. Therefore, if there is data held in other parts of the company, it must be loaded into the database before it can be combined with that database's other data. This can also apply to data held by Cloud providers.
+ 
+Let's go back to our \hyperlink{emergence-model}{emergence model}. Think about moving from one database, to two.
+ 
+In the example below, the Customer Relationship Management (CRM) system is in the cloud, and data is also being imported from the product database:
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/4_11-integrations.png}{{\imgevalsize{images/4_11-integrations.png}{\includegraphics[width=0.48\textwidth]{images/4_11-integrations.png}}}}{integrations}
+\end{center}
+\caption{Data integrations}
+\end{wrapfigure}
+ 
+The process of identifying such remote data and loading it into a database to enable work to be done is known as "integration" and is a complex domain \hyperlink{Hohpe2003}{[Hohpe2003]}.  There are many ways data can be integrated, and industry views of what is "good practice" have changed over the years.
+ \begin{DBKadmonition}{}{Note}
+ 
+Thinking in terms of the emergence model, you have likely been integrating data in various ways for some time. However, in a large governed organization, you need to formalize your understandings and approach.
+ \end{DBKadmonition}
+ 
+Take the above diagram and multiply it by several hundred times, and you will start to get an idea of the complexity of enterprise information management at scale in the enterprise. How do we decide what data needs to flow where? What happens if we acquire another company and can't simply move them over to our systems immediately? What department should properly own a given database? These and similar questions occupy data professionals worldwide.
+ 
+As we see from the above picture, the same data may exist in multiple systems. Understanding what system is the "master" is critical. Product data should (in general) not flow from the sales database back into the product system. But what about sales information flowing from the sales database back to the CRM system? This might be helpful, so that people using the CRM system understand how much business a customer represents.
+ 
+The "system of record" concept is widely used in data management, records management, and enterprise architecture to resolve these kinds of questions. It is often said that the system of record is the "master" for the data in question, and sustaining the System of Record concept may also be called Master Data Management. In general, the system of record represents data that is viewed as:
+ \begin{itemize}
+
+\item{} the most complete and accurate
+ 
+
+\item{} authoritative, in terms of resolving questions
+ 
+
+\item{} suitable for legal and regulatory purposes
+ 
+
+\item{} the "source" for other systems to refer to
+ 
+\end{itemize}
+ 
+It is important to realize that the designation "system of record" is a ROLE that a given database (or system) plays with respect to SOME DATA. The "Sales" database above might be the system of record for invoices, but is not the system of record for products or customers:
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/4_11-SORs.png}{{\imgevalsize{images/4_11-SORs.png}{\includegraphics[width=0.48\textwidth]{images/4_11-SORs.png}}}}{systems of record}
+\end{center}
+\caption{Systems of record}
+\end{wrapfigure}
+ 
+The system of record (aka SOR) is often the system of origin -{} the system where the data is first captured -{} but not always. In retail, sales transactions are not considered authoritative until they pass through sales audit, and so the system of record for a transaction is not the cash register (which has a database in it):
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/4_11-salesFlow.png}{{\imgevalsize{images/4_11-salesFlow.png}{\includegraphics[width=0.48\textwidth]{images/4_11-salesFlow.png}}}}{sales flow}
+\end{center}
+\caption{Data flow for sales information}
+\end{wrapfigure}
+ 
+Systems of record logically would be the first place to pull data from, but sometimes due to performance or security concerns data may be replicated into an alternate source better suited for distributing the data. A good example of this is an HR system that feeds the corporate directory; the HR system (e.g. Oracle HR, or Workday) is the actual system of record for employee names and identifiers, but most people and other systems in the company will pull the data from the directory (e.g. Microsoft Exchange):
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/4_11-HRData.png}{{\imgevalsize{images/4_11-HRData.png}{\includegraphics[width=0.48\textwidth]{images/4_11-HRData.png}}}}{HR data}
+\end{center}
+\caption{Data flow for HR data}
+\end{wrapfigure}
+ 
+\label{reference-data}\hyperlabel{reference-data}
+  
+\paragraph{Reference data management}
+\label{_reference_data_management}\hyperlabel{_reference_data_management}%
+  \begin{quote}
+
+Reference data is any kind of data that is used solely to categorize other data found in a database, or solely for relating data in a database to information beyond the boundaries of the enterprise.
+
+\hspace*\fill--- Malcolm Chisholm
+\emph{Managing Reference Data} \end{quote}
+ 
+There are various ways to categorize data. Frequently, it is categorized by business process or functional area (Sales, Marketing, Support, etc). However, another important way to understand data is by its non-{}functional characteristics. Some data is transactional (e.g. Invoice and Invoice Line Item in the above example) and some is more persistent (Customer, Product).
+ 
+When data is highly persistent and used for primarily for categorizing across an enterprise, we may call it  "reference" data. Classic examples of reference data include:
+ \begin{itemize}
+
+\item{} Geographic information (cities, states, zip codes)
+ 
+
+\item{} Widely used "codes" in the business (medical insurance makes extensive use of these)
+ 
+
+\item{} An organization's chart of accounts
+ 
+\end{itemize}
+ 
+Reference data is among the first data to be shared between systems. It is often the basis for dimensions in analytic processing, which we cover in the next chapter section.
+ 
+\label{commercial-data}\hyperlabel{commercial-data}
+  
+\paragraph{Commercial data}
+\label{_commercial_data}\hyperlabel{_commercial_data}%
+  
+Data is not just an internal artifact of organizations. Data can be bought and sold on the open market like any other commodity. Marketing organizations frequently acquire contact information for email and other campaigns. Here are examples of commercial data available through market sources:
+ \begin{table}[htbp]
+\begin{center}
+\begingroup%
+\setlength{\newtblsparewidth}{\linewidth-2\tabcolsep-2\tabcolsep-2\tabcolsep}%
+\setlength{\newtblstarfactor}{\newtblsparewidth / \real{100}}%
+
+\begin{tabular}{ll}\hline
+\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright\bfseries%
+%
+Data type%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright\bfseries%
+%
+Market provider%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Stock prices
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+Bloomberg, Reuters
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Credit ratings
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+Trans-{}Union, Experian
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Known security issues
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+NIST Common Vulnerability database
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Technology products and availability dates
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+BDNA Technopedia
+%
+}\tabularnewline
+\hline
+\end{tabular}\endgroup%
+
+\end{center}
+
+\caption{Commercial data}
+\end{table}
+ 
+Other forms include:
+ \begin{itemize}
+
+\item{} Transactions of record (e.g. real estate)
+ 
+
+\item{} Governmental actions (these may be nominally free from the government, but frequently are resold by vendors who make the data more accessible)
+ 
+\end{itemize}
+ 
+For a detailed examination of the privacy issues relating to commercial data, especially when governmental data is commercialized, see \hyperlink{DHS2006}{[DHS2006]}.
+ 
+\label{data-quality}\hyperlabel{data-quality}
+  
+\paragraph{Data quality}
+\label{_data_quality}\hyperlabel{_data_quality}%
+  \begin{quote}
+
+Human beings cannot make effective business decisions with flawed, incomplete, or misleading data.
+
+\hspace*\fill--- Danette McGilvary
+\emph{Executing Data Quality Projects} \end{quote}
+ 
+We touched on quality management and \hyperlink{continuous-improvement}{continuous improvement} in Chapter 9. Data is an important subject for continuous improvement approaches. Sometimes, the best way to improve a process is to examine the data it is consuming and producing, and an entire field of data quality management has arisen (a number of books are referenced at the end of this chapter).
+ 
+Poor data quality costs the enterprise in many ways.
+ \begin{itemize}
+
+\item{} Customer dissatisfaction ("they lost my order/reservation")
+ 
+
+\item{} Increased support costs (30 minutes support operator time spent solving the problem)
+ 
+
+\item{} Governance issues and regulatory risk (\hyperlink{audit}{auditors} and regulators often check data quality as evidence of \hyperlink{compliance}{compliance} to \hyperlink{controls}{controls} and regulations)
+ 
+
+\item{} Operational and supply chain issues
+ 
+
+\item{} Poor business outcomes
+ 
+\end{itemize}
+ 
+
+\begin{sidebar}
+
+\textbf{Sidebar: The power of bad data}
+
+In 2015, Minneapolis-{}based Target Corporation lost \$7 billion when its attempt to expand into Canada failed. One primary reason for the loss was a failure of data quality in the supply chain system. As reported by \emph{Canadian Business}:
+
+\textquotedblleft{}It didn't take long for Target to figure out the underlying cause of the breakdown: The data contained within the company's supply chain software, which governs the movement of inventory, was riddled with flaws.
+
+"Product dimensions would be in inches, not centimeters or entered in the wrong order: width by height by length, instead of, say, length by width by height. Sometimes the wrong currency was used. Item descriptions were vague. Important information was missing. There were myriad typos. \textquotedblleft{}You name it, it was wrong,\textquotedblright{} says a former employee. \textquotedblleft{}It was a disaster.\textquotedblright{}
+
+The consequences were serious. \textquotedblleft{}\ldots{}products weren't fitting into shipping containers as expected, or tariff codes were missing or incomplete. Merchandise that made it to a distribution center couldn't be processed for shipping to a store. Other items weren't able to fit properly onto store shelves. What appeared to be isolated fires quickly became a raging inferno threatening to destroy the company's supply chain.\textquotedblright{}
+
+Ultimately, lack of inventory (empty shelves in the store) was a major cause of the expansion's failure. \hyperlink{Castaldo2016}{[Castaldo2016]}
+\end{sidebar}
+ 
+The following activities are typically seen in data quality management (derived and paraphrased from \hyperlink{DAMA2009}{[DAMA2009]}):
+ \begin{itemize}
+
+\item{} Identify measurable indicators of data quality
+ 
+
+\item{} Establish a process for acting upon those indicators (what do we do if we see bad data?)
+ 
+
+\item{} Actively monitor the quality
+ 
+
+\item{} Fix both data quality exceptions, and their reasons for occurring
+ 
+\end{itemize}
+ 
+Data quality indicators may be automated (e.g. reports that identify exceptions) or manual (e.g. audits of specific records and comparison against what they are supposed to represent).
+ 
+It is important to track trending over time, so that the organization understands if progress is being made.
+ 
+\label{records-mgmt}\hyperlabel{records-mgmt}
+   
+\subsubsection{Enterprise records management}
+\label{_enterprise_records_management}\hyperlabel{_enterprise_records_management}%
+  
+Not all enterprise information is stored in structured databases; in fact, most isn't. (We will leave aside the issues of rich content such as audio, images, and video.) Content management is a major domain in and of itself, which shades into the general topic of knowledge management (to be covered in the Topics section). Here, we will focus on records management. As discussed above, businesses gained efficiency through converting \hyperlink{paper-to-digital}{paper records to digital forms}. But we still see paper records to this day: loan applications, doctor's forms, and more. If you have a car, you likely have an official paper title to it issued by a governmental authority. Also, we above defined the concept of a \hyperlink{system-of-record}{System of Record} as an authoritative source. Think about the various kinds of data that might be needed in the case of disputes or legal matters:
+ \begin{itemize}
+
+\item{} Employee records
+ 
+
+\item{} Sales records (purchase orders and invoices)
+ 
+
+\item{} Contracts and other agreements
+ 
+
+\item{} Key correspondence with customers (e.g. emails directing a stock broker to "buy")
+ 
+\end{itemize}
+ 
+These can be take the form of:
+ \begin{itemize}
+
+\item{} paper documents in a file cabinet
+ 
+
+\item{} documents scanned into a document management system
+ 
+
+\item{} records in a database
+ 
+\end{itemize}
+ 
+In all cases, if they are "official" -{} if they represent the organization's best and most true understanding of important facts -{} they can be called "records."
+ 
+This use of the word "records" is distinct from the idea of a "record" in a database. Official records are of particular interest to the company's legal staff, regulators, and auditors. Records management is a professional practice, represented by the Association of Records Management Administrators (www.arma.org). Records management will remain important in digitally transforming enterprises, as lawyers, regulators, and auditors are not going away. One of the critical operational aspects of records management is the concept of the \textbf{retention schedule.}
+ 
+It is not usually in an organization's interest to maintain all data related to all things in perpetuity. Obviously, there is a cost to doing this. However, as storage costs continue to decrease, other reasons become more important. For example, data maintained by the company can be used against it in a lawsuit. For this reason, companies establish records management policies such as:
+ \begin{itemize}
+
+\item{} Human Resources data is to be deleted 7 years after the employee leaves the company
+ 
+
+\item{} Point of Sale data is to be deleted 3 years after the transaction
+ 
+
+\item{} Real estate records are to be deleted 10 years after the property is sold or otherwise disposed of
+ 
+\end{itemize}
+ 
+This is not necessarily encouraging illegal behavior. Lawsuits can be frivolous, and can "go fishing" through a company's data if a court orders it. A strict retention schedule, that can be shown to be adhered to, can be an important protection in the legal domain.
+ \begin{DBKadmonition}{warning}{Important}
+ 
+If you or your company are involved in legal issues relating to the above, seek a lawyer. This discussion is not intended as legal advice.
+ \end{DBKadmonition}
+ 
+We will return to records management in the discussion below on e-{}discovery and cyberlaw.
+ 
+Records management drives us to consider questions such as "who owns that data" and "who takes care of it." This leads us to the concept of data governance.
+  
+\subsubsection{Data Governance}
+\label{_data_governance}\hyperlabel{_data_governance}%
+  
+This book views data governance as based in the fundamental principles of governance from \hyperlink{gov-chap}{Chapter 10}:
+ \begin{itemize}
+
+\item{} Governance is \hyperlink{gov-v-mgmt}{distinct} from management
+ 
+
+\item{} Governance represents a control and \hyperlink{gov-as-feedback}{feedback} mechanism for the digital pipeline
+ 
+
+\item{} Governance is particularly concerned with the \hyperlink{gov-as-env-resp}{external environment} (markets, brands, channels, regulators, adversaries)
+ 
+\end{itemize}
+ 
+By applying these principles we can keep the topic of "data governance" to a reasonable scope. As \hyperlink{limiting-governance}{above} let's focus on the data aspects of:
+ \begin{itemize}
+
+\item{} risk management, including security
+ 
+
+\item{} compliance
+ 
+
+\item{} policy
+ 
+
+\item{} assurance
+ 
+\end{itemize}
+ 
+\paragraph{Information related risks}
+\label{_information_related_risks}\hyperlabel{_information_related_risks}%
+  
+The biggest risk with information is unauthorized access, discussed previously as a \hyperlink{security}{security} concern. Actual destruction, while possible, is less of a concern given the nature of information (it can be copied and is intangible). Other risks include regulatory and civil penalties for mis-{}handling, and operational risks (e.g. from bad \hyperlink{data-quality}{data quality}.)
+ 
+There are a wide variety of specific \hyperlink{security-taxonomy}{threats} to data, leading to risk, for example:
+ \begin{itemize}
+
+\item{} Data theft (e.g. by targeted exploit)
+ 
+
+\item{} Data leakage (i.e. unauthorized disclosure by insiders)
+ 
+
+\item{} Data loss (e.g. by disaster \& backup failure)
+ 
+\end{itemize}
+ 
+The standard risk and security approaches suggested in Chapter 10 are appropriate to all of these. There are particular technical solutions such as data leakage analysis that may figure into a controls strategy.
+ 
+A valuable contribution of information management is a better understanding of the risks represented by data. We've discussed simple info sensitivity \hyperlink{four-level-info-classification}{models} (for example Public, Internal, Confidential, Restricted). However, a comprehensive information classification model must accommodate:
+ \begin{itemize}
+
+\item{} basic sensitivity (e.g. Confidential)
+ 
+
+\item{} ownership/stewardship (e.g. SVP HR, HR/IS director)
+ 
+
+\item{} regulatory aspects (e.g. SOX or HIPAA)
+ 
+
+\item{} records management (e.g. "Human Resources," "Broker/Client Communications," "Patient History")
+ 
+\end{itemize}
+ 
+Beyond sensitivity, the regulatory aspects drive both regulatory and legal risks. For example, transmitting human resources data related to German citizens off of German soil is illegal, by German law. But if German HR data is not clearly understood for what it is, it may be transmitted illegally.
+ 
+Other countries have different regulations, but privacy is a key theme through many of them. The U.S. HIPAA regulations are stringent in the area of U.S. medical data.
+ 
+To thoroughly manage for such risks, data stores should be tagged with the applicable regulations and the records type.
+ 
+The broad topic of individuals' expectations for how data relating to them is stored and secured is called \emph{data privacy}. It drives regulations, lawsuits, standards, and is a frequent topic of news coverage (e.g. when a mass data breach occurs.)
+ 
+Bad data quality also presents risks as mentioned above. In fact, \hyperlink{DeLuccia2008}{[DeLuccia2008]} sees data quality as a kind of \hyperlink{controls}{control} (in the sense of risk mitigation).
+  
+\paragraph{E-{}Discovery and Cyberlaw}
+\label{_e_discovery_and_cyberlaw}\hyperlabel{_e_discovery_and_cyberlaw}%
+  
+Information systems and the data within them can be the subject of litigation, both civil and criminal. Criminal investigation may ensue after a security breach. Civil and regulatory actions may result from (for example) inappropriate behavior by the organization, such as failing to honor a contract.
+ 
+In some cases, records are placed under a "legal hold." This means that (whether physical or digital) the records must be preserved. The United States Federal Rules of Civil Procedure \hyperlink{NationalCourt2016}{[NationalCourt2016]} covers the discovery of information stored in computing systems. Successfully identifying the data in scope for the hold requires disciplined approaches to records management and data classification, as described above.
+ \begin{DBKadmonition}{warning}{Important}
+ 
+Again, if you or your company are involved in legal issues relating to the above, seek a lawyer. This discussion is not intended as legal advice.
+ \end{DBKadmonition}
+ 
+\label{analytics}\hyperlabel{analytics}
+    

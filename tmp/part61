@@ -1,0 +1,277 @@
+\subsection{Learning from manufacturing}
+\label{_learning_from_manufacturing}\hyperlabel{_learning_from_manufacturing}%
+  
+
+\begin{sidebar}
+\textbf{Instructor's note}
+
+
+The concepts of queuing and work in process are critical to the rest of this book. Recommend classroom exercises and additional reading to ensure that they are well understood by students. The \emph{Phoenix Project} and \emph{The Goal} are excellent, entertaining books that use novelization to illustrate these principles.
+\end{sidebar}
+ 
+Manufacturing? What do digital professionals have to learn from that? "Our work is not an assembly line!," is one frequently heard response. It is true that we need to be careful in drawing the \textbf{right} lessons from manufacturing, but there is a growing consensus on how to do this. Please keep an open mind as you read this chapter.
+ 
+\subsubsection{Kanban and its Lean origins}
+\label{_kanban_and_its_lean_origins}\hyperlabel{_kanban_and_its_lean_origins}%
+  \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/2_05-Ohno.jpg}{{\imgevalsize{images/2_05-Ohno.jpg}{\includegraphics[width=0.48\textwidth]{images/2_05-Ohno.jpg}}}}{Ohno}
+\end{center}
+\caption[{Lean pioneer Taichi Ohno }]{Lean pioneer Taichi Ohno \footnotemark{}}
+\end{wrapfigure}
+ 
+To understand Kanban let's discuss Lean briefly. We've had passing mention of Lean already in this book. But what is it?
+ 
+Lean is a term invented by some American researchers who investigated Japanese industrial practices and their success in the 20th century. After the end of World War II, no-{}one expected the Japanese economy to recover the way it did. The recovery is credited to practices invented by  \href{https://en.wikipedia.org/wiki/Taiichi_Ohno}{Taiichi Ohno} and \href{https://en.wikipedia.org/wiki/Shigeo_Shingo}{Shigeo Shingo} at \href{https://en.wikipedia.org/wiki/Toyota}{Toyota}. These practices included:
+ \begin{itemize}
+
+\item{} Respect for people
+ 
+
+\item{} Limiting work in process
+ 
+
+\item{} Small batch sizes (driving towards "single piece flow")
+ 
+
+\item{} Just-{}in-{}time production
+ 
+
+\item{} Decreased cycle time
+ 
+\end{itemize}
+ 
+Credit for Lean is also given to U.S. thinkers such as W.E. Deming, Peter Juran, and the theorists behind the Training Within Industry methodology, who all played influential roles in shaping the industrial practices of post-{}war Japan.
+ \begin{DBKadmonition}{warning}{Important}
+ 
+Lean is important. Regardless of your intended career path, it is advisable to read the great Lean classics, including \href{http://www.goodreads.com/book/show/93903.Machine_That_Changed_the_World}{The Machine That Changed the World}, \href{http://www.goodreads.com/book/show/289467.Lean_Thinking}{Lean Thinking}, \href{http://www.goodreads.com/book/show/161789.The_Toyota_Way}{The Toyota Way}, and Ohno's own \href{http://www.goodreads.com/book/show/376237.Toyota_Production_System}{Toyota Production System}. \href{http://www.goodreads.com/book/show/6736366-toyota-kata}{Toyota Kata} is a more recent, in-{}depth analysis of Toyota's culture.
+ \end{DBKadmonition}
+ 
+Kanban is a term originating from Lean and the Toyota Production System. Originally, it signified a \textquotedblleft{}pull\textquotedblright{} technique in which materials would only be transferred to a given workstation on a definite signal that the workstation required the materials. This was in contrast to \textquotedblleft{}push\textquotedblright{} approaches where work was allowed to accumulate on the shop floor, on the (now discredited) idea that it was more \textquotedblleft{}efficient\textquotedblright{} to operate workstations at maximum capacity.
+ 
+Factories operating on a "push" model found themselves with massive amounts of inventory (work in process) in their facilities. This tied up operating capital and resulted in long delays to shipment. Japanese companies did not have the luxury of large amounts of operating capital, so they started experimenting with "single-{}piece flow." This led to a number of related innovations, such as the ability to re-{}configure manufacturing machinery much more quickly than U.S. factories were capable of.
+ 
+David J. Anderson was a product manager at Microsoft who was seeking a more effective approach to managing software development. In consultation with Don Reinertsen (introduced in the \hyperlink{queuing}{below}) he applied the original concept of Kanban to his software development activities \hyperlink{Anderson2010}{[Anderson2010]}.
+ 
+\hyperlink{scrum}{Scrum} (covered in the previous chapter) is based on a rhythm with its scheduled sprints, for example every two weeks. In contrast, Kanban is a continuous process with no specified rhythm (also known as \emph{cadence}). Work is \textquotedblleft{}pulled\textquotedblright{} from backlog into active attention as resources are freed from previous work. This is perhaps the most important aspect of Kanban -{} the idea that \textbf{work is not accepted until there is capacity to perform it.}
+ 
+You may have a white board covered with sticky notes, but if they are stacked on top of each other with no concern for worker availability, you are not doing Kanban. You are accepting too much work in process and you are likely to encounter a "high-{}queue state" in which work becomes slower and slower to get done. (More on \hyperlink{queuing}{queues} below.)
+  
+\subsubsection{The Theory of Constraints}
+\label{_the_theory_of_constraints}\hyperlabel{_the_theory_of_constraints}%
+  
+Eliyahu Moshe Goldratt was an Israeli physicist and management consultant, best known for his pioneering work in management theory, including  \emph{The Goal}, which is a best-{}selling business novel frequently assigned in MBA programs. It and Goldratt's other novels have had a tremendous effect on industrial theory, and now, digital management. One of the best known stories in \emph{The Goal} centers around a Boy Scout march. Alex, the protagonist struggling to save his manufacturing plant, takes a troop of Scouts on a ten mile hike. The troop has hikers of various speeds, yet the goal is to arrive simultaneously. As Alex tries to keep the Scouts together, he discovers that the slowest, most overweight scout (Herbie) also has packed an unusually heavy backpack. The contents of Herbie's pack are redistributed, speeding up both Herbie and the troop.
+ 
+This story summarizes the Goldratt approach: finding the "constraint" to production (his work as a whole is called the Theory of Constraints). In Goldratt's view, a system is only as productive as its constraint. At Alex's factory, it's found that the "constraint" to the overall productivity issues is the newest computer-{}controlled machine tool\hspace{0.167em}\textemdash{}\hspace{0.167em}one that could (in theory) do the work of several older models but was now jeopardizing the entire plant's survival. This novelization parallels in important regards actual Lean case studies on the often-{}negative impact of such capital-{}intensive approaches to production.
+ 
+There is a tremendous wealth of material available on Lean history and theory, and the IT student is urged to become familiar with it. Often, IT professionals resist drawing lessons from non-{}IT fields, because of a perception that these other fields (especially manufacturing) are \textquotedblleft{}deterministic\textquotedblright{} while IT systems development is too \textquotedblleft{}uncertain.\textquotedblright{} In reality, manufacturing is less deterministic than IT professionals often perceive, while software development is, at its most uncertain, just another form of \href{https://en.wikipedia.org/wiki/New_product_development}{new product development}, and/or \href{https://en.wikipedia.org/wiki/Research_and_development}{research and development} and therefore can be managed on that basis. Furthermore, much IT work is not R\&D (e.g. infrastructure provisionings), and that kind of work is even more suited for the application of manufacturing insights.
+ 
+
+\begin{sidebar}
+\textbf{Author's note: Gene Kim and The Phoenix Project}
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/2_05-GeneKim.jpg}{{\imgevalsize{images/2_05-GeneKim.jpg}{\includegraphics[width=0.48\textwidth]{images/2_05-GeneKim.jpg}}}}{Gene Kim}
+\end{center}
+\caption{Gene Kim}
+\end{wrapfigure}
+
+Between 2005 and 2012, I was a lead enterprise architect at Wells Fargo Bank, primarily concerned with IT delivery capabilities such as portfolio and service management. One day around 2007, I arrived at my office to find an envelope from my friend Gene Kim, then CTO of Tripwire. Gene and I had been corresponding for some years on high-{}performing IT, IT process improvement, and related topics. In the envelope was a copy of a book called \emph{The Goal}, by Eli Goldratt. I was a little mystified, but after reading the book I began to understand.
+
+Gene saw the potential of the Theory of Constraints in understanding certain aspects of information technology management, and used it as a template to write another remarkable and influential book, \emph{The Phoenix Project} \hyperlink{Kim2013}{[Kim2013]}. Rather than a manufacturing plant, the Phoenix Project centers on the struggles of the IT team at a medium-{}sized automotive parts manufacturer and retailer. From a state of chaos, uncontrolled work in process and resource constraints, the team applies Lean, Agile, and DevOps techniques to great effect. In my view, \emph{The Phoenix Project} is one of the most important works in the history of IT and digital management, and is also an enjoyable novel. I am honored to have been one of the original reviewers. If you are considering a career in IT or digital, it is essential reading. See especially Chapter 30 for an interesting discussion of manufacturing lessons in an IT context.
+\end{sidebar}
+ 
+\label{work-in-process}\hyperlabel{work-in-process} \label{queuing}\hyperlabel{queuing}
+  
+\subsubsection{Queues and limiting work in process}
+\label{_queues_and_limiting_work_in_process}\hyperlabel{_queues_and_limiting_work_in_process}%
+  \begin{quote}
+
+Queues matter because they are economically important, they are poorly managed, and they have the potential to be much better managed. Queues profoundly affect the economics of product development. They cause valuable work products to sit idle, waiting to access busy resources. This idle time increases inventory, which is the root cause of many other economic problems\ldots{}\hspace{0em}queues hurt cycle time, quality, and efficiency.
+
+\hspace*\fill--- Don Reinertsen
+\emph{Principles of Product Development Flow} \end{quote}
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/2_05-queue.jpg}{{\imgevalsize{images/2_05-queue.jpg}{\includegraphics[width=0.48\textwidth]{images/2_05-queue.jpg}}}}{queue}
+\end{center}
+\caption[{A queue }]{A queue \footnotemark{}}
+\end{wrapfigure}
+ 
+Even at this stage of our evolution, with just one co-{}located collaborative team, it's important to consider work in progress and how to limit it. One topic we will emphasize throughout the rest of this book is \emph{queuing}. What is a queue? A queue, intuitively, is a collection of tasks to be done, being serviced by some worker or resource in some sequence, for example:
+ \begin{itemize}
+
+\item{} feature "stories" being developed by a product team
+ 
+
+\item{} customer requests coming into a service desk
+ 
+
+\item{} requests from a development team to an infrastructure team for services (e.g. network or server configuration, consultations, etc.)
+ 
+\end{itemize}
+ \begin{DBKadmonition}{warning}{Important}
+ 
+Queuing theory is an important branch of mathematics used extensively in computing, operations research, networking, and other fields. It's a topic getting much attention of late in the Agile and related movements, especially as it relates to digital product team productivity.
+ \end{DBKadmonition}
+ 
+The amount of time that any given work item spends in the queue, is proportional to how busy the servicing resource is. The simple formula is
+ 
+Wait time = (\% Busy) / (\% Idle)
+ 
+In other words, if you divide the percentage of busy time for the resource, by its idle time, you see the average wait time. So, if a resource is busy 40\% of the days, but idle 60\% of the days, the average time you wait for the resource is
+ 
+0.4/0.6= 0.67 hours (2/3 of a day).
+ 
+Conversely, if a resource is busy 95\% of the time, the average time you'll wait is
+ 
+0.95/0.5 = 5.67 (19 days!)
+ 
+If you use a graphing calculator, you see the following:
+ 
+\begin{center}
+ 
+\noindent\begin{minipage}[c]{\linewidth}
+\begin{center}
+\imgexists{images/2_05-wait-time.png}{{\imgevalsize{images/2_05-wait-time.png}{\includegraphics[width=0.48\textwidth]{images/2_05-wait-time.png}}}}{wait time}\end{center}
+\end{minipage}
+
+ 
+\end{center}
+ 
+Notice how the wait time approaches infinity as the queue utilization approaches 100\%. And yet, full utilization of resources is often sought by managers in the name of "efficiency." These basic principles are discussed by Gene Kim et al in the \emph{Phoenix Project} \hyperlink{Kim2013}{[Kim2013]} in Chapter 23, and more rigorously by Don Reinertsen in \emph{The Principles of Product Development Flow} \hyperlink{Reinertsen2009}{[Reinertsen2009]}, chapter 3. A further complication is when work must pass through multiple queues; wait times for work easily expand to weeks or months. Such scenarios are not hypothetical, they are often seen in the real world and are a fundamental cause of information technology organizations getting a bad name for being slow and unresponsive. Fortunately, digital professionals are gaining insight into these dynamics and (as of 2016) matters are improving across the industry.
+ 
+Understanding queuing behavior is critical to productivity. Reinertsen suggests that poorly managed queues contribute to:
+ \begin{itemize}
+
+\item{} Longer cycle time
+ 
+
+\item{} Increased risk
+ 
+
+\item{} More variability
+ 
+
+\item{} More overhead
+ 
+
+\item{} Lower quality
+ 
+
+\item{} Less motivation
+ 
+\end{itemize}
+ 
+These issues were understood by the pioneers of Lean manufacturing, an important movement throughout the 20th century. One of its central principles is to limit work in process. Work in process is obvious on a shop floor, because physical raw materials (inventory) are quite visible.
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/2_05-wip.jpg}{{\imgevalsize{images/2_05-wip.jpg}{\includegraphics[width=0.48\textwidth]{images/2_05-wip.jpg}}}}{work in process}
+\end{center}
+\caption[{Physical Work in Process }]{Physical Work in Process \footnotemark{}}
+\label{wip}\hyperlabel{wip}%
+\end{wrapfigure}
+ 
+Don Reinertsen developed the insight that product design and development had an \textbf{invisible} inventory of "Work in Process" that he called Design in Process (DIP). Just as managing physical work in process on the factory floor is key to a factory's success, so correctly understanding and managing design in process is essential to all kinds of research and development organizations\hspace{0.167em}\textemdash{}\hspace{0.167em}\textbf{including digital product development, e.g. building software(!)} In fact, because digital systems are largely invisible even when finished, understanding their work in process is even more challenging.
+ 
+It is easy and tempting for a product development team to accumulate excessive amounts of work in process. And, to some degree, having a rich backlog of ideas is an asset. But, just as some inventory (e.g. groceries) is perishable, so are design ideas. They have a limited time in which they might be relevant to a customer or a market. Therefore, accumulating too many of them at any point in time can be wasteful.
+ 
+What does this have to do with queuing? Design in process is one form of queue seen in the digital organization. Other forms include unplanned work (incidents and defects), implementation work, and many other concepts we'll discuss in this chapter.
+ 
+Regardless of whether it is a "Requirement," a "User Story," an "Epic," "Defect,", "Issue," or "Service Request," you should remember it's \textbf{all just work.} It needs to be logged, prioritized, assigned, and tracked to completion. Queues are the fundamental concept for doing this, and it's critical that digital management specialists understand this.
+ \begin{DBKadmonition}{warning}{Important}
+ 
+These concepts of work in process and queuing are the basis for much of the rest of this book. Be sure you are completely comfortable with them.
+ \end{DBKadmonition}
+ 
+We will revisit the topic of queuing in Chapter 9. For now, some rules of thumb:
+ \begin{itemize}
+
+\item{} Finish what you start, if you can, before starting anything else. When you work on three things at once, the multi-{}tasking wastes time and it takes you three times longer to get any one of the things done. (More on \hyperlink{multi-tasking}{multi-{}tasking} in this chapter.)
+ 
+
+\item{} Infinitely long to-{}do lists (backlog) sap motivation. Consider limiting backlog as well as work in process.
+ 
+
+\item{} Visibility into work in progress is important for the collective mental model of the team.
+ 
+\end{itemize}
+ 
+There are deeper philosophical and cultural qualities to Kanban beyond workflow and queuing. Anderson and his colleagues continue to evolve Kanban into a more ambitious framework. Mike Burrows \hyperlink{Burrows2014}{[Burrows2014]} identifies the following key principles
+ \begin{itemize}
+
+\item{} Start with what you do now.
+ 
+
+\item{} Agree to pursue evolutionary change.
+ 
+
+\item{} Initially, respect current processes, roles, responsibilities, and job titles.
+ 
+
+\item{} Encourage acts of leadership at every level in your organization \textemdash{}from individual contributor to senior management.
+ 
+
+\item{} Visualize.
+ 
+
+\item{} Limit Work-{}in-{}Progress (WIP).
+ 
+
+\item{} Manage flow.
+ 
+
+\item{} Make policies explicit.
+ 
+
+\item{} Implement feedback loops.
+ 
+
+\item{} Improve collaboratively, evolve experimentally (using models and the scientific method).
+ 
+\end{itemize}
+ 
+\label{multi-tasking}\hyperlabel{multi-tasking}
+  
+\subsubsection{Multi-{}tasking}
+\label{_multi_tasking}\hyperlabel{_multi_tasking}%
+  \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/3_07-juggling.jpg}{{\imgevalsize{images/3_07-juggling.jpg}{\includegraphics[width=0.48\textwidth]{images/3_07-juggling.jpg}}}}{juggling}
+\end{center}
+\caption[{Multi-{}tasking destroys productivity }]{Multi-{}tasking destroys productivity \footnotemark{}}
+\end{wrapfigure}
+ 
+Multi-{}tasking (in this context) is when a human attempts to work on diverse activities simultaneously, for example developing code for a new application while also handling support calls. There is a broad agreement that multi-{}tasking destroys productivity and even mental health \hyperlink{Cherry2016}{[Cherry2016]}. Therefore, minimize multi-{}tasking.  Multi-{}tasking in part emerges as a natural response when one activity becomes blocked (e.g. due to needing another team's contribution). Approaches that enable teams to work without depending on outside resources are less likely to promote multi-{}tasking. \hyperlink{queuing}{Queuing} and \hyperlink{work-in-process}{work in process} thus become even more critical topics for management concern as one scales up.
+  
+\subsubsection{Scrum, Kanban, or both?}
+\label{_scrum_kanban_or_both}\hyperlabel{_scrum_kanban_or_both}%
+  
+So, do you choose \hyperlink{_scrum}{Scrum}, Kanban, both, or neither?
+ 
+We can see in comparing Scrum and Kanban that their areas of focus are somewhat different.
+ \begin{itemize}
+
+\item{} Scrum is widely adopted in industry and has achieved a level of formalization, which is why Scrum training is widespread and generally consistent in content.
+ 
+
+\item{} Kanban is more flexible but this comes at a cost of more management overhead. It requires more interpretation to translate to a given organization's culture and practices.
+ 
+
+\item{} As Scrum author Ken Rubin notes, \textquotedblleft{}Scrum is not well suited to highly interrupt-{}driven work.\textquotedblright{} \hyperlink{Rubin2012}{[Rubin2012]}. Scrum on the service desk doesn't work. (But if your company is too small, it may be difficult to segregate out interrupt-{}driven work! We will discuss the issues around interrupt-{}driven work further in Chapter 6.)
+ 
+
+\item{} Finally, hybrids exist (Ladas' \textquotedblleft{}Scrumban,\textquotedblright{} \hyperlink{Ladas2009}{[Ladas2009]}).
+ 
+\end{itemize}
+ 
+Ultimately, instead of talking too much  about "Scrum" or "Kanban," the student is encouraged to look more deeply into their fundamental differences. We will return to this topic in the section on Lean Product Development.
+ 
+\label{shared-mental-model}\hyperlabel{shared-mental-model}
+   

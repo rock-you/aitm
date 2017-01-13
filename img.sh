@@ -5,7 +5,7 @@ LC_ALL=C sed -i -- 's/usepackage{makeidx}/usepackage{makeidx}\
 LC_ALL=C sed -i -- 's/begin{figure}\[H\]/begin{wrapfigure}{r}{0.5\\textwidth}/g' $1
 LC_ALL=C sed -i -- 's/end{figure}/end{wrapfigure}/g' $1
 LC_ALL=C sed -i -- 's/width=.*,/width=0.48\\textwidth/g' $1
-
+LC_ALL=C sed -i -- 's/\\hyperlabel{.*}//g' $1
 
 # before
 #

@@ -2,9 +2,9 @@
 <?asciidoc-toc maxdepth="4"?>
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
 <info>
-<title>Agile IT Management</title>
-<subtitle>From Startup to Enterprise (Collaborative Draft PDF)</subtitle>
-<date>2016-10-31</date>
+<title>The digital professional</title>
+<subtitle>from startup to enterprise (Collaborative Draft PDF)</subtitle>
+<date>2016-12-30</date>
 <author>
 <personname>
 <firstname>Charles</firstname>
@@ -411,11 +411,13 @@ Also, you may notice that <emphasis role="strong">the chapter titles don’t nec
 </tbody>
 </tgroup>
 </informaltable>
-<simpara>I use a central server in teaching my classes, but even that is not necessary. This class can be taught with a zero computing budget, assuming that each team of students at least has access to a modern laptop and a fast Internet connection. As of this writing, I am using free and open source versions of Chef, Jenkins, iTOP, jUnit, Ant, and other tools (see GitHub for the current approach).</simpara>
+<simpara>I use a central server in teaching my classes, but even that is not necessary. This class can be taught with a zero computing budget, assuming that each team of students at least has access to a modern laptop (recommend 8 gigabytes of RAM and 1 terabyte drive) and a fast Internet connection. As of this writing, I am using free and open source versions of Chef, Jenkins, iTOP, jUnit, Ant, and other tools (see GitHub for the current approach).</simpara>
 <simpara>Some may question the inclusion of command-line experience, but without some common technical platform, it is hard to provide a meaningful, hands-on experience in the first half of the course. I structure my class on the assumption that the students are at least willing to learn computing techniques, with no prerequisites beyond that. Not even a programming language is required; the Java currently used as a sample is minimal.</simpara>
 <simpara>Truly beginning students will have to work at the Linux tutorials, but all they need master is basic command line navigation, and I have found this possible with a diverse student body, some with no previous direct experience. The labs for the second half of the course use games, experiential paper-based classroom exercises, GUI-based software, databases, and office productivity tools.</simpara>
-<literallayout class="monospaced">similarity to spiral model
-not a reference... some topics are split... it's a hero's journey</literallayout>
+<simpara>similarity to spiral model
+not a reference&#8230;&#8203; some topics are split&#8230;&#8203; it&#8217;s a hero&#8217;s journey
+shu-ha-ri
+scale also means longer time scales</simpara>
 </section>
 </chapter>
 <chapter xml:id="Introduction">
@@ -423,10 +425,19 @@ not a reference... some topics are split... it's a hero's journey</literallayout
 <section xml:id="_for_the_student">
 <title>For the student</title>
 <simpara>This is a <emphasis>survey</emphasis> text intended for the advanced undergraduate or graduate student interested in the general field of applied IT management. It is grounded in basic computing fundamentals but does not require any particular technical skills to understand. You do not need to have taken any courses in networking, security, or specific programming languages to understand this book. However, you will be presented with material on such topics, including fragments of programming languages and pseudocode, and you will need to be willing to invest the time and effort to understand.</simpara>
-<simpara>This book makes frequent reference to digital startups—early stage companies bringing new products to market that are primarily delivered as some form of computer-based service. Whether or not you intend to pursue such endeavors, the startup journey is a powerful one for your learning. Large information technology organizations in enterprises sometimes gain a reputation for losing sight of business value. IT seems to be acquired and operated for its own sake. Statements like “we need to align IT with the business!” are too often heard.</simpara>
+<simpara>This book makes frequent reference to digital startups—early stage companies bringing new products to market that are primarily delivered as some form of computer-based service. Whether or not you intend to pursue such endeavors, the startup journey is a powerful frame for your learning. Large information technology organizations in enterprises sometimes gain a reputation for losing sight of business value. IT seems to be acquired and operated for its own sake. Statements like “we need to align IT with the business!” are too often heard.</simpara>
 <simpara>A digital startup exposes with great clarity the linkage between IT and “the business.” The success or failure of the company itself depends on the adept and responsive creation and deployment of the software-based systems. Market revenues arrive, or do not, based on digital product strategy and the priorities chosen. Features the market doesn’t need? You won’t have the money to stay in business. Great features, but your product is unstable and unreliable? Your customers will go to the competition.</simpara>
-<literallayout class="monospaced">Valleys of Death graphic</literallayout>
 <simpara>The lessons that digital entrepreneurs have learned through this trial by fire shed great light on IT’s value to the business. Thinking about a startup allows us to consider the most fundamental principles as a sort of microcosm, a small laboratory model of the same problems that the largest enterprises face.</simpara>
+<simpara>Verne Harnish, in the book <emphasis>Scaling Up</emphasis> (<xref linkend="Harnish2014"/>, pp-25-26), describes how companies tend to cluster at certain levels of scale. The majority of firms never grow beyond a founder; a small percentage emerge as a viable team of 8-12, and even smaller numbers make it to the stable plateaus of 40-70 and 350-500. This scaling model, and the needs that emerge as companies grow, is the basis for this book&#8217;s learning progression.</simpara>
+<figure xml:id="img-label">
+<title>Organizations cluster at certain sizes (credit <xref linkend="Harnish2014"/>) <footnote><simpara><emphasis>similar to <xref linkend="Harnish2014"/>, p. 25</emphasis></simpara></footnote></title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="images/0.25-scaling.png" contentwidth="500"/>
+</imageobject>
+<textobject><phrase>scaling</phrase></textobject>
+</mediaobject>
+</figure>
 <simpara>However, this is not a textbook (or course) on entrepreneurship. It remains IT-centric. <emphasis role="strong">And, the book is also intended to be relevant to students entering directly into large, established enterprises.</emphasis> In fact, it prepares the student for working in all stages of growth because it progresses through these four contexts:</simpara>
 <itemizedlist>
 <listitem>
@@ -530,19 +541,21 @@ not a reference... some topics are split... it's a hero's journey</literallayout
 </orderedlist>
 </listitem>
 </orderedlist>
-<simpara><emphasis role="strong">The boundary between the “team” and the “team of teams” is a challenging area, and industry responses remain incomplete and evolving—hence the notation “THE SCALING PROBLEM” on the diagram.</emphasis></simpara>
+<warning>
+<simpara><emphasis role="strong">The boundary between the “Team” and the “Team of Teams” is a challenging area, and industry responses remain incomplete and evolving.</emphasis></simpara>
+</warning>
 <orderedlist numeration="upperroman" startingnumber="3">
 <listitem>
 <simpara><emphasis role="strong">Team of Teams</emphasis></simpara>
 <orderedlist numeration="arabic" startingnumber="7">
 <listitem>
-<simpara><emphasis role="strong">Coordination.</emphasis> When we have more than one team, they need to <emphasis>coordinate</emphasis>, which we define as "the process of managing dependencies among activities." There are many synchronization techniques to help us coordinate, including project and process management and Agile concepts.</simpara>
+<simpara><emphasis role="strong">Coordination.</emphasis> When we have more than one team, they need to <emphasis>coordinate</emphasis>, which we define as "the process of managing dependencies among activities." There are many synchronization techniques to help us coordinate, including project and process management and Agile concepts. What is the future of process management as a delivery model?</simpara>
 </listitem>
 <listitem>
-<simpara><emphasis role="strong">Planning and investment.</emphasis> We make investments in various products, programs, and/or projects, and we are now big enough that we have portfolios of them. How do we decide? How do we choose and work with our suppliers? How do we manage the finances of complex digital organizations?</simpara>
+<simpara><emphasis role="strong">Planning and investment.</emphasis> We make investments in various products, programs, and/or projects, and we are now big enough that we have portfolios of them. How do we decide? How do we choose and work with our suppliers? How do we manage the finances of complex digital organizations? What is the future of project management as a delivery model?</simpara>
 </listitem>
 <listitem>
-<simpara><emphasis role="strong">Organization and culture.</emphasis> We’re getting big. How do we deal with this? What are the unwritten values and norms in our company? How are we structured, and why that way? How can we benefit from increasing maturity and specialization while still maintaining a responsive digital product? How do we hire great people and get the most out of them?</simpara>
+<simpara><emphasis role="strong">Organization and culture.</emphasis> We’re getting big. How do we deal with this?  How are we structured, and why that way? How can we benefit from increasing maturity and specialization while still maintaining a responsive digital product? How do we hire great people and get the most out of them? What are the unwritten values and norms in our company and how can we change them?</simpara>
 </listitem>
 </orderedlist>
 </listitem>
@@ -564,16 +577,13 @@ not a reference... some topics are split... it's a hero's journey</literallayout
 <simpara><emphasis role="strong">Appendices</emphasis></simpara>
 <orderedlist numeration="arabic">
 <listitem>
-<simpara><emphasis role="strong">A review of IT frameworks and standards</emphasis></simpara>
+<simpara><emphasis role="strong">The major frameworks</emphasis></simpara>
 </listitem>
 <listitem>
-<simpara><emphasis role="strong">Project management fundamentals</emphasis></simpara>
+<simpara><emphasis role="strong">Project management</emphasis></simpara>
 </listitem>
 <listitem>
-<simpara><emphasis role="strong">Process management fundaments</emphasis></simpara>
-</listitem>
-<listitem>
-<simpara><emphasis role="strong">Towards a theory of IT management</emphasis></simpara>
+<simpara><emphasis role="strong">Process modeling</emphasis></simpara>
 </listitem>
 <listitem>
 <simpara><emphasis role="strong">Recommended readings</emphasis></simpara>
@@ -881,7 +891,7 @@ Diomidis Spinellis
 <title>The basis of IT value <footnote><simpara><emphasis>Image credit <link xl:href="https://www.flickr.com/photos/iicd/5348620457/">https://www.flickr.com/photos/iicd/5348620457/</link>, downloaded 2016-11-07, commercial use permitted</emphasis></simpara></footnote></title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/1_01-ITValue.png" contentwidth="400"/>
+<imagedata fileref="images/1_01-ITValue.png" contentwidth="600"/>
 </imageobject>
 <textobject><phrase>woman at computer</phrase></textobject>
 </mediaobject>
@@ -1081,7 +1091,7 @@ Diomidis Spinellis
 <title>The essential states of the digital service (or product)</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/1_01-ITStates.png" contentwidth="600"/>
+<imagedata fileref="images/1_01-ITStates.png" contentwidth="800"/>
 </imageobject>
 <textobject><phrase>IT States</phrase></textobject>
 </mediaobject>
@@ -1091,7 +1101,7 @@ Diomidis Spinellis
 <title>The IT service lifecycle</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/1_01-ITSvcChg.png" contentwidth="600"/>
+<imagedata fileref="images/1_01-ITSvcChg.png" contentwidth="800"/>
 </imageobject>
 <textobject><phrase>IT service changes</phrase></textobject>
 </mediaobject>
@@ -1253,7 +1263,7 @@ Steve Blank
 <simpara>Laggards: Traditional, isolated, conservative</simpara>
 </listitem>
 </itemizedlist>
-<simpara>The above figure was popularized in the following variation by Geoffrey Moore <xref linkend="Moore2014"/> in his bestseller <emphasis>Crossing the Chasm</emphasis>:</simpara>
+<simpara>The above figure was popularized in the following variation by Geoffrey Moore <xref linkend="Moore2014"/> in his bestseller <emphasis>Crossing the Chasm</emphasis>.</simpara>
 <figure>
 <title>Purported "chasm" between adopter categories <footnote><simpara><emphasis>similar to <xref linkend="Moore2014"/>, page 21</emphasis></simpara></footnote></title>
 <mediaobject>
@@ -1906,6 +1916,11 @@ We can change the state of some data, or store it. We also need to move it. This
 </section>
 <section xml:id="_choosing_infrastructure">
 <title>Choosing infrastructure</title>
+<note>
+<simpara>The following is written as if you are a decision maker in the early stages of conceiving a product. If you are an individual contributor in a large enterprise, or even a newcomer to an established product team, these decisions will likely have been made for you.<?asciidoc-br?>
+<?asciidoc-br?>
+ But at some point, <emphasis role="strong">someone</emphasis> had to go through this decision process, before anything could be developed.</simpara>
+</note>
 <figure>
 <title>Tower-style servers on a rack. <footnote><simpara>image credit <emphasis><link xl:href="https://www.flickr.com/photos/sfllaw/78981814">https://www.flickr.com/photos/sfllaw/78981814</link>, downloaded 2016-11-7, commercial use permitted.</emphasis></simpara></footnote></title>
 <mediaobject>
@@ -1915,11 +1930,6 @@ We can change the state of some data, or store it. We also need to move it. This
 <textobject><phrase>servers on a rack</phrase></textobject>
 </mediaobject>
 </figure>
-<note>
-<simpara>The following is written as if you are a decision maker in the early stages of conceiving a product. If you are an individual contributor in a large enterprise, or even a newcomer to an established product team, these decisions will likely have been made for you.<?asciidoc-br?>
-<?asciidoc-br?>
- But at some point, <emphasis role="strong">someone</emphasis> had to go through this decision process, before anything could be developed.</simpara>
-</note>
 <simpara>There is ferocious turbulence in the IT infrastructure market. Cloud technologies, DevOps, various platform wars… As an entrepreneur, you need to understand what technical trends matter and what are more of same. In particular, you will need to make some level of commitment to your technical architecture. And at some point you <emphasis role="strong">WILL</emphasis> be asked, “You’re still using that old technology?” As a startup, you have a couple initial decisions to make regarding infrastructure and tools:</simpara>
 <itemizedlist>
 <listitem>
@@ -2072,22 +2082,12 @@ Scrum-based development uses the concept of a <link xl:href="https://www.scrumal
 <title>Virtualization types</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/1_02-virtualization-types.png" contentwidth="400"/>
+<imagedata fileref="images/1_02-virtualization-types.png" contentwidth="800"/>
 </imageobject>
 <textobject><phrase>Virtualization types</phrase></textobject>
 </mediaobject>
 </figure>
 <simpara>There are two different kinds of hypervisors. The example we just discussed was an example of a Type 2 hypervisor, which runs on top of a host operating system. In a Type 1 hypervisor, a master host OS is not used; the hypervisor runs on the "bare metal" of the computer and in turn "hosts" multiple VMs.</simpara>
-<simpara><anchor xml:id="containers" xreflabel="[containers]"/></simpara>
-<figure>
-<title>Containers</title>
-<mediaobject>
-<imageobject>
-<imagedata fileref="images/1_02-containers.png" contentwidth="250"/>
-</imageobject>
-<textobject><phrase>containers</phrase></textobject>
-</mediaobject>
-</figure>
 <simpara><emphasis>Paravirtualization</emphasis>, e.g. containers, is another form of virtualization found in the marketplace. In a paravirtualized environment, a core operating system is able to abstract hardware resources for multiple virtual guest environments without having to virtualize hardware for each guest. The benefit of this type of virtualization is increased input/output (I/O) efficiency and performance for each of the guest environments.</simpara>
 <simpara>However, while hypervisors can support a diverse array of virtual machines with different operating systems on a single computing node, guest environments in a paravirtualized system generally share a single OS.</simpara>
 <note>
@@ -2259,7 +2259,7 @@ $ touch a b c</literallayout>
 <title>Simple directory/file structure</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/1_02-iac.png" contentwidth="300"/>
+<imagedata fileref="images/1_02-iac.png" contentwidth="500"/>
 </imageobject>
 <textobject><phrase>folders/files</phrase></textobject>
 </mediaobject>
@@ -2415,7 +2415,7 @@ index 0ecbd83..a203522 100644
 <literallayout class="monospaced">char@elsa:~/tmpgit$ git checkout .
 char@elsa:~/tmpgit$ python tmp.py
 hello world!</literallayout>
-<simpara>If you have access to a Linux computer, try it! (It should also work on recent Macs as presented here.)</simpara>
+<simpara>If you have access to a computer, try it! (You will need to install git, and if you are on Windows you should use WSL, the Windows Subsystem for Linux.)</simpara>
 <simpara>In comparison, the following are two 10x10 gray-scale bitmap images being edited in the <link xl:href="https://www.gimp.org/">Gimp image editor</link>. They are about as simple as you can get. Notice that they are slightly different:</simpara>
 <figure>
 <title>Bitmap images</title>
@@ -3564,56 +3564,12 @@ In your career, many - perhaps even the majority - of the people you meet and wo
 <section xml:id="_part_ii_introduction">
 <title>Part II introduction</title>
 <simpara><emphasis role="strong">Scenario</emphasis>
-You are part of a tight-knit team. You’ve moved out of the garage into a more professionalized environment. You might not all be in the same room, but you have a single mission and a cohesive culture, and you don’t need a lot of overhead to get the job done.</simpara>
-<simpara>Your startup has met with some success and you are now a team - still small enough to be fed by two pizzas&#8201;&#8212;&#8201;if people aren&#8217;t that hungry. Even with a few new people comes the need to more clearly establish your product direction, so people are building the right thing. You&#8217;re all in the same location, and can still communicate informally, but there is enough going on that you need a more organized approach to getting work done. Finally, this great thing you&#8217;re building doesn&#8217;t mean much if people cannot understand how best to use it, or if it&#8217;s not running and right people can&#8217;t get to it.</simpara>
-<simpara>However, things are getting larger and more complex. You have a significant user base, and your founder is increasingly out meeting with users, customers and investors; she isn’t in the room with the product team as much any more… in fact, she just named someone to be “product owner” and what is that all about?</simpara>
-<informalfigure>
-<mediaobject>
-<imageobject>
-<imagedata fileref="images/2_00-svcLifecycle.png" contentwidth="400"/>
-</imageobject>
-<textobject><phrase>Service lifecycle</phrase></textobject>
-</mediaobject>
-</informalfigure>
-<simpara>Remember in Chapter 1 we talked of the user&#8217;s <link xl:href="http://dm-academy.github.io/aitm/images/1_01-ITStack2.png">value experience</link>, and also how services <link xl:href="http://dm-academy.github.io/aitm/#_the_it_service_lifecycle">evolve over time in a lifecycle</link>?</simpara>
-<simpara>There are two primary value experiences:</simpara>
-<itemizedlist>
-<listitem>
-<simpara>The value the user derives from the service (e.g. account lookups, or a flawless navigational experience)</simpara>
-</listitem>
-<listitem>
-<simpara>The value the investor derives from monetizing the product, or comparable incentives (e.g. nonprofit missions)</simpara>
-</listitem>
-</itemizedlist>
-<simpara>Additionally, the product team derives career value. This becomes more of a factor later in the game. We will discuss this further in chapter 7 on organization, and Part IV on architecture lifecycles &amp; technical debt.</simpara>
-<simpara>The product team receives feedback from both value experiences. The day to day interactions with the service (e.g. help desk and operations) are understood, and (typically on a more intermittent basis) the portfolio investor also feeds back the information to the product team (the boss&#8217;s boss comes for a visit).</simpara>
-<simpara>This is of course a simplified model, and in a large enterprise both the users and investors may have proxies (more on this to come).</simpara>
-<informalfigure>
-<mediaobject>
-<imageobject>
-<imagedata fileref="images/2_00-feedback1.png" contentwidth="500"/>
-</imageobject>
-<textobject><phrase>productFeedback</phrase></textobject>
-</mediaobject>
-</informalfigure>
-<simpara>The figure above is an architectural representation of the toolchain we started to develop in Section 1. The toolchain can be seen as part of a value chain that is delivering an IT service.</simpara>
-<simpara>In this section, we will look at:</simpara>
-<itemizedlist>
-<listitem>
-<simpara>How you are accepting and executing on feedback signals</simpara>
-</listitem>
-<listitem>
-<simpara>How the feedback relationship with your investors is evolving, in terms of your product direction</simpara>
-</listitem>
-<listitem>
-<simpara>How the feedback relationship with your users is evolving, in terms of both operational criteria and product direction</simpara>
-</listitem>
-</itemizedlist>
-<simpara>We will discuss work management, product management, shared mental models, visualization, and systems monitoring.</simpara>
-<simpara>The practices and approaches established at the team level are critical to the higher levels of scale discussed in Sections 3 and 4. In this section, we discuss small, cross-functional, outcome-oriented teams. We discuss collaboration and customer intimacy, and the need to limit work in process. And we discuss blameless cultures where people are safe to fail and learn.</simpara>
-<simpara>If these learnings are not firmly established, the organization may struggle to scale; the need for cross-team coordination can (ironically) destroy the performance of individual teams, if not handled well. Scaling success starts with building a strong team level.</simpara>
+Your startup has met with some success and you are now a team. (If you are in an enterprise, you&#8217;ve been promoted to team lead.) You’ve moved out of the garage into a more professionalized environment. You might not all be in the same room, but you have a single mission and a cohesive identity, and you don’t need a lot of overhead to get the job done.</simpara>
+<simpara>Even with a few new people comes the need to more clearly establish your product direction, so people are building the right thing. You&#8217;re all in the same location, and can still communicate informally, but there is enough going on that you need a more organized approach to getting work done. Finally, this great thing you&#8217;re building doesn&#8217;t mean much if people cannot understand how best to use it, or if it&#8217;s not running and right people can&#8217;t get to it.</simpara>
+<simpara>Things are getting larger and more complex. You have a significant user base, and the founder is increasingly out meeting with users, customers and investors; she isn’t in the room with the product team as much any more… in fact, she just named someone to be “product owner” and what is that all about?</simpara>
+<simpara>The practices and approaches established at the team level are critical to the higher levels of scale discussed in Sections 3 and 4. In this section, we discuss small, cross-functional, outcome-oriented teams. We discuss product management,  work management, shared mental models, visualization, and systems monitoring. We discuss collaboration and customer intimacy, and the need to limit work in process. And we discuss blameless cultures where people are safe to fail and learn. All of these are critical foundations for future growth; scaling success starts with building a strong team level.</simpara>
 <simpara><emphasis role="strong">Special section: Systems thinking</emphasis>
-We talk of information <emphasis>systems</emphasis>, but what are systems? There is a rich body of knowledge describing them, which we will touch on in this special section.</simpara>
+We talk of information <emphasis>systems</emphasis>, but what are systems? What is feedback? There is a rich body of knowledge describing these topics, which we will touch on in this special section.</simpara>
 <simpara><emphasis role="strong">Chapter 4: Product Management</emphasis></simpara>
 <simpara>You (as the startup leader) are spending more time with investors and customers, and maintaining alignment around your original product vision is becoming more challenging as you are pulled in various directions. You need some means of keeping the momentum here. And the concept of "product management," you&#8217;re finding, represents a rich set of ideas for managing your team&#8217;s efforts at this stage of the game.</simpara>
 <simpara><emphasis role="strong">Chapter 5: Work Management</emphasis></simpara>
@@ -3642,9 +3598,9 @@ Peter Senge
 <simpara>As the Senge quote implies, brute force does not scale well within the context of a system. Systems tend to make their own rules. Within the bounds of the system, actions lead to outcomes, which in turn affect future actions. This <emphasis role="strong">feedback</emphasis> often becomes amplified and re-amplified through the systems' interactions with itself, until an overload occurs, such as the horrible screeching of a microphone too close to a speaker. In the business world, these feedback loops can manifest themselves in rigid platforms, brittle applications, or even a toxic work culture that sabotages success.</simpara>
 <simpara>A thorough discussion of systems theory is beyond the scope of this book. However, many of the ideas that follow are informed by it. Obtaining a working knowledge of systems theory will not only enhance your understanding of this book, it can also be an essential tool for managing uncertainty in your future career, teams, and organizations. If you are interested in this topic, you might start with <emphasis>An Introduction to General Systems Thinking</emphasis> by Gerald Weinberg <xref linkend="Weinberg2001"/>.</simpara>
 <simpara>Feedback is a loaded term. We hear terms like positive feedback and negative feedback, and associate it quickly with performance coaching and management discipline. That is not the sense of feedback in this book. The definition of feedback as used in this book is based on engineering. There is considerable related theory in general engineering and especially <link xl:href="https://en.wikipedia.org/wiki/Control_theory">control theory</link> and the reader is encouraged to investigate some of these foundations if unfamiliar.</simpara>
-<simpara>Here is the classic illustration of a feedback loop:</simpara>
+<simpara>Here is the classic illustration of a reinforcing feedback loop:</simpara>
 <figure>
-<title>Classic feedback loop</title>
+<title>Reinforcing feedback loop</title>
 <mediaobject>
 <imageobject>
 <imagedata fileref="images/2_00-feedback.png" contentwidth="400"/>
@@ -3652,40 +3608,42 @@ Peter Senge
 <textobject><phrase>feedback</phrase></textobject>
 </mediaobject>
 </figure>
-<simpara>For example, we can consider “rabbit reproduction” as a process with a positive feedback loop:</simpara>
+<simpara>For example, we can consider “rabbit reproduction” as a process with a reinforcing feedback loop:</simpara>
 <figure>
-<title>Rabbit reproduction</title>
+<title>Reinforcing (positive?) feedback, with rabbits</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/2_00-rabbits.png" contentwidth="300"/>
+<imagedata fileref="images/2_00-rabbits.png" contentwidth="700"/>
 </imageobject>
 <textobject><phrase>rabbits</phrase></textobject>
 </mediaobject>
 </figure>
-<simpara>The more rabbits, the faster they reproduce, and the more rabbits.</simpara>
-<simpara>This is a “positive” feedback loop, although Mr. MacGregor the local gardener may not agree, given that they are eating all his cabbages!! This is why feedback experts (e.g. <xref linkend="Sterman2000"/>) prefer to call this “reinforcing” feedback, because there is not necessarily anything “positive” about it.</simpara>
+<simpara>The more rabbits, the faster they reproduce, and the more rabbits. This is sometimes called a “positive” feedback loop, although Mr. MacGregor the local gardener may not agree, given that they are eating all his cabbages!! This is why feedback experts (e.g. <xref linkend="Sterman2000"/>) prefer to call this “reinforcing” feedback, because there is not necessarily anything “positive” about it.</simpara>
 <simpara>We can also consider feedback as the relationship between TWO processes:</simpara>
 <figure>
-<title>Feedback between two processes</title>
+<title>Balancing feedback between two processes</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/2_00-processAB.png" contentwidth="400"/>
+<imagedata fileref="images/2_00-balancing.png" contentwidth="350"/>
 </imageobject>
 <textobject><phrase>feedback between 2 processes</phrase></textobject>
 </mediaobject>
 </figure>
 <simpara>In our rabbit example, what if Process B is fox reproduction, that is, the birth rate of foxes (who eat rabbits)?</simpara>
 <figure>
-<title>Balancing feedback</title>
+<title>Balancing (negative?) feedback, with rabbits and foxes</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/2_00-rabbitfox.png" contentwidth="300"/>
+<imagedata fileref="images/2_00-rabbitfox.png" contentwidth="700"/>
 </imageobject>
 <textobject><phrase>rabbits and foxes</phrase></textobject>
 </mediaobject>
 </figure>
 <simpara>More rabbits equals more foxes (notice the “+” symbol on the line), because there are more rabbits to eat! But what does this do to the rabbits? It means LESS rabbits. Which, ultimately, means less foxes… and at some point, the populations balance. This is classic negative feedback. However, the local foxes don’t see it as negative (nor do the local gardeners!)  That is why feedback experts prefer to call this “balancing” feedback.</simpara>
 <simpara>Wikipedia has good articles on <link xl:href="https://en.wikipedia.org/wiki/Causal_loop_diagram">Causal Loop Diagramming</link> and <link xl:href="https://en.wikipedia.org/wiki/System_dynamics">Systems Dynamics</link> (with cool dynamic visuals.) <xref linkend="Sterman2000"/> is the definitive text with applications.</simpara>
+<note>
+<simpara>Still confused? Think about the last time you saw a "reply-all" email storm. The first accidental mass send generates feedback (emails saying "take me off this list"), which generate more emails ("stop emailing the list") and so on. This does not continue indefinitely; management intervention, common sense and fatigue eventually damp the storm down.</simpara>
+</note>
 </section>
 <section xml:id="_what_does_systems_thinking_have_to_do_with_it">
 <title>What does systems thinking have to do with IT?</title>
@@ -3700,7 +3658,19 @@ Peter Senge
 </mediaobject>
 </figure>
 <simpara>As with bridges, at a technical level, reinforcing feedback can be a very bad thing in IT systems. In general, any process that is self-amplified without any balancing feedback will eventually consume all available resources, just like rabbits will eat all the food available to them. So, if you create a process (e.g. write and run a computer program) that recursively spawns itself, it will sooner or later crash the computer as it devours memory and CPU. See <link xl:href="http://osr507doc.sco.com/en/HANDBOOK/runaway_proc.html">Runaway processes.</link></simpara>
-<simpara>Balancing feedback, on the other hand, is critical to make sure you are “staying on track.” Engineers use concepts of <link xl:href="https://en.wikipedia.org/wiki/Control_theory">control theory</link>, for example <link xl:href="https://en.wikipedia.org/wiki/Damping">damping</link>, to keep bridges from falling down. Balancing feedback in a business and IT context takes a wide variety of forms:</simpara>
+<simpara>Balancing feedback, on the other hand, is critical to make sure you are “staying on track.” Engineers use concepts of <link xl:href="https://en.wikipedia.org/wiki/Control_theory">control theory</link>, for example <link xl:href="https://en.wikipedia.org/wiki/Damping">damping</link>, to keep bridges from falling down.</simpara>
+<simpara>Remember in Chapter 1 we talked of the user&#8217;s <link xl:href="http://dm-academy.github.io/aitm/images/1_01-ITStack2.png">value experience</link>, and also how services <link xl:href="http://dm-academy.github.io/aitm/#_the_it_service_lifecycle">evolve over time in a lifecycle</link>? In terms of the <link linkend="dual-axis-vc">dual-axis value chain</link>, there are two primary digital value experiences:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>The value the user derives from the service (e.g. account lookups, or a flawless navigational experience)</simpara>
+</listitem>
+<listitem>
+<simpara>The value the investor derives from monetizing the product, or comparable incentives (e.g. nonprofit missions)</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Additionally, the product team derives career value. This becomes more of a factor later in the game. We will discuss this further in chapter 7 on organization, and Part IV on architecture lifecycles &amp; technical debt.</simpara>
+<simpara>The product team receives feedback from both value experiences. The day to day interactions with the service (e.g. help desk and operations) are understood, and (typically on a more intermittent basis) the portfolio investor also feeds back the information to the product team (the boss&#8217;s boss comes for a visit).</simpara>
+<simpara>Balancing feedback in a business and IT context takes a wide variety of forms:</simpara>
 <itemizedlist>
 <listitem>
 <simpara>The results of a product test in the marketplace, for example do the users prefer a drop down box or check boxes on a form?</simpara>
@@ -3724,23 +3694,32 @@ Peter Senge
 <simpara>Negative/Balancing, “stop doing that,” “fix that”</simpara>
 </listitem>
 </itemizedlist>
-<note>
-<simpara>Still confused? Think about the last time you saw a "reply-all" email storm. The first accidental mass send generates feedback (emails saying "take me off this list"), which generate more emails ("stop emailing the list") and so on. This does not continue indefinitely; management intervention, common sense and fatigue eventually damp the storm down.</simpara>
-</note>
+<simpara>You should consider:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>How you are accepting and executing on feedback signals</simpara>
+</listitem>
+<listitem>
+<simpara>How the feedback relationship with your investors is evolving, in terms of your product direction</simpara>
+</listitem>
+<listitem>
+<simpara>How the feedback relationship with your users is evolving, in terms of both operational criteria and product direction</simpara>
+</listitem>
+</itemizedlist>
 <simpara>One of the most important concepts related to feedback, one we will keep returning to, is that product value is based on feedback. We&#8217;ve discussed <link linkend="lean-startup">Lean Startup</link>, which represents a feedback loop intended to discover product value. Don Reinertsen, whose work we will discuss in this chapter, has written extensively on the importance of fast feedback to the product discovery process.</simpara>
 <section xml:id="_positive_feedback_the_special_case_investors_want">
 <title>Positive feedback: the special case investors want</title>
-<simpara>At a business level, there is a special kind of positive feedback that defines the successful business:</simpara>
-<informalfigure>
+<simpara>At a business level, there is a special kind of reinforcing feedback that defines the successful business:</simpara>
+<figure>
+<title>The reinforcing feedback businesses want</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/2_00-biz-positive.png" contentwidth="500"/>
+<imagedata fileref="images/2_00-biz-positive.png" contentwidth="600"/>
 </imageobject>
 <textobject><phrase>positive business feedback</phrase></textobject>
 </mediaobject>
-</informalfigure>
-<simpara>This is reinforcing feedback and positive for most people involved: investors, customers, employees.</simpara>
-<simpara>At some point, if the cycle continues, it will run into balancing feedback:</simpara>
+</figure>
+<simpara>This is reinforcing feedback and positive for most people involved: investors, customers, employees. At some point, if the cycle continues, it will run into balancing feedback:</simpara>
 <itemizedlist>
 <listitem>
 <simpara>Competition</simpara>
@@ -3752,7 +3731,7 @@ Peter Senge
 <simpara>Negative externalities (regulation, pollution, etc)</simpara>
 </listitem>
 </itemizedlist>
-<simpara>But those are the problems the business wants to have.</simpara>
+<simpara>But those are problems the business wants to have.</simpara>
 <simpara><anchor xml:id="open-loop" xreflabel="open loop"/></simpara>
 </section>
 <section xml:id="_open_versus_closed_loop_systems">
@@ -3778,9 +3757,9 @@ Peter Senge
 </mediaobject>
 </figure>
 <simpara>Without the blindfold, it would be a closed loop system. The person would rise from their chair and, through the ongoing feedback of their eyes to their central nervous system, would move towards the donkey and pin the tail in the correct location.</simpara>
-<simpara>This may seem obvious, but the history of IT management (some would say all management) over the past decades has been the struggle to overcome open-loop practices. Reliance on open-loop practices is arguably an indication of a dysfunctional command and control culture. A IT team that is designing and delivering without sufficient corrective feedback from its stakeholders is an ineffective, open-loop system. <xref linkend="Kennaley2010"/> applies these principles to software development in much greater depth, and is recommended.</simpara>
+<simpara>This may seem obvious, but the history of IT management (some would say all management) over the past decades has been the struggle to overcome open-loop practices. Reliance on open-loop practices is arguably an indication of a dysfunctional culture. A IT team that is designing and delivering without sufficient corrective feedback from its stakeholders is an ineffective, open-loop system. <xref linkend="Kennaley2010"/> applies these principles to software development in much greater depth, and is recommended.</simpara>
 <note>
-<simpara>No system can ever be fully "open loop" indefinitely.  Sooner or later, you take off the blindfold, or wind up on the rocks. Mark Kennaley prefers the term "delayed feedback closed loop system" (personal correspondence, 9/2015).</simpara>
+<simpara>No system can ever be fully "open loop" indefinitely.  Sooner or later, you take off the blindfold, or wind up on the rocks.</simpara>
 </note>
 <simpara>Engineers of complex systems use feedback techniques extensively. Complex systems do not work without them.</simpara>
 <simpara><anchor xml:id="OODA" xreflabel="[OODA]"/></simpara>
@@ -3927,7 +3906,7 @@ Deming and Juran.</literallayout>
 <title>Product design session <footnote><simpara><emphasis>Image credit <link xl:href="https://www.flickr.com/photos/daonb/6223628837">https://www.flickr.com/photos/daonb/6223628837</link>, downloaded 2016-09-14, commercial use permitted</emphasis></simpara></footnote></title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/2_04-design.jpg" contentwidth="400"/>
+<imagedata fileref="images/2_04-design.jpg" contentwidth="500"/>
 </imageobject>
 <textobject><phrase>team meeting</phrase></textobject>
 </mediaobject>
@@ -5073,6 +5052,8 @@ Poppendieck wastes as cited by Cobb, p177</literallayout>
 <simpara><link xl:href="http://pragmaticmarketing.com/resources/creating-product-management-at-a-startup">Creating Product Management at a Startup</link></simpara>
 </listitem>
 </itemizedlist>
+<simpara><emphasis role="strong">Videos</emphasis>
+* Alistair Cockburn, <link xl:href="https://www.youtube.com/watch?v=BdSiBlLafNY">Why Agile Works</link></simpara>
 <simpara><emphasis role="strong">Professional</emphasis></simpara>
 <itemizedlist>
 <listitem>
@@ -10176,7 +10157,7 @@ ISO 38500:2008
 <simpara>Projecting expected benefits is challenging. One of the most useful references for such questions is the book <emphasis>How to Measure Anything: Finding the Value of Intangibles in Business</emphasis> by Doug Hubbard <xref linkend="Hubbard2010"/>.</simpara>
 </note>
 <simpara>Estimation sometimes causes controversy. When a team is asked for a projected delivery date, the temptation for management is to "hold them accountable" for that date and penalize them for not delivering value by then. But product discovery is inherently uncertain, and therefore such penalties can seem arbitrary. Experiments show that when animals are penalized unpredictably, they fall into a condition known as "learned helplessness," in which they stop trying to avoid the penalties &lt;&lt;Wikipedia2016a&gt;.</simpara>
-<simpara>We discussed various <link linkend="coord-tools">boundary-spanning</link> tools and techniques in Chapter 8. Developing plans for understanding dependencies is one of the best known such techniques. An example of such a planning dependency would be that the database product should be chosen and configured before any schema development takes place (this might be a <link linkend="feature-v-component">component team working with a feature team</link>).</simpara>
+<simpara>We discussed various <link linkend="coord-tools">boundary-spanning</link> tools and techniques previously. Developing plans for understanding dependencies is one of the best known such techniques. An example of such a planning dependency would be that the database product should be chosen and configured before any schema development takes place (this might be a <link linkend="feature-v-component">component team working with a feature team</link>).</simpara>
 </section>
 <section xml:id="_planning_larger_efforts">
 <title>Planning larger efforts</title>
@@ -10300,7 +10281,7 @@ Charles G. Cobb
 <title>Traditional IT implementation lifecycle</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/3_08-ProdLifecycle1.png" contentwidth="500"/>
+<imagedata fileref="images/3_08-ProdLifecycle1.png" contentwidth="700"/>
 </imageobject>
 <textobject><phrase>lifecycle</phrase></textobject>
 </mediaobject>
@@ -10310,7 +10291,7 @@ Charles G. Cobb
 <title>Customer responsiveness in traditional model</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/3_08-ProdLifecycle2.png" contentwidth="500"/>
+<imagedata fileref="images/3_08-ProdLifecycle2.png" contentwidth="700"/>
 </imageobject>
 <textobject><phrase>lifecycle2</phrase></textobject>
 </mediaobject>
@@ -10324,7 +10305,7 @@ Charles G. Cobb
 <title>Traditional enterprise IT "space"</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/3_08-ProdLifecycle3.png" contentwidth="600"/>
+<imagedata fileref="images/3_08-ProdLifecycle3.png" contentwidth="700"/>
 </imageobject>
 <textobject><phrase>classic</phrase></textobject>
 </mediaobject>
@@ -10334,7 +10315,7 @@ Charles G. Cobb
 <title>Shrinking space for traditional IT</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/3_08-ProdLifecycle4.png" contentwidth="600"/>
+<imagedata fileref="images/3_08-ProdLifecycle4.png" contentwidth="700"/>
 </imageobject>
 <textobject><phrase>new model</phrase></textobject>
 </mediaobject>
@@ -12107,6 +12088,9 @@ Sutton observations on CMM: stipulates/strongly advocates functional specializat
 <listitem>
 <simpara>Matthew Skelton, <link xl:href="http://www.slideshare.net/SkeltonThatcher/how-and-why-to-design-your-teams-for-modern-software-systems-matthew-skelton-devopscon-munich-2016">How and why to design your Teams for modern Software Systems</link></simpara>
 </listitem>
+<listitem>
+<simpara>Lloyd Taylor, <link xl:href="http://www.slideshare.net/dev2ops/hacking-your-organization-6083382">Hacking your organization</link></simpara>
+</listitem>
 </itemizedlist>
 <simpara>In addition to the above books, the resources available on organizational design at smaller scales are vast, as these are very frequently asked questions by entrepreneurs of all types. Some useful links are:</simpara>
 <itemizedlist>
@@ -12276,7 +12260,7 @@ Sutton observations on CMM: stipulates/strongly advocates functional specializat
 <title>Multiple lifecycle model <footnote><simpara>similar to <xref linkend="Betz2011a"/>, pp. 61-63</simpara></footnote></title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/4_00-multilifecycle.png" contentwidth="600"/>
+<imagedata fileref="images/4_00-multilifecycle.png" contentwidth="800"/>
 </imageobject>
 <textobject><phrase>multi lifecycle problem</phrase></textobject>
 </mediaobject>
@@ -12600,7 +12584,7 @@ Mark Burgess
 <title>Governance emerges at the enterprise level</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/4_10-govEmergence.png" contentwidth="500"/>
+<imagedata fileref="images/4_10-govEmergence.png" contentwidth="800"/>
 </imageobject>
 <textobject><phrase>governance emergence</phrase></textobject>
 </mediaobject>
@@ -12616,7 +12600,7 @@ Mark Burgess
 <title>Governance and management with interface</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/4_10-govArch.png" contentwidth="500"/>
+<imagedata fileref="images/4_10-govArch.png" contentwidth="600"/>
 </imageobject>
 <textobject><phrase>architecture of goverance</phrase></textobject>
 </mediaobject>
@@ -13443,7 +13427,7 @@ Russian proverb
 <title>Assurance in context</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/4_10-AudComRisk.png" contentwidth="500"/>
+<imagedata fileref="images/4_10-AudComRisk.png" contentwidth="700"/>
 </imageobject>
 <textobject><phrase>audit compliance risk</phrase></textobject>
 </mediaobject>
@@ -13479,7 +13463,7 @@ Cobit 5 for Assurance
 <title>Assurance is based on a three-party model</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/4_10-3Party.png" contentwidth="500"/>
+<imagedata fileref="images/4_10-3Party.png" contentwidth="600"/>
 </imageobject>
 <textobject><phrase>three party assurance</phrase></textobject>
 </mediaobject>
@@ -13940,12 +13924,12 @@ ISACA
 <section xml:id="_security_engineering">
 <title>Security engineering</title>
 <simpara>For the next two sections, we will adopt a "2-axis" view, first proposed in <xref linkend="Betz2011a"/>.</simpara>
-<simpara>In this model, the systems lifecycle is considered along the horizontal access, and the user experience is considered along the vertical access (which also maps to the "stack.") In the following picture, we see the distinct concerns of the various stakeholders in the dual-axis model:</simpara>
+<simpara>In this model, the systems lifecycle is considered along the horizontal access, and the user experience is considered along the vertical access (which also maps to the "stack.") In the following picture, we see the distinct concerns of the various stakeholders in the <link linkend="dual-axis-vc">dual-axis model</link>:</simpara>
 <figure>
 <title>Security and the dual-axis value chain</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/4_10-2axis-security.png" contentwidth="600"/>
+<imagedata fileref="images/4_10-2axis-security.png" contentwidth="800"/>
 </imageobject>
 <textobject><phrase>dual axis view of security</phrase></textobject>
 </mediaobject>
@@ -14494,7 +14478,7 @@ The proposed dynamic certification approach adopts the common certification proc
 <title>Governance based on activities and artifacts</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/4_10-gov-2ndary.png" contentwidth="400"/>
+<imagedata fileref="images/4_10-gov-2ndary.png" contentwidth="600"/>
 </imageobject>
 <textobject><phrase>governance based on secondary artifacts</phrase></textobject>
 </mediaobject>
@@ -14505,7 +14489,7 @@ The proposed dynamic certification approach adopts the common certification proc
 <title>Governance of digital exhaust</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/4_10-gov-exhaust.png" contentwidth="400"/>
+<imagedata fileref="images/4_10-gov-exhaust.png" contentwidth="600"/>
 </imageobject>
 <textobject><phrase>governance based on digital exhaust</phrase></textobject>
 </mediaobject>
@@ -14926,7 +14910,7 @@ The Data Management Body of Knowledge
 <title>How many trees? <footnote><simpara><emphasis>Image credit <link xl:href="https://www.flickr.com/photos/bgreenlee/1389858104/">https://www.flickr.com/photos/bgreenlee/1389858104/</link>, commercial use permitted</emphasis></simpara></footnote></title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/4_11-appleTrees.jpg" contentwidth="300"/>
+<imagedata fileref="images/4_11-appleTrees.jpg" contentwidth="400"/>
 </imageobject>
 <textobject><phrase>Apple trees</phrase></textobject>
 </mediaobject>
@@ -14948,7 +14932,7 @@ AncientScripts
 <title>Sumerian cuneiform <footnote><simpara><emphasis>Image credit <link xl:href="https://www.flickr.com/photos/auxesis/3920533954">https://www.flickr.com/photos/auxesis/3920533954</link>, commercial use permitted</emphasis></simpara></footnote></title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/4_11-cuneiform.jpg" contentwidth="300"/>
+<imagedata fileref="images/4_11-cuneiform.jpg" contentwidth="400"/>
 </imageobject>
 <textobject><phrase>Clay tablet with markings</phrase></textobject>
 </mediaobject>
@@ -15058,7 +15042,7 @@ Doug Hubbard
 <title>Babbage Difference Engine <footnote><simpara><emphasis>Image credit <link xl:href="https://www.flickr.com/photos/tolomea/4847227935">https://www.flickr.com/photos/tolomea/4847227935</link>, commercial use permitted</emphasis></simpara></footnote></title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/4_11-diffEngine.jpg" contentwidth="400"/>
+<imagedata fileref="images/4_11-diffEngine.jpg" contentwidth="500"/>
 </imageobject>
 <textobject><phrase>Complex mechanical calculator</phrase></textobject>
 </mediaobject>
@@ -15324,7 +15308,7 @@ William Kent
 <title>Conceptual data model</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/4_11-conceptual.png" contentwidth="400"/>
+<imagedata fileref="images/4_11-conceptual.png" contentwidth="600"/>
 </imageobject>
 <textobject><phrase>conceptual data model</phrase></textobject>
 </mediaobject>
@@ -15349,7 +15333,7 @@ William Kent
 <title>Logical data model</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/4_11-logical.png" contentwidth="400"/>
+<imagedata fileref="images/4_11-logical.png" contentwidth="600"/>
 </imageobject>
 <textobject><phrase>logical data model</phrase></textobject>
 </mediaobject>
@@ -15360,7 +15344,7 @@ William Kent
 <title>Physical data model</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/4_11-physical.png" contentwidth="400"/>
+<imagedata fileref="images/4_11-physical.png" contentwidth="600"/>
 </imageobject>
 <textobject><phrase>physical data model</phrase></textobject>
 </mediaobject>
@@ -15531,7 +15515,7 @@ CUST_LAST_N VARCHAR2(32))</literallayout>
 <title>Systems of record</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/4_11-SORs.png" contentwidth="500"/>
+<imagedata fileref="images/4_11-SORs.png" contentwidth="600"/>
 </imageobject>
 <textobject><phrase>systems of record</phrase></textobject>
 </mediaobject>
@@ -15541,7 +15525,7 @@ CUST_LAST_N VARCHAR2(32))</literallayout>
 <title>Data flow for sales information</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/4_11-salesFlow.png" contentwidth="500"/>
+<imagedata fileref="images/4_11-salesFlow.png" contentwidth="600"/>
 </imageobject>
 <textobject><phrase>sales flow</phrase></textobject>
 </mediaobject>
@@ -15551,7 +15535,7 @@ CUST_LAST_N VARCHAR2(32))</literallayout>
 <title>Data flow for HR data</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/4_11-HRData.png" contentwidth="400"/>
+<imagedata fileref="images/4_11-HRData.png" contentwidth="600"/>
 </imageobject>
 <textobject><phrase>HR data</phrase></textobject>
 </mediaobject>
@@ -17026,7 +17010,7 @@ Bente et al
 <title>Architecture impacts on enterprise value</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/4_12-impact.png" contentwidth="700"/>
+<imagedata fileref="images/4_12-impact.png" contentwidth="800"/>
 </imageobject>
 <textobject><phrase>Architecture value</phrase></textobject>
 </mediaobject>
@@ -17843,7 +17827,7 @@ Bente et al
 <title>A flowchart <footnote><simpara><emphasis>Image credit <link xl:href="https://www.flickr.com/photos/lespetitescases/16715406524">https://www.flickr.com/photos/lespetitescases/16715406524</link>, downloaded 2016-10-16, commercial use permitted</emphasis></simpara></footnote></title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/4_12-flowchart.jpg" contentwidth="300"/>
+<imagedata fileref="images/4_12-flowchart.jpg" contentwidth="400"/>
 </imageobject>
 <textobject><phrase>flowchart</phrase></textobject>
 </mediaobject>
@@ -18056,7 +18040,7 @@ Bente et al
 </attribution>
 <simpara>&#8230;&#8203;we encountered companies that, despite having a fully institutionalized EA in place, were in a state close to paralysis&#8230;&#8203;Although EA has reached the mainstream, a skeptical undertone with regard to its effectiveness has always existed. (p 12-13)</simpara>
 </blockquote>
-<simpara>The relationship between architecture (both "enterprise" and other forms of architecture) and current Agile, DevOps, and digital product development approahces is too often troubled. However, the hope is that this book has given you a set of tools for resolving these concepts in a productive way.</simpara>
+<simpara>The relationship between architecture (both "enterprise" and other forms of architecture) and current Agile, DevOps, and digital product development approaches is too often troubled. However, the hope is that this book has given you a set of tools for resolving these concepts in a productive way.</simpara>
 <simpara>This chapter will challenge you by presenting the polemical arguments directly and frankly, as two sides to a debate, concluding with thoughts on finding common ground. Note that these points of view are deliberately extreme, to make the point:</simpara>
 <sidebar>
 <title>Author&#8217;s Note</title>
@@ -18080,8 +18064,20 @@ Bente et al
 </itemizedlist>
 <simpara>and other such topics. When development cannot proceed without those approvals&#8201;&#8212;&#8201;or if the approvals come at the cost of expensive re-work&#8201;&#8212;&#8201;the experience can often be challenging. Bente et al warn: "if enterprise architects claim to be the only decision-making body in technical matters, there is a huge risk that they create a bottleneck&#8230;&#8203;The practical consequence is that projects deliberately circumvent the enterprise architects&#8230;&#8203;" <xref linkend="Bente2012"/> p19</simpara>
 <simpara>And, looking more broadly at the practice and history of IT architecture, the case against it is strong. Enterprise architecture has presented itself as a solution to complexity, long IT time scales, business frustration, and other various IT problems. These issues are at this writing being solved, but not by architecture&#8201;&#8212;&#8201;at least not visibly. Instead, visible and publicized progress has come through the increasing adoption of Agile and DevOps practices rethinking open-loop, slow feedback, batch-oriented delivery. Architecture has failed in many ways:</simpara>
-<simpara>It failed to realize the emergent issue of too much enterprise work in process, instead championing the proliferation of enterprise processes and their associated queues. Fundamentally, they did not adopt enough of a systems view of IT delivery. Architects' motivation for "efficiency" and interest in capability mapping did not help the cause of cross-functional teams. Instead, functional silos were reinforced as supply-centric "capabilities" and the antipattern of "bringing the team to the work" were promoted as enterprise standard operating procedure - despite the growing evidence of Scrum and Agile success. The iterative, experimental narrative of Lean Startup did not originate from EA.</simpara>
-<simpara>Despite a professed interest in systems theory, architecture has only recently begun to realize the fundamental problems of stage-gated delivery, big bang releases, and so forth. Architecture gap analysis usually assumed that project investment would be used to fill them. Architecture often merited the criticism of "top down planning," which in complex systems domains too often doesn&#8217;t work. Architects too often fall into the trap of the  <link linkend="HIPPO">HiPPO</link> (Highest Paid Person&#8217;s Opinion). A sense of <link linkend="lean-startup">Lean Startup</link> experimentation, of placing bets on options and testing hypotheses, is not part of the mainstream enterprise architecture understanding. Instead, the architecture is presented as an established fact, with "governance" to ensure conformity. Hypothetical "synergies" emerging from "common platforms" are often offered as justification for architecture, with little follow up in measuring actual value delivered.</simpara>
+<itemizedlist>
+<listitem>
+<simpara>It failed to realize the emergent issue of too much enterprise work in process, instead championing the proliferation of enterprise processes and their associated queues.</simpara>
+</listitem>
+<listitem>
+<simpara>Architects' motivation for "efficiency" and interest in capability mapping did not help the cause of cross-functional teams. Instead, functional silos were reinforced as supply-centric "capabilities" and the project-centric anti-pattern of "bringing the team to the work" were promoted as enterprise standard operating procedure - despite the growing evidence of Scrum and Agile success. The iterative, experimental narrative of Lean Startup did not originate from EA.</simpara>
+</listitem>
+<listitem>
+<simpara>Despite a professed interest in systems theory, architecture has failed to adopt a workable systems perspective on digital delivery. It did not recognize the fundamental problems of stage-gated delivery, big bang releases, queue proliferation, and so forth. Architecture "gap" analysis resulted in project recommendations, again "bringing the team to the work."</simpara>
+</listitem>
+<listitem>
+<simpara>Architecture has often deserved the criticism of "top down planning," which in complex systems domains too often doesn&#8217;t work. Architects frequently fall into the trap of the  <link linkend="HIPPO">HiPPO</link> (Highest Paid Person&#8217;s Opinion). A sense of <link linkend="lean-startup">Lean Startup</link> experimentation, of placing bets on options and testing hypotheses, is not part of the mainstream enterprise architecture culture. Instead, the architecture is presented as an established fact, with "governance" to ensure conformity. Hypothetical "synergies" emerging from "common platforms" are often offered as justification for architecture, with little follow up in measuring actual value delivered.</simpara>
+</listitem>
+</itemizedlist>
 <simpara><anchor xml:id="large-arch-xform-risk" xreflabel="[large-arch-xform-risk]"/></simpara>
 <simpara>Justifications for architecture often invoke "complexity" in the portfolio of systems. In response, architecture has often given in to the desire for a  complete "radical surgery" systems re-engineering, the temptation of the "clean slate." But as Jez Humble accurately notes,</simpara>
 <simpara><emphasis>A common response to getting stuck in a big ball of mud is to fund a large systems replacement project. Such projects typically take months or years before they deliver any value to users, and the switchover from the old to the new system is often performed in “big bang” fashion. These projects also run an unusually high risk of running late and over budget and being canceled. Systems rearchitecture should not be done as a large program of work funded from the capital budget. It should be a continuous activity that happens as part of the product development process. <xref linkend="Humble2013"/> ch10</emphasis></simpara>
@@ -18106,14 +18102,15 @@ Ruth Malan
 <simpara>When it  comes to system implementation, the temptation to be  fast, often under the nom de guerre of agile, can soften  quality controls and threaten product usability, reliability, safety, and lifecycle cost <xref linkend="Malan2010"/>.</simpara>
 </blockquote>
 <simpara><link linkend="cost-of-delay">Cost of Delay</link> is a real and often overlooked issue, in understanding the net value of architecture. But it is only a factor, and does not eliminate the value proposition of architecture. If the Cost of Delay is only a few hundred dollars a month, but the risk or technical debt represent millions, then delay may be appropriate. Don Reinertsen, who has done more than anyone to promote the idea of Cost of Delay, emphasizes that <emphasis role="strong">all</emphasis> decision making must take place within an economic framework (<xref linkend="Reinertsen2009"/>, chapter 2) and that means that the other <link linkend="arch-impacts">architectural impact factors</link> on organization value must also be considered.</simpara>
+<simpara><anchor xml:id="agile-doc-gap" xreflabel="[agile-doc-gap]"/></simpara>
 </section>
 <section xml:id="_documentation">
 <title>Documentation</title>
 <simpara>Documentation has been a core concern of the Agile movement, being mentioned in one of the four core principles of the Agile Manifesto:</simpara>
 <simpara><emphasis>"Working software over comprehensive documentation" <xref linkend="Alliance2001"/></emphasis>.</simpara>
-<simpara>When documentation primarily takes the form of <link linkend="secondary-artifacts">secondary artifacts</link>, it is appropriate to question the need for it. "The code is the documentation," some will argue. While it is true that good coding practices result in easier-to-understand (and maintain) source code, the code cannot be the only documentation. However, as Ruth Malan notes,</simpara>
+<simpara>When documentation primarily takes the form of <link linkend="secondary-artifacts">secondary artifacts</link>, it is appropriate to question the need for it. "The code is the documentation," some will argue. While it is true that good coding practices result in easier-to-understand (and maintain) source code, the code cannot be the only documentation. As Ruth Malan notes,</simpara>
 <simpara><emphasis>&#8230;&#8203;for systems of sufficient scope and complexity to warrant teams (of teams) working on (incremental) implementation and evolution, the sheer mass of code can make it hard to discover the essential structure from bottom-up decisions made entirely through the medium of code. <xref linkend="Malan2010"/></emphasis></simpara>
-<simpara>In terms of systems theory, a complex software system has emergent behavior, not obvious from just looking at its components. Because the system&#8217;s behavior can&#8217;t be reduced to its pieces, "self documenting code" can only go so far. The behavior of the assembled components as a system needs to be represented somehow, in a way that transcends the mere mechanics of the pieces. Abstraction is necessary to understand emergent behavior, and this leads inevitably to <link linkend="arch-visualization">visual representation</link>. Without some attention to documenting overall context and systemic intent &amp; behavior, the effectiveness of the overall human/computer system degrades. For example, Alistair Cockburn reports that the Chrysler Comprehensive Compensation project, one of the first widely-reported Agile projects, was eventually halted, and</simpara>
+<simpara>In terms of systems theory, a complex software system has emergent behavior, not obvious from just looking at its components. Because the system&#8217;s behavior can&#8217;t be reduced to its pieces, "self documenting code" can only go so far. The behavior of the assembled components as a system needs to be represented somehow, in a way that transcends the mere mechanics of the pieces. Abstraction is necessary to understand and communicate emergent behavior, and this leads inevitably to <link linkend="arch-visualization">visual representation</link>. Without some attention to documenting overall context and systemic intent and behavior, the effectiveness of the overall human/computer system degrades. For example, Alistair Cockburn reports that the Chrysler Comprehensive Compensation project, one of the first widely-reported Agile projects, was eventually halted, and</simpara>
 <simpara><emphasis>&#8230;&#8203;left no archived documentation &#8230;&#8203; other than two sentence user stories, the tests, and the code. Eventually, enough people left that the oral tradition and group memory were lost <xref linkend="Cockburn2007"/>, pp. 41-43</emphasis></simpara>
 <simpara>In short, failure to sustain a shared mental model of a complex system is a risk that may result in loss of that system&#8217;s value.</simpara>
 </section>
@@ -18121,7 +18118,7 @@ Ruth Malan
 <title>Sourcing and technology standards</title>
 <simpara>Agile and DevOps are software-development centric, and have transformed that world. However, digital organizations don&#8217;t always build everything. There is a complex web of supplier relationships even for organizations with robust software development capabilities, and many organizations would still prefer to "buy rather than build." Software may be eating the world, but that doesn&#8217;t mean everyone employs - or should employ - software developers. Agile has not had a primary focus on <link linkend="sourcing">sourcing</link>, and certainly evaluating commercial software is not a common topic.</simpara>
 <simpara>Suppose you have an idea for a digital product, and you know that you will be (at least in part) assembling complex services/products produced by others? Suppose further that these provided services overlap (the providers compete)? You need to carefully analyze which services you are going to acquire from which provider.  You will need a strategy, and who is it that analyzes these services and their capabilities, interfaces, non-functional characteristics, and makes a final recommendation as to how you are going to bring them all into one unified system?</simpara>
-<simpara>It is easy to say things like, "the teams get to define their own architecture" but at some point the enterprise must reckon with the cost of an overly diverse supplier base. This is a very old topic in business, not restricted to IT. At the end of the day, supplier and sourcing fragmentation costs real money. Open source, Commercial-off-the-shelf, Cloud, in-house&#8230;&#8203; the options are bewildering and require experience. In a sense, the supplier base itself is an inventory, subject to aging and spoilage. (We can consider this another way of understanding technical debt.) A consistent evaluation approach is important (preferably under an economic framework Reinertsen/Hubbard). And at some point, product development teams should not have to do too much of their own R&amp;D on possible platforms for their work.</simpara>
+<simpara>It is easy to say things like, "the teams get to define their own architecture" but at some point the enterprise must reckon with the cost of an overly diverse supplier base. This is a very old topic in business, not restricted to IT. At the end of the day, supplier and sourcing fragmentation costs real money. Open source, Commercial-off-the-shelf, Cloud, in-house&#8230;&#8203; the options are bewildering and require experience. In a sense, the supplier base itself is an inventory, subject to aging and spoilage. (We can consider this another way of understanding technical debt.) A consistent evaluation approach is important (preferably under an economic framework; see Reinertsen &amp; Hubbard). And at some point, product development teams should not have to do too much of their own R&amp;D on possible platforms for their work.</simpara>
 <simpara><anchor xml:id="emergent-arch" xreflabel="[emergent-arch]"/></simpara>
 </section>
 <section xml:id="_architecture_as_emergent">
@@ -18144,9 +18141,8 @@ Adrian Cockcroft
 <section xml:id="_why_creating_the_context">
 <title>Why: Creating the context</title>
 <simpara>One principle throughout this book has been "respect the team," because true product value originates there. If teams are constantly fragmented by enterprise operating models and governance mandates, their ability to creatively solve business problems is hampered. Command and control replaces emergence, motivation declines, and valuable creativity is lost. <emphasis role="strong">Enterprise architecture must first and foremost protect the precious resource that is the high-performing, collaborative, creative team.</emphasis> As we&#8217;ve discussed, imposing multiple governance checkpoints itself <link linkend="digital-risk-management">adds risk</link>. And while it&#8217;s inevitable that the team will be subject to organization-wide mandates, they should be given the benefit of the doubt when autonomy collides with standardization.</simpara>
-<simpara>When enterprise architecture takes on true business architecture questions, including how digital capabilities are to be enabled and enhanced, Agile insights become an input or kind of requirement to business architecture. What capabilities require high-performing, cross-functional teams? What capabilities can be supported with project-based temporary teams? The more valuable and difficult the work, the more it calls for the careful development of a common mental model among a close-knit team over time. Driving organizational capability investment into long-running team structures becomes a strategy that organizational architects should consider as they develop the overall organizational portfolio.</simpara>
-<simpara>Architecture adds value through constraining choices. This may seem counterintuitive, but the choice is often between re-using a known existing platform, or engaging in risky research and development of alternatives. R&amp;D costs money, and itself can impose delay on establishing a reliable digital pipeline.</simpara>
-<simpara>But ultimately, the fundamental objective remains customer and product discovery. All other objectives are secondary; without fulfilling customer needs, architectural consistency is meaningless. Optimizing for the fast creation of product information, tested and validated against operational reality, needs to be top of mind for the architect.</simpara>
+<simpara>When enterprise architecture takes on true business architecture questions, including how digital capabilities are to be enabled and enhanced, Agile insights become an input or kind of requirement to business architecture. What capabilities require high-performing, cross-functional teams? What capabilities can be supported with project-based temporary teams? And what capabilities should be outsourced? The more valuable and difficult the work, the more it calls for the careful development of a common mental model among a close-knit team over time. Driving organizational capability investment into long-running team structures becomes a strategy that organizational architects should consider as they develop the overall organizational portfolio.</simpara>
+<simpara>Architecture adds value through constraining choices. This may seem counterintuitive, but the choice is often between re-using a known existing platform, or engaging in risky research and development of alternatives. R&amp;D costs money, and itself can impose delay on establishing a reliable digital pipeline. But ultimately, the fundamental objective remains customer and product discovery. All other objectives are secondary; without fulfilling customer needs, architectural consistency is meaningless. Optimizing for the fast creation of product information, tested and validated against operational reality, needs to be top of mind for the architect.</simpara>
 </section>
 <section xml:id="_what_the_architecture_of_architecture_of_the_digital_pipeline_itself">
 <title>What: the architecture of architecture, of the digital pipeline itself</title>
@@ -18197,10 +18193,10 @@ Bente et al
 <textobject><phrase>alt text</phrase></textobject>
 </mediaobject>
 </figure>
-<simpara>It is in the "governance and approval" kind of activity that conflict is most likely to emerge. Cadence and synchronization (e.g. processes) with the potential to block teams from pursuing their mission should be very carefully considered. If there is a process or a queue of architecture approvals, it at least should be operated on Cost of Delay of the work it&#8217;s blocking. And more generally, across the organization, the process should be tested against an economic model such as establishing a nominal or <link linkend="portfolio-CoD">portfolio-level Cost of Delay</link>. Like other processes, architecture itself can be assessed against such a baseline.</simpara>
+<simpara>It is in the "governance and approval" kind of activity that conflict is most likely to emerge. Cadence and synchronization (e.g. <link linkend="chap-coordination">coordination techniques</link>) with the potential to block teams from pursuing their mission should be very carefully considered. If there is a process or a queue of architecture approvals, it at least should be operated on Cost of Delay of the work it&#8217;s blocking. And more generally, across the organization, the process should be tested against an economic model such as establishing a nominal or <link linkend="portfolio-CoD">portfolio-level Cost of Delay</link>. Like other processes, architecture itself can be assessed against such a baseline.</simpara>
 <simpara>Queued approvals are only one way of solving issues. A rich and under-utilized approach is using internal market-type mechanisms, where overall rules are set and teams make autonomous decisions based on those rules. Don Reinertsen, in the <emphasis>Principles of Product Development Flow</emphasis>, discusses how Boeing implemented distributed decision-making through setting tradeoff rules for cost and weight. Rather than constantly routing design approvals through a single control point, Boeing instead set the principle that project managers could "purchase" design changes up to $300 per unit, to save a pound of weight. As Reinertsen notes,</simpara>
 <simpara><emphasis>The intrinsic elegance of this approach is that the superiors didn&#8217;t actually give up control over the decision. Instead, they recognized that they could still control the decision without participating in it. They simply had to control the economic logic of the decision.</emphasis> <xref linkend="Reinertsen2009"/>, p 42.</simpara>
-<simpara>One particular work product that architects often are concerned with is documentation. The desire for useful documentation, as mentioned above, reflects architecture&#8217;s goals of curating a common ground for collaboration. As Bente notes, In an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it as part of the condition of satisfaction of a user story or in the definition of done" <xref linkend="Bente2012"/> p 170</simpara>
+<simpara>One particular work product that architects often are concerned with is documentation. The desire for useful documentation, as <link linkend="agile-doc-gap">mentioned above</link>, reflects architecture&#8217;s goals of curating a common ground for collaboration. As Bente notes, "In an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it as part of the condition of satisfaction of a user story or in the definition of done" <xref linkend="Bente2012"/> p 170</simpara>
 </section>
 <section xml:id="_architecture_kata">
 <title>Architecture Kata</title>
@@ -18263,7 +18259,7 @@ Architectural goals—for example, desired performance, availability, and securi
 </listitem>
 </itemizedlist>
 <simpara>and others <xref linkend="Hammant2013"/>.</simpara>
-<simpara>Of course, there are other ways architecture might add value beyond system replacement, in which case the strangler pattern may not be relevant. In particular, architects may be called on to closely collaborate with product teams when certain kinds of issues emerge. This is not a governance or control interaction; it is instead architecture as a form of shared consulting "bench." Not every product team needs a full time architect, the reasoning goes, so architects can be assigned to them on a temporary basis, e.g. for one or a few sprints, perhaps of the technical "spike" (disovery/validation/experimentation) variety.</simpara>
+<simpara>Of course, there are other ways architecture might add value beyond system replacement, in which case the strangler pattern may not be relevant. In particular, architects may be called on to closely collaborate with product teams when certain kinds of issues emerge. This is not a governance or control interaction; it is instead architecture as a form of shared consulting "bench" or coordination mechanism. Not every product team needs a full time architect, the reasoning goes, so architects can be assigned to them on a temporary basis, e.g. for one or a few sprints, perhaps of the technical "spike" (disovery/validation/experimentation) variety.</simpara>
 <simpara><anchor xml:id="arch-hands-on" xreflabel="[arch-hands-on]"/></simpara>
 <simpara>In order to successfully meet this role, the architect needs to have hands-on technical ability. Many Agile authors are dismissive of "ivory-tower" architects who do not do "hands on" work, and in fact if an architect is going to sit with a technical team as a solutions advisor they clearly need the technical skills to do so. On the other hand, not all architects operate at the solutions level, nor are the problems they face necessarily programming problems. See sidebar, "The challenge of the 'hands-on' architect."</simpara>
 <sidebar>
@@ -19399,7 +19395,7 @@ A <emphasis role="strong">process</emphasis> is an ordered, countable set of act
 <title>Merging organizations</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/3_09-hier2.png" contentwidth="500"/>
+<imagedata fileref="images/3_09-hier2.png" contentwidth="700"/>
 </imageobject>
 <textobject><phrase>Hierarchy</phrase></textobject>
 </mediaobject>
@@ -19442,7 +19438,7 @@ A <emphasis role="strong">process</emphasis> is an ordered, countable set of act
 <title>Process crossing functions</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/5_04-ProcXFunc.png" contentwidth="600"/>
+<imagedata fileref="images/5_04-ProcXFunc.png" contentwidth="800"/>
 </imageobject>
 <textobject><phrase>processes crossing functions</phrase></textobject>
 </mediaobject>
@@ -19488,7 +19484,7 @@ A <emphasis role="strong">process</emphasis> is an ordered, countable set of act
 <title>Silos, white space, and cross-functional process</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/5_04-PXFNamed.png" contentwidth="600"/>
+<imagedata fileref="images/5_04-PXFNamed.png" contentwidth="800"/>
 </imageobject>
 <textobject><phrase>cross silo process</phrase></textobject>
 </mediaobject>
@@ -19516,7 +19512,7 @@ A <emphasis role="strong">process</emphasis> is an ordered, countable set of act
 <title>Process modeling templates</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/5_04-visio.png" contentwidth="600"/>
+<imagedata fileref="images/5_04-visio.png" contentwidth="800"/>
 </imageobject>
 <textobject><phrase>visio process templates</phrase></textobject>
 </mediaobject>
@@ -19601,7 +19597,7 @@ A <emphasis role="strong">process</emphasis> is an ordered, countable set of act
 <title>Functional relationships</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/5_04-IGOE2.png" contentwidth="400"/>
+<imagedata fileref="images/5_04-IGOE2.png" contentwidth="600"/>
 </imageobject>
 <textobject><phrase>IGOE</phrase></textobject>
 </mediaobject>
@@ -19634,7 +19630,7 @@ A <emphasis role="strong">process</emphasis> is an ordered, countable set of act
 <title>Basic ordering</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/5_04-ordering1.png" contentwidth="600"/>
+<imagedata fileref="images/5_04-ordering1.png" contentwidth="800"/>
 </imageobject>
 <textobject><phrase>process ordering</phrase></textobject>
 </mediaobject>
@@ -19644,7 +19640,7 @@ A <emphasis role="strong">process</emphasis> is an ordered, countable set of act
 <title>Ordered process across silos</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/5_04-ordering2.png" contentwidth="600"/>
+<imagedata fileref="images/5_04-ordering2.png" contentwidth="800"/>
 </imageobject>
 <textobject><phrase>ordering</phrase></textobject>
 </mediaobject>
@@ -19654,7 +19650,7 @@ A <emphasis role="strong">process</emphasis> is an ordered, countable set of act
 <title>Decision point</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/5_04-ordering4.png" contentwidth="600"/>
+<imagedata fileref="images/5_04-ordering4.png" contentwidth="800"/>
 </imageobject>
 <textobject><phrase>ordering</phrase></textobject>
 </mediaobject>
@@ -19664,7 +19660,7 @@ A <emphasis role="strong">process</emphasis> is an ordered, countable set of act
 <title>Forking and joining</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/5_04-ordering3.png" contentwidth="600"/>
+<imagedata fileref="images/5_04-ordering3.png" contentwidth="800"/>
 </imageobject>
 <textobject><phrase>ordering</phrase></textobject>
 </mediaobject>
@@ -19678,7 +19674,7 @@ A <emphasis role="strong">process</emphasis> is an ordered, countable set of act
 <title>Complex flow across swimlanes</title>
 <mediaobject>
 <imageobject>
-<imagedata fileref="images/5_04-swimlanes.png" contentwidth="600"/>
+<imagedata fileref="images/5_04-swimlanes.png" contentwidth="800"/>
 </imageobject>
 <textobject><phrase>swimlanes</phrase></textobject>
 </mediaobject>
@@ -19691,28 +19687,28 @@ A <emphasis role="strong">process</emphasis> is an ordered, countable set of act
 <simpara>The techniques briefly discussed here can be applied and combined in many different ways, and result in models of large scope and complexity. However there are crucial limitations to visual representations of complexity.</simpara>
 <simpara>There are endless nuances and debates about BPM notations, methodology, and philosophy. Don&#8217;t get caught up in it. Modeling should generate simple, clear artifacts that are useful by a broad audience, and it should not become an end in itself, or (in general) consume inordinate amounts of time. We will discuss this further in the chapter section on Agile.</simpara>
 <simpara>With the above discussion, we have covered in a summary form the basics of business process modeling. In the next section on Agile and process management, we will discuss various process pitfalls and appropriate Agile and Lean responses.</simpara>
-</section>
-</section>
-</section>
-<section xml:id="_towards_a_theory_of_it_management">
-<title>Towards a theory of IT management</title>
-<simpara>As we look forward, and consider the scale at which we are now operating, the challenges only seem to increase. Increasingly, we need to look to engineering and operations practices from other fields, and to math and science for useful theoretical tools.</simpara>
-<simpara>Risk management, complex systems failures, how to safely manage combined human/technical systems - this is all well studied in domains like aerospace. We can&#8217;t understand "change" management without better definitions of change and stability, concepts well studied in the quantitative sciences. No matter the safeguards, complex systems are prone to fail - but can we conceive of systems that can increase their stability through learning from their failures?</simpara>
-<simpara>Finally, what do we even mean by complexity? What is the relationship between the merely complicated, the truly complex, and the absolutely chaotic? What do we need to understand about these various domains, to continue our journey of digital transformation?</simpara>
-<simpara>Folk models = "sr. clinician&#8217;s opinions" - Nancy Raymond</simpara>
-<simpara>the problem of frameworks - folk applications of semantics</simpara>
-<simpara>traditions of canon law (see chapter 11)</simpara>
-<simpara>Optimizing across multiple constraints</simpara>
-<simpara>Limits of iterative approaches &#8230;&#8203; missing higher order modes &#8230;&#8203;</simpara>
+<literallayout class="monospaced">Collaborative draft only</literallayout>
+<literallayout class="monospaced">=== Towards a theory of IT management
+As we look forward, and consider the scale at which we are now operating, the challenges only seem to increase. Increasingly, we need to look to engineering and operations practices from other fields, and to math and science for useful theoretical tools.</literallayout>
+<literallayout class="monospaced">Risk management, complex systems failures, how to safely manage combined human/technical systems - this is all well studied in domains like aerospace. We can't understand "change" management without better definitions of change and stability, concepts well studied in the quantitative sciences. No matter the safeguards, complex systems are prone to fail - but can we conceive of systems that can increase their stability through learning from their failures?</literallayout>
+<literallayout class="monospaced">Finally, what do we even mean by complexity? What is the relationship between the merely complicated, the truly complex, and the absolutely chaotic? What do we need to understand about these various domains, to continue our journey of digital transformation?</literallayout>
+<literallayout class="monospaced">Alistair Cockburn Wittgenstein  etc</literallayout>
+<literallayout class="monospaced">Folk models = "sr. clinician's opinions" - Nancy Raymond</literallayout>
+<literallayout class="monospaced">the problem of frameworks - folk applications of semantics</literallayout>
+<literallayout class="monospaced">traditions of canon law (see chapter 11)</literallayout>
+<literallayout class="monospaced">Optimizing across multiple constraints</literallayout>
+<literallayout class="monospaced">Limits of iterative approaches ... missing higher order modes ...</literallayout>
 <itemizedlist>
 <listitem>
 <simpara>Reinertsen&#8217;s critique of CC</simpara>
+<literallayout class="monospaced">What we can and cannot learn from simulations (AB Murray)</literallayout>
 </listitem>
 </itemizedlist>
-<simpara>What we can and cannot learn from simulations (AB Murray)</simpara>
 </section>
-<section xml:id="_current_agile_texts">
-<title>Current Agile texts</title>
+</section>
+</section>
+<section xml:id="_recommended_readings">
+<title>Recommended readings</title>
 <simpara>There are hundreds of books on Agile. In this part I will seek to credit specifically collegiate texts that may also be of interest.</simpara>
 <itemizedlist>
 <listitem>
@@ -20111,6 +20107,9 @@ A <emphasis role="strong">process</emphasis> is an ordered, countable set of act
 </listitem>
 <listitem>
 <simpara><anchor xml:id="Harmon2003" xreflabel="[Harmon2003]"/>[Harmon2003]: Harmon, Paul. 2003. Business Process Change: A Manager’s Guide to Improving, Redesigning, and Automating Processes. Amsterdam: Elsevier.</simpara>
+</listitem>
+<listitem>
+<simpara><anchor xml:id="Harnish2014" xreflabel="[Harnish2014]"/>[Harnish2014]: Harnish, V., 2014. Scaling Up: How a Few Companies Make It&#8230;&#8203;and Why the Rest Don’t (Rockefeller Habits 2.0) Gazelles.</simpara>
 </listitem>
 <listitem>
 <simpara><anchor xml:id="Harpring2010" xreflabel="[Harpring2010]"/>[Harpring2010]: Harpring, Patricia. 2010. Introduction to Controlled Vocabularies: Terminology for Art, Architecture and Other Cultural Works. Los Angeles, CA: Getty Publications. <link xl:href="http://www.getty.edu/research/publications/electronic_publications/intro_controlled_vocab/index.html">http://www.getty.edu/research/publications/electronic_publications/intro_controlled_vocab/index.html</link>.</simpara>

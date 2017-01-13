@@ -1,0 +1,322 @@
+\subsection{Agile and architecture}
+\label{_agile_and_architecture}\hyperlabel{_agile_and_architecture}%
+  \begin{quote}
+
+\ldots{}\hspace{0em}we encountered companies that, despite having a fully institutionalized EA in place, were in a state close to paralysis\ldots{}\hspace{0em}Although EA has reached the mainstream, a skeptical undertone with regard to its effectiveness has always existed. (p 12-{}13)
+
+\hspace*\fill--- Bente et al
+\emph{Collaborative Enterprise Architecture} \end{quote}
+ 
+The relationship between architecture (both "enterprise" and other forms of architecture) and current Agile, DevOps, and digital product development approaches is too often troubled. However, the hope is that this book has given you a set of tools for resolving these concepts in a productive way.
+ 
+This chapter will challenge you by presenting the polemical arguments directly and frankly, as two sides to a debate, concluding with thoughts on finding common ground. Note that these points of view are deliberately extreme, to make the point:
+ 
+
+\begin{sidebar}
+\textbf{Author's Note}
+
+
+As a practicing architect I can confirm that there is often friction between developers with an Agile perspective and architects, whether "enterprise" or other kinds. This carries through into industry discussions and conference presentations.
+
+I think the best approach to resolving this conflict is through careful understanding of the perspective of each "side." Both have validity. I recommend framing the conversation in terms of \hyperlink{arch-impacts}{architecture's value impacts} and quantifying wherever possible.
+\end{sidebar}
+ 
+\subsubsection{The hubris of architecture}
+\label{_the_hubris_of_architecture}\hyperlabel{_the_hubris_of_architecture}%
+  
+\emph{The goal of enterprise architecture is to act as a guide, perhaps a pathfinder, who takes the enterprise on a transformational journey\textemdash{}from an incoherent and complex world with line-{}of-{}business separation, product-{}specific stovepipes, legacy systems estate, and costly operation to a more rationally organized and useful state with multiservice, revenue-{}generating platforms and an efficient operational regime. On the way, radical surgeries may be required to eliminate duplication, reduce costs, improve reliability, and increase agility in the business. EA acts as a strategic foundation for business enablement.} \hyperlink{Bente2012}{[Bente2012]} p9
+ 
+Product development organizations often experience architecture and its goals as unwarranted interference, imposing a high \hyperlink{cost-of-delay}{Cost of Delay} with little apparent return on investment. Architecture approvals can be required on:
+ \begin{itemize}
+
+\item{} application designs
+ 
+
+\item{} database designs
+ 
+
+\item{} selection of technology products
+ 
+\end{itemize}
+ 
+and other such topics. When development cannot proceed without those approvals\hspace{0.167em}\textemdash{}\hspace{0.167em}or if the approvals come at the cost of expensive re-{}work\hspace{0.167em}\textemdash{}\hspace{0.167em}the experience can often be challenging. Bente et al warn: "if enterprise architects claim to be the only decision-{}making body in technical matters, there is a huge risk that they create a bottleneck\ldots{}\hspace{0em}The practical consequence is that projects deliberately circumvent the enterprise architects\ldots{}\hspace{0em}" \hyperlink{Bente2012}{[Bente2012]} p19
+ 
+And, looking more broadly at the practice and history of IT architecture, the case against it is strong. Enterprise architecture has presented itself as a solution to complexity, long IT time scales, business frustration, and other various IT problems. These issues are at this writing being solved, but not by architecture\hspace{0.167em}\textemdash{}\hspace{0.167em}at least not visibly. Instead, visible and publicized progress has come through the increasing adoption of Agile and DevOps practices rethinking open-{}loop, slow feedback, batch-{}oriented delivery. Architecture has failed in many ways:
+ \begin{itemize}
+
+\item{} It failed to realize the emergent issue of too much enterprise work in process, instead championing the proliferation of enterprise processes and their associated queues.
+ 
+
+\item{} Architects' motivation for "efficiency" and interest in capability mapping did not help the cause of cross-{}functional teams. Instead, functional silos were reinforced as supply-{}centric "capabilities" and the project-{}centric anti-{}pattern of "bringing the team to the work" were promoted as enterprise standard operating procedure -{} despite the growing evidence of Scrum and Agile success. The iterative, experimental narrative of Lean Startup did not originate from EA.
+ 
+
+\item{} Despite a professed interest in systems theory, architecture has failed to adopt a workable systems perspective on digital delivery. It did not recognize the fundamental problems of stage-{}gated delivery, big bang releases, queue proliferation, and so forth. Architecture "gap" analysis resulted in project recommendations, again "bringing the team to the work."
+ 
+
+\item{} Architecture has often deserved the criticism of "top down planning," which in complex systems domains too often doesn't work. Architects frequently fall into the trap of the  \hyperlink{HIPPO}{HiPPO} (Highest Paid Person's Opinion). A sense of \hyperlink{lean-startup}{Lean Startup} experimentation, of placing bets on options and testing hypotheses, is not part of the mainstream enterprise architecture culture. Instead, the architecture is presented as an established fact, with "governance" to ensure conformity. Hypothetical "synergies" emerging from "common platforms" are often offered as justification for architecture, with little follow up in measuring actual value delivered.
+ 
+\end{itemize}
+ 
+\label{large-arch-xform-risk}\hyperlabel{large-arch-xform-risk}
+ 
+Justifications for architecture often invoke "complexity" in the portfolio of systems. In response, architecture has often given in to the desire for a  complete "radical surgery" systems re-{}engineering, the temptation of the "clean slate." But as Jez Humble accurately notes,
+ 
+\emph{A common response to getting stuck in a big ball of mud is to fund a large systems replacement project. Such projects typically take months or years before they deliver any value to users, and the switchover from the old to the new system is often performed in \textquotedblleft{}big bang\textquotedblright{} fashion. These projects also run an unusually high risk of running late and over budget and being canceled. Systems rearchitecture should not be done as a large program of work funded from the capital budget. It should be a continuous activity that happens as part of the product development process. \hyperlink{Humble2013}{[Humble2013]} ch10}
+ 
+Architecture methodology, with its focus on identifying capability gaps for feeding into the project portfolio process, has perhaps been too prone to supporting these large, troubled programs. As we know from our earlier chapters, large system changes are inherently risky and any intervention into a complex system is better undertaken as a series of smaller, incremental changes with frequent monitoring and assessment.
+  
+\subsubsection{The hubris of Agile}
+\label{_the_hubris_of_agile}\hyperlabel{_the_hubris_of_agile}%
+  \begin{quote}
+
+Instead of tapping into the existing knowledge of the organization the autonomous team is prone to reinvent the wheel, and the wheel that they reinvent will not always be superior to the one we are currently using \hyperlink{Reinertsen1997}{[Reinertsen1997]}, p. 104.
+
+\hspace*\fill--- Donald Reinertsen
+\emph{Managing the Design Factory} \end{quote}
+ 
+The Agile community has its own blind spots and challenges. Speed is seen as a good in itself, too often without an economic model. Agile teams often clash with enterprise governance processes that have sound compliance and financial benefits. Phrases like "you aren't gonna need it" are used to justify lapses of due diligence on critical capabilities, and standard platforms and vendors are seen as unreasonable limitations on team autonomy\hspace{0.167em}\textemdash{}\hspace{0.167em}to the point where it seems some teams' interest is primarily in padding their resumes with as many new technologies as possible, regardless of the long-{}term consequences for the organization.
+ 
+\paragraph{The limitations of Cost of Delay}
+\label{_the_limitations_of_cost_of_delay}\hyperlabel{_the_limitations_of_cost_of_delay}%
+  \begin{quote}
+
+When it  comes to system implementation, the temptation to be  fast, often under the nom de guerre of agile, can soften  quality controls and threaten product usability, reliability, safety, and lifecycle cost \hyperlink{Malan2010}{[Malan2010]}.
+
+\hspace*\fill--- Ruth Malan
+\end{quote}
+ 
+\hyperlink{cost-of-delay}{Cost of Delay} is a real and often overlooked issue, in understanding the net value of architecture. But it is only a factor, and does not eliminate the value proposition of architecture. If the Cost of Delay is only a few hundred dollars a month, but the risk or technical debt represent millions, then delay may be appropriate. Don Reinertsen, who has done more than anyone to promote the idea of Cost of Delay, emphasizes that \textbf{all} decision making must take place within an economic framework (\hyperlink{Reinertsen2009}{[Reinertsen2009]}, chapter 2) and that means that the other \hyperlink{arch-impacts}{architectural impact factors} on organization value must also be considered.
+ 
+\label{agile-doc-gap}\hyperlabel{agile-doc-gap}
+  
+\paragraph{Documentation}
+\label{_documentation}\hyperlabel{_documentation}%
+  
+Documentation has been a core concern of the Agile movement, being mentioned in one of the four core principles of the Agile Manifesto:
+ 
+\emph{"Working software over comprehensive documentation" \hyperlink{Alliance2001}{[Alliance2001]}}.
+ 
+When documentation primarily takes the form of \hyperlink{secondary-artifacts}{secondary artifacts}, it is appropriate to question the need for it. "The code is the documentation," some will argue. While it is true that good coding practices result in easier-{}to-{}understand (and maintain) source code, the code cannot be the only documentation. As Ruth Malan notes,
+ 
+\emph{\ldots{}\hspace{0em}for systems of sufficient scope and complexity to warrant teams (of teams) working on (incremental) implementation and evolution, the sheer mass of code can make it hard to discover the essential structure from bottom-{}up decisions made entirely through the medium of code. \hyperlink{Malan2010}{[Malan2010]}}
+ 
+In terms of systems theory, a complex software system has emergent behavior, not obvious from just looking at its components. Because the system's behavior can't be reduced to its pieces, "self documenting code" can only go so far. The behavior of the assembled components as a system needs to be represented somehow, in a way that transcends the mere mechanics of the pieces. Abstraction is necessary to understand and communicate emergent behavior, and this leads inevitably to \hyperlink{arch-visualization}{visual representation}. Without some attention to documenting overall context and systemic intent and behavior, the effectiveness of the overall human/computer system degrades. For example, Alistair Cockburn reports that the Chrysler Comprehensive Compensation project, one of the first widely-{}reported Agile projects, was eventually halted, and
+ 
+\emph{\ldots{}\hspace{0em}left no archived documentation \ldots{}\hspace{0em} other than two sentence user stories, the tests, and the code. Eventually, enough people left that the oral tradition and group memory were lost \hyperlink{Cockburn2007}{[Cockburn2007]}, pp. 41-{}43}
+ 
+In short, failure to sustain a shared mental model of a complex system is a risk that may result in loss of that system's value.
+  
+\paragraph{Sourcing and technology standards}
+\label{_sourcing_and_technology_standards}\hyperlabel{_sourcing_and_technology_standards}%
+  
+Agile and DevOps are software-{}development centric, and have transformed that world. However, digital organizations don't always build everything. There is a complex web of supplier relationships even for organizations with robust software development capabilities, and many organizations would still prefer to "buy rather than build." Software may be eating the world, but that doesn't mean everyone employs -{} or should employ -{} software developers. Agile has not had a primary focus on \hyperlink{sourcing}{sourcing}, and certainly evaluating commercial software is not a common topic.
+ 
+Suppose you have an idea for a digital product, and you know that you will be (at least in part) assembling complex services/products produced by others? Suppose further that these provided services overlap (the providers compete)? You need to carefully analyze which services you are going to acquire from which provider.  You will need a strategy, and who is it that analyzes these services and their capabilities, interfaces, non-{}functional characteristics, and makes a final recommendation as to how you are going to bring them all into one unified system?
+ 
+It is easy to say things like, "the teams get to define their own architecture" but at some point the enterprise must reckon with the cost of an overly diverse supplier base. This is a very old topic in business, not restricted to IT. At the end of the day, supplier and sourcing fragmentation costs real money. Open source, Commercial-{}off-{}the-{}shelf, Cloud, in-{}house\ldots{}\hspace{0em} the options are bewildering and require experience. In a sense, the supplier base itself is an inventory, subject to aging and spoilage. (We can consider this another way of understanding technical debt.) A consistent evaluation approach is important (preferably under an economic framework; see Reinertsen \& Hubbard). And at some point, product development teams should not have to do too much of their own R\&D on possible platforms for their work.
+ 
+\label{emergent-arch}\hyperlabel{emergent-arch}
+  
+\paragraph{Architecture as emergent}
+\label{_architecture_as_emergent}\hyperlabel{_architecture_as_emergent}%
+  \begin{quote}
+
+\textquotedblleft{}At Netflix, we had no central control [of the architecture] \ldots{}\hspace{0em} The goal of architecture was to create the right emergent behaviors\ldots{}\hspace{0em}\textquotedblright{} \hyperlink{Bloomberg2014}{[Bloomberg2014]}
+
+\hspace*\fill--- Adrian Cockcroft
+\emph{former CTO Netflix} \end{quote}
+ 
+The Agile Manifesto is well known for saying "The best architectures, requirements, and designs emerge from self-{}organizing teams" \hyperlink{Alliance2001}{[Alliance2001]}. This is one of the more frequently discussed Agile statements. Netflix CTO Adrian Cockcroft has expressed similar views (quote above).
+ 
+A key question is whether "architecture" is considered at the single product or multi-{}product level. At the single product level, collaborative teams routinely develop effective software architectures. However, when multiple products are involved, it is hard to see how all the \hyperlink{arch-impacts}{architectural value} scenarios are fulfilled without some investment being directed to the goals of cross-{}product architectural coordination. It helps when rules of the road are established; both Amazon and Netflix have benefited from having certain widely accepted platform standards, such as "every product communicates through APIs." Netflix has had a long term commitment to Amazon Cloud services; it is probably not acceptable for teams there to decide on a whim to deploy their services on Google Compute Engine or Microsoft Azure, so at least in that sense Netflix has an architecture. The question gets harder when layered products and services with \hyperlink{IT-lifecycles}{complex lifecycle interactions} are involved.
+ 
+Microservices can reduce the need for cross-{}team coordination, but as we \hyperlink{google-chubby}{previously discussed}, coordination needs still do emerge.
+   
+\subsubsection{Towards reconciliation}
+\label{_towards_reconciliation}\hyperlabel{_towards_reconciliation}%
+  
+So how do we reconcile Agile with architecture practices, especially enterprise architecture and its concerns for longer lifecycles, aggregate technical debt, and governance? We need to understand why we look to architecture, what utilizing it means, and how it ultimately adds value, or doesn't, in the organization.
+ 
+\paragraph{Why: Creating the context}
+\label{_why_creating_the_context}\hyperlabel{_why_creating_the_context}%
+  
+One principle throughout this book has been "respect the team," because true product value originates there. If teams are constantly fragmented by enterprise operating models and governance mandates, their ability to creatively solve business problems is hampered. Command and control replaces emergence, motivation declines, and valuable creativity is lost. \textbf{Enterprise architecture must first and foremost protect the precious resource that is the high-{}performing, collaborative, creative team.} As we've discussed, imposing multiple governance checkpoints itself \hyperlink{digital-risk-management}{adds risk}. And while it's inevitable that the team will be subject to organization-{}wide mandates, they should be given the benefit of the doubt when autonomy collides with standardization.
+ 
+When enterprise architecture takes on true business architecture questions, including how digital capabilities are to be enabled and enhanced, Agile insights become an input or kind of requirement to business architecture. What capabilities require high-{}performing, cross-{}functional teams? What capabilities can be supported with project-{}based temporary teams? And what capabilities should be outsourced? The more valuable and difficult the work, the more it calls for the careful development of a common mental model among a close-{}knit team over time. Driving organizational capability investment into long-{}running team structures becomes a strategy that organizational architects should consider as they develop the overall organizational portfolio.
+ 
+Architecture adds value through constraining choices. This may seem counterintuitive, but the choice is often between re-{}using a known existing platform, or engaging in risky research and development of alternatives. R\&D costs money, and itself can impose delay on establishing a reliable digital pipeline. But ultimately, the fundamental objective remains customer and product discovery. All other objectives are secondary; without fulfilling customer needs, architectural consistency is meaningless. Optimizing for the fast creation of product information, tested and validated against operational reality, needs to be top of mind for the architect.
+  
+\paragraph{What: the architecture of architecture, of the digital pipeline itself}
+\label{_what_the_architecture_of_architecture_of_the_digital_pipeline_itself}\hyperlabel{_what_the_architecture_of_architecture_of_the_digital_pipeline_itself}%
+  
+The digital pipeline ultimately is a finely tuned tool for this creation  of information. It, itself, has an architecture: business, application, and technical. It operates within an economic framework. To understand the architecture of the digital pipeline is in a sense to understand the "architecture of architecture."
+ 
+As we've discussed above, architecture, like \hyperlink{arch-as-staff}{staff functions} generally, is in part a coordination mechanism. It collects and curates knowledge and sustains the organization's understanding of its complex systems.  Architecture also identifies gaps and informs the investment process, in part through collecting feedback from the organization.
+ 
+If architecture's fundamental purpose is enabling the right emergent behavior, there are still questions about how it does so. Architecture adds value in assisting when:
+ \begin{itemize}
+
+\item{} systems are too big for 1 team
+ 
+
+\item{} features are too complex to be implemented in 1 iteration
+ 
+
+\item{} features require significant organizational change management
+ 
+\end{itemize}
+ 
+As a coordination mechanism, it can operate in various ways including planning, controlling, and collaborating. Each may be appropriate for a given challenge or situation. For example, different approaches are required depending on whether the product challenge is \hyperlink{flower-and-cog}{Flower or Cog}. A flower is not engineered to fill a gap. A cog is. Market-{}facing experiments need leeway to pivot, where initiatives intended to fill a gap in a larger system may require more constraints and control. And how do architects know there is a gap? It should be an hypothesis-{}driven process, that needs to establish that there is a valuable, usable, feasible future state.
+  
+\paragraph{How: Execution}
+\label{_how_execution}\hyperlabel{_how_execution}%
+  \begin{quote}
+
+Another possible objection against agile methods is that the processes in EA, and in the enterprise generally, are simply not operating with a time window of the typical sprint length of three weeks. This, of course, is true. But it is at closer inspection not a counter-{}argument against the application of agile principles to EA\textemdash{}just the opposite. The long process cycles add to EA's lack of transparency and promote a silo mentality. Agile techniques can help here. \hyperlink{Bente2012}{[Bente2012]}
+
+\hspace*\fill--- Bente et al
+\emph{Collaborative Enterprise Architecture} \end{quote}
+ 
+As an \hyperlink{arch-practices}{executing capability}, architecture operates in various ways:
+ \begin{itemize}
+
+\item{} Planning and analysis
+ 
+
+\item{} Governance and approvals
+ 
+
+\item{} Collaboration and guidance
+ 
+\end{itemize}
+ 
+Ideally, planning and analysis occurs "upstream" of the creation of a product team. In that guise, architecture functions as a sort of zoning or planning authority\hspace{0.167em}\textemdash{}\hspace{0.167em}"architecture" is not a process or organization directly experienced by the product team. In this ideal, there is no conflict with product teams because once the team is formed, the architect's job is done. I However, this assumes that all the planning associated with launching a new product or capability was done correctly, and this itself is a kind of waterfall assumption. Some form of feedback and coordination is required in \hyperlink{multi-product-scaling}{multi-{}product environments}.
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/4_12-stopwatch.jpg}{{\imgevalsize{images/4_12-stopwatch.jpg}{\includegraphics[width=0.48\textwidth]{images/4_12-stopwatch.jpg}}}}{alt text}
+\end{center}
+\caption[{What is your Cost of Delay? }]{What is your Cost of Delay? \footnotemark{}}
+\end{wrapfigure}
+ 
+It is in the "governance and approval" kind of activity that conflict is most likely to emerge. Cadence and synchronization (e.g. \hyperlink{chap-coordination}{coordination techniques}) with the potential to block teams from pursuing their mission should be very carefully considered. If there is a process or a queue of architecture approvals, it at least should be operated on Cost of Delay of the work it's blocking. And more generally, across the organization, the process should be tested against an economic model such as establishing a nominal or \hyperlink{portfolio-CoD}{portfolio-{}level Cost of Delay}. Like other processes, architecture itself can be assessed against such a baseline.
+ 
+Queued approvals are only one way of solving issues. A rich and under-{}utilized approach is using internal market-{}type mechanisms, where overall rules are set and teams make autonomous decisions based on those rules. Don Reinertsen, in the \emph{Principles of Product Development Flow}, discusses how Boeing implemented distributed decision-{}making through setting tradeoff rules for cost and weight. Rather than constantly routing design approvals through a single control point, Boeing instead set the principle that project managers could "purchase" design changes up to \$300 per unit, to save a pound of weight. As Reinertsen notes,
+ 
+\emph{The intrinsic elegance of this approach is that the superiors didn't actually give up control over the decision. Instead, they recognized that they could still control the decision without participating in it. They simply had to control the economic logic of the decision.} \hyperlink{Reinertsen2009}{[Reinertsen2009]}, p 42.
+ 
+One particular work product that architects often are concerned with is documentation. The desire for useful documentation, as \hyperlink{agile-doc-gap}{mentioned above}, reflects architecture's goals of curating a common ground for collaboration. As Bente notes, "In an agile project, explicit care must be taken to ensure proper documentation\textemdash{}for example, by stating it as part of the condition of satisfaction of a user story or in the definition of done" \hyperlink{Bente2012}{[Bente2012]} p 170
+  
+\paragraph{Architecture Kata}
+\label{_architecture_kata}\hyperlabel{_architecture_kata}%
+  \begin{quote}
+
+\ldots{}\hspace{0em}standardization on a particular toolchain or technology stack is neither necessary nor sufficient for achieving enterprise architecture goals such as enabling teams to respond rapidly to changing requirements, creating high-{}performance systems at scale, or reducing the risk of intrusion or data theft. Just like we drive product and process innovation through the Improvement Kata, we can drive architectural alignment through it too.  Architectural goals\textemdash{}for example, desired performance, availability, and security\textemdash{}should be approached by iteratively specifying target conditions at the program level. Following the Principle of Mission, set out a clear vision of the goals of your enterprise architecture without specifying how the goals are to be achieved, and create a context in which teams can determine how to achieve them through experimentation and collaboration.   \hyperlink{Humble2013}{[Humble2013]}, chap. 10.
+
+\hspace*\fill--- Humble/Molesky
+\emph{Lean Enterprise} \end{quote}
+ 
+\hyperlink{Toyota-Kata}{Toyota Kata} was discussed in Chapter 7. In \emph{Lean Enterprise,} Jez Humble and Joanne Molesky argue that it can provide a useful framework for architecture objectives. Toyota Kata emphasizes end-{}state goals ("target conditions") and calls for hands-{}on investigation and response by participating workers, not consultants or distant executives. Architecture can benefit by understanding "gaps" in the sense of Toyota's target conditions, and then supporting teams in their collaborative efforts to understand and achieve the desired state. The \hyperlink{arch-impacts}{architectural impact} model can assist in thinking through suitable target conditions for architecture:
+ \begin{itemize}
+
+\item{} top-{}line impact through re-{}use (lowering Cost of Delay)
+ 
+
+\item{} bottom-{}line impact through portfolio rationalization
+ 
+
+\item{} risk impact through minimizing attack surface and re-{}use of known good patterns and platforms
+ 
+\end{itemize}
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/4_12-strangler-vine.jpg}{{\imgevalsize{images/4_12-strangler-vine.jpg}{\includegraphics[width=0.48\textwidth]{images/4_12-strangler-vine.jpg}}}}{alt text}
+\end{center}
+\caption[{Australian strangler vine surrounding tree }]{Australian strangler vine surrounding tree \footnotemark{}}
+\end{wrapfigure}
+ 
+Keeping the target operating condition specific is preferable. When architecture scopes problems too broadly, the temptation is to undertake \hyperlink{large-arch-xform-risk}{large and risky transformation programs}. As an alternative, Humble and Molesky suggest the "strangler pattern," proposed by Martin Fowler in 2004 \hyperlink{Fowler2004a}{[Fowler2004a]}. This pattern uses as a metaphor Australian "strangler" vines that grow around trees until the original tree dies, at which point the strangler vine is now itself a sturdy, rooted structure (see picture).
+ 
+To use the strangler pattern is not to replace the system all at once, but rather to do so incrementally, replacing one feature at a time. This may seem more expensive, as it means that both the old and new systems are running (and cost savings through sunsetting the old system will be delayed.) But the risk of replacing complex systems is serious, and needs to be considered along with any hoped-{}for cost savings through replacement. Humble and Molesky suggest:
+ \begin{itemize}
+
+\item{} Start by delivering new functionality\textemdash{}at least at first
+ 
+
+\item{} Do not attempt to port existing functionality unless it is to support a business process change
+ 
+
+\item{} Deliver something fast
+ 
+
+\item{} Design for testability and deployability
+ 
+\end{itemize}
+ 
+The strangler pattern is proven in practice. Paul Hammant provides a large number of strangler pattern case studies, including:
+ \begin{itemize}
+
+\item{} Airline booking application
+ 
+
+\item{} Energy trading application
+ 
+
+\item{} Rail booking application
+ 
+\end{itemize}
+ 
+and others \hyperlink{Hammant2013}{[Hammant2013]}.
+ 
+Of course, there are other ways architecture might add value beyond system replacement, in which case the strangler pattern may not be relevant. In particular, architects may be called on to closely collaborate with product teams when certain kinds of issues emerge. This is not a governance or control interaction; it is instead architecture as a form of shared consulting "bench" or coordination mechanism. Not every product team needs a full time architect, the reasoning goes, so architects can be assigned to them on a temporary basis, e.g. for one or a few sprints, perhaps of the technical "spike" (disovery/validation/experimentation) variety.
+ 
+\label{arch-hands-on}\hyperlabel{arch-hands-on}
+ 
+In order to successfully meet this role, the architect needs to have hands-{}on technical ability. Many Agile authors are dismissive of "ivory-{}tower" architects who do not do "hands on" work, and in fact if an architect is going to sit with a technical team as a solutions advisor they clearly need the technical skills to do so. On the other hand, not all architects operate at the solutions level, nor are the problems they face necessarily programming problems. See sidebar, "The challenge of the 'hands-{}on' architect."
+ 
+
+\begin{sidebar}
+\textbf{The challenge of the "hands-{}on architect"}
+
+
+Architect is a broad category as we have seen. It includes individuals who are talented at single-{}product designs, as well as those tasked with managing the overall interactions between hundreds of systems.
+
+It is well and good for architects to maintain some technical facility, but in the case of true, portfolio-{}level enterprise architects, how to do so may not be obvious. What if one's portfolio includes multiple platforms and languages? It is simply not possible to be hands-{}on in all of them. Some of the most challenging systems may be a complex mix of commercial product and customization, e.g. ERP or core banking systems. Choosing to be "hands on" may not even be welcomed by a given team, who may see it as meddlesome. And other teams may feel the architect is "playing favorites" in their choice of platform to be "hands-{}on" with.
+
+Clearly, if the organization is running primarily on (for example) Node.js, having strong Javascript skills is important for the architect. But in more heterogenous environments the architect may find strong data management skills to be more useful, as often interfaces between systems become their primary concern.
+
+Another form of being "hands on" is maintaining good systems administration skills, so that the architect can easily experiment with new technologies. This is different from being adept in a given programming language. One recent positive trend is lightweight virtualization. In years past, experimenting with new products was difficult on two fronts:
+\begin{itemize}
+
+\item{} First, one had to obtain high performance computing resources capable of running demanding software. Sometimes these resources needed unusual operating systems (e.g. "in order to try our software, you have to run HP-{}UX version 11"\hspace{0.167em}\textemdash{}\hspace{0.167em}not a capability most architects had in their back pocket.)
+ 
+
+\item{} Second, one had to obtain demonstration version of software from vendors, who would usually start a sales cycle if you asked for it.
+ 
+\end{itemize}
+
+Times have changed. Demonstration versions of software are increasingly available with little overhead or risk of triggering unwanted sales calls. Platform requirements are less diverse. And lightweight virtualization (e.g. the combination of Vagrant and Virtualbox) now makes it possible for architects to be hands-{}on; modern laptops can run multiple VMs in cluster architectures. Significant experimentation can be carried out in working with systems of various characteristics. Being able to evaluate technologies in such a virtual lab setting is arguably even more useful than being a "coding architect." Product team developers do the programming; the architect should be more concerned with the suitability and feasibility of the integrated platform.
+\end{sidebar}
+  
+\paragraph{Evaluating architecture outcomes}
+\label{_evaluating_architecture_outcomes}\hyperlabel{_evaluating_architecture_outcomes}%
+  
+Finally, how do we evaluate architecture outcomes? If an organization adopts an experimental, Toyota Kata approach, it may find that architecture experiments run on long time horizons. Maintaining an organizational focus on value may be challenging, as the experiments don't yield results quickly. Curating a common ground of understanding may sound like a fine ideal, but how do we measure it?
+ 
+First, the concept of Net Promoter Score is relevant for any service organization, internal or external. Its single question "Based on your experience, on a scale of 1-{}10 would you recommend this product or service to a friend?" efficiently encapsulates value in a single, easy to respond to query.
+ 
+As digital pipelines become more automated, it may be possible to evaluate their \hyperlink{digital-exhaust-governance}{"digital exhaust"} to evaluate the impact of architecture services:
+ \begin{itemize}
+
+\item{} are architecture standards evident in the source and package managers?
+ 
+
+\item{} are platform recommendations encountering performance or capacity challenges?
+ 
+\end{itemize}
+ 
+In a world of increasing connectivity and automation, there is no reason for architects in the organization to lack visibility into the consequences of their recommendations. Ultimately, if the cost of operating the coordination mechanism that is architecture exceeds the value it provides, then continuing to operate it is irrational.
+ 
+\label{portfolio-management}\hyperlabel{portfolio-management}
+    

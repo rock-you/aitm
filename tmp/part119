@@ -1,0 +1,463 @@
+\subsection{Assurance and audit}
+\label{_assurance_and_audit}\hyperlabel{_assurance_and_audit}%
+  
+\label{assurance}\hyperlabel{assurance}
+ 
+\subsubsection{Assurance}
+\label{_assurance}\hyperlabel{_assurance}%
+  \begin{quote}
+
+Trust, but verify.
+
+\hspace*\fill--- Russian proverb
+\end{quote}
+ 
+Assurance is a broad term. In this book, it is associated with governance. It represents a form of additional confirmation that management is performing its tasks adequately. Go back to the \hyperlink{gov-shop-example}{example} that started the chapter, of the shop owner hiring a manager. Suppose that this relationship has continued for some time, and while things seem to be working OK, the owner has doubts about the arrangement. Over time, things have gone well enough that the owner does not worry about the shop being opened on time, having sufficient stock, or paying suppliers. But are any number of doubts the owner might retain:
+ \begin{itemize}
+
+\item{} Is money being accounted for honestly and accurately?
+ 
+
+\item{} Is the shop clean? Is it following local regulations? For example, fire, health and safety codes?
+ 
+
+\item{} If the manager selects a new supplier, are they trustworthy? Or is the shop at risk of selling counterfeit or tainted merchandise?
+ 
+
+\item{} Are the shop's prices competitive? Is it still well regarded in the community? Or has its reputation declined with the new manager?
+ 
+
+\item{} Is the shop protected from theft and disaster?
+ 
+\end{itemize}
+ 
+These kinds of concerns remain with the owner, by and large, even with a reliable and trustworthy manager. If not handled correctly, the owner's entire investment is at risk. The manager may only have a salary (and perhaps a profit share) to worry about, but if the shop is closed due to violations, or lawsuit, or lost to a fire, the owner's entire life investment may be lost. These concerns give rise to the general concept of assurance, which applies to digital business just as it does to small retail shops. The following diagram, derived from previous illustrations, shows how this book views assurance: as a set of practices overlaid across the enablers, and in particular concerned with external forces.
+ 
+\label{assurance-external-forces}\hyperlabel{assurance-external-forces}
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/4_10-AudComRisk.png}{{\imgevalsize{images/4_10-AudComRisk.png}{\includegraphics[width=0.48\textwidth]{images/4_10-AudComRisk.png}}}}{audit compliance risk}
+\end{center}
+\caption{Assurance in context}
+\end{wrapfigure}
+ 
+As ISACA stipulates,
+ 
+\emph{The IS audit and assurance function shall be independent of the area or activity being reviewed to permit objective completion of the audit and assurance engagement.} \hyperlink{ISACA2014}{[ISACA2014]}, p.9. Assurance can be seen as an external, additional mechanism of control and feedback. This independent, out-{}of-{}band aspect is essential to the concept of assurance.
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/4_10-GovAssurance.png}{{\imgevalsize{images/4_10-GovAssurance.png}{\includegraphics[width=0.48\textwidth]{images/4_10-GovAssurance.png}}}}{governance and assurance}
+\end{center}
+\caption{Assurance is an objective, external mechanism}
+\end{wrapfigure}
+ 
+
+\begin{sidebar}
+
+\textbf{Assurance is like out-{}of-{}band management}
+
+In terms of the governance-{}management interface, assurance is fundamentally distinct from the information provided by management and must travel through distinct communication channels. This is why auditors (for example) forward their reports directly to the audit committee, and do not route them through the executives who have been audited.
+
+Technologists, especially those with a background in networking, may have heard of the concept of "out of band control." With out of band management or control of IT resources, the channel over which management commands travel is distinct from the channel over which the system provides its services.
+
+This channel separation is done to increase security, confidence, and reliability, and is analogous to assurance.
+\end{sidebar}
+ 
+\label{three-party-model}\hyperlabel{three-party-model}
+ 
+\paragraph{Three party foundation}
+\label{_three_party_foundation}\hyperlabel{_three_party_foundation}%
+  \begin{quote}
+
+Assurance means that, pursuant to an accountability relationship between two or more parties, an IT audit and assurance professional may be engaged to issue a written communication expressing a conclusion about the subject matters to the accountable party.
+
+\hspace*\fill--- Cobit 5 for Assurance
+\end{quote}
+ 
+There are broader and narrower definitions of assurance. But all reflect some kind of three-{}party arrangement:
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/4_10-3Party.png}{{\imgevalsize{images/4_10-3Party.png}{\includegraphics[width=0.48\textwidth]{images/4_10-3Party.png}}}}{three party assurance}
+\end{center}
+\caption{Assurance is based on a three-{}party model}
+\end{wrapfigure}
+ 
+\emph{reflects concepts from \hyperlink{ISACA2013b}{[ISACA2013b]} and \hyperlink{IAASB2013}{[IAASB2013]}}
+ 
+The above diagram is \textbf{one} common scenario:
+ \begin{enumerate}[label=\arabic*.]
+
+\item{} The stakeholder (e.g. the audit committee of the board of directors) engages an assurance professional (e.g. an audit firm). The scope and approach of this is determined by the engaging party, although the accountable party in practice often has input as well.
+ 
+
+\item{} The accountable party, at the direction responds to  the assurance professional's inquiries on the audit topic.
+ 
+
+\item{} The assurance professional provides the assessment back to the engaging party, and/or other users of the report (potentially including the accountable party).
+ 
+\end{enumerate}
+ 
+This is a simplified view of what can be a more complex process and set of relationships. The ISAE3000 standard states that there must be at least three parties to any assurance engagement:
+ \begin{itemize}
+
+\item{} The responsible (accountable) party
+ 
+
+\item{} The practitioner
+ 
+
+\item{} The intended users (of the assurance report)
+ 
+\end{itemize}
+ 
+But there may be additional parties:
+ \begin{itemize}
+
+\item{} The engaging party
+ 
+
+\item{} The measuring/evaluating party (sometimes not the practitioner, who may be called on to render an opinion on someone \textbf{else's} measurement)
+ 
+\end{itemize}
+ 
+ISAE3000 goes on to stipulate a complex set of business rules for the allowable relationships between these parties \hyperlink{IAASB2013}{[IAASB2013]}, pp 95-{}96. Perhaps the most important rule is that the practitioner \textbf{cannot} be the same as either the responsible party, or the intended users. There must be some level of professional objectivity.
+ 
+What's the difference between assurance and simple consulting? There are two major factors:
+ \begin{itemize}
+
+\item{} Consulting can be simply a two-{}party relationship -{} a manager hires someone for advice
+ 
+
+\item{} Consultants do not necessarily apply strong assessment criteria. Indeed, with complex problems, there may not be any such criteria. Assurance in general presupposes some existing standard of practice, or at least some benchmark external to the organization being assessed.
+ 
+\end{itemize}
+ 
+Finally, the concept of assurance criteria is key. Some assurance is executed against the responsible party's own criteria. In this form of assurance, the primary questions are "are you documenting what you do, and doing what you document?" That is, for example, do you have formal process management documentation (as discussed in \hyperlink{process-def}{Chapter 9})? And are you following it?
+ 
+Other forms of assurance use \textbf{external} criteria. A good example is the Uptime Institute's data center tier certification criteria, discussed below.
+ 
+If criteria are weak or non-{}existent, the assurance engagement may be more correctly termed an advisory effort. Assurance requires clarity on this topic.
+  
+\paragraph{Types of assurance}
+\label{_types_of_assurance}\hyperlabel{_types_of_assurance}%
+  \begin{quote}
+
+Exercise caution in your business affairs; for the world is full of trickery.
+
+\hspace*\fill--- Max Ehrmann
+\emph{Desiderata} \end{quote}
+ 
+The general topic of "assurance" implies a spectrum of activities.
+ 
+In the strictest definitions, assurance is provided by licensed professionals under highly formalized arrangements. However, \textbf{while all audit is assurance, not all assurance is audit.} As noted in COBIT for Assurance, "assurance also covers evaluation activities not governed by internal and/or external audit standards." \hyperlink{ISACA2013a}{[ISACA2013a]} p15.
+ 
+This is a blurry boundary in practice, as an assurance engagement may be undertaken by auditors, and then might be casually called an "audit" by the parties involved. And there is a spectrum of organizational activities that seem at least to be related to formal assurance:
+ \begin{itemize}
+
+\item{} Brand assurance
+ 
+
+\item{} Quality assurance
+ 
+
+\item{} Vendor assurance
+ 
+
+\item{} Capability assessments
+ 
+
+\item{} Attestation services
+ 
+
+\item{} Certification services
+ 
+
+\item{} Compliance
+ 
+
+\item{} Risk management
+ 
+
+\item{} Benchmarking
+ 
+
+\item{} Other forms of "due diligence"
+ 
+\end{itemize}
+ 
+Some of these activities may be managed primarily internally, but even in the case of internally-{}managed activities, there is usually some sense of governance, some desire for objectivity.
+ 
+From a purist perspective, internally directed assurance is a contradiction in terms. There is a conflict of interest in that in terms of the \hyperlink{three-party-model}{three-{}party model} above, the accountable party is the practitioner.
+ 
+However, it may well be less expensive for an organization to fund and sustain internal assurance capabilities and get much of the same benefits as from external parties. This requires sufficient organizational safeguards be instituted. Internal auditors typically report directly to the Board-{}level audit committee, and generally are not seen as having a conflict of interest.
+ 
+In another example, an internal compliance function might report to the corporate general counsel (chief lawyer), and not to any executive whose performance is judged based on their organization's compliance\hspace{0.167em}\textemdash{}\hspace{0.167em}this would be a conflict of interest. However, because the internal compliance function is ultimately under the CEO, their concerns can be overruled.
+ 
+The various ways that internal and external assurance arrangements can work, and can go wrong, is a long history. If you are interested in the topic, review the histories of Enron, Worldcom, the 2008 mortgage crisis, and other such failures.
+  
+\paragraph{Assurance and risk management}
+\label{_assurance_and_risk_management}\hyperlabel{_assurance_and_risk_management}%
+  
+Risk management (discussed in the \hyperlink{risk-management}{previous chapter section}) may be seen as part of a broader assurance ecosystem (for evidence of this, consider that the Institute of Internal Auditors offers a certificate in Risk Management Assurance). Assurance in practice may seem to be biased towards risk management, but (as with governance in general) assurance as a whole relates to all aspects of IT and digital governance, including effectiveness and efficiency.
+ 
+Audit practices may be informed by known risks and particularly concerned with their mitigation, but risk management remains a distinct practice. Audits may have scope beyond risks, and audits are only one tool used by risk management.
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/4_10-AssuranceRisk.png}{{\imgevalsize{images/4_10-AssuranceRisk.png}{\includegraphics[width=0.48\textwidth]{images/4_10-AssuranceRisk.png}}}}{assurance and risk}
+\end{center}
+\caption{Assurance and risk management}
+\end{wrapfigure}
+ 
+In short, and as shown in the above diagram, assurance plays a role across value recognition, while risk management specifically targets the value recognition objective of risk optimization.
+  
+\paragraph{Non-{}audit assurance examples}
+\label{_non_audit_assurance_examples}\hyperlabel{_non_audit_assurance_examples}%
+  \begin{quote}
+
+Businesses must find a level of trust between each other  . . .  3rd party reports provide that confidence. Those issuing the reports stake their name \& liability with each issuance.
+
+\hspace*\fill--- James DeLuccia
+\emph{Successfully Establishing and Representing DevOps in an Audit} \end{quote}
+ 
+Before we turn to a more detailed discussion of audit, we'll discuss some specifically non-{}audit examples of assurance seen in IT and digital management.
+ 
+\label{cloud-due-diligence}\hyperlabel{cloud-due-diligence}
+ 
+\textbf{Example 1: Due diligence on a Cloud provider}
+ 
+Your company is considering a major move to Cloud infrastructure for its systems. The agility value proposition\hspace{0.167em}\textemdash{}\hspace{0.167em}the ability to minimize \hyperlink{cost-of-delay}{Cost of Delay}\hspace{0.167em}\textemdash{}\hspace{0.167em}is compelling, and there may be some cost structure advantages as well.
+ 
+But you are aware of some Cloud failures:
+ \begin{itemize}
+
+\item{} In 2013, UK Cloud provider 2e2 went bankrupt and customers were given "24 to 48 hours to get \ldots{}\hspace{0em} data and systems out and into a new environment" \hyperlink{duPreez2015}{[duPreez2015]}. Subsequently, the provider demanded nearly £1 million pounds (roughly \$1.5 million) from its customers in order for their uninterrupted access to services (i.e., their data.) \hyperlink{Venkatraman2013}{[Venkatraman2013]}
+ 
+
+\item{} Also in 2013, Cloud storage provider Nirvanix went bankrupt and its customers also had a limited time to remove their data. MegaCloud went out of business with no warning two months later and all customers lost all data. \hyperlink{Butler2013}{[Butler2013]}, \hyperlink{Butler2014}{[Butler2014]}
+ 
+
+\item{} In mid-{}2014, online source code repository Cloud Spaces (an early Github competitor) was taken over by hackers and destroyed. All data was lost. \hyperlink{Venezia2014}{[Venezia2014]}, \hyperlink{Marks2014}{[Marks2014]}
+ 
+\end{itemize}
+ 
+The question is, how do you manage the risks of trusting your data and organizational operations to a Cloud provider? This is not a new question, as computing has been outsourced to specialist firms for many years. You want to be sure that their operations meet certain standards:
+ \begin{itemize}
+
+\item{} Financial standards
+ 
+
+\item{} Operational standards
+ 
+
+\item{} Security standards
+ 
+\end{itemize}
+ 
+Data center evaluations of cloud providers are a form of \textbf{assurance}. Two well known approaches are:
+ \begin{itemize}
+
+\item{} The Uptime Institute's Tier Certification
+ 
+
+\item{} The American Institute of Certified Public Accountants' (AICPA) SOC 3 "Trust Services Report" certifying "Service Organizations" (based in turn on the SSAE-{}16 standard)
+ 
+\end{itemize}
+ 
+The Uptime Institute provides the well-{}known "Tier" concept for certifying data centers, from Tier I to Tier IV. In their words, "Certification provides assurances that there are not shortfalls or weak links anywhere in the data center infrastructure." \hyperlink{Uptime2016}{[Uptime2016]}. The Tiers progress as follows \hyperlink{Uptime2014}{[Uptime2014]}:
+ \begin{itemize}
+
+\item{} Tier I: Basic Capacity
+ 
+
+\item{} Tier II: Redundant Capacity Components
+ 
+
+\item{} Tier III: Concurrently Maintainable
+ 
+
+\item{} Tier IV: Fault Tolerance
+ 
+\end{itemize}
+ 
+Uptime Institute certification is a generic form of assurance in terms of the \hyperlink{three-party-model}{3-{}party model}; the data center operator must work with the Uptime Institute who provides an independent opinion based on their criteria as to the data center's tier (and therefore effecctiveness).
+ 
+The SOC 3 report is considered an "assurance" standard as well. However, as mentioned above, this is the kind of "assurance" done in general by licensed auditors, and which might casually be called an "audit" by the participants. A qualified professional, again in the 3-{}party model, examines the data center in terms of the SSAE 16 reporting standard.
+ 
+Your internal risk management organization might look to both Uptime Institute and SOC 3 certification as indicators that your Cloud provider risk is mitigated. (More on this in chapter section on Risk Management.)
+ 
+\textbf{Example 2: Internal process assessment}
+ 
+You may also have concerns about your internal operations. Perhaps your process for selecting technology vendors is unsatisfactory in general; it takes too long and yet vendors with critical weaknesses have been selected. More generally, the actual practices of various areas in your organization may be assessed by external consultants using the related guidance:
+ \begin{itemize}
+
+\item{} Enterprise Architecture with TOGAF
+ 
+
+\item{} Project Management with PMBOK
+ 
+
+\item{} IT processes such as Incident Management, Change Management, and Release Management with ITIL or CMMI-{}SVC
+ 
+\end{itemize}
+ 
+These assessments may be performed through using a maturity scale, e.g. CMM-{}derived. The CMM-{}influenced ISO/IEC 15504 standard may be used as a general process assessment framework. (Remember that we have discussed the \hyperlink{problem-statisical-process}{problems} with the fundamental CMM assumptions on which such assessments are based.)
+ 
+According to \hyperlink{Bente2012}{[Bente2012]}, "In our own experience, we have seen that the maturity models have their limitations." They warn that maturity assessments of enterprise architecture at least are prone to being:
+ \begin{itemize}
+
+\item{} Subjective,
+ 
+
+\item{} Academic,
+ 
+
+\item{} Easily manipulated,
+ 
+
+\item{} Bureaucratic,
+ 
+
+\item{} Superfluous, and
+ 
+
+\item{} Misleading.
+ 
+\end{itemize}
+ 
+Those issues may well apply to all forms of maturity assessments. Let the buyer beware. At least, the concept of maturity should be very carefully defined in a manner relevant to the organization being assessed.
+ 
+\textbf{Example 3: Competitive benchmarking}
+ 
+Finally, you may wonder, "how does my digital operation compare to other companies?" Now, it is difficult to go to a competitor and ask this. It's also not especially practical to go and find some non-{}competing company in a different industry you don't understand well. An entire industry has emerged to assist with this question.
+ 
+We talked about the role of \hyperlink{industry-analysts}{industry analysts} in chapter 8. Benchmarking firms play a similar role, and in fact some analyst firms provide benchmarking services.
+ 
+There are a variety of ways benchmarking is conducted, but it is similar to assurance in that it often follows the \hyperlink{three-party-model}{3-{}party model}. Some stakeholder directs an accountable party to be benchmarked within some defined scope. For example, the number of staff required to managed a given quantity of servers (aka admin:server) has been a popular benchmark. (Note that with cloud, virtualization, and containers, the usefulness of this metric is increasingly in question.)
+ 
+An independent authority is retained. The benchmarker collects, or has collected, information on similar operations; for example, they may have collected data from 50 organizations of similar size on admin:server ratios. This data is aggregated and/or anonymized so that competitive concerns are reduced. Wells Fargo will not be told "JP Morgan Chase has an overall ratio of 1:300;" they will be told "Average for financial services is 1:250."
+ 
+In terms of formal assurance principles, the benchmark data becomes the assessment criteria. A single engagement might consider dozens of different metrics, and where simple quantitative ratios do not apply, the benchmarker may have a continuously maintained library of case studies for more qualitative analysis. This starts to shade into the kind of work also performed by industry analysts. As the work becomes more qualitative, it also becomes more advisory, and less about "assurance" per se.
+ 
+\label{audit}\hyperlabel{audit}
+   
+\subsubsection{Audit}
+\label{_audit}\hyperlabel{_audit}%
+  \begin{quote}
+
+The Committee therefore recommends that all listed companies should establish an audit committee.
+
+\hspace*\fill--- Cadbury Report
+\end{quote}
+ \begin{quote}
+
+Agile or not, a team ultimately has to meet legal and essential organizational needs, and audits help to ensure this.
+
+\hspace*\fill--- Scott Ambler
+\emph{Disciplined Agile Delivery} \end{quote}
+ 
+If you look up "audit" online or in a dictionary, you will see it mainly defined in terms of finance: an audit is a formal examination of an organization's finances (sometimes termed "books"). Auditors look for fraud and error, so that investors (like our \hyperlink{gov-shop-example}{shop owner}) have confidence that accountable parties (e.g. the shop manager) are conducting business honestly and accurately.
+ 
+Audit is critically important to the functioning of the modern economy, because there are great incentives for theft and fraud, and owners (in the form of shareholders) are remote from the business operations.
+ 
+But what does all this have to do with information technology and digital transformation?
+ 
+Digital organizations of course have budgets and must account for how they spend money. Since financial accounting and its associated audit practices are a well established practice, we won't discuss it here. (We discussed IT financial management and service accounting in \hyperlink{financial-mgmt}{Chapter 8}.)
+ 
+Money represents a form of information, that of value. Money once was stored as precious metal. When carrying large amounts of precious metal became impossible, it was stored in banks and managed through paper record keeping.
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/4_10-money-compute.png}{{\imgevalsize{images/4_10-money-compute.png}{\includegraphics[width=0.48\textwidth]{images/4_10-money-compute.png}}}}{money over history}
+\end{center}
+\caption[{Money, from physical to virtual }]{Money, from physical to virtual \footnotemark{}}
+\end{wrapfigure}
+ 
+Paper record keeping migrated onto computing machines, which now represent the value once associated with gold and silver. Bank deposits (our \hyperlink{what-is-IT-value}{digital user's} bank account balance from Chapter 1) are now no more than a computer record\hspace{0.167em}\textemdash{}\hspace{0.167em}digital bits in memory\hspace{0.167em}\textemdash{}\hspace{0.167em}made meaningful by tradition and law, and secured through multiple layers of protection and assurance.
+ 
+Because of this, auditors became increasingly interested in information technology. Clearly, these new electronic computers could be used to commit fraud in new and powerful ways. Auditors had to start asking, "How do you know the data in the computer is correct?"
+ 
+This led to the formation in 1967 of the Electonic Data Processing Auditors Association (EDPAA), which eventually became ISACA (developer of \hyperlink{COBIT}{COBIT}).
+ 
+It also became clear that computers and their associated operation were a notable source of cost and risk for the organization, even if they were not being directly used for financial accounting. This has led to the direct auditing of information technology practices and processes, as part of the broader assurance ecosystem we are discussing in this chapter section.
+ 
+A wide variety of IT practices and processes may be audited. Auditors may take a general interest in whether the IT organization is "documenting what it does and doing what it documents" and therefore this author has seen nearly every IT process audited.
+ 
+IT auditors may audit projects, checking that the expected project methodology is being followed. They may audit IT performance reporting, such as claims of meeting Service Level Agreements. And they audit the organization's security approach -{} both its definition of security policies and controls, as well as their effectiveness.
+ 
+\paragraph{External versus internal audit}
+\label{_external_versus_internal_audit}\hyperlabel{_external_versus_internal_audit}%
+  
+There are two major kinds of auditors of interest to us:
+ \begin{itemize}
+
+\item{} External auditors
+ 
+
+\item{} Internal auditors
+ 
+\end{itemize}
+ 
+Here is a definition of external auditor:
+ 
+\emph{An external auditor is chartered by a regulatory authority to visit an
+enterprise or entity and to review and independently report the results of that review.} \hyperlink{Moeller2013}{[Moeller2013]}, p. 319.
+ 
+Many accounting firms offer external audit services, and the largest accounting firms (such as PriceWaterhouse Coopers and Ernst \& Young) provide audit services to the largest organizations (corporations, non-{}profits, and governmental entities). External auditors are usually certified public accountants, licensed by their state, and following industry standards (e.g. from the American Institute of Certified Public Accountants).
+ 
+By contrast, internal auditing is housed internally to the organization, as defined by the Institute of Internal Auditors:
+ 
+\emph{Internal auditing is an independent appraisal function established within an organization to examine and evaluate its activities as a service to the organization} \hyperlink{Moeller2013}{[Moeller2013]}, p. 320.
+ 
+Internal audit is considered a distinct but complementary function to external audit. \hyperlink{Cadbury1992}{[Cadbury1992]}, 4\_39. The internal audit function usually reports to audit committee. As  with assurance in general, independence is critical -{} auditors must have organizational distance from those they are auditing, and must not be restricted in any way that could limit the effectiveness of their findings.
+  
+\paragraph{Audit practices}
+\label{_audit_practices}\hyperlabel{_audit_practices}%
+  
+As with other forms of assurance, audit follows the \hyperlink{three-party-model}{3-{}party model}. There is a stakeholder, an accountable party, and an independent practitioner. The typical internal audit lifecycle consists of (derived from \hyperlink{ISACA2013a}{[ISACA2013a]}):
+ \begin{itemize}
+
+\item{} Planning/scoping
+ 
+
+\item{} Performing
+ 
+
+\item{} Communicating
+ 
+\end{itemize}
+ 
+In the scoping phase, the parties are identified (e.g. the board audit committee, the accountable and responsible parties, the auditors, and other stakeholders.)
+The scope of the audit is very specifically established, including objectives, controls, and enablers (e.g. processes) to be tested. Appropriate frameworks may be utilized as a basis for the audit, and/or the organization's own process documentation.
+ 
+The audit is then performed. A variety of techniques may be used by the auditors:
+ \begin{itemize}
+
+\item{} Performance of processes or their steps
+ 
+
+\item{} Inspection of previous process cycles and their evidence (e.g. documents, recorded transactions, reports, logs, etc.)
+ 
+
+\item{} Interviews with staff
+ 
+
+\item{} Physical inspection or walkthroughs of facilities
+ 
+
+\item{} Direct inspection of system configurations and validation against expected guidelines
+ 
+
+\item{} Attempting what should be prevented (e.g. trying to access a secured system, or view data over the authorization level)
+ 
+\end{itemize}
+ 
+A fundamental principle is, "expected versus actual." There must be some expected result to a process step, a calculation, etc, that the actual result can be compared to.
+ 
+Finally, the audit results are reported to the agreed users (often with a preliminary "heads up" cycle so that people are not surprised by the results). Deficiencies are identified in various ways, and typically are taken into system and process improvement projects.
+ 
+\label{security}\hyperlabel{security}
+    

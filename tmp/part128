@@ -1,0 +1,486 @@
+\subsection{Data management basics}
+\label{_data_management_basics}\hyperlabel{_data_management_basics}%
+  
+\subsubsection{The importance of context}
+\label{_the_importance_of_context}\hyperlabel{_the_importance_of_context}%
+  
+Information management as we will discuss in the rest of this chapter arises from the large scale absorption of data into highly efficient, miniaturized, automated digital infrastructures with capacity orders of magnitude greater than anything previously known.
+ 
+But cuneiform and quipu, hash marks on paper, financial ledgers, punched cards, vacuum tubes, transistors, and hard disks represent a continuum, not a disconnected list. Whether we are looking at a scratch on a clay tablet, or the magnetic state of some atoms in a solid state drive, there is one essential question:
+ 
+\textbf{What do we mean by that?}
+ 
+Consider the state of those atoms on a solid state drive. They represent the numbers 547. But without context, that number is meaningless. It could be:
+ \begin{itemize}
+
+\item{} The numeric portion of a street address
+ 
+
+\item{} A piece of a taxpayer identification number
+ 
+
+\item{} The balance on a bank account
+ 
+
+\item{} A piece of the data uniquely identifying DNA in a crime
+ 
+\end{itemize}
+ 
+The state of this data may have significant consequences. A destination address might be wrong, a tax return mis-{}identified. A credit card might be accepted or declined. A mortgage might be approved or denied. Or the full force of the law may be imposed on an offender, including criminal penalties resulting from a conviction on the evidence stored in the computer.
+ 
+The COBIT Enabling Information guide \hyperlink{ISACA2012b}{[ISACA2012b]} proposes a layered approach to this problem:
+ \begin{table}[htbp]
+\begin{center}
+\begingroup%
+\setlength{\newtblsparewidth}{\linewidth-2\tabcolsep-2\tabcolsep-2\tabcolsep}%
+\setlength{\newtblstarfactor}{\newtblsparewidth / \real{100}}%
+
+\begin{tabular}{ll}\hline
+\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright\bfseries%
+%
+Layer%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright\bfseries%
+%
+Implication%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Physical
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+The media (paper, electronic) storing the data
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Empirical
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+The layer that observes the signals from the physical, and distinguishes signal from noise
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Syntactic
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+The layer that encodes the data into symbols (e.g. ASCII)
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Semantic
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+The layer providing the rules for constructing meaning from syntactical elements
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Pragmatic
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+The layer providing larger, linguistic structuring
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Social
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+The layer that provides the context and ultimately consequence of the data (e.g. legal, financial, entertainment)
+%
+}\tabularnewline
+\hline
+\end{tabular}\endgroup%
+
+\end{center}
+
+\caption{COBIT Enabling Information layers}
+\end{table}
+ 
+Without all these layers, the magnetic state of those atoms is irrelevant.
+ 
+The physical, empirical, and syntactic layers -{} (hardware and lowest level software) are  in general out of scope for this book. They are the concern of broad and deep fields of theory, research, development, market activity, and standards.  (Chapter 2 on infrastructure is the most closely related).
+ 
+A similar but simpler hierarchy is
+ \begin{itemize}
+
+\item{} Data
+ 
+
+\item{} Information
+ 
+
+\item{} Knowledge
+ 
+\end{itemize}
+ 
+\textbf{Data} is the context-{}less raw material.
+ 
+\textbf{Information} is data + context, which makes it meaningful and actionable
+ 
+\textbf{Knowledge} is the situational awareness to make use of information
+ 
+Semantic, pragmatic, and social concerns (information and knowledge) are fundamental to this book and chapter. At digital scale -{} terabytes, petabytes, exabytes -{} establishing the meaning and social consequence of data is a massive undertaking.  Data management and records management are two practices by which such meaning is developed and managed operationally. We will start by examining data management as a practice.
+  
+\subsubsection{Data management and the DMBOK}
+\label{_data_management_and_the_dmbok}\hyperlabel{_data_management_and_the_dmbok}%
+  
+Data management is a long established practice in larger IT organizations. As a profession, it is represented by the Data Management Association (DAMA). DAMA developed and supports the Data Management Body of Knowledge (DMBOK), which is a primary influence on this chapter section.
+ 
+\paragraph{The Data Management Body of Knowledge}
+\label{_the_data_management_body_of_knowledge}\hyperlabel{_the_data_management_body_of_knowledge}%
+  
+\label{DMBOK}\hyperlabel{DMBOK}
+ 
+The Data Management Body of Knowledge \hyperlink{DAMA2009}{[DAMA2009]} is similar to other frameworks presented in this book (e.g. ITIL, COBIT, and PMBOK.) It includes ten major functions:
+ \begin{itemize}
+
+\item{} Data Governance
+ 
+
+\item{} Data Architecture Management
+ 
+
+\item{} Data Development
+ 
+
+\item{} Data Operations Management
+ 
+
+\item{} Data Security Management
+ 
+
+\item{} Reference and Master Data Management
+ 
+
+\item{} Data Warehousing and Business Intelligence Management
+ 
+
+\item{} Document and Content Management
+ 
+
+\item{} Meta-{}data Management
+ 
+
+\item{} Data Quality Management
+ 
+\end{itemize}
+ 
+Attentive readers will notice some commonalities with general areas covered in this book: Governance, Architecture, Operations, and Security in particular. Data at scale is a significant problem area and so the DMBOK provides a data-{}specific interpretation of these broader concerns, as well as more specialized topics.
+ 
+We won't go through each of the DMBOK functions in order, but we will be addressing most of them throughout this chapter.
+   
+\subsubsection{Data architecture and development}
+\label{_data_architecture_and_development}\hyperlabel{_data_architecture_and_development}%
+  
+\paragraph{Data and process}
+\label{_data_and_process}\hyperlabel{_data_and_process}%
+  
+In order to understand data, we must understand how it is being used. We covered process management in Chapter 9. Data is often contrasted with process: processes take data inputs and produce data outputs. The fundamental difference between the two can be seen in the core computer science concepts of algorithms (process) and data structures.
+ 
+Data emerges, almost unavoidably, when processes are conceived and implemented. A process such as "Hire Employee" implies that there is an employee, and also a concept of "hire" with associated date and other circumstances.
+ 
+This may seem obvious, but data structures are surprisingly challenging to develop and gain consensus on.
+ 
+\label{ontology-problem}\hyperlabel{ontology-problem}
+  
+\paragraph{The ontology problem}
+\label{_the_ontology_problem}\hyperlabel{_the_ontology_problem}%
+  \begin{quote}
+
+The boundaries of an entity are arbitrary, our selection of entity types is arbitrary, the
+distinction between entities, attributes, and relationships is arbitrary.
+
+\hspace*\fill--- Graeme Simsion
+\emph{Preface to Kent's Data and Reality} \end{quote}
+ 
+Suppose you are discussing the concept of "customer" with a teammate. You seem to be having some difficulty understanding each other. (You are from Support and she is from Sales.) You begin to realize that you have two different definitions for the same word:
+ \begin{itemize}
+
+\item{} You believe that "customer" means someone who has bought something
+ 
+
+\item{} She believes that "customer" includes sales leads
+ 
+\end{itemize}
+ 
+This is a classic issue in data management: when one term means two things. It can lead to serious confusion and technical difficulties, if these misunderstandings affect how systems are built and operated.
+ 
+Because of this, it is critical to have rational and clear discussions about "what we mean." In a startup driven by one or two visionary founders, perhaps little or no time is needed for this. The mental model of the problem domain may be powerfully understood by the founder, who controls the key architectural decisions. In this way a startup can progress far with little formalized concern for data management.
+ 
+But as a company scales, especially into multi-{}product operations, unspoken (tacit) understandings do not scale correspondingly. Team members will start to misunderstand each other, unless definitions are established. This may well be needed regardless of whether data is being held in a database.
+ 
+The concept of a "controlled vocabulary" is therefore key to enterprise information management.
+ 
+
+\begin{sidebar}
+
+\textbf{Definition: Controlled Vocabulary}
+
+"A controlled vocabulary is an information tool that contains standardized words and phrases used to refer to ideas, physical characteristics, people, places, events, subject matter, and many other concepts. Controlled vocabularies allow for the categorization, indexing, and retrieval of information." \hyperlink{Harpring2010}{[Harpring2010]}
+\end{sidebar}
+ 
+In many areas of business, the industry defines the vocabulary. Retailers are clear on terms like "supplier," "cost," and "retail" (as in amount to be charged for the item; they do not favor the term "price" as it is ambiguous.) The medical profession defines "patient," "provider," and so forth.
+ 
+But in more flexible spaces, where a company may be creating its own business model, defining a controlled vocabulary may be essential. We see this even in books, which adopt glossaries. Why does a book have a glossary, when dictionaries exist? Because the book is defining a controlled vocabulary. General-{}purpose dictionaries may list multiple meanings for the same word, or not be very precise. The author, by developing a glossary, can make the book more consistent and accurate.
+ 
+There are techniques for developing controlled vocabularies in efficient and effective ways. The term "ontology engineering" is sometimes used \hyperlink{DeNicola216}{[DeNicola216]}. While specialists may debate the boundaries, another important practice is "conceptual data modeling."
+ 
+All of these concepts (controlled vocabularies, glossaries, ontologies, conceptual data models) are independent of computers. But the initial development of controlled vocabulary is the first step towards automating the information with computers.
+ 
+\label{data-modeling}\hyperlabel{data-modeling}
+  
+\paragraph{Data modeling}
+\label{_data_modeling}\hyperlabel{_data_modeling}%
+  \begin{quote}
+
+An information system (e.g., database) is a model of a small, finite subset of the real world\ldots{}\hspace{0em}We expect certain correspondences between constructs inside the information system and in the real world. We expect to have one record in the employee file for each person employed by the company. If an employee works in a certain department, we expect to find that department's number in that employee's record.
+
+\hspace*\fill--- William Kent
+\emph{Data and Reality} \end{quote}
+ 
+Databases are the physical representation of information within computing systems. As we discussed above, the data contained within them \textbf{corresponds} to some "real world" concept we hold.
+ 
+There are well known techniques for translating concepts (e.g. controlled vocabularies) into technical database structures. The best known of these is relational data modeling.
+ 
+Relational data modeling is often presented as having three layers:
+ \begin{itemize}
+
+\item{} Conceptual
+ 
+
+\item{} Logical
+ 
+
+\item{} Physical
+ 
+\end{itemize}
+ 
+The following descriptions of the layers are typical:
+ \begin{table}[htbp]
+\begin{center}
+\begingroup%
+\setlength{\newtblsparewidth}{\linewidth-2\tabcolsep-2\tabcolsep-2\tabcolsep}%
+\setlength{\newtblstarfactor}{\newtblsparewidth / \real{100}}%
+
+\begin{tabular}{ll}\hline
+\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Conceptual
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+Independent of computing platform -{} no assumption of any database. Does include simple relationships. Does not include attributes.
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Logical
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+Assumes a database, but not what kind. Includes more detailed relationships and attributes. Human-{}readable names.
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Physical
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+Intended for a specific database platform (e.g. Oracle or MySQL). Computer-{}compatible names. Can be used to generate data definition scripts.
+%
+}\tabularnewline
+\hline
+\end{tabular}\endgroup%
+
+\end{center}
+
+\caption{3 data modeling levels}
+\end{table}
+ 
+A simple conceptual model might look like this:
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/4_11-conceptual.png}{{\imgevalsize{images/4_11-conceptual.png}{\includegraphics[width=0.48\textwidth]{images/4_11-conceptual.png}}}}{conceptual data model}
+\end{center}
+\caption{Conceptual data model}
+\end{wrapfigure}
+ 
+The above model might be a fragment from a sales system. It shows that their are four major \emph{entities}:
+ \begin{itemize}
+
+\item{} Customer
+ 
+
+\item{} Invoice
+ 
+
+\item{} Line Item
+ 
+
+\item{} Product
+ 
+\end{itemize}
+ 
+This might be elaborated into a logical model:
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/4_11-logical.png}{{\imgevalsize{images/4_11-logical.png}{\includegraphics[width=0.48\textwidth]{images/4_11-logical.png}}}}{logical data model}
+\end{center}
+\caption{Logical data model}
+\end{wrapfigure}
+ 
+The logical model includes \emph{attributes} (Customer First Name). The line between them has particular "adornments" representing a well known data modeling notation called "crow's foot." In this case, the notation is stipulating that one customer may have zero to many invoices, but any invoice must have one and only one customer. Notice also that the entity and attribute names are human-{}readable.
+ 
+Then, the logical model might be transformed into physical:
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/4_11-physical.png}{{\imgevalsize{images/4_11-physical.png}{\includegraphics[width=0.48\textwidth]{images/4_11-physical.png}}}}{physical data model}
+\end{center}
+\caption{Physical data model}
+\end{wrapfigure}
+ 
+The names are no longer human-{}readable in full, nor do they have spaces. Common data types such as "name" and "date" have been replaced with brief codes ("N" and "DT"). In this form, the physical data model can be (in theory) translated to data definition language that can result in the creation of the necessary database tables.
+  
+\paragraph{Database administration}
+\label{_database_administration}\hyperlabel{_database_administration}%
+  
+Continuing from above: the data modeling work might have been performed by  a data architect or analyst, or a developer. Perhaps a pictorial representation is not even created (formal data modeling as above is less likely in a startup). But at some point (assuming a relational database) the following statement will be developed:
+ 
+\begin{lstlisting}[firstnumber=1,backgroundcolor={},basicstyle=\ttfamily,]
+CREATE TABLE SALES.CUST
+(CUST_ID NUMBER,
+CUST_FIRST_N VARCHAR2(32),
+CUST_LAST_N VARCHAR2(32))
+\end{lstlisting}
+ 
+In the above SQL (Structured Query Language) statement, the Customer entity has been finally represented as a series of encoded statements an Oracle database can understand, including specification of the data types needed to contain Customer Identifier (a Number type) and the customer's first and last names (a 32-{}character long string field, called "VARCHAR" in Oracle).
+ 
+If a database administrator (DBA) issues that statement to the Oracle database, the table will be created. Once the structure is created, it can (within limits) hold any number of customers, in terms of knowing their first and last names and an ID number, which might or might not be assigned automatically by the system. (Of course, we would want many more attributes, e.g. customer address.)
+ \begin{DBKadmonition}{warning}{Important}
+ 
+Notice that this database would only work for regions where customers have "first" and "last" names. This may not be true in all areas of the world. See \href{https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/}{Falsehoods Programmers Believe about Names}.
+ \end{DBKadmonition}
+ 
+The Oracle software is installed on some node or machine, and receives the statement. The database adds the table suggested:
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/4_11-1stTable.png}{{\imgevalsize{images/4_11-1stTable.png}{\includegraphics[width=0.48\textwidth]{images/4_11-1stTable.png}}}}{one table}
+\end{center}
+\caption{Database creates table}
+\end{wrapfigure}
+ 
+Further tables can easily be added in the same manner:
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/4_11-multiTbl.png}{{\imgevalsize{images/4_11-multiTbl.png}{\includegraphics[width=0.48\textwidth]{images/4_11-multiTbl.png}}}}{several tables}
+\end{center}
+\caption{Multiple tables in database}
+\end{wrapfigure}
+ 
+What is a database in this sense? The important point is that it is a common query space -{} you can ask for data from either the CUST or INVOICE table, or ask the database to "join" them so you can see data from both. (This is how, for example, we would report on sales by customer.)
+  
+\paragraph{Patterns and reference architectures}
+\label{_patterns_and_reference_architectures}\hyperlabel{_patterns_and_reference_architectures}%
+  
+Reference architectures and design patterns are examples of approaches that are known to work for solving certain problems. In other words, they are reusable (and usually free) solutions for commonly occurring scenarios. They apply to core software development, often suggesting particular class structures. \hyperlink{Gamma1995}{[Gamma1995]} However, the concept can also be applied to data and system architectures, e.g. \hyperlink{Fowler2003}{[Fowler2003]}, \hyperlink{Betz2011a}{[Betz2011a]}. David Hay \hyperlink{Hay1996}{[Hay1996]} and Len Silverston \hyperlink{Silverston2001}{[Silverston2001]}, \hyperlink{Silverston2001a}{[Silverston2001a]}, \hyperlink{Silverston2008}{[Silverston2008]} have documented data models for a variety of industries.
+ 
+Reference architectures also can provide guidance on data structures, as they often contain industry learnings. Examples include:
+ \begin{table}[htbp]
+\begin{center}
+\begingroup%
+\setlength{\newtblsparewidth}{\linewidth-2\tabcolsep-2\tabcolsep-2\tabcolsep-2\tabcolsep}%
+\setlength{\newtblstarfactor}{\newtblsparewidth / \real{100}}%
+
+\begin{tabular}{lll}\hline
+\multicolumn{1}{|p{33.3333\newtblstarfactor}|}{\raggedright\bfseries%
+%
+Organization%
+}&\multicolumn{1}{p{33.3333\newtblstarfactor}|}{\raggedright\bfseries%
+%
+Domain%
+}&\multicolumn{1}{p{33.3334\newtblstarfactor}|}{\raggedright\bfseries%
+%
+Standard(s)%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\cline{3-3}\multicolumn{1}{|p{33.3333\newtblstarfactor}|}{\raggedright%
+Tele-{}Management Forum
+%
+}&\multicolumn{1}{p{33.3333\newtblstarfactor}|}{\raggedright%
+Telecommunications
+%
+}&\multicolumn{1}{p{33.3334\newtblstarfactor}|}{\raggedright%
+Frameworx, ETom (Enhanced Telecommunications Operating Model), NGOSS, SIDS
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\cline{3-3}\multicolumn{1}{|p{33.3333\newtblstarfactor}|}{\raggedright%
+Association for Retail Technology Standards
+%
+}&\multicolumn{1}{p{33.3333\newtblstarfactor}|}{\raggedright%
+Retail
+%
+}&\multicolumn{1}{p{33.3334\newtblstarfactor}|}{\raggedright%
+ARTS model
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\cline{3-3}\multicolumn{1}{|p{33.3333\newtblstarfactor}|}{\raggedright%
+ACORD.org
+%
+}&\multicolumn{1}{p{33.3333\newtblstarfactor}|}{\raggedright%
+Insurance
+%
+}&\multicolumn{1}{p{33.3334\newtblstarfactor}|}{\raggedright%
+ACORD Framework
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\cline{3-3}\multicolumn{1}{|p{33.3333\newtblstarfactor}|}{\raggedright%
+Banking Industry Architecture Network
+%
+}&\multicolumn{1}{p{33.3333\newtblstarfactor}|}{\raggedright%
+Banking
+%
+}&\multicolumn{1}{p{33.3334\newtblstarfactor}|}{\raggedright%
+BIAN Service Landscape
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\cline{3-3}\multicolumn{1}{|p{33.3333\newtblstarfactor}|}{\raggedright%
+The Open Group Exploration, Mining, Metals and Minerals Forum
+%
+}&\multicolumn{1}{p{33.3333\newtblstarfactor}|}{\raggedright%
+Exploration, Mining, and Minerals
+%
+}&\multicolumn{1}{p{33.3334\newtblstarfactor}|}{\raggedright%
+Exploration and Mining Business Reference Model
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\cline{3-3}\multicolumn{1}{|p{33.3333\newtblstarfactor}|}{\raggedright%
+The Open Group IT4IT Forum
+%
+}&\multicolumn{1}{p{33.3333\newtblstarfactor}|}{\raggedright%
+Information Technology Management
+%
+}&\multicolumn{1}{p{33.3334\newtblstarfactor}|}{\raggedright%
+IT4IT Standard
+%
+}\tabularnewline
+\hline
+\end{tabular}\endgroup%
+
+\end{center}
+
+\caption{Reference architectures}
+\end{table}
+ 
+Patterns and reference architectures can accelerate understanding, but they also can over-{}complicate solutions. Understanding and applying them pragmatically is the challenge. Certainly, various well-{}known problems such as customer address management have surprising complexity, and can benefit from leveraging previous work.
+  
+\paragraph{Section conclusion}
+\label{_section_conclusion}\hyperlabel{_section_conclusion}%
+  
+The above description is brief and "classic" -{} the techniques shown here date back decades, and there are many other ways the same problem might be represented, analyzed, and solved. But in all cases in data management, the following questions must be answered:
+ \begin{itemize}
+
+\item{} What do we mean?
+ 
+
+\item{} How do we represent it?
+ 
+\end{itemize}
+ 
+The classic model shown here has solved many business problems at large scale. But there are critical limitations. Continuing to expand one "monolithic" database does not work past a certain point, but fragmenting the data into multiple independent systems and datastores also has challenges. We will discuss these further as the chapter progresses.
+    

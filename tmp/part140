@@ -1,0 +1,203 @@
+\subsection{Portfolio analysis}
+\label{_portfolio_analysis}\hyperlabel{_portfolio_analysis}%
+  \begin{quote}
+
+\ldots{}every product and every activity of a business begins to obsolesce as soon as it is started. Every product, every operation, and every activity in a business should be put on trial for its life every two or three years.  Each should be considered the way we consider a proposal to go into a new product, a new operation, or activity \textendash{} complete with budget, capital appropriation request, and so on.  One question should be asked of each: \textquotedblleft{}if we were not in this already, would we now go into it?\textquotedblright{} And if the answer is \textquotedblleft{}no,\textquotedblright{} the next question should be: \textquotedblleft{}How do we get out and how fast?\textquotedblright{} \hyperlink{Drucker1963}{[Drucker1963]}
+
+\hspace*\fill--- Peter F. Drucker
+\end{quote}
+ 
+The aggregate digital investments of any large enterprise are massive. Whether capital or expense, whether internally hosted or externally sourced, the IT portfolio consumes tremendous amounts of time, money, and expertise.
+ 
+In this chapter, we have discussed architecture in terms of \hyperlink{arch-repos}{catalogs, diagrams,and matrices}, sometimes stored in architecture repositories. But architecture repositories are in general not \hyperlink{analytics}{analytic} tools. Nor is architecture an analytic discipline (it is not usually strongly quantitative). Architecture too often relies heavily on interviews and expert opinions, approaches that are sometimes critiqued as relying on the "\hyperlink{HIPPO}{Highest Paid Person's Opinion} ." Portfolio management can be a means to bringing in a more quantitative approach.
+ 
+We first discussed portfolio manageement in \hyperlink{structuring-investment}{Chapter 8}. How do we define portfolio? \hyperlink{Betz2011}{[Betz2011]} defines it as "things of consequence managed over long time horizon." The concept of \hyperlink{arch-repos}{TOGAF catalog} is a good place to start. Frequently, portfolio management starts at the application level; the application portfolio can be seen as a sort of alternate "chart of accounts" by which digital investments can be grouped.
+ 
+Portfolios are intended to provide a consistent basis for comparison and understanding. \textbf{Items in the portfolio should be comparable.} They may rely on both objective and subjective data points:
+ \begin{itemize}
+
+\item{} Objective data
+ \begin{itemize}
+
+\item{} Business revenue/value
+ 
+
+\item{} Cost
+ 
+
+\item{} Risks
+ 
+
+\item{} Staffing
+ 
+
+\item{} Service levels, changes, incidents
+ 
+
+\item{} Product obsolescence (quantifiable technical debt)
+ 
+\end{itemize}
+ 
+
+\item{} Subjective data
+ \begin{itemize}
+
+\item{} Usability
+ 
+
+\item{} Customer satisfaction (net promoter score)
+ 
+
+\item{} Engineering assessments (subjective perceptions of technical debt)
+ 
+\end{itemize}
+ 
+\end{itemize}
+ 
+Digital investments and costs typically include some or all of the following:
+ \begin{itemize}
+
+\item{} Hardware investment, depreciation or leasing
+ 
+
+\item{} Software licensing (typically 15\%-{}20\% annually of initial acquisition, required for vendor support).
+ 
+
+\item{} Floor space \textendash{} i.e., real estate charges
+ 
+
+\item{} Facilities infrastructure: power, high volume air conditioning (HVAC), raised floor, racks, etc.
+ 
+
+\item{} Network connectivity and related infrastructure (e.g. directory services software, security perimeters, and the like)
+ 
+
+\item{} Operational software infrastructure: monitoring systems, batch schedulers, backup systems, and so on, all with their own associated costs.
+ 
+
+\item{} Operations and support staff. Staffing typically can come in various flavors:
+ \begin{itemize}
+
+\item{} Data center operations monitors
+ 
+
+\item{} Help desk operators
+ 
+
+\item{} Application specialists
+ 
+
+\item{} Senior engineers
+ 
+
+\item{} Senior IT executives and customer relationship managers
+ 
+
+\item{} Business-{}side lead users and process and information specialists
+ 
+
+\item{} Vendor relationship owners and contract managers
+ 
+\end{itemize}
+ 
+\end{itemize}
+ 
+\subsubsection{Application value analysis}
+\label{_application_value_analysis}\hyperlabel{_application_value_analysis}%
+  
+Application portofolio management may concern itself with any or all of the following:
+ \begin{itemize}
+
+\item{} Application functions (examined for redundancy)
+ 
+
+\item{} Application total cost of ownership
+ 
+
+\item{} Application complexity
+ 
+
+\item{} Fitness and currency of underlying technical products
+ 
+
+\item{} Application service performance
+ 
+
+\item{} Application customer feedback
+ 
+\end{itemize}
+ 
+A four-{}box is often used for application value analysis:
+ \begin{table}[htbp]
+\begin{center}
+\begingroup%
+\setlength{\newtblsparewidth}{\linewidth-2\tabcolsep-2\tabcolsep-2\tabcolsep-2\tabcolsep}%
+\setlength{\newtblstarfactor}{\newtblsparewidth / \real{100}}%
+
+\begin{tabular}{lll}\hline
+\multicolumn{1}{|p{33.3333\newtblstarfactor}|}{\raggedright\bfseries%
+%
+%
+}&\multicolumn{1}{p{33.3333\newtblstarfactor}|}{\raggedright\bfseries%
+%
+Low Technical Fitness%
+}&\multicolumn{1}{p{33.3334\newtblstarfactor}|}{\raggedright\bfseries%
+%
+High Technical Fitness%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\cline{3-3}\multicolumn{1}{|p{33.3333\newtblstarfactor}|}{\raggedright%
+\textbf{High Business Value}
+%
+}&\multicolumn{1}{p{33.3333\newtblstarfactor}|}{\raggedright%
+Re-{}engineer or replatform.
+
+
+Consider outsourcing carefully.
+%
+}&\multicolumn{1}{p{33.3334\newtblstarfactor}|}{\raggedright%
+Invest as needed to exploit value.
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\cline{3-3}\multicolumn{1}{|p{33.3333\newtblstarfactor}|}{\raggedright%
+\textbf{Low Business Value}
+%
+}&\multicolumn{1}{p{33.3333\newtblstarfactor}|}{\raggedright%
+Retire if possible or outsource
+%
+}&\multicolumn{1}{p{33.3334\newtblstarfactor}|}{\raggedright%
+Improve understanding of customer requirements
+
+
+Retire service if no longer serving a purpose but reclaim/re-{}use platform, capabilities \& assets
+%
+}\tabularnewline
+\hline
+\end{tabular}\endgroup%
+
+\end{center}
+
+\caption{Standard IT portfolio "4-{}box"}
+\end{table}
+  
+\subsubsection{Application rationalization}
+\label{_application_rationalization_2}\hyperlabel{_application_rationalization_2}%
+  
+What does it mean to rationalize"? There are three steps:
+ \begin{enumerate}[label=\arabic*.]
+
+\item{} Take an inventory of the items to be rationalized.
+ 
+
+\item{} Categorize them to identify redundancy.
+ 
+
+\item{} Consolidate redundancy
+ 
+\end{enumerate}
+ 
+This implies some basis for classification, so that the investments can be compared. This is where industry taxonomies, such as found in \hyperlink{vertical-standards}{vertical standards,} may help. You may call your application "Peoplesoft HR," "Workday," or even an internal brand like "HR2020," but a reference taxonomy categorizes it as simply a "Human Resource Management System."
+ 
+\hyperlink{system-of-record}{Data integrations} may also be a way to identify redundancy. When two systems start exchanging more and more data, a useful question is whether there is still a need for both or if a more economical, integrated solution is possible. Just beware of the \hyperlink{large-arch-xform-risk}{risk of overly ambitious consolidation efforts}.
+ 
+Through analysis and understanding of redundancy, business and technical value, applications (and related concepts such as services and capabilities) can be managed as a coherent investment strategy. For further information, see the books referenced at the end of this chapter.
+   

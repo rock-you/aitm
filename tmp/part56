@@ -1,0 +1,220 @@
+\subsection{Product planning}
+\label{_product_planning}\hyperlabel{_product_planning}%
+  
+\subsubsection{Product roadmapping and release planning}
+\label{_product_roadmapping_and_release_planning}\hyperlabel{_product_roadmapping_and_release_planning}%
+  \begin{quote}
+
+Some companies may notice that every specification they have ever prepared in the history of their company has had to change during product development, but they attribute this to human error and lack of discipline. They deeply believe that they can produce a good specification if only they try hard enough. You may recognize this as the classic thinking of an \hyperlink{open-loop}{open loop} control system\ldots{}\hspace{0em}
+
+\hspace*\fill--- Don Reinertsen
+\emph{Managing the Design Factory} \end{quote}
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/2_04-plan-driven.png}{{\imgevalsize{images/2_04-plan-driven.png}{\includegraphics[width=0.48\textwidth]{images/2_04-plan-driven.png}}}}{planning}
+\end{center}
+\caption{Planning fallacy}
+\end{wrapfigure}
+ 
+Creating effective plans in complex situations is hard. Planning a new product is one of the most challenging endeavors, one in which failure is common. As the Don Reinertsen quote above reflects, the historically failed approach (call it the "planning fallacy") is to develop overly detailed (sometimes called "rigorous") plans and then assume that achieving them is simply a matter of "correct execution."
+ 
+Contrast the planning fallacy with \hyperlink{lean-startup}{Lean Startup}, which emphasizes ongoing confirmation of product direction through experimentation. In complex efforts, ongoing validation of assumptions and direction is essential, which is why overly plan-{}driven approaches are falling out of favor. However, some understanding of time frames and mapping goals against the calendar is still important. Exactly how much effort to devote to such forecasting remains a controversial topic with digital product management professionals, one we will return to throughout this book.
+ 
+Minimally, a high level product roadmap is usually called for: without at least this, it may be difficult to secure the needed investment to start product work. Roman Pichler recommends the product roadmap contain:
+ \begin{itemize}
+
+\item{} Major versions
+ 
+
+\item{} Their projected launch dates
+ 
+
+\item{} Target customers and needs
+ 
+
+\item{} Top three to five features for each version (\hyperlink{Pichler2010}{[Pichler2010]}, p. 41.)
+ 
+\end{itemize}
+ 
+More detailed understanding is left to the \hyperlink{scrum}{product backlog}, which is subject to ongoing "grooming" (re-{}evaluation in light of \hyperlink{feedback}{feedback}).
+ 
+\label{backlog-estimation-prioritization}\hyperlabel{backlog-estimation-prioritization}
+  
+\subsubsection{Backlog, estimation, and prioritization}
+\label{_backlog_estimation_and_prioritization}\hyperlabel{_backlog_estimation_and_prioritization}%
+  \begin{quote}
+
+\emph{companies often create complex prioritization algorithms that produce precise priorities based on very imprecise input data. I prefer the simple approach. To select between two almost equivalent choices creates great difficulty and little payoff. Instead, we should try to prevent the big, stupid mistakes. This does not require precision} (\hyperlink{Reinertsen2009}{[Reinertsen2009]} p 192).
+
+\hspace*\fill--- Don Reinertsen
+\emph{Principles of Product Development Flow} \end{quote}
+ 
+The product discovery and roadmapping activity ultimately generates a more detailed view or list of the work to be done. As we previously mentioned, in \hyperlink{_scrum}{Scrum} (and other Agile methods) this is often termed a backlog. Both Mike Cohn and Roman Pichler use the DEEP acronym to describe backlog qualities (\hyperlink{Cohn2010}{[Cohn2010]} p. 243, \hyperlink{Pichler2010}{[Pichler2010]} p. 48):
+ \begin{itemize}
+
+\item{} Detailed appropriately
+ 
+
+\item{} Estimated
+ 
+
+\item{} Emergent (feedback such as new or changed stories are readily accepted)
+ 
+
+\item{} Prioritized
+ 
+\end{itemize}
+ 
+The backlog should receive ongoing "grooming" to support these qualities, which means several things:
+ \begin{itemize}
+
+\item{} Addition of new items
+ 
+
+\item{} Re-{}prioritization of items
+ 
+
+\item{} Elaboration (decomposition, estimation and refinement)
+ 
+\end{itemize}
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/2_05-backlog.png}{{\imgevalsize{images/2_05-backlog.png}{\includegraphics[width=0.48\textwidth]{images/2_05-backlog.png}}}}{backlog}
+\end{center}
+\caption[{Backlog granularity \& priority }]{Backlog granularity \& priority \footnotemark{}}
+\end{wrapfigure}
+ 
+When "detailed appropriately," items in the backlog are not all the same scale. Scrum and Agile thinkers generally agree on the core concept of "story," but stories vary in size, with the largest stories often termed "epics." The backlog is ordered in terms of priority (what will be done next) but, critically, it is also understood that the lower-{}priority items in general can be larger grained. In other words, if we visualize the backlog as a stack, with the highest priority on the top, the size of the stories increases as we go down. (Reinertsen terms this \emph{progressive specification}; see \hyperlink{Reinertsen1997}{[Reinertsen1997]}, pp. 176-{}177 for a detailed discussion.)
+ 
+Estimating user stories is a standard practice in Scrum and Agile methods more generally. Agile approaches are wary of false precision and accept the fact that estimation is an uncertain practice at best. However, without some overall estimate or roadmap for when a product might be ready for use, it is unlikely that the investment will be made to create it. It is difficult to establish the economic value of developing a product feature at a particular time, if you have no idea of the cost and/or effort involved to bring it to market.
+ 
+At a more detailed level, it is common practice for product teams to estimate detailed stories using "points." Mike Cohn emphasizes, "Estimate size, derive duration" (\hyperlink{Cohn2006}{[Cohn2006]} p. xxvii). Points are a relative form of estimation, valid within the boundary of one team. Story point estimating strives to avoid false precision, often restricting the team's estimate of the effort to a modified Fibonacci sequence, or even T-{}shirt or dog sizes:
+ \begin{table}[htbp]
+\begin{center}
+\begingroup%
+\setlength{\newtblsparewidth}{\linewidth-2\tabcolsep-2\tabcolsep-2\tabcolsep-2\tabcolsep}%
+\setlength{\newtblstarfactor}{\newtblsparewidth / \real{100}}%
+
+\begin{tabular}{lll}\hline
+\multicolumn{1}{|p{33.3333\newtblstarfactor}|}{\raggedright\bfseries%
+%
+Story point%
+}&\multicolumn{1}{p{33.3333\newtblstarfactor}|}{\raggedright\bfseries%
+%
+T-{}shirt%
+}&\multicolumn{1}{p{33.3334\newtblstarfactor}|}{\raggedright\bfseries%
+%
+Dog%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\cline{3-3}\multicolumn{1}{|p{33.3333\newtblstarfactor}|}{\raggedright%
+1
+%
+}&\multicolumn{1}{p{33.3333\newtblstarfactor}|}{\raggedright%
+XXS
+%
+}&\multicolumn{1}{p{33.3334\newtblstarfactor}|}{\raggedright%
+Chihauha
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\cline{3-3}\multicolumn{1}{|p{33.3333\newtblstarfactor}|}{\raggedright%
+2
+%
+}&\multicolumn{1}{p{33.3333\newtblstarfactor}|}{\raggedright%
+XS
+%
+}&\multicolumn{1}{p{33.3334\newtblstarfactor}|}{\raggedright%
+Dachshund
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\cline{3-3}\multicolumn{1}{|p{33.3333\newtblstarfactor}|}{\raggedright%
+3
+%
+}&\multicolumn{1}{p{33.3333\newtblstarfactor}|}{\raggedright%
+S
+%
+}&\multicolumn{1}{p{33.3334\newtblstarfactor}|}{\raggedright%
+Terrier
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\cline{3-3}\multicolumn{1}{|p{33.3333\newtblstarfactor}|}{\raggedright%
+5
+%
+}&\multicolumn{1}{p{33.3333\newtblstarfactor}|}{\raggedright%
+M
+%
+}&\multicolumn{1}{p{33.3334\newtblstarfactor}|}{\raggedright%
+Border collie
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\cline{3-3}\multicolumn{1}{|p{33.3333\newtblstarfactor}|}{\raggedright%
+8
+%
+}&\multicolumn{1}{p{33.3333\newtblstarfactor}|}{\raggedright%
+L
+%
+}&\multicolumn{1}{p{33.3334\newtblstarfactor}|}{\raggedright%
+Bulldog
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\cline{3-3}\multicolumn{1}{|p{33.3333\newtblstarfactor}|}{\raggedright%
+13
+%
+}&\multicolumn{1}{p{33.3333\newtblstarfactor}|}{\raggedright%
+XL
+%
+}&\multicolumn{1}{p{33.3334\newtblstarfactor}|}{\raggedright%
+Labrador retriever
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\cline{3-3}\multicolumn{1}{|p{33.3333\newtblstarfactor}|}{\raggedright%
+20
+%
+}&\multicolumn{1}{p{33.3333\newtblstarfactor}|}{\raggedright%
+XXL
+%
+}&\multicolumn{1}{p{33.3334\newtblstarfactor}|}{\raggedright%
+Mastiff
+%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\cline{3-3}\multicolumn{1}{|p{33.3333\newtblstarfactor}|}{\raggedright%
+40
+%
+}&\multicolumn{1}{p{33.3333\newtblstarfactor}|}{\raggedright%
+XXXL
+%
+}&\multicolumn{1}{p{33.3334\newtblstarfactor}|}{\raggedright%
+Great Dane
+%
+}\tabularnewline
+\hline
+\end{tabular}\endgroup%
+
+\end{center}
+
+\caption{Agile estimating scales}
+\end{table}
+ 
+(similar to \hyperlink{Cohn2006}{[Cohn2006]}, p. 37)
+ 
+Mike Cohn emphasizes that estimates are best done by the teams performing the work ()\hyperlink{Cohn2006}{[Cohn2006]} p.51). We'll discuss the mechanics of maintaining backlogs in \hyperlink{work-management}{Chapter 5, Work Management}.
+ 
+Backlogs require prioritization. In order to prioritize, we must have some kind of common understanding of what we are prioritizing \textbf{for}. Mike Cohn, in \emph{Agile Estimating and Planning}, proposes that there are four major factors in understanding product value:
+ \begin{itemize}
+
+\item{} The financial value of having the features
+ 
+
+\item{} The cost of developing and supporting the features
+ 
+
+\item{} The value of the learning created by developing the features
+ 
+
+\item{} The amount of risk reduced by developing the features \hyperlink{Cohn2006}{[Cohn2006]}, p80.
+ 
+\end{itemize}
+ 
+In Chapter 5 we will discuss additional tools for managing and prioritizing work, and we will return to the topic of estimation in Chapter 8.
+   

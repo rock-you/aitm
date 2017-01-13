@@ -1,0 +1,397 @@
+\subsection{IT sourcing and contract management}
+\label{_it_sourcing_and_contract_management}\hyperlabel{_it_sourcing_and_contract_management}%
+  
+\textbf{IT sourcing} is the set of concerns related to identifying suppliers (sources) of the necessary inputs to deliver digital value. \textbf{Contract management} is a critical, subsidiary concern, where digital value intersects with law.
+ 
+The basic classes of inputs include:
+ \begin{itemize}
+
+\item{} People (with certain skills and knowledge)
+ 
+
+\item{} Hardware
+ 
+
+\item{} Software
+ 
+
+\item{} Services (which themselves are composed of people, hardware, and/or software)
+ 
+\end{itemize}
+ 
+Practically speaking, these inputs are handled by two different functions:
+ \begin{itemize}
+
+\item{} People (in particular, full time employees) are handled by a Human Resources function.
+ 
+
+\item{} Hardware, software, and services are handled by a Procurement function. Other terms associated with this are Vendor Management, Contract Management, and Supplier Management. We will not attempt to clarify or rationalize these areas in this section.
+ 
+\end{itemize}
+ 
+We discussed hiring and managing digital specialists in the \hyperlink{resource-mgmt}{previous chapter}.
+ 
+\subsubsection{Basic concerns}
+\label{_basic_concerns}\hyperlabel{_basic_concerns}%
+  
+
+\begin{sidebar}
+\textbf{Case study: Choosing a telecommunications provider}
+
+
+When Company X was a startup, its telecommunications needs were limited, as were its options. The founder had one choice for Internet access, the local cable company. Even when the company moved to a larger space, as a single team startup, its options were limited.
+
+However, it is now a company of 50, and moving yet again to a new headquarters where there are a variety of options for network carriers. The company is known to be growing and three telecommunications companies ("carriers") have been sending sales representatives periodically to inquire if their services might be needed.
+
+With the move to a new facility, some systematic effort must be undertaken to choose an appropriate provider. This becomes a sub-{}project in its own right, part of the larger program required to effectively complete the move.
+
+As part of this project, a formal "Request for Information" (RFI) is sent to all the potential carriers. Part of this RFI consists of a lengthy series of questions, such as:
+\begin{itemize}
+
+\item{} What kinds of circuits are available?
+ 
+
+\item{} What is their territory?
+ 
+
+\item{} How much data can they handle?
+ 
+
+\item{} What do they cost (at a high level)?
+ 
+
+\item{} How are they secured?
+ 
+
+\item{} How stable are they (how often are they "down")?
+ 
+
+\item{} Are co-{}location services available (can the carrier host the company's servers in its data centers?)
+ 
+
+\item{} What other services does the carrier provide?
+ 
+\end{itemize}
+
+The responses to these questions are "scored" (assigned a numeric weighting) and the 2 top scoring vendors are issued a Request for Quote (RFQ). The RFQ goes into much more detail in terms of the contract the carrier is willing to offer. After extensive discussions and negotiations, Company X's contract team awards the business to the carrier they believe will provide the greatest value.
+
+The same approach is used to establish relationships with Cloud vendors, software providers, and consultants. In fact, because the approach is so consistent, it is considered a repeatable "process." See the chapter on \hyperlink{chap-coordination}{process management}.
+\end{sidebar}
+ 
+A small company may establish binding agreements with vendors relatively casually. For example, when the founder first chose a Cloud platform on which to build their product, they clicked on a button that said "I accept," at the bottom of a lengthy legal document they didn't necessarily read closely. This "clickwrap" agreement is a legally binding contract, which means that the terms and conditions it specifies are enforceable by the courts.
+ 
+\begin{center}
+ 
+\noindent\begin{minipage}[c]{\linewidth}
+\begin{center}
+\imgexists{images/3_08-clickwrap.png}{{\imgevalsize{images/3_08-clickwrap.png}{\includegraphics[width=0.48\textwidth]{images/3_08-clickwrap.png}}}}{Clickwrap license}\end{center}
+\end{minipage}
+
+ 
+\end{center}
+ 
+\textbf{Figure: Example of clickwrap licensing}
+ 
+A startup may be inattentive to the full implications of its contracts for various reasons:
+ \begin{itemize}
+
+\item{} The founder does not understand the importance and consequences of legally binding agreements
+ 
+
+\item{} The founder understands, but feels they have little to lose (for example, they have incorporated as a limited liability company, meaning the founder's personal assets are not at risk)
+ 
+
+\item{} The service is perceived to be so broadly used that an agreement with it must be safe (if 50 other startups are using a well known Cloud provider and prospering, why would a startup founder spend precious time and money on overly detailed scrutiny of its agreements?)
+ 
+\end{itemize}
+ 
+All of these assumptions bear some risk\hspace{0.167em}\textemdash{}\hspace{0.167em}and many startups have been burned on such matters\hspace{0.167em}\textemdash{}\hspace{0.167em}but there are many other, perhaps more pressing risks for the founder and startup.
+ 
+However, by the time the company has scaled to the team of teams level, contract management is almost certainly a concern of the Chief Financial Officer. The company has more resources ("deeper pockets") and so lawsuits start to become a concern. The complexity of the company's services may require more specialized terms and conditions. Standard "boilerplate" contracts thus are replaced by individualized agreements. Concerns over intellectual property, the ability to terminate agreements, liability for damages, and other topics require increased negotiation and counterproposing contractual language. See the case study on the \hyperlink{nine-figure-true-up}{9 figure true-{}up} for a grim scenario.
+ 
+At this point, the company may have hired its own legal professional; certainly, legal fees are going up, whether as services from external law firms or internal staff.
+ 
+Contract and vendor management is more than just establishing the initial agreement. The ongoing relationship must be monitored for its consistency with the contract. If the vendor agrees that its service will be available 99\_999\% of the time, the availability of that service should be measured and if it falls below that threshhold, contractual penalties may need to be applied.
+ 
+In larger organizations, where a vendor might hold multiple contracts, a concept of "Vendor Management" emerges. Vendors may be provided "scorecards" that aggregate metrics describing their performance and the overall impression of the customer. Perhaps key stakeholders are internally surveyed as to their impression of the vendor's performance and whether they would be likely to recommend them again. Low scores may penalize a vendor's chances in future RFI/RFP processes; high scores may enhance them. Finally, advising on sourcing is one of the main services an \hyperlink{chap-arch-portfolio}{Enterprise Architecture} group may provide.
+  
+\subsubsection{Outsourcing and Cloudsourcing}
+\label{_outsourcing_and_cloudsourcing}\hyperlabel{_outsourcing_and_cloudsourcing}%
+  \begin{quote}
+
+cloud computing has some fundamental characteristics that distinguish it from traditional outsourcing\ldots{}\hspace{0em}many cloud services are merely passive providers of computing resources, utilized by users to perform their own processing.
+
+\hspace*\fill--- Millard et al
+\emph{Cloud Computing Law} \end{quote}
+ 
+The first significant vendor relationship the startup may engage with is for  \hyperlink{cloud}{Cloud} services. The decision whether, and how much, to leverage Cloud computing remains (as of 2016) a topic of much industry discussion. JP Morgenthal reports on a 2016 discussion with industry analysts that identified the following pros and cons  \hyperlink{Morgenthal2016}{[Morgenthal2016]}:
+ \begin{table}[htbp]
+\begin{center}
+\begingroup%
+\setlength{\newtblsparewidth}{\linewidth-2\tabcolsep-2\tabcolsep-2\tabcolsep}%
+\setlength{\newtblstarfactor}{\newtblsparewidth / \real{100}}%
+
+\begin{tabular}{ll}\hline
+\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright\bfseries%
+%
+Pro%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright\bfseries%
+%
+Con%
+}\tabularnewline
+\cline{1-1}\cline{2-2}\multicolumn{1}{|p{50\newtblstarfactor}|}{\raggedright%
+Operational costs
+
+
+Poor availability of skilled workforce for implemeting internal Cloud
+
+
+Better capital management (i.e. through expensed Cloud services)
+
+
+Difficulty in providing elastic scalability
+
+
+Agility (faster provisioning of commercial Cloud instances)
+
+
+Building and operating data centers is expensive
+
+
+Limiting innovation (e.g. web-{}scale applications may require current cloud infrastructure)
+
+
+Private clouds are poor imitation of public cloud experience
+
+
+Poor capacity management / resource utilization
+%
+}&\multicolumn{1}{p{50\newtblstarfactor}|}{\raggedright%
+Data Gravity (scale of data to voluminous to easily migrate the apps and data to the cloud)
+
+
+Security (perception Cloud is not as secure)
+
+
+Emerging scalable solutions for private clouds
+
+
+Lack of equivalent SaaS offerings for applications being run in-{}house
+
+
+Significant integration requirements between in house apps and new ones deployed to Cloud
+
+
+Lack of ability to support migration to cloud
+
+
+Vendor licensing (see \hyperlink{nine-figure-true-up}{9 figure true-{}up})
+
+
+Network latency (slow response of Cloud-{}deployed apps)
+
+
+Poor transparency of Cloud infrastructure
+
+
+Risk of Cloud platform lock-{}in
+%
+}\tabularnewline
+\hline
+\end{tabular}\endgroup%
+
+\end{center}
+
+\caption{Cloud sourcing pros and cons}
+\end{table}
+ 
+Cloud can reduce costs when deployed in a sophisticated way; if a company has purchased more capacity than it needs, Cloud can be more economical (review the section on \hyperlink{virtualization-econ}{virtualization economics}). However, ultimately as Abbott and Fisher point out,
+ 
+\emph{Large, rapidly growing companies can usually realize greater margins by using wholly owned equipment than they can by operating in the cloud. This difference arises because laaS operators, while being able to purchase and manage their equipment costeffectively, are still looking to make a profit on their services} \hyperlink{Abbott2015}{[Abbott2015]}, p474.
+ 
+Minimally, Cloud services need to be controlled for consumption. Cloud providers will happily allow virtual machines to run indefinitely, and charge for them. An ecosystem of Cloud brokers and value-{}add resellers is emerging to assist organizations with optimizing their Cloud dollars.
+  
+\subsubsection{Software licensing}
+\label{_software_licensing}\hyperlabel{_software_licensing}%
+  
+As software and digital services are increasingly used by firms large and small, the contractual rights of usage become more and more critical.
+ 
+We mentioned a "clickwrap" licensing agreement above. Software licensing in general is a large and detailed topic, one presenting substantial financial risk to the unwary firm, especially when Cloud and virtualization are concerned.
+ 
+\label{nine-figure-true-up}\hyperlabel{nine-figure-true-up}
+ 
+
+\begin{sidebar}
+
+\textbf{Case study: The 9-{}figure "true-{}up"} A large enterprise had a long relationship with a major software vendor, who provided a critical software product used widely for many purposes across the enterprise.
+
+The price for this product was set based on the power of the computer running it. A license would cost less for computer with 4 cores and 1 gigabyte of RAM, than it would for a computer with 16 cores and 8 gigabytes of RAM. The largest computers required the most expensive licenses.
+
+As described previously, the goal of \hyperlink{virtualization}{virtualization} is to use one powerful physical computer to consolidate more lightly-{}loaded computers as "virtual machines." This can provide significant savings.
+
+Over the course of 3 years, the enterprise described here virtualized about 5,000 formerly physical computers, each of which had been running the vendor's software.
+
+However, a deadly wrinkle emerged in the software vendor's licensing terms. The formerly physical computers were in general smaller machines. The new virtual farms were clusters of 16 of the most powerful computers available on the market. The vendor held that EACH of the 5,000 instances of its software running in the virtual machines was liable for the FULL licensing fee applicable to the most powerful machine!
+
+Even though each of the 5,000 virtual machines could not possibly have been using the full capacity of the virtual farm, the vendor insisted (and was upheld) that the contract did not account for that, and there was no way of knowing whether any given VM had been using the full capacity of the farm at some point.
+
+The dispute escalated to the CEOs of each company, but the vendor held firm. The enterprise was obliged to pay a "true-{}up" charge of over \$100 million (9 figures).
+
+This is not an isolated instance. Major software vendors have earned billions in such charges and continue to audit aggressively for these kinds of scenarios. This is why contracts and licenses should never be taken lightly. Even startups could be vulnerable, if licensed commercial software is used in un-{}authorized ways in a Cloud environment, for example.
+\end{sidebar}
+ 
+Software licensing is a subset of Software Asset Management, which is itself a subset of IT Asset Management, discussed in more depth in the material on \hyperlink{chap-coordination}{process management} and \hyperlink{IT-lifecycles}{IT lifecycles}. Software asset management in many cases relies on the integrity of a digital organization's \hyperlink{package-mgmt}{package management}; the package manager should represent a definitive inventory of all the software in use in the organization.
+ 
+Free and open source software (sometimes abbreviated FOSS) has become an increasingly prevalent and critical component of digital products. While technically "free," the licensing of such softare can present risks. In some cases, open course products have unclear licensing that puts them at risk of legal conflicts which may impact users of the technology \hyperlink{Loftus2006}{[Loftus2006]}. In other cases, the open source license may discourage commercial or proprietary use; for example, the Gnu Public License (GPL) requirement for disclosing derivative works causes concern among enterprises \hyperlink{Yegulalp2014}{[Yegulalp2014]}.
+ 
+\label{industry-analysts}\hyperlabel{industry-analysts}
+  
+\subsubsection{The role of industry analysts}
+\label{_the_role_of_industry_analysts}\hyperlabel{_the_role_of_industry_analysts}%
+  
+When a company is faced by a sourcing question of any kind, one initial reaction is to research the market alternatives. But research is time consuming and markets are large and complex. Therefore, the role of industry or market analyst has developed.
+ 
+In the financial media, one often hears from "industry analysts" who are concerned with whether a company is a good investment in the stock market. While there is some overlap, the industry analysts we are concerned with here are more focused on advising prospective customers of a given market's offerings.
+ 
+Because sourcing and contracting is an infrequent activity, especially for smaller companies, it is valuable to have such services. Because they are researching a market and talking to vendors and customers on a regular basis, analysts can be helpful to companies in the purchasing process.
+ 
+However, analysts take money from the vendors they are covering as well, leading to occasional charges of conflict of interest [cite]. How does this work? There are a couple of ways.
+ 
+First, the analyst firm engages in objective research of a given market segment. They do this by developing a common set of criteria for who gets included, and a detailed set of questions to assess their capabilities.
+ 
+For example, an analyst firm might define a market segment of "Cloud Infrastructure as a Service" vendors. Only vendors supporting the basic NIST guidelines for Infrastructure as a Service are invited. Then, the analyst might ask, "Do you support Software Defined Networking, e.g. Network Function Virtualization" as a question. Companies that answer "yes" will be given a higher score than companies that answer "no." The number of questions on a major research report might be as high as 300 or even higher.
+ 
+Once the report is completed and the vendors are ranked (analyst firms typically use a two-{}dimensional ranking, such as the Gartner Magic Quadrant), it is made available to end users for a fee. Fees for such research might range from \$500 to \$5000 or more, depending on how specialized the topic, how difficult the research, and the ability to pay of prospective customers.
+ \begin{DBKadmonition}{}{Note}
+ 
+Large companies, e.g. those in the Fortune 500, typically would purchase an "enterprise agreement", often defined as a named "seat" for an individual, who can then access entire categories of research.
+ \end{DBKadmonition}
+ 
+Customers may have further questions for the analyst who wrote the research. They may be entitled to some portion of analyst time as part of their license, or they may pay extra for this privilege.
+ 
+Beyond selling the research to potential customers of a market, the analyst firm has a complex relationship with the vendors they are covering. In our example of a major market research report, the analyst firm's sales team also reaches out the vendors who were covered. The conversation goes something like this:
+ 
+"Greetings. You did very well in our recent research report. Would you like to be able to give it away to prospective customers, with your success highlighted? If so, you can sponsor the report for \$50,000."
+ 
+Because the analyst report is seen as having some independence, it can be an attractive marketing tool for the vendor, who will often pay (after some negotiating) for the sponsorship. In fact, vendors have so many opportunities along these lines they often find it necessary to establish a function known as "Analyst Relations" to manage all of them.
+ 
+\label{contract-mgmt}\hyperlabel{contract-mgmt}
+  
+\subsubsection{Software development and contracts}
+\label{_software_development_and_contracts}\hyperlabel{_software_development_and_contracts}%
+  \begin{quote}
+
+Customer collaboration over contract negotiation.
+
+\hspace*\fill--- Agile Manifesto
+\end{quote}
+ \begin{quote}
+
+For both suppliers and buyers of information technology (IT) projects, one issue arises repeatedly: how to get out of the trap of fixed pricing without the disadvantages of time and materials contracts.
+
+\hspace*\fill--- Andreas Opelt et al
+\emph{Agile Contracts: Creating and Managing Successful Projects with Scrum} \end{quote}
+ \begin{quote}
+
+What do lawyers assume is the nature of software projects? First, it is common that they view it as similar to a construction project\textemdash{}relatively predictable\textemdash{}rather than the highly uncertain and variable research and development that it usually is. Second, that in the project (1) there is a long delay before something can be delivered that is well done, with (2) late and weak feedback, (3) long payment cycles, and (4) great problems for the customer if the project is stopped at any arbitrary point in time. \textbf{These assumptions are invalidated in agile development.}
+
+\hspace*\fill--- Arbogast et  al
+\emph{Agile Contracts Primer} \end{quote}
+ 
+Software is often developed and delivered per contractual terms. Contracts are legally binding agreements, typically developed with the assistance of lawyers. As noted in \hyperlink{Arbogast2012}{[Arbogast2012]} (p.5),  "Legal professionals are trained to act, under legal duty, to advance their client's interests and protect them against all pitfalls, seen or unseen." The idea of "customer collaboration over contract negotiation" may strike them as the height of naivete. However, Agile and Lean influences have made substantial inroads in contracting approaches.
+ 
+Arbogast et al. describe the general areas of contract concern:
+ \begin{itemize}
+
+\item{} Risk, exposure, and liability
+ 
+
+\item{} Flexibility
+ 
+
+\item{} Clarity of obligations, expectations, and deliverables
+ 
+\end{itemize}
+ 
+They argue that "An agile-{}project contract may articulate the same limitations of liability (and related terms) as a traditional-{}project contract, but the agile contract will better support avoiding the very problems that a lawyer is worried about." (p. 12)
+ 
+So, what is an agile contract?
+ 
+There are two major classes of contracts:
+ \begin{itemize}
+
+\item{} Time and materials
+ 
+
+\item{} Fixed price
+ 
+\end{itemize}
+ 
+In a \textbf{time and materials} contract, the contracting firm simply pays the provider until the work is done. This means that the risk of the project overrunning its schedule or budget resides primarily with the firm hiring out the work. While this can work, there is often a desire on the part of the firm to reduce this risk. If you are hiring someone because they claim they are experts, and can do the work better/cheaper/quicker than your own staff, it seems reasonable that they should be willing to shoulder some of the risk.
+ 
+In a \textbf{fixed price} contract, the vendor providing the service will make a binding commitment that (for example) "we will get the software completely written in 9 months for \$3 million." Penalties may be enforced if the software is late, and it's up to the vendor to control development costs. If the vendor does not understand the work correctly, they may lose money on the deal.
+ 
+Reconciling Agile with fixed-{}price contracting approaches has been a challenging topic \hyperlink{Opelt2013}{[Opelt2013]}. The desire for control over a contractual relationship is historically one of the major drivers of \hyperlink{Agile-history}{waterfall} approaches. However, since requirements cannot be known in advance, this is problematic.
+ 
+When a contract is signed based on waterfall assumptions, the project management process of \hyperlink{change-control}{change control} is typically used to govern any alterations to the scope of the effort. Each change order typically implies some increase in cost to the customer. Because of this, the perceived risk mitigation of a fixed price contract may become a false premise.
+ 
+This problem has been understood for some time. Scott Ambler argued in 2005 that "It's time to abandon the idea that fixed bids reduce risk. Clients have far more control over a project with a variable, gated approach to funding in which working software is delivered on a regular basis" \hyperlink{Ambler2005}{[Ambler2005]}. Andreas Opelt states, "For agile IT projects it is therefore necessary to find an agreement that supports the balance between a fixed budget (maximum price range) and agile development (scope not yet defined in detail)\ldots{}\hspace{0em}"
+ 
+How is this done? Opelt and his co-{}authors further argue that the essential question revolves around the project "iron triangle":
+ \begin{itemize}
+
+\item{} Scope
+ 
+
+\item{} Cost
+ 
+
+\item{} Deadline
+ 
+\end{itemize}
+ 
+The approach they recommend is determining which of these elements is the "fixed point" and which is estimated. In traditional waterfall projects, scope is fixed, while costs and deadline must be estimated (a problematic approach when \hyperlink{lean-product-dev}{product development} is required.)
+ 
+In Opelt's view, in Agile contracting, costs and deadline are fixed, while scope is "estimated" -{} understood to have some inevitable variability. "\ldots{}\hspace{0em}you never know exactly what details will be needed at the start of a project. On the other hand, you do not always need everything that had originally been considered to be important" \hyperlink{Opelt2013}{[Opelt2013]}.
+ 
+Their recommended approach supports the following benefits:
+ \begin{itemize}
+
+\item{} Simplified adaptation to change
+ 
+
+\item{} Non-{}punitive changes in scope
+ 
+
+\item{} Reduced knowledge decay (large "batches" of requirements degrade in value over time)
+ 
+\end{itemize}
+ 
+This is achieved through:
+ \begin{itemize}
+
+\item{} Defining the contract at the level of product or project vision (epics or high-{}level stories; see discussion of \hyperlink{scrum}{Scrum}) -{} not detailed specification
+ 
+
+\item{} Developing high-{}level estimation
+ 
+
+\item{} Establishing agreement for sharing the risk of product development variability
+ 
+\end{itemize}
+ 
+This last point, which Opelt et al term "riskshare," is key. If the schedule or cost expand beyond the initial estimate, both the supplier and the customer pay, according to some agreed \%, which they recommend be between 30\%-{}70\%. If the supplier proportion is too low, the contract becomes essentially time \& materials. If the customer proportion is too low, the contract starts to resemble traditional fixed-{}price.
+ 
+Incremental checkpoints are also essential; for example, the supplier/customer interactions should be high bandwidth for the first few sprints, while culture and expectations are being established and the project is developing a rhythm.
+ 
+Finally, the ability for either party to exit gracefully and with minimum penalty is needed. If the initiative is testing market response (ala \hyperlink{lean-startup}{Lean Startup})
+and the product hypothesis is falsified, there is little point to continuing the work from the customer's point of view. AND, if the product vision turns out to be far more work than either party estimated, the supplier should be able to walk away  (or at least insist on comprehensive re-{}negotiation.)
+ 
+These ideas are a departure from traditional contract management. As Opelt asks, "How can you sign a contract from which one party can exit at any time?" Recall however that (if Agile principles are applied) the customer is receiving working software continuously through the engagement (e.g. after every sprint).
+ 
+In conclusion, as Arbogast et al argue, "Contracts that promote or mandate
+sequential life cycle development increase project risk\ldots{}\hspace{0em} an agile approach
+\ldots{}\hspace{0em} reduces risk because it limits both the scope of the deliverable and extent of the payment [and] allows for inevitable change" \hyperlink{Arbogast2012}{[Arbogast2012]} (p.13).
+ 
+\label{structuring-investment}\hyperlabel{structuring-investment}
+   

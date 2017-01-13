@@ -1,0 +1,170 @@
+\subsection{Analytics}
+\label{_analytics}\hyperlabel{_analytics}%
+  
+
+\begin{sidebar}
+
+Instructor's note:
+
+This is a brief discussion, because many aspects of big data, analytics, and data science are specific forms of product development. This book for example has avoided detailed discussion of programming languages or current vendor products. Similarly, the intent here is to explore the background and management implications of big data, analytics, and data science, not to discuss specific techniques or products in any detail.
+\end{sidebar}
+ 
+\subsubsection{Analytics in context}
+\label{_analytics_in_context}\hyperlabel{_analytics_in_context}%
+  \begin{quote}
+
+\ldots{}\hspace{0em}analytical competitors wring every last drop of value from business processes and key decisions.
+
+\hspace*\fill--- Tom Davenport and Jeanne Harris
+\emph{Competing on Analytics} \end{quote}
+ 
+One important aspect of digital product development is data analytics. Analysis of organizational records has always been a part of any concern large enough to have formal records management. The word for this originally was simply "reporting." A set of files or ledgers would be provided to one or more clerks, who would manually review them and extract the needed figures.
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/4_11-reportingOldStyle.png}{{\imgevalsize{images/4_11-reportingOldStyle.png}{\includegraphics[width=0.48\textwidth]{images/4_11-reportingOldStyle.png}}}}{1900s clerk with adding machine}
+\end{center}
+\caption[{Reporting and analytics, old style }]{Reporting and analytics, old style \footnotemark{}}
+\end{wrapfigure}
+ 
+We have touched on reporting previously, in our discussion of \hyperlink{metrics-KPIs}{metrics}. This is a more detailed examination.
+ 
+The compilation of data from physical sources, and its analysis for the purposes of organizational strategy, was distinct from the day to day creation and use of the data. The clerk who attended to the customer and updated their account records, had a different role than the clerk who added up the figures across dozens or hundreds of accounts for the annual corporate report.
+ 
+What do we mean by the words "analysis" or "analytics" in this older context? Just compiling totals and averages was expensive and time-{}consuming. Cross-{}tabulating data (e.g. to understand sales by region) was even more so.
+ 
+As information became more and more automated, the field of "Decision Support" (and its academic partner "Decision Sciences") emerged. The power of extensively computerized information, that could support more and more ambitious forms of analysis, gave rise to the concept and practice of "Data Warehousing" \hyperlink{Inmon1992}{[Inmon1992]}.
+ 
+A robust profession and set of practices emerged around data warehousing and analytics. And as infrastructure became more powerful and storage less expensive, the idea of full-{}lifecycle or closed-{}loop analytics originated.
+ 
+When analyzing data is costly and slow, the data analysis can only affect large, long-{}cycle decisions. It is not a form of fast feedback. The annual report may drive next year's product portfolio investment decisions, but it cannot drive the day to day behavior of sales, marketing, and customer service:
+ 
+\label{analytics-context}\hyperlabel{analytics-context}
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/4_11-oldCycle.png}{{\imgevalsize{images/4_11-oldCycle.png}{\includegraphics[width=0.48\textwidth]{images/4_11-oldCycle.png}}}}{old analytics cycle}
+\end{center}
+\caption{Strategic analytics}
+\end{wrapfigure}
+ 
+However, as analysis becomes faster and faster, it can inform operational decisions.
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/4_11-newCycle.png}{{\imgevalsize{images/4_11-newCycle.png}{\includegraphics[width=0.48\textwidth]{images/4_11-newCycle.png}}}}{new analytics cycle}
+\end{center}
+\caption{Opeational analytics (closed-{}loop)}
+\end{wrapfigure}
+ 
+And, for certain applications (such as an online traffic management application on your smartphone), analytics is such a fundamental part of the application that it becomes operational. Such pervasive use of analytics is one of the hallmarks of digital transformation.
+  
+\subsubsection{Data warehousing and business intelligence}
+\label{_data_warehousing_and_business_intelligence}\hyperlabel{_data_warehousing_and_business_intelligence}%
+  \begin{quote}
+
+The reason to build a data warehouse is to have the ability to make better decisions faster based on information using current and historic data.
+
+\hspace*\fill--- Paul Westerman
+\emph{Data Warehousing: Using the Wal-{}Mart Model} \end{quote}
+ 
+According to the Data Management Body of Knowledge, "A Data Warehouse (DW) is a combination of two primary components. The first is an integrated decision support database. The second is the related software programs used to collect, cleanse, transform, and store data from a variety of operational and external sources\ldots{}\hspace{0em}Data warehousing is a technology solution supporting Business Intelligence (BI)" \hyperlink{DAMA2009}{[DAMA2009]}. The vision of an integrated data warehouse for decision support is compelling and has provided enough value to support an industry sector of specialized hardware, software, training, and consulting. It can be seen as a common architectural pattern, in which disparate data is aggregated and consolidated for purposes of analysis, reporting, and for feedback into strategy, tactics, and operational concerns.
+ 
+\label{DW-BI-illustrated}\hyperlabel{DW-BI-illustrated}
+ 
+Here is an illustration of an data warehousing/business intelligence (DW/BI) implementation pattern:
+ \begin{wrapfigure}{r}{0.5\textwidth}
+
+\begin{center}
+\imgexists{images/4_11-DW-BI.png}{{\imgevalsize{images/4_11-DW-BI.png}{\includegraphics[width=0.48\textwidth]{images/4_11-DW-BI.png}}}}{DW/BI architecture}
+\end{center}
+\caption{Data warehousing/business intelligence architecture}
+\end{wrapfigure}
+ 
+The above diagram expands on the above \hyperlink{analytics-context}{contextual diagrams}, showing the major business areas (Sales etc) as data sources. (In a large organization this might be dozens or hundreds of source systems.) These systems feed a "data services layer" that both aggregates data for analytics, as well as providing direct services such as data cleansing and master data management.
+ 
+It's important to understand that in terms of this book's emphasis on product-{}centric development that \textbf{the data services layer itself is an internal product.} Some might call it more of a \hyperlink{feature-v-component}{component than a feature}, but it is intended in any case as a general-{}purpose platform that can support a wide variety of use cases.
+ 
+"Factoring out" data services in this way may or may not be optimal for any given organization, depending on maturity, business objectives, and a variety of other concerns. However, at scale the skills and practices do become specialized, and so it's anticipated we'll continue to see implementation strategies similar to the above figure.
+ 
+Notice also that the data services layer is not solely for analytics; it also supports direct operational services.
+ 
+Here are discussions of the diagrams's various elements:
+ 
+\paragraph{Operational applications}
+\label{_operational_applications}\hyperlabel{_operational_applications}%
+  
+These are the source systems that provide the data and require data services.
+  
+\paragraph{Quality analysis}
+\label{_quality_analysis}\hyperlabel{_quality_analysis}%
+  
+This is the capability to analyze data for consistency, integrity, and conformity with expectations, and to track associated metrics over time. (See \hyperlink{data-quality}{data quality}.)
+  
+\paragraph{Extraction and archiving}
+\label{_extraction_and_archiving}\hyperlabel{_extraction_and_archiving}%
+  
+As data storage has become less expensive, maintaining a historical record of data extracts in original format is seen more often in data warehousing. (This may use a schema-{}less data lake for implementation.)
+  
+\paragraph{Master data reconciliation}
+\label{_master_data_reconciliation}\hyperlabel{_master_data_reconciliation}%
+  
+When master data exists in diverse locations (e.g. in multiple \hyperlink{system-of-record}{Systems of Record}) the ability to reconcile and define the true or "golden" master may be required. This is useful directly to operational systems, as an online service (e.g. postal service address verification), and is also important when populating the data warehouse or mart. Master data includes reference data, and in the data warehousing environment may be the basis for "dimensions," a technical term for the ways data can be categorized for analytic purposes (e.g. retail categorizes sales by time, region, and product line). Maintaining a history of dimensions is a challenging topic; search on the "slowly changing dimension" problem for further information.
+  
+\paragraph{Metadata}
+\label{_metadata}\hyperlabel{_metadata}%
+  
+Commonly understood as "data about data," we have \hyperlink{commit-as-metadata}{previously} encountered the concept of metadata and will further discuss it in the next chapter section.
+  
+\paragraph{Transformation and load}
+\label{_transformation_and_load}\hyperlabel{_transformation_and_load}%
+  
+Converting data to a consistent and normalized form has been the basis of enterprise data warehousing since it was first conceived. (We will discuss the \hyperlink{schema-less}{schema-{}less} data lake approach in the next chapter section.) A broad market segment of "Extract, Transform, Load" (ETL) tooling exists to support this need.
+  
+\paragraph{Sourcing and archiving}
+\label{_sourcing_and_archiving}\hyperlabel{_sourcing_and_archiving}%
+  
+This represents the physical data store required for the extraction and archiving capability. Again, it may be implemented as a schema-{}less data lake, or as a traditional relational structure.
+  
+\paragraph{Integrated data warehouse}
+\label{_integrated_data_warehouse}\hyperlabel{_integrated_data_warehouse}%
+  
+The integrated or enterprise data warehouse is the classic, normalized, often massive, historical data store envisioned originally by Bill Inmon \hyperlink{Inmon1992}{[Inmon1992]}. While the development effort in creating fully normalized data warehouses has limited them, they nevertheless are important, valuable, and frequently encountered in larger organizations.
+  
+\paragraph{Schema-{}less lake}
+\label{_schema_less_lake}\hyperlabel{_schema_less_lake}%
+  
+A newer form of data aggregation is seen in the \hyperlink{schema-less}{schema-{}less} lake. As discussed in the next chapter section, schema-{}less approaches accept data in native formats and defer the hard question of normalizing the data to to the reporting and analysis stage.
+  
+\paragraph{Mart(s)}
+\label{_mart_s}\hyperlabel{_mart_s}%
+  
+The integrated data warehouse is intended to provide a consistent and universal platform across the enterprise. The data mart on the other hand is usually seen as specific to a particular organization or problem.
+  
+\paragraph{Statistics}
+\label{_statistics}\hyperlabel{_statistics}%
+  
+Statistical analysis of the aggregated and cleansed data is a common use case, often performed using commercial software or the R programming language.
+  
+\paragraph{Machine learning}
+\label{_machine_learning}\hyperlabel{_machine_learning}%
+  
+Machine learning is broadly defined as "a field of study that gives computers the ability to learn without being explicitly programmed." [Arthur Samuel as quoted in Simon, waiting on book]. Machine learning allows computers to develop and improve algorithmic models for making predictions or decisions. Spam filters that "learn" are a good example.
+  
+\paragraph{Visualization}
+\label{_visualization_2}\hyperlabel{_visualization_2}%
+  
+Representing complex information effectively so that humans can understand it and derive value is itself a challenging topic. Many graphical forms have been developed to communicate various aspects of data. See for example the open source visualization library \href{https://d3js.org/}{D3.js}
+  
+\paragraph{Ontology and inference}
+\label{_ontology_and_inference}\hyperlabel{_ontology_and_inference}%
+  
+This includes text mining and analytics, and also the ability to infer meaning from unstructured data sets. More in the next chapter section discussion on \hyperlink{schema-less}{schema-{}less}.
+  
+\paragraph{Agile methods meet DW/BI}
+\label{_agile_methods_meet_dw_bi}\hyperlabel{_agile_methods_meet_dw_bi}%
+  
+Data infrastructure, like any complex systems development effort, is most effective and least risky when undertaken iteratively and incrementally. An organization's analysis needs will change unpredictably over time and so a fast feedback loop of testing and learning is essential.
+ 
+The enterprise data warehouse can support a wide variety of analysis objectives flexibly. Its challenge has always been the lead time required to develop the data structures and ETL logic. This will be discussed further in the next chapter section.
+    

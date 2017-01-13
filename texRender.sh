@@ -21,8 +21,8 @@ dblatex -t tex -T simple $NAME.xml    #simple tex
 ./img.sh $NAME.tex
 
 # or tex-pdf only, verbose
-pdflatex $NAME.tex  #2x for cites
-pdflatex $NAME.tex
+#pdflatex $NAME.tex  #2x for cites
+#pdflatex $NAME.tex
 
 rm -f *.idx *.log *.aux *.bbl *.blg *.out *.toc *.lof *.lot *.glo *.cb *.cb2
 
