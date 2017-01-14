@@ -31,9 +31,9 @@ yes|cp -P book/*/*/images/*.jpg output/html/images/
 
 
 #freezing these 2 until end of year
-asciidoctor -D output/html aitm-student.adoc
-asciidoctor -D output/html aitm-instructor.adoc
-asciidoctor -D output/html aitm-collaborator.adoc
+asciidoctor -r asciidoctor-bibtex -D output/html aitm-student.adoc
+asciidoctor -r asciidoctor-bibtex -D output/html aitm-instructor.adoc
+asciidoctor -r asciidoctor-bibtex -D output/html aitm-collaborator.adoc
 
 # asciidoctor-pdf -a allow-uri-read aitm-collaborator-pdf.adoc  #need to fix URI-based figures
 # asciidoctor-epub3 aitm-student-epub.adoc
