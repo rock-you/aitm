@@ -1,0 +1,51 @@
+==== Choosing infrastructure
+
+NOTE: The following is written as if you are a decision maker in the early stages of conceiving a product. If you are an individual contributor in a large enterprise, or even a newcomer to an established product team, these decisions will likely have been made for you. +
+ +
+ But at some point, *someone* had to go through this decision process, before anything could be developed.
+
+.Tower-style servers on a rack. footnote:[image credit _https://www.flickr.com/photos/sfllaw/78981814, downloaded 2016-11-7, commercial use permitted._]
+image::images/1_02-server.jpg[servers on a rack, 400, , float="left"]
+
+There is ferocious turbulence in the IT infrastructure market. Cloud technologies, DevOps, various platform wars… As an entrepreneur, you need to understand what technical trends matter and what are more of same. In particular, you will need to make some level of commitment to your technical architecture. And at some point you *WILL* be asked, “You’re still using that old technology?” As a startup, you have a couple initial decisions to make regarding infrastructure and tools:
+
+- What is my vision for bringing my product to the world?
+- What toolset should I use to forward this vision?
+
+As a startup, it would seem likely that you would use a commodity cloud provider. This text is based on this assumption (physical IT asset management will be discussed in Sections 3 and 4), but is there any reason why that would not work for you? The two questions are related. If you want to develop on a LAMP stack, you need a Cloud provider that will support you in this. While most are very flexible, you will need to consider the specific support levels they are offering; a provider that supports the platform (and not just the operating system) might be more valuable, but there may be higher costs and other tradeoffs. There is a near-infinite amount of material, debate, discussion, books, blogs, lists, and so forth concerning choice of language and platform. Exploring this area is not the purpose of this book. However, this book has certain assumptions:
+
+* Your system will be built, at least in part, with some form of programming language which is human-readable and compiled or interpreted into binary instructions.
+* Your system will run on general purpose digital computers using well known technologies.
+* Your computing environment is networked in a standard way.
+* You use the concept of a software pipeline, in which new functionality is developed in a scope distinct from what is currently offered as your product/service.
+* New functionality moves through the pipeline at significant volumes and velocity and you are concerned with optimizing this overall flow.
+
+IMPORTANT: Infrastructure automation enables rapid iterations and scaling. Iterative development and rapid scaling, while possible, was often more difficult with earlier, less automated technical platforms.
+
+There is a long tradition in IT management of saying “How can you be thinking about infrastructure before you have gone deeply into requirements?”
+
+Let’s be clear, in defining a product (Chapter 1) you already have started to think about requirements, although we have not yet started to use that term. The idea that all requirements need to be understood in detail before considering technical platform is, in general, an outmoded concept that made more sense when hardware was more specialized and only available as expensive, organization-owned assets. With the emergence of Cloud providers able to sell computing services, companies no longer need to commit to large capital outlays. And digital product professionals realize that requirements are never fully "understood" up front (more on this in the next chapter). Your Minimum Marketable Feature is an initial statement of requirements from which you should be able to infer at least initial toolset and platform requirements. Here to get you started are the major players as of this writing:
+
+.Major technical stacks
+|====
+|Stack 1 (Enterprise Java) |Stack 2 (Microsoft) |Stack 3 (LAMP) |Stack 4 (MEAN)
+
+|Java       |C#        |PHP  |Javascript, Express & Angular
+|Oracle DB |MS SQL Server |MySQL |MongoDB
+|Websphere|.Net | Apache Web Server | NodeJS
+|Commercial Unix |Microsoft Windows  |Red Hat Linux |Ubuntu Linux
+|====
+
+Ruby on Rails is another frequently-encountered platform. If you are building a data or analytics-centric product, there are other alternatives as well. There is a good reason, however, why you should not spend too much time “analyzing” before you make platform decisions. The reality is that you cannot know all of the factors necessary to make a perfect decision, and in fact the way you will learn them is by moving forward and testing out various approaches. So, choose Ruby on Rails, or LAMP, or MEAN, and a hosting provider who supports them, and start. You can easily stand up environments for comparison using Cloud services, or even with lightweight virtualization on your own personal laptop. Do not fall into analysis paralysis. But *be critical of everything* especially in your first few weeks of development. Ask yourself:
+
+* Can I see myself doing things this way for the next year?
+* Will I be able to train people in this platform?
+* Will this scale to a bigger codebase? Higher performance? Faster throughput of new features?
+
+If you become uncomfortable with the answers, you should consider alternatives.
+
+****
+TIP: *The technical "spike"* +
+ +
+Scrum-based development uses the concept of a https://www.scrumalliance.org/community/articles/2013/march/spikes-and-the-effort-to-grief-ratio[“spike”] to represent effort whose outcome is not shippable product, but rather research and information. Consider thinking of your infrastructure selection process in this way.
+****

@@ -24,7 +24,7 @@ and their relationships.
 [quote, Andrew Clay Shafer, Web Operations:Keeping the Data On Time]
 In software development, version control is the foundation of every other Agile technical practice. Without version control, there is no build, no TDD, no continuous integration.
 
-The Agile Alliance indicates “version control” as one of the https://www.agilealliance.org/agile101/subway-map-to-agile-practices/[four foundational areas of Agile] cite:[Alliance2016], along with team, iterative development, and incremental development. Why is this? Version control is critical for any kind of system with complex, changing content, especially when many people are working on that content. Version control provides the capability of seeing the exact sequence of a complex system's evolution and isolating any particular moment in its history, or providing detailed analysis on how two versions differ. With version control, we can understand what changed and when, which is essential to coping with complexity.
+The Agile Alliance indicates “version control” as one of the https://www.agilealliance.org/agile101/subway-map-to-agile-practices/[four foundational areas of Agile] <<Alliance2016>>, along with team, iterative development, and incremental development. Why is this? Version control is critical for any kind of system with complex, changing content, especially when many people are working on that content. Version control provides the capability of seeing the exact sequence of a complex system's evolution and isolating any particular moment in its history, or providing detailed analysis on how two versions differ. With version control, we can understand what changed and when, which is essential to coping with complexity.
 
 While version control was always deemed important for software artifacts, it has only recently become the preferred paradigm for managing infrastructure state as well.  Because of this, version control is possibly the first IT management system you should acquire and implement (perhaps as a cloud service, such as Github).
 
@@ -33,7 +33,7 @@ Version control in recent years increasingly distinguishes between source and pa
 .Types of version control
 image::images/1_02-versionControlTypes.png[Version control types, 300,]
 
-Version control works like an advanced file system with a memory. (Actual file systems that do this are called https://en.wikipedia.org/wiki/Versioning_file_system[_versioning_] file systems.) It can remember all the changes you make to its contents, tell you the differences between any two versions, and also bring back the version you had at any point in time. Version control is important - but how important? Survey research presented in the annual State of DevOps report indicates that version control is one of the most critical practices associated with high performing IT organizations cite:[Forsgren2016>>. Nicole Forsgren <<Forsgren2016a]  summarizes the practice of version control as:
+Version control works like an advanced file system with a memory. (Actual file systems that do this are called https://en.wikipedia.org/wiki/Versioning_file_system[_versioning_] file systems.) It can remember all the changes you make to its contents, tell you the differences between any two versions, and also bring back the version you had at any point in time. Version control is important - but how important? Survey research presented in the annual State of DevOps report indicates that version control is one of the most critical practices associated with high performing IT organizations <<Forsgren2016>>. Nicole Forsgren <<Forsgren2016a>>  summarizes the practice of version control as:
 
 * Our application code is in a version control system
 * Our system configurations are in a version control system
@@ -128,7 +128,7 @@ Even if we analyzed the differences, we would need to know much about the .png f
 
 ====== The "commit" concept
 
-Although implementation details may differ, all version control systems have some concept of “commit.” As stated in _Version Control with Git_ cite:[Loeliger2009]:
+Although implementation details may differ, all version control systems have some concept of “commit.” As stated in _Version Control with Git_ <<Loeliger2009>>:
 
 _In Git, a commit is used to record changes to a repository… Every Git commit represents a single, *atomic* changeset with respect to the previous state. Regardless of the number of directories, files, lines, or bytes that change with a commit… either all changes apply or none do._ [emphasis added]
 
@@ -190,4 +190,4 @@ And so on. Many traditional programming languages take an imperative approach. A
 
 More practically, declarative approaches are used to ensure that the proper versions of software are always present on a system, and that configurations such as Internet ports and security settings do not vary from the intended specification.
 
-This is a complex topic and there are advantages and disadvantages to each approach. (See "When and Where Order Matters" by Mark Burgess for an advanced discussion cite:[Burgess2016].) But policy-based approaches seem to have the upper hand for now.
+This is a complex topic and there are advantages and disadvantages to each approach. (See "When and Where Order Matters" by Mark Burgess for an advanced discussion <<Burgess2016>>.) But policy-based approaches seem to have the upper hand for now.

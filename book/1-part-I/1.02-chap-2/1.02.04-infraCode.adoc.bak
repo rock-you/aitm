@@ -16,7 +16,7 @@ The following passage from The Phoenix Project captures some of the issues. The 
 
 _“Several months ago, we were three hours into a Sev 1 outage, and we bent over backward not to escalate to Brent. But eventually, we got to a point where we were just out of ideas, and we were starting to make things worse. So, we put Brent on the problem.” He shakes his head, recalling the memory, “He sat down at the keyboard, and it’s like he went into this trance. Ten minutes later, the problem is fixed. Everyone is happy and relieved that the system came back up. But then someone asked, ‘How did you do it?’ And I swear to God, Brent just looked back at him blankly and said, ‘I have no idea. I just did it.’”_
 
-cite:[Kim2013], p. 116.
+<<Kim2013>>, p. 116.
 
 Obviously, “close your eyes and go into a trance” is not a repeatable process. It is not a procedure or operation that can be archived and distributed across multiple servers. So, shell scripts or more advanced forms of automation are written and increasingly, all actual server configuration is based on such pre-developed specification. It is becoming more and more rare for a systems administrator to actually “log in” to a server and execute configuration-changing commands in an ad-hoc manner (as Brent).
 
@@ -80,7 +80,7 @@ At best, the systems administrators, or server engineers, might have written gui
 
 The problem with this is that modern computing systems are so complex that deleting software can be difficult; if the un-install process fails in some way, the server can be left in a compromised state. Similarly, one-time configuration adjustments made to one server means that it may be inconsistent with similar devices, and this can cause problems. For example, if the first systems administrator is on vacation, their substitute may expect the server to be configured in a certain way and make adjustments that have unexpected effects. Or the first systems administrator themselves may forget exactly what it is they did. Through such practices, servers would start to develop personalities, because their configurations were inconsistent.
 
-As people started to work more and more with virtualization, they realized it was easier to rebuild virtual servers from scratch, rather than trying to fix them. Automated configuration management tools helped by promoting a consistent process for rebuilding. Randy Bias, noting this, put forth the provocative idea that "servers are cattle, not pets" cite:[Bias2012]. That is, when a pet is sick, one takes it to the vet, but a sick cow might simply  be taken out and shot.
+As people started to work more and more with virtualization, they realized it was easier to rebuild virtual servers from scratch, rather than trying to fix them. Automated configuration management tools helped by promoting a consistent process for rebuilding. Randy Bias, noting this, put forth the provocative idea that "servers are cattle, not pets" <<Bias2012>>. That is, when a pet is sick, one takes it to the vet, but a sick cow might simply  be taken out and shot.
 
 I prefer the saying that "servers are fleet vehicles, not collectible cars" as it seems less cruel, and the cattle metaphor overlooks the fact that large animal veterinarians are routinely employed in the cattle industry.
 
@@ -89,4 +89,4 @@ image::images/1_02-vehicles.png[collectible car, 500, , float="left"]
 
 ****
 
-For further information and practical examples, see _Infrastructure as Code_ by Kief Morris cite:[Morris2016].
+For further information and practical examples, see _Infrastructure as Code_ by Kief Morris <<Morris2016>>.
