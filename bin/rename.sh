@@ -18,3 +18,6 @@ sed -E -i .bak 's/([0-9])\.([0-9]{2}.*[png|jpg])/\1_\2/g' *.adoc
 sed -E -i  's/3_09/5_04/g' *process.adoc
 
 note: .bak is mac os variant
+
+# convert cites
+sed -E -i.bak 's/<<(.+?)>>/cite:\[\1\]/g' *.adoc
