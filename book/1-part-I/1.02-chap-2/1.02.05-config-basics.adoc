@@ -115,18 +115,18 @@ If you have access to a computer, try it! (You will need to install git, and if 
 In comparison, the following are two 10x10 gray-scale bitmap images being edited in the https://www.gimp.org/[Gimp image editor]. They are about as simple as you can get. Notice (in <<fig-bothPixels-500-c>>) that they are slightly different.
 
 [[fig-bothPixels-500-c]]
-.Bitmap
+.Two bitmaps
 image::images/1_02-bothPixels.png[grid, 500]
 
-If we save these in the *.png format, we can see they are different sizes (242 k vs 239k). But if we open them in a binary editor it is very difficult to understand how they differ (compare <<fig-pixelHex1-500-c>> with <<fig-pixelHex2-500-c>>).
+If we save these in the *.png format, we can see they are different sizes (242 k vs 239k). But if we open them in a binary editor it is very difficult to understand how they differ (compare <<fig-pixelHexFirst-500-c>> with <<fig-pixelHexSecond-500-c>>).
 
-[[fig-pixelHex1-500-c]]
+[[fig-pixelHexFirst-500-c]]
 .First file binary data
-image::images/1_02-pixelHex1.png[data, 500]
+image::images/1_02-pixelHexFirst.png[data, 500]
 
-[[fig-pixelHex2-500-c]]
+[[fig-pixelHexSecond-500-c]]
 .Second file binary data
-image::images/1_02-pixelHex2.png[data, 500]
+image::images/1_02-pixelHexSecond.png[data, 500]
 
 Even if we analyzed the differences, we would need to know much about the .png format in order to understand how the two images differ. We can still track both versions these files, of course, with the proper version control. But again, binary data is not ideal for source control tools like git.
 
@@ -161,8 +161,9 @@ anchor:deployment-mgmt[]
 
 ===== Deployment management
 
-Version control is an important part of the overall concept of configuration management. But configuration management also covers the matter of how artifacts under version control are combined with other IT resources (such as virtual machines) to deliver services. The following illustration is one way to think about the relationships:
+Version control is an important part of the overall concept of configuration management. But configuration management also covers the matter of how artifacts under version control are combined with other IT resources (such as virtual machines) to deliver services. <<fig-configMgmt-500-c>> depicts the relationships.
 
+[[fig-configMgmt-500-c]]
 .Configuration management and its components
 image::images/1_02-configMgmt.png[Configuration management types, 500,,]
 
