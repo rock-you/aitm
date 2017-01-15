@@ -5,7 +5,7 @@
 [quote, Martin Fowler, Foreword to Continuous Integration]
 Oddly enough, it seems that when you run into a painful activity, a good tip is to do it more often.
 
-As systems engineering approaches transform to xref:cloud[Cloud] and xref:infracode[Infrastructure as Code], a large and increasing percentage of IT work takes the form of altering text files and tracking their xref:version-control[versions]. We have seen this in the previous chapter, with artifacts such as xref:infra-code-example[scripts] being created to drive the provisioning and configuring of computing resources. Approaches which encourage ongoing development and evolution are increasingly recognized as less risky, since systems do not respond well to big "batches" of change. An important concept is that of "continuous integration,” popularized by Paul Duvall in his book of the same name cite:[Duvall2007].
+As systems engineering approaches transform to xref:cloud[Cloud] and xref:infracode[Infrastructure as Code], a large and increasing percentage of IT work takes the form of altering text files and tracking their xref:version-control[versions]. We have seen this in the previous chapter, with artifacts such as xref:infra-code-example[scripts] being created to drive the provisioning and configuring of computing resources. Approaches which encourage ongoing development and evolution are increasingly recognized as less risky, since systems do not respond well to big "batches" of change. An important concept is that of "continuous integration,” popularized by Paul Duvall in his book of the same name <<Duvall2007>>.
 
 .Two developers, one file
 image::images/1_03-dual-access.png[2 devs 3 files,400,, float="right"]
@@ -38,7 +38,7 @@ image::images/1_03-fast-ID.png[errors caught quickly,640,,]
 
 These problems have driven the evolution of software configuration management for decades. In previous methods, to develop a new release, the code would be copied into a very long-lived "branch" (a version of the code to receive independent enhancement). Ongoing “maintenance” fixes of the existing code base would also continue, and the two code bases would inevitably diverge. Switching over to the “new” code base might mean that once-fixed bugs (bugs that had been addressed by maintenance activities) would show up again, and of course this would not be acceptable. So, when the newer development was complete, it would need to be merged back into the older line of code, and this was rarely if ever easy (again, "merge hell"). In a worst case scenario, the new development might have to be redone.
 
-Enter continuous integration. As presented in cite:[Duvall2007] the key practices (you will notice similarities to the xref:pipeline[pipeline discussion]) include:
+Enter continuous integration. As presented in <<Duvall2007>> the key practices (you will notice similarities to the xref:pipeline[pipeline discussion]) include:
 
 * Developers run private builds including their automated tests before committing to source control
 * Developers check in to source control at least daily (hopefully we have been harping on this enough that you are taking it seriously by now).
