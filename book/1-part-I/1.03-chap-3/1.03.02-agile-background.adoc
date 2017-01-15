@@ -8,9 +8,10 @@ When the author first joined Andersen Consulting (now Accenture) in 1998, we wer
 
 What is waterfall development? It is a controversial question. The original theorist who coined the term named it in order to critique it cite:[Royce1970]. Military contracting and management consultancy practices, however, embraced it, as it provided an illusion of certainty. The fact that computer systems until recently included a substantial component of hardware systems engineering may also have contributed.
 
-Waterfall development as a term has become associated with a number of practices. The original illustration was similar to this:
+Waterfall development as a term has become associated with a number of practices. The original illustration was similar to <<fig-waterfall-500-c>> footnote:[similar to cite:[Royce1970]):
 
-.Waterfall lifecycle footnote:[similar to cite:[Royce1970]]
+[[fig-waterfall-500-c]]
+.Waterfall lifecycle
 image::images/1_03-waterfall.png[waterfall progression, 500,,]
 
 First, requirements need to be extensively captured and analyzed before the work of development should commence. So, the project team would develop enormous spreadsheets of requirements, spending weeks on making sure that they represented what “the customer” wanted. The objective was to get the customer’s signature. Any further alterations could be profitably billed as “change requests."
@@ -21,9 +22,10 @@ In the design phase, the actual technical platforms would be chosen; major subsy
 
 Only AFTER extensive requirements, analysis, and design would coding take place (implementation). Furthermore, there were separation of duties between developers and testers. Developers would write code and testers would try to break it, filing bug reports that the developers would then need to respond to.
 
-Another model sometimes encountered at this time was the V-model. This was intended to better represent the various levels of abstraction operating in the systems delivery activity. Requirements operate at various levels, from high level business intent through detailed specifications. It is all too possible that a system is “successfully” implemented at lower levels of specification, but fails to satisfy the original higher level intent.
+Another model sometimes encountered at this time was the V-model (see <<fig-vmodel-400-c>> footnote:[Image credit https://en.wikipedia.org/wiki/V-Model_(software_development), downloaded 2016-11-12, public domain]). This was intended to better represent the various levels of abstraction operating in the systems delivery activity. Requirements operate at various levels, from high level business intent through detailed specifications. It is all too possible that a system is “successfully” implemented at lower levels of specification, but fails to satisfy the original higher level intent.
 
-.V-model footnote:[_Image credit https://en.wikipedia.org/wiki/V-Model_(software_development), downloaded 2016-11-12, public domain_]
+[[fig-vmodel-400-c]]
+.V-model
 image::images/1_03-vmodel.png[v-model, 400,]
 
 The failures of these approaches at scale are by now well known. Large distributed teams would wrestle with thousands of requirements. The customer would “sign off” on multiple large binders, with widely varying degrees of understanding of what they were agreeing to. Documentation became an end in itself, and yet did not meet its objectives of ensuring continuity if staff turned over. The development team would design and build extensive product implementations without checking the results with customers. They would also defer testing that various component parts would effectively interoperate until the very end of the project, when the time came to assemble the whole system.
