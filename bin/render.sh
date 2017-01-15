@@ -30,7 +30,8 @@ yes|cp -P book/*/*/images/*.jpg output/html/images/
 #yes|cp  book/*/images/* images  # why book/**/ doesn't work?
 
 
-#freezing these 2 until end of year
+#asciidoctor-bibtex REALLY doesn't like simple Zotero bibtex export, but tolerates the
+#bibtex synch approach (options|Bibtex)
 asciidoctor -r asciidoctor-bibtex -D output/html aitm-student.adoc
 asciidoctor -r asciidoctor-bibtex -D output/html aitm-instructor.adoc
 asciidoctor -r asciidoctor-bibtex -D output/html aitm-collaborator.adoc
