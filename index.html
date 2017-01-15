@@ -3115,7 +3115,7 @@ For a beginner-level introduction to the world of digital logic at its most fund
 </table>
 </div>
 <div class="paragraph">
-<p>If we have a picture of our friend, and we use a digital filter to adjust the brightness, that is an application of compute power. The picture is made up of "pixels" (see <a href="#fig-bitmap-300-o">Picture enlarged to show pixels</a><sup class="footnote">[<a id="_footnoteref_9" class="footnote" href="#_footnote_9" title="View footnote.">9</a>]</sup>) which are nothing but numbers representing the color of some tiny square of the picture. Each of those numbers needs to be evaluated and the brightness adjusted. There may be millions in a single image.</p>
+<p>If we have a picture of our friend, and we use a digital filter to adjust the brightness, that is an application of compute power. The picture is made up of "pixels" (see <a href="#fig-bitmap-300-o">Picture enlarged to show pixels</a><sup class="footnote">[<a id="_footnoteref_9" class="footnote" href="#_footnote_9" title="View footnote.">9</a>]</sup>]) which are nothing but numbers representing the color of some tiny square of the picture. Each of those numbers needs to be evaluated and the brightness adjusted. There may be millions in a single image.</p>
 </div>
 <div id="fig-bitmap-300-o" class="imageblock" style="float: right">
 <div class="content">
@@ -3170,10 +3170,10 @@ If these concepts are strange to you, spend some time with the suggested Wikiped
 <div class="content">
 <img src="images/1_02-storage-disks.jpg" alt="hard drives in array" width="450">
 </div>
-<div class="title">Figure 17. Disks in a storage array <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup></div>
+<div class="title">Figure 17. Disks in a storage array</div>
 </div>
 <div class="paragraph">
-<p><strong>Storage</strong> But where did the picture come from? The data comprising the pixels needs to be stored somewhere (see <a href="#fig-storage-disks-450-i">Disks in a storage array <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup></a> <sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnote_10" title="View footnote.">10</a>]</sup>). Sometimes you will hear the technical term "persisted." The combined set of pixels and their precise values can be termed the "state" of the photograph; the digital logic of the filter alters the state, and also needs to save this new state somewhere (otherwise it will be lost).</p>
+<p><strong>Storage</strong> But where did the picture come from? The data comprising the pixels needs to be stored somewhere (see <a href="#fig-storage-disks-450-i">Disks in a storage array</a> <sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnote_10" title="View footnote.">10</a>]</sup>). Sometimes you will hear the technical term "persisted." The combined set of pixels and their precise values can be termed the "state" of the photograph; the digital logic of the filter alters the state, and also needs to save this new state somewhere (otherwise it will be lost).</p>
 </div>
 <div class="paragraph">
 <p>Many technologies <a href="http://www.zetta.net/history-of-computer-storage/">have been used for digital storage.</a> Increasingly, the IT professional need not be concerned with the physical infrastructure used for storing data. As we will cover in the next section, storage increasingly is experienced as a virtual resource, accessed through executing programmed logic on Cloud platforms. "Underneath the covers" the Cloud provider might be using various forms of storage, from RAM to solid state drives to tapes, but the end user is,  <strong>ideally</strong>, shielded from the implementation details (part of the definition of a service).</p>
@@ -3200,12 +3200,6 @@ If these concepts are strange to you, spend some time with the suggested Wikiped
 <div class="paragraph">
 <p>If this is unfamiliar, see Wikipedia or research on your own; you should have a basic grasp of this issue.</p>
 </div>
-<div id="fig-network-connections-350-o" class="imageblock" style="float: right">
-<div class="content">
-<img src="images/1_02-network-connections.png" alt="cables and equipment" width="350">
-</div>
-<div class="title">Figure 18. Network cabling in a rack</div>
-</div>
 <div class="paragraph">
 <p><strong>Network</strong>
 We can change the state of some data, or store it. We also need to move it. This is the basic concern of <a href="https://en.wikipedia.org/wiki/Computer_network">networking</a>, to transmit data (or information) from one location to another. If you use your cell phone to look up your bank balance, there is network (see <a href="#fig-network-connections-350-o">Network cabling in a rack</a><sup class="footnote">[<a id="_footnoteref_11" class="footnote" href="#_footnote_11" title="View footnote.">11</a>]</sup>) involved - otherwise, how did the data get from the bank&#8217;s computer in New Jersey to your cell phone in Minnesota? We see evidence of networking every day; you may be familiar with coaxial cables for TV, or telephone lines strung from pole to pole in many areas. However, like storage, there is also a hierarchy of networking:</p>
@@ -3229,6 +3223,12 @@ We can change the state of some data, or store it. We also need to move it. This
 </li>
 </ul>
 </div>
+<div id="fig-network-connections-350-o" class="imageblock" style="float: right">
+<div class="content">
+<img src="images/1_02-network-connections.png" alt="cables and equipment" width="350">
+</div>
+<div class="title">Figure 18. Network cabling in a rack</div>
+</div>
 <div class="paragraph">
 <p>And like storage and compute, networking as a service increasingly is independent of implementation. The developer uses programmatic tools to define expected information transmission, and (again <strong>ideally</strong>) need not be concerned with the specific networking technologies or architectures serving their needs.</p>
 </div>
@@ -3250,11 +3250,11 @@ The following is written as if you are a decision maker in the early stages of c
 </tr>
 </table>
 </div>
-<div class="imageblock" style="float: left">
+<div id="fig-server-400-o" class="imageblock" style="float: right">
 <div class="content">
 <img src="images/1_02-server.jpg" alt="servers on a rack" width="400">
 </div>
-<div class="title">Figure 19. Tower-style servers on a rack. <sup class="footnote">[<a id="_footnoteref_12" class="footnote" href="#_footnote_12" title="View footnote.">12</a>]</sup></div>
+<div class="title">Figure 19. Tower-style servers on a rack</div>
 </div>
 <div class="paragraph">
 <p>There is ferocious turbulence in the IT infrastructure market. Cloud technologies, DevOps, various platform wars… As an entrepreneur, you need to understand what technical trends matter and what are more of same. In particular, you will need to make some level of commitment to your technical architecture. And at some point you <strong>WILL</strong> be asked, “You’re still using that old technology?” As a startup, you have a couple initial decisions to make regarding infrastructure and tools:</p>
@@ -3287,7 +3287,7 @@ The following is written as if you are a decision maker in the early stages of c
 <p>You use the concept of a software pipeline, in which new functionality is developed in a scope distinct from what is currently offered as your product/service.</p>
 </li>
 <li>
-<p>New functionality moves through the pipeline at significant volumes and velocity and you are concerned with optimizing this overall flow.</p>
+<p>New functionality moves through the pipeline at significant volumes and velocity and you are concerned with optimizing this overall flow. <sup class="footnote">[<a id="_footnoteref_12" class="footnote" href="#_footnote_12" title="View footnote.">12</a>]</sup></p>
 </li>
 </ul>
 </div>
@@ -3432,26 +3432,26 @@ Scrum-based development uses the concept of a <a href="https://www.scrumalliance
 </div>
 <div class="sect4">
 <h5 id="_virtualization">Virtualization</h5>
-<div class="imageblock" style="float: left">
+<div id="fig-laptop-300-i" class="imageblock" style="float: left">
 <div class="content">
 <img src="images/1_02-laptop.jpg" alt="laptop" width="300">
 </div>
-<div class="title">Figure 20. Laptop computer <sup class="footnote">[<a id="_footnoteref_13" class="footnote" href="#_footnote_13" title="View footnote.">13</a>]</sup></div>
+<div class="title">Figure 20. Laptop computer</div>
 </div>
 <div class="paragraph">
 <p><a href="https://en.wikipedia.org/wiki/Virtualization">Virtualization</a>, for the purposes of this section, starts with the idea of a computer within a computer. (It has applicability to storage and networking as well but we will skip that for now.) In order to understand this, we need to understand a little bit about operating systems and how they relate to the physical computer.</p>
 </div>
 <div class="paragraph">
-<p>Assume a simple, physical computer such as a laptop. When the laptop is first turned on, the operating system (OS) loads; the OS is itself software, but is able to directly control the computer&#8217;s physical resources: its central processing unit (CPU), memory, screen, and any interfaces such as WiFi, USB, and Bluetooth. The operating system (in a traditional approach) then is used to run "applications" such as Web browsers, media players, word processors, spreadsheets, and the like. Many such programs can also be run as applications within the browser, but the browser still needs to be run as an application.</p>
+<p>Assume a simple, physical computer such as a laptop (see <a href="#fig-laptop-300-i">Laptop computer</a>, <sup class="footnote">[<a id="_footnoteref_13" class="footnote" href="#_footnote_13" title="View footnote.">13</a>]</sup>). When the laptop is first turned on, the operating system (OS) loads; the OS is itself software, but is able to directly control the computer&#8217;s physical resources: its central processing unit (CPU), memory, screen, and any interfaces such as WiFi, USB, and Bluetooth. The operating system (in a traditional approach) then is used to run "applications" such as Web browsers, media players, word processors, spreadsheets, and the like. Many such programs can also be run as applications within the browser, but the browser still needs to be run as an application.</p>
 </div>
-<div class="imageblock" style="float: right">
+<div id="fig-virt-400-o" class="imageblock" style="float: right">
 <div class="content">
 <img src="images/1_02-virt.png" alt="little computers inside big one" width="400">
 </div>
 <div class="title">Figure 21. Virtualization is computers within a computer</div>
 </div>
 <div class="paragraph">
-<p>In the simplest form of virtualization, a specialized application known as a <em>hypervisor</em> is loaded like any other application. The purpose of this hypervisor is to emulate the hardware computer in software. Once the hypervisor is running, it can emulate any number of "virtual" computers, each of which can have its own operating system. The hypervisor mediates the <a href="https://en.wikipedia.org/wiki/Virtual_machine">virtual machine</a> (VM) access to the actual, physical hardware of the laptop; the VM can take input from the USB port, and output to the Bluetooth interface, just like the master OS that launched when the laptop was turned on.</p>
+<p>In the simplest form of virtualization, a specialized application known as a <em>hypervisor</em> is loaded like any other application. The purpose of this hypervisor is to emulate the hardware computer in software. Once the hypervisor is running, it can emulate any number of "virtual" computers , each of which can have its own operating system (see <a href="#fig-virt-400-o">Virtualization is computers within a computer</a>). The hypervisor mediates the <a href="https://en.wikipedia.org/wiki/Virtual_machine">virtual machine</a> (VM) access to the actual, physical hardware of the laptop; the VM can take input from the USB port, and output to the Bluetooth interface, just like the master OS that launched when the laptop was turned on.</p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -3467,7 +3467,7 @@ You can experiment with a hypervisor by downloading <a href="https://www.virtual
 </tr>
 </table>
 </div>
-<div class="imageblock">
+<div id="fig-virtualization-types-800-c" class="imageblock">
 <div class="content">
 <img src="images/1_02-virtualization-types.png" alt="Virtualization types" width="800">
 </div>
@@ -3480,7 +3480,7 @@ You can experiment with a hypervisor by downloading <a href="https://www.virtual
 <p><em>Paravirtualization</em>, e.g. containers, is another form of virtualization found in the marketplace. In a paravirtualized environment, a core operating system is able to abstract hardware resources for multiple virtual guest environments without having to virtualize hardware for each guest. The benefit of this type of virtualization is increased input/output (I/O) efficiency and performance for each of the guest environments.</p>
 </div>
 <div class="paragraph">
-<p>However, while hypervisors can support a diverse array of virtual machines with different operating systems on a single computing node, guest environments in a paravirtualized system generally share a single OS.</p>
+<p>However, while hypervisors can support a diverse array of virtual machines with different operating systems on a single computing node, guest environments in a paravirtualized system generally share a single OS. See <a href="#fig-virtualization-types-800-c">Virtualization types</a> for an overview of all the types.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -3503,9 +3503,9 @@ And yes, you can run computers within computers within computers with virtualiza
 <div class="sect4">
 <h5 id="_why_is_virtualization_important">Why is virtualization important?</h5>
 <div class="paragraph">
-<p>Virtualization attracted business attention as a means to consolidate computing workloads. For years, companies would purchase servers to run applications of various sizes, and in many cases the computers were badly underutilized. Because of configuration issues (legitimate) and an overabundance of caution (questionable), average utilization in a pre-virtualization data center might average 10-20%. (That&#8217;s 90% of the computer&#8217;s capacity being wasted.)</p>
+<p>Virtualization attracted business attention as a means to consolidate computing workloads. For years, companies would purchase servers to run applications of various sizes, and in many cases the computers were badly underutilized. Because of configuration issues (legitimate) and an overabundance of caution (questionable), average utilization in a pre-virtualization data center might average 10-20%. That&#8217;s up to 90% of the computer&#8217;s capacity being wasted (see <a href="#fig-physUtil-800-c">Inefficient utilization</a>).</p>
 </div>
-<div class="imageblock">
+<div id="fig-physUtil-800-c" class="imageblock">
 <div class="content">
 <img src="images/1_02-physUtil.png" alt="underutilization" width="800">
 </div>
@@ -3515,9 +3515,9 @@ And yes, you can run computers within computers within computers with virtualiza
 <p>The above figure is a simplification. Computing and storage infrastructure supporting each application stack in the business were sized to support each workload. For example, a payroll server might run on a different infrastructure configuration than a data warehouse server. Large enterprises needed to support hundreds of different infrastructure configurations, increasing maintenance and support costs.</p>
 </div>
 <div class="paragraph">
-<p>The adoption of virtualization allowed businesses to compress multiple application workloads onto a smaller number of physical servers:</p>
+<p>The adoption of virtualization allowed businesses to compress multiple application workloads onto a smaller number of physical servers (see <a href="#fig-virtUtil-400-i">Efficiency through virtualization</a>).</p>
 </div>
-<div class="imageblock" style="float: left">
+<div id="fig-virtUtil-400-i" class="imageblock" style="float: left">
 <div class="content">
 <img src="images/1_02-virtUtil.png" alt="efficient util" width="400">
 </div>
@@ -3550,14 +3550,14 @@ For illustration only. A utilization of 62.5% might actually be a bit too high f
 <div class="paragraph">
 <p>As computers became cheaper, companies increasingly acquired their own data centers, investing large amounts of capital in high-technology spaces with extensive power and cooling infrastructure. This was the trend through the late 1980s to about 2010, when Cloud computing started to provide a realistic alternative with true "pay as you go" pricing, analogous to electric metering.</p>
 </div>
-<div class="imageblock" style="float: right">
+<div id="fig-parkhill-300-o" class="imageblock" style="float: right">
 <div class="content">
 <img src="images/1_02-parkhill.png" alt="book" width="300">
 </div>
-<div class="title">Figure 25. Cloud computing started here</div>
+<div class="title">Figure 25. Initial statement of Cloud computing</div>
 </div>
 <div class="paragraph">
-<p>The idea of running IT completely as a utility service goes back at least to 1965 and the publication of <em>The Challenge of the Computer Utility</em>, by Douglas Parkhill. While the conceptual idea of Cloud and utility computing was foreseeable fifty years ago, it took many years of hard-won IT evolution to support the vision. Reliable hardware of exponentially increasing performance, robust open-source software, Internet backbones of massive speed and capacity, and many other factors converged towards this end.</p>
+<p>The idea of running IT completely as a utility service goes back at least to 1965 and the publication of <em>The Challenge of the Computer Utility</em>, by Douglas Parkhill (see <a href="#fig-parkhill-300-o">Initial statement of Cloud computing</a>). While the conceptual idea of Cloud and utility computing was foreseeable fifty years ago, it took many years of hard-won IT evolution to support the vision. Reliable hardware of exponentially increasing performance, robust open-source software, Internet backbones of massive speed and capacity, and many other factors converged towards this end.</p>
 </div>
 <div class="paragraph">
 <p>However, people store data - often private - on computers. In order to deliver compute as a utility, it is essential to segregate each customer&#8217;s workload from all others. This is called <em>multi-tenancy</em>. In multi-tenancy, multiple customers share physical resources that provide the illusion of being dedicated.</p>
@@ -3775,13 +3775,13 @@ $ touch a b c</pre>
 </ol>
 </div>
 <div class="paragraph">
-<p>If you find yourself (with the appropriate permissions) at a Unix command prompt, and run those commands, you will wind up with a configuration that could be visualized as this:</p>
+<p>If you find yourself (with the appropriate permissions) at a Unix command prompt, and run those commands, you will wind up with a configuration that could be visualized as in <a href="#fig-iac-500-o">Simple directory/file structure script</a>.</p>
 </div>
-<div class="imageblock" style="float: right">
+<div id="fig-iac-500-o" class="imageblock" style="float: right">
 <div class="content">
 <img src="images/1_02-iac.png" alt="folders/files" width="500">
 </div>
-<div class="title">Figure 26. Simple directory/file structure</div>
+<div class="title">Figure 26. Simple directory/file structure script</div>
 </div>
 <div class="paragraph">
 <p>(If you don’t understand this, you should probably spend a couple hours with a Linux tutorial).</p>
@@ -3839,13 +3839,13 @@ The state of the art in infrastructure configuration is not to use shell scripts
 <p>As people started to work more and more with virtualization, they realized it was easier to rebuild virtual servers from scratch, rather than trying to fix them. Automated configuration management tools helped by promoting a consistent process for rebuilding. Randy Bias, noting this, put forth the provocative idea that "servers are cattle, not pets" [<a href="#Bias2012">4</a>]. That is, when a pet is sick, one takes it to the vet, but a sick cow might simply  be taken out and shot.</p>
 </div>
 <div class="paragraph">
-<p>I prefer the saying that "servers are fleet vehicles, not collectible cars" as it seems less cruel, and the cattle metaphor overlooks the fact that large animal veterinarians are routinely employed in the cattle industry.</p>
+<p>I prefer the saying that "servers are fleet vehicles, not collectible cars" as it seems less cruel (see <a href="#fig-vehicles-500-i">[fig-vehicles-500-i]</a> <sup class="footnote">[<a id="_footnoteref_14" class="footnote" href="#_footnote_14" title="View footnote.">14</a>]</sup>), and the cattle metaphor overlooks the fact that large animal veterinarians are routinely employed in the cattle industry.</p>
 </div>
-<div class="imageblock" style="float: left">
+<div id="fig-vehicles-500-c" class="imageblock">
 <div class="content">
 <img src="images/1_02-vehicles.png" alt="collectible car" width="500">
 </div>
-<div class="title">Figure 27. Collectible car versus fleet vehicles <sup class="footnote">[<a id="_footnoteref_14" class="footnote" href="#_footnote_14" title="View footnote.">14</a>]</sup></div>
+<div class="title">Figure 27. Collectible car versus fleet vehicles</div>
 </div>
 </div>
 </div>
@@ -3921,9 +3921,9 @@ In software development, version control is the foundation of every other Agile 
 <p>While version control was always deemed important for software artifacts, it has only recently become the preferred paradigm for managing infrastructure state as well.  Because of this, version control is possibly the first IT management system you should acquire and implement (perhaps as a cloud service, such as Github).</p>
 </div>
 <div class="paragraph">
-<p>Version control in recent years increasingly distinguishes between source and package management: the management of binary files, as distinct from human-understandable symbolic files. There is also a need to understand what versions are installed on what computers; this can be termed "deployment management." (With the advent of containers, this is a particularly fast changing area.)</p>
+<p>Version control in recent years increasingly distinguishes between source and package management (see <a href="#fig-versionControlTypes-300-c">Types of version control</a>): the management of binary files, as distinct from human-understandable symbolic files. There is also a need to understand what versions are installed on what computers; this can be termed "deployment management." (With the advent of containers, this is a particularly fast changing area.)</p>
 </div>
-<div class="imageblock">
+<div id="fig-versionControlTypes-300-c" class="imageblock">
 <div class="content">
 <img src="images/1_02-versionControlTypes.png" alt="Version control types" width="300">
 </div>
@@ -4074,24 +4074,24 @@ hello world!</pre>
 <p>If you have access to a computer, try it! (You will need to install git, and if you are on Windows you should use WSL, the Windows Subsystem for Linux.)</p>
 </div>
 <div class="paragraph">
-<p>In comparison, the following are two 10x10 gray-scale bitmap images being edited in the <a href="https://www.gimp.org/">Gimp image editor</a>. They are about as simple as you can get. Notice that they are slightly different:</p>
+<p>In comparison, the following are two 10x10 gray-scale bitmap images being edited in the <a href="https://www.gimp.org/">Gimp image editor</a>. They are about as simple as you can get. Notice (in <a href="#fig-bothPixels-500-c">Bitmap</a>) that they are slightly different.</p>
 </div>
-<div class="imageblock">
+<div id="fig-bothPixels-500-c" class="imageblock">
 <div class="content">
 <img src="images/1_02-bothPixels.png" alt="grid" width="500">
 </div>
-<div class="title">Figure 29. Bitmap images</div>
+<div class="title">Figure 29. Bitmap</div>
 </div>
 <div class="paragraph">
-<p>If we save these in the *.png format, we can see they are different sizes (242 k vs 239k). But if we open them in a binary editor it is very difficult to understand how they differ:</p>
+<p>If we save these in the *.png format, we can see they are different sizes (242 k vs 239k). But if we open them in a binary editor it is very difficult to understand how they differ (compare <a href="#fig-pixelHex1-500-c">First image binary data</a> with <a href="#fig-pixelHex2-500-c">Second image binary data</a>).</p>
 </div>
-<div class="imageblock">
+<div id="fig-pixelHex1-500-c" class="imageblock">
 <div class="content">
 <img src="images/1_02-pixelHex1.png" alt="data" width="500">
 </div>
 <div class="title">Figure 30. First image binary data</div>
 </div>
-<div class="imageblock">
+<div id="fig-pixelHex2-500-c" class="imageblock">
 <div class="content">
 <img src="images/1_02-pixelHex2.png" alt="data" width="500">
 </div>
@@ -8217,7 +8217,7 @@ Queuing theory is an important branch of mathematics used extensively in computi
 <div class="content">
 <img src="images/2_05-wip.jpg" alt="work in process" width="300">
 </div>
-<div class="title">Figure 73. Physical Work in Process <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnote_2" title="View footnote.">2</a>]</sup></div>
+<div class="title">Figure 73. Physical Work in Process <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup></div>
 </div>
 <div class="paragraph">
 <p>Don Reinertsen developed the insight that product design and development had an <strong>invisible</strong> inventory of "Work in Process" that he called Design in Process (DIP). Just as managing physical work in process on the factory floor is key to a factory&#8217;s success, so correctly understanding and managing design in process is essential to all kinds of research and development organizations&#8201;&#8212;&#8201;<strong>including digital product development, e.g. building software(!)</strong> In fact, because digital systems are largely invisible even when finished, understanding their work in process is even more challenging.</p>
@@ -28501,10 +28501,7 @@ Cost of Delay</pre>
 <div id="footnotes">
 <hr>
 <div class="footnote" id="_footnote_1">
-<a href="#_footnoteref_1">1</a>. <em>Image credit <a href="https://www.flickr.com/photos/wwward0/10629876605" class="bare">https://www.flickr.com/photos/wwward0/10629876605</a>, downloaded 2016-11-12, commercial use permitted</em>
-</div>
-<div class="footnote" id="_footnote_2">
-<a href="#_footnoteref_2">2</a>. <em>Image credit <a href="https://www.flickr.com/photos/jayburkhalter/6679328027/" class="bare">https://www.flickr.com/photos/jayburkhalter/6679328027/</a>, downloaded 2016-10-07, commercial use permitted</em>
+<a href="#_footnoteref_1">1</a>. <em>Image credit <a href="https://www.flickr.com/photos/jayburkhalter/6679328027/" class="bare">https://www.flickr.com/photos/jayburkhalter/6679328027/</a>, downloaded 2016-10-07, commercial use permitted</em>
 </div>
 <div class="footnote" id="_footnote_1">
 <a href="#_footnoteref_1">1</a>. similar to cite:[Harnish2014 (p. 25)
@@ -28531,7 +28528,7 @@ Cost of Delay</pre>
 <a href="#_footnoteref_8">8</a>. Image credit <a href="https://www.flickr.com/photos/ministerio_tic/6812435353" class="bare">https://www.flickr.com/photos/ministerio_tic/6812435353</a>, downloaded 2016-11-12, commercial use permitted
 </div>
 <div class="footnote" id="_footnote_9">
-<a href="#_footnoteref_9">9</a>. Image credit <a href="https://url" class="bare">https://url</a>, downloaded 2016-XX-XX, commercial use permitted
+<a href="#_footnoteref_9">9</a>. Image credit <a href="https://www.flickr.com/photos/iicd/5348620457/" class="bare">https://www.flickr.com/photos/iicd/5348620457/</a>, downloaded 2016-11-07, commercial use permitted
 </div>
 <div class="footnote" id="_footnote_10">
 <a href="#_footnoteref_10">10</a>. Image credit <a href="https://www.flickr.com/photos/wwward0/10629876605" class="bare">https://www.flickr.com/photos/wwward0/10629876605</a>, downloaded 2016-11-12, commercial use permitted
@@ -28540,13 +28537,13 @@ Cost of Delay</pre>
 <a href="#_footnoteref_11">11</a>. Image credit <a href="https://www.flickr.com/photos/zunami/3780220955" class="bare">https://www.flickr.com/photos/zunami/3780220955</a>, downloaded 2016-12-14, commercial use permitted
 </div>
 <div class="footnote" id="_footnote_12">
-<a href="#_footnoteref_12">12</a>. image credit <em><a href="https://www.flickr.com/photos/sfllaw/78981814" class="bare">https://www.flickr.com/photos/sfllaw/78981814</a>, downloaded 2016-11-7, commercial use permitted.</em>
+<a href="#_footnoteref_12">12</a>. Image credit _https://www.flickr.com/photos/sfllaw/78981814, downloaded 2016-11-7, commercial use permitted.
 </div>
 <div class="footnote" id="_footnote_13">
-<a href="#_footnoteref_13">13</a>. <em>Image credit <a href="https://www.flickr.com/photos/125417539@N06/14657459654/" class="bare">https://www.flickr.com/photos/125417539@N06/14657459654/</a>, downloaded 2016-11-07, commercial use permitted</em>
+<a href="#_footnoteref_13">13</a>. Image credit <a href="https://www.flickr.com/photos/125417539@N06/14657459654/" class="bare">https://www.flickr.com/photos/125417539@N06/14657459654/</a>, downloaded 2016-11-07, commercial use permitted
 </div>
 <div class="footnote" id="_footnote_14">
-<a href="#_footnoteref_14">14</a>. <em>Image credit <a href="https://www.flickr.com/photos/jacksnell707/15744307900/" class="bare">https://www.flickr.com/photos/jacksnell707/15744307900/</a>, <a href="https://www.flickr.com/photos/cokestories/6295871015/" class="bare">https://www.flickr.com/photos/cokestories/6295871015/</a>, downloaded 2016-11-10, commercial use permitted</em>
+<a href="#_footnoteref_14">14</a>. Image credit <a href="https://www.flickr.com/photos/jacksnell707/15744307900/" class="bare">https://www.flickr.com/photos/jacksnell707/15744307900/</a>, <a href="https://www.flickr.com/photos/cokestories/6295871015/" class="bare">https://www.flickr.com/photos/cokestories/6295871015/</a>, downloaded 2016-11-10, commercial use permitted
 </div>
 <div class="footnote" id="_footnote_15">
 <a href="#_footnoteref_15">15</a>. <em>Image credit <a href="https://en.wikipedia.org/wiki/ENIAC" class="bare">https://en.wikipedia.org/wiki/ENIAC</a>, downloaded 2015-10-01, commercial use permitted</em>
