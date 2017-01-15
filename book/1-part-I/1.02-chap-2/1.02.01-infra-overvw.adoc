@@ -56,7 +56,7 @@ We will discuss a variety of subsidiary concerns and concepts, but those are the
 
 TIP: For a beginner-level introduction to the world of digital logic at its most fundamental, see  http://www.goodreads.com/book/show/44882.Code[_Code_], by Charles Petzold.
 
-If we have a picture of our friend, and we use a digital filter to adjust the brightness, that is an application of compute power. The picture is made up of "pixels" (see <<fig-bitmap-300-o>>footnote:[Image credit https://url, downloaded 2016-XX-XX, commercial use permitted]) which are nothing but numbers representing the color of some tiny square of the picture. Each of those numbers needs to be evaluated and the brightness adjusted. There may be millions in a single image.
+If we have a picture of our friend, and we use a digital filter to adjust the brightness, that is an application of compute power. The picture is made up of "pixels" (see <<fig-bitmap-300-o>>footnote:[Image credit https://www.flickr.com/photos/iicd/5348620457/, downloaded 2016-11-07, commercial use permitted]]) which are nothing but numbers representing the color of some tiny square of the picture. Each of those numbers needs to be evaluated and the brightness adjusted. There may be millions in a single image.
 
 [[fig-bitmap-300-o]]
 .Picture enlarged to show pixels
@@ -79,7 +79,7 @@ Computer processing is not free. Moving data from one point to another - the fun
 IMPORTANT: If these concepts are strange to you, spend some time with the suggested Wikipedia articles, or otherwise researching the topics. Wikipedia in the area of fundamental computer concepts is generally accurate.
 
 [[fig-storage-disks-450-i]]
-.Disks in a storage array footnote:[_Image credit https://www.flickr.com/photos/wwward0/10629876605, downloaded 2016-11-12, commercial use permitted_]
+.Disks in a storage array
 image::images/1_02-storage-disks.jpg[hard drives in array, 450, , float="left"]
 
 *Storage* But where did the picture come from? The data comprising the pixels needs to be stored somewhere (see <<fig-storage-disks-450-i>> footnote:[Image credit https://www.flickr.com/photos/wwward0/10629876605, downloaded 2016-11-12, commercial use permitted]). Sometimes you will hear the technical term "persisted." The combined set of pixels and their precise values can be termed the "state" of the photograph; the digital logic of the filter alters the state, and also needs to save this new state somewhere (otherwise it will be lost).
@@ -95,10 +95,6 @@ However, it is important to understand that in general, storage follows a https:
 
 If this is unfamiliar, see Wikipedia or research on your own; you should have a basic grasp of this issue.
 
-[[fig-network-connections-350-o]]
-.Network cabling in a rack
-image::images/1_02-network-connections.png[cables and equipment, 350, , float="right"]
-
 *Network*
 We can change the state of some data, or store it. We also need to move it. This is the basic concern of https://en.wikipedia.org/wiki/Computer_network[networking], to transmit data (or information) from one location to another. If you use your cell phone to look up your bank balance, there is network (see <<fig-network-connections-350-o>>footnote:[Image credit https://www.flickr.com/photos/zunami/3780220955, downloaded 2016-12-14, commercial use permitted]) involved - otherwise, how did the data get from the bank's computer in New Jersey to your cell phone in Minnesota? We see evidence of networking every day; you may be familiar with coaxial cables for TV, or telephone lines strung from pole to pole in many areas. However, like storage, there is also a hierarchy of networking:
 
@@ -107,5 +103,9 @@ We can change the state of some data, or store it. We also need to move it. This
 * https://en.wikipedia.org/wiki/Local_area_network[Local area networks]
 * https://en.wikipedia.org/wiki/Wide_area_network[Wide area networks]
 * https://en.wikipedia.org/wiki/Backbone_network[Backbone networks]
+
+[[fig-network-connections-350-o]]
+.Network cabling in a rack
+image::images/1_02-network-connections.png[cables and equipment, 350, , float="right"]
 
 And like storage and compute, networking as a service increasingly is independent of implementation. The developer uses programmatic tools to define expected information transmission, and (again *ideally*) need not be concerned with the specific networking technologies or architectures serving their needs.

@@ -28,8 +28,9 @@ The Agile Alliance indicates “version control” as one of the https://www.agi
 
 While version control was always deemed important for software artifacts, it has only recently become the preferred paradigm for managing infrastructure state as well.  Because of this, version control is possibly the first IT management system you should acquire and implement (perhaps as a cloud service, such as Github).
 
-Version control in recent years increasingly distinguishes between source and package management: the management of binary files, as distinct from human-understandable symbolic files. There is also a need to understand what versions are installed on what computers; this can be termed "deployment management." (With the advent of containers, this is a particularly fast changing area.)
+Version control in recent years increasingly distinguishes between source and package management (see <<fig-versionControlTypes-300-c>>): the management of binary files, as distinct from human-understandable symbolic files. There is also a need to understand what versions are installed on what computers; this can be termed "deployment management." (With the advent of containers, this is a particularly fast changing area.)
 
+[[fig-versionControlTypes-300-c]]
 .Types of version control
 image::images/1_02-versionControlTypes.png[Version control types, 300,]
 
@@ -111,16 +112,19 @@ We can restore the original file (note that this eradicates the working change w
 
 If you have access to a computer, try it! (You will need to install git, and if you are on Windows you should use WSL, the Windows Subsystem for Linux.)
 
-In comparison, the following are two 10x10 gray-scale bitmap images being edited in the https://www.gimp.org/[Gimp image editor]. They are about as simple as you can get. Notice that they are slightly different:
+In comparison, the following are two 10x10 gray-scale bitmap images being edited in the https://www.gimp.org/[Gimp image editor]. They are about as simple as you can get. Notice (in <<fig-bothPixels-500-c>>) that they are slightly different.
 
-.Bitmap images
+[[fig-bothPixels-500-c]]
+.Bitmap
 image::images/1_02-bothPixels.png[grid, 500]
 
-If we save these in the *.png format, we can see they are different sizes (242 k vs 239k). But if we open them in a binary editor it is very difficult to understand how they differ:
+If we save these in the *.png format, we can see they are different sizes (242 k vs 239k). But if we open them in a binary editor it is very difficult to understand how they differ (compare <<fig-pixelHex1-500-c>> with <<fig-pixelHex2-500-c>>).
 
+[[fig-pixelHex1-500-c]]
 .First image binary data
 image::images/1_02-pixelHex1.png[data, 500]
 
+[[fig-pixelHex2-500-c]]
 .Second image binary data
 image::images/1_02-pixelHex2.png[data, 500]
 

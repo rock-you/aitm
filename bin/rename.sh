@@ -1,3 +1,4 @@
+# don't run this. it's a collection of command snippets
 # renaming file names from #.##-title.jpg|png to #_##-title.png|png
 
 rename -v -n 's/(\d)\.(\d\d)/$1_$2/' *g
