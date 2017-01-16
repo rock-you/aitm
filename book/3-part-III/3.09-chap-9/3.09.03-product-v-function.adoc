@@ -26,14 +26,17 @@ NOTE: We will go into detail on project management in chapter 8 and process mana
 
 ===== Waterfall and functional organization
 
-For example, some manufacturing can be represented as a very simple, sequential process model:
+For example, some manufacturing can be represented as a very simple, sequential process model (see <<fig-naive-mfg-500-c>>).
 
+[[fig-naive-mfg-500-c]]
 .Simple sequential manufacturing
 image::images/3_07-naive-mfg.png[manufacturing sequence,500]
 
-The product is already defined and the need to generate information (i.e. through xref:feedback[feedback]) is at an absolute minimum.
-NOTE: Even in this simplest model, feedback is important. Much of the evolution of 20th century manufacturing has been in challenging this naive, open-loop model. (Remember our brief discussion of xref:open-loop[open-loop]?) The original, open-loop waterfall model of IT systems implementation was arguably based on just such a naive concept:
 
+The product is already defined and the need to generate information (i.e. through xref:feedback[feedback]) is at an absolute minimum.
+NOTE: Even in this simplest model, feedback is important. Much of the evolution of 20th century manufacturing has been in challenging this naive, open-loop model. (Remember our brief discussion of xref:open-loop[open-loop]?) The original, open-loop waterfall model of IT systems implementation (see <<fig-waterfallB-500-c>>) was arguably based on just such a naive concept.
+
+[[fig-waterfallB-500-c]]
 .Waterfall
 image::images/3_07-waterfall.png[waterfall,500]
 
@@ -55,10 +58,12 @@ anchor:org-continuum[]
 
 ===== The continuum of organizational forms
 
-NOTE: The following discussion and accompanying set of diagrams is derived from Preston Smith and Don Reinertsen's thought regarding this problem in  _Developing Products in Half the Time_ <<Smith1998>> and _Managing the Design Factory._ <<Reinertsen1997>>. Similar discussions are found in the _Guide to the Project Management Body of Knowledge_ (<<PMI2013>>) and Abbott and Fisher's _The Art of Scalability_ <<Abbott2015>>.
+NOTE: The following discussion and accompanying set of diagrams is derived from Preston Smith and Don Reinertsen's thought regarding this problem in  _Developing Products in Half the Time_ cite:[Smith1998] and _Managing the Design Factory_ cite:[Reinertsen1997]. Similar discussions are found in the _Guide to the Project Management Body of Knowledge_ (cite:[PMI2013]) and Abbott and Fisher's _The Art of Scalability_ cite:[Abbott2015].
 
-There is a spectrum of alternatives in structuring organizations for flow across functional concerns. First, a lightweight "matrix" project structure may be implemented, in which the project manager has limited power to influence the activity-based work, where people sit, etc.
+There is a spectrum of alternatives in structuring organizations for flow across functional concerns. First, a lightweight "matrix" project structure may be implemented, in which the project manager has limited power to influence the activity-based work, where people sit, etc (see <<fig-lightweight-pm-800-c>>).
 
+
+[[fig-lightweight-pm-800-c]]
 .Lightweight project management across functions
 image::images/3_07-lightweight-pm.png[matrix figure, 800,]
 
@@ -66,20 +71,25 @@ Work flows across the functions, perhaps called "centers of excellence," and the
 
 anchor:heavyweight-pm[]
 
-Second, a heavyweight project structure may specify much more, including dedicated time assignment, modes of work, standards, etc. The vertical functional manager may be little more than a resource manager, but does still have reporting authority over the team member and crucially still writes their annual performance evaluation (if the organization still uses those.) This has been the most frequent operating model in the xref:trad-cio-org[traditional CIO organization].
+Second, a heavyweight project structure may specify much more, including dedicated time assignment, modes of work, standards, and so forth (see <<fig-heavy-pm-800-c>>). The vertical functional manager may be little more than a resource manager, but does still have reporting authority over the team member and crucially still writes their annual performance evaluation (if the organization still uses those.) This has been the most frequent operating model in the xref:trad-cio-org[traditional CIO organization].
 
+[[fig-heavy-pm-800-c]]
 .Heavyweight project management across functions
 image::images/3_07-heavy-pm.png[matrix figure, 800,]
 
-If even more focus is needed -- the now-minimized influence of the functional areas is still deemed too strong --  the organization may move to completely product-based reporting. With this, the team member reports to the product owner. There may still be communities of interest (Spotify guilds and tribes are good examples) and there still may be standards for technical choices:
 
+If even more focus is needed -- the now-minimized influence of the functional areas is still deemed too strong --  the organization may move to completely product-based reporting (see <<fig-product-mgmt-800-c>>). With this, the team member reports to the product owner. There may still be communities of interest (Spotify guilds and tribes are good examples) and there still may be standards for technical choices.
+
+
+[[fig-product-mgmt-800-c]]
 .Product team, virtual functions
 image::images/3_07-product-mgmt.png[matrix figure, 800,]
 
 anchor:skunkworks[]
 
-Finally, in the skunkworks model, all functional influence is deliberately blocked, as distracting or destructive to the product team's success:
+Finally, in the skunkworks model, all functional influence is deliberately blocked, as distracting or destructive to the product team's success (see <<fig-skunk-800-c>>).
 
+[[fig-skunk-800-c]]
 .Skunkworks model
 image::images/3_07-skunk.png[matrix figure, 800,]
 
@@ -89,25 +99,25 @@ The product team has complete autonomy, and can move at great speed. It is also 
 * bring in new components on a whim (regardless of whether they are truly necessary) adding to sourcing and long-term support complexity,
 * ignore safety and security standards, resulting in risk and expensive retrofits.
 
-Early e-commerce sites were often set up as skunkworks to keep the interference of the traditional CIO to a minimum, and this was arguably necessary. However, ultimately, skunkworks is not scalable. Research by the Corporate Executive Board suggests that "Once more than about 15% of projects go through the fast [skunkworks] team, productivity starts to fall away dramatically." It also causes issues with morale, as a two-tier organization starts to emerge with elite and non-elite segments <<Goodwin2015>>.
+Early e-commerce sites were often set up as skunkworks to keep the interference of the traditional CIO to a minimum, and this was arguably necessary. However, ultimately, skunkworks is not scalable. Research by the Corporate Executive Board suggests that "Once more than about 15% of projects go through the fast [skunkworks] team, productivity starts to fall away dramatically." It also causes issues with morale, as a two-tier organization starts to emerge with elite and non-elite segments cite:[Goodwin2015].
 
-Because of these issues, Don Reinertsen (<<Reinertsen1997>>) observes that "Companies that experiment with autonomous teams learn their lessons, and conclude that the disadvantages are significant. Then they try to combine the advantages of the functional form with those of the autonomous team."
+Because of these issues, Don Reinertsen (cite:[Reinertsen1997]) observes that "Companies that experiment with autonomous teams learn their lessons, and conclude that the disadvantages are significant. Then they try to combine the advantages of the functional form with those of the autonomous team."
 
 The Agile movement is an important correction to dominant IT management approaches employing xref:open-loop[open-loop] delivery across centralized functional centers of excellence. However, the ultimate extreme of the skunkworks approach cannot be the basis for organization across the enterprise. While xref:product-v-function[functionally specialized organizations] have their challenges, they do promote understanding and common standards for technical areas. In a product-centric organization, communities of interest or practice are important counterbalances.  We will examine the various adaptations and approaches for balancing the two organizational extremes further in Chapter 9 (Execution Management).
 
 ===== Scaling the product organization
-The functional organization scales well. Just keep hiring more Java programmers, or DBAs, or security engineers and assign them to xref:heavyweight-pm[projects] as needed. Scaling product organizations requires more thought however. The most advanced thinking in this area is found in the work of xref:scrum[Scrum] authors such as Ken Schwaber, Mike Cohn, Craig Larman and Roman Pichler.
-
-Scrum, as we have discussed, is a strict, prescriptive framework calling for self-managing teams with a minimum number of roles:
+The functional organization scales well. Just keep hiring more Java programmers, or DBAs, or security engineers and assign them to xref:heavyweight-pm[projects] as needed. Scaling product organizations requires more thought however. The most advanced thinking in this area is found in the work of xref:scrum[Scrum] authors such as Ken Schwaber, Mike Cohn, Craig Larman and Roman Pichler. Scrum, as we have discussed, is a strict, prescriptive framework calling for self-managing teams with a minimum number of roles:
 
 * Product owner
 * Scrum master
 * Team member
 
-.Product owner hierarchy footnote:[Similar to <<Pichler2010>>, p. 12; <<Schwaber2007>>, pp. 70-73.]
+[[fig-SoS-POs-500-o]]
+.Product owner hierarchy
 image::images/3_07-SoS-POs.png[hierarchy,500,,float="right"]
 
-Let's accept Scrum and the xref:amazon-productization[2-pizza team] as our organizing approach. A large scale Scrum effort is based on multiple small teams (i.e. representing xref:AKF-cube[AKF scaling cube partitions]). If we want to minimize xref:multi-tasking[multi-tasking and context-switching], we need to ask "how many product teams can a given product owner handle?" In _Agile Product Management with Scrum_, Roman Pichler says, "My experience suggests that a product owner usually cannot look after more than two teams in a sustainable manner" (<<Pichler2010>>, p. 12). Scrum authors therefore suggest that larger scale products be managed as aggregates of smaller teams. We'll discuss how the product structure is defined in Chapter 8.
+
+Let's accept Scrum and the xref:amazon-productization[2-pizza team] as our organizing approach. A large scale Scrum effort is based on multiple small teams, e.g. representing xref:AKF-cube[AKF scaling cube partitions] (see <<fig-SoS-POs-500-o>> footnote:[Similar to cite:[Pichler2010>>, p. 12; <<Schwaber2007]). If we want to minimize xref:multi-tasking[multi-tasking and context-switching], we need to ask "how many product teams can a given product owner handle?" In _Agile Product Management with Scrum_, Roman Pichler says, "My experience suggests that a product owner usually cannot look after more than two teams in a sustainable manner" (cite:[Pichler2010], p. 12). Scrum authors therefore suggest that larger scale products be managed as aggregates of smaller teams. We'll discuss how the product structure is defined in Chapter 8.
 
 
 anchor:shared-services[]

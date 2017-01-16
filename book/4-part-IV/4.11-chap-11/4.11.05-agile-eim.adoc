@@ -3,7 +3,7 @@
 ===== Software versus data
 [quote, Dan McCrory]
 Services and Applications can have their own Gravity, but Data is the most massive and dense, therefore it has the most gravity. Data if large enough can be virtually impossible to move.
-<<McCrory2010>>
+cite:[McCrory2010]
 
 Enterprise information management (including data management) has had a contentious relationship to Agile methods. There are inherent differences in perspective between those who focus on implementing software, versus those who are concerned with data and information, especially at scale.
 
@@ -11,11 +11,11 @@ The tendency among software engineers is to focus on the conceptual aspects of s
 
 As we have previously discussed, xref:refactoring[refactoring] is one of the critical practices of Agile development, keeping systems flexible and current when used appropriately. The simple act of turning one overly-large software class or module into two or three more cohesive elements is performed every day by developers around the world, as they strive for clean, well engineered code.
 
-DevOps and Agile techniques can be applied to databases; in fact there are important technical books such as Refactoring Databases by Ambler and Sadalage <<Ambler2006>>. With smaller systems, there is little reason to avoid ongoing refactoring of data along with code.
+DevOps and Agile techniques can be applied to databases; in fact there are important technical books such as Refactoring Databases by Ambler and Sadalage cite:[Ambler2006]. With smaller systems, there is little reason to avoid ongoing refactoring of data along with code.
 
 Infrastructure as Code techniques apply. Database artifacts (e.g. SQL scripts, export/import scripts, etc.) must be under version control and should leverage continuous integration techniques. Test-driven development can apply equally well to database-related development.
 
-But when data reaches a certain scale, its concerns start to become priorities. The bandwidth of FedEx is still greater than that of the Internet (<<Munroe2013>>). That is to say, it is more effective and efficient, past a certain scale, to physically move data by moving the hard drives around, than to copy the data. The reasons are well understood and trace back to fundamental laws of physics and information first understood by Claude Shannon <<Shannon1949>>. The concept of "data gravity" (quote above) seems consistent with Shannon's work.
+But when data reaches a certain scale, its concerns start to become priorities. The bandwidth of FedEx is still greater than that of the Internet (cite:[Munroe2013>>). That is to say, it is more effective and efficient, past a certain scale, to physically move data by moving the hard drives around, than to copy the data. The reasons are well understood and trace back to fundamental laws of physics and information first understood by Claude Shannon <<Shannon1949]. The concept of "data gravity" (quote above) seems consistent with Shannon's work.
 
 Notice that these physical limitations apply not just to simple movement of data, but also to complex xref:refactoring[refactoring]. It's one thing to refactor code -- even the SQL defining a table. Breaking an existing, overly-large database table and its contents into several more specialized tables is a different problem, if data is large. Data, in the sense understood by digital and IT professionals, is *persistent*. It exists as physical indications of state in the physical world: whether knotted ropes, clay tablets, or electromagnetic state.
 
@@ -32,7 +32,7 @@ endif::collaborator-draft[]
 
 All in all, this is an error-prone process, requiring careful auditing and cross-checking to mitigate the risk of information loss. It can and should be automated to the maximum degree possible.
 
-Modern web-scale architectures are often built to accommodate rolling upgrades in a more efficient manner (see <<Limoncelli2014>> Chapter 11, "Upgrading Live Services"). Perhaps the data can be transformed on a "if changed, then transform" basis, or via other techniques. Nevertheless, schema changes can still be problematic. Some system outage may be unavoidable, especially in systems with strong transactional needs for complete integrity. (See earlier discussion of xref:CAP-theorem[CAP theorem].)
+Modern web-scale architectures are often built to accommodate rolling upgrades in a more efficient manner (see cite:[Limoncelli2014] Chapter 11, "Upgrading Live Services"). Perhaps the data can be transformed on a "if changed, then transform" basis, or via other techniques. Nevertheless, schema changes can still be problematic. Some system outage may be unavoidable, especially in systems with strong transactional needs for complete integrity. (See earlier discussion of xref:CAP-theorem[CAP theorem].)
 
 Because of these issues, there will always be some contention between the software and information management perspectives. Software developers, especially those schooled in Agile practices, tend to rely on heuristics such as "do the simplest thing that could possibly work." Such a heuristic might lead to a preference for a simpler data structure, that will not hold up past a certain scale.
 
@@ -67,7 +67,7 @@ The value of cross-functional teams was discussed at length in xref:product-v-fu
 
 ====== Domain-driven design
 [quote, Martin Fowler]
-As you try to model a larger domain, it gets progressively harder to build a single unified model <<Fowler2014>>.
+As you try to model a larger domain, it gets progressively harder to build a single unified model cite:[Fowler2014].
 
 The relational database, with its fast performance and integrated schemas allowing data to be joined with great flexibility, has fundamentally defined the worldview of data managers for decades now.
 
@@ -83,9 +83,9 @@ However, attempting to establish such a model can run into difficulties getting 
 
 NOTE: In fact, there are theoretical concerns at the heart of philosophy with attempting to formulate universal ontologies. They are beyond the scope of this text but if you are interested, start by researching _semiotics_ and _postmodernism_. Such concerns may seem academic, but we see their consequences in the practical difficulty of creating universal data models.
 
-A pragmatic response to these difficulties is represented in the Martin Fowler quote above. Fowler recommends the practice of domain-driven design, which accepts the fact that "Different groups of people will use subtly different vocabularies in different parts of a large organization" <<Fowler2014>> and quotes Eric Evans that "total unification of the domain model for a large system will not be feasible or cost-effective" <<Evans2004>>.
+A pragmatic response to these difficulties is represented in the Martin Fowler quote above. Fowler recommends the practice of domain-driven design, which accepts the fact that "Different groups of people will use subtly different vocabularies in different parts of a large organization" cite:[Fowler2014>> and quotes Eric Evans that "total unification of the domain model for a large system will not be feasible or cost-effective" <<Evans2004].
 
-Instead, there are various techniques for relating these contexts, beyond the scope of this book. (See <<Evans2004>>.) Some will argue for the use of microservices, but data always wants to be recombined, so microservices have limitations as a solution for the problems of information management.
+Instead, there are various techniques for relating these contexts, beyond the scope of this book. (See cite:[Evans2004].) Some will argue for the use of microservices, but data always wants to be recombined, so microservices have limitations as a solution for the problems of information management.
 
 And, before you completely adopt a domain-driven design approach, be certain you understand the consequences for data governance and records management. Human resources records are human resources records and must be handled appropriately. Regulators and courts will not accept "domain driven design" as a defense for non-compliance.
 
@@ -182,7 +182,7 @@ Your code needs to support a wide variety of data inputs and outputs. At first, 
 
 But this nonsensical data quickly was shown to not work. For example, if you are testing integration with an address-scrubbing service, you will get an error with an address in New Mexico that shows a ZIP code of 10001. (Actually, the nonsensical data is useful in testing that particular error scenario. But that is only one of many error scenarios.)
 
-Based on hearing anecdotal concerns, the authors of the _2016 State of DevOps_ report examined test data management practices and found that they correlated postively with "better IT performance, lower change failure rates, and lower levels of deployment pain and rework" <<Forsgren2016>>, p. 29. In particular, the report suggests that test data be minimized and created from a blank slate wherever possible.
+Based on hearing anecdotal concerns, the authors of the _2016 State of DevOps_ report examined test data management practices and found that they correlated postively with "better IT performance, lower change failure rates, and lower levels of deployment pain and rework" cite:[Forsgren2016], p. 29. In particular, the report suggests that test data be minimized and created from a blank slate wherever possible.
 
 Taking data from production systems as a basis for testing is also frequently done. However, such data must be sanitized -- sensitive information such as social security number must be removed. This can be done automatically, but then such automation must itself be developed and maintained, and the extensive production data set may (in effect) be driving a large amount of non-value-add testing.
 

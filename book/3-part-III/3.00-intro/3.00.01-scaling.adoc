@@ -8,13 +8,15 @@ As we begin the second half of this book, consider Pichler's advice above. We ha
 
 
 ==== The two dimensions of demand management
-To provide a framework for Part III, let's start with this two-dimensional analysis:
+To provide a framework for Part III, let's start with this two-dimensional analysis in (<<fig-two-d-demand-800-c>>)
 
+[[fig-two-d-demand-800-c]]
+.Two dimensions of demand management
 image::images/3_00-2d-demand.png[complex 2d figure, 800,]
 
 You should spend some time reviewing the graphic, which provides a unique way of understanding the work you are now experiencing as a "team of teams" or "manager of managers" in an IT-dependent environment of increasing size and complexity. We've come a long ways since our discussion of xref:work-management[work management]. By the time we started to xref:ops-mgmt[formalize operations], we saw that work was xref:IT-process-emergence[tending to differentiate]. Still, regardless of the label we put on a given activity, it represents some set of tasks or objectives that real people are going to take time to perform, and expect to be compensated for. It is all xref:demand-mgmt[demand, requiring management]. Remembering this is essential to digital management.
 
-Let's consider the various forms that demand may take. Understanding these demand forms will also help you develop a deeper understanding of an *architecture of IT management*, a topic I have explored in other works <<Betz2011>>. The diagram has two dimensions:
+Let's consider the various forms that demand may take. Understanding these demand forms will also help you develop a deeper understanding of an *architecture of IT management*, a topic I have explored in other works cite:[Betz2011]. The diagram has two dimensions:
 
 * Planning
 * Granularity
@@ -23,8 +25,9 @@ Let's consider the various forms that demand may take. Understanding these deman
 
 *Granularity.* The  terminology you use to describe your work also becomes more diverse, reflecting in some ways the broader time horizons you are concerned with. Requests, changes, incidents, work orders, releases, stories, features, problems, major incidents, epics, refreshes, products, programs, strategies... there is a continuum of how you think about your organization's work efforts. Mostly, the range of work seems tied to how much planning time you have, but there are exceptions: disasters take a lot of work, but you don't get much advance warning! So size of work is independent of planning horizon.
 
-The bubbles represent a "space" where one is likely to find that kind of work. As indicated by the central diagonal, it reflects an assumption that larger amounts of work are more likely to be planned further in advance. However, this is not always true. A large, unwelcome amount of required work that shows up with no planning is probably a disaster. Desired work (in the form of aggregate transactional demand) may also spike unexpectedly. Transactional demand considered across a long timeframe is xref:capacity-mgmt[capacity management]. The following table lists various examples:
+The bubbles represent a "space" where one is likely to find that kind of work. As indicated by the central diagonal, it reflects an assumption that larger amounts of work are more likely to be planned further in advance. However, this is not always true. A large, unwelcome amount of required work that shows up with no planning is probably a disaster. Desired work (in the form of aggregate transactional demand) may also spike unexpectedly. Transactional demand considered across a long timeframe is xref:capacity-mgmt[capacity management]. <<tbl-work-items>>  lists various examples.
 
+[[tbl-work-items]]
 .Work items of varying sizes
 [cols="2*", options="header"]
 |===
@@ -55,9 +58,13 @@ anchor:cynefin[]
 
 .Snowden's Cynefin framework
 ****
-.Cynefin thinking framework footnote:[similar to <<Kurtz2003>> and extensive related work by Dave Snowden.]
+
+
+[[fig-cynefin-300-o]]
+.Cynefin thinking framework
 image::images/3_01-cynefin.png[cynefin,300,,float="right"]
-This third dimension of variability is challenging to understand and touches on our earlier discussion of xref:systems-thinking[systems thinking]. A helpful framework to understand it is the Cynefin framework, by Dave Snowden and Cynthia Kurtz <<Kurtz2003>>. Cynefin proposes that there are five major domains useful in understanding situations:
+
+This third dimension of variability is challenging to understand and touches on our earlier discussion of xref:systems-thinking[systems thinking]. A helpful framework to understand it is the Cynefin framework, by Dave Snowden and Cynthia Kurtz cite:[Kurtz2003] (see <<fig-cynefin-300-o>> footnote:[similar to cite:[Kurtz2003]). Cynefin proposes that there are five major domains useful in understanding situations:
 
 * Simple/Obvious
 * Complicated
@@ -67,7 +74,7 @@ This third dimension of variability is challenging to understand and touches on 
 
 The *simple or obvious* domain is straightforward, repeatable, and cause and effect are known. The concept of "best practice" applies. The mode of action is to sense, categorize, and respond.
 
-
+[[fig-variability-cynefin-260-o]]
 .Variability as Cynefin domains
 image::images/3_01-variability-cynefin.png[variability vector, 260,,float="right"]
 
@@ -83,12 +90,13 @@ Finally, *disorder* is considered to be the domain you're in when you have not f
 
 
 
-.Part II: increasing certainty (credit to Cantor) footnote:[Similar to figure from <<Cantor2016>>.]
+[[fig-PartIIOverview-400-o]]
+.Part II: increasing certainty (credit to Cantor)
 image::images/3_00-PartIIOverview.png[risk curve,400,,float="right"]
 
 The two dimensional model above does not describe how uncertain work is, however. The predictability of the work is also independent. You might have two projects, both taking the same effort. One of them you were able to predict easily, while the other one was not predictable - more precisely, your expected time, effort and cost was a long way off from what you wound up spending. (Usually in an unfavorable direction.)
 
-Part II (Chapters 4-6, which we just finished) can be viewed as a logical progression from the uncertainty of developing a novel xref:product-mgmt-chap[product], to the day to day xref:work-management[work] of building its features, to its predictable xref:ops-mgmt[operation]. The "predictability curve" illustrated in the associated figure increases as the digital product stabilizes and moves to a fully operational state.
+Part II (Chapters 4-6, which we just finished) can be viewed as a logical progression from the uncertainty of developing a novel xref:product-mgmt-chap[product], to the day to day xref:work-management[work] of building its features, to its predictable xref:ops-mgmt[operation]. The "predictability curve" illustrated in <<fig-PartIIOverview-400-o>> footnote:[Similar to figure from cite:[Cantor2016] increases as the digital product stabilizes and moves to a fully operational state.
 
 This question of predictability, of *the degree to which actuals track estimates* and can be known in advance, will be an ongoing theme throughout Part III. As we scale up, our organization takes on more and more work of all kinds, from highly uncertain to very predictable. Understanding the differences in this "portfolio" of work is essential to managing it correctly. There has always been an element of risk; as a startup, your success was not guaranteed! You now find that you are managing different classes of risk simultaneously, and "one size fits all" approaches do not work.
 
@@ -101,15 +109,19 @@ anchor:betz-org-scale-cube[]
 
 ==== The Betz organizational scaling cube
 
-.Betz organization scaling cube footnote:[Author's note: I believe this to be original; it is being published here for the first time.]
+
+
+[[fig-newCube-500-o]]
+.Betz organization scaling cube
 image::images/3_01-newCube.png[3d cube, 500,,float="right"]
+
 When we combine the three dimensions:
 
 * Size of work;
 * Time horizon; and
 * Predictability
 
-we get the Betz organizational scaling cube. It shows the three dimensions we'll consider throughout Part III. The accompanying cube shows these dimensions visually. The three dimensions represent a space to understand work, resource, and planning as we scale the organization.
+we get the Betz organizational scaling cube (see <<fig-newCube-500-o>> footnote:[Author's note: I believe this to be original; it is being published here for the first time.]). It shows the three dimensions we'll consider throughout Part III. The accompanying cube shows these dimensions visually. The three dimensions represent a space to understand work, resource, and planning as we scale the organization.
 
 The z-axis of variability can be seen as a progression along the first four xref:cynefin[Cynefin] domains (see sidebar). At the origin at lower left, we have predictable, small-grained work occurring in short "planning" horizons (e.g. automated transactions running on computers.) As we scale out to larger domains of work, longer time frames, and greater variability in planning, we encounter the problems of growth, coordination, strategy, and the fundamental uncertainties of operating in a chaotic, competitive world.
 
@@ -122,8 +134,9 @@ execution (n.) 14c., "a carrying out, a putting into effect; enforcement; perfor
 
 In order to understand the concept of execution, we need to think about supply versus demand. Think about the kinds of demand described above. Each form of demand implies some kind of supply to meet it. For example, the demand that an automated transaction be executed requires the supply of appropriate computing capacity at the necessary place and time. The demand that a new story be supported as part of a software product feature requires the supply of a software development team's time and attention. And a major product or project requires the supply perhaps of many teams as well as other resources (hardware and software assets, for example).
 
-In the xref:betz-org-scale-cube[Betz organization scaling cube], work and execution converges to the origin at front lower left. An alternate view that helps us describe the chapter structure is with the convergence point at the top of a pyramid. This rotated approach is compatible with the xref:dual-axis-vc[dual-axis value chain].
+In the xref:betz-org-scale-cube[Betz organization scaling cube], work and execution converges to the origin at front lower left. An alternate view that helps us describe the chapter structure is with the convergence point at the top of a pyramid (see <<fig-DSE-800-c>>). This rotated approach is compatible with the xref:dual-axis-vc[dual-axis value chain].
 
+[[fig-DSE-800-c]]
 .Demand-supply-execute model
 image::images/3_01-DSE.png[dse model, 800,]
 
@@ -139,8 +152,10 @@ Notice how the fog lifts as you get closer to actual execution. The closer we ge
 
 
 ==== Part III chapter structure
-The chapter structure of Part III can be visualized as in the accompanying figure.
+The chapter structure of Part III can be visualized as in <<fig-chapStruc-420-o>>.
 
+
+[[fig-chapStruc-420-o]]
 .Part III Chapter structure
 image::images/3_01-chapStruc.png[pyramid,420,,float="right"]
 
@@ -172,15 +187,17 @@ It is important that you review them. Sometimes, the concept of "program" is als
 ****
 Program management is a term seen in government efforts and military contracting to describe major efforts of uncertain duration and (sometimes) uncertain outcome. Product management is also uncertain of duration and outcome, and the industry does not clearly distinguish between the two. Some companies use concepts of both product and program management; others use one or the other. Stanley Portny describes:
 
-_Program: This term can describe two different situations. First, a program can be a set of goals that gives rise to specific projects, but, unlike a project, a program can never be completely accomplished. For example, a health-awareness program can never completely achieve its goal (the public will never be totally aware of all health issues as a result of a health-awareness program), but one or more projects may accomplish specific results related to the program’s goal (such as a workshop on minimizing the risk of heart disease). Second, a program sometimes refers to a group of specified projects that achieve a common goal_ <<Portny2013>>.
+_Program: This term can describe two different situations. First, a program can be a set of goals that gives rise to specific projects, but, unlike a project, a program can never be completely accomplished. For example, a health-awareness program can never completely achieve its goal (the public will never be totally aware of all health issues as a result of a health-awareness program), but one or more projects may accomplish specific results related to the program’s goal (such as a workshop on minimizing the risk of heart disease). Second, a program sometimes refers to a group of specified projects that achieve a common goal_ cite:[Portny2013].
 
 Where both terms are used, program management may be more about delivery and execution (shading into project management's domain), while product management is more about vision and outcome.
 ****
 
-We order the delivery models by their _variability_. What does that mean? Products and programs have the highest variability. Their outcome may differ considerably from the initial vision that drove them. Projects, in theory, should be reasonably plannable -- their schedule and cost are managed in terms of "plan versus actual" and differences, ideally, should be well controlled and understandable. Finally, process management strives to minimize variation and in its most rigorous form uses statistical control to do so. If we matrix the delivery models with the time frames we get:
+We order the delivery models by their _variability_. What does that mean? Products and programs have the highest variability. Their outcome may differ considerably from the initial vision that drove them. Projects, in theory, should be reasonably plannable -- their schedule and cost are managed in terms of "plan versus actual" and differences, ideally, should be well controlled and understandable. Finally, process management strives to minimize variation and in its most rigorous form uses statistical control to do so. If we matrix the delivery models with the time frames we get <<fig-layersMatrix-600-i>>.
 
-.Time frame matrixed to delivery
-image::images/3_01-layers.png[matrix, 600,,align="left"]
+
+[[fig-layersMatrix-600-i]]
+.Time frames and delivery models
+image::images/3_01-layers.png[delivery models and time frames, 600,,align="left"]
 
 The relationships between the timeframes and delivery models are complex:
 

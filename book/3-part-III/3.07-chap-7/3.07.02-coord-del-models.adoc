@@ -1,7 +1,6 @@
 ==== Coordination, execution, and the delivery models
 
-.Coordination cube inspired by Strode footnote:[derived from <<Strode2012>>.]
-image::images/3_07-Strode-Coord-Cube.png[cube, 400,,float="right"]
+
 
 If we take the strategies proposed by Strode et al and think of them as three orthogonal dimensions, we can derive another useful 3-dimensional cube.
 
@@ -34,11 +33,11 @@ NOTE: Recommend you review the definitions of the "xref:process-project-product[
 
 Where project and process management are explicitly coordination-oriented, product management is broader, and focused on outcomes. As noted xref:process-project-product[previously], it might use either project or process management to achieve its outcomes, or it might not.
 
-Release management was introduced in xref:release-mgmt[Part I], and has remained a key concept we'll return to now. Release management is a common coordination mechanism in product management, even in environments that don't otherwise emphasize processes or projects. At scale, the concept of a "release train" is seen. The Scaled Agile Framework considers it the "primary value delivery construct" <<SAFE2016a>>.
+Release management was introduced in xref:release-mgmt[Part I], and has remained a key concept we'll return to now. Release management is a common coordination mechanism in product management, even in environments that don't otherwise emphasize processes or projects. At scale, the concept of a "release train" is seen. The Scaled Agile Framework considers it the "primary value delivery construct" cite:[SAFE2016a].
 
 The train is a xref:synchronization[cadenced synchronization] strategy. It "departs the station" on a reliable schedule. As with xref:Scrum[Scrum], date and quality are fixed, while scope is variable. SAFe emphasizes that "being on the train" in general is a full-time responsibility, so the train is also a temporary organizational or programmatic concept. The release train "engineer" or similar role is an example of the _coordinator role_ seen in the Strode xref:coord-tools[coordination tools and techniques matrix].
 
-The release train is a useful concept for coordinating large, multi-team efforts, and is applicable in environments that have not fully adopted Agile approaches. As author Joanna Rothman notes, "You can de-scope features from a particular train, but you can never allow a train to be late. That helps the project team focus on delivering value and helps your customer become accustomed to taking the product on a more frequent basis" <<Rothman2011>>.
+The release train is a useful concept for coordinating large, multi-team efforts, and is applicable in environments that have not fully adopted Agile approaches. As author Joanna Rothman notes, "You can de-scope features from a particular train, but you can never allow a train to be late. That helps the project team focus on delivering value and helps your customer become accustomed to taking the product on a more frequent basis" cite:[Rothman2011].
 
 anchor:project-mgmt-coordination[]
 
@@ -71,9 +70,9 @@ We will take a deeper look at project management in Chapter 8.
 
 ===== Decision rights
 [quote, Don Reinertsen, Managing the Design Factory]
-There are two ways of communicating boundaries inside the organization. Unfortunately, the most common approach is trial and error. Some people refer to this as discovering the location of the invisible electric fences...There is a better approach for setting boundaries. It consists of clarifying expectations for the entire team regarding their authority to make decisions. This is done by making a list of specific decisions and discussing them with the functional managers and the team. A two-hour meeting early in the program can have enormous impact on clarifying intended operating practices to the team (<<Reinertsen1997>> pp.106-108).
+There are two ways of communicating boundaries inside the organization. Unfortunately, the most common approach is trial and error. Some people refer to this as discovering the location of the invisible electric fences...There is a better approach for setting boundaries. It consists of clarifying expectations for the entire team regarding their authority to make decisions. This is done by making a list of specific decisions and discussing them with the functional managers and the team. A two-hour meeting early in the program can have enormous impact on clarifying intended operating practices to the team (cite:[Reinertsen1997] pp.106-108).
 
-Approvals are a particular form of xref:strode-dependency-taxonomy[activity dependency], and since approvals tend to flow upwards in the organizational hierarchy to busy individuals, they can be a significant source of delay and as Reinertsen points out (<<Reinertsen1997>> p. 108), discovering "invsible electric fences" by trial and error is both slow and also reduces human initiative. One xref:coord-tools[boundary spanning coordination artifact] an organization can produce as a coordination response is a statement of decision rights, for example a _RACI analysis_. RACI stands for
+Approvals are a particular form of xref:strode-dependency-taxonomy[activity dependency], and since approvals tend to flow upwards in the organizational hierarchy to busy individuals, they can be a significant source of delay and as Reinertsen points out (cite:[Reinertsen1997] p. 108), discovering "invsible electric fences" by trial and error is both slow and also reduces human initiative. One xref:coord-tools[boundary spanning coordination artifact] an organization can produce as a coordination response is a statement of decision rights, for example a _RACI analysis_. RACI stands for
 
 * Responsible
 * Accountable (sometimes understood as Approves)
@@ -117,9 +116,10 @@ Project management and process management interact in 2 primary ways:
 * Projects often are used to create and deploy processes. A large system implementation (e.g. of a Enterprise Resource Planning module such as Human Resource Management) will often be responsible for process implementation including training.
 * As environments mature, product and/or project teams require process support.
 
-The following diagram illustrates:
+<<fig-wrk-prj-proc-600-c>> illustrates:
 
+[[fig-wrk-prj-proc-600-c]]
 .Process and project
 image::images/3_09-wrk-prj-proc.png[process and project, 600,]
 
-As Richardson notes in _Project Management Theory and Practice_, "there are many organizational processes that are needed to optimally support a successful project." <<Richardson2010>> For example, the project may require predictable contractor hiring, or infrastructure provisioning, or security reviews. The same is true for product teams that may not be using a "project" concept to manage their work. To the extent these are managed as repeatable, optimized processes, risk is reduced. The trouble is when the processes require prioritization of resources to perform them. This can lead to long delays, as the teams performing the process may not have the information to make an informed prioritization decision. Many IT professionals will agree that the relationship between application and infrastructure teams has been contentious for decades because of just this issue. One response has been increasing automation of infrastructure service provisioning (private and external xref:cloud[Cloud]).
+As Richardson notes in _Project Management Theory and Practice_, "there are many organizational processes that are needed to optimally support a successful project." cite:[Richardson2010] For example, the project may require predictable contractor hiring, or infrastructure provisioning, or security reviews. The same is true for product teams that may not be using a "project" concept to manage their work. To the extent these are managed as repeatable, optimized processes, risk is reduced. The trouble is when the processes require prioritization of resources to perform them. This can lead to long delays, as the teams performing the process may not have the information to make an informed prioritization decision. Many IT professionals will agree that the relationship between application and infrastructure teams has been contentious for decades because of just this issue. One response has been increasing automation of infrastructure service provisioning (private and external xref:cloud[Cloud]).

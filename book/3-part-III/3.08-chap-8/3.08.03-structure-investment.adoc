@@ -6,7 +6,7 @@ Directors should monitor the progress of approved IT proposals to ensure that th
 
 Now that we understand the xref:chap-coordination[coordination problem] better, and have discussed xref:financial-mgmt[finance] and xref:sourcing[sourcing], we are prepared to make longer term commitments to a more complicated organizational structure. As we stated in the xref:chap-invest-mgmt[chapter introduction], one way of looking at these longer term commitments is as investments. We start them, we decide to continue them, or we decide to halt (exit) them. In fact, we could use the term "portfolio" to describe these various investments; this is not a new concept in IT management.
 
-NOTE: The first comparison of IT investments to a portfolio was in 1974, by Richard Nolan in _Managing the Data Resource Function_ <<Nolan1974>>.
+NOTE: The first comparison of IT investments to a portfolio was in 1974, by Richard Nolan in _Managing the Data Resource Function_ cite:[Nolan1974].
 
 Whatever the xref:digital-context[context for your digital products] (external or internal), they are intended to provide value to your organization and ultimately your end customer. Each of them in a sense is a "bet" on how to realize this value (review the xref:DIBB[Spotify DIBB model]), and represents in some sense a form of xref:prod-discovery[product discovery]. As you deepen your abilities to understand investments, you may find yourself applying xref:business-case-analysis[business case analysis techniques] in more rigorous ways, but as always retaining a xref:lean-startup[Lean Startup] experimental mindset is advisable.
 
@@ -15,12 +15,13 @@ As you strengthen a hypothesis in a given product or feature structure, you incr
 anchor:feature-v-component[]
 
 ===== Features versus components
-As you consider your options for partitioning your product, in terms of the xref:AKF-cube[AKF scaling cube], a useful and widely-adopted distinction is that between "features" and "components."
+As you consider your options for partitioning your product, in terms of the xref:AKF-cube[AKF scaling cube], a useful and widely-adopted distinction is that between "features" and "components" (see <<fig-feature-v-component-400-o>>).
 
-Features are *what* your product *does*. They are what the customers perceive as valuable. “Scope as viewed by the customer” according to Mark Kennaley (<<Kennaley2010>> p. 169). They may be "xref:flower-and-cog[flowers]" -- defined by the value they provide externally, and encouraged to evolve with some freedom. You may be investing in new features using xref:lean-startup[Lean Startup], the xref:DIBB[Spotify DIBB model] or some other hypothesis-driven approach.
+Features are *what* your product *does*. They are what the customers perceive as valuable. “Scope as viewed by the customer” according to Mark Kennaley (cite:[Kennaley2010] p. 169). They may be "xref:flower-and-cog[flowers]" -- defined by the value they provide externally, and encouraged to evolve with some freedom. You may be investing in new features using xref:lean-startup[Lean Startup], the xref:DIBB[Spotify DIBB model] or some other hypothesis-driven approach.
 
-Components are *how* your product is *built*, such as database and Web components. In other words, they are a form of infrastructure (but infrastructure you may need to build yourself, rather than just spin up in the Cloud). They are more likely to be "xref:flower-and-cog[cogs]" -  more constrained and engineered to specifications. Mike Cohn defines a component team as "a team that develops software to be delivered to another team on the project rather than directly to users" (<<Cohn2010>>, p.183).
+Components are *how* your product is *built*, such as database and Web components. In other words, they are a form of infrastructure (but infrastructure you may need to build yourself, rather than just spin up in the Cloud). They are more likely to be "xref:flower-and-cog[cogs]" -  more constrained and engineered to specifications. Mike Cohn defines a component team as "a team that develops software to be delivered to another team on the project rather than directly to users" (cite:[Cohn2010], p.183).
 
+[[fig-feature-v-component-400-o]]
 .Features versus components
 image::images/3_07-feature-v-component.png[feature component matrix,400,,float="right"]
 
@@ -31,16 +32,16 @@ It may be easy to say that features are more important than components, but this
 * more technically focused
 * more generally re-usable
 
-than features. SAFE also recommends a ratio of roughly 20-25% component teams to 75%-80% feature teams <<SAFE2016>>.
+than features. SAFE also recommends a ratio of roughly 20-25% component teams to 75%-80% feature teams cite:[SAFE2016].
 
-Mike Cohn suggests the following advantages for feature teams (<<Cohn2010>>, pp.183-184):
+Mike Cohn suggests the following advantages for feature teams (cite:[Cohn2010], pp.183-184):
 
 * They are better able  to evaluate the impact of design decisions
 * They reduce hand-off waste (a coordination problem)
 * They present less schedule risk
 * They maintain focus on delivering outcomes
 
-He also suggests  (<<Cohn2010>>, pp.186-187) that component teams are justified when:
+He also suggests  (cite:[Cohn2010], pp.186-187) that component teams are justified when:
 
 * Their work will be used by multiple teams
 * They reduce the sharing of specialists across teams
@@ -52,13 +53,18 @@ anchor:multi-product-scaling[]
 
 ===== Epics and new products
 
-In the xref:defining-coord[last chapter], we talked of one product with multiple feature and/or component teams. Features and components as we are discussing them here are large enough to require separate teams (with new xref:coord-tools[coordination requirements]). At an even larger scale, we have new product ideas, perhaps first seen as xref:backlog-estimation-prioritization[epics in a product backlog].
+In the xref:defining-coord[last chapter], we talked of one product with multiple feature and/or component teams (see <<fig-one-product-400-o>>). Features and components as we are discussing them here are large enough to require separate teams (with new xref:coord-tools[coordination requirements]). At an even larger scale, we have new product ideas, perhaps first seen as xref:backlog-estimation-prioritization[epics in a product backlog].
 
+
+
+[[fig-one-product-400-o]]
 .One company, one product
 image::images/3_08-one-product.png[one product,400,,float="right"]
 
-Eventually, larger and more ambitious initiatives lead to a key organizaitonal state transition: from one product to multiple products. Consider our hypothetical startup company. At first, everyone on the team is supporting one product and dedicated to its success. There is little sense of contention with "others" in the organization. This changes with the addition of a second product team with different incentives. Concerns for fair allocation and a sense of internal competition naturally arise out of this diversification. Fairness is deeply wired into human (and animal) brains, and the creation of a new product with an associated team provokes new dynamics in the growing company.
+Eventually, larger and more ambitious initiatives lead to a key organizaitonal state transition: from one product to multiple products. Consider our hypothetical startup company. At first, everyone on the team is supporting one product and dedicated to its success. There is little sense of contention with "others" in the organization. This changes with the addition of a second product team with different incentives (see <<fig-multi-product-400-o>>). Concerns for fair allocation and a sense of internal competition naturally arise out of this diversification. Fairness is deeply wired into human (and animal) brains, and the creation of a new product with an associated team provokes new dynamics in the growing company.
 
+
+[[fig-multi-product-400-o]]
 .One company, multiple products
 image::images/3_08-multi-product.png[multi product,400,,float="right"]
 
@@ -76,8 +82,9 @@ Structurally, we might decide to separate a portfolio backlog from the product b
 * The portfolio backlog is the list of potential new products that the organization might invest in
 * Each product team still has its own backlog of stories (or other xref:representation[representations] of their work)
 
-The xref:backlog-estimation-prioritization[DEEP backlog] we discussed in Chapter 5 gets split accordingly:
+The xref:backlog-estimation-prioritization[DEEP backlog] we discussed in Chapter 5 gets split accordingly (see <<fig-DEEPPortfolios-500-o>>).
 
+[[fig-DEEPPortfolios-500-o]]
 .Portfolio versus product backlog
 image::images/3_08-DEEP2Portfolios.png[deep2portfolios,500,,float="right"]
 

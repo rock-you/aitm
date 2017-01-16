@@ -11,15 +11,17 @@ Good team structure can go a long way toward reducing dependencies but will not 
 [quote,  Gary Hamel, preface to the Open Organization: Igniting Passion and Performance]
 What’s typically underestimated is the complexity and indivisibility of many large-scale coordination tasks.
 
-We've xref:demand-supply-execute[defined execution] as the point at which supply and demand are combined, and of course we've been executing since the start of our journey. Now, however, we are executing in a more complex environment; we have started to scale along the xref:AKF-cube[AKF scaling cube] y-axis, and we have either multiple teams working on one product, and/or multiple products.Execution becomes more than just "pull another story off the Kanban board." As multiple teams are formed, dependencies arise, and we need coordination.  The term "architecture" is likely emerging through these discussions. (We will discuss organizational structure directly in Chapter 9, and architecture in Chapter 12.)
-
+[[fig-multi-feature-350-i]]
 .Multiple feature teams, one product
 image::images/3_08-multi-feature.png[multi-feature, 350,,float="left"]
 
+We've xref:demand-supply-execute[defined execution] as the point at which supply and demand are combined, and of course we've been executing since the start of our journey. Now, however, we are executing in a more complex environment; we have started to scale along the xref:AKF-cube[AKF scaling cube] y-axis, and we have either multiple teams working on one product, and/or multiple products.Execution becomes more than just "pull another story off the Kanban board." As multiple teams are formed (see <<fig-multi-feature-350-i>>), dependencies arise, and we need coordination.  The term "architecture" is likely emerging through these discussions. (We will discuss organizational structure directly in Chapter 9, and architecture in Chapter 12.)
+
 As a consequence of scaling, we are introducing multiple teams as our product scales up (see figure). As noted in the discussion of xref:amazon-productization[Amazon's product strategy], some needs for coordination may be mitigated through the design of the product itself. This is why APIs and microservices are popular architecture styles. If the features and components have well defined protocols for their interaction and clear contracts for matters like performance, development on each team can move forward with some autonomy.
 
-But at scale, complexity is inevitable. What happens when a given business objective requires coordinated effort across multiple teams? (Figure.) For example, an online e-commerce site might find itself overwhelmed by business success. Upgrading the site to accommodate the new demand might require distinct development work to be performed by multiple teams.
+But at scale, complexity is inevitable. What happens when a given business objective requires coordinated effort across multiple teams? (Figure.) For example, an online e-commerce site might find itself overwhelmed by business success. Upgrading the site to accommodate the new demand might require distinct development work to be performed by multiple teams (see <<fig-multi-feature-coord-420-o>>).
 
+[[fig-multi-feature-coord-420-o]]
 .Coordinated initiative across timeframes
 image::images/3_08-multi-feature-coord.png[coordination, 420,,float="right"]
 
@@ -29,13 +31,13 @@ As the quote from Gary Hamel above indicates, a central point of coordination an
 [quote, Malone and Crowston]
 ...coordination can be seen as the process of managing dependencies among activities.
 
-What is a "dependency"? We need to think carefully about this. According to the definition above (from <<Malone1994>>), without dependencies, we do not need coordination. (We'll look at other definitions of coordination in the next two chapters.) Diane Strode and her associates (<<Strode2012>>) have described a comprehensive framework for thinking about dependencies and coordination, including a dependency taxonomy, an inventory of coordination strategies, and an examination of coordination effectiveness criteria.
+What is a "dependency"? We need to think carefully about this. According to the definition above (from cite:[Malone1994>>), without dependencies, we do not need coordination. (We'll look at other definitions of coordination in the next two chapters.) Diane Strode and her associates (<<Strode2012]) have described a comprehensive framework for thinking about dependencies and coordination, including a dependency taxonomy, an inventory of coordination strategies, and an examination of coordination effectiveness criteria.
 
 anchor:strode-dependency-taxonomy[]
 
-To understand dependencies, Strode et al. propose the following framework <<Strode2012a>>:
+To understand dependencies, Strode et al. propose the following framework cite:[Strode2012a]:
 
-.Dependency taxonomy footnote:[adapted from <<Strode2012a>>]
+.Dependency taxonomy footnote:[adapted from cite:[Strode2012a]]
 [cols="3*", options="header"]
 |====
 |Type|Dependency|Description
@@ -63,7 +65,7 @@ Our previous discussion of xref:work-management[work management]was a simple, id
 
 As we scale up, we see that dependencies and resource management have become defining concerns. However, we retain our xref:lean-product-dev[Lean product development] concerns for fast feedback and adaptability, as well as a critical approach to the idea that complex initiatives can be precisely defined and simply executed through xref:open-loop[open loop] approaches. In this section, we will discuss some of the organizational responses (techniques and tools) that have emerged as proven responses to these emergent issues.
 
-IMPORTANT: The discussion of particular techniques is always hazardous. People will tend to latch on to a promising approach without full understanding. As noted by Craig Larman (<<Larman2009>>, p.44), the risk is one of xref:cargo-cult[cargo cult] process adoption. In Chapter 9 we will discuss the Mike Rother book xref:Toyota-Kata[Toyota Kata]. Toyota does not implement any procedural change without fully understanding the "target operating condition" -- the nature of the work and the desired changes to it.
+IMPORTANT: The discussion of particular techniques is always hazardous. People will tend to latch on to a promising approach without full understanding. As noted by Craig Larman (cite:[Larman2009], p.44), the risk is one of xref:cargo-cult[cargo cult] process adoption. In Chapter 9 we will discuss the Mike Rother book xref:Toyota-Kata[Toyota Kata]. Toyota does not implement any procedural change without fully understanding the "target operating condition" -- the nature of the work and the desired changes to it.
 
 anchor:cargo-cult[]
 
@@ -75,7 +77,7 @@ During World War II, South Pacific native peoples had been exposed abruptly to m
 
 On further investigation, it became clear that the natives were seeking more “cargo” and had developed a magical understanding of how goods would be delivered. By imitating the form of what they had seen, they hoped to recreate it.
 
-In 1974, the noted physicist Richard Feynman gave a speech at Caltech in which he coined the immortal phrase “cargo cult science” <<Feynman1974>>. His intent was to caution against activities which appear to follow the external form of science, but lack the essential understanding at its core. Similar analogies are seen in business and IT management, as organizations adopt tools and techniques because they have seen others do so, without having fundamental clarity about the problems they are trying to solve and how a given technique might specifically help.
+In 1974, the noted physicist Richard Feynman gave a speech at Caltech in which he coined the immortal phrase “cargo cult science” cite:[Feynman1974]. His intent was to caution against activities which appear to follow the external form of science, but lack the essential understanding at its core. Similar analogies are seen in business and IT management, as organizations adopt tools and techniques because they have seen others do so, without having fundamental clarity about the problems they are trying to solve and how a given technique might specifically help.
 
 As with many stories of this kind, there are questions around the accuracy of the original anthropological accounts and Western interpretations and mythmaking around what was seen. However there is no question that “cargo cult thinking” is a useful cautionary metaphor.
 ****
@@ -84,7 +86,7 @@ anchor:coord-tools[]
 
 Strode et al provide a useful framework for understanding coordination mechanisms, excerpted and summarized into the following table:
 
-.Coordination taxonomy footnote:[adapted from <<Strode2012>>]
+.Coordination taxonomy footnote:[adapted from cite:[Strode2012]]
 [cols="3*", options="header"]
 |====
 |Strategy|Component|Definition
@@ -109,14 +111,14 @@ NOTE: We introduced the idea of _artifact_ in Chapter 5. For our purposes here, 
 The following sections expand the three strategies (structure, synchronization, boundary spanning) with examples.
 
 ====== Structure
-Don Reinertsen (<<Reinertsen2009>> p. 230) proposes "The Principle of Colocation" which asserts that "Colocation improves almost all aspects of communication." In order to scale this beyond one team, one logically needs what Mike Cohn (<<Cohn2010>>, p. 346) calls "The Big Room."
+Don Reinertsen (cite:[Reinertsen2009>> p. 230) proposes "The Principle of Colocation" which asserts that "Colocation improves almost all aspects of communication." In order to scale this beyond one team, one logically needs what Mike Cohn (<<Cohn2010], p. 346) calls "The Big Room."
 
 In terms of communications, this has significant organizational advantages. Communications are as simple as walking over to another person's desk, or just shouting out over the room. It is also easy to synchronize the entire room, through calling for everyone's attention. However, there are limits to scaling the "Big Room" approach:
 
 * Contention for key individual's attention
 * "All hands" calls for attention that actually interest only a subset of the room
 * Increasing ambient noise in the room
-* Distracting individuals from intellectually demanding work requiring concentration, driving xref:multi-tasking[multi-tasking and context-switching], and ultimately interfering with their personal sense of flow - a destructive outcome. (See <<Csikszentmihalyi1990>> for more on flow as a valuable psychological state.)
+* Distracting individuals from intellectually demanding work requiring concentration, driving xref:multi-tasking[multi-tasking and context-switching], and ultimately interfering with their personal sense of flow - a destructive outcome. (See cite:[Csikszentmihalyi1990] for more on flow as a valuable psychological state.)
 
 The tension between team coordination and individual focus will likely continue. It is an ongoing topic in facilities design.
 
@@ -140,7 +142,7 @@ All of them are essentially similar in approach and assumption: build a shared u
 anchor:cadence[cadence]
 
 
-*Cadenced approaches.* When a synchronization activity occurs on a timed interval, this can be called a xref:cadence[cadence]. Sometimes, cadences are layered; for example, a daily standup, a weekly review, and a monthly Scrum of Scrums. Reinertsen calls this harmonic cadencing (<<Reinertsen2009>> pp. 190-191). Harmonic cadencing has been used in financial management for a long time (monthly, quarterly, and annual financial reporting).
+*Cadenced approaches.* When a synchronization activity occurs on a timed interval, this can be called a xref:cadence[cadence]. Sometimes, cadences are layered; for example, a daily standup, a weekly review, and a monthly Scrum of Scrums. Reinertsen calls this harmonic cadencing (cite:[Reinertsen2009] pp. 190-191). Harmonic cadencing has been used in financial management for a long time (monthly, quarterly, and annual financial reporting).
 
 anchor:boundary-spanning[]
 
@@ -160,16 +162,16 @@ Examples of boundary-spanning liaison and coordination structures include:
 
 *Shared team members* are suggested when two teams have a persistent interface requiring focus and ownership. When a product has multiple interfaces that emerge as a problem requiring focus, an *integration team* may be called for. *Communities of practice* will be introduced in Chapter 9 when we discuss the xref:spotify-model[Spotify model]. Considered here, they may also play a coordination role as well as a practice development/maturity role.
 
-Finally, the idea of a *Scrum of Scrums* is essentially a representative or delegated model, in which each individual Scrum team sends one individual to a periodic coordination meeting where matters of cross-team concern can be discussed and decisions taken. (<<Cohn2010>>, Chapter 17)
+Finally, the idea of a *Scrum of Scrums* is essentially a representative or delegated model, in which each individual Scrum team sends one individual to a periodic coordination meeting where matters of cross-team concern can be discussed and decisions taken. (cite:[Cohn2010], Chapter 17)
 
-<<Cohn2010>> (p342) cautions: "A scrum of scrums meeting will feel nothing like a daily scrum despite the similarities in names. The daily scrum is a synchronization meeting: individual team members come together to communicate about their work and synchronize their efforts.The scrum of scrums, on the other hand, is a problem-solving meeting and will not have the same quick, get-in-get-out tone of a daily scrum."
+cite:[Cohn2010] (p342) cautions: "A scrum of scrums meeting will feel nothing like a daily scrum despite the similarities in names. The daily scrum is a synchronization meeting: individual team members come together to communicate about their work and synchronize their efforts.The scrum of scrums, on the other hand, is a problem-solving meeting and will not have the same quick, get-in-get-out tone of a daily scrum."
 
 anchor:submittal-schedule[]
-Another technique mentioned in The Checklist Manifesto <<Gawande2010>> is the *submittal schedule*. Some work, while detailed, can be planned to a high degree of detail (i.e. the "checklists" of the title). However, emergent complexity requires different approach - no checklist can anticipate all eventualities. To handle all the emergent complexity, the coordination focus must shift to structuring the right communications. In examining modern construction industry techniques, Gawande noted the concept of the "submittal schedule," which "didn't specify construction tasks; it specified _communication_ tasks" (p. 65, emphasis supplied). With the submittal schedule, the project manager tracks that the right people are talking to each other to resolve problems - a key change in focus from activity-centric approaches.
+Another technique mentioned in The Checklist Manifesto cite:[Gawande2010] is the *submittal schedule*. Some work, while detailed, can be planned to a high degree of detail (i.e. the "checklists" of the title). However, emergent complexity requires different approach - no checklist can anticipate all eventualities. To handle all the emergent complexity, the coordination focus must shift to structuring the right communications. In examining modern construction industry techniques, Gawande noted the concept of the "submittal schedule," which "didn't specify construction tasks; it specified _communication_ tasks" (p. 65, emphasis supplied). With the submittal schedule, the project manager tracks that the right people are talking to each other to resolve problems - a key change in focus from activity-centric approaches.
 
 We have previously discussed APIs in terms of xref:amazon-productization[Amazon's product strategy]. They are also important as a product scales into multiple components and features; API standards can be seen as a boundary-spanning mechanism.
 
-The above discussion is by no means exhaustive. A wealth of additional techniques relevant for digital professionals is to be found in <<Larman2009>> and <<Cohn2010>>. New techniques are continually emerging from the front lines of the digital industry; the interested student should consider attending industry conferences such as those offered by the Agile Alliance.
+The above discussion is by no means exhaustive. A wealth of additional techniques relevant for digital professionals is to be found in cite:[Larman2009>> and <<Cohn2010]. New techniques are continually emerging from the front lines of the digital industry; the interested student should consider attending industry conferences such as those offered by the Agile Alliance.
 
 In general, the above approaches imply synchronized meetings and face to face interactions. When the boundary-spanning approach is based on artifacts (often a requirement for larger, decentralized enterprises), we move into the realms of process and project management. Approaches based on routing artifacts into xref:queuing[queues] often receive criticism for introducing too much latency into the product development process. When artifacts are routed via work  orders and tickets for action by independent teams, prioritization may be arbitray (not based on business value, e.g. xref:cost-of-delay[Cost of Delay]), and sometimes the work must flow through multiple queues in an uncoordinated way, as we warned in Chapter 5. Such approaches can add dangerous latency to high-value processes. We will look in more detail at process management in a future section.
 
@@ -180,7 +182,7 @@ anchor:google-chubby[]
 
 The Agile manifesto idea that architecture can "emerge" without explicit coordination (e.g. across a set of smaller grained services ("microservices") is attractive. Coordinating designs across products, services, features and/or components is expensive and ideally products should be able to evolve independently.
 
-Mike Burrows of Google provides a detailed description of the Chubby lock service <<Burrows2006>>, which is a prototypical example of a broadly-available internal service usable by a wide variety of other products.
+Mike Burrows of Google provides a detailed description of the Chubby lock service cite:[Burrows2006], which is a prototypical example of a broadly-available internal service usable by a wide variety of other products.
 
 The purpose of a lock service is to "allow its clients to synchronize their activities and to agree on basic information about their environment." Chubby was built from the start with objectives of reliability, availability to a "moderately large set of clients," and ease of understanding. Burrows notes that even with such a cohesive and well-designed internal service, they still encounter coordination problems requiring human intervention. Such problems include:
 

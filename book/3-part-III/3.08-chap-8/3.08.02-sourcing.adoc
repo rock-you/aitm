@@ -50,10 +50,14 @@ The same approach is used to establish relationships with Cloud vendors, softwar
 
 ****
 
-A small company may establish binding agreements with vendors relatively casually. For example, when the founder first chose a Cloud platform on which to build their product, they clicked on a button that said "I accept," at the bottom of a lengthy legal document they didn't necessarily read closely. This "clickwrap" agreement is a legally binding contract, which means that the terms and conditions it specifies are enforceable by the courts.
+A small company may establish binding agreements with vendors relatively casually. For example, when the founder first chose a Cloud platform on which to build their product, they clicked on a button that said "I accept," at the bottom of a lengthy legal document they didn't necessarily read closely. This "clickwrap" agreement (see <<fig-clickwrap-400>>) is a legally binding contract, which means that the terms and conditions it specifies are enforceable by the courts.
 
+
+[[fig-clickwrap-400]]
+.Clickwrap example
 image::images/3_08-clickwrap.png[Clickwrap license, 400,]
-*Figure: Example of clickwrap licensing*
+
+
 
 A startup may be inattentive to the full implications of its contracts for various reasons:
 
@@ -75,7 +79,7 @@ In larger organizations, where a vendor might hold multiple contracts, a concept
 [quote, Millard et al, Cloud Computing Law]
 cloud computing has some fundamental characteristics that distinguish it from traditional outsourcing...many cloud services are merely passive providers of computing resources, utilized by users to perform their own processing.
 
-The first significant vendor relationship the startup may engage with is for  xref:cloud[Cloud] services. The decision whether, and how much, to leverage Cloud computing remains (as of 2016) a topic of much industry discussion. JP Morgenthal reports on a 2016 discussion with industry analysts that identified the following pros and cons  <<Morgenthal2016>>:
+The first significant vendor relationship the startup may engage with is for  xref:cloud[Cloud] services. The decision whether, and how much, to leverage Cloud computing remains (as of 2016) a topic of much industry discussion. JP Morgenthal reports on a 2016 discussion with industry analysts that identified the following pros and cons  cite:[Morgenthal2016]:
 
 .Cloud sourcing pros and cons
 [cols="2*", options="header"]
@@ -123,7 +127,7 @@ Risk of Cloud platform lock-in
 
 Cloud can reduce costs when deployed in a sophisticated way; if a company has purchased more capacity than it needs, Cloud can be more economical (review the section on xref:virtualization-econ[virtualization economics]). However, ultimately as Abbott and Fisher point out,
 
-_Large, rapidly growing companies can usually realize greater margins by using wholly owned equipment than they can by operating in the cloud. This difference arises because laaS operators, while being able to purchase and manage their equipment costeffectively, are still looking to make a profit on their services_ <<Abbott2015>>, p474.
+_Large, rapidly growing companies can usually realize greater margins by using wholly owned equipment than they can by operating in the cloud. This difference arises because laaS operators, while being able to purchase and manage their equipment costeffectively, are still looking to make a profit on their services_ cite:[Abbott2015], p474.
 
 Minimally, Cloud services need to be controlled for consumption. Cloud providers will happily allow virtual machines to run indefinitely, and charge for them. An ecosystem of Cloud brokers and value-add resellers is emerging to assist organizations with optimizing their Cloud dollars.
 
@@ -157,7 +161,7 @@ This is not an isolated instance. Major software vendors have earned billions in
 
 Software licensing is a subset of Software Asset Management, which is itself a subset of IT Asset Management, discussed in more depth in the material on xref:chap-coordination[process management] and xref:IT-lifecycles[IT lifecycles]. Software asset management in many cases relies on the integrity of a digital organization's xref:package-mgmt[package management]; the package manager should represent a definitive inventory of all the software in use in the organization.
 
-Free and open source software (sometimes abbreviated FOSS) has become an increasingly prevalent and critical component of digital products. While technically "free," the licensing of such softare can present risks. In some cases, open course products have unclear licensing that puts them at risk of legal conflicts which may impact users of the technology <<Loftus2006>>. In other cases, the open source license may discourage commercial or proprietary use; for example, the Gnu Public License (GPL) requirement for disclosing derivative works causes concern among enterprises <<Yegulalp2014>>.
+Free and open source software (sometimes abbreviated FOSS) has become an increasingly prevalent and critical component of digital products. While technically "free," the licensing of such softare can present risks. In some cases, open course products have unclear licensing that puts them at risk of legal conflicts which may impact users of the technology cite:[Loftus2006>>. In other cases, the open source license may discourage commercial or proprietary use; for example, the Gnu Public License (GPL) requirement for disclosing derivative works causes concern among enterprises <<Yegulalp2014].
 
 
 anchor:industry-analysts[]
@@ -200,7 +204,7 @@ For both suppliers and buyers of information technology (IT) projects, one issue
 [quote, Arbogast et  al, Agile Contracts Primer]
 What do lawyers assume is the nature of software projects? First, it is common that they view it as similar to a construction project—relatively predictable—rather than the highly uncertain and variable research and development that it usually is. Second, that in the project (1) there is a long delay before something can be delivered that is well done, with (2) late and weak feedback, (3) long payment cycles, and (4) great problems for the customer if the project is stopped at any arbitrary point in time. *These assumptions are invalidated in agile development.*
 
-Software is often developed and delivered per contractual terms. Contracts are legally binding agreements, typically developed with the assistance of lawyers. As noted in <<Arbogast2012>> (p.5),  "Legal professionals are trained to act, under legal duty, to advance their client’s interests and protect them against all pitfalls, seen or unseen." The idea of "customer collaboration over contract negotiation" may strike them as the height of naivete. However, Agile and Lean influences have made substantial inroads in contracting approaches.
+Software is often developed and delivered per contractual terms. Contracts are legally binding agreements, typically developed with the assistance of lawyers. As noted in cite:[Arbogast2012] (p.5),  "Legal professionals are trained to act, under legal duty, to advance their client’s interests and protect them against all pitfalls, seen or unseen." The idea of "customer collaboration over contract negotiation" may strike them as the height of naivete. However, Agile and Lean influences have made substantial inroads in contracting approaches.
 
 Arbogast et al. describe the general areas of contract concern:
 
@@ -221,11 +225,11 @@ In a *time and materials* contract, the contracting firm simply pays the provide
 
 In a *fixed price* contract, the vendor providing the service will make a binding commitment that (for example) "we will get the software completely written in 9 months for $3 million." Penalties may be enforced if the software is late, and it's up to the vendor to control development costs. If the vendor does not understand the work correctly, they may lose money on the deal.
 
-Reconciling Agile with fixed-price contracting approaches has been a challenging topic <<Opelt2013>>. The desire for control over a contractual relationship is historically one of the major drivers of xref:Agile-history[waterfall] approaches. However, since requirements cannot be known in advance, this is problematic.
+Reconciling Agile with fixed-price contracting approaches has been a challenging topic cite:[Opelt2013]. The desire for control over a contractual relationship is historically one of the major drivers of xref:Agile-history[waterfall] approaches. However, since requirements cannot be known in advance, this is problematic.
 
 When a contract is signed based on waterfall assumptions, the project management process of xref:change-control[change control] is typically used to govern any alterations to the scope of the effort. Each change order typically implies some increase in cost to the customer. Because of this, the perceived risk mitigation of a fixed price contract may become a false premise.
 
-This problem has been understood for some time. Scott Ambler argued in 2005 that "It's time to abandon the idea that fixed bids reduce risk. Clients have far more control over a project with a variable, gated approach to funding in which working software is delivered on a regular basis" <<Ambler2005>>. Andreas Opelt states, "For agile IT projects it is therefore necessary to find an agreement that supports the balance between a fixed budget (maximum price range) and agile development (scope not yet defined in detail)..."
+This problem has been understood for some time. Scott Ambler argued in 2005 that "It's time to abandon the idea that fixed bids reduce risk. Clients have far more control over a project with a variable, gated approach to funding in which working software is delivered on a regular basis" cite:[Ambler2005]. Andreas Opelt states, "For agile IT projects it is therefore necessary to find an agreement that supports the balance between a fixed budget (maximum price range) and agile development (scope not yet defined in detail)..."
 
 How is this done? Opelt and his co-authors further argue that the essential question revolves around the project "iron triangle":
 
@@ -235,7 +239,7 @@ How is this done? Opelt and his co-authors further argue that the essential ques
 
 The approach they recommend is determining which of these elements is the "fixed point" and which is estimated. In traditional waterfall projects, scope is fixed, while costs and deadline must be estimated (a problematic approach when xref:lean-product-dev[product development] is required.)
 
-In Opelt's view, in Agile contracting, costs and deadline are fixed, while scope is "estimated" - understood to have some inevitable variability. "...you never know exactly what details will be needed at the start of a project. On the other hand, you do not always need everything that had originally been considered to be important" <<Opelt2013>>.
+In Opelt's view, in Agile contracting, costs and deadline are fixed, while scope is "estimated" - understood to have some inevitable variability. "...you never know exactly what details will be needed at the start of a project. On the other hand, you do not always need everything that had originally been considered to be important" cite:[Opelt2013].
 
 Their recommended approach supports the following benefits:
 
@@ -260,7 +264,7 @@ These ideas are a departure from traditional contract management. As Opelt asks,
 
 In conclusion, as Arbogast et al argue, "Contracts that promote or mandate
 sequential life cycle development increase project risk... an agile approach
-... reduces risk because it limits both the scope of the deliverable and extent of the payment [and] allows for inevitable change" <<Arbogast2012>> (p.13).
+... reduces risk because it limits both the scope of the deliverable and extent of the payment [and] allows for inevitable change" cite:[Arbogast2012] (p.13).
 
 ifdef::collaborator-draft[]
 

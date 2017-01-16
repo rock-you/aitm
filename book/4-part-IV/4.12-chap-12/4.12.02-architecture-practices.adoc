@@ -58,7 +58,7 @@ EA therefore may have a role in defining xref:how-policy-begins[policies], espec
 
 As discussed in xref:policy-hierarchy[Chapter 10], there needs to be traceability from tactical standards to strategic codes and principles. The preference for a given database should not be a policy, but having a process that establishes such a preference *would* be -- that is, a policy should exist saying (for example) "there shall be a Technology Lifecycle Management process with the following objectives and scope." Where appropriate, such policies might also be linked to specific risks as xref:controls[controls] or xref:enablers[enablers].
 
-As for all policies, it's important to have some sort of sunset mechanism for EA guidance. As Bente et al note, _Many EA-originated policies that appear obsolete today have not always been meaningless...A frequent example is the uncontrolled proliferation of newly hyped technologies by the IT crowd, and the EA group's rigid attempt to reinstitute order. Once the technology has matured, the EA rules often appear overly strict and suppress a flexible use of the appropriate technology._ <<Bente2012>> p19
+As for all policies, it's important to have some sort of sunset mechanism for EA guidance. As Bente et al note, _Many EA-originated policies that appear obsolete today have not always been meaningless...A frequent example is the uncontrolled proliferation of newly hyped technologies by the IT crowd, and the EA group's rigid attempt to reinstitute order. Once the technology has matured, the EA rules often appear overly strict and suppress a flexible use of the appropriate technology._ cite:[Bente2012] p19
 
 The issue with the quote above is that the overall benefits of having (for example) a Technology Lifecycle Management process are not usually quantified in terms of cost and risk avoidance. Without an overall governance mandate and value proposition, Enterprise Architecture activities may seesaw in response to the "issue of the moment." This is not a recipe for sustainable architecture; whose most important value proposition lies in the long term. Architecture, as a component of coherent governance, requires no less.
 
@@ -136,7 +136,7 @@ We discussed the importance of visual management in Chapter 5. Making informatio
 
 The word "architect," whether in a building or digital context,  is often associated with visualizations: blueprints, sketches, specialized notations, and so forth. Drawings have been used to represent structures for likely as long as xref:writing-history[writing has existed]. The image at the beginning of this Part Is of Gudea, a Mesopotamian ruler known for building temples; on his lap is a blueprint.
 
-Judging simply by its history, visualization is therefore an essential tool for humans dealing with large scale complexity (and erecting buildings has always been one of the more complex domains of human activity.) In digital and IT contexts, however, visualization has certain challenges and notable skeptics. Adrian Cockcroft, the former CTO of Netflix, stated: “Our architecture was changing faster than you can draw it... As a result, it wasn’t useful to try to draw it” <<Bloomberg2014>>.
+Judging simply by its history, visualization is therefore an essential tool for humans dealing with large scale complexity (and erecting buildings has always been one of the more complex domains of human activity.) In digital and IT contexts, however, visualization has certain challenges and notable skeptics. Adrian Cockcroft, the former CTO of Netflix, stated: “Our architecture was changing faster than you can draw it... As a result, it wasn’t useful to try to draw it” cite:[Bloomberg2014].
 
 .Whiteboard footnote:[_Image https://www.flickr.com/photos/simonov/15484240880, downloaded 2016-10-10, commercial use permitted_]
 image::images/4_12-whiteboard.jpg[blueprint, 350, , float="left"]
@@ -145,7 +145,7 @@ Even in construction and engineering trades that rely on blueprints as a source 
 
 ====== Human visual processing
 [quote, Dan Moody, The "Physics" of Notations]
-Visual representations are effective because they tap into the capabilities of the powerful and highly parallel human visual system. We like receiving information in visual form and can process it very efficiently: around a quarter of our brains are devoted to vision, more than all our other senses combined [63]. In addition, diagrams can convey information more concisely [27] and precisely than ordinary language [8, 68]. Information represented visually is also more likely to be remembered due to the picture superiority effect [38, 70] ...Visual representations are also processed differently: according to dual channel theory [80], the human mind has separate systems for processing pictorial and verbal material. Visual representations are processed in parallel by the visual system, while textual representations are processed serially by the auditory system... <<Moody2009>>.
+Visual representations are effective because they tap into the capabilities of the powerful and highly parallel human visual system. We like receiving information in visual form and can process it very efficiently: around a quarter of our brains are devoted to vision, more than all our other senses combined [63]. In addition, diagrams can convey information more concisely [27] and precisely than ordinary language [8, 68]. Information represented visually is also more likely to be remembered due to the picture superiority effect [38, 70] ...Visual representations are also processed differently: according to dual channel theory [80], the human mind has separate systems for processing pictorial and verbal material. Visual representations are processed in parallel by the visual system, while textual representations are processed serially by the auditory system... cite:[Moody2009].
 
 As the above quote shows, there are clear neurological reasons for diagramming as a communication form. To expand a bit more on the points Dan Moody is making:
 
@@ -162,9 +162,11 @@ image::images/4_12-tiger.jpg[blueprint, 350, , float="right"]
 [quote,William Kent, Data and Reality]
 A message to mapmakers: Highways are not painted red, rivers don’t have county lines running down the middle, and you can’t see contour lines on a mountain.
 
-.The first software flowchart footnote:[_<<vonNeumann1947>>, figure 7.9, public domain assumed_]
+[[fig-neumann-flowchart-350-i]]
+.The first software flowchart
 image::images/4_12-neumann-flowchart.png[blueprint, 350, , float="left"]
-Architects and architecture are known for creating diagrams -- abstract graphical representations of complex systems. The first known instance of applying graphical techniques to a digital problem was in 1947 <<vonNeumann1947>> and visual notations have evolved along with the field of computing ever since. Notable examples include:
+
+Architects and architecture are known for creating diagrams -- abstract graphical representations of complex systems. The first known instance of applying graphical techniques to a digital problem was in 1947 (see <<fig-neumann-flowchart-350-i>>) cite:[vonNeumann1947] and visual notations have evolved along with the field of computing ever since. Notable examples include:
 
 * The IBM flowcharting template
 * The Gane-Sarson data-flow diagram notation
@@ -185,11 +187,11 @@ Research at Microsoft suggests that developers use diagrams for four purposes:
 * Manipulating
 * Brainstorming
 
-They argue "diagrams support communicating, capturing attention and grounding conversations [4]. They reduce the cognitive burden of evaluating a design or considering new ideas [13]" <<Cherubini2007>>.
+They argue "diagrams support communicating, capturing attention and grounding conversations [4]. They reduce the cognitive burden of evaluating a design or considering new ideas [13]" cite:[Cherubini2007].
 
 But visual notations have been problematic in the Agile community; as Fowler notes in his classic essay Is Design Dead:
 
-_[Agile method eXtreme Progamming] de-emphasizes diagrams to a great extent. Although the official position is along the lines of "use them if they are useful", there is a strong subtext of "real XPers don't do diagrams".... I think the issue comes from two separate causes. One is the fact that some people find software diagrams helpful and some people don't. The danger is that those who do think that those who don't should do and vice-versa. Instead we should just accept that some people will use diagrams and some won't._ <<Fowler2004>>
+_[Agile method eXtreme Progamming] de-emphasizes diagrams to a great extent. Although the official position is along the lines of "use them if they are useful", there is a strong subtext of "real XPers don't do diagrams".... I think the issue comes from two separate causes. One is the fact that some people find software diagrams helpful and some people don't. The danger is that those who do think that those who don't should do and vice-versa. Instead we should just accept that some people will use diagrams and some won't._ cite:[Fowler2004]
 
 There is no question that some IT professionals, including perhaps some of the most skilled software engineers, find little of use in diagrams . As Martin Fowler says, "people like Kent [Beck, eXtreme Progamming originator] aren't at all comfortable with diagrams, indeed I've never seen Kent voluntarily draw a software diagram in any fixed notation." However, it seems likely that Kent Beck and others like him are members of a programming elite, with a well-honed mental ability to process source code in its "raw" form.
 
@@ -204,7 +206,7 @@ Note that flowcharts, data models, and other such diagrams tend to be associated
 
 ====== Limitations of visualization
 [quote, Bente et al, Collaborative Enterprise Architecture]
-The big picture is part of the standard mindset of EA, which everyone immediately associates with the activities of an enterprise architect. However, many of these big pictures you meet in practice have been over-abstracted to the point of insignificance and no longer address any relevant question. <<Bente2012>>, p16.
+The big picture is part of the standard mindset of EA, which everyone immediately associates with the activities of an enterprise architect. However, many of these big pictures you meet in practice have been over-abstracted to the point of insignificance and no longer address any relevant question. cite:[Bente2012], p16.
 
 Visualization has a number of limitations:
 
@@ -361,7 +363,7 @@ A simple example:
 
 Let’s say that you have identified a set of use cases indicating $250,000 maximum savings from an accurate and optimally scoped architecture repository. The implementation is projected to cost $200,000 over 3 years, for net benefits of $50,000. This means that you have an ROI of 25% ($50k/$200k). You can’t get 25% return on investment in the stock market, so the CFO sees this as a good use of money. On the other hand, if you only are projecting $15,000 in net benefits, for an ROI of 8%, the CFO may well say, “I can do better with other projects, or by leaving our money in the stock market.”
 
-Of course, estimating benefits such as reducing redundant research are not simple. The book How to Measure Anything by Doug Hubbard <<Hubbard2010>> is a very useful resource for these kinds of problems. You may need to consider using techniques such as Monte Carlo Analysis for business benefits that are more probabilistic. But you do not need to throw up your hands and say it’s all just “intangible,” successfully making challenging business cases of this nature is possible.
+Of course, estimating benefits such as reducing redundant research are not simple. The book How to Measure Anything by Doug Hubbard cite:[Hubbard2010] is a very useful resource for these kinds of problems. You may need to consider using techniques such as Monte Carlo Analysis for business benefits that are more probabilistic. But you do not need to throw up your hands and say it’s all just “intangible,” successfully making challenging business cases of this nature is possible.
 
 ===== The "rationalization" quest
 [quote, Ralph Waldo Emerson]
@@ -385,7 +387,7 @@ We close this section with some case studies on rationalization.
 
 ====== Application rationalization
 [quote, Bente et al, Collaborative Enterprise Architecture]
-One core question decided by governance is how much autonomy is granted to business units or geographical regions. In case this autonomy is high, would a quest for high IT integration and standardization not be like fighting windmills? <<Bente2012>> p.45
+One core question decided by governance is how much autonomy is granted to business units or geographical regions. In case this autonomy is high, would a quest for high IT integration and standardization not be like fighting windmills? cite:[Bente2012] p.45
 
 A large electronics retailer purchases a smaller chain of stores specializing in vinyl records and CDs, just as the market for these are declining. The decision is made to integrate all the systems: Point of Sale, inventory, HR & Payroll, etc, in the interest of efficiency and rationalization.
 
@@ -402,13 +404,13 @@ And once a system of record is established and the data interfaces have been con
 .Airbus A-380 footnote:[_Image credit https://www.flickr.com/photos/44400809@N07/4081438180, downloaded 2016-10-11, commercial use permitted_]
 image::images/4_12-A-380.jpg[A-380, 300, , float="left"]
 
-In 2006, Airbus was in the midst of developing the gigantic A-380 aircraft. Because of the scale of the effort, multiple teams of engineers in different countries were working on the effort. As William Ulrich says of the German and French teams, "having failed to coordinate efforts to wire the world's largest plane, they were surprised to learn that they had used different approaches to designing the A380's wiring system" <<Ulrich2010>>, p. 32. This was because the teams were using different software for wiring design of the critical wiring design software <<Clark2006>>. The use of different software to fulfill the capability resulted in a year's delay, a $4.5bn order loss to Boeing, and a 26% drop in Airbus stock.
+In 2006, Airbus was in the midst of developing the gigantic A-380 aircraft. Because of the scale of the effort, multiple teams of engineers in different countries were working on the effort. As William Ulrich says of the German and French teams, "having failed to coordinate efforts to wire the world's largest plane, they were surprised to learn that they had used different approaches to designing the A380's wiring system" cite:[Ulrich2010>>, p. 32. This was because the teams were using different software for wiring design of the critical wiring design software <<Clark2006]. The use of different software to fulfill the capability resulted in a year's delay, a $4.5bn order loss to Boeing, and a 26% drop in Airbus stock.
 
 ====== Technology rationalization case #2
 
-Henrik Kniberg worked on the PUST project for the Swedish national police, which was a project to deploy laptops to the Swedish police. Because of its urgency, it was allowed to use Lean and Agile techniques, and received favorable media coverage and was generally deemed a success  <<Kniberg2011>>.
+Henrik Kniberg worked on the PUST project for the Swedish national police, which was a project to deploy laptops to the Swedish police. Because of its urgency, it was allowed to use Lean and Agile techniques, and received favorable media coverage and was generally deemed a success  cite:[Kniberg2011].
 
-Unfortunately, a drive for technology "rationalization" resulted in the re-platforming of the system on a commercial platform (Siebel) <<Kniberg2013>>. Furthermore, an xref:open-loop[open loop] xref:Agile-history[waterfall] method was used to deliver the system. Kniberg reports that the result has been an unsuccessful rollout, unhappy users, and cost to the Swedish police department of about 1 biliion pounds ($1.6B).
+Unfortunately, a drive for technology "rationalization" resulted in the re-platforming of the system on a commercial platform (Siebel) cite:[Kniberg2013]. Furthermore, an xref:open-loop[open loop] xref:Agile-history[waterfall] method was used to deliver the system. Kniberg reports that the result has been an unsuccessful rollout, unhappy users, and cost to the Swedish police department of about 1 biliion pounds ($1.6B).
 
 As we have discussed, there can be an economic case for rationalization. It reduces support costs and increases vendor leverage. However, 1 billion pounds  would have bought a lot of support & vendor leverage for the "nonstandard" technologies. It is hard to see that this was an economically rational decision, especially given the particular risks of police work (the system in question is used by officers in the field, to keep records on criminal cases.) It does not take much imagination to think of scenarios where a difficult to use system for a police officer could have costly or even tragic results. In this case, the quest for rationalization appears misguided.
 

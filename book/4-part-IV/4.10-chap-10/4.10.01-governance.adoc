@@ -22,9 +22,7 @@ anchor:gov-v-mgmt[]
 [quote, COBIT 5 Framework, ISACA]
 The COBIT 5 framework makes a clear distinction between governance and management. These two disciplines encompass different types of activities, require different organisational structures and serve different purposes . . . In most enterprises, governance is the responsibility of the board of directors under the leadership of the chairperson [while] management is the responsibility of the executive management under the leadership of the CEO.
 
-To talk about digital or IT governance, we must talk about governance in general.
-
-Governance is a challenging and often misunderstood concept. First and foremost, it must be distinguished from "management." This is not always easy, but remains essential.
+To talk about digital or IT governance, we must talk about governance in general. Governance is a challenging and often misunderstood concept. First and foremost, it must be distinguished from "management." This is not always easy, but remains essential.
 
 anchor:gov-shop-example[]
 
@@ -32,16 +30,13 @@ anchor:gov-shop-example[]
 
 Here is simple explanation of governance:
 
-Suppose you own a small retail store. For years, you were the primary operator. You might have hired an occasional cashier, but that person had limited authority; they had the keys to the store and cash register, but not the safe combination, nor was their name on the bank account. They did not talk to your suppliers. They received an hourly wage and you gave them direct and ongoing supervision.
+Suppose you own a small retail store. For years, you were the primary operator. You might have hired an occasional cashier, but that person had limited authority; they had the keys to the store and cash register, but not the safe combination, nor was their name on the bank account. They did not talk to your suppliers. They received an hourly wage and you gave them direct and ongoing supervision. footnote:[Credit: I got this analogy from hearing Brian Barnier speak at an ISACA meeting around 2011.] In this case, you were a manager. Governance was not part of the relationship.
 
-_Credit: I got this analogy from hearing Brian Barnier speak at an ISACA meeting around 2011._
-
-In this case, you were a manager. Governance was not part of the relationship.
-
-.Someone to "mind the store" footnote:[_image credit https://www.flickr.com/photos/garryknight/11240024613, commercial use permitted._]
+[[fig-shopkeeper-600-i]]
+.Someone to "mind the store"
 image::images/4_10-shopkeeper.jpg[two men in front of a store,600,,float="left"]
 
-Now, you wish to go on an extended vacation - perhaps a cruise around the world, or a trek in the Himalayas. You need someone who can count the cash and deposit it, and place orders with and pay your suppliers. You need to hire a professional manager.
+Now, you wish to go on an extended vacation - perhaps a cruise around the world, or a trek in the Himalayas. You need someone who can count the cash and deposit it, and place orders with and pay your suppliers. You need to hire a professional manager (see <<fig-shopkeeper-600-i>> footnote:[Image credit https://www.flickr.com/photos/garryknight/11240024613, commercial use permitted.]).
 
 They will likely draw a salary, perhaps some percentage of your proceeds, and you will not supervise them in detail as you did the cashier. Instead, you will set overall guidance and expectations for the results they produce. How do you do this? And perhaps even more importantly, how do you trust this person?
 
@@ -53,11 +48,9 @@ IMPORTANT: There is too often a temptation to lump all of "management" in with g
 
 ====== Some theory of goverance
 
-In political science and economics, the need for governance is seen as an example of the https://en.wikipedia.org/wiki/Principal%E2%80%93agent_problem[principal-agent problem] <<Eisenhardt1989>>. Our shopkeeper example illustrates this. The hired manager is the "agent," acting on behalf of the shop owner, who is the "principal."
+In political science and economics, the need for governance is seen as an example of the https://en.wikipedia.org/wiki/Principal%E2%80%93agent_problem[principal-agent problem] cite:[Eisenhardt1989]. Our shopkeeper example illustrates this. The hired manager is the "agent," acting on behalf of the shop owner, who is the "principal."
 
-In principal-agent theory, the agent may have different interests than the principal. The agent also has much more information (think of the manager running the shop day to day, versus the owner off climbing mountains).
-
-The agent is in a position to do economic harm to the principal; to shirk duty, to steal, to take kickbacks from suppliers. Mitigating such conflicts of interest is a part of governance.
+In principal-agent theory, the agent may have different interests than the principal. The agent also has much more information (think of the manager running the shop day to day, versus the owner off climbing mountains). The agent is in a position to do economic harm to the principal; to shirk duty, to steal, to take kickbacks from suppliers. Mitigating such conflicts of interest is a part of governance.
 
 In larger organizations (such as you are now), it's not just a simple matter of one clear owner vesting power in one clear agent. The corporation may be publicly owned, or in the case of a non-profit, it may be seeking to represent a diffuse set of interests (e.g. environmental issues). In such cases, a group of individuals (directors) is formed, often termed a "board," with ultimate authority to speak for the organization.
 
@@ -67,15 +60,11 @@ The fundamental purpose of boards of directors and similar bodies is to take the
 
 Because governance is the principal's concern, and because the directors represent the principal, governance, including IT governance, is a board-level concern.
 
-There are various principles of corporate governance we will not go into here, such as shareholder rights, stakeholder interests, transparency, and so forth. References on these topics are included in the chapter conclusion (COSO and ISACA are good places to start).
+There are various principles of corporate governance we will not go into here, such as shareholder rights, stakeholder interests, transparency, and so forth. References on these topics are included in the chapter conclusion (COSO and ISACA are good places to start). However, as we turn to our focus on digital and IT-related governance, there are a few final insights from principal-agent theory that are helpful to understanding governance. Consider:
 
-However, as we turn to our focus on digital and IT-related governance, there are a few final insights from principal-agent theory that are helpful to understanding governance. Consider:
+_the heart of principal-agent theory is the trade-off between (a) the cost of measuring behavior and (b) the cost of measuring outcomes and transferring risk to the agent._ cite:[Eisenhardt1989]
 
-_the heart of principal-agent theory is the trade-off between (a) the cost of measuring behavior and (b) the cost of measuring outcomes and transferring risk to the agent._ <<Eisenhardt1989>>
-
-What does this mean?
-
-Suppose the shopkeeper tells the manager, "I will pay you a salary of $50,000 while I am gone, assuming you can show me you have faithfully executed your daily duties."
+What does this mean? Suppose the shopkeeper tells the manager, "I will pay you a salary of $50,000 while I am gone, assuming you can show me you have faithfully executed your daily duties."
 
 anchor:programmability[]
 
@@ -95,7 +84,7 @@ In general, it may seem that an outcome-based relationship would always be prefe
 
 Finally, there is a way to align interests around outcomes without going fully to performance-based pay. If the manager for cultural reasons sees their interests as aligned, this may mitigate the principal-agent problem. In our example, suppose the store is in a small, tight-knit community with a strong sense of civic pride and familial ties.
 
-Even if the manager is being managed in terms of their behavior, their cultural ties to the community or clan may lead them to see their interests as well aligned with those of the principal. As noted in <<Eisenhardt1989>>, "Clan control implies goal congruence between people and, therefore, the reduced need to monitor behavior or outcomes. Motivation issues disappear." We have discussed this kind of motivation in Chapter 7, especially in our discussion of xref:failure-control-culture[control culture] and insights drawn from the military.
+Even if the manager is being managed in terms of their behavior, their cultural ties to the community or clan may lead them to see their interests as well aligned with those of the principal. As noted in cite:[Eisenhardt1989], "Clan control implies goal congruence between people and, therefore, the reduced need to monitor behavior or outcomes. Motivation issues disappear." We have discussed this kind of motivation in Chapter 7, especially in our discussion of xref:failure-control-culture[control culture] and insights drawn from the military.
 
 anchor:COSO-control[]
 
@@ -127,7 +116,7 @@ Control activities, according to COSO, are
 
 _the actions established through policies and procedures that help ensure that management's directives to mitigate risks to the achievement of objectives are carried out. Control activities are performed at all levels of the entity, at various stages within business processes, and over the technology environment. They may be preventive or detective in nature and may encompass a range of manual and automated activities such as authorizations and approvals, verifications, reconciliations, and business performance reviews._
 
-_...Ongoing evaluations, built into business processes at different levels of the entity, provide timely information. Separate evaluations, conducted periodically, will vary in scope and frequency depending on assessment of risks, effectiveness of ongoing evaluations, and other management considerations. Findings are evaluated against criteria established by regulators, recognized standard-setting bodies or management and the board of directors, and deficiencies are communicated to management and the board of directors as appropriate._ <<COSO2013>>
+_...Ongoing evaluations, built into business processes at different levels of the entity, provide timely information. Separate evaluations, conducted periodically, will vary in scope and frequency depending on assessment of risks, effectiveness of ongoing evaluations, and other management considerations. Findings are evaluated against criteria established by regulators, recognized standard-setting bodies or management and the board of directors, and deficiencies are communicated to management and the board of directors as appropriate._ cite:[COSO2013]
 
 anchor:gov-as-feedback[]
 
@@ -135,12 +124,13 @@ anchor:gov-as-feedback[]
 *Systems theory, feedback, control, and governance*
 We've encountered systems theory and associated concepts such as xref:feedback[feedback] and xref:empirical-process-control[control] throughout this book. The idea of "governance" predates these, but in an interesting way.
 
-The term "governance" originates from the Greek word κυβερνάω [kubernáo], which means "to steer," as in a ship. Nautical navigation is a process of feedback and correction. The same Greek word is also the basis for the term "cybernetics," another word closely associated with systems and control theory.
+The term "governance" originates from the Greek word kubernáo, which means "to steer," as in a ship. Nautical navigation is a process of feedback and correction. The same Greek word is also the basis for the term "cybernetics," another word closely associated with systems and control theory.
 
-.Centrifugal governor footnote:[Public domain image via Wikipedia]
+[[fig-centrifugal_governor-300-o]]
+.Centrifugal governor
 image::images/4_10-centrifugal_governor.png[mechanism, 300,,float="right"]
 
-"Governors" have been part of mechanical systems for centuries. These mechanisms have the effect of automatically controlling a system so that it (for example) operates at the desired revolutions per minute. Without governors, steam engines tended to blow up, or go out; applying devices such as the https://en.wikipedia.org/wiki/Centrifugal_governor[centrifugal governor] to regulate them was an important step in the development of steam power. Importantly, such devices operated to control the process from variation on either side, whether too fast or too slow. They did not operate merely as brakes.
+"Governors" have been part of mechanical systems for centuries (see <<fig-centrifugal_governor-300-o>> footnote:[Public domain Image via Wikipedia]). These mechanisms have the effect of automatically controlling a system so that it (for example) operates at the desired revolutions per minute. Without governors, steam engines tended to blow up, or go out; applying devices such as the https://en.wikipedia.org/wiki/Centrifugal_governor[centrifugal governor] to regulate them was an important step in the development of steam power. Importantly, such devices operated to control the process from variation on either side, whether too fast or too slow. They did not operate merely as brakes.
 
 So, if you find yourself coping with arbitrary and bureaucratic "governance" processes, it might be good to remember the origins of the term. There is more to governance than just slowing a system down.
 
@@ -151,12 +141,11 @@ So, if you find yourself coping with arbitrary and bureaucratic "governance" pro
 anchor:gov-as-env-resp[]
 
 ====== Governance context
-Enough theory. Governance is also practical concern for you because at your scale, you have a complex set of environmental forces to cope with:
-
+[[fig-govEnv-500-c]]
 .Governance in context
 image::images/4_10-govEnv.png[governance environment, 500]
 
-You started with a focus on the customer, and the market they represented. Sooner or later, you encountered regulators and adversaries: competitors and cybercriminals.
+Enough theory. Governance is also practical concern for you because at your scale, you have a complex set of environmental forces to cope with (see <<fig-govEnv-500-c>>). You started with a focus on the customer, and the market they represented. Sooner or later, you encountered regulators and adversaries: competitors and cybercriminals.
 
 ****
 *Mark Burgess and Promise Theory*
@@ -164,7 +153,7 @@ You started with a focus on the customer, and the market they represented. Soone
 [quote, Mark Burgess, Promise Theory]
 Promise Theory is . . . an engineering framework for coping with uncertainty in information systems.
 
-We use the term "promise" here in a manner intended to be roughly consistent with Promise Theory. Promise Theory is a way of reasoning about relationships and systems developed by Mark Burgess. <<Burgess2015>>
+We use the term "promise" here in a manner intended to be roughly consistent with Promise Theory. Promise Theory is a way of reasoning about relationships and systems developed by Mark Burgess. cite:[Burgess2015]
 
 Promise Theory is a sophisticated, mathematically-founded framework for reasoning about intent, outcome, control, and related topics of interest to digital governance. It is not possible to discuss it in depth here, but one basic heuristic we will follow is that a promise is better than a command, because "A promise expresses intent about the end point, or ultimate outcome, instead of indicating what to do at the starting point." We have explored similar themes in our chapter section on xref:failure-control-culture[culture].
 
@@ -172,7 +161,7 @@ Promise Theory is a sophisticated, mathematically-founded framework for reasonin
 
 These external parties intersect with your reality via various channels:
 
-* Your brand, which represents a sort of general promise to the market (see <<Sussna2015>>, p.16)
+* Your brand, which represents a sort of general promise to the market (see cite:[Sussna2015], p.16)
 * Contracts, which represent more specific promises to suppliers and customers
 * Laws, regulations, and standards, which can be seen as promises you must make and keep in order to function in civil society, or in order to obtain certain contracts.
 * Threats, which may be of various kinds:
@@ -185,16 +174,20 @@ These external parties intersect with your reality via various channels:
 
 We will return to the role of external forces in our discussion of assurance. For now, we will turn to how digital governance, within an overall system of digital delivery, reflects our emergence model.
 
+ifdef::collaborator-draft[]
+
  credit Sussna for "brand as promise" https://medium.com/@jeffsussna/brands-as-promise-marks-d43dc2efaf21#.24pc4smy5
+endif::collaborator-draft[]
 
 ====== Governance and the emergence model
 
 In terms of our xref:emergence-model[emergence model], the most important distinction between a "xref:Part-III-coordination[team of teams]" and an "xref:enterprise[enterprise]" is the existence of xref:formalization[formalized] organizational governance.
 
+[[fig-govEmergence-800-c]]
 .Governance emerges at the enterprise level
 image::images/4_10-govEmergence.png[governance emergence, 800]
 
-In the above diagram, formalized governance is represented by the establishment of a *governing body*, responsive to some *stakeholders* who seek to recognize value from the organization or "entity" -- in this case, a digital delivery organization.
+As illustrated in <<fig-govEmergence-800-c>>, formalized governance is represented by the establishment of a *governing body*, responsive to some *stakeholders* who seek to recognize value from the organization or "entity" -- in this case, a digital delivery organization.
 
 Corporate governance is a broad and deep topic, essential to the functioning of society and its organized participants. These include for-profit, non-profit, and even governmental organizations. Any legally organized entity of significant scope has governance needs.
 
@@ -204,16 +197,14 @@ However, organizational governance takes other forms. Public institutions of hig
 
 These are well known topics in law, finance, and social organization, and there are many sources you can turn to if you have further interest. If you are taking any courses on Finance or Accounting, you will likely cover governance objectives and processes.
 
-Here is a more detailed visual representation of the relationship of governance and management in a digital context:
 
 anchor:govarch[]
 
+[[fig-govArch-600-c]]
 .Governance and management with interface
 image::images/4_10-govArch.png[architecture of goverance, 600]
 
-_synthesized from various sources including ISO 38500 and COBIT_
-
-Reading from the top down:
+Illustrated in <<fig-govArch-600-c>> footnote:[Synthesized from various sources including ISO 38500 and COBIT] is a more detailed visual representation of the relationship of governance and management in a digital context. Reading from the top down:
 
 *Value recognition* is the fundamental objective of the stakeholder. We  discussed in Chapter 4 the value objectives of xref:impact-mapping[effectiveness, efficiency, and risk] (aka top line, bottom line, and risk). These are useful final targets for impact mapping, to demonstrate that lower level perhaps more "technical" product capabilities do ultimately contribute to organization outcomes.
 
@@ -225,9 +216,9 @@ Here, we see them from the stakeholder perspective of
 * Cost optimization
 * Risk optimization
 
-(Adapted from <<ISACA2012a>>, p. 23)
+(Adapted from cite:[ISACA2012a], p. 23)
 
-Both ISO 38500 <<ISO2008>> as well as COBIT <<ISACA2012a>> specify that the fundamental *governance activities* of governance are:
+Both ISO 38500 cite:[ISO2008>> as well as COBIT <<ISACA2012a] specify that the fundamental *governance activities* of governance are:
 
 * Direct
 * Evaluate

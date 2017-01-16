@@ -53,28 +53,33 @@ The system requires its own hardware (servers, storage, perhaps a dedicated swit
 
 It would not have been much different for a fully in house developed application, except that more money would have gone to developers. The slow infrastructure supply chain still drove much of the behavior, and correctly "sizing" this infrastructure was a challenge particularly for in-house developed software. (The vendors of commercial software would usually have a better idea of the infrastructure required for a given load.) Hence much attention to up-front planning. Without requirements, no analysis or design; without design, how to know how much server to buy?
 
-Ultimately, the project comes to an end, and the results (if a product such as a digital service) are transitioned to a "production" state. Here is a graphical depiction:
+Ultimately, the project comes to an end, and the results (if a product such as a digital service) are transitioned to a "production" state. <<fig-ProdLifecycleA-700-c>> presents a  graphical depiction.
 
+[[fig-ProdLifecycleA-700-c]]
 .Traditional IT implementation lifecycle
-image::images/3_08-ProdLifecycle1.png[lifecycle, 700,  ]
+image::images/3_08-ProdLifecycle1.png[lifecycle, 700, ]
 
-We can see a number of problems with this classic model, starting with the lack of responsiveness to consumer needs:
+There are a number of problems with this classic model, starting with the lack of responsiveness to consumer needs (see <<fig-ProdLifecycleB-700-c>>).
 
+[[fig-ProdLifecycleB-700-c]]
 .Customer responsiveness in traditional model
 image::images/3_08-ProdLifecycle2.png[lifecycle2, 700, ]
+
 
 This might be OK for a non-competitive function, but if the "digital service consumer" has other options they may go elsewhere. If they are an internal user within an enterprise, they might be engaged in critical competitive activities.
 
 anchor:trad-IT-decline[]
 
 ====== The decline of the "traditional" IT project
-The above scenario is in decline, and along with it a way of life for many "IT" professionals. One primary reason is Cloud, and in particular Software as a Service.  Another reason is the increasing adoption of the Lean/Agile product development approach for digital services. Here is one view of the classic model:
+The above scenario is in decline, and along with it a way of life for many "IT" professionals. One primary reason is Cloud, and in particular Software as a Service.  Another reason is the increasing adoption of the Lean/Agile product development approach for digital services. <<fig-ProdLifecycleC-700-c>> presents one view of the classic model.
 
+[[fig-ProdLifecycleC-700-c]]
 .Traditional enterprise IT "space"
 image::images/3_08-ProdLifecycle3.png[classic, 700, ]
 
-Notice the long triangles labeled "Producing focus" and "Consuming focus." These represent the perspectives of (for example) a software vendor versus their customer. Traditionally, the research and development (R&D) function was most mature in the product companies. What was less well understood was that internal IT development was also a form of R&D. Because of the desire for scope management (predictability and control), the IT department performing systems development was often trapped in the worst of both worlds - having neither good quality product, nor high levels of certainty. For many years, this was accepted by industry as the best that could be expected. However, the combination of Lean/Agile and Cloud is changing this situation:
+Notice the long triangles labeled "Producing focus" and "Consuming focus." These represent the perspectives of (for example) a software vendor versus their customer. Traditionally, the research and development (R&D) function was most mature in the product companies. What was less well understood was that internal IT development was also a form of R&D. Because of the desire for scope management (predictability and control), the IT department performing systems development was often trapped in the worst of both worlds - having neither good quality product, nor high levels of certainty. For many years, this was accepted by industry as the best that could be expected. However, the combination of Lean/Agile and Cloud is changing this situation (see <<fig-ProdLifecycleD-700-c>>).
 
+[[fig-ProdLifecycleD-700-c]]
 .Shrinking space for traditional IT
 image::images/3_08-ProdLifecycle4.png[new model, 700, ]
 
@@ -104,15 +109,17 @@ Project accounting, at scale, is a deep area with considerable research and theo
 
 ===== The "iron triangle"
 
-.Project "Iron Triangle" footnote:[_Image credit https://commons.wikimedia.org/w/index.php?curid=4282986, "By I, John Manuel Kennedy T., CC BY-SA 3.0," downloaded 2016-10-31, fair use]
+[[fig-triad-constraints-300-i]]
+.Project "Iron Triangle"
 image::images/3_08-triad-constraints.jpg[Iron triangle, 300, , float="left"]
 
-The project management https://en.wikipedia.org/wiki/Project_management_triangle["Iron Triangle"] represents the interaction of cost, time, scope, and quality on a project. The idea is that, in general, one or more of these factors may be a constraint. The following sign is often seen in service organizations:
+The project management https://en.wikipedia.org/wiki/Project_management_triangle["Iron Triangle"] represents the interaction of cost, time, scope, and quality on a project (see <<fig-triad-constraints-300-i>> footnote:[Image credit https://commons.wikimedia.org/w/index.php?curid=4282986, "By I, John Manuel Kennedy T., CC BY-SA 3.0," downloaded 2016-10-31, fair use]). The idea is that, in general, one or more of these factors may be a constraint. The "Pick any Two" sign is often seen in service organizations (see <<fig-good-cheap-fast-400-o>> footnote:[Image credit https://www.flickr.com/photos/centralasian/4534292595, downloaded 2016-10-31, commercial use permitted]).
 
-.Pick any two footnote:[_Image credit https://www.flickr.com/photos/centralasian/4534292595, downloaded 2016-10-31, commercial use permitted]
+[[fig-good-cheap-fast-400-o]]
+.Pick any two
 image::images/3_08-good-cheap-fast.jpg[Good-Cheap-Fast, 400, , float="right"]
 
-The same applies to project management and reflects well the "iron triangle" of tradeoffs. However, more recent thinking in the DevOps movement suggests that optimizing for continuous flow and speed tends to have beneficial impacts on quality as well. As digital xref:pipeline[pipelines] increase their automation and thus speed to delivery, quality increases because testing and building become more predictable. Conversely, the idea that stability increases through injecting delay into the deployment process (i.e. through formal Change Management) is also under question (see <<Puppet2014>>).
+The same applies to project management and reflects well the "iron triangle" of tradeoffs. However, more recent thinking in the DevOps movement suggests that optimizing for continuous flow and speed tends to have beneficial impacts on quality as well. As digital xref:pipeline[pipelines] increase their automation and thus speed to delivery, quality increases because testing and building become more predictable. Conversely, the idea that stability increases through injecting delay into the deployment process (i.e. through formal Change Management) is also under question (see cite:[Puppet2014]).
 
 
 ===== Project practices
@@ -130,7 +137,7 @@ However, in Agile domains that seek to be more adaptive to changing business dyn
 IMPORTANT: Part of the problem with extensive frameworks such as PMBOK is that knowing how and when to tailor them is hard-won knowledge that is not part of the usual formalized training. And yet, without some idea of "what matters" in applying the framework, there is great risk of wasted effort. The Agile movement in some ways is a reaction to the waste that can result from overly detailed frameworks.
 
 ====== Scope management
-Scope management is a powerful tool and concept, at the heart of the most challenging debates around project management. PMBOK uses the following definitions <<PMI2013>>:
+Scope management is a powerful tool and concept, at the heart of the most challenging debates around project management. PMBOK uses the following definitions cite:[PMI2013]:
 
 *Scope.* The sum of the products, services, and results to be provided as a project. See also project scope and product scope.
 
@@ -147,9 +154,9 @@ On the other hand, remember our xref:emergence-model[emergence model]. The simpl
 
 It is in the tension between product autonomy and accountability that we see project management techniques such as the work breakdown structure and project change control employed. The work breakdown structure is defined by the Project Management Body of Knowledge as
 
-_...a hierarchical decomposition of the total scope of work to be carried out by the project team to accomplish the project objectives and create the required deliverables. The WBS organizes and defines the total scope of the project, and represents the work specified in the current approved project_ <<PMI2013>>.
+_...a hierarchical decomposition of the total scope of work to be carried out by the project team to accomplish the project objectives and create the required deliverables. The WBS organizes and defines the total scope of the project, and represents the work specified in the current approved project_ cite:[PMI2013].
 
-<<Portny2013>> recommends "Subdivide your WBS component into additional deliverables if you think either of the following situations applies: The component will take much longer than two calendar weeks to complete. The component will require much more than 80 person-hours to complete."
+cite:[Portny2013] recommends "Subdivide your WBS component into additional deliverables if you think either of the following situations applies: The component will take much longer than two calendar weeks to complete. The component will require much more than 80 person-hours to complete."
 
 This may seem reasonable, but in iterative product development, it can be difficult to "decompose" a problem in the way project management seems to require. Or to estimate in the way Portny suggests. This can lead to two problems.
 
@@ -166,7 +173,7 @@ Risks may be formally identified in project management tooling. They may be acce
 
 Enterprise IT organizations have evolved to use a mix of project management, processes, and ad-hoc work routing to achieve their results. Often, resources (people) are assigned to multiple projects, a practice sometimes called "fractional allocation."
 
-In fractional allocation, a database administrator will work 25% on one project, 25% on another, and still be expected to work 50% on ongoing production support. This may appear to work mathematically, but practically it is an ineffective practice. Both Gene Kim in The Phoenix Project <<Kim2013>> and Eli Goldratt in Critical Chain <<Goldratt1997>> present dramatized accounts of the overburden and gridlock that can result from such approaches.
+In fractional allocation, a database administrator will work 25% on one project, 25% on another, and still be expected to work 50% on ongoing production support. This may appear to work mathematically, but practically it is an ineffective practice. Both Gene Kim in The Phoenix Project cite:[Kim2013>> and Eli Goldratt in Critical Chain <<Goldratt1997] present dramatized accounts of the overburden and gridlock that can result from such approaches.
 
 As previously discussed, human beings are notably bad at xref:multi-tasking[multi-tasking], and the mental "context-switching" required to move from one task to another is wasteful and ultimately not scalable. A human being fractionally allocated to more and more projects will get less and less done in total, as the transactional friction of task switching increases.
 
@@ -200,3 +207,7 @@ Successful systems designers for years have relied on concepts such as encapsula
 Systems that do not adopt such approaches are often termed "monolithic" and have a well deserved reputation for being problematic to build and operate. Many large software failures stem from such approaches. If you have a project plan with excessive dependencies, the question at least should be asked: does my massive, tightly-coupled project plan indicate I am building a monolithic, tightly-coupled system that will not be flexible or responsive to change?
 
 Again, many digital companies build tremendously robust integrated services from the combination of many quasi-independent, microservice-based "product" teams, each serving a particular function. However, when a particular organizational objective requires changes to more than one such "product," the need for cross-team coordination emerges. Someone needs to own this larger objective, even if its actual implementation is carried out across multiple distinct teams. We will discuss this further in Chapter 9.
+
+ifdef::collaborator-draft[]
+ xref Chubby sidebar
+endif::collaborator-draft[]

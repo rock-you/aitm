@@ -37,19 +37,25 @@ The history of continuous improvement is intertwined with the history of 20th ce
 
 Then the Industrial Revolution happened.
 
-.Gilbreth "scientific management" organization footnote:[_Image credit https://www.flickr.com/photos/kheelcenter/5279836252/, downloaded 2016-12-23, commercial use permitted_]
+
+
+[[fig-scientific-mgmt-400-o]]
+.Gilbreth "scientific management" organization
 image::images/3_07-scientific-mgmt.jpg[org chart, 500, , float="right"]
 
 
 As steam and electric power increased the productivity of industry, requiring greater sums of capital to fund, a search for improvements began. Blacksmith shops (and other craft producers such as grain millers and weavers) began to consolidate into larger organizations, and technology became more complex and dangerous. It started to become clear that allowing each worker to perform the work as they preferred was not feasible.
 
-Enter the scientific method. Thinkers such as Frederick Taylor and Frank and Lillian Gilbreth (of "Cheaper by the Dozen" fame) started applying careful techniques of measurement and comparison, in search of the "one best way" to dig ditches or assemble vehicles. Organizationa became much more specialized and hierarchical, as shown in the accompanying early organization chart by Gilbreth. An entire profession of industrial engineering was established, along with the formal study of business management itself.
+Enter the scientific method. Thinkers such as Frederick Taylor and Frank and Lillian Gilbreth (of "Cheaper by the Dozen" fame,) started applying careful techniques of measurement and comparison, in search of the "one best way" to dig ditches or assemble vehicles. Organization became much more specialized and hierarchical, as shown in the accompanying early organization chart by Gilbreth (see <<fig-scientific-mgmt-400-o>> footnote:[Image credit https://www.flickr.com/photos/kheelcenter/5279836252/, downloaded 2016-12-23, commercial use permitted]). An entire profession of industrial engineering was established, along with the formal study of business management itself.
 
 anchor:taylorism[]
 
 ===== Frederick Taylor and efficiency
 
-.An industrial engineer observing a worker footnote:[_Image credit https://www.flickr.com/photos/kheelcenter/5279194177/i, downloaded 2016-12-22, commercial use permitted_]
+
+
+[[fig-taylor-engineer-dns-400-i]]
+.An industrial engineer observing a worker
 image::images/3_07-taylor-engineer-dns.jpg[engineer observing worker, 400, , float="left"]
 
 Frederick Taylor (1856-1915)  was a mechanical engineer and one of the first industrial engineers. In 1911, he wrote _Principles of Scientific Management_. One of Taylor's primary contributions to management thinking was a systematic approach to efficiency. To understand this, let's consider some fundamentals.
@@ -63,10 +69,10 @@ There are many possible reasons. Perhaps the second factory is poorly laid out a
 As Peter Drucker, one of the most influential management thinkers, says of Frederick Taylor:
 
 ****
-The application of knowledge to work explosively increased productivity. For hundreds of years there had been no increase in the ability of workers to turn out goods or to move goods . . . But within a few years after Taylor began to apply knowledge to work, productivity began to rise at a rate of 3.5 to 4 percent compound a year—which means doubling every eighteen years or so. Since Taylor began, productivity has increased some fiftyfold in all advanced countries. On this unprecedented expansion rest all the increases in both standard of living and quality of life in the developed countries. <<Drucker1993>>, pp.37-38.
+The application of knowledge to work explosively increased productivity. For hundreds of years there had been no increase in the ability of workers to turn out goods or to move goods . . . But within a few years after Taylor began to apply knowledge to work, productivity began to rise at a rate of 3.5 to 4 percent compound a year—which means doubling every eighteen years or so. Since Taylor began, productivity has increased some fiftyfold in all advanced countries. On this unprecedented expansion rest all the increases in both standard of living and quality of life in the developed countries. cite:[Drucker1993], pp.37-38.
 ****
 
-The history of industrial engineering is often controversial, however. Hard-won skills were analyzed and stripped from traditional craftspeople by industrial engineers with clipboards, who now would determine the "one best way." Workers were increasingly treated as disposable. Work was reduced to its smallest components of a repeatable movement, to be performed on the assembly line, hour after hour, day after day until the industrial engineers developed a new assembly line. Taylor was known for his contempt for the workers, and his methods were used to increase work burdens sometimes to inhuman levels. Finally, some kinds of work simply can't be broken into constituent tasks.
+The history of industrial engineering is often controversial, however. Hard-won skills were analyzed and stripped from traditional craftspeople by industrial engineers with clipboards (see <<fig-taylor-engineer-dns-400-i>> footnote:[Image credit https://www.flickr.com/photos/kheelcenter/5279194177/i, downloaded 2016-12-22, commercial use permitted]), who now would determine the "one best way." Workers were increasingly treated as disposable. Work was reduced to its smallest components of a repeatable movement, to be performed on the assembly line, hour after hour, day after day until the industrial engineers developed a new assembly line. Taylor was known for his contempt for the workers, and his methods were used to increase work burdens sometimes to inhuman levels. Finally, some kinds of work simply can't be broken into constituent tasks.
 
 ===== W.E. Deming and variation
 The quest for effiency leads to the long-standing management interest in variability and variation. What do we mean by this?
@@ -76,9 +82,10 @@ If you expect a process to take 5 days, what do you make of occurrences when it 
 \W. Edwards Deming (1900-1993) is noted for (among many other things) his understanding of variation and organizational responses to it. Understanding variation is one of the major parts of his "System of Profound Knowledge." He emphasizes the need to distinguish special causes from  common causes of variation; special causes are those requiring management attention.
 
 Deming in particular was an advocate of the control chart, a technique to understand
-whether a process was within statistical control:
+whether a process was within statistical control (see <<fig-controlChart-500-o>> footnote:[Image from https://www.flickr.com/photos/internetarchivebookImages/14775750673/, no known copyright restrictions]).
 
-.Process control chart footnote:[_image from https://www.flickr.com/photos/internetarchivebookimages/14775750673/, no known copyright restrictions_]
+[[fig-controlChart-500-o]]
+.Process control chart
 image::images/3_09-controlChart.jpg[control chart, 500]
 
 However, using techniques of this nature makes certain critical assumptions about the nature of the process. Understanding variation and when to manage it requires care. These techniques were defined to understand *physical* processes that in general follow https://en.wikipedia.org/wiki/Normal_distribution[normal distributions].
@@ -91,7 +98,7 @@ The assumption is that, for your project tasks, you should be able to estimate t
 
 The problem is that neither of these are true. Despite heroic efforts, you cannot improve your estimation. In process control jargon, there are too many causes of variation for "best practices" to emerge. Project tasks remain unpredictable, and the variability does not follow a normal distribution. Very few tasks get finished earlier than you estimated, and there is a https://en.wikipedia.org/wiki/Long_tail[long tail] to the right, of tasks that take 2x, 3x or 10x longer than estimated.
 
-In general, applying statistical process control to variable, creative product development processes is inappropriate. For software development, Steven Kan states: "Many assumptions that underlie control charts are not being met in software data. Perhaps the most critical one is that data variation is from homogeneous sources of variation." That is, the causes of variation are knowable and can be addressed. This is in general not true of development work. <<Kan2003>>
+In general, applying statistical process control to variable, creative product development processes is inappropriate. For software development, Steven Kan states: "Many assumptions that underlie control charts are not being met in software data. Perhaps the most critical one is that data variation is from homogeneous sources of variation." That is, the causes of variation are knowable and can be addressed. This is in general not true of development work. cite:[Kan2003]
 
 Deming (along with Juran) is also known for "continuous improvement" as a cycle, e.g. "Plan/Do/Check/Act" or "Define/Measure/Analyze/Implement/Control." Such cycles are akin to the scientific method, as they essentially engage in the ongoing development and testing of hypotheses, and the implementation of validated learning. We touch on similar cycles in our discussions of xref:lean-startup[Lean Startup], xref:OODA[OODA], and xref:Toyota-Kata[Toyota Kata].
 
@@ -101,7 +108,7 @@ the purpose of controlling the process must be to influence economic outcomes. T
 
 Discussions of efficiency usually focus on productivity given a certain set of inputs. Time can be one of those inputs. Everything else being equal, a company that can produce the pizza cutters more quickly is also viewed as more efficient. Customers may pay a premium for early delivery, and may penalize late delivery; such charges typically would be some percentage (say plus or minus 20%) of the final price of the finished goods.
 
-However, the question of time becomes a game-changer in the "process" of new product development. As we have discussed previously, starting with a series of influential articles in the early 1980s, Don Reinertsen developed the idea of xref:cost-of-delay[Cost of Delay] for product development (<<Reinertsen1997>>).
+However, the question of time becomes a game-changer in the "process" of new product development. As we have discussed previously, starting with a series of influential articles in the early 1980s, Don Reinertsen developed the idea of xref:cost-of-delay[Cost of Delay] for product development (cite:[Reinertsen1997]).
 
 Where the cost of a delayed product shipment might be some percentage, the cost of delay for a delayed product could be much more substantial. For example, if a new product launch misses a key trade show where competitors will be presenting similar innovations, the cost to the company might be millions of dollars of lost revenue, or more - many times the product development investment.
 
@@ -115,12 +122,12 @@ process theory experts . . . were amazed and appalled that my industry, systems 
 
 Ken Schwaber, inventor of the Scrum methodology (along with Jeff Sutherland), like many other software engineers in the 1990s, experienced discomfort with the Deming-inspired process control approach promoted by major software contractors at the time. Mainstream software development processes sought to make software development predictable and repeatable in the sense of a defined process.
 
-As Schwaber discusses (<<Schwaber2002>>, pp. 24-25), defined processes are completely understood, which is not the case with creative processes. Highly automated industrial processes run predictably, with consistent results. By contrast, complex processes that are not understood require the *empirical model.*
+As Schwaber discusses (cite:[Schwaber2002], pp. 24-25), defined processes are completely understood, which is not the case with creative processes. Highly automated industrial processes run predictably, with consistent results. By contrast, complex processes that are not understood require the *empirical model.*
 
 NOTE: The defined and empirical models of process control are concepts from formal https://en.wikipedia.org/wiki/Process_control[process control theory]. We touched on some related topics in our discussion of systems theory and xref:feedback[feedback].
 
 Empirical process control relies on frequent inspection and adaptation. After exposure to Dupont process theory experts who clarified the difference between defined and empirical process control, Schwaber went on to develop the influential Scrum methodology. As he notes:
 
-_During my visit to DuPont . . . I realized why [software development] was in such trouble and had such a poor reputation. We were wasting our time trying to control our work by thinking we had an assembly line when the only proper control was frequent and first-hand inspection, followed by immediate adjustments._ <<Schwaber2002>>, p. 25.
+_During my visit to DuPont . . . I realized why [software development] was in such trouble and had such a poor reputation. We were wasting our time trying to control our work by thinking we had an assembly line when the only proper control was frequent and first-hand inspection, followed by immediate adjustments._ cite:[Schwaber2002], p. 25.
 
 There's little question the idea of statistical process control for digital product development is thoroughly discredited. However, this is not only a textbook on digital product development. It covers all of traditional IT management, in its new guise of the digitally transformed organization. Development is only part of digital management.

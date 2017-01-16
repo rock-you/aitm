@@ -14,7 +14,7 @@ I think the best approach to resolving this conflict is through careful understa
 ****
 
 ===== The hubris of architecture
-_The goal of enterprise architecture is to act as a guide, perhaps a pathfinder, who takes the enterprise on a transformational journey—from an incoherent and complex world with line-of-business separation, product-specific stovepipes, legacy systems estate, and costly operation to a more rationally organized and useful state with multiservice, revenue-generating platforms and an efficient operational regime. On the way, radical surgeries may be required to eliminate duplication, reduce costs, improve reliability, and increase agility in the business. EA acts as a strategic foundation for business enablement._ <<Bente2012>> p9
+_The goal of enterprise architecture is to act as a guide, perhaps a pathfinder, who takes the enterprise on a transformational journey—from an incoherent and complex world with line-of-business separation, product-specific stovepipes, legacy systems estate, and costly operation to a more rationally organized and useful state with multiservice, revenue-generating platforms and an efficient operational regime. On the way, radical surgeries may be required to eliminate duplication, reduce costs, improve reliability, and increase agility in the business. EA acts as a strategic foundation for business enablement._ cite:[Bente2012] p9
 
 Product development organizations often experience architecture and its goals as unwarranted interference, imposing a high xref:cost-of-delay[Cost of Delay] with little apparent return on investment. Architecture approvals can be required on:
 
@@ -22,7 +22,7 @@ Product development organizations often experience architecture and its goals as
 * database designs
 * selection of technology products
 
-and other such topics. When development cannot proceed without those approvals -- or if the approvals come at the cost of expensive re-work -- the experience can often be challenging. Bente et al warn: "if enterprise architects claim to be the only decision-making body in technical matters, there is a huge risk that they create a bottleneck...The practical consequence is that projects deliberately circumvent the enterprise architects..." <<Bente2012>> p19
+and other such topics. When development cannot proceed without those approvals -- or if the approvals come at the cost of expensive re-work -- the experience can often be challenging. Bente et al warn: "if enterprise architects claim to be the only decision-making body in technical matters, there is a huge risk that they create a bottleneck...The practical consequence is that projects deliberately circumvent the enterprise architects..." cite:[Bente2012] p19
 
 And, looking more broadly at the practice and history of IT architecture, the case against it is strong. Enterprise architecture has presented itself as a solution to complexity, long IT time scales, business frustration, and other various IT problems. These issues are at this writing being solved, but not by architecture -- at least not visibly. Instead, visible and publicized progress has come through the increasing adoption of Agile and DevOps practices rethinking open-loop, slow feedback, batch-oriented delivery. Architecture has failed in many ways:
 
@@ -35,21 +35,21 @@ anchor:large-arch-xform-risk[]
 
 Justifications for architecture often invoke "complexity" in the portfolio of systems. In response, architecture has often given in to the desire for a  complete "radical surgery" systems re-engineering, the temptation of the "clean slate." But as Jez Humble accurately notes,
 
-_A common response to getting stuck in a big ball of mud is to fund a large systems replacement project. Such projects typically take months or years before they deliver any value to users, and the switchover from the old to the new system is often performed in “big bang” fashion. These projects also run an unusually high risk of running late and over budget and being canceled. Systems rearchitecture should not be done as a large program of work funded from the capital budget. It should be a continuous activity that happens as part of the product development process. <<Humble2013>> ch10_
+_A common response to getting stuck in a big ball of mud is to fund a large systems replacement project. Such projects typically take months or years before they deliver any value to users, and the switchover from the old to the new system is often performed in “big bang” fashion. These projects also run an unusually high risk of running late and over budget and being canceled. Systems rearchitecture should not be done as a large program of work funded from the capital budget. It should be a continuous activity that happens as part of the product development process. cite:[Humble2013] ch10_
 
 Architecture methodology, with its focus on identifying capability gaps for feeding into the project portfolio process, has perhaps been too prone to supporting these large, troubled programs. As we know from our earlier chapters, large system changes are inherently risky and any intervention into a complex system is better undertaken as a series of smaller, incremental changes with frequent monitoring and assessment.
 
 ===== The hubris of Agile
 [quote, Donald Reinertsen, Managing the Design Factory]
-Instead of tapping into the existing knowledge of the organization the autonomous team is prone to reinvent the wheel, and the wheel that they reinvent will not always be superior to the one we are currently using <<Reinertsen1997>>, p. 104.
+Instead of tapping into the existing knowledge of the organization the autonomous team is prone to reinvent the wheel, and the wheel that they reinvent will not always be superior to the one we are currently using cite:[Reinertsen1997], p. 104.
 
 The Agile community has its own blind spots and challenges. Speed is seen as a good in itself, too often without an economic model. Agile teams often clash with enterprise governance processes that have sound compliance and financial benefits. Phrases like "you aren't gonna need it" are used to justify lapses of due diligence on critical capabilities, and standard platforms and vendors are seen as unreasonable limitations on team autonomy -- to the point where it seems some teams' interest is primarily in padding their resumes with as many new technologies as possible, regardless of the long-term consequences for the organization.
 
 ====== The limitations of Cost of Delay
 [quote, Ruth Malan]
-When it  comes to system implementation, the temptation to be  fast, often under the nom de guerre of agile, can soften  quality controls and threaten product usability, reliability, safety, and lifecycle cost <<Malan2010>>.
+When it  comes to system implementation, the temptation to be  fast, often under the nom de guerre of agile, can soften  quality controls and threaten product usability, reliability, safety, and lifecycle cost cite:[Malan2010].
 
-xref:cost-of-delay[Cost of Delay] is a real and often overlooked issue, in understanding the net value of architecture. But it is only a factor, and does not eliminate the value proposition of architecture. If the Cost of Delay is only a few hundred dollars a month, but the risk or technical debt represent millions, then delay may be appropriate. Don Reinertsen, who has done more than anyone to promote the idea of Cost of Delay, emphasizes that *all* decision making must take place within an economic framework (<<Reinertsen2009>>, chapter 2) and that means that the other xref:arch-impacts[architectural impact factors] on organization value must also be considered.
+xref:cost-of-delay[Cost of Delay] is a real and often overlooked issue, in understanding the net value of architecture. But it is only a factor, and does not eliminate the value proposition of architecture. If the Cost of Delay is only a few hundred dollars a month, but the risk or technical debt represent millions, then delay may be appropriate. Don Reinertsen, who has done more than anyone to promote the idea of Cost of Delay, emphasizes that *all* decision making must take place within an economic framework (cite:[Reinertsen2009], chapter 2) and that means that the other xref:arch-impacts[architectural impact factors] on organization value must also be considered.
 
 anchor:agile-doc-gap[]
 
@@ -61,11 +61,11 @@ _"Working software over comprehensive documentation" cite:[AgileAlliance2001]_.
 
 When documentation primarily takes the form of xref:secondary-artifacts[secondary artifacts], it is appropriate to question the need for it. "The code is the documentation," some will argue. While it is true that good coding practices result in easier-to-understand (and maintain) source code, the code cannot be the only documentation. As Ruth Malan notes,
 
-_...for systems of sufficient scope and complexity to warrant teams (of teams) working on (incremental) implementation and evolution, the sheer mass of code can make it hard to discover the essential structure from bottom-up decisions made entirely through the medium of code. <<Malan2010>>_
+_...for systems of sufficient scope and complexity to warrant teams (of teams) working on (incremental) implementation and evolution, the sheer mass of code can make it hard to discover the essential structure from bottom-up decisions made entirely through the medium of code. cite:[Malan2010]_
 
 In terms of systems theory, a complex software system has emergent behavior, not obvious from just looking at its components. Because the system's behavior can't be reduced to its pieces, "self documenting code" can only go so far. The behavior of the assembled components as a system needs to be represented somehow, in a way that transcends the mere mechanics of the pieces. Abstraction is necessary to understand and communicate emergent behavior, and this leads inevitably to xref:arch-visualization[visual representation]. Without some attention to documenting overall context and systemic intent and behavior, the effectiveness of the overall human/computer system degrades. For example, Alistair Cockburn reports that the Chrysler Comprehensive Compensation project, one of the first widely-reported Agile projects, was eventually halted, and
 
-_...left no archived documentation ... other than two sentence user stories, the tests, and the code. Eventually, enough people left that the oral tradition and group memory were lost <<Cockburn2007>>, pp. 41-43_
+_...left no archived documentation ... other than two sentence user stories, the tests, and the code. Eventually, enough people left that the oral tradition and group memory were lost cite:[Cockburn2007], pp. 41-43_
 
 In short, failure to sustain a shared mental model of a complex system is a risk that may result in loss of that system's value.
 
@@ -81,9 +81,9 @@ anchor:emergent-arch[]
 
 ====== Architecture as emergent
 [quote, Adrian Cockcroft, former CTO Netflix]
-“At Netflix, we had no central control [of the architecture] ... The goal of architecture was to create the right emergent behaviors...” <<Bloomberg2014>>
+“At Netflix, we had no central control [of the architecture] ... The goal of architecture was to create the right emergent behaviors...” cite:[Bloomberg2014]
 
-The Agile Manifesto is well known for saying "The best architectures, requirements, and designs emerge from self-organizing teams" <<AgileAlliance2001>>. This is one of the more frequently discussed Agile statements. Netflix CTO Adrian Cockcroft has expressed similar views (quote above).
+The Agile Manifesto is well known for saying "The best architectures, requirements, and designs emerge from self-organizing teams" cite:[AgileAlliance2001]. This is one of the more frequently discussed Agile statements. Netflix CTO Adrian Cockcroft has expressed similar views (quote above).
 
 A key question is whether "architecture" is considered at the single product or multi-product level. At the single product level, collaborative teams routinely develop effective software architectures. However, when multiple products are involved, it is hard to see how all the xref:arch-impacts[architectural value] scenarios are fulfilled without some investment being directed to the goals of cross-product architectural coordination. It helps when rules of the road are established; both Amazon and Netflix have benefited from having certain widely accepted platform standards, such as "every product communicates through APIs." Netflix has had a long term commitment to Amazon Cloud services; it is probably not acceptable for teams there to decide on a whim to deploy their services on Google Compute Engine or Microsoft Azure, so at least in that sense Netflix has an architecture. The question gets harder when layered products and services with xref:IT-lifecycles[complex lifecycle interactions] are involved.
 
@@ -119,7 +119,7 @@ As a coordination mechanism, it can operate in various ways including planning, 
 ====== How: Execution
 
 [quote, Bente et al, Collaborative Enterprise Architecture]
-Another possible objection against agile methods is that the processes in EA, and in the enterprise generally, are simply not operating with a time window of the typical sprint length of three weeks. This, of course, is true. But it is at closer inspection not a counter-argument against the application of agile principles to EA—just the opposite. The long process cycles add to EA's lack of transparency and promote a silo mentality. Agile techniques can help here. <<Bente2012>>
+Another possible objection against agile methods is that the processes in EA, and in the enterprise generally, are simply not operating with a time window of the typical sprint length of three weeks. This, of course, is true. But it is at closer inspection not a counter-argument against the application of agile principles to EA—just the opposite. The long process cycles add to EA's lack of transparency and promote a silo mentality. Agile techniques can help here. cite:[Bente2012]
 
 
 As an xref:arch-practices[executing capability], architecture operates in various ways:
@@ -137,16 +137,16 @@ It is in the "governance and approval" kind of activity that conflict is most li
 
 Queued approvals are only one way of solving issues. A rich and under-utilized approach is using internal market-type mechanisms, where overall rules are set and teams make autonomous decisions based on those rules. Don Reinertsen, in the _Principles of Product Development Flow_, discusses how Boeing implemented distributed decision-making through setting tradeoff rules for cost and weight. Rather than constantly routing design approvals through a single control point, Boeing instead set the principle that project managers could "purchase" design changes up to $300 per unit, to save a pound of weight. As Reinertsen notes,
 
-_The intrinsic elegance of this approach is that the superiors didn't actually give up control over the decision. Instead, they recognized that they could still control the decision without participating in it. They simply had to control the economic logic of the decision._ <<Reinertsen2009>>, p 42.
+_The intrinsic elegance of this approach is that the superiors didn't actually give up control over the decision. Instead, they recognized that they could still control the decision without participating in it. They simply had to control the economic logic of the decision._ cite:[Reinertsen2009], p 42.
 
-One particular work product that architects often are concerned with is documentation. The desire for useful documentation, as xref:agile-doc-gap[mentioned above], reflects architecture's goals of curating a common ground for collaboration. As Bente notes, "In an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it as part of the condition of satisfaction of a user story or in the definition of done" <<Bente2012>> p 170
+One particular work product that architects often are concerned with is documentation. The desire for useful documentation, as xref:agile-doc-gap[mentioned above], reflects architecture's goals of curating a common ground for collaboration. As Bente notes, "In an agile project, explicit care must be taken to ensure proper documentation—for example, by stating it as part of the condition of satisfaction of a user story or in the definition of done" cite:[Bente2012] p 170
 
 ====== Architecture Kata
 
 [quote, Humble/Molesky, Lean Enterprise]
 ...standardization on a particular toolchain or technology stack is neither necessary nor sufficient for achieving enterprise architecture goals such as enabling teams to respond rapidly to changing requirements, creating high-performance systems at scale, or reducing the risk of intrusion or data theft. Just like we drive product and process innovation through the Improvement Kata, we can drive architectural alignment through it too. +
  +
-Architectural goals—for example, desired performance, availability, and security—should be approached by iteratively specifying target conditions at the program level. Following the Principle of Mission, set out a clear vision of the goals of your enterprise architecture without specifying how the goals are to be achieved, and create a context in which teams can determine how to achieve them through experimentation and collaboration.   <<Humble2013>>, chap. 10.
+Architectural goals—for example, desired performance, availability, and security—should be approached by iteratively specifying target conditions at the program level. Following the Principle of Mission, set out a clear vision of the goals of your enterprise architecture without specifying how the goals are to be achieved, and create a context in which teams can determine how to achieve them through experimentation and collaboration.   cite:[Humble2013], chap. 10.
 
 xref:Toyota-Kata[Toyota Kata] was discussed in Chapter 7. In _Lean Enterprise,_ Jez Humble and Joanne Molesky argue that it can provide a useful framework for architecture objectives. Toyota Kata emphasizes end-state goals ("target conditions") and calls for hands-on investigation and response by participating workers, not consultants or distant executives. Architecture can benefit by understanding "gaps" in the sense of Toyota's target conditions, and then supporting teams in their collaborative efforts to understand and achieve the desired state. The xref:arch-impacts[architectural impact] model can assist in thinking through suitable target conditions for architecture:
 
@@ -157,7 +157,7 @@ xref:Toyota-Kata[Toyota Kata] was discussed in Chapter 7. In _Lean Enterprise,_ 
 .Australian strangler vine surrounding tree footnote:[_Image credit https://www.flickr.com/photos/cynren/16011788979, downloaded 2016-10-23, commercial use permitted_]
 image::images/4_12-strangler-vine.jpg[alt text, 400, , float="right"]
 
-Keeping the target operating condition specific is preferable. When architecture scopes problems too broadly, the temptation is to undertake xref:large-arch-xform-risk[large and risky transformation programs]. As an alternative, Humble and Molesky suggest the "strangler pattern," proposed by Martin Fowler in 2004 <<Fowler2004a>>. This pattern uses as a metaphor Australian "strangler" vines that grow around trees until the original tree dies, at which point the strangler vine is now itself a sturdy, rooted structure (see picture).
+Keeping the target operating condition specific is preferable. When architecture scopes problems too broadly, the temptation is to undertake xref:large-arch-xform-risk[large and risky transformation programs]. As an alternative, Humble and Molesky suggest the "strangler pattern," proposed by Martin Fowler in 2004 cite:[Fowler2004a]. This pattern uses as a metaphor Australian "strangler" vines that grow around trees until the original tree dies, at which point the strangler vine is now itself a sturdy, rooted structure (see picture).
 
 To use the strangler pattern is not to replace the system all at once, but rather to do so incrementally, replacing one feature at a time. This may seem more expensive, as it means that both the old and new systems are running (and cost savings through sunsetting the old system will be delayed.) But the risk of replacing complex systems is serious, and needs to be considered along with any hoped-for cost savings through replacement. Humble and Molesky suggest:
 
@@ -172,7 +172,7 @@ The strangler pattern is proven in practice. Paul Hammant provides a large numbe
 * Energy trading application
 * Rail booking application
 
-and others <<Hammant2013>>.
+and others cite:[Hammant2013].
 
 Of course, there are other ways architecture might add value beyond system replacement, in which case the strangler pattern may not be relevant. In particular, architects may be called on to closely collaborate with product teams when certain kinds of issues emerge. This is not a governance or control interaction; it is instead architecture as a form of shared consulting "bench" or coordination mechanism. Not every product team needs a full time architect, the reasoning goes, so architects can be assigned to them on a temporary basis, e.g. for one or a few sprints, perhaps of the technical "spike" (disovery/validation/experimentation) variety.
 
