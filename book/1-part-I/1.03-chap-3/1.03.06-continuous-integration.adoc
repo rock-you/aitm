@@ -50,7 +50,11 @@ image::images/1_03-fast-ID.png[errors caught quickly,640,,]
 
 These problems have driven the evolution of software configuration management for decades. In previous methods, to develop a new release, the code would be copied into a very long-lived "branch" (a version of the code to receive independent enhancement). Ongoing “maintenance” fixes of the existing code base would also continue, and the two code bases would inevitably diverge. Switching over to the “new” code base might mean that once-fixed bugs (bugs that had been addressed by maintenance activities) would show up again, and of course this would not be acceptable. So, when the newer development was complete, it would need to be merged back into the older line of code, and this was rarely if ever easy (again, "merge hell"). In a worst case scenario, the new development might have to be redone.
 
-Enter continuous integration. As presented in cite:[Duvall2007] the key practices (you will notice similarities to the xref:pipeline[pipeline discussion]) include:
+[[fig-name-600-c]]
+.Big bang vs. continuous integration
+image::images/1_03-CI.png[Big bang vs continuous integration, 700, , ]
+
+Enter continuous integration (see <<fig-name-600-c>>). As presented in cite:[Duvall2007] the key practices (you will notice similarities to the xref:pipeline[pipeline discussion]) include:
 
 * Developers run private builds including their automated tests before committing to source control
 * Developers check in to source control at least daily (hopefully we have been harping on this enough that you are taking it seriously by now).

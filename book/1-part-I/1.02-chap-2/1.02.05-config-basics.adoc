@@ -43,9 +43,14 @@ Version control works like an advanced file system with a memory. (Actual file s
 
 ====== Source control
 
+
+[[fig-name-500-c]]
+.Source control
+image::images/1_02-source-ctrl.png[Source control, 500, , float="left"]
+
 Digital systems start with text files, typically encoded in https://en.wikipedia.org/wiki/ASCII[ASCII]. Text editors create source code, scripts, and configuration files. These may be transformed in defined ways (e.g. by compilers and build tools) but the human understandable end of the process is mostly based on text files. In the previous section, we described a xref:infra-code-example[simple script] that altered the state of a computer system. We care very much about when such a text file changes. One wrong character can completely alter the behavior of a large, complex system. Therefore, our configuration management approach must track to that level of detail.
 
-Source control is at its most powerful when dealing with textual data. It is less useful in dealing with  binary data, such as image files. Text files can analyzed for their differences in an easy to understand way. If I change "abc" to "abcd" it is clear that the third character has been changed from “c” to “d.” On the other hand, if I take a picture (e.g. as a *.png file) and alter one pixel, and compare the resulting before and after binary files in terms of their data, it would be more difficult to understand what had changed. I might be able to easily tell that they are two different files, but they would look very similar and the difference in the binary data might be difficult to understand. Here is a detailed demonstration, using the command line in Ubuntu Linux. (Don't worry, we will explain what is going on.)
+Source control is at its most powerful when dealing with textual data. It is less useful in dealing with  binary data, such as image files. Text files can analyzed for their differences in an easy to understand way (see <<fig-name-500-c>>). If I change "abc" to "abcd" it is clear that the third character has been changed from “c” to “d.” On the other hand, if I take a picture (e.g. as a *.png file) and alter one pixel, and compare the resulting before and after binary files in terms of their data, it would be more difficult to understand what had changed. I might be able to easily tell that they are two different files, but they would look very similar and the difference in the binary data might be difficult to understand. Here is a detailed demonstration, using the command line in Ubuntu Linux. (Don't worry, we will explain what is going on.)
 
 NOTE: In the below sequence, what you see after the "$" sign is what is being typed. If there is no "$" sign, it is what the system is saying in response.
 
@@ -149,11 +154,26 @@ anchor:package-mgmt[]
 [quote, Puppet Labs 2015 State of DevOps report]
 Implement version control for all production artifacts. cite:[PuppetLabs2015]
 
-In some organizations, it was once common for compiled binaries to be stored in the same repositories as source code. However, this is no longer considered a best practice. Source and package management are now viewed as two separate things.  Source repositories should be reserved for text-based artifacts whose differences can be made visible in a human-understandable way. Package repositories in contrast are for binary artifacts that can be deployed.
+
+Much if not most software, once created as some kind of text-based artifact suitable for source control, must be compiled and further organized into deployable assets, often called "packages" (see <<fig-pkg-mgmt-400-o>>).
+
+[[fig-pkg-mgmt-400-o]]
+.Building software
+image::images/1_02-pkg-mgmt.png[alttextxxx, 400, , float="left"]
+
+In some organizations, it was once common for compiled binaries to be stored in the same repositories as source code (see <<fig-name-250-i>>). However, this is no longer considered a best practice. Source and package management are now viewed as two separate things (see <<fig-name-450-o>>).  Source repositories should be reserved for text-based artifacts whose differences can be made visible in a human-understandable way. Package repositories in contrast are for binary artifacts that can be deployed.
+
+[[fig-name-250-i]]
+.Dual version control repositories
+image::images/1_02-old-VCS.png[integrated VCS, 250, , float="left"]
 
 Package repositories also can serve as a proxy to the external world of downloadable software. That is, they are a cache, an intermediate store of the software provided by various "upstream" sources. For example, developers may be told to download the approved Ruby on Rails version from the local package repository, rather than going to the getting the latest version, which may not be suitable for the environment.
 
-Package repositories are also used to enable collaboration between teams working on large systems. Teams can check in their built components into the package repository for other teams to download. This is more efficient than everyone  always building all parts of the application from the source repository.
+Package repositories furthermore are used to enable collaboration between teams working on large systems. Teams can check in their built components into the package repository for other teams to download. This is more efficient than everyone  always building all parts of the application from the source repository.
+
+[[fig-name-450-o]]
+.Integrated version control
+image::images/1_02-dual-repo.png[dual repository, 450, , float="left"]
 
 The boundary between source and package is not hard and fast, however. One does see binary files in source repositories, such as images used in an application. Also, when interpreted languages (such as Javascript) are "packaged," they still appear in the package as text files, perhaps compressed or otherwise incorporated into some larger containing structure.
 
