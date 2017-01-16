@@ -7,21 +7,23 @@ anchor:product-mgmt[]
 NOTE: You should review the xref:digital-context[digital context] material in Chapter 1.
 
 
-.Product design session footnote:[_Image credit https://www.flickr.com/photos/daonb/6223628837, downloaded 2016-09-14, commercial use permitted_]
-image::images/2_04-design.jpg[team meeting, 500,,float="left"]
-
-
 Before work, before operations, there must be a vision of product. You already established a preliminary vision in Chapter 1, but now as your organization grows, you need to consider further how you will sustain that vision and establish an ongoing capability for realizing it. Like many other topics in this book, product management is a significant field in and of itself. Historically, product management has *not* been a major theme in enterprise IT management. Digital changes this.
 
 IT systems started by serving narrow purposes, often “back office” functions such as accounting or https://en.wikipedia.org/wiki/Material_requirements_planning[materials planning]. Mostly, such systems were managed as projects assembled on a temporary basis, resulting in the creation of a system to be “thrown over the wall” to operations. Product management, on the other hand, is concerned with the entire lifecycle. The product manager (or owner, in Scrum terms) cares about the vision, its execution, the market reaction to the vision (even if an internal market), the health, care and feeding of the product, and the product’s eventual sunset or replacement.
 
 In the enterprise IT world, "third party" vendors (e.g. IBM) providing the back office systems had product management approaches, but these were *external* to the IT operations. Nor were IT-based product companies as numerous forty years ago as they are today; as noted in chapter 1, the digital component of modern products xref:digital-transformation[continues to increase] to the point where it's often not clear whether a product is "IT" or not.
 
+
+[[fig-design-500-i]]
+.Product design session
+image::images/2_04-design.jpg[team meeting, 500,,float="left"]
+
+
 Reacting to market feedback and adapting product direction is an essential role of the product owner. In the older model, feedback was often unwelcome, as the project manager typically was committed to the xref:open-loop[open-loop dead reckoning] of the project plan and changing scope or direction was seen as a failure, more often than not.
 
 Now, it’s accepted that systems evolve, perhaps in unexpected directions. Rapidly testing, failing fast, learning, and pivoting direction are all part of the lexicon, at least for market-facing IT-based products. And even back-office IT systems with better understood scope are being managed more as systems (or products) with lifecycles, as opposed to transient projects. (See the xref:amazon-productization[Amazon discussion], below.)
 
-So, what is product management and what does it mean for your team?
+So, what is product management and what does it mean for your team? footnote:[Image credit https://www.flickr.com/photos/daonb/6223628837, downloaded 2016-09-14, commercial use permitted]
 
 anchor:prod-mgmt-definition[]
 
@@ -51,7 +53,7 @@ anchor:product-mgmt-v-marketing[]
 
 However, Marty Cagan warns against confusing Product Management and Product Marketing. He defines the two as follows:
 
-_The product manager is responsible for defining—in detail—the product to be built, and validating that product with real customers and users. The product marketing person is responsible for telling the world about that product, including positioning, messaging and pricing, managing the product launch, providing tools for the sales channel to market and sell the product, and for leading key programs such as online marketing and influencer marketing programs._ <<Cagan2008>>, pp. 10-11.
+_The product manager is responsible for defining—in detail—the product to be built, and validating that product with real customers and users. The product marketing person is responsible for telling the world about that product, including positioning, messaging and pricing, managing the product launch, providing tools for the sales channel to market and sell the product, and for leading key programs such as online marketing and influencer marketing programs._ cite:[Cagan2008], pp. 10-11.
 
 We discuss some criticisms of overly marketing-driven approaches xref:jobs-to-be-done[below].
 
@@ -89,8 +91,9 @@ The Appendices have brief discussions of xref:project-mgmt[project management] a
 
 
 
-The above distinctions are deliberately exaggerated and there are of course exceptions (short projects, processes that take years). However, it is in the friction between these perspectives we see some of the major problems in modern IT management. For example, an activity, which may be a one-time task or a repeatable process, results in some work product (perhaps an artifact):
+The above distinctions are deliberately exaggerated and there are of course exceptions (short projects, processes that take years). However, it is in the friction between these perspectives we see some of the major problems in modern IT management. For example, an activity, which may be a one-time task or a repeatable process, results in some work product--perhaps an artifact (see <<fig-process-400-c>>).
 
+[[fig-process-400-c]]
 .Activities create work products
 image::images/2_04-process.png[activities-work products, 400,,]
 
@@ -98,18 +101,18 @@ The consumer or stakeholder of that work product might be a Project Manager.
 
 Project management includes concern for both the activities, AND the resources (people, assets, software) required to produce some deliverable:
 
-.Projects create deliverables with resources and activities
-image::images/2_04-project.png[projects-deliverables, 500,,]
 
 The consumer of that deliverable might be a Product Manager.
 
-Product management includes concern for projects and their deliverables, and their ultimate *outcomes* (either in the external market or internally):
+Product management includes concern for projects and their deliverables, and their ultimate *outcomes*, either in the external market or internally (see <<fig-project-500-c>>).
 
-.Product management may create outcomes with products
-image::images/2_04-product.png[Product-outcomes, 600,,]
+[[fig-project-500-c]]
+.Projects create deliverables with resources and activities
+image::images/2_04-project.png[projects-deliverables, 500,,]
 
-Notice that product management may directly access activities and resources. In fact, earlier-stage companies often do not formalize project management:
+Notice that product management may directly access activities and resources. In fact, earlier-stage companies often do not formalize project management (see <<fig-productNoProject-600-c>>).
 
+[[fig-productNoProject-600-c]]
 .Product management sometimes does not use projects
 image::images/2_04-productNoProject.png[Product-outcomes2, 600,,]
 
@@ -118,15 +121,16 @@ In our scenario, you are now on a tight-knit, collaborative team. You should thi
 anchor:amazon-productization[]
 
 ===== Productization as a strategy at Amazon
-Amazon (the online bookseller) is an important influence in the modern trend towards product-centric IT management. First, the founder Jeff Bezos mandated that all software development should be http://apievangelist.com/2012/01/12/the-secret-to-amazons-success-internal-apis/[service-oriented]. That means that some form of standard API (Application Programming Interface) was required for all application to communicate with each other. (By some accounts, Bezos threatened to fire anyone who did not do this <<Lane2012>>.) Second, all teams are to assume that the functionality being built might at some point be offered to external customers <<Lane2012>>.
+Amazon (the online bookseller) is an important influence in the modern trend towards product-centric IT management. First, the founder Jeff Bezos mandated that all software development should be http://apievangelist.com/2012/01/12/the-secret-to-amazons-success-internal-apis/[service-oriented]. That means that some form of standard API (Application Programming Interface) was required for all application to communicate with each other. By some accounts, Bezos threatened to fire anyone who did not do this. Second, all teams are to assume that the functionality being built might at some point be offered to external customers cite:[Lane2012].
 
-.Can you feed your team with two pizzas? footnote:[_Image credit https://www.flickr.com/photos/ramblinbears/7937873272, downloaded 2016-09-20, commercial use permitted_]
+[[fig-pizzas-500-i]]
+.Two pizzas, one team
 image::images/2_04-pizzas.jpg[pizzas, 500,,float="left"]
 
-Second, a widely reported practice at Amazon.com is the http://www.fastcompany.com/3037542/productivity-hack-of-the-week-the-two-pizza-approach-to-productive-teamwork[limitation of product teams to between 5-7 people], the number that can be fed by “two pizzas” (depending on how hungry they are) <<Gillet2014>>. It has long been recognized in software and IT management that larger teams do not necessarily result in higher productivity. The best known statement of this is Fred Brooks’ rule from The Mythical Man-Month, that “adding people to a late project will make it later” <<Brooks1975>>.
+Second, a widely reported practice at Amazon.com is the http://www.fastcompany.com/3037542/productivity-hack-of-the-week-the-two-pizza-approach-to-productive-teamwork[limitation of product teams to between 5-7 people], the number that can be fed by “two pizzas” (depending on how hungry they are) cite:[Gillet2014] (see <<fig-pizzas-500-i>> footnote:[Image credit https://www.flickr.com/photos/ramblinbears/7937873272, downloaded 2016-09-20, commercial use permitted]). It has long been recognized in software and IT management that larger teams do not necessarily result in higher productivity. The best known statement of this is Fred Brooks’ rule from The Mythical Man-Month, that “adding people to a late project will make it later” cite:[Brooks1975].
 
 NOTE: Fred Brooks' _The Mythical Man-Month_, derived in part from his experiences leading the IBM OS-360 project, is one of the timeless classics in software engineering and IT management writing. Serious IT professionals, whether or not they are actually programmers, should have it on their bookshelves.
 
-The reasons for "Brooks' Law" have been studied and analyzed (see e.g. <<Madachy2008>>, <<Choi2016>>) but in general it is due to the increased communication overhead of expanded teams. Product design work (of which software development is one form) is creative and highly dependent on tacit knowledge, interpersonal interactions, organizational culture, and other “soft” factors. Products, especially those with a significant IT component, can  be understood as socio-technical systems, often complex. This means that small changes to their components or interactions can have major effects on their overall behavior and value.
+The reasons for "Brooks' Law" have been studied and analyzed (see e.g. cite:[Madachy2008>>, <<Choi2016]) but in general it is due to the increased communication overhead of expanded teams. Product design work (of which software development is one form) is creative and highly dependent on tacit knowledge, interpersonal interactions, organizational culture, and other “soft” factors. Products, especially those with a significant IT component, can  be understood as socio-technical systems, often complex. This means that small changes to their components or interactions can have major effects on their overall behavior and value.
 
 This in turn means that newcomers to a product development organization can have a profound impact on the product. Getting them “up to speed” with the culture, mental models, and tacit assumptions of the existing team can be challenging and rarely is simple. And the bigger the team, the bigger the problem. The net result of these two practices at Amazon (and now xref:fowler-quote[General Electric and many other companies]) is the creation of multiple nimble services that are decoupled from each other, constructed and supported by teams appropriately sized for optimal high-value interactions.

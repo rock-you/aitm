@@ -39,7 +39,7 @@ The primary question in managing state is “what matters”? What aspects of th
 
 How do things get to be “in production”? What do we mean by that?
 
-First, let’s get back to our fundamental principle that there is an IT system delivering some "moment of truth" to someone. This system can be of any scale, but as above we are able to conceive of it having a xref:state-config-discovery[“state.”] When we want to change the behavior of this system, we are cautious. We reproduce the system at varying levels of fidelity (building "lower" environments with xref:infracode[Infrastructure as Code] techniques) and experiment with potential state changes. This is called development. When we start to gain confidence in our experiments, we increase the fidelity and also start to communicate more widely that we are contemplating a change to the state of the system. We may increase the fidelity along a set of traditional names:
+First, let’s get back to our fundamental principle that there is an IT system delivering some "moment of truth" to someone. This system can be of any scale, but as above we are able to conceive of it having a xref:state-config-discovery[“state.”] When we want to change the behavior of this system, we are cautious. We reproduce the system at varying levels of fidelity (building "lower" environments with xref:infracode[Infrastructure as Code] techniques) and experiment with potential state changes. This is called development. When we start to gain confidence in our experiments, we increase the fidelity and also start to communicate more widely that we are contemplating a change to the state of the system. We may increase the fidelity along a set of traditional names (see <<fig-environments-720-c>>):
 
 * Development
 * Testing
@@ -49,6 +49,8 @@ First, let’s get back to our fundamental principle that there is an IT system 
 
 The final state, where value is realized, is “Production.” Moving functionality in smaller and smaller batches, with increasing degrees of automation, is called xref:continuous-delivery[continuous delivery].
 
+
+[[fig-environments-720-c]]
 .Example environment pipeline
 image::images/2_06-environments.png[environments, 720]
 
@@ -81,7 +83,7 @@ It used to be that the concept of “testing in production” was frowned upon. 
 On the flip side, development systems must never be treated casually.
 
 * The xref:pipeline[development pipeline] itself represents a significant operational commitment.
-* The failure of a source code repository, if not backed up, could wipe out a company (see <<Marks2014>>).
+* The failure of a source code repository, if not backed up, could wipe out a company (see cite:[Marks2014]).
 * The failure of a build server or package repository could be almost as bad.
 * In the digital economy, dozens or hundreds of developers out of work represents a severe operational and financial setback, even if the “production” systems continue to function.
 

@@ -17,12 +17,14 @@ Manufacturing? What do digital professionals have to learn from that? "Our work 
 
 ===== Kanban and its Lean origins
 
-.Lean pioneer Taichi Ohno footnote:[_By Source (WP:NFCC#4), Fair use, https://en.wikipedia.org/w/index.php?curid=46971844_]
+
+[[fig-Ohno-200-o]]
+.Lean pioneer Taichi Ohno
 image::images/2_05-Ohno.jpg[Ohno, 200,,float="right"]
 
 To understand Kanban let's discuss Lean briefly. We've had passing mention of Lean already in this book. But what is it?
 
-Lean is a term invented by some American researchers who investigated Japanese industrial practices and their success in the 20th century. After the end of World War II, no-one expected the Japanese economy to recover the way it did. The recovery is credited to practices invented by  https://en.wikipedia.org/wiki/Taiichi_Ohno[Taiichi Ohno] and https://en.wikipedia.org/wiki/Shigeo_Shingo[Shigeo Shingo] at https://en.wikipedia.org/wiki/Toyota[Toyota]. These practices included:
+Lean is a term invented by some American researchers who investigated Japanese industrial practices and their success in the 20th century. After the end of World War II, no-one expected the Japanese economy to recover the way it did. The recovery is credited to practices invented by  https://en.wikipedia.org/wiki/Taiichi_Ohno[Taiichi Ohno] (see <<fig-Ohno-200-o>> footnote:[By Source (WP:NFCC#4), Fair use, https://en.wikipedia.org/w/index.php?curid=46971844]) and https://en.wikipedia.org/wiki/Shigeo_Shingo[Shigeo Shingo] at https://en.wikipedia.org/wiki/Toyota[Toyota]. These practices included:
 
 * Respect for people
 * Limiting work in process
@@ -38,7 +40,7 @@ Kanban is a term originating from Lean and the Toyota Production System. Origina
 
 Factories operating on a "push" model found themselves with massive amounts of inventory (work in process) in their facilities. This tied up operating capital and resulted in long delays to shipment. Japanese companies did not have the luxury of large amounts of operating capital, so they started experimenting with "single-piece flow." This led to a number of related innovations, such as the ability to re-configure manufacturing machinery much more quickly than U.S. factories were capable of.
 
-David J. Anderson was a product manager at Microsoft who was seeking a more effective approach to managing software development. In consultation with Don Reinertsen (introduced in the xref:queuing[below]) he applied the original concept of Kanban to his software development activities <<Anderson2010>>.
+David J. Anderson was a product manager at Microsoft who was seeking a more effective approach to managing software development. In consultation with Don Reinertsen (introduced in the xref:queuing[below]) he applied the original concept of Kanban to his software development activities cite:[Anderson2010].
 
 xref:scrum[Scrum] (covered in the previous chapter) is based on a rhythm with its scheduled sprints, for example every two weeks. In contrast, Kanban is a continuous process with no specified rhythm (also known as _cadence_). Work is “pulled” from backlog into active attention as resources are freed from previous work. This is perhaps the most important aspect of Kanban - the idea that *work is not accepted until there is capacity to perform it.*
 
@@ -55,12 +57,13 @@ There is a tremendous wealth of material available on Lean history and theory, a
 .Author's note: Gene Kim and The Phoenix Project
 ****
 
+[[fig-GeneKim-200-i]]
 .Gene Kim
 image::images/2_05-GeneKim.jpg[Gene Kim, 200,,float="left"]
 
 Between 2005 and 2012, I was a lead enterprise architect at Wells Fargo Bank, primarily concerned with IT delivery capabilities such as portfolio and service management. One day around 2007, I arrived at my office to find an envelope from my friend Gene Kim, then CTO of Tripwire. Gene and I had been corresponding for some years on high-performing IT, IT process improvement, and related topics. In the envelope was a copy of a book called _The Goal_, by Eli Goldratt. I was a little mystified, but after reading the book I began to understand.
 
-Gene saw the potential of the Theory of Constraints in understanding certain aspects of information technology management, and used it as a template to write another remarkable and influential book, _The Phoenix Project_ <<Kim2013>>. Rather than a manufacturing plant, the Phoenix Project centers on the struggles of the IT team at a medium-sized automotive parts manufacturer and retailer. From a state of chaos, uncontrolled work in process and resource constraints, the team applies Lean, Agile, and DevOps techniques to great effect. In my view, _The Phoenix Project_ is one of the most important works in the history of IT and digital management, and is also an enjoyable novel. I am honored to have been one of the original reviewers. If you are considering a career in IT or digital, it is essential reading. See especially Chapter 30 for an interesting discussion of manufacturing lessons in an IT context.
+Gene saw the potential of the Theory of Constraints in understanding certain aspects of information technology management, and used it as a template to write another remarkable and influential book, _The Phoenix Project_ cite:[Kim2013]. Rather than a manufacturing plant, the Phoenix Project centers on the struggles of the IT team at a medium-sized automotive parts manufacturer and retailer. From a state of chaos, uncontrolled work in process and resource constraints, the team applies Lean, Agile, and DevOps techniques to great effect. In my view, _The Phoenix Project_ is one of the most important works in the history of IT and digital management, and is also an enjoyable novel. I am honored to have been one of the original reviewers. If you are considering a career in IT or digital, it is essential reading. See especially Chapter 30 for an interesting discussion of manufacturing lessons in an IT context.
 ****
 
 anchor:work-in-process[]
@@ -70,10 +73,14 @@ anchor:queuing[]
 [quote, Don Reinertsen, Principles of Product Development Flow]
 Queues matter because they are economically important, they are poorly managed, and they have the potential to be much better managed. Queues profoundly affect the economics of product development. They cause valuable work products to sit idle, waiting to access busy resources. This idle time increases inventory, which is the root cause of many other economic problems...queues hurt cycle time, quality, and efficiency.
 
-.A queue footnote:[_Image credit https://www.flickr.com/photos/hktang/4243300265, downloaded 2016-10-07, commercial use permitted_]
+
+[[fig-queue-300-o]]
+.A queue
 image::images/2_05-queue.jpg[queue, 300, float="right"]
 
-Even at this stage of our evolution, with just one co-located collaborative team, it’s important to consider work in progress and how to limit it. One topic we will emphasize throughout the rest of this book is _queuing_. What is a queue? A queue, intuitively, is a collection of tasks to be done, being serviced by some worker or resource in some sequence, for example:
+
+Even at this stage of our evolution, with just one co-located collaborative team, it’s important to consider work in progress and how to limit it. One topic we will emphasize throughout the rest of this book is _queuing_. What is a queue
+(see <<fig-queue-300-o>> footnote:[Image credit https://www.flickr.com/photos/hktang/4243300265, downloaded 2016-10-07, commercial use permitted])? A queue, intuitively, is a collection of tasks to be done, being serviced by some worker or resource in some sequence, for example:
 
 * feature "stories" being developed by a product team
 * customer requests coming into a service desk
@@ -93,11 +100,13 @@ Conversely, if a resource is busy 95% of the time, the average time you'll wait 
 
 0.95/0.5 = 5.67 (19 days!)
 
-If you use a graphing calculator, you see the following:
+If you use a graphing calculator, you see the results in <<fig-wait-time-500-c>>.
 
+[[fig-wait-time-500-c]]
+.Time in queue increases exponentially with load
 image::images/2_05-wait-time.png[wait time, 500,]
 
-Notice how the wait time approaches infinity as the queue utilization approaches 100%. And yet, full utilization of resources is often sought by managers in the name of "efficiency." These basic principles are discussed by Gene Kim et al in the _Phoenix Project_ <<Kim2013>> in Chapter 23, and more rigorously by Don Reinertsen in _The Principles of Product Development Flow_ <<Reinertsen2009>>, chapter 3. A further complication is when work must pass through multiple queues; wait times for work easily expand to weeks or months. Such scenarios are not hypothetical, they are often seen in the real world and are a fundamental cause of information technology organizations getting a bad name for being slow and unresponsive. Fortunately, digital professionals are gaining insight into these dynamics and (as of 2016) matters are improving across the industry.
+Notice how the wait time approaches infinity as the queue utilization approaches 100%. And yet, full utilization of resources is often sought by managers in the name of "efficiency." These basic principles are discussed by Gene Kim et al in the _Phoenix Project_ cite:[Kim2013>> in Chapter 23, and more rigorously by Don Reinertsen in _The Principles of Product Development Flow_ <<Reinertsen2009], chapter 3. A further complication is when work must pass through multiple queues; wait times for work easily expand to weeks or months. Such scenarios are not hypothetical, they are often seen in the real world and are a fundamental cause of information technology organizations getting a bad name for being slow and unresponsive. Fortunately, digital professionals are gaining insight into these dynamics and (as of 2016) matters are improving across the industry.
 
 Understanding queuing behavior is critical to productivity. Reinertsen suggests that poorly managed queues contribute to:
 
@@ -108,11 +117,15 @@ Understanding queuing behavior is critical to productivity. Reinertsen suggests 
 * Lower quality
 * Less motivation
 
-These issues were understood by the pioneers of Lean manufacturing, an important movement throughout the 20th century. One of its central principles is to limit work in process. Work in process is obvious on a shop floor, because physical raw materials (inventory) are quite visible.
+These issues were understood by the pioneers of Lean manufacturing, an important movement throughout the 20th century. One of its central principles is to limit work in process. Work in process is obvious on a shop floor, because physical raw materials (inventory) are quite visible
+(see <<fig-wip-300-i>> footnote:[Image credit https://www.flickr.com/photos/jayburkhalter/6679328027/, downloaded 2016-10-07, commercial use permitted]).
 
 [[wip]]
-.Physical Work in Process footnote:[_Image credit https://www.flickr.com/photos/jayburkhalter/6679328027/, downloaded 2016-10-07, commercial use permitted_]
+
+[[fig-wip-300-i]]
+.Physical Work in Process
 image::images/2_05-wip.jpg[work in process, 300, , float="left"]
+
 
 Don Reinertsen developed the insight that product design and development had an *invisible* inventory of "Work in Process" that he called Design in Process (DIP). Just as managing physical work in process on the factory floor is key to a factory's success, so correctly understanding and managing design in process is essential to all kinds of research and development organizations -- *including digital product development, e.g. building software(!)* In fact, because digital systems are largely invisible even when finished, understanding their work in process is even more challenging.
 
@@ -130,7 +143,7 @@ We will revisit the topic of queuing in Chapter 9. For now, some rules of thumb:
 * Infinitely long to-do lists (backlog) sap motivation. Consider limiting backlog as well as work in process.
 * Visibility into work in progress is important for the collective mental model of the team.
 
-There are deeper philosophical and cultural qualities to Kanban beyond workflow and queuing. Anderson and his colleagues continue to evolve Kanban into a more ambitious framework. Mike Burrows <<Burrows2014>> identifies the following key principles
+There are deeper philosophical and cultural qualities to Kanban beyond workflow and queuing. Anderson and his colleagues continue to evolve Kanban into a more ambitious framework. Mike Burrows cite:[Burrows2014] identifies the following key principles
 
 * Start with what you do now.
 * Agree to pursue evolutionary change.
@@ -148,10 +161,12 @@ anchor:multi-tasking[]
 
 ===== Multi-tasking
 
-.Multi-tasking destroys productivity footnote:[_Image credit https://www.flickr.com/photos/bluefade/4229364807, downloaded 2016-2016-11-28, commercial use permitted_]
-image::images/3_07-juggling.jpg[juggling, 250, , float="right"]
 
-Multi-tasking (in this context) is when a human attempts to work on diverse activities simultaneously, for example developing code for a new application while also handling support calls. There is a broad agreement that multi-tasking destroys productivity and even mental health <<Cherry2016>>. Therefore, minimize multi-tasking.  Multi-tasking in part emerges as a natural response when one activity becomes blocked (e.g. due to needing another team's contribution). Approaches that enable teams to work without depending on outside resources are less likely to promote multi-tasking. xref:queuing[Queuing] and xref:work-in-process[work in process] thus become even more critical topics for management concern as one scales up.
+[[fig-juggling-250-o]]
+.Multi-tasking destroys productivity
+image::images/2_05-juggling.jpg[juggling, 250, , float="right"]
+
+Multi-tasking (in this context) is when a human attempts to work on diverse activities simultaneously, for example developing code for a new application while also handling support calls). There is a broad agreement that multi-tasking destroys productivity and even mental health cite:[Cherry2016]. Therefore, minimize multi-tasking.  Multi-tasking in part emerges as a natural response when one activity becomes blocked (e.g. due to needing another team's contribution). Approaches that enable teams to work without depending on outside resources are less likely to promote multi-tasking. xref:queuing[Queuing] and xref:work-in-process[work in process] thus become even more critical topics for management concern as one scales up. footnote:[Image credit https://www.flickr.com/photos/bluefade/4229364807, downloaded 2016-2016-11-28, commercial use permitted]
 
 ===== Scrum, Kanban, or both?
 
@@ -161,7 +176,7 @@ We can see in comparing Scrum and Kanban that their areas of focus are somewhat 
 
 * Scrum is widely adopted in industry and has achieved a level of formalization, which is why Scrum training is widespread and generally consistent in content.
 * Kanban is more flexible but this comes at a cost of more management overhead. It requires more interpretation to translate to a given organization’s culture and practices.
-* As Scrum author Ken Rubin notes, “Scrum is not well suited to highly interrupt-driven work.” <<Rubin2012>>. Scrum on the service desk doesn't work. (But if your company is too small, it may be difficult to segregate out interrupt-driven work! We will discuss the issues around interrupt-driven work further in Chapter 6.)
-* Finally, hybrids exist (Ladas' “Scrumban,” <<Ladas2009>>).
+* As Scrum author Ken Rubin notes, “Scrum is not well suited to highly interrupt-driven work.” cite:[Rubin2012]. Scrum on the service desk doesn't work. (But if your company is too small, it may be difficult to segregate out interrupt-driven work! We will discuss the issues around interrupt-driven work further in Chapter 6.)
+* Finally, hybrids exist (Ladas' “Scrumban,” cite:[Ladas2009]).
 
 Ultimately, instead of talking too much  about "Scrum" or "Kanban," the student is encouraged to look more deeply into their fundamental differences. We will return to this topic in the section on Lean Product Development.

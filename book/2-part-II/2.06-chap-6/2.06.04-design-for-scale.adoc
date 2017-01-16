@@ -20,6 +20,8 @@ anchor:CAP-theorem[]
 
 ===== The CAP principle
 
+
+[[fig-CAP-triangle-300-o]]
 .CAP principle
 image::images/2_06-CAP-triangle.png[CAP triangle, 300, , float="right"]
 
@@ -31,7 +33,7 @@ ifdef::collaborator-draft[]
 endif::collaborator-draft[]
 
 
-The advantage to scaling vertically is that all your data can reside on one server, with fast and reliable access. As soon as you start to split your data across servers, you run into the practical implications of the CAP principle.
+The advantage to scaling vertically is that all your data can reside on one server, with fast and reliable access. As soon as you start to split your data across servers, you run into the practical implications of the CAP principle (see <<fig-CAP-triangle-300-o>>).
 
 CAP stands for:
 
@@ -39,7 +41,7 @@ CAP stands for:
 * Availability
 * Partition-tolerance
 
-and the CAP Principle (or Theorem) states that it is not possible to build a distributed system that guarantees all three  <<Fox1999>>. What does this mean? First, let's define our terms:
+and the CAP Principle (or Theorem) states that it is not possible to build a distributed system that guarantees all three  cite:[Fox1999]. What does this mean? First, let's define our terms:
 
 *Consistency* means that all the servers (or "nodes") in the system see the same data at the same time. If an update is being processed, no node will see it before any other. This is often termed a transactional guarantee, and it is the sort of processing relational databases excel at.
 
@@ -55,32 +57,39 @@ Companies such as Google and Facebook took the alternative approach. They said, 
 
 The challenge with accepting inconsistency is how to do so. Eventually, the system needs to become consistent, and if conflicting updates are made they need to be resolved. Scalable systems in general favor availability and partition-tolerance as principles, and therefore must take explicit steps to restore consistency when it fails. The approach taken to partitioning the system into replicas is critical to managing eventual consistency, which brings us to the AKF scaling cube.
 
-For further discussion, see <<Limoncelli2014>>, section 1.5.
+For further discussion, see cite:[Limoncelli2014], section 1.5.
 
 anchor:AKF-cube[]
 
 ===== The AKF scaling cube
 
-.AKF scaling cube footnote:[_Similar to <<Abbott2015>>, p. 376_]
+
+[[fig-akf-400-o]]
+.AKF scaling cube
 image::images/2_06-akf.png[AKF cube, 400, , float="right"]
 
-Another powerful tool for thinking about scaling systems is the AKF Scaling Cube. AKF stands for Abbott, Keeven, and Fisher, authors of _The Art of Scalability_ <<Abbott2015>>. The AKF cube is a visual representation of the three basic options for scaling a system:
+
+Another powerful tool for thinking about scaling systems is the AKF Scaling Cube (see <<fig-akf-400-o>> footnote:[Similar to cite:[Abbott2015], p. 376). AKF stands for Abbott, Keeven, and Fisher, authors of _The Art of Scalability_ cite:[Abbott2015]. The AKF cube is a visual representation of the three basic options for scaling a system:
 
 * Replicate the complete system (x-axis)
 * Split the system functionally into smaller layers or components (y-axis)
 * Split the system's data (z-axis)
 
-.Point of sale terminals - horizontal scale footnote:[_Image credit https://www.flickr.com/photos/jeepersmedia/14061759587, downloaded 2016-11-21, commercial use permitted_]
+
+[[fig-POS-400-i]]
+.Point of sale terminals - horizontal scale
 image::images/2_06-POS.jpg[POS terminals, 400, , float="left"]
 
-A *complete system replica* is similar to the Point of Sale terminals in a retailer. Each is a self-contained system with all the data it needs to handle typical transactions. POS terminals do not depend on each other and therefore you can keep increasing the capacity of your store's checkout lines by simply adding more fo them.
+A *complete system replica* is similar to the Point of Sale terminals in a retailer(see <<fig-POS-400-i>> footnote:[Image credit https://www.flickr.com/photos/jeepersmedia/14061759587, downloaded 2016-11-21, commercial use permitted]). Each is a self-contained system with all the data it needs to handle typical transactions. POS terminals do not depend on each other and therefore you can keep increasing the capacity of your store's checkout lines by simply adding more fo them.
 
 *Functional splitting* is when you separate out different xref:feature-v-component[features or components]. To continue the retail analogy, this is like a department store; you view and buy electronics, or clothes, in those specific departments. The store "scales" by adding departments, which are self-contained in general; however, in order to get a complete outfit, you may need to visit several. In terms of systems, separating web and database servers is commonly seen - this is a component separation. E-commerce sites often separate "show" (product search and display) from "buy" (shopping cart and online checkout); this is a feature separation. Complex distributed systems may have large numbers of features and components, all orchestrated together into one common web or smartphone app experience.
 
-.Partitioning by data range at a conference footnote:[_Image credit https://www.flickr.com/photos/abragad/2531511657, downloaded 2016-11-21, commercial use permitted_]
+
+[[fig-registration-450-o]]
+.Partitioning by data range at a conference
 image::images/2_06-registration.jpg[conference registrations, 450, , float="right"]
 
-*Data splitting* is the concept of "partitioning" from the CAP discussion, above. Have you ever checked into a large event, and the first thing you see is check-in stations divided by alphabet range? For example:
+*Data splitting* is the concept of "partitioning" from the CAP discussion, above. Have you ever checked into a large event, and the first thing you see is check-in stations divided by alphabet range (see <<fig-registration-450-o>> footnote:[Image credit https://www.flickr.com/photos/abragad/2531511657, downloaded 2016-11-21, commercial use permitted])? For example:
 
 * A-H register here
 * I-Q register here
@@ -96,7 +105,7 @@ There are many ways to implement and combine the 3 axes of the AKF scaling cube 
 * Hardware redundancy
 * Designing systems for continuous availability during upgrades
 
-and much more. For further information, see <<Abbott2015>> and <<Limoncelli2014>>.
+and much more. For further information, see cite:[Abbott2015] and [Limoncelli2014].
 
 
 ifdef::collaborator-draft[]

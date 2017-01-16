@@ -10,15 +10,18 @@ Computers run in large data centers, where physical access to them is tightly co
 ===== Monitoring techniques
 Limoncelli et al define monitoring this way:
 
-_Monitoring is the primary way we gain visibility into the systems we run. It is the process of observing information about the state of things for use in both short-term and long-term decision making_ <<Limoncelli2014>>.
+_Monitoring is the primary way we gain visibility into the systems we run. It is the process of observing information about the state of things for use in both short-term and long-term decision making_ cite:[Limoncelli2014].
 
+
+[[fig-monitoring-A-400-i]]
 .Simple monitoring
 image::images/2_06-monitoring-1.png[application server and monitor, 400,,float="left"]
 
 But how does one “observe” computing infrastructure? Clearly, sitting in the data center (assuming you could get in) and looking at the lights on the faces of servers will not convey much useful information, beyond whether they are off or on. Monitoring tools are the software that watches the software (and systems more broadly).
 
-A variety of techniques are used to monitor computing infrastructure. Typically these involve communication over a network with the device being managed. Often, the network traffic is over the same network carrying the primary traffic of the computers. Sometimes, however, there is a distinct "out of band" network for management traffic. A simple monitoring tool will interact on a regular basis with a computing node, perhaps by “pinging” it periodically, and will raise an alert if the node does not respond within an expected time frame.
+A variety of techniques are used to monitor computing infrastructure. Typically these involve communication over a network with the device being managed. Often, the network traffic is over the same network carrying the primary traffic of the computers. Sometimes, however, there is a distinct "out of band" network for management traffic. A simple monitoring tool will interact on a regular basis with a computing node, perhaps by “pinging” it periodically, and will raise an alert if the node does not respond within an expected time frame (see <<fig-monitoring-A-400-i>>).
 
+[[fig-monitoring-B-500-o]]
 .Extended monitoring
 image::images/2_06-monitoring-2.png[application server and monitor, 500,,float="right"]
 
@@ -30,20 +33,23 @@ More broadly, these tools provide a variety of mechanisms for monitoring and con
 * network availability
 * log file contents (searching the files for messages indicating problems)
 * a given component's interactions with other elements in the IT infrastructure
-* and more.
+* and more (see <<fig-monitoring-B-500-o>>).
 
+[[fig-monitoring-C-350-i]]
 .User experience monitoring
 image::images/2_06-monitoring-3.png[application server and monitor, 350,,float="left"]
 
-Some monitoring covers low level system indicators not usually of direct interest to the end user. Other simulates end user experience; service level agreements are often defined in terms of the response time as experienced by the end user. See <<Limoncelli2014>>, chapters 16-17.
+Some monitoring covers low level system indicators not usually of direct interest to the end user. Other simulates end user experience; service level agreements are often defined in terms of the response time as experienced by the end user (see <<fig-monitoring-C-350-i>>). See cite:[Limoncelli2014], chapters 16-17.
 
 All of this data may then be forwarded to a central console and be integrated, with the objective of supporting the organization’s service level agreements in priority order. Enterprise monitoring tools are notorious for requiring agents (small, continuously-running programs) on servers; while some things can be detected without such agents, having software running on a given computer still provides the richest data. Since licensing is often agent-based, this gets expensive.
 
 NOTE: Monitoring systems are similar to source control systems in that they are a critical point at which xref:commit-as-metadata[metadata] diverges from the actual system under management.
 
+[[fig-config-mon-500-o]]
 .Configuration, monitoring, and element managers
 image::images/2_06-config-mon.png[relationship illustration,500,,float="right"]
-Related to monitoring tools is the concept of an element manager. Element managers are low-level tools for managing various classes of digital or IT infrastructure. For example, Cisco provides software for managing network infrastructure, and EMC provides software for managing its storage arrays. Microsoft provides a variety of tools for managing various Windows components. Notice that such tools often play a dual role, in that they can both change the infrastructure configuration as well as report on its status. Many however are reliant on graphical user interfaces, which are falling out of favor as a basis for configuring infrastructure.
+
+Related to monitoring tools is the concept of an element manager (see <<fig-config-mon-500-o>>). Element managers are low-level tools for managing various classes of digital or IT infrastructure. For example, Cisco provides software for managing network infrastructure, and EMC provides software for managing its storage arrays. Microsoft provides a variety of tools for managing various Windows components. Notice that such tools often play a dual role, in that they can both change the infrastructure configuration as well as report on its status. Many however are reliant on graphical user interfaces, which are falling out of favor as a basis for configuring infrastructure.
 
 anchor:custom-monitoring[]
 
@@ -55,8 +61,10 @@ with not knowing all of your requirements before you develop a piece of software
 so must we have an agile and evolutionary development mindset for our monitor
 ing platforms and systems.
 
-Monitoring tools, out of the box, can provide ongoing visibility to well understood aspects of the digital product: the performance of infrastructure, the capacity utilized, and well understood, common failure modes (such as a network link being down.) However, the digital product or application also needs to provide its own specific telemetry in various ways. This can be done through logging to output files, or in some cases through raising alerts via the network.
+Monitoring tools, out of the box, can provide ongoing visibility to well understood aspects of the digital product: the performance of infrastructure, the capacity utilized, and well understood, common failure modes (such as a network link being down.) However, the digital product or application also needs to provide its own specific telemetry in various ways (see <<fig-monitoring-D-500-o>>). This can be done through logging to output files, or in some cases through raising alerts via the network.
 
+
+[[fig-monitoring-D-500-o]]
 .Custom software requires custom monitoring
 image::images/2_06-monitoring-4.png[custom monitoring,500,,float="right"]
 
@@ -70,10 +78,11 @@ Finally, as the quote at the beginning of this section suggests, it is critical 
 
 ===== Aggregation and operations centers
 
+[[fig-monitoring-E-300-o]]
 .Aggregated monitoring
 image::images/2_06-monitoring-5.png[aggregation,300,,float="right"]
 
-It is not possible for a 24 x 7 operations team to access and understand the myriads of element managers and specialized monitoring tools present in the large IT environment. Instead, these teams rely on aggregators of various kinds to provide an integrated view into the complexity. These aggregators may focus on  status events, or specifically on performance aspects related either to the elements or to logical transactions flowing across them. They may incorporate dependencies from configuration management to provide a true “business view” into the event streams. This is directly analogous to the concept of xref:andon[Andon] board from Lean practices, or the idea of “information radiator” from Agile principles.
+It is not possible for a 24 x 7 operations team to access and understand the myriads of element managers and specialized monitoring tools present in the large IT environment. Instead, these teams rely on aggregators of various kinds to provide an integrated view into the complexity (see <<fig-monitoring-E-300-o>>). These aggregators may focus on  status events, or specifically on performance aspects related either to the elements or to logical transactions flowing across them. They may incorporate dependencies from configuration management to provide a true “business view” into the event streams. This is directly analogous to the concept of xref:andon[Andon] board from Lean practices, or the idea of “information radiator” from Agile principles.
 
 A monitoring console may present a rich and detailed set of information to an operator. Too detailed, in fact, as systems become large. Raw event streams must be filtered for specific events or patterns of concern. Event de-duplication starts to become an essential capability, which leads to distinguishing the monitoring system from the event management system. Also, for this reason, monitoring tools are often linked directly to ticketing systems; on certain conditions, a xref:ticketing[ticket]
  (e.g. an xref:IT-process-emergence[Incident]) is created and assigned to a team or individual.
@@ -144,15 +153,18 @@ Capacity and performance management are closely related, but not identical terms
 
 A capacity management system may include large quantities of data harvested from monitoring and event management systems, stored for long periods of time so that history of system utilization is understood and some degree of prediction can be ventured for upcoming utilization.
 
-.Black Friday at Macy's footnote:[_Image credit https://www.flickr.com/photos/diariocriticove/8211477590, downloaded 2016-10-31, commercial use permitted_]
+
+[[fig-BlackFriday-400-i]]
+.Black Friday at Macy's
 image::images/2_06-BlackFriday.jpg[Macys crowded, 400, , float="left"]
 
-The classic example of significant capacity utilization is the https://en.wikipedia.org/wiki/Black_Friday_(shopping)[Black Friday/Cyber Monday] experience of retailers. Both physical store and online ecommerce systems are placed under great strain annually around this time, with the year's profits potentially on the line.
+
+The classic example of significant capacity utilization is the https://en.wikipedia.org/wiki/Black_Friday_(shopping)[Black Friday/Cyber Monday] experience of retailers (see <<fig-BlackFriday-400-i>> footnote:[Image credit https://www.flickr.com/photos/diariocriticove/8211477590, downloaded 2016-10-31, commercial use permitted]). Both physical store and online ecommerce systems are placed under great strain annually around this time, with the year's profits potentially on the line.
 
 Performance management focuses on the responsiveness (e.g. speed) of the systems being used. Responsiveness may be related to capacity utilization, but some capacity issues don't immediately affect responsiveness. For example, a disk drive may be approaching full. When it fills, the system will immediately crash, and performance is severely affected. But until then, the system performs fine. The disk needs to be replaced on the basis of capacity reporting, not performance trending. On the other hand, some performance issues are not related to capacity. A mis-configured router might badly affect a web site's performance, but the configuration simply needs to be fixed - there is no need to handle as a capacity-related issue.
 
 At a simpler level, capacity and performance management may consist of monitoring CPU, memory, and storage utilization across a given set of nodes, and raising alerts if certain thresholds are approached. For example, if a critical server is frequently approaching 50% CPU utilization (leaving 50% "headroom"), engineers might identify that another server should be added. Abbot and Fisher suggest, "As a general rule of thumb, we like to start at 50% as the ideal usage percentage
-and work up from there as the arguments dictate" <<Abbott2015>>, p 204.
+and work up from there as the arguments dictate" cite:[Abbott2015], p 204.
 
 So, what do we do when a capacity alert is raised, either through an automated system or through the manual efforts of a capacity analyst? There are a number of responses that may follow:
 

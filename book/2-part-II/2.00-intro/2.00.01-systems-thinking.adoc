@@ -16,29 +16,34 @@ Merriam-Webster http://www.merriam-webster.com/dictionary/system[defines a syste
 
 As the Senge quote implies, brute force does not scale well within the context of a system. Systems tend to make their own rules. Within the bounds of the system, actions lead to outcomes, which in turn affect future actions. This *feedback* often becomes amplified and re-amplified through the systems' interactions with itself, until an overload occurs, such as the horrible screeching of a microphone too close to a speaker. In the business world, these feedback loops can manifest themselves in rigid platforms, brittle applications, or even a toxic work culture that sabotages success.
 
-A thorough discussion of systems theory is beyond the scope of this book. However, many of the ideas that follow are informed by it. Obtaining a working knowledge of systems theory will not only enhance your understanding of this book, it can also be an essential tool for managing uncertainty in your future career, teams, and organizations. If you are interested in this topic, you might start with _An Introduction to General Systems Thinking_ by Gerald Weinberg <<Weinberg2001>>.
+A thorough discussion of systems theory is beyond the scope of this book. However, many of the ideas that follow are informed by it. Obtaining a working knowledge of systems theory will not only enhance your understanding of this book, it can also be an essential tool for managing uncertainty in your future career, teams, and organizations. If you are interested in this topic, you might start with _An Introduction to General Systems Thinking_ by Gerald Weinberg cite:[Weinberg2001].
 
 Feedback is a loaded term. We hear terms like positive feedback and negative feedback, and associate it quickly with performance coaching and management discipline. That is not the sense of feedback in this book. The definition of feedback as used in this book is based on engineering. There is considerable related theory in general engineering and especially https://en.wikipedia.org/wiki/Control_theory[control theory] and the reader is encouraged to investigate some of these foundations if unfamiliar.
 
-Here is the classic illustration of a reinforcing feedback loop:
+In <<fig-feedback-400-c>>) we see the classic illustration of a reinforcing feedback loop:
 
+[[fig-feedback-400-c]]
 .Reinforcing feedback loop
 image::images/2_00-feedback.png[feedback, 400]
 
-For example, we can consider “rabbit reproduction” as a process with a reinforcing feedback loop:
+For example (as in <<fig-rabbits-700-c>>), we can consider “rabbit reproduction” as a process with a reinforcing feedback loop.
 
+[[fig-rabbits-700-c]]
 .Reinforcing (positive?) feedback, with rabbits
 image::images/2_00-rabbits.png[rabbits, 700,]
 
-The more rabbits, the faster they reproduce, and the more rabbits. This is sometimes called a “positive” feedback loop, although Mr. MacGregor the local gardener may not agree, given that they are eating all his cabbages!! This is why feedback experts (e.g. <<Sterman2000>>) prefer to call this “reinforcing” feedback, because there is not necessarily anything “positive” about it.
 
-We can also consider feedback as the relationship between TWO processes:
+The more rabbits, the faster they reproduce, and the more rabbits. This is sometimes called a “positive” feedback loop, although Mr. MacGregor the local gardener may not agree, given that they are eating all his cabbages!! This is why feedback experts (e.g. cite:[Sterman2000]) prefer to call this “reinforcing” feedback, because there is not necessarily anything “positive” about it.
 
+We can also consider feedback as the relationship between TWO processes (see <<fig-balancing-350-c>>).
+
+[[fig-balancing-350-c]]
 .Balancing feedback between two processes
 image::images/2_00-balancing.png[feedback between 2 processes, 350]
 
-In our rabbit example, what if Process B is fox reproduction, that is, the birth rate of foxes (who eat rabbits)?
+In our rabbit example, what if Process B is fox reproduction, that is, the birth rate of foxes (who eat rabbits) (<<fig-rabbitfox-700-c>>)?
 
+[[fig-rabbitfox-700-c]]
 .Balancing (negative?) feedback, with rabbits and foxes
 image::images/2_00-rabbitfox.png[rabbits and foxes, 700]
 
@@ -52,15 +57,16 @@ Linked from https://en.wikipedia.org/wiki/Causal_loop_diagram[Wikipedia]
 
 endif::aitm-pdf[]
 
-Wikipedia has good articles on https://en.wikipedia.org/wiki/Causal_loop_diagram[Causal Loop Diagramming] and https://en.wikipedia.org/wiki/System_dynamics[Systems Dynamics] (with cool dynamic visuals.) <<Sterman2000>> is the definitive text with applications.
+Wikipedia has good articles on https://en.wikipedia.org/wiki/Causal_loop_diagram[Causal Loop Diagramming] and https://en.wikipedia.org/wiki/System_dynamics[Systems Dynamics] (with cool dynamic visuals.) cite:[Sterman2000] is the definitive text with applications.
 
 NOTE: Still confused? Think about the last time you saw a "reply-all" email storm. The first accidental mass send generates feedback (emails saying "take me off this list"), which generate more emails ("stop emailing the list") and so on. This does not continue indefinitely; management intervention, common sense and fatigue eventually damp the storm down.
 
 ==== What does systems thinking have to do with IT?
 
-In an engineering sense, positive feedback is often dangerous and a topic of concern. The classic example of bad positive feedback in engineering is the collapse of the Tacoma Narrows bridge, "Galloping Gertie."
+In an engineering sense, positive feedback is often dangerous and a topic of concern. The classic example of bad positive feedback in engineering is the collapse of the Tacoma Narrows bridge, "Galloping Gertie" (see <<fig-bridge-400-o>> footnote:[Image credit https://en.wikipedia.org/w/index.php?curid=23093518, downloaded 2016-10-31, By Barney Elliott; The Camera Shop - Screenshot taken from 16MM Kodachrome motion picture film by Barney Elliott. Fair use. There is debate about whether the collapse of this bridge is a good example of feedback; another case would be appreciated.])
 
-."Galloping Gertie" footnote:[_Image credit https://en.wikipedia.org/w/index.php?curid=23093518, downloaded 2016-10-31, By Barney Elliott; The Camera Shop - Screenshot taken from 16MM Kodachrome motion picture film by Barney Elliott. Fair use_.]
+[[fig-bridge-400-o]]
+."Galloping Gertie"
 image::images/2_00-bridge.jpg[collapsing bridge, 400, ,float="right"]
 
 As with bridges, at a technical level, reinforcing feedback can be a very bad thing in IT systems. In general, any process that is self-amplified without any balancing feedback will eventually consume all available resources, just like rabbits will eat all the food available to them. So, if you create a process (e.g. write and run a computer program) that recursively spawns itself, it will sooner or later crash the computer as it devours memory and CPU. See http://osr507doc.sco.com/en/HANDBOOK/runaway_proc.html[Runaway processes.]
@@ -107,8 +113,9 @@ Linked from https://en.wikipedia.org/wiki/System_dynamics[Wikipedia]
 
 endif::aitm-pdf[]
 
-At a business level, there is a special kind of reinforcing feedback that defines the successful business:
+At a business level, there is a special kind of reinforcing feedback that defines the successful business (see <<fig-biz-positive-600-c>>).
 
+[[fig-biz-positive-600-c]]
 .The reinforcing feedback businesses want
 image::images/2_00-biz-positive.png[positive business feedback, 600]
 
@@ -131,14 +138,13 @@ Finally, we should talk briefly about open loop versus closed loop systems.
 
 In navigation terminology, the open-loop attempt to stick to a course without external information (e.g. navigating in the fog, without radar or communications) is known as " https://en.wikipedia.org/wiki/Dead_reckoning[dead reckoning]," in part because it can easily get you dead!
 
-A good example of an open loop system is the children’s game “pin the tail on the donkey.” In “pin the tail on the donkey,” a person has to execute a process (pinning a paper or cloth "tail" onto a poster of a donkey - no live donkeys are involved!) while blindfolded, based on their memory of their location (and perhaps after being deliberately disoriented by spinning in circles). Since they are blindfolded, they have to move across the room and pin the tail without the ongoing corrective feedback of their eyes. (Perhaps they are getting feedback from their friends, but perhaps their friends are not reliable….)
+A good example of an open loop system is the children’s game “pin the tail on the donkey” (see <<fig-donkey-300-o>> footnote:[Image credit https://www.flickr.com/photos/portland_mike/5445434245/, downloaded 2016-11-13, mike krzeszak, Flickr, Creative Commons]). In “pin the tail on the donkey,” a person has to execute a process (pinning a paper or cloth "tail" onto a poster of a donkey - no live donkeys are involved!) while blindfolded, based on their memory of their location (and perhaps after being deliberately disoriented by spinning in circles). Since they are blindfolded, they have to move across the room and pin the tail without the ongoing corrective feedback of their eyes. (Perhaps they are getting feedback from their friends, but perhaps their friends are not reliable….)
 
-.Pin the tail on the donkey footnote:[_Image credit https://www.flickr.com/photos/portland_mike/5445434245/, downloaded 2016-11-13, mike krzeszak, Flickr, Creative Commons_]
+[[fig-donkey-300-o]]
+.Pin the tail on the donkey
 image::images/2_00-donkey.jpg[donkey game, 300, float="right"]
 
-Without the blindfold, it would be a closed loop system. The person would rise from their chair and, through the ongoing feedback of their eyes to their central nervous system, would move towards the donkey and pin the tail in the correct location.
-
-This may seem obvious, but the history of IT management (some would say all management) over the past decades has been the struggle to overcome open-loop practices. Reliance on open-loop practices is arguably an indication of a dysfunctional culture. A IT team that is designing and delivering without sufficient corrective feedback from its stakeholders is an ineffective, open-loop system. <<Kennaley2010>> applies these principles to software development in much greater depth, and is recommended.
+Without the blindfold, it would be a closed loop system. The person would rise from their chair and, through the ongoing feedback of their eyes to their central nervous system, would move towards the donkey and pin the tail in the correct location. In the context of a children's game, the challenges of open-loop may seem obvious, but an important aspect of IT management over the past decades has been the struggle to overcome open-loop practices. Reliance on open-loop practices is arguably an indication of a dysfunctional culture. An IT team that is designing and delivering without sufficient corrective feedback from its stakeholders is an ineffective, open-loop system. Mark Kennaley cite:[Kennaley2010] applies these principles to software development in much greater depth, and is recommended.
 
 NOTE: No system can ever be fully "open loop" indefinitely.  Sooner or later, you take off the blindfold, or wind up on the rocks.
 
