@@ -1,5 +1,8 @@
 ==== Why architecture?
 
+[[fig-architecture-800-c]]
+.St. Vitus Cathedral, Prague
+image::images/4_12-architecture.jpg[alt text, 800, , float=""]
 
 [quote, Fred Brooks, Planning a Computer System: Project Stretch]
 Computer architecture, like other architecture, is the art of determining the needs of the user of a structure and then designing to meet those needs as effectively as possible within economic and technological constraints. Architecture must include engineering considerations, so that the design will be economical and feasible; but the emphasis in architecture is upon the needs of the user, whereas in engineering the emphasis is upon the needs of the fabricator. [cite:[Buchholz1962], first published use of the term "architecture" with respect to computing system organization.]
@@ -30,7 +33,7 @@ Investment decisions become harder. You're far beyond the days when you had a on
 
 And then there are the big headaches. A major commercial product version is going off support, and it's the perfect time to think about a rewrite or replatform (say into the Cloud). But the moving pieces and interdependencies are formidably complex, and if you get the analysis wrong the business impact will be severe. You acquire another firm, with a lot of overlapping activities, and start to see the need for "Business Architecture" to clarify your understanding of business processes, organizations, and capabilities. Or a major outage hits the business hard, and all of a sudden the organizational priority (from the Board on down) is "fix this so it never happens again." Everything else is to go "on hold." Except, of course, it can't.
 
-In response to these and a thousand other complexities of digital management as organizations scale up, a general purpose coordination capability emerges sometimes called Enterprise Architecture. In this chapter section, we will discuss its definition, organizational dynamics, and value proposition.
+In response to these and a thousand other complexities of digital management as organizations scale up, a general purpose coordination capability emerges sometimes called Enterprise Architecture. In this chapter section, we will discuss its definition, organizational dynamics, and value proposition. footnote:[Image credit https://www.flickr.com/photos/aigle_dore/6365091333, downloaded 2016-10-25, Image copyrights Moyan Brenn, commercial use permitted]
 
 anchor:defining-ea[]
 
@@ -60,21 +63,27 @@ There are numerous definitions of _enterprise architecture_. The examples above 
 
 In general, definitions of enterprise architecture characterize it as a coordination and problem solving discipline, suited to large scale problems at the intersection of digital technology and human organization. An important function of architecture is supporting a shared mental model of the complex organization; we were first introduced to the importance of xref:shared-mental-model[shared mental models] in Chapter 5 and this need has only increased as the organization became more complex. Enterprise Architecture provides the tools and techniques for sustaining shared mental models of complexity at scale.
 
-.The terrain footnote:[_Image credit https://www.flickr.com/photos/endogamia/3979040177, downloaded 2016-10-16, commercial use permitted_]
+
+[[fig-serengeti-250-i]]
+.The terrain
 image::images/4_12-serengeti.jpg[alt text, 250, , float="left"]
 
-.The mapmaker footnote:[_Image credit https://www.flickr.com/photos/perspective/8474999166, downloaded 2016-10-16, commercial use permitted_]
+
+
+[[fig-surveyor-200-i]]
+.The mapmaker
 image::images/4_12-surveyor.jpg[alt text, 200, , float="left"]
 
-.The map footnote:[_Image credit https://www.flickr.com/photos/martye_green/2354576085, downloaded 2016-10-16, commercial use permitted_]
+[[fig-map-235-c]]
+.The map
 image::images/4_12-map.jpg[alt text, 235, , float=""]
 
 Confused? Consider the activity of map-making. In map-making you have:
 
-* The actual terrain
-* The capability of map making: surveying, drawing, etc.
+* The actual terrain (<<fig-serengeti-250-i>> footnote:[Image credit https://www.flickr.com/photos/endogamia/3979040177, downloaded 2016-10-16, commercial use permitted])
+* The capability of map making: surveying, drawing, etc. (<<fig-surveyor-200-i>> footnote:[Image credit https://www.flickr.com/photos/perspective/8474999166, downloaded 2016-10-16, commercial use permitted])
 * The process of surveying and mapping it
-* The resulting map as a document
+* The resulting map as a document (<<fig-map-235-c>> footnote:[Image credit https://www.flickr.com/photos/martye_green/2354576085, downloaded 2016-10-16, commercial use permitted])
 
 And once the map is made, you might use it for a wide variety of purposes, and you also might find that once you start to use the map, you wish it had more information. Similarly, in enterprise architecture, it's important to remember that there are different concerns:
 
@@ -106,12 +115,14 @@ Architecture has a comparable emergence story, but for somewhat different reason
 
 These lessons had also been learned by the Austrian, Prussian, and French militaries.
 
-.Franz Moritz Graf von Lacy footnote:[Image credit https://en.wikipedia.org/wiki/Franz_Moritz_von_Lacy#/media/File:Count_Franz_Moritz_von_Lacy_(oil_on_canvas_portrait_HGM).jpg, downloaded 2016-10-04, labeled as public domain by Wikipedia]
+
+[[fig-moritz-300-i]]
+.Franz Moritz Graf von Lacy
 image::images/4_12-moritz.jpg[Moritz,300, float="left" ]
 
 In previous ages, nobles would assemble and fight for their King, but their armies were poorly coordinated, and disputes over strategy would often arise. Each noble's army would have its own quartermaster, couriers, intelligence, supply chains, and the like. This was both inefficient, and ineffective: overall plans of battle often could not be made or executed, and military operations would be bungled.
 
-As fighting wars became (unfortunately) a larger and larger scale endeavor, the need to centralize certain capabilities became more and more obvious. This culminated in the late 1700s and early 1800s with the creation of "general staffs" that were responsible for coordination of planning and execution across the increasingly complex military operations. The HQ "staff" and its shared services were deliberately distinguished from the warfighting "line." The Austrian field marshall  Franz Moritz Graf von Lacy was one of the pioneers of this new style of organization, which was soon copied by the French army under Napoleon Bonaparte.
+As fighting wars became (unfortunately) a larger and larger scale endeavor, the need to centralize certain capabilities became more and more obvious. This culminated in the late 1700s and early 1800s with the creation of "general staffs" that were responsible for coordination of planning and execution across the increasingly complex military operations. The HQ "staff" and its shared services were deliberately distinguished from the warfighting "line." The Austrian field marshall  Franz Moritz Graf von Lacy(see <<fig-moritz-300-i>> footnote:[Image credit https://en.wikipedia.org/wiki/Franz_Moritz_von_Lacy#/media/File:Count_Franz_Moritz_von_Lacy_(oil_on_canvas_portrait_HGM).jpg, downloaded 2016-10-04, labeled as public domain by Wikipedia]) was one of the pioneers of this new style of organization, which was soon copied by the French army under Napoleon Bonaparte.
 
 For example, the role of Napoleon's staff officer Pierre-Joseph Bourcet under Napoleon is described thus:
 
@@ -156,8 +167,9 @@ But in many cases, centralizing staff expertise and the definition of acceptable
 [quote, Weill and Ross, Enterprise Architecture as Strategy]
 The operating model is the necessary level of business process integration and standardization for delivering goods and services to customers. Different companies have different levels of process integration across their business units (i.e., the extent to which business units share data). Integration enables end-to-end processing and a single face to the customer, but it forces a common understanding of data across diverse business units.
 
-In terms of overall positioning, Enterprise Architecture is often portrayed as mediating between strategy and portfolio management:
+In terms of overall positioning, Enterprise Architecture is often portrayed as mediating between strategy and portfolio management (see <<fig-EA-context-900-c>>).
 
+[[fig-EA-context-900-c]]
 .EA context, based on cite:[Ross2006], fig 1-2, p.10.
 image::images/4_12-EA-context.png[EA context, 900]
 
@@ -176,11 +188,11 @@ But, assuming that some shared vision, intelligence, economies of scale, and sha
 
 anchor:Zachman[]
 
-One of the most frequently used visualizations of enterprise architecture's concerns is the Zachman Framework:
+One of the most frequently used visualizations of enterprise architecture's concerns is the Zachman Framework (see <<fig-zachman-600>> footnote:[loosely based on cite:[Zachman1987] and succeeding work]).
 
+[[fig-zachman-600]]
 .A variation on the Zachman framework
 image::images/4_12-zachman.png[Zachman framework, 600]
-_(loosely based on cite:[Zachman1987] and succeeding work.)_
 
 We were exposed to the xref:data-modeling[data modeling] progression from conceptual to logical to physical data model in Chapter 11. The Zachman framework generalizes this progression to various views of importance to organizations, as shown in the columns:
 
@@ -195,9 +207,9 @@ Overall, the Zachman framework represents the range of organizational operating 
 
 ====== Peer organizations
 
-It's reasonable to associate the xref:biz-model-canvas[Business Model Canvas]
- with strategy, and the Zachman framework with the enterprise architecture (as an artifact):
+It's reasonable to associate the xref:biz-model-canvas[Business Model Canvas] with strategy, and the Zachman framework with the enterprise architecture as an artifact (see <<fig-BM-OM-800-c>>).
 
+[[fig-BM-OM-800-c]]
 .Business model versus operating model
 image::images/4_12-BM-OM.png[Business model versus operating model, 900]
 
@@ -251,12 +263,13 @@ The following outcomes are often asserted for enterprise architecture:
 
 anchor:arch-impacts[]
 
-The following model is a high level xref:impact-mapping[impact mapping] representation.
+Illustrated in <<fig-impact-800-c>> is a high level xref:impact-mapping[impact mapping] representation.
 
+[[fig-impact-800-c]]
 .Architecture impacts on enterprise value
 image::images/4_12-impact.png[Architecture value, 800]
 
-The above diagram suggests a number of specific, measurable outcomes from typical enterprise architecture goals. Without exploring every line of value:
+The  diagram suggests a number of specific, measurable outcomes from typical enterprise architecture goals. Without exploring every line of value:
 
 * A reduced technology portfolio can and should result in improved xref:sourcing[sourcing], improved support, improved security, reduced IT staffing spend, and potentially reduced development time. For example, vendors may offer more favorable terms when their products are preferred standards throughout an organization. A smaller product portfolio is easier to  xref:sourcing-and-security[secure].
 * Better understanding of the current estate should reduce investigation times and outages, and reduce the risk of regulatory violations. For example, if regulators require evidence that employee medical xref:records-mgmt[records] have not been removed from the country, architecture's curating of that information will expedite xref:compliance[compliance] response.
