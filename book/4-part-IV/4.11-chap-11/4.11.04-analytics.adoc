@@ -18,10 +18,12 @@ endif::instructor-ed[]
 [quote, Tom Davenport and Jeanne Harris, Competing on Analytics]
 ...analytical competitors wring every last drop of value from business processes and key decisions.
 
-One important aspect of digital product development is data analytics. Analysis of organizational records has always been a part of any concern large enough to have formal records management. The word for this originally was simply "reporting." A set of files or ledgers would be provided to one or more clerks, who would manually review them and extract the needed figures.
+One important aspect of digital product development is data analytics. Analysis of organizational records has always been a part of any concern large enough to have formal records management. The word for this originally was simply "reporting." A set of files or ledgers would be provided to one or more clerks, who would manually review them and extract the needed figures (see <<fig-reportingOldStyle-i>> footnote:[Image credit https://www.flickr.com/photos/seattlemunicipalarchives/3347281230, commercial use permitted]).
 
-.Reporting and analytics, old style footnote:[_Image credit https://www.flickr.com/photos/seattlemunicipalarchives/3347281230, commercial use permitted_]
+[[fig-reportingOldStyle-i]]
+.Reporting and analytics, old style
 image::images/4_11-reportingOldStyle.png[1900s clerk with adding machine, 300, , float="left"]
+
 
 We have touched on reporting previously, in our discussion of xref:metrics-KPIs[metrics]. This is a more detailed examination.
 
@@ -33,15 +35,19 @@ As information became more and more automated, the field of "Decision Support" (
 
 A robust profession and set of practices emerged around data warehousing and analytics. And as infrastructure became more powerful and storage less expensive, the idea of full-lifecycle or closed-loop analytics originated.
 
-When analyzing data is costly and slow, the data analysis can only affect large, long-cycle decisions. It is not a form of fast feedback. The annual report may drive next year's product portfolio investment decisions, but it cannot drive the day to day behavior of sales, marketing, and customer service:
+When analyzing data is costly and slow, the data analysis can only affect large, long-cycle decisions. It is not a form of fast feedback. The annual report may drive next year's product portfolio investment decisions, but it cannot drive the day to day behavior of sales, marketing, and customer service (see <<fig-oldCycle-500-c>>).
 
 anchor:analytics-context[]
 
+
+[[fig-oldCycle-500-c]]
 .Strategic analytics
 image::images/4_11-oldCycle.png[old analytics cycle, 500]
 
-However, as analysis becomes faster and faster, it can inform operational decisions.
+However, as analysis becomes faster and faster, it can inform operational decisions (see <<fig-newCycle-500-c>>).
 
+
+[[fig-newCycle-500-c]]
 .Opeational analytics (closed-loop)
 image::images/4_11-newCycle.png[new analytics cycle, 500]
 
@@ -56,20 +62,17 @@ According to the Data Management Body of Knowledge, "A Data Warehouse (DW) is a 
 
 anchor:DW-BI-illustrated[]
 
-Here is an illustration of an data warehousing/business intelligence (DW/BI) implementation pattern:
-
+[[fig-DW-BI-600-c]]
 .Data warehousing/business intelligence architecture
 image::images/4_11-DW-BI.png[DW/BI architecture, 600]
 
-The above diagram expands on the above xref:analytics-context[contextual diagrams], showing the major business areas (Sales etc) as data sources. (In a large organization this might be dozens or hundreds of source systems.) These systems feed a "data services layer" that both aggregates data for analytics, as well as providing direct services such as data cleansing and master data management.
+
+<<fig-DW-BI-600-c>> illustrates an data warehousing/business intelligence (DW/BI) implementation pattern. The  diagram expands on the above xref:analytics-context[contextual diagrams], showing the major business areas (Sales etc) as data sources. (In a large organization this might be dozens or hundreds of source systems.) These systems feed a "data services layer" that both aggregates data for analytics, as well as providing direct services such as data cleansing and master data management.
 
 It's important to understand that in terms of this book's emphasis on product-centric development that *the data services layer itself is an internal product.* Some might call it more of a xref:feature-v-component[component than a feature], but it is intended in any case as a general-purpose platform that can support a wide variety of use cases.
 
 "Factoring out" data services in this way may or may not be optimal for any given organization, depending on maturity, business objectives, and a variety of other concerns. However, at scale the skills and practices do become specialized, and so it's anticipated we'll continue to see implementation strategies similar to the above figure.
-
-Notice also that the data services layer is not solely for analytics; it also supports direct operational services.
-
-Here are discussions of the diagrams's various elements:
+Notice also that the data services layer is not solely for analytics; it also supports direct operational services. Here are discussions of the diagrams's various elements:
 
 ====== Operational applications
 These are the source systems that provide the data and require data services.

@@ -25,8 +25,9 @@ In the last section, we analyzed a business problem as a data model and created 
 
 Let's go back to our xref:emergence-model[emergence model]. Think about moving from one database, to two.
 
-In the example below, the Customer Relationship Management (CRM) system is in the cloud, and data is also being imported from the product database:
+In the example below, the Customer Relationship Management (CRM) system is in the cloud, and data is also being imported from the product database (see <<fig-integrations-500-c>>).
 
+[[fig-integrations-500-c]]
 .Data integrations
 image::images/4_11-integrations.png[integrations, 500]
 
@@ -45,18 +46,21 @@ The "system of record" concept is widely used in data management, records manage
 * suitable for legal and regulatory purposes
 * the "source" for other systems to refer to
 
-It is important to realize that the designation "system of record" is a ROLE that a given database (or system) plays with respect to SOME DATA. The "Sales" database above might be the system of record for invoices, but is not the system of record for products or customers:
+It is important to realize that the designation "system of record" is a ROLE that a given database (or system) plays with respect to SOME DATA. The "Sales" database above might be the system of record for invoices, but is not the system of record for products or customers (see <<fig-SORs-600-c>>).
 
+[[fig-SORs-600-c]]
 .Systems of record
 image::images/4_11-SORs.png[systems of record, 600]
 
-The system of record (aka SOR) is often the system of origin - the system where the data is first captured - but not always. In retail, sales transactions are not considered authoritative until they pass through sales audit, and so the system of record for a transaction is not the cash register (which has a database in it):
+The system of record (aka SOR) is often the system of origin - the system where the data is first captured - but not always. In retail, sales transactions are not considered authoritative until they pass through sales audit, and so the system of record for a transaction is not the cash register, which has a database in it (see <<fig-salesFlow-600-c>>).
 
+[[fig-salesFlow-600-c]]
 .Data flow for sales information
 image::images/4_11-salesFlow.png[sales flow, 600]
 
-Systems of record logically would be the first place to pull data from, but sometimes due to performance or security concerns data may be replicated into an alternate source better suited for distributing the data. A good example of this is an HR system that feeds the corporate directory; the HR system (e.g. Oracle HR, or Workday) is the actual system of record for employee names and identifiers, but most people and other systems in the company will pull the data from the directory (e.g. Microsoft Exchange):
+Systems of record logically would be the first place to pull data from, but sometimes due to performance or security concerns data may be replicated into an alternate source better suited for distributing the data. A good example of this is an HR system that feeds the corporate directory; the HR system (e.g. Oracle HR, or Workday) is the actual system of record for employee names and identifiers, but most people and other systems in the company will pull the data from the directory (e.g. Microsoft Exchange -- see <<fig-HRData-600-c>>).
 
+[[fig-HRData-600-c]]
 .Data flow for HR data
 image::images/4_11-HRData.png[HR data, 600]
 

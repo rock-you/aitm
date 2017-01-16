@@ -144,8 +144,9 @@ The following descriptions of the layers are typical:
 |Physical|Intended for a specific database platform (e.g. Oracle or MySQL). Computer-compatible names. Can be used to generate data definition scripts.
 |====
 
-A simple conceptual model might look like this:
+A simple conceptual model might look like as shown in <<fig-conceptual-600-c>>.
 
+[[fig-conceptual-600-c]]
 .Conceptual data model
 image::images/4_11-conceptual.png[conceptual data model, 600]
 
@@ -156,15 +157,17 @@ The above model might be a fragment from a sales system. It shows that their are
 * Line Item
 * Product
 
-This might be elaborated into a logical model:
+This might be elaborated into a logical model (see <<fig-logical-600-c>>).
 
+[[fig-logical-600-c]]
 .Logical data model
 image::images/4_11-logical.png[logical data model, 600]
 
 The logical model includes _attributes_ (Customer First Name). The line between them has particular "adornments" representing a well known data modeling notation called "crow's foot." In this case, the notation is stipulating that one customer may have zero to many invoices, but any invoice must have one and only one customer. Notice also that the entity and attribute names are human-readable.
 
-Then, the logical model might be transformed into physical:
+Then, the logical model might be transformed into physical (see <<fig-physical-600-c>>).
 
+[[fig-physical-600-c]]
 .Physical data model
 image::images/4_11-physical.png[physical data model, 600]
 
@@ -184,13 +187,15 @@ If a database administrator (DBA) issues that statement to the Oracle database, 
 
 IMPORTANT: Notice that this database would only work for regions where customers have "first" and "last" names. This may not be true in all areas of the world. See https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/[Falsehoods Programmers Believe about Names].
 
-The Oracle software is installed on some node or machine, and receives the statement. The database adds the table suggested:
+The Oracle software is installed on some node or machine, and receives the statement. The database adds the table suggested (see <<fig-1stTable-400-c>>).
 
+[[fig-1stTable-400-c]]
 .Database creates table
 image::images/4_11-1stTable.png[one table, 400]
 
-Further tables can easily be added in the same manner:
+Further tables can easily be added in the same manner (see <<fig-multiTbl-400-c>>).
 
+[[fig-multiTbl-400-c]]
 .Multiple tables in database
 image::images/4_11-multiTbl.png[several tables,400]
 
