@@ -32,6 +32,7 @@ yes|cp -P book/*/*/images/*.jpg output/html/images/
 
 #asciidoctor-bibtex REALLY doesn't like simple Zotero bibtex export, but tolerates the
 #bibtex synch approach (options|Bibtex)
+#actually not true, still issues.
 asciidoctor -r asciidoctor-bibtex -D output/html aitm-student.adoc
 asciidoctor -r asciidoctor-bibtex -D output/html aitm-instructor.adoc
 asciidoctor -r asciidoctor-bibtex -D output/html aitm-collaborator.adoc
