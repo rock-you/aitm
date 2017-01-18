@@ -8,10 +8,10 @@ anchor:product-roadmapping[]
 Some companies may notice that every specification they have ever prepared in the history of their company has had to change during product development, but they attribute this to human error and lack of discipline. They deeply believe that they can produce a good specification if only they try hard enough. You may recognize this as the classic thinking of an xref:open-loop[open loop] control system...
 
 
-Creating effective plans in complex situations is hard. Planning a new product is one of the most challenging endeavors, one in which failure is common. As the Don Reinertsen quote above reflects, the historically failed approach (call it the "planning fallacy") is to develop overly detailed (sometimes called "rigorous") plans and then assume that achieving them is simply a matter of "correct execution" (see <<fig-plan-driven-200-o>>).
+Creating effective plans in complex situations is hard. Planning a new product is one of the most challenging endeavors, one in which failure is common. As the Don Reinertsen quote above reflects, the historically failed approach (call it the "planning fallacy") is to develop overly detailed (sometimes called "rigorous") plans and then assume that achieving them is simply a matter of "correct execution" (see <<fig-plan-driven-250-o>>).
 
 
-[[fig-plan-driven-200-o]]
+[[fig-plan-driven-250-o]]
 .Planning fallacy
 image::images/2_04-plan-driven.png[planning,300,,float="right"]
 
@@ -34,6 +34,7 @@ anchor:backlog-estimation-prioritization[]
 [quote, Don Reinertsen, Principles of Product Development Flow]
 _companies often create complex prioritization algorithms that produce precise priorities based on very imprecise input data. I prefer the simple approach. To select between two almost equivalent choices creates great difficulty and little payoff. Instead, we should try to prevent the big, stupid mistakes. This does not require precision_ (cite:[Reinertsen2009] p 192).
 
+
 The product discovery and roadmapping activity ultimately generates a more detailed view or list of the work to be done. As we previously mentioned, in xref:Scrum[Scrum] (and other Agile methods) this is often termed a backlog. Both Mike Cohn and Roman Pichler use the DEEP acronym to describe backlog qualities (cite:[Cohn2010], p. 243, cite:[Pichler2010] p. 48):
 
 * Detailed appropriately
@@ -41,23 +42,27 @@ The product discovery and roadmapping activity ultimately generates a more detai
 * Emergent (feedback such as new or changed stories are readily accepted)
 * Prioritized
 
+[[fig-backlog-300-i]]
+.Backlog granularity & priority
+image::images/2_05-backlog.png[backlog, 300, ,float="right"]
+
+
 The backlog should receive ongoing "grooming" to support these qualities, which means several things:
 
 * Addition of new items
 * Re-prioritization of items
 * Elaboration (decomposition, estimation and refinement)
 
-[[fig-backlog-250-o]]
-.Backlog granularity & priority
-image::images/2_05-backlog.png[backlog, 300, ,float="right"]
 
-
-When "detailed appropriately," items in the backlog are not all the same scale. Scrum and Agile thinkers generally agree on the core concept of "story," but stories vary in size (see <<fig-backlog-250-o>> footnote:[similar to cite:[Pichler2010]), with the largest stories often termed "epics." The backlog is ordered in terms of priority (what will be done next) but, critically, it is also understood that the lower-priority items in general can be larger grained. In other words, if we visualize the backlog as a stack, with the highest priority on the top, the size of the stories increases as we go down. (Reinertsen terms this _progressive specification_; see cite:[Reinertsen1997], pp. 176-177 for a detailed discussion.)
+When "detailed appropriately," items in the backlog are not all the same scale. Scrum and Agile thinkers generally agree on the core concept of "story," but stories vary in size (see <<fig-backlog-300-i>> footnote:[similar to cite:[Pichler2010]), with the largest stories often termed "epics." The backlog is ordered in terms of priority (what will be done next) but, critically, it is also understood that the lower-priority items in general can be larger grained. In other words, if we visualize the backlog as a stack, with the highest priority on the top, the size of the stories increases as we go down. (Reinertsen terms this _progressive specification_; see cite:[Reinertsen1997], pp. 176-177 for a detailed discussion.)
 
 Estimating user stories is a standard practice in Scrum and Agile methods more generally. Agile approaches are wary of false precision and accept the fact that estimation is an uncertain practice at best. However, without some overall estimate or roadmap for when a product might be ready for use, it is unlikely that the investment will be made to create it. It is difficult to establish the economic value of developing a product feature at a particular time, if you have no idea of the cost and/or effort involved to bring it to market.
 
-At a more detailed level, it is common practice for product teams to estimate detailed stories using "points." Mike Cohn emphasizes, "Estimate size, derive duration" (cite:[Cohn2006] p. xxvii). Points are a relative form of estimation, valid within the boundary of one team. Story point estimating strives to avoid false precision, often restricting the team's estimate of the effort to a modified Fibonacci sequence, or even T-shirt or dog sizes:
+At a more detailed level, it is common practice for product teams to estimate detailed stories using "points." Mike Cohn emphasizes, "Estimate size, derive duration" (cite:[Cohn2006] p. xxvii). Points are a relative form of estimation, valid within the boundary of one team. Story point estimating strives to avoid false precision, often restricting the team's estimate of the effort to a modified Fibonacci sequence, or even T-shirt or dog sizes (cite:[Cohn2006], p. 37) as shown in <<tbl-agile-est>>. footnote:[Similar to cite:[Cohn2006], p. 37)]
 
+Mike Cohn emphasizes that estimates are best done by the teams performing the work ()cite:[Cohn2006] p.51). We'll discuss the mechanics of maintaining backlogs in xref:work-management[Chapter 5, Work Management].
+
+[[tbl-agile-est]]
 .Agile estimating scales
 [cols="3*", options="header"]
 |====
@@ -72,9 +77,6 @@ At a more detailed level, it is common practice for product teams to estimate de
 |40|XXXL|Great Dane
 |====
 
-(similar to cite:[Cohn2006], p. 37)
-
-Mike Cohn emphasizes that estimates are best done by the teams performing the work ()cite:[Cohn2006] p.51). We'll discuss the mechanics of maintaining backlogs in xref:work-management[Chapter 5, Work Management].
 
 Backlogs require prioritization. In order to prioritize, we must have some kind of common understanding of what we are prioritizing *for*. Mike Cohn, in _Agile Estimating and Planning_, proposes that there are four major factors in understanding product value:
 
