@@ -24,11 +24,11 @@ and their relationships.
 [quote, Andrew Clay Shafer, Web Operations:Keeping the Data On Time]
 In software development, version control is the foundation of every other Agile technical practice. Without version control, there is no build, no TDD, no continuous integration.
 
-The Agile Alliance indicates “version control” as one of the https://www.agilealliance.org/agile101/subway-map-to-agile-practices/[four foundational areas of Agile] cite:[AgileAlliance2016], along with team, iterative development, and incremental development. Why is this? Version control is critical for any kind of system with complex, changing content, especially when many people are working on that content. Version control provides the capability of seeing the exact sequence of a complex system's evolution and isolating any particular moment in its history, or providing detailed analysis on how two versions differ. With version control, we can understand what changed and when, which is essential to coping with complexity.
+The Agile Alliance indicates “version control” as one of the https://www.agilealliance.org/agile101/subway-map-to-agile-practices/[four foundational areas of Agile] cite:[Alliance2016], along with team, iterative development, and incremental development. Why is this? Version control is critical for any kind of system with complex, changing content, especially when many people are working on that content. Version control provides the capability of seeing the exact sequence of a complex system's evolution and isolating any particular moment in its history, or providing detailed analysis on how two versions differ. With version control, we can understand what changed and when, which is essential to coping with complexity.
 
 While version control was always deemed important for software artifacts, it has only recently become the preferred paradigm for managing infrastructure state as well.  Because of this, version control is possibly the first IT management system you should acquire and implement (perhaps as a cloud service, such as Github).
 
-Version control in recent years increasingly distinguishes between source and package management (see <<fig-versionControlTypes-300-c>>): the management of binary files, as distinct from human-understandable symbolic files. There is also a need to understand what versions are installed on what computers; this can be termed "deployment management." (With the advent of containers, this is a particularly fast changing area.)
+Version control in recent years increasingly distinguishes between source and package management (see <<fig-versionControlTypes-300-c>> and <<fig-configMgmt-500-c>> below): the management of binary files, as distinct from human-understandable symbolic files. There is also a need to understand what versions are installed on what computers; this can be termed "deployment management." (With the advent of containers, this is a particularly fast changing area.)
 
 [[fig-versionControlTypes-300-c]]
 .Types of version control
@@ -155,11 +155,12 @@ anchor:package-mgmt[]
 Implement version control for all production artifacts. cite:[Puppet2015]
 
 
-Much if not most software, once created as some kind of text-based artifact suitable for source control, must be compiled and further organized into deployable assets, often called "packages" (see <<fig-pkg-mgmt-400-o>>).
-
 [[fig-pkg-mgmt-400-o]]
 .Building software
 image::images/1_02-pkg-mgmt.png[alttextxxx, 400, , float="left"]
+
+Much if not most software, once created as some kind of text-based artifact suitable for source control, must be compiled and further organized into deployable assets, often called "packages" (see <<fig-pkg-mgmt-400-o>>).
+
 
 In some organizations, it was once common for compiled binaries to be stored in the same repositories as source code (see <<fig-name-250-i>>). However, this is no longer considered a best practice. Source and package management are now viewed as two separate things (see <<fig-name-450-o>>).  Source repositories should be reserved for text-based artifacts whose differences can be made visible in a human-understandable way. Package repositories in contrast are for binary artifacts that can be deployed.
 
@@ -181,15 +182,17 @@ anchor:deployment-mgmt[]
 
 ===== Deployment management
 
-Version control is an important part of the overall concept of configuration management. But configuration management also covers the matter of how artifacts under version control are combined with other IT resources (such as virtual machines) to deliver services. <<fig-configMgmt-500-c>> depicts the relationships.
+Version control is an important part of the overall concept of configuration management. But configuration management also covers the matter of how artifacts under version control are combined with other IT resources (such as virtual machines) to deliver services. <<fig-configMgmt-500-c>> elaborates on <<fig-versionControlTypes-300-c>> to depict the relationships.
+
+====== Deployment basics
+
+
+Resources in version control in general are not yet active in any value-adding sense. In order for them to deliver experiences, they must be combined with computing resources: servers (physical or virtual), storage, nettworking, and the rest, whether owned by the organization or leased as xref:cloud[Cloud services]. The process of doing so is called deployment. Version control manages the state of the artifacts; deployment management (as another configuration management practice) manages the *combination of those artifacts with the needed resources for value delivery*.
 
 [[fig-configMgmt-500-c]]
 .Configuration management and its components
 image::images/1_02-configMgmt.png[Configuration management types, 500,,]
 
-====== Deployment basics
-
-Resources in version control in general are not yet active in any value-adding sense. In order for them to deliver experiences, they must be combined with computing resources: servers (physical or virtual), storage, nettworking, and the rest, whether owned by the organization or leased as xref:cloud[Cloud services]. The process of doing so is called deployment. Version control manages the state of the artifacts; deployment management (as another configuration management practice) manages the *combination of those artifacts with the needed resources for value delivery*.
 
 anchor:policy-config[]
 

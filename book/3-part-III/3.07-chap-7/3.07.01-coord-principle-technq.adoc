@@ -5,27 +5,31 @@ anchor:defining-coord[]
 
 
 ===== Example: Scaling one product
+
 [quote, Mike Cohn, Succeeding with Agile]
 Good team structure can go a long way toward reducing dependencies but will not eliminate them.
 
 [quote,  Gary Hamel, preface to the Open Organization: Igniting Passion and Performance]
 What’s typically underestimated is the complexity and indivisibility of many large-scale coordination tasks.
 
-[[fig-multi-feature-350-i]]
+
+[[fig-multi-feature-350-o]]
 .Multiple feature teams, one product
 image::images/3_08-multi-feature.png[multi-feature, 350,,float="left"]
 
-We've xref:demand-supply-execute[defined execution] as the point at which supply and demand are combined, and of course we've been executing since the start of our journey. Now, however, we are executing in a more complex environment; we have started to scale along the xref:AKF-cube[AKF scaling cube] y-axis, and we have either multiple teams working on one product, and/or multiple products.Execution becomes more than just "pull another story off the Kanban board." As multiple teams are formed (see <<fig-multi-feature-350-i>>), dependencies arise, and we need coordination.  The term "architecture" is likely emerging through these discussions. (We will discuss organizational structure directly in Chapter 9, and architecture in Chapter 12.)
+We've xref:demand-supply-execute[defined execution] as the point at which supply and demand are combined, and of course we've been executing since the start of our journey. Now, however, we are executing in a more complex environment; we have started to scale along the xref:AKF-cube[AKF scaling cube] y-axis, and we have either multiple teams working on one product, and/or multiple products.Execution becomes more than just "pull another story off the Kanban board." As multiple teams are formed (see <<fig-multi-feature-350-o>>), dependencies arise, and we need coordination.  The term "architecture" is likely emerging through these discussions. (We will discuss organizational structure directly in Chapter 9, and architecture in Chapter 12.)
 
 As a consequence of scaling, we are introducing multiple teams as our product scales up (see figure). As noted in the discussion of xref:amazon-productization[Amazon's product strategy], some needs for coordination may be mitigated through the design of the product itself. This is why APIs and microservices are popular architecture styles. If the features and components have well defined protocols for their interaction and clear contracts for matters like performance, development on each team can move forward with some autonomy.
 
 But at scale, complexity is inevitable. What happens when a given business objective requires coordinated effort across multiple teams? (Figure.) For example, an online e-commerce site might find itself overwhelmed by business success. Upgrading the site to accommodate the new demand might require distinct development work to be performed by multiple teams (see <<fig-multi-feature-coord-420-o>>).
 
+As the quote from Gary Hamel above indicates, a central point of coordination and accountability is advisable, otherwise the objective is at risk. (It becomes "someone else's problem.") We will return to the investment and organizational aspects of multi-team and multi-product scaling in Chapters 8 and 9. For now, we will focus on dependencies and operational coordination.
+
+
 [[fig-multi-feature-coord-420-o]]
 .Coordinated initiative across timeframes
 image::images/3_08-multi-feature-coord.png[coordination, 420,,float="right"]
 
-As the quote from Gary Hamel above indicates, a central point of coordination and accountability is advisable, otherwise the objective is at risk. (It becomes "someone else's problem.") We will return to the investment and organizational aspects of multi-team and multi-product scaling in Chapters 8 and 9. For now, we will focus on dependencies and operational coordination.
 
 ===== A deeper look at dependencies
 [quote, Malone and Crowston]
@@ -37,7 +41,7 @@ anchor:strode-dependency-taxonomy[]
 
 To understand dependencies, Strode et al. propose the following framework cite:[Strode2012a]:
 
-.Dependency taxonomy footnote:[adapted from cite:[Strode2012a]]
+.Dependency taxonomy footnote:[adapted from cite:[Strode2012a]
 [cols="3*", options="header"]
 |====
 |Type|Dependency|Description
@@ -63,9 +67,15 @@ Where leveraging yellow stickies or index cards makes sense in conjunction with 
 
 Our previous discussion of xref:work-management[work management]was a simple, idealized flow of uniform demand (new product functionality, issues, etc). Tasks in general did not have dependencies, or dependencies were handled through ad-hoc coordination within the team. We also in general assumed that resources (people) were available to perform the tasks; resource contention, while it certainly may have come up, was again handled through ad-hoc means. However, as we scale, simple xref:kanban[Kanban] and visual xref:andon[Andon] is no longer sufficient, given the nature of the coordination we now require. We need a more diverse and comprehensive set of techniques.
 
+IMPORTANT: The discussion of particular techniques is always hazardous. People will tend to latch on to a promising approach without full understanding. As noted by Craig Larman (cite:[Larman2009], p.44), the risk is one of xref:cargo-cult[cargo cult] process adoption. In Chapter 9 we will discuss the Mike Rother book xref:Toyota-Kata[Toyota Kata]. Toyota does not implement any procedural change without fully understanding the "target operating condition" -- the nature of the work and the desired changes to it.
+
 As we scale up, we see that dependencies and resource management have become defining concerns. However, we retain our xref:lean-product-dev[Lean product development] concerns for fast feedback and adaptability, as well as a critical approach to the idea that complex initiatives can be precisely defined and simply executed through xref:open-loop[open loop] approaches. In this section, we will discuss some of the organizational responses (techniques and tools) that have emerged as proven responses to these emergent issues.
 
-IMPORTANT: The discussion of particular techniques is always hazardous. People will tend to latch on to a promising approach without full understanding. As noted by Craig Larman (cite:[Larman2009], p.44), the risk is one of xref:cargo-cult[cargo cult] process adoption. In Chapter 9 we will discuss the Mike Rother book xref:Toyota-Kata[Toyota Kata]. Toyota does not implement any procedural change without fully understanding the "target operating condition" -- the nature of the work and the desired changes to it.
+NOTE: Table <<tbl-coord-tax>> uses the concept of _artifact_, which we introduced in Chapter 5. For our purposes here, an artifact is a xref:representation[representation] of some idea, activity, status, task, request, or system. Artifacts can represent or describe other artifacts. Artifacts are frequently used as the basis of communication.
+
+anchor:coord-tools[]
+
+Strode et al provide a useful framework for understanding coordination mechanisms, excerpted and summarized into <<tbl-coord-tax>>.
 
 anchor:cargo-cult[]
 
@@ -82,11 +92,10 @@ In 1974, the noted physicist Richard Feynman gave a speech at Caltech in which h
 As with many stories of this kind, there are questions around the accuracy of the original anthropological accounts and Western interpretations and mythmaking around what was seen. However there is no question that “cargo cult thinking” is a useful cautionary metaphor.
 ****
 
-anchor:coord-tools[]
 
-Strode et al provide a useful framework for understanding coordination mechanisms, excerpted and summarized into the following table:
 
-.Coordination taxonomy footnote:[adapted from cite:[Strode2012]]
+[[tbl-coord-tax]]
+.Coordination taxonomy table footnote:[adapted from cite:[Strode2012]
 [cols="3*", options="header"]
 |====
 |Strategy|Component|Definition
@@ -106,7 +115,6 @@ team and project boundaries.
 |Coordinator role|A role taken by a project team member specifically to support interaction with people who are not part of the project team but who provide resources or information to the project.
 |====
 
-NOTE: We introduced the idea of _artifact_ in Chapter 5. For our purposes here, an artifact is a xref:representation[representation] of some idea, activity, status, task, request, or system. Artifacts can represent or describe other artifacts. Artifacts are frequently used as the basis of communication.
 
 The following sections expand the three strategies (structure, synchronization, boundary spanning) with examples.
 

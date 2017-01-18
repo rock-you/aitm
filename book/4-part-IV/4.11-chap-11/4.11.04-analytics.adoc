@@ -18,9 +18,9 @@ endif::instructor-ed[]
 [quote, Tom Davenport and Jeanne Harris, Competing on Analytics]
 ...analytical competitors wring every last drop of value from business processes and key decisions.
 
-One important aspect of digital product development is data analytics. Analysis of organizational records has always been a part of any concern large enough to have formal records management. The word for this originally was simply "reporting." A set of files or ledgers would be provided to one or more clerks, who would manually review them and extract the needed figures (see <<fig-reportingOldStyle-600-i>> footnote:[Image credit https://www.flickr.com/photos/seattlemunicipalarchives/3347281230, commercial use permitted]).
+One important aspect of digital product development is data analytics. Analysis of organizational records has always been a part of any concern large enough to have formal records management. The word for this originally was simply "reporting." A set of files or ledgers would be provided to one or more clerks, who would manually review them and extract the needed figures (see <<fig-reportingOldStyle-400-i>> footnote:[Image credit https://www.flickr.com/photos/seattlemunicipalarchives/3347281230, commercial use permitted]).
 
-[[fig-reportingOldStyle-600-i]]
+[[fig-reportingOldStyle-400-i]]
 .Reporting and analytics, old style
 image::images/4_11-reportingOldStyle.png[1900s clerk with adding machine, 300, , float="left"]
 
@@ -60,6 +60,14 @@ The reason to build a data warehouse is to have the ability to make better decis
 
 According to the Data Management Body of Knowledge, "A Data Warehouse (DW) is a combination of two primary components. The first is an integrated decision support database. The second is the related software programs used to collect, cleanse, transform, and store data from a variety of operational and external sources...Data warehousing is a technology solution supporting Business Intelligence (BI)" cite:[DAMA2009]. The vision of an integrated data warehouse for decision support is compelling and has provided enough value to support an industry sector of specialized hardware, software, training, and consulting. It can be seen as a common architectural pattern, in which disparate data is aggregated and consolidated for purposes of analysis, reporting, and for feedback into strategy, tactics, and operational concerns.
 
+<<fig-DW-BI-600-c>> illustrates an data warehousing/business intelligence (DW/BI) implementation pattern. The  diagram expands on the above xref:analytics-context[contextual diagrams], showing the major business areas (Sales etc) as data sources. (In a large organization this might be dozens or hundreds of source systems.) These systems feed a "data services layer" that both aggregates data for analytics, as well as providing direct services such as data cleansing and master data management.
+
+It's important to understand that in terms of this book's emphasis on product-centric development that *the data services layer itself is an internal product.* Some might call it more of a xref:feature-v-component[component than a feature], but it is intended in any case as a general-purpose platform that can support a wide variety of use cases.
+
+"Factoring out" data services in this way may or may not be optimal for any given organization, depending on maturity, business objectives, and a variety of other concerns. However, at scale the skills and practices do become specialized, and so it's anticipated we'll continue to see implementation strategies similar to the above figure.
+Notice also that the data services layer is not solely for analytics; it also supports direct operational services. Here are discussions of the diagrams's various elements:
+
+
 anchor:DW-BI-illustrated[]
 
 [[fig-DW-BI-600-c]]
@@ -67,12 +75,6 @@ anchor:DW-BI-illustrated[]
 image::images/4_11-DW-BI.png[DW/BI architecture, 600]
 
 
-<<fig-DW-BI-600-c>> illustrates an data warehousing/business intelligence (DW/BI) implementation pattern. The  diagram expands on the above xref:analytics-context[contextual diagrams], showing the major business areas (Sales etc) as data sources. (In a large organization this might be dozens or hundreds of source systems.) These systems feed a "data services layer" that both aggregates data for analytics, as well as providing direct services such as data cleansing and master data management.
-
-It's important to understand that in terms of this book's emphasis on product-centric development that *the data services layer itself is an internal product.* Some might call it more of a xref:feature-v-component[component than a feature], but it is intended in any case as a general-purpose platform that can support a wide variety of use cases.
-
-"Factoring out" data services in this way may or may not be optimal for any given organization, depending on maturity, business objectives, and a variety of other concerns. However, at scale the skills and practices do become specialized, and so it's anticipated we'll continue to see implementation strategies similar to the above figure.
-Notice also that the data services layer is not solely for analytics; it also supports direct operational services. Here are discussions of the diagrams's various elements:
 
 ====== Operational applications
 These are the source systems that provide the data and require data services.

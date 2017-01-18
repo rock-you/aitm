@@ -13,11 +13,9 @@ In this chapter section, we will look at:
 * The importance of visualization as a practice in architecture
 * Architecture and the quest for "rationalization"
 
-.Author's corner
-****
-What do architects do, actually?
+===== From the author: What do architects do, actually?
 
-I was a Lead Architect (job class Systems Architect 6) for Wells Fargo for 6 years. This is a director-level position, and I was ultimately awarded the VP title, which in financial services tends to be honorary. (I never managed a large organization.) My assigned domain was the "business of IT," including systems management, service management, portfolio management, and the data, processes, and tools of architecture itself.
+I was a Lead Architect (job class Systems Architect 6) for Wells Fargo for 6 years. This is a director-level position, and I was ultimately awarded the VP title, which in financial services tends to be honorary. (I never managed a large organization, but I did lead various ad-hoc teams, more by influence than command.) My assigned domain was the "business of IT," including systems management, service management, portfolio management, and the data, processes, and tools of architecture itself.
 
 Across an annual IT spend of around $5 billion, many of course were involved in all these questions, but I was a nexus and was often called on to lead workshops and discussions with senior executives. These folks were typically at the "2-down" level from the CIO, that is, executives reporting to one of the CIO's direct reports, themselves leading large teams of teams. They called me in when they were struggling with managing one of the larger IT shops on the planet, especially when it came to processes, data, and systems *internal to the IT* organization. (I always admit, I never learned that much about banking; there was plenty to do just coordinating that IT pipeline and the thousands of systems it was delivering.)
 
@@ -41,7 +39,6 @@ Comparing my activities during those 6 years with how industry standards (such a
 * Shuttle diplomat - driving agreement between deeply conflicted business units or individuals, where relationships had broken down.
 
 If I had to characterize the important skills for this role, they would start with communication and facilitation. In terms of the principles discussed in this book, the architecture team was a mechanism for synchronizing across the organization. It definitely fit the classic definition and value proposition of a xref:arch-as-staff[staff organization].
-****
 
 ===== Architecture and governance
 
@@ -79,6 +76,10 @@ Finally, does enterprise architecture promote effectiveness? Effectiveness is of
 
 ===== Architecture as a management program
 
+[[fig-archProgram-800-c]]
+.Large scale architecture program
+image::images/4_12-archProgram.png[program, 800]
+
 The above section discussed the relationship of architecture to governance. As we covered in chapter 10, xref:gov-v-mgmt[governance is not management]. Here, we will cover the topic of architecture as a management program of activity, in part through examining an example large-scale architecture program.
 
 Architecture as a program refers to a coordinated set of
@@ -92,9 +93,6 @@ Architecture as a program refers to a coordinated set of
 
 intended to serve a key xref:boundary-spanning[coordination] role. Illustrated in <<fig-archProgram-800-c>> is a large scale, coordinated architecture program in a large enterprise. Notice that this is not a single organization. The Architecture Program in this example spans a centralized Enterprise Architecture group as well as teams of Line of Business architects.
 
-[[fig-archProgram-800-c]]
-.Large scale architecture program
-image::images/4_12-archProgram.png[program, 800]
 
 The Enterprise Architecture organization might report to a CTO, the Chief of Staff for the Office of the CIO, or the head of Corporate Strategy and Planning. It is a centralized organization with a small staff of domain architects and an Architecture Standards organization that owns two key cross-functional architecture processes.
 
@@ -127,7 +125,6 @@ anchor:arch-visualization[]
 ===== Modeling and visualization
 
 
-
 [[fig-gudea-350-o]]
 .Gudea with blueprint, ~2140 BCE
 image::images/4_12-gudea.jpg[blueprint, 350, , float="right"]
@@ -150,20 +147,24 @@ image::images/4_12-whiteboard.jpg[blueprint, 350, , float="left"]
 Even in construction and engineering trades that rely on blueprints as a source of truth, keeping them up to date requires considerable discipline and process. In faster-moving digital organizations, visual models are almost always out of date unless they have been specifically refreshed for a purpose, or unless there is a strong formal process in place (and the value of such a process may be difficult to establish). That doesn't mean that diagrams will go away. Co-located teams use whiteboards and dry-erase markers and will continue to use them (see <<fig-whiteboard-350-i>> footnote:[Image https://www.flickr.com/photos/simonov/15484240880, downloaded 2016-10-10, commercial use permitted]). There are important cognitive and human factors reasons for this that will not go away. Because of these facts, it is useful to understand some of the fundamentals of how humans interpret visual data.
 
 ====== Human visual processing
-[quote, Dan Moody, The "Physics" of Notations]
-Visual representations are effective because they tap into the capabilities of the powerful and highly parallel human visual system. We like receiving information in visual form and can process it very efficiently: around a quarter of our brains are devoted to vision, more than all our other senses combined [63]. In addition, diagrams can convey information more concisely [27] and precisely than ordinary language [8, 68]. Information represented visually is also more likely to be remembered due to the picture superiority effect [38, 70] ...Visual representations are also processed differently: according to dual channel theory [80], the human mind has separate systems for processing pictorial and verbal material. Visual representations are processed in parallel by the visual system, while textual representations are processed serially by the auditory system... cite:[Moody2009].
-
-As the above quote shows, there are clear neurological reasons for diagramming as a communication form. To expand a bit more on the points Dan Moody is making:
 
 [[fig-tiger-350-o]]
 .Fast recognition means survival
 image::images/4_12-tiger.jpg[blueprint, 350, , float="right"]
 
+Dan Moody notes cite:[Moody2009]:
 
-* Human vision uses parallel processing. This means that a given image or visual stimulus is processed by many neurons simultaneously. This is how we can quickly recognize and act on threats, such as a crouching tiger (as in <<fig-tiger-350-o>> footnote:[Image https://www.flickr.com/photos/samiksha/2436037856, downloaded 2016-10-10, commercial use permitted]).
-* A large percentage of our brain is devoted to visual processing (you will see figures quoted from 25% to 66% depending on whether it's "pure" visual tasks or vision-driven tasks involving other brain areas)
-* The old saying "a picture is worth a thousand words" is consistent with the science. Diagrams can be both faster and more precise at conveying information; however, this has limits.
-* Pictures can be more memorable than words.
+_Visual representations are effective because they tap into the capabilities of the powerful and highly parallel human visual system. We like receiving information in visual form and can process it very efficiently: around a quarter of our brains are devoted to vision, more than all our other senses combined [63]. In addition, diagrams can convey information more concisely [27] and precisely than ordinary language [8, 68]. Information represented visually is also more likely to be remembered due to the picture superiority effect [38, 70] ...Visual representations are also processed differently: according to dual channel theory [80], the human mind has separate systems for processing pictorial and verbal material. Visual representations are processed in parallel by the visual system, while textual representations are processed serially by the auditory system..._ .
+
+As the above quote shows, there are clear neurological reasons for diagramming as a communication form. To expand a bit more on the points Dan Moody is making:
+
+*Human vision uses parallel processing*. This means that a given image or visual stimulus is processed by many neurons simultaneously. This is how we can quickly recognize and act on threats, such as a crouching tiger (as in <<fig-tiger-350-o>> footnote:[Image https://www.flickr.com/photos/samiksha/2436037856, downloaded 2016-10-10, commercial use permitted]).
+
+*A large percentage of our brain is devoted to visual processing*. You will see figures quoted from 25% to 66% depending on whether it's "pure" visual tasks or vision-driven tasks involving other brain areas.
+
+The old saying *"a picture is worth a thousand words"* is consistent with the science. Diagrams can be both faster and more precise at conveying information; however, this has limits.
+
+Finally, *Pictures can be more memorable than words*.
 
 
 ====== Visualization in digital systems

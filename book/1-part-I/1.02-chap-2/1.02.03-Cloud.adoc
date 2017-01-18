@@ -21,35 +21,38 @@ anchor:virtualization[]
 
 ===== Virtualization
 
-[[fig-laptop-300-i]]
-.Laptop computer
-image::images/1_02-laptop.jpg[laptop, 300, , float="left"]
 
 
 https://en.wikipedia.org/wiki/Virtualization[Virtualization], for the purposes of this section, starts with the idea of a computer within a computer. (It has applicability to storage and networking as well but we will skip that for now.) In order to understand this, we need to understand a little bit about operating systems and how they relate to the physical computer.
 
-Assume a simple, physical computer such as a laptop (see <<fig-laptop-300-i>>, footnote:[Image credit https://www.flickr.com/photos/125417539@N06/14657459654/, downloaded 2016-11-07, commercial use permitted]). When the laptop is first turned on, the operating system (OS) loads; the OS is itself software, but is able to directly control the computer's physical resources: its central processing unit (CPU), memory, screen, and any interfaces such as WiFi, USB, and Bluetooth. The operating system (in a traditional approach) then is used to run "applications" such as Web browsers, media players, word processors, spreadsheets, and the like. Many such programs can also be run as applications within the browser, but the browser still needs to be run as an application.
+[[fig-laptop-300-o]]
+.Laptop computer
+image::images/1_02-laptop.jpg[laptop, 300, , float="left"]
+
+
+Assume a simple, physical computer such as a laptop (see <<fig-laptop-300-o>>, footnote:[Image credit https://www.flickr.com/photos/125417539@N06/14657459654/, downloaded 2016-11-07, commercial use permitted]). When the laptop is first turned on, the operating system (OS) loads; the OS is itself software, but is able to directly control the computer's physical resources: its central processing unit (CPU), memory, screen, and any interfaces such as WiFi, USB, and Bluetooth. The operating system (in a traditional approach) then is used to run "applications" such as Web browsers, media players, word processors, spreadsheets, and the like. Many such programs can also be run as applications within the browser, but the browser still needs to be run as an application.
+
+
+In the simplest form of virtualization, a specialized application known as a _hypervisor_ is loaded like any other application. The purpose of this hypervisor is to emulate the hardware computer in software. Once the hypervisor is running, it can emulate any number of "virtual" computers , each of which can have its own operating system (see <<fig-virt-400-o>>). The hypervisor mediates the https://en.wikipedia.org/wiki/Virtual_machine["virtual machine"] (VM) access to the actual, physical hardware of the laptop; the VM can take input from the USB port, and output to the Bluetooth interface, just like the master OS that launched when the laptop was turned on.
+
+
+There are two different kinds of hypervisors. The example we just discussed was an example of a Type 2 hypervisor, which runs on top of a host operating system. In a Type 1 hypervisor, a master host OS is not used; the hypervisor runs on the "bare metal" of the computer and in turn "hosts" multiple VMs.
 
 [[fig-virt-400-o]]
 .Virtualization is computers within a computer
 image::images/1_02-virt.png[little computers inside big one, 400,,float="right"]
 
-In the simplest form of virtualization, a specialized application known as a _hypervisor_ is loaded like any other application. The purpose of this hypervisor is to emulate the hardware computer in software. Once the hypervisor is running, it can emulate any number of "virtual" computers , each of which can have its own operating system (see <<fig-virt-400-o>>). The hypervisor mediates the https://en.wikipedia.org/wiki/Virtual_machine["virtual machine"] (VM) access to the actual, physical hardware of the laptop; the VM can take input from the USB port, and output to the Bluetooth interface, just like the master OS that launched when the laptop was turned on.
 
 
-TIP: You can experiment with a hypervisor by downloading https://www.virtualbox.org/wiki/Downloads[Virtualbox] (on Windows, Mac OS, or Linux) and using https://www.vagrantup.com/[Vagrant] to download and initialize a Linux virtual machine. +
- +
- You'll probably want at least 4 gb of RAM on your laptop and a gigabyte of free disk space, at the bare minimum.
-
-[[fig-virtualization-types-800-c]]
-.Virtualization types
-image::images/1_02-virtualization-types.png[Virtualization types, 800]
-
-There are two different kinds of hypervisors. The example we just discussed was an example of a Type 2 hypervisor, which runs on top of a host operating system. In a Type 1 hypervisor, a master host OS is not used; the hypervisor runs on the "bare metal" of the computer and in turn "hosts" multiple VMs.
+NOTE: You can experiment with a hypervisor by downloading https://www.virtualbox.org/wiki/Downloads[Virtualbox] (on Windows, Mac OS, or Linux) and using https://www.vagrantup.com/[Vagrant] to download and initialize a Linux virtual machine. You'll probably want at least 4 gb of RAM on your laptop and a gigabyte of free disk space, at the bare minimum.
 
 _Paravirtualization_, e.g. containers, is another form of virtualization found in the marketplace. In a paravirtualized environment, a core operating system is able to abstract hardware resources for multiple virtual guest environments without having to virtualize hardware for each guest. The benefit of this type of virtualization is increased input/output (I/O) efficiency and performance for each of the guest environments.
 
 However, while hypervisors can support a diverse array of virtual machines with different operating systems on a single computing node, guest environments in a paravirtualized system generally share a single OS. See <<fig-virtualization-types-800-c>> for an overview of all the types.
+
+[[fig-virtualization-types-800-c]]
+.Virtualization types
+image::images/1_02-virtualization-types.png[Virtualization types, 800]
 
 NOTE: Virtualization was predicted in the earliest theories that led to the development of computers. Turing and Church realized that any general purpose computer could emulate any other. Virtual systems have existed in some form since https://en.wikipedia.org/wiki/Timeline_of_virtualization_development[at latest 1967] - only 20 years after the first fully functional computers. +
  +

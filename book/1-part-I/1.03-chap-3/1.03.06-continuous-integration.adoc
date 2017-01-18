@@ -5,19 +5,16 @@
 [quote, Martin Fowler, Foreword to Continuous Integration]
 Oddly enough, it seems that when you run into a painful activity, a good tip is to do it more often.
 
-As systems engineering approaches transform to xref:cloud[Cloud] and xref:infracode[Infrastructure as Code], a large and increasing percentage of IT work takes the form of altering text files and tracking their xref:version-control[versions]. We have seen this in the previous chapter, with artifacts such as xref:infra-code-example[scripts] being created to drive the provisioning and configuring of computing resources. Approaches which encourage ongoing development and evolution are increasingly recognized as less risky, since systems do not respond well to big "batches" of change. An important concept is that of "continuous integration,” popularized by Paul Duvall in his book of the same name cite:[Duvall2007].
-
 
 [[fig-dual-access-400-o]]
 .Two developers, one file
 image::images/1_03-dual-access.png[2 devs 3 files,400,, float="right"]
 
+As systems engineering approaches transform to xref:cloud[Cloud] and xref:infracode[Infrastructure as Code], a large and increasing percentage of IT work takes the form of altering text files and tracking their xref:version-control[versions]. We have seen this in the previous chapter, with artifacts such as xref:infra-code-example[scripts] being created to drive the provisioning and configuring of computing resources. Approaches which encourage ongoing development and evolution are increasingly recognized as less risky, since systems do not respond well to big "batches" of change. An important concept is that of "continuous integration,” popularized by Paul Duvall in his book of the same name cite:[Duvall2007].
+
 In order to understand why continuous integration is important, it is necessary to further discuss the concept of source control and how it is employed in real world settings. Imagine Mary have been working for some time with her partner Aparna in their startup (or on a small team) and they have three code modules (see <<fig-dual-access-400-o>>). Mary is writing the web front end (file A), Aparna is writing the administrative tools and reporting (file C), and they both partner on the data access layer (file B). The conflict of course arises on the file B that they both need to work on.  A and C are mostly independent of each other, but changes to any part of B can have an impact on both their modules.
 
 If changes are frequently needed to B, and yet they cannot split it into logically separate modules, they have a problem; they cannot both work on the same file at the same time. They are each concerned that the other does not introduce changes into B that “break” the code in their own modules A and C.
-
-NOTE: Breaking a system apart by "layer" (e.g. front end versus data access) does not scale well. Microservices approaches encourage keeping data access and business logic together in functionally cohesive units. More on this in future chapters. But in this example, both developers are on the same small team. It is not always possible (or worth it) to divide work to keep two people from ever needing to change the same thing.
-
 
 [[fig-dual-vc-400-i]]
 .File B being worked on by 2 people
@@ -30,6 +27,8 @@ In smaller environments, or under older practices, perhaps there is no conflict,
 Now, because they took this book's advice and didn't start developing until they had xref:version-control[version control] in place, each of them works on a "local" copy of the file (see illustration "File B being worked on by 2 people").
 
 That way, they can move ahead on their local workstations. But when the time comes to combine both of your work, they may find themselves in "merge hell." They may have chosen very different approaches to solving the same problem, and code may need massive revision to settle on one code base. For example, in the accompanying illustration, Mary's changes to B are represented by triangles and Aparna's are represented by circles. They each had a local version on their workstation for far too long, without talking to each other.
+
+NOTE: Breaking a system apart by "layer" (e.g. front end versus data access) does not scale well. Microservices approaches encourage keeping data access and business logic together in functionally cohesive units. More on this in future chapters. But in this example, both developers are on the same small team. It is not always possible (or worth it) to divide work to keep two people from ever needing to change the same thing.
 
 In the diagrams, we represent the changes graphically; of course, with real code, the different graphics represent different development approaches each person took. For example, Mary had certain needs for how errors were handled, while Aparna had different needs.
 

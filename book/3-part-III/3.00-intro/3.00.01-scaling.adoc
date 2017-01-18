@@ -10,11 +10,13 @@ As we begin the second half of this book, consider Pichler's advice above. We ha
 ==== The two dimensions of demand management
 To provide a framework for Part III, let's start with this two-dimensional analysis in (<<fig-two-d-demand-800-c>>)
 
+You should spend some time reviewing the graphic, which provides a unique way of understanding the work you are now experiencing as a "team of teams" or "manager of managers" in an IT-dependent environment of increasing size and complexity. We've come a long ways since our discussion of xref:work-management[work management]. By the time we started to xref:ops-mgmt[formalize operations], we saw that work was xref:IT-process-emergence[tending to differentiate]. Still, regardless of the label we put on a given activity, it represents some set of tasks or objectives that real people are going to take time to perform, and expect to be compensated for. It is all xref:demand-mgmt[demand, requiring management]. Remembering this is essential to digital management.
+
+
 [[fig-two-d-demand-800-c]]
 .Two dimensions of demand management
 image::images/3_00-2d-demand.png[complex 2d figure, 800,]
 
-You should spend some time reviewing the graphic, which provides a unique way of understanding the work you are now experiencing as a "team of teams" or "manager of managers" in an IT-dependent environment of increasing size and complexity. We've come a long ways since our discussion of xref:work-management[work management]. By the time we started to xref:ops-mgmt[formalize operations], we saw that work was xref:IT-process-emergence[tending to differentiate]. Still, regardless of the label we put on a given activity, it represents some set of tasks or objectives that real people are going to take time to perform, and expect to be compensated for. It is all xref:demand-mgmt[demand, requiring management]. Remembering this is essential to digital management.
 
 Let's consider the various forms that demand may take. Understanding these demand forms will also help you develop a deeper understanding of an *architecture of IT management*, a topic I have explored in other works cite:[Betz2011]. The diagram has two dimensions:
 
@@ -51,14 +53,10 @@ Some forms of work may lead to other forms of work. For example, Projects may ma
 The final point of this diagram: you only have so much capacity to execute the work it implies. If you have a disaster, or a series of major incidents, this unplanned work may impact your ability to deliver user stories, changes, or even meet transactional demand. Trade-offs must be considered.
 
 
-==== Adding a third dimension
+==== Adding a third dimension with Cynefin
 
 
 anchor:cynefin[]
-
-.Snowden's Cynefin framework
-****
-
 
 [[fig-cynefin-300-o]]
 .Cynefin thinking framework
@@ -86,10 +84,6 @@ In the *chaotic* domain, cause and effect are not apparent even in hindsight. Th
 
 Finally, *disorder* is considered to be the domain you're in when you have not figured out which of the other four applies.
 
-****
-
-
-
 [[fig-PartIIOverview-400-o]]
 .Part II: increasing certainty (credit to Cantor)
 image::images/3_00-PartIIOverview.png[risk curve,400,,float="right"]
@@ -108,8 +102,6 @@ anchor:betz-org-scale-cube[]
 
 
 ==== The Betz organizational scaling cube
-
-
 
 [[fig-newCube-500-o]]
 .Betz organization scaling cube
@@ -136,15 +128,17 @@ In order to understand the concept of execution, we need to think about supply v
 
 In the xref:betz-org-scale-cube[Betz organization scaling cube], work and execution converges to the origin at front lower left. An alternate view that helps us describe the chapter structure is with the convergence point at the top of a pyramid (see <<fig-DSE-800-c>>). This rotated approach is compatible with the xref:dual-axis-vc[dual-axis value chain].
 
-[[fig-DSE-800-c]]
-.Demand-supply-execute model
-image::images/3_01-DSE.png[dse model, 800,]
-
 Bottom to top, this diagram tells a story of demand and supply as they progress through increasingly refined understandings to the specific execution of work and delivery of value.
 
 We have markets and regulations, which define and constrain the potential demand for the digital product. Markets are met with capital funding, human resources, strategies and product offerings, which lead to programs of work, projects, and platform decisions. These in turn lead to identifying xref:system-intent[user stories], writing software, configuring platforms, and executing changes, service requests and work tasks.
 
+
 That finer and finer grained demand stream converges with a finer and finer grained supply stream. Large blocks of capital are translated into strategic technology choices and vendor relationships, organizational structures and investments in skilled people. More detailed budgets and planning culminate ultimately in the availability of people, hardware, and software for given assignments, e.g, an empty slot on a xref:kanban[Kanban] board. The journey can start anywhere, with a large block of traditionally managed programmatic capital or a small round of seed funding translated directly into a xref:amazon-productization[two-pizza team] with maximum autonomy, which then grows and leads to  larger investments.
+
+[[fig-DSE-800-c]]
+.Demand-supply-execute model
+image::images/3_01-DSE.png[dse model, 800,]
+
 
 Ultimately the deployed IT service system is available for fulfilling transactional xref:what-is-IT-value[service demand] which can be measured in terms of quality, availability and performance. Execution, in this model, is defined as _the irrevocable combination of demand with supply_. The gap between the legs of the V is filled with the "Fog of Forecasting." With the lower level, larger grained abstractions it is more difficult to understand demand and supply, especially when product development (e.g. novel software engineering) is involved. (Understanding the opportunities of large grained demand and matching those with significant supply is strategy.) As demand and supply converge to the point of execution, a finer and finer grained awareness is created of the impending work and whether it is likely to be successful - that is, if demand will effectively and efficiently be paired with supply.
 
@@ -154,17 +148,19 @@ Notice how the fog lifts as you get closer to actual execution. The closer we ge
 ==== Part III chapter structure
 The chapter structure of Part III can be visualized as in <<fig-chapStruc-420-o>>.
 
-
 [[fig-chapStruc-420-o]]
 .Part III Chapter structure
 image::images/3_01-chapStruc.png[pyramid,420,,float="right"]
 
 In thinking about how organizations develop as they scale, it is helpful to consider various time frames:
 
-* Ongoing execution is the actual day to day work, however conceived. At this point in our journey, the work includes a significant challenge of coordination (which we define and analyze in Chapter 7). It can include defined process activities, project deliverables, the flow of new product functionality, or ongoing improvement and governance. Ongoing execution is the "moment of truth" where estimate becomes actual and supply meets demand, and in our environment is now a complex matter.
-* Investment decisions are required to charter programs, products, features, and components, even in those companies that may be moving away from a traditional project cycle. Investments are usually understood in terms of budget planning, which traditionally has driven the project funding cycle. They represent some statement of intent for a larger scope of work to be performed and/or sustained, based on the organizational platform, which should be able to support multiple investments.
-* Organizational changes may take years, and require considerable effort and thought if they are to succeed. One does not change organizational structures lightly or (hopefully) frequently.  Employee tenure is in general even longer.
-* Culture takes longest and is most difficult to change; it easily outlasts both organizational forms and even individual employees coming and going. Both culture and organization have self-reinforcing xref:feedback[feedback] loops which add complexity to any deliberate attempts to transform them.
+*Ongoing execution* is the actual day to day work, however conceived. At this point in our journey, the work includes a significant challenge of coordination (which we define and analyze in Chapter 7). It can include defined process activities, project deliverables, the flow of new product functionality, or ongoing improvement and governance. Ongoing execution is the "moment of truth" where estimate becomes actual and supply meets demand, and in our environment is now a complex matter.
+
+*Investment decisions* are required to charter programs, products, features, and components, even in those companies that may be moving away from a traditional project cycle. Investments are usually understood in terms of budget planning, which traditionally has driven the project funding cycle. They represent some statement of intent for a larger scope of work to be performed and/or sustained, based on the organizational platform, which should be able to support multiple investments.
+
+*Organizational changes* may take years, and require considerable effort and thought if they are to succeed. One does not change organizational structures lightly or (hopefully) frequently.  Employee tenure is in general even longer.
+
+*Culture* takes longest and is most difficult to change; it easily outlasts both organizational forms and even individual employees coming and going. Both culture and organization have self-reinforcing xref:feedback[feedback] loops which add complexity to any deliberate attempts to transform them.
 
 anchor:delivery-models[]
 
@@ -201,10 +197,11 @@ image::images/3_01-layers.png[delivery models and time frames, 600,,align="left"
 
 The relationships between the timeframes and delivery models are complex:
 
-* Investments are made in products first, which may or may not need projects and/or processes. Rigorous planned projects or detailed, repeatable processes are not, in fact, optimal for product discovery - a mistake the digital industry has fallen into over and over again.
-* Products are best thought of in terms of discovery and empirical hypothesis-testing. If the hypothesis fails, the investment should be cancelled. So, the "product" concept is both shorter and longer lived than the average project, which is typically understood on an annual cycle.
-* Project management also may take place without processes, as it may be based on one-time "deliverables" that are not repeatedly produced.
-* To support a process requires portfolio investment and organizational structure, but no project may ever be involved. Whether a product is implied by the existence of a process is an interesting question we will think about.
+*Investments are made in products first*, which may or may not need projects and/or processes. Rigorous planned projects or detailed, repeatable processes are not, in fact, optimal for product discovery - a mistake the digital industry has fallen into over and over again. Products are best thought of in terms of discovery and empirical hypothesis-testing. If the hypothesis fails, the investment should be cancelled. So, the "product" concept is both shorter and longer lived than the average project, which is typically understood on an annual cycle.
+
+*Project management* also may take place without processes, as it may be based on one-time "deliverables" that are not repeatedly produced.
+
+Finally, to support a *process* requires portfolio investment and organizational structure, but no project may ever be involved. Whether a product is implied by the existence of a process is an interesting question we will think about.
 
 Clearly, we must think carefully about the relationships between these dimensions. That, in a nutshell, is the purpose of part III.
 

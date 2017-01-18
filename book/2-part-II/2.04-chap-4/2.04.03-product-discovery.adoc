@@ -20,6 +20,16 @@ anchor:prod-discovery-techniques[]
 
 ===== Formalizing product discovery
 
+.Case study: Amazon shopping cart recommendations
+****
+A well known story of the power of experimentation is told by Greg Linden, who was a product developer for early versions of the Amazon shopping cart. Linden had an idea of making recommendations to people based on what was already in their shopping cart. (While this is common across e-commerce sites now, at one point it was a new idea.) While grocery stores "recommnend" impulse purchases (candy, gum) in the checkout lane, an ecommerce provider can recommend anything in the store, so the idea is even more powerful. Linden developed a prototype, and while it got some favorable reactions, one senior vice president was against it -- his view was that it might distract people and lead them to abandon the cart.
+
+As Linden says, "I was forbidden to work on this any further." But he went ahead and prepared the feature anyways. The SVP was furious, but Amazon already had a data-driven culture and even senior executives couldn't block tests. The feature was then pushed out to a small set of Amazon customers.  In this way, they could compare the behavior of customers who did receive shopping cart recommendations to those who didn't (otherwise known as a controlled experiment.) The results were dramatic - the feature outperformed the control of not having it by such a large margin that, as Linden says, "not having it live was costing Amazon a notable chunk of change."
+
+It's unknown what happened to the SVP. Challenging senior executives can be bad for your career, but if you find yourself in a place run by HiPPOs who don't want to experiment, you might want to consider how long that organization will be in business.
+cite:[Linden2006]
+****
+
 [quote, Ronnie Kohavi, Online Experimentation at Microsoft]
 It is humbling to see how bad experts are at estimating the value of features (us included).
 
@@ -50,16 +60,6 @@ The problem with relying on "gut feel" or personal opinions is that people -- re
 
 * "Netflix considers 90% of what they try to be wrong"
 * "75 percent of important business decisions and business improvement ideas either have no impact on performance or actually hurt performance" according to Qualpro (a consultancy specializing in controlled experiments)
-
-.Amazon Shopping Cart Recommendations
-****
-A well known story of the power of experimentation is told by Greg Linden, who was a product developer for early versions of the Amazon shopping cart. Linden had an idea of making recommendations to people based on what was already in their shopping cart. (While this is common across e-commerce sites now, at one point it was a new idea.) While grocery stores "recommnend" impulse purchases (candy, gum) in the checkout lane, an ecommerce provider can recommend anything in the store, so the idea is even more powerful. Linden developed a prototype, and while it got some favorable reactions, one senior vice president was against it -- his view was that it might distract people and lead them to abandon the cart.
-
-As Linden says, "I was forbidden to work on this any further." But he went ahead and prepared the feature anyways. The SVP was furious, but Amazon already had a data-driven culture and even senior executives couldn't block tests. The feature was then pushed out to a small set of Amazon customers.  In this way, they could compare the behavior of customers who did receive shopping cart recommendations to those who didn't (otherwise known as a controlled experiment.) The results were dramatic - the feature outperformed the control of not having it by such a large margin that, as Linden says, "not having it live was costing Amazon a notable chunk of change."
-
-It's unknown what happened to the SVP. Challenging senior executives can be bad for your career, but if you find yourself in a place run by HiPPOs who don't want to experiment, you might want to consider how long that organization will be in business.
-cite:[Linden2006]
-****
 
 It is therefore critical to establish a strong practice of data-driven experimentation when forming a product team, and avoid any cultural acceptance of "gut feel" or deferring to HIPPOs. This can be a difficult transition for the company founder, who has until now served as the _de facto_ product manager.
 
