@@ -13,10 +13,12 @@ function HelloWorld()
 
 </head>
 <body>
-  var app = new annotator.App();
-  app.include(annotator.ui.main);
+  var ann = new Annotator(document.body);
+  ann.include(annotator.ui.main);
+  ann.setupPlugins()
 
-  app.start();
+
+  ann.start();
 
 <a href="javascript:HelloWorld()">Hello</a>
 
