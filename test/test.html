@@ -8,11 +8,9 @@ function HelloWorld()
 {
    alert ("Hello World!");
 }
-var ann = new Annotator(document.body);
-ann.include(annotator.ui.main);
-ann.setupPlugins();
-
-ann.start();
+var app = new annotator.App();
+app.include(annotator.ui.main);
+app.start();
 </script>
 
 </head>
@@ -23,7 +21,6 @@ ann.start();
 
 <a href="javascript:HelloWorld()">Hello</a>
 <script src="jquery-3.1.1.min.js"></script>
-
 <script src="annotator.min.js"></script>
 
 
