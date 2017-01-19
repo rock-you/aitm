@@ -16,7 +16,7 @@
 #build html
 # bundle exec rake book:build
 
-rm -rf output/html
+# rm -rf output/html
 mkdir -p output/html/images
 #rewriting rakefile
 
